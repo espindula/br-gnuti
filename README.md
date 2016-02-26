@@ -1,4 +1,4 @@
-# Projeto de tradução do ``Manual do GNU texinfo'', versão 6.1, para o idioma português do Brasil.
+# Projeto de tradução do ``Manual do GNU Texinfo'', versão 6.1, para o idioma português do Brasil.
 
 Translation project of the ``GNU Texinfo Manual'', version 6.1, into Brasilian Portuguese.
 
