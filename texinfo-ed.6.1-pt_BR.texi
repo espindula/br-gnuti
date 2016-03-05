@@ -227,269 +227,342 @@ Info.
 * General Index::               Um menu cobrindo muitos tópicos.
 
 @detailmenu
- --- The Detailed Node Listing ---
+ --- A Listagem Detalhada do Nodo ---
 
-Overview of Texinfo
+Visão geral de Texinfo
 
-* Reporting Bugs::              Submitting effective bug reports.
-* Output Formats::              Overview of the supported output formats.
-* Info Files::                  What is an Info file?
-* Printed Books::               Characteristics of a printed book or manual.
-* Adding Output Formats::       Man pages and implementing new formats.
-* History::                     Acknowledgements, contributors and genesis.
+* Reporting Bugs::              Sumetendo relatórios efetivos de bugs.
+* Output Formats::              Visão geral dos formatos de saída 
+suportados.
+* Info Files::                  O que é um arquivo Info?
+* Printed Books::               Característica de um livro impresso ou 
+manual.
+* Adding Output Formats::       Páginas de manual e implementando novos 
+formatos.
+* History::                     Agradecimentos, contribuidores e gênese.
 
-Writing a Texinfo File
+Escrevendo um Arquivo Texinfo
 
-* Command Syntax::              @@-commands are used for formatting.
-* Conventions::                 General rules for writing a Texinfo file.
-* Comments::                    Writing comments and ignored text in general.
-* Minimum::                     What a Texinfo file must have.
-* Short Sample::                A short sample Texinfo file.
+* Command Syntax::              Comandos @@ são utilizados para 
+formatação.
+* Conventions::                 Regras gerais para se escrever um 
+arquivo Texinfo.
+* Comments::                    Escrevendo comentários e texto ignorado 
+em geral.
+* Minimum::                     O que um arquivo Texinfo deve ter.
+* Short Sample::                Um arquivo curto Texinfo de amostra.
 
-Beginning and Ending a Texinfo File
+Iniciando e Finalizando um Arquivo Texinfo
 
-* Sample Beginning::            A sample beginning for a Texinfo file.
-* Texinfo File Header::         The first lines.
-* Document Permissions::        Ensuring your manual is free.
-* Titlepage & Copyright Page::  Creating the title and copyright pages.
-* Contents::                    How to create a table of contents.
-* The Top Node::                Creating the `Top' node and master menu.
-* Global Document Commands::    Affecting formatting throughout.
-* Ending a File::               What is at the end of a Texinfo file?
+* Sample Beginning::            Um início de amostra para um arquivo 
+Texinfo.
+* Texinfo File Header::         As primeiras linhas.
+* Document Permissions::        Assegurando-se de que seu manual é 
+livre.
+* Titlepage & Copyright Page::  Criando as páginas de título e de 
+direitos autorais.
+* Contents::                    Como criar uma tabela de conteúdo.
+* The Top Node::                Criando o nodo `Top' e o menu principal.
+* Global Document Commands::    Afetando a formatação ao longo do 
+documento.
+* Ending a File::               O que está ao final de um arquivo 
+Texinfo?
 
-Texinfo File Header
+Cabeçalho de Arquivo Texinfo
 
-* First Line::                  The first line of a Texinfo file.
-* Start of Header::             Formatting a region requires this.
-* @code{@@setfilename}::                Tell Info the name of the Info file.
-* @code{@@settitle}::                   Create a title for the printed work.
-* End of Header::               Formatting a region requires this.
+* First Line::                  A primeira linha de um arquivo Texinfo.
+* Start of Header::             Formatar uma região exige isso.
+* @code{@@setfilename}::                Informe a Info o nome do arquivo 
+Info.
+* @code{@@settitle}::                   Crie um título para o trabalho 
+impresso.
+* End of Header::               Formatar uma região exige isso.
 
-Document Permissions
+Permissões de Documento
 
-* @code{@@copying}::                    Declare the document's copying permissions.
-* @code{@@insertcopying}::              Where to insert the permissions.
+* @code{@@copying}::                    Declare as permissões de cópia 
+do documento.
+* @code{@@insertcopying}::              Onde inserir as permissões.
 
-Title and Copyright Pages
+Páginas de Título e de Direitos Autorais
 
-* @code{@@titlepage}::                  Create a title for the printed document.
-* @code{@@titlefont @@center @@sp}::      The @code{@@titlefont}, @code{@@center},
-                                 and @code{@@sp} commands.
-* @code{@@title @@subtitle @@author}::    The @code{@@title}, @code{@@subtitle},
-                                 and @code{@@author} commands.
-* Copyright::                   How to write the copyright notice and
-                                 include copying permissions.
-* Heading Generation::          Turn on page headings after the title and
-                                 copyright pages.
+* @code{@@titlepage}::                  Crie um título para o documento 
+impresso.
+* @code{@@titlefont @@center @@sp}::      Os comandos 
+@code{@@titlefont}, @code{@@center}, e @code{@@sp}.
+* @code{@@title @@subtitle @@author}::    Os comandos @code{@@title}, 
+@code{@@subtitle}, e @code{@@author}.
+* Copyright::                   Como escrever o aviso de direitos 
+autorais e incluir permissões de cópia.
+* Heading Generation::          Ligar os cabeçalhos de página após as 
+páginas de título e de direitos autorais.
 
-The `Top' Node and Master Menu
+O Nodo `Top' e o Menu Principal
 
 * Top Node Example::
 * Master Menu Parts::
 
-Global Document Commands
+Comandos Globais de Documento
 
-* @code{@@documentdescription}::        Document summary for the HTML output.
-* @code{@@setchapternewpage}::          Start chapters on right-hand pages.
-* @code{@@headings}::                   An option for turning headings on and off
-                                        and double or single sided printing.
-* @code{@@paragraphindent}::            Specify paragraph indentation.
-* @code{@@firstparagraphindent}::       Suppressing first paragraph indentation.
-* @code{@@exampleindent}::              Specify environment indentation.
+* @code{@@documentdescription}::        Sumário de documento para a 
+saída HTML.
+* @code{@@setchapternewpage}::          Iniciar capítulos em páginas do 
+lado direito.
+* @code{@@headings}::                   Uma opção para ligar e desligar 
+cabeçalhos e impressão em ambos ou de um único lado.
+* @code{@@paragraphindent}::            Especifique endentação de 
+parágrafo.
+* @code{@@firstparagraphindent}::       Suprimindo a endentação de 
+primeiro parágrafo.
+* @code{@@exampleindent}::              Especifique a endentação de 
+ambiente.
 
-Nodes
+Nodos
 
-* Texinfo Document Structure::  How Texinfo manuals are usually arranged.
-* Node Names::                  How to choose node names.
-* Writing a Node::              How to write an @code{@@node} line.
-* Node Line Requirements::      Keep names unique.
-* First Node::                  How to write a `Top' node.
-* @code{@@top} Command::                How to use the @code{@@top} command.
-* Node Menu Illustration::      A diagram, and sample nodes and menus.
-* @command{makeinfo} Pointer Creation::   Letting makeinfo determine node pointers.
-* Menus::                       Listing subordinate nodes.
+* Texinfo Document Structure::  Como os manuais Texinfo normalmente são 
+organizados.
+* Node Names::                  Como escolher nomes de nodo.
+* Writing a Node::              Como escrever uma linha @code{@@node}.
+* Node Line Requirements::      Mantenha os nomes unicos.
+* First Node::                  Como escrever um nodo `Top'.
+* @code{@@top} Command::                Como utilizar o comando 
+@code{@@top}.
+* Node Menu Illustration::      Um diagrama, e menus e nodos de amostra.
+* @command{makeinfo} Pointer Creation::   Permitindo que makeinfo 
+determine os ponteiros de nodo.
+* Menus::                       Listando nodos subordinados.
 
 Menus
 
-* Writing a Menu::              What is a menu?
-* Menu Example::                Two and three part menu entries.
-* Menu Location::               Menus go at the ends of nodes.
-* Menu Parts::                  A menu entry has three parts.
-* Less Cluttered Menu Entry::   Two part menu entry.
-* Other Info Files::            How to refer to a different Info file.
+* Writing a Menu::              O que é um menu?
+* Menu Example::                Entradas de menu de duas e três partes.
+* Menu Location::               Menus se situam ao final dos nodos.
+* Menu Parts::                  Uma entrada de menu tem três partes.
+* Less Cluttered Menu Entry::   Entrada de menu de duas partes.
+* Other Info Files::            Como se referir a um arquivo Info 
+diferente.
 
-Chapter Structuring
+Estruturamento de Capítulo
 
-* Tree Structuring::            A manual is like an upside down tree @dots{}
-* Structuring Command Types::   How to divide a manual into parts.
-* @code{@@chapter}::                    Chapter structuring.
+* Tree Structuring::            Um manual é como uma árvore de cabeça 
+para baixo @dots{}
+* Structuring Command Types::   Como dividir um manual em partes.
+* @code{@@chapter}::                    Estruturamento de capítulo.
 * @code{@@unnumbered @@appendix}::
 * @code{@@majorheading @@chapheading}::
 * @code{@@section}::
 * @code{@@unnumberedsec @@appendixsec @@heading}::
 * @code{@@subsection}::
 * @code{@@unnumberedsubsec @@appendixsubsec @@subheading}::
-* @code{@@subsubsection}::              Commands for the lowest level sections.
-* @code{@@part}::                       Collections of chapters.
-* Raise/lower sections::        How to change commands' hierarchical level.
+* @code{@@subsubsection}::              Comandos para as seções de 
+mais baixo nível.
+* @code{@@part}::                       Coleções de capítulos.
+* Raise/lower sections::        Como modificar o nível hierárquico dos 
+comandos.
 
-Cross-references
+Referências cruzadas
 
-* References::                  What cross-references are for.
-* Cross Reference Commands::    A summary of the different commands.
-* Cross Reference Parts::       A cross-reference has several parts.
-* @code{@@xref}::                       Begin a reference with `See' @dots{}
-* Referring to a Manual as a Whole::   Refer to an entire manual.
-* @code{@@ref}::                        A reference for the last part of a sentence.
-* @code{@@pxref}::                      How to write a parenthetical cross-reference.
-* @code{@@anchor}::                     Defining arbitrary cross-reference targets
-* @code{@@inforef}::                    How to refer to an Info-only file.
-* @code{@@url}::                        How to refer to a uniform resource locator.
-* @code{@@cite}::                       How to refer to books not in the Info system.
+* References::                  Para que servem as referências cruzadas.
+* Cross Reference Commands::    Um sumário dos diferentes comandos.
+* Cross Reference Parts::       Uma referência cruzada tem várias 
+partes.
+* @code{@@xref}::                       Comece uma referência com `Veja' 
+@dots{}
+* Referring to a Manual as a Whole::   Referência a um manual inteiro.
+* @code{@@ref}::                        Uma referência para a última 
+parte de uma sentença.
+* @code{@@pxref}::                      Como escrever uma referência 
+cruzada parentesca.
+* @code{@@anchor}::                     Definindo alvos arbitrários de 
+referências cruzdas.
+* @code{@@inforef}::                    Como se referir a um arquivo 
+somente Info.
+* @code{@@url}::                        Como se referir a um localizador 
+uniforme de recurso.
+* @code{@@cite}::                       Como se referir a livros que não 
+estão no sistema Info.
 
 @code{@@xref}
 
-* One Argument::                @code{@@xref} with one argument.
-* Two Arguments::               @code{@@xref} with two arguments.
-* Three Arguments::             @code{@@xref} with three arguments.
-* Four and Five Arguments::     @code{@@xref} with four and five arguments.
+* One Argument::                @code{@@xref} com um argumento.
+* Two Arguments::               @code{@@xref} com dois argumentos.
+* Three Arguments::             @code{@@xref} com três argumentos.
+* Four and Five Arguments::     @code{@@xref} com quatro e cinco 
+argumentos.
 
 @code{@@url}, @code{@@uref@{@var{url}[, @var{text}][, @var{replacement}]@}}
 
-* @code{@@url} Examples::           Examples of using all the forms of @code{@@url}.
-* URL Line Breaking::       How lines are broken within @code{@@url} text.
-* @code{@@url} PDF Output Format::  A special option to hide links in PDF output.
-* PDF Colors::              Colorizing urls and other links in PDF output.
+* @code{@@url} Examples::           Exemplos da utilização de todas as 
+formas do @code{@@url}.
+* URL Line Breaking::       Como as linhas são quebradas dentro do texto 
+do @code{@@url}.
+* @code{@@url} PDF Output Format::  Uma opção especial para ocultar 
+links na saída PDF.
+* PDF Colors::              Colorindo urls e outros links na saída PDF.
 
-Marking Text, Words and Phrases
+Marcando Texto, Palavras e Frases
 
-* Indicating::                  How to indicate definitions, files, etc.
-* Emphasis::                    How to emphasize text.
+* Indicating::                  Como indicar definições, arquivos, etc.
+* Emphasis::                    Como enfatizar texto.
 
-Indicating Definitions, Commands, etc.
+Indicando Definições, Comandos, etc.
 
-* Useful Highlighting::         Highlighting provides useful information.
-* @code{@@code}::                       Indicating program code.
-* @code{@@kbd}::                        Showing keyboard input.
-* @code{@@key}::                        Specifying keys.
-* @code{@@samp}::                       Indicating a literal sequence of characters.
-* @code{@@verb}::                       Indicating a verbatim sequence of characters.
-* @code{@@var}::                        Indicating metasyntactic variables.
-* @code{@@env}::                        Indicating environment variables.
-* @code{@@file}::                       Indicating file names.
-* @code{@@command}::                    Indicating command names.
-* @code{@@option}::                     Indicating option names.
-* @code{@@dfn}::                        Specifying definitions.
-* @code{@@abbr}::                       Indicating abbreviations.
-* @code{@@acronym}::                    Indicating acronyms.
-* @code{@@indicateurl}::                Indicating an example url.
-* @code{@@email}::                      Indicating an electronic mail address.
+* Useful Highlighting::         Salientamento provê informação útil.
+* @code{@@code}::                       Indicando código de programa.
+* @code{@@kbd}::                        Exibindo entrada de teclado.
+* @code{@@key}::                        Especificando teclas.
+* @code{@@samp}::                       Indicando uma sequência literal 
+de caracteres.
+* @code{@@verb}::                       Indicando uma sequência literal 
+de caracteres.
+* @code{@@var}::                        Indicando variáveis meta 
+sintáticas.
+* @code{@@env}::                        Indicando variáveis de ambiante.
+* @code{@@file}::                       Indicando nomes de arquivo.
+* @code{@@command}::                    Indicando nomes de comando.
+* @code{@@option}::                     Indicando nomes de opção.
+* @code{@@dfn}::                        Especificando definições.
+* @code{@@abbr}::                       Indicando abreviações.
+* @code{@@acronym}::                    Indicando acrônimos.
+* @code{@@indicateurl}::                Indicando uma url de exemplo.
+* @code{@@email}::                      Indicando um endereço 
+eletrônico de correspondência.
 
-Emphasizing Text
+Enfatizando Texto
 
-* @code{@@emph @@strong}::               How to emphasize text in Texinfo.
-* Smallcaps::                   How to use the small caps font.
-* Fonts::                       Various font commands for printed output.
+* @code{@@emph @@strong}::               Como enfatizar texto em Texinfo.
+* Smallcaps::                   Como utilizar a fonte capitalização 
+pequena.
+* Fonts::                       Variados comandos de fonte para saída 
+impressa.
 
-Quotations and Examples
+Encapsulamentos e Exemplos
 
-* Block Enclosing Commands::    Different constructs for different purposes.
-* @code{@@quotation}::                  Writing a quotation.
-* @code{@@indentedblock}::              Block of text indented on left.
-* @code{@@example}::                    Writing an example in a fixed-width font.
-* @code{@@verbatim}::                   Writing a verbatim example.
-* @code{@@verbatiminclude}::            Including a file verbatim.
-* @code{@@lisp}::                       Illustrating Lisp code.
-* @code{@@small@dots{}}::                   Examples in a smaller font.
-* @code{@@display}::                    Writing an example in the current font.
-* @code{@@format}::                     Writing an example without narrowed margins.
-* @code{@@exdent}::                     Undo indentation on a line.
-* @code{@@flushleft @@flushright}::      Pushing text flush left or flush right.
-* @code{@@raggedright}::                Avoiding justification on the right.
-* @code{@@noindent}::                   Preventing paragraph indentation.
-* @code{@@indent}::                     Forcing paragraph indentation.
-* @code{@@cartouche}::                  Drawing rounded rectangles around text.
+* Block Enclosing Commands::    Construtores diferentes para propósitos 
+diferentes.
+* @code{@@quotation}::                  Escrevendo uma citação.
+* @code{@@indentedblock}::              Bloco de texto endentado à 
+esquerda.
+* @code{@@example}::                    Escrevendo um exemplo em uma 
+fonte de largura fixa.
+* @code{@@verbatim}::                   escrevendo um exemplo de 
+literal.
+* @code{@@verbatiminclude}::            Incluindo um arquivo de literal.
+* @code{@@lisp}::                       Ilustrando código Lisp.
+* @code{@@small@dots{}}::                   Exemplos em uma fonte menor.
+* @code{@@display}::                    Escrevendo um exemplo na fonte 
+atual.
+* @code{@@format}::                     Escrevendo um exemplo sem 
+margens estreitadas.
+* @code{@@exdent}::                     Desfazer endentação em uma 
+linha.
+* @code{@@flushleft @@flushright}::      Empurrando texto alinhado à 
+esquerda ou alinhado à direita.
+* @code{@@raggedright}::                Evitando justificação à direita.
+* @code{@@noindent}::                   Prevenindo endentação de 
+parágrafo.
+* @code{@@indent}::                     Forçando endentação de 
+parágrafo.
+* @code{@@cartouche}::                  Desenhando retângulos por todos 
+os lados ao redor do texto.
 
-Lists and Tables
+Listas e Tabelas
 
-* Introducing Lists::           Texinfo formats lists for you.
-* @code{@@itemize}::                    How to construct a simple list.
-* @code{@@enumerate}::                  How to construct a numbered list.
-* Two-column Tables::           How to construct a two-column table.
-* Multi-column Tables::         How to construct generalized tables.
+* Introducing Lists::           Listas de formatos Texinfo para você.
+* @code{@@itemize}::                    Como construir uma lista 
+simples.
+* @code{@@enumerate}::                  Como construir uma lista 
+numerada.
+* Two-column Tables::           Como construir uma tabela de duas 
+colunas.
+* Multi-column Tables::         Como construir tabelas generalizadas.
 
-Making a Two-column Table
+Fazendo uma Tabela de Duas Colunas
 
-* @code{@@table}::                      How to construct a two-column table.
-* @code{@@ftable @@vtable}::             Automatic indexing for two-column tables.
-* @code{@@itemx}::                      How to put more entries in the first column.
+* @code{@@table}::                      Como construir uma tabela de 
+duas colunas.
+* @code{@@ftable @@vtable}::             Indexamento automático para 
+tabelas de duas colunas.
+* @code{@@itemx}::                      Como colocar mais entradas na 
+primeira coluna.
 
-@code{@@multitable}: Multi-column Tables
+@code{@@multitable}: Tabelas Multi coluna
 
-* Multitable Column Widths::    Defining multitable column widths.
-* Multitable Rows::             Defining multitable rows, with examples.
+* Multitable Column Widths::    Definindo tamanhos de coluna multitable.
+* Multitable Rows::             Definindo linhas multitable, com 
+exemplos.
 
-Special Displays
+Exibições Especiais
 
-* Floats::                      Figures, tables, and the like.
-* Images::                      Including graphics and images.
-* Footnotes::                   Writing footnotes.
+* Floats::                      Figuras, tabelas, e afins.
+* Images::                      Incluindo gráficos e imagens.
+* Footnotes::                   Escrevendo notas de rodapé.
 
-Floats
+Flutuações
 
-* @code{@@float}::                      Producing floating material.
-* @code{@@caption @@shortcaption}::      Specifying descriptions for floats.
-* @code{@@listoffloats}::               A table of contents for floats.
+* @code{@@float}::                      Produzindo material que flutua.
+* @code{@@caption @@shortcaption}::      Especificando descrições para 
+flutuações.
+* @code{@@listoffloats}::               Uma tabela de conteúdo para 
+flutuações.
 
-Inserting Images
+Inserindo Imagens
 
 * Image Syntax::
 * Image Scaling::
 
-Footnotes
+Notas de rodapé
 
-* Footnote Commands::           How to write a footnote in Texinfo.
-* Footnote Styles::             Controlling how footnotes appear in Info.
+* Footnote Commands::           Como escrever uma nota de rodapé em 
+Texinfo.
+* Footnote Styles::             Controlando como as notas de rodapé 
+aparecem em Info.
 
-Indices
+Índices
 
-* Index Entries::               Choose different words for index entries.
-* Predefined Indices::          Use different indices for different kinds
-                                 of entries.
-* Indexing Commands::           How to make an index entry.
-* Printing Indices & Menus::    How to print an index in hardcopy and
-                                 generate index menus in Info.
-* Combining Indices::           How to combine indices.
-* New Indices::                 How to define your own indices.
+* Index Entries::               Escolha palavras diferentes para 
+entradas de índice.
+* Predefined Indices::          Utilize índices diferentes para tipos 
+diferentes de entradas.
+* Indexing Commands::           Como fazer uma entrada de íncide.
+* Printing Indices & Menus::    Como imprimir um índice em cópia 
+impressa e gerar menus de índice em Info.
+* Combining Indices::           Como combinar índices.
+* New Indices::                 Como definir seus próprios índices.
 
-Combining Indices
+Combinando Índices
 
-* @code{@@syncodeindex}::               How to merge two indices, using @code{@@code}
-                                 font for the merged-from index.
-* @code{@@synindex}::                   How to merge two indices, using the
-                                 roman font for the merged-from index.
+* @code{@@syncodeindex}::               Como mesclar dois índices, 
+utilizando a fonte @code{@@code} para o índice mesclado a partir de.
+* @code{@@synindex}::                   Como mesclar dois índices, 
+utilizando a fonte roman para o índice mesclado a partir de.
 
-Special Insertions
+Inserções Especiais
 
-* Special Characters::          Inserting @@ @{@} , \ #
-* Inserting Quote Characters::  Inserting left and right quotes, in code.
-* Inserting Space::             Inserting the right amount of whitespace.
-* Inserting Accents::           Inserting accents and special characters.
-* Inserting Quotation Marks::   Inserting quotation marks.
-* Inserting Subscripts and Superscripts:: Inserting sub/superscripts.
-* Inserting Math::              Formatting mathematical expressions.
-* Glyphs for Text::             Inserting dots, bullets, currencies, etc.
-* Glyphs for Programming::      Indicating results of evaluation,
-                                 expansion of macros, errors, etc.
-* Inserting Unicode::           Inserting a Unicode character by code point.
+* Special Characters::          Inserindo @@ @{@} , \ #
+* Inserting Quote Characters::  Inserindo aspas à esquerda e à 
+direita, em código.
+* Inserting Space::             Inserindo a quantidade correta de 
+espaços em branco.
+* Inserting Accents::           Inserindo acentos e caracteres especiais.
+* Inserting Quotation Marks::   Inserindo marcas de 
+encapsulamento.
+* Inserting Subscripts and Superscripts:: Inserindo sub/superscripts.
+* Inserting Math::              Formatando expressões matemáticas.
+* Glyphs for Text::             Inserindo pontos, bullets, símbolos de 
+moedas, etc.
+* Glyphs for Programming::      Indicando resultados de avaliação, 
+expansão de macros, erros, etc.
+* Inserting Unicode::           Inserindo um carácter Unicode por 
+ponto de código.
 
-Special Characters: Inserting @@ @{@} , \ #
+Caracteres Especiais: Inserindo @@ @{@} , \ #
 
 * Inserting an Atsign::         @code{@@@@}, @code{@@atchar@{@}}.
 * Inserting Braces::            @code{@@@{ @@@}}, @code{@@l rbracechar@{@}}.
-* Inserting a Comma::           , and @code{@@comma@{@}}.
-* Inserting a Backslash::       \ and @code{@@backslashchar@{@}}.
-* Inserting a Hashsign::        # and @code{@@hashchar@{@}}.
+* Inserting a Comma::           , e @code{@@comma@{@}}.
+* Inserting a Backslash::       \ e @code{@@backslashchar@{@}}.
+* Inserting a Hashsign::        # e @code{@@hashchar@{@}}.
 
 Inserting Space
 
