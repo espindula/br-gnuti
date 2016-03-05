@@ -7,11 +7,13 @@
 
 @c Automake exige isto
 @setfilename texinfo-ed.6.1-pt_BR.info
+@documentencoding UTF-8
+@documentlanguage pt_BR
 
 @c Automake automaticamente atualiza version-pt_BR.texi @set VERSION e 
 @c @set UPDATED com os valores apropriados.
-@include version-pt_BR.texi
 @settitle GNU Texinfo @value{VERSION}
+@include version-pt_BR.texi
 
 @c Define um novo índice para opções de linha de comando.
 @defcodeindex op
