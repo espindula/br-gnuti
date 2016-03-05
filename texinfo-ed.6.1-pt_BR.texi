@@ -1,24 +1,23 @@
 \input texinfo.tex    @c -*-texinfo-*-
-@c $Id: texinfo.texi 6987 2016-02-06 08:59:21Z gavin $
 
-@c Everything between the start/end of header lines will be passed by
-@c Emacs's {texinfo,makeinfo}-format region commands.  See the `start of
-@c header' node for more info.
+@c Tudo entre o início/final das linhas de cabeçalho será 
+@c ignorado pelos comandos de região {texinfo,makeinfo}-format do 
+@c Emacs.   Veja-se o ponto `início de cabeçalho' para mais informação
 @c %**start of header
 
-@c Automake requires this
-@setfilename texinfo.info
+@c Automake exige isto
+@setfilename texinfo-ed.6.1-pt_BR.info
 
-@c Automake automatically updates version.texi to @set VERSION and
-@c @set UPDATED to appropriate values.
-@include version.texi
+@c Automake automaticamente atualiza version-pt_BR.texi @set VERSION e 
+@c @set UPDATED com os valores apropriados.
+@include version-pt_BR.texi
 @settitle GNU Texinfo @value{VERSION}
 
-@c Define a new index for command-line options.
+@c Define um novo índice para opções de linha de comando.
 @defcodeindex op
 
-@c Put everything except function (command, in this case) names in one
-@c index (arbitrarily chosen to be the concept index).
+@c Coloca tudo, exceto nomes (comando, nesse caso) de função em um 
+@c índice (arbitrariamente escolhido para ser o índice de conceito).
 @syncodeindex op cp
 @syncodeindex vr cp
 @syncodeindex pg cp
@@ -27,11 +26,33 @@
 \global\usebracesinindexestrue
 @end tex
 
-@c finalout
+@c final
 
 @comment %**end of header
 
+@c perceba-se que o autor do documento original em inglês se utilizou 
+@comment das duas formas de indicar que uma linha é um simples 
+@c comentário, ou seja @comment e o seu sinônimo @c.   No "Cartão de 
+@comment Referência do GNU Texinfo", para Texinfo versão 5.2, está 
+@c descrita uma terceira forma: DEL.   Essa forma não foi aqui testada 
+@comment e, portanto, não se pode afirmar que funciona.
+
 @copying
+Este manual é para GNU Texinfo (versão @value{VERSION}, 
+@value{UPDATED}), um sistema de documentação que pode produzir ambos 
+informação online e um manual impresso a partir de uma fonte única 
+utilizando marcação semântica.
+
+Direitos autorais @copyright{} 2016 da "versão modificada" traduzida 
+para o Português do Brasil: Jamenson Ferreira Espindula de Almeida 
+Melo.
+
+Direitos autorais @copyright{} 1988, 1990, 1991, 1992, 1993, 1995, 1996, 
+1997, 1998, 1999, 2001, 2001, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 
+2010, 2011, 2012, 2013, 2014, 2015, 2016 da versão original escrita em 
+inglês: Free Software Foundation, Inc.
+
+
 This manual is for GNU Texinfo (version @value{VERSION}, @value{UPDATED}),
 a documentation system that can produce both online information and a
 printed manual from a single source using semantic markup.
@@ -41,6 +62,21 @@ Copyright @copyright{} 1988, 1990, 1991, 1992, 1993, 1995, 1996, 1997,
 2010, 2011, 2012, 2013, 2014, 2015, 2016 Free Software Foundation, Inc.
 
 @quotation
+É concedida permissão para copiar, distribuir e/ou modificar este Manual 
+para GNU Texinfo (versão @value{VERSION}, @value{UPDATED}), versão 
+traduzida para a língua portuguesa sob os termos da Licença de 
+Documentação Livre GNU, versão 1.3 ou qualquer versão posterior 
+publicada pela Free Software Foundation; sem Seções Invariantes, com os 
+Textos de Capa Frontal sendo ``Um Manual GNU'', e com os Textos de 
+Quarta Capa como em (a) abaixo.   Uma cópia da licença está incluída na 
+seção intitulada ``Licença de Documentação Livre GNU''.
+
+(a) O Texto de Quarta Capa da Free Software Foundation, Inc. (FSF) é: 
+``Você tem a liberdade de copiar e modificar este manual GNU.   
+Comprando cópias da FSF você a apóia no desenvolvimento GNU e na 
+promoção da liberdade de software''.
+
+
 Permission is granted to copy, distribute and/or modify this document
 under the terms of the GNU Free Documentation License, Version 1.3 or
 any later version published by the Free Software Foundation; with no
@@ -57,25 +93,31 @@ developing GNU and promoting software freedom.''
 
 @dircategory Texinfo documentation system
 @direntry
-* Texinfo: (texinfo).           The GNU documentation format.
-* install-info: (texinfo)Invoking install-info. Update info/dir entries.
-* makeinfo: (texinfo)Invoking makeinfo.         Translate Texinfo source.
-* pod2texi: (pod2texi)Invoking pod2texi.        Translate Perl POD to Texinfo.
-* texi2dvi: (texinfo)Format with texi2dvi.      Print Texinfo documents.
-* texi2pdf: (texinfo)PDF Output.                PDF output for Texinfo.
-* pdftexi2dvi: (texinfo)PDF Output.             PDF output for Texinfo.
-* texindex: (texinfo)Format with tex/texindex.  Sort Texinfo index files.
+* Texinfo: (texinfo).           O formato de documentação GNU.
+* install-info: (texinfo)Invoking install-info. Atualizar entradas 
+info/dir.
+* makeinfo: (texinfo)Invoking makeinfo.         Traduzir fonte Texinfo.
+* pod2texi: (pod2texi)Invoking pod2texi.        Traduzir POD Perl para 
+Texinfo.
+* texi2dvi: (texinfo)Format with texi2dvi.      Imprimir documentos 
+Texinfo.
+* texi2pdf: (texinfo)PDF Output.                Saída PDF para Texinfo.
+* pdftexi2dvi: (texinfo)PDF Output.             Saída PDF para Texinfo.
+* texindex: (texinfo)Format with tex/texindex.  Ordena arquivos de 
+índice Texinfo.
 @end direntry
 
-@c Set smallbook if printing in smallbook format so the example of the
-@c smallbook font is actually written using smallbook; in bigbook, a kludge
-@c is used for TeX output.  Do this through the -t option to texi2dvi,
-@c so this same source can be used for other paper sizes as well.
+@c Configurar para smallbook se for imprimir no formato para livro 
+@c pequeno, de forma que o exemplo da fonte de livre pequeno atualmente 
+@c está escrito utilizando smallbook; em bigbook, uma gambiarra é 
+@c utilizada para a saída TeX.   Faz-se isso via opção -t a texi2dvi, de 
+@c maneira que essa mesma fonte pode ser utilizada para outros tamanhos 
+@c de papel também.
 @c smallbook
 @c set smallbook
 @c @@clear smallbook
 
-@c If you like blank pages, add through texi2dvi -t.
+@c Se gostar-se de páginas em branco, adicionar via texi2dvi -t.
 @c setchapternewpage odd
 
 @set txiindexatsignignore
@@ -86,31 +128,31 @@ developing GNU and promoting software freedom.''
 
 @titlepage
 @title Texinfo
-@subtitle The GNU Documentation Format
-@subtitle for Texinfo version @value{VERSION}, @value{UPDATED}
+@subtitle O Formato de Documentação GNU
+@subtitle para Texinfo versão @value{VERSION}, @value{UPDATED}
 
 @author Robert J. Chassell
 @author Richard M. Stallman
 
-@c Include the Distribution inside the titlepage so
-@c that headings are turned off.
+@c Inclui a Distribuição no título da página, de forma que tais 
+@c cabeçalhos são desligados.
 
 @page
 @vskip 0pt plus 1filll
 @insertcopying
 
 @sp 1
-Published by the Free Software Foundation @*
+Publicado pela Free Software Foundation @*
 51 Franklin St, Fifth Floor @*
 Boston, MA 02110-1301 @*
 USA @*
-ISBN 1-882114-67-1 @c for version 4.0, September 1999.
-@c ISBN 1-882114-65-5 is for version 3.12, March 1998.
-@c ISBN 1-882114-64-7 is for edition 2.24 of November 1996.
-@c ISBN 1-882114-63-9 is for edition 2.20 of 28 February 1995.
+ISBN 1-882114-67-1 @c para a versão 4.0, Setembro de 1999.
+@c ISBN 1-882114-65-5 é para a versão 3.12, Março de 1998.
+@c ISBN 1-882114-64-7 é para a edição 2.24 de Novembro de 1996.
+@c ISBN 1-882114-63-9 é para a edição 2.20 de 28 de fevereiro de 1995.
 
 @sp 1
-Cover art by Etienne Suvasa.
+Arte da capa por Etienne Suvasa.
 @end titlepage
 
 
@@ -122,55 +164,67 @@ Cover art by Etienne Suvasa.
 @node Top
 @top Texinfo
 
-This manual is for GNU Texinfo (version @value{VERSION}, @value{UPDATED}),
-a documentation system that can produce both online information and a
-printed manual from a single source using semantic markup.
+Este manual é para GNU Texinfo (versão @value{VERSION}, 
+@value{UPDATED}), um sistema de documentação que pode produzir ambos 
+informação online e um manual impresso a partir de uma fonte única 
+utilizando marcação semântica.
 
-The first part of this master menu lists the major nodes in this Info
-document, including the @@-command and concept indices.  The rest of
-the menu lists all the lower-level nodes in the document.
+A primeira parte deste menu principal lista os principais pontos neste 
+documento info, incluindo o comando @@-command e índices de conceito.  O 
+restante do menu lista todos os pontos de baixo nível no documento.
 @end ifnottex
 
 @menu
-* Copying Conditions::          Your rights.
-* Overview::                    Texinfo in brief.
-* Writing a Texinfo File::      Format of a Texinfo source file.
-* Beginning and Ending a File:: Beginning and end of a Texinfo file.
-* Nodes::                       Writing nodes, the basic unit of Texinfo.
-* Chapter Structuring::         Creating chapters, sections, appendices, etc.
-* Cross References::            Writing cross-references.
-* Marking Text::                Marking words and phrases as code,
-                                    keyboard input, meta-syntactic
-                                    variables, and the like.
-* Quotations and Examples::     Block quotations, examples, etc.
-* Lists and Tables::            Itemized or numbered lists, and tables.
-* Special Displays::            Floating figures and footnotes.
-* Indices::                     Creating indices.
-* Insertions::                  Inserting @@-signs, braces, etc.
-* Breaks::                      Forcing or preventing line and page breaks.
-* Definition Commands::         Describing functions and the like uniformly.
-* Internationalization::        Supporting languages other than English.
-* Conditionals::                Specifying text for only some output cases.
-* Defining New Texinfo Commands:: User-defined macros and aliases.
-* Include Files::               How to incorporate other Texinfo files.
-* Hardcopy::                    Output for paper, with @TeX{}.
-* Generic Translator @command{texi2any}:: @command{texi2any}, an all-purpose converter.
-* Creating and Installing Info Files:: Details on Info output.
-* Generating HTML::             Details on HTML output.
-@c * texi2any Output Customization:: Fine tuning with initialization files.
+* Copying Conditions::          Seus direitos.
+* Overview::                    Texinfo em resumo.
+* Writing a Texinfo File::      Formato de um arquivo fonte Texinfo.
+* Beginning and Ending a File:: Iniciando e fim de um arquivo Texinfo.
+* Nodes::                       Escrevendo nodes, a unidade básica de Texinfo.
+* Chapter Structuring::         Criando capítulos, seções, apêndices, 
+etc.
+* Cross References::            Escrevendo referências cruzadas.
+* Marking Text::                Marcando palavras e frases como código, 
+entrada de teclado, variáveis meta sintáticas, e afins.
+* Quotations and Examples::     Encapsulamentos de bloco, exemplos, etc.
+* Lists and Tables::            Listas de itens ou numeradas, e tabelas.
+* Special Displays::            Figuras flutuantes e notas de rodapé.
+* Indices::                     Criando índices.
+* Insertions::                  Inserindo sinais @@-signs, chaves, etc.
+* Breaks::                      Forçando ou prevenindo quebras de página 
+e linha.
+* Definition Commands::         Descrevendo uniformemente funções e 
+afins.
+* Internationalization::        Suporte a outras linguagens diferentes 
+do Inglês.
+* Conditionals::                Especificando texto somente para alguns 
+casos de saída.
+* Defining New Texinfo Commands:: Macros definidas pelo usuário e 
+apelidos.
+* Include Files::               Como incorporar outros arquivos Texinfo.
+* Hardcopy::                    Saída para papel, com @TeX{}.
+* Generic Translator @command{texi2any}:: @command{texi2any}, um 
+conversor para todos os propósitos.
+* Creating and Installing Info Files:: Detalhes sobre saída Info.
+* Generating HTML::             Detalhes sobre saída HTML.
+@c * texi2any Output Customization:: Sintonia fina com arquivos de 
+@c inicialização
 
-Appendices
+Apêndices
 
-* @@-Command Details::           Details of the Texinfo @@-commands.
-* Tips::                        Hints on how to write a Texinfo document.
-* Sample Texinfo Files::        Complete examples, including full texts.
-* Texinfo Mode::                Using the GNU Emacs Texinfo mode.
-* Headings::                    How to write page headings and footings.
-* Catching Mistakes::           How to find mistakes in formatting.
-* Info Format Specification::   Technical details of the Info file format.
-* GNU Free Documentation License:: Copying this manual.
-* Command and Variable Index::  A menu containing commands and variables.
-* General Index::               A menu covering many topics.
+* @@-Command Details::          Detalhes dos comandos @@ de Texinfo.
+* Tips::                        Dicas sobre como escrever um documento 
+Texinfo.
+* Sample Texinfo Files::        Exemplos completos, incluindo textos 
+completos.
+* Texinfo Mode::                Utilizando o modo Texinfo do GNU Emacs.
+* Headings::                    Como escrever cabeçalhos e rodapés de 
+página.
+* Catching Mistakes::           Como achar erros na formatação.
+* Info Format Specification::   Detalhes técnicos do formato de arquivo 
+Info.
+* GNU Free Documentation License:: Copiando este manual.
+* Command and Variable Index::  Um menu contendo comandos e variáveis.
+* General Index::               Um menu cobrindo muitos tópicos.
 
 @detailmenu
  --- The Detailed Node Listing ---
