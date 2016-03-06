@@ -242,7 +242,7 @@ Iniciando e Finalizando um Arquivo Texinfo
 * Texinfo File Header::         As primeiras linhas.
 * Document Permissions::        Assegurando-se de que seu manual é livre.
 * Titlepage & Copyright Page::  Criando as páginas de título e de direitos autorais.
-* Contents::                    Como criar uma tabela de conteúdo.
+* Contents::                    Como criar um Sumário.
 * The Top Node::                Criando o nodo `Top' e o menu principal.
 * Global Document Commands::    Afetando a formatação ao longo do documento.
 * Ending a File::               O que está ao final de um arquivo Texinfo?
@@ -424,7 +424,7 @@ Flutuações
 
 * @code{@@float}::                      Produzindo material que flutua.
 * @code{@@caption @@shortcaption}::      Especificando descrições para flutuações.
-* @code{@@listoffloats}::               Uma tabela de conteúdo para flutuações.
+* @code{@@listoffloats}::               Um Sumário para flutuações.
 
 Inserindo Imagens
 
@@ -2559,17 +2559,17 @@ Or, you may specify your own page heading and footing format.
 
 @code{@@chapter}, @code{@@section}, e outros comandos de estruturamento
 (veja-se @ref{Chapter Structuring}) fornecem a informação para produzir 
-uma tabela de conteúdo, porém eles não fazem com que uma tabela atual 
-apareça no manual.   Para fazer isso, você deve necessariamente utilizar 
-os comandos @code{@@contents} e/ou @code{@@summarycontents}.
+um Sumário, porém eles não fazem com que uma tabela atual apareça no 
+manual.   Para fazer isso, você deve necessariamente utilizar os 
+comandos @code{@@contents} e/ou @code{@@summarycontents}.
 
 @table @code
 @item @@contents
-Gera uma tabela de conteúdo em um manual impresso, incluindo todos os 
+Gera um Sumário em um manual impresso, incluindo todos os 
 capítulos, seções, subseções, etc., bem como apêndices e capítulos não 
 numerados.   Os cabeçalhos gerados por @code{@@majorheading},
 @code{@@chapheading}, e outros comandos @code{@@@dots{}heading} não 
-aparecem na tabela de conteúdo
+aparecem no Sumário
 (veja-se @ref{Structuring Command Types}).
 
 @item @@shortcontents
@@ -2587,7 +2587,7 @@ cada um deles, e colocados próximo do início do arquivo, após o
 @code{@@endtitlepage} (veja-se @ref{@code{@@titlepage}}), antes de 
 qualquer comando de seccionamento.   Os comandos de conteúdo 
 automaticamente geram um cabeçalho estilo capítulo no topo da primeira 
-página da tabela de conteúdo, portanto não inclua qualquer comando de 
+página do Sumário, portanto não inclua qualquer comando de 
 seccionamento tal qual @code{@@unnumbered} antes deles.
 
 Dado que um arquivo info utiliza menus em vez de tabelas de conteúdo, os 
