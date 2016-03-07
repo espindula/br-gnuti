@@ -759,8 +759,8 @@ GNU Texinfo é @dfn{free software}; isso significa que qualquer pessoa é
 livre para utilizá-lo e livre para redistribui-lo sob certas condições.   
 Texinfo não está em domínio público; ele está sob direitos autorais e 
 existem restrições acerca da sua distribuição, porém essas restrições 
-são desenhadas para permitir que qualquer coisa que um bom cidadão 
-cooperador desejaria fazer.   O que não for permitido é para tentar 
+são desenhadas para permitir qualquer coisa que um bom cidadão 
+cooperador desejasse fazer.   O que não for permitido é para tentar 
 prevenir que outras pessoas adicionalmente compartilhem qualquer 
 versão de Texinfo que elas possam obter de você.
 
@@ -789,7 +789,7 @@ nossa reputação.
 As condições precisas das licenças para os programas atualmente seno 
 distribuidos que se relacionem com Texinfo são encontradas nas Licenças 
 Públicas Gerais que os acompanham.   Este manual está coberto pela 
-Licença de Documentação Livre GNU (@pxref{GNU Free Documentation License}).
+Licença de Documentação Livre GNU (@pxref{Licença de Documentação Livre GNU}).
 
 
 @node Overview
@@ -801,62 +801,64 @@ Licença de Documentação Livre GNU (@pxref{GNU Free Documentation License}).
 @cindex Introduction to Texinfo
 @anchor{Using Texinfo} @c nodo mesclado
 
-@dfn{Texinfo} is a documentation system that uses a single source file
-to produce both online information and printed output.  This means
-that instead of writing several different documents, one for each output 
-format, you need only write one document.
+@dfn{Texinfo} é um sistema de documentação que utiliza um arquivo fonte 
+único para produzir ambas informação online e saída impressa.   Isso 
+significa que em vez de escrever vários documentos diferentes, um para 
+cada formato de saída, você precisa somente escrever um documento.
 
-Using Texinfo, you can create a printed document (via the @TeX{}
-typesetting system) in PDF or PostScript format, including chapters,
-sections, cross-references, and indices.  From the same Texinfo source
-file, you can create an HTML output file suitable for use with a web
-browser, you can create an Info file with special features to make
-browsing documentation easy, and also create a Docbook file or a
-transliteration to XML format.
+Ao utilizar Texinfo, você pode criar um documento impresso (via sistema 
+tipográfico @TeX{}) em formato PDF ou PostScript, incluindo capítulos, 
+seções, referências cruzadas, e índices.   A partir do mesmo arquivo 
+fonte Texinfo, você pode criar um arquivo de saída HTML adequado para 
+uso com um navegador web, você pode criar um arquivo Info com 
+características especiais para tornar fácil a navegação da documentação, 
+e também criar um arquivo Docbook ou uma transliteração para o formato 
+XML.
 
 @cindex Source file format
 @cindex Semantic markup
-A Texinfo source file is a plain text file containing text interspersed
-with @dfn{@@-commands} (words preceded by an @samp{@@}) that tell the
-Texinfo processors what to do.  Texinfo's markup commands are almost 
-entirely @dfn{semantic}; that is, they specify the intended meaning
-of text in the document, rather than physical formatting instructions.
-You can edit a Texinfo file with any text editor, but it is especially
-convenient to use GNU Emacs since that editor has a special mode,
-called Texinfo mode, that provides various Texinfo-related features.
-(@xref{Texinfo Mode}.)
+Um arquivo fonte Texinfo é um arquivo de texto plano contendo texto 
+intercalado com @dfn{comandos @@} (palavras precedidas por um @samp{@@}) 
+que informam aos processadores Texinfo o que fazer.   Os comandos de 
+marcação de Texinfo são quase inteiramente @dfn{semânticos}; isto é, 
+eles especificam o significado pretendido do texto no documento, em vez 
+de instruções de formatação física.   Você pode editar um arquivo 
+Texinfo com qualquer editor de texto, porém é especialmente conveniente 
+se utilizar do GNU Emacs dado que esse editor tem um modo especial, 
+chamado modo Texinfo, que provê várias características relacionadas à 
+Texinfo (@xref{Texinfo Mode}).
 
 @cindex Limited scope of Texinfo
-Texinfo was devised specifically for the purpose of writing software
-documentation and manuals.  If you want to write a good manual for
-your program, Texinfo has many features which we hope will make your
-job easier.  However, it provides almost no commands for controlling
-the final formatting.  Texinfo is not intended to be a general-purpose
-formatting program, so if you need to lay out a newspaper, devise a
-glossy magazine ad, or follow the exact formatting requirements of
-a publishing house, Texinfo may not be the simplest tool.
+Texinfo foi concebido especificamente para o propósito de escrever 
+documentação e manuais de software.   Se você deseja escrever um manual 
+bom para o seu programa, Texinfo tem muitas características que 
+espera-se tornarão a sua tarefa mais fácil.   Entretanto, ele quase não 
+provê comandos para controlar a formatação final.   Texinfo não é 
+entendido como um programa de formatação de propósito geral, de modo que 
+se você precisa planejar um jornal, conceber um anúncio luxuoso de 
+revista, ou seguir as exatas exigências de formatação de uma editora, 
+Texinfo pode não ser a ferramenta mais simples.
 
 @cindex Spelling of Texinfo
 @cindex Pronunciation of Texinfo
-Spell ``Texinfo'' with a capital ``T'' and the other letters in
-lowercase.  The first syllable of ``Texinfo'' is pronounced like
-``speck'', not ``hex''.  This odd pronunciation is derived from the
-pronunciation of @TeX{}.  Pronounce @TeX{} as if the @samp{X} were
-the last sound in the name `Bach'.  In the word @TeX{}, the @samp{X}
-is, rather than the English letter ``ex'', actually the Greek letter
-``chi''.
+Escreva-se ``Texinfo'' com um ``T'' maiúsculo e as outras letras em 
+minúsculas.   A primeira silaba de ``Texinfo'' é pronunciada como 
+``speck'', e não ``hex''.   Essa pronúncia estranha é derivada da 
+pronúncia de @TeX{}.   Pronuncie-se @TeX{} como se o @samp{X} fosse o 
+último som no nome `Bach'.   Na palavra @TeX{}, o @samp{X} é, em vez da 
+letra do Inglês ``ex'', atualmente a letra Grega ``chi''.
 
-Texinfo is the official documentation format of the GNU project.
-More information, including manuals for GNU packages, is available
-at the @uref{http://www.gnu.org/doc/, GNU documentation web page}.
+Texinfo é o formato oficial de documentação do projeto GNU.
+Mais informação, incluindo manuais para pacotes GNU, está disponível em 
+@uref{http://www.gnu.org/doc/, página web de documentação GNU}.
 
 @menu
-* Reporting Bugs::              Submitting effective bug reports.
-* Output Formats::              Overview of the supported output formats.
-* Info Files::                  What is an Info file?
-* Printed Books::               Characteristics of a printed book or manual.
-* Adding Output Formats::       Man pages and implementing new formats.
-* History::                     Acknowledgements, contributors and genesis.
+* Reporting Bugs::              Sumetendo relatórios efetivos de bugs.
+* Output Formats::              Visão geral dos formatos de saída suportados.
+* Info Files::                  O que é um arquivo Info?
+* Printed Books::               Característica de um livro impresso ou manual.
+* Adding Output Formats::       Páginas de manual e implementando novos formatos.
+* History::                     Agradecimentos, contribuidores e gênese.
 @end menu
 
 
@@ -866,64 +868,67 @@ at the @uref{http://www.gnu.org/doc/, GNU documentation web page}.
 @cindex Bugs, reporting
 @cindex Suggestions for Texinfo, making
 @cindex Reporting bugs
-We welcome bug reports and suggestions for any aspect of the Texinfo
-system: programs, documentation, installation, etc.  Please email them
-to @email{bug-texinfo@@gnu.org}.  You can get the latest version of
-Texinfo via its home page, @uref{http://www.gnu.org/software/texinfo}.
+Aprecia-se relatórios de defeitos e sugestões para qualquer aspecto do 
+sistema Texinfo: programas, documentação, instalação, etc.   Por favor, 
+envie uma mensagem eletrônica para @email{bug-texinfo@@gnu.org}.
+Você pode obter a versão mais recente de Texinfo via sua home page, 
+@uref{http://www.gnu.org/software/texinfo}.
 
 @cindex Checklist for bug reports
-For bug reports, please include enough information for the maintainers
-to reproduce the problem.  Generally speaking, that means:
+Para relatórios de defeitos, por favor inclua informação suficiente para 
+que os mantenedores possam reproduzir o problema.   Falando 
+genericamente, isso significa:
 
 @itemize @bullet
-@item The version number of Texinfo and the program(s) or manual(s) involved.
-@item The contents of any input files necessary to reproduce the bug.
-@item Precisely how you ran any program(s) involved.
-@item A description of the problem and samples of any erroneous output.
-@item Hardware and operating system names and versions.
-@item Anything else that you think would be helpful.
+@item O número de versão de Texinfo e o(s) programa(s) ou manual(is) envolvidos.
+@item O conteúdo de quaisquer arquivos de entrada necessários para reproduzir o defeito.
+@item Precisamente como você executou quaisquer programa(s) envolvido(s).
+@item Uma descrição do problema e amostras de quaisquer saída errôneas.
+@item Os nomes e versões do hardware e do sistema operacional.
+@item Qualquer outra coisa que você entenda que pudesse ajudar.
 @end itemize
 
-When in doubt whether something is needed or not, include it.  It's
-better to include too much than to leave out something important.
+Quando em dúvida se alguma coisa é necessária ou não, inclua-a.   É 
+melhor incluir muito mais que deixar de fora algo importante.
 
-It is critical to send an actual input file that reproduces the
-problem.  What's not critical is to ``narrow down'' the example to the
-smallest possible input---the actual input with which you discovered
-the bug will suffice.  (Of course, if you do do experiments, the
-smaller the input file, the better.)
+É crítico enviar um arquivo de entrada atual que reproduza o problema.
+O que não é crítico é ``simplificar'' o exemplo para a menor entrada 
+possível---a entrada atual com a qual você descobriu o defeito bastará.
+(Certamente, se você fizer experimentos, quanto menor o arquivo de 
+entrada, melhor).
 
 @cindex Patches, contributing
-Patches are most welcome; if possible, please make them with
-@samp{@w{diff -c}} (@pxref{Top,,, diffutils, Comparing and Merging
-Files}) and include @file{ChangeLog} entries (@pxref{Change Log,,,
-emacs, The GNU Emacs Manual}), and follow the existing coding style.
-
+Correções (``Patches'') são mais que bemvindos; se possível, por favor 
+faça-as com @samp{@w{diff -c}} 
+(@pxref{Top,,, diffutils, Comparing and Merging Files}) e inclua as 
+entradas @file{ChangeLog} 
+(@pxref{Change Log,,, emacs, The GNU Emacs Manual}), e siga o estilo de 
+codificação existente.
 
 @node Output Formats
 @section Output Formats
 @cindex Output formats
 @cindex Back-end output formats
 
-Here is a brief overview of the output formats currently supported by
-Texinfo.
+Aqui está uma visão geral breve dos formatos de saída atualmente 
+suportados por Texinfo.
 
 @table @asis
 @item Info
 @cindex Info output, overview
-(Generated via @command{makeinfo}.)  Info format is mostly a plain
-text transliteration of the Texinfo source.  It adds a few control
-characters to provide navigational information for cross-references, 
-indices, and so on.  The Emacs Info subsystem (@pxref{Top,,, info, 
-Info}), and the standalone @command{info} program (@pxref{Top,,, 
-info-stnd, GNU Info}), among others, can read these files.  @xref{Info 
-Files}, and @ref{Creating and Installing Info Files}.
+(Gerado via @command{makeinfo}).   O formato Info é em sua maior parte 
+transliteração de texto plano do fonte Texinfo.   Ele adiciona uns 
+poucos caracteres de controle para prover informação de navegação para 
+referências cruzadas, índices, de assim por diante.   O subsistema Emacs 
+Info (@pxref{Top,,, info, Info}), e o programa autônomo @command{info} 
+(@pxref{Top,,, info-stnd, GNU Info}), entre outros, podem ler esses 
+arquivos.   @xref{Info Files}, e 
+@ref{Creating and Installing Info Files}.
 
 @item Plain text
 @cindex Plain text output, overview
-(Generated via @command{makeinfo --plaintext}.)  This is almost the
-same as Info output with the navigational control characters are
-omitted.
+(Gerado via @command{makeinfo --plaintext}).   Essa é quase a mesma que 
+a saída Info com os caracteres de controle de navegação omitidos.
 
 @item HTML
 @cindex HTML output, overview
@@ -931,62 +936,73 @@ omitted.
 @cindex Mozilla
 @cindex Lynx
 @cindex Emacs-W3
-(Generated via @command{makeinfo --html}.)  HTML, standing for Hyper
-Text Markup Language, has become the most commonly used language for
-writing documents on the World Wide Web.  Web browsers, such as
-Mozilla, Lynx, and Emacs-W3, can render this language online.  There
-are many versions of HTML, both different standards and
-browser-specific variations.  @command{makeinfo} tries to use a subset
-of the language that can be interpreted by any common browser,
-intentionally not using many newer or less widely-supported tags.
-Although the native output is thus rather plain, it can be customized
-at various levels, if desired.  For details of the HTML language and
-much related information, see @uref{http://www.w3.org/MarkUp/}.
+(Gerado via @command{makeinfo --html}).   HTML, significando Hyper Text 
+Markup Language (Linguagem de Marcação de Hiper Texto), tem se tornado a 
+mais comumente utilizada linguagem para a escrita de documentos na World 
+Wide Web (Teia de Alcance Global).   Os navegadores web, tais como 
+Mozilla, Lynx, e Emacs-W3, podem renderizar essa linguagem online.   
+Existem muitas versões de HTML, também padrões diferentes e variações 
+específicas de navegador.   @command{makeinfo} tenta utilizar um 
+subconjunto da linguagem que possa ser interpretado por qualquer 
+navegador comum, intencionalmente não se utilizando de muitas marcações 
+mais novas ou menos amplamente suportadas.
+Apesar que a saída nativa é assim até certo ponto plana, ela pode ser 
+personalizada em vários níveis, se desejado.   Para detalhes da 
+linguagem HTML e mais informação relacionada, veja-se 
+@uref{http://www.w3.org/MarkUp/}.
 @xref{Generating HTML}.
 
 @item DVI
 @cindex DVI output, overview
 @pindex dvips
 @pindex xdvi
-(Generated via @command{texi2dvi}.)  The DeVIce Independent binary
-format is output by the @TeX{} typesetting program
-(@uref{http://tug.org}).  This is then read by a DVI `driver', which
-knows the actual device-specific commands that can be viewed or
-printed, notably Dvips for translation to PostScript (@pxref{Top,,,
-dvips, Dvips}) and Xdvi for viewing on an X display
+(Gerado via @command{texi2dvi}).   O formato binário ``DeVIce Independent''
+é liberado pelo programa tipográfico @TeX{} (@uref{http://tug.org}).   
+Essa é então lida por um `controlador' DVI, o qual conheçe os comandos 
+específicos de dispositivo atuais que podem ser visualizados ou 
+impressos, notadamente Dvips para tradução para PostScript 
+(@pxref{Top,,, dvips, Dvips}) e Xdvi para visualização em uma tela X
 (@uref{http://sourceforge.net/projects/xdvi/}).  @xref{Hardcopy}.
-(Be aware that the Texinfo language is very different from and much
-stricter than @TeX{}'s usual languages: plain @TeX{}, @LaTeX{},
-Con@TeX{}t, etc.)
+(Esteja avisado de que a linguagem Texinfo é muito diferente de e muito 
+mais estrita que as linguagens usuais de @TeX{}: plain @TeX{}, @LaTeX{},
+Con@TeX{}t, etc.).
 
 @item PostScript
 @cindex PostScript output, overview
-(Generated via @command{texi2dvi --ps}.)  PostScript is a page
-description language that became widely used around 1985 and is still
-used today.  @uref{http://en.wikipedia.org/wiki/PostScript} gives a
-basic description and more preferences.  By default, Texinfo uses the
-@command{dvips} program to convert @TeX{}'s DVI output to PostScript.
+(Gerada via @command{texi2dvi --ps}).   PostScript é uma linguagem de 
+descrição de página que se tornou amplamente utilizada por volta de 1985 
+e ainda é utilizada hoje em dia.   
+@uref{http://en.wikipedia.org/wiki/PostScript} dá uma descrição básica e 
+mais preferências.   Por padrão, Texinfo utiliza o programa 
+@command{dvips} para converter a saída DVI de @TeX{} para PostScript.
 @xref{Top,,, dvips, Dvips}.
 
 @item PDF
 @cindex PDF output, overview
 @cindex Beebe, Nelson
-(Generated via @command{texi2dvi --pdf} or @command{texi2pdf}.)  This
-format was developed by Adobe Systems for portable document
-interchange, based on their previous PostScript language.  It can
-represent the exact appearance of a document, including fonts and
-graphics, and supporting arbitrary scaling.  It is intended to be
-platform-independent and easily viewable, among other design goals;
-@uref{http://en.wikipedia.org/wiki/Portable_Document_Format} and
-@uref{http://tug.org/TUGboat/tb22-3/tb72beebe-pdf.pdf} have some
-background.  By default, Texinfo uses the @command{pdftex} program, an
-extension of @TeX{}, to output PDF; see
+(Gerada via @command{texi2dvi --pdf} ou @command{texi2pdf}).   Esse 
+formato foi desenvolvido por Adobe Systems para troca de documento 
+portável, baseado na linguagem PostScript prévia deles.   O formato pode 
+representar a exata aparência de um documento, incluindo fontes e 
+gráficos, e suportar escalamento arbitrário.   Ele é entendido como 
+sendo independente de plataforma e facilmente visualizável, entre outros 
+objetivos de design;
+@uref{http://en.wikipedia.org/wiki/Portable_Document_Format} e
+@uref{http://tug.org/TUGboat/tb22-3/tb72beebe-pdf.pdf} tem algum 
+conhecimento.   Por padrão, Texinfo utiliza o programa @command{pdftex}, 
+uma extensão de @TeX{}, para liberar PDF; veja-se
 @uref{http://tug.org/applications/pdftex}.  @xref{PDF Output}.
 
 @item Docbook
 @cindex Docbook output, overview
 @cindex XML Docbook output, overview
-(Generated via @command{makeinfo --docbook}.)  This is an XML-based
+(Gerado via @command{makeinfo --docbook}).   Esse é um formato baseado 
+em XML desenvolvido alguns anos atrás, primariamente para documentação 
+técnica.   
+
+
+
+This is an XML-based
 format developed some years ago, primarily for technical
 documentation.  It therefore bears some resemblance, in broad
 outline, to Texinfo.  See @uref{http://www.docbook.org}.  Various
