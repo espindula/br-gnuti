@@ -998,16 +998,10 @@ uma extensão de @TeX{}, para liberar PDF; veja-se
 @cindex XML Docbook output, overview
 (Gerado via @command{makeinfo --docbook}).   Esse é um formato baseado 
 em XML desenvolvido alguns anos atrás, primariamente para documentação 
-técnica.   
-
-
-
-This is an XML-based
-format developed some years ago, primarily for technical
-documentation.  It therefore bears some resemblance, in broad
-outline, to Texinfo.  See @uref{http://www.docbook.org}.  Various
-converters from Docbook @emph{to} Texinfo have also been developed;
-see the Texinfo web pages.
+técnica.   Ele por conseguinte assume alguma semelhança, em linhas 
+gerais, com Texinfo.   Veja-se @uref{http://www.docbook.org}.
+Vários conversores de Docbook @emph{para} Texinfo também foram 
+desenvolvidos; veja-se as páginas web Texinfo.
 
 @item XML
 @cindex XML Texinfo output, overview
@@ -1015,19 +1009,20 @@ see the Texinfo web pages.
 @cindex DTD, for Texinfo XML
 @pindex texinfo.dtd
 @pindex txixml2texi
-(Generated via @command{makeinfo --xml}.)  XML is a generic syntax
-specification usable for any sort of content (a reference is at
-@uref{http://www.w3.org/XML}).  The @command{makeinfo} XML output,
-unlike all the other output formats, is a transliteration of the
-Texinfo source rather than processed output.  That is, it translates
-the Texinfo markup commands into XML syntax, for further processing by
-XML tools.  The details of the output are defined in an XML DTD as
-usual, which is contained in a file @file{texinfo.dtd} included in the
-Texinfo source distribution and available via the Texinfo web pages.
-The XML contains enough information to recreate the original content,
-except for syntactic constructs such as Texinfo macros and
-conditionals.  The Texinfo source distribution includes a utility script
-@file{txixml2texi} to do that backward transformation.
+(Gerado via @command{makeinfo --xml}).   XML é uma especificação de 
+sintaxe genérica utilizável para qualquer tipo de conteúdo (uma 
+referência está em @uref{http://www.w3.org/XML}).   A saída XML de 
+@command{makeinfo}, diferente de todos os outros formatos de saída, é 
+uma transliteração do fonte Texinfo em vez de saída processada.   Isto 
+é, a saída traduz os comandos de marcação Texinfo em sintaxe XML, para 
+processamento mais amplo por ferramentas XML.   Os detalhes da saída 
+estão definidos em um DTD XML como de costume, o qual está contido em um 
+arquivo @file{texinfo.dtd} incluso na distribuição do fonte Texinfo e 
+disponível via páginas web Texinfo.
+O XML contém informação suficiente para recriar o conteúdo original, 
+exceto para construções sintáticas, tais como macros Texinfo e 
+condicionais.   A distribuição do fonte Texinfo inclui um script 
+utilitário @file{txixml2texi} para fazer essa transformação de volta.
 @end table
 
 
