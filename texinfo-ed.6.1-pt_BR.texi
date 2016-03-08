@@ -1030,46 +1030,49 @@ utilitário @file{txixml2texi} para fazer essa transformação de volta.
 @section Info Files
 @cindex Info files
 
-As mentioned above, Info format is mostly a plain text transliteration
-of the Texinfo source, with the addition of a few control characters
-to separate nodes and provide navigational information, so that
-Info-reading programs can operate on it.
+Conforme mencionado acima, o formato Info é em sua maioria uma 
+transliteração de texto plano do fonte Texinfo, com a adição de uns 
+poucos caracteres de controle para separar nodos e prover informação de 
+navegação, de forma que os programas de leitura Info possam operar sobre 
+ele.
 
-Info files are nearly always created by processing a Texinfo source
-document.  @command{makeinfo}, also known as @command{texi2any}, is
-the principal command that converts a Texinfo file into an Info file;
+Os arquivos Info são quase sempre criados pelo processamento de um 
+documento fonte Texinfo.   O comando @command{makeinfo}, também 
+conhecido como @command{texi2any}, é o comando principal que converte um 
+arquivo Texinfo em um arquivo Info; 
 @pxref{Generic Translator @command{texi2any}}.
 
-Generally, you enter an Info file through a node that by convention is
-named `Top'.  This node normally contains just a brief summary of the
-file's purpose, and a large menu through which the rest of the file is
-reached.  From this node, you can either traverse the file
-systematically by going from node to node, or you can go to a specific
-node listed in the main menu, or you can search the index menus and then
-go directly to the node that has the information you want.  Alternatively,
-with the standalone Info program, you can specify specific menu items on
-the command line (@pxref{Top,,, info, Info}).
+Geralmente, você adentra um arquivo Info via um nodo que, por convenção, 
+é chamado `Top'.   Esse nodo normalmente contém somente um sumário curto 
+do propósito do arquivo, e um menu amplo por meio do qual o restante do 
+arquivo é alcançado.   A partir desse nodo, você ou pode atravessar o 
+arquivo sistematicamente, indo de nodo a nodo; ou você pode ir até um 
+nodo específico listado no menu principal, ou você pode pesquisar no 
+meu de índice e então ir diretamente ao nodo que tenha a informação que 
+você deseja.   Alternativamente, com programa autônomo Info, você pode 
+especificar itens de menu na linha de comando 
+(@pxref{Top,,, info, Info}).
 
-If you want to read through an Info file in sequence, as if it were a
-printed manual, you can hit @key{SPC} repeatedly, or you get the whole
-file with the advanced Info command @kbd{g *}.  (@xref{Advanced,,
-Advanced Info commands, info, Info}.)
+Se você desejar ler ao longo de um arquivo Info em sequência, como se 
+ele fosse um manual impresso, você pode teclar @key{SPC} repetidamente, 
+ou você percorre arquivo inteiro com o comando Info avançado @kbd{g *}. 
+(@xref{Advanced,, Advanced Info commands, info, Info}).
 
-The @file{dir} file in the @file{info} directory serves as the
-departure point for the whole Info system.  From it, you can reach the
-`Top' nodes of each of the documents in a complete Info system.
+O arquivo @file{dir} file no diretório @file{info} serve como o ponto de 
+chegada para o sistema Info inteiro.   A partir dele, você pode alcançar 
+os nodos `Top' de cada um dos documentos em um sistema Info completo.
 
 @cindex URI syntax for Info
-If you wish to refer to an Info file via a URI, you can use the
-(unofficial) syntax exemplified by the following.  This works with
-Emacs/W3, for example:
+Se você desejar se referir a um arquivo Info via URI, você pode utilizar 
+a sintaxe (não oficial) exemplificada pelo seguinte.   Isto funciona com 
+Emacs/W3, por exemplo:
 @example
 info:emacs#Dissociated%20Press
 info:///usr/info/emacs#Dissociated%20Press
 info://localhost/usr/info/emacs#Dissociated%20Press
 @end example
 
-The @command{info} program itself does not follow URIs of any kind.
+O próprio programa @command{info} não segue URIs de qualquer tipo.
 
 
 @node Printed Books
@@ -1081,44 +1084,48 @@ The @command{info} program itself does not follow URIs of any kind.
 @cindex Characteristics, printed books or manuals
 
 @cindex Knuth, Donald
-A Texinfo file can be formatted and typeset as a printed book or
-manual.  To do this, you need @TeX{}, a sophisticated typesetting
-program written by Donald Knuth of Stanford University.
+Um arquivo Texinfo pode ser formatado e composto como um livro impresso 
+ou um manual.   Para fazer isso, você precisa de @TeX{}, um sofisticado 
+programa de tipografia escrito por Donald Knuth da Universidade Stanford.
 
-A Texinfo-based book is similar to any other typeset, printed work: it
-can have a title page, copyright page, table of contents, and preface,
-as well as chapters, numbered or unnumbered sections and subsections,
-page headers, cross-references, footnotes, and indices.
+Um livro baseado em Texinfo é similar a qualquer outro composto, 
+trabalho impresso: ele pode ter uma página de título, página de direitos 
+autorais, sumário, e prefácio, bem como capítulos, seções e subseções 
+numeradas ou não numeradas, cabeçalhos de páginas, referências cruzadas, 
+notas de rodapé, e índices.
 
-@TeX{} is a general purpose typesetting program.  Texinfo provides a
-file @file{texinfo.tex} that contains information (definitions or
-@dfn{macros}) that @TeX{} uses when it typesets a Texinfo file.
-(@file{texinfo.tex} tells @TeX{} how to convert the Texinfo @@-commands
-to @TeX{} commands, which @TeX{} can then process to create the typeset
-document.)  @file{texinfo.tex} contains the specifications for printing
-a document.  You can get the latest version of @file{texinfo.tex} from
-the Texinfo home page, @uref{http://www.gnu.org/software/texinfo/}.
+@TeX{} é um programa tipográfico de propósito geral.   Texinfo provê um 
+arquivo @file{texinfo.tex} que contém informação (definições ou 
+@dfn{macros}) que @TeX{} utiliza quando compõeum arquivo Texinfo.
+(@file{texinfo.tex} informa a @TeX{} como converter os comandos @@ de 
+Texinfo para comandos @TeX{}, os quais @TeX{} pode então processar para 
+criar o documento tipografado).   @file{texinfo.tex} contém as 
+especificações para imprimir um documento.   Você pode obter a versão 
+mais recente de @file{texinfo.tex} a partir da página de Texinfo 
+@uref{http://www.gnu.org/software/texinfo/}.
 
-In the United States, documents are most often printed on 8.5 inch by
-11 inch pages (216@dmn{mm} by 280@dmn{mm}); this is the default size.
-But you can also print for 7 inch by 9.25 inch pages (178@dmn{mm} by
-235@dmn{mm}, the @code{@@smallbook} size; or on A4 or A5 size paper
-(@code{@@afourpaper}, @code{@@afivepaper}).
-@xref{@code{@@smallbook}}, and @ref{A4 Paper}.
+Nos Estados Unidos, os documentos são em sua maioria frequentemente 
+impressos em páginas de 8.5 por 11 polegadas 
+(216@dmn{mm} por 280@dmn{mm}); esse é o tamanho padrão.
+Porém, você também pode imprimir em páginas de 7 por 9.25 polegadas 
+(178@dmn{mm} por 235@dmn{mm}, o tamanho @code{@@smallbook}; ou em papel 
+de tamanho A4 ou A5 (@code{@@afourpaper}, @code{@@afivepaper}).
+@xref{@code{@@smallbook}}, e @ref{A4 Paper}.
 
 @cindex Literate programming
-@TeX{} is freely distributable.  It is written in a superset of Pascal
-for literate programming called WEB and can be compiled either in
-Pascal or (by using a conversion program that comes with the @TeX{}
-distribution) in C.
+@TeX{} é livremente distribuível.   Ele é escrito em um super conjunto 
+de Pascal para programação de instrução chamado WEB e pode ser compilado 
+ou em Pascal ou (pelo uso de um programa de conversão que vem com a 
+distribuição de @TeX{}) em C.
 
-@TeX{} is very powerful and has a great many features.  Because a
-Texinfo file must be able to present information both on a
-character-only terminal in Info form and in a typeset book, the
-formatting commands that Texinfo supports are necessarily limited.
+@TeX{} é muito poderoso e tem um grande número de características.  
+Porque um arquivo Texinfo deve necessariamente estar apto a apresentar 
+informação tanto em um terminal somente carácter em formato Info quanto 
+em um livro tipografado, os comandos de formatação que Texinfo suporta 
+são necessariamente limitados.
 
-@xref{Obtaining @TeX{}}, for information on acquiring @TeX{}.  It is
-not part of the Texinfo distribution.
+@xref{Obtaining @TeX{}}, para informação sobre como adquirir @TeX{}.  
+Ele não é parte da distribuição Texinfo.
 
 
 @node Adding Output Formats
