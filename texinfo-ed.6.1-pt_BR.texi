@@ -1132,53 +1132,56 @@ Ele não é parte da distribuição Texinfo.
 @section Adding Output Formats
 @cindex Additional output formats
 
-The output formats in the previous sections handle a wide variety of
-usage, but of course there is always room for more.
+Os formatos de saída nas seções anteriores lidam com um variedade ampla 
+de usos, porém, certamente, sempre existe espaço pais mais.
 
 @cindex Output formats, supporting more
 @cindex SGML-tools output format
-If you are a programmer and would like to contribute to the GNU
-project by implementing additional output formats for Texinfo, that
-would be excellent.  The way to do this that would be most useful is
-to write a new back-end for @command{texi2any}, our reference
-implementation of a Texinfo parser; it creates a tree representation
-of the Texinfo input that you can use for the conversion.  The
-documentation in the source file
-@file{tp/Texinfo/Convert/Converter.pm} is a good place to start.
+Se você for um programador e gostaria de contribuir para com o projeto 
+GNU implementando formatos de saída adicionais para Texinfo, isso seria 
+excelente.   A maneira de fazer isso que seria mais útil é escrever uma 
+infra-estrutura nova para @command{texi2any}, nossa implementação de 
+referência de um analisador Texinfo; ela cria uma representação de 
+árvore da entrada de Texinfo que você pode utilizar para a conversão.
+A documentação no arquivo fonte 
+@file{tp/Texinfo/Convert/Converter.pm} é um bom logar para começar.
 @xref{Generic Translator @command{texi2any}}.
 
-Another viable approach is use the Texinfo XML output from
-@command{texi2any} as your input.  This XML is an essentially complete
-representation of the input, but without the Texinfo syntax and option
-peculiarities, as described above.
+Outra abordagem viável é utilizar a saída XML de Texinfo oriunda de 
+@command{texi2any} como sua entrada.   Esse XML é uma representação 
+essencialmente completa da entrada, porém sem a sintaxe de Texinfo 
+e as peculiaridades de opção, conforme descrito acima.
 
 @cindex Texinfo parsers, discouraging more
-If you still cannot resist the temptation of writing a new program
-that reads Texinfo source directly, let us give some more caveats:
-please do not underestimate the amount of work required.  Texinfo is
-by no means a simple language to parse correctly, and remains under
-development, so you would be committing to an ongoing task.  You
-are advised to check that the tests of the language that come with
-@command{texi2any} give correct results with your new program.
+Se você ainda não conseguir resistir a tentação de escrever um programa 
+novo que leia o fonte Texinfo diretamente, permita-nos te dar mais 
+algumas advertências: por favor não subestime a quantidade de trabalho 
+exigida.   Texinfo não é de forma alguma uma linguagem simples de se 
+analisar corretamente, e permanece sob desenvolvimento, de maneira que 
+você estaria se comprometendo com uma tarefa em andamento.   Você está 
+aconselhado a verificar se os testes da linguagem que vem com 
+@command{texi2any} dão resultados corretos com o seu programa novo.
 
 @cindex Man page output, not supported
-From time to time, proposals are made to generate traditional Unix man
-pages from Texinfo source.  However, because man pages have a strict
-conventional format, creating a good man page requires a completely
-different source from that needed for the typical Texinfo applications 
-of writing a good user tutorial and/or a good reference manual.  This 
-makes generating man pages incompatible with the Texinfo design
-goal of not having to document the same information in different
-ways for different output formats.  You might as well write the man
-page directly.
+De tempos em tempos, propostas são feitas para gerar páginas de manual 
+Unix tradicionais a partir do fonte Texinfo.   Entretanto, pelo motivo 
+de que as páginas de manual tem um formato convencional estrito, criar 
+uma página de manual boa exige um fonte completamente diferente daquele 
+necessário para as aplicações Texinfo típicas de escrita de um tutorial 
+de usuário bom e/ou um bom manual de referência.   Isso torna a geração 
+de páginas de manual incompatível com o objetivo do desenho de Texinfo 
+de não ter de documentar a mesma informação em maneiras diferentes para 
+diferentes formatos de saída.   Você poderia também escrever a página de 
+manual diretamente.
 
 @pindex help2man
 @cindex O'Dea, Brendan
-As an alternative way to support man pages, you may find the program
-@command{help2man} to be useful.  It generates a traditional man page
-from the @samp{--help} output of a program.  In fact, the man pages
-for the programs in the Texinfo distribution are generated with this.
-It is GNU software written by Brendan O'Dea, available from
+Como um meio alternativo para suportar páginas de manual, você pode 
+achar que o programa @command{help2man} seja útil.   Ele gera uma página 
+de manual tradicional a partir da saída @samp{--help} de um programa.
+De fato, as páginas de manual para os programas na distribuição Texinfo 
+são geradas com isso.
+Ele é software GNU escrito por Brendan O'Dea, disponível a partir de 
 @uref{http://www.gnu.org/software/help2man}.
 
 
