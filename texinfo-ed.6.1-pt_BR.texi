@@ -1193,13 +1193,14 @@ Ele é software GNU escrito por Brendan O'Dea, disponível a partir de
 @cindex Chassell, Robert J.
 @cindex Fox, Brian
 @cindex Berry, Karl
-Richard M. Stallman invented the Texinfo format, wrote the initial
-processors, and created Edition 1.0 of this manual.  Robert@tie{}J.
-Chassell greatly revised and extended the manual, starting with
-Edition 1.1.  Brian Fox was responsible for the standalone Texinfo
-distribution until version 3.8, and originally wrote the standalone
-@command{makeinfo} and @command{info} programs.  Karl Berry has
-continued maintenance since Texinfo 3.8 (manual edition 2.22).
+Richard M. Stallman inventou o formato Texinfo, escreveu os 
+processadores iniciais, e criou a Edição 1.0 deste manual.  
+Robert@tie{}J. Chassell revisou e estendeu imensamente o manual, 
+iniciando com a Edição 1.1.   Brian Fox foi responsável pela 
+distribuição autônoma de Texinfo até a versão 3.8, e originalmente 
+escreveu os programas autônomos @command{makeinfo} e @command{info}.  
+Karl Berry continuou a manutenção desde Texinfo 3.8 
+(edição do manual 2.22).
 
 @cindex Pinard, Fran@,{c}ois
 @cindex Schwab, Andreas
@@ -1207,15 +1208,16 @@ continued maintenance since Texinfo 3.8 (manual edition 2.22).
 @cindex Weisshaus, Melissa
 @cindex Zaretskii, Eli
 @cindex Zuhn, David D.
-Our thanks go out to all who helped improve this work, particularly
-the indefatigable Eli Zaretskii and Andreas Schwab, who have provided
-patches beyond counting.  Fran@,{c}ois Pinard and David@tie{}D. Zuhn,
-tirelessly recorded and reported mistakes and obscurities.  Zack
-Weinberg did the impossible by implementing the macro syntax in
-@file{texinfo.tex}.  Thanks to Melissa Weisshaus for her frequent
-reviews of nearly similar editions.  Dozens of others have contributed
-patches and suggestions, they are gratefully acknowledged in the
-@file{ChangeLog} file.  Our mistakes are our own.
+Nossos agradecimento vão para todos que ajudaram a aperfeiçoar este 
+trabalho, particularmente os incansáveis Eli Zaretskii e Andreas Schwab, 
+que forneceram correções incontáveis.   Fran@,{c}ois Pinard e 
+David@tie{}D. Zuhn, incansávelmente gravaram e relataram erros e 
+obscuridades.  Zack Weinberg fez o impossível implementando a sintaxe de 
+macro em @file{texinfo.tex}.   Obrigado a Melissa Weisshaus por suas 
+frequentes revisões de edições quase similares.   Dúzias de outros 
+contribuiram com correções e sugestões, eles estão agradecidamente 
+reconhecidos no arquivo @file{ChangeLog}.   Nossos erros são nossos 
+próprios.
 
 @cindex History of Texinfo
 @cindex Texinfo history
@@ -1223,88 +1225,91 @@ patches and suggestions, they are gratefully acknowledged in the
 
 @cindex Scribe
 @cindex Reid, Brian
-In the 1970's at CMU, Brian Reid developed a program and format named
-Scribe to mark up documents for printing.  It used the @code{@@}
-character to introduce commands, as Texinfo does.  Much more
-consequentially, it strove to describe document contents rather than
-formatting, an idea wholeheartedly adopted by Texinfo.
+Nos anos 1970 no CMU, Brian Reid desenvolveu um programa e formato 
+chamado Scribe para marcar documentos para impressão.   Ele utilizou o 
+carácter @code{@@} para introduzir comandos, conforme Texinfo faz.  
+Muito mais consequencialmente, ele se empenhou em descrever o conteúdo 
+dos documentos em vez da formatação, uma ideia inteiramente adotada por 
+Texinfo.
 
 @cindex Bolio
 @cindex Bo@TeX{}
-Meanwhile, people at MIT developed another, not too dissimilar format
-called Bolio.  This then was converted to using @TeX{} as its typesetting
-language: Bo@TeX{}.  The earliest Bo@TeX{} version seems to have been
-0.02 on October 31, 1984.
+Ao mesmo tempo, pessoas no MIT desenvolveram outro, não muito diferente 
+formato chamado Bolio.  Esse então foi convertido utilizando @TeX{} como 
+sua linguagem tipográfica: Bo@TeX{}.  A versão mais antiga de Bo@TeX{} 
+parece ter sido a 0.02 em 31 de outubro de 1984.
 
-Bo@TeX{} could only be used as a markup language for documents to be
-printed, not for online documents.  Richard Stallman (RMS) worked on
-both Bolio and Bo@TeX{}.  He also developed a nifty on-line help format
-called Info, and then combined Bo@TeX{} and Info to create Texinfo, a
-mark up language for text that is intended to be read both online and
-as printed hard copy.
+Bo@TeX{} somente poderia ser utilizado como uma linguagem de marcação 
+para documentos serem impressos, não para documentos online.  Richard 
+Stallman (RMS) trabalhou em ambos Bolio e Bo@TeX{}.  Ele também 
+desenvolveu um formato chique de ajuda on-line chamado Info, e então 
+combinou Bo@TeX{} e Info para criar Texinfo, uma linguagem de marcação 
+para texto que é entendida para ler ambos online e como cópia impressa.
 
-Moving forward, the original translator to create Info was written
-(primarily by RMS and Bob Chassell) in Emacs Lisp, namely the
-@code{texinfo-format-buffer} and other functions.  In the early 1990s,
-Brian Fox reimplemented the conversion program in C, now called
+Seguindo em frente, o tradutor original para criar Info foi escrito 
+(primariamente por RMS e Bob Chassell) em Emacs Lisp, a saber: o 
+@code{texinfo-format-buffer} e outras funções.  No começo dos anos 1990, 
+Brian Fox reimplementou o programa de conversão em C, agora chamado 
 @command{makeinfo}.
 
 @subheading Reimplementing in Perl
 
 @cindex Cons, Lionel
 @cindex Dumas, Patrice
-In 2012, the C @command{makeinfo} was itself replaced by a Perl
-implementation generically called @command{texi2any}.  This version
-supports the same level of output customization as
-@command{texi2html}, an independent program originally written by
-Lionel Cons, later with substantial work by many others.  The many
-additional features needed to make @command{texi2html} a replacement
-for @command{makeinfo} were implemented by Patrice Dumas.  The first
-never-released version of @command{texi2any} was based on the
-@command{texi2html} code.  That implementation, however, was abandoned
-in favor of the current program, which parses the Texinfo input into a
-tree for processing.  It still supports nearly all the features of
-@command{texi2html}.
+Em 2012, o @command{makeinfo} C foi ele próprio substituido por uma 
+implementação Perl chamada genericamente @command{texi2any}.  Essa 
+versão suporta o mesmo nível de personalização de saída que 
+@command{texi2html}, um programa independente originalmente escrito por 
+Lionel Cons, mais tarde com trabalho substancial de muitos outros.  As 
+muitas características adicionais necessarias para tornar 
+@command{texi2html} uma substituição para @command{makeinfo} foram 
+implementadas por Patrice Dumas.  A primeira versão jamais lançada de 
+@command{texi2any} foi baseada no código @command{texi2html}.  Essa 
+implementação, entretanto, foi abandonada em favor do atual programa, 
+que analisa a entrada Texinfo em uma árvore para processamento.  Ele 
+ainda suporta quase todas as características de @command{texi2html}.
 
-The new Perl program is much slower than the old C program.  We hope
-the speed gap will close in the future, but it may not ever be
-entirely comparable.  So why did we switch?  In short, we intend and
-hope that the present program will be much easier than the previous C
-implementation of @command{makeinfo} to extend to different output
-styles, back-end output formats, and all other customizations.
-In more detail:
+O novo programa Perl é muito mais lento que o antigo programa C.  
+Nós esperamos que a diferença de velocidade será fechada no futuro, 
+porém elas podem jamais ser inteiramente comparáveis.  Então porque nós 
+mudamos?  Em poucas palavras, nós pretendemos e esperamos que o presente 
+programa seja muito mais fácil que a prévia impletação C de 
+@command{makeinfo} para extender para diferentes estilos de saída, 
+formatos de infra estrutura de saída, e todas as outras personalizações.
+Em mais detalhes:
 
 @itemize @bullet
-@item HTML customization.  Many GNU and other free software packages
-had been happily using the HTML customization features in
-@command{texi2html} for years.  Thus, in effect two independent
-implementations of the Texinfo language had developed, and keeping
-them in sync was not simple.  Adding the HTML customization possible
-in @command{texi2html} to a C program would have been an
-enormous effort.
+@item Personalização HTML.  Muitos GNU e outros pacotes de software 
+livre tem sido felizes na utilização das características de 
+personalização de HTML em @command{texi2html} por anos.  Assim, na 
+verdade, duas implementações independentes da linguagem Texinfo foram 
+desenvolvidas, e mantê-las em sincronia não foi simples.  Adicionar a 
+possibilidade de personalização HTML em @command{texi2html} a um 
+programa C tem sido um esforço enorme.
 
-@item Unicode, and multilingual support generally, especially of east
-Asian languages.  Although of course it's perfectly plausible to write
-such support in C, in the particular case of @command{makeinfo}, it
-would have been tantamount to rewriting the entire program.  In Perl,
-much of that comes essentially for free.
+@item Unicode, e suporte multilinguas genericamente, especialmente das 
+linguagens da Ásia Oriental.  Apesar que certamente é perfeitamente 
+plausível escrever tal suporte em C, no caso particular de 
+@command{makeinfo}, isso teria sido equivalente a reescrever o programa 
+inteiro.  Em Perl, muito disso vem essencialmente de graça.
 
-@item Additional back-ends.  The @command{makeinfo} code had become
-convoluted to the point where adding a new back-end was quite complex,
-requiring complex interactions with existing back-ends.  In contrast,
-our Perl implementation provides a clean tree-based representation for
-all back-ends to work from.  People have requested numerous different
-back-ends (@LaTeX{}, the latest (X)HTML, @dots{}), and they will now
-be much more feasible to implement.  Which leads to the last item:
+@item Infra estrutura adicional.  O código @command{makeinfo} se tornou 
+complexo ao ponto de adicionar uma infra estrutura nova era bastante 
+complexo, exigindo interações complexas com as infra estruturas 
+existentes.  Em contraste, nossa implementação Perl provê uma 
+representação limpa baseada em árvore para todas as infra estruturas 
+funcionarem.  Pessoas tem solicitado numerosas infra estruturas 
+diferentes (@LaTeX{}, o mais recente (X)HTML, @dots{}), e elas agora 
+serão muito mais viáveis de implementar.  O que conduz ao último item:
 
-@item Making contributions easier.  In general, due to the cleaner
-structure, the Perl program should be considerably easier than the C
-for anyone to read and contribute to, with the resulting obvious
-benefits.
+@item Tornando as contribuições mais fáceis.  Em geral, dedivo à 
+estrutura mais limpa, o programa Perl deveria ser consideravelmente mais 
+fácil que o C para qualquer pessoa ler e contribuir com, com os óbvios 
+benefícios resultantes.
 @end itemize
 
-@xref{Reference Implementation}, for more on the rationale for and
-role of @command{texi2any}.
+@xref{Reference Implementation}, para mais sobre a razão de ser e função 
+de @command{texi2any}.
 
 
 @node Writing a Texinfo File
