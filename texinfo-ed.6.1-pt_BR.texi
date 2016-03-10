@@ -1465,40 +1465,43 @@ shell.
 @findex comment
 @findex c
 
-You can write comments in a Texinfo file by using the @code{@@comment}
-command, which may be abbreviated to @code{@@c}.  Such comments are
-for a person looking at the Texinfo source file.  All the text on a
-line that follows either @code{@@comment} or @code{@@c} is a comment;
-the rest of the line does not appear in the visible output.  (To be
-precise, the character after the @code{@@c} or @code{@@comment} must
-be something other than a dash or alphanumeric, or it will be taken as
-part of the command.)
+Você pode escrever comentários em um arquivo Texinfo utilizando o 
+comando @code{@@comment}, o qual pode ser abreviado para @code{@@c}.  
+Tais comentários são para uma pessoa examinando o arquivo fonte Texinfo.  
+Todo o texto em uma linha que se seguir ou a @code{@@comment} ou a 
+@code{@@c} é um comentário; o restante da linha não aparece na saída 
+visível.  (Para ser preciso, o carácter após o @code{@@c} ou 
+@code{@@comment} deve necessariamente ser algo que não um traço ou 
+alfanumérico, ou será tomado como sendo parte do comando.)
 
-Often, you can write the @code{@@comment} or @code{@@c} in the middle
-of a line, and only the text that follows after the @code{@@comment}
-or @code{@@c} command does not appear; but some commands, such as
-@code{@@settitle}, work on a whole line.  You cannot use @code{@@comment}
-or @code{@@c} within a line beginning with such a command.
+Frequentemente, você pode escrever o @code{@@comment} ou @code{@@c} no 
+meio de uma linha, e somente o texto que se seguir após o comando 
+@code{@@comment} ou @code{@@c} não aparece; porém alguns comandos, tais 
+como @code{@@settitle}, funcionam sobre uma linha inteira.  Você não 
+pode utilizar @code{@@comment} ou @code{@@c} dentro de uma linha que se 
+inicie com um tal comando.
 
 @findex DEL @r{(comment character)}
 @cindex Catcode for comments in @TeX{}
-In cases of nested command invocations, complicated macro definitions,
-etc., @code{@@c} and @code{@@comment} may provoke an error when
-processing with @TeX{}.  Therefore, you can also use the @kbd{DEL}
-character (ASCII 127 decimal, 0x7f hex, 0177 octal) as a true @TeX{}
-comment character (catcode 14, in @TeX{} internals).  Everything on
-the line after the @kbd{DEL} will be ignored.
+Em casos de invocações de comando aninhado, definições complicadas de 
+macro, etc., @code{@@c} e @code{@@comment} podem provocar um erro quando 
+do processamento com @TeX{}.  Por conseguinte, você também pode utilizar 
+o carácter @kbd{DEL}(decimal 127 ASCII, hexadecimal 0x7f, octal 0177) 
+como um verdadeiro carácter de comentário @TeX{} (catcode 14, em 
+internos @TeX{}).   Tudo na linha após o @kbd{DEL} será ignorado.
 
 @cindex Ignored text
 @cindex Unprocessed text
 @findex ignore
-You can also have long stretches of text ignored by the Texinfo
-processors with the @code{@@ignore} and @code{@@end ignore} commands.
-Write each of these commands on a line of its own, starting each
-command at the beginning of the line.  Text between these two commands
-does not appear in the processed output.  You can use @code{@@ignore}
-and @code{@@end ignore} for writing comments.  (For some caveats
-regarding nesting of such commands, @pxref{Conditional Nesting}.)
+Você também pode ter trechos longos de texto ignorados pelos 
+processadores Texinfo com os comandos @code{@@ignore} e 
+@code{@@end ignore}.
+Escreva cada um desses comandos em sua própria linha, iniciando cada 
+comando no começo da linha.  O texto entre esses dois comandos não 
+aparece na saída processada.  Você pode utilizar @code{@@ignore} e 
+@code{@@end ignore} para escrever comentários.  (Para algumas 
+advertências relativamente ao aninhamento de tais comandos,  
+@pxref{Conditional Nesting}.)
 
 
 @node Minimum
