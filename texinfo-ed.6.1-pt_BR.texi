@@ -1315,14 +1315,14 @@ de @command{texi2any}.
 @node Writing a Texinfo File
 @chapter Writing a Texinfo File
 
-This chapter describes Texinfo syntax and what is required in a Texinfo 
-file, and gives a short sample file.
+Este capítulo descreve a sintax Texinfo e o que é exigido em um arquivo 
+Texinfo, e dá um arquivo curto de amostra.
 
 @menu
-* Conventions::                 General rules for writing a Texinfo file.
-* Comments::                    Writing comments and ignored text in general.
-* Minimum::                     What a Texinfo file must have.
-* Short Sample::                A short sample Texinfo file.
+* Conventions::                Regras gerais para escrever um arquivo Texinfo.
+* Comments::                   Escrevendo comentários e texto ignorado em geral.
+* Minimum::                    O que um arquivo Texinfo deve ter.
+* Short Sample::               Um arquivo curto de amostra Texinfo
 @end menu
 
 
@@ -1332,56 +1332,59 @@ file, and gives a short sample file.
 @cindex Syntactic conventions
 @cindex Conventions, syntactic
 @cindex Characters, basic input
-@anchor{Formatting Commands} @c old name
+@anchor{Formatting Commands} @c nome antigo
 
-This section describes the general conventions used in all Texinfo documents.
+Esta seção descreve as convenções gerais utilizadas em todos os 
+documentos Texinfo.
 
 @itemize @bullet
 @item
 @cindex Source files, characters used
-All printable ASCII characters except @samp{@@}, @samp{@{} and
-@samp{@}} can appear in a Texinfo file and stand for themselves.
-@samp{@@} is the escape character which introduces commands, while
-@samp{@{} and @samp{@}} are used to surround arguments to certain
-commands.  To put one of these special characters into the document, put
-an @samp{@@} character in front of it, like this: @samp{@@@@},
-@samp{@@@{}, and @samp{@@@}}.
+Todos os caracteres ASCII imprimíveis, exceto @samp{@@}, @samp{@{} e 
+@samp{@}}, podem aparecer em um arquivo Texinfo e representam eles 
+mesmos.
+@samp{@@} é o carácter de encapsulamento que introduz comandos, enquanto 
+@samp{@{} e @samp{@}} são utilizados para envolver argumentos a certor 
+comandos.   Para colocar um desses caracteres especiais no documento, 
+coloque um carácter @samp{@@} em frente a ele, como isto: @samp{@@@@},
+@samp{@@@{}, e @samp{@@@}}.
 
 @item
 @cindex @@-commands
 @cindex Formatting commands
-In a Texinfo file, the commands you write to describe the contents of
-the manual are preceded by an @samp{@@} character; they are called
-@dfn{@@-commands}.  (The @samp{@@} in Texinfo has the same meaning that
-@samp{\} has in plain @TeX{}.)
+Em um arquivo Texinfo, os comandos que você escreve para descrever o 
+conteúdo do manual são precedidos por um carácter @samp{@@}; eles são 
+chamados @dfn{comandos @@}.   (O @samp{@@} em Texinfo tem o mesmo 
+significado que @samp{\} tem em @TeX{} plano).
 
 @cindex Braces, when to use
-Depending on what they do or what arguments@footnote{The word
-@dfn{argument} comes from the way it is used in mathematics and does not
-refer to a dispute between two people; it refers to the information
-presented to the command.  According to the @cite{Oxford English
-Dictionary}, the word derives from the Latin for @dfn{to make clear,
-prove}; thus it came to mean `the evidence offered as proof', which is
-to say, `the information offered', which led to its mathematical
-meaning.  In its other thread of derivation, the word came to mean `to
-assert in a manner against which others may make counter assertions',
-which led to the meaning of `argument' as a dispute.} they take, you
-need to write @@-commands on lines of their own, or as part of
-sentences.  As a general rule, a command requires braces if it mingles 
-among other text; but it does not need braces if it is on a line of its 
-own.  For more details of Texinfo command syntax, see @ref{Command 
-Syntax}.
+Dependendo do que fazem ou quais argumentos@footnote{A palavra 
+argumento é oriunda da maneira como ela é empregada em matemática e não 
+se refere a uma disputa entre duas pessoas; ela se refere a informação 
+apresentada ao comando.  De acordo com o @cite{Oxford English 
+Dictionary}, a palavra é derivada do Latim para @dfn{tornar claro, 
+provar}; então, ela veio a significar `a evidência oferecida como 
+prova', o que é dizer `a informação oferecida', o que leva ao seu 
+significado matemático.  Em sua outra derivação subjacente, a palavra 
+veio a significar `afirmar em um modo contra o qual outros podem fazer 
+contra afirmações', o que levou ao significado de `argumento' como uma 
+disputa.} receberem, você precisa escrever comandos @@ em suas próprias 
+linhas, ou como parte de sentenças.   Como uma regra geral, um comando 
+exige chaves se esse comando se mistirar entre outro texto; porém, ele 
+não necessita das chaves se estiver em sua própria linha.  Para mais 
+detalhes da sintaxe de comando Texinfo, veja-se @ref{Command Syntax}.
 
 
 @item
-Whitespace following an @@-command name is optional and (usually)
-ignored if present.  The exceptions are contexts when whitespace is
-significant, e.g., an @code{@@example} environment.
+Espaço em branco seguindo um nome de comando @@ é opcional e 
+(normalmente) ignorado se presente.  As exceções são contextos quando o 
+espaço em branco é significativo, por exemplo, um ambiente de 
+@code{@@example}.
 
 
 @item
-Texinfo supports the usual quotation marks used in English and in
-other languages; see @ref{Inserting Quotation Marks}.
+Texinfo suporta as marcações normais de encapsulamento utilizados em 
+Inglês e em outras linguagens; veja-se @ref{Inserting Quotation Marks}.
 
 @item
 @cindex Multiple dashes in source
@@ -1389,64 +1392,69 @@ other languages; see @ref{Inserting Quotation Marks}.
 @cindex Hyphens in source, two or three in a row
 @cindex Em dash, producing
 @cindex En dash, producing
-Use three hyphens in a row, @samp{---}, to produce a long dash---like
-this (called an @dfn{em dash}), used for punctuation in sentences.
-Use two hyphens, @samp{--}, to produce a medium dash (called an
-@dfn{en dash}), used primarily for numeric ranges, as in ``June
-25--26''.  Use a single hyphen, @samp{-}, to produce a standard hyphen
-used in compound words.  For display on the screen, Info reduces three
-hyphens to two and two hyphens to one (not transitively!).  Of course,
-any number of hyphens in the source remain as they are in literal
-contexts, such as @code{@@code} and @code{@@example}.
+Utilize três hífens em uma linha, @samp{---}, para produzir um traço 
+longo---como esse (chamado um @dfn{travessão}), utilizado para pontuação 
+em sentenças.  Utilize dois hífens, @samp{--}, para produzir um traço 
+médio (chamado um @dfn{traço médio}), utilizado primariamente para 
+intervalos numéricos, como em ``Junho 25--26''.  Utilize um hífen 
+simples, @samp{-}, para produzir um hífen padrão utilizado em palavras 
+compostas.  Para exibir na tela, Info reduz três hífens para dois e dois 
+hífens para um (não transitivamente!).  Certamente, qualquer número de 
+hífens no fonte permanece como eles estiverem em contextos literais, 
+tais como @code{@@code} e @code{@@example}.
 
 @item
 @cindex Form feed characters
 @cindex @kbd{CTRL-l}
-Form feed (@kbd{CTRL-l}) characters in the input are handled as
-follows:
+Os caracteres de alimentação de formulário (@kbd{CTRL-l}) na entrada são 
+manipulados conforme segue:
 
 @table @asis
 @item PDF/DVI
-In normal text, treated as ending any open paragraph; essentially
-ignored between paragraphs.
+Em texto normal, tratado como finalizante de qualquer parágrafo aberto; 
+essencialmente ignorado entre parágrafos.
 
 @item Info
-Output as-is between paragraphs (their most common use); in other
-contexts, they may be treated as regular spaces (and thus consolidated
-with surrounding whitespace).
+Saída como-é entre parágrafos (o uso mais comum deles); em outros 
+contextos, eles podem ser tratados como espaços regulares (e então 
+consolidados com espaço em branco envolvente).
 
 @item HTML
-Written as a numeric entity except contexts where spaces are ignored;
-for example, in @samp{@@footnote@{ ^L foo@}}, the form feed is
-ignored.
+Escrito como uma entidade numérica, exceto contextos onde espaços são 
+ignorados; por exemplo, em @samp{@@footnote@{ ^L foo@}}, a alimentação 
+de formulário é ignorada.
 
 @item XML
-Keep them everywhere; in attributes, escaped as @samp{\f}; also,
-@samp{\} is escaped as @samp{\\} and newline as @samp{\n}.
+Mantenha-os em qualquer lugar; em atributos, encapsulados como 
+@samp{\f}; também, @samp{\} é encapsulado como @samp{\\} e uma nova 
+linha como @samp{\n}.
 
 @item Docbook
-Completely removed, as they are not allowed.
+Completamente removidos, dado que não são permitidos.
 @end table
 
-As you can see, because of these differing requirements of the output
-formats, it's not possible to use form feeds completely portably.
+Como você pode ver, por causa dessas exigências diferentes dos formatos 
+de saída, não é possível se utilizar alimentações de formulário 
+completamente portáveis.
 
 @item
 @cindex Tabs; don't use!
-@strong{Caution:} Last, do not use tab characters in a Texinfo file!
-(Except perhaps in verbatim modes.)  @TeX{} uses variable-width fonts,
-which means that it is impractical at best to define a tab to work in
-all circumstances.  Consequently, @TeX{} treats tabs like single
-spaces, and that is not what they look like in the source.
-Furthermore, @code{makeinfo} does nothing special with tabs, and thus
-a tab character in your input file will usually have a different
-appearance in the output.
+@strong{Aviso:} Por último, não utilize caracteres tab em um arquivo 
+Texinfo! (Exceto, talvez, em modos textuais.)  @TeX{} utiliza fontes de 
+largura variável, o que significa que é impraticável, na melhor das 
+hipóteses, se definir um tab para funcionar em todas as circunstâncias.  
+Consequentemente, @TeX{} trata tabs como espaços únicos, e isso não o 
+eles aparentam no fonte.
+Além disso, @code{makeinfo} não faz nada especial com tabs, e então um 
+carácter tab em seu arquivo de entrada geralmente terá uma aparência 
+diferente na saída.
 
 @noindent
-To avoid this problem, Texinfo mode in GNU Emacs inserts
-multiple spaces when you press the @key{TAB} key.  Also, you can run
-@code{untabify} in Emacs to convert tabs in a region to multiple
-spaces, or use the @code{unexpand} command from the shell.
+Para evitar esse problema, o modo Texinfo em GNU Emacs insere espaços 
+múltiplos quando você pressiona a tecla @key{TAB}.   Ainda, você pode 
+executar @code{untabify} em Emacs para converter tabs em uma região para 
+espaços múltiplos, ou utilizar o comando @code{unexpand} a partir do 
+shell.
 @end itemize
 
 
