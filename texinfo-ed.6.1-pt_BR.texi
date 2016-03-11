@@ -75,7 +75,7 @@ seção intitulada ``Licença de Documentação Livre GNU''.
 
 (a) O Texto de Quarta Capa da Free Software Foundation, Inc. (FSF) é: 
 ``Você tem a liberdade de copiar e modificar este manual GNU.   
-Comprando cópias da FSF você a apóia no desenvolvimento GNU e na 
+Comprando cópias da FSF você a apoia no desenvolvimento GNU e na 
 promoção da liberdade de software''.
 
 
@@ -221,7 +221,7 @@ Apêndices
 
 Visão geral de Texinfo
 
-* Reporting Bugs::              Sumetendo relatórios efetivos de bugs.
+* Reporting Bugs::              Submetendo relatórios efetivos de bugs.
 * Output Formats::              Visão geral dos formatos de saída suportados.
 * Info Files::                  O que é um arquivo Info?
 * Printed Books::               Característica de um livro impresso ou manual.
@@ -287,7 +287,7 @@ Nodos
 * Texinfo Document Structure::  Como os manuais Texinfo normalmente são organizados.
 * Node Names::                  Como escolher nomes de nodo.
 * Writing a Node::              Como escrever uma linha @code{@@node}.
-* Node Line Requirements::      Mantenha os nomes unicos.
+* Node Line Requirements::      Mantenha os nomes únicos.
 * First Node::                  Como escrever um nodo `Top'.
 * @code{@@top} Command::                Como utilizar o comando @code{@@top}.
 * Node Menu Illustration::      Um diagrama, e menus e nodos de amostra.
@@ -327,7 +327,7 @@ Referências cruzadas
 * Referring to a Manual as a Whole::   Referência a um manual inteiro.
 * @code{@@ref}::                        Uma referência para a última parte de uma sentença.
 * @code{@@pxref}::                      Como escrever uma referência cruzada parentesca.
-* @code{@@anchor}::                     Definindo alvos arbitrários de referências cruzdas.
+* @code{@@anchor}::                     Definindo alvos arbitrários de referências cruzadas.
 * @code{@@inforef}::                    Como se referir a um arquivo somente Info.
 * @code{@@url}::                        Como se referir a um localizador uniforme de recurso.
 * @code{@@cite}::                       Como se referir a livros que não estão no sistema Info.
@@ -440,7 +440,7 @@ Notas de rodapé
 
 * Index Entries::               Escolha palavras diferentes para entradas de índice.
 * Predefined Indices::          Utilize índices diferentes para tipos diferentes de entradas.
-* Indexing Commands::           Como fazer uma entrada de íncide.
+* Indexing Commands::           Como fazer uma entrada de índice.
 * Printing Indices & Menus::    Como imprimir um índice em cópia impressa e gerar menus de índice em Info.
 * Combining Indices::           Como combinar índices.
 * New Indices::                 Como definir seus próprios índices.
@@ -575,7 +575,7 @@ Processadores Externos de Macro: Diretivas de Linha
 
 * @samp{#line} Directive::
 * TeX:: @samp{#line} e @TeX{}.
-* Syntax:: Detalhes da Síntaxe @samp{#line}.
+* Syntax:: Detalhes da Sintaxe @samp{#line}.
 
 Arquivos Include
 
@@ -756,7 +756,7 @@ quando ela é ruim, é melhor que nada.
 @cindex Libre software
 
 GNU Texinfo é @dfn{free software}; isso significa que qualquer pessoa é 
-livre para utilizá-lo e livre para redistribui-lo sob certas condições.   
+livre para utilizá-lo e livre para redistribuí-lo sob certas condições.   
 Texinfo não está em domínio público; ele está sob direitos autorais e 
 existem restrições acerca da sua distribuição, porém essas restrições 
 são desenhadas para permitir qualquer coisa que um bom cidadão 
@@ -782,12 +782,12 @@ Ainda, para a nossa própria proteção, nós devemos estar certos de que
 qualquer pessoa sabe que não existe garantia para os programas que se 
 relacionem a Texinfo.   Se esses programas forem modificados por 
 qualquer outra pessoa e passados adiante, nós desejamos que seus 
-receptores saibam que o que eles tem não é o que nós distribuimos, de 
+receptores saibam que o que eles tem não é o que nós distribuímos, de 
 forma que quaisquer problemas introduzidos por outros não refletirão na 
 nossa reputação.
 
 As condições precisas das licenças para os programas atualmente seno 
-distribuidos que se relacionem com Texinfo são encontradas nas Licenças 
+distribuídos que se relacionem com Texinfo são encontradas nas Licenças 
 Públicas Gerais que os acompanham.   Este manual está coberto pela 
 Licença de Documentação Livre GNU (@pxref{Licença de Documentação Livre GNU}).
 
@@ -853,7 +853,7 @@ Mais informação, incluindo manuais para pacotes GNU, está disponível em
 @uref{http://www.gnu.org/doc/, página web de documentação GNU}.
 
 @menu
-* Reporting Bugs::              Sumetendo relatórios efetivos de bugs.
+* Reporting Bugs::              Submetendo relatórios efetivos de bugs.
 * Output Formats::              Visão geral dos formatos de saída suportados.
 * Info Files::                  O que é um arquivo Info?
 * Printed Books::               Característica de um livro impresso ou manual.
@@ -898,7 +898,7 @@ possível---a entrada atual com a qual você descobriu o defeito bastará.
 entrada, melhor).
 
 @cindex Patches, contributing
-Correções (``Patches'') são mais que bemvindos; se possível, por favor 
+Correções (``Patches'') são mais que bem-vindos; se possível, por favor 
 faça-as com @samp{@w{diff -c}} 
 (@pxref{Top,,, diffutils, Comparing and Merging Files}) e inclua as 
 entradas @file{ChangeLog} 
@@ -958,7 +958,7 @@ linguagem HTML e mais informação relacionada, veja-se
 @pindex xdvi
 (Gerado via @command{texi2dvi}).   O formato binário ``DeVIce Independent''
 é liberado pelo programa tipográfico @TeX{} (@uref{http://tug.org}).   
-Essa é então lida por um `controlador' DVI, o qual conheçe os comandos 
+Essa é então lida por um `controlador' DVI, o qual conhece os comandos 
 específicos de dispositivo atuais que podem ser visualizados ou 
 impressos, notadamente Dvips para tradução para PostScript 
 (@pxref{Top,,, dvips, Dvips}) e Xdvi para visualização em uma tela X
@@ -1096,7 +1096,7 @@ notas de rodapé, e índices.
 
 @TeX{} é um programa tipográfico de propósito geral.   Texinfo provê um 
 arquivo @file{texinfo.tex} que contém informação (definições ou 
-@dfn{macros}) que @TeX{} utiliza quando compõeum arquivo Texinfo.
+@dfn{macros}) que @TeX{} utiliza quando compõem arquivo Texinfo.
 (@file{texinfo.tex} informa a @TeX{} como converter os comandos @@ de 
 Texinfo para comandos @TeX{}, os quais @TeX{} pode então processar para 
 criar o documento tipografado).   @file{texinfo.tex} contém as 
@@ -1140,7 +1140,7 @@ de usos, porém, certamente, sempre existe espaço pais mais.
 Se você for um programador e gostaria de contribuir para com o projeto 
 GNU implementando formatos de saída adicionais para Texinfo, isso seria 
 excelente.   A maneira de fazer isso que seria mais útil é escrever uma 
-infra-estrutura nova para @command{texi2any}, nossa implementação de 
+infraestrutura nova para @command{texi2any}, nossa implementação de 
 referência de um analisador Texinfo; ela cria uma representação de 
 árvore da entrada de Texinfo que você pode utilizar para a conversão.
 A documentação no arquivo fonte 
@@ -1211,11 +1211,11 @@ Karl Berry continuou a manutenção desde Texinfo 3.8
 Nossos agradecimento vão para todos que ajudaram a aperfeiçoar este 
 trabalho, particularmente os incansáveis Eli Zaretskii e Andreas Schwab, 
 que forneceram correções incontáveis.   Fran@,{c}ois Pinard e 
-David@tie{}D. Zuhn, incansávelmente gravaram e relataram erros e 
+David@tie{}D. Zuhn, incansavelmente gravaram e relataram erros e 
 obscuridades.  Zack Weinberg fez o impossível implementando a sintaxe de 
 macro em @file{texinfo.tex}.   Obrigado a Melissa Weisshaus por suas 
 frequentes revisões de edições quase similares.   Dúzias de outros 
-contribuiram com correções e sugestões, eles estão agradecidamente 
+contribuíram com correções e sugestões, eles estão agradecidamente 
 reconhecidos no arquivo @file{ChangeLog}.   Nossos erros são nossos 
 próprios.
 
@@ -1256,12 +1256,12 @@ Brian Fox reimplementou o programa de conversão em C, agora chamado
 
 @cindex Cons, Lionel
 @cindex Dumas, Patrice
-Em 2012, o @command{makeinfo} C foi ele próprio substituido por uma 
+Em 2012, o @command{makeinfo} C foi ele próprio substituído por uma 
 implementação Perl chamada genericamente @command{texi2any}.  Essa 
 versão suporta o mesmo nível de personalização de saída que 
 @command{texi2html}, um programa independente originalmente escrito por 
 Lionel Cons, mais tarde com trabalho substancial de muitos outros.  As 
-muitas características adicionais necessarias para tornar 
+muitas características adicionais necessárias para tornar 
 @command{texi2html} uma substituição para @command{makeinfo} foram 
 implementadas por Patrice Dumas.  A primeira versão jamais lançada de 
 @command{texi2any} foi baseada no código @command{texi2html}.  Essa 
@@ -1273,8 +1273,8 @@ O novo programa Perl é muito mais lento que o antigo programa C.
 Nós esperamos que a diferença de velocidade será fechada no futuro, 
 porém elas podem jamais ser inteiramente comparáveis.  Então porque nós 
 mudamos?  Em poucas palavras, nós pretendemos e esperamos que o presente 
-programa seja muito mais fácil que a prévia impletação C de 
-@command{makeinfo} para extender para diferentes estilos de saída, 
+programa seja muito mais fácil que a prévia implementação C de 
+@command{makeinfo} para estender para diferentes estilos de saída, 
 formatos de infra estrutura de saída, e todas as outras personalizações.
 Em mais detalhes:
 
@@ -1287,7 +1287,7 @@ desenvolvidas, e mantê-las em sincronia não foi simples.  Adicionar a
 possibilidade de personalização HTML em @command{texi2html} a um 
 programa C tem sido um esforço enorme.
 
-@item Unicode, e suporte multilinguas genericamente, especialmente das 
+@item Unicode, e suporte multilínguas genericamente, especialmente das 
 linguagens da Ásia Oriental.  Apesar que certamente é perfeitamente 
 plausível escrever tal suporte em C, no caso particular de 
 @command{makeinfo}, isso teria sido equivalente a reescrever o programa 
@@ -1302,7 +1302,7 @@ funcionarem.  Pessoas tem solicitado numerosas infra estruturas
 diferentes (@LaTeX{}, o mais recente (X)HTML, @dots{}), e elas agora 
 serão muito mais viáveis de implementar.  O que conduz ao último item:
 
-@item Tornando as contribuições mais fáceis.  Em geral, dedivo à 
+@item Tornando as contribuições mais fáceis.  Em geral, devido à 
 estrutura mais limpa, o programa Perl deveria ser consideravelmente mais 
 fácil que o C para qualquer pessoa ler e contribuir com, com os óbvios 
 benefícios resultantes.
@@ -1315,7 +1315,7 @@ de @command{texi2any}.
 @node Writing a Texinfo File
 @chapter Writing a Texinfo File
 
-Este capítulo descreve a sintax Texinfo e o que é exigido em um arquivo 
+Este capítulo descreve a sintaxe Texinfo e o que é exigido em um arquivo 
 Texinfo, e dá um arquivo curto de amostra.
 
 @menu
@@ -1344,7 +1344,7 @@ Todos os caracteres ASCII imprimíveis, exceto @samp{@@}, @samp{@{} e
 @samp{@}}, podem aparecer em um arquivo Texinfo e representam eles 
 mesmos.
 @samp{@@} é o carácter de encapsulamento que introduz comandos, enquanto 
-@samp{@{} e @samp{@}} são utilizados para envolver argumentos a certor 
+@samp{@{} e @samp{@}} são utilizados para envolver argumentos a certos 
 comandos.   Para colocar um desses caracteres especiais no documento, 
 coloque um carácter @samp{@@} em frente a ele, como isto: @samp{@@@@},
 @samp{@@@{}, e @samp{@@@}}.
@@ -1370,7 +1370,7 @@ veio a significar `afirmar em um modo contra o qual outros podem fazer
 contra afirmações', o que levou ao significado de `argumento' como uma 
 disputa.} receberem, você precisa escrever comandos @@ em suas próprias 
 linhas, ou como parte de sentenças.   Como uma regra geral, um comando 
-exige chaves se esse comando se mistirar entre outro texto; porém, ele 
+exige chaves se esse comando se misturar entre outro texto; porém, ele 
 não necessita das chaves se estiver em sua própria linha.  Para mais 
 detalhes da sintaxe de comando Texinfo, veja-se @ref{Command Syntax}.
 
@@ -1392,15 +1392,15 @@ Inglês e em outras linguagens; veja-se @ref{Inserting Quotation Marks}.
 @cindex Hyphens in source, two or three in a row
 @cindex Em dash, producing
 @cindex En dash, producing
-Utilize três hífens em uma linha, @samp{---}, para produzir um traço 
+Utilize três hifens em uma linha, @samp{---}, para produzir um traço 
 longo---como esse (chamado um @dfn{travessão}), utilizado para pontuação 
-em sentenças.  Utilize dois hífens, @samp{--}, para produzir um traço 
+em sentenças.  Utilize dois hifens, @samp{--}, para produzir um traço 
 médio (chamado um @dfn{traço médio}), utilizado primariamente para 
 intervalos numéricos, como em ``Junho 25--26''.  Utilize um hífen 
 simples, @samp{-}, para produzir um hífen padrão utilizado em palavras 
-compostas.  Para exibir na tela, Info reduz três hífens para dois e dois 
-hífens para um (não transitivamente!).  Certamente, qualquer número de 
-hífens no fonte permanece como eles estiverem em contextos literais, 
+compostas.  Para exibir na tela, Info reduz três hifens para dois e dois 
+hifens para um (não transitivamente!).  Certamente, qualquer número de 
+hifens no fonte permanece como eles estiverem em contextos literais, 
 tais como @code{@@code} e @code{@@example}.
 
 @item
@@ -1572,108 +1572,109 @@ duas linhas no início e aquela no final.
 @section A Short Sample Texinfo File
 @cindex Sample Texinfo file, with comments
 
-Here is a short but complete Texinfo file, so you can see how Texinfo
-source appears in practice.  The first three parts of the file are
-mostly boilerplate: when writing a manual, you simply change
-the names as appropriate.
+Aqui está um curto, porém completo, arquivo Texinfo, de forma que você 
+possa ver como um fonte Texinfo se aparenta na prática.  As primeiras 
+três partes do arquivo são em sua maioria clichê: quando da escrita de 
+um manual, você simplesmente modifica os nomes conforme apropriado.
 
-The complete file, without interspersed comments, is shown in
+O arquivo completo, sem os comentários intercalados, é mostrado em 
 @ref{Short Sample Texinfo File}.
 
-@xref{Beginning and Ending a File}, for more documentation on the
-commands listed here.
+@xref{Beginning and Ending a File}, para mais documentação acerca dos 
+comandos listados aqui.
 
 
 @subheading Header
 
 @noindent
-The header tells @TeX{} which definitions file to
-use, names the manual, and carries out other such housekeeping tasks.
+O cabeçalho diz a @TeX{} qual arquivo de definições utilizar, nomeia o 
+manual, e realiza outras tais tarefas domésticas.
 
 @example
 @group
 \input texinfo
-@@settitle Sample Manual 1.0
+@@settitle Manual de Amostra 1.0
 @end group
 @end example
 
 
 @subheading Summary Description and Copyright
 
-This segment describes the document and contains the copyright notice 
-and copying permissions.  This is done with the @code{@@copying} command.
+Este segmento descreve o documento e contém o aviso de direitos autorais 
+e permissões de cópia.  Isso é feito com o comando @code{@@copying}.
 
 @noindent
-A real manual includes more text here, according to the license under
-which it is distributed.  @xref{GNU Sample Texts}.
+Um manual real inclui mais texto aqui, de acordo com a licença sob a 
+qual ele é distribuído.  @xref{GNU Sample Texts}.
 
 @example
 @group
 @@copying
-This is a short example of a complete Texinfo file, version 1.0.
+Este é um exemplo curto de um arquivo completo Texinfo, versão 1.0.
 
-Copyright @@copyright@{@} 2016 Free Software Foundation, Inc.
+Direitos autorais @@copyright@{@} 2016 Free Software Foundation, Inc.
 @@end copying
 @end group
 @end example
 
 @subheading Titlepage, Copyright, Contents
 
-The title and copyright segment contains the title and copyright
-pages for the printed manual.  The segment must be enclosed between
-@code{@@titlepage} and @code{@@end titlepage} commands.  The title and
-copyright page does not appear in the online output.
+O segmento de título e direitos autorais contém as páginas de título e 
+de direitos autorais para o manual impresso.   O segmento deve 
+necessariamente estar incluso entre os comandos @code{@@titlepage} e 
+@code{@@end titlepage}.  A página de título e de direitos autorais não 
+aparece na saída online.
 
 @noindent
-We use the @code{@@insertcopying} command to
-include the permission text from the previous section, instead of
-writing it out again; it is output on the back of the title page.  The
-@code{@@contents} command generates a table of contents.
+Nós utilizamos o comando @code{@@insertcopying} para incluir o texto de 
+permissão a partir da seção anterior, em vez de escrevê-lo outra vez; o 
+texto é colocado no verso da página de título.  O comando 
+@code{@@contents} gera um sumário.
 
 @example
 @group
 @@titlepage
-@@title Sample Title
+@@title Título de Amostra
 @end group
 
 @group
-@@c The following two commands start the copyright page.
+@@c Os dois comandos seguintes iniciam a página de direitos autorais.
 @@page
 @@vskip 0pt plus 1filll
 @@insertcopying
 @@end titlepage
 @end group
 
-@@c Output the table of contents at the beginning.
+@@c Coloca o sumário no início.
 @@contents
 @end example
 
 @subheading `Top' Node and Master Menu
 
-The `Top' node starts off the online output; it does not appear in the
-printed manual.  We repeat the short description from the beginning of
-the @samp{@@copying} text, but there's no need to repeat the copyright
-information, so we don't use @samp{@@insertcopying} here.
+O nodo `Top' começa a saída online; ela não aparece no manual impresso.  
+Nós repetimos a descrição curta do início do texto @samp{@@copying}, 
+porém não há a necessidade de se repetir a informação de direitos 
+autorais, de forma que nós não utilizamos @samp{@@insertcopying} aqui.
 
-The @samp{@@top} command itself helps @command{makeinfo} determine
-the relationships between nodes.  The `Top' node contains at least a
-top-level @dfn{menu} listing the chapters, and possibly a @dfn{Master
-Menu} listing all the nodes in the entire document.
+O próprio comando @samp{@@top} ajuda @command{makeinfo} a determinar o 
+relacionamento entre os nodos.  O nodo `Top' contém, pelo menos, um 
+@dfn{menu} de alto nível listando os capítulos, e possivelmente um 
+@dfn{Menu Mestre} listando todos os nodos no documento inteiro.
 
 
 @example
 @@ifnottex
 @@node Top
-@@top Short Sample
+@@top Amostra Curta
 
-This is a short sample Texinfo file.
+Este é um arquivo curto de amostra Texinfo.
 @@end ifnottex
 
 @group
 @@menu
-* First Chapter::    The first chapter is the
-                       only chapter in this sample.
-* Index::            Complete index.
+* Primeiro Capítulo:: O primeiro capítulo é o único capítulo nesta 
+amostra.
+* Índice::            Índice completo.
 @@end menu
 @end group
 @end example
@@ -1682,32 +1683,32 @@ This is a short sample Texinfo file.
 @subheading The Body of the Document
 
 @noindent
-The body segment contains all the text of the document, but not the
-indices or table of contents.  This example illustrates a node and a
-chapter containing an enumerated list.
+O segmento corpo contém todo o texto do documento, porém não os índices 
+ou sumário.  Este exemplo ilustra um nodo e um capítulo contendo uma 
+lista enumerada.
 
 @example
 @group
-@@node First Chapter
-@@chapter First Chapter
+@@node Primeiro Capítulo
+@@chapter Primeiro Capítulo
 
-@@cindex chapter, first
+@@cindex capítulo, primeiro
 @end group
 
 @group
-This is the first chapter.
-@@cindex index entry, another
+Este é o primeiro capítulo.
+@@cindex entrada de índice, um outro
 @end group
 
 @group
-Here is a numbered list.
+Aqui está uma lista numerada.
 
 @@enumerate
 @@item
-This is the first item.
+Este é o primeiro item.
 
 @@item
-This is the second item.
+Este é o segundo item.
 @@end enumerate
 @end group
 @end example
@@ -1715,13 +1716,13 @@ This is the second item.
 
 @subheading The End of the Document
 
-This may contain commands for printing indices, and
-closes with the @code{@@bye} command, which marks the end of the document.
+Isto pode conter comandos para a impressão de índices, o fecha com o 
+comando @code{@@bye}, o qual marca o fim do documento.
 
 @example
 @group
-@@node Index
-@@unnumbered Index
+@@node Índice
+@@unnumbered Índice
 @end group
 
 @group
@@ -1734,21 +1735,22 @@ closes with the @code{@@bye} command, which marks the end of the document.
 
 @subheading Some Results
 
-Here is what the contents of the first chapter of the sample look like:
+Aqui está com o que se parece o conteúdo do primeiro capítulo da 
+amostra:
 
 @sp 1
 @need 700
 @quotation
-This is the first chapter.
+Este é o primeiro capítulo.
 
-Here is a numbered list.
+Aqui está uma lista numerada.
 
 @enumerate
 @item
-This is the first item.
+Este é o primeiro item.
 
 @item
-This is the second item.
+Este é o segundo item.
 @end enumerate
 @end quotation
 
