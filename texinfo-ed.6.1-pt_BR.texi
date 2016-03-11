@@ -1511,26 +1511,26 @@ advertências relativamente ao aninhamento de tais comandos,
 @cindex Required in Texinfo file
 @cindex Texinfo file minimum
 
-By convention, the name of a Texinfo file ends with one of the 
-extensions @file{.texinfo}, @file{.texi}, @file{.txi}, or 
-@file{.tex}.@footnote{The longer extensions are preferred, since they 
-describe more clearly to a human reader the nature of the file.  The 
-shorter extensions are for operating systems that cannot handle long 
-file names.}
+Por convenção, o nome de um arquivo Texinfo termina com uma das 
+extensões @file{.texinfo}, @file{.texi}, @file{.txi}, ou 
+@file{.tex}.@footnote{As extensões mais longas são as preferidas, dado 
+que elas descrevem mais claramente a um leitor humano a natureza do 
+arquivo.  As extensões mais curtas são para sistemas operacionais que 
+não conseguem lidar com nomes longos de arquivos.}
 
-In order to be made into a printed manual and other output
-formats, a Texinfo file must begin with lines like this:
+Para fazer com que seja um manual impresso e outros formatos de saída, 
+um arquivo Texinfo deve necessariamente iniciar com linhas como estas:
 
 @example
 @group
 \input texinfo
-@@settitle @var{name-of-manual}
+@@settitle @var{nome-do-manual}
 @end group
 @end example
 
 @noindent
-The contents of the file follow this beginning, and then you
-must end the Texinfo source with a line like this:
+O conteúdo do arquivo segue esse início, e então você deve finalizar o 
+fonte Texinfo com uma linha como esta:
 
 @example
 @@bye
@@ -1538,33 +1538,33 @@ must end the Texinfo source with a line like this:
 
 @findex \input @r{(raw @TeX{} startup)}
 @noindent
-Here's an explanation:
+Aqui está uma explanação:
 
 @itemize @bullet
 @item
-The @samp{\input texinfo} line tells @TeX{} to use the
-@file{texinfo.tex} file, which tells @TeX{} how to translate the Texinfo
-@@-commands into @TeX{} typesetting commands.  (Note the use of the
-backslash, @samp{\}; this is correct for @TeX{}.)
+A linha @samp{\input texinfo} manda @TeX{} utilizar o arquivo 
+@file{texinfo.tex}, o qual instrui @TeX{} como traduzir os comandos @@ 
+Texinfo em comandos de tipografia @TeX{}.  (Note-se o uso da barra 
+invertida, @samp{\}; isso é correto para @TeX{}.)
 
 @item
-The @code{@@settitle} line specifies a title for the page headers (or
-footers) of the printed manual, and the default title and document
-description for the @samp{<head>} in HTML@.  Strictly speaking,
-@code{@@settitle} is optional---if you don't mind your document being
-titled `Untitled'.
+A linha @code{@@settitle} especifica um título para os cabeçalhos de 
+página (ou rodapés) do manual impresso, e o título padrão e descrição de 
+documento para o marcador @samp{<head>} em HTML@.  Estritamente falando, 
+@code{@@settitle} é opcional---se você não se importar de ver o seu 
+documento sendo intitulado `Untitled'.
 
 @item
-The @code{@@bye} line at the end of the file on a line of its own tells
-the formatters that the file is ended and to stop formatting.  If you 
-leave this out, you'll be dumped at @TeX{}'s prompt at the end of the 
-run.
+A linha @code{@@bye} ao final do arquivo em uma linha própria informa 
+aos formatadores que o arquivo está finalizado e para parar de formatar.  
+Se você deixar isso fora, você será colocado no prompt de @TeX{} ao 
+final da execução.
 @end itemize
 
-Furthermore, you will usually provide a Texinfo file with a title page,
-indices, and the like, all of which are explained in this manual.  But
-the minimum, which can be useful for short documents, is just the two
-lines at the beginning and the one line at the end.
+Além disso, você geralmente proverá um arquivo Texinfo com uma página de 
+título, índices, e semelhantes, tudo isso é explanado neste manual.  
+Porém, o mínimo, que pode ser útil para documentos curtos, é apenas as 
+duas linhas no início e aquela no final.
 
 
 
