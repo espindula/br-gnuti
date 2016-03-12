@@ -2101,61 +2101,61 @@ comentário Texinfo que se parece com isto:
 @cindex Document Permissions
 @cindex Copying Permissions
 
-The copyright notice and copying permissions for a document need to
-appear in several places in the various Texinfo output formats.
-Therefore, Texinfo provides a command (@code{@@copying}) to declare
-this text once, and another command (@code{@@insertcopying}) to
-insert the text at appropriate points.
+O aviso de direitos autorais e permissões de cópia para um documento 
+precisam aparecer em vários lugares nos vários formatos de saída de 
+Texinfo.  Portanto, Texinfo provê um comando (@code{@@copying}) para 
+declarar esse texto uma vez, e outro comando (@code{@@insertcopying}) 
+para inserir o texto em pontos apropriados.
 
-@anchor{Software Copying Permissions}@c old node name
-This section is about the license of the Texinfo document.  If the
-document is a software manual, the software is typically under a
-different license---for GNU and many other free software packages,
-software is usually released under the GNU GPL, and manuals are
-released under the GNU FDL@.  It is helpful to state the license of
-the software of the manual, but giving the complete text of the
-software license is not necessarily required.
+@anchor{Software Copying Permissions}@c nome antigo de nodo
+Esta seção é sobre a licença do documento Texinfo.  Se o documento for 
+um manual de software, o software está tipicamente sob uma licença 
+diferente---para GNU e muitos outros pacotes de software livre, o 
+software é usualmente publicado sob a GNU GPL, e os manuais são 
+publicados sob a GNU FDL@.  É de muita ajuda declarar a licença do 
+software do manual, porém fornecer o texto completo da licença de 
+software não é necessariamente exigido.
 
 @menu
-* @code{@@copying}::                    Declare the document's copying permissions.
-* @code{@@insertcopying}::              Where to insert the permissions.
+* @code{@@copying}::                    Declare as permissões de cópia do documento.
+* @code{@@insertcopying}::              Onde inserir as permissões.
 @end menu
 
 
 @node @code{@@copying}
-@subsection @code{@@copying}: Declare Copying Permissions
+@subsection @code{@@copying}: Declare as Permissões de Cópia
 
-@anchor{copying}@c old name
+@anchor{copying}@c nome antigo
 @findex copying
 
-The @code{@@copying} command should be given very early in the document;
-the recommended location is right after the header material
-(@pxref{Texinfo File Header}).  It conventionally consists of a sentence
-or two about what the program is, identification of the documentation
-itself, the legal copyright line, and the copying permissions.  Here is
-a skeletal example:
+O comando @code{@@copying} deveria ser dado cedíssimo no documento; a 
+localização recomendada é logo após o material de cabeçalho 
+(@pxref{Texinfo File Header}).  Convencionalmente consiste de uma 
+sentença ou duas sobre o que é o programa, identificação da própria 
+documentação, a linha de direitos autorais legal, e as permissões de 
+cópia.  Aqui está um exemplo esqueletal:
 
 @example
 @@copying
-This manual is for @var{program} (version @var{version}, updated
-@var{date}), which @dots{}
+Este documento é para @var{programa} (versão @var{versão}, atualizada 
+@var{date}), o qual @dots{}
 
-Copyright @@copyright@{@} @var{years} @var{copyright-owner}.
+Direitos autorais @@copyright@{@} @var{anos} @var{titular-direitos-autorais}.
 
 @@quotation
-Permission is granted to @dots{}
+É concedida permissão para @dots{}
 @@end quotation
 @@end copying
 @end example
 
-The @code{@@quotation} has no legal significance; it's there to improve
-readability in some contexts.
+O @code{@@quotation} não tem significado legal; ele está lá para 
+melhorar a legibilidade em alguns contextos.
 
-The text of @code{@@copying} is output as a comment at the beginning
-of Info, HTML, XML, and Docbook output files.  It is @emph{not} output
-implicitly in plain text or @TeX{}; it's up to you to use
-@code{@@insertcopying} to emit the copying information.  See the next
-section for details.
+O texto de @code{@@copying} é produzido como um comentário no início dos 
+arquivos de saída Info, HTML, XML, e Docbook.  O texto @emph{não} é 
+produzido implicitamente em texto plano ou @TeX{}; depende de você 
+utilizar @code{@@insertcopying} para emitir a informação de direitos 
+autorais.  Veja a próxima seção para detalhes.
 
 @findex copyright
 The @code{@@copyright@{@}} command generates a @samp{c} inside a
