@@ -1943,141 +1943,151 @@ tipo do arquivo a partir da extensão do arquivo.
 @subsection Start of Header
 @cindex Start of header line
 
-A start-of-header line is a Texinfo comment that looks like this:
+Uma linha `start-of-header' é um comentário Texinfo que se parece com 
+isto:
 
 @example
 @@c %**start of header
 @end example
 
-Write the start-of-header line on the second line of a Texinfo file.
-Follow the start-of-header line with an @code{@@settitle} line and,
-optionally, with other commands that globally affect the document
-formatting, such as @code{@@synindex} or @code{@@footnotestyle}; and
-then by an end-of-header line (@pxref{End of Header}).
+Escreva a linha `start-of-header' na segunda linha de um arquivo 
+Texinfo.  Prossiga a linha `start-of-header' com uma linha 
+`@code{@@settitle}' e, opcionalmente, com outros comandos que 
+globalmente afetam a formatação do documento, tais como 
+@code{@@synindex} ou @code{@@footnotestyle}; e então por uma linha 
+`end-of-header' (@pxref{End of Header}).
 
-The start- and end-of-header lines allow you to format only part of a
-Texinfo file for Info or printing.  @xref{@code{texinfo-format} commands}.
+As linhas `start-' e `end-of-header` te permitem formatar somente parte 
+de um arquivo Texinfo para Info ou impressão.  Veja-se os comandos 
+@xref{@code{texinfo-format}}.
 
-The odd string of characters, @samp{%**}, is to ensure that no other
-comment is accidentally taken for a start-of-header line.  You can
-change it if you wish by setting the @code{tex-start-of-header} and/or
-@code{tex-end-of-header} Emacs variables.  @xref{Texinfo Mode Printing}.
+A estranha sequência de caracteres, @samp{%**}, é para assegurar que 
+nenhum outro comentário seja acidentalmente tomado por uma linha 
+`start-of-header'.  Você pode modificá-la se você desejar, configurando 
+as variáveis Emacs @code{tex-start-of-header} e/ou 
+@code{tex-end-of-header}.  @xref{Texinfo Mode Printing}.
 
 
 @node @code{@@setfilename}
-@subsection @code{@@setfilename}: Set the Output File Name
+@subsection @code{@@setfilename}: Configura o Nome do Arquivo de Saída
 
-@anchor{setfilename}@c old name
+@anchor{setfilename}@c nome antigo
 @findex setfilename
 @cindex Texinfo requires @code{@@setfilename}
 @cindex Output file name, required
 
-The @code{@@setfilename} line specifies the name of the output file to
-be generated.
-When present, it should be the first Texinfo command (that is, afte
-@samp{\input texinfo}).
-Write the @code{@@setfilename} command at the beginning of a line and
-follow it on the same line by the Info file name.
+A linha @code{@@setfilename} especifica o nome do arquivo de saída a ser 
+gerado.
+Quando presente, ele deveria ser o primeiro comando Texinfo (isto é, 
+após @samp{\input texinfo}).
+Escreva o comando @code{@@setfilename} no início de uma linha e siga-o 
+na mesma linha pelo nome do arquivo Info.
 
 @example
-@@setfilename @var{info-file-name}
+@@setfilename @var{nome-arquivo-info}
 @end example
 
-The name must be different from the name of the
-Texinfo file.  There are two conventions for choosing the name: you
-can either remove the extension (such as @samp{.texi}) entirely from
-the input file name, or (recommended) replace it with the @samp{.info}
-extension.
+O nome deve necessariamente ser diferente do nome do arquivo Texinfo.
+Existem duas convenções para a escolha do nome: você ou pode remover a 
+extensão (tal como @samp{.texi}) inteiramente do nome do arquivo de 
+entrada; ou (recomendado) substitui-lo com a extensão @samp{.info}.
 
 @cindex Ignored before @code{@@setfilename}
 @cindex @samp{\input} source line ignored
-When a @code{@@setfilename} line is present, the Texinfo processors
-ignore everything written before the @code{@@setfilename} line.  This
-is why the very first line of the file (the @code{\input} line) does
-not show up in the output.
+Quando uma linha @code{@@setfilename} está presente, os processadores 
+Texinfo ignoram tudo escrito antes da linha @code{@@setfilename}.  Isso 
+é o motivo da primeiríssima linha do arquivo (a linha @code{\input}) não 
+aparecer na saída.
 
-If there is no @code{@@setfilename} line, @code{makeinfo} uses the
-input file name to determine the output name: first, any of the
-extensions @code{.texi}, @code{.tex}, @code{.txi} or @code{.texinfo}
-is removed from the input file name; then, the output format specific
-extension is added---@code{.html} when generating HTML, @code{.info}
-when generating Info, etc.  The @code{\input} line is still ignored in
-this processing, as well as leading blank lines.
+Se não existir uma linha @code{@@setfilename}, @code{makeinfo} utiliza o 
+arquivo de entrada para determinar o nome de saída: primeiro, qualquer 
+das extensões @code{.texi}, @code{.tex}, @code{.txi} ou @code{.texinfo} 
+é removida do nome do arquivo de entrada; então, a extensão específica 
+do formato de saída é adicionada---@code{.html} quando da geração de 
+HTML; @code{.info} quando da geração de Info, etc.  A linha 
+@code{\input} ainda é ignorada nesse processamento, bem como as linhas 
+em branco iniciais.
 
-When producing another output format, @code{makeinfo} will replace any
-final extension with the output format-specific extension (@samp{html}
-when generating HTML, for example), or add a dot followed by the
-extension (@samp{.html} for HTML) if the given name has no extension.
+Quando da produção de outro formato de saída, @code{makeinfo} 
+substituirá qualquer extensão final com a extensão de saída específica 
+de formato (@samp{html} quando da geração de HTML, por exemplo), ou 
+adicionar um ponto seguido pela extensão (@samp{.html} para HTML), se o 
+nome dado não tiver extensão.
 
-@code{@@setfilename} used to be required by the Texinfo processors, and 
-some other programs may still expect it to be present; for example, 
-Automake (@pxref{Texinfo,,,automake, GNU Automake}).
+@code{@@setfilename} costumava ser exigido pelos processadores Texinfo, 
+e alguns outros programas ainda podem esperar que ele esteja presente; 
+por exemplo, Automake (@pxref{Texinfo,,,automake, GNU Automake}).
 
 @cindex Length of file names
 @cindex File name collision
 @cindex Info file name, choosing
-Although an explicit @samp{.info} extension is preferable, some
-operating systems cannot handle long file names.  You can run into a
-problem even when the file name you specify is itself short enough.
-This occurs because the Info formatters split a long Info file into
-short indirect subfiles, and name them by appending @samp{-1},
-@samp{-2}, @dots{}, @samp{-10}, @samp{-11}, and so on, to the original
-file name.  (@xref{Tag and Split Files}.)  The subfile name
-@file{texinfo.info-10}, for example, is too long for old systems with
-a 14-character limit on filenames; so the Info file name for this
-document is @file{texinfo} rather than @file{texinfo.info}.  When
-@code{makeinfo} is running on operating systems such as MS-DOS which
-impose severe limits on file names, it may remove some characters from
-the original file name to leave enough space for the subfile suffix,
-thus producing files named @file{texin-10}, @file{gcc.i12}, etc.
+Apesar que uma extensão @samp{.info} explícita seja preferível, alguns 
+sistemas operacionais não conseguem lidar com nomes longos de arquivo.  
+Você pode acabar com problemas mesmo quando o nome de arquivo que você 
+especificar for ele próprio curto o suficiente.
+Isso ocorre porque os formatadores Info dividem um arquivo longo Info em 
+subarquivos curtos indiretos, e os nomeia acrescentando ao final 
+@samp{-1}, @samp{-2}, @dots{}, @samp{-10}, @samp{-11}, e assim por 
+diante, ao nome de arquivo original.  (@xref{Tag and Split Files}.)  O 
+nome de subarquivo @file{texinfo.info-10}, por exemplo, é longo demais 
+para sistemas antigos com um limite de 14 caracteres em nomes de 
+arquivo; assim, o nome de arquivo Info para este documento é 
+@file{texinfo} em vez de @file{texinfo.info}.  Quando @code{makeinfo} 
+está em execução em sistemas operacionais tais como MS-DOS que impõe 
+limites severos sobre nomes de arquivo, ele pode remover alguns 
+caracteres do nome original do arquivo para deixar espaço suficiente 
+para o sufixo do subarquivo, assim produzindo arquivos chamados 
+@file{texin-10}, @file{gcc.i12}, etc.
 
-See also the @option{--output} option in @ref{Invoking @command{texi2any}}.
+Veja-se também a opção @option{--output} em 
+@ref{Invoking @command{texi2any}}.
 
 
 @node @code{@@settitle}
-@subsection @code{@@settitle}: Set the Document Title
+@subsection @code{@@settitle}: Configura o Título do Documento
 
-@anchor{settitle}@c old name
+@anchor{settitle}@c nome antigo
 @findex settitle
 @cindex Document title, specifying
 
-A Texinfo file should contain a line that looks like this:
+Um arquivo Texinfo deveria conter uma linha que se pareça com isto:
 
 @example
-@@settitle @var{title}
+@@settitle @var{título}
 @end example
 
-Write the @code{@@settitle} command at the beginning of a line and
-follow it on the same line by the title.  Do not write anything else
-on the line.  The @code{@@settitle} command should precede everything
-that generates actual output.  The best place for it is right after
-the @code{@@setfilename} command (described in the previous section).
+Escreva o comando @code{@@settitle} no início de uma linha e siga-o na 
+mesma pelo título.  Não escreva nada mais na linha.  O comando 
+@code{@@settitle} deveria preceder tudo o que gera saída atual.  O 
+melhor lugar para ele é logo após o comando @code{@@setfilename} 
+(descrito na seção anterior).
 
-This command tells @TeX{} the title to use in a header or footer
-for double-sided output, in case such headings are output.  For
-more on headings for @TeX{}, see @ref{Heading Generation}.
+Esse comando informa a @TeX{} o título a utilizar em um cabeçalho ou 
+rodapé para saída de lado duplo, no caso de tais cabeçalhos serem 
+impressos.  Para mais sobre cabeçalhos para @TeX{}, veja-se 
+@ref{Heading Generation}.
 
 @cindex @code{<title>} HTML tag
-In the HTML file produced by @command{makeinfo}, @var{title} serves as
-the document @samp{<title>}.  It also becomes the default document
-description in the @samp{<head>} part
+No arquivo HTML produzido por @command{makeinfo}, @var{título} serve 
+como o @samp{<título>} do documento.  Ele também se torna a descrição 
+padrão do documento na parte @samp{<head>} 
 (@pxref{@code{@@documentdescription}}).
 
-When the title page is used in the output, the title in the
-@code{@@settitle} command does not affect the title as it appears on
-the title page.  Thus, the two do not need not to match exactly.  A
-practice we recommend is to include the version or edition number of
-the manual in the @code{@@settitle} title; on the title page, the
-version number generally appears as a @code{@@subtitle} so it would
-be omitted from the @code{@@title}.  @xref{@code{@@titlepage}}.
+Quando a página de título for utilizada na saída, o título no comando 
+@code{@@settitle} não afeta o título conforme ele aparece na página de 
+título.  Assim, os dois não precisam coincidir exatamente.  Uma prática 
+que se recomenda é incluir a versão ou número de edição do manual no 
+título @code{@@settitle}; no página de título, o número de versão 
+geralmente aparece como um @code{@@subtitle}, de forma que ele poderia 
+ser omitido do @code{@@title}.  @xref{@code{@@titlepage}}.
 
 
 @node End of Header
 @subsection End of Header
 @cindex End of header line
 
-Follow the header lines with an @w{end-of-header} line, which is a
-Texinfo comment that looks like this:
+Siga as linhas de cabeçalho com uma linha @w{end-of-header}, que é um 
+comentário Texinfo que se parece com isto:
 
 @example
 @@c %**end of header
