@@ -1869,36 +1869,38 @@ Este manual é para @var{programa}, versão @var{versão}.
 @cindex Header for Texinfo files
 @cindex Texinfo file header
 
-Texinfo files start with at least two lines.  These are the
-@code{\input texinfo} line and the @code{@@settitle} line.
+Os arquivos Texinfo iniciam com pelo menos duas linhas.  Essas são a 
+linha @code{\input texinfo} e a linha @code{@@settitle}.
 
-Also, if you want to format just part of the Texinfo file in Emacs,
-you must write the @code{@@settitle} line between start-of-header and
-end-of-header lines.  These start- and end-of-header lines are optional,
-but they do no harm, so you might as well always include them.
+Também, se você desejar formatar sumente parte do arquivo Texinfo em 
+Emacs, você deve necessariamente escrever a linha @code{@@settitle} 
+entre as linhas `start-of-header' e `end-of-header'.  Essas linhas 
+`start-' e `end-of-header' são opcionais, porém elas não produzem danos, 
+de forma que você pode muito bem sempre inclui-las.
 
-Any command that affects document formatting as a whole makes sense to
-include in the header.  @code{@@synindex} (@pxref{@code{@@synindex}}),
-for instance, is another command often included in the header.
+Qualquer comando que afete a formatação do documento como um todo faz 
+sentido incluir no cabeçalho.  @code{@@synindex} 
+(@pxref{@code{@@synindex}}), por exemplo, é outro comando frequentemente 
+incluído no cabeçalho.
 
-Thus, the beginning of a Texinfo file looks approximately
-like this:
+Assim, o início de um arquivo Texinfo se parece aproximadamente com 
+isto:
 
 @example
 @group
 \input texinfo
-@@settitle Sample Manual 1.0
+@@settitle Manual de Amostra 1.0
 @end group
 @end example
 
-(@xref{GNU Sample Texts} for complete sample texts.)
+(@xref{GNU Sample Texts} para textos de amostra completos.)
 
 @menu
-* First Line::                  The first line of a Texinfo file.
-* Start of Header::             Formatting a region requires this.
-* @code{@@setfilename}::                Tell Info the name of the Info file.
-* @code{@@settitle}::                   Create a title for the printed work.
-* End of Header::               Formatting a region requires this.
+* First Line::                  A primeira linha de um arquivo Texinfo.
+* Start of Header::             Formatar uma região exige isso.
+* @code{@@setfilename}::        Informe a Info o nome do arquivo Info.
+* @code{@@settitle}::           Crie um título para o trabalho impresso.
+* End of Header::               Formatar uma região exige isso.
 @end menu
 
 
@@ -1908,32 +1910,34 @@ like this:
 @cindex Beginning line of a Texinfo file
 @cindex Header of a Texinfo file
 
-Every Texinfo file that is to be the top-level input to @TeX{} must begin
-with a line that looks like this:
+Cada arquivo Texinfo que é para ser a entrada de alto nível para @TeX{} 
+deve necessariamente iniciar com uma linha que se parece com isto:
 
 @example
 \input texinfo
 @end example
 
-When the file is processed by @TeX{}, the @samp{\input texinfo} command
-tells @TeX{} to load the macros needed for processing a Texinfo file.
-These are in a file called @file{texinfo.tex}, which should have been
-installed on your system along with either the @TeX{} or Texinfo
-software.  @TeX{} uses the backslash, @samp{\}, to mark the beginning of
-a command, exactly as Texinfo uses @samp{@@}.  The @file{texinfo.tex}
-file causes the switch from @samp{\} to @samp{@@}; before the switch
-occurs, @TeX{} requires @samp{\}, which is why it appears at the
-beginning of the file.
+Quando o arquivo é processado por @TeX{}, o comando @samp{\input 
+texinfo} manda @TeX{} carregar as macros necessárias para o 
+processamento de um arquivo Texinfo.
+Essas estão em um arquivo chamado @file{texinfo.tex}, o qual deveria ter 
+sido instalado em seu sistema juntamente com o software @TeX{} ou 
+Texinfo.  @TeX{} utiliza uma barra invertida, @samp{\}, para marcar o 
+início de um comando, exatamente como Texinfo utiliza @samp{@@}.  O 
+arquivo @file{texinfo.tex} provoca a permuta de @samp{\} para @samp{@@}; 
+antes que a permuta ocorra, @TeX{} exige @samp{\}, o que é o motivo que 
+ela aparece no início do arquivo.
 
-You may optionally follow this line with a comment to tell GNU Emacs
-to use Texinfo mode when the file is edited:
+Você pode opcionalmente seguir essa linha com um comentário para 
+informar a GNU Emacs para utilizar o modo Texinfo quando o arquivo for 
+editado:
 
 @example
 \input texinfo   @@c -*-texinfo-*-
 @end example
 
-@noindent This may be useful when Emacs doesn't detect the file type 
-from the file extension automatically.
+@noindent Isso pode ser útil quando Emacs não detectar automaticamente o 
+tipo do arquivo a partir da extensão do arquivo.
 
 @node Start of Header
 @subsection Start of Header
