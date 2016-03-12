@@ -1762,28 +1762,28 @@ Este é o segundo item.
 @cindex Texinfo file beginning
 @cindex File beginning
 
-This chapter expands on the minimal complete Texinfo source file
-previously given (@pxref{Short Sample}).
+Este capítulo se estende sobre o arquivo fonte mínimo completo de 
+Texinfo previamente dado (@pxref{Short Sample}).
 
-Certain pieces of information must be provided at the beginning of a
-Texinfo file, such the title of the document and the Top node.  A table
-of contents is also generally produced here.
+Certos pedaços de informação devem necessariamente ser providos no 
+início de um arquivo Texinfo, tais como o título do documento e o nodo 
+Top.   Um sumário geralmente também é produzido aqui.
 
 @cindex Frontmatter, text in
-Straight text outside of any command before the Top node should be
-avoided.  Such text is treated differently in the different output
-formats: at the time of writing, it is visible in @TeX{} and HTML, by
-default not shown in Info readers, and so on.
+Texto simples fora de qualquer comando antes do nodo Top deveria ser 
+evitado.  Tal texto é tratado diferentemente nos diferentes formatos de 
+saída: no momento da escrita, é visível em @TeX{} e HTML, por padrão não 
+mostrado em leitores Info, e assim por diante.
 
 @menu
-* Sample Beginning::            A sample beginning for a Texinfo file.
-* Texinfo File Header::         The first lines.
-* Document Permissions::        Ensuring your manual is free.
-* Titlepage & Copyright Page::  Creating the title and copyright pages.
-* Contents::                    How to create a table of contents.
-* The Top Node::                Creating the `Top' node and master menu.
-* Global Document Commands::    Affecting formatting throughout.
-* Ending a File::               What is at the end of a Texinfo file?
+* Sample Beginning::     Um início de amostra para um arquivo Texinfo.
+* Texinfo File Header::         As primeiras linhas.
+* Document Permissions::    Assegurando-se de que o seu manual é livre.
+* Titlepage & Copyright Page:: Criando as páginas de título e de direitos autorais.
+* Contents::                    Como criar um sumário.
+* The Top Node::                Criando o nodo `Top' e menu mestre.
+* Global Document Commands::    Afetando a formatação ao longo do documento.
+* Ending a File::               O que está ao final de um arquivo Texinfo?
 @end menu
 
 
@@ -1792,73 +1792,73 @@ default not shown in Info readers, and so on.
 
 @cindex Example beginning of Texinfo file
 
-The following sample shows what is needed.  The elements given here are
-explained in more detail in the following sections.  Other commands are
-often included at the beginning of Texinfo files, but the ones here are
-the most critical.
+A amostra seguinte mostra o que é necessário.  Os elementos dados aqui 
+são explanados em maiores detalhes nas seções seguintes.  Outros 
+comandos frequentemente são incluidos no início de arquivos Texinfo, 
+porém aqueles aqui são os mais críticos.
 
-@xref{GNU Sample Texts}, for the full texts to be used in GNU manuals.
+@xref{GNU Sample Texts}, para os textos completos a serem utilizados em 
+manuais GNU.
 
 @example
 \input texinfo
-@@settitle @var{name-of-manual} @var{version}
+@@settitle @var{nome-do-manual} @var{versão}
 
 @@copying
-This manual is for @var{program}, version @var{version}.
+Este manual é para @var{programa}, versão @var{versão}.
 
-Copyright @@copyright@{@} @var{years} @var{copyright-owner}.
+Direitos autorais @@copyright@{@} @var{anos} @var{titular-direitos-autorais}.
 
 @group
 @@quotation
-Permission is granted to @dots{}
+É concedida permissão para @dots{}
 @@end quotation
 @@end copying
 @end group
 
 @group
 @@titlepage
-@@title @var{name-of-manual-when-printed}
-@@subtitle @var{subtitle-if-any}
-@@subtitle @var{second-subtitle}
-@@author @var{author}
+@@title @var{nome-do-manual-quando-impresso}
+@@subtitle @var{subtítulo-se-algum}
+@@subtitle @var{segundo-subtítulo}
+@@author @var{autor}
 @end group
 
 @group
-@@c  The following two commands
-@@c  start the copyright page.
+@@c  Os dois comandos seguintes
+@@c  iniciam a página de direitos autorais.
 @@page
 @@vskip 0pt plus 1filll
 @@insertcopying
 @end group
 
-Published by @dots{}
+Publicado por @dots{}
 @@end titlepage
 
-@@c So the toc is printed at the start.
+@@c Então o sumário é impresso no início.
 @@contents
 
 @@ifnottex
 @@node Top
-@@top @var{title}
+@@top @var{título}
 
-This manual is for @var{program}, version @var{version}.
+Este manual é para @var{programa}, versão @var{versão}.
 @@end ifnottex
 
 @group
 @@menu
-* First Chapter::    Getting started @dots{}
-* Second Chapter::          @dots{}
- @dots{}
-* Copying::          Your rights and freedoms.
+* First Chapter::    Iniciando @dots{}
+* Second Chapter::       @dots{} @dots{}
+* Copying::          Seus direitos e liberdades.
 @@end menu
 @end group
 
 @group
-@@node First Chapter
-@@chapter First Chapter
+@@node Primeiro Capítulo
+@@chapter Primeiro Capítulo
 
-@@cindex first chapter
-@@cindex chapter, first
+@@cindex primeiro capítulo
+@@cindex capítulo, primeiro
 @dots{}
 @end group
 @end example
