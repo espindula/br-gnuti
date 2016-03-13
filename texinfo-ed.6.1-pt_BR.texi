@@ -45,14 +45,13 @@ Este manual é para GNU Texinfo (versão @value{VERSION},
 informação online e um manual impresso a partir de uma fonte única 
 utilizando marcação semântica.
 
-Direitos autorais @copyright{} 2016 da "versão modificada" traduzida 
-para o Português do Brasil: Jamenson Ferreira Espindula de Almeida 
-Melo.
+Copyright @copyright{} 2016 da "versão modificada" traduzida para o 
+Português do Brasil: Jamenson Ferreira Espindula de Almeida Melo.
 
-Direitos autorais @copyright{} 1988, 1990, 1991, 1992, 1993, 1995, 1996, 
-1997, 1998, 1999, 2001, 2001, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 
-2010, 2011, 2012, 2013, 2014, 2015, 2016 da versão original escrita em 
-inglês: Free Software Foundation, Inc.
+Copyright @copyright{} 1988, 1990, 1991, 1992, 1993, 1995, 1996, 1997, 
+1998, 1999, 2001, 2001, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 
+2011, 2012, 2013, 2014, 2015, 2016 da versão original escrita em inglês: 
+Free Software Foundation, Inc.
 
 
 This manual is for GNU Texinfo (version @value{VERSION}, @value{UPDATED}),
@@ -2158,51 +2157,52 @@ utilizar @code{@@insertcopying} para emitir a informação de direitos
 autorais.  Veja a próxima seção para detalhes.
 
 @findex copyright
-The @code{@@copyright@{@}} command generates a @samp{c} inside a
-circle when the output format supports this glyph (print and HTML
-always do, for instance).  When the glyph is not supported in the
-output, it generates the three-character sequence @samp{(C)}.
+O comando @code{@@copyright@{@}} gera um @samp{c} dentro de um círculo 
+quando o formato de saída suportar essa figura (imprimir e HTML sempre 
+suportam, por exemplo).  Quando a figura não for suportada na saída, o 
+comando gera a sequência de três caracteres @samp{(C)}.
 
-The copyright notice itself has the following legally-prescribed
-form:
+O próprio aviso de direitos autorais tem a seguinte forma legalmente 
+prescrita:
 
 @example
-Copyright @copyright{} @var{years} @var{copyright-owner}.
+Direitos autorais @copyright{} @var{anos} @var{titular-direitos-autorais}.
 @end example
 
 @cindex Copyright word, always in English
-The word `Copyright' must always be written in English, even if the
-document is otherwise written in another language.  This is due to
-international law.
+A palavra `Copyright' deve necessariamente estar escrita em Inglês, 
+mesmo se o documento estiver de outra forma escrito em outra linguagem.  
+Isso é devido ao direito internacional.
 
 @cindex Years, in copyright line
-The list of years should include all years in which a version was
-completed (even if it was released in a subsequent year).  It is
-simplest for each year to be written out individually and in full,
-separated by commas.
+A lista dos anos deveria incluir todos os anos nos quais uma versão foi 
+completada (mesmo se ela foi publicada em um ano subsequente).  É mais 
+simples que cada ano seja escrito individualmente e na íntegra, 
+separados por vírgulas.
 
 @cindex Copyright holder for FSF works
 @cindex Holder of copyright for FSF works
 @cindex Owner of copyright for FSF works
-The copyright owner (or owners) is whoever holds legal copyright on the
-work.  In the case of works assigned to the FSF, the owner is `Free
-Software Foundation, Inc.'.
+O titular (ou titulares) dos direitos autorais é quem quer que detenha 
+os direitos autorais legais sobre o trabalho.  No caso de trabalhos 
+atribuídos à FSF, o títular é `Free Software Foundation, Inc.'.
 
-The copyright `line' may actually be split across multiple lines, both
-in the source document and in the output.  This often happens for
-documents with a long history, having many different years of
-publication.  If you do use several lines, do not indent any of them
-(or anything else in the @code{@@copying} block) in the source file.
+A `linha' de direitos autorais atualmente pode ser dividida em linhas 
+múltiplas, tanto no documento fonte quanto na saída.  Isso acontece 
+frequentemente para documentos com um histórico longo, tendo muitos anos 
+diferentes de publicação.  Se você utilizar várias linhas, não endente 
+qualquer delas (ou qualquer outra coisa no bloco @code{@@copying}) no 
+arquivo fonte.
 
-@xref{Copyright Notices,,, maintain, GNU Maintainer Information}, for
-additional information.  @xref{GNU Sample Texts}, for the full text to
-be used in GNU manuals.  @xref{GNU Free Documentation License}, for
-the license itself under which GNU and other free manuals are
-distributed.
+@xref{Copyright Notices,,, maintain, GNU Maintainer Information}, para 
+informação adicional.  @xref{GNU Sample Texts}, para o texto completo a 
+ser utilizado em manuais GNU.  @xref{GNU Free Documentation License}, 
+para a própria licença sob a qual GNU e outros manuais livres são 
+distribuídos.
 
 
 @node @code{@@insertcopying}
-@subsection @code{@@insertcopying}: Include Permissions Text
+@subsection @code{@@insertcopying}: Incluir Texto de Permissões
 
 @anchor{insertcopying}@c old name
 @findex insertcopying
@@ -2210,31 +2210,31 @@ distributed.
 @cindex Permissions text, including
 @cindex Including permissions text
 
-The @code{@@insertcopying} command is simply written on a line by
-itself, like this:
+O comando @code{@@insertcopying} simplesmente é escrito em uma linha 
+própria, como esta:
 
 @example
 @@insertcopying
 @end example
 
-This inserts the text previously defined by @code{@@copying}.  To meet
-legal requirements, it must be used on the copyright page in the printed
-manual (@pxref{Copyright}).
+Isso insere o texto previamente definido por @code{@@copying}.  Para 
+atender às exigências legais, o texto deve necessariamente ser utilizado 
+na página de direitos autorais no manual impresso (@pxref{Copyright}).
 
-The @code{@@copying} command itself causes the permissions text to
-appear in an Info file @emph{before} the first node.  The text is also
-copied into the beginning of each split Info output file, as is legally
-necessary.  This location implies a human reading the manual using Info
-does @emph{not} see this text (except when using the advanced Info
-command @kbd{g *}), but this does not matter for legal purposes,
-because the text is present.
+O próprio comando @code{@@copying} faz com que o texto das permissões 
+apareça em um arquivo Info @emph{antes} do primeiro nodo.  O texto 
+também é copiado no início de cada arquivo dividido de saída Info, como 
+é legalmente necessário.  Essa localização implica que um humano lendo o 
+manual utilizando Info @emph{não} vê esse texto (exceto quando da 
+utilização do comando avançado @kbd{g *} de Info), porém isso não 
+importa para propósitos legais, pois o texto está presente.
 
-Similarly, the @code{@@copying} text is automatically included at the
-beginning of each HTML output file, as an HTML comment.  Again, this
-text is not visible (unless the reader views the HTML source).
+Similarmente, o texto @code{@@copying} é automaticamente incluído no 
+início de cada arquivo de saída HTML, como um comentário HTML.  De novo, 
+esse texto não é visível (a menos que o leitor visualize o fonte HTML).
 
-The permissions text defined by @code{@@copying} also appears
-automatically at the beginning of the XML and Docbook output files.
+O texto de permissões definido por @code{@@copying} também apareçe 
+automaticamente no início dos arquivos de saída XML e Docbook.
 
 
 @node Titlepage & Copyright Page
