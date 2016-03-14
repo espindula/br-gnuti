@@ -2411,54 +2411,55 @@ marcação, não se recomenda-os.
 @findex subtitle
 @findex author
 
-You can use the @code{@@title}, @code{@@subtitle}, and @code{@@author}
-commands to create a title page in which the vertical and horizontal
-spacing is done for you automatically.  This contrasts with the method
-described in the previous section, in which the @code{@@sp} command is
-needed to adjust vertical spacing.
+Você pode utilizar os comandos @code{@@title}, @code{@@subtitle}, e 
+@code{@@author} para criar uma página de título na qual o espaçamento 
+vertical e horizontal seja feito para você automaticamente.  Isso 
+contrasta com o método descrito na seção anterior, no qual o comando 
+@code{@@sp} é necessário para ajustar o espaçamento vertical.
 
-Write the @code{@@title}, @code{@@subtitle}, or @code{@@author}
-commands at the beginning of a line followed by the title, subtitle,
-or author.  The @code{@@author} command may be used for a quotation in
-an @code{@@quotation} block (@pxref{@code{@@quotation}});
-except for that, it is an error to use any of these commands outside
-of @code{@@titlepage}.
+Escreva os comandos @code{@@title}, @code{@@subtitle}, ou 
+@code{@@author} no início de uma linha seguido pelo título, subtítulo, 
+ou autor.  O comando @code{@@author} pode ser utilizado para uma citação 
+em um bloco @code{@@quotation} (@pxref{@code{@@quotation}});
+exceto para isso, é um erro utilizar quaisquer desses comandos fora de 
+@code{@@titlepage}.
 
-The @code{@@title} command produces a line in which the title is set
-flush to the left-hand side of the page in a larger than normal font.
-The title is underlined with a black rule.  The title must be given on
-a single line in the source file; it will be broken into multiple
-lines of output is needed.
+O comando @code{@@title} produz uma linha na qual o título é configurado 
+rente ao lado esquerdo da página em um fonte mais larga que a normal.
+O título é sublinhado com uma linha preta.  O título deve 
+necessariamente ser dado em uma linha única no arquivo fonte; ele será 
+quebrado em múltiplas linhas de saída se necessário.
 
-For long titles, the @code{@@*} command may be used to specify the
-line breaks in long titles if the automatic breaks do not suit.  Such
-explicit line breaks are generally reflected in all output formats; if
-you only want to specify them for the printed output, use a
-conditional (@pxref{Conditionals}).  For example:
+Para títulos longos, o comando @code{@@*} pode ser utilizado para 
+especificar as quebras de linha em títulos longos de as quebras 
+automáticas não servirem.  Tais quebras explícitas de linha geralmente 
+são refletidas em todos os formatos de saída; se você desejar somente 
+especificá-las para a saída impressa, utiliza um condicional 
+(@pxref{Conditionals}).  Por exemplo:
 
 @example
-@@title This Long Title@@inlinefmt@{tex,@@*@} Is Broken in @@TeX@{@}
+@@title Este Título Longo@@inlinefmt@{tex,@@*@} É Quebrado em @@TeX@{@}
 @end example
 
-The @code{@@subtitle} command sets subtitles in a normal-sized font
-flush to the right-hand side of the page.
+O comando @code{@@subtitle} configura subtítulos em uma fonte de tamanho 
+normal rente ao lado direito da página.
 
-The @code{@@author} command sets the names of the author or authors in
-a middle-sized font flush to the left-hand side of the page on a line
-near the bottom of the title page.  The names are followed by a black
-rule that is thinner than the rule that underlines the title.
+O comando @code{@@author} configura os nomes do autor ou autores em uma 
+fonte de tamanho médio rente ao lado esquerdo da página em uma linha 
+próxima ao pé da página de título.  Os nomes são seguidos por uma linha 
+preta que é mais fina que a linha que sublinha o título.
 
-There are two ways to use the @code{@@author} command: you can write
-the name or names on the remaining part of the line that starts with
-an @code{@@author} command:
+Existem duas maneiras de se utilizar o comando @code{@@author}: você 
+pode escrever o nome ou nomes na parte restante da linha que inicia com 
+um comando @code{@@author}:
 
 @example
-@@author by Jane Smith and John Doe
+@@author por Jane Smith e John Doe
 @end example
 
 @noindent
-or you can write the names one above each other by using multiple
-@code{@@author} commands:
+ou você pode escrever os nomes um acima do outro, utilizando múltiplos 
+comandos @code{@@author}:
 
 @example
 @group
@@ -2468,15 +2469,15 @@ or you can write the names one above each other by using multiple
 @end example
 
 @need 950
-A template for this method looks like this:
+Um modelo para esse método se parece com isto:
 
 @example
 @group
 @@titlepage
-@@title @var{name-of-manual-when-printed}
-@@subtitle @var{subtitle-if-any}
-@@subtitle @var{second-subtitle}
-@@author @var{author}
+@@title @var{nome-do-manual-quando-impresso}
+@@subtitle @var{subtítulo-se-algum}
+@@subtitle @var{segundo-subtítulo}
+@@author @var{autor}
 @@page
 @dots{}
 @@end titlepage
@@ -2490,42 +2491,43 @@ A template for this method looks like this:
 @cindex Printed permissions
 @cindex Permissions, printed
 
-By international treaty, the copyright notice for a book must be either
-on the title page or on the back of the title page.  When the copyright
-notice is on the back of the title page, that page is customarily not
-numbered.  Therefore, in Texinfo, the information on the copyright page
-should be within @code{@@titlepage} and @code{@@end titlepage}
-commands.
+Por acordo internacional, o aviso de direitos autorais para um livro 
+deve necessariamente estar ou na página de título ou no verso da página 
+de título.  Quado o aviso de direitos autorais estiver no verso da 
+página de título, essa página é costumeiramente não numerada.  Portanto, 
+em Texinfo, a informação na página de direitos autorais deveria estar 
+entre os comandos @code{@@titlepage} e @code{@@end titlepage}.
 
 @findex vskip @r{@TeX{} vertical skip}
 @cindex filll @r{@TeX{} dimension}
-Use the @code{@@page} command to cause a page break.  To push the
-copyright notice and the other text on the copyright page towards the
-bottom of the page, use the following incantation after @code{@@page}:
+Utilize o comando @code{@@page} para provocar uma quebra de página.  
+Para empurrar o aviso de direitos autorais e o outro texto na página de 
+direitos autorais em direção ao pé da página, utilize a seguinte 
+encantamento após @code{@@page}:
 
 @example
 @@vskip 0pt plus 1filll
 @end example
 
 @noindent
-The @code{@@vskip} command inserts whitespace in the @TeX{} output; it
-is ignored in all other output formats.  The @samp{0pt plus 1filll}
-means to put in zero points of mandatory whitespace, and as much
-optional whitespace as needed to push the following text to the bottom
-of the page.  Note the use of three @samp{l}s in the word
-@samp{filll}; this is correct.
+O comando @code{@@vskip} insere espaço em branco na saída @TeX{}; ele é 
+ignora em todos os outros formatos de saída.  O @samp{0pt plus 1filll} 
+significa colocar em zero pontos de espaço em branco obrigatório, e 
+tantos espaços em branco opcionais quantos sejam necessários para 
+umpurrar o texto seguinte para o pé da página.  Note o uso de três 
+@samp{l}s na palavra @samp{filll}; isso está correto.
 
-To insert the copyright text itself, write @code{@@insertcopying}
-next (@pxref{Document Permissions}):
+Para inserir o próprio texto de direitos autorais, escreva 
+@code{@@insertcopying} depois (@pxref{Document Permissions}):
 
 @example
 @@insertcopying
 @end example
 
-Follow the copying text by the publisher, ISBN numbers, cover art
-credits, and other such information.
+Siga o texto de direitos autorais pelo editor, números ISBN, créditos de 
+arte de capa, e outras tais informações.
 
-Here is an example putting all this together:
+Aqui está um exemplo de como colocar tudo isso junto:
 
 @example
 @@titlepage
@@ -2534,16 +2536,16 @@ Here is an example putting all this together:
 @@vskip 0pt plus 1filll
 @@insertcopying
 
-Published by @dots{}
+Publicado por @dots{}
 
-Cover art by @dots{}
+Arte de capa por @dots{}
 @@end titlepage
 @end example
 
-We have one more special case to consider: for plain text output, you
-must insert the copyright information explicitly if you want it to
-appear.  For instance, you could have the following after the copyright
-page:
+Nós temos um caso especial a considerar: para saída de texto plano, você 
+deve necessariamente inserir a informação de direitos autorais 
+explicitamente se você deseja que ela apareça.  Por exemplo, você 
+poderia ter o seguinte após a página de direitos autorais:
 
 @example
 @@ifplaintext
@@ -2551,8 +2553,8 @@ page:
 @@end ifplaintext
 @end example
 
-You could include other title-like information for the plain text
-output in the same place.
+Você poderia incluir outras informações de título para a saída de texto 
+plano no mesmo lugar.
 
 
 
@@ -2565,42 +2567,45 @@ output in the same place.
 @cindex End titlepage starts headings
 @cindex Generating page headings
 
-Like all @code{@@end} commands (@pxref{Quotations and Examples}), the
-@code{@@end titlepage} command must be written at the beginning of a
-line by itself, with only one space between the @code{@@end} and the
-@code{titlepage}.  It not only marks the end of the title and
-copyright pages, but also causes @TeX{} to start generating page
-headings and page numbers.
+Como todos os comandos @code{@@end} (@pxref{Quotations and Examples}), o 
+comando @code{@@end titlepage} deve estar escrito no início de uma linha 
+própria, com somente um espaço entre o @code{@@end} e o @code{titlepage}.
+Ele somente marca o fim das páginas de título e de direitos autorais, 
+porém também manda que @TeX{} inicie a geração de cabeçalhos de página e 
+de numeros de página.
 
-Texinfo has two standard page heading formats, one for documents
-printed on one side of each sheet of paper (single-sided printing),
-and the other for documents printed on both sides of each sheet
-(double-sided printing).
+Texinfo tem dois formatos padrão de cabeçalho  de página, um para 
+documentos impressos em um lado de cada folha de papel (impressão de 
+lado único), e o outro para documentos impressos em ambos os lados de 
+cada folha (impressão de lado duplo).
 
-In full generality, you can control the headings in different ways:
+Em genelaridade plena, você pode controlar os cabeçalhos em diferentes 
+maneiras:
 
 @itemize @bullet
 @item
-The conventional way is to write a @code{@@setchapternewpage} command
-before the title page commands, if required, and then have the
-@code{@@end titlepage} command start generating page headings in the
-manner desired.
+A maneira convencional é escrever um comando @code{@@setchapternewpage} 
+antes dos comandos de página de título, se exigido, e então ter o 
+comando @code{@@end titlepage} iniciando a geração de cabeçalhos de 
+página na maneira desejada.
 
-Most documents are formatted with the standard single-sided or
-double-sided headings, (sometimes) using @code{@@setchapternewpage
-odd} for double-sided printing and (almost always) no
-@code{@@setchapternewpage} command for single-sided printing
+A maioria dos documentos é formatada com os cabeçalhos padrão lado único 
+ou lado duplo, (as vezes) utilizando @code{@@setchapternewpageodd} para 
+impressão em lado duplo e (quase sempre) sem comando 
+@code{@@setchapternewpage} para impressão de lado único 
 (@pxref{@code{@@setchapternewpage}}).
 
 @item
-Alternatively, you can use the @code{@@headings} command to prevent
-page headings from being generated or to start them for either single
-or double-sided printing.  Write a @code{@@headings} command
-immediately after the @code{@@end titlepage} command.  To turn off
-headings, write @code{@@headings off}.  @xref{@code{@@headings}}.
+Alternativamente, você pode utilizar o comando @code{@@headings} para 
+prevenir que os cabeçalhos de página sejam gerados ou para iniciá-los 
+para ou impressão de lado único ou duplo.  Escreve um cmando 
+@code{@@headings} imediatamente após o comando @code{@@end titlepage}.
+Para desligar os cabeçalhos, escreva @code{@@headings off}.  
+@xref{@code{@@headings}}.
 
 @item
-Or, you may specify your own page heading and footing format.
+Ou, você pode especificar o seu próprio formato de cabeçalho e rodapé de 
+página.
 @xref{Headings}.
 @end itemize
 
