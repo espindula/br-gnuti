@@ -2240,169 +2240,173 @@ automaticamente no início dos arquivos de saída XML e Docbook.
 @node Titlepage & Copyright Page
 @section Title and Copyright Pages
 
-In hard copy output, the manual's name and author are usually printed on
-a title page.  Copyright information is usually printed on the back of
-the title page.
+Em saída impressa, o nome e autor do manual são usualmente impressos em 
+uma página de título.   A informação de direitos autorais é geralmente 
+impressa no verso de página de título.
 
-The title and copyright pages appear in printed manuals, but not in
-most other output formats.  Because of this, it is possible to use
-several slightly obscure typesetting commands that are not to be used
-in the main text.  In addition, this part of the beginning of a
-Texinfo file contains the text of the copying permissions that appears
-in the printed manual.
+As páginas de título e de direitos autorais aparecem em manuais 
+impressos, porém não na maior parte dos outros formatos de saída.  Por 
+causa disso, é possível utilizar vários comandos de tipografia 
+ligeiramente obscuros que não são para ser utilizados no texto 
+principal.  Adicionalmente, esta parte do início de um arquio Texinfo 
+contém o texto das permissões de cópia que apareçe no manual impresso.
 
 @menu
-* @code{@@titlepage}::                  Create a title for the printed document.
-* @code{@@titlefont @@center @@sp}::      The @code{@@titlefont}, @code{@@center},
-                                 and @code{@@sp} commands.
-* @code{@@title @@subtitle @@author}::    The @code{@@title}, @code{@@subtitle},
-                                 and @code{@@author} commands.
-* Copyright::                   How to write the copyright notice and
-                                 include copying permissions.
-* Heading Generation::          Turn on page headings after the title and
-                                 copyright pages.
+* @code{@@titlepage}::                  Crie um título para o documento impresso.
+* @code{@@titlefont @@center @@sp}::    Os comandos @code{@@titlefont}, @code{@@center}, e @code{@@sp}.
+* @code{@@title @@subtitle @@author}::  Os comandos @code{@@title}, @code{@@subtitle}, e @code{@@author}.
+* Copyright::                   Como escrever o aviso de direitos autorais e incluir permissões de cópia.
+* Heading Generation::          Ligue o cabeçalho de página após as páginas de título e de direitos autorais.
 @end menu
 
 
 @node @code{@@titlepage}
 @subsection @code{@@titlepage}
 
-@anchor{titlepage}@c old name
+@anchor{titlepage}@c nome antigo
 @cindex Title page
 @findex titlepage
 
-Start the material for the title page and following copyright page
-with @code{@@titlepage} on a line by itself and end it with
-@code{@@end titlepage} on a line by itself.
+Inicie o material para a página de título e seguinte à página de 
+direitos autorais com @code{@@titlepage} em uma linha própria e finalize 
+com @code{@@end titlepage} em uma linha própria.
 
-The @code{@@end titlepage} command starts a new page and turns on page
-numbering (@pxref{Heading Generation}).  All the
-material that you want to appear on unnumbered pages should be put
-between the @code{@@titlepage} and @code{@@end titlepage} commands.
-You can force the table of contents to appear there with the
-@code{@@setcontentsaftertitlepage} command (@pxref{Contents}).
+O comando @code{@@end titlepage} inicia uma página nova e liga a 
+numeração de página (@pxref{Heading Generation}).  Todo o material que 
+você deseja que apareça em páginas não numeradas deveria ser colocado 
+entre os comandos @code{@@titlepage} e @code{@@end titlepage}.
+Você pode forçar que o sumário apareça ali com o comando 
+@code{@@setcontentsaftertitlepage} (@pxref{Contents}).
 
 @findex page@r{, within @code{@@titlepage}}
-By using the @code{@@page} command you can force a page break within the
-region delineated by the @code{@@titlepage} and @code{@@end titlepage}
-commands and thereby create more than one unnumbered page.  This is how
-the copyright page is produced.  (The @code{@@titlepage} command might
-perhaps have been better named the @code{@@titleandadditionalpages}
-command, but that would have been rather long!)
+Ao utilizar o comando @code{@@page} você pode forçar uma quebra de 
+página dentro da região delineada pelos comandos @code{@@titlepage} e 
+@code{@@end titlepage} e assim criar mais que uma página não numerada.
+É assim que a página de direitos autorais é produzida.  (O comando 
+@code{@@titlepage} talvez pudesse ter sido melhor nomeado de 
+@code{@@titleandadditionalpages}, porém isso poderia ter sido até certo 
+ponto longo!)
 
-When you write a manual about a computer program, you should write the
-version of the program to which the manual applies on the title page.
-If the manual changes more frequently than the program or is independent
-of it, you should also include an edition number@footnote{We have found
-that it is helpful to refer to versions of independent manuals as
-`editions' and versions of programs as `versions'; otherwise, we find we
-are liable to confuse each other in conversation by referring to both
-the documentation and the software with the same words.} for the manual.
-This helps readers keep track of which manual is for which version of
-the program.  (The `Top' node should also contain this information; see
-@ref{The Top Node}.)
+Quando você escreve um manual acerca de um programa de computador, você 
+deveria escrever, na página de título, a versão do programa para a qual 
+o manual se aplica.
+Se o manual muda mais frequentemente que o programa ou é independente 
+dele, você também deveria incluir um número de 
+edição@footnote{Entendeu-se que é útil se referir a versões de manuais 
+independentes como `edições' e versões de programas como `versões'; do 
+contrário, nós achamos que estamos sujeitos a confundir cada um em 
+conversas, referenciando a ambos, a documentação e o software, com as 
+mesmas palavras.} para o manual.  Isso ajuda os leitores a se manterem 
+informados sobre qual manual é para qual versão do programa.  (O nodo 
+`Top' também deveria conter essa informação; veja-se 
+@ref{The Top Node}).
 
-Texinfo provides two main methods for creating a title page.  One method
-uses the @code{@@titlefont}, @code{@@sp}, and @code{@@center} commands
-to generate a title page in which the words on the page are
-centered.
+Texinfo provê dois métodos principais para criar uma página de título.  
+Um método utiliza os comandos @code{@@titlefont}, @code{@@sp}, e 
+@code{@@center} para gerar uma página de título na qual as palavras na 
+página são centralizadas.
 
-The second method uses the @code{@@title}, @code{@@subtitle}, and
-@code{@@author} commands to create a title page with black rules under
-the title and author lines and the subtitle text set flush to the
-right hand side of the page.  With this method, you do not specify any
-of the actual formatting of the title page.  You specify the text
-you want, and Texinfo does the formatting.
+O segundo método utiliza os comandos @code{@@title}, @code{@@subtitle}, 
+e @code{@@author} para criar uma página de título com traços negros sob 
+as linhas de título e autor e o texto de subtítulo colocado rente ao 
+lado direito da página.   Com esse método, você não especifica nada da 
+formatação atual da página de título.  Você especifica o texto que você 
+deseja, e Texinfo faz a formatação.
 
-You may use either method, or you may combine them; see the examples in
-the sections below.
+Você pode utilizar qualquer método, ou você pode combiná-los; seja os 
+exemplos nas seções abaixo.
 
 @findex shorttitlepage
 @cindex Bastard title page
 @cindex Title page, bastard
-For sufficiently simple documents, and for the bastard title page in
-traditional book frontmatter, Texinfo also provides a command
-@code{@@shorttitlepage} which takes the rest of the line as the title.
-The argument is typeset on a page by itself and followed by a blank
-page.
+Para documentos suficientemente simples, e para a página de ante-rosto 
+em formatador tradicional de livro, Texinfo também provê um comando, 
+@code{@@shorttitlepage}, o qual toma o restante da linha como o título.
+O argumento é tipografado em uma página própria e seguido por uma página 
+em branco.
 
 
 @node @code{@@titlefont @@center @@sp}
-@subsection @code{@@titlefont}, @code{@@center}, and @code{@@sp}
+@subsection @code{@@titlefont}, @code{@@center}, e @code{@@sp}
 
-@anchor{titlefont center sp}@c old name
+@anchor{titlefont center sp}@c nome antigo
 @findex titlefont
 @findex center
 @findex sp @r{(titlepage line spacing)}
 
-You can use the @code{@@titlefont}, @code{@@sp}, and @code{@@center}
-commands to create a title page for a printed document.  (This is the
-first of the two methods for creating a title page in Texinfo.)
+Você pode utilizar os comandos @code{@@titlefont}, @code{@@sp}, e 
+@code{@@center} para criar uma página de título para um documento 
+impresso.  (Esse é o primeiro de dois métodos para a criação de uma 
+página de título em Texinfo).
 
-Use the @code{@@titlefont} command to select a large font suitable for
-the title itself.  You can use @code{@@titlefont} more than once if you
-have an especially long title.
+Utilize o comando @code{@@titlefont} para selecionar uma fonte larga 
+adequada para o próprio título.  Você pode utilizar @code{@@titlefont} 
+mais que uma vez se você tiver um título especialmente longo.
 
-For HTML output, each @code{@@titlefont} command produces an
-@code{<h1>} heading, but the HTML document @code{<title>} is not
-affected.  For that, you must put a @code{@@settitle} command before
-the @code{@@titlefont} command (@pxref{@code{@@settitle}}).
+Para saída HTML, cada comando @code{@@titlefont} produz um cabeçalho 
+@code{<h1>}, porém o @code{<title>} do documento HTML não é afetado.  
+Para isso, você deve necessariamente colocar um comando 
+@code{@@settitle} antes do comando @code{@@titlefont} 
+(@pxref{@code{@@settitle}}).
 
 @need 700
-For example:
+Por exemplo:
 
 @example
 @@titlefont@{Texinfo@}
 @end example
 
-Use the @code{@@center} command at the beginning of a line to center
-the remaining text on that line.  Thus,
+Utilize o comando @code{@@center} no início de uma linha para 
+centralizar o restante do texto naquela linha.  Assim,
 
 @example
 @@center @@titlefont@{Texinfo@}
 @end example
 
 @noindent
-centers the title, which in this example is ``Texinfo'' printed
-in the title font.
+centraliza o título, o qual neste exemplo é ``Texinfo'' impresso na 
+fonte de título.
 
-Use the @code{@@sp} command to insert vertical space.  For example:
+Utilize o comando @code{@@sp} para inserir espaço vertical.  Por 
+exemplo:
 
 @example
 @@sp 2
 @end example
 
 @noindent
-This inserts two blank lines on the printed page.
-(@xref{@code{@@sp}}, for more information about the @code{@@sp}
-command.)
+Isso insere duas linhas em branco na página impressa.
+(@xref{@code{@@sp}}, para mais informação acerca do comando 
+@code{@@sp}).
 
-A template for this method looks like this:
+Um modelo para esse método se parece com isto:
 
 @example
 @group
 @@titlepage
 @@sp 10
-@@center @@titlefont@{@var{name-of-manual-when-printed}@}
+@@center @@titlefont@{@var{nome-do-manual-quando-impresso}@}
 @@sp 2
-@@center @var{subtitle-if-any}
+@@center @var{subtítulo-se-algum}
 @@sp 2
-@@center @var{author}
+@@center @var{autor}
 @dots{}
 @@end titlepage
 @end group
 @end example
 
-The spacing of the example fits an 8.5 by 11 inch manual.
+O espaçamento do exemplo se encaixa em um manual de 8.5 por 11 
+polegadas.
 
-You can in fact use these commands anywhere, not just on a title page,
-but since they are not logical markup commands, we don't recommend
-them.
+Você de fato pode utilizar esses comandos em qualquer lugar, não somente 
+em uma página de título, porém dado que eles não são comandos lógicos de 
+marcação, não se recomenda-os.
+
 
 @node @code{@@title @@subtitle @@author}
-@subsection @code{@@title}, @code{@@subtitle}, and @code{@@author}
+@subsection @code{@@title}, @code{@@subtitle}, e @code{@@author}
 
-@anchor{title subtitle author}@c old name
+@anchor{title subtitle author}@c nome antigo
 @findex title
 @findex subtitle
 @findex author
@@ -24186,6 +24190,12 @@ The fourth example shows a colon character being quoted in a label,
 and the fifth example shows a period being quoted in a node name.
 
 @xref{Cross References}.
+
+
+@node Licença de Documentação Livre GNU
+@appendix Licença de Documentação Livre GNU
+
+@include fdl-pt_BR.texi
 
 
 @node GNU Free Documentation License
