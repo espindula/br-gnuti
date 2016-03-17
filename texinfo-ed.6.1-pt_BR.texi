@@ -277,9 +277,9 @@ Comandos Globais de Documento
 * @code{@@documentdescription}::        Sumário de documento para a saída HTML.
 * @code{@@setchapternewpage}::          Iniciar capítulos em páginas do lado direito.
 * @code{@@headings}::                   Uma opção para ligar e desligar cabeçalhos e impressão em ambos ou de um único lado.
-* @code{@@paragraphindent}::            Especifique endentação de parágrafo.
-* @code{@@firstparagraphindent}::       Suprimindo a endentação de primeiro parágrafo.
-* @code{@@exampleindent}::              Especifique a endentação de ambiente.
+* @code{@@paragraphindent}::            Especifique recuo de parágrafo.
+* @code{@@firstparagraphindent}::       Suprimindo a recuo de primeiro parágrafo.
+* @code{@@exampleindent}::              Especifique a recuo de ambiente.
 
 Nodos
 
@@ -387,11 +387,11 @@ Encapsulamentos e Exemplos
 * @code{@@small@dots{}}::                   Exemplos em uma fonte menor.
 * @code{@@display}::                    Escrevendo um exemplo na fonte atual.
 * @code{@@format}::                     Escrevendo um exemplo sem margens estreitadas.
-* @code{@@exdent}::                     Desfazer endentação em uma linha.
+* @code{@@exdent}::                     Desfazer recuo em uma linha.
 * @code{@@flushleft @@flushright}::      Empurrando texto alinhado à esquerda ou alinhado à direita.
 * @code{@@raggedright}::                Evitando justificação à direita.
-* @code{@@noindent}::                   Prevenindo endentação de parágrafo.
-* @code{@@indent}::                     Forçando endentação de parágrafo.
+* @code{@@noindent}::                   Prevenindo recuo de parágrafo.
+* @code{@@indent}::                     Forçando recuo de parágrafo.
 * @code{@@cartouche}::                  Desenhando retângulos por todos os lados ao redor do texto.
 
 Listas e Tabelas
@@ -2706,24 +2706,24 @@ texi2any --dvi --Xopt --texinfo=@@setcontentsaftertitlepage foo.texi
 @cindex Top node
 @cindex Node, `Top'
 
-The `Top' node is the node in which a reader enters an Info manual.
-As such, it should begin with a brief description of the manual
-(including the version number), and end with a master menu for the
-whole manual.  Of course you should include any other general
-information you feel a reader would find helpful.
+O nodo `Top' é o nodo no qual um leitor acessa um manual Info.
+Como tal, ele deveria iniciar com uma descrição breve do manual 
+(incluindo o número de versão), e terminar com um menu mestre para o 
+manual inteiro.  Certamente você deveria incluir qualquer outra 
+informação geral que você sinta que um leitor acharia de muita ajuda.
 
 @findex top
-It is conventional and desirable to write a @code{@@top} sectioning
-command line containing the title of the document immediately after
-the @code{@@node Top} line (@pxref{@code{@@top} Command}).
+É convencional e desejável escrever um linha de comando de seccionamento 
+@code{@@top} contendo o título do documento imediatamente após a linha 
+@code{@@node Top} (@pxref{Comando @code{@@top}}).
 
-The contents of the `Top' node should appear only in the online output;
-none of it should appear in printed output, so enclose it between
-@code{@@ifnottex} and @code{@@end ifnottex} commands.  (@TeX{} does not
-print either an @code{@@node} line or a menu; they appear only in Info;
-strictly speaking, you are not required to enclose these parts between
-@code{@@ifnottex} and @code{@@end ifnottex}, but it is simplest to do
-so.  @xref{Conditionals, , Conditionally Visible Text}.)
+O conteúdo do nodo `Top' deveria aparecer somente na saída online; nada 
+dele deveria aparecer em saída impressa, então envolva-o entre os 
+comandos @code{@@ifnottex} e @code{@@end ifnottex}.  (@TeX{} não imprime 
+nem uma linha @code{@@node} nem um menu; eles aparecem somente em Info; 
+estritamente falando, você não está obrigado a envolver essas partes 
+entre @code{@@ifnottex} e @code{@@end ifnottex}, porém é mais simples 
+fazer isso.  @xref{Conditionals, , Conditionally Visible Text}).
 
 @menu
 * Top Node Example::
@@ -2736,7 +2736,7 @@ so.  @xref{Conditionals, , Conditionally Visible Text}.)
 
 @cindex Top node example
 
-Here is an example of a Top node.
+Aqui está um exemplo de um nodo Top.
 
 @example
 @group
@@ -2744,11 +2744,11 @@ Here is an example of a Top node.
 @@node Top
 @@top Sample Title
 
-This is the text of the top node.
+Este é o texto do nodo top.
 @@end ifnottex
 @end group
 
-Additional general information.
+Informação geral adicional.
 
 @group
 @@menu
@@ -2767,69 +2767,70 @@ Additional general information.
 @cindex Menu, master
 @cindex Parts of a master menu
 
-A @dfn{master menu} is the main menu.  It is customary to include a
-detailed menu listing all the nodes in the document in this menu.
+Um @dfn{menu mestre} é o menu principal.  É costumeiro incluir um menu 
+detalhado listando todos os nodos no documento nesse menu.
 
-Like any other menu, a master menu is enclosed in @code{@@menu} and
-@code{@@end menu} and does not appear in the printed output.
+Como qualquer outro menu, um menu mestre é envolvido em @code{@@menu} e 
+@code{@@end menu} e não aparece na saída impressa.
 
-Generally, a master menu is divided into parts.
+Geralmente, um menu mestre é dividivo em partes.
 
 @itemize @bullet
 @item
-The first part contains the major nodes in the Texinfo file: the nodes
-for the chapters, chapter-like sections, and the appendices.
+A primeira parte contém os nodos principais no arquivo Texinfo: os nodos 
+para os capítulos, seções em forma de capítulo, e os apêndices.
 
 @item
-The second part contains nodes for the indices.
+A segunda parte contém nodos para os índices.
 
 @item
 @findex detailmenu
 @cindex Detailed menu
-The third and subsequent parts contain a listing of the other,
-lower-level nodes, often ordered by chapter.  This way, rather than go
-through an intermediary menu, an inquirer can go directly to a
-particular node when searching for specific information.  These menu
-items are not required; add them if you think they are a convenience.
-If you do use them, put @code{@@detailmenu} before the first one, and
-@code{@@end detailmenu} after the last; otherwise, @code{makeinfo}
-will get confused.
+A terceira e subsequentes partes contém uma listagem dos outros, nodos 
+de baixo nível, frequentemente ordenados por capítulo.  Essa maneira, em 
+vez de se ir ao longo de um menu intermediário, um investigador pode ir 
+diretamente a um nodo particular quando da busca por informação 
+específica.  Esses itens de menu não são exigidos; adicione-os se você 
+pensar que eles são uma conveniência.
+Se você utilizá-los, coloque @code{@@detailmenu} antes do primeiro, e 
+@code{@@end detailmenu} após o último; do contrário, @code{makeinfo} 
+ficará confuso.
 @end itemize
 
-Each section in the menu can be introduced by a descriptive line.  So
-long as the line does not begin with an asterisk, it will not be
-treated as a menu entry.  (@xref{Writing a Menu}, for more
-information.)
+Cada seção no menu pode ser introduzida por uma linha descritiva.  
+Contanto que a linha não se inicie com um asterísco, ela não será 
+tratada como uma entrada de menu.  (@xref{Writing a Menu}, para mais 
+informação).
 
-For example, the master menu for this manual looks like the following
-(but has many more entries):
+Por exemplo, o menu mestre para este manual se parece com o seguinte 
+(porém tem muito mais entradas):
 
 @example
 @group
 @@menu
-* Copying Conditions::  Your rights.
-* Overview::            Texinfo in brief.
+* Condições de Cópia::  Seus direitos.
+* Visão Geral::         Texinfo em resumo.
 @dots{}
 @end group
 @group
-* Command and Variable Index::
-* General Index::
+* Índices de Comandos e Variáveis::
+* Índices Gerais::
 @end group
 
 @group
 @@detailmenu
---- The Detailed Node Listing ---
+--- A Listagem Detalhada do Nodo ---
 
-Overview of Texinfo
+Visão geral de Texinfo
 
-* Reporting Bugs:: @dots{}
+* Relatando Bugs:: @dots{}
 @dots{}
 @end group
 
 @group
-Beginning a Texinfo File
+Iniciando um Arquivo Texinfo
 
-* Sample Beginning:: @dots{}
+* Início de Amostra:: @dots{}
 @dots{}
 @@end detailmenu
 @@end menu
@@ -2841,24 +2842,23 @@ Beginning a Texinfo File
 @section Global Document Commands
 @cindex Global Document Commands
 
-Besides the basic commands mentioned in the previous sections, here are
-additional commands which affect the document as a whole.  They are
-generally all given before the Top node, if they are given at all.
+Ao lado dos comandos básicos mencionados nas seções anteriores, aqui 
+estão comandos adicionais que afetam o documento como um todo.  Eles 
+geralmente são todos dados antes do nodo Top, se forem dados afinal.
 
 @menu
-* @code{@@documentdescription}::        Document summary for the HTML output.
-* @code{@@setchapternewpage}::          Start chapters on right-hand pages.
-* @code{@@headings}::                   An option for turning headings on and off
-                                        and double or single sided printing.
-* @code{@@paragraphindent}::            Specify paragraph indentation.
-* @code{@@firstparagraphindent}::       Suppressing first paragraph indentation.
-* @code{@@exampleindent}::              Specify environment indentation.
+* @code{@@documentdescription}::        Sumário do documento para a saída HTML.
+* @code{@@setchapternewpage}::          Iniciar capítulos em páginas do lado direito.
+* @code{@@headings}::                   Uma opção para ligar e desligar cabeçalhos e impressão em lado único ou duplo.
+* @code{@@paragraphindent}::            Especificar recuo de parágrafo.
+* @code{@@firstparagraphindent}::       Suprimindo o primeiro recuo de parágrafo.
+* @code{@@exampleindent}::              Especificar recuo de ambiente.
 @end menu
 
 
 @node @code{@@documentdescription}
-@subsection @code{@@documentdescription}: Summary Text
-@anchor{documentdescription}@c old name
+@subsection @code{@@documentdescription}: Texto de Resumo
+@anchor{documentdescription}@c nome antigo
 
 @cindex Document description
 @cindex Description of document
@@ -2867,103 +2867,109 @@ generally all given before the Top node, if they are given at all.
 @cindex @code{<meta>} HTML tag, and document description
 @findex documentdescription
 
-When producing HTML output for a document, @command{makeinfo} writes a
-@samp{<meta>} element in the @samp{<head>} to give some idea of the
-content of the document.  By default, this @dfn{description} is the
-title of the document, taken from the @code{@@settitle} command
-(@pxref{@code{@@settitle}}).  To change this, use the
-@code{@@documentdescription} environment, as in:
+Quando da produção de saída HTML para um documento, @command{makeinfo} 
+escreve um elemento @samp{<meta>} no @samp{<head>} para dar alguma ideia 
+do conteúdo do documento.  Por padrão, essa @dfn{descrição} é o título 
+do documento, tomado a partir do comando @code{@@settitle} 
+(@pxref{@code{@@settitle}}).  Para mudar isso, utilize o ambiente 
+@code{@@documentdescription}, como em:
 
 @example
 @@documentdescription
-descriptive text.
+texto descritivo.
 @@end documentdescription
 @end example
 
 @noindent
-This will produce the following output in the @samp{<head>} of the HTML:
+Isso produzirá a saída seguinte no @samp{<head>} do HTML:
 
 @example
-<meta name=description content="descriptive text.">
+<meta name=description content="texto descritivo.">
 @end example
 
-@code{@@documentdescription} must be specified before the first node of
-the document.
+@code{@@documentdescription} deve necessariamente estar especificado 
+antes do primeiro nodo do documento.
 
 
 @node @code{@@setchapternewpage}
 @subsection @code{@@setchapternewpage}: Blank Pages Before Chapters
 
-@anchor{setchapternewpage}@c old name
+@anchor{setchapternewpage}@c nome antigo
 @findex setchapternewpage
 @cindex Starting chapters
 @cindex Pages, starting odd
 
-In an officially bound book, text is usually printed on both sides of
-the paper, chapters start on right-hand pages, and right-hand pages have
-odd numbers.  But in short reports, text often is printed only on one
-side of the paper.  Also in short reports, chapters sometimes do not
-start on new pages, but are printed on the same page as the end of the
-preceding chapter, after a small amount of vertical whitespace.
+Em um oficialmente limitado livro, o texto normalmente é impresso em 
+ambos os lados do papel, capítulos iniciam em páginas do lado direito, e 
+as páginas do lado direito tem números ímpares.  Porém em relatórios 
+curtos, o texto frequentemente é impresso somente em um lado do papel.  
+Também em relatórios curtos, capítulos as vezes não iniciam em páginas 
+novas, mas são impressos na mesma página que o final do capítulo 
+precedente, após uma quantidade pequena de espaço em branco vertical.
 
-You can use the @code{@@setchapternewpage} command with various
-arguments to specify how @TeX{} should start chapters and whether it
-should format headers for printing on one or both sides of the paper
-(single-sided or double-sided printing).
+Você pode utilizar o comando @code{@@setchapternewpage} com vários 
+argumentos para especificar como @TeX{} deveria iniciar capítulos e 
+quando deveria formatar cabeçalhos para impressão em um ou ambos os 
+lados do papel (impressão em lado único ou em lado duplo).
 
-Write the @code{@@setchapternewpage} command at the beginning of a
-line followed by its argument.
+Escreva o comando @code{@@setchapternewpage} no início de uma linha 
+seguido pelo seu argumento.
 
-For example, you would write the following to cause each chapter to
-start on a fresh odd-numbered page:
+Por exemplo, você escreveria o seguinte para fazer com que cada capítulo 
+iniciasse em uma nova página com numeração ímpar:
 
 @example
 @@setchapternewpage odd
 @end example
 
-You can specify one of three alternatives with the
-@code{@@setchapternewpage} command:
+Você pode especificar uma de três alternativas com o comando 
+@code{@@setchapternewpage}:
 
 @table @asis
 
 @item @code{@@setchapternewpage off}
-Cause @TeX{} to typeset a new chapter on the same page as the last
-chapter, after skipping some vertical whitespace.  Also, cause @TeX{} to
-format page headers for single-sided printing.
+Provoca @TeX{} a tipografar um novo capítulo na mesma página como o 
+último capítulo, após pular algum espaço em branco vertical.  Também faz 
+com que @TeX{} formate os cabeçalhos de página para impressão em lado 
+único.
 
 @item @code{@@setchapternewpage on}
-Cause @TeX{} to start new chapters on new pages and to format page
-headers for single-sided printing.  This is the form most often used for
-short reports or personal printing. This is the default.
+Provoca @TeX{} a iniciar novos capítulos em novas páginas e formatar os 
+cabeçalhos de página para impressão em lado único.  Issa é a forma 
+frequentemente mais utilizada para relatórios curtos ou impressão 
+pessoal.  Essa é a padrão.
 
 @item @code{@@setchapternewpage odd}
-Cause @TeX{} to start new chapters on new, odd-numbered pages
-(right-handed pages) and to typeset for double-sided printing.  This is
-the form most often used for books and manuals.
+Provoca @TeX{} a iniciar novos capítulos em novas, páginas de número 
+ímpar (páginas de lado direito) e a tipografar para impressão em lado 
+duplo.  Essa é a forma frequentemente mais utilizada para livros e 
+manuais.
 @end table
 
-Texinfo does not have a @code{@@setchapternewpage even} command,
-because there is no printing tradition of starting chapters or books on
-an even-numbered page.
+Texinfo não te um comando @code{@@setchapternewpage even}, pois não há 
+tradição de impressão de capítulos de início ou livros em uma página de 
+número par.
 
-If you don't like the default headers that @code{@@setchapternewpage}
-sets, you can explicit control them with the @code{@@headings} command.
+Se você não gosta dos cabeçalhos padrão que @code{@@setchapternewpage} 
+configura, você pode explicitamente controlá-los com o comando 
+@code{@@headings}.
 @xref{@code{@@headings}}.
 
-At the beginning of a manual or book, pages are not numbered---for
-example, the title and copyright pages of a book are not numbered.  By
-convention, table of contents and frontmatter pages are numbered with
-roman numerals and not in sequence with the rest of the document.
+No início de um manual ou livro, as páginas não numeradas---por exemplo, 
+as páginas de título e de direitos autorais de um livro não são 
+numeradas.  Por convenção, as páginas de sumário e frontal são numeradas 
+com numerais romanos e não em sequência com o restante do documento.
 
-The @code{@@setchapternewpage} has no effect in output formats that do
-not have pages, such as Info and HTML.
+O @code{@@setchapternewpage} não tem efeito em formatos de saída que não 
+tem páginas, tais como Info e HTML.
 
-We recommend not including any @code{@@setchapternewpage} command in
-your document source at all, since such desired pagination is not
-intrinsic to the document.  For a particular hard copy run, if you
-don't want the default output (no blank pages, same headers on all
-pages) use the @option{--texinfo} option to @command{texi2dvi} to
-specify the output you want.
+Recomenda-se não incluir qualquer comando @code{@@setchapternewpage} em 
+seu fonte de documento de jeito nenhum, dado que tal paginação desejada 
+não é intrínseca ao documento.  Para uma execução particular de 
+impressão em papel, se você não deseja que a saída padrão (sem páginas 
+em branco, mesmos cabeçalhos em todas as páginas) utilize a opção 
+@option{--texinfo} a @command{texi2dvi} para especificar a saída que 
+você deseja.
 
 
 @node @code{@@headings}
