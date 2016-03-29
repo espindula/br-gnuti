@@ -1793,7 +1793,7 @@ mostrado em leitores Info, e assim por diante.
 
 A amostra seguinte mostra o que é necessário.  Os elementos dados aqui 
 são explanados em maiores detalhes nas seções seguintes.  Outros 
-comandos frequentemente são incluidos no início de arquivos Texinfo, 
+comandos frequentemente são incluídos no início de arquivos Texinfo, 
 porém aqueles aqui são os mais críticos.
 
 @xref{GNU Sample Texts}, para os textos completos a serem utilizados em 
@@ -1871,11 +1871,11 @@ Este manual é para @var{programa}, versão @var{versão}.
 Os arquivos Texinfo iniciam com pelo menos duas linhas.  Essas são a 
 linha @code{\input texinfo} e a linha @code{@@settitle}.
 
-Também, se você desejar formatar sumente parte do arquivo Texinfo em 
+Também, se você desejar formatar somente parte do arquivo Texinfo em 
 Emacs, você deve necessariamente escrever a linha @code{@@settitle} 
 entre as linhas `start-of-header' e `end-of-header'.  Essas linhas 
 `start-' e `end-of-header' são opcionais, porém elas não produzem danos, 
-de forma que você pode muito bem sempre inclui-las.
+de forma que você pode muito bem sempre incluí-las.
 
 Qualquer comando que afete a formatação do documento como um todo faz 
 sentido incluir no cabeçalho.  @code{@@synindex} 
@@ -2025,17 +2025,17 @@ sistemas operacionais não conseguem lidar com nomes longos de arquivo.
 Você pode acabar com problemas mesmo quando o nome de arquivo que você 
 especificar for ele próprio curto o suficiente.
 Isso ocorre porque os formatadores Info dividem um arquivo longo Info em 
-subarquivos curtos indiretos, e os nomeia acrescentando ao final 
+sub-arquivos curtos indiretos, e os nomeia acrescentando ao final 
 @samp{-1}, @samp{-2}, @dots{}, @samp{-10}, @samp{-11}, e assim por 
 diante, ao nome de arquivo original.  (@xref{Tag and Split Files}.)  O 
-nome de subarquivo @file{texinfo.info-10}, por exemplo, é longo demais 
+nome de sub-arquivo @file{texinfo.info-10}, por exemplo, é longo demais 
 para sistemas antigos com um limite de 14 caracteres em nomes de 
 arquivo; assim, o nome de arquivo Info para este documento é 
 @file{texinfo} em vez de @file{texinfo.info}.  Quando @code{makeinfo} 
 está em execução em sistemas operacionais tais como MS-DOS que impõe 
 limites severos sobre nomes de arquivo, ele pode remover alguns 
 caracteres do nome original do arquivo para deixar espaço suficiente 
-para o sufixo do subarquivo, assim produzindo arquivos chamados 
+para o sufixo do sub-arquivo, assim produzindo arquivos chamados 
 @file{texin-10}, @file{gcc.i12}, etc.
 
 Veja-se também a opção @option{--output} em 
@@ -2185,7 +2185,7 @@ separados por vírgulas.
 @cindex Owner of copyright for FSF works
 O titular (ou titulares) dos direitos autorais é quem quer que detenha 
 os direitos autorais legais sobre o trabalho.  No caso de trabalhos 
-atribuídos à FSF, o títular é `Free Software Foundation, Inc.'.
+atribuídos à FSF, o titular é `Free Software Foundation, Inc.'.
 
 A `linha' de direitos autorais atualmente pode ser dividida em linhas 
 múltiplas, tanto no documento fonte quanto na saída.  Isso acontece 
@@ -2233,7 +2233,7 @@ Similarmente, o texto @code{@@copying} é automaticamente incluído no
 início de cada arquivo de saída HTML, como um comentário HTML.  De novo, 
 esse texto não é visível (a menos que o leitor visualize o fonte HTML).
 
-O texto de permissões definido por @code{@@copying} também apareçe 
+O texto de permissões definido por @code{@@copying} também aparece 
 automaticamente no início dos arquivos de saída XML e Docbook.
 
 
@@ -2249,7 +2249,7 @@ impressos, porém não na maior parte dos outros formatos de saída.  Por
 causa disso, é possível utilizar vários comandos de tipografia 
 ligeiramente obscuros que não são para ser utilizados no texto 
 principal.  Adicionalmente, esta parte do início de um arquio Texinfo 
-contém o texto das permissões de cópia que apareçe no manual impresso.
+contém o texto das permissões de cópia que aparece no manual impresso.
 
 @menu
 * @code{@@titlepage}::                  Crie um título para o documento impresso.
@@ -2319,7 +2319,7 @@ exemplos nas seções abaixo.
 @findex shorttitlepage
 @cindex Bastard title page
 @cindex Title page, bastard
-Para documentos suficientemente simples, e para a página de ante-rosto 
+Para documentos suficientemente simples, e para a página de anterrosto 
 em formatador tradicional de livro, Texinfo também provê um comando, 
 @code{@@shorttitlepage}, o qual toma o restante da linha como o título.
 O argumento é tipografado em uma página própria e seguido por uma página 
@@ -2514,7 +2514,7 @@ O comando @code{@@vskip} insere espaço em branco na saída @TeX{}; ele é
 ignora em todos os outros formatos de saída.  O @samp{0pt plus 1filll} 
 significa colocar em zero pontos de espaço em branco obrigatório, e 
 tantos espaços em branco opcionais quantos sejam necessários para 
-umpurrar o texto seguinte para o pé da página.  Note o uso de três 
+empurrar o texto seguinte para o pé da página.  Note o uso de três 
 @samp{l}s na palavra @samp{filll}; isso está correto.
 
 Para inserir o próprio texto de direitos autorais, escreva 
@@ -2572,7 +2572,7 @@ comando @code{@@end titlepage} deve estar escrito no início de uma linha
 própria, com somente um espaço entre o @code{@@end} e o @code{titlepage}.
 Ele somente marca o fim das páginas de título e de direitos autorais, 
 porém também manda que @TeX{} inicie a geração de cabeçalhos de página e 
-de numeros de página.
+de números de página.
 
 Texinfo tem dois formatos padrão de cabeçalho  de página, um para 
 documentos impressos em um lado de cada folha de papel (impressão de 
@@ -2598,7 +2598,7 @@ impressão em lado duplo e (quase sempre) sem comando
 @item
 Alternativamente, você pode utilizar o comando @code{@@headings} para 
 prevenir que os cabeçalhos de página sejam gerados ou para iniciá-los 
-para ou impressão de lado único ou duplo.  Escreve um cmando 
+para ou impressão de lado único ou duplo.  Escreve um comando 
 @code{@@headings} imediatamente após o comando @code{@@end titlepage}.
 Para desligar os cabeçalhos, escreva @code{@@headings off}.  
 @xref{@code{@@headings}}.
@@ -2640,7 +2640,7 @@ aparecem no Sumário
 
 Gera uma tabela curta ou sumário do conteúdo que lista somente os 
 capítulos, apêndices e capítulos não numerados.   Seções, subseções e 
-subsubseções são omitidas.   Somente um manual longo precisa de uma 
+sub-subseções são omitidas.   Somente um manual longo precisa de uma 
 tabela curta de conteúdo em adição à tabela completa de conteúdo.
 @end table
 
@@ -2773,7 +2773,7 @@ detalhado listando todos os nodos no documento nesse menu.
 Como qualquer outro menu, um menu mestre é envolvido em @code{@@menu} e 
 @code{@@end menu} e não aparece na saída impressa.
 
-Geralmente, um menu mestre é dividivo em partes.
+Geralmente, um menu mestre é dividido em partes.
 
 @itemize @bullet
 @item
@@ -2798,7 +2798,7 @@ ficará confuso.
 @end itemize
 
 Cada seção no menu pode ser introduzida por uma linha descritiva.  
-Contanto que a linha não se inicie com um asterísco, ela não será 
+Contanto que a linha não se inicie com um asterisco, ela não será 
 tratada como uma entrada de menu.  (@xref{Writing a Menu}, para mais 
 informação).
 
@@ -2935,7 +2935,7 @@ com que @TeX{} formate os cabeçalhos de página para impressão em lado
 
 @item @code{@@setchapternewpage on}
 Provoca @TeX{} a iniciar novos capítulos em novas páginas e formatar os 
-cabeçalhos de página para impressão em lado único.  Issa é a forma 
+cabeçalhos de página para impressão em lado único.  Essa é a forma 
 frequentemente mais utilizada para relatórios curtos ou impressão 
 pessoal.  Essa é a padrão.
 
@@ -2975,49 +2975,52 @@ você deseja.
 @node @code{@@headings}
 @subsection The @code{@@headings} Command
 
-@anchor{headings on off}@c old name
+@anchor{headings on off}@c nome antigo
 @findex headings
 
-The @code{@@headings} command is rarely used.  It specifies what kind of
-page headings and footings to print on each page.  Usually, this is
-controlled by the @code{@@setchapternewpage} command.  You need the
-@code{@@headings} command only if the @code{@@setchapternewpage} command
-does not do what you want, or if you want to turn off predefined page
-headings prior to defining your own.  Write a @code{@@headings} command
-immediately after the @code{@@end titlepage} command.
+O comando @code{@@headings} raramente é utilizado.  Ele especifica o 
+tipo de cabeçalhos e rodapés a imprimir em cada página.  Usualmente, 
+isso é controlado pelo comando @code{@@setchapternewpage}.  Você precisa 
+do comando @code{@@headings} somente se o comando 
+@code{@@setchapternewpage} não fizer o que você desejar, ou se você 
+desejar desligar os cabeçalhos de página pré-definidos antes de definir 
+os seus próprios.  Escreva um comando @code{@@headings} imediatamente 
+após o comando @code{@@end titlepage}.
 
-You can use @code{@@headings} as follows:
+Você pode utilizar @code{@@headings} conforme a seguir:
 
 @table @code
 @item @@headings off
-Turn off printing of page headings.
+Desliga a impressão de cabeçalhos de páginas.
 
 @item @@headings single
-Turn on page headings appropriate for single-sided printing.
+Liga os cabeçalhos de página apropriados para a impressão em lado único.
 
 @item @@headings double
-Turn on page headings appropriate for double-sided printing.
+Liga os cabeçalhos de página apropriados para a impressão em lado duplo.
 
 @item @@headings singleafter
 @itemx @@headings doubleafter
-Turn on @code{single} or @code{double} headings, respectively, after the
-current page is output.
+Liga os cabeçalhos @code{single} ou @code{double}, respectivamente, após 
+ser produzida a saída da página atual.
 
 @item @@headings on
-Turn on page headings: @code{single} if @samp{@@setchapternewpage
-on}, @code{double} otherwise.
+Liga os cabeçalhos de página: @code{single} se 
+@samp{@@setchapternewpageon}; e @code{double} do contrário.
 @end table
 
-For example, suppose you write @code{@@setchapternewpage off} before the
-@code{@@titlepage} command to tell @TeX{} to start a new chapter on the
-same page as the end of the last chapter.  This command also causes
-@TeX{} to typeset page headers for single-sided printing.  To cause
-@TeX{} to typeset for double sided printing, write @code{@@headings
-double} after the @code{@@end titlepage} command.
+Por exemplo, suponha que você escreva @code{@@setchapternewpage off} 
+antes do comando @code{@@titlepage} para informar a @TeX{} para iniciar 
+um capítulo novo na mesma página como o final do mais recente capítulo.  
+Esse comando também faz com que @TeX{} tipografe os cabeçalhos de página 
+para a impressão em lado único.  Para fazer com que @TeX{} tipografe 
+para impressão em lado duplo, escreva @code{@@headingsdouble} após o 
+comando @code{@@end titlepage}.
 
-You can stop @TeX{} from generating any page headings at all by
-writing @code{@@headings off} on a line of its own immediately after the
-line containing the @code{@@end titlepage} command, like this:
+Você pode fazer com que @TeX{} pare de gerar quaisquer cabeçalhos de 
+página em quaisquer circunstâncias, escrevendo @code{@@headings off} em 
+uma linha própria imediatamente após a linha contendo o comando 
+@code{@@end titlepage}, como isto:
 
 @example
 @@end titlepage
@@ -3025,11 +3028,12 @@ line containing the @code{@@end titlepage} command, like this:
 @end example
 
 @noindent
-The @code{@@headings off} command overrides the @code{@@end titlepage}
-command, which would otherwise cause @TeX{} to print page headings.
+O comando @code{@@headings off} anula o comando @code{@@end titlepage}, 
+o qual do contrário faz com que @TeX{} imprima os cabeçalhos de página.
 
-You can also specify your own style of page heading and footing.
-@xref{Headings, , Page Headings}, for more information.
+Você também pode especificar seu próprio estilo de cabeçalho e de rodapé 
+de página.
+@xref{Headings, , Page Headings}, para mais informação.
 
 
 @node @code{@@paragraphindent}
