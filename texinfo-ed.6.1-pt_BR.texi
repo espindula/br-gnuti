@@ -3044,45 +3044,44 @@ de página.
 @cindex Indenting paragraphs, control of
 @cindex Paragraph indentation control
 
-The Texinfo processors may insert whitespace at the beginning of the
-first line of each paragraph, thereby indenting that paragraph.  You can
-use the @code{@@paragraphindent} command to specify this indentation.
-Write a @code{@@paragraphindent} command at the beginning of a line
-followed by either @samp{asis} or a number:
+Os processadores de Texinfo podem inserir espaços em branco no início da 
+primeira linha de cada parágrafo, consequentemente recuando esse 
+parágrafo.  Você pode utilizar o comando @code{@@paragraphindent} para 
+especificar tal recuo.  Escreva um comando @code{@@paragraphindent} no 
+início de uma linha seguido por ou @samp{asis} ou um número:
 
 @example
 @@paragraphindent @var{indent}
 @end example
 
-The indentation is according to the value of @var{indent}:
+O recuo ocorre de acordo com o valor de @var{indent}:
 
 @table @asis
 @item @code{asis}
-Do not change the existing indentation (not implemented in @TeX{}).
+Não modifica o recuo existente (não implementado em @TeX{}).
 
 @item @code{none}
 @itemx 0
-Omit all indentation.
+Omite todos os recuos.
 
 @item @var{n}
-Indent by @var{n} space characters in Info output, by @var{n} ems in
-@TeX{}.
+Recua @var{n} caracteres de espaço em saída Info, @var{n} em @TeX{}.
 
 @end table
 
-The default value of @var{indent} is 3.  @code{@@paragraphindent} is
-ignored for HTML output.
+O valor padrão de @var{indent} é três (3).  @code{@@paragraphindent} é 
+ignorado para saída HTML.
 
-It is best to write the @code{@@paragraphindent} command before the
-end-of-header line at the beginning of a Texinfo file, so the region
-formatting commands indent paragraphs as specified.  @xref{Start of
-Header}.
+É melhor escrever o comando @code{@@paragraphindent} antes da linha de 
+fim de cabeçalho, no início de um arquivo Texinfo, de maneira que os 
+comandos de formatação de região recuem os parágrafos conforme 
+especificado.  @xref{Start of Header}.
 
 
 @node @code{@@firstparagraphindent}
 @subsection @code{@@firstparagraphindent}: Indenting After Headings
 
-@anchor{firstparagraphindent}@c old name
+@anchor{firstparagraphindent}@c nome antigo
 @findex firstparagraphindent
 @cindex First paragraph, suppressing indentation of
 @cindex Suppressing first paragraph indentation
@@ -3090,43 +3089,43 @@ Header}.
 @cindex Indenting, suppressing of first paragraph
 @cindex Headings, indentation after
 
-As you can see in the present manual, the first paragraph in any
-section is not indented by default.  Typographically, indentation is a
-paragraph separator, which means that it is unnecessary when a new
-section begins.  This indentation is controlled with the
-@code{@@firstparagraphindent} command:
+Conforme você pode ver no presente manual, o primeiro parágrafo em 
+qualquer seção não é recuado por padrão.  Tipograficamente, o recuo é um 
+separador de parágrafos, o que significa que ele é desnecessário quando 
+uma nova seção se inicia.  Esse recuo é controlado com o comando 
+@code{@@firstparagraphindent}:
 
 @example
 @@firstparagraphindent @var{word}
 @end example
 
-The first paragraph after a heading is indented according to the value
-of @var{word}:
+O primeiro parágrafo após um cabeçalho é recuado de acordo com o valor 
+de @var{word}:
 
 @table @asis
 @item @code{none}
-Prevents the first paragraph from being indented (default).
-This option is ignored by @command{makeinfo} if
-@code{@@paragraphindent asis} is in effect.
+Evita que o primeiro parágrafo seja recuado (padrão).
+Essa opção é ignorada por @command{makeinfo} se 
+@code{@@paragraphindent asis} estiver em efeito.
 
 @item @code{insert}
-Include normal paragraph indentation.  This respects the paragraph
-indentation set by a @code{@@paragraphindent} command
+Inclui o recuo normal de parágrafo.  Isso respeita o recuo de parágrafo 
+configurado por um comando @code{@@paragraphindent} 
 (@pxref{@code{@@paragraphindent}}).
 @end table
 
-@code{@@firstparagraphindent} is ignored for HTML and Docbook output.
+@code{@@firstparagraphindent} é ignorado para saída HTML e Docbook.
 
-It is best to write the @code{@@firstparagraphindent} command before the
-end-of-header line at the beginning of a Texinfo file, so the region
-formatting commands indent paragraphs as specified.  @xref{Start of
-Header}.
+É melhor escrever o comando @code{@@firstparagraphindent} antes da linha 
+de fim de cabeçalho, no início de um arquivo Texinfo, de maneira que os 
+comandos de formatação de região recuem os parágrafos conforme 
+especificado.  @xref{Start of Header}.
 
 
 @node @code{@@exampleindent}
 @subsection @code{@@exampleindent}: Environment Indenting
 
-@anchor{exampleindent}@c old name
+@anchor{exampleindent}@c nome antigo
 @findex exampleindent
 @cindex Indenting environments
 @cindex Environment indentation
