@@ -3131,38 +3131,39 @@ especificado.  @xref{Start of Header}.
 @cindex Environment indentation
 @cindex Example indentation
 
-The Texinfo processors indent each line of @code{@@example} and similar
-environments.  You can use the @code{@@exampleindent} command to specify
-this indentation.  Write an @code{@@exampleindent} command at the
-beginning of a line followed by either @samp{asis} or a number:
+Os processadores Texinfo recuam cada linha de @code{@@example} e 
+ambientes similares.  Você pode utilizar o comando 
+@code{@@exampleindent} para especificar tal recuo.  Escreva um comando 
+@code{@@exampleindent} no início de uma linha seguido por ou @samp{asis} 
+ou um número:
 
 @example
 @@exampleindent @var{indent}
 @end example
 
-The indentation is according to the value of @var{indent}:
+O recuo é de acordo com o valor de @var{indent}:
 
 @table @asis
 @item @code{asis}
-Do not change the existing indentation (not implemented in @TeX{}).
+Não modifica o recuo existente (não implementado em @TeX{}).
 
 @item 0
-Omit all indentation.
+Omite todos os recuos.
 
 @item @var{n}
-Indent environments by @var{n} space characters in Info output, by
-@var{n} ems in @TeX{}.
+Recua ambientes em @var{n} caracteres de espaço em saída Info, @var{n} 
+em @TeX{}.
 
 @end table
 
-The default value of @var{indent} is 5 spaces in Info, and 0.4@dmn{in}
-in @TeX{}, which is somewhat less.  (The reduction is to help @TeX{}
-fit more characters onto physical lines.)
+O valor padrão de @var{indent} é cinco (5) espaços em Info, e 
+0.4@dmn{in} em @TeX{}, o que é de alguma maneira menos.  (A redução é 
+para ajudar @TeX{} a encaixar mais caracteres em linhas físicas).
 
-It is best to write the @code{@@exampleindent} command before the
-end-of-header line at the beginning of a Texinfo file, so the region
-formatting commands indent paragraphs as specified.  @xref{Start of
-Header}.
+É melhor escrever o comando @code{@@exampleindent} antes da linha de fim 
+de cabeçalho, no início de um arquivo Texinfo, de maneira que os 
+comandos de formatação de região recuem os parágrafos conforme 
+especificado.  @xref{Start of Header}.
 
 
 @node Ending a File
@@ -3172,9 +3173,9 @@ Header}.
 @cindex File ending
 @findex bye
 
-The end of a Texinfo file should include commands to create indices
-(@pxref{Printing Indices & Menus}), and the @code{@@bye} command to mark
-the last line to be processed.  For example:
+O final de um arquivo Texinfo deveria incluir comandos para criar 
+índices (@pxref{Printing Indices & Menus}), e o comando @code{@@bye} 
+para marcar a última linha a ser processada.  Por exemplo:
 
 @example
 @@node Index
@@ -3187,46 +3188,49 @@ the last line to be processed.  For example:
 
 @findex bye
 @anchor{File End}
-An @code{@@bye} command terminates Texinfo processing.  None of the
-formatters process anything following @code{@@bye}; any such text is
-completely ignored.  The @code{@@bye} command should be on a line by
-itself.
+Um comando @code{@@bye} termina o processamento Texinfo.  Nenhum dos 
+formatadores processa nada seguinte a @code{@@bye}; qualquer de tal 
+texto é completamente ignorado.  O comando @code{@@bye} deveria estar em 
+uma linha própria.
 
-Thus, if you wish, you may follow the @code{@@bye} line with arbitrary
-notes.  Also, you may follow the @code{@@bye} line with a local
-variables list for Emacs, most typically a @samp{compile-command}
+Assim, se você desejar, você pode seguir a linha @code{@@bye} com notas 
+arbitrárias.  Também, você pode seguir a linha @code{@@bye} com uma 
+lista de variáveis locais para Emacs, a maioria das vez tipicamente um 
+@samp{compile-command} 
 (@pxref{Compile-Command,, Using the Local Variables List}).
 
 
 @node Nodes
 @chapter Nodes
-@anchor{node}@anchor{@@node} @c old names
+@anchor{node}@anchor{@@node} @c nomes antigos
 
 @cindex Node, defined
-A @dfn{node} is a region of text that begins at a @code{@@node}
-command, and continues until the next @code{@@node} command.
-To specify a node, write a @code{@@node} command at the beginning of
-a line, and follow it with the name of the node.
-Each node contains the discussion of one topic.  Info readers
-display one node at a time, and provide commands for the user to move
-to related nodes.  The HTML output can be similarly navigated.
+Um @dfn{node} é uma região de texto que inicia no comando @code{@@node}, 
+e continua até o próximo comando @code{@@node}.
+Para especificar um nodo, escreva um comando @code{@@node} no início de 
+uma linha, e siga-o com o nome do nodo.
+Cada nodo contém a discussão de um tópico.  Os leitores Info exibem um 
+nodo por vez, e disponibilizam comandos para o usuário se movimentar a 
+nodos relacionados.  A saída HTML pode ser navegada similarmente.
 
-Nodes are used as the targets of cross-references.  Cross-references,
-such as the one at the end of this sentence, are made with @code{@@xref}
-and related commands; see @ref{Cross References}.  Cross-references can
-be sprinkled throughout the text, and provide a way to represent links
-that do not fit a hierarchical structure.
+Os nodos são utilizados coo os alvos de referências cruzadas.  As 
+referências cruzadas, tais quais aquelas ao final desta sentença, são 
+feitas com @code{@@xref} e comandos relacionadas; veja-se 
+@ref{Cross References}.  As referências cruzadas podem ser colocados em 
+qualquer parte do texto, e proporcionam uma maneira de representar links 
+que não se encaixam em uma estrutura hierárquica.
 
-Normally, you put a node command immediately before each chapter
-structuring command---for example, an @code{@@section} or
-@code{@@subsection} line.  (@xref{Chapter Structuring}.).
-You must do this even if you do not intend to format the file for Info.
-This is because @TeX{} uses both @code{@@node} names and
-chapter-structuring names in the output for cross-references.  The only
-time you are likely to use the chapter structuring commands without also
-using nodes is if you are writing a document that contains no cross
-references and will only be printed, not transformed into Info, HTML, or
-other formats.
+Normalmente, você coloca um comando nodo imediatamente antes de cada 
+comando de estruturação de capítulo---por exemplo, uma linha 
+@code{@@section} ou @code{@@subsection}.  (@xref{Chapter Structuring}).
+Você deve necessariamente fazer isso, ainda que você não pretenda 
+formatar o arquivo para Info.
+Isso é por que @TeX{} utiliza ambos, nomes @code{@@node} e nomes de 
+estruturação de capítulo, na saída para referências cruzadas.  A única 
+vez que você similarmente utiliza os comandos de estruturação de 
+capítulo sem também utilizar nodos é se você estiver escrevendo um 
+documento que não contenha referências cruzadas e somente será impresso, 
+não transformado em Info, HTML, ou outros formatos.
 
 
 @menu
