@@ -2579,7 +2579,7 @@ documentos impressos em um lado de cada folha de papel (impressão de
 lado único), e o outro para documentos impressos em ambos os lados de 
 cada folha (impressão de lado duplo).
 
-Em genelaridade plena, você pode controlar os cabeçalhos em diferentes 
+Em generalidade plena, você pode controlar os cabeçalhos em diferentes 
 maneiras:
 
 @itemize @bullet
@@ -3234,15 +3234,16 @@ não transformado em Info, HTML, ou outros formatos.
 
 
 @menu
-* Texinfo Document Structure::  Double structure of documents.
-* Node Names::                  How to choose node names.
-* Writing a Node::              How to write an @code{@@node} line.
-* Node Line Requirements::      Keep names unique.
-* First Node::                  How to write a `Top' node.
-* @code{@@top} Command::                How to use the @code{@@top} command.
-* Node Menu Illustration::      A diagram, and sample nodes and menus.
-* @command{makeinfo} Pointer Creation::   Letting makeinfo determine node pointers.
-* Menus::                       Listing subordinate nodes.
+* Texinfo Document Structure::  Estrutura dupla de documentos.
+* Node Names::                  Como escolher nomes de nodo.
+* Writing a Node::              Como escrever uma linha @code{@@node}.
+* Node Line Requirements::      Mantenha únicos os nomes.
+* First Node::                  Como escrever um nodo `Top'.
+* @code{@@top} Command::        Como utilizar o comando @code{@@top}.
+* Node Menu Illustration::      Um diagrama, e nodos e menus de amostra.
+* @command{makeinfo} Pointer Creation::   Permitindo que makeinfo 
+determine os ponteiros de nodo.
+* Menus::                       Listando nodos subordinados.
 @end menu
 
 
@@ -3253,52 +3254,53 @@ não transformado em Info, HTML, ou outros formatos.
 @cindex Structure, of Texinfo documents
 @cindex Double structure, of Texinfo documents
 
-@anchor{Two Paths}@c node name
+@anchor{Two Paths}@c nome de nodo
 
-Nodes can contain @dfn{menus}, which contain the names of @dfn{child
-nodes} within the parent node; for example, a node corresponding to a
-chapter would have a menu of the sections in that chapter.  The menus
-allow the user to move to the child nodes in a natural way in the online
-output.
+Os nodos podem conter @dfn{menus}, os quais contém os nomes de 
+@dfn{child nodes} dentro do nodo pai; por exemplo, um nodo 
+correspondente a um capítulo poderia ter um meno de seções nesse 
+capítulo.  Os menus permitem ao usuário se movimentar aos nodos filhos 
+em uma maneira natural na saída em linha.
 
-In addition, nodes contain @dfn{node pointers} that name other nodes.
-The `Next' and `Previous' pointers form nodes at the same sectioning
-level into a chain.  As you might imagine, the `Next' pointer links to
-the next node, and the `Previous' pointer links to the previous node.
-Thus, for example, all the nodes that are at the level of sections
-within a chapter are linked together, and the order in this chain
-is the same as the order of the children in the menu of the parent
-chapter.  Each child node records the parent node name as its `Up'
-pointer.
+Adicionalmente, os nodos contém @dfn{node pointers} que nomeiam outros 
+nodos.  Os ponteiros `Next' e `Previous' formam nodos no mesmo nível de 
+seccionamento em uma cadeia.  Conforme você pode imaginar, o ponteiro 
+`Next' vincula ao próximo nodo, e o ponteiro `Previous' vincula ao nodo 
+anterior.  Assim, por exemplo, todos os nodos que estão ao nível de 
+seções dentro de um capítulo, são vinculados juntos, e a ordem dentro 
+dessa cadeia é a mesma que a ordem dos filhos no menu do capítulo pai.  
+Cada nodo filho grava o nome de nodo pai como o seu ponteiro `Up'.
 
 @opindex accesskey@r{, in HTML output of nodes}
-The Info and HTML output from @command{makeinfo} for each node includes
-links to the `Next', `Previous', and `Up' nodes.  The HTML also uses
-the @code{accesskey} attribute with the values @samp{n}, @samp{p}, and
-@samp{u} respectively.  This allows people using web browsers to
-follow the navigation using (typically) @kbd{M-@var{letter}}, e.g.,
-@kbd{M-n} for the `Next' node, from anywhere within the node.
-Node pointers and menus provide structure for Info files just as
-chapters, sections, subsections, and the like provide structure for
-printed books.  The two structures are theoretically distinct; in
-practice, however, the tree structure of printed books is essentially
-always used for the node and menu structure also, as this leads to a
-document which is easiest to follow.  @xref{Texinfo Document
-Structure}.
+A saída Info e HTML originada de @command{makeinfo} para cada nodo 
+inclui vínculos aos nodos `Next', `Previous', e `Up'.  O HTML também 
+utiliza o atributo @code{accesskey} com os valores @samp{n}, @samp{p}, e
+@samp{u}, respectivamente.  Isso permite a pessoas que utilizem 
+navegadores web a seguir a navegação usando (tipicamente) 
+@kbd{M-@var{letter}}, por exemplo, @kbd{M-n} para o nodo `Next', a 
+partir de qualquer lugar dentro do nodo.
+Os ponteiros e menus de nodo proveem estrutura para os arquivos Info, 
+exatamente como capítulos, seções, subseções e semelhantes proveem 
+estrutura para livros impressos.  As duas estruturas teoricamente são 
+distintas; na prática, entretanto, a estrutura de árvore de livros 
+impressos é também essencialmente sempre utilizada para o nodo e 
+estrutura de menu, pois isso conduz a um documento que é mais fácil de 
+seguir.  @xref{Texinfo Document Structure}.
 
-Typically, the sectioning structure and the node structure are
-completely parallel, with one node for each chapter, section, etc.,
-and with the nodes following the same hierarchical arrangement as the
-sectioning.  Thus, if a node is at the logical level of a chapter, its
-child nodes are at the level of sections; similarly, the child nodes
-of sections are at the level of subsections.
+Tipicamente, a estrutura de seccionamento e a estrutura de nodo são 
+completamente paralelas, com um nodo para cada capítulo, seção, etc., e 
+com os nodos seguindo o mesmo arranjo hierárquico que o seccionamento.  
+Assim, se o nodo estiver ao nível lógico de um capítulo, então seus 
+nodos filhos estão ao nível de seções; similarmente, os nodos filhos de 
+seções estão ao nível de subseções.
 
-Although it is technically possible to create Texinfo documents with
-only one structure or the other, or for the two structures not to be
-parallel, or for either the sectioning or node structure to be
-abnormally formed, etc., this is @emph{not at all recommended}.  To
-the best of our knowledge, all the Texinfo manuals currently in
-general use do follow the conventional parallel structure.
+Apesar que é tecnicamente possível se criar documentos Texinfo com 
+somente uma estrutura ou a outra, ou para as duas estruturas não estarem 
+em paralelo, ou para ou o seccionamento ou estrutura de nodo estarem 
+anormalmente formadas, etc., isso 
+@emph{terminantemente não é recomendado}.  Conforme é do nosso 
+conhecimento, todos os manuais Texinfo atualmente em uso geral seguem a 
+estrutura paralela convencional.
 
 
 @node Node Names
