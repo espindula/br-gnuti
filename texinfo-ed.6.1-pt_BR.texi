@@ -3307,53 +3307,55 @@ estrutura paralela convencional.
 @section Choosing Node Names
 
 @cindex Node names, choosing
-The name of a node identifies the node.  For all the details of node
-names, @pxref{Node Line Requirements}).
+O nome de um nodo identifica o nodo.  Para todos os detalhes de nomes de 
+nodo, @pxref{Node Line Requirements}).
 
-@anchor{Node Line Tips}@c previous node name
-Here are some suggestions for node names:
+@anchor{Node Line Tips}@c nome prévio de nodo
+Aqui estão algumas sugestões para nomes de nodo:
 
 @itemize @bullet
 @item
-Try to pick node names that are informative but short.
+Tente pegar nomes de nodo que sejam informativos, porém curtos.
 
-In the Info file, the file name, node name, and pointer names are all
-inserted on one line, which may run into the right edge of the window.
-(This does not cause a problem with Info, but is ugly.)
-
-@item
-Try to pick node names that differ from each other near the beginnings
-of their names.  This way, it is easy to use automatic name completion in
-Info.
+No arquivo Info, o nome de arquivo, nome de nodo, e nomes de ponteiro 
+são todos inseridos em uma linha, os quais podem invadir a borda direita 
+da janela.  (Isso não causa um problema com Info, porém é horrível).
 
 @item
-Conventionally, node names are capitalized in the same way as section
-and chapter titles.  In this manual, initial and significant words are
-capitalized; others are not.  In other manuals, just initial words and
-proper nouns are capitalized.  Either way is fine; we recommend just
-being consistent.
+Tente pegar nomes de nodo que difiram uns dos outros próximo do iníio de 
+seus nomes.  Dessa maneira, é fácil utilizar a complementação automática 
+de nome em Info.
+
+@item
+Convencionalmente, os nomes de nodo são capitalizados da mesma maneira 
+que os títulos de seção e capítulo.  Neste manual, as palavras iniciais 
+e significantes são capitalizadas; outras não o são.  Em outros manuais, 
+somente as palavras iniciais e substantivos próprios são capitalizados.  
+Qualquer forma está boa; nós somente recomendamos ser consistente.
 @end itemize
 
-Because node names are used in cross-references, it is not desirable
-to casually change them once published.  Such name changes invalidate
-references from other manuals, from mail archives, and so on.
+Por que os nomes de nodo são utilizados em referências cruzadas, não é 
+desejável casualmente modificá-los uma vez publicados.  Tais mudanças de 
+nome invalidam as referências a partir de outros manuais, a partir de 
+arquivamentos de correspondências, e assim por diante.
 @xref{HTML Xref Link Preservation}.
 
-The pointers from a given node enable you to reach other nodes and
-consist simply of the names of those nodes.  The pointers are usually
-not specified explicitly, as @command{makeinfo} can determine them
+Os ponteiros a partir de um dado nodo te habilitam a alcançar outros 
+nodos e consistem simplesmente dos nomes de tais nodos.  Os ponteiros 
+usualmente não estão especificados explicitamente, conforme 
+@command{makeinfo} possa determiná-los 
 (@pxref{@command{makeinfo} Pointer Creation}).
 
-Normally, a node's `Up' pointer contains the name of the node whose
-menu mentions that node.  The node's `Next' pointer contains the name
-of the node that follows the present node in that menu and its
-`Previous' pointer contains the name of the node that precedes it in
-that menu.  When a node's `Previous' node is the same as its `Up'
-node, both pointers name the same node.
+Normalmente, um ponteiro `Up' de nodo contém o nome do nodo cujo menu 
+menciona aquele nodo.  O ponteiro `Next' de nodo contém o nome do nodo 
+que segue o presente nodo naquele menu e seu ponteiro `Previous' contém 
+o nome do nodo que o precede naquele menu.  Quando um nodo `Previous' de 
+nodo for o mesmo que seu nodo `Up', ambos os ponteiros nomeiam o mesmo 
+nodo.
 
-Usually, the first node of a Texinfo file is the `Top' node, and its
-`Up' pointer points to the @file{dir} file, which contains the main menu
-for all of Info.
+Usualmente, o primeiro nodo de um arquio Texinfo é o nodo `Top', e o seu 
+ponteiro `Up' aponta para o arquivo @file{dir}, o qual contém o menu 
+principal para todos os Info.
 
 
 @node Writing a Node
