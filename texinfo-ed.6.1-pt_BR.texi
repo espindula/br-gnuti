@@ -3365,72 +3365,77 @@ principal para todos os Info.
 @cindex Node line writing
 
 @findex node
-The easiest way to write an @code{@@node} line is to write @code{@@node}
-at the beginning of a line and then the name of the node, like this:
+A maneira mais fácil de se escrever uma linha @code{@@node} é escrever 
+@code{@@node} no início de uma linha e então o nome do nodo, como isto:
 
 @example
 @@node @var{node-name}
 @end example
 
-After you have inserted an @code{@@node} line, you should immediately
-write an @@-command for the chapter or section and insert its name.
-Next (and this is important!), put in several index entries.  Usually,
-you will find at least two and often as many as four or five ways of
-referring to the node in the index.  Use them all.  This will make it
-much easier for people to find the node.
+Após se ter inserido uma linha @code{@@node}, você deveria imediatamente 
+escrever um @@-command para o capítulo ou seção e inserir o nome desse 
+capítulo ou seção.
+Próximo (e isto é importante!), coloque várias entradas de índices.  
+Usualmente, você encontrará pelo menos duas e frequentemente por volta 
+de quatro ou cinco maneiras de se referir ao nodo no índice.  Utilize-as 
+todas.  Isso tornará muito mais fácil para as pessoas encontrar o nodo.
 
-If you wish, you can ignore @code{@@node} lines altogether in your
-first draft and then use the @code{texinfo-insert-node-lines} command
-to create @code{@@node} lines for you.  However, we do not recommend
-this practice.  It is better to name the node itself at the same time
-that you write a segment so you can easily make cross-references.
-Useful cross-references are an especially important feature of a good
-Texinfo manual.
+Se você desejar, você pode ignorar as linhas @code{@@node} completamente 
+em seu primeiro rascunho e então utilizar o comando 
+@code{texinfo-insert-node-lines} para criar as linhas @code{@@node} para 
+você.  Entretanto, não se recomenda essa prática.  É melhor nomear o 
+nodo ao mesmo tempo em que você escreve um segmento, de forma que você 
+possa facilmente produzir referências cruzadas.
+As referências cruzadas úteis são uma característica especialmente 
+importante de um bom manual Texinfo.
 
-Even when you explicitly specify all pointers, you cannot write the
-nodes in the Texinfo source file in an arbitrary order!  Because
-formatters must process the file sequentially, irrespective of node
-pointers, you must write the nodes in the order you wish them to
-appear in the output.  For Info format one can imagine that the order
-may not matter, but it matters for the other formats.
+Mesmo quando você explicitamente especificar todos os ponteiros, você 
+não pode escrever os nodos no arquivo fonte Texinfo em uma ordem 
+arbitrária!  Porque os formatadores devem necessariamente processar o 
+arquivo sequencialmente, sem considerar os ponteiros de nodo, você deve 
+necessariamente escrever os nodos na ordem que você os desejar para 
+aparecer na saída.  Para o formato Info, alguém pode imaginar que a 
+ordem pode não importar, porém ela importa para os outros formatos.
 
-You may optionally follow the node name argument to @code{@@node}
-with up to three optional arguments on the rest of the same line,
-separating the arguments with commas.  These are the names of the
-`Next', `Previous', and `Up' pointers, in that order.  We recommend
-omitting them if your Texinfo document is hierarchically organized,
-as virtually all are (@pxref{@command{makeinfo} Pointer Creation}).
+Você pode opcionalmente seguir o argumento de nome de nodo a 
+@code{@@node} com até três argumentos opcionais no restante da mesma 
+linha, separando os argumentos com vírgulas.  Esses são os nomes dos 
+ponteiros `Next', `Previous', e `Up', nessa exata ordem.  Recomenda-se 
+omiti-los se o seu documento Texinfo for hierárquicamente organizado, 
+como virtualmente todos são 
+(@pxref{@command{makeinfo} Pointer Creation}).
 
-Any spaces before or after each name on the @code{@@node} line are
-ignored.
+Quaisquer espaços antes ou após cada nome na linha @code{@@node} são 
+ignorados.
 
-The template for a fully-written-out node line with `Next', `Previous',
-and `Up' pointers looks like this:
+O modelo para uma linha de nodo completamente preenchida com os 
+ponteiros `Next', `Previous', e `Up' se parece com isto:
 
 @example
 @@node @var{node-name}, @var{next}, @var{previous}, @var{up}
 @end example
 
-The @var{node-name} argument must be present, but the others are
-optional.  If you wish to specify some but not others, just insert
-commas as needed, as in: @samp{@@node mynode,,,uppernode}.  However,
-we recommend leaving off all the pointers and letting @code{makeinfo}
-determine them.
+O argumento @var{node-name} deve necessariamente estar presente, porém 
+os outros são opcionais.  Se você desejar especificar algum, porém não 
+outros, apenas insira vírgulas conforme necessário, como em: 
+@samp{@@node mynode,,,uppernode}.  Entretanto, recomenda-se deixar 
+desativads todos os ponteiros e permitir que @code{makeinfo} os 
+determine.
 
-If you are using GNU Emacs, you can use the update node commands
-provided by Texinfo mode to insert the names of the pointers; or
-(recommended), you can leave the pointers out of the Texinfo file and
-let @code{makeinfo} insert node pointers into the Info file it
-creates.  (@xref{Texinfo Mode}, and @ref{@command{makeinfo} Pointer
-Creation}.)
+Se você estiver utilizando o GNU Emacs, você pode utilizar os comandos 
+de atualização de nodos disponibilizados pelo modo Texinfo para inserir 
+os nomes dos ponteiros; ou (recomendado), você pode deixar os ponteiros 
+fora do arquivo Texinfo e permitir que @code{makeinfo} insira os 
+ponteiros de nodo no arquivo Info que ele criar. 
+(@xref{Texinfo Mode}, e @ref{@command{makeinfo} Pointer Creation}).
 
-Alternatively, you can insert the `Next', `Previous', and `Up'
-pointers yourself.  If you do this, you may find it helpful to use the
-Texinfo mode keyboard command @kbd{C-c C-c n}.  This command inserts
-@samp{@@node} and a comment line listing the names of the pointers in
-their proper order.  The comment line helps you keep track of which
-arguments are for which pointers.  This comment line is especially useful
-if you are not familiar with Texinfo.
+Alternativamente, você pode inserir os ponteiros `Next', `Previous', e 
+`Up' você mesmo.  Se você fizer isso, você pode achar de grande ajuda 
+utilizar o comando de teclado do modo Texinfo @kbd{C-c C-c n}.  Esse 
+comando insere @samp{@@node} e uma linha de comentário que te ajuda a 
+monitorar quais argumentos são para quais ponteiros.  Essa linha de 
+comentário é especialmente útil se você não estiver familiarizado com 
+Texinfo.
 
 
 @node Node Line Requirements
