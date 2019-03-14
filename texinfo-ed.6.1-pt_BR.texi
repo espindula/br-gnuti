@@ -278,8 +278,8 @@ Comandos Globais de Documento
 * @code{@@setchapternewpage}::          Iniciar capítulos em páginas do lado direito.
 * @code{@@headings}::                   Uma opção para ligar e desligar cabeçalhos e impressão em ambos ou de um único lado.
 * @code{@@paragraphindent}::            Especifique recuo de parágrafo.
-* @code{@@firstparagraphindent}::       Suprimindo a recuo de primeiro parágrafo.
-* @code{@@exampleindent}::              Especifique a recuo de ambiente.
+* @code{@@firstparagraphindent}::       Suprimindo o recuo de primeiro parágrafo.
+* @code{@@exampleindent}::              Especifique o recuo de ambiente.
 
 Nodos
 
@@ -785,7 +785,7 @@ receptores saibam que o que eles tem não é o que nós distribuímos, de
 forma que quaisquer problemas introduzidos por outros não refletirão na 
 nossa reputação.
 
-As condições precisas das licenças para os programas atualmente seno 
+As condições precisas das licenças para os programas atualmente sendo 
 distribuídos que se relacionem com Texinfo são encontradas nas Licenças 
 Públicas Gerais que os acompanham.   Este manual está coberto pela 
 Licença de Documentação Livre GNU (@pxref{Licença de Documentação Livre GNU}).
@@ -3444,49 +3444,53 @@ Texinfo.
 @cindex Node line requirements
 @cindex Restrictions on node names
 
-Names used with @code{@@node} have several requirements:
+Os nomes usados com @code{@@node} tem várias exigências:
 
 @itemize @bullet
 @item
 @cindex Unique node names requirement
 @cindex Node names must be unique
-All the node names in a single Texinfo file must be unique.
+Todos os nomes de nodo em um arquivo Texinfo devem ser únicos.
 
-This means, for example, that if you end every chapter with a summary,
-you must name each summary node differently.  You cannot just call
-them all ``Summary''.  You may, however, duplicate the titles of
-chapters, sections, and the like.  Thus you can end each chapter with
-a section called ``Summary'', so long as the node names for those
-sections are all different.
+Isso significa, por exemplo, que, se você finalizar cada capítulo com um 
+sumário, você precisa nomear cada nodo de sumário diferentemente. Você 
+não pode simplesmente chamá-los todos de ``Sumário''. Você pode, 
+entretanto, duplicar os títulos dos capítulos, seções, e afins. Assim, 
+você pode finalizar cada capítulo com uma seção chamada ``Sumário'', 
+contanto que os nomes de nodo para tais seções sejam todos diferentes.
 
 @item
 @cindex Commands in node names
 @cindex @@-commands in node names
-Node names can contain @@-commands.  The output is generally the
-natural result of the command; for example, using @code{@@TeX@{@}} in a
-node name results in the @TeX{} logo being output, as it would be in
-normal text.  Cross-references should use @code{@@TeX@{@}} just as the
-node name does.
+Os nomes de nodo podem conter @@-commands. A saída é geralmente o 
+resultado natural do comando; por exemplo, usar @code{@@TeX@{@}} em um 
+nome de nodo resulta no logotipo do @TeX{} sendo exibido, conforme 
+poderia estar em texto normal. As referências cruzadas deveriam usar 
+@code{@@TeX@{@}}, assim como o nome de nodo usa.
 
-For Info and HTML output, especially, it is necessary to expand
-commands to some sequence of plain characters; for instance,
-@code{@@TeX@{@}} expands to the three letters @samp{TeX} in the Info
-node name.  However, cross-references to the node should not take the
-``shortcut'' of using @samp{TeX}; stick to the actual node name,
-commands and all.
+Para saída Info e HTML, especialmente, é necessário expandir os comandos 
+para alguma sequência de carácteres planos; por exemplo, 
+@code{@@TeX@{@}} se expande para as três letras @samp{TeX} no nome de 
+nodo do Info. Entretanto, as referências cruzadas ao nodo não deveriam 
+tomar o ``atalho'' de usar @samp{TeX}; furar ao nome do nó real, comandos e tudo.
 
-Some commands do not make sense in node names; for instance,
-environments (e.g., @code{@@quotation}), commands that read a whole
-line as their argument (e.g., @code{@@sp}), and plenty of others.
+Alguns comandos não fazem sentido em nomes de nodo; por exemplo, ambientes (e.g., 
+@code{@@quotation}), comandos que leem uma linha inteira como seu argumento (e.g., 
+@code{@@sp}), e muitos outros.
 
-For the complete list of commands that are allowed, and their
-expansion for HTML identifiers and file names, @pxref{HTML Xref
-Command Expansion}.  The expansions for Info are generally given with
-main the description of the command.
+Para a lista completa de comandos permitidos, e suas expansões para identificadores 
+HTML e nomes de arquivo, veja-se @pxref{HTML Xref Command Expansion}. As
+expansões para Info geralmente são dadas como a principal descrição do comando.
 
-Prior to the Texinfo 5 release in 2013, this feature was supported in
-an ad hoc way (the @option{--commands-in-node-names} option to
-@command{makeinfo}).  Now it is part of the language.
+Antes do lançamento de Texinfo 5 em 2013, essa característica era suportada em
+uma maneira ad hoc (a opção @option{--commands-in-node-names} para @command{makeinfo}).
+Agora é parte da linguagem.
+
+
+
+
+
+
 
 @item
 @cindex Colon in node name
