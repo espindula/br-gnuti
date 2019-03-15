@@ -194,7 +194,7 @@ restante do menu lista todos os pontos de baixo nível no documento.
 * Internationalization::        Suporte a outras linguagens diferentes do Inglês.
 * Conditionals::                Especificando texto somente para alguns casos de saída.
 * Defining New Texinfo Commands:: Macros definidas pelo usuário e apelidos.
-* Include Files::               Como incorporar outros arquivos Texinfo.
+* Arquivos Incluídos::               Como incorporar outros arquivos Texinfo.
 * Hardcopy::                    Saída para papel, com @TeX{}.
 * Generic Translator @command{texi2any}:: @command{texi2any}, um conversor para todos os propósitos.
 * Creating and Installing Info Files:: Detalhes sobre saída Info.
@@ -242,7 +242,7 @@ Iniciando e Finalizando um Arquivo Texinfo
 * Document Permissions::        Assegurando-se de que seu manual é livre.
 * Titlepage & Copyright Page::  Criando as páginas de título e de direitos autorais.
 * Contents::                    Como criar um Sumário.
-* The Top Node::                Criando o nodo `Top' e o menu principal.
+* O Nodo Top::                Criando o nodo `Top' e o menu principal.
 * Comandos Globais de Documento::    Afetando a formatação ao longo do documento.
 * Ending a File::               O que está ao final de um arquivo Texinfo?
 
@@ -466,7 +466,7 @@ Caracteres Especiais: Inserindo @@ @{@} , \ #
 
 * Inserting an Atsign::         @code{@@@@}, @code{@@atchar@{@}}.
 * Inserting Braces::            @code{@@@{ @@@}}, @code{@@l rbracechar@{@}}.
-* Inserting a Comma::           , e @code{@@comma@{@}}.
+* Inserindo Uma Vírgula::           , e @code{@@comma@{@}}.
 * Inserting a Backslash::       \ e @code{@@backslashchar@{@}}.
 * Inserting a Hashsign::        # e @code{@@hashchar@{@}}.
 
@@ -578,13 +578,13 @@ Processadores Externos de Macro: Diretivas de Linha
 
 Arquivos Include
 
-* Using Include Files::         Como utilizar o comando @code{@@include}.
+* Using Arquivos Incluídos::         Como utilizar o comando @code{@@include}.
 * @code{texinfo-multiple-files-update}:: Como criar e atualizar nodos e 
 menus quando da utilização de arquivos included.
-* Include Files Requirements::  Exigências @code{texinfo-multiple-files-update}.
+* Arquivos Incluídos Requirements::  Exigências @code{texinfo-multiple-files-update}.
 * Sample Include File::         Um arquivo exterior de amostra com 
 arquivos included dentro dele; e um arquivo included de amostra.
-* Include Files Evolution::     Como a utilização do comando @code{@@include} mudou ao longo do tempo.
+* Arquivos Incluídos Evolution::     Como a utilização do comando @code{@@include} mudou ao longo do tempo.
 
 Formatando e Imprimindo Cópia Impressa
 
@@ -632,7 +632,7 @@ Variáveis de Personalização
 Criando e Instalando Arquivos Info
 
 * Creating an Info File::
-* Installing an Info File::
+* Instalando Um Arquivo Info::
 
 Criando um Arquivo Info
 
@@ -1778,7 +1778,7 @@ mostrado em leitores Info, e assim por diante.
 * Document Permissions::    Assegurando-se de que o seu manual é livre.
 * Titlepage & Copyright Page:: Criando as páginas de título e de direitos autorais.
 * Contents::                    Como criar um sumário.
-* The Top Node::                Criando o nodo `Top' e menu mestre.
+* O Nodo Top::                Criando o nodo `Top' e menu mestre.
 * Comandos Globais de Documento::    Afetando a formatação ao longo do documento.
 * Ending a File::               O que está ao final de um arquivo Texinfo?
 @end menu
@@ -2297,7 +2297,7 @@ conversas, referenciando a ambos, a documentação e o software, com as
 mesmas palavras.} para o manual.  Isso ajuda os leitores a se manterem 
 informados sobre qual manual é para qual versão do programa.  (O nodo 
 `Top' também deveria conter essa informação; veja-se 
-@ref{The Top Node}).
+@ref{O Nodo Top}).
 
 Texinfo provê dois métodos principais para criar uma página de título.  
 Um método utiliza os comandos @code{@@titlefont}, @code{@@sp}, e 
@@ -2699,7 +2699,7 @@ texi2any --dvi --Xopt --texinfo=@@setcontentsaftertitlepage foo.texi
 
 
 
-@node The Top Node
+@node O Nodo Top
 @section The `Top' Node and Master Menu
 @cindex Top node
 @cindex Node, `Top'
@@ -3490,53 +3490,51 @@ Agora é parte da linguagem.
 @cindex Caracteres, inválidos em nome de nodo
 @cindex Caracteres inválidos em nome de nodo
 @cindex Nomes de nodo, caracteres inválidos em
-Unfortunately, you cannot reliably use periods, commas, or colons
-within a node name; these can confuse the Info reader.  Also, a node
-name may not start with a left parenthesis preceding a right
-parenthesis, as in @code{(not)allowed}, since this syntax is used to
-specify an external manual.  (Perhaps these limitations will be
-removed some day.)
+Infelizmente, você não pode confiávelmente usar pontos, vírgulas ou dois pontos
+em um nome de nodo; esses podem confundir o leitor Info. Também,  um nome de nodo
+não pode iniciar com um abre parênteses precedendo um fecha parênteses, como
+em @code{(não)permitido}, dado que tal sintaxe é usada para especificar um
+manual externo. (Talvez essas limitações sejam removidas algum dia).
 
-@command{makeinfo} warns about such problematic usage in node names,
-menu items, and cross-references.  If you don't want to see the
-warnings, you can set the customization variable
-@code{INFO_SPECIAL_CHARS_WARNING} to @samp{0} (@pxref{Other
-Customization Variables}).
+@command{makeinfo} alerta sobre tais usos problemáticos em nomes de nodo, 
+itens de menu e referências cruzadas. Se você não quiser ver os alertas, 
+você pode configurar a variável de personalização @code{INFO_SPECIAL_CHARS_WARNING} 
+para @samp{0} (veja-se @ref{Outras Variáveis de Personalização}).
 
-Also, if you insist on using these characters in node names (accepting
-the resulting substandard Info output), in order not to confuse the
-Texinfo processors you must still escape those characters, by using
-either special insertions (@pxref{Inserting a Comma}) or @code{@@asis}
-(@pxref{@code{@@asis}}).  For example:
+Também, se você insistir em usar tais caracteres em nomes de nodo (aceitando 
+a saída Info subpadrão resultante), com o objetivo de não confundir os processadores
+Texinfo, você deve ainda encapsular tais caracteres, usando ou inserções especiais 
+(veja-se @ref{Inserindo Uma Vírgula}) ou @code{@@asis} (veja-se @ref{@code{@@asis}}).
+Por exemplo:
 
 @example
 @@node foo@@asis@{::@}bar
 @end example
 
-As an example of avoiding the special characters, the following is a
-section title in this manual:
+Como um exemplo de se evitar os caracteres especiais, o seguinte é um 
+título de seção neste manual:
 
 @smallexample
 @@section @@code@{@@@@unnumbered@}, @@code@{@@@@appendix@}: ...
 @end smallexample
 
 @noindent
-But the corresponding node name lacks the commas and the subtitle:
+Porém, falta ao nome de nodo correspondente as vírgulas e o subtítulo:
 
 @smallexample
 @@node @code{@@unnumbered @@appendix}
 @end smallexample
 
-@cindex Case in node name
+@cindex Maiúsculas e minúsculas em nome de nodo
 @item
-Case is significant in node names.
+Maiúsculas e minúsculas são significantes em nomes de nodo.
 
-@cindex White space in node name
-@cindex Spaces in node name
+@cindex Espaço em branco em nome de nodo
+@cindex Espaços em nome de nodo
 @item
-Spaces before and after names on the @samp{@@node} line are ignored.
-Multiple whitespace characters ``inside'' a name are collapsed to a
-single space.  For example:
+Os espaços antes e depois dos nomes na linha @samp{@@node} são ignorados.
+Caracteres espaços em branco múltiplos ``dentro'' de um nome são substituídos
+por um espaço único. Por exemplo:
 
 @example
 @@node foo bar
@@ -3546,79 +3544,75 @@ single space.  For example:
 @@node  foo  bar ,
 @end example
 
-@noindent all define the same node, namely @samp{foo bar}. 
-In menu entries, this is the name that should be used: no leading or
-trailing spaces, and a single internal space.  (For cross-references,
-the node name used in the Texinfo sources is automatically normalized
-in this way.)
+@noindent todos definem o mesmo nodo, chamado @samp{foo bar}. Em entradas de menu, 
+esse é o nome que deveria ser usado: sem espaços antes ou depois, e um espaço interno
+único. (Para referências cruzadas, o nome de nodo usado nos fontes Texinfo é 
+automaticamente normalizado dessa maneira).
 
 @item
-The next/previous/up pointers on @code{@@node} lines must be the names
-of nodes.  (It's recommended to leave out these explicit node pointer
-names, which automatically avoids any problem here; @pxref{@command{makeinfo}
-Pointer Creation}.)
+Os ponteiros next/previous/up em linhas @code{@@node} devem ser os nomes dos nodos.
+(É recomendado deixar esses nomes de ponteiros de nodo explícitos, os quais 
+automaticamente evitam quaisquer problemas aqui; 
+veja-se @ref{Criação de Ponteiros do @command{makeinfo}}).
 @end itemize
 
 
-@node First Node
-@section The First Node
-@cindex Top node is first
-@cindex First node
+@node Primeiro Nodo
+@section O Primeiro Nodo
+@cindex O nodo Top é primeiro
+@cindex Primeiro nodo
 
-The first node of a Texinfo file is the @dfn{Top} node, except in an
-included file (@pxref{Include Files}).  The Top node should contain a
-short summary, copying permissions, and a master menu.  @xref{The Top
-Node}, for more information on the Top node contents and examples.
+O primeiro nodo de um arquivo Texinfo é o nodo @dfn{Top}, exceto em um arquivo 
+incluído (veja-se @ref{Arquivos Incluídos}). O nodo Top deveria conter um 
+sumário curto, permissões de cópia e um menu mestre. Veja-se @ref{O Nodo Top}, 
+para mais informações sobre o conteúdo e exemplos do nodo Top.
 
-Here is a description of the node pointers to be used in the Top node:
+Aqui está uma descrição dos ponteiros de nodo a serem usados no nodo Top:
 
 @itemize @bullet
 @item
-@cindex Up node of Top node
-@cindex (dir) as Up node of Top node
-The Top node (which must be named @samp{top} or @samp{Top}) should have
-as its `Up' node the name of a node in another file, where there is a
-menu that leads to this file.  Specify the file name in parentheses.
+@cindex Nodo Up do nodo Top
+@cindex (dir) como nodo Up do nodo Top
+O nodo Top (o qual deve ser nomeado @samp{top} ou @samp{Top}) deveria ter como 
+seu nodo `Up' o nome de um nodo em outro arquivo, onde existe um menu que leva 
+a esse arquivo. Especifique o nome de arquivo entre parênteses.
 
-Usually, all Info files are available through a single virtual Info
-tree, constructed from multiple directories.  In this case, use
-@samp{(dir)} as the parent of the Top node; this specifies the
-top-level node in the @file{dir} file, which contains the main menu
-for the Info system as a whole.  (Each directory with Info files is
-intended to contain a file named @file{dir}.)
+Usualmente, todos os arquivos Info estão disponíveis por meio de uma árvore 
+virtual única de Info, construída a partir de múltiplos diretórios. Nesse caso, 
+use @samp{(dir)} como o pai do nodo Top; isso especifica o nodo topo de nível no 
+arquivo @file{dir}, o qual contém o menu principal para o sistema Info como um 
+todo. (Cada diretório com arquivos Info deve conter um arquivo chamado @file{dir}).
 
-That's fine for Info, but for HTML output, one might well want the Up
-link from the Top node to go somewhere other than @samp{dir.html}.
-For example, for GNU the natural place would be
-@url{http://www.gnu.org/manual/} (a web page collecting links to most
-GNU manuals), better specified as just @code{/manual/} if the manual
-will be installed on @code{www.gnu.org}.  This can be specified with
-the @code{TOP_NODE_UP_URL} customization variable (@pxref{HTML
-Customization Variables}), as in
+Isso está bom para Info, porém para saída HTML, alguém bem pode desejar que o 
+link Up oriundo do nodo Top vá para algum lugar diferente de @samp{dir.html}. 
+Por exemplo, para GNU, o lugar natural seria @url{http://www.gnu.org/manual/} 
+(uma página da web contendo links para a maior parte dos manuais GNU), melhor 
+especificada que apenas @code{/manual/}, se o manual será instalado em 
+@code{www.gnu.org}. Isso pode ser especificado com a variável de personalização 
+@code{TOP_NODE_UP_URL} (veja-se @ref{Variáveis de Personalização HTML}), como em 
 
 @example
 $ @kbd{makeinfo --html -c TOP_NODE_UP_URL=/manual/} ...
 @end example
 
-All links to @code{(dir)} will be replaced by the given url.
+Todos os links para @code{(dir)} serão substituídos pela URL dada.
 
 @item
-@cindex Prev node of Top node
-The `Prev' node of the Top node is usually either omitted or also set
-to @file{(dir)}.  Either is fine.
+@cindex Nodo Prev do nodo Top
+O nodo `Prev' do nodo Top é usualmente ou omitido ou também configurado para 
+@file{(dir)}. Qualquer uma está legal.
 
 @item
-@cindex Next node of Top node
-The `Next' node of the Top node should be the first chapter in your
-document.
+@cindex Nodo Next do nodo Top
+O nodo `Next' do nodo Top deveria ser o primeiro capítulo em seu documento.
 
 @end itemize
 
-@xref{Installing an Info File}, for more information about installing
-an Info file in the @file{info} directory.
+Veja-se @ref{Instalando Um Arquivo Info}, para mais informação sobre a instalação 
+de um arquivo Info no diretório @file{info}.
 
-It is usually best to leave the pointers off entirely and let the
-tools implicitly define them, with this simple result:
+Geralmente, é melhor deixar os ponteiros completamente e deixar que as ferramentas 
+os definam implicitamente, com este resultado simples:
 
 @example
 @@node Top
@@ -3787,12 +3781,12 @@ line, and then by indexing lines.
 
 
 @node Criação de Ponteiros do @command{makeinfo}
-@section @code{makeinfo} Pointer Creation
+@section @code{makeinfo} Criação de Ponteiros do @command{makeinfo}
 
 @cindex Creating pointers with @code{makeinfo}
-@cindex Pointer creation with @code{makeinfo}
-@cindex Automatic pointer creation with @code{makeinfo}
-@cindex Implicit pointer creation with @code{makeinfo}
+@cindex Criação de Ponteiros do @command{makeinfo} with @code{makeinfo}
+@cindex Automatic Criação de Ponteiros do @command{makeinfo} with @code{makeinfo}
+@cindex Implicit Criação de Ponteiros do @command{makeinfo} with @code{makeinfo}
 
 The @code{makeinfo} program can automatically determine node pointers
 for a hierarchically organized document.  This implicit node pointer
@@ -4346,7 +4340,7 @@ underneath.  So, the above example produces the following output:
 
 In HTML, the @code{@@chapter} command produces an @code{<h2>}-level
 header by default (controlled by the @code{CHAPTER_HEADER_LEVEL}
-customization variable, @pxref{Other Customization Variables}).
+customization variable, @pxref{Outras Variáveis de Personalização}).
 
 In the XML and Docbook output, a @code{<chapter>} element is produced
 that includes all the following sections, up to the next chapter.
@@ -4705,10 +4699,10 @@ chapters, subsections to sections, and so on.  Conversely, the
 to subsections, and so on.  Thus, a @code{@@lowersections} command
 cancels a @code{@@raisesections} command, and vice versa.
 
-@cindex Include files, and section levels
+@cindex Arquivos Incluídos, and section levels
 You can use @code{@@lowersections} to include text written as an outer
 or standalone Texinfo file in another Texinfo file as an inner,
-included file (@pxref{Include Files}).  Typical usage looks like this:
+included file (@pxref{Arquivos Incluídos}).  Typical usage looks like this:
 
 @example
 @@lowersections
@@ -4940,7 +4934,7 @@ this:
 
 Whitespace before and after the commas separating these arguments is
 ignored.  To include a comma in one of the arguments, use
-@code{@@comma@{@}} (@pxref{Inserting a Comma}).
+@code{@@comma@{@}} (@pxref{Inserindo Uma Vírgula}).
 
 @cindex Comma after cross-reference
 When processing with TeX, a comma is automatically inserted after the
@@ -6121,7 +6115,7 @@ in typewriter-like contexts such as the @code{@@example} environment
 To control which quoting characters are implicitly inserted by Texinfo
 processors in the output of @samp{@@code}, etc., see the
 @code{OPEN_QUOTE_SYMBOL} and @code{CLOSE_QUOTE_SYMBOL} customization
-variables (@pxref{Other Customization Variables}).  This is separate
+variables (@pxref{Outras Variáveis de Personalização}).  This is separate
 from how actual quotation characters in the input document are handled
 (@pxref{Inserting Quote Characters}).
 
@@ -9649,7 +9643,7 @@ restricted contexts, as explained in the respective sections.
 @menu
 * Inserting an Atsign::         @code{@@@@}, @code{@@atchar@{@}}.
 * Inserting Braces::            @code{@@@{ @@@}}, @code{@@l rbracechar@{@}}.
-* Inserting a Comma::           , and @code{@@comma@{@}}.
+* Inserindo Uma Vírgula::           , and @code{@@comma@{@}}.
 * Inserting a Backslash::       \ and @code{@@backslashchar@{@}}.
 * Inserting a Hashsign::        # and @code{@@hashchar@{@}}.
 @end menu
@@ -9693,7 +9687,7 @@ necessary to avoid using literal brace characters in the source (and
 may be clearer in other contexts).
 
 
-@node Inserting a Comma
+@node Inserindo Uma Vírgula
 @subsection Inserting `,' with @code{@@comma@{@}}
 
 @findex comma
@@ -14498,7 +14492,7 @@ such lines.
 The @command{makeinfo} program recognizes these lines by default,
 except within @code{@@verbatim} blocks (@pxref{@code{@@verbatim}}.
 Their recognition can be turned off completely with
-@code{CPP_LINE_DIRECTIVES} (@pxref{Other Customization Variables}),
+@code{CPP_LINE_DIRECTIVES} (@pxref{Outras Variáveis de Personalização}),
 though there is normally no reason to do so.
 
 For those few programs (M4, CPP, Texinfo) which need to document
@@ -14609,10 +14603,10 @@ result is that lines might match which you wouldn't expect, e.g.,
 The possible solutions are described above (@pxref{@samp{#line} Directive}).
 
 
-@node Include Files
-@chapter Include Files
+@node Arquivos Incluídos
+@chapter Arquivos Incluídos
 
-@cindex Include files
+@cindex Arquivos Incluídos
 
 When a Texinfo processor sees an @code{@@include} command in a Texinfo
 file, it processes the contents of the file named by the
@@ -14621,20 +14615,20 @@ created.  Include files thus let you keep a single large document as a
 collection of conveniently small parts.
 
 @menu
-* Using Include Files::         How to use the @code{@@include} command.
+* Using Arquivos Incluídos::         How to use the @code{@@include} command.
 * @code{texinfo-multiple-files-update}:: How to create and update nodes and
                                      menus when using included files.
-* Include Files Requirements::  @code{texinfo-multiple-files-update} needs.
+* Arquivos Incluídos Requirements::  @code{texinfo-multiple-files-update} needs.
 * Sample Include File::         A sample outer file with included files
                                      within it; and a sample included file.
 * @code{@@verbatiminclude}::            Including a file verbatim.
-* Include Files Evolution::     How use of the @code{@@include} command
+* Arquivos Incluídos Evolution::     How use of the @code{@@include} command
                                      has changed over time.
 @end menu
 
 
-@node Using Include Files
-@section How to Use Include Files
+@node Using Arquivos Incluídos
+@section How to Use Arquivos Incluídos
 
 @findex include
 
@@ -14743,10 +14737,10 @@ updates @emph{every} pointer and menu in @emph{all} the files and
 then inserts a master menu.
 
 
-@node Include Files Requirements
-@section Include Files Requirements
-@cindex Include files requirements
-@cindex Requirements for include files
+@node Arquivos Incluídos Requirements
+@section Arquivos Incluídos Requirements
+@cindex Arquivos Incluídos requirements
+@cindex Requirements for Arquivos Incluídos
 
 If you plan to use the @code{texinfo-multiple-files-update} command,
 the outer Texinfo file that lists included files within it should
@@ -14872,8 +14866,8 @@ For a method on printing the file contents in a smaller font size, see
 the end of the section on @code{@@verbatim}.
 
 
-@node Include Files Evolution
-@section Evolution of Include Files
+@node Arquivos Incluídos Evolution
+@section Evolution of Arquivos Incluídos
 
 When Info was first created, it was customary to create many small
 Info files on one subject.  Each Info file was formatted from its own
@@ -16800,8 +16794,8 @@ The sections below give the details for each of these.
 @menu
 * Commands: Customization Variables for @@-Commands.
 * Options:  Customization Variables and Options.
-* HTML:     HTML Customization Variables.
-* Other:    Other Customization Variables.
+* HTML:     Variáveis de Personalização HTML.
+* Other:    Outras Variáveis de Personalização.
 @end menu
 
 
@@ -16976,8 +16970,8 @@ exec texi2any -c TEXINPUT_OUTPUT_FORMAT=textcontent "$@@"
 @end ftable
 
 
-@node HTML Customization Variables
-@subsection HTML Customization Variables
+@node Variáveis de Personalização HTML
+@subsection Variáveis de Personalização HTML
 
 This table gives the customization variables which apply to HTML
 output only.  A few other customization variable apply to both HTML
@@ -17283,8 +17277,8 @@ otherwise use the node name or section name depending on
 @end vtable
 
 
-@node Other Customization Variables
-@subsection Other Customization Variables
+@node Outras Variáveis de Personalização
+@subsection Outras Variáveis de Personalização
 
 This table gives the remaining customization variables, which apply to
 multiple formats, or affect global behavior, or otherwise don't fit
@@ -17476,7 +17470,7 @@ Autoconf, Automake, and @code{configure}.
 The output file prefix, which is prepended to some output file names.
 By default it is set by @code{@@setfilename} or from the input file
 (@pxref{@code{@@setfilename}}).  How this value is used depends on the
-value of other customization variables or command line options, such
+value of Outras Variáveis de Personalização or command line options, such
 as whether the output is split and @code{NODE_FILENAMES}.  The default
 is unset.
 
@@ -17884,7 +17878,7 @@ itself.
 
 @menu
 * Creating an Info File::
-* Installing an Info File::
+* Instalando Um Arquivo Info::
 @end menu
 
 
@@ -17900,7 +17894,7 @@ file, HTML file, or plain text.  @code{texinfo-format-region} and
 Texinfo to Info.
 
 For information on installing the Info file in the Info system,
-@pxref{Installing an Info File}.
+@pxref{Instalando Um Arquivo Info}.
 
 @menu
 * @command{makeinfo} Advantages::         @command{makeinfo} provides better error checking.
@@ -18124,7 +18118,7 @@ file that is needed at the time.  This way, Emacs avoids wasting
 memory when you run Info.  (Before splitting was implemented, Info
 files were always kept short and @dfn{include files} were designed as
 a way to create a single, large printed manual out of the smaller Info
-files.  @xref{Include Files}, for more information.  Include files are
+files.  @xref{Arquivos Incluídos}, for more information.  Include files are
 still used for very large documents, such as @cite{The Emacs Lisp
 Reference Manual}, in which each chapter is a separate file.)
 
@@ -18191,9 +18185,9 @@ validate the structure of the nodes, see @ref{Using
 @code{Info-validate}}.
 
 
-@node Installing an Info File
-@section Installing an Info File
-@cindex Installing an Info file
+@node Instalando Um Arquivo Info
+@section Instalando Um Arquivo Info
+@cindex Instalando Um Arquivo Info
 @cindex Info file installation
 @cindex @file{dir} directory for Info installation
 
@@ -19914,7 +19908,7 @@ Control output of @code{`} and @code{'} in code examples.
 
 @item @@comma@{@}
 Insert a comma `,' character; only needed when a literal comma would
-be taken as an argument separator.  @xref{Inserting a Comma}.
+be taken as an argument separator.  @xref{Inserindo Uma Vírgula}.
 
 @item @@command@{@var{command-name}@}
 Indicate a command name, such as @command{ls}.  @xref{@code{@@command}}.
@@ -20370,7 +20364,7 @@ Include graphics image in external @var{filename} scaled to the given
 @samp{@var{filename}.@var{ext}} in HTML@.  @xref{Images}.
 
 @item @@include @var{filename}
-Read the contents of Texinfo source file @var{filename}.  @xref{Include Files}.
+Read the contents of Texinfo source file @var{filename}.  @xref{Arquivos Incluídos}.
 
 @item @@indent
 Insert paragraph indentation.  @xref{@code{@@indent}}.
@@ -22192,7 +22186,7 @@ any).
 
 With an argument (prefix argument, @kbd{C-u,} if interactive), first create or
 update all the nodes and all the regular menus in the buffer before
-constructing the master menu.  (@xref{The Top Node, , The Top Node and
+constructing the master menu.  (@xref{O Nodo Top, , The Top Node and
 Master Menu}, for more about a master menu.)
 
 For @code{texinfo-master-menu} to work, the Texinfo file must have a
@@ -23019,7 +23013,7 @@ For @code{@@include} files only: expands to the name of the current
 @code{@@include} file.  If the current Texinfo source file is not an
 @code{@@include} file, this command has no effect.  This command does
 @emph{not} provide the name of the current Texinfo source file unless
-it is an @code{@@include} file.  (@xref{Include Files}, for more
+it is an @code{@@include} file.  (@xref{Arquivos Incluídos}, for more
 information about @code{@@include} files.)
 @end table
 
