@@ -192,7 +192,7 @@ restante do menu lista todos os pontos de baixo nível no documento.
 * Breaks::                      Forçando ou prevenindo quebras de página e linha.
 * Definition Commands::         Descrevendo uniformemente funções e afins.
 * Internationalization::        Suporte a outras linguagens diferentes do Inglês.
-* Conditionals::                Especificando texto somente para alguns casos de saída.
+* Condicionais::                Especificando texto somente para alguns casos de saída.
 * Defining New Texinfo Commands:: Macros definidas pelo usuário e apelidos.
 * Arquivos Incluídos::               Como incorporar outros arquivos Texinfo.
 * Hardcopy::                    Saída para papel, com @TeX{}.
@@ -315,7 +315,7 @@ Estruturamento de Capítulo
 * @code{@@unnumberedsubsec @@appendixsubsec @@subheading}::
 * @code{@@subsubsection}::              Comandos para as seções de mais baixo nível.
 * @code{@@part}::                       Coleções de capítulos.
-* Raise/lower sections::        Como modificar o nível hierárquico dos comandos.
+* Levantar/abaixar seções::        Como modificar o nível hierárquico dos comandos.
 
 Referências cruzadas
 
@@ -549,7 +549,7 @@ Texto Visível Condicionalmente
 * Conditional Commands::        Texto para um dado formato.
 * Conditional Not Commands::    Texto para qualquer outro formato que não um dado.
 * Raw Formatter Commands::      Utilizando comandos crus do formatador.
-* Inline Conditionals::         Texto condicional delimitado por chaves.
+* Inline Condicionais::         Texto condicional delimitado por chaves.
 * @code{@@set @@clear @@value}::          Testes de variáveis e substituições.
 * Testing for Texinfo Commands:: Testando se um comando Texinfo está disponível.
 * Conditional Nesting::         Utilizando condicionais dentro de condicionais.
@@ -2433,7 +2433,7 @@ especificar as quebras de linha em títulos longos se as quebras
 automáticas não servirem.  Tais quebras explícitas de linha geralmente 
 são refletidas em todos os formatos de saída; se você desejar somente 
 especificá-las para a saída impressa, utilize um condicional 
-(veja-se @ref{Conditionals}).  Por exemplo:
+(veja-se @ref{Condicionais}).  Por exemplo:
 
 @example
 @@title Este Título Longo@@inlinefmt@{tex,@@*@} É Quebrado em @@TeX@{@}
@@ -2721,7 +2721,7 @@ comandos @code{@@ifnottex} e @code{@@end ifnottex}.  (@TeX{} não imprime
 nem uma linha @code{@@node} nem um menu; eles aparecem somente em Info; 
 estritamente falando, você não está obrigado a envolver essas partes 
 entre @code{@@ifnottex} e @code{@@end ifnottex}, porém é mais simples 
-fazer isso. Veja-se @ref{Conditionals, , Conditionally Visible Text}).
+fazer isso. Veja-se @ref{Condicionais, , Conditionally Visible Text}).
 
 @menu
 * Top Node Example::
@@ -3619,52 +3619,51 @@ os definam implicitamente, com este resultado simples:
 @end example
 
 
-@node @code{@@top} Command
-@section The @code{@@top} Sectioning Command
+@node Comando @code{@@top}
+@section O Comando de Seccionamento @code{@@top}
 
 @anchor{top command}@c old name
 @anchor{makeinfo top}@c another old name
 @anchor{makeinfo top command}@c yet another name
 @findex top
 
-The @code{@@top} command is a special sectioning command that you
-should only use after a @samp{@@node Top} line at the beginning of a
-Texinfo file.  The @code{@@top} command tells the @code{makeinfo}
-formatter which node is to be used as the root of the node tree.
+O comando @code{@@top} é um comando especial de seccionamento que você 
+deveria somente usar após uma linha @samp{@@node Top} no início de um 
+arquivo Texinfo. O comando @code{@@top} diz ao formatador @code{makeinfo} 
+qual nodo é para ser usado como raiz da árvore de nodos.
 
-It produces the same sort of output as @code{@@unnumbered}
-(@pxref{@code{@@unnumbered @@appendix}}).
+O comando produz o mesmo tipo de saída que @code{@@unnumbered} 
+(veja-se @ref{@code{@@unnumbered @@appendix}}).
 
-The @code{@@top} node is conventionally wrapped in an
-@code{@@ifnottex} conditional so that it will not appear in @TeX{}
-output (@pxref{Conditionals}).
-Thus, in practice, a Top node usually looks like this:
+O nodo @code{@@top} é convencionalmente envolto em um condicional 
+@code{@@ifnottex} de forma que não aparecerá na saída @TeX{} 
+(veja-se @ref{Condicionais}).
+Assim, na prática, um nodo Top geralmente se parece com isto:
 
 @example
 @@ifnottex
 @@node Top
-@@top @var{your-manual-title}
+@@top @var{titulo-do-seu-manual}
 
-@var{very-high-level-summary}
+@var{sumario-de-altissimo-nivel}
 @@end ifnottex
 @end example
 
-@code{@@top} is ignored when raising or lowering sections.  That is,
-it is never lowered and nothing can be raised to it
-(@pxref{Raise/lower sections}).
+@code{@@top} é ignorado ao se levantar ou abaixar seções. Ou seja, nunca 
+é baixado e nada pode ser levantado a ele (veja-se 
+@ref{Levantar/abaixar seções}).
 
+@node Ilustração de Menu e Nodo
+@section Ilustração de Menu e Nodo @c Capítulo 4 - Nodos - Seção 4.7
 
-@node Node Menu Illustration
-@section Node and Menu Illustration
+Aqui está uma diagrama que ilustra um arquivo Texinfo com três capítulos, 
+cada um dos quais contendo duas seções.
 
-Here is a diagram that illustrates a Texinfo file with three chapters,
-each of which contains two sections.
-
-The ``root'' is at the top of the diagram and the ``leaves'' are at
-the bottom.  This is how such a diagram is drawn conventionally; it
-illustrates an upside-down tree.  For this reason, the root node is
-called the `Top' node, and `Up' node pointers carry you closer to the
-root.
+A ``raiz'' está no topo do diagrama e as ``folhas'' estão na parte 
+inferior. Assim é como tal diagrama é desenhado convencionalmente; ele 
+ilustra uma árvore de cabeça para baixo. Por essa razão, o nodo raiz é 
+chamado de nodo `Top', e ponteiros de nodo `Up' levam você para mais 
+perto da raiz.
 
 @example
 @group
@@ -3672,116 +3671,117 @@ root.
                           |
         -------------------------------------
        |                  |                  |
-    Chapter 1          Chapter 2          Chapter 3
+    Capítulo 1        Capítulo 2         Capítulo 3
        |                  |                  |
     --------           --------           --------
    |        |         |        |         |        |
-Section  Section   Section  Section   Section  Section
+ Seção    Seção     Seção    Seção     Seção    Seção
   1.1      1.2       2.1      2.2       3.1      3.2
 @end group
 @end example
 
-Using explicit pointers (not recommended, but for shown for purposes
-of the example), the fully-written command to start Chapter@tie{}2
-would be this:
+Usando ponteiros explícitos (não recomendado, mas mostrado para fins do 
+exemplo), o comando totalmente escrito para iniciar o Capítulo@tie{}2 
+poderia ser isto:
 
 @example
 @group
-@@node     Chapter 2,  Chapter 3, Chapter 1, Top
-@@comment  node-name,  next,      previous,  up
+@@node     Capítulo 2,  Capítulo 3, Capítulo 1, Top
+@@comment  nome-nodo,   next,       previous,   up
 @end group
 @end example
 
 @noindent
-This @code{@@node} line says that the name of this node is
-``Chapter@tie{}2'', the name of the `Next' node is ``Chapter 3'', the
-name of the `Previous' node is ``Chapter@tie{}1'', and the name of the
-`Up' node is ``Top''.  You can (and should) omit writing out these
-node names if your document is hierarchically organized
-(@pxref{Criação de Ponteiros do @command{makeinfo}}), but the pointer
-relationships still obtain.
+Essa linha @code{@@node} diz que o nome desse nodo é ``Capítulo@tie{}2'', 
+o nome do nodo `Next' é ``Capítulo 3'', o nome do nodo `Previous' é 
+``Capítulo@tie{}1'' e o nome do nodo `Up' é ``Top''. Você pode (e 
+deveria) omitir a explicitação desses nomes de nodo se o seu documento 
+estiver hierarquicamente organizado 
+(veja-se @ref{Criação de Ponteiros do @command{makeinfo}}), porém os 
+relacionamentos de ponteiros ainda serão obtidas.
 
-@quotation Note
-`Next' and `Previous' refer to nodes at the @emph{same hierarchical
-level} in the manual, not necessarily to the next node within the
-Texinfo file.  In the Texinfo file, the subsequent node may be at a
-lower level---a section-level node most often follows a chapter-level
-node, for example.  (The `Top' node contains the exception to this
-rule.  Since the `Top' node is the only node at that level, `Next'
-refers to the first following node, which is almost always a chapter
-or chapter-level node.)
+@quotation Nota
+`Next' e `Previous' se referem a nodos no @emph{mesmo nível hierárquico} 
+no manual, não necessariamente ao próximo nodo dentro do arquivo Texinfo. 
+No arquivo Texinfo, o nodo subsequente pode estar a um nível mais 
+baixo---um nodo de nível de seção frequentemente segue um nodo de nível 
+de capítulo, por exemplo. (O nodo `Top' contém a exceção a essa regra. 
+Dado que o nodo `Top' é o único nodo naquele nível, `Next' se refere ao 
+primeiro nodo seguinte, o qual quase sempre é um nodo de capítulo ou 
+nível de capítulo).
 @end quotation
 
-To go to Sections 2.1 and 2.2 using Info, you need a menu inside
-Chapter 2.  (@xref{Menus}.)  You would write the menu just before the
-beginning of Section 2.1, like this:
+Para ir para as Seções 2.1 e 2.2 usando Info, você precisa de um menu 
+dentro do Capítulo 2. (veja-se @ref{Menus}). Você escreveria o menu 
+pouco antes do início da Seção 2.1, como isto:
 
 @example
 @group
    @@menu
-   * Sect. 2.1::    Description of this section.
-   * Sect. 2.2::    Description.
+   * Seção. 2.1::    Descrição dessa seção.
+   * Seção. 2.2::    Descrição.
    @@end menu
 @end group
 @end example
 
-Using explicit pointers, the node for Sect.@: 2.1 is written like this:
+Usando ponteiros explícitos, o nodo para a Seção.@: 2.1 é escrito como 
+isto:
 
 @example
 @group
-@@node     Sect. 2.1, Sect. 2.2, Chapter 2, Chapter 2
-@@comment  node-name, next,      previous,  up
+@@node     Seção. 2.1, Seção. 2.2, Capítulo 2, Capítulo 2
+@@comment  nome-nodo,  next,       previous,   up
 @end group
 @end example
 
-In Info format, the `Next' and `Previous' pointers of a node usually
-lead to other nodes at the same level---from chapter to chapter or
-from section to section (sometimes, as shown, the `Previous' pointer
-points up); an `Up' pointer usually leads to a node at the level above
-(closer to the `Top' node); and a `Menu' leads to nodes at a level
-below (closer to `leaves').  (A cross-reference can point to a node at
-any level; see @ref{Referências Cruzadas}.)
+Em formato Info, os ponteiros `Next' e `Previous' de um nodo geralmente 
+conduzem à outros nodos no mesmo nível---de capítulo para capítulo ou de 
+seção para seção (as vezes, conforme mostrado, o ponteiro `Previous' 
+aponta para cima); um ponteiro `Up' geralmente conduz à um nodo ao nível 
+acima (mais perto do nodo `Top'); e um `Menu' conduz à nodos a um nível 
+abaixo (mais perto das `folhas'). (Uma referência cruzada pode apontar 
+para um nodo em qualquer nível; veja-se @ref{Referências Cruzadas}).
 
-A @code{@@node} command and a chapter structuring command are
-conventionally used together, in that order, often followed by
-indexing commands.  (As shown in the example above, you may follow the
-@code{@@node} line with a comment line, e.g., to show which pointer is
-which if explicit pointers are used.)  The Texinfo processors use this
-construct to determine the relationships between nodes and sectioning
-commands.
+Um comando @code{@@node} e um comando de estruturamente de capítulo são 
+convencionalmente usados juntos, nessa ordem, frequentemente seguidos 
+por comandos de indexação. (Conforme mostrado no exemplo acima, você 
+pode seguir a linha @code{@@node} com uma linha de comentário, por 
+exemplo, para mostrar qual ponteiro é qual se ponteiros explícitos são 
+usados). Os processadores Texinfo usam essa construção para determinar 
+os relacionamentos entre nodos e comandos de seccionamento.
 
-Here is the beginning of the chapter in this manual called ``Ending a
-Texinfo File''.  This shows an @code{@@node} line followed by an
-@code{@@chapter} line, and then by indexing lines.
+Aqui está o início de um capítulo neste manual chamado 
+``Finalizando um Arquivo Texinfo''. Isso mostra uma linha @code{@@node} 
+seguida por uma linha @code{@@chapter} e, então, por linhas de 
+indexação.
 
 @example
 @group
-@@node Ending a File
-@@chapter Ending a Texinfo File
-@@cindex Ending a Texinfo file
-@@cindex Texinfo file ending
-@@cindex File ending
+@@node Finalizando um Arquivo
+@@chapter Finalizando um Arquivo Texinfo
+@@cindex Finalizando um arquivo Texinfo
+@@cindex Finalização de arquivo Texinfo
+@@cindex Finalização de arquivo
 @end group
 @end example
 
-An earlier version of the manual used explicit node pointers.  Here is
-the beginning of the same chapter for that case.  This shows an
-@code{@@node} line followed by a comment line, a @code{@@chapter}
-line, and then by indexing lines.
+Uma versão mais antiga do manual usava ponteiros de nodo explícitos. 
+Aqui está o início do mesmo capítulo para esse caso. Isto mostra uma 
+linha @code{@@node} seguida por uma linha de comentário, uma linha 
+@code{@@chapter} e, então, por linhas de indexação.
 
 @example
 @group
-@@node    Ending a File, Structuring, Beginning a File, Top
-@@comment node-name,     next,        previous,         up
-@@chapter Ending a Texinfo File
-@@cindex Ending a Texinfo file
+@@node    Finalizando um Arquivo, Estruturamento, Iniciando um Arquivo, Top
+@@comment nome-nodo,              next,           previous,             up
+@@chapter Finalizando um Arquivo Texinfo
+@@cindex Finalizando um Arquivo Texinfo
 @dots{}
 @end group
 @end example
 
-
 @node Criação de Ponteiros do @command{makeinfo}
-@section @code{makeinfo} Criação de Ponteiros do @command{makeinfo}
+@section Criação de Ponteiros do @command{makeinfo} @c Capítulo 4 - Nodos - Seção 4.8
 
 @cindex Creating pointers with @code{makeinfo}
 @cindex Criação de Ponteiros do @command{makeinfo} with @code{makeinfo}
@@ -4184,7 +4184,7 @@ Estruturamento de Capítulo command.  @xref{Nodes}.
 * @code{@@unnumberedsubsec @@appendixsubsec @@subheading}::
 * @code{@@subsubsection}::              Commands for the lowest level sections.
 * @code{@@part}::                       Collections of chapters.
-* Raise/lower sections::        How to change commands' hierarchical level.
+* Levantar/abaixar seções::        How to change commands' hierarchical level.
 @end menu
 
 
@@ -4681,8 +4681,8 @@ In the Info and plain text output, @code{@@part} has no effect.
 section).  That is, it is never lowered and nothing can be raised to it.
 
 
-@node Raise/lower sections
-@section Raise/lower Sections: @code{@@raisesections} and @code{@@lowersections}
+@node Levantar/abaixar seções
+@section Levantar/abaixar seções: @code{@@raisesections} and @code{@@lowersections}
 @findex raisesections
 @findex lowersections
 @cindex Raising and lowering sections
@@ -5585,7 +5585,7 @@ document in Info.
 @code{@@inforef} is used for making cross-references to Info
 documents---even from a printed manual.  This might be because you
 want to refer to conditional @code{@@ifinfo} text
-(@pxref{Conditionals}), or because printed output is not available
+(@pxref{Condicionais}), or because printed output is not available
 (perhaps because there is no Texinfo source), among other
 possibilities.
 
@@ -9661,7 +9661,7 @@ not put braces after an @code{@@@@} command.
 
 @code{@@atchar@{@}} also produces a single @samp{@@} character in the
 output.  It does need following braces, as usual for alphabetic
-commands.  In inline conditionals (@pxref{Inline Conditionals}), it
+commands.  In inline Condicionais (@pxref{Inline Condicionais}), it
 can be necessary to avoid using the literal @samp{@@} character in the
 source (and may be clearer in other contexts).
 
@@ -9682,7 +9682,7 @@ produces a single @samp{@}}.  Do not put braces after either an
 @code{@@lbracechar@{@}} and @code{@@rbracechar@{@}} also produce
 single @samp{@{} and @samp{@}} characters in the output.  They do need
 following braces, as usual for alphabetic commands.  In inline
-conditionals (@pxref{Inline Conditionals}), it can be
+Condicionais (@pxref{Inline Condicionais}), it can be
 necessary to avoid using literal brace characters in the source (and
 may be clearer in other contexts).
 
@@ -12946,7 +12946,7 @@ of non-ASCII, e.g., it's written in German.  You can use the
 (@pxref{Inserting Unicode}).
 
 
-@node Conditionals
+@node Condicionais
 @chapter Conditionally Visible Text
 @cindex Conditionally visible text
 @cindex Text, conditionally visible
@@ -12982,10 +12982,10 @@ is set or clear.
 * Conditional Commands::        Text for a given format.
 * Conditional Not Commands::    Text for any format other than a given one.
 * Raw Formatter Commands::      Using raw formatter commands.
-* Inline Conditionals::         Brace-delimited conditional text.
+* Inline Condicionais::         Brace-delimited conditional text.
 * @code{@@set @@clear @@value}::          Variable tests and substitutions.
 * Testing for Texinfo Commands:: Testing if a Texinfo command is available.
-* Conditional Nesting::         Using conditionals inside conditionals.
+* Conditional Nesting::         Using Condicionais inside Condicionais.
 @end menu
 
 
@@ -13036,7 +13036,7 @@ The @code{@@if@dots{}} constructs are intended to conditionalize
 normal Texinfo source; @pxref{Raw Formatter Commands}, for using
 underlying format commands directly.
 
-Here is an example showing all these conditionals:
+Here is an example showing all these Condicionais:
 
 @example
 @@iftex
@@ -13087,13 +13087,13 @@ version of the manual you are reading.
 
 @findex errormsg
 In complex documents, you may want Texinfo to issue an error message
-in some conditionals that should not ever be processed.  The
+in some Condicionais that should not ever be processed.  The
 @code{@@errormsg@{@var{text}@}} command will do this; it takes one
 argument, the text of the error message, which is expanded more or
 less as if it were Info text.
 
 We mention @code{@@errormsg@{@}} here even though it is not strictly
-related to conditionals, since in practice it is most likely to be
+related to Condicionais, since in practice it is most likely to be
 useful in that context.  Technically, it can be used anywhere.
 @xref{External Macro Processors}, for a caveat regarding the line
 numbers which @code{@@errormsg} emits in @TeX{}.
@@ -13154,7 +13154,7 @@ with @code{@@iftex}, not raw formatter source as with @code{@@tex}
 @cindex Commands using raw @TeX{}
 @cindex Plain @TeX{}
 
-The @code{@@if@dots{}} conditionals just described must be used only
+The @code{@@if@dots{}} Condicionais just described must be used only
 with normal Texinfo source.  For instance, most features of plain
 @TeX{} will not work within @code{@@iftex}.  The purpose of
 @code{@@if@dots{}} is to provide conditional processing for Texinfo
@@ -13264,20 +13264,20 @@ The remedy is simple: don't do that.  Use the raw formatter commands
 for their intended purpose, of providing material directly in the
 underlying format.  When you simply want to give different Texinfo
 specifications for different output formats, use the
-@code{@@if@dots{}} conditionals and stay in Texinfo syntax.
+@code{@@if@dots{}} Condicionais and stay in Texinfo syntax.
 
 
 
-@node Inline Conditionals
-@section Inline Conditionals: @code{@@inline}, @code{@@inlineifelse}, @code{@@inlineraw}
+@node Inline Condicionais
+@section Inline Condicionais: @code{@@inline}, @code{@@inlineifelse}, @code{@@inlineraw}
 @findex inlinefmt
 @findex inlinefmtifelse
 @findex inlineraw
-@cindex Inline conditionals
+@cindex Inline Condicionais
 @cindex Conditional commands, inline
 @cindex Brace-delimited conditional text
-@cindex Newlines, avoiding in conditionals
-@cindex Whitespace, controlling in conditionals
+@cindex Newlines, avoiding in Condicionais
+@cindex Whitespace, controlling in Condicionais
 
 Texinfo provides a set of conditional commands with arguments given
 within braces:
@@ -13337,12 +13337,12 @@ these commands always have exactly two arguments.
 For @TeX{}, the processed @var{text} cannot contain newline-delimited
 commands.  Text to be ignored (i.e., for non-@TeX{}) can, though.
 
-Two other @code{@@inline...} conditionals complement the
+Two other @code{@@inline...} Condicionais complement the
 @code{@@ifset} and @code{@@ifclear} commands; see the next section.
 
 
 @node @code{@@set @@clear @@value}
-@section Flags: @code{@@set}, @code{@@clear}, conditionals, and @code{@@value}
+@section Flags: @code{@@set}, @code{@@clear}, Condicionais, and @code{@@value}
 
 @anchor{set clear value}@c old name
 You can direct the Texinfo formatting commands to format or ignore parts
@@ -13380,7 +13380,7 @@ Brace-delimited version of @code{@@ifclear}.
 @menu
 * @code{@@set @@value}::                 Expand a flag variable to a string.
 * @code{@@ifset @@ifclear}::             Format a region if a flag is set.
-* @code{@@inlineifset @@inlineifclear}:: Brace-delimited flag conditionals.
+* @code{@@inlineifset @@inlineifclear}:: Brace-delimited flag Condicionais.
 * @code{@@value} Example::              An easy way to update edition information.
 @end menu
 
@@ -13565,13 +13565,13 @@ command looks like this:
 
 @findex inlineifset
 @findex inlineifclear
-@cindex Flag conditionals, brace-delimited
-@cindex Brace-delimited flag conditionals
+@cindex Flag Condicionais, brace-delimited
+@cindex Brace-delimited flag Condicionais
 
 @code{@@inlineifset} and @code{@@inlineifclear} provide
 brace-delimited alternatives to the @code{@@ifset} and
 @code{@@ifclear} forms, similar to the other @code{@@inline...}
-Commands (@pxref{Inline Conditionals}).  The same caveats about
+Commands (@pxref{Inline Condicionais}).  The same caveats about
 argument parsing given there apply here too.
 
 @table @code
@@ -13697,7 +13697,7 @@ do not need to edit the three sections.
 
 Occasionally, you may want to arrange for your manual to test if a
 given Texinfo command is available and (presumably) do some sort of
-fallback formatting if not.  There are conditionals
+fallback formatting if not.  There are Condicionais
 @code{@@ifcommanddefined} and @code{@@ifcommandnotdefined} to do this.
 For example:
 
@@ -13723,15 +13723,15 @@ and linked from the Texinfo home page
 (@url{http://www.gnu.org/software/texinfo}) to see when a particular
 command was added.
 
-@vindex txicommandconditionals
-These command-checking conditionals themselves were added in
+@vindex txicommandCondicionais
+These command-checking Condicionais themselves were added in
 Texinfo@tie{}5.0, released in 2013---decades after Texinfo's
 inception.  In order to test if they themselves are available,
-the predefined flag @code{txicommandconditionals} can be tested, like
+the predefined flag @code{txicommandCondicionais} can be tested, like
 this:
 
 @example
-@@ifset txicommandconditionals
+@@ifset txicommandCondicionais
 @@ifcommandnotdefined foobarnode
 (Good, @@samp@{@@@@foobarnode@} is not defined.)
 @@end ifcommandnotdefined
@@ -13759,11 +13759,11 @@ general, to avoid unnecessary dependencies between packages
 
 @node Conditional Nesting
 @section Conditional Nesting
-@cindex Conditionals, nested
-@cindex Nesting conditionals
+@cindex Condicionais, nested
+@cindex Nesting Condicionais
 
-Conditionals can be nested; however, the details are a little tricky.
-The difficulty comes with failing conditionals, such as
+Condicionais can be nested; however, the details are a little tricky.
+The difficulty comes with failing Condicionais, such as
 @code{@@ifhtml} when HTML is not being produced, where the included
 text is to be ignored.  However, it is not to be @emph{completely}
 ignored, since it is useful to have one @code{@@ifset} inside another,
@@ -13784,7 +13784,7 @@ Somevar is set, anothervar is not.
 Technically, Texinfo requires that for a failing conditional, the
 ignored text must be properly nested with respect to that failing
 conditional.  Unfortunately, it's not always feasible to check that
-@emph{all} conditionals are properly nested, because then the
+@emph{all} Condicionais are properly nested, because then the
 processors could have to fully interpret the ignored text, which
 defeats the purpose of the command.  Here's an example illustrating
 these rules:
@@ -14235,7 +14235,7 @@ reasons, it fails with a mysterious error message (namely,
 
 @item
 Macros cannot define macros in the natural way.  To do this, you must
-use conditionals and raw @TeX{}.  For example:
+use Condicionais and raw @TeX{}.  For example:
 
 @example
 @@ifnottex
@@ -17566,7 +17566,7 @@ makeinfo \
 @end example
 
 @noindent (Caveat: Since @code{PLAINTEXINFO} output does expand
-Texinfo macros and conditionals, it's necessary to remove any such
+Texinfo macros and Condicionais, it's necessary to remove any such
 differences before installing the updates in the original document.
 This will be remedied in a future release.)
 
@@ -18847,7 +18847,7 @@ Styles}.
 @cindex Raw HTML
 @strong{Raw HTML}: @command{makeinfo} will include segments of Texinfo
 source between @code{@@ifhtml} and @code{@@end ifhtml} in the HTML
-output (but not any of the other conditionals, by default).  Source
+output (but not any of the other Condicionais, by default).  Source
 between @code{@@html} and @code{@@end html} is passed without change
 to the output (i.e., suppressing the normal escaping of input
 @samp{<}, @samp{>} and @samp{&} characters which have special
@@ -20160,7 +20160,7 @@ an error message: @samp{@error{}}.  @xref{@code{@@error}}.
 @item @@errormsg@{@var{msg}@}
 Report @var{msg} as an error to standard error, and exit unsuccessfully.
 Texinfo commands within @var{msg} are expanded to plain text.
-@xref{Conditionals}, and @ref{External Macro Processors}.
+@xref{Condicionais}, and @ref{External Macro Processors}.
 
 @item @@euro@{@}
 Generate the Euro currency sign.  @xref{@code{@@euro}}.
@@ -20320,7 +20320,7 @@ Begin text that will appear only in the given output format.
 @code{@@ifinfo} output appears in both Info and (for historical
 compatibility) plain text output.  Pair with @code{@@end ifdocbook}
 resp.@: @code{@@end ifhtml} resp.@: @code{@@end ifinfo}.
-@xref{Conditionals}.
+@xref{Condicionais}.
 
 @item @@ifnotdocbook
 @itemx @@ifnothtml
@@ -20330,16 +20330,16 @@ resp.@: @code{@@end ifhtml} resp.@: @code{@@end ifinfo}.
 Begin text to be ignored in one output format but not the others.
 @code{@@ifnothtml} text is omitted from HTML output, etc.  Pair with
 the corresponding @code{@@end ifnot@var{format}}.
-@xref{Conditionals}.
+@xref{Condicionais}.
 
 @item @@ifnotinfo
 Begin text to appear in output other than Info and (for historical
 compatibility) plain text.  Pair with @code{@@end ifnotinfo}.
-@xref{Conditionals}.
+@xref{Condicionais}.
 
 @item @@ifplaintext
 Begin text that will appear only in the plain text output.
-Pair with @code{@@end ifplaintext}.  @xref{Conditionals}.
+Pair with @code{@@end ifplaintext}.  @xref{Condicionais}.
 
 @item @@ifset @var{txivar}
 If the Texinfo variable @var{txivar} is set, format the following
@@ -20348,11 +20348,11 @@ text.  Pair with @code{@@end ifset}.  @xref{@code{@@set @@clear
 
 @item @@iftex
 Begin text to appear only in the @TeX{} output.  Pair with @code{@@end
-iftex}.  @xref{Conditionals, , Conditionally Visible Text}.
+iftex}.  @xref{Condicionais, , Conditionally Visible Text}.
 
 @item @@ifxml
 Begin text that will appear only in the XML output.  Pair with
-@code{@@end ifxml}.  @xref{Conditionals}.
+@code{@@end ifxml}.  @xref{Condicionais}.
 
 @item @@ignore
 Begin text that will not appear in any output.  Pair with @code{@@end
@@ -20383,7 +20383,7 @@ manual.  @xref{@code{@@inforef}}.
 
 @item @@inlinefmt@{@var{fmt}, @var{text}@}
 Insert @var{text} only if the output format is @var{fmt}.
-@xref{Inline Conditionals}.
+@xref{Inline Condicionais}.
 
 @item @@inlinefmtifelse@{@var{fmt}, @var{text}, @var{else-text}@}
 Insert @var{text} if the output format is @var{fmt}, else @var{else-text}.
@@ -20461,7 +20461,7 @@ Produce a table-of-contents-like listing of @code{@@float}s.
 
 @item @@lowersections
 Change subsequent chapters to sections, sections to subsections, and so
-on. @xref{Raise/lower sections, , @code{@@raisesections} and
+on. @xref{Levantar/abaixar seções, , @code{@@raisesections} and
 @code{@@lowersections}}.
 
 @item @@macro @var{macroname} @{@var{params}@}
@@ -20606,7 +20606,7 @@ Info.  @xref{@code{@@raggedright}}.
 
 @item @@raisesections
 Change subsequent sections to chapters, subsections to sections, and so
-on.  @xref{Raise/lower sections}.
+on.  @xref{Levantar/abaixar seções}.
 
 @item @@ref@{@var{node}, [@var{entry}], [@var{node-title}], [@var{info-file}], [@var{manual}]@}
 Make a plain reference that does not start with any special text.
@@ -21000,7 +21000,7 @@ other such outer-level document commands, such as @code{@@section},
 @code{@@node}, and @code{@@setfilename}.
 
 @code{@@c}, @code{@@comment} and @code{@@if ... @@end if} conditional
-commands may appear anywhere (except the conditionals must still be on
+commands may appear anywhere (except the Condicionais must still be on
 lines by themselves).  @code{@@caption} may only appear in
 @code{@@float} but may contain general text.  @code{@@footnote}
 content likewise.
