@@ -8,7 +8,7 @@
 @c Automake exige isto
 @setfilename texinfo-ed.6.1-pt_BR.info
 @documentencoding UTF-8
-@documentlanguage pt_BR
+@documentlanguage pt
 
 @c Automake automaticamente atualiza version-pt_BR.texi @set VERSION e 
 @c @set UPDATED com os valores apropriados.
@@ -45,8 +45,9 @@ Este manual é para GNU Texinfo (versão @value{VERSION},
 informação online e um manual impresso a partir de uma fonte única 
 utilizando marcação semântica.
 
-Copyright @copyright{} 2016 da "versão modificada" traduzida para o 
-Português do Brasil: Jamenson Ferreira Espindula de Almeida Melo.
+Copyright @copyright{} 2016, 2017, 2018, 2019 da "versão modificada" 
+traduzida para o Português do Brasil: Jamenson Ferreira Espindula de 
+Almeida Melo @email{jafesp@@gmail.com}.
 
 Copyright @copyright{} 1988, 1990, 1991, 1992, 1993, 1995, 1996, 1997, 
 1998, 1999, 2001, 2001, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 
@@ -300,7 +301,7 @@ Menus
 * Menu Location::               Menus se situam ao final dos nodos.
 * Menu Parts::                  Uma entrada de menu tem três partes.
 * Less Cluttered Menu Entry::   Entrada de menu de duas partes.
-* Other Info Files::            Como se referir a um arquivo Info diferente.
+* Outros Arquivos Info::            Como se referir a um arquivo Info diferente.
 
 Estruturamento de Capítulo
 
@@ -3840,325 +3841,325 @@ generalidade.
 @cindex Menus
 @findex menu
 
-@dfn{Menus} contain pointers to subordinate nodes.  In online output,
-you use menus to go to such nodes.  Menus have no effect in printed
-manuals and do not appear in them.
+@dfn{Menus} contém ponteiros para subordinar nodos. Em saída online, 
+você usa menus para ir para tais nodos. Os menus não tem efeito em 
+manuais impressos e não aparecem neles.
 
 @menu
-* Escrevendo um Menu::              What is a menu?
-* Menu Example::                Two and three part menu entries.
-* Menu Location::               Menus go at the ends of nodes.
-* Menu Parts::                  A menu entry has three parts.
-* Less Cluttered Menu Entry::   Two part menu entry.
-* Other Info Files::            How to refer to a different Info file.
+* Escrevendo um Menu::          O que é um menu?
+* Exemplo de Menu::             Entradas de menu de duas e três partes
+* Localização de Menu::         Menus vão ao final de nodos
+* Partes de Menu::              Uma entrada de menu tem três partes
+* Entrada de Menu Menos Desordenada::   Entrada de menu de duas partes
+* Outros Arquivos Info::        Como se referir a um arquivo Info diferente
 @end menu
-
 
 @node Escrevendo um Menu
 @subsection Escrevendo um Menu
 @cindex Escrevendo um Menu
-@cindex Menu writing
+@cindex Menu, Escrevendo
 
-A menu consists of a @code{@@menu} command on a line by itself,
-followed by menu entry lines or menu comment lines, and then followed
-by an @code{@@end menu} command on a line by itself.
+Um menu consiste de um comando @code{@@menu} em uma linha própria, 
+seguido por linhas de entrada de menu ou linhas de comentário de menu, e 
+então seguido por um comando @code{@@end menu} em uma linha própria.
 
-A menu looks like this:
+Um menu se parece com isto:
 
 @example
 @group
 @@menu
-Larger Units of Text
+Unidades de Texto Mais Largas
 
-* Files::                       All about handling files.
-* Multiples: Buffers.           Multiple buffers; editing
-                                 several files at once.
+* Arquivos::                    Tudo sobre a manipulação de arquivos
+* Múltiplos: Buffers.           Múltiplos buffers; editando
+                                 vários arquivos de uma vez
 @@end menu
 @end group
 @end example
 
-@cindex Spaces, in menus
-In a menu, every line that begins with an @w{@samp{* }} is a @dfn{menu
-entry}.  (Note the space after the asterisk.)
+@cindex Espaços, em menus
+Em um menu, cada linha que inicie com um @w{@samp{* }} é uma 
+@dfn{entrada de menu}. (Note o espaço após o asterisco).
 
-A line that does not start with an @w{@samp{* }} may also appear in a
-menu.  Such a line is not a menu entry but rather a @dfn{menu comment}
-line that appears in the Info file.  In the example above, the line
-@samp{Larger Units of Text} is such a menu comment line; the two lines
-starting with @w{@samp{* }} are menu entries.
+Uma linha que não se inicie com um @w{@samp{* }} também pode aparecer em 
+um menu. Tal linha não é uma entrada de menu, mas sim uma linha de 
+@dfn{comentário de menu} que aparece no arquivo Info. No exemplo acima, 
+a linha @samp{Unidades de Texto Mais Largas} é uma linha de comentário 
+de menu; as duas linhas iniciando com @w{@samp{* }} são entradas de 
+menu.
 
-@cindex Hierarchical documents, and menus
-Technically, menus can carry you to any node, regardless of the
-structure of the document; even to nodes in a different Info file.
-However, we do not recommend making use of this, because it is hard
-for readers to follow.  Also, the @command{makeinfo} implicit pointer
-creation feature (@pxref{Criação de Ponteiros do @command{makeinfo}}) and GNU
-Emacs Texinfo mode updating commands work only to create menus of
-subordinate nodes in a hierarchically structured document.  It is much
-better to use cross-references to refer to arbitrary nodes.
+@cindex Documentos hierárquicos, e menus
+Tecnicamente, menus podem te transportar para qualquer nodo, 
+independentemente da estrutura do documento; mesmo para nodos em um 
+arquivo Info diferente. Entretanto, nós não recomendamos fazer uso 
+disso, pois é trabalhoso para os leitores seguirem. Também, a 
+característica de criação implícita de ponteiros do comando 
+@command{makeinfo} (@pxref{Criação de Ponteiros do @command{makeinfo}}) 
+e os comandos de atualização do modo Texinfo do GNU Emacs funcionam 
+somente para criar menus de nodos subordinados em um documentos 
+hierárquicamente estruturado. É muito melhor usar referências cruzadas 
+para se referir a nodos arbitrários.
 
-@cindex Menus, automatically generating
+@cindex Menus, gerando automaticamente
 @findex validatemenus
-@command{makeinfo} can automatically generate menus in nodes for Info 
-and HTML output, based on the chapter structure of the document.  To 
-specify that you want it to do this, place the line 
-@samp{@@validatemenus off} near the beginning of the document.
+O comando @command{makeinfo} pode automaticamente gerar menus em nodos 
+para saída Info e HTML, baseado na estrutura de capítulo do documento. 
+Para especificar que você deseja que o comando faça isso, coloque uma 
+linha @samp{@@validatemenus off} próxima do início do documento.
 
-In Info, a user selects a node with the @kbd{m} (@code{Info-menu})
-command.  The menu entry name is what the user types after the @kbd{m}
-command.
-@opindex accesskey@r{, in HTML output of menus}
-In the HTML output from @command{makeinfo}, the @code{accesskey}
-attribute is used with the values @samp{1}@dots{}@samp{9} for the
-first nine entries.  This allows people using web browsers to follow
-the first menu entries using (typically) @kbd{M-@var{digit}}, e.g.,
-@kbd{M-1} for the first entry.
+Em Info, um usuário seleciona um nodo o comando @kbd{m} 
+(@code{Info-menu}). O nome de entrada de menu é o que o usuário digita 
+após o comando @kbd{m}.
 
-@node Menu Example
-@subsection A Menu Example
-@cindex Menu example
-@cindex Example menu
+@opindex accesskey@r{, em saída de menus HTML}
+Na saída HTML oriunda de @command{makeinfo}, o atributo @code{accesskey} 
+é usado com os valores @samp{1}@dots{}@samp{9} para as primeiras nove 
+entradas. Isso permite que as pessoas usando navegadores da Internet 
+sigam a primeira entrada de menu usando (tipicamente) 
+@kbd{M-@var{digit}}, por exemplo, @kbd{M-1} para a primeira entrada.
 
-@c merge with Escrevendo um Menu node?
+@node Exemplo de Menu
+@subsection Um Exemplo de Menu
+@cindex Exemplo de Menu
+@cindex Menu, Exemplo
 
-A menu looks like this in Texinfo:
+@c mesclar com o nodo Escrevendo um Menu?
+
+Um menu se parece com isto em Texinfo:
 
 @example
 @group
 @@menu
-* menu entry name: Node name.   A short description.
-* Node name::                   This form is preferred.
+* Nome de entrada do menu: Nome do nodo. Uma descrição curta.
+* Nome do nodo::                   Essa forma é preferida.
 @@end menu
 @end group
 @end example
 
 @need 800
 @noindent
-This produces:
+Isso produz:
 
 @example
 @group
 * menu:
 
-* menu entry name: Node name.   A short description.
-* Node name::                   This form is preferred.
+* Nome de entrada do menu: Nome do nodo. Uma descrição curta.
+* Nome do nodo::                   Essa forma é preferida.
 @end group
 @end example
 
 @need 700
-Here is an example as you might see it in a Texinfo file:
+Aqui está um exemplo de como você poderá vê-lo em um arquivo Texinfo:
 
 @example
 @group
 @@menu
-Larger Units of Text
+Unidades de Texto Mais Largas
 
-* Files::                       All about handling files.
-* Multiples: Buffers.           Multiple buffers; editing
-                                 several files at once.
+* Arquivos::                    Tudo sobre a manipulação de arquivos.
+* Múltiplos: Buffers.           Múltiplos buffers; editando
+                                vários arquivos de uma vez.
 @@end menu
 @end group
 @end example
 
 @need 800
 @noindent
-This produces:
+Isso produz:
 
 @example
 @group
 * menu:
-Larger Units of Text
+Unidades de Texto Mais Largas
 
-* Files::                       All about handling files.
-* Multiples: Buffers.           Multiple buffers; editing
-                                 several files at once.
+* Arquivos::                    Tudo sobre a manipulação de arquivos.
+* Múltiplos: Buffers.           Múltiplos buffers; editando
+                                vários arquivos de uma vez.
 @end group
 @end example
 
-In this example, the menu has two entries.  @samp{Files} is both a menu
-entry name and the name of the node referred to by that name.
-@samp{Multiples} is the menu entry name; it refers to the node named
-@samp{Buffers}. The line @samp{Larger Units of Text} is a comment; it
-appears in the menu, but is not an entry.
+Nesse exemplo, o menu tem duas entradas. @samp{Arquivos} tanto é um nome 
+de entrada de menu quanto o nome do nodo referenciado por aquele nome.
+@samp{Múltiplos} é o nome de entrada de menu; ele se refere ao nodo 
+chamado @samp{Buffers}. A linha @samp{Unidades de Texto Mais Largas} é 
+um comentário; ele aparece no menu, porém não é uma entrada.
 
-Since no file name is specified with either @samp{Files} or
-@samp{Buffers}, they must be the names of nodes in the same Info file
-(@pxref{Other Info Files, , Referring to Other Info Files}).
+Dado que nenhum nome de arquivo é especificado com @samp{Arquivos} ou 
+@samp{Buffers}, eles podem ser os nomes de nodos no mesmo arquivo Info 
+(@pxref{Outros Arquivos Info, , Referindo-se a Outros Arquivos Info}).
 
+@node Localização de Menu
+@subsection Localização de Menu
+@cindex Localização de Menu
+@cindex Menus, Localização de
 
-@node Menu Location
-@subsection Menu Location
-@cindex Menu location
-@cindex Location of menus
+Pode existir ao menos um menu em um nodo. Um menu é convencionalmente 
+localizado ao final de um nodo, sem qualquer texto regular ou comandos 
+adicionais entre o @code{@@end menu} e o início do próximo nodo.
 
-There may be at most one menu in a node.  A menu is conventionally
-located at the end of a node, without any regular text or additional
-commands between the @code{@@end menu} and the beginning of the next
-node.
+@cindex Formato Info, e menus
+Essa convenção é útil, dado que um leitor que usa o menu poderia 
+facilmente se esquecer de quaisquer de tais textos. Também, quaisquer de 
+tais textos pós menu serão considerados parte do menu na saída Info (a 
+qual não tem marcador para o final de um menu). Assim, uma linha 
+iniciando com @samp{* } será igualmente incorretamente manipulada.
 
-@cindex Info format, and menus
-This convention is useful, since a reader who uses the menu could
-easily miss any such text.  Also, any such post-menu text will be
-considered part of the menu in Info output (which has no marker for
-the end of a menu).  Thus, a line beginning with @samp{* } will likely
-be incorrectly handled.
-
-It's usually best if a node with a menu does not contain much text.
-If you find yourself with a lot of text before a menu, we generally
-recommend moving all but a couple of paragraphs into a new subnode.
-Otherwise, it is easy for readers to miss the menu.
+Geralmente é melhor se um nodo com um menu não contenha muito texto. Se 
+você se encontrar com um monte de texto antes de um menu, geralmente nós 
+recomendamos mover tudo, menos um par de parágrafos, para um novo 
+subnodo. Do contrário, é fácil para os leitores esquecerem o menu.
 
 @ignore
-Years ago, we recommended using a @samp{@@heading} command within an
-@code{@@ifinfo} conditional instead of the normal sectioning commands
-after a very short node with a menu.  This had the advantage of making
-the printed output look better, because there was no very short text
-between two headings on the page.  But it does not work with
-@command{makeinfo}'s implicit pointer creation, and it also makes the
-XML output incorrect, since it does not reflect the true document
-structure.  So, we no longer recommend this.
+Anos atrás, nós recomendamos o uso de um comando @samp{@@heading} dentro 
+de um condicional @code{@@ifinfo} em vez dos comandos de seccionamento 
+normais após um nodo muito curto com um menu. Isso tinha a vantagem de 
+tornar a saída impressa visualmente melhor, pois não havia texto muito 
+curto entre dois cabeçalhos no pagina. Porém, não funcionava com a 
+criação de ponteiros implícita de @command{makeinfo}, e também tornava a 
+saída XML incorreta, dado que não refletia a verdadeira estrutura do 
+documento. Dessa maneira, nós não mais recomendamos isso.
 @end ignore
 
 
-@node Menu Parts
-@subsection The Parts of a Menu
-@cindex Parts of a menu
-@cindex Menu parts
-@cindex @code{@@menu} parts
+@node Partes de Menu
+@subsection As Partes de um Menu
+@cindex Partes de um menu
+@cindex Menu, partes
+@cindex Partes de um @code{@@menu}
 
-A menu entry has three parts, only the second of which is required:
+Uma entrada de menu tem três partes, das quais apenas a segunda é 
+exigida:
 
 @enumerate
 @item
-The menu entry name (optional).
+O nome de entrada de menu (opcional).
 
 @item
-The name of the node (required).
+O nome do nodo (exigido).
 
 @item
-A description of the item (optional).
+Uma descrição do item (opcional).
 @end enumerate
 
-The template for a generic menu entry looks like this (but see the
-next section for one more possibility):
+O modelo para uma entrada de menu genérica se parece com isto (porém, 
+veja a próxima seção para mais uma possibilidade):
 
 @example
-* @var{menu-entry-name}: @var{node-name}.   @var{description}
+* @var{nome_de_entrada_de_menu}: @var{nome_de_nodo}.   @var{descrição}
 @end example
 
-Follow the menu entry name with a single colon, and follow the node
-name with tab, comma, newline, or the two characters period and space
-(@samp{. }).
+Coloque um único dois pontos após o nome de entrada de menu, seguido do 
+nome de nodo e um tab, vírgula, enter ou os dois caracteres ``ponto'' e 
+``espaço'' (@samp{. }).
 
-The third part of a menu entry is a descriptive phrase or sentence.
-Menu entry names and node names are often short; the description
-explains to the reader what the node is about.  A useful description
-complements the node name rather than repeats it.  The description,
-which is optional, can spread over multiple lines; if it does, some
-authors prefer to indent the second line while others prefer to align
-it with the first (and all others).  It's up to you.  An empty line,
-or the next menu entry, ends a description.
+A terceira parte de uma entrada de menu é uma frase descritiva ou 
+sentença. Os nomes de entrada de menu e os nomes de nodo frequentemente 
+são curtos; a descrição explana para o leitor a respeito de que se trata 
+o nodo. Uma descrição útil complementa o nome de nodo em vez de 
+repeti-lo. A descrição, a qual é opcional, pode ser espraiada por várias 
+linhas; se isso acontecei, alguns autores preferem recuar a segunda 
+linha enquanto outros preferem alinhá-lo com a primeira (e todas as 
+outras). É completamente com você. Uma linha variz, ou a próxima entrada 
+de menu, finaliza a descrição.
 
-Space characters in a menu are preserved as-is in the Info output; this
-allows you to format the menu as you wish.  Unfortunately you must type
-node names without any extra spaces or some versions of some Info
-readers will not find the node (@pxref{Exigências de Linha de Nodo}).
+Os caracteres de espaço em um menu são preservados como estão na saída 
+Info; isso permite formatar o menu como se desejar. Infelizmente, você 
+deve digitar os nomes de nodo sem quaisquer espaços extra ou algumas 
+versões de alguns leitores Info não encontrarão o nodo 
+(@pxref{Exigências de Linha de Nodo}).
 
+@command{makeinfo} alerta quando o texto de um item de menu (e nomes de 
+nodo e referências cruzadas) contem uma construção problemática que 
+interferirá com sua análise em Info. Se você não deseja ver esses 
+alertas, você pode configurar a variável de personalização 
+@code{INFO_SPECIAL_CHARS_WARNING} para @samp{0} 
+(@pxref{Outras Variáveis de Personalização}).
 
-@command{makeinfo} warns when the text of a menu item (and node names
-and cross-references) contains a problematic construct that will
-interfere with its parsing in Info.  If you don't want to see the
-warnings, you can set the customization variable
-@code{INFO_SPECIAL_CHARS_WARNING} to @samp{0} (@pxref{Other
-Customization Variables}).
+@node Entrada de Menu Menos Desordenada
+@subsection Entrada de Menu Menos Desordenada
+@cindex Entrada de menu de duas partes
+@cindex Entradas de menu de dois pontos
+@cindex Entradas de menu com dois ``dois pontos''
+@cindex Entrada de menu menos desordenada
+@cindex Entrada de menu organizada
 
-
-
-@node Less Cluttered Menu Entry
-@subsection Less Cluttered Menu Entry
-@cindex Two part menu entry
-@cindex Double-colon menu entries
-@cindex Menu entries with two colons
-@cindex Less cluttered menu entry
-@cindex Uncluttered menu entry
-
-When the menu entry name and node name are the same, you can write
-the name immediately after the asterisk and space at the beginning of
-the line and follow the name with two colons.
+Quando o nome de entrada de menu e o nome de nodo são os mesmos, você 
+pode escrever o nome imediatamente após o asterisco e espaço no início 
+da linha e seguir com o nome com ``dois pontos'' duas vezes.
 
 @need 800
-For example, write
+Por exemplo, escreva
 
 @example
-* Name::                        @var{description}
+* Nome::                        @var{descrição}
 @end example
 
 @need 800
 @noindent
-instead of
+em vez de
 
 @example
-* Name: Name.                   @var{description}
+* Nome: Nome.                   @var{descrição}
 @end example
 
-We recommend using the node name for the menu entry name whenever
-possible, since it reduces visual clutter in the menu.
+Nós recomendamos usar o nome de nodo para o nome de entrada de menu 
+sempre que possível, dado que isso reduz a confusão visual no menu.
 
+@node Outros Arquivos Info
+@subsection Referindo-se a Outros Arquivos Info
+@cindex Referindo-se a Outros Arquivos Info
+@cindex Nodos em Outros Arquivos Info
+@cindex Outros Arquivos Info' nodos
+@cindex Indo para Outros Arquivos Info' nodos
+@cindex Info; outros arquivos' nodos
 
-@node Other Info Files
-@subsection Referring to Other Info Files
-@cindex Referring to other Info files
-@cindex Nodes in other Info files
-@cindex Other Info files' nodes
-@cindex Going to other Info files' nodes
-@cindex Info; other files' nodes
-
-You can create a menu entry that enables a reader in Info to go to a
-node in another Info file by writing the file name in parentheses just
-before the node name.  Some examples:
-
-@example
-@group
-@@menu
-* @var{first-entry-name}:(@var{filename})@var{nodename}.     @var{description}
-* (@var{filename})@var{second-node}::                  @var{description}
-@@end menu
-@end group
-@end example
-
-For example, to refer directly to the @samp{Outlining} and
-@samp{Rebinding} nodes in the @cite{Emacs Manual}, you could write a
-menu like this:
+Você pode criar uma entrada de menu que habilite um leitor em Info a ir 
+para um nodo em outro arquivo Info, escrevendo o nome de arquivo entre 
+parênteses um pouco antes do nome do nodo. Alguns exemplos:
 
 @example
 @group
 @@menu
-* Outlining: (emacs)Outline Mode. The major mode for
-                                   editing outlines.
-* (emacs)Rebinding::              How to redefine the
-                                   meaning of a key.
+* @var{nome-da-primeira-entrada}:(@var{nome-do-arquivo})@var{nome-do-nodo}.     @var{descrição}
+* (@var{nome-do-arquivo})@var{segundo-nodo}::                                   @var{descrição}
 @@end menu
 @end group
 @end example
 
-If you do not list the node name, but only name the file, then Info
-presumes that you are referring to the `Top' node.  Examples:
+Por exemplo, para se referir diretamente aos nodos @samp{Outlining} e 
+@samp{Rebinding} no @cite{Manual do Emacs}, você poderia escrever um 
+menu como este:
 
 @example
 @group
-* Info: (info).         Documentation browsing system.
-* (emacs)::             The extensible, self-documenting
-                         text editor.
+@@menu
+* Outlining: Modo Contorno(emacs). O principal modo de edição de contornos.
+
+* (emacs)Rebinding::              Como redefinir o significado de uma tecla.
+
+@@end menu
 @end group
 @end example
 
-The GNU Emacs Texinfo mode menu updating commands only work with nodes
-within the current buffer, so you cannot use them to create menus that
-refer to other files.  You must write such menus by hand.
+Se você não listar o nome de nodo, mas apenas nomear o arquivo, então 
+Info presume que você está se referindo ao nodo `Top'. Exemplos:
 
+@example
+@group
+* Info: (info).         Sistema de navegação de documentação.
+* (emacs)::             Editor de texto, extensível, auto-documentador
+
+@end group
+@end example
+
+Os comandos de atualização de menu do modo Texinfo do GNU Emacs somente 
+funcionam com nodos dentro do buffer atual, de forma que você não pode 
+usá-los para criar menus que se refiram a outros arquivos. Você deve 
+escrever tais menus manualmente.
 
 @node Estruturamento de Capítulo
-@chapter Estruturamento de Capítulo
+@chapter Estruturamento de Capítulo @c Capítulo 5
 @anchor{Structuring}@c old name
 @cindex Estruturamento de Capítulo
 @cindex Structuring of chapters
@@ -14879,8 +14880,8 @@ memory for the small Info file that contained the particular
 information sought.  This way, Emacs could avoid wasting memory.
 
 References from one file to another were made by referring to the file
-name as well as the node name. (@xref{Other Info Files, , Referring to
-Other Info Files}.  Also, see @ref{Four and Five Arguments, ,
+name as well as the node name. (@xref{Outros Arquivos Info, , Referring to
+Outros Arquivos Info}.  Also, see @ref{Four and Five Arguments, ,
 @code{@@xref} with Four and Five Arguments}.)
 
 Include files were designed primarily as a way to create a single,
@@ -18237,7 +18238,7 @@ this:
 Each of these menu entries points to the `Top' node of the Info file
 that is named in parentheses.  (The menu entry does not need to
 specify the `Top' node, since Info goes to the `Top' node if no node
-name is mentioned.  @xref{Other Info Files, , Nodes in Other Info
+name is mentioned.  @xref{Outros Arquivos Info, , Nodes in Other Info
 Files}.)
 
 Thus, the @samp{Info} entry points to the `Top' node of the
@@ -22165,7 +22166,7 @@ node.
 The menu updating commands remove menu entries that refer to other Info
 files since they do not refer to nodes within the current buffer.  This
 is a deficiency.  Rather than use menu entries, you can use cross
-references to refer to other Info files.  None of the updating commands
+references to refer to Outros Arquivos Info.  None of the updating commands
 affect cross-references.
 
 Texinfo mode has five updating commands that are used most often: two
