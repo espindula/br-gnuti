@@ -270,7 +270,7 @@ Páginas de Título e de Direitos Autorais
 O Nodo `Top' e o Menu Principal
 
 * Top Node Example::
-* Master Menu Parts::
+* Partes do Menu Mestre::
 
 Comandos Globais de Documento
 
@@ -680,7 +680,7 @@ Utilizando o Modo Texinfo
 * Emacs Editing::               Adições do modo Texinfo às características de propósito geral de edição do GNU Emacs.
 * Inserting::                   Como inserir comandos @code{@@@@} utilizados frequentemente.
 * Showing the Structure::       Como exibir a estrutura de um arquivo.
-* Updating Nodes and Menus::    Como atualizar ou criar novos nodos e menus.
+* Atualizando Nodos e Menus::    Como atualizar ou criar novos nodos e menus.
 * Info Formatting::             Como formatar para Info.
 * Printing::                   Como formatar e imprimir parte ou tudo de um arquivo.
 * Texinfo Mode Summary::        Sumário de todos os comandos do modo Texinfo.
@@ -2725,7 +2725,7 @@ fazer isso. Veja-se @ref{Condicionais, , Conditionally Visible Text}).
 
 @menu
 * Top Node Example::
-* Master Menu Parts::
+* Partes do Menu Mestre::
 @end menu
 
 
@@ -2759,7 +2759,7 @@ Informação geral adicional.
 @end example
 
 
-@node Master Menu Parts
+@node Partes do Menu Mestre
 @subsection Partes de um Menu Mestre
 @cindex Master menu
 @cindex Menu, master
@@ -3783,59 +3783,60 @@ linha @code{@@node} seguida por uma linha de comentário, uma linha
 @node Criação de Ponteiros do @command{makeinfo}
 @section Criação de Ponteiros do @command{makeinfo} @c Capítulo 4 - Nodos - Seção 4.8
 
-@cindex Creating pointers with @code{makeinfo}
-@cindex Criação de Ponteiros do @command{makeinfo} with @code{makeinfo}
-@cindex Automatic Criação de Ponteiros do @command{makeinfo} with @code{makeinfo}
-@cindex Implicit Criação de Ponteiros do @command{makeinfo} with @code{makeinfo}
+@cindex Criando ponteiros com @code{makeinfo}
+@cindex Criação de Ponteiros do @command{makeinfo} com @code{makeinfo}
+@cindex Criação Automática De Ponteiros do @command{makeinfo} com @code{makeinfo}
+@cindex Criação Implícita de Ponteiros do @command{makeinfo} com @code{makeinfo}
 
-The @code{makeinfo} program can automatically determine node pointers
-for a hierarchically organized document.  This implicit node pointer
-creation feature in @code{makeinfo} relieves you from the need to
-update menus and pointers manually or with Texinfo mode commands.
-(@xref{Updating Nodes and Menus}.)  We highly recommend taking
-advantage of this.
+O programa @code{makeinfo} pode automaticamente determinar ponteiros de 
+nodo para um documento hierarquicamente organizado. Essa característica 
+de criação implícita de ponteiro de nodo em @code{makeinfo} liberta você 
+da necessidade de atualizar menus e ponteiros manualmente ou com 
+comandos em modo Texinfo. (Veja-se @ref{Atualizando Nodos e Menus}). Nós 
+recomendamos enfaticamente tomar vantagem disso.
 
-To do so, write your @code{@@node} lines with just the name of the
-node:
+Para fazer isso, escreva suas linhas @code{@@node} apenas com o nome do 
+nodo:
 
 @example
-@@node My Node
+@@node Meu Nodo
 @end example
 
 @noindent
-You do not need to write out the `Next', `Previous', and `Up'
-pointers.
+Você não precisa escrever os ponteiros `Next', `Previous', e `Up'.
 
-Then, you must write a sectioning command, such as @code{@@chapter}
-or @code{@@section}, on the line immediately following each truncated
-@code{@@node} line (except that comment lines may intervene).  This is
-where it normally goes.
+Então, você deve escrever um comando de seccionamento, como 
+@code{@@chapter} ou @code{@@section}, na linha imediatamente seguinte a 
+cada linha @code{@@node} truncada (exceto aquelas linhas de comentários 
+que podem intervir). Isso é como normalmente ocorre.
 
-Also, you must write the name of each node (except for the `Top' node)
-in a menu that is one or more hierarchical levels above the node's
-level.
+Também, você deve escrever o nome de cada nodo (exceto para o nodo 
+`Top') em um menu que esteja um ou mais níveis hierárquicos acima do 
+nível do nodo.
 
-Finally, you must follow the `Top' @code{@@node} line with a line
-beginning with @code{@@top} to mark the top-level node in the file.
-@xref{@code{@@top} Command}.
+Finalmente, você deve seguir a linha `Top' da linha @code{@@node} com 
+uma linha iniciando com @code{@@top} para marcar o nodo de nível de topo 
+no arquivo. Veja-se @ref{Comando @code{@@top}}.
 
-@cindex Detail menu
-@findex detailmenu
-If you use a detailed menu in your master menu (@pxref{Master Menu
-Parts}), mark it with the @code{@@detailmenu @dots{} @@end
-detailmenu} environment, or @command{makeinfo} will get confused,
-typically about the last and/or first node in the document.
+@cindex Menu de detalhe
+@findex menudetalhe
+Se você usa um menu detalhado no seu menu mestre (veja-se 
+@ref{Partes do Menu Mestre}), marque-o com o ambiente 
+@code{@@detailmenu @dots{} @@end detailmenu}, ou @command{makeinfo} 
+ficará confuso, tipicamente acerca do último e/ou primeiro nodo no 
+documento.
 
-In most cases, you will want to take advantage of this feature and not
-redundantly specify node pointers that the programs can determine.
-However, Texinfo documents are not required to be organized
-hierarchically or in fact to contain sectioning commands at all (for
-example, if you never intend the document to be printed), so node
-pointers may still be specified explicitly, in full generality.
-
+Na maior parte dos casos, você desejará tomar vantagem dessa 
+característica e não redundantemente especificar ponteiros de nodo que 
+os programas podem determinar. Entretanto, não se exige que os 
+documentos Texinfo sejam organizados hierárquicamente ou, de fato, 
+conterem quaisquer comandos de seccionamento (por exemplo, se você nunca 
+pretender que o documento seja impresso), de forma que os ponteiros de 
+nodo ainda possam ser especificados explicitamente, em completa 
+generalidade.
 
 @node Menus
-@section Menus
+@section Menus @c Capítulo 4 - Nodos - Seção 4.9
 @cindex Menus
 @findex menu
 
@@ -20069,7 +20070,7 @@ as arguments the category of the entity and the name of the entity.
 
 @item @@detailmenu
 Mark the (optional) detailed node listing in a master menu.
-@xref{Master Menu Parts}.
+@xref{Partes do Menu Mestre}.
 
 @item @@dfn@{@var{term}@}
 Indicate the introductory or defining use of a term.  @xref{@code{@@dfn}}.
@@ -21807,7 +21808,7 @@ commands and tools to help ease your work.
                                   purpose editing features.
 * Inserting::                   How to insert frequently used @@-commands.
 * Showing the Structure::       How to show the structure of a file.
-* Updating Nodes and Menus::    How to update or create new nodes and menus.
+* Atualizando Nodos e Menus::    How to update or create new nodes and menus.
 * Info Formatting::             How to format for Info.
 * Printing::                    How to format and print part or all of a file.
 * Texinfo Mode Summary::        Summary of all the Texinfo mode commands.
@@ -22093,10 +22094,10 @@ commands to move forward and backward by chapter, and to use the
 about the page commands.
 
 
-@node Updating Nodes and Menus
-@section Updating Nodes and Menus
+@node Atualizando Nodos e Menus
+@section Atualizando Nodos e Menus
 
-@cindex Updating nodes and menus
+@cindex Atualizando Nodos e Menus
 @cindex Create nodes, menus automatically
 @cindex Insert nodes, menus automatically
 @cindex Automatically insert nodes, menus
