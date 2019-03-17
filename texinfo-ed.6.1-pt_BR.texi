@@ -181,7 +181,7 @@ restante do menu lista todos os pontos de baixo nível no documento.
 * Overview::                    Texinfo em resumo.
 * Writing a Texinfo File::      Formato de um arquivo fonte Texinfo.
 * Beginning and Ending a File:: Iniciando e fim de um arquivo Texinfo.
-* Nodes::                       Escrevendo nodes, a unidade básica de Texinfo.
+* Nodos::                       Escrevendo Nodos, a unidade básica de Texinfo.
 * Estruturamento de Capítulo::         Criando capítulos, seções, apêndices, etc.
 * Referências Cruzadas::            Escrevendo referências cruzadas.
 * Marking Text::                Marcando palavras e frases como código, entrada de teclado, variáveis meta sintáticas, e afins.
@@ -305,7 +305,7 @@ Menus
 
 Estruturamento de Capítulo
 
-* Tree Structuring::            Um manual é como uma árvore de cabeça para baixo @dots{}
+* Estruturamento de Árvore::            Um manual é como uma árvore de cabeça para baixo @dots{}
 * Tipos de Comandos Estruturantes::   Como dividir um manual em partes.
 * @code{@@chapter}::                    Estruturamento de capítulo.
 * @code{@@unnumbered @@appendix}::
@@ -727,7 +727,7 @@ Desenho Geral do Formato Info
 * Indirect::        Tabela Indireta do Formato Info.
 * Tag table::       Tabela de Etiquetas do Formato Info.
 * Local variables:: Variáveis Local do Formato Info.
-* Regular nodes::   Nodos Regulares do Formato Info.
+* Regular Nodos::   Nodos Regulares do Formato Info.
 
 Construtores de Texto do Formato Info
 
@@ -2610,7 +2610,7 @@ página.
 
 
 @node Contents
-@section Generating a Table of Contents
+@section Gerando um Sumário
 @cindex Table of contents
 @cindex Contents, table of
 @cindex Short table of contents
@@ -3197,8 +3197,8 @@ lista de variáveis locais para Emacs, a maioria das vezes tipicamente um
 (veja-se @ref{Compile-Command,, Usando a Lista de Variáveis Locais}).
 
 
-@node Nodes
-@chapter Nodes
+@node Nodos
+@chapter Nodos
 @anchor{node}@anchor{@@node} @c nomes antigos
 
 @cindex Node, defined
@@ -3268,7 +3268,7 @@ seções dentro de um capítulo, são vinculados juntos, e a ordem dentro
 dessa cadeia é a mesma que a ordem dos filhos no menu do capítulo pai.  
 Cada nodo filho grava o nome de nodo pai como o seu ponteiro `Up'.
 
-@opindex accesskey@r{, in HTML output of nodes}
+@opindex accesskey@r{, in HTML output of Nodos}
 A saída Info e HTML originada de @command{makeinfo} para cada nodo 
 inclui vínculos aos nodos `Next', `Previous', e `Up'.  O HTML também 
 utiliza o atributo @code{accesskey} com os valores @samp{n}, @samp{p}, e
@@ -4160,23 +4160,23 @@ escrever tais menus manualmente.
 
 @node Estruturamento de Capítulo
 @chapter Estruturamento de Capítulo @c Capítulo 5
-@anchor{Structuring}@c old name
+@anchor{Estruturamento}@c old name
 @cindex Estruturamento de Capítulo
-@cindex Structuring of chapters
-@cindex Sectioning
+@cindex Estruturamento de capítulos
+@cindex Seccionamento
 
-Texinfo's @dfn{Estruturamento de Capítulo} commands divide a document into a
-hierarchy of chapters, sections, subsections, and subsubsections.  These
-commands generate large headings in the text, like the one above.  They
-also provide information for generating the table of contents
-(@pxref{Contents,, Generating a Table of Contents}).
+Os comandos de @dfn{Estruturamento de Capítulo} do Texinfo dividem um 
+documento em uma hierárquia de capítulos, seções, subseções e 
+subsubseções. Esses comandos geram cabeçalhos largos no texto, como o 
+acima. Eles também proveem informação para a geração de índices 
+(@pxref{Conteúdo,, Gerando um Sumário}).
 
-Normally you put a @code{@@node} command immediately before each
-Estruturamento de Capítulo command.  @xref{Nodes}.
+Normalmente você coloca um comando @code{@@node} imediatamente antes de 
+cada comando de Estruturamento de Capítulo. @xref{Nodos}.
 
 @menu
-* Tree Structuring::            A manual is like an upside down tree @dots{}
-* Tipos de Comandos Estruturantes::   How to divide a manual into parts.
+* Estruturamento de Árvore::  Um manual é como uma árvore de cabeça para baixo @dots{}
+* Tipos de Comandos Estruturantes::  Como dividir um manual em partes.
 * @code{@@chapter}::                    Estruturamento de Capítulo.
 * @code{@@unnumbered @@appendix}::
 * @code{@@majorheading @@chapheading}::
@@ -4184,24 +4184,24 @@ Estruturamento de Capítulo command.  @xref{Nodes}.
 * @code{@@unnumberedsec @@appendixsec @@heading}::
 * @code{@@subsection}::
 * @code{@@unnumberedsubsec @@appendixsubsec @@subheading}::
-* @code{@@subsubsection}::              Commands for the lowest level sections.
-* @code{@@part}::                       Collections of chapters.
-* Levantar/abaixar seções::        How to change commands' hierarchical level.
+* @code{@@subsubsection}::  Comandos para as seções de nível mais baixo.
+* @code{@@part}::           Coleções de capítulos.
+* Levantar/abaixar seções::  Como modificar o nível hierárquico de comandos.
 @end menu
 
 
-@node Tree Structuring
-@section Tree Structure of Sections
-@cindex Tree structuring
+@node Estruturamento de Árvore
+@section Estrutura de Árvore das Seções @c Capítulo 5 - Estruturamento de Capítulo; Seção 5.1 - Estrutura de Árvore das Seções
+@cindex Estruturamento de Árvore
 
-A Texinfo file is usually structured like a book with chapters,
-sections, subsections, and the like.  This structure can be visualized
-as a tree (or rather as an upside-down tree) with the root at the top
-and the levels corresponding to chapters, sections, subsection, and
-subsubsections.
+Um arquivo Texinfo é geralmente estruturado como um livro com capítulos, 
+seções, subseções, e afins. Essa estrutura pode ser visualizada como uma 
+árvore (ou melhor, como uma árvore de cabeça para baixo) com a raiz no 
+topo e as folhas correspondendo aos capítulos, seções, subseções e 
+subsubseções.
 
-Here is a diagram that shows a Texinfo file with three chapters, each
-with two sections.
+Aqui está um diagrama que mostra um arquivo Texinfo com três capítulos, 
+cada qual com duas seções.
 
 @example
 @group
@@ -4209,83 +4209,82 @@ with two sections.
                           |
         -------------------------------------
        |                  |                  |
-    Chapter 1          Chapter 2          Chapter 3
+    Capítulo 1         Capítulo 2         Capítulo 3
        |                  |                  |
     --------           --------           --------
    |        |         |        |         |        |
-Section  Section   Section  Section   Section  Section
+ Seção    Seção     Seção    Seção     Seção    Seção
   1.1      1.2       2.1      2.2       3.1      3.2
 
 @end group
 @end example
 
-In a Texinfo file that has this structure, the beginning of Chapter 2
-would be written like this:
+Em um arquivo Texinfo que tenha essa estrutura, o início do Capítulo 2 
+poderia ser escrito assim:
 
 @example
 @group
-@@node    Chapter 2
-@@chapter Chapter 2
+@@node    Capítulo 2
+@@chapter Capítulo 2
 @end group
 @end example
 
 @noindent
-For purposes of example, here is how it would be written with
-explicit node pointers:
+Para o propósito do exemplo, aqui está como poderia ser escrito com 
+ponteiros de nodo explícitos:
 
 @example
 @group
-@@node    Chapter 2,  Chapter 3, Chapter 1, Top
-@@chapter Chapter 2
+@@node    Capítulo 2,  Capítulo 3, Capítulo 1, Top
+@@chapter Capítulo 2
 @end group
 @end example
 
-The chapter structuring commands are described in the sections that
-follow; the @code{@@node} command is described in
-the previous chapter (@pxref{Nodes}).
-
+Os comandos de estruturamento de capítulo estão descritos nas seções 
+seguintes; o comando @code{@@node} está descrito no capítulo anterior 
+(@pxref{Nodos}).
 
 @node Tipos de Comandos Estruturantes
-@section Tipos de Comandos Estruturantes
+@section Tipos de Comandos Estruturantes @c Capítulo 5 - Estruturamento de Capítulo; Seção 5.2 - Tipos de Comandos Estruturantes
 
-The chapter structuring commands fall into four groups or series, each
-of which contains structuring commands corresponding to the
-hierarchical levels of chapters, sections, subsections, and
-subsubsections.
+Os comandos de estruturamento de capítulo se dividem em quatro grupos ou 
+séries, cada um dos quais contendo comandos de estruturamento 
+correspondentes aos níveis hierárquicos de capítulos, seções, subseções 
+e subsubseções.
 
-The four groups of commands are the @code{@@chapter} series, the
-@code{@@unnumbered} series, the @code{@@appendix} series, and the
-@code{@@heading} series.  Each command produces a title with a
-different appearance in the body of the document.  Some of the
-commands list their titles in the tables of contents, while others do
-not.  Here are the details:
+Os quatro grupos de comandos são: a série @code{@@chapter}; a série 
+@code{@@unnumbered}; a série @code{@@appendix}; e a série 
+@code{@@heading}. Cada comando produz um título com uma aparência 
+diferente no corpo do documento. Alguns dos comandos listam seus títulos 
+no sumário, enquanto outros não. Aqui estão os detalhes:
 
 @itemize @bullet
 @item
-The @code{@@chapter} and @code{@@appendix} series of commands produce
-numbered or lettered entries both in the body of a document and in its
-table of contents.
+As séries de comandos @code{@@chapter} e @code{@@appendix} produzem 
+entradas numeradas ou letradas, ambas no corpo de um documento e em seu 
+sumário.
 
 @item
-The @code{@@unnumbered} series of commands produce unnumbered entries
-both in the body of a document and in its table of contents.  The
-@code{@@top} command, which has a special use, is a member of this
-series (@pxref{@code{@@top} Command}).  An @code{@@unnumbered} section
-is a normal part of the document structure.
+A série de comandos @code{@@unnumbered} produzem entradas não numeradas, 
+ambas no corpo de um documento e em seu sumário. O comando @code{@@top}, 
+o qual tem um uso especial, é um membro dessa série 
+(@pxref{Comando @code{@@top}}). Uma seção @code{@@unnumbered} é uma 
+parte normal da estrutura do documento.
 
 @item
-The @code{@@heading} series of commands produce simple unnumbered
-headings that do not appear in a table of contents, are not associated
-with nodes, and cannot be cross-referenced.  These heading commands
-never start a new page.
+A série de comandos @code{@@heading} produzem cabeçalhos não numerados 
+simples que não aparecem em um sumário, não são associados com nodos e 
+não podem ser referênciados. Esses comandos de cabeçalhos nunca iniciam 
+uma nova página.
 @end itemize
 
-When a @code{@@setchapternewpage} command says to do so, the
-@code{@@chapter}, @code{@@unnumbered}, and @code{@@appendix} commands
-start new pages in the printed manual; the @code{@@heading} commands
-do not.  @xref{@code{@@setchapternewpage}}.
+Quando um comando @code{@@setchapternewpage} diz para fazer isso, ou 
+seja, novo capítulo com nova página, os comandos @code{@@chapter}, 
+@code{@@unnumbered} e @code{@@appendix} iniciam novas páginas no manual 
+impresso; os comandos @code{@@heading} não. 
+@xref{@code{@@setchapternewpage}}.
 
-Here is a summary:
+Aqui está um sumário:
 
 @tex
 {\globaldefs=1 \smallfonts \rm}
@@ -4293,8 +4292,8 @@ Here is a summary:
 
 @multitable @columnfractions .19 .30 .29 .22
 @item                        @tab                              @tab                       @tab No new page
-@item @i{Numbered}           @tab @i{Unnumbered}               @tab @i{Lettered/numbered} @tab @i{Unnumbered}
-@item In contents            @tab In contents                  @tab In contents           @tab Not in contents
+@item @i{Numerada}           @tab @i{Não numerada}             @tab @i{Letrada/numerada}  @tab @i{Não numerada}
+@item No conteúdo            @tab No conteúdo                  @tab No conteúdo           @tab Não no conteúdo
 @item                        @tab @code{@@top}                 @tab                       @tab @code{@@majorheading}
 @item @code{@@chapter}       @tab @code{@@unnumbered}          @tab @code{@@appendix} @tab @code{@@chapheading}
 @item @code{@@section}       @tab @code{@@unnumberedsec}       @tab @code{@@appendixsec} @tab @code{@@heading}
@@ -4307,46 +4306,44 @@ Here is a summary:
 
 
 @node @code{@@chapter}
-@section @code{@@chapter}: Chapter Structuring
+@section @code{@@chapter}: Estruturamento de Capítulo @c Capítulo 5 - Estruturamento de Capítulo; Seção 5.3 - Estruturamento de Capítulo
 
 @anchor{chapter}@c old name
 @findex chapter
 
-@code{@@chapter} identifies a chapter in the document--the highest
-level of the normal document structuring hierarchy.  Write the command
-at the beginning of a line and follow it on the same line by the title
-of the chapter.  The chapter is numbered automatically, starting
-from@tie{}1.
+@code{@@chapter} identifica um capítulo no documento--a nível mais alto 
+da hierarquia de estruturamento normal do documento. Escreva o comando 
+no início de uma linha e o siga na mesma linha pelo título ou capítulo. 
+O capítulo é numerado automaticamente, iniciando a partir de@tie{}1.
 
-For example, the present chapter in this manual is entitled
-``@code{@@chapter}: Chapter Structuring''; the @code{@@chapter} line
-looks like this:
+Por exemplo, o capítulo presente neste manual é intitulado 
+``@code{@@chapter}: Estruturamento de Capítulo'';  a linha 
+@code{@@chapter} se parece com isto:
 
 @example
-@@chapter @@code@{@@@@chapter@}: Chapter Structuring
+@@chapter @@code@{@@@@chapter@}: Estruturamento de Capítulo
 @end example
 
-In @TeX{}, the @code{@@chapter} command produces a chapter heading in
-the document.
+Em @TeX{}, o comando @code{@@chapter} produz um cabeçalho de capítulo no 
+documento.
 
-In Info and plain text output, the @code{@@chapter} command causes the
-title to appear on a line by itself, with a line of asterisks inserted
-underneath.  So, the above example produces the following output:
+Em saída Info e texto plano, o comando @code{@@chapter} faz com que o 
+título apareça em uma linha própria, com uma linha de asteríscos 
+inserida abaixo. Assim, o exemplo acima produz a seguinte saída:
 
 @example
 @group
-5 Chapter Structuring
-*********************
+5 Estruturamento de Capítulo
+****************************
 @end group
 @end example
 
-In HTML, the @code{@@chapter} command produces an @code{<h2>}-level
-header by default (controlled by the @code{CHAPTER_HEADER_LEVEL}
-customization variable, @pxref{Outras Variáveis de Personalização}).
+Em HTML, o comando @code{@@chapter} produz um cabeçalho de nível 
+@code{<h2>} por padrão (controlado pela variável de personalização 
+@code{CHAPTER_HEADER_LEVEL}, @pxref{Outras Variáveis de Personalização}).
 
-In the XML and Docbook output, a @code{<chapter>} element is produced
-that includes all the following sections, up to the next chapter.
-
+Na saída XML e Docbook, um elemento @code{<chapter>} é produzido, o qual 
+inclui todas as seções seguintes, até o próximo capítulo.
 
 @node @code{@@unnumbered @@appendix}
 @section @code{@@unnumbered}, @code{@@appendix}: Chapters with Other Labeling
@@ -4415,7 +4412,7 @@ In Info and plain text, the @code{@@majorheading} and
 @code{@@chapheading} commands produce the same output as
 @code{@@chapter}: the title is printed on a line by itself with a line
 of asterisks underneath.  Similarly for HTML@.  The only difference is
-the lack of numbering and the lack of any association with nodes.
+the lack of numbering and the lack of any association with Nodos.
 @xref{@code{@@chapter}}.
 
 
@@ -4646,7 +4643,7 @@ example:
 As can be inferred from this example, no automatic numbering or
 labeling of the @code{@@part} text is done.  The text is taken as-is.
 
-Because parts are not associated with nodes, no general text can
+Because parts are not associated with Nodos, no general text can
 follow the @code{@@part} line.  To produce the intended output, it
 must be followed by a chapter-level command (including its node).
 Thus, to continue the example:
@@ -4785,9 +4782,9 @@ in an entry that you can follow using the Info @samp{f} command.
 (@xref{Help-Xref,, Following cross-references, info, Info}.)  In HTML, a
 cross-reference results in an hyperlink.
 
-The various cross-reference commands use nodes (or anchors,
+The various cross-reference commands use Nodos (or anchors,
 @pxref{@code{@@anchor}}) to define cross-reference locations.
-@TeX{} needs nodes to define cross-reference locations.  When @TeX{}
+@TeX{} needs Nodos to define cross-reference locations.  When @TeX{}
 generates a DVI file, it records each node's page number and uses the 
 page numbers in making references.  Thus, even if you are writing a 
 manual that will only be printed, and not used online, you must 
@@ -5527,7 +5524,7 @@ that location breaks up the flow of reading.
 @cindex Targets for cross-references, arbitrary
 
 An @dfn{anchor} is a position in your document, labelled so that
-cross-references can refer to it, just as they can to nodes.  You
+cross-references can refer to it, just as they can to Nodos.  You
 create an anchor with the @code{@@anchor} command, and give the label
 as a normal brace-delimited argument.  For example:
 
@@ -5556,7 +5553,7 @@ text when they jump to the anchor.  You can put the @code{@@anchor}
 command on a line by itself if that helps readability of the source.
 Whitespace (including newlines) is ignored after @code{@@anchor}.
 
-Anchor names and node names may not conflict.  Anchors and nodes are
+Anchor names and node names may not conflict.  Anchors and Nodos are
 given similar treatment in some ways; for example, the
 @code{goto-node} command takes either an anchor name or a node name as
 an argument.  (@xref{Go to node,,, info, Info}.)
@@ -5564,12 +5561,12 @@ an argument.  (@xref{Go to node,,, info, Info}.)
 Also like node names, anchor names cannot include some characters
 (@pxref{Exigências de Linha de Nodo}).
 
-@cindex Nodes, deleting or renaming
+@cindex Nodos, deleting or renaming
 Because of this duality, when you delete or rename a node, it is
 usually a good idea to define an @code{@@anchor} with the old name.
 That way, any links to the old node, whether from other Texinfo
 manuals or general web pages, keep working.  You can also do this with
-the @file{RENAMED_NODES_FILE} feature of @command{makeinfo}
+the @file{RENAMED_Nodos_FILE} feature of @command{makeinfo}
 (@pxref{Preservação de Vínculo Xref HTML}).  Both methods keep links
 on the web working; the only substantive difference is that defining
 anchors also makes the old node names available when reading the
@@ -5866,7 +5863,7 @@ colors, which must be used inside @code{@@tex}:
 
 @code{\urlcolor} changes the color of @code{@@url} output (both the
 actual url and any textual label), while @code{\linkcolor} changes the
-color for cross-references to nodes, etc.  They are independent.
+color for cross-references to Nodos, etc.  They are independent.
 
 @cindex RGB color specification.
 The three given values must be numbers between 0 and 1, specifying the
@@ -8954,7 +8951,7 @@ bottom of the page, below a horizontal line.
 In Info, the reference mark for a footnote is a pair of parentheses
 with the footnote number between them, like this: @samp{(1)}.  The
 reference mark is followed by a cross-reference link to the footnote
-text if footnotes are put in separate nodes (@pxref{Footnote Styles}).
+text if footnotes are put in separate Nodos (@pxref{Footnote Styles}).
 
 In the HTML output, footnote references are generally marked with a
 small, superscripted number which is rendered as a hypertext link to
@@ -14618,7 +14615,7 @@ collection of conveniently small parts.
 
 @menu
 * Using Arquivos Incluídos::         How to use the @code{@@include} command.
-* @code{texinfo-multiple-files-update}:: How to create and update nodes and
+* @code{texinfo-multiple-files-update}:: How to create and update Nodos and
                                      menus when using included files.
 * Arquivos Incluídos Requirements::  @code{texinfo-multiple-files-update} needs.
 * Sample Include File::         A sample outer file with included files
@@ -14754,14 +14751,14 @@ file of their own.
 Moreover, each of the included files must contain exactly one highest
 level node (conventionally, @code{@@chapter} or equivalent),
 and this node must be the first node in the included file.
-Furthermore, each of these highest level nodes in each included file
+Furthermore, each of these highest level Nodos in each included file
 must be at the same hierarchical level in the file structure.
 Usually, each is a @code{@@chapter}, an @code{@@appendix}, or an
 @code{@@unnumbered} node.  Thus, normally, each included file contains
 one, and only one, chapter or equivalent-level node.
 
 The outer file should contain only @emph{one} node, the `Top' node.  It
-should @emph{not} contain any nodes besides the single `Top' node.  The
+should @emph{not} contain any Nodos besides the single `Top' node.  The
 @code{texinfo-multiple-files-update} command will not process
 them.
 
@@ -16424,7 +16421,7 @@ blocks will be.
 @opindex --no-node-files
 @opindex --node-files
 When generating HTML, create redirection files for anchors and any
-nodes not already output with the file name corresponding to the node
+Nodos not already output with the file name corresponding to the node
 name (@pxref{HTML Xref Node Name Expansion}).  This makes it possible
 for section- and chapter-level cross-manual references to succeed
 (@pxref{HTML Xref Configuration}).
@@ -16744,8 +16741,8 @@ With implicit node pointers, the above error cannot occur, as such.
 
 Instead, @code{makeinfo} checks that the tree constructed from the
 document's menus matches the tree constructed from the sectioning
-commands.  For example, if a chapter-level menu mentions nodes
-@var{n1} and @var{n2}, in that order, nodes @var{n1} and @var{n2} must
+commands.  For example, if a chapter-level menu mentions Nodos
+@var{n1} and @var{n2}, in that order, Nodos @var{n1} and @var{n2} must
 be associated with @code{@@section} commands in the chapter.
 
 Finally, with both explicit and implicit node pointers,
@@ -17255,7 +17252,7 @@ For HTML@.  If set, a vertical navigation panel is used; default false.
 
 @item WORDS_IN_PAGE
 @cindex Navigation panel, bottom of page
-For HTML, with output split at nodes.  Specifies the approximate
+For HTML, with output split at Nodos.  Specifies the approximate
 minimum page length at which a navigation panel is placed at the
 bottom of a page.  To avoid ever having the navigation buttons at the
 bottom of a page, set this to a sufficiently large number.  The
@@ -17271,10 +17268,10 @@ For HTML@.  Only relevant for cross-reference commands with no cross
 reference name (second argument).  If set to@tie{}1, use the node name
 (first) argument in cross-reference @@-commands for the text displayed
 as the hyperlink.  If set to@tie{}0, use the node name if
-@code{USE_NODES} is set, otherwise the section name.  If set to
+@code{USE_Nodos} is set, otherwise the section name.  If set to
 @samp{undef}, use the first argument in preformatted environments,
 otherwise use the node name or section name depending on
-@code{USE_NODES}.  The default is @samp{undef}.
+@code{USE_Nodos}.  The default is @samp{undef}.
 
 @end vtable
 
@@ -17480,13 +17477,13 @@ is unset.
 Name of the program used.  By default, it is set to the name of the
 program launched, with a trailing @samp{.pl} removed.
 
-@item RENAMED_NODES_FILE
-If set, use the value for the renamed nodes description file.  If not
+@item RENAMED_Nodos_FILE
+If set, use the value for the renamed Nodos description file.  If not
 set, the file is @file{@var{doc_basename}-noderename.cnf}.
 @xref{Preservação de Vínculo Xref HTML}.
 
-@item RENAMED_NODES_REDIRECTIONS
-If set, create redirection files for renamed nodes.  Set by default
+@item RENAMED_Nodos_REDIRECTIONS
+If set, create redirection files for renamed Nodos.  Set by default
 when generating HTML@.
 
 @item SHOW_MENU
@@ -17496,9 +17493,9 @@ generating Docbook or if @option{--no-headers} is specified.
 
 @item SORT_ELEMENT_COUNT
 @pindex texi-elements-by-size
-@cindex Longest nodes, finding
-@cindex Sorting nodes by size
-If set, the name of a file to which a list of elements (nodes or
+@cindex Longest Nodos, finding
+@cindex Sorting Nodos by size
+If set, the name of a file to which a list of elements (Nodos or
 sections, depending on the output format) is dumped, sorted by the
 number of lines they contain after removal of @@-commands; default
 unset.  This is used by the program @code{texi-elements-by-size} in
@@ -17577,8 +17574,8 @@ in the @code{pod2texi} utility distributed with Texinfo;
 @pxref{Invoking @command{pod2texi}}):
 
 @ftable @samp
-@item complete_tree_nodes_menus
-Add menu entries or whole menus for nodes associated with sections of
+@item complete_tree_Nodos_menus
+Add menu entries or whole menus for Nodos associated with sections of
 any level, based on the sectioning tree.
 
 @item fill_gaps_in_sectioning
@@ -17590,8 +17587,8 @@ if a @code{@@chapter} is followed by a @code{@@subsection}.
 Reformat menus so that descriptions start at column
 @code{TEXINFO_COLUMN_DESCRIPTION}.
 
-@item insert_nodes_for_sectioning_commands
-Insert nodes for sectioning commands lacking a corresponding node.
+@item insert_Nodos_for_sectioning_commands
+Insert Nodos for sectioning commands lacking a corresponding node.
 
 @item move_index_entries_after_items
 In @code{@@enumerate} and @code{@@itemize}, move index entries
@@ -17611,8 +17608,8 @@ for the menu.  It differs from setting @code{SIMPLE_MENU} in that
 
 @end ftable
 
-@item USE_NODES
-Preferentially use nodes to decide where elements are separated.  If
+@item USE_Nodos
+Preferentially use Nodos to decide where elements are separated.  If
 set to false, preferentially use sectioning to decide where elements
 are separated.  The default is true.
 
@@ -17852,7 +17849,7 @@ corresponding @command{texi2any} customization variables.
 @item @option{--l2h-tmp}              @tab @code{L2H_TMP}
 @item @option{--l2h-file}             @tab @code{L2H_FILE}
 @item @option{--l2h-clean}            @tab @code{L2H_CLEAN}
-@item @option{--use-nodes}            @tab @code{USE_NODES}
+@item @option{--use-Nodos}            @tab @code{USE_Nodos}
 @item @option{--monolithic}           @tab @code{MONOLITHIC}
 @item @option{--top-file}             @tab @code{TOP_FILE}
 @item @option{--toc-file}             @tab @code{TOC_FILE}
@@ -18106,7 +18103,7 @@ use that Emacs for anything else until the command finishes.)
 If a Texinfo file has more than 30,000 bytes,
 @code{texinfo-format-buffer} automatically creates a tag table
 for its Info file; @code{makeinfo} always creates a tag table.  With
-a @dfn{tag table}, Info can jump to new nodes more quickly than it can
+a @dfn{tag table}, Info can jump to new Nodos more quickly than it can
 otherwise.
 
 @cindex Indirect subfiles
@@ -18164,7 +18161,7 @@ Node: conventions^?6855
 @end example
 
 @noindent
-(But @file{test-texinfo} had far more nodes than are shown here.)  Each of
+(But @file{test-texinfo} had far more Nodos than are shown here.)  Each of
 the split-off, indirect files, @file{test-texinfo-1},
 @file{test-texinfo-2}, and @file{test-texinfo-3}, is listed in this file
 after the line that says @samp{Indirect:}.  The tag table is listed after
@@ -18183,7 +18180,7 @@ you may want to run the @code{Info-validate} command.  (The
 need @code{Info-validate}.)  However, you cannot run the @kbd{M-x
 Info-validate} node-checking command on indirect files.  For
 information on how to prevent files from being split and how to
-validate the structure of the nodes, see @ref{Using
+validate the structure of the Nodos, see @ref{Using
 @code{Info-validate}}.
 
 
@@ -18238,7 +18235,7 @@ this:
 Each of these menu entries points to the `Top' node of the Info file
 that is named in parentheses.  (The menu entry does not need to
 specify the `Top' node, since Info goes to the `Top' node if no node
-name is mentioned.  @xref{Outros Arquivos Info, , Nodes in Other Info
+name is mentioned.  @xref{Outros Arquivos Info, , Nodos in Other Info
 Files}.)
 
 Thus, the @samp{Info} entry points to the `Top' node of the
@@ -18504,7 +18501,7 @@ Software libraries
 Text creation and manipulation
 @end display
 
-@cindex Invoking nodes, including in dir file
+@cindex Invoking Nodos, including in dir file
 Each `Invoking' node for every program installed should have a
 corresponding @code{@@direntry}.  This lets users easily find the
 documentation for the different programs they can run, as with the
@@ -18861,7 +18858,7 @@ significance in HTML)@.  @xref{Conditional Commands}.
 @cindex Split HTML output
 @cindex HTML output, split
 
-When splitting output at nodes (which is the default),
+When splitting output at Nodos (which is the default),
 @command{makeinfo} writes HTML output into (basically) one output file
 per Texinfo source @code{@@node}.
 
@@ -18869,12 +18866,12 @@ Each output file name is the node name with spaces replaced by
 @samp{-}'s and special characters changed to @samp{_} followed by
 their code point in hex (@pxref{HTML Xref}).  This is to make it
 portable and easy to use as a filename.  In the unusual case of two
-different nodes having the same name after this treatment, they are
+different Nodos having the same name after this treatment, they are
 written consecutively to the same file, with HTML anchors so each can
 be referred to independently.
 
 If @command{makeinfo} is run on a system which does not distinguish
-case in file names, nodes which are the same except for case (e.g.,
+case in file names, Nodos which are the same except for case (e.g.,
 @samp{index} and @samp{Index}) will also be folded into the same
 output file with anchors.  You can also pretend to be on a case
 insensitive filesystem by setting the customization variable
@@ -19119,7 +19116,7 @@ appended and still comply with the 255-character limit which is common
 to many filesystems.  Although technically this can be changed with
 the @code{BASEFILENAME_LENGTH} customization variable (@pxref{Other
 Customization Variables}), doing so would make cross-manual references
-to such nodes invalid.
+to such Nodos invalid.
 
 Any directory part in the filename argument of the source cross
 reference command is ignored.  Thus, @code{@@xref@{,,,../foo@}} and
@@ -19157,9 +19154,9 @@ the @samp{-} and @samp{_} characters are all that can be used.
 (Although HTML anchors can contain most characters, XHTML is more
 restrictive.)
 
-Cross-references in Texinfo can refer either to nodes or anchors
+Cross-references in Texinfo can refer either to Nodos or anchors
 (@pxref{@code{@@anchor}}).  However, anchors are treated identically
-to nodes in this context, so we'll continue to say ``node'' names for
+to Nodos in this context, so we'll continue to say ``node'' names for
 simplicity.
 
 A special exception: the Top node (@pxref{The Top Node}) is always
@@ -19222,7 +19219,7 @@ Example translations of common characters:
 @item @samp{A  node} @result{} @samp{A-node}
 @end itemize
 
-On case-folding computer systems, nodes differing only by case will be
+On case-folding computer systems, Nodos differing only by case will be
 mapped to the same file.  In particular, as mentioned above, Top
 always maps to the file @file{index.html}.  Thus, on a case-folding
 system, Top and a node named `Index' will both be written to
@@ -19511,7 +19508,7 @@ directory, and file name for @var{manual} as one monolithic file.
 @cindex split manuals, for HTML cross-references
 If the keyword is @code{node}, @code{section}, or @code{chapter},
 @var{urlprefix} gives the host and directory for @var{manual} split
-into nodes, sections, or chapters, respectively.
+into Nodos, sections, or chapters, respectively.
 
 When available, @command{makeinfo} will use the ``corresponding''
 value for cross-references between manuals.  That is, when generating
@@ -19545,26 +19542,26 @@ usual.  You can get the latest version from
 @pindex noderename.cnf
 @pindex @var{manual}-noderename.cnf
 @cindex HTML cross-reference link preservation
-@cindex Preserving HTML links to old nodes
-@cindex Old nodes, preserving links to
-@cindex Renaming nodes, and preserving links
-@cindex Links, preserving to renamed nodes
+@cindex Preserving HTML links to old Nodos
+@cindex Old Nodos, preserving links to
+@cindex Renaming Nodos, and preserving links
+@cindex Links, preserving to renamed Nodos
 @cindex Node renaming, and preserving links
 
-Occasionally changes in a program require removing (or renaming) nodes
+Occasionally changes in a program require removing (or renaming) Nodos
 in the manual in order to have the best documentation.  Given the
 nature of the web, however, links may exist anywhere to such a removed
 node (renaming appears the same as removal for this purpose), and it's
 not ideal for those links to simply break.
 
-@vindex RENAMED_NODES_FILE
+@vindex RENAMED_Nodos_FILE
 Therefore, Texinfo provides a way for manual authors to specify old
-node names and the new nodes to which the old names should be
+node names and the new Nodos to which the old names should be
 redirected, via the file @var{manual}@file{-noderename.cnf}, where
 @var{manual} is the base name of the manual.  For example, the manual
 @file{texinfo.texi} would be supplemented by a file
 @file{texinfo-noderename}.cnf.  (This name can be overridden by
-setting the @file{RENAMED_NODES_FILE} customization variable;
+setting the @file{RENAMED_Nodos_FILE} customization variable;
 @pxref{Customization Variables}).
 
 The file is read in pairs of lines, as follows:
@@ -19587,7 +19584,7 @@ Lines consisting only of whitespace are ignored.  Comments are
 indicated with a @samp{@@c} at the beginning of a line, optionally
 preceded by whitespace.
 
-Another approach to preserving links to deleted or renamed nodes is to
+Another approach to preserving links to deleted or renamed Nodos is to
 use anchors (@pxref{@code{@@anchor}}).  There is no effective
 difference between the two approaches.
 
@@ -19922,7 +19919,7 @@ any output.  A synonym for @code{@@c}.
 
 @item @@contents
 Print a complete table of contents.  Has no effect in Info, which uses
-menus instead.  @xref{Contents, , Generating a Table of Contents}.
+menus instead.  @xref{Contents, , Gerando um Sumário}.
 
 @item @@copying
 Specify copyright holders and copying conditions for the document Pair
@@ -20480,7 +20477,7 @@ than the @code{@@chapheading} command.  @xref{@code{@@majorheading
 Format a mathematical expression.  @xref{Inserting Math}.
 
 @item @@menu
-Mark the beginning of a menu of nodes.  No effect in a printed manual.
+Mark the beginning of a menu of Nodos.  No effect in a printed manual.
 Pair with @code{@@end menu}.  @xref{Menus}.
 
 @item @@minus@{@}
@@ -20686,7 +20683,7 @@ Define the short caption for a @code{@@float}.  @xref{@code{@@caption
 @item @@shortcontents
 Print a short table of contents, with chapter-level entries only.  Not
 relevant to Info, which uses menus rather than tables of contents.
-@xref{Contents, , Generating a Table of Contents}.
+@xref{Contents, , Gerando um Sumário}.
 
 @item @@shorttitlepage @var{title}
 Generate a minimal title page.  @xref{@code{@@titlepage}}.
@@ -20775,7 +20772,7 @@ have title pages.  @xref{@code{@@title @@subtitle @@author}}.
 
 @item @@summarycontents
 Print a short table of contents.  Synonym for @code{@@shortcontents}.
-@xref{Contents, , Generating a Table of Contents}.
+@xref{Contents, , Gerando um Sumário}.
 
 @item @@sup @{@var{text}@}
 Set @var{text} as a superscript.  @xref{Inserting Subscripts and Superscripts}.
@@ -21346,7 +21343,7 @@ should expect to learn the meaning from this passage.
 @end itemize
 
 
-@subsubheading Program Invocation Nodes
+@subsubheading Program Invocation Nodos
 
 You can invoke programs such as Emacs, GCC, and @code{gawk} from a
 shell.  The documentation for each program should contain a section that
@@ -21393,15 +21390,15 @@ beginning of the section that describes the functions.
 @anchor{texi-elements-by-size}
 @subsubheading Node Length
 
-Keep nodes (sections) to a reasonable length, whatever reasonable
-might be in the given context.  Don't hesitate break up long nodes
-into subnodes and have an extensive tree structure; that's what it's
+Keep Nodos (sections) to a reasonable length, whatever reasonable
+might be in the given context.  Don't hesitate break up long Nodos
+into subNodos and have an extensive tree structure; that's what it's
 there for.  Many times, readers will probably try to find a single
 specific point in the manual, using search, indexing, or just plain
 guessing, rather than reading the whole thing from beginning to end.
 
 You can use the @command{texi-elements-by-size} utility to see a list
-of all nodes (or sections) in the document, sorted by size (either
+of all Nodos (or sections) in the document, sorted by size (either
 lines or words), to find candidates for splitting.  It's in the
 @file{util/} subdirectory of the Texinfo sources.
 
@@ -21809,7 +21806,7 @@ commands and tools to help ease your work.
                                   purpose editing features.
 * Inserting::                   How to insert frequently used @@-commands.
 * Showing the Structure::       How to show the structure of a file.
-* Atualizando Nodos e Menus::    How to update or create new nodes and menus.
+* Atualizando Nodos e Menus::    How to update or create new Nodos and menus.
 * Info Formatting::             How to format for Info.
 * Printing::                    How to format and print part or all of a file.
 * Texinfo Mode Summary::        Summary of all the Texinfo mode commands.
@@ -21943,7 +21940,7 @@ cursor between the braces.
 @findex texinfo-insert-@@node
 Insert @code{@@node} and a comment line
 listing the sequence for the `Next',
-`Previous', and `Up' nodes.
+`Previous', and `Up' Nodos.
 Leave point after the @code{@@node}.
 
 @item  C-c C-c o
@@ -22099,9 +22096,9 @@ about the page commands.
 @section Atualizando Nodos e Menus
 
 @cindex Atualizando Nodos e Menus
-@cindex Create nodes, menus automatically
-@cindex Insert nodes, menus automatically
-@cindex Automatically insert nodes, menus
+@cindex Create Nodos, menus automatically
+@cindex Insert Nodos, menus automatically
+@cindex Automatically insert Nodos, menus
 
 Texinfo mode provides commands for automatically creating or updating
 menus and node pointers.  The commands are called ``update'' commands
@@ -22118,8 +22115,8 @@ hand, which is a tedious task.
 * Updating Requirements::       How to structure a Texinfo file for
                                   using the updating command.
 * Other Updating Commands::     How to indent descriptions, insert
-                                  missing nodes lines, and update
-                                  nodes in sequence.
+                                  missing Nodos lines, and update
+                                  Nodos in sequence.
 @end menu
 
 @node Updating Commands
@@ -22138,7 +22135,7 @@ insert or update the menu for a section, and
 create a master menu for a Texinfo source file.
 @end itemize
 
-You can also use the commands to update all the nodes and menus in a
+You can also use the commands to update all the Nodos and menus in a
 region or in a whole Texinfo file.
 
 The updating commands work only with conventional Texinfo files, which
@@ -22158,13 +22155,13 @@ interpose only a @code{@@comment} line or an @code{@@ifinfo} line.
 Commands which work on a whole buffer require that the `Top' node be
 followed by a node with a @code{@@chapter} or equivalent-level command.
 The menu updating commands will not create a main or master menu for a
-Texinfo file that has only @code{@@chapter}-level nodes!  The menu
-updating commands only create menus @emph{within} nodes for lower level
-nodes.  To create a menu of chapters, you must provide a `Top'
+Texinfo file that has only @code{@@chapter}-level Nodos!  The menu
+updating commands only create menus @emph{within} Nodos for lower level
+Nodos.  To create a menu of chapters, you must provide a `Top'
 node.
 
 The menu updating commands remove menu entries that refer to other Info
-files since they do not refer to nodes within the current buffer.  This
+files since they do not refer to Nodos within the current buffer.  This
 is a deficiency.  Rather than use menu entries, you can use cross
 references to refer to Outros Arquivos Info.  None of the updating commands
 affect cross-references.
@@ -22187,7 +22184,7 @@ Create or update a master menu that includes all the other menus
 any).
 
 With an argument (prefix argument, @kbd{C-u,} if interactive), first create or
-update all the nodes and all the regular menus in the buffer before
+update all the Nodos and all the regular menus in the buffer before
 constructing the master menu.  (@xref{O Nodo Top, , The Top Node and
 Master Menu}, for more about a master menu.)
 
@@ -22203,11 +22200,11 @@ C-u C-c C-u m
 @end example
 
 @noindent
-This updates all the nodes and menus completely and all at once.
+This updates all the Nodos and menus completely and all at once.
 @end table
 
 The other major updating commands do smaller jobs and are designed for
-the person who updates nodes and menus as he or she writes a Texinfo
+the person who updates Nodos and menus as he or she writes a Texinfo
 file.
 
 @need 1000
@@ -22231,7 +22228,7 @@ between point and mark).
 Create or update the menu in the node that point is within.
 With an argument (@kbd{C-u} as prefix argument, if
 interactive), the command makes or updates menus for the
-nodes which are either within or a part of the
+Nodos which are either within or a part of the
 region.
 
 Whenever @code{texinfo-make-menu} updates an existing menu, the
@@ -22269,7 +22266,7 @@ C-u M-x texinfo-all-menus-update
 @end example
 
 @noindent
-This updates all the nodes and menus.
+This updates all the Nodos and menus.
 @end table
 
 The @code{texinfo-column-for-description} variable specifies the
@@ -22372,7 +22369,7 @@ missing throughout a region in a Texinfo file.
 With an argument (@kbd{C-u} as prefix argument, if interactive), the
 command @code{texinfo-insert-node-lines} not only inserts
 @code{@@node} lines but also inserts the chapter or section titles as
-the names of the corresponding nodes.  In addition, it inserts the
+the names of the corresponding Nodos.  In addition, it inserts the
 titles as node names in pre-existing @code{@@node} lines that lack
 names.  Since node names should be more concise than section or
 chapter titles, you must manually edit node names so inserted.
@@ -22392,7 +22389,7 @@ edit the inserted text.
 
 @item M-x texinfo-multiple-files-update
 @findex texinfo-multiple-files-update @r{(in brief)}
-Update nodes and menus in a document built from several separate files.
+Update Nodos and menus in a document built from several separate files.
 With @kbd{C-u} as a prefix argument, create and insert a master menu in
 the outer file.  With a numeric prefix argument, such as @kbd{C-u 2}, first
 update all the menus and all the `Next', `Previous', and `Up' pointers
@@ -22413,16 +22410,16 @@ description.
 
 @item M-x texinfo-sequential-node-update
 @findex texinfo-sequential-node-update
-Insert the names of the nodes immediately following and preceding the
+Insert the names of the Nodos immediately following and preceding the
 current node as the `Next' or `Previous' pointers regardless of those
-nodes' hierarchical level.  This means that the `Next' node of a
-subsection may well be the next chapter.  Sequentially ordered nodes are
+Nodos' hierarchical level.  This means that the `Next' node of a
+subsection may well be the next chapter.  Sequentially ordered Nodos are
 useful for novels and other documents that you read through
 sequentially.  (However, in Info, the @kbd{g *} command lets
-you look through the file sequentially, so sequentially ordered nodes
+you look through the file sequentially, so sequentially ordered Nodos
 are not strictly necessary.)  With an argument (prefix argument, if
 interactive), the @code{texinfo-sequential-node-update} command
-sequentially updates all the nodes in the region.
+sequentially updates all the Nodos in the region.
 @end table
 
 @node Info Formatting
@@ -22469,7 +22466,7 @@ C-u M-x texinfo-master-menu
 @end example
 
 @noindent
-This updates all the nodes and menus.  Then type the following to create
+This updates all the Nodos and menus.  Then type the following to create
 an Info file:
 
 @example
@@ -22603,7 +22600,7 @@ M-x texinfo-master-menu
 
 @group
 C-u C-c C-u m   @r{With @kbd{C-u} as a prefix argument, first}
-               @r{create or update all nodes and regular}
+               @r{create or update all Nodos and regular}
                @r{menus, and then create a master menu.}
 @end group
 @end example
@@ -22624,7 +22621,7 @@ C-c C-u C-e     @r{Update every node in the buffer.}
 Invoke the  update menu commands by typing @kbd{C-c C-u}
 and then either @kbd{C-m} for @code{texinfo-make-menu} or
 @kbd{C-a} for @code{texinfo-all-menus-update}.  To update
-both nodes and menus at the same time, precede @kbd{C-c C-u
+both Nodos and menus at the same time, precede @kbd{C-c C-u
 C-a} with @kbd{C-u}.
 
 @example
@@ -22637,7 +22634,7 @@ C-c C-u C-a     @r{Make or update all}
 
 @group
 C-u C-c C-u C-a @r{With @kbd{C-u} as a prefix argument,}
-               @r{first create or update all nodes and}
+               @r{first create or update all Nodos and}
                @r{then create or update all menus.}
 @end group
 @end example
@@ -22710,7 +22707,7 @@ M-x texinfo-insert-node-lines
 M-x texinfo-multiple-files-update
                @r{Update a multi-file document.}
                @r{With @kbd{C-u 2} as a prefix argument,}
-               @r{create or update all nodes and menus}
+               @r{create or update all Nodos and menus}
                @r{in all included files first.}
 @end group
 
@@ -23080,7 +23077,7 @@ bottom of a page both in headings and in footings.
 @node Catching Mistakes
 @appendix Catching Mistakes
 @cindex Structure, catching mistakes in
-@cindex Nodes, catching mistakes
+@cindex Nodos, catching mistakes
 @cindex Catching mistakes
 @cindex Correcting mistakes
 @cindex Mistakes, catching
@@ -23089,7 +23086,7 @@ bottom of a page both in headings and in footings.
 
 Besides mistakes in the content of your documentation, there are two
 kinds of mistake you can make with Texinfo: you can make mistakes with
-@@-commands, and you can make mistakes with the structure of the nodes
+@@-commands, and you can make mistakes with the structure of the Nodos
 and chapters.
 
 Emacs has two tools for catching the @@-command mistakes and two for
@@ -23099,7 +23096,7 @@ For finding problems with @@-commands, you can run @TeX{} or a region
 formatting command on the region that has a problem; indeed, you can
 run these commands on each region as you write it.
 
-For finding problems with the structure of nodes and chapters, you can use
+For finding problems with the structure of Nodos and chapters, you can use
 @kbd{C-c C-s} (@code{texinfo-show-structure}) and the related @code{occur}
 command and you can use the @kbd{M-x Info-validate} command.
 
@@ -23109,7 +23106,7 @@ command and you can use the @kbd{M-x Info-validate} command.
 * Debugging with @TeX{}::          How to catch errors with @TeX{} formatting.
 * Using @code{texinfo-show-structure}:: How to use @code{texinfo-show-structure}.
 * Using @code{occur}::                 How to list all lines containing a pattern.
-* Running @code{Info-validate}::       How to find badly referenced nodes.
+* Running @code{Info-validate}::       How to find badly referenced Nodos.
 @end menu
 
 
@@ -23176,7 +23173,7 @@ occurs, or not long after it.  The buffer will look like this:
                                  `texinfo-show-structure'
                                  to catch mistakes.
 * Running Info-validate::         How to check for
-                                 unreferenced nodes.
+                                 unreferenced Nodos.
 @@end menus
 @point{}
 ---------- Buffer: *Info Region* ----------
@@ -23372,7 +23369,7 @@ directly with @TeX{}, not with Texinfo.)
 @cindex Showing the structure of a file
 @findex texinfo-show-structure
 
-It is not always easy to keep track of the nodes, chapters, sections, and
+It is not always easy to keep track of the Nodos, chapters, sections, and
 subsections of a Texinfo file.  This is especially true if you are revising
 or adding to a Texinfo file that someone else has written.
 
@@ -23395,7 +23392,7 @@ Lines matching "^@@\\(chapter \\|sect\\|subs\\|subh\\|
 unnum\\|major\\|chapheading \\|heading \\|appendix\\)"
 in buffer texinfo.texi.
 @dots{}
-4177:@@chapter Nodes
+4177:@@chapter Nodos
 4198:    @@heading Two Paths
 4231:    @@section Node and Menu Illustration
 4337:    @@section The @@code@{@@@@node@} Command
@@ -23472,7 +23469,7 @@ If you want to see only those lines that start with the word
 @code{occur}.  If you want to see all the lines that end with a word
 or phrase, end the last word with a @samp{$}; for example,
 @samp{catching mistakes$}.  This can be helpful when you want to see
-all the nodes that are part of the same chapter or section and
+all the Nodos that are part of the same chapter or section and
 therefore have the same `Up' pointer.
 
 @xref{Other Repeating Search, , Using Occur, emacs , The GNU Emacs Manual},
@@ -23480,15 +23477,15 @@ for more information.
 
 
 @node Running @code{Info-validate}
-@section Finding Badly Referenced Nodes
+@section Finding Badly Referenced Nodos
 
 @anchor{Running Info-Validate}@c old name
 @findex Info-validate
-@cindex Nodes, checking for badly referenced
-@cindex Checking for badly referenced nodes
-@cindex Looking for badly referenced nodes
-@cindex Finding badly referenced nodes
-@cindex Badly referenced nodes
+@cindex Nodos, checking for badly referenced
+@cindex Checking for badly referenced Nodos
+@cindex Looking for badly referenced Nodos
+@cindex Finding badly referenced Nodos
+@cindex Badly referenced Nodos
 
 You can use the @code{Info-validate} command to check whether any of
 the `Next', `Previous', `Up' or other node pointers fail to point to a
@@ -23560,7 +23557,7 @@ This is because every `Next' pointer should be matched by a
 `Previous' (in the node where the `Next' points) which points back.
 
 @code{Info-validate} also checks that all menu entries and cross-references
-point to actual nodes.
+point to actual Nodos.
 
 @code{Info-validate} requires a tag table and does not work with files
 that have been split.  (The @code{texinfo-format-buffer} command
@@ -23582,7 +23579,7 @@ are generated when a master file is split.  If you have a large file
 a way that it does not create indirect subfiles.  You will also need
 to create a tag table for the Info file.  After you have done this,
 you can run @code{Info-validate} and look for badly referenced
-nodes.
+Nodos.
 
 The first step is to create an unsplit Info file.  To prevent
 @code{texinfo-format-buffer} from splitting a Texinfo file into
@@ -23658,7 +23655,7 @@ The split-off files are called the indirect subfiles.
 Info files are split to save memory.  With smaller files, Emacs does not
 have make such a large buffer to hold the information.
 
-If an Info file has more than 30 nodes, you should also make a tag
+If an Info file has more than 30 Nodos, you should also make a tag
 table for it.  @xref{Using @code{Info-validate}}, for information
 about creating a tag table.  (Again, tag tables are usually created
 automatically by the formatting command; you only need to create a tag
@@ -23709,7 +23706,7 @@ case-insensitive to keywords that occur in the file (for example,
 @samp{Tag Table} and @samp{Tag table} should be equivalent) in order to
 support Info-generating programs that use different capitalization.
 
-The sections in an Info file (such as nodes or tag tables) are separated
+The sections in an Info file (such as Nodos or tag tables) are separated
 with a sequence:
 
 @example
@@ -23752,7 +23749,7 @@ This section describes the overall layout of Info manuals.
 * Indirect:        Info Format Indirect Table.
 * Tag table:       Info Format Tag Table.
 * Local variables: Info Format Local Variables.
-* Regular nodes:   Info Format Regular Nodes.
+* Regular Nodos:   Info Format Regular Nodos.
 @end menu
 
 
@@ -23777,7 +23774,7 @@ The syntax for a nonsplit manual is:
 @end example
 
 When split, there is a @dfn{main file}, which contains only pointers
-to the nodes given in other @dfn{subfiles}.  The main file looks
+to the Nodos given in other @dfn{subfiles}.  The main file looks
 like this:
 
 @example
@@ -23922,7 +23919,7 @@ End Tag Table
 @end example
 
 @noindent
-This specifies a manual with two nodes, `Top' and `Ch1', at byte
+This specifies a manual with two Nodos, `Top' and `Ch1', at byte
 positions 89 and 292 respectively.  Because the @samp{(Indirect)} line
 is not present, the manual is not split.
 
@@ -23949,12 +23946,12 @@ End:
 @xref{@code{@@documentencoding}}.
 
 
-@node Info Format Regular Nodes
-@subheading Info Format: Regular Nodes
+@node Info Format Regular Nodos
+@subheading Info Format: Regular Nodos
 
-@cindex Info nodes, in Info format
+@cindex Info Nodos, in Info format
 
-Regular nodes look like this:
+Regular Nodos look like this:
 
 @example
     <node> =
@@ -23979,7 +23976,7 @@ either @samp{manualname} or @samp{manualname.info}.  No parenthesized
 @t{<infofile>} component may appear within @t{<id1>}.
 
 Each of the identifiers after @code{Next}, @code{Prev} and @code{Up}
-refer to nodes or anchors within a file.  These pointers normally
+refer to Nodos or anchors within a file.  These pointers normally
 refer within the same file, but @samp{(dir)} is often used to point to
 the top-level dir file.  If an @t{<infofile>} component is used then
 the node name may be omitted, in which case the node identifier refers
@@ -23988,7 +23985,7 @@ to the @samp{Top} node within the referenced file.
 The @code{Next} and @code{Prev} pointers are optional.  The @code{Up}
 pointer is technically also optional, although most likely this
 indicates a mistake in the node structuring.  Conventionally, the
-nodes are arranged to form a tree, but this is not a requirement of
+Nodos are arranged to form a tree, but this is not a requirement of
 the format.
 
 Node names containing periods, commas, colons or parentheses
@@ -24002,8 +23999,8 @@ recommend you make use of this support until such time as Info-reading
 programs that recognize this syntax are common.  @xref{Node Line 
 Requirements}.
 
-The use of non-ASCII characters in the names of nodes is permitted,
-but can cause problems in cross-references between nodes in Info files
+The use of non-ASCII characters in the names of Nodos is permitted,
+but can cause problems in cross-references between Nodos in Info files
 with different character encodings, and also when node names from many
 different files are listed (for example, with the @option{--apropos}
 option to the standalone Info browser), so we recommend avoiding them
@@ -24035,7 +24032,7 @@ These special Info constructs can appear within the text of a node.
 
 @cindex Menus, in Info format
 
-Conventionally menus appear at the end of nodes, but the Info format
+Conventionally menus appear at the end of Nodos, but the Info format
 places no restrictions on their location.
 
 @example
@@ -24161,7 +24158,7 @@ text>} is descriptive text.
 
 In both forms the @t{<id>} refers to a node or anchor, in the same way
 as a reference in the node information line does (@pxref{Info Format
-Regular Nodes}).  The optional parenthesized @samp{<infofile>} is the
+Regular Nodos}).  The optional parenthesized @samp{<infofile>} is the
 filename of the manual being referenced, and the @t{<nodename>} is the
 node or anchor within that manual,
 
