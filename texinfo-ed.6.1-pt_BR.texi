@@ -47,7 +47,7 @@ utilizando marcação semântica.
 
 Copyright @copyright{} 2016, 2017, 2018, 2019 da "versão modificada" 
 traduzida para o Português do Brasil: Jamenson Ferreira Espindula de 
-Almeida Melo @email{jafesp@@gmail.com}.
+Almeida Melo <@email{jafesp@@gmail.com}>.
 
 Copyright @copyright{} 1988, 1990, 1991, 1992, 1993, 1995, 1996, 1997, 
 1998, 1999, 2001, 2001, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 
@@ -789,12 +789,13 @@ nossa reputação.
 As condições precisas das licenças para os programas atualmente sendo 
 distribuídos que se relacionem com Texinfo são encontradas nas Licenças 
 Públicas Gerais que os acompanham.   Este manual está coberto pela 
-Licença de Documentação Livre GNU (@pxref{Licença de Documentação Livre GNU}).
+Licença de Documentação Livre GNU 
+(@pxref{Licença de Documentação Livre GNU}).
 
 
 @node Overview
-@chapter Overview of Texinfo
-@cindex Overview of Texinfo
+@chapter Visão Geral do Texinfo @c Capítulo 1
+@cindex Visão Geral do Texinfo
 @cindex Texinfo overview
 @cindex Using Texinfo in general
 @cindex Texinfo, introduction to
@@ -1310,8 +1311,8 @@ Veja-se @ref{Reference Implementation}, para mais sobre a razão de ser e funç�
 de @command{texi2any}.
 
 
-@node Writing a Texinfo File
-@chapter Writing a Texinfo File
+@node Escrevendo um Arquivo Texinfo
+@chapter Escrevendo um Arquivo Texinfo @c Capítulo 2
 
 Este capítulo descreve a sintaxe Texinfo e o que é exigido em um arquivo 
 Texinfo, e dá um arquivo curto de amostra.
@@ -1755,7 +1756,7 @@ Este é o segundo item.
 
 @node Beginning and Ending a File
 @anchor{Beginning a File} @c old name
-@chapter Beginning and Ending a Texinfo File
+@chapter Começando e Terminando um Arquivo Texinfo @c Capítulo 3
 @cindex Beginning a Texinfo file
 @cindex Texinfo file beginning
 @cindex File beginning
@@ -3198,7 +3199,7 @@ lista de variáveis locais para Emacs, a maioria das vezes tipicamente um
 
 
 @node Nodos
-@chapter Nodos
+@chapter Nodos @c Capítulo 4
 @anchor{node}@anchor{@@node} @c nomes antigos
 
 @cindex Node, defined
@@ -4734,7 +4735,7 @@ on a line of its own.
 
 
 @node Referências Cruzadas
-@chapter Cross-references
+@chapter Referências Cruzadas @c Capítulo 6
 @cindex Making cross-references
 @cindex Cross-references
 @cindex References
@@ -5894,7 +5895,7 @@ command since a reader can easily follow such a reference in Info.
 
 
 @node Marking Text
-@chapter Marking Text, Words and Phrases
+@chapter Marcação de Texto, Palavras e Frases
 @cindex Paragraph, marking text within
 @cindex Marking words and phrases
 @cindex Words and phrases, marking them
@@ -6992,7 +6993,7 @@ specific font effects, such as in @TeX{} and related packages.
 
 
 @node Quotations and Examples
-@chapter Quotations and Examples
+@chapter Citações e Exemplos
 
 Quotations and examples are blocks of text consisting of one or more
 whole paragraphs that are set off from the bulk of the text and
@@ -7796,7 +7797,7 @@ consistently within a chapter.
 
 
 @node Lists and Tables
-@chapter Lists and Tables
+@chapter Listas e Tabelas
 @cindex Making lists and tables
 @cindex Lists and tables, making
 @cindex Tables and lists, making
@@ -8449,7 +8450,7 @@ split that window.
 
 
 @node Special Displays
-@chapter Special Displays
+@chapter Exibições Especiais
 @cindex Special displays
 
 The commands in this chapter allow you to write text that is specially
@@ -9059,7 +9060,7 @@ separate file.
 
 
 @node Indices
-@chapter Indices
+@chapter Índices
 @cindex Indices
 
 Using Texinfo, you can generate indices without having to sort and
@@ -9582,7 +9583,7 @@ well-known extension name.
 
 
 @node Insertions
-@chapter Special Insertions
+@chapter Inserções Especiais
 @cindex Inserting special characters and symbols
 @cindex Special insertions
 
@@ -11237,7 +11238,7 @@ That's all.  No magic!
 
 
 @node Breaks
-@chapter Forcing and Preventing Breaks
+@chapter Forçando e Evitando Quebras
 
 @cindex Forcing line and page breaks
 @cindex Making line and page breaks
@@ -11646,7 +11647,7 @@ lines at the bottoms of printed pages.
 
 
 @node Definition Commands
-@chapter Definition Commands
+@chapter Comandos de Definição
 @cindex Definition commands
 
 The @code{@@deffn} command and the other @dfn{definition commands}
@@ -12741,7 +12742,7 @@ that for functions except that variables do not take arguments.
 
 
 @node Internationalization
-@chapter Internationalization
+@chapter Internacionalização
 
 @cindex Internationalization
 Texinfo has some support for writing in languages other than English,
@@ -12945,7 +12946,7 @@ of non-ASCII, e.g., it's written in German.  You can use the
 
 
 @node Condicionais
-@chapter Conditionally Visible Text
+@chapter Texto Condicionalmente Visível
 @cindex Conditionally visible text
 @cindex Text, conditionally visible
 @cindex Visibility of conditional text
@@ -13803,7 +13804,7 @@ for nesting purposes.
 
 
 @node Defining New Texinfo Commands
-@chapter Defining New Texinfo Commands
+@chapter Definindo Novos Comandos Texinfo
 
 @cindex Macros
 @cindex Defining new Texinfo commands
@@ -14602,7 +14603,7 @@ The possible solutions are described above (@pxref{@samp{#line} Directive}).
 
 
 @node Arquivos Incluídos
-@chapter Arquivos Incluídos
+@chapter Arquivos Include
 
 @cindex Arquivos Incluídos
 
@@ -14905,7 +14906,7 @@ Texinfo files.
 
 
 @node Hardcopy
-@chapter Formatting and Printing Hardcopy
+@chapter Formatando e Imprimindo Cópia Impressa
 @cindex Format and print hardcopy
 @cindex Printing hardcopy
 @cindex Hardcopy, printing it
@@ -16024,7 +16025,7 @@ and you can get it over the Internet or on physical media.  See
 
 
 @node Generic Translator @command{texi2any}
-@chapter @command{texi2any}: The Generic Translator for Texinfo
+@chapter @command{texi2any}: O Tradutor Genérico para Texinfo
 
 @command{texi2any} is the generic translator for Texinfo that can
 produce different output formats and is highly customizable.  It
@@ -17869,7 +17870,7 @@ notes, but may still be useful to some.
 
 
 @node Creating and Installing Info Files
-@chapter Creating and Installing Info Files
+@chapter Criando e Instalando Arquivos Info
 
 This chapter describes how to create and install Info files.
 @xref{Info Files}, for general information about the file format
@@ -18736,7 +18737,7 @@ Display version information and exit successfully.
 
 
 @node Generating HTML
-@chapter Generating HTML
+@chapter Gerando HTML
 
 @cindex Generating HTML
 @cindex Outputting HTML
@@ -21702,7 +21703,7 @@ This manual is for GNU Sample (version @value{VERSION}, @value{UPDATED}).
 
 
 @node Invoking sample
-@chapter Invoking sample
+@chapter Invocação de Amostra
 
 @pindex sample
 @cindex invoking @command{sample}
