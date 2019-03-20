@@ -24,9 +24,9 @@
 @syncodeindex vr cp
 @syncodeindex pg cp
 
-@tex
-\global\usebracesinindexestrue
-@end tex
+@c @tex
+@c \global\usebracesinindexestrue
+@c @end tex
 
 @c final
 
@@ -1953,17 +1953,17 @@ Texinfo.  Prossiga a linha `start-of-header' com uma linha
 `@code{@@settitle}' e, opcionalmente, com outros comandos que 
 globalmente afetam a formatação do documento, tais como 
 @code{@@synindex} ou @code{@@footnotestyle}; e então por uma linha 
-`end-of-header' (veja-se @ref{End of Header}).
+`end-of-header' (@pxref{End of Header}).
 
 As linhas `start-' e `end-of-header` te permitem formatar somente parte 
-de um arquivo Texinfo para Info ou impressão.  Veja-se os comandos 
-@ref{@code{texinfo-format}}.
+de um arquivo Texinfo para Info ou impressão. 
+@xref{Comandos @code{texinfo-format}}.
 
 A estranha sequência de caracteres, @samp{%**}, é para assegurar que 
 nenhum outro comentário seja acidentalmente tomado por uma linha 
 `start-of-header'.  Você pode modificá-la se você desejar, configurando 
 as variáveis Emacs @code{tex-start-of-header} e/ou 
-@code{tex-end-of-header}. Veja-se @ref{Texinfo Mode Printing}.
+@code{tex-end-of-header}. @xref{Texinfo Mode Printing}.
 
 
 @node @code{@@setfilename}
@@ -2271,11 +2271,11 @@ direitos autorais com @code{@@titlepage} em uma linha própria e finalize
 com @code{@@end titlepage} em uma linha própria.
 
 O comando @code{@@end titlepage} inicia uma página nova e liga a 
-numeração de página (veja-se @ref{Heading Generation}).  Todo o material que 
+numeração de página (@pxref{Heading Generation}).  Todo o material que 
 você deseja que apareça em páginas não numeradas deveria ser colocado 
 entre os comandos @code{@@titlepage} e @code{@@end titlepage}.
 Você pode forçar que o sumário apareça ali com o comando 
-@code{@@setcontentsaftertitlepage} (veja-se @ref{Contents}).
+@code{@@setcontentsaftertitlepage} (@pxref{Conteúdo}).
 
 @findex page@r{, within @code{@@titlepage}}
 Ao utilizar o comando @code{@@page} você pode forçar uma quebra de 
@@ -2609,7 +2609,7 @@ página.
 @end itemize
 
 
-@node Contents
+@node Conteúdo
 @section Gerando um Sumário
 @cindex Table of contents
 @cindex Contents, table of
@@ -3793,7 +3793,7 @@ O programa @code{makeinfo} pode automaticamente determinar ponteiros de
 nodo para um documento hierarquicamente organizado. Essa característica 
 de criação implícita de ponteiro de nodo em @code{makeinfo} liberta você 
 da necessidade de atualizar menus e ponteiros manualmente ou com 
-comandos em modo Texinfo. (Veja-se @ref{Atualizando Nodos e Menus}). Nós 
+comandos em modo Texinfo. (@xref{Atualizando Nodos e Menus}). Nós 
 recomendamos enfaticamente tomar vantagem disso.
 
 Para fazer isso, escreva suas linhas @code{@@node} apenas com o nome do 
@@ -4656,7 +4656,7 @@ Thus, to continue the example:
 @end example
 
 In the @TeX{} output, the @code{@@part} text is included in both the
-normal and short tables of contents (@pxref{Contents}), without a page
+normal and short tables of contents (@pxref{Conteúdo}), without a page
 number (since that is the normal convention).  In addition, a ``part
 page'' is output in the body of the document, with just the
 @code{@@part} text.  In the example above, the @code{@@*} causes a
@@ -4969,8 +4969,8 @@ described separately following the description of @code{@@xref}.
 names and menu items) contains a problematic construct that will
 interfere with its parsing in Info.  If you don't want to see the
 warnings, you can set the customization variable
-@code{INFO_SPECIAL_CHARS_WARNING} to @samp{0} (@pxref{Other
-Customization Variables}).
+@code{INFO_SPECIAL_CHARS_WARNING} to @samp{0} 
+(@pxref{Outras Variáveis de Personalização}).
 
 
 @node @code{@@xref}
@@ -9230,7 +9230,7 @@ so that it appears among the other entries beginning `M'.
 @quotation Caution
 Do not use a colon in an index entry.  In Info, a colon separates the
 menu entry name from the node name, so a colon in the entry itself
-confuses Info.  @xref{Menu Parts}, for more information about the
+confuses Info.  @xref{Partes de Menu}, for more information about the
 structure of a menu entry.
 @end quotation
 
@@ -15590,7 +15590,7 @@ For more information, see:
 @item @ref{Headings}.
 @item @ref{Titlepage & Copyright Page}.
 @item @ref{Imprimindo Índices e Menus}.
-@item @ref{Contents}.
+@item @ref{Conteúdo}.
 @end itemize
 
 
@@ -16698,8 +16698,9 @@ numbered sections.  (Perhaps this could be improved in the future, if
 requests are received.)
 
 The actual name of the command that is invoked is specified by the
-@code{TEXI2DVI} customization variable (@pxref{Other Customization
-Variables}).  As you might guess, the default is @samp{texi2dvi}.
+@code{TEXI2DVI} customization variable 
+(@pxref{Outras Variáveis de Personalização}). As you might guess, the 
+default is @samp{texi2dvi}.
 
 @command{texi2any} itself does not generate any normal output when it
 invokes @command{texi2dvi}, only diagnostic messages.
@@ -17107,7 +17108,7 @@ links; default unset.
 @item INLINE_CONTENTS
 For HTML@.  If set, output the contents where the @code{@@contents} and
 similar @@-commands are located; default true.  This is ignored if
-@code{@@set*contentsaftertitlepage} is set (@pxref{Contents}).
+@code{@@set*contentsaftertitlepage} is set (@pxref{Conteúdo}).
 
 @item INLINE_CSS_STYLE
 For HTML@.  Put CSS directly in HTML elements rather than at the
@@ -17199,7 +17200,7 @@ default true.
 @item SIMPLE_MENU
 For HTML@.  If set, use a simple preformatted style for the menu,
 instead of breaking down the different parts of the menu; default false.
-@xref{Menu Parts}.
+@xref{Partes de Menu}.
 
 @item TOC_LINKS
 For HTML@.  If set, links from headings to toc entries are created;
@@ -17224,9 +17225,9 @@ For HTML@.  A url used for @code{(dir)} references; the default is
 @code{undef}, meaning that the normal rules apply, typically leading
 to a link to @samp{dir.html} from an implicit or explicit reference to
 @samp{(dir)} (@pxref{HTML Xref}).  For more about the Top node
-pointers, @pxref{First Node}.  For overriding the Up pointer in other
-formats, see @code{TOP_NODE_UP} in @ref{Other Customization
-Variables}.
+pointers, @pxref{Primeiro Nodo}.  For overriding the Up pointer in other
+formats, see @code{TOP_NODE_UP} in 
+@ref{Outras Variáveis de Personalização}.
 
 @item USE_ACCESSKEY
 @cindex @code{accesskey}, customization variable for
@@ -17542,8 +17543,8 @@ also output comments.  Default false.
 
 @item TOP_NODE_UP
 Up node for the Top node; default @samp{(dir)}.  For overriding the
-url in HTML output, see @code{TOP_NODE_UP_URL} in @ref{HTML
-Customization Variables}.
+url in HTML output, see @code{TOP_NODE_UP_URL} in 
+@ref{Variáveis de Personalização HTML}.
 
 @item TREE_TRANSFORMATIONS
 The associated value is a comma separated list of transformations that
@@ -18022,7 +18023,7 @@ For more information, see@*
 @end ifnottex
 
 
-@node @code{texinfo-format} commands
+@node Comandos @code{texinfo-format}
 @subsection The @code{texinfo-format@dots{}} Commands
 
 @c anchor{texinfo-format commands}@c prev name
@@ -19113,9 +19114,9 @@ Another rule, that only holds for filenames, is that base filenames
 are truncated to 245 characters, to allow for an extension to be
 appended and still comply with the 255-character limit which is common
 to many filesystems.  Although technically this can be changed with
-the @code{BASEFILENAME_LENGTH} customization variable (@pxref{Other
-Customization Variables}), doing so would make cross-manual references
-to such Nodos invalid.
+the @code{BASEFILENAME_LENGTH} customization variable 
+(@pxref{Outras Variáveis de Personalização}), doing so would make 
+cross-manual references to such Nodos invalid.
 
 Any directory part in the filename argument of the source cross
 reference command is ignored.  Thus, @code{@@xref@{,,,../foo@}} and
@@ -19158,7 +19159,7 @@ Cross-references in Texinfo can refer either to Nodos or anchors
 to Nodos in this context, so we'll continue to say ``node'' names for
 simplicity.
 
-A special exception: the Top node (@pxref{The Top Node}) is always
+A special exception: the Top node (@pxref{O Nodo Top}) is always
 mapped to the file @file{index.html}, to match web server software.
 However, the HTML @emph{target} is @samp{Top}.  Thus (in the split case):
 
@@ -19918,7 +19919,7 @@ any output.  A synonym for @code{@@c}.
 
 @item @@contents
 Print a complete table of contents.  Has no effect in Info, which uses
-menus instead.  @xref{Contents, , Gerando um Sumário}.
+menus instead.  @xref{Conteúdo, , Gerando um Sumário}.
 
 @item @@copying
 Specify copyright holders and copying conditions for the document Pair
@@ -20659,7 +20660,7 @@ odd-numbered (right-hand) new pages.  @xref{@code{@@setchapternewpage}}.
 
 @item @@setcontentsaftertitlepage
 Put the table of contents after the @samp{@@end titlepage} even if the
-@code{@@contents} command is at the end.  @xref{Contents}.
+@code{@@contents} command is at the end.  @xref{Conteúdo}.
 
 @item @@setfilename @var{info-file-name}
 Provide a name to be used for the output files.  This command is ignored
@@ -20668,7 +20669,7 @@ for @TeX{} formatting.  @xref{@code{@@setfilename}}.
 @item @@setshortcontentsaftertitlepage
 Place the short table of contents after the @samp{@@end titlepage}
 command even if the @code{@@shortcontents} command is at the end.
-@xref{Contents}.
+@xref{Conteúdo}.
 
 @item @@settitle @var{title}
 Specify the title for page headers in a printed manual, and the
@@ -20682,7 +20683,7 @@ Define the short caption for a @code{@@float}.  @xref{@code{@@caption
 @item @@shortcontents
 Print a short table of contents, with chapter-level entries only.  Not
 relevant to Info, which uses menus rather than tables of contents.
-@xref{Contents, , Gerando um Sumário}.
+@xref{Conteúdo, , Gerando um Sumário}.
 
 @item @@shorttitlepage @var{title}
 Generate a minimal title page.  @xref{@code{@@titlepage}}.
@@ -20771,7 +20772,7 @@ have title pages.  @xref{@code{@@title @@subtitle @@author}}.
 
 @item @@summarycontents
 Print a short table of contents.  Synonym for @code{@@shortcontents}.
-@xref{Contents, , Gerando um Sumário}.
+@xref{Conteúdo, , Gerando um Sumário}.
 
 @item @@sup @{@var{text}@}
 Set @var{text} as a superscript.  @xref{Inserting Subscripts and Superscripts}.
@@ -20867,8 +20868,8 @@ formatted as a chapter-level heading.  The entire top node, including
 the @code{@@node} and @code{@@top} lines, are normally enclosed with
 @code{@@ifnottex ... @@end ifnottex}.  In @TeX{} and
 @code{texinfo-format-buffer}, the @code{@@top} command is merely a
-synonym for @code{@@unnumbered}.  @xref{@command{makeinfo} Pointer
-Creation}.
+synonym for @code{@@unnumbered}. 
+@xref{Criação de Ponteiros do @command{makeinfo}}.
 
 @item @@U@{@var{hex}@}
 Output a representation of Unicode character U+@var{hex}.
@@ -20921,8 +20922,8 @@ Generate check accent over the character @var{c}, as in @v{o}.
 @xref{Inserting Accents}.
 
 @item @@validatemenus @var{on-off}
-Control whether menus can be automatically generated.  @xref{Writing a 
-Menu}.
+Control whether menus can be automatically generated. 
+@xref{Escrevendo um Menu}.
 
 @item @@value@{@var{txivar}@}
 Insert the value, if any, of the Texinfo variable @var{txivar},
@@ -22015,7 +22016,7 @@ inserts a node's section or chapter title in the space for the
 description in a menu entry line.  (A menu entry has three parts, the
 entry name, the node name, and the description.  Only the node name is
 required, but a description helps explain what the node is about.
-@xref{Menu Parts, , The Parts of a Menu}.)
+@xref{Partes de Menu, , Partes de Menu}.)
 
 To use @code{texinfo-start-menu-description}, position point in a menu
 entry line and type @kbd{C-c C-c C-d}.  The command looks for and copies
@@ -23995,8 +23996,8 @@ these, the @t{<nodename>} should be surrounded by a pair of @t{<del>}
 characters.  There is support in @command{makeinfo} for adding these
 characters (@pxref{INFO_SPECIAL_CHARS_QUOTE}); however, we don't 
 recommend you make use of this support until such time as Info-reading 
-programs that recognize this syntax are common.  @xref{Node Line 
-Requirements}.
+programs that recognize this syntax are common. 
+@xref{Exigências de Linha de Nodo}.
 
 The use of non-ASCII characters in the names of Nodos is permitted,
 but can cause problems in cross-references between Nodos in Info files
@@ -24040,10 +24041,10 @@ places no restrictions on their location.
 (<menu entry> | <menu comment>)*
 @end example
 
-The parts of a @t{<menu entry>} are also described in @ref{Menu
-Parts}.  They have the same syntax as cross-references (@pxref{Info
-Format Cross Reference}).  Indices extend the menu format to specify the
-destination line; @pxref{Info Format Printindex}.
+The parts of a @t{<menu entry>} are also described in 
+@ref{Partes de Menu}. They have the same syntax as cross-references 
+(@pxref{Info Format Cross Reference}). Indices extend the menu format to
+ specify the destination line; @pxref{Info Format Printindex}.
 
 A @t{<menu comment>} is any line not beginning with @samp{*} that
 appears either at the beginning of the menu or is separated from a
