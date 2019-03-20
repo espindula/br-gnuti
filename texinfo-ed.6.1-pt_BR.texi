@@ -4419,206 +4419,208 @@ e a falta de qualquer associação com Nodos. @xref{@code{@@chapter}}.
 @section @code{@@section}: Seções Abaixo de Capítulos
 @c Capítulo 5 - Nodos; Seção 5.6 - Seções Abaixo de Capítulos
 
-@anchor{section}@c old name
+@anchor{section}@c nome antigo
 @findex section
 
-An @code{@@section} command identifies a section within a chapter
-unit, whether created with @code{@@chapter}, @code{@@unnumbered}, or
-@code{@@appendix}, following the numbering scheme of the chapter-level
-command.  Thus, within a @code{@@chapter} chapter numbered `1', the
-sections are numbered `1.1', `1.2', etc.; within an @code{@@appendix}
-``chapter'' labeled `A', the sections are numbered `A.1', `A.2', etc.;
-within an @code{@@unnumbered} chapter, the section gets no number.
-The output is underlined with @samp{=} in Info and plain text.
+Um comando @code{@@section} identifica uma seção dentro de uma unidade 
+de capítulo, seja ela criada com @code{@@chapter}, @code{@@unnumbered}, 
+ou @code{@@appendix}, seguindo o esquema de numeração do comando de 
+nível de capítulo. Assim, dentro de um Capítulo @code{@@chapter} 
+numerado `1', as seções são numeradas `1.1', `1.2', etc.; dentro de um 
+``capítulo'' @code{@@appendix} rotulado `A', as seções são numeradas 
+`A.1', `A.2', etc.; dentro de um capítulo @code{@@unnumbered}, a seção 
+não é numerada. A saída é sublinhada com @samp{=} em Info e texto plano.
 
-To make a section, write the @code{@@section} command at the
-beginning of a line and follow it on the same line by the section
-title.  For example,
+Para criar uma seção, escreva o comando @code{@@section} no início de 
+uma linha e siga-o, na mesma linha, pelo título da seção. Por exemplo,
 
 @example
-@@section This is a section
+@@section Isto é uma seção
 @end example
 
 @noindent
-might produce the following in Info:
+pode produzir o seguinte em Info:
 
 @example
 @group
-5.7 This is a section
-=====================
+5.7 Isto é uma seção
+====================
 @end group
 @end example
 
-Section titles are listed in the table of contents.
+Os títulos de seção são listados no índice.
 
-The @TeX{}, HTML, Docbook, and XML output is all analogous to the
-chapter-level output, just ``one level down''; @pxref{@code{@@chapter}}.
+A saída @TeX{}, HTML, Docbook e XML é toda análoga à saída de nível de 
+capítulo, apenas ``um nível abaixo''; @pxref{@code{@@chapter}}.
 
 
 @node @code{@@unnumberedsec @@appendixsec @@heading}
 @section @code{@@unnumberedsec}, @code{@@appendixsec}, @code{@@heading}
+@c Capítulo 5 - Nodos; Seção 5.7 - @code{@@unnumberedsec}, @code{@@appendixsec}, @code{@@heading}
 
-@anchor{unnumberedsec appendixsec heading}@c old name
+@anchor{unnumberedsec appendixsec heading}@c nome antigo
 @findex unnumberedsec
 @findex appendixsec
 @findex heading
 
-The @code{@@unnumberedsec}, @code{@@appendixsec}, and @code{@@heading}
-commands are, respectively, the unnumbered, appendix-like, and
-heading-like equivalents of the @code{@@section} command (see the
-previous section).
+Os comandos @code{@@unnumberedsec}, @code{@@appendixsec} e 
+@code{@@heading} são respectivamente, os equivalentes não numerado, 
+apêndice e cabeçalho do comando @code{@@section} (veja a seção 
+anterior).
 
-@code{@@unnumberedsec} and @code{@@appendixsec} do not need to be used
-in ordinary circumstances, because @code{@@section} may also be used
-within @code{@@unnumbered} and @code{@@appendix} chapters; again, see
-the previous section.
+@code{@@unnumberedsec} e @code{@@appendixsec} não precisam ser usados em 
+circunstâncias normais, pois @code{@@section} também pode ser usado 
+dentro de capítulos @code{@@unnumbered} e @code{@@appendix}; novamente, 
+veja a seção anterior.
 
 @table @code
 @item @@unnumberedsec
-The @code{@@unnumberedsec} command may be used within an unnumbered
-chapter or within a regular chapter or appendix to produce an
-unnumbered section.
+O comando @code{@@unnumberedsec} pode ser usado dentro de um capítulo 
+não numerado ou dentro de um capítulo ou apêndice normal para produzir 
+uma seção não numerada.
 
 @item @@appendixsec
 @itemx @@appendixsection
 @findex appendixsection
 @findex appendixsec
-@code{@@appendixsection} is a longer spelling of the
-@code{@@appendixsec} command; the two are synonymous.
+@code{@@appendixsection} é a escrita mais longa do comando 
+@code{@@appendixsec}; os dois são sinônimos.
 
-Conventionally, the @code{@@appendixsec} or @code{@@appendixsection}
-command is used only within appendices.
+Convencionalmente, o comando @code{@@appendixsec} ou 
+@code{@@appendixsection} é usado somente dentro de apêndices.
 
 @item @@heading
-You may use the @code{@@heading} command (almost) anywhere for a
-section-style heading that will not appear in the table of contents.
-The @code{@@heading}-series commands can appear inside most
-environments, for example, though pathological and useless locations
-such as inside @code{@@titlepage}, as an argument to another command,
-etc., are not allowed.
+Você pode usar o comand @code{@@heading} (quase) em qualquer lugar para 
+um cabeçalho estilo seção que não aparecerá no índice. Os comandos da 
+série @code{@@heading} podem aparecer dentro da maior parte dos 
+ambientes, por exemplo, ao longo de localizações patológicas e inúteis 
+como dentro de @code{@@titlepage}, como um argumento para outro comando, 
+etc., não são permitidos.
 
 @end table
 
 
 @node @code{@@subsection}
-@section @code{@@subsection}: Subsections Below Sections
+@section @code{@@subsection}: Subseções Abaixo de Seções
+@c Capítulo 5 - Nodos; Seção 5.8 - @code{@@subsection}: Subseções Abaixo de Seções
 
-@anchor{subsection}@c old name
+@anchor{subsection}@c nome antigo
 @findex subsection
 
-Subsections are to sections as sections are to chapters;
-@pxref{@code{@@section}}.  In Info and plain text, subsection titles
-are underlined with @samp{-}.  For example,
+Subseções estão para seções como seções estão para capítulos; 
+@pxref{@code{@@section}}. Em Info e texto plano, os títulos de subseções 
+são sublinhados com @samp{-}. Por exemplo,
 
 @example
-@@subsection This is a subsection
+@@subsection Esta é uma subseção
 @end example
 
 @noindent
-might produce
+pode produzir
 
 @example
 @group
-1.2.3 This is a subsection
---------------------------
+1.2.3 Esta é uma subseção
+-------------------------
 @end group
 @end example
 
-Subsection titles are listed in the table of contents.
+Os títulos das subseções são listados no índice.
 
-The @TeX{}, HTML, Docbook, and XML output is all analogous to the
-chapter-level output, just ``two levels down'';
-@pxref{@code{@@chapter}}.
+A saída @TeX{}, HTML, Docbook e XML é toda análoga à saída de nível de 
+capítulo, apenas ``dois níveis abaixo''; @pxref{@code{@@chapter}}.
 
 
 @node @code{@@unnumberedsubsec @@appendixsubsec @@subheading}
-@section The @code{@@subsection}-like Commands
+@section Os Comandos do Tipo @code{@@subsection}
+@c Capítulo 5 - Nodos; Seção 5.9 - Os Comandos do Tipo @code{@@subsection}
 
-@anchor{unnumberedsubsec appendixsubsec subheading}@c old name
+@anchor{unnumberedsubsec appendixsubsec subheading}@c nome antigo
 @findex unnumberedsubsec
 @findex appendixsubsec
 @findex subheading
 @cindex Subsection-like commands
 
-The @code{@@unnumberedsubsec}, @code{@@appendixsubsec}, and
-@code{@@subheading} commands are, respectively, the unnumbered,
-appendix-like, and heading-like equivalents of the @code{@@subsection}
-command.  (@xref{@code{@@subsection}}.)
+Os comandos @code{@@unnumberedsubsec}, @code{@@appendixsubsec} e 
+@code{@@subheading} são, respectivamente, os equivalentes não numerado, 
+tipo apêndice e tipo cabeçalho do comando @code{@@subsection}. 
+(@xref{@code{@@subsection}}).
 
-@code{@@unnumberedsubsec} and @code{@@appendixsubsec} do not need to
-be used in ordinary circumstances, because @code{@@subsection} may
-also be used within sections of @code{@@unnumbered} and
-@code{@@appendix} chapters (@pxref{@code{@@section}}).
+@code{@@unnumberedsubsec} e @code{@@appendixsubsec} não precisam ser 
+usados em circunstâncias normais, pois @code{@@subsection} também pode 
+ser usado dentro de seções de capítulos @code{@@unnumbered} e 
+@code{@@appendix} (@pxref{@code{@@section}}).
 
-An @code{@@subheading} command produces a heading like that of a
-subsection except that it is not numbered and does not appear in the
-table of contents.  Similarly, an @code{@@unnumberedsubsec} command
-produces an unnumbered heading like that of a subsection and an
-@code{@@appendixsubsec} command produces a subsection-like heading
-labeled with a letter and numbers; both of these commands produce
-headings that appear in the table of contents.  In Info and plain
-text, the @code{@@subsection}-like commands generate a title
-underlined with hyphens.
+Um comando @code{@@subheading} produz um cabeçalho semelhante àquele de 
+uma subseção, exceto que não é numerado e não aparece no índice. 
+Similarmente, um comando @code{@@unnumberedsubsec} produz um cabeçalho 
+não numerado semelhante àquele de uma subseção e um comando 
+@code{@@appendixsubsec} produz um cabeçalho do tipo subseção rotulado 
+com uma letra e números; ambos esses comandos produzem cabeçalhos que 
+aparecem no índice. Em Info e texto plano, os comandos do tipo 
+@code{@@subsection} geram um título sublinhado com hífens.
 
 
 @node @code{@@subsubsection}
-@section @code{@@subsection} and Other Subsub Commands
+@section @code{@@subsection} e Outros Comandos Subsub
+@c Capítulo 5 - Nodos; Seção 5.10 - @code{@@subsection} e Outros Comandos Subsub
 
-@anchor{subsubsection}@c old name
+@anchor{subsubsection}@c nome antigo
 @findex subsubsection
 @findex unnumberedsubsubsec
 @findex appendixsubsubsec
 @findex subsubheading
 @cindex Subsub sectioning commands
 
-The fourth and lowest level sectioning commands in Texinfo are the
-`subsub' commands.  They are:
+O quarto e menor nível de comandos de seccionamento em Texinfo são os 
+comandos `subsub'. São eles:
 
 @table @code
 @item @@subsubsection
-Subsubsections are to subsections as subsections are to sections.
-(@xref{@code{@@subsection}}.)  Subsubsection titles appear in the
-table of contents.
+Subsubseções estão para subseções como subseções estão para seções. 
+(@xref{@code{@@subsection}}). Os títulos das subsubseções aparecem no 
+índice.
 
 @item @@unnumberedsubsubsec
-Unnumbered subsubsection titles appear in the table of contents,
-but lack numbers.  Otherwise, unnumbered subsubsections are the same
-as subsubsections.
+Os títulos de subsubseções não numeradas aparecem no índice, porém 
+faltam números. Do contrário, subsubseções não numeradas são o mesmo que 
+subsubseções.
 
 @item @@appendixsubsubsec
-Conventionally, appendix commands are used only for appendices and are
-lettered and numbered appropriately.  They also appear in the table
-of contents.
+Convencionalmente, os comandos de apêndice são usados somente para 
+apêndices e são indicados e numerados apropriadamente. Eles também 
+aparecem no índice.
 
 @item @@subsubheading
-The @code{@@subsubheading} command may be used anywhere that you want
-a small heading that will not appear in the table of contents.
+O comando @code{@@subsubheading} pode ser usado em qualquer lugar onde 
+você desejar um pequeno cabeçalho que não aparecerá no índice.
+
 @end table
 
-As with subsections, @code{@@unnumberedsubsubsec} and
-@code{@@appendixsubsubsec} do not need to be used in ordinary
-circumstances, because @code{@@subsubsection} may also be used within
-subsections of @code{@@unnumbered} and @code{@@appendix} chapters
+Como com subseções, @code{@@unnumberedsubsubsec} e 
+@code{@@appendixsubsubsec} não precisam ser usados em circunstâncias 
+normais, pois @code{@@subsubsection} também pode ser usado dentro de 
+subseções de capítulos @code{@@unnumbered} e @code{@@appendix} 
 (@pxref{@code{@@section}}).
 
-In Info, `subsub' titles are underlined with periods.  For example,
+Em Info, os títulos `subsub' são sublinhados com pontos. Por exemplo, 
 
 @example
-@@subsubsection This is a subsubsection
+@@subsubsection Esta é uma subsubseção
 @end example
 
 @noindent
-might produce
+pode produzir
 
 @example
 @group
-1.2.3.4 This is a subsubsection
-...............................
+1.2.3.4 Esta é uma subsubseção
+..............................
 @end group
 @end example
 
-The @TeX{}, HTML, Docbook, and XML output is all analogous to the
-chapter-level output, just ``three levels down''; @pxref{@code{@@chapter}}.
+A saída @TeX{}, HTML, Docbook e XML é toda análoga à saída de nível de 
+capítulo, apenas ``três níveis abaixo''; @pxref{@code{@@chapter}}.
 
 
 @node @code{@@part}
