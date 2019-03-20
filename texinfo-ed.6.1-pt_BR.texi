@@ -4352,72 +4352,71 @@ inclui todas as seções seguintes, até o próximo capítulo.
 @findex unnumbered
 @findex appendix
 
-Use the @code{@@unnumbered} command to start a chapter-level element
-that appears without chapter numbers of any kind.  Use the
-@code{@@appendix} command to start an appendix that is labeled by
-letter (`A', `B', @dots{}) instead of by number; appendices are also
-at the chapter level of structuring.
+Use o comando @code{@@unnumbered} para iniciar um elemento de nível de 
+capítulo que aparece sem números de capítulos de qualquer tipo. Use o 
+comando @code{@@appendix} para iniciar um apêndice que é rotulado por 
+letras (`A', `B', @dots{}) em vez de números; apêndices também estão ao 
+nível de estruturamento de capítulo.
 
-Write an @code{@@appendix} or @code{@@unnumbered} command at the
-beginning of a line and follow it on the same line by the title,
-just as with @code{@@chapter}.
+Escreva um comando @code{@@appendix} ou @code{@@unnumbered} no início de 
+uma linha e siga-o, na mesma linha, pelo título, exatamente como com 
+@code{@@chapter}.
 
 @findex centerchap
-Texinfo also provides a command @code{@@centerchap}, which is analogous
-to @code{@@unnumbered}, but centers its argument in the printed and HTML
-outputs.  This kind of stylistic choice is not usually offered by
-Texinfo.  It may be suitable for short documents.
-@c but the Hacker's Dictionary wanted it, before they quit Texinfo.
+Texinfo também provê um comando @code{@@centerchap}, o qual é análogo a 
+@code{@@unnumbered}, porém centraliza seus argumentos nas saídas 
+impressa e HTML. Esse tipo de escolha estilística geralmente não é 
+oferecida por Texinfo. Ela pode ser adequada para documentos curtos.
+@c porém, o Dicionário do Hacker desejava, antes de abandonarem Texinfo.
 
-@cindex Docbook and prefatory sections
-@cindex Preface, etc., and Docbook
-With @code{@@unnumbered}, if the name of the associated node is one of
-these English words (case-insensitive):
+@cindex Docbook e seções prévias
+@cindex Prefácio, etc., e Docbook
+Com @code{@@unnumbered}, se o nome do nodo associado é uma destas 
+palavras do Inglês (não diferencia maiúsculas de minúsculas):
 
 @example
 Acknowledgements  Colophon  Dedication  Preface
 @end example
 
-@cindex @code{<acknowledgements>} Docbook tag
-@cindex @code{<colophon>} Docbook tag
-@cindex @code{<dedication>} Docbook tag
-@cindex @code{<preface>} Docbook tag
-@cindex @code{<chapter>} Docbook tag
-@cindex @code{<title>} Docbook tag
-@noindent then the Docbook output uses corresponding special tags
-(@code{<preface>}, etc.)@: instead of the default @code{<chapter>}.
-The argument to @code{@@unnumbered} itself can be anything, and is
-output as the following @code{<title>} text as usual.
-
+@cindex @code{<acknowledgements>} Etiqueta do Docbook
+@cindex @code{<colophon>} Etiqueta do Docbook
+@cindex @code{<dedication>} Etiqueta do Docbook
+@cindex @code{<preface>} Etiqueta do Docbook
+@cindex @code{<chapter>} Etiqueta do Docbook
+@cindex @code{<title>} Etiqueta do Docbook
+@noindent então a saída Docbook usa etiquetas especiais correspondentes 
+(@code{<preface>}, etc.)@: em vez do padrão @code{<chapter>}. O 
+argumento ao próprio @code{@@unnumbered} pode ser qualquer coisa, e é 
+produzido como o texto @code{<title>} a seguir como de costume.
 
 @node @code{@@majorheading @@chapheading}
-@section @code{@@majorheading}, @code{@@chapheading}: Chapter-level Headings
+@section @code{@@majorheading}, @code{@@chapheading}: Cabeçalhos de Nível de Capítulo
+@c Capítulo 5 - Nodos; Seção 5.5 - Cabeçalhos de Nível de Capítulo
 
 @anchor{majorheading & chapheading}@c old name
 @findex majorheading
 @findex chapheading
 
-The @code{@@majorheading} and @code{@@chapheading} commands produce
-chapter-like headings in the body of a document.
+Os comandos @code{@@majorheading} e @code{@@chapheading} produzem 
+cabeçalhos semelhantes a capítulos no corpo de um documento.
 
-However, neither command produces an entry in the table of contents,
-and neither command causes @TeX{} to start a new page in a printed
-manual.
+Entretanto, nenhum desses comandos produz uma entrada no índice, e 
+nenhum desses comandos faz com que @TeX{} inicie uma nova página em um 
+manual impresso.
 
-In @TeX{}, a @code{@@majorheading} command generates a larger vertical
-whitespace before the heading than a @code{@@chapheading} command but
-is otherwise the same.
+Em @TeX{}, um comando @code{@@majorheading} gera um espaço em branco 
+vertical mais largo, antes do cabeçalho, que um comando 
+@code{@@chapheading}, porém, de outra forma, é o mesmo.
 
-In Info and plain text, the @code{@@majorheading} and
-@code{@@chapheading} commands produce the same output as
-@code{@@chapter}: the title is printed on a line by itself with a line
-of asterisks underneath.  Similarly for HTML@.  The only difference is
-the lack of numbering and the lack of any association with Nodos.
-@xref{@code{@@chapter}}.
-
+Em Info e texto plano, os comandos @code{@@majorheading} e 
+@code{@@chapheading} produzem a mesma saída que @code{@@chapter}: o 
+título é impresso em uma linha própria com uma linha de asteríscos 
+abaixo. Semelhante para HTML@. A única diferença é a falta de numeração 
+e a falta de qualquer associação com Nodos. @xref{@code{@@chapter}}.
 
 @node @code{@@section}
-@section @code{@@section}: Sections Below Chapters
+@section @code{@@section}: Seções Abaixo de Capítulos
+@c Capítulo 5 - Nodos; Seção 5.6 - Seções Abaixo de Capítulos
 
 @anchor{section}@c old name
 @findex section
