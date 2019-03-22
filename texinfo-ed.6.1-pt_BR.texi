@@ -3565,7 +3565,7 @@ veja-se @ref{Criação de Ponteiros do @command{makeinfo}}).
 @cindex Primeiro nodo
 
 O primeiro nodo de um arquivo Texinfo é o nodo @dfn{Top}, exceto em um arquivo 
-incluído (veja-se @ref{Arquivos Incluídos}). O nodo Top deveria conter um 
+incluído (veja-se @ref{Arquivos Included}). O nodo Top deveria conter um 
 sumário curto, permissões de cópia e um menu mestre. Veja-se @ref{O Nodo Top}, 
 para mais informações sobre o conteúdo e exemplos do nodo Top.
 
@@ -4624,116 +4624,124 @@ capítulo, apenas ``três níveis abaixo''; @pxref{@code{@@chapter}}.
 
 
 @node @code{@@part}
-@section @code{@@part}: Groups of Chapters
+@section @code{@@part}: Grupos de Capítulos
+@c Capítulo 5 - Nodos; Seção 5.11 - @code{@@part}: Grupos de Capítulos
 @findex part
 @cindex Part pages
 
-The final sectioning command is @code{@@part}, to mark a @dfn{part} of
-a manual, that is, a group of chapters or (rarely) appendices.  This
-behaves quite differently from the other sectioning commands, to fit
-with the way such ``parts'' are conventionally used in books.
+O comando de seccionamento final é o @code{@@part}, para marcar uma 
+@dfn{parte} de um manual, isto é, um grupo de capítulos ou (raramente) 
+apêndices. Isso se comporta bem diferentemente de outros comandos de 
+seccionamento, para se encaixar com a maneira que tais ``partes'' são 
+convencionalmente usadas em livros.
 
-No @code{@@node} command is associated with @code{@@part}.  Just write
-the command on a line by itself, including the part title, at the
-place in the document you want to mark off as starting that part.  For
-example:
+Nenhum comando @code{@@node} é associado com @code{@@part}. Apenas 
+escreva o comando em uma linha própria, incluindo o título da parte, no 
+lugar no documento que você desejar marcar como o início daquela parte. 
+Por exemplo:
 
 @example
-@@part Part I:@@* The beginning
+@@part Parte I:@@* O Início
 @end example
 
-As can be inferred from this example, no automatic numbering or
-labeling of the @code{@@part} text is done.  The text is taken as-is.
+Como pode ser inferido desse exemplo, nenhuma numeração ou rotulamento 
+automático do texto do @code{@@part} é feito. O texto é tomado como 
+está.
 
-Because parts are not associated with Nodos, no general text can
-follow the @code{@@part} line.  To produce the intended output, it
-must be followed by a chapter-level command (including its node).
-Thus, to continue the example:
+Por causa de as partes não serem associadas com Nodos, nenhum texto 
+geral pode seguir a linha @code{@@part}. Para produzir a saída 
+pretendida, a linha deve ser seguida por um comando de nível de 
+capítulo (incluíndo seu nodo). Assim, para continuar o exemplo:
 
 @example
-@@part Part I:@@* The beginning
+@@part Parte I:@@* O Início
 
-@@node Introduction
-@@chapter Introduction
+@@node Introdução
+@@chapter Introdução
 ...
 @end example
 
-In the @TeX{} output, the @code{@@part} text is included in both the
-normal and short tables of contents (@pxref{Conteúdo}), without a page
-number (since that is the normal convention).  In addition, a ``part
-page'' is output in the body of the document, with just the
-@code{@@part} text.  In the example above, the @code{@@*} causes a
-line break on the part page (but is replaced with a space in the
-tables of contents).  This part page is always forced to be on an odd
-(right-hand) page, regardless of the chapter pagination
+Na saída @TeX{}, o texto @code{@@part} é incluído em ambos os índices, 
+o normal e o resumido, (@pxref{Conteúdo}), sem um número de página 
+(dado que é a convenção normal). Adicionalmente, uma ``página da parte'' 
+é saída no corpo do documento, apenas contendo o texto @code{@@part}. No 
+exemplo acima, o @code{@@*} causa uma quebra de linha no página da parte 
+(porém, é substituída com um espaço no índice). Essa página da parte é 
+sempre forçada a estar em uma página ímpar (a direita), 
+independentemente da capitulação do capítulo 
 (@pxref{@code{@@setchapternewpage}}).
 
-In the HTML output, the @code{@@part} text is similarly included in
-the tables of contents, and a heading is included in the main document
-text, as part of the following chapter or appendix node.
+Na saída HTML, o texto @code{@@part} é similarmente incluído no índice, 
+e um cabeçalho é incluído no texto do documento principal, como parte do 
+nodo do capítulo ou apêndice seguinte.
 
-In the XML and Docbook output, the @code{<part>} element includes all
-the following chapters, up to the next @code{<part>}.  A @code{<part>}
-containing chapters is also closed at an appendix.
+Na saída XML e Docbook, o elemento @code{<part>} inclui todos os 
+capítulos seguintes, até o próximo @code{<part>}. Um @code{<part>} 
+contendo capítulos também é fechado em um apêndice.
 
-In the Info and plain text output, @code{@@part} has no effect.
+Na saída Info e texto plano, @code{@@part} não tem efeito.
 
-@code{@@part} is ignored when raising or lowering sections (see next
-section).  That is, it is never lowered and nothing can be raised to it.
+@code{@@part} é ignorado quando do levantamento ou do abaixamento de 
+seções (veja a próxima seção). Isto é, nunca é abaixado e nada pode ser 
+levantado para ele.
 
 
 @node Levantar/abaixar seções
-@section Levantar/abaixar seções: @code{@@raisesections} and @code{@@lowersections}
+@section Levantar/abaixar seções: @code{@@raisesections} e @code{@@lowersections}
+@c Capítulo 5 - Nodos; Seção 5.12 - Levantar/abaixar seções: @code{@@raisesections} e @code{@@lowersections}
 @findex raisesections
 @findex lowersections
 @cindex Raising and lowering sections
 @cindex Lowering and raising sections
 @cindex Sections, raising and lowering
 
-The @code{@@raisesections} and @code{@@lowersections} commands
-implicitly raise and lower the hierarchical level of following
-chapters, sections and the other sectioning commands (excluding parts).
+Os comandos @code{@@raisesections} e @code{@@lowersections} 
+implicitamente levantam e abaixam o nível hierárquico dos seguintes 
+capítulos, seções e dos outros comandos de seccionamento (excluindo as 
+partes).
 
-That is, the @code{@@raisesections} command changes sections to
-chapters, subsections to sections, and so on.  Conversely, the
-@code{@@lowersections} command changes chapters to sections, sections
-to subsections, and so on.  Thus, a @code{@@lowersections} command
-cancels a @code{@@raisesections} command, and vice versa.
+Isto é, o comando @code{@@raisesections} modifica seções para capítulos, 
+subseções para seções, e assim por diante. Por outro lado, o comando 
+@code{@@lowersections} modifica capítulos para seções, seções para 
+subseções, e assim por diante. Assim, um comando @code{@@lowersections} 
+cancela um comando @code{@@raisesections}, e vice versa.
 
-@cindex Arquivos Incluídos, and section levels
-You can use @code{@@lowersections} to include text written as an outer
-or standalone Texinfo file in another Texinfo file as an inner,
-included file (@pxref{Arquivos Incluídos}).  Typical usage looks like this:
+@cindex Arquivos Include, e níveis de seção
+Você pode usar @code{@@lowersections} para incluir texto escrito como um 
+arquivo Texinfo externo ou autônomo em outro arquivo Texinfo como um 
+arquivo interno, arquivo included (@pxref{Arquivos Included}). O uso 
+típico se parece com isto:
 
 @example
 @@lowersections
-@@include somefile.texi
+@@include algum_arquivo.texi
 @@raisesections
 @end example
 
-@noindent (Without the @code{@@raisesections}, all the subsequent
-sections in the main file would also be lowered.)
+@noindent (Sem o @code{@@raisesections}, todas as seções subsequentes no 
+arquivo principal também poderiam ser rebaixadas).
 
-If the included file being lowered has a @code{@@top} node, you'll
-need to conditionalize its inclusion with a flag (@pxref{@code{@@set
-@@value}}).
+Se o arquivo included sendo rebaixado tiver um nodo @code{@@top}, você 
+precisará condicionar sua inclusão com um parâmetro 
+(@pxref{@code{@@set @@value}}).
 
-As a practical matter, you generally only want to raise or lower large
-chunks, usually in external files as shown above.  The final result has
-to have menus that take the raising and lowering into account, so you
-cannot just arbitrarily sprinkle @code{@@raisesections} and
-@code{@@lowersections} commands throughout the document.
+De um ponto de vista prático, você geralmente só quer elevar ou rebaixar 
+grandes blocos, geralmente em arquivos externos, como mostrado acima. O 
+resultado final tem que ter menus que levem em conta a elevação e o 
+rebaixamento, de forma que você não pode simplesmente intercalar 
+arbitrariamente os comandos @code{@@raisesections} e 
+@code{@@lowersections} por todo o documento.
 
-Repeated use of the commands continues to raise or lower the
-hierarchical level a step at a time.  An attempt to raise above
-`chapter' reproduces chapter commands; an attempt to lower below
-`subsubsection' reproduces subsubsection commands.  Also, lowered
-subsubsections and raised chapters will not work with
-@command{makeinfo}'s feature of implicitly determining node pointers,
-since the menu structure cannot be represented correctly.
+O uso repetido dos comandos continua a elevar ou a rebaixar o nível 
+hierárquico um passo de cada vez. Uma tentativa de elevar `capítulo' 
+acima reproduz comandos de capítulo; uma tentativa de rebaixar 
+`subsubseção' abaixo reproduz comandos subsubseção. Também, subsubseções 
+rebaixadas e capítulos elevados não funcionarão com a característica de 
+@command{makeinfo} de implicitamente determinar ponteiros de nodo, dado 
+que a estrutura de menu não pode ser representada corretamente.
 
-Write each @code{@@raisesections} and @code{@@lowersections} command
-on a line of its own.
+Escreva cada comando @code{@@raisesections} e @code{@@lowersections} em 
+uma linha própria.
 
 
 @node Referências Cruzadas
@@ -18120,7 +18128,7 @@ file that is needed at the time.  This way, Emacs avoids wasting
 memory when you run Info.  (Before splitting was implemented, Info
 files were always kept short and @dfn{include files} were designed as
 a way to create a single, large printed manual out of the smaller Info
-files.  @xref{Arquivos Incluídos}, for more information.  Include files are
+files.  @xref{Arquivos Included}, for more information.  Include files are
 still used for very large documents, such as @cite{The Emacs Lisp
 Reference Manual}, in which each chapter is a separate file.)
 
@@ -20366,7 +20374,7 @@ Include graphics image in external @var{filename} scaled to the given
 @samp{@var{filename}.@var{ext}} in HTML@.  @xref{Images}.
 
 @item @@include @var{filename}
-Read the contents of Texinfo source file @var{filename}.  @xref{Arquivos Incluídos}.
+Read the contents of Texinfo source file @var{filename}.  @xref{Arquivos Included}.
 
 @item @@indent
 Insert paragraph indentation.  @xref{@code{@@indent}}.
@@ -23015,7 +23023,7 @@ For @code{@@include} files only: expands to the name of the current
 @code{@@include} file.  If the current Texinfo source file is not an
 @code{@@include} file, this command has no effect.  This command does
 @emph{not} provide the name of the current Texinfo source file unless
-it is an @code{@@include} file.  (@xref{Arquivos Incluídos}, for more
+it is an @code{@@include} file.  (@xref{Arquivos Included}, for more
 information about @code{@@include} files.)
 @end table
 
