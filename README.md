@@ -5,8 +5,9 @@ Translation project of the "GNU Texinfo Manual", version 6.1, into Brazilian Por
 git clone https://github.com/espindula/gnuti-pt_BR.git
 
 
-Direitos autorais da versão modificada traduzida para a língua 
-portuguesa falada no Brasil: (c) 2016 Jamenson Ferreira Espindula de Almeida Melo.
+Direitos autorais (Copyright) da versão modificada traduzida para a língua 
+portuguesa falada no Brasil: (c) 2016, 2017, 2018, 2019 
+Jamenson Ferreira Espindula de Almeida Melo <jafesp@gmail.com>.
 
   Este trabalho de tradução do Manual do GNU Texinfo é classificado pela 
   Free Software Foundation como sendo uma "versão modificada" do 
