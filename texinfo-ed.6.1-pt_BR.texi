@@ -320,17 +320,17 @@ Estruturamento de Capítulo
 
 Referências cruzadas
 
-* References::                  Para que servem as referências cruzadas.
-* Cross Reference Commands::    Um sumário dos diferentes comandos.
-* Cross Reference Parts::       Uma referência cruzada tem várias partes.
-* @code{@@xref}::                       Comece uma referência com `Veja' @dots{}
-* Referring to a Manual as a Whole::   Referência a um manual inteiro.
+* Referências::                  Para que são as referências cruzadas.
+* Comandos de Referências Cruzadas::    Um sumário dos diferentes comandos.
+* Partes de Referências Cruzadas::      Uma Referência Cruzada tem várias partes.
+* @code{@@xref}::                       Inicie uma referência com `Veja' @dots{}
+* Referênciando um Manual como um Todo::   Referência a um manual inteiro.
 * @code{@@ref}::                        Uma referência para a última parte de uma sentença.
-* @code{@@pxref}::                      Como escrever uma referência cruzada parentesca.
-* @code{@@anchor}::                     Definindo alvos arbitrários de referências cruzadas.
-* @code{@@inforef}::                    Como se referir a um arquivo somente Info.
-* @code{@@url}::                        Como se referir a um localizador uniforme de recurso.
-* @code{@@cite}::                       Como se referir a livros que não estão no sistema Info.
+* @code{@@pxref}::                      Como escrever uma Referência Cruzada entre parênteses.
+* @code{@@anchor}::                     Definindo alvos de Referência Cruzada arbitrários.
+* @code{@@inforef}::                    Como referênciar um arquivo somente Info.
+* @code{@@url}::                        Como referênciar um Localizador Uniforme de Recursos.
+* @code{@@cite}::                       Como referênciar livros que não estão no sistema Info.
 
 @code{@@xref}
 
@@ -3565,7 +3565,7 @@ veja-se @ref{Criação de Ponteiros do @command{makeinfo}}).
 @cindex Primeiro nodo
 
 O primeiro nodo de um arquivo Texinfo é o nodo @dfn{Top}, exceto em um arquivo 
-incluído (veja-se @ref{Arquivos Included}). O nodo Top deveria conter um 
+incluído (@pxref{Arquivos Include}). O nodo Top deveria conter um 
 sumário curto, permissões de cópia e um menu mestre. Veja-se @ref{O Nodo Top}, 
 para mais informações sobre o conteúdo e exemplos do nodo Top.
 
@@ -4709,7 +4709,7 @@ cancela um comando @code{@@raisesections}, e vice versa.
 @cindex Arquivos Include, e níveis de seção
 Você pode usar @code{@@lowersections} para incluir texto escrito como um 
 arquivo Texinfo externo ou autônomo em outro arquivo Texinfo como um 
-arquivo interno, arquivo included (@pxref{Arquivos Included}). O uso 
+arquivo interno, arquivo included (@pxref{Arquivos Include}). O uso 
 típico se parece com isto:
 
 @example
@@ -4750,242 +4750,246 @@ uma linha própria.
 @cindex Cross-references
 @cindex References
 
-@dfn{Cross-references} are used to refer the reader to other parts of the
-same or different Texinfo files.
+@dfn{Referências cruzadas} são usadas para guiar o leitor para outras 
+partes do mesmo ou de diferentes arquivos Texinfo.
 
 @menu
-* References::                  What cross-references are for.
-* Cross Reference Commands::    A summary of the different commands.
-* Cross Reference Parts::       A cross-reference has several parts.
-* @code{@@xref}::                       Begin a reference with `See' @dots{}
-* Referring to a Manual as a Whole::   Refer to an entire manual.
-* @code{@@ref}::                        A reference for the last part of a sentence.
-* @code{@@pxref}::                      How to write a parenthetical cross-reference.
-* @code{@@anchor}::                     Defining arbitrary cross-reference targets
-* @code{@@inforef}::                    How to refer to an Info-only file.
-* @code{@@url}::                        How to refer to a uniform resource locator.
-* @code{@@cite}::                       How to refer to books not in the Info system.
+* Referências::                  Para que são as referências cruzadas.
+* Comandos de Referências Cruzadas::    Um sumário dos diferentes comandos.
+* Partes de Referências Cruzadas::      Uma Referência Cruzada tem várias partes.
+* @code{@@xref}::                       Inicie uma referência com `Veja' @dots{}
+* Referênciando um Manual como um Todo::   Referência a um manual inteiro.
+* @code{@@ref}::                        Uma referência para a última parte de uma sentença.
+* @code{@@pxref}::                      Como escrever uma Referência Cruzada entre parênteses.
+* @code{@@anchor}::                     Definindo alvos de Referência Cruzada arbitrários.
+* @code{@@inforef}::                    Como referênciar um arquivo somente Info.
+* @code{@@url}::                        Como referênciar um Localizador Uniforme de Recursos.
+* @code{@@cite}::                       Como referênciar livros que não estão no sistema Info.
 @end menu
 
 
 @node References
-@section What References Are For
+@section Para Que São As Referências Cruzadas
+@c Capítulo 6 - Referências Cruzadas; Seção 6.1 - Para Que São As Referências Cruzadas
 
-Often, but not always, a printed document should be designed so that
-it can be read sequentially.  People tire of flipping back and forth
-to find information that should be presented to them as they need
-it.
+Frequentemente, porém nem sempre, um documento impresso deveria ser 
+projetado de forma que possa ser lido sequencialmente. As pessoas se 
+cansam de ir e vir para encontrar informações que deveriam ser 
+apresentadas a elas conforme necessário.
 
-However, in any document, some information will be too detailed for
-the current context, or incidental to it; use cross-references to
-provide access to such information.  Also, an online help system or a
-reference manual is not like a novel; few read such documents in
-sequence from beginning to end.  Instead, people look up what they
-need.  For this reason, such creations should contain many cross
-references to help readers find other information that they may not
-have read.
+Entretanto, em qualquer documento, algumas informações estarão 
+detalhadas demais para o contexto atual, ou incidental; use referências 
+cruzadas para fornecer acesso a tais informações. Também, um sistema de 
+ajuda online ou um manual de referência não é como um romance; poucos 
+leem tais documentos em sequência do início ao final. Em vez disso, as 
+pessoas buscam o que precisam. Por essa razão, tais criações deveriam 
+conter muitas referências cruzadas para ajudar os leitores a achar outra 
+informação que eles podem não ter lido.
 
-In a printed manual, a cross-reference results in a page reference,
-unless it is to another manual altogether, in which case the
-cross-reference names that manual.  In Info, a cross-reference results
-in an entry that you can follow using the Info @samp{f} command.
-(@xref{Help-Xref,, Following cross-references, info, Info}.)  In HTML, a
-cross-reference results in an hyperlink.
+Em um manual impresso, uma referência cruzada resulta em uma referência 
+de página, a menos que seja para outro manual, caso no qual a referência 
+cruzada nomeia esse manual. Em Info, uma referência cruzada resulta em 
+uma entrada que você pode seguir usando o comando @samp{f}. 
+(@xref{Help-Xref,, Following cross-references, info, Info}). Em HTML, 
+uma referência cruzada resulta em um hiperlink.
 
-The various cross-reference commands use Nodos (or anchors,
-@pxref{@code{@@anchor}}) to define cross-reference locations.
-@TeX{} needs Nodos to define cross-reference locations.  When @TeX{}
-generates a DVI file, it records each node's page number and uses the 
-page numbers in making references.  Thus, even if you are writing a 
-manual that will only be printed, and not used online, you must 
-nonetheless write @code{@@node} lines in order to name the places to 
-which you make cross-references.
+Os vários comandos de referências cruzadas usam Nodos 
+(ou âncoras, @pxref{@code{@@anchor}}) para definir localizações de 
+referências cruzadas. @TeX{} precisa de Nodos para definir localizações 
+de referências cruzadas. Quando @TeX{} gera um arquivo DVI, grava cada 
+número de págino do nodo e usa os números de página na produção das 
+referências. Assim, mesmo que você esteja escrevendo um manual que será 
+somente impresso, e não usado online, você deve, ainda assim, escrever 
+linhas @code{@@node} para nomear os lugares para os quais você faz 
+referências cruzadas.
 
 @need 800
 @node Cross Reference Commands
-@section Different Cross-reference Commands
+@section Diferentes Comandos de Referência Cruzada
+@c Capítulo 6 - Referências Cruzadas; Seção 6.2 - Diferentes Comandos de Referência Cruzada
 @cindex Different cross-reference commands
 
-There are three different cross-reference commands:
+Existem três diferentes comandos de referência cruzada:
 
 @table @code
 @item @@xref
-Used to start a sentence in the printed manual and in HTML with
-@w{`See @dots{}'} or an Info cross-reference saying @samp{*Note
-@var{name}: @var{node}.}.
+Usado para iniciar uma frase no manual impresso e em HTML com 
+@w{`Veja @dots{}'} ou uma referência cruzada Info dizendo 
+@samp{*Nota @var{name}: @var{node}.}.
 
 @item @@ref
-Used within or, more often, at the end of a sentence; produces just
-the reference in the printed manual and in HTML without the preceding
-`See' (same as @code{@@xref} for Info).
+Usado dentro de, ou mais frequentemente, ao final de uma frase; produz 
+apenas a referência no manual impresso e em HTML, sem ser precedida por 
+`Veja' (mesmo que @code{@@xref} para Info).
 
 @item @@pxref
-Used within parentheses, at the end of a sentence, or otherwise before
-punctuation, to make a reference.  Its output starts with a lowercase
-`see' in the printed manual and in HTML, and a lowercase @samp{*note}
-in Info.  (@samp{p} is for `parenthesis'.)
+Usado dentro de parênteses, ao final de uma frase, ou, do contrário, 
+antes de pontuação, para fazer uma referência. Sua saída inicia com um 
+`veja' escrito com letras todas minúsculas no manual impresso e em HTML, 
+e um @samp{*nota} também escrito com letras todas minúsculas em Info. 
+(@samp{p} é para `parênteses').
 @end table
 
-Additionally, there are commands to produce references to documents
-outside the Texinfo system.  The @code{@@cite} command is used
-to make references to books and manuals.  @code{@@url} produces
-a @acronym{URL}, for example a reference to a page on the World
-Wide Web.  @code{@@inforef} is used to make a reference to an Info
-file for which there is no printed manual.
+Adicionalmente, existem comandos que produzem referências a documentos 
+fora do sistema Texinfo. O comando @code{@@cite} é usado para fazer 
+referências a livros e manuais. @code{@@url} produz um @acronym{URL}, 
+por exemplo, uma referência a uma página na Rede Mundial de 
+Computadores. @code{@@inforef} é usado para fazer uma referência a um 
+arquivo Info para o qual não existe manual impresso.
 
 
 @node Cross Reference Parts
-@section Parts of a Cross-reference
+@section Partes de Uma Referência Cruzada
+@c Capítulo 6 - Referências Cruzadas; Seção 6.3 - Partes de Uma Referência Cruzada
 @cindex Cross-reference parts
 @cindex Parts of a cross-reference
-@anchor{Reference Syntax} @c merged node
+@anchor{Reference Syntax} @c nodo mesclado
 
-A cross-reference command requires only one argument, which is
-the name of the node to which it refers.  Here is a simple example:
+Um comando de referência cruzada exige apenas um argumento, o qual é o 
+nome do nodo para o qual se refere. Aqui está um exemplo simples:
 
 @example
-@@xref@{Node name@}.
+@@xref@{Nome do nodo@}.
 @end example
 
 @noindent
-In Info output, this produces
+Em saída Info, isso produz
 
 @example
-*Note Node name::.
+*Nota Nome do nodo::.
 @end example
 
 @noindent
-In a printed manual, the output is
+Em um manual impresso, a saída é
 
 @quotation
-See Section @var{nnn} [Node name], page @var{ppp}.
+Veja Seção @var{nnn} [Nome do nodo], página @var{ppp}.
 @end quotation
 
-A cross-reference command may contain up to four additional arguments.
-By using these arguments, you can provide a cross-reference name,
-a topic description or section title for the printed output, the name
-of a different manual file, and the name of a different printed manual.
-To refer to another manual as a whole, the manual file and/or the name
-of the printed manual are the only required arguments (@pxref{Referring
-to a Manual as a Whole}).
+Um comando de referência cruzada pode conter até quatro argumentos 
+adicionais. Usando esses argumentos, você pode fornecer um nome de 
+referência cruzada, uma descrição de tópico ou título de seção para a 
+saída impressa, o nome de um arquivo diferente de manual e o nome de um 
+manual diferente impresso. Para se referir a outro manual como um todo, 
+o arquivo de manual e/ou o nome do manual impresso são os únicos 
+argumentos exigidos (@pxref{Referenciando Um Manual Como Um Todo}).
 
 @need 700
-Here is an example of a full five-part cross-reference:
+Aqui está um exemplo de uma referência cruzada completa de cinco partes:
 
 @example
 @group
-@@xref@{Node name, Online Label, Printed Label,
-info-file-name, A Printed Manual@}, for details.
+@@xref@{Nome do nodo, Rótulo Online, Rótulo Impresso,
+nome-arquivo-info, Um Manual Impresso@}, para detalhes.
 @end group
 @end example
 
 @noindent
-which produces
+o qual produz
 
 @example
-*Note Online Label: (info-file-name)Node name,
-for details.
+*Nota Rótulo Online: (nome-arquivo-info)Nome do nodo,
+para detalhes.
 @end example
 
 @noindent
-in Info and
+em Info e
 
 @quotation
-See section ``Printed Label'' in @i{A Printed Manual}, for details.
+Veja seção ``Rótulo Impresso'' em @i{Um Manual Impresso}, para detalhes.
 @end quotation
 
 @noindent
-in a printed book.
+em um livro impresso.
 
-The five possible arguments for a cross-reference are:
+Os cinco argumentos possíveis para uma referência cruzada são:
 
 @enumerate
 @item
-The node or anchor name (required, except for reference to whole
-manuals).  This is the location to which the cross-reference takes
-you.  In a printed document, the location of the node provides the
-page reference only for references within the same document.
-Use @code{@@node} to define the node (@pxref{Escrevendo um Nodo}), or 
+O nome do nodo ou âncora (exigido, exceto para referência a manuais 
+inteiros). Isso é a localização para onde a referência cruzada leva 
+você. Em um documento impresso, a localização do nodo fornece a 
+referência de página apenas para referências dentro do mesmo documento. 
+Use @code{@@node} para definir o nodo (@pxref{Escrevendo um Nodo}), ou 
 @code{@@anchor} (@pxref{@code{@@anchor}}).
 
-Write a node name in a cross-reference in exactly the same way as in
-the @code{@@node} line, including the same capitalization; otherwise, the
-formatters may not find the reference.
+Escreva um nome de nodo em uma referência cruzada exatamente da mesma 
+maneira que na linha @code{@@node}, incluindo a mesma capitalização; do 
+contrário, os formatadores podem não encontrar a referência.
 
 @item
-A label for online output.  It is usually omitted; then
-the topic description (third argument) is used if it was specified;
-if that was omitted as well, the node name is used.
+Um rótulo para saída online. Ele geralmente é omitido; então a descrição 
+do tópico (terceiro argumento) é usado foi especificado; se também foi 
+omitido, o nome do nodo é usado.
 
 @item
-A label for printed output.  Often, this is the title or topic of the
-section.  This is used as the name of the reference in the printed
-manual.  If omitted, the node name is used.
+Um rótulo para saída impressa. Frequentemente, isso é o título ou tópico 
+da seção. Isso é usado como o nome da referência no manual impresso. Se 
+omitido, o nome do noso é usado.
 
 @item
-The name of the manual file in which the reference is located, if it is
-different from the current file.  This name is used both for Info and
-HTML.
+O nome do arquivo de manual no qual a referência está localizada, se for 
+diferente o arquivo atual. Esse nome é usado por Info e por HTML.
 
 @item
-The name of a printed manual from a different Texinfo file.
+O nome de um manual impresso oriundo de um diferente arquivo Texinfo.
 @end enumerate
 
-The template for a full five argument cross-reference looks like
-this:
+O modelo para uma referência cruzada de cinco argumentos completa é 
+semelhante a este
 
 @example
 @group
-@@xref@{@var{node-name}, @var{online-label}, @var{printed-label},
-@var{info-file-name}, @var{printed-manual-title}@}
+@@xref@{@var{nome-do-nodo}, @var{rótulo-online}, @var{rótulo-impresso}, 
+@var{nome-arquivo-info}, @var{título-manual-impresso}@}
 @end group
 @end example
 
-Whitespace before and after the commas separating these arguments is
-ignored.  To include a comma in one of the arguments, use
-@code{@@comma@{@}} (@pxref{Inserindo Uma Vírgula}).
+Espaços em branco antes ou depois das vírgulas separando esses 
+argumentos são ignorados. Para incluir uma vírgula em um dos argumentos, 
+use @code{@@comma@{@}} (@pxref{Inserindo Uma Vírgula}).
 
 @cindex Comma after cross-reference
-When processing with TeX, a comma is automatically inserted after the
-page number for cross-references to within the same manual, unless the
-closing brace of the argument is followed by non-whitespace (such as a
-comma or period).  This gives you the choice of whether to have a comma
-there in Info or HTML output.  For example,
+Quando do processamento com TeX, uma vírgula é automaticamente inserida 
+após o número da página para referências cruzadas para dentro do mesmo 
+manual, a menos que a chave de fechamento do argumento seja seguida por 
+espaços não brancos (como uma vírgula ou um ponto). Isso lhe dá opção de 
+ter uma vírgula lá na saída Info ou HTML. Por exemplo, 
 
 @example
-@@xref@{Another Section@} for more information
+@@xref@{Outra Seção@} para mais informação
 @end example
 
-@noindent produces
-@w{`See Another Section, page @var{ppp}, for more information'} in the 
-printed output, and
-@w{@samp{*Note Another Section:: for more information}} in the Info 
-output.
+@noindent produz
+@w{`Veja Outra Seção, página @var{ppp}, para mais informação'} na saída 
+impressa, e
+@w{@samp{*Nota Outra Seção:: para mais informação}} na saída Info.
 
-If an unwanted comma is added, follow the argument
-with a command such as @samp{@@:}.  For example,
-@w{@samp{@@xref@{Hurricanes@}@@: --- for the details}} produces
+Se uma vírgula indesejada for adicionada, siga o argumento com um 
+comando como @samp{@@:}. Por exemplo, 
+@w{@samp{@@xref@{Furacões@}@@: --- para os detalhes}} produz
 
 @quotation
-See Hurricanes, page @var{ppp} --- for the details
+Veja Furacões, página @var{ppp} --- para os detalhes
 @end quotation
 
-@noindent instead of
-@w{`See Hurricanes, page @var{ppp}, --- for the details'}.
+@noindent em vez de 
+@w{`Veja Furacões, página @var{ppp}, --- para os detalhes'}.
 
-Cross-references with one, two, three, four, and five arguments are
-described separately following the description of @code{@@xref}.
+Referências cruzados com um, dois, três quatro e cinco argumentos estão 
+descritas separadamento seguindo a descrição de @code{@@xref}.
 
-@command{makeinfo} warns when the text of a cross-reference (and node
-names and menu items) contains a problematic construct that will
-interfere with its parsing in Info.  If you don't want to see the
-warnings, you can set the customization variable
-@code{INFO_SPECIAL_CHARS_WARNING} to @samp{0} 
+@command{makeinfo} alerta quando o texto de uma referência cruzada (e 
+nomes de nodo e itens de menu) contém uma construção problemática que 
+interferirá com sua análise em Info. Se você não deseja ver tais 
+alertas, você pode configurar a variável de personalização 
+@code{INFO_SPECIAL_CHARS_WARNING} para @samp{0} 
 (@pxref{Outras Variáveis de Personalização}).
 
 
 @node @code{@@xref}
 @section @code{@@xref}
+@c Capítulo 6 - Referências Cruzadas; Seção 6.4 - @code{@@xref}
 
 @anchor{xref}@c old name
 @findex xref
@@ -5302,8 +5306,8 @@ Finally, it's also allowed to leave out all the arguments
 whole.  See the next section.
 
 
-@node Referring to a Manual as a Whole
-@section Referring to a Manual as a Whole
+@node Referenciando Um Manual Como Um Todo
+@section Referenciando Um Manual Como Um Todo
 @cindex Manual, referring to as a whole
 @cindex Referring to an entire manual
 @anchor{Top Node Naming} @c old name
@@ -14612,7 +14616,7 @@ result is that lines might match which you wouldn't expect, e.g.,
 The possible solutions are described above (@pxref{@samp{#line} Directive}).
 
 
-@node Arquivos Incluídos
+@node Arquivos Include
 @chapter Arquivos Include
 
 @cindex Arquivos Incluídos
@@ -17128,7 +17132,7 @@ beginning of the output; default false.
 @item KEEP_TOP_EXTERNAL_REF
 For HTML@.  If set, do not ignore @samp{Top} as the first
 argument for an external ref to a manual, as is done by default.
-@xref{Referring to a Manual as a Whole}.
+@xref{Referenciando Um Manual Como Um Todo}.
 
 @item L2H
 For HTML@.  If set, @command{latex2html} is used to convert @code{@@math}
@@ -18128,7 +18132,7 @@ file that is needed at the time.  This way, Emacs avoids wasting
 memory when you run Info.  (Before splitting was implemented, Info
 files were always kept short and @dfn{include files} were designed as
 a way to create a single, large printed manual out of the smaller Info
-files.  @xref{Arquivos Included}, for more information.  Include files are
+files.  @xref{Arquivos Include}, for more information.  Include files are
 still used for very large documents, such as @cite{The Emacs Lisp
 Reference Manual}, in which each chapter is a separate file.)
 
@@ -20374,7 +20378,7 @@ Include graphics image in external @var{filename} scaled to the given
 @samp{@var{filename}.@var{ext}} in HTML@.  @xref{Images}.
 
 @item @@include @var{filename}
-Read the contents of Texinfo source file @var{filename}.  @xref{Arquivos Included}.
+Read the contents of Texinfo source file @var{filename}.  @xref{Arquivos Include}.
 
 @item @@indent
 Insert paragraph indentation.  @xref{@code{@@indent}}.
@@ -23023,7 +23027,7 @@ For @code{@@include} files only: expands to the name of the current
 @code{@@include} file.  If the current Texinfo source file is not an
 @code{@@include} file, this command has no effect.  This command does
 @emph{not} provide the name of the current Texinfo source file unless
-it is an @code{@@include} file.  (@xref{Arquivos Included}, for more
+it is an @code{@@include} file.  (@xref{Arquivos Include}, for more
 information about @code{@@include} files.)
 @end table
 
