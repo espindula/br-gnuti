@@ -5307,6 +5307,7 @@ todo. Veja a próxima seção.
 
 @node Referenciando Um Manual Como Um Todo
 @section Referenciando Um Manual Como Um Todo
+@c Capítulo 6 - Referências Cruzadas; Seção 6.5 - Referenciando Um Manual Como Um Todo
 @cindex Manual, referring to as a whole
 @cindex Referring to an entire manual
 @anchor{Top Node Naming} @c nome antigo
@@ -5384,155 +5385,165 @@ referências cruzadas de manual inteiro.
 
 @node @code{@@ref}
 @section @code{@@ref}
+@c Capítulo 6 - Referências Cruzadas; Seção 6.6 - @ref
 
-@anchor{ref}@c old name
+@anchor{ref} @c nome antigo
 @findex ref
 @cindex Cross-references using @code{@@ref}
 @cindex References using @code{@@ref}
 
-@code{@@ref} is nearly the same as @code{@@xref} except that it does
-not generate a `See' in the printed output, just the reference itself.
-This makes it useful as the last part of a sentence.
+@code{@@ref} é aproximadamente o mesmo que @code{@@xref}, exceto que não 
+gera um `Veja' na saída impressa, apenas a própria referência. Isse a 
+torna útil como a última parte de uma frase.
 
-@noindent For example,
+@noindent
+Por exemplo,
 
 @cindex Hurricanes
 @example
-For more information, @@pxref@{This@}, and @@ref@{That@}.
+Para mais informação, @@pxref@{Isso@}, e @@ref@{Aquilo@}.
 @end example
 
 @noindent
-produces in Info:
+produz em Info:
 
 @example
-For more information, *note This::, and *note That::.
+Para mais informação, *nota Isso::, e *nota Aquilo::.
 @end example
 
 @noindent
-and in printed output:
+e em saída impressa:
 
 @quotation
-For more information, see Section 1.1 [This], page 1,
-and Section 1.2 [That], page 2.
+Para mais informação, veja Seção 1.1 [Isso], página 1, e Seção 1.2 
+[Aquilo], página 2.
 @end quotation
 
-The @code{@@ref} command can tempt writers to express themselves in a
-manner that is suitable for a printed manual but looks awkward in the
-Info format.  Bear in mind that your audience could be using both the
-printed and the Info format.  For example:
+O comando @code{@@ref} pode instigar os escritores a se expressarem de 
+uma maneira que seja adequada para um manual impresso, porém parecerem 
+estranhos no formato Info. Tenha em mente que seu público pode estar 
+usando tanto o formato impresso quanto o Info. Por exemplo:
 
 @cindex Sea surges
 @example
-Sea surges are described in @@ref@{Hurricanes@}.
+Os surtos de mar estão descritos na @@ref@{Furacões@}.
 @end example
 
 @noindent
-looks ok in the printed output:
+aparenta ok na saída impressa:
 
 @quotation
-Sea surges are described in Section 6.7 [Hurricanes], page 72.
+Os surtos de mar estão descritos na Seção 6.7 [Furacões], página 72.
 @end quotation
 
 @noindent
-but is awkward to read in Info, ``note'' being a verb:
+porém, é estranho ler em Info, ``nota'' sendo um verbo:
 
 @example
-Sea surges are described in *note Hurricanes::.
+Os surtos de mar estão descritos na *nota Furacões::.
 @end example
 
 
 @node @code{@@pxref}
 @section @code{@@pxref}
+@c Capítulo 6 - Referências Cruzadas; Seção 6.7 - @pxref
 
-@anchor{pxref}@c old name
+@anchor{pxref} @c nome antigo
 @findex pxref
 @cindex Cross-references using @code{@@pxref}
 @cindex References using @code{@@pxref}
 
-The parenthetical reference command, @code{@@pxref}, is nearly the
-same as @code{@@xref}, but it is best used at the end of a sentence or
-before a closing parenthesis.  The command differs from @code{@@xref}
-in that @TeX{} typesets the reference for the printed manual with a
-lowercase `see' rather than an uppercase `See'.
+O comando de referência entre parênteses, @code{@@pxref}, é 
+aproximadamente o mesmo que @code{@@xref}, porém é melhor usado no final 
+de uma frase ou antes de um parêntese de fechamento. O comando difere do 
+@code{@@xref} em que @TeX{} digita a referência para o manual impresso 
+com um `veja' escrito em letras minúsculas em vez de `Veja' escrito com 
+a primeira letra maiúscula.
 
 @noindent
-With one argument, a parenthetical cross-reference looks like this:
+Com um argumento, uma referência cruzada entre parênteses se parece com 
+isto:
 
 @cindex Flooding
 @example
-@dots{} storms cause flooding (@@pxref@{Hurricanes@}) @dots{}
+@dots{} tempestades causam inundações (@@pxref@{Furacões@}) @dots{}
 @end example
 
 @need 800
 @noindent
-which produces
+o qual produz:
 
 @example
 @group
-@dots{} storms cause flooding (*note Hurricanes::) @dots{}
+@dots{} tempestades causam inundações (*nota Furacões::) @dots{}
 @end group
 @end example
 
 @noindent
-in Info and
+em Info e
 
 @quotation
-@dots{} storms cause flooding (see Section 6.7 [Hurricanes], page 72) @dots{}
+@dots{} tempestades causam inundações (veja Seção 6.7 [Furacões], página 
+72) @dots{}
 @end quotation
 
 @noindent
-in a printed manual.
+em um manual impresso.
 
-With two arguments, a parenthetical cross-reference has this template:
+Sem argumentos, uma referência cruzada entre parênteses tem este modelo:
 
 @example
-@dots{} (@@pxref@{@var{node-name}, @var{cross-reference-name}@}) @dots{}
+@dots{} (@@pxref@{@var{nome-nodo}, @var{nome-referência-cruzada}@}) 
+@dots{}
 @end example
 
 @noindent
-which produces
+o qual produz
 
 @example
-@dots{} (*note @var{cross-reference-name}: @var{node-name}.) @dots{}
+@dots{} (*nota @var{nome-referência-cruzada}: @var{nome-nodo}.) @dots{}
 @end example
 
 @noindent
-in Info and
+em Info e
 
 @quotation
-@dots{} (see Section @var{nnn} [@var{node-name}], page @var{ppp}) @dots{}
+@dots{} (veja Seção @var{nnn} [@var{nome-nodo}], página @var{ppp}) 
+@dots{}
 @end quotation
 
 @noindent
-in a printed manual.
+em um manual impresso.
 
-@code{@@pxref} can be used with up to five arguments, just like
+@code{@@pxref} pode ser usado com até cinco argumentos, exatamente como 
 @code{@@xref} (@pxref{@code{@@xref}}).
 
-In past versions of Texinfo, it was not allowed to write punctuation
-after a @code{@@pxref}, so it could be used @emph{only} before a
-right parenthesis.  This is no longer the case, so now it can be used
-(for example) at the end of a sentence, where a lowercase ``see''
-works best.  For instance:
+Em versões antigas de Texinfo, não era permitido escrever pontuação após 
+um @code{@@pxref}, de forma que o comando poderia ser usado 
+@emph{somente} antes de um parêntese de fechamento. Esse não mais é o 
+caso, de forma que agora o comando pode ser usado (por exemplo) no final 
+de uma frase, onde um ``'veja' escrito com letras minúsculas funciona 
+melhor. Por exemplo:
 
 @example
-@dots{} For more information, @@pxref@{More@}.
+@dots{} Para mais informação, @@pxref@{Mais@}.
 @end example
 
 @noindent
-which outputs (in Info):
+o qual tem a seguinte saída (em Info):
 
 @example
-@dots{} For more information, *note More::.
+@dots{} Para mais informação, *nota Mais::.
 @end example
 
-As a matter of style, @code{@@pxref} is best used at the ends of
-sentences.  Although it technically works in the middle of a sentence,
-that location breaks up the flow of reading.
-
+Por uma questão de estilo, @code{@@pxref} é mais usado nos finais de 
+frase. Embora tecnicamente o comando funcione no meio de uma frase, essa 
+localização interrompe o fluxo de leitura.
 
 @node @code{@@anchor}
-@section @code{@@anchor}: Defining Arbitrary Cross-reference Targets
+@section @code{@@anchor}: Definindo Alvos Arbitrários de Referências Cruzadas
+@c Capítulo 6 - Referências Cruzadas;
+@c Seção 6.8 - @code{@@anchor}: Definindo Alvos Arbitrários de Referências Cruzadas
 
 @anchor{anchor}@c old name
 @findex anchor
