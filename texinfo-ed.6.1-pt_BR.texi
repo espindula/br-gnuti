@@ -334,10 +334,10 @@ Referências cruzadas
 
 @code{@@xref}
 
-* One Argument::                @code{@@xref} com um argumento.
-* Two Arguments::               @code{@@xref} com dois argumentos.
-* Three Arguments::             @code{@@xref} com três argumentos.
-* Four and Five Arguments::     @code{@@xref} com quatro e cinco argumentos.
+* Um Argumento::                @code{@@xref} com um argumento.
+* Dois Argumentos::               @code{@@xref} com dois argumentos.
+* Três Argumentos::             @code{@@xref} com três argumentos.
+* Quatro e Cinco Argumentos::     @code{@@xref} com quatro e cinco argumentos.
 
 @code{@@url}, @code{@@uref@{@var{url}[, @var{text}][, @var{replacement}]@}}
 
@@ -4991,392 +4991,395 @@ alertas, você pode configurar a variável de personalização
 @section @code{@@xref}
 @c Capítulo 6 - Referências Cruzadas; Seção 6.4 - @code{@@xref}
 
-@anchor{xref}@c old name
+@anchor{xref}@c nome antigo
 @findex xref
 @cindex Cross-references using @code{@@xref}
 @cindex References using @code{@@xref}
 
-The @code{@@xref} command generates a cross-reference for the
-beginning of a sentence.
+O comando @code{@@xref} gera uma referência cruzada para o início de uma 
+frase.
 
 @menu
-* One Argument::                @code{@@xref} with one argument.
-* Two Arguments::               @code{@@xref} with two arguments.
-* Three Arguments::             @code{@@xref} with three arguments.
-* Four and Five Arguments::     @code{@@xref} with four and five arguments.
+* Um Argumento::                @code{@@xref} com um argumento.
+* Dois Argumentos::             @code{@@xref} com dois argumentos.
+* Três Argumentos::             @code{@@xref} com três argumentos.
+* Quatro e Cinco Argumentos::   @code{@@xref} com quatro e cinco 
+                                argumentos.
 @end menu
 
-@node One Argument
-@subsection @code{@@xref} with One Argument
+@node Um Argumento
+@subsection @code{@@xref} com Um Argumento
 @cindex One-argument form of cross-references
 
-The simplest form of @code{@@xref} takes one argument, the name of
-another node in the same Texinfo file.
+A forma mais simples do @code{@@xref} pega um argumento, o nome de outro 
+nodo no mesmo arquivo Texinfo.
 
 @need 700
 @noindent
-For example,
+Por exemplo,
 
 @example
-@@xref@{Tropical Storms@}.
+@@xref@{Tempestades Tropicais@}.
 @end example
 
 @noindent
-produces
+produz
 
 @example
-*Note Tropical Storms::.
+*Nota Tempestades Tropicais::.
 @end example
 
 @noindent
-in Info and
+em Info e
 
 @quotation
-See Section 3.1 [Tropical Storms], page 24.
+Veja Seção 3.1 [Tempestades Tropicais], página 24.
 @end quotation
 
 @noindent
-in a printed manual.
+em um manual impresso.
 
 
-@node Two Arguments
-@subsection @code{@@xref} with Two Arguments
+@node Dois Argumentos
+@subsection @code{@@xref} com Dois Argumentos
 @cindex Two-argument form of cross-references
 
-With two arguments, the second is used as a label for the online output.
+Com dois argumentos, o segundo é usado como um rótulo para a saída 
+online.
 
 @need 750
 @noindent
-The template is like this:
+O modelo é semelhante a isto:
 
 @example
-@@xref@{@var{node-name}, @var{online-label}@}.
+@@xref@{@var{nome-nodo}, @var{rótulo-online}@}.
 @end example
 
 @need 700
 @noindent
-For example,
+Por exemplo,
 
 @example
-@@xref@{Electrical Effects, Lightning@}.
+@@xref@{Efeitos Elétricos, Relâmpago@}.
 @end example
 
 @noindent
-produces:
+produz:
 
 @example
-*Note Lightning: Electrical Effects.
+*Nota Relâmpago: Efeitos Elétricos.
 @end example
 
 @noindent
-in Info and
+em Info e
 
 @quotation
-See Section 5.2 [Electrical Effects], page 57.
+Veja Seção 5.2 [Efeitos Elétricos], página 57.
 @end quotation
 
 @noindent
-in a printed manual, where the node name is printed.
+em um manual impresso, onde o nome do nodo é impresso.
 
-The second argument to cross-references must observe some of the
-restrictions for node names (@pxref{Exigências de Linha de Nodo}).  The
-most common issue is that colons cannot be used, since that interferes
-with the parsing of the Info file.
+O segundo argumento para referências cruzadas deve observar algumas das 
+restrições para nomes de nodo (@pxref{Exigências de Linha de Nodo}). O 
+problema mais comum é que dois pontos não podem ser usados, pois isso 
+interfere na análise do arquivo Info.
 
-
-@node Three Arguments
-@subsection @code{@@xref} with Three Arguments
+@node Três Argumentos
+@subsection @code{@@xref} com Três Argumentos
 @cindex Three-argument form of cross-references
 
-A third argument replaces the node name in the @TeX{} output.  The third
-argument should be the name of the section in the printed output, or
-else state the topic discussed by that section.
+Um terceiro argumento substitui o nome de nodo na saída @TeX{}. O 
+terceiro argumento deveria ser o nome da seção na saída impressa, ou, 
+pelo contrário, indicar o tópico debatido pela aquela seção.
 
 @need 750
 @noindent
-The template is like this:
+O modelo é semelhante a isto:
 
 @example
 @group
-@@xref@{@var{node-name}, @var{online-label}, @var{printed-label}@}.
+@@xref@{@var{nome-nodo}, @var{rótulo-online}, @var{rótulo-impresso}@}.
 @end group
 @end example
 
 @need 700
 @noindent
-For example,
+Por exemplo,
 
 @example
 @group
-@@xref@{Electrical Effects, Lightning, Thunder and Lightning@},
-for details.
+@@xref@{Efeitos Elétricos, Relâmpago, Trovão e Relâmpago@}, para 
+detalhes.
 @end group
 @end example
 
 @noindent
-produces
+produz:
 
 @example
-*Note Lightning: Electrical Effects, for details.
+*Nota Relâmpago: Efeitos Elétricos, para detalhes.
 @end example
 
 @noindent
-in Info and
+em Info e
 
 @quotation
-See Section 5.2 [Thunder and Lightning], page 57, for details.
+Veja Seção 5.2 [Trovão e Relâmpago], página 57, para detalhes.
 @end quotation
 
 @noindent
-in a printed manual.
+em um manual impresso.
 
-If a third argument is given and the second one is empty, then the
-third argument serves for both.  (Note how two commas, side by side, mark
-the empty second argument.)
+Se um terceiro argumento for dado e o segundo estiver vazio, então e 
+terceiro argumento serve a ambos. (Note como duas vírgulas, lado a lado, 
+marcam o segundo argumento vazio).
 
 @example
 @group
-@@xref@{Electrical Effects, , Thunder and Lightning@},
-for details.
+@@xref@{Efeitos Elétricos, , Trovão e Relâmpago@}, para detalhes.
 @end group
 @end example
 
 @noindent
-produces
+produz:
 
 @example
-*Note Thunder and Lightning: Electrical Effects, for details.
+*Nota Trovão e Relâmpago: Efeitos Elétricos, para detalhes.
 @end example
 
 @noindent
-in Info and
+em Info e
 
 @quotation
-See Section 5.2 [Thunder and Lightning], page 57, for details.
+Veja Seção 5.2 [Trovão e Relâmpago], página 57, para detalhes.
 @end quotation
 
 @noindent
-in a printed manual.
+em um manual impresso.
 
-The third argument to cross-references must observe some of the
-restrictions for node names (@pxref{Exigências de Linha de Nodo}).  The
-most common issue is that colons cannot be used, since that interferes
-with the parsing of the Info file.
+O terceiro argumento para referências cruzadas deve observar algumas das 
+restrições para nomes de nodo (@pxref{Exigências de Linha de Nodo}). O 
+problema mais comum é que dois pontos não podem ser usados, pois isso 
+interfere na análise do arquivo Info.
 
-As a practical matter, it is often best to write cross-references with
-just the first argument if the node name and the section title are the
-same (or nearly so), and with the first and third arguments only if the
-node name and title are different.
+De um ponto de vista prático, geralmente é melhor escrever referências 
+cruzadas apenas com o primeiro argumento se o nome do nodo e o título da 
+seção forem iguais (ou quase), e com o primeiro e terceiro 
+argumentos somente se o nome de nodo e título forem diferentes.
 
 @findex xrefautomaticsectiontitle
-Texinfo offers a setting to use the section title instead of node
-names by default in cross-references (an explicitly specified third
-argument still takes precedence):
+Texinfo oferece uma configuração para usar o título da seção em vez dos 
+nomes de nodo por padrão em referências cruzadas (um terceiro argumento 
+explicitamente especificado ainda tem precedência):
 
 @example
 @@xrefautomaticsectiontitle on
 @end example
 
-Typically this line would be given near the beginning of the document
-and used for the whole manual.  But you can turn it off if you want
-(@code{@@xrefautomaticsectiontitle off}), for example, if you're
-including some other sub-document that doesn't have suitable section
-names.
+Tipicamente essa linha deveria ser dada próxima do início do documento e 
+usada para o manual inteiro. Porém, você pode desativá-la se você 
+desejar (@code{@@xrefautomaticsectiontitle off}), por exemplo, se você 
+estiver incluindo algum outro sub-documento que não tenha nomes de seção 
+adequados.
 
 
-@node Four and Five Arguments
-@subsection @code{@@xref} with Four and Five Arguments
+@node Quatro e Cinco Argumentos
+@subsection @code{@@xref} com Quatro e Cinco Argumentos
 @cindex Four- and five argument forms of cross-references
 
-In a cross-reference, a fourth argument specifies the name of another
-Info file, different from the file in which the reference appears, and
-a fifth argument specifies its title as a printed manual.
+Em uma referência cruzada, um quarto argumento especifica o nome de 
+outro arquivo Info, diferente do arquivo no qual a referência aparece, e 
+um quinto argumento especifica seu título como um manual impresso.
 
 @need 800
 @noindent
-The full template is:
+O modelo completo é:
 
 @example
 @group
-@@xref@{@var{node-name}, @var{online-label}, @var{printed-label},
-@var{info-file-name}, @var{printed-manual-title}@}.
+@@xref@{@var{nome-nodo}, @var{rótulo-online}, @var{rótulo-impresso}, 
+@var{nome-arquivo-info}, @var{título-manual-impresso}@}.
 @end group
 @end example
 
 @need 700
 @noindent
-For example,
+Por exemplo,
 
 @example
-@@xref@{Electrical Effects, Lightning, Thunder and Lightning,
-weather, An Introduction to Meteorology@}.
+@@xref@{Efeitos Elétricos, Relâmpago, Trovão e Relâmpago, clima, Uma 
+Introdução à Meteorologia@}.
 @end example
 
 @noindent
-produces this output in Info:
+produz esta saída em Info:
 
 @example
-*Note Lightning: (weather)Electrical Effects.
+*Nota Relâmpago: (clima)Efeitos Elétricos.
 @end example
 
 @noindent
-As you can see, the name of the Info file is enclosed in parentheses
-and precedes the name of the node.
+Como você pode ver, o nome do arquivo Info está entre parênteses e 
+precede o nome do nodo.
 
 @noindent
-In a printed manual, the reference looks like this:
+Em um manual impresso, a referência se parece com isto:
 
 @quotation
-See section ``Thunder and Lightning'' in @cite{An Introduction to
-Meteorology}.
+Veja seção ``Trovão e Relâmpago'' em @cite{Uma Introdução à 
+Meteorologia}.
 @end quotation
 
 @noindent
-The title of the printed manual is typeset like @code{@@cite}; and the
-reference lacks a page number since @TeX{} cannot know to which page a
-reference refers when that reference is to another manual.
+O título do manual impresso é digitado como @code{@@cite}; e a 
+referência não possui um número de página, pois @TeX{} não tem como 
+saber para qual página uma referência se refere quando essa referência é 
+para outro manual.
 
-Next case: often, you will leave out the second argument when you use
-the long version of @code{@@xref}.  In this case, the third argument,
-the topic description, will be used as the cross-reference name in
-Info.  For example,
+Próximo caso: frequentemente você deixará de fora o segundo argumento 
+quando usar a versão longa de @code{@@xref}. Nesse caso, o terceiro 
+argumento, a descrição do tópico, será usada como o nome da referência 
+cruzada em Info. Por exemplo,
 
 @example
-@@xref@{Electrical Effects, , Thunder and Lightning,
-weather, An Introduction to Meteorology@}.
+@@xref@{Efeitos Elétricos, , Trovão e Relâmpago, clima, Uma Introdução à 
+Meteorologia@}.
 @end example
 
 @noindent
-produces
+produz:
 
 @example
 @group
-*Note Thunder and Lightning: (weather)Electrical Effects.
+*Nota Trovão e Relâmpago: (clima)Efeitos Elétricos.
 @end group
 @end example
 
 @noindent
-in Info and
+em Info e
 
 @quotation
-See section ``Thunder and Lightning'' in @cite{An Introduction to
-Meteorology}.
+Veja seção ``Trovão e Relâmpago'' in @cite{Uma Introdução à 
+Meteorologia}.
 @end quotation
 
 @noindent
-in a printed manual.
+em um manual impresso.
 
-Next case: If the node name and the section title are the same in the
-other manual, you may also leave out the section title.  In this case,
-the node name is used in both instances.  For example,
+
+Próximo caso: se o nome do nodo e o título de seção forem iguais no 
+outro manual, você também pode deixar de fora o título da seção. Nesse 
+caso, o nome de nodo é usado em ambas as instâncias. Por exemplo, 
 
 @example
-@@xref@{Electrical Effects,,,
-weather, An Introduction to Meteorology@}.
+@@xref@{Efeitos Elétricos,,, clima, Uma Introdução à Meteorologia@}.
 @end example
 
 @noindent
-produces
+produz:
 
 @example
 @group
-*Note (weather)Electrical Effects::.
+*Nota (clima)Efeitos Elétricos::.
 @end group
 @end example
 
 @noindent
-in Info and
+em Info e
 
 @quotation
-See section ``Electrical Effects'' in @cite{An Introduction to
-Meteorology}.
+Veja seção ``Efeitos Elétricos'' em @cite{Uma Introdução à Meteorologia}.
 @end quotation
 
 @noindent
-in a printed manual.
+em um manual impresso.
 
-A very unusual case: you may want to refer to another manual file that
-is within a single printed manual---when multiple Texinfo files are
-incorporated into the same @TeX{} run but can create separate Info or
-HTML output files.  In this case, you need to specify only the fourth
-argument, and not the fifth.
+Um caso muito incomum: você pode querer se referir a outro arquivo de 
+manual que esteja dentro de um manual impresso único---quando 
+múltilos arquivos Texinfo são incorporados à mesma execução de @TeX{}, 
+porém pode criar arquivos de saída Info ou HTML separados. Nesse caso, 
+você precisa especificar apenas o quarto argumento e não o quinto.
 
-Finally, it's also allowed to leave out all the arguments
-@emph{except} the fourth and fifth, to refer to another manual as a
-whole.  See the next section.
-
+Finalmente, também é permitido deixar de fora todos os argumentos, 
+@emph{except} o quarto e quinto, para referenciar outro manual como um 
+todo. Veja a próxima seção.
 
 @node Referenciando Um Manual Como Um Todo
 @section Referenciando Um Manual Como Um Todo
 @cindex Manual, referring to as a whole
 @cindex Referring to an entire manual
-@anchor{Top Node Naming} @c old name
+@anchor{Top Node Naming} @c nome antigo
 
-Ordinarily, you must always name a node in a cross-reference.
-However, it's not unusual to want to refer to another manual as a
-whole, rather than a particular section within it.  In this case,
-giving any section name is an unnecessary distraction.
+Normalmente, você sempre deve nomear um nodo em uma referência 
+cruzada. Entretanto, não é incomum querer referenciar outro manual como 
+um todo, em vez de uma seção em particular dentro dele. Nesse caso, dar 
+qualquer nome de seção é uma distração desnecessária.
 
-So, with cross-references to other manuals (@pxref{Four and Five
-Arguments}), if the first argument is either @samp{Top} (capitalized
-just that way) or omitted entirely, and the third argument is omitted,
-the printed output includes no node or section name.  (The Info output
-includes @samp{Top} if it was given.)  For example,
+Assim, com referências cruzadas a outros manuais 
+(@pxref{Quatro e Cinco Argumentos}), se o primeiro argumento for ou 
+@samp{Top} (escrito com a primeira letra maiúscula) ou inteiramente 
+omitido, e o terceiro argumento for omitido, a saída impressa não inclui 
+nome de nodo ou seção. (A saída Info inclui @samp{Top} se foi dado). Por 
+exemplo, 
 
 @example
-@@xref@{Top,,, make, The GNU Make Manual@}.
+@@xref@{Top,,, make, O Manual do GNU Make@}.
 @end example
 
-@noindent produces
+@noindent
+produz:
 
 @example
 @group
-*Note (make)Top::.
+*Nota (make)Top::.
 @end group
 @end example
 
-@noindent and
+@noindent
+e
 
 @quotation
-See @cite{The GNU Make Manual}.
+Veja @cite{O Manual do GNU Make}.
 @end quotation
 
 @noindent
-Info readers will go to the Top node of the manual whether
-or not the `Top' node is explicitly specified.
+Os leitores Info irão para o nodo Top do manual se o nodo `Top' for 
+explicitamente especificado ou não.
 
-It's also possible (and is historical practice) to refer to a whole
-manual by specifying the `Top' node and an appropriate entry for the
-third argument to the @code{@@xref} command.  Using this idiom, to
-make a cross-reference to @cite{The GNU Make Manual}, you would write:
+Também é possivel (e é prática histórica) referenciar uma manual inteiro 
+especificando-se o nodo `Top' e uma entrada apropriada para o terceiro 
+argumento ao comando @code{@@xref}. Usando esse idioma, para fazer uma 
+referência cruzada para o @cite{O Manual do GNU Make}, você poderia 
+escrever: 
 
 @example
-@@xref@{Top,, Overview, make, The GNU Make Manual@}.
+@@xref@{Top,, Visão Geral, make, O Manual do GNU Make@}.
 @end example
 
 @noindent
-which produces
+o qual produz:
 
 @example
-*Note Overview: (make)Top.
+*Nota Visão Geral: (make)Top.
 @end example
 
 @noindent
-in Info and
+em Info e
 
 @quotation
-See section ``Overview'' in @cite{The GNU Make Manual}.
+Veja seção ``Visão Geral'' in @cite{O Manual do GNU Make}.
 @end quotation
 
 @noindent
-in a printed manual.
+em um manual impresso.
 
-In this example, @samp{Top} is the name of the first node, and
-@samp{Overview} is the name of the first section of the manual.  There
-is no widely-used convention for naming the first section in a printed
-manual, this is just what the Make manual happens to use.  This
-arbitrariness of the first name is a principal reason why omitting the
-third argument in whole-manual cross-references is preferable.
+Nesse exemplo, @samp{Top} é o nome do primeiro nodo e @samp{Visão Geral} 
+é o nome da primeira seção do manual. Não existe convenção amplamente 
+usada para nomear a primeira seção em um manual impresso; isso é apenas 
+o que o manual do Make usa. Essa arbitrariedade do primeiro nome é a 
+razão principal pela qual é preferível omitir o terceiro argumento em 
+referências cruzadas de manual inteiro.
 
 
 @node @code{@@ref}
@@ -14892,8 +14895,8 @@ information sought.  This way, Emacs could avoid wasting memory.
 
 References from one file to another were made by referring to the file
 name as well as the node name. (@xref{Outros Arquivos Info, , Referring to
-Outros Arquivos Info}.  Also, see @ref{Four and Five Arguments, ,
-@code{@@xref} with Four and Five Arguments}.)
+Outros Arquivos Info}.  Also, see @ref{Quatro e Cinco Argumentos, ,
+@code{@@xref} with Quatro e Cinco Argumentos}.)
 
 Include files were designed primarily as a way to create a single,
 large printed manual out of several smaller Info files.  In a printed
@@ -17055,7 +17058,7 @@ commands; default @samp{2}.
 
 @item CHECK_HTMLXREF
 For HTML@.  Check that manuals which are the target of external
-cross-references (@pxref{Four and Five Arguments}) are present in
+cross-references (@pxref{Quatro e Cinco Argumentos}) are present in
 @file{htmlxref.cnf} (@pxref{HTML Xref Configuration}); default false.
 
 @item COMPLEX_FORMAT_IN_TABLE
@@ -20993,7 +20996,7 @@ mandatory.  @xref{@code{@@xref}}.
 
 @item @@xrefautomaticsectiontitle @var{on-off}
 By default, use the section title instead of the node name in cross
-references.  @xref{Three Arguments}.
+references.  @xref{Três Argumentos}.
 
 @end table
 
