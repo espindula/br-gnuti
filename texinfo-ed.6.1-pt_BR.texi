@@ -341,10 +341,10 @@ Referências cruzadas
 
 @code{@@url}, @code{@@uref@{@var{url}[, @var{text}][, @var{replacement}]@}}
 
-* @code{@@url} Examples::           Exemplos da utilização de todas as formas do @code{@@url}.
-* URL Line Breaking::       Como as linhas são quebradas dentro do texto do @code{@@url}.
-* @code{@@url} PDF Output Format::  Uma opção especial para ocultar links na saída PDF.
-* PDF Colors::              Colorindo urls e outros links na saída PDF.
+* Exemplos @code{@@url}::           Exemplos da utilização de todas as formas do @code{@@url}.
+* Quebra de linha de URL::       Como as linhas são quebradas dentro do texto do @code{@@url}.
+* Formato de Saída PDF @code{@@url}::  Uma opção especial para ocultar links na saída PDF.
+* Cores de PDF::              Colorindo urls e outros links na saída PDF.
 
 Marcando Texto, Palavras e Frases
 
@@ -506,7 +506,7 @@ Símbolos para Programação
 Forcando e Prevenindo Quebras
 
 * Break Commands::              Sumário dos comandos relacionados à quebras.
-* Line Breaks::                 Forçando quebras de linha.
+* Quebras de Linha::                 Forçando quebras de linha.
 * @code{@@- @@hyphenation}::             Ajudando @TeX{} com pontos de hifenação.
 * @code{@@allowcodebreaks}::            Controlando quebras de linhas dentro do texto de @@code.
 * @code{@@w}::                          Prevenindo quebras de linha indesejadas em texto.
@@ -3774,8 +3774,8 @@ linha @code{@@node} seguida por uma linha de comentário, uma linha
 
 @example
 @group
-@@node    Finalizando um Arquivo, Estruturamento, Iniciando um Arquivo, Top
-@@comment nome-nodo,              next,           previous,             up
+@@node Finalizando um Arquivo, Estruturamento, Iniciando um Arquivo, Top
+@@comment nome-nodo,           next,           previous,             up
 @@chapter Finalizando um Arquivo Texinfo
 @@cindex Finalizando um Arquivo Texinfo
 @dots{}
@@ -4135,9 +4135,10 @@ menu como este:
 @example
 @group
 @@menu
-* Outlining: Modo Contorno(emacs). O principal modo de edição de contornos.
+* Outlining: Modo Contorno(emacs). O principal modo de edição de 
+                                   contornos.
 
-* (emacs)Rebinding::              Como redefinir o significado de uma tecla.
+* (emacs)Rebinding::          Como redefinir o significado de uma tecla.
 
 @@end menu
 @end group
@@ -5545,308 +5546,329 @@ localização interrompe o fluxo de leitura.
 @c Capítulo 6 - Referências Cruzadas;
 @c Seção 6.8 - @code{@@anchor}: Definindo Alvos Arbitrários de Referências Cruzadas
 
-@anchor{anchor}@c old name
+@anchor{anchor} @c nome antigo
 @findex anchor
 @cindex Anchors
 @cindex Cross-reference targets, arbitrary
 @cindex Targets for cross-references, arbitrary
 
-An @dfn{anchor} is a position in your document, labelled so that
-cross-references can refer to it, just as they can to Nodos.  You
-create an anchor with the @code{@@anchor} command, and give the label
-as a normal brace-delimited argument.  For example:
+Uma @dfn{âncora} é uma posição no seu documento, rotulada de forma que 
+referências cruzadas possam referenciá-la, exatamente como podem a 
+Nodos. Você cria uma âncora com o comando @code{@@anchor}, e dá o rótulo 
+como um argumento normal delimitado por chaves. Por exemplo:
 
 @example
-This marks the @@anchor@{x-spot@}spot.
+Isso marca o ponto @@anchor@{x-spot@}.
 @dots{}
-@@xref@{x-spot,,the spot@}.
+@@xref@{x-spot,,o ponto@}.
 @end example
 
-@noindent produces:
+@noindent
+produz:
 
 @example
-This marks the spot.
+Isso marca o ponto.
 @dots{}
-See [the spot], page 1.
+Veja [o ponto], página 1.
 @end example
 
-As you can see, the @code{@@anchor} command itself produces no output.
-This example defines an anchor `x-spot' just before the word `spot'.
-You can refer to it later with an @code{@@xref} or other cross
-reference command, as shown (@pxref{Referências Cruzadas}).
+Como você pode ver, o próprio comando @code{@@anchor} não produz saída. 
+Esse exemplo define uma âncora `x-spot' exatamente antes da palavra 
+`ponto'. Você referenciá-la depois com um @code{@@xref} ou outro comando 
+de referência cruzada, conforme mostrado (@pxref{Referências Cruzadas}).
 
-It is best to put @code{@@anchor} commands just before the position you
-wish to refer to; that way, the reader's eye is led on to the correct
-text when they jump to the anchor.  You can put the @code{@@anchor}
-command on a line by itself if that helps readability of the source.
-Whitespace (including newlines) is ignored after @code{@@anchor}.
+É melhor colocar os comandos @code{@@anchor} exatamente antes da posição 
+de que deseja referenciar; dessa maneira o olho do leitor é guiado ao 
+texto correto quando pular para a âncora. Você pode colocar o comando 
+@code{@@anchor} em uma linha própria se isso ajudar a legibilidade do 
+fonte. Espaços em branco (incluíndo novas linhas) são ignorados após 
+@code{@@anchor}.
 
-Anchor names and node names may not conflict.  Anchors and Nodos are
-given similar treatment in some ways; for example, the
-@code{goto-node} command takes either an anchor name or a node name as
-an argument.  (@xref{Go to node,,, info, Info}.)
+Os nomes de âncora e os nomes de nodos não podem conflitar. Às âncoras e 
+aos nodos são dados tratamento similar de algumas maneiras; por exemplo, 
+o comando @code{goto-node} recebe ou um nome de âncora ou um nome de 
+nodo como argumento. (@xref{Ir para o nodo,,, info, Info}).
 
-Also like node names, anchor names cannot include some characters
-(@pxref{Exigências de Linha de Nodo}).
+Também, como nomes de nodo, os nomes de âncora não podem incluir alguns 
+caracteres (@pxref{Exigências de Linha de Nodo}).
 
-@cindex Nodos, deleting or renaming
-Because of this duality, when you delete or rename a node, it is
-usually a good idea to define an @code{@@anchor} with the old name.
-That way, any links to the old node, whether from other Texinfo
-manuals or general web pages, keep working.  You can also do this with
-the @file{RENAMED_Nodos_FILE} feature of @command{makeinfo}
-(@pxref{Preservação de Vínculo Xref HTML}).  Both methods keep links
-on the web working; the only substantive difference is that defining
-anchors also makes the old node names available when reading the
-document in Info.
-
+@cindex Nodos, deletando ou renomeando
+Por causa dessa dualidade, quando você deleta ou renomeia um nodo, 
+geralmente é uma boa ideia definir um @code{@@anchor} com o nome antigo. 
+Dessa maneira, quaisquer vínculos ao nodo antigo, seja originários de 
+outros manuais Texinfo ou páginas web em geral, continuam funcionando. 
+Você também pode fazer isso com a característica 
+@file{RENAMED_NODE_FILE} de @command{makeinfo} 
+(@pxref{Preservação de Vínculo Xref HTML}). Ambos os métodos mantém 
+links na web funcionando; a única diferença substantiva é que a 
+definição de âncoras também torna os nomes de nodo antigos acessíveis 
+quando da leitura do documento em Info.
 
 @node @code{@@inforef}
-@section @code{@@inforef}: Cross-references to Info-only Material
+@section @code{@@inforef}: Referências cruzadas para material unicamente Info
+@c Capítulo 6 - Referências Cruzadas;
+@c Seção 6.9 - @code{@@inforef}: Referências cruzadas para material unicamente Info
 
-@anchor{inforef}@c old name
+@anchor{inforef} @c nome antigo
 @findex inforef
-@cindex Cross-references using @code{@@inforef}
-@cindex References using @code{@@inforef}
+@cindex Referências cruzadas usando @code{@@inforef}
+@cindex Referências usando @code{@@inforef}
 
-@code{@@inforef} is used for making cross-references to Info
-documents---even from a printed manual.  This might be because you
-want to refer to conditional @code{@@ifinfo} text
-(@pxref{Condicionais}), or because printed output is not available
-(perhaps because there is no Texinfo source), among other
-possibilities.
+@code{@@inforef} é usado para fazer referências cruzadas para documentos 
+Info---mesmo a partir de um manual impresso. Isso pode ser porque você 
+quer referenciar um texto condicional @code{@@ifinfo} 
+(@pxref{Condicionais}), ou porque a saída impressa não está acessível 
+(talvez porque não exista um fonte Texinfo), entre outras 
+possibilidades.
 
-The command takes either two or three arguments, in the following
-order:
+O comando recebe ou dois ou três argumentos, na seguinte ordem:
 
 @enumerate
 @item
-The node name.
+O nome do nodo.
 
 @item
-The cross-reference name (optional).
+O nome da referência cruzada (opcional).
 
 @item
-The Info file name.
+O nome do arquivo Info.
 @end enumerate
 
 @noindent
-The template is:
+O modelo é:
 
 @example
-@@inforef@{@var{node-name}, @var{cross-reference-name}, @var{info-file-name}@}
+@@inforef@{@var{nome-nodo}, @var{nome-referência-cruzada}, @var{nome-arquivo-info}@}
 @end example
 
 @need 800
 @noindent
-For example,
+Por exemplo,
 
 @example
 @group
-@@inforef@{Advanced, Advanced Info commands, info@},
-for more information.
+@@inforef@{Avançado, Comandos Info avançados, info@},
+para mais informação.
 @end group
 @end example
 
 @need 800
 @noindent
-produces (in Info):
+produz (em Info):
 
 @example
 @group
-*Note Advanced Info commands: (info)Advanced,
-for more information.
+*Nota Comandos Info avançados: (info)Avançado,
+para mais informação.
 @end group
 @end example
 
 @need 800
 @noindent
-and (in the printed output):
+e (na saída impressa):
 
 @quotation
-See Info file @file{info}, node @samp{Advanced}, for more information.
+Veja arquivo Info @file{info}, nodo @samp{Avançado}, para mais 
+informação.
 @end quotation
 
-(This particular example is not realistic, since the Info manual is
-written in Texinfo, so all formats are available.  In fact, we don't
-know of any extant Info-only manuals.)
+(Esse exemplo em particular não é realístico, dado que o manual Info é 
+escrito em Texinfo, de forma que todos os formatos estão disponíveis. Na 
+verdade, não se sabe de nenhum manual existente unicamente Info).
 
-The converse of @code{@@inforef} is @code{@@cite}, which is used to
-refer to printed works for which no Info form exists.
+O inverso de @code{@@inforef} é @code{@@cite}, que é usado para se 
+referir a trabalhos impressos para os quais não existe uma forma Info. 
 @xref{@code{@@cite}}.
-
 
 @node @code{@@url}
 @section @code{@@url}, @code{@@uref@{@var{url}[, @var{text}][, @var{replacement}]@}}
+@c Capítulo 6 - Referências Cruzadas;
+@c Seção 6.10 - @code{@@url}, @code{@@uref@{@var{url}[, @var{text}][, @var{replacement}]@}}
 
-@anchor{uref}@c old name
+@anchor{uref} @c nome antigo
 @findex uref
-@cindex Uniform resource locator, referring to
-@cindex URL, referring to
+@cindex Localizador Uniforme de Recursos, refenciando a
+@cindex URL, refenciando a
 
-@cindex @code{href}, producing HTML
-@code{@@uref} produces a reference to a uniform resource locator
-(url).  It takes one mandatory argument, the url, and two optional
-arguments which control the text that is displayed.  In HTML and PDF
-output, @code{@@uref} produces a link you can follow.  (To merely
-indicate a url without creating a link people can follow, use
-@code{@@indicateurl}, @pxref{@code{@@indicateurl}}.)
+@cindex @code{href}, produzindo HTML
+@code{@@uref} produz uma referência a um Localizador Uniforme de 
+Recursos (URL). O comando recebe um argumento obrigatório, a URL, e dois 
+argumentos opcionais que controlam o texto que é exibido. Em saída HTML 
+e PDF, @code{@@uref} produz um link que você pode seguir. (Para 
+meramente indicar uma URL sem criar um link que as pessoas possam 
+seguir, use @code{@@indicateurl}, @pxref{@code{@@indicateurl}}).
 
 @findex url
-@anchor{url}@code{@@url} is a synonym for @code{@@uref}.
-(Originally, @code{@@url} had the meaning of @code{@@indicateurl}, but
-in practice it was almost always misused.  So we've changed the
-meaning.)
+@anchor{url}
+@code{@@url} é um sinônimo para @code{@@uref}. (Originalmente, 
+@code{@@url} tinha o significado de @code{@@indicateurl}, porém, na 
+prática, era quase sempre mal usado. Então, mudou-se o significado).
+O segundo argumento, se especificado, é o texto a exibir (o padrão é a 
+própria URL); em saída Info, DVI e PDF, porém não em saída HTML, a URL é 
+exibida adicionalmente a esse texto.
 
-The second argument, if specified, is the text to display (the default
-is the url itself); in Info, DVI, and PDF output, but not in HTML
-output, the url is output in addition to this text.
-
-@cindex Man page, reference to
-The third argument, if specified, is the text to display, but in this
-case the url is not output in any format.  This is useful when the
-text is already sufficiently referential, as in a man page.  Also, if
-the third argument is given, the second argument is ignored.
+@cindex Página de Manual, referência a
+O terceiro argumento, se especificado, é o texto a exibir, mas, nesse 
+caso, a URL não é exibida em qualquer formato de saída. Isso é útil 
+quando o texto já está suficientemente referencial, como em uma página 
+de manual. Também, se o terceiro argumento for dado, o segundo argumento 
+é ignorado.
 
 @menu
-* @code{@@url} Examples::           Examples of using all the forms of @code{@@url}.
-* URL Line Breaking::       How lines are broken within @code{@@url} text.
-* @code{@@url} PDF Output Format::  A special option to hide links in PDF output.
-* PDF Colors::              Colorizing urls and other links in PDF output.
+* Exemplos @code{@@url}::           Exemplos da utilização de todas as formas do @code{@@url}.
+* Quebra de linha de URL::       Como as linhas são quebradas dentro do texto do @code{@@url}.
+* Formato de Saída PDF @code{@@url}::  Uma opção especial para ocultar links na saída PDF.
+* Cores de PDF::              Colorindo urls e outros links na saída PDF.
 @end menu
 
+@node Exemplos @code{@@url}
+@subsection Exemplos @code{@@url}
+@c Capítulo 6 - Referências Cruzadas;
+@c Seção 6.10 - @code{@@url}, @code{@@uref@{@var{url}[, @var{text}][, @var{replacement}]@}}
+@c Subseção 6.10.1 - Exemplos @code{@@url}
 
-@node @code{@@url} Examples
-@subsection @code{@@url} Examples
+@cindex @code{@@url}, exemplos de uso
+@cindex URL, exemplos de exibição
 
-@cindex @code{@@url}, examples of using
-@cindex URL, examples of displaying
-
-First, here is an example of the simplest form of @code{@@url}, with
-just one argument.  The given url is both the target and the visible
-text of the link:
+Primeiro, aqui está um exemplo da forma mais simples de @code{@@url}, 
+com apenas um argumento. A URL dada é tanto o alvo quanto o texto 
+visível do link:
 
 @example
-The official GNU ftp site is @@uref@{http://ftp.gnu.org/gnu@}.
+O site ftp oficial do projeto GNU é @@uref@{http://ftp.gnu.org/gnu@}.
 @end example
 
-@noindent produces:
+@noindent
+produz:
 @display
-The official GNU ftp site is @uref{http://ftp.gnu.org/gnu}.
+O site ftp oficial do projeto GNU é @uref{http://ftp.gnu.org/gnu}.
 @end display
 
-@subsubheading Two-argument form of @code{@@url}
+@subsubheading Forma de dois argumentos de @code{@@url}
 
-Here is an example of the two-argument form:
+Aqui está um exemplo da forma de dois argumentos:
 @example
-The official @@uref@{http://ftp.gnu.org/gnu, GNU ftp site@}
-holds programs and texts.
+O @@uref@{http://ftp.gnu.org/gnu, site ftp oficial do projeto GNU@} 
+contém programas e textos.
 @end example
 
-@noindent which produces:
+@noindent
+o que produz:
 @display
-The official @uref{http://ftp.gnu.org/gnu, GNU ftp site}
-holds programs and texts.
+O @uref{http://ftp.gnu.org/gnu, site ftp oficial do projeto GNU} contém 
+programas e textos.
 @end display
 
-@noindent that is, the Info (and @TeX{}, etc.)@: output is this:
+@noindent
+isto é, a saída Info (e @TeX{}, etc.)@: é esta:
 @example
-The official GNU ftp site (http://ftp.gnu.org/gnu)
-holds programs and texts.
+O site ftp oficial do projeto GNU (http://ftp.gnu.org/gnu) contém 
+programas e textos.
 @end example
 
-@noindent while the HTML output is this:
+@noindent
+enquanto que a saída HTML é esta:
 @example
-The official <a href="http://ftp.gnu.org/gnu">GNU ftp site</a>
-holds programs and texts.
+O <a href="http://ftp.gnu.org/gnu">O site ftp oficial do projeto GNU</a> 
+contém programas e textos.
 @end example
 
-@subsubheading Three-argument form of @code{@@url}
+@subsubheading Forma de três argumentos de @code{@@url}
 
-Finally, an example of the three-argument form:
+Finalmente, um exemplo da forma de três argumentos:
 @example
-The @@uref@{/man.cgi/1/ls,,ls@} program @dots{}
+O programa @@uref@{/man.cgi/1/ls,,ls@} @dots{}
 @end example
 
-@noindent which, except for HTML, produces:
+@noindent
+o qual, exceto para HTML, produz:
 @display
-The @uref{/man.cgi/1/ls,,ls} program @dots{}
+O programa @uref{/man.cgi/1/ls,,ls} @dots{}
 @end display
 
-@noindent but with HTML:
+@noindent
+porém, com HTML:
 @example
-The <a href="/man.cgi/1/ls">ls</a> program @dots{}
+O programa <a href="/man.cgi/1/ls">ls</a> @dots{}
 @end example
 
 
-By the way, some people prefer to display urls in the unambiguous
-format:
+A propósito, algumas pessoas preferem exibir URLs no inequívoco formato:
 
 @display
 <URL:http://@var{host}/@var{path}>
 @end display
 
 @noindent
-@cindex @code{<URL...>} convention, not used
-You can use this form in the input file if you wish.  We feel it's not
-necessary to include the @samp{<URL:} and @samp{>} in the output,
-since to be useful any software that tries to detect urls in text
-already has to detect them without the @samp{<URL:}.
+@cindex @code{<URL...>} convenção, não usada
+Você pode usar essa forma no arquivo de entrada de desejar. Sentimos que 
+não é necessário incluir o @samp{<URL:} e @samp{>} na saída, dado que, 
+para ser útil, qualquer software que tente detectar URLs em texto já tem 
+de detectá-las sem o @samp{<URL:}.
 
 
-@node URL Line Breaking
-@subsection URL Line Breaking
+@node Quebra de linha de URL
+@subsection Quebra de linha de URL
+@c Capítulo 6 - Referências Cruzadas;
+@c Seção 6.10 - @code{@@url}, @code{@@uref@{@var{url}[, @var{text}][, @var{replacement}]@}}
+@c Subseção 6.10.2 - Quebra de linha de URL
 
-@cindex Line breaking, and urls
-@cindex Breakpoints within urls
-@TeX{} allows line breaking within urls at only a few characters
-(which are special in urls): @samp{&}, @samp{.}, @samp{#}, @samp{?},
-and @samp{/} (but not between two @samp{/} characters).  A tiny amount
-of stretchable space is also inserted around these characters to help
-with line breaking.
+@cindex Quebra de linha, e URLs
+@cindex Pontos de interrupção dentro de URLs
+@TeX{} permite quebra de linha dentro de URLs com apenas alguns 
+caracteres (os quais são especiais em URLs): @samp{&}, @samp{.}, 
+@samp{#}, @samp{?}, e @samp{/}, (mas não entre dois caracteres 
+@samp{/}). Uma pequena quantidade de espaço elástico também é inserida 
+em torno desses caracteres para ajudar na quebra de linha.
 
-For HTML output, modern browsers will also do line breaking within
-displayed urls.  If you need to allow breaks at other characters you
-can insert @code{@@/} as needed (@pxref{Line Breaks}).
+Para saída HTML, os navegadores de Internet modernos também fazem quebra 
+de linha dentro das URLs exibidas. Se você precisar permitir quebras em 
+outros caracteres, você pode inserir @code{@@/} conforme necessário 
+(@pxref{Quebras de Linha}).
 
-@findex urefbreakstyle
-By default, in @TeX{} any such breaks at special characters will occur
-after the character.  Some people prefer such breaks to happen before
-the special character.  This can be controlled with the
-@code{@@urefbreakstyle} command (this command has effect only in
+@findex estilo de quebra uref
+@findex uref, estilo de quebra
+Por padrão, em @TeX{}, quaisquer de tais quebras em caracteres especiais 
+ocorrerão após o caracter. Algumas pessoas preferem que tais quebras 
+aconteçam antes do caracter especial. Isso pode ser controlado com o 
+comando @code{@@urefbreakstyle} (esse comando tem efeito somente em 
 @TeX{}):
 
 @example
-@@urefbreakstyle @var{how}
+@@urefbreakstyle @var{como}
 @end example
 
-@noindent where the argument @var{how} is one of these words:
+@noindent
+onde o argumento @var{como} é uma destas palavras:
 
-@vindex after@r{, value for @code{@@urefbreakstyle}}
-@vindex before@r{, value for @code{@@urefbreakstyle}}
-@vindex none@r{, value for @code{@@urefbreakstyle}}
+@vindex after@r{, valor para @code{@@urefbreakstyle}}
+@vindex before@r{, valor para @code{@@urefbreakstyle}}
+@vindex none@r{, valor para @code{@@urefbreakstyle}}
 @table @samp
 @item after
-(the default) Potentially break after the special characters.
+(O padrão). Potencialmente quebra após os caracteres especiais.
 @item before
-Potentially break before the special characters.
+Potencialmente quebra antes dos caracteres especiais.
 @item none
-Do not consider breaking at the special characters at all; any potential
-breaks must be manually inserted.
+Não considera a quebra em caracteres especiais em absoluto; quaisquer 
+quebras potenciais devem ser inseridas manualmente.
 @end table
 
 
-@node @code{@@url} PDF Output Format
-@subsection @code{@@url} PDF Output Format
+@node Formato de Saída PDF @code{@@url}
+@subsection @code{@@url} Formato de Saída PDF
+@c Capítulo 6 - Referências Cruzadas;
+@c Seção 6.10 - @code{@@url}, @code{@@uref@{@var{url}[, @var{text}][, @var{replacement}]@}}
+@c Subseção 6.10.3 - @code{@@url} Formato de Saída PDF
 
-@cindex PDF output of urls
-@cindex URLs, PDF output of
-
-If the ultimate purpose of a PDF is only to be viewed online, perhaps
-similar to HTML in some inchoate way, you may not want the urls to be
-included in the visible text (just as urls are not visible to readers
-of web pages).  Texinfo provides a PDF-specific option for this, which
-must be used inside @code{@@tex}:
+@cindex Saída PDF de URLs
+@cindex URLs, saída PDF de
+Se o propósito final de um PDF é apenas para ser visto online, talvez 
+similar a HTML de alguma maneira incipiente, você pode não querer que as 
+URLs sejam incluídas no texto visível (exatamente como as URLs não são 
+visíveis a leitores de páginas da web). Texinfo provê uma opção 
+específica de PDF para isso, a qual deve ser usado dentro de 
+@code{@@tex}:
 
 @findex \urefurlonlylinktrue
 @example
@@ -5855,71 +5877,80 @@ must be used inside @code{@@tex}:
 @@end tex
 @end example
 
-The result is that @code{@@url@{http://www.gnu.org, GNU@}} has the
-visible output of just `GNU', with a link target of
-@url{http://www.gnu.org}.  Ordinarily, the visible output would
-include both the label and the url: `GNU (@url{http://www.gnu.org})'.
+O resultado é que @code{@@url@{http://www.gnu.org, GNU@}} tem a saída 
+visível de apenas `GNU', com um alvo de link de 
+@url{http://www.gnu.org}. Normalmente, a saída visível incluiria tanto o 
+rótulo quanto a URL: `GNU (@url{http://www.gnu.org})'.
 
-This option only has effect when the PDF output is produced with the
-pdf@TeX{} program, not with other ways of getting from Texinfo to PDF
-(e.g., @TeX{} to DVI to PDF)@.  Consequently, it is ok to specify this
-option unconditionally within @code{@@tex}, as shown above.  It is
-ignored when DVI is being produced.
+Essa opção somente tem efeito quando a saída PDF é produzida com o 
+programa pdf@TeX{}, não com outras maneiras de obter de Texinfo para PDF 
+(por exemplo, @TeX{} para DVI para PDF)@.  Consequentemente, está certo 
+especificar essa opção incondicionalmente dentro de @code{@@tex}, 
+conforme mostrado acima. A opção é ignorada quando DVI está sendo 
+produzido.
 
 
-@node PDF Colors
-@subsection PDF Colors
+@node Cores de PDF
+@subsection Cores de PDF
+@c Capítulo 6 - Referências Cruzadas;
+@c Seção 6.10 - @code{@@url}, @code{@@uref@{@var{url}[, @var{text}][, @var{replacement}]@}}
+@c Subseção 6.10.4 - Cores de PDF
 
-@cindex Colored links, in PDF output
-@cindex Links, coloring in PDF output
-@cindex URLs, coloring in PDF output
+@cindex Links coloridos, em saída PDF
+@cindex Links, colorindo em saída PDF
+@cindex URLs, colorindo em saída PDF
 
-By default, urls and cross-reference links are printed in black in PDF
-output.  Very occasionally, however, you may want to highlight such
-``live'' links with a different color, as is commonly done on web
-pages.  Texinfo provides a PDF-specific option for specifying these
-colors, which must be used inside @code{@@tex}:
+Por padrão, links de URLs e de referências cruzadas são impressos em 
+preto em saída PDF. Muito ocasionalmente, entretanto, você pode querer 
+destacar tais links ``vivos'' com uma cor diferente, como é feito 
+comumente em páginas da web. Texinfo prove uma opção específica de PDF 
+para especificar tais cores, a qual deve ser usada dentro de 
+@code{@@tex}:
 
 @findex \linkcolor
 @findex \urlcolor
 @example
 @@tex
-\global\def\linkcolor@{1 0 0@}  % red
-\global\def\urlcolor@{0 1 0@}   % green
+\global\def\linkcolor@{1 0 0@}  % vermelha
+\global\def\urlcolor@{0 1 0@}   % verde
 @@end tex
 @end example
 
-@code{\urlcolor} changes the color of @code{@@url} output (both the
-actual url and any textual label), while @code{\linkcolor} changes the
-color for cross-references to Nodos, etc.  They are independent.
+@code{\urlcolor} muda a cor da saída @code{@@url} (tanto a URL atual, 
+quanto qualquer rótulo textual), ao passo que @code{\linkcolor} muda a 
+cor para referências cruzadas para nodos, etc. As opções são 
+independentes.
 
-@cindex RGB color specification.
-The three given values must be numbers between 0 and 1, specifying the
-amount of red, green, and blue respectively.
+@cindex especificação de cor RGB
+Os três valores dados devem ser números entre 0 e 1, especificando a 
+quantidade de vermelho, verde e azul, respectivamente.
 
-These definitions only have an effect when the PDF output is produced
-with the pdf@TeX{} program, not with other ways of getting from
-Texinfo to PDF (e.g., @TeX{} to DVI to PDF)@.  Consequently, it is ok
-to specify this option unconditionally within @code{@@tex}, as shown
-above.  It is ignored when DVI is being produced.
+Essas definições somente tem efeito quando a saída PDF é produzida com o 
+programa pdf@TeX{}, não com outros meio de obter de Texinfo para PDF 
+(por exemplo, @TeX{} para DVI para PDF)@. Consequentemente, está certo 
+especificar essa opção incondicionalmente dentro de @code{@@tex}, 
+conforme mostrado acima. A opção é ignorada quando DVI está sendo 
+produzido.
 
-We do not recommend colorizing just for fun; unless you have a
-specific reason to use colors, best to skip it.
+Não recomendamos colorir apenas por diversão; a menos que você tenha um 
+motivo específico para usar cores, melhor ignorá-las.
 
 
 @node @code{@@cite}
-@section @code{@@cite}@{@var{reference}@}
+@section @code{@@cite}@{@var{referência}@}
+@c Capítulo 6 - Referências Cruzadas;
+@c Seção 6.11 - @code{@@cite}@{@var{referência}@}
 
-@anchor{cite}@c old name
+@anchor{cite} @c nome antigo
 @findex cite
 
-Use the @code{@@cite} command for the name of a book that lacks a
-companion Info file.  The command produces italics in the printed
-manual, and quotation marks in the Info file.
+Use o comando @code{@@cite} para o nome de um livro que não tenha um 
+arquivo complementar Info. O comando produz itálicos no manual impresso 
+e aspas no arquivo Info.
 
-If a book is written in Texinfo, it is better to use a cross-reference
-command since a reader can easily follow such a reference in Info.
-@xref{@code{@@xref}}.
+Se um livro for escrito em Texinfo, é melhor usar um comando de 
+referência cruzada dado que um leitor pode facilmente seguir tal 
+referência em Info. @xref{@code{@@xref}}.
 
 
 @node Marking Text
@@ -5929,6 +5960,7 @@ command since a reader can easily follow such a reference in Info.
 @cindex Words and phrases, marking them
 @cindex Marking text within a paragraph
 @cindex Text, marking up
+@c Capítulo 7 - Marcação de Texto, Palavras e Frases
 
 In Texinfo, you can mark words and phrases in a variety of ways.
 The Texinfo formatters use this information to determine how to
@@ -11289,7 +11321,7 @@ problematic line and page breaks.
 
 @menu
 * Break Commands::              Summary of break-related commands.
-* Line Breaks::                 Forcing line breaks.
+* Quebras de Linha::                 Forcing line breaks.
 * @code{@@- @@hyphenation}::             Helping @TeX{} with hyphenation points.
 * @code{@@allowcodebreaks}::            Controlling line breaks within @@code text.
 * @code{@@w}::                          Preventing unwanted line breaks in text.
@@ -11345,8 +11377,8 @@ Start a new page if not enough space on this one.
 @end table
 
 
-@node Line Breaks
-@section @code{@@*} and @code{@@/}: Generate and Allow Line Breaks
+@node Quebras de Linha
+@section @code{@@*} and @code{@@/}: Generate and Allow Quebras de Linha
 
 @findex * @r{(force line break)}
 @findex / @r{(allow line break)}
@@ -11419,7 +11451,7 @@ these commands have any effect there.
 
 
 @node @code{@@allowcodebreaks}
-@section @code{@@allowcodebreaks}: Control Line Breaks in @code{@@code}
+@section @code{@@allowcodebreaks}: Control Quebras de Linha in @code{@@code}
 
 @anchor{allowcodebreaks}@c old name
 @findex allowcodebreaks
@@ -11460,7 +11492,7 @@ This command has no effect except in HTML and @TeX{} output.
 
 
 @node @code{@@w}
-@section @code{@@w}@{@var{text}@}: Prevent Line Breaks
+@section @code{@@w}@{@var{text}@}: Prevent Quebras de Linha
 
 @anchor{w}@c old name
 @findex w
@@ -19725,7 +19757,7 @@ Generate an umlaut or acute accent, respectively, over the next
 character, as in @"o and @'o.  @xref{Inserting Accents}.
 
 @item @@*
-Force a line break.  @xref{Line Breaks}.
+Force a line break.  @xref{Quebras de Linha}.
 
 @item @@,@{@var{c}@}
 Generate a cedilla accent under @var{c}, as in @,{c}.  @xref{Inserting
@@ -19739,7 +19771,7 @@ Produce a period that ends a sentence (usually after an
 end-of-sentence capital letter).  @xref{Ending a Sentence}.
 
 @item @@/
-Produces no output, but allows a line break.  @xref{Line Breaks}.
+Produces no output, but allows a line break.  @xref{Quebras de Linha}.
 
 @item @@:
 Tell @TeX{} to refrain from inserting extra whitespace after an
