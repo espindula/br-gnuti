@@ -45,9 +45,9 @@ Este manual é para GNU Texinfo (versão @value{VERSION},
 informação online e um manual impresso a partir de uma fonte única 
 utilizando marcação semântica.
 
-Copyright @copyright{} 2016, 2017, 2018, 2019 da "versão modificada" 
-traduzida para o Português do Brasil: Jamenson Ferreira Espindula de 
-Almeida Melo <@email{jafesp@@gmail.com}>.
+Copyright @copyright{} 2016, 2017, 2018, 2019 da ``versão modificada'' 
+traduzida para a língua portuguesa falada e escrita no Brasil: Jamenson 
+Ferreira Espindula de Almeida Melo <@email{jafesp@@gmail.com}>.
 
 Copyright @copyright{} 1988, 1990, 1991, 1992, 1993, 1995, 1996, 1997, 
 1998, 1999, 2001, 2001, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 
@@ -177,44 +177,44 @@ restante do menu lista todos os pontos de baixo nível no documento.
 @end ifnottex
 
 @menu
-* Copying Conditions::          Seus direitos.
-* Overview::                    Texinfo em resumo.
-* Writing a Texinfo File::      Formato de um arquivo fonte Texinfo.
-* Beginning and Ending a File:: Iniciando e fim de um arquivo Texinfo.
+* Condições de Cópia::          Seus direitos.
+* Visão Geral::                    Texinfo em resumo.
+* Escrevendo um Arquivo Texinfo::      Formato de um arquivo fonte Texinfo.
+* Iniciando e Finalizando um Arquivo:: Iniciando e fim de um arquivo Texinfo.
 * Nodos::                       Escrevendo Nodos, a unidade básica de Texinfo.
 * Estruturamento de Capítulo::         Criando capítulos, seções, apêndices, etc.
 * Referências Cruzadas::            Escrevendo referências cruzadas.
-* Marking Text::                Marcando palavras e frases como código, entrada de teclado, variáveis meta sintáticas, e afins.
-* Quotations and Examples::     Encapsulamentos de bloco, exemplos, etc.
-* Lists and Tables::            Listas de itens ou numeradas, e tabelas.
-* Special Displays::            Figuras flutuantes e notas de rodapé.
-* Indices::                     Criando índices.
-* Insertions::                  Inserindo sinais @@-signs, chaves, etc.
-* Breaks::                      Forçando ou prevenindo quebras de página e linha.
-* Definition Commands::         Descrevendo uniformemente funções e afins.
-* Internationalization::        Suporte a outras linguagens diferentes do Inglês.
+* Marcando Texto::                Marcando palavras e frases como código, entrada de teclado, variáveis meta sintáticas, e afins.
+* Citações e Exemplos::     Encapsulamentos de bloco, exemplos, etc.
+* Listas e Tabelas::            Listas de itens ou numeradas, e tabelas.
+* Exibições Especiais::            Figuras flutuantes e notas de rodapé.
+* Índices::                     Criando índices.
+* Inserções::                  Inserindo sinais @@-signs, chaves, etc.
+* Quebras::                      Forçando ou prevenindo quebras de página e linha.
+* Comandos de Definição::         Descrevendo uniformemente funções e afins.
+* Internacionalização::        Suporte a outras linguagens diferentes do Inglês.
 * Condicionais::                Especificando texto somente para alguns casos de saída.
-* Defining New Texinfo Commands:: Macros definidas pelo usuário e apelidos.
-* Arquivos Incluídos::               Como incorporar outros arquivos Texinfo.
-* Hardcopy::                    Saída para papel, com @TeX{}.
-* Generic Translator @command{texi2any}:: @command{texi2any}, um conversor para todos os propósitos.
-* Creating and Installing Info Files:: Detalhes sobre saída Info.
-* Generating HTML::             Detalhes sobre saída HTML.
+* Definindo Novos Comandos Texinfo:: Macros definidas pelo usuário e apelidos.
+* Arquivos Include::               Como incorporar outros arquivos Texinfo.
+* Cópia Impressa::                    Saída para papel, com @TeX{}.
+* Tradutor Genérico @command{texi2any}:: @command{texi2any}, um conversor para todos os propósitos.
+* Criando e Instalando Arquivos Info:: Detalhes sobre saída Info.
+* Gerando HTML::             Detalhes sobre saída HTML.
 @c * texi2any Output Customization:: Sintonia fina com arquivos de 
 @c inicialização
 
 Apêndices
 
-* @@-Command Details::          Detalhes dos comandos @@ de Texinfo.
-* Tips::                        Dicas sobre como escrever um documento Texinfo.
-* Sample Texinfo Files::        Exemplos completos, incluindo textos completos.
-* Texinfo Mode::                Utilizando o modo Texinfo do GNU Emacs.
-* Headings::                    Como escrever cabeçalhos e rodapés de página.
-* Catching Mistakes::           Como achar erros na formatação.
-* Info Format Specification::   Detalhes técnicos do formato de arquivo Info.
-* GNU Free Documentation License:: Copiando este manual.
-* Command and Variable Index::  Um menu contendo comandos e variáveis.
-* General Index::               Um menu cobrindo muitos tópicos.
+* Detalhes do Comando @@::          Detalhes dos comandos @@ de Texinfo.
+* Dicas::                        Dicas sobre como escrever um documento Texinfo.
+* Arquivos Texinfo Modelo::        Exemplos completos, incluindo textos completos.
+* Modo Texinfo::                Utilizando o modo Texinfo do GNU Emacs.
+* Cabeçalhos::                    Como escrever cabeçalhos e rodapés de página.
+* Capturando Erros::           Como achar erros na formatação.
+* Especificação do Formato Info::   Detalhes técnicos do formato de arquivo Info.
+* Licença de Documentação Livre GNU:: Copiando este manual.
+* Índice de Comando e Variável::  Um menu contendo comandos e variáveis.
+* Índice Geral::               Um menu cobrindo muitos tópicos.
 
 @detailmenu
  --- A Listagem Detalhada do Nodo ---
@@ -342,33 +342,33 @@ Referências cruzadas
 @code{@@url}, @code{@@uref@{@var{url}[, @var{text}][, @var{replacement}]@}}
 
 * Exemplos @code{@@url}::           Exemplos da utilização de todas as formas do @code{@@url}.
-* Quebra de linha de URL::       Como as linhas são quebradas dentro do texto do @code{@@url}.
+* Quebra de Linha de URL::       Como as linhas são quebradas dentro do texto do @code{@@url}.
 * Formato de Saída PDF @code{@@url}::  Uma opção especial para ocultar links na saída PDF.
 * Cores de PDF::              Colorindo urls e outros links na saída PDF.
 
 Marcando Texto, Palavras e Frases
 
-* Indicating::                  Como indicar definições, arquivos, etc.
-* Emphasis::                    Como enfatizar texto.
+* Indicando::                  Como indicar definições, arquivos, etc.
+* Ênfase::                    Como enfatizar texto.
 
 Indicando Definições, Comandos, etc.
 
-* Useful Highlighting::         Salientamento provê informação útil.
+* Realçamento Útil::                    Realçamento provê informação útil.
 * @code{@@code}::                       Indicando código de programa.
-* @code{@@kbd}::                        Exibindo entrada de teclado.
+* @code{@@kbd}::                        Mostrando entrada de teclado.
 * @code{@@key}::                        Especificando teclas.
 * @code{@@samp}::                       Indicando uma sequência literal de caracteres.
 * @code{@@verb}::                       Indicando uma sequência literal de caracteres.
-* @code{@@var}::                        Indicando variáveis meta sintáticas.
-* @code{@@env}::                        Indicando variáveis de ambiante.
+* @code{@@var}::                        Indicando variáveis metassintáticas.
+* @code{@@env}::                        Indicando variáveis de ambiente.
 * @code{@@file}::                       Indicando nomes de arquivo.
 * @code{@@command}::                    Indicando nomes de comando.
 * @code{@@option}::                     Indicando nomes de opção.
 * @code{@@dfn}::                        Especificando definições.
 * @code{@@abbr}::                       Indicando abreviações.
-* @code{@@acronym}::                    Indicando acrônimos.
-* @code{@@indicateurl}::                Indicando uma url de exemplo.
-* @code{@@email}::                      Indicando um endereço eletrônico de correspondência.
+* @code{@@acronym}::                    Indicando siglas.
+* @code{@@indicateurl}::                Indicando uma URL de exemplo.
+* @code{@@email}::                      Indicando um endereço de correio eletrônico.
 
 Enfatizando Texto
 
@@ -439,11 +439,11 @@ Notas de rodapé
 Índices
 
 * Index Entries::               Escolha palavras diferentes para entradas de índice.
-* Predefined Indices::          Utilize índices diferentes para tipos diferentes de entradas.
+* Predefined Índices::          Utilize índices diferentes para tipos diferentes de entradas.
 * Indexing Commands::           Como fazer uma entrada de índice.
 * Imprimindo Índices e Menus::    Como imprimir um índice em cópia impressa e gerar menus de índice em Info.
-* Combining Indices::           Como combinar índices.
-* New Indices::                 Como definir seus próprios índices.
+* Combining Índices::           Como combinar índices.
+* New Índices::                 Como definir seus próprios índices.
 
 Combinando Índices
 
@@ -453,7 +453,7 @@ Combinando Índices
 Inserções Especiais
 
 * Special Characters::          Inserindo @@ @{@} , \ #
-* Inserting Quote Characters::  Inserindo aspas à esquerda e à direita, em código.
+* Inserindo Caracteres de Citação::  Inserindo aspas à esquerda e à direita, em código.
 * Inserting Space::             Inserindo a quantidade correta de espaços em branco.
 * Inserting Accents::           Inserindo acentos e caracteres especiais.
 * Inserting Quotation Marks::   Inserindo marcas de encapsulamento.
@@ -579,13 +579,13 @@ Processadores Externos de Macro: Diretivas de Linha
 
 Arquivos Include
 
-* Using Arquivos Incluídos::         Como utilizar o comando @code{@@include}.
+* Using Arquivos Include::         Como utilizar o comando @code{@@include}.
 * @code{texinfo-multiple-files-update}:: Como criar e atualizar nodos e 
 menus quando da utilização de arquivos included.
-* Arquivos Incluídos Requirements::  Exigências @code{texinfo-multiple-files-update}.
+* Arquivos Include Requirements::  Exigências @code{texinfo-multiple-files-update}.
 * Sample Include File::         Um arquivo exterior de amostra com 
 arquivos included dentro dele; e um arquivo included de amostra.
-* Arquivos Incluídos Evolution::     Como a utilização do comando @code{@@include} mudou ao longo do tempo.
+* Arquivos Include Evolution::     Como a utilização do comando @code{@@include} mudou ao longo do tempo.
 
 Formatando e Imprimindo Cópia Impressa
 
@@ -594,7 +594,7 @@ Formatando e Imprimindo Cópia Impressa
 * Format with @command{tex}/@command{texindex}::    Formatando com comandos explícitos de shell.
 * Print with @command{lpr}::              Como imprimir.
 * Within Emacs::                Como formatar e imprimir a partir de um shell Emacs.
-* Texinfo Mode Printing::       Como formatar e imprimir em modo Texinfo.
+* Modo Texinfo Printing::       Como formatar e imprimir em modo Texinfo.
 * Compile-Command::             Como imprimir utilizando o comando de compilar do Emacs.
 * Requirements Summary::        Sumário de exigências de formatação do @TeX{}.
 * Preparing for @TeX{}::           O que se fazer antes de utilizar o @TeX{}.
@@ -619,7 +619,7 @@ Formatar com @code{@@command{tex}/@code{@@command{texindex}}
 * @code{@@command{texi2any}} Printed Output::     Chamando @code{@@command{texi2any}}.
 * Pointer Validation::          Como verificar que os ponteiros apontam para algum lugar.
 * Customization Variables::     Configurando @code{@@command{texi2any}}.
-* Internationalization of Document Strings:: Traduzindo texto inserido pelo programa.
+* Internacionalização of Document Strings:: Traduzindo texto inserido pelo programa.
 * Invoking @command{pod2texi}::           Traduzindo POD Perl para Texinfo.
 * @code{@@command{texi2html}}::                   Um ancestral de @code{@@command{texi2any}}.
 
@@ -677,14 +677,14 @@ Arquivos de Amostra Texinfo
 
 Utilizando o Modo Texinfo
 
-* Texinfo Mode Overview::       Como o modo Texinfo pode te ajudar.
+* Modo Texinfo Visão Geral::       Como o modo Texinfo pode te ajudar.
 * Emacs Editing::               Adições do modo Texinfo às características de propósito geral de edição do GNU Emacs.
 * Inserting::                   Como inserir comandos @code{@@@@} utilizados frequentemente.
 * Showing the Structure::       Como exibir a estrutura de um arquivo.
 * Atualizando Nodos e Menus::    Como atualizar ou criar novos nodos e menus.
 * Info Formatting::             Como formatar para Info.
 * Printing::                   Como formatar e imprimir parte ou tudo de um arquivo.
-* Texinfo Mode Summary::        Sumário de todos os comandos do modo Texinfo.
+* Modo Texinfo Summary::        Sumário de todos os comandos do modo Texinfo.
 
 Atualizando Nodos e Menus
 
@@ -694,10 +694,10 @@ Atualizando Nodos e Menus
 
 Cabeçalhos de Página
 
-* Headings Introduced::         Convenções para se utilizar cabeçalhos de página.
+* Cabeçalhos Introduced::         Convenções para se utilizar cabeçalhos de página.
 * Heading Format::              Formatos padrão de cabeçalhos de página.
 * Heading Choice::              Como especificar o tipo do cabeçalho de página.
-* Custom Headings::             Como criar seus próprios cabeçalhos e rodapés.
+* Custom Cabeçalhos::             Como criar seus próprios cabeçalhos e rodapés.
 
 Capturando Erros
 
@@ -748,8 +748,8 @@ quando ela é ruim, é melhor que nada.
 @end quotation
 
 
-@node Copying Conditions
-@unnumbered Texinfo Copying Conditions
+@node Condições de Cópia
+@unnumbered Texinfo Condições de Cópia
 @cindex Copying conditions
 @cindex Conditions for copying Texinfo
 @cindex Free software
@@ -793,7 +793,7 @@ Licença de Documentação Livre GNU
 (@pxref{Licença de Documentação Livre GNU}).
 
 
-@node Overview
+@node Visão Geral
 @chapter Visão Geral do Texinfo @c Capítulo 1
 @cindex Visão Geral do Texinfo
 @cindex Texinfo overview
@@ -827,7 +827,7 @@ de instruções de formatação física.   Você pode editar um arquivo
 Texinfo com qualquer editor de texto, porém é especialmente conveniente 
 se utilizar do GNU Emacs dado que esse editor tem um modo especial, 
 chamado modo Texinfo, que provê várias características relacionadas à 
-Texinfo (@xref{Texinfo Mode}).
+Texinfo (@xref{Modo Texinfo}).
 
 @cindex Limited scope of Texinfo
 Texinfo foi concebido especificamente para o propósito de escrever 
@@ -924,7 +924,7 @@ referências cruzadas, índices, e assim por diante.   O subsistema Emacs
 Info (veja-se @ref{Top,,, info, Info}), e o programa autônomo @command{info} 
 (@pxref{Top,,, info-stnd, GNU Info}), entre outros, podem ler esses 
 arquivos. Veja-se @ref{Info Files}, e 
-@ref{Creating and Installing Info Files}.
+@ref{Criando e Instalando Arquivos Info}.
 
 @item Plain text
 @cindex Plain text output, overview
@@ -951,7 +951,7 @@ Apesar que a saída nativa é assim até certo ponto plana, ela pode ser
 personalizada em vários níveis, se desejado.   Para detalhes da 
 linguagem HTML e mais informação relacionada, veja-se 
 @uref{http://www.w3.org/MarkUp/}.
-Veja-se @ref{Generating HTML}.
+Veja-se @ref{Gerando HTML}.
 
 @item DVI
 @cindex DVI output, overview
@@ -963,7 +963,7 @@ Essa é então lida por um `controlador' DVI, o qual conhece os comandos
 específicos de dispositivo atuais que podem ser visualizados ou 
 impressos, notadamente Dvips para tradução para PostScript 
 (veja-se @ref{Top,,, dvips, Dvips}) e Xdvi para visualização em uma tela X
-(@uref{http://sourceforge.net/projects/xdvi/}). Veja-se @ref{Hardcopy}.
+(@uref{http://sourceforge.net/projects/xdvi/}). Veja-se @ref{Cópia Impressa}.
 (Esteja avisado de que a linguagem Texinfo é muito diferente de, e muito 
 mais estrita que, as linguagens usuais de @TeX{}: plain @TeX{}, @LaTeX{},
 Con@TeX{}t, etc.).
@@ -1041,7 +1041,7 @@ Os arquivos Info são quase sempre criados pelo processamento de um
 documento fonte Texinfo.   O comando @command{makeinfo}, também 
 conhecido como @command{texi2any}, é o comando principal que converte um 
 arquivo Texinfo em um arquivo Info; veja-se 
-@ref{Generic Translator @command{texi2any}}.
+@ref{Tradutor Genérico @command{texi2any}}.
 
 Geralmente, você adentra um arquivo Info via um nodo que, por convenção, 
 é chamado `Top'.   Esse nodo normalmente contém somente um sumário curto 
@@ -1144,7 +1144,7 @@ referência de um analisador Texinfo; ela cria uma representação de
 árvore da entrada de Texinfo que você pode utilizar para a conversão.
 A documentação no arquivo fonte 
 @file{tp/Texinfo/Convert/Converter.pm} é um bom lugar para começar.
-Veja-se @ref{Generic Translator @command{texi2any}}.
+Veja-se @ref{Tradutor Genérico @command{texi2any}}.
 
 Outra abordagem viável é utilizar a saída XML de Texinfo oriunda de 
 @command{texi2any} como sua entrada.   Esse XML é uma representação 
@@ -1579,7 +1579,7 @@ um manual, você simplesmente modifica os nomes conforme apropriado.
 O arquivo completo, sem os comentários intercalados, é mostrado em 
 @ref{Short Sample Texinfo File}.
 
-Veja-se @ref{Beginning and Ending a File}, para mais documentação acerca dos 
+Veja-se @ref{Iniciando e Finalizando um Arquivo}, para mais documentação acerca dos 
 comandos listados aqui.
 
 
@@ -1754,7 +1754,7 @@ Este é o segundo item.
 @end quotation
 
 
-@node Beginning and Ending a File
+@node Iniciando e Finalizando um Arquivo
 @anchor{Beginning a File} @c old name
 @chapter Começando e Terminando um Arquivo Texinfo @c Capítulo 3
 @cindex Beginning a Texinfo file
@@ -1964,7 +1964,7 @@ A estranha sequência de caracteres, @samp{%**}, é para assegurar que
 nenhum outro comentário seja acidentalmente tomado por uma linha 
 `start-of-header'.  Você pode modificá-la se você desejar, configurando 
 as variáveis Emacs @code{tex-start-of-header} e/ou 
-@code{tex-end-of-header}. @xref{Texinfo Mode Printing}.
+@code{tex-end-of-header}. @xref{Modo Texinfo Printing}.
 
 
 @node @code{@@setfilename}
@@ -2196,7 +2196,7 @@ arquivo fonte.
 
 Veja-se @ref{Copyright Notices,,, maintain, GNU Maintainer Information}, para 
 informação adicional. Veja-se @ref{GNU Sample Texts}, para o texto completo a 
-ser utilizado em manuais GNU. Veja-se @ref{GNU Free Documentation License}, 
+ser utilizado em manuais GNU. Veja-se @ref{Licença de Documentação Livre GNU}, 
 para a própria licença sob a qual GNU e outros manuais livres são 
 distribuídos.
 
@@ -2562,12 +2562,12 @@ plano no mesmo lugar.
 @subsection Heading Generation
 
 @anchor{end titlepage}@c old name
-@cindex Headings, page, begin to appear
+@cindex Cabeçalhos, page, begin to appear
 @cindex Titlepage end starts headings
 @cindex End titlepage starts headings
 @cindex Generating page headings
 
-Como todos os comandos @code{@@end} (veja-se @ref{Quotations and Examples}), o 
+Como todos os comandos @code{@@end} (veja-se @ref{Citações e Exemplos}), o 
 comando @code{@@end titlepage} deve estar escrito no início de uma linha 
 própria, com somente um espaço entre o @code{@@end} e o @code{titlepage}.
 Ele somente marca o fim das páginas de título e de direitos autorais, 
@@ -2606,7 +2606,7 @@ Para desligar os cabeçalhos, escreva @code{@@headings off}. Veja-se
 @item
 Ou, você pode especificar o seu próprio formato de cabeçalho e rodapé de 
 página.
-@xref{Headings}.
+@xref{Cabeçalhos}.
 @end itemize
 
 
@@ -3031,7 +3031,7 @@ O comando @code{@@headings off} anula o comando @code{@@end titlepage},
 o qual do contrário faz com que @TeX{} imprima os cabeçalhos de página.
 
 Você também pode especificar seu próprio estilo de cabeçalho e de rodapé 
-de página. Veja-se @ref{Headings, , Page Headings}, para mais informação.
+de página. Veja-se @ref{Cabeçalhos, , Page Cabeçalhos}, para mais informação.
 
 
 @node @code{@@paragraphindent}
@@ -3085,7 +3085,7 @@ especificado. Veja-se @ref{Início de Cabeçalho}.
 @cindex Suppressing first paragraph indentation
 @cindex Preventing first paragraph indentation
 @cindex Indenting, suppressing of first paragraph
-@cindex Headings, indentation after
+@cindex Cabeçalhos, indentation after
 
 Conforme você pode ver no presente manual, o primeiro parágrafo em 
 qualquer seção não é recuado por padrão.  Tipograficamente, o recuo é um 
@@ -3308,7 +3308,7 @@ estrutura paralela convencional.
 O nome de um nodo identifica o nodo.  Para todos os detalhes de nomes de 
 nodo, veja-se @ref{Exigências de Linha de Nodo}).
 
-@anchor{Node Line Tips}@c nome prévio de nodo
+@anchor{Node Line Dicas}@c nome prévio de nodo
 Aqui estão algumas sugestões para nomes de nodo:
 
 @itemize @bullet
@@ -3425,7 +3425,7 @@ de atualização de nodos disponibilizados pelo modo Texinfo para inserir
 os nomes dos ponteiros; ou (recomendado), você pode deixar os ponteiros 
 fora do arquivo Texinfo e permitir que @code{makeinfo} insira os 
 ponteiros de nodo no arquivo Info que ele criar. 
-(Veja-se @ref{Texinfo Mode}, e @ref{Criação de Ponteiros do @command{makeinfo}}).
+(Veja-se @ref{Modo Texinfo}, e @ref{Criação de Ponteiros do @command{makeinfo}}).
 
 Alternativamente, você pode inserir os ponteiros `Next', `Previous', e 
 `Up' você mesmo.  Se você fizer isso, você pode achar de grande ajuda 
@@ -5716,7 +5716,7 @@ de manual. Também, se o terceiro argumento for dado, o segundo argumento
 
 @menu
 * Exemplos @code{@@url}::           Exemplos da utilização de todas as formas do @code{@@url}.
-* Quebra de linha de URL::       Como as linhas são quebradas dentro do texto do @code{@@url}.
+* Quebra de Linha de URL::       Como as linhas são quebradas dentro do texto do @code{@@url}.
 * Formato de Saída PDF @code{@@url}::  Uma opção especial para ocultar links na saída PDF.
 * Cores de PDF::              Colorindo urls e outros links na saída PDF.
 @end menu
@@ -5807,11 +5807,11 @@ para ser útil, qualquer software que tente detectar URLs em texto já tem
 de detectá-las sem o @samp{<URL:}.
 
 
-@node Quebra de linha de URL
-@subsection Quebra de linha de URL
+@node Quebra de Linha de URL
+@subsection Quebra de Linha de URL
 @c Capítulo 6 - Referências Cruzadas;
 @c Seção 6.10 - @code{@@url}, @code{@@uref@{@var{url}[, @var{text}][, @var{replacement}]@}}
-@c Subseção 6.10.2 - Quebra de linha de URL
+@c Subseção 6.10.2 - Quebra de Linha de URL
 
 @cindex Quebra de linha, e URLs
 @cindex Pontos de interrupção dentro de URLs
@@ -5953,7 +5953,7 @@ referência cruzada dado que um leitor pode facilmente seguir tal
 referência em Info. @xref{@code{@@xref}}.
 
 
-@node Marking Text
+@node Marcando Texto
 @chapter Marcação de Texto, Palavras e Frases
 @cindex Paragraph, marking text within
 @cindex Marking words and phrases
@@ -5962,225 +5962,240 @@ referência em Info. @xref{@code{@@xref}}.
 @cindex Text, marking up
 @c Capítulo 7 - Marcação de Texto, Palavras e Frases
 
-In Texinfo, you can mark words and phrases in a variety of ways.
-The Texinfo formatters use this information to determine how to
-highlight the text.
-You can specify, for example, whether a word or phrase is a
-defining occurrence, a metasyntactic variable, or a symbol used in a
-program.  Also, you can emphasize text, in several different ways.
+Em Texinfo, você pode marcar palavras e frases de várias formas. Os 
+formatadores Texinfo usam essa informação para determinar como destacar 
+o texto. Você pode especificar, por exemplo, quando uma palavra ou frase 
+é uma ocorrência definidora, uma variável metassintática ou um símbolo 
+usado em um programa. Além disso, você pode enfatizar o texto, de 
+diferentes maneiras.
 
 @menu
-* Indicating::                  How to indicate definitions, files, etc.
-* Emphasis::                    How to emphasize text.
+* Indicando::                  Como indicar definições, arquivos, etc.
+* Ênfase::                    Como enfatizar texto.
 @end menu
 
 
-@node Indicating
-@section Indicating Definitions, Commands, etc.
+@node Indicando
+@section Indicando Definições, Comandos, etc.
+@c Capítulo 7 - Marcação de Texto, Palavras e Frases
+@c Seção 7.1 - Indicando Definições, Comandos, etc.
 
-@cindex Highlighting text
-@cindex Indicating commands, definitions, etc.
+@cindex Destacando texto
+@cindex Realçando texto
+@cindex Indicando comandos, definições, etc.
 
-Texinfo has commands for indicating just what kind of object a piece
-of text refers to.  For example, email addresses are marked by
-@code{@@email}; that way, the result can be a live link to send email
-when the output format supports it.  If the email address was simply
-marked as ``print in a typewriter font'', that would not be possible.
+Texinfo tem comandos para indicar exatamente a que tipo de objeto um 
+pedaço de texto se refere. Por exemplo, endereços de correio eletrônico 
+são marcados por @code{@@email}; dessa maneira, o resultado pode ser um 
+link ``vivo'' para enviar mensagem eletrônica quando o formato de saída 
+for compatível. Se o endereço de correio eletrônico simplesmente fosse 
+marcado como ``imprimir em uma fonte de máquina de escrever'', isso não 
+seria possível.
 
 @menu
-* Useful Highlighting::         Highlighting provides useful information.
-* @code{@@code}::                       Indicating program code.
-* @code{@@kbd}::                        Showing keyboard input.
-* @code{@@key}::                        Specifying keys.
-* @code{@@samp}::                       Indicating a literal sequence of characters.
-* @code{@@verb}::                       Indicating a verbatim sequence of characters.
-* @code{@@var}::                        Indicating metasyntactic variables.
-* @code{@@env}::                        Indicating environment variables.
-* @code{@@file}::                       Indicating file names.
-* @code{@@command}::                    Indicating command names.
-* @code{@@option}::                     Indicating option names.
-* @code{@@dfn}::                        Specifying definitions.
-* @code{@@abbr}::                       Indicating abbreviations.
-* @code{@@acronym}::                    Indicating acronyms.
-* @code{@@indicateurl}::                Indicating an example url.
-* @code{@@email}::                      Indicating an electronic mail address.
+* Realçamento Útil::                    Realçamento provê informação útil.
+* @code{@@code}::                       Indicando código de programa.
+* @code{@@kbd}::                        Mostrando entrada de teclado.
+* @code{@@key}::                        Especificando teclas.
+* @code{@@samp}::                       Indicando uma sequência literal de caracteres.
+* @code{@@verb}::                       Indicando uma sequência literal de caracteres.
+* @code{@@var}::                        Indicando variáveis metassintáticas.
+* @code{@@env}::                        Indicando variáveis de ambiente.
+* @code{@@file}::                       Indicando nomes de arquivo.
+* @code{@@command}::                    Indicando nomes de comando.
+* @code{@@option}::                     Indicando nomes de opção.
+* @code{@@dfn}::                        Especificando definições.
+* @code{@@abbr}::                       Indicando abreviações.
+* @code{@@acronym}::                    Indicando siglas.
+* @code{@@indicateurl}::                Indicando uma URL de exemplo.
+* @code{@@email}::                      Indicando um endereço de correio eletrônico.
 @end menu
 
 
-@node Useful Highlighting
-@subsection Highlighting Commands are Useful
+@node Realçamento Útil
+@subsection Comandos de Realçamento são Úteis
+@c Capítulo 7 - Marcação de Texto, Palavras e Frases
+@c Seção 7.1 - Indicando Definições, Comandos, etc.
+@c Subseção 7.1.1 - Comandos de Realçamento são Úteis
 
-The commands serve a variety of purposes:
+Os comandos servem a uma variedade de propósitos:
 
 @table @code
-@item @@code@{@var{sample-code}@}
-Indicate text that is a literal example of a piece of a program.
+@item @@code@{@var{código-modelo}@}
+Indica texto que é um exemplo literal de um pedaço de um programa.  
 @xref{@code{@@code}}.
 
-@item @@kbd@{@var{keyboard-characters}@}
-Indicate keyboard input.  @xref{@code{@@kbd}}.
+@item @@kbd@{@var{caracteres-de-teclado}@}
+Indica entrada de teclado.  @xref{@code{@@kbd}}.
 
-@item @@key@{@var{key-name}@}
-Indicate the conventional name for a key on a keyboard.
+@item @@key@{@var{nome-de-tecla}@}
+Indica o nome convencional para uma tecla em um teclado.  
 @xref{@code{@@key}}.
 
-@item @@samp@{@var{text}@}
-Indicate text that is a literal example of a sequence of characters.
+@item @@samp@{@var{texto}@}
+Indica texto que é um exemplo literal de uma sequência de caracteres.  
 @xref{@code{@@samp}}.
 
-@item @@verb@{@var{text}@}
-Write a verbatim sequence of characters.
-@xref{@code{@@verb}}.
+@item @@verb@{@var{texto}@}
+Escreve uma sequência literal de caracteres.  @xref{@code{@@verb}}.
 
-@item @@var@{@var{metasyntactic-variable}@}
-Indicate a metasyntactic variable.  @xref{@code{@@var}}.
+@item @@var@{@var{variável-metassintática}@}
+Indica uma variável metassintática.  @xref{@code{@@var}}.
 
-@item @@env@{@var{environment-variable}@}
-Indicate an environment variable.  @xref{@code{@@env}}.
+@item @@env@{@var{variável-de-ambiente}@}
+Indica uma variável de ambiente.  @xref{@code{@@env}}.
 
-@item @@file@{@var{file-name}@}
-Indicate the name of a file.  @xref{@code{@@file}}.
+@item @@file@{@var{nome-de-arquivo}@}
+Indica o nome de um arquivo.  @xref{@code{@@file}}.
 
-@item @@command@{@var{command-name}@}
-Indicate the name of a command.
-@xref{@code{@@command}}.
+@item @@command@{@var{nome-de-comando}@}
+Indica o nome de um comando.  @xref{@code{@@command}}.
 
-@item @@option@{@var{option}@}
-Indicate a command-line option.
-@xref{@code{@@option}}.
+@item @@option@{@var{opção}@}
+Indica uma opção de linha de comando.  @xref{@code{@@option}}.
 
-@item @@dfn@{@var{term}@}
-Indicate the introductory or defining use of a term.
-@xref{@code{@@dfn}}.
+@item @@dfn@{@var{termo}@}
+Indica o uso definidor ou introdutório de um termo.  @xref{@code{@@dfn}}.
 
-@item @@cite@{@var{reference}@}
-Indicate the name of a book.  @xref{@code{@@cite}}.
+@item @@cite@{@var{referência}@}
+Indica o nome de um livro.  @xref{@code{@@cite}}.
 
-@item @@abbr@{@var{abbreviation}@}
-Indicate an abbreviation, such as `Comput.'.
+@item @@abbr@{@var{abreviação}@}
+Indica uma abreviação, como `Comput.'.
 
-@item @@acronym@{@var{acronym}@}
-Indicate an acronym.  @xref{@code{@@acronym}}.
+@item @@acronym@{@var{sigla}@}
+Indica uma sigla.  @xref{@code{@@acronym}}.
 
-@item @@indicateurl@{@var{uniform-resource-locator}@}
-Indicate an example (that is, nonfunctional) uniform resource locator.
-@xref{@code{@@indicateurl}}.  (Use @code{@@url} (@pxref{@code{@@url}}) for
-live urls.)
+@item @@indicateurl@{@var{localizador-uniforme-de-recurso}@}
+Indica um exemplo (isto é, não funcional) de Localizador Uniforme de 
+Recurso.  @xref{@code{@@indicateurl}}.  (Use @code{@@url} 
+(@pxref{@code{@@url}}) para URLs ``vivas'').
 
-@item @@email@{@var{email-address}[, @var{displayed-text}]@}
-Indicate an electronic mail address.  @xref{@code{@@email}}.
+@item @@email@{@var{endereço-de-email}[, @var{texto-exibido}]@}
+Indica um endereço de correio eletrônico.  @xref{@code{@@email}}.
 
 @end table
 
 
 @node @code{@@code}
-@subsection @code{@@code}@{@var{sample-code}@}
+@subsection @code{@@code}@{@var{código-modelo}@}
+@c Capítulo 7 - Marcação de Texto, Palavras e Frases
+@c Seção 7.1 - Indicando Definições, Comandos, etc.
+@c Subseção 7.1.2 - @code{código-modelo}
 
-@anchor{code}@c old name
-@findex code
+@anchor{code} @c nome antigo
+@findex código
 
-@cindex Syntactic tokens, indicating
-Use the @code{@@code} command to indicate text that is a piece of a
-program and which consists of entire syntactic tokens.  Enclose the
-text in braces.
+@cindex Tokens sintáticos, indicando
+@cindex Símbolos sintáticos, indicando
+Use o comando @code{@@code} para indicar texto que é um pedaço de um 
+programa e que consiste de símbolos sintáticos inteiros. Coloque o texto 
+entre chaves.
 
-@cindex Expressions in a program, indicating
-@cindex Keywords, indicating
-@cindex Reserved words, indicating
-Thus, you should use @code{@@code} for an expression in a program, for
-the name of a variable or function used in a program, or for a
-keyword in a programming language.
+@cindex Expressões em um programa, indicando
+@cindex Palavras chave, indicando
+@cindex Palavras reservadas, indicando
+Assim, você deveria usar @code{@@code} para uma expressão em um 
+programa, para o nome de uma variável ou função usada em um programa ou 
+para uma palavra chave em uma linguagem de programação.
 
-Use @code{@@code} for command names in languages that resemble
-programming languages, such as Texinfo.  For example, @code{@@code} and
-@code{@@samp} are produced by writing @samp{@@code@{@@@@code@}} and
-@samp{@@code@{@@@@samp@}} in the Texinfo source, respectively.
+Use @code{@@code} para nomes de comando em linguagens que reconstróem 
+linguagens de programação, como Texinfo.  Por exemplo, @code{@@code} e 
+@code{@@samp} são produzidos escrevendo @samp{@@code@{@@@@code@}} e 
+@samp{@@code@{@@@@samp@}} no fonte Texinfo, respectivamente.
 
-@cindex Case, not altering in @code{@@code}
-It is incorrect to alter the case of a word inside a @code{@@code}
-command when it appears at the beginning of a sentence.  Most computer
-languages are case sensitive.  In C, for example, @code{Printf} is
-different from the identifier @code{printf}, and most likely is a
-misspelling of it.  Even in languages which are not case sensitive, it
-is confusing to a human reader to see identifiers spelled in different
-ways.  Pick one spelling and always use that.  If you do not want to
-start a sentence with a command name written all in lowercase, you
-should rearrange the sentence.
+@cindex Maiúscula, não alteração @code{@@code}
+É incorreto alterar a primeira letra (para maiúscula) de uma palavra 
+dentro de um comando @code{@@code} quando esse aparece no início de uma 
+frase. A maioria das linguagens de programação diferencia maiúsculas de 
+minúsculas. Em C, por exemplo, @code{Printf} é diferente do 
+identificador @code{printf}, e possivelmente é um erro de ortografia. 
+Mesmo em linguagens que não diferenciam maiúsculas de minúsculas, é 
+confuso para um leitor humano ver identificadores escritos de diferentes 
+maneiras. Escolha uma grafia e sempre a use. Se você não quer iniciar 
+uma frase com um nome de comando escrito todo em letras minúsculas, você 
+deveria reorganizar a frase.
 
-In the Info output, @code{@@code} results in single quotation marks
-around the text.  In other formats, @code{@@code} argument is typeset
-in a typewriter (monospace) font.  For example,
+Na saída Info, @code{@@code} resulta em aspas simples em torno do texto. 
+Em outros formatos, o argumento @code{@@code} é formatado em uma fonte 
+de máquina de escrever (monoespaçada). Por exemplo, 
 
 @example
-The function returns @@code@{nil@}.
+A função retorna @@code@{nulo@}.
 @end example
 
 @noindent
-produces this:
+produz isto:
 
 @quotation
-The function returns @code{nil}.
+A função retorna @code{nulo}.
 @end quotation
 
-Here are some cases for which it is preferable @emph{not} to use @code{@@code}:
+Aqui estão alguns casos para os quais é preferível @emph{não} usar 
+@code{@@code}:
 
 @itemize @bullet
 @item
-For shell command names such as @command{ls} (use @code{@@command}).
+Para nomes de comando de shell como @command{ls} (use @code{@@command}).
 
 @item
-For environment variable such as @env{TEXINPUTS} (use @code{@@env}).
+Para variável de ambiente como @env{TEXINPUTS} (use @code{@@env}).
 
 @item
-For shell options such as @samp{-c} when such options stand alone (use
-@code{@@option}).
+Para opções de shell como @samp{-c} quando tais opções são independentes 
+(use @code{@@option}).
 
 @item
-An entire shell command often looks better if written using
-@code{@@samp} rather than @code{@@code}.  In this case, the rule is to
-choose the more pleasing format.
+Um comando inteiro de shell frequentemente parece melhor se escrito 
+usando @code{@@samp} em vez de @code{@@code}. Nesse caso, a regra é 
+escolher o formato mais agradável.
 
 @item
-For a string of characters shorter than a syntactic token.  For example,
-if you are writing about @samp{goto-ch}, which is just a part of the
-name for the @code{goto-char} Emacs Lisp function, you should use
-@code{@@samp}.
+Para uma sequência de caracteres menor que um token sintático. Por 
+exemplo, se você está escrevendo sobre @samp{goto-ch}, que apenas é 
+parte do nome para a função @code{goto-char} da Emacs Lisp, você deveria 
+usar @code{@@samp}.
 
 @item
-In general, when writing about the characters used in a token; for
-example, do not use @code{@@code} when you are explaining what letters
-or printable symbols can be used in the names of functions.  (Use
-@code{@@samp}.)  Also, you should not use @code{@@code} to mark text
-that is considered input to programs unless the input is written in a
-language that is like a programming language.  For example, you should
-not use @code{@@code} for the keystroke commands of GNU Emacs (use
-@code{@@kbd} instead) although you may use @code{@@code} for the names
-of the Emacs Lisp functions that the keystroke commands invoke.
+Geralmente, quando escrever acerca dos caracteres usados em um token; 
+por exemplo, não use @code{@@code} quando estiver explanando quais 
+letras ou símbolos imprimíveis podem ser usados nos nomes das funções. 
+(Use @code{@@samp}). Ainda, você deveria não usar @code{@@code} para 
+marcar texto que é considerado entrada para programas, a menos que a 
+entrada seja escrita em uma linguagem que seja semelhante a uma 
+linguagem de programação. Por exemplo, você não deveria usar 
+@code{@@code} para os comandos de teclas do GNU Emacs (use @code{@@kbd} 
+em vez disso), apesar que você pode usar @code{@@code} para os nomes das 
+funções da Emacs Lisp que os comandos de teclas invocam.
 
 @end itemize
 
-By default, @TeX{} will consider breaking lines at @samp{-} and
-@samp{_} characters within @code{@@code} and related commands.  This
-can be controlled with @code{@@allowcodebreaks}
-(@pxref{@code{@@allowcodebreaks}}).  The HTML output attempts to
-respect this for @samp{-}, but ultimately it is up to the browser's
-behavior.  For Info, it seems better never to make such breaks.
+Por padrão, @TeX{} considerará quebras de linhas nos caracteres @samp{-} 
+e @samp{_} dentro do @code{@@code} e comandos relacionados. Isso pode 
+ser controlado com @code{@@allowcodebreaks} 
+(@pxref{@code{@@allowcodebreaks}}). A saída HTML tenta respeitar isso 
+para @samp{-}, mas, no final, depende do comportamento do navegador. 
+Para Info, parece melhor nunca fazer tais quebras.
 
-For Info, the quotes are omitted in the output of the @code{@@code}
-command and related commands (e.g., @code{@@kbd}, @code{@@command}),
-in typewriter-like contexts such as the @code{@@example} environment
-(@pxref{@code{@@example}}) and @code{@@code} itself, etc.
+Para Info, as aspas são omitidas na saída do comando @code{@@code} e 
+comandos relacionados (por exemplo, @code{@@kbd}, @code{@@command}), em 
+contextos semelhantes a máquinas de escrever, como o ambiente 
+@code{@@example} (@pxref{@code{@@example}}) e o próprio @code{@@code}, 
+etc.
 
-To control which quoting characters are implicitly inserted by Texinfo
-processors in the output of @samp{@@code}, etc., see the
-@code{OPEN_QUOTE_SYMBOL} and @code{CLOSE_QUOTE_SYMBOL} customization
-variables (@pxref{Outras Variáveis de Personalização}).  This is separate
-from how actual quotation characters in the input document are handled
-(@pxref{Inserting Quote Characters}).
+Para controlar quais caracteres de citação são implicitamente inseridos 
+por processadores Texinfo na saída do @samp{@@code}, etc., veja as 
+variáveis de personalização @code{OPEN_QUOTE_SYMBOL} e 
+@code{CLOSE_QUOTE_SYMBOL} (@pxref{Outras Variáveis de Personalização}).  
+Isso é separado de como são manipulados os atuais caracteres de citação 
+no documento de entrada (@pxref{Inserindo Caracteres de Citação}).
 
 
 @node @code{@@kbd}
-@subsection @code{@@kbd}@{@var{keyboard-characters}@}
+@subsection @code{@@kbd}@{@var{caracteres-de-teclado}@}
+@c Capítulo 7 - Marcação de Texto, Palavras e Frases
+@c Seção 7.1 - Indicando Definições, Comandos, etc.
+@c Subseção 7.1.3 - @kbd{caracteres-de-teclado}
 
 @anchor{kbd}@c old name
 @findex kbd
@@ -6841,7 +6856,7 @@ suggestions to the @email{bug-texinfo@@gnu.org, same place}.
 @end display
 
 
-@node Emphasis
+@node Ênfase
 @section Emphasizing Text
 @cindex Emphasizing text
 
@@ -7052,7 +7067,7 @@ exist primarily to make it possible to document the functionality of
 specific font effects, such as in @TeX{} and related packages.
 
 
-@node Quotations and Examples
+@node Citações e Exemplos
 @chapter Citações e Exemplos
 
 Quotations and examples are blocks of text consisting of one or more
@@ -7710,7 +7725,7 @@ beginning of what would otherwise be a paragraph, to eliminate the
 indentation that normally happens there.  It can either be followed by
 text or be on a line by itself.  There is no reason to use it
 in other contexts, such as in the middle of a paragraph or inside an
-environment (@pxref{Quotations and Examples}).
+environment (@pxref{Citações e Exemplos}).
 
 You can control the number of blank lines in the Info file output by
 adjusting the input as desired: a line containing just
@@ -7856,7 +7871,7 @@ consistently within a chapter.
 
 
 
-@node Lists and Tables
+@node Listas e Tabelas
 @chapter Listas e Tabelas
 @cindex Making lists and tables
 @cindex Lists and tables, making
@@ -8217,7 +8232,7 @@ with each one, such as a list of definitions.
 Write the @code{@@table} command at the beginning of a line, after a
 blank line, and follow it on the same line with an argument that is an
 `indicating'' command, such as @code{@@code}, @code{@@samp},
-@code{@@var}, @code{@@option}, or @code{@@kbd} (@pxref{Indicating}).
+@code{@@var}, @code{@@option}, or @code{@@kbd} (@pxref{Indicando}).
 This command will be applied to the text in the first column.  For 
 example, @code{@@table @@code} will cause the text in the first column 
 to be output as if it had been the argument to a @code{@@code} command.
@@ -8234,7 +8249,7 @@ explicitly mentioned here.  However, you can only use predefined
 Texinfo commands that take an argument in braces.  You cannot
 reliably use a new command defined with @code{@@macro}, although an
 @code{@@alias} (for a suitable predefined command) is acceptable.
-@xref{Defining New Texinfo Commands}.
+@xref{Definindo Novos Comandos Texinfo}.
 
 @findex item
 Begin each table entry with an @code{@@item} command at the beginning
@@ -8307,7 +8322,7 @@ the first column of the table into the index of variables.  This
 simplifies the task of creating indices.  Only the items on the same
 line as the @code{@@item} or @code{@@itemx} commands are indexed, and
 they are indexed in exactly the form that they appear on that line.
-@xref{Indices}, for more information about indices.
+@xref{Índices}, for more information about indices.
 
 Begin a two-column table using @code{@@ftable} or @code{@@vtable} by
 writing the @@-command at the beginning of a line, followed on the same
@@ -8509,7 +8524,7 @@ split that window.
 @end multitable
 
 
-@node Special Displays
+@node Exibições Especiais
 @chapter Exibições Especiais
 @cindex Special displays
 
@@ -9077,7 +9092,7 @@ formatted for Info in the separate node style:
 
 @smallexample
 @group
-File: texinfo.info  Node: Overview-Footnotes, Up: Overview
+File: texinfo.info  Node: Visão Geral-Footnotes, Up: Visão Geral
 
 (1) The first syllable of "Texinfo" is pronounced like "speck", not
 "hex". @dots{}
@@ -9119,9 +9134,9 @@ not split, footnotes are put at the end of the output.  If set to
 separate file.
 
 
-@node Indices
+@node Índices
 @chapter Índices
-@cindex Indices
+@cindex Índices
 
 Using Texinfo, you can generate indices without having to sort and
 collate entries manually.  In an index, the entries are listed in
@@ -9136,19 +9151,19 @@ You can combine indices or use them for other than their canonical
 purpose.  Lastly, you can define your own new indices.
 
 @menu
-* Predefined Indices::          Use different indices for different kinds
+* Predefined Índices::          Use different indices for different kinds
                                  of entries.
 * Indexing Commands::           How to make an index entry.
 * Index Entries::               Choose different words for index entries.
 * Imprimindo Índices e Menus::    How to print an index in hardcopy and
                                  generate index menus in Info.
-* Combining Indices::           How to combine indices.
-* New Indices::                 How to define your own indices.
+* Combining Índices::           How to combine indices.
+* New Índices::                 How to define your own indices.
 @end menu
 
 
-@node Predefined Indices
-@section Predefined Indices
+@node Predefined Índices
+@section Predefined Índices
 
 Texinfo provides six predefined indices.  Here are their nominal
 meanings, abbreviations, and the corresponding index entry commands:
@@ -9201,13 +9216,13 @@ On the other hand, it is best not to stray too far from the meaning of
 the predefined indices.  Otherwise, in the event that your text is
 combined with other text from other manuals, the index entries will
 not match up.  Instead, define your own new index (@pxref{New
-Indices}).
+Índices}).
 
 We recommend having a single index in the final document whenever
 possible, however many source indices you use, since then readers have
 only one place to look.  Two or more source indices can be combined
 into one output index using the @code{@@synindex} or
-@code{@@syncodeindex} commands (@pxref{Combining Indices}).
+@code{@@syncodeindex} commands (@pxref{Combining Índices}).
 
 
 @node Indexing Commands
@@ -9259,7 +9274,7 @@ By default, entries for a concept index are printed in a small roman
 font and entries for the other indices are printed in a small
 @code{@@code} font.  You may change the way part of an entry is
 printed with the usual Texinfo commands, such as @code{@@file} for
-file names (@pxref{Marking Text}), and @code{@@r} for the normal roman
+file names (@pxref{Marcando Texto}), and @code{@@r} for the normal roman
 font (@pxref{Fonts}).
 
 @findex sortas
@@ -9339,7 +9354,7 @@ different ways people may look for something.  Different people
 helpful index will have items indexed under all the different words
 that people may use.  For example, one reader may think it obvious
 that the two-letter names for indices should be listed under
-``Indices, two-letter names, since ``Indices'' are the general
+``Índices, two-letter names, since ``Índices'' are the general
 concept.  But another reader may remember the specific concept of
 two-letter names and search for the entry listed as ``Two letter names
 for indices''.  A good index will have both entries and will help both
@@ -9351,9 +9366,9 @@ yourself.
 
 
 @node Imprimindo Índices e Menus
-@section Printing Indices and Menus
+@section Printing Índices and Menus
 @cindex Printing an index
-@cindex Indices, printing and menus
+@cindex Índices, printing and menus
 @cindex Generating menus with indices
 @cindex Menus generated with indices
 
@@ -9364,12 +9379,12 @@ cause the raw data for the index to be accumulated.  To generate an
 index, you must include the @code{@@printindex} command at the place in
 the document where you want the index to appear.  Also, as part of the
 process of creating a printed manual, you must run a program called
-@code{texindex} (@pxref{Hardcopy}) to sort the raw data to produce a
+@code{texindex} (@pxref{Cópia Impressa}) to sort the raw data to produce a
 sorted index file.  The sorted index file is what is actually used to
 print the index.
 
 Texinfo offers six separate types of predefined index, which suffice
-in most cases.  @xref{Indices}, for information on this, as well
+in most cases.  @xref{Índices}, for information on this, as well
 defining your own new indices, combining indices, and, most
 importantly advice on writing the actual index entries.  This section
 focuses on printing indices, which is done with the
@@ -9443,10 +9458,10 @@ In XML and Docbook output, it simply records the index to be printed.
 @end itemize
 
 
-@node Combining Indices
-@section Combining Indices
+@node Combining Índices
+@section Combining Índices
 @cindex Combining indices
-@cindex Indices, combining them
+@cindex Índices, combining them
 
 Sometimes you will want to combine two disparate indices such as
 functions and concepts, perhaps because you have few enough entries
@@ -9494,7 +9509,7 @@ The template looks like this:
 
 @cindex Predefined names for indices
 @cindex Two letter names for indices
-@cindex Indices, two letter names
+@cindex Índices, two letter names
 @cindex Names for indices
 For this purpose, the indices are given two-letter names:
 
@@ -9561,16 +9576,16 @@ index into a function index.
 at the end of a book or creating an index menu in an Info file.
 
 
-@node New Indices
-@section Defining New Indices
+@node New Índices
+@section Defining New Índices
 
 @cindex Defining new indices
-@cindex Indices, defining new
+@cindex Índices, defining new
 @cindex New index defining
 @findex defindex
 @findex defcodeindex
 
-In addition to the predefined indices (@pxref{Predefined Indices}),
+In addition to the predefined indices (@pxref{Predefined Índices}),
 you may use the @code{@@defindex} and @code{@@defcodeindex} commands
 to define new indices.  These commands create new indexing @@-commands
 with which you mark index entries.  The @code{@@defindex} command is
@@ -9629,7 +9644,7 @@ You should define new indices before the end-of-header line of a
 Texinfo file, and (of course) before any @code{@@synindex} or
 @code{@@syncodeindex} commands (@pxref{Texinfo File Header}).
 
-As mentioned earlier (@pxref{Predefined Indices}), we recommend having
+As mentioned earlier (@pxref{Predefined Índices}), we recommend having
 a single index in the final document whenever possible, however many
 source indices you use, since then readers have only one place to
 look.
@@ -9642,7 +9657,7 @@ other purposes, such as @samp{.aux} or @samp{.xml}.
 well-known extension name.
 
 
-@node Insertions
+@node Inserções
 @chapter Inserções Especiais
 @cindex Inserting special characters and symbols
 @cindex Special insertions
@@ -9671,7 +9686,7 @@ These are:
 
 @menu
 * Special Characters::          Inserting @@ @{@} , \ #
-* Inserting Quote Characters::  Inserting left and right quotes, in code.
+* Inserindo Caracteres de Citação::  Inserting left and right quotes, in code.
 * Inserting Space::             Inserting the right amount of whitespace.
 * Inserting Accents::           Inserting accents and special characters.
 * Inserting Quotation Marks::   Inserting quotation marks.
@@ -9850,8 +9865,8 @@ Although @samp{@@hashchar@{@}} can be used nearly anywhere, there
 is no need for it anywhere except this unusual case.
 
 
-@node Inserting Quote Characters
-@section Inserting Quote Characters
+@node Inserindo Caracteres de Citação
+@section Inserindo Caracteres de Citação
 
 @cindex Inserting quote characters
 @cindex Quote characters, inserting
@@ -10026,7 +10041,7 @@ a period.
 A few Texinfo commands force normal interword spacing, so that you
 don't have to insert @code{@@:} where you otherwise would.  These are
 the code-like highlighting commands, @code{@@var}, @code{@@abbr}, and
-@code{@@acronym} (@pxref{Useful Highlighting}).  For example, in
+@code{@@acronym} (@pxref{Realçamento Útil}).  For example, in
 @samp{@@code@{foo. bar@}} the period is not considered to be the end of a
 sentence, and no extra space is inserted.
 
@@ -11297,7 +11312,7 @@ in the six ASCII characters @samp{U+0132} for the example above.
 That's all.  No magic!
 
 
-@node Breaks
+@node Quebras
 @chapter Forçando e Evitando Quebras
 
 @cindex Forcing line and page breaks
@@ -11384,7 +11399,7 @@ Start a new page if not enough space on this one.
 @findex / @r{(allow line break)}
 @cindex Line breaks, controlling
 @cindex Controlling line breaks
-@cindex Breaks in a line
+@cindex Quebras in a line
 @cindex Force line break
 @cindex Allow line break
 
@@ -11408,9 +11423,9 @@ into two lines.
 
 The @code{@@/} command can be useful within long urls or other
 identifiers where @TeX{} can't find a good place to break.  @TeX{}
-will automatically break urls at the natural places (@pxref{URL Line
-Breaking}), so only use @code{@@/} if you need it.  @code{@@/} has no
-effect in the other output format.
+will automatically break urls at the natural places 
+(@pxref{Quebra de Linha de URL}), so only use @code{@@/} if you need it.  
+@code{@@/} has no effect in the other output format.
 
 
 @node @code{@@- @@hyphenation}
@@ -11455,7 +11470,7 @@ these commands have any effect there.
 
 @anchor{allowcodebreaks}@c old name
 @findex allowcodebreaks
-@cindex Breaks, within @code{@@code}
+@cindex Quebras, within @code{@@code}
 @cindex @sortas{-} -, breakpoint within @code{@@code}
 @cindex Hyphen, breakpoint within @code{@@code}
 @cindex Dash, breakpoint within @code{@@code}
@@ -11617,7 +11632,7 @@ page.
 
 
 @node @code{@@group}
-@section @code{@@group}: Prevent Page Breaks
+@section @code{@@group}: Prevent Page Quebras
 
 @anchor{group}@c old name
 @findex group
@@ -11639,7 +11654,7 @@ Although @code{@@group} would make sense conceptually in a wide
 variety of contexts, its current implementation works reliably only
 within @code{@@example} and variants, and within @code{@@display},
 @code{@@format}, @code{@@flushleft} and @code{@@flushright}.
-@xref{Quotations and Examples}.  (What all these commands have in
+@xref{Citações e Exemplos}.  (What all these commands have in
 common is that each line of input produces a line of output.)  In
 other contexts, @code{@@group} can cause anomalous vertical
 spacing.
@@ -11676,7 +11691,7 @@ considerable text.  It is a good rule of thumb to look for a missing
 
 
 @node @code{@@need}
-@section @code{@@need @var{mils}}: Prevent Page Breaks
+@section @code{@@need @var{mils}}: Prevent Page Quebras
 
 @anchor{need}@c old name
 @findex need
@@ -11706,7 +11721,7 @@ The @code{@@need} command is useful for preventing orphans: single
 lines at the bottoms of printed pages.
 
 
-@node Definition Commands
+@node Comandos de Definição
 @chapter Comandos de Definição
 @cindex Definition commands
 
@@ -11725,7 +11740,7 @@ output formats, the body of the definition is indented.  Also, the
 name of the entity is entered into the appropriate index:
 @code{@@deffn} enters the name into the index of functions,
 @code{@@defvr} enters it into the index of variables, and so
-on (@pxref{Predefined Indices}).
+on (@pxref{Predefined Índices}).
 
 A manual need not and should not contain more than one definition for
 a given name.  An appendix containing a summary should use
@@ -11928,7 +11943,7 @@ this:
 @end example
 
 @noindent
-The function is listed in the Command and Variable Index under
+The function is listed in the Índice de Comando e Variável under
 @samp{foobar}.
 
 
@@ -11994,7 +12009,7 @@ The `x' forms work similarly to @code{@@itemx}
 
 
 @node Def Cmds in Detail
-@section The Definition Commands
+@section The Comandos de Definição
 
 Texinfo provides more than a dozen definition commands, all of which
 are described in this section.
@@ -12801,14 +12816,14 @@ Ordinary variables and user options are described using a format like
 that for functions except that variables do not take arguments.
 
 
-@node Internationalization
+@node Internacionalização
 @chapter Internacionalização
 
-@cindex Internationalization
+@cindex Internacionalização
 Texinfo has some support for writing in languages other than English,
 although this area still needs considerable work.  (If you are
 yourself helping to translate the fixed strings written to documents,
-@pxref{Internationalization of Document Strings}.)
+@pxref{Internacionalização of Document Strings}.)
 
 For a list of the various accented and special characters Texinfo
 supports, see @ref{Inserting Accents}.
@@ -12848,12 +12863,12 @@ example, @code{de} is equivalent to @code{de_DE} (German as spoken in
 Germany).
 
 @cindex Document strings, translation of
-For Info and other online output, this command changes the translation
-of various @dfn{document strings} such as ``see'' in cross-references
-(@pxref{Referências Cruzadas}), ``Function' in defuns (@pxref{Definition
-Commands}), and so on.  Some strings, such as ``Node:'', ``Next:'',
-``Menu:'', etc., are keywords in Info output, so are not translated
-there; they are translated in other output formats.
+For Info and other online output, this command changes the translation 
+of various @dfn{document strings} such as ``see'' in cross-references 
+(@pxref{Referências Cruzadas}), ``Function' in defuns 
+(@pxref{Comandos de Definição}), and so on.  Some strings, such as 
+``Node:'', ``Next:'', ``Menu:'', etc., are keywords in Info output, so 
+are not translated there; they are translated in other output formats.
 
 @cindex @file{txi-@var{cc}.tex}
 For @TeX{}, this command causes a file @file{txi-@var{locale}.tex} to
@@ -12879,7 +12894,7 @@ the extended @TeX{} programs @command{etex} (DVI output) and
 extended @TeX{}s if they are available (@pxref{Format with
 @command{texi2dvi}}).
 
-In September 2006, the W3C Internationalization Activity released a
+In September 2006, the W3C Internacionalização Activity released a
 new recommendation for specifying languages:
 @url{http://www.rfc-editor.org/rfc/bcp/bcp47.txt}.  When Gettext
 supports this new scheme, Texinfo will too.
@@ -13771,7 +13786,7 @@ Good, @@samp@{@@@@node@} is defined.
 This conditional will also consider true any new commands defined by
 the document via @code{@@macro}, @code{@@alias},
 @code{@@definfoenclose}, and @code{@@def@r{(}code@r{)}index}
-(@pxref{Defining New Texinfo Commands}).  Caveat: the @TeX{}
+(@pxref{Definindo Novos Comandos Texinfo}).  Caveat: the @TeX{}
 implementation reports internal @TeX{} commands, in addition to all
 the Texinfo commands, as being ``defined''; the @code{makeinfo}
 implementation is reliable in this regard, however.
@@ -13863,7 +13878,7 @@ the processors cannot reliably determine which commands to consider
 for nesting purposes.
 
 
-@node Defining New Texinfo Commands
+@node Definindo Novos Comandos Texinfo
 @chapter Definindo Novos Comandos Texinfo
 
 @cindex Macros
@@ -14446,7 +14461,7 @@ command (such as @code{@@emph}, @code{@@strong}, @code{@@t}, or
 definition.  We don't recommend this.
 
 An enclosure command defined this way takes one argument in braces,
-since it is intended for new markup commands (@pxref{Marking Text}).
+since it is intended for new markup commands (@pxref{Marcando Texto}).
 
 @findex phoo
 For example, you can write:
@@ -14599,10 +14614,10 @@ will run @command{makeinfo} first to expand macros and eliminate
 @samp{#line}.
 
 @item
-If you run @command{makeinfo} or its variants (@pxref{Generic
-Translator @command{texi2any}}), you can specify @option{--no-ifinfo
---iftex -E somefile.out}, and then give @file{somefile.out} to
-@code{texi2dvi} in a separate command.
+If you run @command{makeinfo} or its variants 
+(@pxref{Tradutor Genérico @command{texi2any}}), you can specify 
+@option{--no-ifinfo --iftex -E somefile.out}, and then give 
+@file{somefile.out} to @code{texi2dvi} in a separate command.
 
 @item
 Or you can run @option{makeinfo --dvi --Xopt -E}.  (Or @option{--pdf}
@@ -14665,7 +14680,7 @@ The possible solutions are described above (@pxref{@samp{#line} Directive}).
 @node Arquivos Include
 @chapter Arquivos Include
 
-@cindex Arquivos Incluídos
+@cindex Arquivos Include
 
 When a Texinfo processor sees an @code{@@include} command in a Texinfo
 file, it processes the contents of the file named by the
@@ -14674,20 +14689,20 @@ created.  Include files thus let you keep a single large document as a
 collection of conveniently small parts.
 
 @menu
-* Using Arquivos Incluídos::         How to use the @code{@@include} command.
+* Using Arquivos Include::         How to use the @code{@@include} command.
 * @code{texinfo-multiple-files-update}:: How to create and update Nodos and
                                      menus when using included files.
-* Arquivos Incluídos Requirements::  @code{texinfo-multiple-files-update} needs.
+* Arquivos Include Requirements::  @code{texinfo-multiple-files-update} needs.
 * Sample Include File::         A sample outer file with included files
                                      within it; and a sample included file.
 * @code{@@verbatiminclude}::            Including a file verbatim.
-* Arquivos Incluídos Evolution::     How use of the @code{@@include} command
+* Arquivos Include Evolution::     How use of the @code{@@include} command
                                      has changed over time.
 @end menu
 
 
-@node Using Arquivos Incluídos
-@section How to Use Arquivos Incluídos
+@node Using Arquivos Include
+@section How to Use Arquivos Include
 
 @findex include
 
@@ -14796,10 +14811,10 @@ updates @emph{every} pointer and menu in @emph{all} the files and
 then inserts a master menu.
 
 
-@node Arquivos Incluídos Requirements
-@section Arquivos Incluídos Requirements
-@cindex Arquivos Incluídos requirements
-@cindex Requirements for Arquivos Incluídos
+@node Arquivos Include Requirements
+@section Arquivos Include Requirements
+@cindex Arquivos Include requirements
+@cindex Requirements for Arquivos Include
 
 If you plan to use the @code{texinfo-multiple-files-update} command,
 the outer Texinfo file that lists included files within it should
@@ -14841,7 +14856,7 @@ would insert a main or master menu:
 @c %**end of header
 @end group
 
-... @xref{Sample Texinfo Files}, for
+... @xref{Arquivos Texinfo Modelo}, for
 examples of the rest of the frontmatter ...
 
 @group
@@ -14925,8 +14940,8 @@ For a method on printing the file contents in a smaller font size, see
 the end of the section on @code{@@verbatim}.
 
 
-@node Arquivos Incluídos Evolution
-@section Evolution of Arquivos Incluídos
+@node Arquivos Include Evolution
+@section Evolution of Arquivos Include
 
 When Info was first created, it was customary to create many small
 Info files on one subject.  Each Info file was formatted from its own
@@ -14965,14 +14980,14 @@ you can write menus and cross-references without naming the different
 Texinfo files.
 
 
-@node Hardcopy
+@node Cópia Impressa
 @chapter Formatando e Imprimindo Cópia Impressa
 @cindex Format and print hardcopy
 @cindex Printing hardcopy
-@cindex Hardcopy, printing it
+@cindex Cópia Impressa, printing it
 @cindex Making a printed manual
 @cindex Sorting indices
-@cindex Indices, sorting
+@cindex Índices, sorting
 @cindex @TeX{} index sorting
 
 Running the @command{texi2dvi} or @command{texi2pdf} command is the
@@ -15000,7 +15015,7 @@ Details are in the following sections.
 * Format with @command{tex}/@command{texindex}::    Formatting with explicit shell commands.
 * Print with @command{lpr}::              How to print.
 * Within Emacs::                How to format and print from an Emacs shell.
-* Texinfo Mode Printing::       How to format and print in Texinfo mode.
+* Modo Texinfo Printing::       How to format and print in Texinfo mode.
 * Compile-Command::             How to print using Emacs's compile command.
 * Requirements Summary::        @TeX{} formatting requirements summary.
 * Preparing for @TeX{}::           What to do before you use @TeX{}.
@@ -15446,7 +15461,7 @@ You can give formatting and printing commands from a shell within GNU
 Emacs, just like any other shell command.  To create a shell within
 Emacs, type @kbd{M-x shell} (@pxref{Shell,,, emacs, The GNU Emacs
 Manual}).  In this shell, you can format and print the document.
-@xref{Hardcopy, , Format and Print Hardcopy}, for details.
+@xref{Cópia Impressa, , Format and Print Cópia Impressa}, for details.
 
 You can switch to and from the shell buffer while @code{tex} is
 running and do other editing.  If you are formatting a long document
@@ -15467,8 +15482,8 @@ See the next section for more information about formatting
 and printing in Texinfo mode.
 
 
-@node Texinfo Mode Printing
-@section Formatting and Printing in Texinfo Mode
+@node Modo Texinfo Printing
+@section Formatting and Printing in Modo Texinfo
 @cindex Region printing in Texinfo mode
 @cindex Format and print in Texinfo mode
 @cindex Print and format in Texinfo mode
@@ -15648,7 +15663,7 @@ For more information, see:
 @itemize @bullet
 @item @ref{@code{@@settitle}}.
 @item @ref{@code{@@setchapternewpage}}.
-@item @ref{Headings}.
+@item @ref{Cabeçalhos}.
 @item @ref{Titlepage & Copyright Page}.
 @item @ref{Imprimindo Índices e Menus}.
 @item @ref{Conteúdo}.
@@ -16084,7 +16099,7 @@ and you can get it over the Internet or on physical media.  See
 @c please keep that text in sync with www.gnu.org/prep/FTP
 
 
-@node Generic Translator @command{texi2any}
+@node Tradutor Genérico @command{texi2any}
 @chapter @command{texi2any}: O Tradutor Genérico para Texinfo
 
 @command{texi2any} is the generic translator for Texinfo that can
@@ -16123,7 +16138,7 @@ The rest of this chapter goes into the details.
 * @command{texi2any} Printed Output::     Calling @command{texi2dvi}.
 * Pointer Validation::          How to check that pointers point somewhere.
 * Customization Variables::     Configuring @command{texi2any}.
-* Internationalization of Document Strings:: Translating program-inserted text.
+* Internacionalização of Document Strings:: Translating program-inserted text.
 * Invoking @command{pod2texi}::           Translating Perl pod to Texinfo.
 * @command{texi2html}::                   An ancestor of @command{texi2any}.
 @end menu
@@ -16371,7 +16386,7 @@ successfully.
 Generate HTML output (rather than Info).  By default, the HTML output
 is split into one output file per Texinfo source node, and the split
 output is written into a subdirectory based on the name of the
-top-level Info file.  @xref{Generating HTML}.
+top-level Info file.  @xref{Gerando HTML}.
 
 @item -I @var{path}
 @opindex -I @var{path}
@@ -16455,7 +16470,7 @@ compatibility.)
 When generating HTML, and output is split, also output navigation
 links only at the beginning of each file.  If output is not split, do
 not include navigation links at the top of each node at all.
-@xref{Generating HTML}.
+@xref{Gerando HTML}.
 
 @item --no-ifdocbook
 @opindex --no-ifdocbook
@@ -16491,7 +16506,7 @@ not split, @option{--node-files} enables the creation of the
 redirection files, in addition to the monolithic main output file.
 @option{--no-node-files} suppresses the creation of redirection files
 in any case.  This option has no effect with any output format other
-than HTML@.  @xref{Generating HTML}.
+than HTML@.  @xref{Gerando HTML}.
 
 @item --no-number-footnotes
 @opindex --no-number-footnotes
@@ -16632,8 +16647,8 @@ Variables}.
 @c
 When generating Info, by default large output files are split into
 smaller subfiles, of approximately 300k bytes.  When generating HTML,
-by default each output file contains one node (@pxref{Generating
-HTML}).  @option{--no-split} suppresses this splitting of the output.
+by default each output file contains one node (@pxref{Gerando HTML}). 
+ @option{--no-split} suppresses this splitting of the output.
 
 Alternatively, @option{--split=@var{how}} may be used to specify at
 which level the HTML output should be split.  The possible values for
@@ -17435,7 +17450,7 @@ index menus in output Info files.  For Info and plaintext only.
 If set, whenever there are problematic characters for Info output in
 places such as node names or menu items, surround the part of the
 construct where they appear with quoting characters, as described in
-@ref{Info Format Specification}.  @xref{Exigências de Linha de Nodo}.
+@ref{Especificação do Formato Info}.  @xref{Exigências de Linha de Nodo}.
 
 @item INFO_SPECIAL_CHARS_WARNING
 If set, warn about problematic constructs for Info output (such as the
@@ -17513,7 +17528,7 @@ the output format.  In particular, the XML-based formats use
 otherwise specified.  @xref{@code{@@documentencoding}}.
 
 @item OVERVIEW_LINK_TO_TOC
-If set, the cross-references in the Overview link to the corresponding
+If set, the cross-references in the Visão Geral link to the corresponding
 Table of Contents entries; default true.
 
 @item PACKAGE
@@ -17705,11 +17720,11 @@ transliterate more characters; default true.
 @end vtable
 
 
-@node Internationalization of Document Strings
-@section Internationalization of Document Strings
+@node Internacionalização of Document Strings
+@section Internacionalização of Document Strings
 
 @cindex I18n, of document strings
-@cindex Internationalization of document strings
+@cindex Internacionalização of document strings
 @cindex Document strings, internationalization of
 @cindex Output document strings, internationalization of
 @cindex Translating strings in output documents
@@ -17874,7 +17889,7 @@ approximate equivalents is given below.
 @item The program-level customization API is very different in
 @command{texi2any}.
 
-@item Indices cannot be split.
+@item Índices cannot be split.
 
 @item Translated strings cannot be customized; we hope to introduce
 this feature in @command{texi2any} in the future.
@@ -17929,7 +17944,7 @@ the Texinfo source repository.  It consists mainly of very rough
 notes, but may still be useful to some.
 
 
-@node Creating and Installing Info Files
+@node Criando e Instalando Arquivos Info
 @chapter Criando e Instalando Arquivos Info
 
 This chapter describes how to create and install Info files.
@@ -18049,7 +18064,7 @@ output.
 
 @noindent
 (Note that the parallel commands for killing and recentering a @TeX{}
-job are @kbd{C-c C-t C-k} and @kbd{C-c C-t C-l}.  @xref{Texinfo Mode
+job are @kbd{C-c C-t C-k} and @kbd{C-c C-t C-l}.  @xref{Modo Texinfo
 Printing}.)
 
 You can specify options for @code{makeinfo} by setting the
@@ -18116,7 +18131,7 @@ Format the current buffer for Info.
 The @code{texinfo-format-region} and @code{texinfo-format-buffer}
 commands provide you with some error checking, and other functions can
 provide you with further help in finding formatting errors.  These
-procedures are described in an appendix; see @ref{Catching Mistakes}.
+procedures are described in an appendix; see @ref{Capturando Erros}.
 However, the @code{makeinfo} program provides better error checking
 (@pxref{@code{makeinfo} in Emacs}).
 
@@ -18796,10 +18811,10 @@ Display version information and exit successfully.
 @end table
 
 
-@node Generating HTML
+@node Gerando HTML
 @chapter Gerando HTML
 
-@cindex Generating HTML
+@cindex Gerando HTML
 @cindex Outputting HTML
 
 @command{makeinfo} generates Info output by default, but given the
@@ -19650,8 +19665,8 @@ use anchors (@pxref{@code{@@anchor}}).  There is no effective
 difference between the two approaches.
 
 
-@node @@-Command Details
-@appendix @@-Command Details
+@node Detalhes do Comando @@
+@appendix Detalhes do Comando @@
 
 Here are the details of @@-commands: information about their syntax, a 
 list of commands, and information about where commands can appear.
@@ -19964,7 +19979,7 @@ or a program name.  Unquoted in Info output.  @xref{@code{@@code}}.
 @item @@codequotebacktick @var{on-off}
 @itemx @@codequoteundirected @var{on-off}
 Control output of @code{`} and @code{'} in code examples.
-@xref{Inserting Quote Characters}.
+@xref{Inserindo Caracteres de Citação}.
 
 @item @@comma@{@}
 Insert a comma `,' character; only needed when a literal comma would
@@ -19992,25 +20007,25 @@ Generate the copyright symbol @copyright{}.
 
 @item @@defcodeindex @var{index-name}
 Define a new index and its indexing command.  Print entries in an
-@code{@@code} font.  @xref{New Indices, , Defining New Indices}.
+@code{@@code} font.  @xref{New Índices, , Defining New Índices}.
 
 @item @@defcv @var{category} @var{class} @var{name}
 @itemx @@defcvx @var{category} @var{class} @var{name}
 Format a description for a variable associated with a class in
 object-oriented programming.  Takes three arguments: the category of
 thing being defined, the class to which it belongs, and its name.
-@xref{Definition Commands}.
+@xref{Comandos de Definição}.
 
 @item @@deffn @var{category} @var{name} @var{arguments}@dots{}
 @itemx @@deffnx @var{category} @var{name} @var{arguments}@dots{}
 Format a description for a function, interactive command, or similar
 entity that may take arguments.  @code{@@deffn} takes as arguments the
 category of entity being described, the name of this particular
-entity, and its arguments, if any.  @xref{Definition Commands}.
+entity, and its arguments, if any.  @xref{Comandos de Definição}.
 
 @item @@defindex @var{index-name}
 Define a new index and its indexing command.  Print entries in a roman
-font.  @xref{New Indices, , Defining New Indices}.
+font.  @xref{New Índices, , Defining New Índices}.
 
 @item @@definfoenclose @var{newcmd}, @var{before}, @var{after}
 Must be used within @code{@@ifinfo}; create a new command
@@ -20022,55 +20037,55 @@ strings that precede and follow the text.
 @itemx @@defivarx @var{class} @var{instance-variable-name}
 Format a description for an instance variable in object-oriented
 programming.  The command is equivalent to @samp{@@defcv @{Instance
-Variable@} @dots{}}.  @xref{Definition Commands}.
+Variable@} @dots{}}.  @xref{Comandos de Definição}.
 
 @item @@defmac @var{macroname} @var{arguments}@dots{}
 @itemx @@defmacx @var{macroname} @var{arguments}@dots{}
 Format a description for a macro; equivalent to @samp{@@deffn Macro
-@dots{}}.  @xref{Definition Commands}.
+@dots{}}.  @xref{Comandos de Definição}.
 
 @item @@defmethod @var{class} @var{method-name} @var{arguments}@dots{}
 @itemx @@defmethodx @var{class} @var{method-name} @var{arguments}@dots{}
 Format a description for a method in object-oriented programming;
-equivalent to @samp{@@defop Method @dots{}}.  @xref{Definition
-Commands}.
+equivalent to @samp{@@defop Method @dots{}}.  
+@xref{Comandos de Definição}.
 
 @item @@defop @var{category} @var{class} @var{name} @var{arguments}@dots{}
 @itemx @@defopx @var{category} @var{class} @var{name} @var{arguments}@dots{}
 Format a description for an operation in object-oriented programming.
 @code{@@defop} takes as arguments the name of the category of
 operation, the name of the operation's class, the name of the
-operation, and its arguments, if any.  @xref{Definition Commands}, and
+operation, and its arguments, if any.  @xref{Comandos de Definição}, and
 @ref{Abstract Objects}.
 
 @item @@defopt @var{option-name}
 @itemx @@defoptx @var{option-name}
 Format a description for a user option; equivalent to @samp{@@defvr
-@{User Option@} @dots{}}.  @xref{Definition Commands}.
+@{User Option@} @dots{}}.  @xref{Comandos de Definição}.
 
 @item @@defspec @var{special-form-name} @var{arguments}@dots{}
 @itemx @@defspecx @var{special-form-name} @var{arguments}@dots{}
 Format a description for a special form; equivalent to @samp{@@deffn
-@{Special Form@} @dots{}}.  @xref{Definition Commands}.
+@{Special Form@} @dots{}}.  @xref{Comandos de Definição}.
 
 @item @@deftp @var{category} @var{name-of-type} @var{attributes}@dots{}
 @itemx @@deftpx @var{category} @var{name-of-type} @var{attributes}@dots{}
 Format a description for a data type; its arguments are the category,
 the name of the type (e.g., @samp{int}) , and then the names of
-attributes of objects of that type.  @xref{Definition Commands}, and
+attributes of objects of that type.  @xref{Comandos de Definição}, and
 @ref{Data Types}.
 
 @item @@deftypecv @var{category} @var{class} @var{data-type} @var{name}
 @itemx @@deftypecvx @var{category} @var{class} @var{data-type} @var{name}
 Format a description for a typed class variable in object-oriented programming.
-@xref{Definition Commands}, and @ref{Abstract Objects}.
+@xref{Comandos de Definição}, and @ref{Abstract Objects}.
 
 @item @@deftypefn @var{category} @var{data-type} @var{name} @var{arguments}@dots{}
 @itemx @@deftypefnx @var{category} @var{data-type} @var{name} @var{arguments}@dots{}
 Format a description for a function or similar entity that may take
 arguments and that is typed.  @code{@@deftypefn} takes as arguments the
 category of entity being described, the type, the name of the
-entity, and its arguments, if any.  @xref{Definition Commands}.
+entity, and its arguments, if any.  @xref{Comandos de Definição}.
 
 @item @@deftypefnnewline @var{on-off}
 Specifies whether return types for @code{@@deftypefn} and similar are
@@ -20081,51 +20096,51 @@ Functions,, Functions in Typed Languages}.
 @itemx @@deftypefunx @var{data-type} @var{function-name} @var{arguments}@dots{}
 Format a description for a function in a typed language.
 The command is equivalent to @samp{@@deftypefn Function @dots{}}.
-@xref{Definition Commands}.
+@xref{Comandos de Definição}.
 
 @item @@deftypeivar @var{class} @var{data-type} @var{variable-name}
 @itemx @@deftypeivarx @var{class} @var{data-type} @var{variable-name}
 Format a description for a typed instance variable in object-oriented
-programming. @xref{Definition Commands}, and @ref{Abstract Objects}.
+programming. @xref{Comandos de Definição}, and @ref{Abstract Objects}.
 
 @item @@deftypemethod @var{class} @var{data-type} @var{method-name} @var{arguments}@dots{}
 @itemx @@deftypemethodx @var{class} @var{data-type} @var{method-name} @var{arguments}@dots{}
 Format a description for a typed method in object-oriented programming.
-@xref{Definition Commands}.
+@xref{Comandos de Definição}.
 
 @item @@deftypeop @var{category} @var{class} @var{data-type} @var{name} @var{arguments}@dots{}
 @itemx @@deftypeopx @var{category} @var{class} @var{data-type} @var{name} @var{arguments}@dots{}
 Format a description for a typed operation in object-oriented programming.
-@xref{Definition Commands}, and @ref{Abstract Objects}.
+@xref{Comandos de Definição}, and @ref{Abstract Objects}.
 
 @item @@deftypevar @var{data-type} @var{variable-name}
 @itemx @@deftypevarx @var{data-type} @var{variable-name}
 Format a description for a variable in a typed language.  The command is
-equivalent to @samp{@@deftypevr Variable @dots{}}.  @xref{Definition
-Commands}.
+equivalent to @samp{@@deftypevr Variable @dots{}}.  
+@xref{Comandos de Definição}.
 
 @item @@deftypevr @var{category} @var{data-type} @var{name}
 @itemx @@deftypevrx @var{category} @var{data-type} @var{name}
 Format a description for something like a variable in a typed
 language---an entity that records a value.  Takes as arguments the
 category of entity being described, the type, and the name of the
-entity.  @xref{Definition Commands}.
+entity.  @xref{Comandos de Definição}.
 
 @item @@defun @var{function-name} @var{arguments}@dots{}
 @itemx @@defunx @var{function-name} @var{arguments}@dots{}
 Format a description for a function; equivalent to
-@samp{@@deffn Function @dots{}}.  @xref{Definition Commands}.
+@samp{@@deffn Function @dots{}}.  @xref{Comandos de Definição}.
 
 @item @@defvar @var{variable-name}
 @itemx @@defvarx @var{variable-name}
 Format a description for a variable; equivalent to @samp{@@defvr
-Variable @dots{}}.  @xref{Definition Commands}.
+Variable @dots{}}.  @xref{Comandos de Definição}.
 
 @item @@defvr @var{category} @var{name}
 @itemx @@defvrx @var{category} @var{name}
 Format a description for any kind of variable.  @code{@@defvr} takes
 as arguments the category of the entity and the name of the entity.
-@xref{Definition Commands}.
+@xref{Comandos de Definição}.
 
 @item @@detailmenu
 Mark the (optional) detailed node listing in a master menu.
@@ -20190,7 +20205,7 @@ Indicate an electronic mail address.  @xref{@code{@@email}}.
 
 @item @@emph@{@var{text}@}
 Emphasize @var{text}, by using @emph{italics} where possible, and
-enclosing in asterisks in Info.  @xref{Emphasis, , Emphasizing Text}.
+enclosing in asterisks in Info.  @xref{Ênfase, , Emphasizing Text}.
 
 @item @@end @var{environment}
 Ends @var{environment}, as in @samp{@@end example}.  @xref{Formatting
@@ -20228,13 +20243,13 @@ Generate the Euro currency sign.  @xref{@code{@@euro}}.
 @item @@evenfooting [@var{left}] @@| [@var{center}] @@| [@var{right}]
 @itemx @@evenheading [@var{left}] @@| [@var{center}] @@| [@var{right}]
 Specify page footings resp.@: headings for even-numbered (left-hand)
-pages.  @xref{Custom Headings, ,
-How to Make Your Own Headings}.
+pages.  @xref{Custom Cabeçalhos, ,
+How to Make Your Own Cabeçalhos}.
 
 @item @@everyfooting [@var{left}] @@| [@var{center}] @@| [@var{right}]
 @itemx @@everyheading [@var{left}] @@| [@var{center}] @@| [@var{right}]
 Specify page footings resp.@: headings for every page.  Not relevant to
-Info.  @xref{Custom Headings, , How to Make Your Own Headings}.
+Info.  @xref{Custom Cabeçalhos, , How to Make Your Own Cabeçalhos}.
 
 @item @@example
 Begin an example.  Indent text, do not fill, and select fixed-width
@@ -20472,7 +20487,7 @@ environment.  @xref{@code{@@insertcopying}}.
 Indicate the beginning of a marked paragraph for @code{@@itemize} and
 @code{@@enumerate}; indicate the beginning of the text of a first column
 entry for @code{@@table}, @code{@@ftable}, and @code{@@vtable}.
-@xref{Lists and Tables}.
+@xref{Listas e Tabelas}.
 
 @item @@itemize @var{mark-generating-character-or-command}
 Begin an unordered list: indented paragraphs with a mark, such as
@@ -20574,8 +20589,8 @@ Generate the uppercase and lowercase O-with-slash letters, respectively:
 @item  @@oddfooting [@var{left}] @@| [@var{center}] @@| [@var{right}]
 @itemx @@oddheading [@var{left}] @@| [@var{center}] @@| [@var{right}]
 Specify page footings resp.@: headings for odd-numbered (right-hand)
-pages.  @xref{Custom Headings, ,
-How to Make Your Own Headings}.
+pages.  @xref{Custom Cabeçalhos, ,
+How to Make Your Own Cabeçalhos}.
 
 @item @@OE@{@}
 @itemx @@oe@{@}
@@ -20841,12 +20856,12 @@ Set @var{text} as a superscript.  @xref{Inserting Subscripts and Superscripts}.
 @item @@syncodeindex @var{from-index} @var{to-index}
 Merge the index named in the first argument into the index named in
 the second argument, formatting the entries from the first index with
-@code{@@code}.  @xref{Combining Indices}.
+@code{@@code}.  @xref{Combining Índices}.
 
 @item @@synindex @var{from-index} @var{to-index}
 Merge the index named in the first argument into the index named in
 the second argument.  Do not change the font of @var{from-index}
-entries.  @xref{Combining Indices}.
+entries.  @xref{Combining Índices}.
 
 @item @@t@{@var{text}@}
 Set @var{text} in a @t{fixed-width}, typewriter-like font.  No effect
@@ -20883,8 +20898,8 @@ Only allowed in a heading or footing.  Stands for, respectively, the
 number and name of the current chapter (in the format `Chapter 1:
 Title'), the current chapter name only, the current chapter number
 only, the filename, the current page number, and the title of the
-document, respectively.  @xref{Custom Headings, , How to Make Your Own
-Headings}.
+document, respectively.  @xref{Custom Cabeçalhos, , How to Make Your Own
+Cabeçalhos}.
 
 @item @@TH@{@}
 @itemx @@th@{@}
@@ -20920,7 +20935,7 @@ with @code{@@end titlepage}.  Nothing between @code{@@titlepage} and
 
 @item @@today@{@}
 Insert the current date, in `1 Jan 1900' style.  @xref{Custom
-Headings, , How to Make Your Own Headings}.
+Cabeçalhos, , How to Make Your Own Cabeçalhos}.
 
 @item @@top @var{title}
 Mark the topmost @code{@@node} in the file, which must be defined on
@@ -21090,12 +21105,12 @@ For precise and complete information, we suggest looking into the
 test suite in the sources, which exhaustively tries combinations.
 
 
-@node Tips
-@appendix Tips and Hints
+@node Dicas
+@appendix Dicas and Hints
 
 Here are some tips for writing Texinfo documentation:
 
-@cindex Tips
+@cindex Dicas
 @cindex Usage tips
 @cindex Hints
 @itemize @bullet
@@ -21254,7 +21269,7 @@ and @code{@@value}.  @xref{@code{@@value} Example}, and @ref{GNU
 Sample Texts}.
 
 
-@subsubheading Definition Commands
+@subsubheading Comandos de Definição
 
 Definition commands are @code{@@deffn}, @code{@@defun},
 @code{@@defmac}, and the like, and enable you to write descriptions in
@@ -21509,8 +21524,8 @@ Write notes for yourself at the very end of a Texinfo file after the
 @end itemize
 
 
-@node Sample Texinfo Files
-@appendix Sample Texinfo Files
+@node Arquivos Texinfo Modelo
+@appendix Arquivos Texinfo Modelo
 @cindex Sample Texinfo files
 
 The first example from the first chapter (@pxref{Short Sample}) is
@@ -21619,7 +21634,7 @@ They're included here nonetheless because many manuals do (or could)
 benefit from them.
 
 @xref{Short Sample}, for a minimal example of a Texinfo file.
-@xref{Beginning and Ending a File}, for a full explanation of that
+@xref{Iniciando e Finalizando um Arquivo}, for a full explanation of that
 minimal example.
 
 Here are some notes on the example:
@@ -21677,9 +21692,9 @@ information about command-line usage of a given program.  @xref{Manual
 Structure Details,,, standards, GNU Coding Standards}.
 
 @item
-@cindex GNU Free Documentation License, including entire
+@cindex Licença de Documentação Livre GNU, including entire
 @cindex Free Documentation License, including entire
-It is best to include the entire GNU Free Documentation License in a GNU
+It is best to include the entire Licença de Documentação Livre GNU in a GNU
 manual, unless the manual is only a few pages long.  Of course this
 sample is even shorter than that, but it includes the FDL anyway in
 order to show one conventional way to do so.  The @file{fdl.texi} file
@@ -21757,7 +21772,7 @@ This manual is for GNU Sample (version @value{VERSION}, @value{UPDATED}).
 
 @menu
 * Invoking sample::
-* GNU Free Documentation License::
+* Licença de Documentação Livre GNU::
 * Index::
 @end menu
 
@@ -21849,8 +21864,8 @@ notice and this notice are preserved.
 @end example
 
 
-@node Texinfo Mode
-@appendix Using Texinfo Mode
+@node Modo Texinfo
+@appendix Using Modo Texinfo
 @cindex Texinfo mode
 @cindex Mode, using Texinfo
 @cindex GNU Emacs
@@ -21862,7 +21877,7 @@ comes with a special mode, called Texinfo mode, that provides Emacs
 commands and tools to help ease your work.
 
 @menu
-* Texinfo Mode Overview::       How Texinfo mode can help you.
+* Modo Texinfo Visão Geral::       How Texinfo mode can help you.
 * Emacs Editing::               Texinfo mode adds to GNU Emacs' general
                                   purpose editing features.
 * Inserting::                   How to insert frequently used @@-commands.
@@ -21870,11 +21885,11 @@ commands and tools to help ease your work.
 * Atualizando Nodos e Menus::    How to update or create new Nodos and menus.
 * Info Formatting::             How to format for Info.
 * Printing::                    How to format and print part or all of a file.
-* Texinfo Mode Summary::        Summary of all the Texinfo mode commands.
+* Modo Texinfo Summary::        Summary of all the Texinfo mode commands.
 @end menu
 
-@node Texinfo Mode Overview
-@section Texinfo Mode Overview
+@node Modo Texinfo Visão Geral
+@section Modo Texinfo Visão Geral
 
 Texinfo mode provides special features for working with Texinfo files.
 You can:
@@ -22368,7 +22383,7 @@ must look either like this:
 
 @example
 @group
-@@node     Comments,  Minimum, Conventions, Overview
+@@node     Comments,  Minimum, Conventions, Visão Geral
 @@comment  node-name, next,    previous,    up
 @@section Comments
 @end group
@@ -22378,7 +22393,7 @@ or like this (without the @code{@@comment} line):
 
 @example
 @group
-@@node Comments, Minimum, Conventions, Overview
+@@node Comments, Minimum, Conventions, Visão Geral
 @@section Comments
 @end group
 @end example
@@ -22395,7 +22410,7 @@ or like this (without the explicit node pointers):
 @noindent
 In this example, `Comments' is the name of both the node and the
 section.  The next node is called `Minimum' and the previous node is
-called `Conventions'.  The `Comments' section is within the `Overview'
+called `Conventions'.  The `Comments' section is within the `Visão Geral'
 node, which is specified by the `Up' pointer.  (Instead of an
 @code{@@comment} line, you may also write an @code{@@ifinfo} line.)
 
@@ -22600,11 +22615,11 @@ on a line by itself.  (When you use @code{texinfo-tex-region}, you must
 surround the @code{@@settitle} line with start-of-header and
 end-of-header lines.)
 
-@xref{Hardcopy}, for a description of the other @TeX{} related
+@xref{Cópia Impressa}, for a description of the other @TeX{} related
 commands, such as @code{tex-show-print-queue}.
 
-@node Texinfo Mode Summary
-@section Texinfo Mode Summary
+@node Modo Texinfo Summary
+@section Modo Texinfo Summary
 
 In Texinfo mode, each set of commands has default keybindings that
 begin with the same keys.  All the commands that are custom-created
@@ -22784,9 +22799,9 @@ M-x texinfo-sequential-node-update
 @end example
 
 
-@node Headings
-@appendix Page Headings
-@cindex Headings
+@node Cabeçalhos
+@appendix Page Cabeçalhos
+@cindex Cabeçalhos
 @cindex Footings
 @cindex Page numbering
 @cindex Page headings
@@ -22796,18 +22811,18 @@ Most printed manuals contain headings along the top of every page
 except the title and copyright pages.  Some manuals also contain
 footings. @c HTML output also supports something like these, but in a
 @c completely different way: @pxref{Customizing HTML Page Layout}.
-Headings and footings have no meaning in Info or the other output
+Cabeçalhos and footings have no meaning in Info or the other output
 formats.
 
 @menu
-* Headings Introduced::         Conventions for using page headings.
+* Cabeçalhos Introduced::         Conventions for using page headings.
 * Heading Format::              Standard page heading formats.
 * Heading Choice::              How to specify the type of page heading.
-* Custom Headings::             How to create your own headings and footings.
+* Custom Cabeçalhos::             How to create your own headings and footings.
 @end menu
 
-@node Headings Introduced
-@section Headings Introduced
+@node Cabeçalhos Introduced
+@section Cabeçalhos Introduced
 
 Texinfo provides standard page heading formats for manuals that are
 printed on one side of each sheet of paper and for manuals that are
@@ -22945,8 +22960,8 @@ Specify the double-sided heading format, with chapters on new pages.
 Texinfo lacks a @code{@@setchapternewpage even} command.
 
 
-@node Custom Headings
-@section How to Make Your Own Headings
+@node Custom Cabeçalhos
+@section How to Make Your Own Cabeçalhos
 
 You can use the standard headings provided with Texinfo or specify
 your own.  By default, Texinfo has no footers, so if you specify them,
@@ -23135,8 +23150,8 @@ By default the @code{@@this...} commands reflect the situation at the
 bottom of a page both in headings and in footings.
 
 
-@node Catching Mistakes
-@appendix Catching Mistakes
+@node Capturando Erros
+@appendix Capturando Erros
 @cindex Structure, catching mistakes in
 @cindex Nodos, catching mistakes
 @cindex Catching mistakes
@@ -23246,7 +23261,7 @@ odd error messages.  For example, the following cross-reference fails
 to format:
 
 @example
-(@@xref@{Catching Mistakes, for more info.)
+(@@xref@{Capturando Erros, for more info.)
 @end example
 
 @noindent
@@ -23261,20 +23276,20 @@ example, in the following, the closing brace is swapped with the
 closing parenthesis:
 
 @example
-(@@xref@{Catching Mistakes), for more info.@}
+(@@xref@{Capturando Erros), for more info.@}
 @end example
 
 @noindent
 Formatting produces:
 @example
-(*Note for more info.: Catching Mistakes)
+(*Note for more info.: Capturando Erros)
 @end example
 
 The only way for you to detect this error is to realize that the
 reference should have looked like this:
 
 @example
-(*Note Catching Mistakes::, for more info.)
+(*Note Capturando Erros::, for more info.)
 @end example
 
 Incidentally, if you are reading this node in Info and type @kbd{f
@@ -23282,7 +23297,7 @@ Incidentally, if you are reading this node in Info and type @kbd{f
 message that says:
 
 @example
-No such node: "Catching Mistakes) The only way @dots{}
+No such node: "Capturando Erros) The only way @dots{}
 @end example
 
 @noindent
@@ -23291,8 +23306,8 @@ cross-reference in this node and if you type a @key{RET} immediately
 after typing the Info @kbd{f} command, Info will attempt to go to the
 referenced node.  If you type @kbd{f catch @key{TAB} @key{RET}}, Info
 will complete the node name of the correctly written example and take
-you to the `Catching Mistakes' node.  (If you try this, you can return
-from the `Catching Mistakes' node by typing @kbd{l}
+you to the `Capturando Erros' node.  (If you try this, you can return
+from the `Capturando Erros' node by typing @kbd{l}
 (@code{Info-last}).)
 
 
@@ -23459,7 +23474,7 @@ in buffer texinfo.texi.
 4337:    @@section The @@code@{@@@@node@} Command
 4393:        @@subheading Choosing Node and Pointer Names
 4417:        @@subsection How to Write a @@code@{@@@@node@} Line
-4469:        @@subsection @@code@{@@@@node@} Line Tips
+4469:        @@subsection @@code@{@@@@node@} Line Dicas
 @dots{}
 @end group
 @end example
@@ -23597,20 +23612,20 @@ For example, @code{Info-validate} was run on a test file that contained
 only the first node of this manual.  One of the messages said:
 
 @example
-In node "Overview", invalid Next: Texinfo Mode
+In node "Visão Geral", invalid Next: Modo Texinfo
 @end example
 
 @noindent
-This meant that the node called @samp{Overview} had a `Next' pointer that
+This meant that the node called @samp{Visão Geral} had a `Next' pointer that
 did not point to anything (which was true in this case, since the test file
 had only one node in it).
 
-Now suppose we add a node named @samp{Texinfo Mode} to our test case
+Now suppose we add a node named @samp{Modo Texinfo} to our test case
 but we do not specify a `Previous' for this node.  Then we will get
 the following error message:
 
 @example
-In node "Texinfo Mode", should have Previous: Overview
+In node "Modo Texinfo", should have Previous: Visão Geral
 @end example
 
 @noindent
@@ -23745,8 +23760,8 @@ The primary file still functions as an Info file, but it contains just
 the tag table and a directory of subfiles.
 
 
-@node Info Format Specification
-@appendix Info Format Specification
+@node Especificação do Formato Info
+@appendix Especificação do Formato Info
 
 @cindex Info format specification
 @cindex Specification of Info format
@@ -23959,8 +23974,8 @@ output file.
 
 Each line defines an identifier as either an anchor or a node, as
 specified.  For example, @samp{Node: Top^?1647} says that the node named
-@samp{Top} starts at byte 1647 while @samp{Ref: Overview-Footnote-1^?30045}
-says that the anchor named @samp{Overview-Footnote-1} starts at byte 30045.
+@samp{Top} starts at byte 1647 while @samp{Ref: Visão Geral-Footnote-1^?30045}
+says that the anchor named @samp{Visão Geral-Footnote-1} starts at byte 30045.
 It is an error to define the same identifier both ways.  
 
 In the case of nonsplit output, the byte positions simply refer to the
@@ -24104,7 +24119,7 @@ places no restrictions on their location.
 
 The parts of a @t{<menu entry>} are also described in 
 @ref{Partes de Menu}. They have the same syntax as cross-references 
-(@pxref{Info Format Cross Reference}). Indices extend the menu format to
+(@pxref{Info Format Cross Reference}). Índices extend the menu format to
  specify the destination line; @pxref{Info Format Printindex}.
 
 A @t{<menu comment>} is any line not beginning with @samp{*} that
@@ -24152,10 +24167,10 @@ The format does not prescribe the choice between displaying the
 @node Info Format Printindex
 @subsection Info Format: Printindex
 
-@cindex Indices, in Info format
+@cindex Índices, in Info format
 
-Indices in Info format are generally written as a menu
-(@pxref{Indices}), but with an additional directive at the beginning
+Índices in Info format are generally written as a menu
+(@pxref{Índices}), but with an additional directive at the beginning
 marking this as an index node:
 
 @example
@@ -24243,9 +24258,9 @@ such references.
 Here are some examples:
 
 @example
-*note GNU Free Documentation License::
+*note Licença de Documentação Livre GNU::
 *note Tag table: Info Format Tag Table, for details.
-*Note Overview: (make)Top.
+*Note Visão Geral: (make)Top.
 *Note ^?:^?: (bash)Bourne Shell Builtins.
 *Note alloca.h: (gnulib)^?alloca.h^?.
 @end example
@@ -24259,7 +24274,7 @@ on this particular reference, and the @samp{for details.} is text
 belonging to the sentence, not part of the reference.
 
 The third example refers to the node `Top' in another manual, namely
-@samp{make}, with `Overview' being the label for this cross-reference.
+@samp{make}, with `Visão Geral' being the label for this cross-reference.
 
 The fourth example shows a colon character being quoted in a label,
 and the fifth example shows a period being quoted in a node name.
@@ -24279,8 +24294,8 @@ and the fifth example shows a period being quoted in a node name.
 @include fdl.texi
 
 
-@node Command and Variable Index
-@unnumbered Command and Variable Index
+@node Índice de Comando e Variável
+@unnumbered Índice de Comando e Variável
 
 This is an alphabetical list of all the @@-commands, assorted Emacs Lisp
 functions, and several variables.  To make the list easier to use, the
@@ -24289,8 +24304,8 @@ commands are listed without their preceding @samp{@@}.
 @printindex fn
 
 
-@node General Index
-@unnumbered General Index
+@node Índice Geral
+@unnumbered Índice Geral
 
 @printindex cp
 
