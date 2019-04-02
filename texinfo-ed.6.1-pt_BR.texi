@@ -440,7 +440,7 @@ Notas de rodapé
 
 * Index Entries::               Escolha palavras diferentes para entradas de índice.
 * Predefined Índices::          Utilize índices diferentes para tipos diferentes de entradas.
-* Indexing Commands::           Como fazer uma entrada de índice.
+* Comandos de Indexação::           Como fazer uma entrada de índice.
 * Imprimindo Índices e Menus::    Como imprimir um índice em cópia impressa e gerar menus de índice em Info.
 * Combining Índices::           Como combinar índices.
 * New Índices::                 Como definir seus próprios índices.
@@ -455,7 +455,7 @@ Inserções Especiais
 * Special Characters::          Inserindo @@ @{@} , \ #
 * Inserindo Caracteres de Citação::  Inserindo aspas à esquerda e à direita, em código.
 * Inserting Space::             Inserindo a quantidade correta de espaços em branco.
-* Inserting Accents::           Inserindo acentos e caracteres especiais.
+* Inserindo Acentos::           Inserindo acentos e caracteres especiais.
 * Inserting Quotation Marks::   Inserindo marcas de encapsulamento.
 * Inserting Subscripts and Superscripts:: Inserindo sub/superscripts.
 * Inserting Math::              Formatando expressões matemáticas.
@@ -9166,7 +9166,7 @@ purpose.  Lastly, you can define your own new indices.
 @menu
 * Predefined Índices::          Use different indices for different kinds
                                  of entries.
-* Indexing Commands::           How to make an index entry.
+* Comandos de Indexação::           How to make an index entry.
 * Index Entries::               Choose different words for index entries.
 * Imprimindo Índices e Menus::    How to print an index in hardcopy and
                                  generate index menus in Info.
@@ -9238,7 +9238,7 @@ into one output index using the @code{@@synindex} or
 @code{@@syncodeindex} commands (@pxref{Combining Índices}).
 
 
-@node Indexing Commands
+@node Comandos de Indexação
 @section Defining the Entries of an Index
 
 @cindex Defining indexing entries
@@ -9701,7 +9701,7 @@ These are:
 * Special Characters::          Inserting @@ @{@} , \ #
 * Inserindo Caracteres de Citação::  Inserting left and right quotes, in code.
 * Inserting Space::             Inserting the right amount of whitespace.
-* Inserting Accents::           Inserting accents and special characters.
+* Inserindo Acentos::           Inserting accents and special characters.
 * Inserting Quotation Marks::   Inserting quotation marks.
 * Inserting Subscripts and Superscripts:: Inserting sub/superscripts.
 * Inserting Math::              Formatting mathematical expressions.
@@ -9924,9 +9924,9 @@ If you want these settings for only part of the document,
 @code{@@codequote... off} will restore the normal behavior, as in
 @code{@@codequoteundirected off}.
 
-These settings affect @code{@@code}, @code{@@example}, @code{@@kbd},
-@code{@@samp}, @code{@@verb}, and @code{@@verbatim}.  @xref{Useful
-Highlighting}.
+These settings affect @code{@@code}, @code{@@example}, @code{@@kbd}, 
+@code{@@samp}, @code{@@verb}, and @code{@@verbatim}.  
+@xref{Realçamento Útil}.
 
 @vindex txicodequoteundirected@r{, obsolete variable}
 @vindex txicodequotebacktick@r{, obsolete variable}
@@ -10213,8 +10213,8 @@ period to prevent @TeX{} from inserting extra whitespace, as shown
 here.  @xref{Not Ending a Sentence}.
 
 
-@node Inserting Accents
-@section Inserting Accents
+@node Inserindo Acentos
+@section Inserindo Acentos
 
 @cindex Inserting accents
 @cindex Accents, inserting
@@ -12839,7 +12839,7 @@ yourself helping to translate the fixed strings written to documents,
 @pxref{Internacionalização of Document Strings}.)
 
 For a list of the various accented and special characters Texinfo
-supports, see @ref{Inserting Accents}.
+supports, see @ref{Inserindo Acentos}.
 
 @menu
 * @code{@@documentlanguage}::           Declaring the current language.
@@ -13566,7 +13566,7 @@ It is a @{No value for "howmuch"@} wet day.
 @end example
 
 @code{@@value} cannot be reliably used as the argument to an accent
-command (@pxref{Inserting Accents}).  For example, this fails:
+command (@pxref{Inserindo Acentos}).  For example, this fails:
 
 @example
 @@set myletter a
@@ -14262,7 +14262,7 @@ White space is ignored at the beginnings of lines.
 
 @item
 Macros can't be reliably used in the argument to accent commands
-(@pxref{Inserting Accents}).
+(@pxref{Inserindo Acentos}).
 
 @item
 The backslash escape for commas in macro arguments does not work;
@@ -14270,7 +14270,7 @@ The backslash escape for commas in macro arguments does not work;
 
 @item
 Likewise, if you want to pass an argument with the Texinfo command 
-@code{@@,} (to produce a cedilla, see @ref{Inserting Accents}), you have 
+@code{@@,} (to produce a cedilla, see @ref{Inserindo Acentos}), you have 
 to use @code{@@value} or another work-around.  Otherwise, the comma
 may be taken as separating the arguments.  For example,
 
@@ -16319,7 +16319,7 @@ By default, or with @option{--enable-encoding}, output accented and
 special characters in Info and plain text output based on
 @samp{@@documentencoding}.  With @option{--disable-encoding}, 7-bit
 ASCII transliterations are output.  @xref{@code{@@documentencoding}},
-and @ref{Inserting Accents}.
+and @ref{Inserindo Acentos}.
 
 @item --docbook
 @opindex --docbook
@@ -19782,7 +19782,7 @@ end-of-sentence capital letter).  @xref{Ending a Sentence}.
 @item @@"
 @itemx @@'
 Generate an umlaut or acute accent, respectively, over the next
-character, as in @"o and @'o.  @xref{Inserting Accents}.
+character, as in @"o and @'o.  @xref{Inserindo Acentos}.
 
 @item @@*
 Force a line break.  @xref{Quebras de Linha}.
@@ -19808,7 +19808,7 @@ colon, as @TeX{} normally would.  @xref{Not Ending a Sentence}.
 
 @item @@=
 Generate a macron (bar) accent over the next character, as in @=o.
-@xref{Inserting Accents}.
+@xref{Inserindo Acentos}.
 
 @item @@?
 Produce a question mark that ends a sentence (usually after an
@@ -19828,7 +19828,7 @@ anywhere, while @code{@@\} works only inside @code{@@math}.
 @itemx @@`
 Generate a circumflex (hat) or grave accent, respectively, over the next
 character, as in @^o and @`e.
-@xref{Inserting Accents}.
+@xref{Inserindo Acentos}.
 
 @item @@@{
 @itemx @@lbracechar@{@}
@@ -19840,12 +19840,12 @@ Insert a right brace, @samp{@}}.  @xref{Inserting Braces}.
 
 @item @@~
 Generate a tilde accent over the next character, as in @~N.
-@xref{Inserting Accents}.
+@xref{Inserindo Acentos}.
 
 @item @@AA@{@}
 @itemx @@aa@{@}
 Generate the uppercase and lowercase Scandinavian A-ring letters,
-respectively: @AA{}, @aa{}.  @xref{Inserting Accents}.
+respectively: @AA{}, @aa{}.  @xref{Inserindo Acentos}.
 
 @item @@abbr@{@var{abbreviation}@}
 Indicate a general abbreviation, such as `Comput.'.
@@ -19858,7 +19858,7 @@ Indicate an acronym in all capital letters, such as `NASA'.
 @item @@AE@{@}
 @itemx @@ae@{@}
 Generate the uppercase and lowercase AE ligatures, respectively:
-@AE{}, @ae{}.  @xref{Inserting Accents}.
+@AE{}, @ae{}.  @xref{Inserindo Acentos}.
 
 @item @@afivepaper
 Change page dimensions for the A5 paper size.  @xref{A4 Paper}.
@@ -20165,7 +20165,7 @@ Indicate the introductory or defining use of a term.  @xref{@code{@@dfn}}.
 @item @@DH@{@}
 @itemx @@dh@{@}
 Generate the uppercase and lowercase Icelandic letter eth, respectively:
-@DH{}, @dh{}.  @xref{Inserting Accents}.
+@DH{}, @dh{}.  @xref{Inserindo Acentos}.
 
 @item @@dircategory @var{dirpart}
 Specify a part of the Info directory menu where this file's entry should
@@ -20203,11 +20203,11 @@ Declare the document language as the two-character ISO-639 abbreviation
 
 @item @@dotaccent@{@var{c}@}
 Generate a dot accent over the character @var{c}, as in @dotaccent{o}.
-@xref{Inserting Accents}.
+@xref{Inserindo Acentos}.
 
 @item @@dotless@{@var{i-or-j}@}
 Generate dotless i (`@dotless{i}') and dotless j (`@dotless{j}').
-@xref{Inserting Accents}.
+@xref{Inserindo Acentos}.
 
 @item @@dots@{@}
 Generate an ellipsis, @samp{@dots{}}.
@@ -20273,7 +20273,7 @@ Indent example-like environments by @var{indent} number of spaces
 (perhaps 0).  @xref{@code{@@exampleindent}}.
 
 @item @@exclamdown@{@}
-Generate an upside-down exclamation point.  @xref{Inserting Accents}.
+Generate an upside-down exclamation point.  @xref{Inserindo Acentos}.
 
 @item @@exdent @var{line-of-text}
 Remove any indentation a line might have.  @xref{@code{@@exdent}}.
@@ -20608,11 +20608,11 @@ How to Make Your Own Cabeçalhos}.
 @item @@OE@{@}
 @itemx @@oe@{@}
 Generate the uppercase and lowercase OE ligatures, respectively:
-@OE{}, @oe{}.  @xref{Inserting Accents}.
+@OE{}, @oe{}.  @xref{Inserindo Acentos}.
 
 @item @@ogonek@{@var{c}@}
 Generate an ogonek diacritic under the next character, as in
-@ogonek{a}.  @xref{Inserting Accents}.
+@ogonek{a}.  @xref{Inserindo Acentos}.
 
 @item @@option@{@var{option-name}@}
 Indicate a command-line option, such as @option{-l} or
@@ -20621,7 +20621,7 @@ Indicate a command-line option, such as @option{-l} or
 @item @@ordf@{@}
 @itemx @@ordm@{@}
 Generate the feminine and masculine Spanish ordinals, respectively:
-@ordf{}, @ordm{}.  @xref{Inserting Accents}.
+@ordf{}, @ordm{}.  @xref{Inserindo Acentos}.
 
 @item @@page
 Start a new page in a printed manual.  No effect in Info.
@@ -20666,7 +20666,7 @@ manual.  Use within parentheses only.  Only the first argument is
 mandatory.  @xref{@code{@@pxref}}.
 
 @item @@questiondown@{@}
-Generate an upside-down question mark.  @xref{Inserting Accents}.
+Generate an upside-down question mark.  @xref{Inserindo Acentos}.
 
 @item @@quotation
 Narrow the margins to indicate text that is quoted from another work.
@@ -20718,7 +20718,7 @@ glyph: @samp{@result{}}.  @xref{@code{@@result}}.
 
 @item @@ringaccent@{@var{c}@}
 Generate a ring accent over the next character, as in @ringaccent{o}.
-@xref{Inserting Accents}.
+@xref{Inserindo Acentos}.
 
 @item @@samp@{@var{text}@}
 Indicate a literal example of a sequence of characters, in general.
@@ -20816,13 +20816,14 @@ Pair with @code{@@end smallquotation}.  @xref{@code{@@small@dots{}}}.
 
 @item @@sortas @{@var{key}@}
 Used in the arguments to index commands to give a string by which the 
-index entry should be sorted.  @xref{Indexing Commands}.
+index entry should be sorted.  @xref{Comandos de Indexação}.
 
 @item @@sp @var{n}
 Skip @var{n} blank lines.  @xref{@code{@@sp}}.
 
 @item @@ss@{@}
-Generate the German sharp-S es-zet letter, @ss{}.  @xref{Inserting Accents}.
+Generate the German sharp-S es-zet letter, @ss{}.  
+@xref{Inserindo Acentos}.
 
 @item @@strong @{@var{text}@}
 Emphasize @var{text} more strongly than @code{@@emph}, by using
@@ -20917,7 +20918,7 @@ Cabeçalhos}.
 @item @@TH@{@}
 @itemx @@th@{@}
 Generate the uppercase and lowercase Icelandic letter thorn, respectively:
-@TH{}, @th{}.  @xref{Inserting Accents}.
+@TH{}, @th{}.  @xref{Inserindo Acentos}.
 
 @item @@tie@{@}
 Generate a normal interword space at which a line break is not
@@ -20925,7 +20926,7 @@ allowed.  @xref{@code{@@tie}}.
 
 @item @@tieaccent@{@var{cc}@}
 Generate a tie-after accent over the next two characters @var{cc}, as in
-`@tieaccent{oo}'.  @xref{Inserting Accents}.
+`@tieaccent{oo}'.  @xref{Inserindo Acentos}.
 
 @item @@tindex @var{entry}
 Add @var{entry} to the index of data types.  @xref{Index Entries, ,
@@ -20969,7 +20970,7 @@ Output a representation of Unicode character U+@var{hex}.
 @itemx @@udotaccent@{@var{c}@}
 Generate a breve, underbar, or underdot accent, respectively, over or
 under the character @var{c}, as in @u{o}, @ubaraccent{o},
-@udotaccent{o}.  @xref{Inserting Accents}.
+@udotaccent{o}.  @xref{Inserindo Acentos}.
 
 @item @@unmacro @var{macroname}
 Undefine the macro @code{@@@var{macroname}} if it has been defined.
@@ -21008,7 +21009,7 @@ characters: @code{after}, @code{before}, @code{none}.
 
 @item @@v@{@var{c}@}
 Generate check accent over the character @var{c}, as in @v{o}.
-@xref{Inserting Accents}.
+@xref{Inserindo Acentos}.
 
 @item @@validatemenus @var{on-off}
 Control whether menus can be automatically generated. 
