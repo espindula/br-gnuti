@@ -6197,127 +6197,131 @@ no documento de entrada (@pxref{Inserindo Caracteres de Citação}).
 @c Seção 7.1 - Indicando Definições, Comandos, etc.
 @c Subseção 7.1.3 - @kbd{caracteres-de-teclado}
 
-@anchor{kbd}@c old name
+@anchor{kbd} @c nome antigo
 @findex kbd
-@cindex Keyboard input
+@cindex Entrada de teclado
+@cindex Teclado, Entrada de
 
-Use the @code{@@kbd} command for characters of input to be typed by
-users.  For example, to refer to the characters @kbd{M-a}, write:
+Use o comando @code{@@kbd} para caracteres de entrada a serem digitados 
+por usuários. Por exemplo, para se referir aos caracteres @kbd{M-a}, 
+escreva:
 
 @example
 @@kbd@{M-a@}
 @end example
 
 @noindent
-and to refer to the characters @kbd{M-x shell}, write:
+e para se referir aos caracteres @kbd{M-x shell}, escreva:
 
 @example
 @@kbd@{M-x shell@}
 @end example
 
-@cindex User input
-@cindex Slanted typewriter font, for @code{@@kbd}
-By default, the @code{@@kbd} command produces a different font
-(slanted typewriter instead of normal typewriter),
-so users can distinguish the characters that they are supposed
-to type from those that the computer outputs.
+@cindex Entrada de usuário
+@cindex Fonte de máquina de escrever inclinada, para @code{@@kbd}
+Por padrão, o comando @code{@@kbd} produz uma fonte diferente (máquina 
+de escrever inclinada em vez da máquina de escrever normal), de forma 
+que os usuários podem distinguir os caracteres que deveriam digitar 
+daqueles que o computador exibe.
 
 @findex kbdinputstyle
-Since the usage of @code{@@kbd} varies from manual to manual, you can
-control the font switching with the @code{@@kbdinputstyle} command.
-This command has no effect on Info output.  Write this command at the
-beginning of a line with a single word as an argument, one of the
-following:
+Dado que o uso de @code{@@kbd} varia de manual para manual, você pode 
+controlar a fonte trocando com o comando @code{@@kbdinputstyle}. Esse 
+comando não tem efeito sobre a saída Info. Escreva esse comando no 
+início de uma linha com uma única palavra como um argumento, uma das 
+seguintes:
 
 @vindex distinct@r{, value for @code{@@kbdinputstyle}}
 @vindex example@r{, value for @code{@@kbdinputstyle}}
 @vindex code@r{, value for @code{@@kbdinputstyle}}
 @table @samp
 @item code
-Always use the same font for @code{@@kbd} as @code{@@code}.
+Sempre use a mesma fonte para @code{@@kbd} como @code{@@code}.
 @item example
-Use the distinguishing font for @code{@@kbd} only in @code{@@example}
-and similar environments.
+Use a fonte de distinção para @code{@@kbd} somente em @code{@@example} e 
+ambientes similares.
 @item distinct
-(the default) Always use the distinguishing font for @code{@@kbd}.
+(o padrão) Sempre use a fonte de distinção para @code{@@kbd}.
 @end table
 
-You can embed another @@-command inside the braces of a @code{@@kbd}
-command.  Here, for example, is the way to describe a command that
-would be described more verbosely as ``press the @samp{r} key and then
-press the @key{RETURN} key'':
+Você pode incorporar outro comando @@ dentro das chaves de um comando 
+@code{@@kbd}. Aqui, por exemplo, está a maneira para descrever um comando que pressiona a tecla @key{RETURN}'':
 
 @example
 @@kbd@{r @@key@{RET@}@}
 @end example
 
 @noindent
-This produces: @kbd{r @key{RET}}.  (The present manual uses the
-default for @code{@@kbdinputstyle}.)
+Isso produz: @kbd{r @key{RET}}.  (O presente manual usa o padrão para 
+@code{@@kbdinputstyle}).
 
-You also use the @code{@@kbd} command if you are spelling out the letters
-you type; for example:
+Você também usa o comando @code{@@kbd} se estiver soletrando as letras 
+que digitar; por exemplo:
 
 @example
-To give the @@code@{logout@} command,
-type the characters @@kbd@{l o g o u t @@key@{RET@}@}.
+Para dar o comando @@code@{logout@}, digite os caracteres 
+@@kbd@{l o g o u t @@key@{RET@}@}.
 @end example
 
 @noindent
-This produces:
+Isso produz:
 
 @quotation
-To give the @code{logout} command,
-type the characters @kbd{l o g o u t @key{RET}}.
+Para dar o comando @code{logout}, digite os caracteres 
+@kbd{l o g o u t @key{RET}}.
 @end quotation
 
-(Also, this example shows that you can add spaces for clarity.  If you
-explicitly want to mention a space character as one of the characters of
-input, write @kbd{@@key@{SPC@}} for it.)
+(Além disso, esse exemplo mostra que você pode adicionar espaços para 
+maior clareza. Se você deseja mencionar explicitamente um caractere 
+espaço como um dos caracteres da entrada, escreva @kbd{@@key@{SPC@}} 
+para ele).
 
 
 @node @code{@@key}
-@subsection @code{@@key}@{@var{key-name}@}
+@subsection @code{@@key}@{@var{nome-de-tecla}@}
+@c Capítulo 7 - Marcação de Texto, Palavras e Frases
+@c Seção 7.1 - Indicando Definições, Comandos, etc.
+@c Subseção 7.1.4 - @key{nome-de-tecla}
 
-@anchor{key}@c old name
+@anchor{key} @c nome antigo
 @findex key
 
-Use the @code{@@key} command for the conventional name for a key on a
-keyboard, as in:
+Use o comando @code{@@key} para o nome convencional para uma tecla em um 
+teclado, como em:
 
 @example
 @@key@{RET@}
 @end example
 
-You can use the @code{@@key} command within the argument of an
-@code{@@kbd} command when the sequence of characters to be typed
-includes one or more keys that are described by name.
+Você pode usar o comando @code{@@key} dentro do argumento de um comando 
+@code{@@kbd} quando a sequência de caracteres a ser digitada incluir uma 
+ou mais teclas que sejam descritas por nome.
 
-For example, to produce @kbd{C-x @key{ESC}} and @kbd{M-@key{TAB}} you
-would type:
+Por exemplo, para produzir @kbd{C-x @key{ESC}} e @kbd{M-@key{TAB}} você 
+digitaria:
 
 @example
 @@kbd@{C-x @@key@{ESC@}@}
 @@kbd@{M-@@key@{TAB@}@}
 @end example
 
-Here is a list of the recommended names for keys:
-@cindex Recommended names for keys
-@cindex Keys, recommended names
-@cindex Names recommended for keys
-@cindex Abbreviations for keys
-@cindex Control keys, specifying
-@cindex Meta keys, specifying
+Aqui está uma lista dos nomes recomendados para teclas:
+@cindex Nomes recomendados para teclas
+@cindex Teclas, nomes recomendados
+@cindex Abreviações para teclas
+@cindex Teclas de controle, especificando
+@cindex Teclas Meta, especificando
 
 @quotation
 @table @t
 @item SPC
-Space
+Espaço
 @item RET
-Return
+Retorno (Nova linha)
 @item LFD
-Linefeed (however, since most keyboards nowadays do not have a Linefeed key,
-it might be better to call this character @kbd{C-j})
+Alimentação de Linha (no entanto, como a maioria dos teclados hoje em 
+dia não tem uma tecla de alimentação de linha, talvez seja melhor chamar 
+esse caractere @kbd {C-j})
 @item TAB
 Tab
 @item BS
@@ -6335,125 +6339,134 @@ Meta
 @end table
 @end quotation
 
-@cindex META key
-There are subtleties to handling words like `meta' or `ctrl' that are
-names of modifier keys.  When mentioning a character in which the
-modifier key is used, such as @kbd{Meta-a}, use the @code{@@kbd} command
-alone; do not use the @code{@@key} command; but when you are referring
-to the modifier key in isolation, use the @code{@@key} command.  For
-example, write @samp{@@kbd@{Meta-a@}} to produce @kbd{Meta-a} and
-@samp{@@key@{META@}} to produce @key{META}.
+@cindex META, tecla
+Existem sutilezas para lidar com palavras como `meta' ou `ctrl', que são 
+nomes de teclas modificadoras. Quando mencionar um caracter no qual a 
+tecla modificadora é usada, como @kbd{Meta-a}, use o comando 
+@code{@@kbd} sozinho; não use o comando @code{@@key}; porém, quando 
+estiver se referindo à tecla modificadora isoladamente, use o comando 
+@code{@@key}. Por exemplo, escreva @samp{@@kbd@{Meta-a@}} para produzir 
+@kbd{Meta-a} e @samp{@@key@{META@}} para produzir @key{META}.
 
-@c per rms.
-As a convention in GNU manuals, @code{@@key} should not be used in
-index entries.
+@c por Richard Matthew Stallman (rms).
+Como uma convenção em manuais GNU, @code{@@key} não deveria ser usado em entradas de indexação.
 
 
 @node @code{@@samp}
-@subsection @code{@@samp}@{@var{text}@}
+@subsection @code{@@samp}@{@var{texto}@}
+@c Capítulo 7 - Marcação de Texto, Palavras e Frases
+@c Seção 7.1 - Indicando Definições, Comandos, etc.
+@c Subseção 7.1.5 - @samp{texto}
 
-@anchor{samp}@c old name
+@anchor{samp} @c nome antigo
 @findex samp
 
-Use the @code{@@samp} command to indicate text that is a literal example
-or `sample' of a sequence of characters in a file, string, pattern, etc.
-Enclose the text in braces.  The argument appears within single
-quotation marks in both the Info file and the printed manual; in
-addition, it is printed in a fixed-width font.
+Use o comando @code{@@samp} para indicar um texto que seja um exemplo 
+literal ou ``amostra'' de uma sequência de caracteres em um arquivo, 
+cadeia de caracteres, padrão, etc. Coloque o texto entre chaves. O 
+argumento aparece entre aspas simples tanto no arquivo Info quanto no 
+manual impresso; além disso, o texto é impresso em uma fonte de largura 
+fixa.
 
 @example
-To match @@samp@{foo@} at the end of the line,
-use the regexp @@samp@{foo$@}.
+Para combinar @@samp@{foo@} no final da linha, use a expressão regular 
+@@samp@{foo$@}.
 @end example
 
 @noindent
-produces
+produz:
 
 @quotation
-To match @samp{foo} at the end of the line, use the regexp
+Para combinar @samp{foo} no final da linha, use a expressão regular 
 @samp{foo$}.
 @end quotation
 
-Any time you are referring to single characters, you should use
-@code{@@samp} unless @code{@@kbd} or @code{@@key} is more appropriate.
-Also, you may use @code{@@samp} for entire statements in C and for entire
-shell commands---in this case, @code{@@samp} often looks better than
-@code{@@code}.  Basically, @code{@@samp} is a catchall for whatever is
-not covered by @code{@@code}, @code{@@kbd}, @code{@@key},
-@code{@@command}, etc.
+Sempre que estiver se referindo a caracteres únicos, você deveria usar 
+@code{@@samp}, a menos que @code{@@kbd} ou @code{@@key} sejam mais 
+apropriados. Além disso, você pode usar @code{@@samp} para instruções 
+inteiras em C e para comandos inteiros do shell---nesse caso, 
+@code{@@samp} geralmente parece melhor que @code{@@code}. Basicamente, 
+@code{@@samp} é um ``pega tudo'' para o que não for coberto por 
+@code{@@code}, @code{@@kbd}, @code{@@key}, @code{@@command}, etc.
 
-Only include punctuation marks within braces if they are part of the
-string you are specifying.  Write punctuation marks outside the braces
-if those punctuation marks are part of the English text that surrounds
-the string.  In the following sentence, for example, the commas and
-period are outside of the braces:
+Somente inclua sinais de pontuação entre chaves se eles fizerem parte da 
+sequência de caracteres que você estiver especificando. Escreva sinais 
+de pontuação fora das chaves se tais sinais de pontuação fizerem parte 
+do texto em Inglês que envolve a sequência de caracteres. Na frase 
+seguinte, por exemplo, as vírgulas e pontos estão fora das chaves:
 
 @example
 @group
-In English, the vowels are @@samp@{a@}, @@samp@{e@},
-@@samp@{i@}, @@samp@{o@}, @@samp@{u@}, and sometimes
-@@samp@{y@}.
+Em Inglês, as vogais são @@samp@{a@}, @@samp@{e@}, @@samp@{i@}, 
+@@samp@{o@}, @@samp@{u@}, e, as vezes, @@samp@{y@}.
 @end group
 @end example
 
 @noindent
-This produces:
+Isso produz:
 
 @quotation
-In English, the vowels are @samp{a}, @samp{e},
-@samp{i}, @samp{o}, @samp{u},  and sometimes
-@samp{y}.
+Em Inglês, as vogais são @samp{a}, @samp{e}, @samp{i}, @samp{o}, 
+@samp{u}, e, as vezes, @samp{y}.
 @end quotation
 
 
 @node @code{@@verb}
 @subsection @code{@@verb}@{@var{char}@var{text}@var{char}@}
+@c Capítulo 7 - Marcação de Texto, Palavras e Frases
+@c Seção 7.1 - Indicando Definições, Comandos, etc.
+@c Subseção 7.1.6 - @verb{chartextchar}
 
-@anchor{verb}@c old name
+@anchor{verb} @c nome antigo
 @findex verb
-@cindex Verbatim in-line text
+@cindex Texto literal interno a linha
 
-@cindex Delimiter character, for verbatim
-Use the @code{@@verb} command to print a verbatim sequence of
-characters.
+@cindex Caracter delimitador, para literalidade
+Use o comando @code{@@verb} para imprimir uma sequência literal de 
+caracteres.
 
-Like @LaTeX{}'s @code{\verb} command, the verbatim text can be quoted using
-any unique delimiter character.  Enclose the verbatim text, including the
-delimiters, in braces.  Text is printed in a fixed-width font:
+Semelhante ao comando @code{\verb} do @LaTeX{}, o texto literal pode ser 
+delimitado usando-se qualquer caracter delimitador único. Coloque o 
+texto literal, incluindo os delimitadores, entre chaves. O texto é 
+impresso em uma fonte de largura fixa:
 
 @example
-How many @@verb@{|@@|@}-escapes does one need to print this
-@@verb@{.@@a @@b.@@c.@} string or @@verb@{+@@'e?`@{@}!`\+@} this?
+Quantos caracteres de escape @@verb@{|@@|@} alguém precisa para imprimir 
+esta sequência @@verb@{.@@a @@b.@@c.@} ou esta 
+@@verb@{+@@'e?`@{@}!`\+@}?
 @end example
 
 @noindent
-produces
+produz:
 
 @example
-How many @verb{|@|}-escapes does one need to print this
-@verb{.@a @b.@c.} string or @verb{+@'e?`{}!`\+} this?
+Quantos caracteres de escape @verb{|@|} alguém precisa para imprimir 
+esta sequência @verb{.@a @b.@c.} ou esta @verb{+@'e?`{}!`\+}?
 @end example
 
-This is in contrast to @code{@@samp} (see the previous section),
-@code{@@code}, and similar commands; in those cases, the argument is
-normal Texinfo text, where the three characters @code{@@@{@}} are
-special, as usual.  With @code{@@verb}, nothing is special except the
-delimiter character you choose.
+Isso está em contraste com @code{@@samp} (veja a seção anterior), 
+@code{@@code} e comandos semelhantes; naqueles casos, o argumento é 
+texto normal Texinfo, onde os três caracteres @code{@@@{@}} são 
+especiais, como de costume. Com @code{@@verb}, nada é especial, exceto o 
+caracter delimitador que você escolher.
 
-The delimiter character itself may appear inside the verbatim text, as
-shown above.  As another example, @samp{@@verb@{...@}} prints a single
-(fixed-width) period.
+O próprio caracter delimitador pode aparecer dentro do texto literal, 
+conforme mostrado acima. Como outro exemplo, @samp{@@verb@{...@}} 
+imprime um único ponto (largura fixa).
 
-It is not reliable to use @code{@@verb} inside other Texinfo
-constructs.  In particular, it does not work to use @code{@@verb} in
-anything related to cross-referencing, such as section titles or
-figure captions.
+Não é confiável usar @code{@@verb} dentro de outras construções do 
+Texinfo. Em particular, não funciona usar @code{@@verb} em nada 
+relacionado a referências cruzadas, como títulos de seção ou legendas de 
+figuras.
 
 
 @node @code{@@var}
-@subsection @code{@@var}@{@var{metasyntactic-variable}@}
+@subsection @code{@@var}@{@var{variável-metassintática}@}
+@c Capítulo 7 - Marcação de Texto, Palavras e Frases
+@c Seção 7.1 - Indicando Definições, Comandos, etc.
+@c Subseção 7.1.7 - @var{variável-metassintática}
 
-@anchor{var}@c old name
+@anchor{var} @c nome antigo
 @findex var
 
 Use the @code{@@var} command to indicate metasyntactic variables.  A
