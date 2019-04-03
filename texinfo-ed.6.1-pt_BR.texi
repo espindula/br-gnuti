@@ -373,7 +373,7 @@ Indicando Definições, Comandos, etc.
 Enfatizando Texto
 
 * @code{@@emph @@strong}::               Como enfatizar texto em Texinfo.
-* Smallcaps::                   Como utilizar a fonte capitalização pequena.
+* Capitalização Pequena::                   Como utilizar a fonte capitalização pequena.
 * Fonts::                       Variados comandos de fonte para saída impressa.
 
 Encapsulamentos e Exemplos
@@ -466,7 +466,7 @@ Inserções Especiais
 Caracteres Especiais: Inserindo @@ @{@} , \ #
 
 * Inserting an Atsign::         @code{@@@@}, @code{@@atchar@{@}}.
-* Inserting Braces::            @code{@@@{ @@@}}, @code{@@l rbracechar@{@}}.
+* Inserindo Chaves::            @code{@@@{ @@@}}, @code{@@l rbracechar@{@}}.
 * Inserindo Uma Vírgula::           , e @code{@@comma@{@}}.
 * Inserting a Backslash::       \ e @code{@@backslashchar@{@}}.
 * Inserting a Hashsign::        # e @code{@@hashchar@{@}}.
@@ -474,8 +474,8 @@ Caracteres Especiais: Inserindo @@ @{@} , \ #
 Inserindo Espaço
 
 * Multiple Spaces::             Inserindo múltiplos espaços.
-* Not Ending a Sentence::       Algumas vezes um . não finaliza uma sentença.
-* Ending a Sentence::           Algumas vezes finaliza.
+* Não Finalizando Uma Frase::       Algumas vezes um ponto ``.'' não finaliza uma frase.
+* Finalizando Uma Frase::           Algumas vezes finaliza.
 * @code{@@frenchspacing}::              Especificando espaçamento de fim-de-sentença.
 * @code{@@dmn}::                        Formatando uma dimensão.
 
@@ -501,7 +501,7 @@ Símbolos para Programação
 * @code{@@error}::                      Como indicar uma mensagem de erro.
 * @code{@@equiv}::                      Como indicar equivalência.
 * @code{@@point}::                      Como indicar a localização do ponto.
-* Click Sequences::             Inserindo sequências de uso GUI.
+* Sequências de Clique::             Inserindo sequências de uso GUI.
 
 Forcando e Prevenindo Quebras
 
@@ -600,7 +600,7 @@ Formatando e Imprimindo Cópia Impressa
 * Preparing for @TeX{}::           O que se fazer antes de utilizar o @TeX{}.
 * Overfull hboxes::             O que são e o que se fazer com hboxes superlotados.
 * @code{@@smallbook}::                  Como imprimir livros e manuais formato pequeno.
-* A4 Paper::                    Como imprimir em papel A4 ou A5.
+* Papel A4::                    Como imprimir em papel A4 ou A5.
 * @code{@@pagesizes}::                  Como imprimir com tamanhos de página personalizados.
 * Cropmarks and Magnification:: Como imprimir marcas para indicar o 
 tamanho das páginas e como imprimir saída escalada.
@@ -1111,7 +1111,7 @@ impressos em páginas de 8.5 por 11 polegadas
 Porém, você também pode imprimir em páginas de 7 por 9.25 polegadas 
 (178@dmn{mm} por 235@dmn{mm}, o tamanho @code{@@smallbook}; ou em papel 
 de tamanho A4 ou A5 (@code{@@afourpaper}, @code{@@afivepaper}).
- Veja-se @ref{@code{@@smallbook}}, e @ref{A4 Paper}.
+ Veja-se @ref{@code{@@smallbook}}, e @ref{Papel A4}.
 
 @cindex Literate programming
 @TeX{} é livremente distribuível.   Ele é escrito em um super conjunto 
@@ -6051,7 +6051,7 @@ Indica o nome de um arquivo.  @xref{@code{@@file}}.
 @item @@command@{@var{nome-de-comando}@}
 Indica o nome de um comando.  @xref{@code{@@command}}.
 
-@item @@option@{@var{opção}@}
+@item @@option@{@var{nome-de-opção}@}
 Indica uma opção de linha de comando.  @xref{@code{@@option}}.
 
 @item @@dfn@{@var{termo}@}
@@ -6245,7 +6245,8 @@ ambientes similares.
 @end table
 
 Você pode incorporar outro comando @@ dentro das chaves de um comando 
-@code{@@kbd}. Aqui, por exemplo, está a maneira para descrever um comando que pressiona a tecla @key{RETURN}'':
+@code{@@kbd}. Aqui, por exemplo, está a maneira para descrever um 
+comando que pressiona a tecla @key{RETURN}'':
 
 @example
 @@kbd@{r @@key@{RET@}@}
@@ -6349,7 +6350,8 @@ estiver se referindo à tecla modificadora isoladamente, use o comando
 @kbd{Meta-a} e @samp{@@key@{META@}} para produzir @key{META}.
 
 @c por Richard Matthew Stallman (rms).
-Como uma convenção em manuais GNU, @code{@@key} não deveria ser usado em entradas de indexação.
+Como uma convenção em manuais GNU, @code{@@key} não deveria ser usado em 
+entradas de indexação.
 
 
 @node @code{@@samp}
@@ -6469,403 +6471,434 @@ figuras.
 @anchor{var} @c nome antigo
 @findex var
 
-Use the @code{@@var} command to indicate metasyntactic variables.  A
-@dfn{metasyntactic variable} is something that stands for another
-piece of text.  For example, you should use a metasyntactic variable
-in the documentation of a function to describe the arguments that are
-passed to that function.
+Use o comando @code{@@var} para indicar variáveis metassintáticas. Uma 
+@dfn{variável metassintática} é algo que representa outro pedaço de 
+texto. Por exemplo, você deveria usar uma variável metassintática na 
+documentação de uma função para descrever os argumentos que são passados 
+para aquela função.
 
-Do not use @code{@@var} for the names of normal variables in computer
-programs.  These are specific names, so @code{@@code} is correct for
-them (@code{@@code}).  For example, the Emacs Lisp variable
-@code{texinfo-tex-command} is not a metasyntactic variable; it is
-properly formatted using @code{@@code}.
+Não use @code{@@var} para os nomes de variáveis normais em programas de 
+computador. Esse são nomes específicos, de forma que @code{@@code} é 
+correto para eles (@code{@@code}). Por exemplo, a variável 
+@code{texinfo-tex-command} da Emacs Lisp não é uma variável 
+metassintática; ela é formatada apropriadamente usando @code{@@code}.
 
-Do not use @code{@@var} for environment variables either; @code{@@env}
-is correct for them (see the next section).
+Tampouco use @code{@@var} para variáveis de ambiente; @code{@@env} é 
+correto para elas (veja a próxima seção).
 
-The effect of @code{@@var} in the Info file is to change the case of
-the argument to all uppercase.  In the printed manual and HTML
-output, the argument is output in slanted type.
+O efeito de @code{@@var} no arquivo Info é modificar a escrita do 
+argumento para letras todas maiúsculas. No manual impresso e saída HTML, 
+o argumento é exibido em tipo inclinado.
 
 @need 700
-For example,
+Por exemplo,
 
 @example
-To delete file @@var@{filename@},
-type @@samp@{rm @@var@{filename@}@}.
+Para deletar o arquivo @@var@{filename@}, digite 
+@@samp@{rm @@var@{filename@}@}.
 @end example
 
 @noindent
-produces
+produz:
 
 @quotation
-To delete file @var{filename}, type @samp{rm @var{filename}}.
+Para deletar o arquivo @var{filename}, digite @samp{rm @var{filename}}.
 @end quotation
 
 @noindent
-(Note that @code{@@var} may appear inside @code{@@code},
-@code{@@samp}, @code{@@file}, etc.)
+(Note que @code{@@var} pode aparecer dentro de @code{@@code}, 
+@code{@@samp}, @code{@@file}, etc.).
 
-Write a metasyntactic variable all in lowercase without spaces, and
-use hyphens to make it more readable.  Thus, the Texinfo source for
-the illustration of how to begin a Texinfo manual looks like
-this:
-
-@example
-@group
-\input texinfo
-@@@@settitle @@var@{name-of-manual@}
-@end group
-@end example
-
-@noindent
-This produces:
+Escreva uma variável metassintática toda em letras minúsculas e sem 
+espaços, e use hífens para torná-la mais legível. Assim, o fonte de 
+Texinfo para a ilustração de como iniciar um manual Texinfo se parece 
+com isto:
 
 @example
 @group
 \input texinfo
-@@settitle @var{name-of-manual}
+@@@@settitle @@var@{nome-do-manual@}
 @end group
 @end example
 
-In some documentation styles, metasyntactic variables are shown with
-angle brackets, for example:
+@noindent
+Isso produz:
 
 @example
-@dots{}, type rm <filename>
+@group
+\input texinfo
+@@settitle @var{nome-do-manual}
+@end group
+@end example
+
+Em alguns estilos de documentação, as variáveis metassintáticas são 
+mostradas entre colchetes angulares, por exemplo:
+
+@example
+@dots{}, digite rm <nome_arquivo>
 @end example
 
 @noindent
-However, that is not the style that Texinfo uses.
+Entretanto, esse não é o estilo que Texinfo usa.
 
-@c FIXME add a customization variable?  Add an example on how to do that
-@c for HTML?
-@c (You can, of course, modify the sources to @file{texinfo.tex}
-@c and the Info formatting commands
-@c to output the @code{<@dots{}>} format if you wish.)
+@c CONSERTE-ME: adicionar uma variável de personalização? Adicionar um 
+@c exemplo sobre como fazer isso para HTML?
+@c (Você pode, certamente, modificar os fontes para @file{texinfo.tex} e 
+@c os comandos de formatação do Info para expedir o formato do 
+@c @code{<@dots{}>} se você quiser).
 
 
 @node @code{@@env}
-@subsection @code{@@env}@{@var{environment-variable}@}
+@subsection @code{@@env}@{@var{variável-de-ambiente}@}
+@c Capítulo 7 - Marcação de Texto, Palavras e Frases
+@c Seção 7.1 - Indicando Definições, Comandos, etc.
+@c Subseção 7.1.8 - @env{variável-de-ambiente}
 
-@anchor{env}@c old name
+@anchor{env} @c nome antigo
 @findex env
 
-Use the @code{@@env} command to indicate environment variables, as
-used by many operating systems, including GNU@.  Do not use it for
-@emph{meta}syntactic variables; use @code{@@var} for those (see the
-previous section).
+Use o comando @code{@@env} para indicar variáveis de ambiente, conforme 
+usadas por muitos Sistemas Operacionais, incluindo GNU@. Não a use para 
+variáveis @emph{meta}ssintáticas; use @code{@@var} para essas (veja a 
+seção anterior).
 
-@code{@@env} is equivalent to @code{@@code} in its effects.
-For example:
+@code{@@env} é equivalente a @code{@@code} em seus efeitos. Por exemplo:
 
 @example
-The @@env@{PATH@} environment variable @dots{}
+A variável de ambiente @@env@{PATH@} @dots{}
 @end example
-@noindent produces
+@noindent
+produz:
 @quotation
-The @env{PATH} environment variable @dots{}
+A variável de ambiente @env{PATH} @dots{}
 @end quotation
 
 
 @node @code{@@file}
-@subsection @code{@@file}@{@var{file-name}@}
+@subsection @code{@@file}@{@var{nome-de-arquivo}@}
+@c Capítulo 7 - Marcação de Texto, Palavras e Frases
+@c Seção 7.1 - Indicando Definições, Comandos, etc.
+@c Subseção 7.1.9 - @file{nome-de-arquivo}
 
-@anchor{file}@c old name
+@anchor{file} @c nome antigo
 @findex file
 
-Use the @code{@@file} command to indicate text that is the name of a
-file, buffer, or directory, or is the name of a node in Info.  You can
-also use the command for file name suffixes.  Do not use @code{@@file}
-for symbols in a programming language; use @code{@@code}.
+Use o comando @code{@@file} para indicar texto que é o nome de um 
+arquivo, buffer, ou diretório, ou é o nome de um nodo em Info. Você 
+também pode usar o comando para extensões de nome de arquivo. Não use 
+@code{@@file} para símbolos em uma linguagem de programação; use 
+@code{@@code}.
 
-@code{@@file} is equivalent to @code{code} in its effects.  For
-example,
+@code{@@file} é equivalente a @code{code} em seus efeitos. Por exemplo,
 
 @example
-The @@file@{.el@} files are in
-the @@file@{/usr/local/emacs/lisp@} directory.
+Os arquivos @@file@{.el@} estão no diretório 
+@@file@{/usr/local/emacs/lisp@}.
 @end example
 
 @noindent
-produces
+produz:
 
 @quotation
-The @file{.el} files are in
-the @file{/usr/local/emacs/lisp} directory.
+Os arquivos @file{.el} estão no diretório @file{/usr/local/emacs/lisp}.
 @end quotation
 
 
 @node @code{@@command}
-@subsection @code{@@command}@{@var{command-name}@}
+@subsection @code{@@command}@{@var{nome-de-comando}@}
+@c Capítulo 7 - Marcação de Texto, Palavras e Frases
+@c Seção 7.1 - Indicando Definições, Comandos, etc.
+@c Subseção 7.1.10 - @command{nome-de-comando}
 
-@anchor{command}@c old name
-@findex command
-@cindex Command names, indicating
-@cindex Program names, indicating
+@anchor{command} @c nome antigo
+@findex comando
+@cindex Nomes de comando, indicando
+@cindex Nomes de programa, indicando
 
-Use the @code{@@command} command to indicate command names, such as
-@command{ls} or @command{cc}.
+Use o comando @code{@@command} para indicar os nomes de comando, como 
+@command{ls} ou @command{cc}.
 
-@code{@@command} is equivalent to @code{@@code} in its effects.
-For example:
+@code{@@command} é equivalente a @code{@@code} em seus efeitos. Por 
+exemplo:
 
 @example
-The command @@command@{ls@} lists directory contents.
+O comando @@command@{ls@} lista o conteúdo de diretórios.
 @end example
-@noindent produces
+@noindent
+produz:
 @quotation
-The command @command{ls} lists directory contents.
+O comando @command{ls} lista o conteúdo de diretórios.
 @end quotation
 
-You should write the name of a program in the ordinary text font, rather
-than using @code{@@command}, if you regard it as a new English word,
-such as `Emacs' or `Bison'.
+Você deveria escrever o nome de um programa na fonte de texto comum, em 
+vez de usar @code{@@command}, se considerá-lo uma nova palavra em 
+inglês, como `Emacs' or `Bison'.
 
-When writing an entire shell command invocation, as in @samp{ls -l},
-you should use either @code{@@samp} or @code{@@code} at your discretion.
+Quando escrever uma invocação inteira de comando de shell, como em 
+@samp{ls -l}, você deveria usar ou @code{@@samp} ou @code{@@code} a seu 
+critério.
 
 
 @node @code{@@option}
-@subsection @code{@@option}@{@var{option-name}@}
+@subsection @code{@@option}@{@var{nome-de-opção}@}
+@c Capítulo 7 - Marcação de Texto, Palavras e Frases
+@c Seção 7.1 - Indicando Definições, Comandos, etc.
+@c Subseção 7.1.11 - @option{nome-de-opção}
 
-@anchor{option}@c old name
-@findex option
+@anchor{option} @c nome antigo
+@findex opção
 
-Use the @code{@@option} command to indicate a command-line option; for
-example, @option{-l} or @option{--version} or
+Use o comando @code{@@option} para indicar uma opção de linha de 
+comando; por exemplo, @option{-l} ou @option{--version} ou 
 @option{--output=@var{filename}}.
 
-@code{@@option} is equivalent to @code{@@code} in its effects.
-For example:
+@code{@@option} é equivalente a @code{@@code} em seus efeitos. Por 
+exemplo:
 
 @example
-The option @@option@{-l@} produces a long listing.
+A opção @@option@{-l@} produz uma listagem longa.
 @end example
-@noindent produces
+@noindent
+produz:
 @quotation
-The option @option{-l} produces a long listing.
+A opção @option{-l} produz uma listagem longa.
 @end quotation
 
 
 @node @code{@@dfn}
-@subsection @code{@@dfn}@{@var{term}@}
+@subsection @code{@@dfn}@{@var{termo}@}
+@c Capítulo 7 - Marcação de Texto, Palavras e Frases
+@c Seção 7.1 - Indicando Definições, Comandos, etc.
+@c Subseção 7.1.12 - @dfn{termo}
 
-@anchor{dfn}@c old name
+@anchor{dfn} @c nome antigo
 @findex dfn
 
-Use the @code{@@dfn} command to identify the introductory or defining
-use of a technical term.  Use the command only in passages whose
-purpose is to introduce a term which will be used again or which the
-reader ought to know.  Mere passing mention of a term for the first
-time does not deserve @code{@@dfn}.  The command generates italics in
-the printed manual, and double quotation marks in the Info file.  For
-example:
+Use o comando @code{@@dfn} para identificar o uso introdutório ou 
+definidor de um termo técnico. Use o comando somente em passagens cujo 
+propósito é introduzir um termo o qual será usado novamente ou o qual o 
+leitor deve saber. A simples menção de um termo pela primeira vez não 
+merece um @code{@@dfn}. O comando gera itálicos no manual impresso, e 
+aspas duplas no arquivo Info. Por exemplo:
 
 @example
-Getting rid of a file is called @@dfn@{deleting@} it.
+Livrar-se de um arquivo chama-se @@dfn@{deletando@}.
 @end example
 
 @noindent
-produces
+produz:
 
 @quotation
-Getting rid of a file is called @dfn{deleting} it.
+Livrar-se de um arquivo chama-se @dfn{deletando}.
 @end quotation
 
-As a general rule, a sentence containing the defining occurrence of a
-term should be a definition of the term.  The sentence does not need
-to say explicitly that it is a definition, but it should contain the
-information of a definition---it should make the meaning clear.
+Como regra geral, uma frase contendo a ocorrência definidora de um termo 
+deve ser uma definição do termo. A frase não precisa dizer 
+explicitamente que é uma definição, mas deve conter a informação de uma 
+definição---ela deve deixar claro o significado.
 
 
 @node @code{@@abbr}
-@subsection @code{@@abbr}@{@var{abbreviation}[, @var{meaning}]@}
+@subsection @code{@@abbr}@{@var{abreviação}[, @var{significado}]@}
+@c Capítulo 7 - Marcação de Texto, Palavras e Frases
+@c Seção 7.1 - Indicando Definições, Comandos, etc.
+@c Subseção 7.1.13 - @abbr{abreviação[, significado]}
 
-@anchor{abbr}@c old name
+@anchor{abbr} @c nome antigo
 @findex abbr
 
-@cindex Abbreviations, tagging
-You can use the @code{@@abbr} command for general abbreviations.  The
-abbreviation is given as the single argument in braces, as in
-@samp{@@abbr@{Comput.@}}.  As a matter of style, or for particular
-abbreviations, you may prefer to omit periods, as in
+@cindex Abreviaturas, marcação
+Você pode usar o comando @code{@@abbr} para abreviações gerais. A 
+abreviação é dada como o argumento único entre chaves, como em 
+@samp{@@abbr@{Comput.@}}. Por uma questão de estilo, ou para 
+abreviações específicas, você pode perferir omitir pontos, como em 
 @samp{@@abbr@{Mr@} Stallman}.
 
-@code{@@abbr} accepts an optional second argument, intended to be used
-for the meaning of the abbreviation.
+@code{@@abbr} aceita um segundo argumento opcional, destinado a ser 
+usado para o significado da abreviação.
 
-If the abbreviation ends with a lowercase letter and a period, and is
-not at the end of a sentence, and has no second argument, remember to
-use the @code{@@.} command (@pxref{Ending a Sentence}) to get the
-correct spacing.  However, you do not have to use @code{@@.} within
-the abbreviation itself; Texinfo automatically assumes periods within
-the abbreviation do not end a sentence.
+Se a abreviação finalizar com uma letra minúscula e um ponto, e não 
+estiver no final de uma frase, e não tiver um segundo argumento, 
+lembre-se de usar o comando @code{@@.} (@pxref{Finalizando Uma Frase}) 
+para obter o espaçamento correto. Entretanto, você não tem de usar 
+@code{@@.} dentro da própria abreviação; Texinfo automaticamente assume 
+que pontos dentro da abreviação não finalizam uma frase.
 
-@cindex @code{<abbr>} and @code{<abbrev>} tags
-In @TeX{} and in the Info output, the first argument is printed as-is;
-if the second argument is present, it is printed in parentheses after
-the abbreviation.  In HTML the @code{<abbr>} tag is used; in Docbook,
-the @code{<abbrev>} tag is used.  For instance:
+@cindex marcações @code{<abbr>} e @code{<abbrev>}
+Em @TeX{} e na saída Info, o primeiro argumento é impresso como está; se 
+o segundo argumento estiver presente, ele é impresso entre parênteses 
+após a abreviação. Em HTML, a marcação @code{<abbr>} é usada; em 
+Docbook, a marcação @code{<abbrev>} é usada. Por exemplo:
 
 @example
-@@abbr@{Comput. J., Computer Journal@}
+@@abbr@{Comput. J., Jornal do Computador@}
 @end example
 
-@noindent produces:
+@noindent
+produz:
 
 @display
-@abbr{Comput. J., Computer Journal}
+@abbr{Comput. J., Jornal do Computador}
 @end display
 
-For abbreviations consisting of all capital letters, you may prefer to
-use the @code{@@acronym} command instead.  See the next section for
-more on the usage of these two commands.
+Para abreviações que consistem de todas as letras maiúsculas, você pode 
+preferir usar o comando @code{@@acronym}. Veja a próxima seção para mais 
+sobre o uso desses dois comandos.
 
 
 @node @code{@@acronym}
-@subsection @code{@@acronym}@{@var{acronym}[, @var{meaning}]@}
+@subsection @code{@@acronym}@{@var{sigla}[, @var{significado}]@}
+@c Capítulo 7 - Marcação de Texto, Palavras e Frases
+@c Seção 7.1 - Indicando Definições, Comandos, etc.
+@c Subseção 7.1.14 - @acronym{sigla[, significado] }
 
-@anchor{acronym}@c old name
-@findex acronym
+@anchor{acronym} @c nome antigo
+@findex sigla
 
-@cindex NASA, as acronym
-@cindex Acronyms, tagging
-You can use the @code{@@acronym} command for abbreviations written in
-all capital letters, such as `@acronym{NASA}'.  The abbreviation is
-given as the single argument in braces, as in
-@samp{@@acronym@{NASA@}}.  As a matter of style, or for particular
-acronyms, you may prefer to use periods, as in
-@samp{@@acronym@{N.A.S.A.@}}.
+@cindex NASA, como sigla
+@cindex Siglas, marcando
+Você pode usar o comando @code{@@acronym} para abreviações escritas 
+todas com letras maiúsculas, como `@acronym{NASA}'. A abreviação é dada 
+como o único argumento entre chaves, como em @samp{@@acronym@{NASA@}}. 
+Por uma questão de estilo, ou para siglas específicas, você pode 
+preferir usar pontos, como em @samp{@@acronym@{N.A.S.A.@}}.
 
-@code{@@acronym} accepts an optional second argument, intended to be
-used for the meaning of the acronym.
+@code{@@acronym} aceita um segundo argumento opcional, destinado a ser 
+usado para o significado da sigla.
 
-If the acronym is at the end of a sentence, and if there is no second
-argument, remember to use the @code{@@.} or similar command
-(@pxref{Ending a Sentence}) to get the correct spacing.
+Se a sigla estiver no final de uma frase, e se não existir segundo 
+argumento, lembre-se de usar o @code{@@.} ou comando similar 
+(@pxref{Finalizando Uma Frase}) para obter o espaçamento correto.
 
-@cindex @code{<acronym>} tag
-In @TeX{}, the acronym is printed in slightly smaller font.  In the
-Info output, the argument is printed as-is.  In either format, if the
-second argument is present, it is printed in parentheses after the
-acronym.  In HTML and Docbook the @code{<acronym>} tag is used.
+@cindex marcação @code{<acronym>}
+Em @TeX{}, a sigla é impressa em fonte ligeiramente menor. Na saída 
+Info, o argumento é impresso como está. Em qualquer formato, se o 
+segundo argumento estiver presente, ele é impresso entre parênteses após 
+a sigla. Em HTML e Docbook a marcação @code{<acronym>} é usada.
 
-For instance (since GNU is a recursive acronym, we use
-@code{@@acronym} recursively):
+Por exemplo (dado que GNU é uma sigla recursiva, nós usamos 
+@code{@@acronym} recursivamente):
 
 @example
-@@acronym@{GNU, @@acronym@{GNU@}'s Not Unix@}
+@@acronym@{GNU, @@acronym@{GNU@} Não é Unix@}
 @end example
 
-@noindent produces:
+@noindent
+produz:
 
 @display
-@acronym{GNU, @acronym{GNU}'s Not Unix}
+@acronym{GNU, @acronym{GNU} Não é Unix}
 @end display
 
-@cindex Family names, in all capitals
-In some circumstances, it is conventional to print family names in all
-capitals.  Don't use @code{@@acronym} for this, since a name is not an
-acronym.  Use @code{@@sc} instead (@pxref{Smallcaps}).
+@cindex Nomes de família, todas letras maiúsculas
+Em algumas circunstâncias, é convencional imprimir nomes de família em 
+letras maiúsculas. Não use @code{@@acronym} para isso, pois um nome não 
+é uma sigla. Use @code{@@sc} (@pxref{Capitalização Pequena}).
 
-@code{@@abbr} and @code{@@acronym} are closely related commands: they
-both signal to the reader that a shortened form is being used, and
-possibly give a meaning.  When choosing whether to use these two
-commands, please bear the following in mind.
+@code{@@abbr} e @code{@@acronym} são comandos intimamente relacionados: 
+ambos sinalizam para o leitor que uma forma abreviada está sendo usada, 
+e possivelmente dá um significado. Ao escolher usar esses dois comandos, 
+por favor tenha o seguinte em mente.
 
 @itemize @minus
 @item
-In common English usage, acronyms are a subset of abbreviations: they
-include pronounceable words like `@acronym{NATO}', `radar', and
-`snafu'; some sources also include syllable acronyms like
-`Usenet', hybrids like `@acronym{SIGGRAPH}', and unpronounceable
-initialisms like `@acronym{FBI}'.
+No uso comum do Inglês, siglas são um subconjunto de abreviações: elas 
+incluem palavras pronunciáveis como `@acronym{NATO}', `radar' e `snafu'; 
+algumas fontes também incluem siglas de siglas, como `Usenet'; híbridas, 
+como `@acronym{SIGGRAPH}'; e inicialismos impronunciáveis como 
+`@acronym{FBI}'.
 
 @item
-In Texinfo, an acronym (but not an abbreviation) should consist only
-of capital letters and periods, no lowercase.
+Em Texinfo, uma sigla (mas não uma abreviação) deveria consistir apenas 
+de letras maiúsculas e pontos, não minúsculas.
 
 @item
-In @TeX{}, an acronym (but not an abbreviation) is printed in a
-slightly smaller font.
+Em @TeX{}, uma sigla (mas não uma abreviação) é impressa em uma fonte 
+ligeiramente menor.
 
 @item
-Some browsers place a dotted bottom border under abbreviations but not
-acronyms.
+Alguns navegadores colocam uma borda inferior pontilhada em abreviações, 
+mas não em siglas.
 
 @item
-It usually turns out to be quite difficult and/or time-consuming to
-consistently use @code{@@acronym} for all sequences of uppercase
-letters.  Furthermore, it looks strange for some acronyms to be in the
-normal font size and others to be smaller.  Thus, a simpler approach
-you may wish to consider is to avoid @code{@@acronym} and just typeset
-everything as normal text in all capitals: @samp{GNU}, producing the
-output `GNU'.
+Geralmente é bastante difícil e/ou demorado usar consistentemente 
+@code{@@acronym} para todas as sequências de letras maiúsculas. Além do 
+mais, parece estranho para algumas siglas estar no tamanho normal da 
+fonte e outras estarem menores. Assim, uma abordagem mais simples que 
+você pode querer considerar é evitar @code{@@acronym} e apenas digitar 
+tudo como texto normal em todas maiúsculas: @samp{GNU}, produzindo a 
+saída `GNU'.
 
 @item
-In general, it's not essential to use either of these commands for all
-abbreviations; use your judgment.  Text is perfectly readable without
-them.
+Em geral, não é essencial usar quaisquer desses comandos para todas as 
+abreviações; use seu bom senso. O texto é perfeitamente legível sem tais 
+comandos.
 @end itemize
 
 
 @node @code{@@indicateurl}
-@subsection @code{@@indicateurl}@{@var{uniform-resource-locator}@}
+@subsection @code{@@indicateurl}@{@var{localizador-uniforme-de-recurso}@}
+@c Capítulo 7 - Marcação de Texto, Palavras e Frases
+@c Seção 7.1 - Indicando Definições, Comandos, etc.
+@c Subseção 7.1.15 - @indicateurl{localizador-uniforme-de-recurso}
 
-@anchor{indicateurl}@c old name
+@anchor{indicateurl} @c nome antigo
 @findex indicateurl
-@cindex Uniform resource locator, indicating
-@cindex URL, indicating
+@cindex Localizador Uniforme de Recurso, indicando
+@cindex URL, indicando
 
-Use the @code{@@indicateurl} command to indicate a uniform resource
-locator on the World Wide Web.  This is purely for markup purposes and
-does not produce a link you can follow (use the @code{@@url} or
-@code{@@uref} command for that, @pxref{@code{@@url}}).
-@code{@@indicateurl} is useful for urls which do not actually exist.
-For example:
+Use o comando @code{@@indicateurl} para indicar um Localizador Uniforme 
+de Recurso na Internet. Isso é puramente para propósitos de marcação e 
+não produz um link que você possa seguir (use o comando @code{@@url} ou 
+@code{@@uref} para isso, @pxref{@code{@@url}}). @code{@@indicateurl} é 
+útil para URLs que não existem atualmente. Por exemplo:
 
 @example
-For example, the url might be @@indicateurl@{http://example.org/path@}.
+Por exemplo, a URL poderia ser @@indicateurl@{http://example.org/path@}.
 @end example
 
-@noindent which produces:
+@noindent
+que produz:
 
 @display
-For example, the url might be @indicateurl{http://example.org/path}.
+Por exemplo, a URL poderia ser @indicateurl{http://example.org/path}.
 @end display
 
-The output from @code{@@indicateurl} is more or less like that of
+A saída oriunda de @code{@@indicateurl} é mais ou menos como aquela de 
 @code{@@samp} (@pxref{@code{@@samp}}).
 
 
 @node @code{@@email}
-@subsection @code{@@email}@{@var{email-address}[, @var{displayed-text}]@}
+@subsection @code{@@email}@{@var{endereço-de-email}[, @var{texto-exibido}]@}
+@c Capítulo 7 - Marcação de Texto, Palavras e Frases
+@c Seção 7.1 - Indicando Definições, Comandos, etc.
+@c Subseção 7.1.16 - @email{endereço-de-email[, texto-exibido]}
 
-@anchor{email}@c old name
+@anchor{email} @c nome antigo
 @findex email
 
-Use the @code{@@email} command to indicate an electronic mail address.
-It takes one mandatory argument, the address, and one optional argument, the
-text to display (the default is the address itself).
+Use o comando @code{@@email} para indicar um endereço de correio 
+eletrônico. O comando recebe um argumento obrigatório, o endereço, e um 
+argumento opcional, o texto a exibir (o padrão é o próprio endereço).
 
-@cindex Mailto link
-In Info, the address is shown in angle brackets, preceded by the text
-to display if any.  In @TeX{}, the angle brackets are omitted.  In
-HTML output, @code{@@email} produces a @samp{mailto} link that usually
-brings up a mail composition window.  For example:
+@cindex Link para EMail
+Em Info, o endereço é mostrado entre colchetes angulares (sinal de 
+``maior que'' e ``menor que''), precedido pelo texto a ser exibido, se 
+houver. Em @TeX{}, os colchetes angulares são omitidos. Na saída HTML, 
+@code{@@email} produz um link @samp{mailto} que geralmente abre uma 
+janela de composição de correspondência. Por exemplo:
 
 @example
-Send bug reports to @@email@{bug-texinfo@@@@gnu.org@},
-suggestions to the @@email@{bug-texinfo@@@@gnu.org, same place@}.
+Mande relatórios de bugs para @@email@{bug-texinfo@@@@gnu.org@}, 
+sugestões para o @@email@{bug-texinfo@@@@gnu.org, algum lugar@}.
 @end example
 
-@noindent produces
+@noindent
+produz:
 
 @display
-Send bug reports to @email{bug-texinfo@@gnu.org},
-suggestions to the @email{bug-texinfo@@gnu.org, same place}.
+Mande relatórios de bugs para @email{bug-texinfo@@gnu.org},
+sugestões para o @email{bug-texinfo@@gnu.org, algum lugar}.
 @end display
 
 
@@ -6884,7 +6917,7 @@ These commands have no effect in Info and only one of them, the
 
 @menu
 * @code{@@emph @@strong}::               How to emphasize text in Texinfo.
-* Smallcaps::                   How to use the small caps font.
+* Capitalização Pequena::                   How to use the small caps font.
 * Fonts::                       Various font commands for printed output.
 @end menu
 
@@ -6933,7 +6966,7 @@ there.
 @end quotation
 
 
-@node Smallcaps
+@node Capitalização Pequena
 @subsection @code{@@sc}@{@var{text}@}: The Small Caps Font
 @cindex Small caps font
 @findex sc @r{(small caps font)}
@@ -9729,7 +9762,7 @@ restricted contexts, as explained in the respective sections.
 
 @menu
 * Inserting an Atsign::         @code{@@@@}, @code{@@atchar@{@}}.
-* Inserting Braces::            @code{@@@{ @@@}}, @code{@@l rbracechar@{@}}.
+* Inserindo Chaves::            @code{@@@{ @@@}}, @code{@@l rbracechar@{@}}.
 * Inserindo Uma Vírgula::           , and @code{@@comma@{@}}.
 * Inserting a Backslash::       \ and @code{@@backslashchar@{@}}.
 * Inserting a Hashsign::        # and @code{@@hashchar@{@}}.
@@ -9753,7 +9786,7 @@ can be necessary to avoid using the literal @samp{@@} character in the
 source (and may be clearer in other contexts).
 
 
-@node Inserting Braces
+@node Inserindo Chaves
 @subsection Inserting `@{ `@}' with @code{@@@{ @@@}} and @code{@@l rbracechar@{@}}
 
 @findex @{ @r{(literal @samp{@{})}
@@ -9946,8 +9979,8 @@ kinds within and after sentences.
 
 @menu
 * Multiple Spaces::             Inserting multiple spaces.
-* Not Ending a Sentence::       Sometimes a . doesn't end a sentence.
-* Ending a Sentence::           Sometimes it does.
+* Não Finalizando Uma Frase::       Sometimes a . doesn't end a sentence.
+* Finalizando Uma Frase::           Sometimes it does.
 * @code{@@frenchspacing}::              Specifying end-of-sentence spacing.
 * @code{@@dmn}::                        Formatting a dimension.
 @end menu
@@ -9998,8 +10031,8 @@ Do not follow any of these commands with braces.
 To produce a non-breakable space, see @ref{@code{@@tie}}.
 
 
-@node Not Ending a Sentence
-@subsection Not Ending a Sentence
+@node Não Finalizando Uma Frase
+@subsection Não Finalizando Uma Frase
 
 @cindex Not ending a sentence
 @cindex Sentence non-ending punctuation
@@ -10061,10 +10094,10 @@ sentence, and no extra space is inserted.
 @code{@@:} has no effect on the HTML or Docbook output.
 
 
-@node Ending a Sentence
-@subsection Ending a Sentence
+@node Finalizando Uma Frase
+@subsection Finalizando Uma Frase
 
-@cindex Ending a Sentence
+@cindex Finalizando Uma Frase
 @cindex Sentence ending punctuation
 
 @findex . @r{(end of sentence)}
@@ -10166,7 +10199,7 @@ This is text. Two sentences. Three sentences. French spacing.
 This is text. Two sentences. Three sentences. Non-French spacing.
 
 @code{@@frenchspacing} also affects the output after @code{@@.},
-@code{@@!}, and @code{@@?} (@pxref{Ending a Sentence}).
+@code{@@!}, and @code{@@?} (@pxref{Finalizando Uma Frase}).
 
 @code{@@frenchspacing} has no effect on the HTML or Docbook output;
 for XML, it outputs a transliteration of itself (@pxref{Output
@@ -10210,7 +10243,7 @@ so that no line break can occur between the number and the dimension.
 Also, if you write a period after an abbreviation within a sentence
 (as with the `in.'@: above), you should write @samp{@@:} after the
 period to prevent @TeX{} from inserting extra whitespace, as shown
-here.  @xref{Not Ending a Sentence}.
+here.  @xref{Não Finalizando Uma Frase}.
 
 
 @node Inserindo Acentos
@@ -10926,7 +10959,7 @@ empty braces.
 * @code{@@error}::                      How to indicate an error message.
 * @code{@@equiv}::                      How to indicate equivalence.
 * @code{@@point}::                      How to indicate the location of point.
-* Click Sequences::             Inserting GUI usage sequences.
+* Sequências de Clique::             Inserting GUI usage sequences.
 @end menu
 
 
@@ -11224,8 +11257,8 @@ This is the changed @@point@{@}contents of foo.
 @end example
 
 
-@node Click Sequences
-@subsection Click Sequences
+@node Sequências de Clique
+@subsection Sequências de Clique
 
 @cindex Click sequences
 @cindex Sequence of clicks
@@ -13412,7 +13445,7 @@ the arguments, as usual, but is @emph{not} ignored at the end of
 To insert a literal at sign, left brace, or right brace in one of the
 arguments, you must use the alphabetic commands @code{@@atchar@{@}}
 (@pxref{Inserting an Atsign}), and @code{@@lbracechar@{@}} or
-@code{@@rbracechar@{@}} (@pxref{Inserting Braces}), or the parsing
+@code{@@rbracechar@{@}} (@pxref{Inserindo Chaves}), or the parsing
 will become confused.
 
 With @code{@@inlinefmtifelse}, it is also necessary to use
@@ -15034,7 +15067,7 @@ Details are in the following sections.
 * Preparing for @TeX{}::           What to do before you use @TeX{}.
 * Overfull hboxes::             What are and what to do with overfull hboxes.
 * @code{@@smallbook}::                  How to print small format books and manuals.
-* A4 Paper::                    How to print on A4 or A5 paper.
+* Papel A4::                    How to print on A4 or A5 paper.
 * @code{@@pagesizes}::                  How to print with customized page sizes.
 * Cropmarks and Magnification:: How to print marks to indicate the size
                                  of pages and how to print scaled up output.
@@ -15124,7 +15157,7 @@ This inserts @var{cmd} on a line by itself, after a
 @code{@@setfilename} line in a temporary copy of the input file, before
 running @TeX{}.  With this, you can specify different printing
 formats, such as @code{@@smallbook} (@pxref{@code{@@smallbook}}),
-@code{@@afourpaper} (@pxref{A4 Paper}), or @code{@@pagesizes}
+@code{@@afourpaper} (@pxref{Papel A4}), or @code{@@pagesizes}
 (@pxref{@code{@@pagesizes}}), without actually changing the document
 source.  (You can also do this on a site-wide basis with
 @file{texinfo.cnf}; @pxref{Preparing for @TeX{}}).
@@ -15745,7 +15778,7 @@ This file is read by @TeX{} at the beginning of a Texinfo file.
 You can put any commands you like there, according to local site-wide
 conventions.  They will be read by @TeX{} when processing any Texinfo
 document.  For example, if @file{texinfo.cnf} contains the line
-@samp{@@afourpaper} (@pxref{A4 Paper}), then all Texinfo documents
+@samp{@@afourpaper} (@pxref{Papel A4}), then all Texinfo documents
 will be processed with that page size in effect.  If you have nothing
 to put in @file{texinfo.cnf}, you do not need to create it.
 
@@ -15911,8 +15944,8 @@ for other ways to format with @code{@@smallbook} that do not require
 changing the source file.
 
 
-@node A4 Paper
-@section Printing on A4 Paper
+@node Papel A4
+@section Printing on Papel A4
 @cindex A4 paper, printing on
 @cindex A5 paper, printing on
 @cindex Paper size, A4
@@ -19777,7 +19810,7 @@ stretchable, interword space.  @xref{Multiple Spaces}.
 
 @item @@!
 Produce an exclamation point that ends a sentence (usually after an
-end-of-sentence capital letter).  @xref{Ending a Sentence}.
+end-of-sentence capital letter).  @xref{Finalizando Uma Frase}.
 
 @item @@"
 @itemx @@'
@@ -19788,15 +19821,15 @@ character, as in @"o and @'o.  @xref{Inserindo Acentos}.
 Force a line break.  @xref{Quebras de Linha}.
 
 @item @@,@{@var{c}@}
-Generate a cedilla accent under @var{c}, as in @,{c}.  @xref{Inserting
-Accents}.
+Generate a cedilla accent under @var{c}, as in @,{c}.  
+@xref{Inserindo Acentos}.
 
 @item @@-
 Insert a discretionary hyphenation point.  @xref{@code{@@- @@hyphenation}}.
 
 @item @@.
 Produce a period that ends a sentence (usually after an
-end-of-sentence capital letter).  @xref{Ending a Sentence}.
+end-of-sentence capital letter).  @xref{Finalizando Uma Frase}.
 
 @item @@/
 Produces no output, but allows a line break.  @xref{Quebras de Linha}.
@@ -19804,7 +19837,7 @@ Produces no output, but allows a line break.  @xref{Quebras de Linha}.
 @item @@:
 Tell @TeX{} to refrain from inserting extra whitespace after an
 immediately preceding period, question mark, exclamation mark, or
-colon, as @TeX{} normally would.  @xref{Not Ending a Sentence}.
+colon, as @TeX{} normally would.  @xref{Não Finalizando Uma Frase}.
 
 @item @@=
 Generate a macron (bar) accent over the next character, as in @=o.
@@ -19812,7 +19845,7 @@ Generate a macron (bar) accent over the next character, as in @=o.
 
 @item @@?
 Produce a question mark that ends a sentence (usually after an
-end-of-sentence capital letter).  @xref{Ending a Sentence}.
+end-of-sentence capital letter).  @xref{Finalizando Uma Frase}.
 
 @item @@@@
 @itemx @@atchar@{@}
@@ -19832,11 +19865,11 @@ character, as in @^o and @`e.
 
 @item @@@{
 @itemx @@lbracechar@{@}
-Insert a left brace, @samp{@{}.  @xref{Inserting Braces}.
+Insert a left brace, @samp{@{}.  @xref{Inserindo Chaves}.
 
 @item @@@}
 @itemx @@rbracechar@{@}
-Insert a right brace, @samp{@}}.  @xref{Inserting Braces}.
+Insert a right brace, @samp{@}}.  @xref{Inserindo Chaves}.
 
 @item @@~
 Generate a tilde accent over the next character, as in @~N.
@@ -19861,12 +19894,12 @@ Generate the uppercase and lowercase AE ligatures, respectively:
 @AE{}, @ae{}.  @xref{Inserindo Acentos}.
 
 @item @@afivepaper
-Change page dimensions for the A5 paper size.  @xref{A4 Paper}.
+Change page dimensions for the A5 paper size.  @xref{Papel A4}.
 
 @item @@afourlatex
 @itemx @@afourpaper
 @itemx @@afourwide
-Change page dimensions for the A4 paper size.  @xref{A4 Paper}.
+Change page dimensions for the A4 paper size.  @xref{Papel A4}.
 
 @item @@alias @var{new}=@var{existing}
 Make the command @samp{@@@var{new}} a synonym for the existing command
@@ -19890,8 +19923,8 @@ Info, the title is underlined with asterisks.
 Begin an appendix section within an appendix.  The section title
 appears in the table of contents.  In Info, the title is underlined
 with equal signs.  @code{@@appendixsection} is a longer spelling of
-the @code{@@appendixsec} command.  @xref{@code{@@unnumberedsec
-@@appendixsec @@heading}}.
+the @code{@@appendixsec} command.  
+@xref{@code{@@unnumberedsec @@appendixsec @@heading}}.
 
 @item @@appendixsubsec @var{title}
 Begin an appendix subsection.  The title appears in the table of
@@ -19905,7 +19938,7 @@ contents.  In Info, the title is underlined with periods.
 
 @item @@arrow@{@}
 Generate a right arrow glyph: @samp{@arrow{}}.  Used by default
-for @code{@@click}.  @xref{Click Sequences}.
+for @code{@@click}.  @xref{Sequências de Clique}.
 
 @item @@asis
 Used following @code{@@table}, @code{@@ftable}, and @code{@@vtable} to
@@ -19975,15 +20008,15 @@ and @code{@@end ifset} commands, and preventing
 
 @item @@click@{@}
 Represent a single ``click'' in a GUI@.  Used within
-@code{@@clicksequence}.  @xref{Click Sequences}.
+@code{@@clicksequence}.  @xref{Sequências de Clique}.
 
 @item @@clicksequence@{@var{action} @@click@{@} @var{action}@}
-Represent a sequence of clicks in a GUI@.  @xref{Click Sequences}.
+Represent a sequence of clicks in a GUI@.  @xref{Sequências de Clique}.
 
 @item @@clickstyle @@@var{cmd}
 Execute @@@var{cmd} for each @code{@@click}; the default is
 @code{@@arrow}.  The usual following empty braces on @@@var{cmd} are
-omitted.  @xref{Click Sequences}.
+omitted.  @xref{Sequências de Clique}.
 
 @item @@code@{@var{sample-code}@}
 Indicate an expression, a syntactically complete token of a program,
@@ -20730,7 +20763,7 @@ effect in Info.  @xref{Fonts}.
 
 @item @@sc@{@var{text}@}
 Set @var{text} in a small caps font in printed output, and uppercase
-in Info.  @xref{Smallcaps}.
+in Info.  @xref{Capitalização Pequena}.
 
 @item @@section @var{title}
 Begin a section within a chapter.  The section title appears in the
@@ -24299,13 +24332,13 @@ and the fifth example shows a period being quoted in a node name.
 @node Licença de Documentação Livre GNU
 @appendix Licença de Documentação Livre GNU
 
-@include fdl-pt_BR.texi
+@include fdl-versao_1.3-pt_BR.texi
 
 
 @node GNU Free Documentation License
 @appendix GNU Free Documentation License
 
-@include fdl.texi
+@include fdl-versao_1.3-en_US.texi
 
 
 @node Índice de Comando e Variável
