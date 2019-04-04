@@ -6915,7 +6915,7 @@ marcar palavras. Entretanto, as vezes, você desejará enfatizar texto sem
 indicar uma categoria. Texinfo tem dois comandos para fazer isso. Além 
 disso, Texinfo tem vários comandos que especificam a fonte na qual o 
 texto será produzido. Esses comandos não tem efeito em Info e apenas um 
-deles, o comando @code{@@r}, tem algum uso uso regular.
+deles, o comando @code{@@r}, tem algum uso regular.
 
 @menu
 * @code{@@emph @@strong}::       Como enfatizar texto em Texinfo.
@@ -6925,10 +6925,10 @@ deles, o comando @code{@@r}, tem algum uso uso regular.
 
 
 @node @code{@@emph @@strong}
-@subsection @code{@@emph}@{@var{texto}@} and @code{@@strong}@{@var{texto}@}
+@subsection @code{@@emph}@{@var{texto}@} e @code{@@strong}@{@var{texto}@}
 @c Capítulo 7 - Marcação de Texto, Palavras e Frases
 @c Seção 7.2 - Enfatizando Texto
-@c Subseção 7.2.1 - @emph{texto} and @strong{texto}
+@c Subseção 7.2.1 - @emph{texto} e @strong{texto}
 
 @anchor{emph & strong} @c nome antigo
 @findex comando ``emph''
@@ -6937,7 +6937,7 @@ deles, o comando @code{@@r}, tem algum uso uso regular.
 
 Os comandos @code{@@emph} e @code{@@strong} são para ênfase; 
 @code{@@strong} é o mais forte. Em saída impressa, @code{@@emph} produz 
-@emph{italics} e @code{@@strong} produz @strong{bold}. Na saída Info, 
+@emph{itálico} e @code{@@strong} produz @strong{negrito}. Na saída Info, 
 @code{@@emph} envolve o texto com sublinhados (@samp{_}), e 
 @code{@@strong} coloca asteríscos em volta do texto.
 
@@ -6956,7 +6956,7 @@ produz o seguinte:
 @strong{Cuidado}: @samp{rm * .[^.]*} remove @emph{todos} os arquivos normais.
 @end quotation
 
-O comando @code{@@strong} raramente é usado, exceto para marcar o que é, 
+O comando @code{@@strong} raramente é usado, exceto para marcar que é, 
 na verdade, um elemento tipográfico, como a palavra `Cuidado' no exemplo 
 anterior.
 
