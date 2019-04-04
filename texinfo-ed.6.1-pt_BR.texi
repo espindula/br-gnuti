@@ -372,9 +372,9 @@ Indicando Definições, Comandos, etc.
 
 Enfatizando Texto
 
-* @code{@@emph @@strong}::               Como enfatizar texto em Texinfo.
-* Capitalização Pequena::                   Como utilizar a fonte capitalização pequena.
-* Fonts::                       Variados comandos de fonte para saída impressa.
+* @code{@@emph @@strong}::       Como enfatizar texto em Texinfo.
+* Capitalização Pequena::        Como utilizar a fonte capitalização pequena.
+* Fontes::                       Comandos variados de fonte para saída impressa.
 
 Encapsulamentos e Exemplos
 
@@ -6903,218 +6903,231 @@ sugestões para o @email{bug-texinfo@@gnu.org, algum lugar}.
 
 
 @node Ênfase
-@section Emphasizing Text
-@cindex Emphasizing text
+@section Enfatizando Texto
+@cindex Enfatizando Texto
+@c Capítulo 7 - Marcação de Texto, Palavras e Frases
+@c Seção 7.2 - Enfatizando Texto
 
-Usually, Texinfo changes the font to mark words in the text according
-to the category the words belong to; an example is the @code{@@code}
-command.  Most often, this is the best way to mark words.  However,
-sometimes you will want to emphasize text without indicating a
-category.  Texinfo has two commands to do this.  Also, Texinfo has
-several commands that specify the font in which text will be output.
-These commands have no effect in Info and only one of them, the
-@code{@@r} command, has any regular use.
+Normalmente, Texinfo modifica a fonte para marcar palavras no texto de 
+acordo com a categoria a que as palavras pertencem; um exemplo é o 
+comando @code{@@code}. Na maioria das vezes, essa é a melhor maneira de 
+marcar palavras. Entretanto, as vezes, você desejará enfatizar texto sem 
+indicar uma categoria. Texinfo tem dois comandos para fazer isso. Além 
+disso, Texinfo tem vários comandos que especificam a fonte na qual o 
+texto será produzido. Esses comandos não tem efeito em Info e apenas um 
+deles, o comando @code{@@r}, tem algum uso uso regular.
 
 @menu
-* @code{@@emph @@strong}::               How to emphasize text in Texinfo.
-* Capitalização Pequena::                   How to use the small caps font.
-* Fonts::                       Various font commands for printed output.
+* @code{@@emph @@strong}::       Como enfatizar texto em Texinfo.
+* Capitalização Pequena::        Como utilizar a fonte capitalização pequena.
+* Fontes::                       Comandos variados de fonte para saída impressa.
 @end menu
 
 
 @node @code{@@emph @@strong}
-@subsection @code{@@emph}@{@var{text}@} and @code{@@strong}@{@var{text}@}
+@subsection @code{@@emph}@{@var{texto}@} and @code{@@strong}@{@var{texto}@}
+@c Capítulo 7 - Marcação de Texto, Palavras e Frases
+@c Seção 7.2 - Enfatizando Texto
+@c Subseção 7.2.1 - @emph{texto} and @strong{texto}
 
-@anchor{emph & strong}@c oldname
-@findex emph
-@findex strong
-@cindex Emphasizing text, font for
+@anchor{emph & strong} @c nome antigo
+@findex comando ``emph''
+@findex comando ``strong''
+@cindex Enfatizando Texto, fonte para
 
-The @code{@@emph} and @code{@@strong} commands are for emphasis;
-@code{@@strong} is stronger.  In printed output, @code{@@emph} produces
-@emph{italics} and @code{@@strong} produces @strong{bold}.
-In the Info output, @code{@@emph} surrounds the text with underscores
-(@samp{_}), and @code{@@strong} puts asterisks around the text.
+Os comandos @code{@@emph} e @code{@@strong} são para ênfase; 
+@code{@@strong} é o mais forte. Em saída impressa, @code{@@emph} produz 
+@emph{italics} e @code{@@strong} produz @strong{bold}. Na saída Info, 
+@code{@@emph} envolve o texto com sublinhados (@samp{_}), e 
+@code{@@strong} coloca asteríscos em volta do texto.
 
-For example,
+Por exemplo,
 
 @example
 @group
-@@strong@{Caution:@} @@samp@{rm *@}
-removes @@emph@{all@} normal files.
+@@strong@{Cuidado:@} @@samp@{rm *@} remove @@emph@{todos@} os arquivos normais.
 @end group
 @end example
 
 @noindent
-produces the following:
+produz o seguinte:
 
 @quotation
-@strong{Caution}: @samp{rm * .[^.]*}
-removes @emph{all} normal files.
+@strong{Cuidado}: @samp{rm * .[^.]*} remove @emph{todos} os arquivos normais.
 @end quotation
 
-The @code{@@strong} command is seldom used except to mark what is, in
-effect, a typographical element, such as the word `Caution' in the
-preceding example.
+O comando @code{@@strong} raramente é usado, exceto para marcar o que é, 
+na verdade, um elemento tipográfico, como a palavra `Cuidado' no exemplo 
+anterior.
 
-@quotation Caution
-Do not use @code{@@strong} with the word @samp{Note} followed by a
-space; Info will mistake the combination for a cross-reference.  Use a
-phrase such as @strong{Please notice} or @strong{Caution} instead, or
-the optional argument to @code{@@quotation}---@samp{Note} is allowable
-there.
+@quotation Cuidado
+Não use @code{@@strong} com a palavra @samp{Nota} seguida por um espaço; 
+Info confundirá a combinação para uma referência cruzada. Use uma frase, 
+como @strong{Por favor note} ou @strong{Cuidado} em vez disso, ou o 
+argumento opcional para @code{@@quotation}---@samp{Nota} é permitido lá.
 @end quotation
 
 
 @node Capitalização Pequena
-@subsection @code{@@sc}@{@var{text}@}: The Small Caps Font
-@cindex Small caps font
-@findex sc @r{(small caps font)}
+@subsection @code{@@sc}@{@var{texto}@}: A Fonte de Capitalização Pequena
+@cindex Fonte de capitalização pequena
+@findex sc @r{(fonte de capitalização pequena)}
+@c Capítulo 7 - Marcação de Texto, Palavras e Frases
+@c Seção 7.2 - Enfatizando Texto
+@c Subseção 7.2.2 - @sc{texto}: A Fonte de Capitalização Pequena
 
-Use the @samp{@@sc} command to set text in @sc{a small caps font}
-(where possible).  Write the text you want to be in small caps between
-braces in lowercase, like this:
+Use o comando @samp{@@sc} para configurar texto em 
+@sc{uma fonte de capitalização pequena} (onde for possível). Escreva o 
+texto que você quer que esteja em capitalização pequena entre chaves e 
+em letras minúsculas, como isto:
 
 @example
 Richard @@sc@{Stallman@} commenc@'{e} GNU.
 @end example
 
 @noindent
-This produces:
+Isso produz:
 
 @display
 Richard @sc{Stallman} commenc@'{e} GNU.
 @end display
 
-As shown here, we recommend reserving @code{@@sc} for special cases
-where you want typographic small caps; family names are one such,
-especially in languages other than English, though there are no
-hard-and-fast rules about such things.
+Como mostrado aqui, nós recomendamos reservar @code{@@sc} para casos 
+especiais onde você desejar capitalização pequena tipográfica; nomes de 
+família são um desses, especialmente em outros idiomas que não o Inglẽs, 
+embora não existam regras rígidas e rápidas acerca de tais coisas.
 
-@cindex @code{<small>} tag
-@TeX{} typesets any uppercase letters between the braces of an
-@code{@@sc} command in full-size capitals; only lowercase letters are
-printed in the small caps font.  In the Info output, the argument to
-@code{@@sc} is printed in all uppercase.  In HTML, the argument is
-uppercased and the output marked with the @code{<small>} tag to reduce
-the font size, since HTML cannot easily represent true small caps.
+@cindex marcação @code{<small>}
+@TeX{} escreve qualquer letra maiúscula entre as chaves de um comando 
+@code{@@sc} em letras maiúsculas de tamanho real; apenas letras 
+minúsculas são impressas na fonte de capitalização pequena. Na saída 
+Info, o argumento para @code{@@sc} é impresso todo em maiúsculas. Em 
+HTML, o argumento é colocado em letras maiúsculas e a saída marcada com 
+a marcação @code{<small>} para reduzir o tamanho da fonte, dado que HTML 
+não pode facilmente representar capitalizações pequenas verdadeiras.
 
-Overall, we recommend using standard upper- and lowercase letters
-wherever possible.
+No geral, recomendamos o uso de letras maiúsculas e minúsculas padrão 
+sempre que possível.
 
 
-@node Fonts
-@subsection Fonts for Printing
-@cindex Fonts for printing
+@node Fontes
+@subsection Fontes para Impressão
+@cindex Fontes para impressão
+@c Capítulo 7 - Marcação de Texto, Palavras e Frases
+@c Seção 7.2 - Enfatizando Texto
+@c Subseção 7.2.3 - Fontes para Impressão
 
-@findex fonttextsize
-@cindex Font size, reducing
-@cindex Reducing font size
-@cindex Smaller fonts
-Texinfo provides one command to change the size of the main body font
-in the @TeX{} output for a document: @code{@@fonttextsize}.  It has no
-effect in other output.  It takes a single argument on the remainder
-of the line, which must be either @samp{10} or @samp{11}.  For
-example:
+@findex comando fonttextsize
+@cindex Tamanho de fonte, reduzindo
+@cindex Reduzindo tamanho de fonte
+@cindex Fontes menores
+O Texinfo fornece um comando para mudar o tamanho da fonte do corpo 
+principal na saída @TeX{} para um documento: @code{@@fonttextsize}. O 
+comando não tem efeito em outra saída. O comando recebe um argumento 
+único no restante da linha, o qual deve ser ou @samp{10} ou @samp{11}. 
+Por exemplo:
 
 @example
 @@fonttextsize 10
 @end example
 
-@cindex Printing cost, reducing
-The effect is to reduce the body font to a 10@dmn{pt} size (the
-default is 11@dmn{pt}).  Fonts for other elements, such as sections
-and chapters, are reduced accordingly.  This should only be used in
-conjunction with @code{@@smallbook} (@pxref{@code{@@smallbook}}) or
-similar, since 10@dmn{pt} fonts on standard paper (8.5x11 or A4) are
-too small.  One reason to use this command is to save pages, and hence
-printing cost, for physical books.
+@cindex Custo de impressão, reduzindo
+O efeito é reduzir a fonte do corpo para um tamanho de 10@dmn{pt} (o 
+padrão é 11@dmn{pt}). Fontes para outros elementos,  tais como seções e 
+capítulos, são reduzidas de acordo. Isso somente deveria ser usado em 
+conjunto com @code{@@smallbook} (@pxref{@code{@@smallbook}}) ou similar, 
+dado que fontes de 10@dmn{pt} em papel padrão (8.5x11 or A4) são muito 
+pequenas. Uma razão para usar esse comando é para economizar páginas, e, 
+assim, custo de impressão, para livros físicos.
 
-Texinfo does not at present have commands to switch the font family
-to use, or more general size-changing commands.
+Texinfo atualmente não tem comandos para alternar a família da fonte a 
+usar, ou comandos de alteração de tamanho mais gerais.
 
-Texinfo also provides a number of font commands that specify font
-changes in the printed manual and (where possible) in the HTML output.
-They have no effect in Info.  All the commands apply to a following
-argument surrounded by braces.
+Texinfo também fornece vários comandos de fonte que especificam as 
+mudanças de fonte no manual impresso e (quando possível) na saída HTML. 
+Esses comandos não tem efeito em Info. Todos os comandos se aplicam a um 
+argumento a seguir cercados por chaves.
 
 @table @code
 @item @@b
-@findex b @r{(bold font)}
-@cindex Bold font
-selects @b{bold} face;
+@findex b @r{(negrito)}
+@cindex Negrito
+seleciona @b{negrito};
 
 @item @@i
-@findex i @r{(italic font)}
+@findex i @r{(itálico)}
 @cindex Italic font
-selects an @i{italic} font;
+seleciona uma fonte @i{itálico};
 
 @item @@r
-@findex r @r{(roman font)}
-@cindex Roman font
-@cindex Default font
-selects a @r{roman} font, which is the usual font in which text is
-printed.  It may or may not be seriffed.
+@findex r @r{(fonte roman)}
+@cindex Fonte roman
+@cindex Fonte padrão
+seleciona uma fonte @r{roman}, que é a fonte usual na qual o texto é 
+impresso. Ela pode ou não ser serif.
 
 @item @@sansserif
-@findex sansserif @r{(sans serif font)}
-@cindex Sans serif font
-selects a @sansserif{sans serif} font;
+@findex sansserif @r{(fonte sans serif)}
+@cindex Fonte sans serif
+seleciona uma fonte @sansserif{sans serif};
 
 @item @@slanted
-@findex slanted @r{(slanted font)}
-@cindex Slanted font
-@cindex Oblique font
-selects a @slanted{slanted} font;
+@findex slanted @r{(fonte inclinada)}
+@cindex Fonte inclinada
+@cindex Fonte oblíqua
+seleciona uma fonte @slanted{inclinada};
 
 @item @@t
-@findex t @r{(typewriter font)}
-@cindex Monospace font
-@cindex Fixed-width font
-@cindex Typewriter font
-selects the @t{fixed-width}, typewriter-style font used by @code{@@code};
+@findex t @r{(fonte de máquina de escrever)}
+@cindex Fonte monoespaçada
+@cindex Fonte de tamanho fixo
+@cindex Fonte de máquina de escrever
+seleciona a fonte de @t{tamanho fixo}, estilo máquina de escrever usada 
+por @code{@@code};
 
 @end table
 
-(The commands with longer names were invented much later than the
-others, at which time it did not seem desirable to use very short
-names for such infrequently needed features.)
+(Os comandos com nomes mais longos foram inventados muito mais tarde que 
+os outros, quando não parecia desejável usar nomes muito curtos para 
+recursos tão pouco necessários).
 
-@cindex @code{<lineannotation>} Docbook tag
-The @code{@@r} command can be useful in example-like environments, to
-write comments in the standard roman font instead of the fixed-width
-font.  This looks better in printed output, and produces a
-@code{<lineannotation>} tag in Docbook output.
+@cindex marcação @code{<lineannotation>} do Docbook
+O comando @code{@@r} pode ser útil em ambientes de exemplo, para 
+escrever comentários na fonte roman padrão em vez da fonte de largura 
+fixa. Isso fica melhor na saída impressa, e produz uma marca 
+@code{<lineannotation>} na saída do Docbook.
 
-For example,
+Por exemplo,
 
 @example
 @group
 @@lisp
-(+ 2 2)    ; @@r@{Add two plus two.@}
+(+ 2 2)    ; @@r@{Adiciona dois mais dois.@}
 @@end lisp
 @end group
 @end example
 
 @noindent
-produces
+produz
 
 @lisp
-(+ 2 2)    ; @r{Add two plus two.}
+(+ 2 2)    ; @r{Adiciona dois mais dois.}
 @end lisp
 
-The @code{@@t} command can occasionally be useful to produce output in
-a typewriter font where that is supported (e.g., HTML and PDF), but no
-distinction is needed in Info or plain text: @code{@@t@{foo@}}
-produces @t{foo}, cf. @code{@@code@{foo@}} producing @code{foo}.
+O comando @code{@@t} pode ocasionalmente ser útil para produzir saída em 
+uma fonte de máquina de escrever onde isso for suportado (por exemplo, 
+HTML e PDF), mas nenhuma distinção é necessária em Info ou texto plano: 
+@code{@@t@{foo@}} produz @t{foo}, cf. @code{@@code@{foo@}} produzindo 
+@code{foo}.
 
-In general, the other font commands are unlikely to be useful; they
-exist primarily to make it possible to document the functionality of
-specific font effects, such as in @TeX{} and related packages.
+Em geral, os outros comandos de fonte provavelmente não são úteis; eles 
+existem principalmente para possibilitar documentar a funcionalidade de 
+efeitos específicos de fontes, como no @TeX{} e pacotes relacionados.
 
 
 @node Citações e Exemplos
 @chapter Citações e Exemplos
+@c Capítulo 8 - Citações e Exemplos
 
 Quotations and examples are blocks of text consisting of one or more
 whole paragraphs that are set off from the bulk of the text and
@@ -20251,7 +20264,7 @@ Indicate an electronic mail address.  @xref{@code{@@email}}.
 
 @item @@emph@{@var{text}@}
 Emphasize @var{text}, by using @emph{italics} where possible, and
-enclosing in asterisks in Info.  @xref{Ênfase, , Emphasizing Text}.
+enclosing in asterisks in Info.  @xref{Ênfase, , Enfatizando Texto}.
 
 @item @@end @var{environment}
 Ends @var{environment}, as in @samp{@@end example}.  @xref{Formatting
@@ -20861,7 +20874,7 @@ Generate the German sharp-S es-zet letter, @ss{}.
 @item @@strong @{@var{text}@}
 Emphasize @var{text} more strongly than @code{@@emph}, by using
 @strong{boldface} where possible; enclosed in asterisks in Info.
-@xref{emph & strong, , Emphasizing Text}.
+@xref{emph & strong, , Enfatizando Texto}.
 
 @item @@sub @{@var{text}@}
 Set @var{text} as a subscript.  @xref{Inserting Subscripts and Superscripts}.
