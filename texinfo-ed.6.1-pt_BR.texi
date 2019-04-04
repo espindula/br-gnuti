@@ -7437,7 +7437,7 @@ displaying them, use the @code{@@code} command or its relatives
 (@pxref{@code{@@code}}).
 
 If you wish to write a ``comment'' on a line of an example in the
-normal roman font, you can use the @code{@@r} command (@pxref{Fonts}).
+normal roman font, you can use the @code{@@r} command (@pxref{Fontes}).
 
 
 @node @code{@@verbatim}
@@ -9334,7 +9334,7 @@ font and entries for the other indices are printed in a small
 @code{@@code} font.  You may change the way part of an entry is
 printed with the usual Texinfo commands, such as @code{@@file} for
 file names (@pxref{Marcando Texto}), and @code{@@r} for the normal roman
-font (@pxref{Fonts}).
+font (@pxref{Fontes}).
 
 @findex sortas
 @cindex sort keys for index entries
@@ -9610,7 +9610,7 @@ index, write the following:
 @end group
 @end example
 
-@cindex Fonts for indices
+@cindex Fontes for indices
 The @code{@@syncodeindex} command puts all the entries from the `from'
 index (the redirected index) into the @code{@@code} font, overriding
 whatever default font is used by the index to which the entries are
@@ -19963,7 +19963,7 @@ Typeset @var{author} flushleft and underline it.  @xref{@code{@@title
 @@subtitle @@author}}.
 
 @item @@b@{@var{text}@}
-Set @var{text} in a @b{bold} font.  No effect in Info.  @xref{Fonts}.
+Set @var{text} in a @b{bold} font.  No effect in Info.  @xref{Fontes}.
 
 @item @@bullet@{@}
 Generate a large round dot, @bullet{} (@samp{*} in Info).  Often used
@@ -20358,7 +20358,7 @@ flushleft} (@code{@@end flushright}).  @xref{@code{@@flushleft
 
 @item @@fonttextsize @var{10-11}
 Change the size of the main body font in the @TeX{} output.
-@xref{Fonts}.
+@xref{Fontes}.
 
 @item @@footnote@{@var{text-of-footnote}@}
 Enter a footnote.  Footnote text is printed at the bottom of the page
@@ -20434,7 +20434,7 @@ Formatter Commands}.
 Explicitly define hyphenation points.  @xref{@code{@@- @@hyphenation}}.
 
 @item @@i@{@var{text}@}
-Set @var{text} in an @i{italic} font.  No effect in Info.  @xref{Fonts}.
+Set @var{text} in an @i{italic} font.  No effect in Info.  @xref{Fontes}.
 
 @item @@ifclear @var{txivar}
 If the Texinfo variable @var{txivar} is not set, format the following
@@ -20731,7 +20731,7 @@ Produce various quotation marks: @quotedblleft{} @quotedblright{}
 
 @item @@r@{@var{text}@}
 Set @var{text} in the regular @r{roman} font.  No effect in Info.
-@xref{Fonts}.
+@xref{Fontes}.
 
 @item @@raggedright
 Fill text; left justify every line while leaving the right end ragged.
@@ -20772,7 +20772,7 @@ Quoted in Info output.  @xref{@code{@@samp}}.
 
 @item @@sansserif@{@var{text}@}
 Set @var{text} in a @sansserif{sans serif} font if possible.  No
-effect in Info.  @xref{Fonts}.
+effect in Info.  @xref{Fontes}.
 
 @item @@sc@{@var{text}@}
 Set @var{text} in a small caps font in printed output, and uppercase
@@ -20825,7 +20825,7 @@ Generate a minimal title page.  @xref{@code{@@titlepage}}.
 
 @item @@slanted@{@var{text}@}
 Set @var{text} in a @slanted{slanted} font if possible.  No effect
-in Info.  @xref{Fonts}.
+in Info.  @xref{Fontes}.
 
 @item @@smallbook
 Cause @TeX{} to produce a printed manual in a 7 by 9.25 inch format
@@ -20925,7 +20925,7 @@ entries.  @xref{Combining Índices}.
 
 @item @@t@{@var{text}@}
 Set @var{text} in a @t{fixed-width}, typewriter-like font.  No effect
-in Info.  @xref{Fonts}.
+in Info.  @xref{Fontes}.
 
 @item @@tab
 Separate columns in a row of a multitable.  @xref{Multitable Rows}.
