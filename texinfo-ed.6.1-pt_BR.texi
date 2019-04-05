@@ -324,13 +324,13 @@ Referências cruzadas
 * Comandos de Referências Cruzadas::    Um sumário dos diferentes comandos.
 * Partes de Referências Cruzadas::      Uma Referência Cruzada tem várias partes.
 * @code{@@xref}::                       Inicie uma referência com `Veja' @dots{}
-* Referênciando um Manual como um Todo::   Referência a um manual inteiro.
+* Referenciando um Manual como um Todo::   Referência a um manual inteiro.
 * @code{@@ref}::                        Uma referência para a última parte de uma sentença.
 * @code{@@pxref}::                      Como escrever uma Referência Cruzada entre parênteses.
 * @code{@@anchor}::                     Definindo alvos de Referência Cruzada arbitrários.
-* @code{@@inforef}::                    Como referênciar um arquivo somente Info.
-* @code{@@url}::                        Como referênciar um Localizador Uniforme de Recursos.
-* @code{@@cite}::                       Como referênciar livros que não estão no sistema Info.
+* @code{@@inforef}::                    Como referenciar um arquivo somente Info.
+* @code{@@url}::                        Como referenciar um Localizador Uniforme de Recursos.
+* @code{@@cite}::                       Como referenciar livros que não estão no sistema Info.
 
 @code{@@xref}
 
@@ -378,22 +378,22 @@ Enfatizando Texto
 
 Encapsulamentos e Exemplos
 
-* Block Enclosing Commands::    Construtores diferentes para propósitos diferentes.
-* @code{@@quotation}::                  Escrevendo uma citação.
-* @code{@@indentedblock}::              Bloco de texto endentado à esquerda.
-* @code{@@example}::                    Escrevendo um exemplo em uma fonte de largura fixa.
-* @code{@@verbatim}::                   escrevendo um exemplo de literal.
-* @code{@@verbatiminclude}::            Incluindo um arquivo de literal.
-* @code{@@lisp}::                       Ilustrando código Lisp.
-* @code{@@small@dots{}}::                   Exemplos em uma fonte menor.
-* @code{@@display}::                    Escrevendo um exemplo na fonte atual.
-* @code{@@format}::                     Escrevendo um exemplo sem margens estreitadas.
-* @code{@@exdent}::                     Desfazer recuo em uma linha.
-* @code{@@flushleft @@flushright}::      Empurrando texto alinhado à esquerda ou alinhado à direita.
-* @code{@@raggedright}::                Evitando justificação à direita.
-* @code{@@noindent}::                   Prevenindo recuo de parágrafo.
-* @code{@@indent}::                     Forçando recuo de parágrafo.
-* @code{@@cartouche}::                  Desenhando retângulos por todos os lados ao redor do texto.
+* Comandos de Inclusão de Blocos::    Construtores diferentes para propósitos diferentes.
+* @code{@@quotation}::                Escrevendo uma citação.
+* @code{@@indentedblock}::            Bloco de texto recuado a esquerda.
+* @code{@@example}::                  Escrevendo um exemplo em uma fonte de largura fixa.
+* @code{@@verbatim}::                 Escrevendo um exemplo de literal.
+* @code{@@verbatiminclude}::          Incluindo um arquivo de literal.
+* @code{@@lisp}::                     Ilustrando código Lisp.
+* @code{@@small@dots{}}::             Exemplos em uma fonte menor.
+* @code{@@display}::                  Escrevendo um exemplo na fonte atual.
+* @code{@@format}::                   Escrevendo um exemplo sem margens estreitadas.
+* @code{@@exdent}::                   Desfazer recuo em uma linha.
+* @code{@@flushleft @@flushright}::   Empurrando texto alinhado à esquerda ou alinhado à direita.
+* @code{@@raggedright}::              Evitando justificação à direita.
+* @code{@@noindent}::                 Prevenindo recuo de parágrafo.
+* @code{@@indent}::                   Forçando recuo de parágrafo.
+* @code{@@cartouche}::                Desenhando retângulos por todos os lados ao redor do texto.
 
 Listas e Tabelas
 
@@ -564,7 +564,7 @@ Parâmetros: @code{@@set}, @code{@@clear}, condicionais, e @code{@@value}
 
 Definindo Novos Comandos Texinfo
 
-* Defining Macros::             Definindo e indefinindo novos comandos.
+* Definindo Macros::             Definindo e indefinindo novos comandos.
 * Invoking Macros::             Utilizando uma macro, uma vez que se definiu uma.
 * Macro Details::               Limitações das macros Texinfo.
 * @code{@@alias}::                      Apelidos de comandos.
@@ -2127,7 +2127,7 @@ software não é necessariamente exigido.
 @anchor{copying}@c nome antigo
 @findex copying
 
-O comando @code{@@copying} deveria ser dado cedíssimo no documento; a 
+O comando @code{@@copying} deveria ser dado cedissimo no documento; a 
 localização recomendada é logo após o material de cabeçalho 
 (@pxref{Texinfo File Header}).  Convencionalmente consiste de uma 
 sentença ou duas sobre o que é o programa, identificação da própria 
@@ -3035,12 +3035,12 @@ de página. Veja-se @ref{Cabeçalhos, , Page Cabeçalhos}, para mais informaçã
 
 
 @node @code{@@paragraphindent}
-@subsection @code{@@paragraphindent}: Controlando a Indentação de Parágrafo
+@subsection @code{@@paragraphindent}: Controlando o Recuo de Parágrafo
 
 @anchor{paragraphindent}@c old name
 @findex paragraphindent
 @cindex Indentando parágrafos, controle de
-@cindex Controle de indentação de parágrafo
+@cindex Controle de recuo de parágrafo
 
 Os processadores de Texinfo podem inserir espaços em branco no início da 
 primeira linha de cada parágrafo, consequentemente recuando esse 
@@ -3399,7 +3399,7 @@ Você pode opcionalmente seguir o argumento de nome de nodo a
 @code{@@node} com até três argumentos opcionais no restante da mesma 
 linha, separando os argumentos com vírgulas.  Esses são os nomes dos 
 ponteiros `Next', `Previous', e `Up', nessa exata ordem.  Recomenda-se 
-omiti-los se o seu documento Texinfo for hierárquicamente organizado, 
+omiti-los se o seu documento Texinfo for hierarquicamente organizado, 
 como virtualmente todos são 
 (veja-se @ref{Criação de Ponteiros do @command{makeinfo}}).
 
@@ -3492,7 +3492,7 @@ Agora é parte da linguagem.
 @cindex Caracteres, inválidos em nome de nodo
 @cindex Caracteres inválidos em nome de nodo
 @cindex Nomes de nodo, caracteres inválidos em
-Infelizmente, você não pode confiávelmente usar pontos, vírgulas ou dois pontos
+Infelizmente, você não pode confiavelmente usar pontos, vírgulas ou dois pontos
 em um nome de nodo; esses podem confundir o leitor Info. Também,  um nome de nodo
 não pode iniciar com um abre parênteses precedendo um fecha parênteses, como
 em @code{(não)permitido}, dado que tal sintaxe é usada para especificar um
@@ -3744,7 +3744,7 @@ acima (mais perto do nodo `Top'); e um `Menu' conduz à nodos a um nível
 abaixo (mais perto das `folhas'). (Uma referência cruzada pode apontar 
 para um nodo em qualquer nível; veja-se @ref{Referências Cruzadas}).
 
-Um comando @code{@@node} e um comando de estruturamente de capítulo são 
+Um comando @code{@@node} e um comando de estruturamento de capítulo são 
 convencionalmente usados juntos, nessa ordem, frequentemente seguidos 
 por comandos de indexação. (Conforme mostrado no exemplo acima, você 
 pode seguir a linha @code{@@node} com uma linha de comentário, por 
@@ -3831,7 +3831,7 @@ documento.
 Na maior parte dos casos, você desejará tomar vantagem dessa 
 característica e não redundantemente especificar ponteiros de nodo que 
 os programas podem determinar. Entretanto, não se exige que os 
-documentos Texinfo sejam organizados hierárquicamente ou, de fato, 
+documentos Texinfo sejam organizados hierarquicamente ou, de fato, 
 conterem quaisquer comandos de seccionamento (por exemplo, se você nunca 
 pretender que o documento seja impresso), de forma que os ponteiros de 
 nodo ainda possam ser especificados explicitamente, em completa 
@@ -3898,7 +3898,7 @@ característica de criação implícita de ponteiros do comando
 @command{makeinfo} (@pxref{Criação de Ponteiros do @command{makeinfo}}) 
 e os comandos de atualização do modo Texinfo do GNU Emacs funcionam 
 somente para criar menus de nodos subordinados em um documentos 
-hierárquicamente estruturado. É muito melhor usar referências cruzadas 
+hierarquicamente estruturado. É muito melhor usar referências cruzadas 
 para se referir a nodos arbitrários.
 
 @cindex Menus, gerando automaticamente
@@ -4168,7 +4168,7 @@ escrever tais menus manualmente.
 @cindex Seccionamento
 
 Os comandos de @dfn{Estruturamento de Capítulo} do Texinfo dividem um 
-documento em uma hierárquia de capítulos, seções, subseções e 
+documento em uma hierarquia de capítulos, seções, subseções e 
 subsubseções. Esses comandos geram cabeçalhos largos no texto, como o 
 acima. Eles também proveem informação para a geração de índices 
 (@pxref{Conteúdo,, Gerando um Sumário}).
@@ -4276,7 +4276,7 @@ parte normal da estrutura do documento.
 @item
 A série de comandos @code{@@heading} produzem cabeçalhos não numerados 
 simples que não aparecem em um sumário, não são associados com nodos e 
-não podem ser referênciados. Esses comandos de cabeçalhos nunca iniciam 
+não podem ser referenciados. Esses comandos de cabeçalhos nunca iniciam 
 uma nova página.
 @end itemize
 
@@ -4330,7 +4330,7 @@ Em @TeX{}, o comando @code{@@chapter} produz um cabeçalho de capítulo no
 documento.
 
 Em saída Info e texto plano, o comando @code{@@chapter} faz com que o 
-título apareça em uma linha própria, com uma linha de asteríscos 
+título apareça em uma linha própria, com uma linha de asteriscos 
 inserida abaixo. Assim, o exemplo acima produz a seguinte saída:
 
 @example
@@ -4412,7 +4412,7 @@ vertical mais largo, antes do cabeçalho, que um comando
 
 Em Info e texto plano, os comandos @code{@@majorheading} e 
 @code{@@chapheading} produzem a mesma saída que @code{@@chapter}: o 
-título é impresso em uma linha própria com uma linha de asteríscos 
+título é impresso em uma linha própria com uma linha de asteriscos 
 abaixo. Semelhante para HTML@. A única diferença é a falta de numeração 
 e a falta de qualquer associação com Nodos. @xref{@code{@@chapter}}.
 
@@ -4559,7 +4559,7 @@ não numerado semelhante àquele de uma subseção e um comando
 @code{@@appendixsubsec} produz um cabeçalho do tipo subseção rotulado 
 com uma letra e números; ambos esses comandos produzem cabeçalhos que 
 aparecem no índice. Em Info e texto plano, os comandos do tipo 
-@code{@@subsection} geram um título sublinhado com hífens.
+@code{@@subsection} geram um título sublinhado com hifens.
 
 
 @node @code{@@subsubsection}
@@ -4652,7 +4652,7 @@ está.
 Por causa de as partes não serem associadas com Nodos, nenhum texto 
 geral pode seguir a linha @code{@@part}. Para produzir a saída 
 pretendida, a linha deve ser seguida por um comando de nível de 
-capítulo (incluíndo seu nodo). Assim, para continuar o exemplo:
+capítulo (incluindo seu nodo). Assim, para continuar o exemplo:
 
 @example
 @@part Parte I:@@* O Início
@@ -4759,13 +4759,13 @@ partes do mesmo ou de diferentes arquivos Texinfo.
 * Comandos de Referências Cruzadas::    Um sumário dos diferentes comandos.
 * Partes de Referências Cruzadas::      Uma Referência Cruzada tem várias partes.
 * @code{@@xref}::                       Inicie uma referência com `Veja' @dots{}
-* Referênciando um Manual como um Todo::   Referência a um manual inteiro.
+* Referenciando um Manual como um Todo::   Referência a um manual inteiro.
 * @code{@@ref}::                        Uma referência para a última parte de uma sentença.
 * @code{@@pxref}::                      Como escrever uma Referência Cruzada entre parênteses.
 * @code{@@anchor}::                     Definindo alvos de Referência Cruzada arbitrários.
-* @code{@@inforef}::                    Como referênciar um arquivo somente Info.
-* @code{@@url}::                        Como referênciar um Localizador Uniforme de Recursos.
-* @code{@@cite}::                       Como referênciar livros que não estão no sistema Info.
+* @code{@@inforef}::                    Como referenciar um arquivo somente Info.
+* @code{@@url}::                        Como referenciar um Localizador Uniforme de Recursos.
+* @code{@@cite}::                       Como referenciar livros que não estão no sistema Info.
 @end menu
 
 
@@ -4798,7 +4798,7 @@ Os vários comandos de referências cruzadas usam Nodos
 (ou âncoras, @pxref{@code{@@anchor}}) para definir localizações de 
 referências cruzadas. @TeX{} precisa de Nodos para definir localizações 
 de referências cruzadas. Quando @TeX{} gera um arquivo DVI, grava cada 
-número de págino do nodo e usa os números de página na produção das 
+número de página do nodo e usa os números de página na produção das 
 referências. Assim, mesmo que você esteja escrevendo um manual que será 
 somente impresso, e não usado online, você deve, ainda assim, escrever 
 linhas @code{@@node} para nomear os lugares para os quais você faz 
@@ -4926,7 +4926,7 @@ omitido, o nome do nodo é usado.
 @item
 Um rótulo para saída impressa. Frequentemente, isso é o título ou tópico 
 da seção. Isso é usado como o nome da referência no manual impresso. Se 
-omitido, o nome do noso é usado.
+omitido, o nome do nodo é usado.
 
 @item
 O nome do arquivo de manual no qual a referência está localizada, se for 
@@ -4978,7 +4978,7 @@ Veja Furacões, página @var{ppp} --- para os detalhes
 @w{`Veja Furacões, página @var{ppp}, --- para os detalhes'}.
 
 Referências cruzados com um, dois, três quatro e cinco argumentos estão 
-descritas separadamento seguindo a descrição de @code{@@xref}.
+descritas separadamente seguindo a descrição de @code{@@xref}.
 
 @command{makeinfo} alerta quando o texto de uma referência cruzada (e 
 nomes de nodo e itens de menu) contém uma construção problemática que 
@@ -5298,7 +5298,7 @@ em um manual impresso.
 
 Um caso muito incomum: você pode querer se referir a outro arquivo de 
 manual que esteja dentro de um manual impresso único---quando 
-múltilos arquivos Texinfo são incorporados à mesma execução de @TeX{}, 
+múltiplos arquivos Texinfo são incorporados à mesma execução de @TeX{}, 
 porém pode criar arquivos de saída Info ou HTML separados. Nesse caso, 
 você precisa especificar apenas o quarto argumento e não o quinto.
 
@@ -5349,7 +5349,7 @@ Veja @cite{O Manual do GNU Make}.
 Os leitores Info irão para o nodo Top do manual se o nodo `Top' for 
 explicitamente especificado ou não.
 
-Também é possivel (e é prática histórica) referenciar uma manual inteiro 
+Também é possível (e é prática histórica) referenciar uma manual inteiro 
 especificando-se o nodo `Top' e uma entrada apropriada para o terceiro 
 argumento ao comando @code{@@xref}. Usando esse idioma, para fazer uma 
 referência cruzada para o @cite{O Manual do GNU Make}, você poderia 
@@ -5394,7 +5394,7 @@ referências cruzadas de manual inteiro.
 @cindex References using @code{@@ref}
 
 @code{@@ref} é aproximadamente o mesmo que @code{@@xref}, exceto que não 
-gera um `Veja' na saída impressa, apenas a própria referência. Isse a 
+gera um `Veja' na saída impressa, apenas a própria referência. Isso a 
 torna útil como a última parte de uma frase.
 
 @noindent
@@ -5581,7 +5581,7 @@ de referência cruzada, conforme mostrado (@pxref{Referências Cruzadas}).
 de que deseja referenciar; dessa maneira o olho do leitor é guiado ao 
 texto correto quando pular para a âncora. Você pode colocar o comando 
 @code{@@anchor} em uma linha própria se isso ajudar a legibilidade do 
-fonte. Espaços em branco (incluíndo novas linhas) são ignorados após 
+fonte. Espaços em branco (incluindo novas linhas) são ignorados após 
 @code{@@anchor}.
 
 Os nomes de âncora e os nomes de nodos não podem conflitar. Às âncoras e 
@@ -5829,8 +5829,8 @@ outros caracteres, você pode inserir @code{@@/} conforme necessário
 @findex estilo de quebra uref
 @findex uref, estilo de quebra
 Por padrão, em @TeX{}, quaisquer de tais quebras em caracteres especiais 
-ocorrerão após o caracter. Algumas pessoas preferem que tais quebras 
-aconteçam antes do caracter especial. Isso pode ser controlado com o 
+ocorrerão após o carácter. Algumas pessoas preferem que tais quebras 
+aconteçam antes do carácter especial. Isso pode ser controlado com o 
 comando @code{@@urefbreakstyle} (esse comando tem efeito somente em 
 @TeX{}):
 
@@ -6099,7 +6099,7 @@ Assim, você deveria usar @code{@@code} para uma expressão em um
 programa, para o nome de uma variável ou função usada em um programa ou 
 para uma palavra chave em uma linguagem de programação.
 
-Use @code{@@code} para nomes de comando em linguagens que reconstróem 
+Use @code{@@code} para nomes de comando em linguagens que reconstroem 
 linguagens de programação, como Texinfo.  Por exemplo, @code{@@code} e 
 @code{@@samp} são produzidos escrevendo @samp{@@code@{@@@@code@}} e 
 @samp{@@code@{@@@@samp@}} no fonte Texinfo, respectivamente.
@@ -6118,7 +6118,7 @@ deveria reorganizar a frase.
 
 Na saída Info, @code{@@code} resulta em aspas simples em torno do texto. 
 Em outros formatos, o argumento @code{@@code} é formatado em uma fonte 
-de máquina de escrever (monoespaçada). Por exemplo, 
+de máquina de escrever (mono espaçada). Por exemplo, 
 
 @example
 A função retorna @@code@{nulo@}.
@@ -6342,7 +6342,7 @@ Meta
 
 @cindex META, tecla
 Existem sutilezas para lidar com palavras como `meta' ou `ctrl', que são 
-nomes de teclas modificadoras. Quando mencionar um caracter no qual a 
+nomes de teclas modificadoras. Quando mencionar um carácter no qual a 
 tecla modificadora é usada, como @kbd{Meta-a}, use o comando 
 @code{@@kbd} sozinho; não use o comando @code{@@key}; porém, quando 
 estiver se referindo à tecla modificadora isoladamente, use o comando 
@@ -6423,12 +6423,12 @@ Em Inglês, as vogais são @samp{a}, @samp{e}, @samp{i}, @samp{o},
 @findex verb
 @cindex Texto literal interno a linha
 
-@cindex Caracter delimitador, para literalidade
+@cindex Carácter delimitador, para literalidade
 Use o comando @code{@@verb} para imprimir uma sequência literal de 
 caracteres.
 
 Semelhante ao comando @code{\verb} do @LaTeX{}, o texto literal pode ser 
-delimitado usando-se qualquer caracter delimitador único. Coloque o 
+delimitado usando-se qualquer carácter delimitador único. Coloque o 
 texto literal, incluindo os delimitadores, entre chaves. O texto é 
 impresso em uma fonte de largura fixa:
 
@@ -6450,9 +6450,9 @@ Isso está em contraste com @code{@@samp} (veja a seção anterior),
 @code{@@code} e comandos semelhantes; naqueles casos, o argumento é 
 texto normal Texinfo, onde os três caracteres @code{@@@{@}} são 
 especiais, como de costume. Com @code{@@verb}, nada é especial, exceto o 
-caracter delimitador que você escolher.
+carácter delimitador que você escolher.
 
-O próprio caracter delimitador pode aparecer dentro do texto literal, 
+O próprio carácter delimitador pode aparecer dentro do texto literal, 
 conforme mostrado acima. Como outro exemplo, @samp{@@verb@{...@}} 
 imprime um único ponto (largura fixa).
 
@@ -6510,7 +6510,7 @@ Para deletar o arquivo @var{filename}, digite @samp{rm @var{filename}}.
 @code{@@samp}, @code{@@file}, etc.).
 
 Escreva uma variável metassintática toda em letras minúsculas e sem 
-espaços, e use hífens para torná-la mais legível. Assim, o fonte de 
+espaços, e use hifens para torná-la mais legível. Assim, o fonte de 
 Texinfo para a ilustração de como iniciar um manual Texinfo se parece 
 com isto:
 
@@ -6711,7 +6711,7 @@ definição---ela deve deixar claro o significado.
 Você pode usar o comando @code{@@abbr} para abreviações gerais. A 
 abreviação é dada como o argumento único entre chaves, como em 
 @samp{@@abbr@{Comput.@}}. Por uma questão de estilo, ou para 
-abreviações específicas, você pode perferir omitir pontos, como em 
+abreviações específicas, você pode preferir omitir pontos, como em 
 @samp{@@abbr@{Mr@} Stallman}.
 
 @code{@@abbr} aceita um segundo argumento opcional, destinado a ser 
@@ -6939,7 +6939,7 @@ Os comandos @code{@@emph} e @code{@@strong} são para ênfase;
 @code{@@strong} é o mais forte. Em saída impressa, @code{@@emph} produz 
 @emph{itálico} e @code{@@strong} produz @strong{negrito}. Na saída Info, 
 @code{@@emph} envolve o texto com sublinhados (@samp{_}), e 
-@code{@@strong} coloca asteríscos em volta do texto.
+@code{@@strong} coloca asteriscos em volta do texto.
 
 Por exemplo,
 
@@ -6994,7 +6994,7 @@ Richard @sc{Stallman} commenc@'{e} GNU.
 
 Como mostrado aqui, nós recomendamos reservar @code{@@sc} para casos 
 especiais onde você desejar capitalização pequena tipográfica; nomes de 
-família são um desses, especialmente em outros idiomas que não o Inglẽs, 
+família são um desses, especialmente em outros idiomas que não o Inglês, 
 embora não existam regras rígidas e rápidas acerca de tais coisas.
 
 @cindex marcação @code{<small>}
@@ -7079,7 +7079,7 @@ seleciona uma fonte @slanted{inclinada};
 
 @item @@t
 @findex t @r{(fonte de máquina de escrever)}
-@cindex Fonte monoespaçada
+@cindex Fonte mono espaçada
 @cindex Fonte de tamanho fixo
 @cindex Fonte de máquina de escrever
 seleciona a fonte de @t{tamanho fixo}, estilo máquina de escrever usada 
@@ -7129,76 +7129,79 @@ efeitos específicos de fontes, como no @TeX{} e pacotes relacionados.
 @chapter Citações e Exemplos
 @c Capítulo 8 - Citações e Exemplos
 
-Quotations and examples are blocks of text consisting of one or more
-whole paragraphs that are set off from the bulk of the text and
-treated differently.  They are usually indented in the output.
+Citações e exemplos são blocos de texto que consistem em um ou mais 
+parágrafos inteiros que são separados da maior parte do texto e tratados 
+de forma diferente. Eles geralmente são recuados na saída.
 
-@findex end
-In Texinfo, you always begin a quotation or example by writing an
-@@-command at the beginning of a line by itself, and end it by writing
-an @code{@@end} command that is also at the beginning of a line by
-itself.  For instance, you begin an example by writing
-@code{@@example} by itself at the beginning of a line and end the
-example by writing @code{@@end example} on a line by itself, at the
-beginning of that line, and with only one space between the
-@code{@@end} and the @code{example}.
+@findex fim
+Em Texinfo, você sempre inicia uma citação ou exemplo escrevendo um 
+comando @@ sozinho no início de uma linha, e o finaliza escrevendo um 
+comando @code{@@end} que também está sozinho no início de uma linha. Por 
+exemplo, você inicia um exemplo escrevendo @code{@@example} no início de 
+uma linha e finaliza o exemplo escrevendo @code{@@end example} sozinho, 
+no início daquela linha, e somente com um espaço entre o @code{@@end} e 
+o @code{example}.
 
 @menu
-* Block Enclosing Commands::    Different constructs for different purposes.
-* @code{@@quotation}::                  Writing a quotation.
-* @code{@@indentedblock}::              Block of text indented on left.
-* @code{@@example}::                    Writing an example in a fixed-width font.
-* @code{@@verbatim}::                   Writing a verbatim example.
-* @code{@@lisp}::                       Illustrating Lisp code.
-* @code{@@display}::                    Writing an example in the current font.
-* @code{@@format}::                     Writing an example without narrowed margins.
-* @code{@@exdent}::                     Undo indentation on a line.
-* @code{@@flushleft @@flushright}::      Pushing text flush left or flush right.
-* @code{@@raggedright}::                Avoiding justification on the right.
-* @code{@@noindent}::                   Preventing paragraph indentation.
-* @code{@@indent}::                     Forcing paragraph indentation.
-* @code{@@cartouche}::                  Drawing rounded rectangles around text.
-* @code{@@small@dots{}}::                   Examples in a smaller font.
+* Comandos de Inclusão de Blocos::    Construtores diferentes para propósitos diferentes.
+* @code{@@quotation}::                Escrevendo uma citação.
+* @code{@@indentedblock}::            Bloco de texto recuado a esquerda.
+* @code{@@example}::                  Escrevendo um exemplo em uma fonte de largura fixa.
+* @code{@@verbatim}::                 Escrevendo um exemplo de literal.
+* @code{@@verbatiminclude}::          Incluindo um arquivo de literal.
+* @code{@@lisp}::                     Ilustrando código Lisp.
+* @code{@@small@dots{}}::             Exemplos em uma fonte menor.
+* @code{@@display}::                  Escrevendo um exemplo na fonte atual.
+* @code{@@format}::                   Escrevendo um exemplo sem margens estreitadas.
+* @code{@@exdent}::                   Desfazer recuo em uma linha.
+* @code{@@flushleft @@flushright}::   Empurrando texto alinhado à esquerda ou alinhado à direita.
+* @code{@@raggedright}::              Evitando justificação à direita.
+* @code{@@noindent}::                 Prevenindo recuo de parágrafo.
+* @code{@@indent}::                   Forçando recuo de parágrafo.
+* @code{@@cartouche}::                Desenhando retângulos por todos os lados ao redor do texto.
 @end menu
 
 
-@node Block Enclosing Commands
-@section Block Enclosing Commands
+@node Comandos de Inclusão de Blocos
+@section Comandos de Inclusão de Blocos
+@c Capítulo 8 - Citações e Exemplos
+@c Seção 8.1 - Comandos de Inclusão de Blocos
 
-Here is a summary of commands that enclose blocks of text, also known
-as @dfn{environments}.  They're explained further in the following
-sections.
+Aqui está um resumo de comandos que contém blocos de texto, também 
+conhecidos como @dfn{ambientes}. Eles estão mais explicados nas próximas 
+seções.
 
 @table @code
 @item @@quotation
-Indicate text that is quoted. The text is filled, indented (from both
-margins), and printed in a roman font by default.
+Indica texto que é citado. O texto é preenchido, recuado (a partir de 
+ambas as margens) , e impresso em uma fonte roman por padrão.
 
 @item @@indentedblock
-Like @code{@@quotation}, but the text is indented only on the left.
+Como @code{@@quotation}, mas o texto é recuado apenas a esquerda.
 
 @item @@example
-Illustrate code, commands, and the like. The text is printed
-in a fixed-width font, and indented but not filled.
+Ilustra código, comandos, e afins. O texto é impresso em uma fonte de 
+largura fixa, e recuado, mas não preenchido.
 
 @item @@lisp
-Like @code{@@example}, but specifically for illustrating Lisp code. The
-text is printed in a fixed-width font, and indented but not filled.
+Como @code{@@example}, mas especificamente para ilustrar código da Lisp. 
+O texto é impresso em uma fonte de largura fixa, e recuado, mas não 
+preenchido.
 
 @item @@verbatim
-Mark a piece of text that is to be printed verbatim; no character
-substitutions are made and all commands are ignored, until the next
-@code{@@end verbatim}.  The text is printed in a fixed-width font,
-and not indented or filled.  Extra spaces and blank lines are
-significant, and tabs are expanded.
+Marca um pedaço de texto que é para ser impresso literalmente; nenhuma 
+substituição de carácter é feita e todos os comandos são ignorados, até 
+o próximo @code{@@end verbatim}. O texto é impresso em uma fonte de 
+largura fixa, e não é recuado ou preenchido. Espaços extra e linhas em 
+branco são significantes, e TABs são expandidos.
 
 @item @@display
-Display illustrative text.  The text is indented but not filled, and
-no font is selected (so, by default, the font is roman).
+Exibe texto ilustrativo. O texto é recuado, mas não preenchido, e 
+nenhuma fonte é selecionada (então, por padrão, a fonte ŕ roman).
 
 @item @@format
-Like @code{@@display} (the text is not filled and no font is
-selected), but the text is not indented.
+Como @code{@@display} (o texto não é preenchido e nenhuma fonte é 
+selecionada), mas o texto não é recuado.
 
 @item @@smallquotation
 @itemx @@smallindentedblock
@@ -7206,113 +7209,117 @@ selected), but the text is not indented.
 @itemx @@smalllisp
 @itemx @@smalldisplay
 @itemx @@smallformat
-These @code{@@small...} commands are just like their non-small
-counterparts, except that they output text in a smaller font size,
-where possible.
+Esses comandos @code{@@small...} são semelhantes aos seus equivalentes 
+não-small, exceto que emitem texto em um tamanho de fonte menor, quando 
+possível.
 
 @item @@flushleft
 @itemx @@flushright
-Text is not filled, but is set flush with the left or right margin,
-respectively.
+O texto não é preenchido, mas é alinhado com a margem esquerda ou 
+direita, respectivamente.
 
 @item @@raggedright
-Text is filled, but only justified on the left, leaving the right
-margin ragged.
+O texto é preenchido, mas justificado apenas a esquerda, deixando a 
+margem direita irregular.
 
 @item @@cartouche
-Highlight text, often an example or quotation, by drawing a box with
-rounded corners around it.
+Realça o texto, geralmente um exemplo ou uma citação, desenhando uma 
+caixa com cantos arredondados ao redor.
 @end table
 
-The @code{@@exdent} command is used within the above constructs to
-undo the indentation of a line.
+O comando @code{@@exdent} é usado dentro das construções acima para 
+desfazer o recuo de uma linha.
 
-The @code{@@noindent} command may be used after one of the above
-constructs (or at the beginning of any paragraph) to prevent the
-following text from being indented as a new paragraph.
+O comando @code{@@noindent} pode ser usado após uma das construções 
+acima (ou no início de qualquer parágrafo) para prevenir que o texto 
+seguinte seja recuado como um novo parágrafo.
 
 
 @node @code{@@quotation}
-@section @code{@@quotation}: Block Quotations
-@anchor{quotation}@c old name
+@section @code{@@quotation}: Citações de Bloco
+@anchor{quotation} @c nome antigo
+@c Capítulo 8 - Citações e Exemplos
+@c Seção 8.2 - @quotation: Citações de Bloco
 
-@cindex Quotations
-@findex quotation
+@cindex Citações
+@findex citação
 
-The text of a quotation is processed like normal text (regular font,
-text is filled) except that:
+O texto de uma citação é processado como texto normal (fonte regular, 
+texto é preenchido), exceto que:
 
 @itemize @bullet
 @item
-both the left and right margins are closer to the center of the page,
-so the whole of the quotation is indented;
+ambas as margens esquerda e direita estão mais próximas ao centro da 
+página, de forma que a totalidade da citação é recuada;
 
 @item
-the first lines of paragraphs are indented no more than other lines; and
+as primeiras linhas de parágrafos não são recuadas mais que outras 
+linhas; e
 
 @item
-an @code{@@author} command may be given to specify the author of the
-quotation.
+um comando @code{@@author} pode ser dado para especificar o autor da 
+citação.
 @end itemize
 
 @quotation
-This is an example of text written between a @code{@@quotation}
-command and an @code{@@end quotation} command.  A @code{@@quotation}
-command is most often used to indicate text that is excerpted from
-another (real or hypothetical) printed work.
+Este é um exemplo de texto escrito entre um comando @code{@@quotation} e 
+um comando @code{@@end quotation}. Um comando @code{@@quotation} é usado 
+com frequência para indicar texto que é extraído de outro trabalho 
+impresso (real ou hipotético).
 @end quotation
 
-Write a @code{@@quotation} command as text on a line by itself.  This
-line will disappear from the output.  Mark the end of the quotation
-with a line beginning with and containing only @code{@@end quotation}.
-The @code{@@end quotation} line will likewise disappear from the
-output.
+Escreva um comando @code{@@quotation} como texto sozinho em uma linha. 
+Essa linha desaparecerá da saída. Marque o final da citação com uma 
+linha iniciando com e contendo somente @code{@@end quotation}. A linha 
+do @code{@@end quotation} também desaparecerá da saída.
 
-@code{@@quotation} takes one optional argument, given on the remainder
-of the line.  This text, if present, is included at the beginning of
-the quotation in bold or otherwise emphasized, and followed with a
-@samp{:}.  For example:
+@code{@@quotation} aceita um argumento opcional, dado no restante da 
+linha. Esse texto, se presente, é incluído no início da citação, em 
+negrito, ou, caso contrário, enfatizado, e seguido com um @samp{:}. Por 
+exemplo:
 
 @example
-@@quotation Note
-This is
-a foo.
+@@quotation Nota
+Isto é 
+um foo.
 @@end quotation
 @end example
 
 @noindent
-produces
+produz:
 
-@quotation Note
-This is
-a foo.
+@quotation Nota
+Isto é 
+um foo.
 @end quotation
 
-If the @code{@@quotation} argument is one of these English words
-(case-insensitive):
+Se o argumento do @code{@@quotation} for uma destas palavras do Inglês 
+(não diferencia maiúsculas de minúsculas):
 
 @example
 Caution  Important  Note  Tip  Warning
 @end example
 
-@cindex @code{<caution>} Docbook tag
-@cindex @code{<important>} Docbook tag
-@cindex @code{<note>} Docbook tag
-@cindex @code{<tip>} Docbook tag
-@cindex @code{<warning>} Docbook tag
-@cindex @code{<blockquote>} HTML tag
-@noindent then the Docbook output uses corresponding special tags
-(@code{<note>}, etc.)@: instead of the default @code{<blockquote>}.
-HTML output always uses @code{<blockquote>}.
+@cindex marcação @code{<caution>} do Docbook
+@cindex marcação @code{<important>} do Docbook
+@cindex marcação @code{<note>} do Docbook
+@cindex marcação @code{<tip>} do Docbook
+@cindex marcação @code{<warning>} do Docbook
+@cindex marcação @code{<blockquote>} do HTML
+@noindent
+então a saída do Docbook usa marcações especiais correspondentes 
+(@code{<note>}, etc.)@: em vez do padrão @code{<blockquote>}. A saída 
+HTML sempre usa @code{<blockquote>}.
 
-If the author of the quotation is specified in the @code{@@quotation}
-block with the @code{@@author} command, a line with the author name is
-displayed after the quotation:
+Se o autor da citação for especificado no bloco @code{@@quotation} com o 
+comando @code{@@author}, uma linha com o nome do autor é exibida após a 
+citação:
 
 @example
 @@quotation
-People sometimes ask me if it is a sin in the Church of Emacs to use
-vi.  Using a free version of vi is not a sin; it is a penance.  So happy
+
+As pessoas as vezes me perguntam se é pecado na Igreja do Emacs usar vi. 
+Usar uma versão livre do vi não é pecado; é uma penitência. Então, feliz 
 hacking.
 
 @@author Richard Stallman
@@ -7323,58 +7330,62 @@ hacking.
 produces
 
 @quotation
-People sometimes ask me if it is a sin in the Church of Emacs to use
-vi.  Using a free version of vi is not a sin; it is a penance.  So happy
+As pessoas as vezes me perguntam se é pecado na Igreja do Emacs usar vi. 
+Usar uma versão livre do vi não é pecado; é uma penitência. Então, feliz 
 hacking.
 
 @author Richard Stallman
 @end quotation
 
-@findex smallquotation
-Texinfo also provides a command @code{@@smallquotation}, which is just
-like @code{@@quotation} but uses a smaller font size where possible.
-@xref{@code{@@small@dots{}}}.
+@findex citaçãopequena
+Texinfo também fornece um comando @code{@@smallquotation}, o qual é 
+exatamente como @code{@@quotation}, mas usa um tamanho de fonte menor 
+onde for possível. @xref{@code{@@small@dots{}}}.
 
 
 @node @code{@@indentedblock}
-@section @code{@@indentedblock}: Indented text blocks
-@cindex Indented text block
-@findex indentedblock
+@section @code{@@indentedblock}: Blocos recuados de texto
+@cindex Blocos recuados de texto
+@findex blocorecuado
+@c Capítulo 8 - Citações e Exemplos
+@c Seção 8.3 - @indentedblock: Blocos recuados de texto
 
-The @code{@@indentedblock} environment is similar to
-@code{@@quotation}, except that text is only indented on the left (and
-there is no optional argument for an author).  Thus, the text font
-remains unchanged, and text is gathered and filled as usual, but the
-left margin is increased.  For example:
+O ambiente @code{@@indentedblock} é semelhante ao @code{@@quotation}, 
+exceto que o texto somente é recuado a esquerda (e não existe argumento 
+opcional para um autor). Assim, a fonte do texto permanece inalterada, e 
+o texto é reunido e preenchido como de costume, mas a margem esquerda é 
+aumentada. Por exemplo:
 
 @indentedblock
-This is an example of text written between an @code{@@indentedblock}
-command and an @code{@@end indentedblock} command.  The
-@code{@@indentedblock} environment can contain any text or other
-commands desired.
+Este é um exemplo de texto escrito entre um comando 
+@code{@@indentedblock} e um comando @code{@@end indentedblock}. O 
+ambiente @code{@@indentedblock} pode conter qualquer texto ou outros 
+comandos desejados.
 @end indentedblock
 
-This is written in the Texinfo source as:
+Isso é escrito no fonte do Texinfo como:
 
 @example
 @@indentedblock
-This is an example ...
+Este é um exemplo ...
 @@end indentedblock
 @end example
 
-@findex smallindentedblock
-Texinfo also provides a command @code{@@smallindentedblock}, which is
-just like @code{@@indentedblock} but uses a smaller font size where
-possible.  @xref{@code{@@small@dots{}}}.
+@findex blocorecuadopequeno
+Texinfo também fornece um comando @code{@@smallindentedblock}, que é 
+exatamente como @code{@@indentedblock}, mas usa um tamanho de fonte 
+menor onde possível. @xref{@code{@@small@dots{}}}.
 
 
 @node @code{@@example}
-@section @code{@@example}: Example Text
+@section @code{@@example}: Texto de Exemplo
+@c Capítulo 8 - Citações e Exemplos
+@c Seção 8.4 - @example: Texto de Exemplo
 
-@anchor{example}@c old name
-@findex example
-@cindex Examples, formatting them
-@cindex Formatting examples
+@anchor{example} @c nome antigo
+@findex exemplo
+@cindex Exemplos, formatando
+@cindex Formatando exemplos
 
 The @code{@@example} environment is used to indicate an example that
 is not part of the running text, such as computer input or output.
@@ -7820,8 +7831,8 @@ As a special case, when @code{@@indent} is used in an environment
 where text is not filled, it produces a paragraph indentation space in
 the @TeX{} output.  (These environments are where a line of input
 produces a line of output, such as @code{@@example} and
-@code{@@display}; for a summary of all environments, @pxref{Block
-Enclosing Commands}.)
+@code{@@display}; for a summary of all environments, 
+@pxref{Comandos de Inclusão de Blocos}.)
 
 Do not put braces after an @code{@@indent} command; they are not used,
 since @code{@@indent} is a command used outside of paragraphs
@@ -8905,7 +8916,7 @@ indentation.  If you want it centered, use @code{@@center}
 
 @cindex Alt attribute for images
 @cindex Images, alternate text for
-@findex @sortas{-} -@r{ (in image alt string)}
+@findex @sortas{-} -@r{ (in image alt string)} @c CONSERTE-ME
 For HTML output, @code{makeinfo} sets the @dfn{alt attribute} for
 inline images to the optional @var{alttext} (fourth) argument to
 @code{@@image}, if supplied.  If not supplied, @code{makeinfo} uses
@@ -8980,7 +8991,7 @@ big point (72bp = 1in)
 @item in
 @cindex Inches
 inch
-@item cm
+@item cm @c CONSERTE-ME
 @cindex Centimeters
 centimeter (2.54cm = 1in)
 @item mm
@@ -9786,7 +9797,7 @@ restricted contexts, as explained in the respective sections.
 @subsection Inserting `@@' with @code{@@@@} and @code{@@atchar@{@}}
 @cindex At sign, inserting
 @cindex Inserting @@ @r{(literal @samp{@@})}
-@findex @sortas{@@} @@ @r{(literal @samp{@@})}
+@findex @sortas{@@} @@ @r{(literal @samp{@@})} @c CONSERTE-ME
 @findex atchar@{@} @r{(literal @samp{@@})}
 
 @code{@@@@} produces a single @samp{@@} character in the output.  Do
@@ -9833,8 +9844,8 @@ However, Texinfo uses the comma as a special character only in one
 context: to separate arguments to those Texinfo commands, such as
 @code{@@acronym} (@pxref{@code{@@acronym}}) and @code{@@xref}
 (@pxref{Referências Cruzadas}), as well as user-defined macros
-(@pxref{Defining Macros}), which take more than one argument.
-
+(@pxref{Definindo Macros}), which take more than one argument.
+@c CONSERTE-ME
 Since a comma character would confuse Texinfo's parsing for these
 commands, you must use the command @samp{@@comma@{@}} instead if you want
 to pass an actual comma.  Here are some examples:
@@ -9865,7 +9876,7 @@ typeset the backslash from the typewriter font.
 
 However, Texinfo uses the backslash as a special character in one
 restricted context: to delimit formal arguments in the bodies of
-user-defined macros (@pxref{Defining Macros}).
+user-defined macros (@pxref{Definindo Macros}).
 
 Due to the vagaries of macro argument parsing, it is more reliable to
 pass an alphabetic command that produces a backslash instead of using
@@ -10580,7 +10591,7 @@ here@@sub@{below@}@@sup@{above@}
 @noindent produces:
 
 @display
-here@sub{below}@sup{above}
+here@sub{below}@sup{above} @c CONSERTE-ME
 @end display
 
 @cindex Math italic font
@@ -10693,7 +10704,7 @@ Here's an example:
 \sin 2\pi \equiv \cos 3\pi
 @end example
 
-@findex @sortas{\} \ @r{(literal \ in @code{@@math})}
+@findex @sortas{\} \ @r{(literal \ in @code{@@math})} @c CONSERTE-ME
 Since @samp{\} is an escape character inside @code{@@math}, you can
 use @code{@@\} to get a literal backslash (@code{\\} will work in
 @TeX{}, but you'd get the literal two characters @samp{\\} in Info).
@@ -10807,7 +10818,7 @@ ellipsis, which is three dots in a row, appropriately spaced @dots{}
 like so.  To emphasize: do not simply write three periods in the input
 file; that would work for the Info file output, but would produce the
 wrong amount of space between the periods in the printed manual.
-
+@c CONSERTE-ME
 The @code{@@enddots@{@}} command generates an end-of-sentence
 ellipsis, which also has three dots, but with different spacing
 afterwards, @enddots{}  Look closely to see the difference.
@@ -11491,7 +11502,7 @@ will automatically break urls at the natural places
 @section @code{@@-} and @code{@@hyphenation}: Helping @TeX{} Hyphenate
 
 @anchor{- and hyphenation}@c old name
-@findex @sortas{-} - @r{(discretionary hyphen)}
+@findex @sortas{-} - @r{(discretionary hyphen)} @c CONSERTE-ME
 @findex hyphenation
 @cindex Hyphenation, helping @TeX{} do
 @cindex Fine-tuning, and hyphenation
@@ -11530,7 +11541,7 @@ these commands have any effect there.
 @anchor{allowcodebreaks}@c old name
 @findex allowcodebreaks
 @cindex Quebras, within @code{@@code}
-@cindex @sortas{-} -, breakpoint within @code{@@code}
+@cindex @sortas{-} -, breakpoint within @code{@@code} @c CONSERTE-ME
 @cindex Hyphen, breakpoint within @code{@@code}
 @cindex Dash, breakpoint within @code{@@code}
 @cindex _, breakpoint within @code{@@code}
@@ -11595,7 +11606,7 @@ also will not stretch or shrink.  Sometimes that is what you want, for
 instance if you're doing manual indenting.  However, usually you want
 a normal interword space that does stretch and shrink (in the printed
 output); for that, see the @code{@@tie} command in the next section.
-
+@c CONSERTE-ME
 @cindex Hyphenation, preventing
 You can also use the @code{@@w} command to prevent @TeX{} from
 automatically hyphenating a long name or phrase that happens to fall
@@ -11909,7 +11920,7 @@ definition.
 @section Definition Command Continuation Lines
 @cindex Continuation lines in definition commands
 @cindex Definition command headings, continuing
-@cindex @sortas{@@} @samp{@@} as continuation in definition commands
+@cindex @sortas{@@} @samp{@@} as continuation in definition commands @c CONSERTE-ME
 
 The heading line of a definition command can get very long.
 Therefore, Texinfo has a special syntax allowing them to be continued
@@ -11973,7 +11984,7 @@ specified by using square brackets and ellipses: an argument enclosed
 within square brackets is optional, and an argument followed by an
 ellipsis is optional and may be repeated more than once.
 
-Thus, [@var{optional-arg}] means that @var{optional-arg} is optional
+Thus, [@var{optional-arg}] means that @var{optional-arg} is optional @c CONSERTE-ME
 and @var{repeated-args}@code{@dots{}} stands for zero or more
 arguments.  Parentheses are used when several arguments are grouped
 into additional levels of list structure in Lisp.
@@ -13979,7 +13990,7 @@ If you want to do simple text substitution, @code{@@set} and
 @@value}}).
 
 @menu
-* Defining Macros::             Defining and undefining new commands.
+* Definindo Macros::             Defining and undefining new commands.
 * Invoking Macros::             Using a macro, once you've defined it.
 * Macro Details::               Limitations of Texinfo macros.
 * @code{@@alias}::                      Command aliases.
@@ -13988,8 +13999,8 @@ If you want to do simple text substitution, @code{@@set} and
 @end menu
 
 
-@node Defining Macros
-@section Defining Macros
+@node Definindo Macros
+@section Definindo Macros
 @cindex Defining macros
 @cindex Macro definitions, Texinfo
 
@@ -15733,8 +15744,8 @@ For more information, see:
 @section Preparing for @TeX{}
 @cindex Preparing for @TeX{}
 @cindex @TeX{} input initialization
-@cindex @sortas{profile init} @file{.profile} initialization file
-@cindex @sortas{cshrc init} @file{.cshrc} initialization file
+@cindex @sortas{profile init} @file{.profile} initialization file @c CONSERTE-ME
+@cindex @sortas{cshrc init} @file{.cshrc} initialization file @c CONSERTE-ME
 @cindex Initialization file for @TeX{} input
 
 @TeX{} needs to know where to find the @file{texinfo.tex} file that the
@@ -15820,7 +15831,7 @@ export TEXINPUTS
 @end group
 @end example
 
-@need 1000
+@need 1000 @c CONSERTE-ME
 While in a @file{.cshrc} file, you could use the following @code{csh}
 command sequence:
 
@@ -20600,7 +20611,7 @@ on. @xref{Levantar/abaixar seções, , @code{@@raisesections} and
 
 @item @@macro @var{macroname} @{@var{params}@}
 Define a new Texinfo command @code{@@@var{macroname}@{@var{params}@}}.
-Pair with @code{@@end macro}.  @xref{Defining Macros}.
+Pair with @code{@@end macro}.  @xref{Definindo Macros}.
 
 @item @@majorheading @var{title}
 Print an unnumbered chapter-like heading, but omit from the table of
@@ -21020,7 +21031,7 @@ under the character @var{c}, as in @u{o}, @ubaraccent{o},
 
 @item @@unmacro @var{macroname}
 Undefine the macro @code{@@@var{macroname}} if it has been defined.
-@xref{Defining Macros}.
+@xref{Definindo Macros}.
 
 @item @@unnumbered @var{title}
 Begin a chapter that appears without chapter numbers of any kind.  The
