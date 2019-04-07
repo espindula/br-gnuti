@@ -265,7 +265,7 @@ Páginas de Título e de Direitos Autorais
 * @code{@@titlepage}::                  Crie um título para o documento impresso.
 * @code{@@titlefont @@center @@sp}::      Os comandos @code{@@titlefont}, @code{@@center}, e @code{@@sp}.
 * @code{@@title @@subtitle @@author}::    Os comandos @code{@@title}, @code{@@subtitle}, e @code{@@author}.
-* Copyright::                   Como escrever o aviso de direitos autorais e incluir permissões de cópia.
+* Direitos Autorais::                   Como escrever o aviso de direitos autorais e incluir permissões de cópia.
 * Geração de Cabeçalho::          Ligar os cabeçalhos de página após as páginas de título e de direitos autorais.
 
 O Nodo `Top' e o Menu Principal
@@ -749,11 +749,11 @@ quando ela é ruim, é melhor que nada.
 
 
 @node Condições de Cópia
-@unnumbered Texinfo Condições de Cópia
-@cindex Copying conditions
-@cindex Conditions for copying Texinfo
-@cindex Free software
-@cindex Libre software
+@unnumbered Condições de Cópia do Texinfo
+@cindex Condições de cópia
+@cindex Condições para copiar Texinfo
+@cindex Software livre
+@cindex Livre, software
 
 GNU Texinfo é @dfn{free software}; isso significa que qualquer pessoa é 
 livre para utilizá-lo e livre para redistribuí-lo sob certas condições.   
@@ -1326,8 +1326,8 @@ Texinfo, e dá um arquivo curto de amostra.
 
 
 @node Convenções
-@section General Syntactic Conventions
-@cindex General syntactic conventions
+@section Convenções Sintáticas Gerais
+@cindex Convenções sintáticas gerais
 @cindex Syntactic conventions
 @cindex Convenções, syntactic
 @cindex Characters, basic input
@@ -1503,12 +1503,12 @@ advertências relativamente ao aninhamento de tais comandos, veja-se
 @ref{Aninhamento Condicional}.)
 
 
-@node Minimo
-@section What a Texinfo File Must Have
-@cindex Minimal Texinfo file (requirements)
-@cindex Must have in Texinfo file
-@cindex Required in Texinfo file
-@cindex Texinfo file minimum
+@node Mínimo
+@section O Que um Arquivo do Texinfo Deve Ter
+@cindex Arquivo mínimo do Texinfo (requisitos)
+@cindex Deve ter no arquivo do Texinfo
+@cindex Obrigatório no arquivo do Texinfo
+@cindex Mínimo do arquivo do Texinfo
 
 Por convenção, o nome de um arquivo Texinfo termina com uma das 
 extensões @file{.texinfo}, @file{.texi}, @file{.txi}, ou 
@@ -1568,8 +1568,8 @@ duas linhas no início e aquela no final.
 
 
 @node Amostra Curta
-@section A Short Sample Texinfo File
-@cindex Sample Texinfo file, with comments
+@section Um Arquivo Curto de Amostra do Texinfo
+@cindex Arquivo de amostra do Texinfo, com comentários
 
 Aqui está um curto, porém completo, arquivo Texinfo, de forma que você 
 possa ver como um fonte Texinfo se aparenta na prática.  As primeiras 
@@ -1787,7 +1787,7 @@ mostrado em leitores Info, e assim por diante.
 
 
 @node Inicialização de Amostra
-@section Sample Texinfo File Beginning
+@section Exemplo de Início do Arquivo do Texinfo
 
 @cindex Example beginning of Texinfo file
 
@@ -1904,10 +1904,10 @@ isto:
 
 
 @node Primeira Linha
-@subsection The First Line of a Texinfo File
-@cindex First line of a Texinfo file
-@cindex Beginning line of a Texinfo file
-@cindex Header of a Texinfo file
+@subsection A Primeira Linha de um Arquivo do Texinfo
+@cindex Primeira linha de um arquivo do Texinfo
+@cindex Linha de início de um arquivo do Texinfo
+@cindex Cabeçalho de um arquivo do Texinfo
 
 Cada arquivo Texinfo que é para ser a entrada de alto nível para @TeX{} 
 deve necessariamente iniciar com uma linha que se parece com isto:
@@ -2219,7 +2219,7 @@ própria, como esta:
 
 Isso insere o texto previamente definido por @code{@@copying}.  Para 
 atender às exigências legais, o texto deve necessariamente ser utilizado 
-na página de direitos autorais no manual impresso (veja-se @ref{Copyright}).
+na página de direitos autorais no manual impresso (veja-se @ref{Direitos Autorais}).
 
 O próprio comando @code{@@copying} faz com que o texto das permissões 
 apareça em um arquivo Info @emph{antes} do primeiro nodo.  O texto 
@@ -2238,7 +2238,7 @@ automaticamente no início dos arquivos de saída XML e Docbook.
 
 
 @node Página de Título e Página de Direitos Autorais
-@section Title and Copyright Pages
+@section Páginas de Título e de Direitos Autorais
 
 Em saída impressa, o nome e autor do manual são usualmente impressos em 
 uma página de título.   A informação de direitos autorais é geralmente 
@@ -2255,7 +2255,7 @@ contém o texto das permissões de cópia que aparece no manual impresso.
 * @code{@@titlepage}::                  Crie um título para o documento impresso.
 * @code{@@titlefont @@center @@sp}::    Os comandos @code{@@titlefont}, @code{@@center}, e @code{@@sp}.
 * @code{@@title @@subtitle @@author}::  Os comandos @code{@@title}, @code{@@subtitle}, e @code{@@author}.
-* Copyright::                   Como escrever o aviso de direitos autorais e incluir permissões de cópia.
+* Direitos Autorais::                   Como escrever o aviso de direitos autorais e incluir permissões de cópia.
 * Geração de Cabeçalho::          Ligue o cabeçalho de página após as páginas de título e de direitos autorais.
 @end menu
 
@@ -2485,11 +2485,11 @@ Um modelo para esse método se parece com isto:
 @end example
 
 
-@node Copyright
-@subsection Copyright Page
-@cindex Copyright page
-@cindex Printed permissions
-@cindex Permissions, printed
+@node Direitos Autorais
+@subsection Página de Direitos Autorais
+@cindex Página de direitos autorais
+@cindex Permissões impressas
+@cindex Permissões, impressas
 
 Por acordo internacional, o aviso de direitos autorais para um livro 
 deve necessariamente estar ou na página de título ou no verso da página 
@@ -2702,9 +2702,9 @@ texi2any --dvi --Xopt --texinfo=@@setcontentsaftertitlepage foo.texi
 
 
 @node O Nodo Top
-@section The `Top' Node and Master Menu
-@cindex Top node
-@cindex Node, `Top'
+@section O Nodo `Top' e Menu Mestre
+@cindex Nodo Top
+@cindex Nodo, `Top'
 
 O nodo `Top' é o nodo no qual um leitor acessa um manual Info.
 Como tal, ele deveria iniciar com uma descrição breve do manual 
@@ -3031,7 +3031,7 @@ O comando @code{@@headings off} anula o comando @code{@@end titlepage},
 o qual do contrário faz com que @TeX{} imprima os cabeçalhos de página.
 
 Você também pode especificar seu próprio estilo de cabeçalho e de rodapé 
-de página. Veja-se @ref{Cabeçalhos, , Page Cabeçalhos}, para mais informação.
+de página. Veja-se @ref{Cabeçalhos, , Cabeçalhos de Página}, para mais informação.
 
 
 @node @code{@@paragraphindent}
@@ -3077,7 +3077,7 @@ especificado. Veja-se @ref{Início de Cabeçalho}.
 
 
 @node @code{@@firstparagraphindent}
-@subsection @code{@@firstparagraphindent}: Indentando Após Cabeçalhos
+@subsection @code{@@firstparagraphindent}: Recuando Após Cabeçalhos
 
 @anchor{firstparagraphindent}@c nome antigo
 @findex firstparagraphindent
@@ -3165,10 +3165,10 @@ especificado.  @xref{Início de Cabeçalho}.
 
 
 @node Finalizando um Arquivo
-@section Ending a Texinfo File
-@cindex Ending a Texinfo file
-@cindex Texinfo file ending
-@cindex File ending
+@section Finalizando um Arquivo do Texinfo
+@cindex Finalizando um Arquivo do Texinfo
+@cindex Finalização de arquivo do Texinfo
+@cindex Finalização de arquivo
 @findex bye
 
 O final de um arquivo Texinfo deveria incluir comandos para criar 
@@ -4348,7 +4348,7 @@ Na saída XML e Docbook, um elemento @code{<chapter>} é produzido, o qual
 inclui todas as seções seguintes, até o próximo capítulo.
 
 @node @code{@@unnumbered @@appendix}
-@section @code{@@unnumbered}, @code{@@appendix}: Chapters with Other Labeling
+@section @code{@@unnumbered}, @code{@@appendix}: Capítulos com Outra Rotulagem
 
 @anchor{unnumbered & appendix}@c old name
 @findex unnumbered
@@ -5681,9 +5681,9 @@ referir a trabalhos impressos para os quais não existe uma forma Info.
 @xref{@code{@@cite}}.
 
 @node @code{@@url}
-@section @code{@@url}, @code{@@uref@{@var{url}[, @var{text}][, @var{replacement}]@}}
+@section @code{@@url}, @code{@@uref@{@var{url}[, @var{texto}][, @var{substituição}]@}}
 @c Capítulo 6 - Referências Cruzadas;
-@c Seção 6.10 - @code{@@url}, @code{@@uref@{@var{url}[, @var{text}][, @var{replacement}]@}}
+@c Seção 6.10 - @url, @uref{url[, texto][, substituição]}
 
 @anchor{uref} @c nome antigo
 @findex uref
@@ -9283,8 +9283,8 @@ all will be consistent for the reader.
 On the other hand, it is best not to stray too far from the meaning of
 the predefined indices.  Otherwise, in the event that your text is
 combined with other text from other manuals, the index entries will
-not match up.  Instead, define your own new index (@pxref{New
-Índices}).
+not match up.  Instead, define your own new index 
+(@pxref{Novos Índices}).
 
 We recommend having a single index in the final document whenever
 possible, however many source indices you use, since then readers have
@@ -10223,8 +10223,8 @@ This is text. Two sentences. Three sentences. Non-French spacing.
 @code{@@!}, and @code{@@?} (@pxref{Finalizando Uma Frase}).
 
 @code{@@frenchspacing} has no effect on the HTML or Docbook output;
-for XML, it outputs a transliteration of itself (@pxref{Output
-Formats}).
+for XML, it outputs a transliteration of itself 
+(@pxref{Formatos de Saída}).
 
 
 @node @code{@@dmn}
@@ -10936,8 +10936,8 @@ in an itemized list, you do not need to type the braces
 
 If you actually want to typeset some math that does a subtraction, it
 is better to use @code{@@math}.  Then the regular @samp{-} character
-produces a minus sign, as in @code{@@math@{a-b@}} (@pxref{Inserting
-Math}).
+produces a minus sign, as in @code{@@math@{a-b@}} 
+(@pxref{Inserindo Fórmulas Matemáticas}).
 
 
 @node @code{@@geq @@leq}
@@ -11609,7 +11609,7 @@ You can also use the @code{@@w} command to prevent @TeX{} from
 automatically hyphenating a long name or phrase that happens to fall
 near the end of a line.  @command{makeinfo} does not ever hyphenate
 words.
-
+@c CONSERTE-ME
 @cindex Keyword expansion, preventing
 @cindex Version control keywords, preventing expansion of
 @cindex $Id expansion, preventing
@@ -16421,8 +16421,8 @@ default value is 72.
 Set the footnote style to @var{style}: either @samp{end} for the end
 node style (the default) or @samp{separate} for the separate node
 style.  The value set by this option overrides the value set in a
-Texinfo file by a @code{@@footnotestyle} command (@pxref{Footnote
-Styles}).
+Texinfo file by a @code{@@footnotestyle} command 
+(@pxref{Estilos de Notas de Rodapé}).
 
 When the footnote style is @samp{separate}, @code{makeinfo} makes a
 new node containing the footnotes found in the current node.  When the
@@ -17226,8 +17226,8 @@ the `end' footnotestyle; default @samp{4}.  @xref{Estilos de Notas de Rodapé}.
 
 @item FOOTNOTE_SEPARATE_HEADER_LEVEL
 For HTML@.  Header formatting level used for the footnotes header with
-the `separate' footnotestyle; default @samp{4}.  @xref{Footnote
-Styles}.
+the `separate' footnotestyle; default @samp{4}.  
+@xref{Estilos de Notas de Rodapé}.
 
 @item FRAMES
 For HTML@.  If set, a file describing the frame layout is generated,
@@ -18982,8 +18982,8 @@ feature.
 @strong{Footnotes:} for HTML, when the footnote style is @samp{end},
 or if the output is not split, footnotes are put at the end of the
 output.  If the footnoet style is set to @samp{separate}, and the
-output is split, they are placed in a separate file.  @xref{Footnote
-Styles}.
+output is split, they are placed in a separate file.  
+@xref{Estilos de Notas de Rodapé}.
 
 @cindex Escaping to HTML
 @cindex Raw HTML
@@ -20156,8 +20156,8 @@ entity, and its arguments, if any.  @xref{Comandos de Definição}.
 
 @item @@deftypefnnewline @var{on-off}
 Specifies whether return types for @code{@@deftypefn} and similar are
-printed on lines by themselves; default is off.  @xref{Typed
-Functions,, Functions in Typed Languages}.
+printed on lines by themselves; default is off.  
+@xref{Funções Digitadas,, Functions in Typed Languages}.
 
 @item @@deftypefun @var{data-type} @var{function-name} @var{arguments}@dots{}
 @itemx @@deftypefunx @var{data-type} @var{function-name} @var{arguments}@dots{}
@@ -20240,8 +20240,8 @@ thin space before @var{dimension}.  No effect in Info.
 @xref{@code{@@dmn}}.
 
 @item @@docbook
-Enter Docbook completely.  Pair with @code{@@end docbook}.  @xref{Raw
-Formatter Commands}.
+Enter Docbook completely.  Pair with @code{@@end docbook}.  
+@xref{Comandos do Formatador Bruto}.
 
 @item @@documentdescription
 Set the document description text, included in the HTML output.  Pair
@@ -20407,8 +20407,8 @@ group}.  Ignored in Info.  @xref{@code{@@group}}.
 Double and single angle quotation marks: @guillemetleft{}
 @guillemetright{} @guilsinglleft{} @guilsinglright{}.
 @code{@@guillemotleft} and @code{@@guillemotright} are synonyms for
-@code{@@guillemetleft} and @code{@@guillemetright}.  @xref{Inserting
-Quotation Marks}.
+@code{@@guillemetleft} and @code{@@guillemetright}.  
+@xref{Inserindo Aspas}.
 
 @item @@H@{@var{c}@}
 Generate the long Hungarian umlaut accent over @var{c}, as in @H{o}.
@@ -20435,8 +20435,8 @@ Set @var{text} in the font used for multitable heading rows; mostly
 useful in multitable templates.  @xref{Linhas de Multi Tabelas}.
 
 @item @@html
-Enter HTML completely.  Pair with @code{@@end html}.  @xref{Raw
-Formatter Commands}.
+Enter HTML completely.  Pair with @code{@@end html}.  
+@xref{Comandos do Formatador Bruto}.
 
 @item @@hyphenation@{@var{hy-phen-a-ted words}@}
 Explicitly define hyphenation points.  @xref{@code{@@- @@hyphenation}}.
@@ -20543,8 +20543,8 @@ Use the specified macro definitions file.  This command is used only
 in the first line of a Texinfo file to cause @TeX{} to make use of the
 @file{texinfo} macro definitions file.  The @code{\} in @code{\input}
 is used instead of an @code{@@} because @TeX{} does not recognize
-@code{@@} until after it has read the definitions file.  @xref{Texinfo
-File Header}.
+@code{@@} until after it has read the definitions file.  
+@xref{Cabeçalho do Arquivo do Texinfo}.
 
 @item @@insertcopying
 Insert the text previously defined with the @code{@@copying}
@@ -20950,8 +20950,8 @@ from @var{formatting-command}.  Pair with @code{@@end table}.
 Generate the @TeX{} logo.  @xref{@code{@@TeX @@LaTeX}}.
 
 @item @@tex
-Enter @TeX{} completely.  Pair with @code{@@end tex}.  @xref{Raw
-Formatter Commands}.
+Enter @TeX{} completely.  Pair with @code{@@end tex}.  
+@xref{Comandos do Formatador Bruto}.
 
 @item @@textdegree@{@}
 Generate the degree symbol.  @xref{@code{@@textdegree}}.
@@ -21100,7 +21100,7 @@ In a printed manual, insert whitespace so as to push text on the
 remainder of the page towards the bottom of the page.  Used in
 formatting the copyright page with the argument @samp{0pt plus
 1filll}.  (Note spelling of @samp{filll}.)  @code{@@vskip} may be used
-only in contexts ignored for Info.  @xref{Copyright}.
+only in contexts ignored for Info.  @xref{Direitos Autorais}.
 
 @item @@vtable @var{formatting-command}
 Begin a two-column table, using @code{@@item} for each entry.
@@ -21112,8 +21112,8 @@ index of variables.  Pair with @code{@@end vtable}.  The same as
 Disallow line breaks within @var{text}.  @xref{@code{@@w}}.
 
 @item @@xml
-Enter XML completely.  Pair with @code{@@end xml}.  @xref{Raw
-Formatter Commands}.
+Enter XML completely.  Pair with @code{@@end xml}.  
+@xref{Comandos do Formatador Bruto}.
 
 @item @@xref@{@var{node}, [@var{entry}], [@var{node-title}], [@var{info-file}], [@var{manual}]@}
 Make a reference that starts with `See' in a printed manual.  Follow
@@ -21174,7 +21174,7 @@ test suite in the sources, which exhaustively tries combinations.
 
 
 @node Dicas
-@appendix Dicas and Hints
+@appendix Dicas e Sugestões
 
 Here are some tips for writing Texinfo documentation:
 
@@ -21933,9 +21933,9 @@ notice and this notice are preserved.
 
 
 @node Modo Texinfo
-@appendix Using Modo Texinfo
-@cindex Texinfo mode
-@cindex Mode, using Texinfo
+@appendix Usando o Modo Texinfo
+@cindex Modo Texinfo
+@cindex Modo, usando Texinfo
 @cindex GNU Emacs
 @cindex Emacs
 
@@ -22868,7 +22868,7 @@ M-x texinfo-sequential-node-update
 
 
 @node Cabeçalhos
-@appendix Page Cabeçalhos
+@appendix Cabeçalhos de Página
 @cindex Cabeçalhos
 @cindex Footings
 @cindex Page numbering
