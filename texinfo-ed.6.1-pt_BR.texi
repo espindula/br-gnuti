@@ -7387,26 +7387,31 @@ menor onde possível. @xref{@code{@@small@dots{}}}.
 @cindex Exemplos, formatando
 @cindex Formatando exemplos
 
-The @code{@@example} environment is used to indicate an example that
-is not part of the running text, such as computer input or output.
-Write an @code{@@example} command at the beginning of a line by
-itself.  Mark the end of the example with an @code{@@end example}
-command, also written at the beginning of a line by itself.
+O ambiente @code{@@example} é usado para indicar um exemplo que não é 
+parte do texto em execução, como uma saída ou entrada de computador. 
+Escreva um comando @code{@@example} sozinho no início de uma linha. 
+Marque o final do exemplo com um comando @code{@@end example}, também 
+escrito sozinho no início de uma linha.
 
-An @code{@@example} environment has the following characteristics:
+Um ambiente @code{@@example} tem as seguintes características:
 
 @itemize
-@item Each line in the input file is a line in the output; that is,
-the source text is not filled as it normally is.
-@item Extra spaces and blank lines are significant.
-@item The output is indented.
-@item The output uses a fixed-width font.
-@item Texinfo commands @emph{are} expanded; if you want the output to
-be the input verbatim, use the @code{@@verbatim} environment instead
+@item 
+Cada linha no arquivo de entrada é uma linha na saída; isto é, o texto 
+fonte não é preenchido como normalmente é.
+@item 
+Linhas em branco e espaços extras são significantes.
+@item 
+A saída é recuada.
+@item 
+A saída usa uma fonte de largura fixa.
+@item 
+Os comandos do Texinfo @emph{são} expandidos; se você deseja que a saída 
+seja a entrada literalmente, use o ambiente @code{@@verbatim} 
 (@pxref{@code{@@verbatim}}).
 @end itemize
 
-For example,
+Por exemplo,
 
 @example
 @@example
@@ -7416,317 +7421,334 @@ cp foo @@var@{dest1@}; \
 @end example
 
 @noindent
-produces
+produz:
 
 @example
 cp foo @var{dest1}; \
  cp foo @var{dest2}
 @end example
 
-The lines containing @code{@@example} and @code{@@end example} will
-disappear from the output.  To make the output look good, you should
-put a blank line before the @code{@@example} and another blank line
-after the @code{@@end example}.  Blank lines inside the beginning
-@code{@@example} and the ending @code{@@end example}, on the other
-hand, do appear in the output.
+As linhas contendo @code{@@example} e @code{@@end example} desaparecerão 
+da entrada. Para fazer com que a saída apareça bem, você deveria colocar 
+uma linha em branco antes do @code{@@example} e outra linha em branco 
+após o @code{@@end example}. As linhas em branco dentro do 
+@code{@@example} inicial e do @code{@@end example} final, por outro 
+lado, aparecem na saída.
 
-@quotation Caution
-Do not use tabs in the lines of an example!  (Or anywhere else in
-Texinfo, except in verbatim environments.)  @TeX{} treats tabs as
-single spaces, and that is not what they look like.  In Emacs, you can
-use @kbd{M-x untabify} to convert tabs in a region to multiple spaces.
+@quotation Cuidado
+Não use ``tabs'' nas linhas de um exemplo! (Ou em qualquer outro lugar 
+em Texinfo, exceto em ambientes ``verbatim''). O @TeX{} trata os 
+``tabs'' como espaços simples, e isso não é o que parecem. Em Emacs, 
+você pode usar @kbd{M-x untabify} para converter ``tabs'' em uma região 
+para espaços múltiplos.
 @end quotation
 
-Examples are often, logically speaking, ``in the middle'' of a
-paragraph, and the text that continues afterwards should not be
-indented, as in the example above.  The @code{@@noindent} command
-prevents a piece of text from being indented as if it were a new
-paragraph (@pxref{@code{@@noindent}}.
+Os exemplos frequentemente estão, falando logicamente, ``no meio'' de um 
+parágrafo, e o texto que continua após não deveria ser recuado, como no 
+exemplo acima. O comando @code{@@noindent} evita que um pedaço de texto 
+seja recuado como se fosse um parágrafo novo (@pxref{@code{@@noindent}}.
 
-If you want to embed code fragments within sentences, instead of
-displaying them, use the @code{@@code} command or its relatives
+Se você deseja incorporar fragmentos de código em frases, em vez de 
+exibi-los, use o comando @code{@@code} ou seus parentes 
 (@pxref{@code{@@code}}).
 
-If you wish to write a ``comment'' on a line of an example in the
-normal roman font, you can use the @code{@@r} command (@pxref{Fontes}).
+Se você quer escrever um ``comentário'' em uma linha de um exemplo na 
+fonte roman normal, você pode usar o comando @code{@@r} (@pxref{Fontes}).
 
 
 @node @code{@@verbatim}
-@section @code{@@verbatim}: Literal Text
+@section @code{@@verbatim}: Texto Literal
+@c Capítulo 8 - Citações e Exemplos
+@c Seção 8.5 - @verbatim: Texto Literal
 
-@anchor{verbatim}@c old name
+@anchor{verbatim} @c nome antigo
 @findex verbatim
-@cindex Verbatim environment
+@cindex Ambiente verbatim
 
-Use the @code{@@verbatim} environment for printing of text that may
-contain special characters or commands that should not be interpreted,
-such as computer input or output (@code{@@example} interprets its text
-as regular Texinfo commands).  This is especially useful for including automatically
-generated files in a Texinfo manual.
+Use o ambiente @code{@@verbatim} para a impressão de texto que pode 
+conter caracteres especiais ou comandos que não deveriam ser 
+interpretados, como saída ou entrada de computador (@code{@@example} 
+interpreta seu texto como comandos regulares do Texinfo). Isso é útil 
+especialmente para incluir arquivos gerados automaticamente em um manual 
+Texinfo.
 
-In general, the output will be just the same as the input.  No
-character substitutions are made, e.g., all spaces and blank lines are
-significant, including tabs.  In the printed manual, the text is
-typeset in a fixed-width font, and not indented or filled.
+Geralmente, a saída será exatamente a mesma que a entrada. Nenhuma 
+substituição de caracteres é feita, por exemplo, todas as linhas em 
+branco e espaços são significantes, incluindo ``tabs''. No manual 
+impresso, o texto é produzido em uma fonte de largura fixa, e não 
+recuado ou preenchido.
 
-Write a @code{@@verbatim} command at the beginning of a line by
-itself.  This line will disappear from the output.  Mark the end of
-the verbatim block with an @code{@@end verbatim} command, also written
-at the beginning of a line by itself.  The @code{@@end verbatim} will
-also disappear from the output.
+Escreva um comando @code{@@verbatim} sozinho no início de uma linha. 
+Essa linha desaparecerá da saída. Marque o final do bloco ``verbatim'' 
+com um comando @code{@@end verbatim}, também escrito sozinho no início 
+de uma linha. O @code{@@end verbatim} também desaparecerá da saída.
 
-For example:
-@c oops, got to trick this a bit: can't use @end verbatim inside @verbatim
+Por exemplo:
+@c oops, tive que enganar isso um pouco: não se pode usar @end verbatim 
+@c dentro de @verbatim
 
 @example
 @exdent @t{@@verbatim}
 @exdent @t{@{}
-@exdent @key{TAB}@t{@@command with strange characters: @@'e}
-@exdent @t{expand@key{TAB}me}
+@exdent @key{TAB}@t{@@command com caracteres estranhos: @@'e}
+@exdent @t{expanda-@key{TAB}me}
 @exdent @t{@}}
 @exdent @t{@@end verbatim}
 @end example
 
 @noindent
-This produces:
+Isso produz:
 
 @verbatim
 {
-        @command with strange characters: @'e
-expand	me
+        @command com caracteres estranhos: @'e
+expanda-	me
 }
 @end verbatim
 
-Since the lines containing @code{@@verbatim} and @code{@@end verbatim}
-produce no output, typically you should put a blank line before the
-@code{@@verbatim} and another blank line after the @code{@@end
-verbatim}.  Blank lines between the beginning @code{@@verbatim} and
-the ending @code{@@end verbatim} will appear in the output.
+Dado que as linhas contendo @code{@@verbatim} e @code{@@end verbatim} 
+não produzem saída, tipicamente você deveria colocar uma linha em branco 
+antes do @code{@@verbatim} e outra linha em branco após o 
+@code{@@end verbatim}. As linhas em branco entre o início do 
+@code{@@verbatim} e o final do @code{@@end verbatim} aparecerão na saída.
 
-@cindex Verbatim, small
-@cindex Small verbatim
-You can get a ``small'' verbatim by enclosing the @code{@@verbatim} in
-an @code{@@smallformat} environment, as shown here:
+@cindex Verbatim, pequeno
+@cindex Literal, pequeno
+@cindex Pequeno verbatim
+Você pode obter um literal ``pequeno'' colocando o @code{@@verbatim} em 
+um ambiente @code{@@smallformat}, conforme mostrado aqui:
 
-@c more cheating ...
+@c mais trapaça ...
 @smallexample
 @exdent @t{@@smallformat}
 @exdent @t{@@verbatim}
-@exdent @t{... still verbatim, but in a smaller font ...}
+@exdent @t{... ainda literal, mas em uma fonte menor ...}
 @exdent @t{@@end verbatim}
 @exdent @t{@@end smallformat}
 @end smallexample
 
-Finally, a word of warning: it is not reliable to use
-@code{@@verbatim} inside other Texinfo constructs.
+Finalmente, uma palavra de alerta: não é confiável usar 
+@code{@@verbatim} dentro de outras construções do Texinfo.
 
-See also @ref{@code{@@verbatiminclude}}.
+Veja também @ref{@code{@@verbatiminclude}}.
 
 
 @node @code{@@lisp}
-@section @code{@@lisp}: Marking a Lisp Example
+@section @code{@@lisp}: Marcando um Exemplo da Lisp
+@c Capítulo 8 - Citações e Exemplos
+@c Seção 8.6 - @lisp: Marcando um Exemplo da Lisp
 
-@anchor{lisp}@c old name
+@anchor{lisp} @c nome antigo
 @findex lisp
-@cindex Lisp example
+@cindex Exemplo (ambiente) da Lisp
 
-The @code{@@lisp} command is used for Lisp code.  It is synonymous
-with the @code{@@example} command.
+O comando @code{@@lisp} é usado para código da Lisp. Ele é um sinônimo 
+do comando @code{@@example}.
 
 @lisp
-This is an example of text written between an
-@code{@@lisp} command and an @code{@@end lisp} command.
+Este é um exemplo de texto escrito entre um comando @code{@@lisp} e um 
+comando @code{@@end lisp}.
 @end lisp
 
-Use @code{@@lisp} instead of @code{@@example} to preserve information
-regarding the nature of the example.  This is useful, for example, if
-you write a function that evaluates only and all the Lisp code in a
-Texinfo file.  Then you can use the Texinfo file as a Lisp
-library.  Mark the end of @code{@@lisp} with @code{@@end lisp} on a line
-by itself.
+Use @code{@@lisp} em vez de @code{@@example} para preservar informação 
+relativa à natureza do exemplo. Isso é útil, por exemplo, se você 
+escrever uma função que avalia apenas e todo o código Lisp em um arquivo 
+do Texinfo. Então você pode usar o arquivo Texinfo como uma biblioteca 
+Lisp. Marque o final do @code{@@lisp} com @code{@@end lisp} sozinho em 
+uma linha.
 
 
 @node @code{@@display}
-@section @code{@@display}: Examples Using the Text Font
+@section @code{@@display}: Exemplos Usando a Fonte de Texto
+@c Capítulo 8 - Citações e Exemplos
+@c Seção 8.7 - @display: Exemplos Usando a Fonte de Texto
 
-@anchor{display}@c old name
-@findex display
-@cindex Display formatting
+@anchor{display} @c nome antigo
+@findex exibição
+@cindex Formatação de exibição
 
-The @code{@@display} command begins another kind of environment, where
-the font is left unchanged, not switched to typewriter as with
-@code{@@example}.  Each line of input still produces a line of output,
-and the output is still indented.
+O comando @code{@@display} inicia outro tipo de ambiente, onde a fonte é 
+deixada inalterada, não trocada para máquina de escrever como com 
+@code{@@example}. Cada linha da entrada ainda produz uma linha de saída, 
+e a saída ainda é recuada.
 
 @display
-This is an example of text written between a @code{@@display} command
-and an @code{@@end display} command.  The @code{@@display} command
-indents the text, but does not fill it.
+Este é um exemplo de texto escrito entre um comando @code{@@display} e 
+um comando @code{@@end display}. O comando @code{@@display} recua o 
+texto, mas não o preenche.
 @end display
 
-@findex smalldisplay
-Texinfo also provides the environment @code{@@smalldisplay}, which is
-like @code{@@display} but uses a smaller font size.
+@findex exibiçãopequena
+Texinfo também fornece o ambiente @code{@@smalldisplay}, que é como 
+@code{@@display}, mas usa um tamanho de fonte menor. 
 @xref{@code{@@small@dots{}}}.
 
 
 @node @code{@@format}
-@section @code{@@format}: Examples Using the Full Line Width
+@section @code{@@format}: Exemplos Usando a Largura Total da Linha
+@c Capítulo 8 - Citações e Exemplos
+@c Seção 8.8 - @format: Exemplos Usando a Largura Total da Linha
 
-@anchor{format}@c old name
-@findex format
+@anchor{format} @c nome antigo
+@findex formato
 
-The @code{@@format} command is similar to @code{@@display}, except it
-leaves the text unindented.  Like @code{@@display}, it does not select
-the fixed-width font.
+O comando @code{@@format} é similar a @code{@@display}, exceto que deixa 
+o texto sem recuo. Como @code{@@display}, não seleciona a fonte de 
+largura fixa.
 
 @format
-This is an example of text written between a @code{@@format} command
-and an @code{@@end format} command.  As you can see
-from this example,
-the @code{@@format} command does not fill the text.
+Este é um exemplo de texto escrito entre um comando @code{@@format} e um 
+comando @code{@@end format}. Como você pode ver a partir deste exemplo, 
+o comando @code{@@format} não preenche o texto.
 @end format
 
-@findex smallformat
-Texinfo also provides the environment @code{@@smallformat}, which is
-like @code{@@format} but uses a smaller font size.
+@findex formatopequeno
+Texinfo também fornece o ambiente @code{@@smallformat}, que é como 
+@code{@@format}, mas usa um tamanho de fonte menor. 
 @xref{@code{@@small@dots{}}}.
 
 
 @node @code{@@exdent}
-@section @code{@@exdent}: Undoing a Line's Indentation
+@section @code{@@exdent}: Desfazendo o Recuo de Uma Linha
+@c Capítulo 8 - Citações e Exemplos
+@c Seção 8.9 - @exdent: Desfazendo o Recuo de Uma Linha
 
-@anchor{exdent}@c old name
+@anchor{exdent} @c nome antigo
 @findex exdent
-@cindex Indentation undoing
+@cindex Recuo, desfazendo
 
-The @code{@@exdent} command removes any indentation a line might have.
-The command is written at the beginning of a line and applies only to
-the text that follows the command that is on the same line.  Do not use
-braces around the text.  In a printed manual, the text on an
-@code{@@exdent} line is printed in the roman font.
+O comando @code{@@exdent} remove qualquer recuo que uma linha possa ter. 
+O comando é escrito no início de uma linha e se aplica somente ao texto 
+que segue o comando que está na mesma linha. Não use chaves em volta do 
+texto. Em um manual impresso, o texto em uma linha @code{@@exdent} é 
+impresso na fonte roman.
 
-@code{@@exdent} is usually used within examples.  Thus,
+@code{@@exdent} normalmente é usado dentro de exemplos. Assim,
 
 @example
 @group
 @@example
-This line follows an @@@@example command.
-@@exdent This line is exdented.
-This line follows the exdented line.
-The @@@@end example comes on the next line.
+Esta linha segue um comando @@@@example.
+@@exdent Esta linha está sem recuo.
+Esta linha segue a linha sem recuo.
+O @@@@end example vem na próxima linha.
 @@end example
 @end group
 @end example
 
 @noindent
-produces
+produz:
 
 @example
 @group
-This line follows an @@example command.
-@exdent This line is exdented.
-This line follows the exdented line.
-The @@end example comes on the next line.
+Esta linha segue um comando @@example.
+@exdent Esta linha está sem recuo.
+Esta linha segue a linha sem recuo.
+O @@end example vem na próxima linha.
 @end group
 @end example
 
-In practice, the @code{@@exdent} command is rarely used.  Usually, you
-un-indent text by ending the example and returning the page to its
-normal width.
+Na prática, o comando @code{@@exdent} raramente é usado. Geralmente, 
+você retira o recuo do texto finalizando o exemplo e retornando a página 
+para a sua largura normal.
 
-@code{@@exdent} has no effect in HTML output.
+@code{@@exdent} não tem efeito em saída HTML.
 
 
 @node @code{@@flushleft @@flushright}
-@section @code{@@flushleft} and @code{@@flushright}
+@section @code{@@flushleft} e @code{@@flushright}
+@c Capítulo 8 - Citações e Exemplos
+@c Seção 8.10 - @flushleft e @flushright
 
-@anchor{flushleft & flushright}@c old name
+@anchor{flushleft & flushright} @c nome antigo
 @findex flushleft
 @findex flushright
-@cindex Ragged right, without filling
-@cindex Ragged left, without filling
+@cindex Direita irregular, sem preencher
+@cindex Esquerda irregular, sem preencher
 
-The @code{@@flushleft} and @code{@@flushright} commands line up the
-ends of lines on the left and right margins of a page,
-but do not fill the text.  The commands are written on lines of their
-own, without braces.  The @code{@@flushleft} and @code{@@flushright}
-commands are ended by @code{@@end flushleft} and @code{@@end
-flushright} commands on lines of their own.
+Os comandos @code{@@flushleft} e @code{@@flushright} alinham as 
+extremidades das linhas nas margens esquerda e direita de uma página, 
+mas não preenchem o texto. Os comandos são escritos sozinhos em linhas 
+próprias, sem chaves. Os comandos @code{@@flushleft} e 
+@code{@@flushright} são finalizados pelos comandos 
+@code{@@end flushleft} e @code{@@end flushright} sozinhos em suas 
+próprias linhas.
 
 @need 1500
-For example,
+Por exemplo,
 
 @example
 @group
 @@flushleft
-This text is
-written flushleft.
+Este texto está
+escrito flushleft.
 @@end flushleft
 @end group
 @end example
 
 @noindent
-produces
+produz:
 
 @quotation
 @flushleft
-This text is
-written flushleft.
+Este texto está
+escrito flushleft.
 @end flushleft
 @end quotation
 
 
-@code{@@flushright} produces the type of indentation often used in the
-return address of letters.  For example,
+@code{@@flushright} produz o tipo de recuo frequentemente usado no 
+endereço de retorno de cartas. Por exemplo,
 
 @example
 @group
 @@flushright
-Here is an example of text written
-flushright.  The @@code@{@@flushright@} command
-right justifies every line but leaves the
-left end ragged.
+Aqui está um exemplo de texto escrito 
+flushright.  O comando @@code@{@@flushright@} 
+justifica a direita de cada linha, mas deixa a 
+extremidade esquerda irregular.
 @@end flushright
 @end group
 @end example
 
 @noindent
-produces
+produz:
 
 @flushright
-Here is an example of text written
-flushright.  The @code{@@flushright} command
-right justifies every line but leaves the
-left end ragged.
+Aqui está um exemplo de texto escrito 
+flushright.  O comando @code{@@flushright} 
+justifica a direita de cada linha, mas deixa a 
+extremidade esquerda irregular.
 @end flushright
 
 
 @node @code{@@raggedright}
-@section @code{@@raggedright}: Ragged Right Text
+@section @code{@@raggedright}: Texto Irregular a Direita
+@c Capítulo 8 - Citações e Exemplos
+@c Seção 8.11 - @raggedright: Texto Irregular a Direita
 
-@anchor{raggedright}@c old name
+@anchor{raggedright} @c nome antigo
 @findex raggedright
-@cindex Ragged right, with filling
+@cindex Irregular a Direita, com preenchimento
 
-The @code{@@raggedright} fills text as usual, but the text is only
-justified on the left; the right margin is ragged.  The command is
-written on a line of its own, without braces.  The
-@code{@@raggedright} command is ended by @code{@@end raggedright} on a
-line of its own.  This command has no effect in Info and HTML output,
-where text is always set ragged right.
+O @code{@@raggedright} preenche texto como de costume, mas o texto só é 
+justificado a esquerda; a margem direita é irregular. O comando é 
+escrito sozinho em uma linha, sem chaves. O comando @code{@@raggedright} 
+é finalizado por @code{@@end raggedright} sozinho em uma linha. Esse 
+comando não tem efeito em saída Info e HTML, onde o texto sempre é 
+definido como irregular a direita.
 
-The @code{@@raggedright} command can be useful with paragraphs
-containing lists of commands with long names, when it is known in
-advance that justifying the text on both margins will make the
-paragraph look bad.
+O comando @code{@@raggedright} pode ser útil com parágrafos contendo 
+listas de comandos com nomes longos, quando se sabe antecipadamente que 
+justificar o texto em ambas as margens fará com que o parágrafo tenha 
+aparência ruim.
 
-An example (from elsewhere in this manual):
+Um exemplo (originário de outro lugar neste manual):
 
 @example
 @group
 @@raggedright
-Commands for double and single angle quotation marks:
+Comandos para aspas de ângulo duplo e único:
 @@code@{@@@@guillemetleft@@@{@@@}@}, @@code@{@@@@guillemetright@@@{@@@}@},
 @@code@{@@@@guillemotleft@@@{@@@}@}, @@code@{@@@@guillemotright@@@{@@@}@},
 @@code@{@@@@guilsinglleft@@@{@@@}@}, @@code@{@@@@guilsinglright@@@{@@@}@}.
@@ -7735,127 +7757,131 @@ Commands for double and single angle quotation marks:
 @end example
 
 @noindent
-produces
+produz:
 
 @raggedright
-Commands for double and single angle quotation marks:
-@code{@@guillemetleft@{@}}, @code{@@guillemetright@{@}},
-@code{@@guillemotleft@{@}}, @code{@@guillemotright@{@}},
+Comandos para aspas de ângulo duplo e único: 
+@code{@@guillemetleft@{@}}, @code{@@guillemetright@{@}}, 
+@code{@@guillemotleft@{@}}, @code{@@guillemotright@{@}}, 
 @code{@@guilsinglleft@{@}}, @code{@@guilsinglright@{@}}.
 @end raggedright
 
 
 @node @code{@@noindent}
-@section @code{@@noindent}: Omitting Indentation
+@section @code{@@noindent}: Omitindo Recuo
+@c Capítulo 8 - Citações e Exemplos
+@c Seção 8.12 - @noindent: Omitindo Recuo
 
-@anchor{noindent}@c old name
-@findex noindent
-@cindex Omitting indentation
-@cindex Suppressing indentation
-@cindex Indentation, omitting
+@anchor{noindent} @c nome antigo
+@findex semrecuo
+@cindex Omitindo recuo
+@cindex Suprimindo recuo
+@cindex Recuo, omitindo
 
-An example or other inclusion can break a paragraph into segments.
-Ordinarily, the formatters indent text that follows an example as a new
-paragraph.  You can prevent this on a case-by-case basis by writing
-@code{@@noindent} at the beginning of a line, preceding the continuation
-text.  You can also disable indentation for all paragraphs globally with
-@code{@@paragraphindent} (@pxref{@code{@@paragraphindent}}).
+Um exemplo ou outra inclusão pode quebrar um parágrafo em segmentos. 
+Normalmente, os formatadores recuam o texto que segue um exemplo como um 
+parágrafo novo. Você pode evitar isso caso a caso escrevendo 
+@code{@@noindent} no início de uma linha, precedendo o texto de 
+continuação. Você também pode desativar o recuo de todos os parágrafos 
+globalmente com @code{@@paragraphindent} 
+(@pxref{@code{@@paragraphindent}}).
 
-Here is an example showing how to eliminate the normal indentation of
-the text after an @code{@@example}, a common situation:
+Aqui está um exemplo mostrando como eliminar o recuo normal do texto 
+após um @code{@@example}, uma situação comum:
 
 @example
 @group
 @@example
-This is an example
+Este é um exemplo
 @@end example
 
 @@noindent
-This line is not indented.  As you can see, the
-beginning of the line is fully flush left with the
-line that follows after it.
+Esta linha não é recuada. Como você pode ver, o 
+início da linha é nivelado totalmente com a 
+linha seguinte.
 @end group
 @end example
 
-@noindent produces:
+@noindent
+produz:
 
 @display
 @example
-This is an example
+Este é um exemplo
 @end example
 
 @noindent
-This line is not indented.  As you can see, the
-beginning of the line is fully flush left with the
-line that follows after it.
+Esta linha não é recuada. Como você pode ver, o 
+início da linha é nivelado totalmente com a 
+linha seguinte.
 @end display
 
-The standard usage of @code{@@indent} is just as above: at the
-beginning of what would otherwise be a paragraph, to eliminate the
-indentation that normally happens there.  It can either be followed by
-text or be on a line by itself.  There is no reason to use it
-in other contexts, such as in the middle of a paragraph or inside an
-environment (@pxref{Citações e Exemplos}).
+O uso padrão do @code{@@indent} é exatamente como acima: no início do 
+que seria de outro modo um parágrafo, para eliminar o recuo que 
+normalmente acontece ali. O comando ou pode ser seguido por texto ou 
+estar sozinho em uma linha. Não há razão para usá-lo em outros 
+contextos, como no meio de um parágrafo ou dentro de um ambiente 
+(@pxref{Citações e Exemplos}).
 
-You can control the number of blank lines in the Info file output by
-adjusting the input as desired: a line containing just
-@code{@@noindent} does not generate a blank line, and neither does an
-@code{@@end} line for an environment.
+Você pode controlar o número de linhas em branco na saída do arquivo 
+Info ajustando a entrada como desejado: uma linha contendo apenas 
+@code{@@noindent} não gera uma linha em branco, e também não o faz uma 
+linha @code{@@end} para um ambiente.
 
-Do not put braces after a @code{@@noindent} command; they are not
-used, since @code{@@noindent} is a command used outside of paragraphs
-(@pxref{Sintaxe de Comando}).
+Não coloque chaves após um comando @code{@@noindent}; elas não usadas, 
+dado que @code{@@noindent} é um comando usado do lado de fora de 
+parágrafos (@pxref{Sintaxe de Comando}).
 
 
 @node @code{@@indent}
-@section @code{@@indent}: Forcing Indentation
+@section @code{@@indent}: Forçando o Recuo
+@c Capítulo 8 - Citações e Exemplos
+@c Seção 8.13 - @indent: Forçando o Recuo
 
-@anchor{indent}@c old name
-@findex indent
-@cindex Forcing indentation
-@cindex Inserting indentation
-@cindex Indentation, forcing
+@anchor{indent} @c nome antigo
+@findex recuo
+@cindex Forçando recuo
+@cindex Inserindo recuo
+@cindex Recuo, forçando
 
 @indent
-To complement the @code{@@noindent} command (see the previous
-section), Texinfo provides the @code{@@indent} command to force a
-paragraph to be indented.  For instance, this paragraph (the first in
-this section) is indented using an @code{@@indent} command.
+Para complementar o comando @code{@@noindent} (veja a seção anterior), 
+Texinfo fornece o comando @code{@@indent} para forçar que um parágrafo 
+seja recuado. Por exemplo, este parágrafo (o primeiro nesta seção) está 
+recuado usando um comando @code{@@indent}.
 
-And indeed, the first paragraph of a section is the most likely place
-to use @code{@@indent}, to override the normal behavior of no
-indentation there (@pxref{@code{@@paragraphindent}}).  It can either be
-followed by text or be on a line by itself.
+E, de fato, o primeiro parágrafo de uma seção é o lugar mais provável 
+para se usar @code{@@indent}, para anular o comportamento normal de não 
+recuo ali (@pxref{@code{@@paragraphindent}}). O comando ou pode ser 
+seguido por texto ou estar sozinho em uma linha.
 
-As a special case, when @code{@@indent} is used in an environment
-where text is not filled, it produces a paragraph indentation space in
-the @TeX{} output.  (These environments are where a line of input
-produces a line of output, such as @code{@@example} and
-@code{@@display}; for a summary of all environments, 
-@pxref{Comandos de Inclusão de Blocos}.)
+Como um caso especial, quando @code{@@indent} é usado em um ambiente 
+onde o texto não é preenchido, ele produz um espaço de recuo de 
+parágrafo na saída @TeX{}. (Esses ambientes são onde uma linha de 
+entrada produz uma linha de saída, como @code{@@example} e 
+@code{@@display}; para um resumo de todos os ambientes, 
+@pxref{Comandos de Inclusão de Blocos}).
 
-Do not put braces after an @code{@@indent} command; they are not used,
-since @code{@@indent} is a command used outside of paragraphs
-(@pxref{Sintaxe de Comando}).
+Não coloque chaves após um comando @code{@@indent}; elas não são usadas, dado que @code{@@indent} é um comando usado do lado de fora de parágrafos (@pxref{Sintaxe de Comando}).
 
 
 @node @code{@@cartouche}
-@section @code{@@cartouche}: Rounded Rectangles
+@section @code{@@cartouche}: Retângulos Arredondados
+@c Capítulo 8 - Citações e Exemplos
+@c Seção 8.14 - @cartouche: Retângulos Arredondados
 
-@anchor{cartouche}@c old name
+@anchor{cartouche} @c nome antigo
 @findex cartouche
-@cindex Box with rounded corners
-@cindex Rounded rectangles, around text
+@cindex Caixa com cantos arredondados
+@cindex Retângulos arredondados, ao redor do texto
 
-In a printed manual, the @code{@@cartouche} command draws a box with
-rounded corners around its contents.  In HTML, a normal rectangle is
-drawn.  @code{@@cartouche} has no effect in Info output.
+Em um manual impresso, o comando @code{@@cartouche} desenha uma caixa 
+com cantos arredondados em torno do seu conteúdo. Em HTML, um retângulo 
+normal é desenhado. @code{@@cartouche} não tem efeito em saída Info.
 
-You can use this command to further highlight an example or quotation.
-For instance, you could write a manual in which one type of example is
-surrounded by a cartouche for emphasis.
+Você pode usar esse comando para realçar ainda mais um exemplo ou citação. Por exemplo, você poderia escrever um manual no qual um tipo de exemplo esteja envolvido por um ``cartouche'' para ênfase.
 
-For example,
+Por exemplo,
 
 @example
 @@cartouche
@@ -7867,11 +7893,11 @@ For example,
 @end example
 
 @noindent
-surrounds the two-line example with a box with rounded corners, in the
-printed manual.
+cerca o exemplo de duas linhas com uma caixa com cantos arredondados, no 
+manual impresso.
 
-The output from the example looks like this (if you're reading this in
-Info, you'll see the @code{@@cartouche} had no effect):
+A saída oriunda do exemplo se parece com isto (se você estiver lendo 
+isto em Info, você verá que o @code{@@cartouche} não teve efeito):
 
 @cartouche
 @example
@@ -7880,64 +7906,68 @@ Info, you'll see the @code{@@cartouche} had no effect):
 @end example
 @end cartouche
 
-@code{@@cartouche} also implies @code{@@group} (@pxref{@code{@@group}}).
+@code{@@cartouche} também implica @code{@@group} 
+(@pxref{@code{@@group}}).
+
 
 @node @code{@@small@dots{}}
-@section @code{@@small@dots{}} Block Commands
+@section @code{@@small@dots{}} Comandos de Bloco
+@c Capítulo 8 - Citações e Exemplos
+@c Seção 8.15 - @code{@@small@dots{}} Comandos de Bloco
 
-@anchor{small}@c old name
+@anchor{small} @c nome antigo
 @findex smallexample
 @findex smallformat
 @findex smalllisp
 @findex smallquotation
-@cindex Small examples
-@cindex Examples in smaller fonts
-@cindex Quotations in smaller fonts
-@cindex Lisp examples in smaller fonts
+@cindex Exemplos do comando small
+@cindex Exemplos em fontes menores
+@cindex Citações em fontes menores
+@cindex Exemplos da Lisp em fontes menores
 
-In addition to the regular @code{@@example} and similar commands,
-Texinfo has ``small'' example-style commands.  These are
-@code{@@smallquotation}, @code{@@smallindentedblock},
-@code{@@smalldisplay}, @code{@@smallexample}, @code{@@smallformat},
-and @code{@@smalllisp}.
+Adicionalmente ao @code{@@example} regular e comandos similares, Texinfo 
+tem comandos estilo de exemplo ``pequeno''. Esses são 
+@code{@@smallquotation}, @code{@@smallindentedblock}, 
+@code{@@smalldisplay}, @code{@@smallexample}, @code{@@smallformat}, e 
+@code{@@smalllisp}.
 
-In Info output, the @code{@@small@dots{}} commands are equivalent to
-their non-small companion commands.
+Em saída Info, os comandos @code{@@small@dots{}} são equivalentes aos 
+seus comandos complementares não ``pequeno''.
 
-In @TeX{}, however, the @code{@@small@dots{}} commands typeset text in
-a smaller font than the non-small example commands.  Thus, for
-instance, code examples can contain longer lines and still fit on a
-page without needing to be rewritten.
+Em @TeX{}, entretanto, os comandos @code{@@small@dots{}} produzem texto 
+em uma fonte menor que os comandos exemplo não-small. Assim, por 
+exemplo, exemplos de código podem conter linhas mais longas e ainda 
+caberem em uma página sem a necessidade de serem reescritos.
 
-A smaller font size is also requested in HTML output, and (as usual)
-retained in the Texinfo@tie{}XML transliteration.
+Um tamanho de fonte menor também é solicitado em saída HTML, e (como de 
+costume) retido na transliteração XML do Texinfo@tie{}.
 
-Mark the end of a @code{@@small@dots{}} block with a corresponding
-@code{@@end small@dots{}}.  For example, pair @code{@@smallexample} with
-@code{@@end smallexample}.
+Marque o fim de um bloco @code{@@small@dots{}} com um correspondente 
+@code{@@end small@dots{}} . Por exemplo, emparelhe @code{@@smallexample} 
+com @code{@@end smallexample}.
 
-Here is an example of the font used by the @code{@@smallexample}
-command (in Info, the output will be the same as usual):
+Aqui está um exemplo da fonte usada pelo comando @code{@@smallexample} 
+(em Info, a saída será a mesma como de costume):
 
 @smallexample
-@dots{} to make sure that you have the freedom to
-distribute copies of free software (and charge for
-this service if you wish), that you receive source
-code or can get it if you want it, that you can
-change the software or use pieces of it in new free
-programs; and that you know you can do these things.
+@dots{} para ter certeza de que você tem a liberdade de 
+distribuir cópias de software livre (e cobrar por 
+esse serviço se você desejar), que você receba o código 
+fonte ou consiga obtê-lo se quiser, que você pode 
+modificar o software ou usar partes dele em novos 
+programas livres; e que você sabe que você pode fazer 
+essas coisas.
 @end smallexample
 
-The @code{@@small@dots{}} commands use the same font style as their
-normal counterparts: @code{@@smallexample} and @code{@@smalllisp} use
-a fixed-width font, and everything else uses the regular font.
-They also have the same behavior in other respects---whether filling
-is done and whether margins are narrowed.
+Os comandos @code{@@small@dots{}} usam o mesmo estilo de fonte que suas 
+contrapartes normais: @code{@@smallexample} e @code{@@smalllisp} usam 
+uma fonte de largura fixa, e os demais usam a fonte regular. Eles também 
+tem o mesmo comportamento em outros aspectos---quando o preenchimento é 
+feito e quando as margens são reduzidas.
 
-As a general rule, a printed document looks better if you use only one
-of (for instance) @code{@@example} or @code{@@smallexample}
-consistently within a chapter.
-
+Como regra geral, um documento impresso terá uma melhor aparência se 
+você usar somente um de (por exemplo) @code{@@example} ou 
+@code{@@smallexample} consistentemente dentro de um capítulo.
 
 
 
@@ -7946,6 +7976,7 @@ consistently within a chapter.
 @cindex Making lists and tables
 @cindex Lists and tables, making
 @cindex Tables and lists, making
+@c Capítulo 9 - Listas e Tabelas
 
 Texinfo has several ways of making lists and tables.  Lists can be
 bulleted or numbered; two-column tables can highlight the items in
