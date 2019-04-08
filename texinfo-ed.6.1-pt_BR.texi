@@ -406,12 +406,12 @@ Listas e Tabelas
 Fazendo uma Tabela de Duas Colunas
 
 * @code{@@table}::                      Como construir uma tabela de duas colunas.
-* @code{@@ftable @@vtable}::             Indexamento automático para tabelas de duas colunas.
+* @code{@@ftable @@vtable}::            Indexamento automático para tabelas de duas colunas.
 * @code{@@itemx}::                      Como colocar mais entradas na primeira coluna.
 
 @code{@@multitable}: Tabelas Multi Coluna
 
-* Tamanhos de Colunas Multi Tabelas::   Definindo tamanhos de coluna multi tabela.
+* Larguras de Colunas Multi Tabelas::   Definindo tamanhos de coluna multi tabela.
 * Linhas de Multi Tabelas::             Definindo linhas multi tabela, com exemplos.
 
 Exibições Especiais
@@ -7973,14 +7973,15 @@ você usar somente um de (por exemplo) @code{@@example} ou
 
 @node Listas e Tabelas
 @chapter Listas e Tabelas
-@cindex Making lists and tables
-@cindex Lists and tables, making
-@cindex Tables and lists, making
+@cindex Construindo listas e tabelas
+@cindex Listas e tabelas, construindo
+@cindex Tabelas e listas, construindo
 @c Capítulo 9 - Listas e Tabelas
 
-Texinfo has several ways of making lists and tables.  Lists can be
-bulleted or numbered; two-column tables can highlight the items in
-the first column; multi-column tables are also supported.
+Texinfo tem várias maneiras de construir listas e tabelas. As listas 
+podem ser marcadas ou numeradas; tabelas de duas colunas podem realçar 
+os itens na primeira coluna; tabelas multi colunas também são 
+suportadas.
 
 @menu
 * Listas de Introdução::          Listas de formatos Texinfo para você.
@@ -7992,642 +7993,676 @@ the first column; multi-column tables are also supported.
 
 @node Listas de Introdução
 @section Listas de Introdução
+@c Capítulo 9 - Listas e Tabelas
+@c Seção 9.1 - Listas de Introdução
 
-Texinfo automatically indents the text in lists or tables, and numbers
-an enumerated list.  This last feature is useful if you modify the
-list, since you do not need to renumber it yourself.
+Texinfo automaticamente recua o texto em listas ou tabelas, e numera uma 
+lista numerada. Esse último recurso é útil se você modificar a lista, 
+dado que não precisa renumerá-la você mesmo.
 
-Numbered lists and tables begin with the appropriate @@-command at the
-beginning of a line, and end with the corresponding @code{@@end}
-command on a line by itself.  The table and itemized-list commands
-also require that you write formatting information on the same line as
-the beginning @@-command.
+As listas numeradas e tabelas se iniciam com o comando @@ apropriado no 
+início de uma linha, e finalizam-se com o correspondente @code{@@end} 
+sozinho em uma linha. Os comandos de tabela e lista de itens também 
+exigem que você escreva informação de formatação na mesma linha do 
+comando @@ de inicialização.
 
-Begin an enumerated list, for example, with an @code{@@enumerate}
-command and end the list with an @code{@@end enumerate} command.
-Begin an itemized list with an @code{@@itemize} command, followed on
-the same line by a formatting command such as @code{@@bullet}, and end
-the list with an @code{@@end itemize} command.
-@findex end
+Inicie uma lista numerada, por exemplo, com um comando 
+@code{@@enumerate} e finalize a lista com um comando 
+@code{@@end enumerate}. Inicie uma lista de itens com um comando 
+@code{@@itemize}, seguido na mesma linha por um comando de formatação 
+como @code{@@bullet}, e finalize a lista com um comando 
+@code{@@end itemize}.
+@findex fim
 
-Precede each element of a list with an @code{@@item} or @code{@@itemx}
-command.
+Preceda cada elemento de uma lista com um comando @code{@@item} ou 
+@code{@@itemx}.
 
 @sp 1
 @noindent
-Here is an itemized list of the different kinds of table and lists:
+Aqui está uma lista de itens dos diferentes tipos de tabela e listas:
 
 @itemize @bullet
 @item
-Itemized lists with and without bullets.
+Listas de itens com e sem marcações.
 
 @item
-Enumerated lists, using numbers or letters.
+Listas numeradas, usando números ou letras.
 
 @item
-Two-column tables with highlighting.
+Tabelas de duas colunas com realçamento.
 @end itemize
 
 @sp 1
 @noindent
-Here is an enumerated list with the same items:
+Aqui está uma lista numerada com os mesmos itens:
 
 @enumerate
 @item
-Itemized lists with and without bullets.
+Listas de itens com e sem marcações.
 
 @item
-Enumerated lists, using numbers or letters.
+Listas numeradas, usando números ou letras.
 
 @item
-Two-column tables with highlighting.
+Tabelas de duas colunas com realçamento.
 @end enumerate
 
 @sp 1
 @noindent
-And here is a two-column table with the same items and their
-@w{@@-commands}:
+E aqui está uma tabela de duas colunas com os mesmos itens e seus 
+comandos @w{@@}:
 
 @table @code
 @item @@itemize
-Itemized lists with and without bullets.
+Listas de itens com e sem marcações.
 
 @item @@enumerate
-Enumerated lists, using numbers or letters.
+Listas numeradas, usando números ou letras.
 
 @item @@table
 @itemx @@ftable
 @itemx @@vtable
-Two-column tables, optionally with indexing.
+Tabelas de duas colunas, opcionalmente com indexação.
 @end table
 
 
 @node @code{@@itemize}
-@section @code{@@itemize}: Making an Itemized List
+@section @code{@@itemize}: Construindo Uma Lista de Itens
+@c Capítulo 9 - Listas e Tabelas
+@c Seção 9.2 - @itemize: Construindo Uma Lista de Itens
 
-@anchor{itemize}@c old name
+@anchor{itemize} @c nome antigo
 @findex itemize
 @cindex Itemization
 
-The @code{@@itemize} command produces a sequence of ``items'', each
-starting with a bullet or other mark inside the left margin, and
-generally indented.
+O comando @code{@@itemize} produz uma sequência de ``itens'', cada um 
+iniciando com uma bola ou outra marca dentro da margem esquerda, e 
+geralmente recuados.
 
-@cindex @code{@@w}, for blank items
-Begin an itemized list by writing @code{@@itemize} at the beginning of
-a line.  Follow the command, on the same line, with a character or a
-Texinfo command that generates a mark.  Usually, you will use
-@code{@@bullet} after @code{@@itemize}, but you can use
-@code{@@minus}, or any command or character that results in a single
-character in the Info file.  (When you write the mark command such as
-@code{@@bullet} after an @code{@@itemize} command, you may omit the
-@samp{@{@}}.)  If you don't specify a mark command, the default is
-@code{@@bullet}.  If you don't want any mark at all, but still want
-logical items, use @code{@@w@{@}} (in this case the braces are
-required).
+@cindex @code{@@w}, para itens em branco
+Inicie uma lista de itens escrevendo @code{@@itemize} no início de uma 
+linha. Siga o comando, na mesma linha, com um caracter ou um comando do 
+Texinfo que gera uma marca. Geralmente, você usará @code{@@bullet} após 
+@code{@@itemize}, mas você pode usar @code{@@minus}, ou qualquer comando 
+ou caracter que resulte em um caracter único no arquivo Info. (Quando 
+você escrever o comando de marca como @code{@@bullet} após um comando 
+@code{@@itemize}, você pode omitir o @samp{@{@}}). Se você não 
+especificar um comando de marca, o padrão é @code{@@bullet}. Se você não 
+quer nenhuma marca, mas ainda quer itens lógicos, use @code{@@w@{@}} 
+(nesse caso as chaves são obrigatórias).
 
 @findex item
-After the @code{@@itemize}, write your items, each starting with
-@code{@@item}.  Text can follow on the same line as the @code{@@item}.
-The text of an item can continue for more than one paragraph.
+Após o @code{@@itemize}, escreva seus itens, cada um iniciando com 
+@code{@@item}. O texto pode seguir na mesma linha que @code{@@item}. O 
+texto de um item pode continuar por mais que um parágrafo.
 
-There should be at least one @code{@@item} inside the @code{@@itemize}
-environment.  If none are present, @code{makeinfo} gives a warning.
-If you just want indented text and not a list of items, use
-@code{@@indentedblock}; @pxref{@code{@@indentedblock}}.
+Deveria existir ao menos um @code{@@item} dentro do ambiente 
+@code{@@itemize}. Se nenhum estiver presente, @code{makeinfo} emite um 
+alerta. Se você apenas deseja texto recuado e não uma lista de itens, 
+use @code{@@indentedblock}; @pxref{@code{@@indentedblock}}.
 
-Index entries and comments that are given before an @code{@@item}
-including the first, are automatically moved (internally) to after the
-@code{@@item}, so the output is as expected.  Historically this has
-been a common practice.
+As entradas de índice e comentários que são dados antes de um 
+@code{@@item} incluindo o primeiro, são automaticamente movidos 
+(internamente) para após o @code{@@item}, de forma que a saída esteja 
+como esperada. Historicamente essa tem sido uma prática comum.
 
-Usually, you should put a blank line between items.  This puts a blank
-line in the Info file. (@TeX{} inserts the proper vertical space in
-any case.)  Except when the entries are very brief, these blank lines
-make the list look better.
+Geralmente, você deveria colocar uma linha em branco entre os itens. 
+Isso coloca uma linha em branco no arquivo Info. (O @TeX{} insere o 
+espaço vertical apropriado em qualquer caso). Exceto quando as entradas 
+são muito breves, esses espaços em branco fazem a lista ter uma 
+aparência melhor.
 
-Here is an example of the use of @code{@@itemize}, followed by the
-output it produces.  @code{@@bullet} produces an @samp{*} in Info and
-a round dot in other output formats.
+Aqui está um exemplo do uso de @code{@@itemize}, seguido pela saída que 
+esse comando produz. O @code{@@bullet} produz um @samp{*} em Info e um 
+ponto redondo em outros formatos de saída.
 
 @example
 @group
 @@itemize @@bullet
 @@item
-Some text for foo.
+Algum texto para foo.
 
 @@item
-Some text
-for bar.
+Algum texto
+para bar.
 @@end itemize
 @end group
 @end example
 
 @noindent
-This produces:
+Isso produz:
 
 @quotation
 @itemize @bullet
 @item
-Some text for foo.
+Algum texto para foo.
 
 @item
-Some text
-for bar.
+Algum texto
+para bar.
 @end itemize
 @end quotation
 
-Itemized lists may be embedded within other itemized lists.  Here is a
-list marked with dashes embedded in a list marked with bullets:
+As listas de itens podem ser incorporadas em outras listas de itens. 
+Aqui está uma lista marcada com traços embutida em uma lista marcada com 
+marcadores:
 
 @example
 @group
 @@itemize @@bullet
 @@item
-First item.
+Primeiro item.
 
 @@itemize @@minus
 @@item
-Inner item.
+Item interno.
 
 @@item
-Second inner item.
+Segundo item interno.
 @@end itemize
 
 @@item
-Second outer item.
+Segundo item externo.
 @@end itemize
 @end group
 @end example
 
 @noindent
-This produces:
+Isso produz:
 
 @quotation
 @itemize @bullet
 @item
-First item.
+Primeiro item.
 
 @itemize @minus
 @item
-Inner item.
+Item interno.
 
 @item
-Second inner item.
+Segundo item interno.
 @end itemize
 
 @item
-Second outer item.
+Segundo item externo.
 @end itemize
 @end quotation
 
 
 @node @code{@@enumerate}
-@section @code{@@enumerate}: Making a Numbered or Lettered List
+@section @code{@@enumerate}: Fazendo Uma Lista Numerada ou Uma Com Letras
+@c Capítulo 9 - Listas e Tabelas
+@c Seção 9.3 - @code{@@enumerate}: Fazendo Uma Lista Numerada ou Uma Com Letras
 
-@anchor{enumerate}@c old name
-@findex enumerate
-@cindex Enumeration
+@anchor{enumerate} @c nome antigo
+@findex enumerar
+@cindex Enumeração
 
-@code{@@enumerate} is like @code{@@itemize} (@pxref{@code{@@itemize}}),
-except that the labels on the items are successive integers or letters
-instead of bullets.
+@code{@@enumerate} é como @code{@@itemize} (@pxref{@code{@@itemize}}), 
+exceto que os rótulos nos itens são números inteiros sucessivos ou 
+letras em vez de marcadores.
 
-Write the @code{@@enumerate} command at the beginning of a line.  The
-command does not require an argument, but accepts either a number or a
-letter as an option.  Without an argument, @code{@@enumerate} starts the
-list with the number @samp{1}.  With a numeric argument, such as
-@samp{3}, the command starts the list with that number.  With an upper-
-or lowercase letter, such as @samp{a} or @samp{A}, the command starts
-the list with that letter.
+Escreva o comando @code{@@enumerate} no início de uma linha. O comando 
+não exige um argumento, mas aceita ou um número ou uma letra como uma 
+opção. Sem um argumento, @code{@@enumerate} inicia a lista com o número 
+@samp{1}. Com um argumento numérico, como @samp{3}, o comando inicia a 
+lista com aquele número. Com uma letra maiúscula ou minúscula, como 
+@samp{A} ou @samp{a}, o comando inicia a lista com aquela letra.
 
-Write the text of the enumerated list in the same way as an itemized
-list: write a line starting with @code{@@item} at the beginning of
-each item in the enumeration.  It is ok to have text following the
-@code{@@item}, and the text for an item can continue for several
-paragraphs.
+Escreva o texto da lista numerada da mesma maneira que uma lista de 
+itens: escreva a linha iniciando com @code{@@item} no início de cada 
+item na enumeração. Está OK ter texto seguindo o @code{@@item}, e o 
+texto para um item pode continuar por vários parágrafos.
 
-You should put a blank line between entries in the list.
-This generally makes it easier to read the Info file.
+Você deveria colocar uma linha em branco entre as entradas na lista. 
+Isso geralmente torna mais fácil ler o arquivo Info.
 
 @need 1500
-Here is an example of @code{@@enumerate} without an argument:
+Aqui está um exemplo do @code{@@enumerate} sem um argumento:
 
 @example
 @group
 @@enumerate
 @@item
-Underlying causes.
+Causas subjacentes.
 
 @@item
-Proximate causes.
+Causas imediatas.
 @@end enumerate
 @end group
 @end example
 
 @noindent
-This produces:
+Isso produz:
 
 @enumerate
 @item
-Underlying causes.
+Causas subjacentes.
 
 @item
-Proximate causes.
+Causas imediatas.
 @end enumerate
 @sp 1
-Here is an example with an argument of @kbd{3}:
+Aqui está um exemplo com um argumento de @kbd{3}:
 @sp 1
 @example
 @group
 @@enumerate 3
 @@item
-Predisposing causes.
+Causas predisponentes.
 
 @@item
-Precipitating causes.
+Causas precipitantes.
 
 @@item
-Perpetuating causes.
+Causas perpetuantes.
 @@end enumerate
 @end group
 @end example
 
 @noindent
-This produces:
+Isso produz:
 
 @enumerate 3
 @item
-Predisposing causes.
+Causas predisponentes.
 
 @item
-Precipitating causes.
+Causas precipitantes.
 
 @item
-Perpetuating causes.
+Causas perpetuantes.
 @end enumerate
 @sp 1
-Here is a brief summary of the alternatives.  The summary is constructed
-using @code{@@enumerate} with an argument of @kbd{a}.
+Aqui está um resumo breve das alternativas. O resumo é construído usando 
+@code{@@enumerate} com um argumento de @kbd{a}.
+
 @sp 1
 @enumerate a
 @item
 @code{@@enumerate}
 
-Without an argument, produce a numbered list, with the first item
-numbered@tie{}1.
+Sem um argumento, produz uma lista numerada, com o primeiro item 
+numerado@tie{}1.
 
 @item
 @code{@@enumerate @var{unsigned-integer}}
 
-With an (unsigned) numeric argument, start a numbered list with that
-number.  You can use this to continue a list that you interrupted with
-other text.
+Com um argumento numérico (não sinalado), inicia uma lista numerada com 
+aquele número. Você pode usar isso para continuar uma lista que você 
+interrompeu com outro texto.
 
 @item
 @code{@@enumerate @var{upper-case-letter}}
 
-With an uppercase letter as argument, start a list
-in which each item is marked
-by a letter, beginning with that uppercase letter.
+Com uma letra maiúscula como argumento, inicia uma lista na qual cada 
+item é marcado por uma letra, iniciando com aquela letra maiúscula.
 
 @item
 @code{@@enumerate @var{lower-case-letter}}
 
-With a lowercase letter as argument, start a list
-in which each item is marked by
-a letter, beginning with that lowercase letter.
+Com uma letra minúscula como argumento, inicia uma lista na qual cada 
+item é marcado por uma letra, iniciando com aquela letra minúscula.
 @end enumerate
 
-You can also nest enumerated lists, as in an outline.
+Você também pode aninhar listas enumeradas, como em uma estrutura de 
+tópicos.
 
 
 @node Tabelas de Duas Colunas
-@section Making a Two-column Table
+@section Construindo Uma Tabela de Duas Colunas
+@c Capítulo 9 - Listas e Tabelas
+@c Seção 9.4 - Construindo Uma Tabela de Duas Colunas
 
-@cindex Tables, making two-column
-@findex table
+@cindex Tabelas, construindo duas colunas
+@findex tabela
 
-@code{@@table} is similar to @code{@@itemize}
-(@pxref{@code{@@itemize}}), but allows you to specify a name or
-heading line for each item.  The @code{@@table} command is used to
-produce two-column tables, and is especially useful for glossaries,
-explanatory exhibits, and command-line option summaries.
+@code{@@table} é similar a @code{@@itemize} (@pxref{@code{@@itemize}}), 
+mas permite especificar um nome ou uma linha de título para cada item. O 
+comando @code{@@table} é usado para produzir tabelas de duas colunas, e 
+é especialmente útil para glossários, exibições explicativas, e resumos 
+de opções de linha de comando.
 
 @menu
-* @code{@@table}::                      How to construct a two-column table.
-* @code{@@ftable @@vtable}::             Automatic indexing for two-column tables.
-* @code{@@itemx}::                      How to put more entries in the first column.
+* @code{@@table}::                      Como construir uma tabela de duas colunas.
+* @code{@@ftable @@vtable}::            Indexamento automático para tabelas de duas colunas.
+* @code{@@itemx}::                      Como colocar mais entradas na primeira coluna.
 @end menu
 
 @node @code{@@table}
-@subsection Using the @code{@@table} Command
+@subsection Usando o Comando @code{@@table}
+@c Capítulo 9 - Listas e Tabelas
+@c Seção 9.4 - Construindo Uma Tabela de Duas Colunas
+@c Subseção 9.4.1 - Usando o Comando @table
 
-@anchor{table}@c old name
+@anchor{table} @c nome antigo
 
-@cindex Definition lists, typesetting
-Use the @code{@@table} command to produce a two-column table.  This 
-command is typically used when you have a list of items and a brief text 
-with each one, such as a list of definitions.
+@cindex Listas de definição, compondo
+Use o comando @code{@@table} para produzir uma tabela de duas colunas. 
+Esse comando tipicamente é usado quando você tem uma lista de itens e um 
+texto breve com cada um, como uma lista de definições.
 
-Write the @code{@@table} command at the beginning of a line, after a
-blank line, and follow it on the same line with an argument that is an
-`indicating'' command, such as @code{@@code}, @code{@@samp},
-@code{@@var}, @code{@@option}, or @code{@@kbd} (@pxref{Indicando}).
-This command will be applied to the text in the first column.  For 
-example, @code{@@table @@code} will cause the text in the first column 
-to be output as if it had been the argument to a @code{@@code} command.
+Escreva o comando @code{@@table} no início de uma linha, após uma linha 
+em branco, e siga-o, na mesma linha, com um argumento que é um comando 
+de ``indicação'', como @code{@@code}, @code{@@samp}, @code{@@var}, 
+@code{@@option}, ou @code{@@kbd} (@pxref{Indicando}). Esse comando será 
+aplicado ao texto na primeira coluna. Por exemplo, @code{@@table @@code} 
+fará com que o texto na primeira coluna seja produzido como se ele 
+tivesse sido o argumento para um comando @code{@@code}.
 
-@anchor{@code{@@asis}}@c command name with @, for consistency
+@anchor{@code{@@asis}} @c nome do comando com @, para consistência
 @findex asis
-You may use the @code{@@asis} command as an argument to
-@code{@@table}.  @code{@@asis} is a command that does nothing: if you
-use this command after @code{@@table}, the first column entries are
-output without added highlighting (``as is'').
+Você pode usar o comando @code{@@asis} como um argumento para 
+@code{@@table}. @code{@@asis} é um comando que não faz nada: se você 
+usar esse comando após @code{@@table}, as entradas da primeira coluna 
+são exibidas sem realce adicional (``como está'').
 
-The @code{@@table} command works with other commands besides those
-explicitly mentioned here.  However, you can only use predefined
-Texinfo commands that take an argument in braces.  You cannot
-reliably use a new command defined with @code{@@macro}, although an
-@code{@@alias} (for a suitable predefined command) is acceptable.
-@xref{Definindo Novos Comandos Texinfo}.
+O comando @code{@@table} funciona com outros comandos além daqueles 
+mencionados explicitamente aqui. Entretanto, você só pode usar comandos 
+predefinidos do Texinfo que recebam um argumento entre chaves. Você não 
+pode confiavelmente usar um comando novo definido com @code{@@macro}, 
+embora um @code{@@alias} seja aceitável (para um comando predefinido 
+adequado). @xref{Definindo Novos Comandos Texinfo}.
 
 @findex item
-Begin each table entry with an @code{@@item} command at the beginning
-of a line.  Write the text for the first column on the same line as the
-@code{@@item} command.  Write the text for the second column on the line
-following the @code{@@item} line and on subsequent lines.  You may
-write as many lines of supporting text as you wish, even several
-paragraphs.  But only the text on the same line as the @code{@@item}
-will be placed in the first column (including any footnotes).
-You do not need to type anything for an empty second column.
+Inicie cada entrada da tabela com um comando @code{@@item} no início de 
+uma linha. Escreva o texto para a primeira coluna na mesma linha que o 
+comando @code{@@item}. Escreva o texto para a segunda coluna na linha 
+seguinte à linha @code{@@item} e em linhas subsequentes. Você pode 
+escrever quantas linhas de texto de apoio desejar, até mesmo vários 
+parágrafos. Mas, somente o texto na mesma linha que @code{@@item} será 
+colocado na primeira coluna (incluindo quaisquer notas de rodapé). Você 
+não precisa digitar nada para uma segunda coluna vazia.
 
-Normally, you should put a blank line before an @code{@@item} line
-(except the first one).  This puts a blank line in the Info file.
-Except when the entries are very brief, a blank line looks better.
-End the table with a line consisting of @code{@@end table}, followed
-by a blank line.  @TeX{} will always start a new paragraph after the
-table, so the blank line is needed for the Info output to be analogous.
+Normalmente, você deveria colocar uma linha em branco antes de uma linha 
+@code{@@item}, (exceto a primeira). Isso coloca uma linha em branco no 
+arquivo Info. Exceto quando as entradas são muito breves, uma linha em 
+branco parece melhor. Finalize a tabela com uma linha consistindo de 
+@code{@@end table}, seguido por uma linha em branco. O @TeX{} sempre 
+iniciará um parágrafo novo após a tabela, de forma que a linha em branco 
+é necessária para que a saída Info seja análoga.
 
 @need 1500
-For example, the following table highlights the text in the first
-column with the @code{@@samp} command:
+Por exemplo, a tabela seguite realça o texto na primeira coluna com o 
+comando @code{@@samp}:
 
 @example
 @group
 @@table @@samp
 @@item foo
-This is the text for
+Este é o texto para
 @@samp@{foo@}.
 
 @@item bar
-Text for @@samp@{bar@}.
+Texto para @@samp@{bar@}.
 @@end table
 @end group
 @end example
 
 @noindent
-This produces:
+Isso produz:
 
 @table @samp
 @item foo
-This is the text for
+Este é o texto para
 @samp{foo}.
 @item bar
-Text for @samp{bar}.
+Texto para @samp{bar}.
 @end table
 
-If you want to list two or more named items with a single block of
-text, use the @code{@@itemx} command.  (@xref{@code{@@itemx}}.)
+Se você quer listas dois ou mais itens nomeados com um bloco único de 
+texto, use o comando @code{@@itemx}. (@xref{@code{@@itemx}}).
 
-The @code{@@table} command (@pxref{@code{@@table}}) is not supported
-inside @code{@@display}.  Since @code{@@display} is line-oriented, it
-doesn't make sense to use them together.  If you want to indent a
-table, try @code{@@quotation} (@pxref{@code{@@quotation}}) or
+O comando @code{@@table} (@pxref{@code{@@table}}) não é suportado dentro 
+do @code{@@display}. Dado que @code{@@display} é orientado a linha, não 
+faz sentido usá-los juntos. Se você deseja recuar uma tabela, tente 
+@code{@@quotation} (@pxref{@code{@@quotation}}) ou 
 @code{@@indentedblock} (@pxref{@code{@@indentedblock}}).
 
-@node @code{@@ftable @@vtable}
-@subsection @code{@@ftable} and @code{@@vtable}
 
-@anchor{ftable vtable}@c old name
+@node @code{@@ftable @@vtable}
+@subsection @code{@@ftable} e @code{@@vtable}
+@c Capítulo 9 - Listas e Tabelas
+@c Seção 9.4 - Construindo Uma Tabela de Duas Colunas
+@c Subseção 9.4.2 - @ftable e @vtable
+
+@anchor{ftable vtable} @c nome antigo
 @findex ftable
 @findex vtable
-@cindex Tables with indexing
-@cindex Indexing table entries automatically
+@cindex Tabelas com indexação
+@cindex Indexando entradas de tabela automaticamente
 
-The @code{@@ftable} and @code{@@vtable} commands are the same as the
-@code{@@table} command except that @code{@@ftable} automatically enters
-each of the items in the first column of the table into the index of
-functions and @code{@@vtable} automatically enters each of the items in
-the first column of the table into the index of variables.  This
-simplifies the task of creating indices.  Only the items on the same
-line as the @code{@@item} or @code{@@itemx} commands are indexed, and
-they are indexed in exactly the form that they appear on that line.
-@xref{Índices}, for more information about indices.
+Os comandos @code{@@ftable} e @code{@@vtable} são os mesmos que o 
+comando @code{@@table}, exceto que @code{@@ftable} automaticamente 
+insere cada um dos itens na primeira coluna da tabela no índice de 
+funções e @code{@@vtable} automaticamente insere cada um dos itens na 
+primeira coluna da tabela no índice de variváveis. Apenas os itens na 
+mesma linha que os comandos @code{@@item} ou @code{@@itemx} são 
+indexados, e são indexados exatamente na forma em que aparecem nessa 
+linha. @xref{Índices}, para mais informação acerca de índices.
 
-Begin a two-column table using @code{@@ftable} or @code{@@vtable} by
-writing the @@-command at the beginning of a line, followed on the same
-line by an argument that is a Texinfo command such as @code{@@code},
-exactly as you would for a @code{@@table} command; and end the table
-with an @code{@@end ftable} or @code{@@end vtable} command on a line by
-itself.
+Inicie uma tabela de duas colunas usando @code{@@ftable} ou 
+@code{@@vtable} escrevendo o comando @@ no início de uma linha, seguido 
+na mesma linha por um argumento que é um comando do Texinfo, como 
+@code{@@code}, exatamente como você faria para um comando 
+@code{@@table}; e termine a tabela com um comando @code{@@end ftable} ou 
+@code{@@end vtable} sozinho em uma linha.
 
-See the example for @code{@@table} in the previous section.
+Veja o exemplo para @code{@@table} na seção anterior.
 
 
 @node @code{@@itemx}
-@subsection @code{@@itemx}: Second and Subsequent Items
+@subsection @code{@@itemx}: Segundo e Itens Subsequentes
+@c Capítulo 9 - Listas e Tabelas
+@c Seção 9.4 - Construindo Uma Tabela de Duas Colunas
+@c Subseção 9.4.3 - @itemx: Segundo e Itens Subsequentes
 
-@anchor{itemx}@c old name
-@cindex Two named items for @code{@@table}
+@anchor{itemx} @c nome antigo
+@cindex Dois itens nomeados para @code{@@table}
 @findex itemx
 
-Use the @code{@@itemx} command inside a table when you have two or more
-first column entries for the same item, each of which should appear on a
-line of its own.
+Use o comando @code{@@itemx} dentro de uma tabela quando você tiver duas 
+ou mais entradas de primeira coluna para o mesmo item, cada uma das 
+quais deveria aparecer sozinha em uma linha.
 
-Use @code{@@item} for the first entry, and @code{@@itemx} for all
-subsequent entries; @code{@@itemx} must always follow an @code{@@item}
-command, with no blank line intervening.
+Use @code{@@item} para a primeira entrada, e @code{@@itemx} para todas 
+as entradas subsequentes; @code{@@itemx} sempre deve seguir um comando 
+@code{@@item}, sem linhas em branco entre eles.
 
-The @code{@@itemx} command works exactly like @code{@@item} except
-that it does not generate extra vertical space above the first column
-text.  If you have multiple consecutive @code{@@itemx} commands, do
-not insert any blank lines between them.
+O comando @code{@@itemx} funciona exatamente como @code{@@item}, exceto 
+que não gera espaço vertical extra acima do texto da primeira coluna. Se 
+você tiver múltiplos comandos @code{@@itemx} consecutivos, não insira 
+quaisquer linhas em branco entre eles.
 
-For example,
+Por exemplo,
 
 @example
 @group
 @@table @@code
 @@item upcase
 @@itemx downcase
-These two functions accept a character or a string as
-argument, and return the corresponding uppercase (lowercase)
-character or string.
+Essas duas funções aceitam um caracter ou uma sequência de caracteres 
+como argumento, e retornam o correspondente caracter ou a sequência de 
+caracteres escritos em letras maiúsculas (minúsculas).
 @@end table
 @end group
 @end example
 
 @noindent
-This produces:
+Isso produz:
 
 @table @code
 @item upcase
 @itemx downcase
-These two functions accept a character or a string as
-argument, and return the corresponding uppercase (lowercase)
-character or string.
+Essas duas funções aceitam um caracter ou uma sequência de caracteres 
+como argumento, e retornam o correspondente caracter ou a sequência de 
+caracteres escritos em letras maiúsculas (minúsculas).
 @end table
 
 @noindent
-(Note also that this example illustrates multi-line supporting text in
-a two-column table.)
+(Note também que esse exemplo ilustra texto de apoio multi linha em uma 
+tabela de duas colunas).
 
 
 @node Tabelas Multi Colunas
 @section @code{@@multitable}: Tabelas Multi Colunas
+@c Capítulo 9 - Listas e Tabelas
+@c Seção 9.5 - @multitable: Tabelas Multi Colunas
 
-@findex multitable
-@cindex Tables, making multi-column
+@findex multitabela
+@cindex Tabelas, construindo multi coluna
 
-@code{@@multitable} allows you to construct tables with any number of
-columns, with each column having any width you like.
+@code{@@multitable} permite que você construa tabelas com qualquer 
+número de colunas, com cada coluna tendo qualquer largura que você 
+goste.
 
-You define the column widths on the @code{@@multitable} line itself, and
-write each row of the actual table following an @code{@@item} command,
-with columns separated by a @code{@@tab} command.  Finally, @code{@@end
-multitable} completes the table.  Details in the sections below.
+Você define as larguras da coluna em uma linha @code{@@multitable} 
+sozinha, e escreve cada linha da atual tabela seguindo um comando 
+@code{@@item}, com colunas separadas por um comando @code{@@tab}. 
+Finalmente, @code{@@end multitable} completa a tabela. Detalhes nas 
+seções abaixo.
 
 @menu
-* Tamanhos de Colunas Multi Tabelas::   Definindo tamanhos de coluna multi tabela.
+* Larguras de Colunas Multi Tabelas::   Definindo tamanhos de coluna multi tabela.
 * Linhas de Multi Tabelas::             Definindo linhas multi tabela, com exemplos.
 @end menu
 
-@node Tamanhos de Colunas Multi Tabelas
-@subsection Tamanhos de Colunas Multi Tabelas
+@node Larguras de Colunas Multi Tabelas
+@subsection Larguras de Colunas Multi Tabelas
 @cindex Multitable column widths
 @cindex Column widths, defining for multitables
 @cindex Widths, defining multitable column
+@c Capítulo 9 - Listas e Tabelas
+@c Seção 9.5 - @multitable: Tabelas Multi Colunas
+@c Subseção 9.5.1 - Larguras de Colunas Multi Tabelas
 
-You can define the column widths for a multitable in two ways: as
-fractions of the line length; or with a prototype row.  Mixing the two
-methods is not supported.  In either case, the widths are defined
-entirely on the same line as the @code{@@multitable} command.
+Você pode definir as larguras de coluna para uma multi tabela de duas 
+maneiras: como frações do comprimento da linha; ou com uma linha de 
+protótipo. A mesclagem dos dois métodos não é suportada. Em qualquer 
+caso, as larguras são definidas inteiramente na mesma linha que o 
+comando @code{@@multitable}.
 
 @enumerate
 @item
-@findex columnfractions
-@cindex Line length, column widths as fraction of
-To specify column widths as fractions of the line length, write
-@code{@@columnfractions} and the decimal numbers (presumably less than
-1; a leading zero is allowed and ignored) after the
-@code{@@multitable} command, as in:
+@findex fraçõescolunas
+@cindex Comprimento de linha, larguras de coluna como fração de
+Para especificar larguras de coluna como frações do comprimento de 
+linha, escreva @code{@@columnfractions} e os números decimais 
+(presumivelmente menor que 1; um zero no início é permitido e ignorado) 
+após o comando @code{@@multitable}, como em:
 
 @example
 @@multitable @@columnfractions .33 .33 .33
 @end example
 
-The fractions need not add up exactly to 1.0, as these do not.  This
-allows you to produce tables that do not need the full line length.
+As frações não precisam somar exatamente a 1.0, como essas não fazem. 
+Isso permite produzir tabelas que não precisam do comprimento total da 
+linha.
 
 @item
-@cindex Prototype row, column widths defined by
-To specify a prototype row, write the longest entry for each column
-enclosed in braces after the @code{@@multitable} command.  For example:
+@cindex Linha de protótipo, larguras de coluna definidas por
+Para especificar uma linha de protótipo, escreva a entrada mais longa 
+para cada coluna entre chaves após o comando @code{@@multitable}. Por 
+exemplo:
 
 @example
-@@multitable @{some text for column one@} @{for column two@}
+@@multitable @{algum texto para a coluna um@} @{para a coluna dois@}
 @end example
 
 @noindent
-The first column will then have the width of the typeset `some text for
-column one', and the second column the width of `for column two'.
+A primeira coluna terá então a largura do conjunto de caracteres `algum 
+texto para a coluna um' e a segunda coluna a largura de `para a coluna 
+dois'.
 
-The prototype entries need not appear in the table itself.
+As entradas de protótipo não precisam aparecer na própria tabela.
 
-Although we used simple text in this example, the prototype entries can
-contain Texinfo commands; markup commands such as @code{@@code} are
-particularly likely to be useful.
+Embora tenhamos usado texto simples nesse exemplo, as entradas de 
+protótipo podem conter comandos do Texinfo; comandos de marcação, como 
+@code{@@code}, são particularmente prováveis de serem úteis.
 
 @end enumerate
 
 
 @node Linhas de Multi Tabelas
 @subsection Linhas de Multi Tabelas
+@c Capítulo 9 - Listas e Tabelas
+@c Seção 9.5 - @multitable: Tabelas Multi Colunas
+@c Subseção 9.5.2 - Linhas de Multi Tabelas
 
-@cindex Multitable rows
-@cindex Rows, of a multitable
+@cindex Linhas de multi tabelas
+@cindex Linhas, de uma multi tabela
 
 @findex item
 @findex tab
-After the @code{@@multitable} command defining the column widths (see
-the previous section), you begin each row in the body of a multitable
-with @code{@@item}, and separate the column entries with @code{@@tab}.
-Line breaks are not special within the table body, and you may break
-input lines in your source file as necessary.
+Após o comando @code{@@multitable} definindo as larguras de coluna (veja 
+a seção anterior), você inicia cada linha no corpo de uma multi tabela 
+com @code{@@item}, e separa as entradas de coluna com @code{@@tab}. As 
+quebras de linha não são especiais dentro do corpo da tabela, e você 
+pode quebrar linhas de entrada em seu arquivo fonte se necessário.
 
 @findex headitem
-@cindex Heading row, in table
-@cindex @code{<thead>} HTML/XML tag
-You can also use @code{@@headitem} instead of @code{@@item} to produce
-a @dfn{heading row}.  The @TeX{} output for such a row is in bold, and
-the HTML and Docbook output uses the @code{<thead>} tag.  In Info, the
-heading row is followed by a separator line made of dashes (@samp{-}
-characters).
+@cindex Linha de cabeçalho, em tabela
+@cindex Marcação @code{<thead>} do HTML/XML
+Você também pode usar @code{@@headitem} em vez de @code{@@item} para 
+produzir uma @dfn{linha de cabeçalho}. A saída do @TeX{} para tal linha 
+é em negrito, e a saída HTML e Docbook usa a marcação @code{<thead>}. Em 
+Info, a linha de cabeçalho é seguida por uma linha separadora feita de 
+traços (caracteres @samp{-}).
 
 @findex headitemfont
-@cindex Font for multitable heading rows
-The command @code{@@headitemfont} can be used in templates when the
-entries in a @code{@@headitem} row need to be used in a template.  It
-is a synonym for @code{@@b}, but using @code{@@headitemfont} avoids
-any dependency on that particular font style, in case we provide a way
-to change it in the future.
+@cindex Fonte para linhas de cabeçalho multi tabela
+O comando @code{@@headitemfont} pode ser usado em modelos quando as 
+entradas em uma linha @code{@@headitem} precisarem ser usadas em um 
+modelo. É um sinônimo para @code{@@b}, mas usar @code{@@headitemfont} 
+evita qualquer dependência daquele estilo específico de fonte, no caso 
+de fornecemos uma maneira de alterá-lo no futuro.
 
-Here is a complete example of a multi-column table (the text is from
-@cite{The GNU Emacs Manual}, @pxref{Split Window,, Splitting Windows,
-emacs, The GNU Emacs Manual}):
+Aqui está um exemplo completo de uma tabela multi coluna (o texto é 
+originário de @cite{O Manual do GNU Emacs}, 
+@pxref{Split Window,, Splitting Windows, emacs, The GNU Emacs Manual}): @c Referência externa. Manter sem alteração!
 
 @example
 @@multitable @@columnfractions .15 .45 .4
-@@headitem Key @@tab Command @@tab Description
+@@headitem Tecla @@tab Comando @@tab Descrição
 @@item C-x 2
 @@tab @@code@{split-window-vertically@}
-@@tab Split the selected window into two windows,
-with one above the other.
+@@tab Divide a janela selecionada em duas janelas, 
+com uma acima da outra.
 @@item C-x 3
 @@tab @@code@{split-window-horizontally@}
-@@tab Split the selected window into two windows
-positioned side by side.
+@@tab Divide a janela selecionada em duas janelas 
+posicionadas lado a lado.
 @@item C-Mouse-2
 @@tab
-@@tab In the mode line or scroll bar of a window,
-split that window.
+@@tab Na linha de modo ou barra de rolagem de uma janela, 
+divide aquela janela.
 @@end multitable
 @end example
 
-@noindent produces:
+@noindent
+produz:
 
 @multitable @columnfractions .15 .45 .4
-@headitem Key @tab Command @tab Description
+@headitem Tecla @tab Comando @tab Descrição
 @item C-x 2
 @tab @code{split-window-vertically}
-@tab Split the selected window into two windows,
-with one above the other.
+@tab Divide a janela selecionada em duas janelas, 
+com uma acima da outra.
 @item C-x 3
 @tab @code{split-window-horizontally}
-@tab Split the selected window into two windows
-positioned side by side.
+@tab Divide a janela selecionada em duas janelas 
+posicionadas lado a lado.
 @item C-Mouse-2
 @tab
-@tab In the mode line or scroll bar of a window,
-split that window.
+@tab Na linha de modo ou barra de rolagem de uma janela, 
+divide aquela janela.
 @end multitable
 
 
 @node Exibições Especiais
 @chapter Exibições Especiais
 @cindex Special displays
+@c Capítulo 10 - Exibições Especiais
 
 The commands in this chapter allow you to write text that is specially
 displayed (output format permitting), outside of the normal document
@@ -20660,7 +20695,7 @@ Generate a minus sign, `@minus{}'.  @xref{@code{@@minus}}.
 @item @@multitable @var{column-width-spec}
 Begin a multi-column table.  Begin each row with @code{@@item} or
 @code{@@headitem}, and separate columns with @code{@@tab}.  Pair with
-@code{@@end multitable}.  @xref{Tamanhos de Colunas Multi Tabelas}.
+@code{@@end multitable}.  @xref{Larguras de Colunas Multi Tabelas}.
 
 @item @@need @var{n}
 Start a new page in a printed manual if fewer than @var{n} mils
