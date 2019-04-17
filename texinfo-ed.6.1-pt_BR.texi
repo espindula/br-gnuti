@@ -423,7 +423,7 @@ Exibições Especiais
 Flutuações
 
 * @code{@@float}::                      Produzindo material que flutua.
-* @code{@@caption @@shortcaption}::      Especificando descrições para flutuações.
+* @code{@@caption @@shortcaption}::     Especificando descrições para flutuações.
 * @code{@@listoffloats}::               Um Sumário para flutuações.
 
 Inserindo Imagens
@@ -8664,16 +8664,17 @@ divide aquela janela.
 @cindex Special displays
 @c Capítulo 10 - Exibições Especiais
 
-The commands in this chapter allow you to write text that is specially
-displayed (output format permitting), outside of the normal document
-flow.
+Os comandos neste capítulo permitem escrever texto que é especialmente 
+exibido (permissão de formato de saída), fora do fluxo normal de 
+documento.
 
-One set of such commands is for creating ``floats'', that is, figures,
-tables, and the like, set off from the main text, possibly numbered,
-captioned, and/or referred to from elsewhere in the document.  Images
-are often included in these displays.
+Um conjunto de tais comandos é para a criação de ``flutuadores'', isto 
+é, figuras, tabelas, e afins, configuradas a partir do texto principal, 
+possivelmente numeradas, rotuladas, e (ou) referenciadas a partir de 
+outro lugar no documento. As imagens frequentemente são incluídas nessas 
+exibições.
 
-Another group of commands is for creating footnotes in Texinfo.
+Outro grupo de comandos é para a criação de notas de rodapé em Texinfo.
 
 @menu
 * Flutuadores::                  Figuras, tabelas, e afins.
@@ -8684,98 +8685,109 @@ Another group of commands is for creating footnotes in Texinfo.
 
 @node Flutuadores
 @section Flutuadores
-@cindex Flutuadores, in general
+@cindex Flutuadores, em geral
+@c Capítulo 10 - Exibições Especiais
+@c Seção 10.1 - Flutuadores
 
-A @dfn{float} is a display which is set off from the main text.  It is
-typically labeled as being a ``Figure'', ``Table'', ``Example'', or
-some similar type.
+Um @dfn{flutuador} é uma exibição que é configurada a partir do texto 
+principal. É tipicamente rotulado como sendo uma ``Figura'', ``Tabela'', 
+``Exemplo'' ou algum tipo similar.
 
-@cindex Floating, not yet implemented
-A float is so-named because, in principle, it can be moved to the
-bottom or top of the current page, or to a following page, in the
-printed output.  (Floating does not make sense in other output
-formats.)  In the present version of Texinfo, however, this floating
-is unfortunately not yet implemented.  Instead, the floating material
-is simply output at the current location, more or less as if it were
-an @code{@@group} (@pxref{@code{@@group}}).
+@cindex Flutuando, ainda não implementado
+Um flutuador é assim nomeado porque, teoricamente, pode ser movido para 
+o pé ou topo da página atual, ou para uma página seguinte, na saída 
+impressa. (Flutuação não faz sentido em outros formatos de saída). Na 
+presente versão de Texinfo, entretanto, essa flutuação infelizmente 
+ainda não está implementada. Em vez disso, o material flutuante é 
+simplesmente produzido na localização atual, mais ou menos como se fosse 
+um @code{@@group} (@pxref{@code{@@group}}).
 
 @menu
-* @code{@@float}::                      Producing floating material.
-* @code{@@caption @@shortcaption}::      Specifying descriptions for floats.
-* @code{@@listoffloats}::               A table of contents for floats.
+* @code{@@float}::                      Produzindo material que flutua.
+* @code{@@caption @@shortcaption}::     Especificando descrições para flutuações.
+* @code{@@listoffloats}::               Um Sumário para flutuações.
 @end menu
 
 
 @node @code{@@float}
-@subsection @code{@@float} [@var{type}][,@var{label}]: Floating Material
+@subsection @code{@@float} [@var{tipo}][,@var{rótulo}]: Material Flutuante
+@c Capítulo 10 - Exibições Especiais
+@c Seção 10.1 - Flutuadores
+@c Subseção 10.1.1 - @float [tipo][,rótulo]: Material Flutuante
 
-@anchor{float}@c old name
+@anchor{float} @c nome antigo
 @findex float
-@cindex Float environment
+@cindex Ambiente float
 
-To produce floating material, enclose the material you want to be
-displayed separate between @code{@@float} and @code{@@end float}
-commands, on lines by themselves.
+Para produzir material flutuante, coloque o material que você quer que 
+seja exibido separado entre os comandos @code{@@float} e 
+@code{@@end float}, sozinhos em suas linhas.
 
-Floating material often uses @code{@@image} to display an
-already-existing graphic (@pxref{Imagens}), or @code{@@multitable} to
-display a table (@pxref{Tabelas Multi Colunas}).  However, the contents
-of the float can be anything.  Here's an example with simple text:
+Material flutuante geralmente usa @code{@@image} para exibir um gráfico 
+já existente (@pxref{Imagens}), ou @code{@@multitable} para exibir uma 
+tabela (@pxref{Tabelas Multi Colunas}). Entretanto, o conteúdo do 
+flutuador podem ser qualquer coisa. Aqui está um exemplo com texto 
+simples:
 
 @example
-@@float Figure,fig:ex1
-This is an example float.
+@@float Figura,fig:ex1
+Este é um flutuador de exemplo.
 @@end float
 @end example
 
-@noindent And the output:
+@noindent
+E a saída:
 
-@float Figure,fig:ex1
-This is an example float.
+@float Figura,fig:ex1
+Este é um flutuador de exemplo.
 @end float
 
-As shown in the example, @code{@@float} takes two arguments (separated
-by a comma), @var{type} and @var{label}.  Both are optional.
+Como mostrado no exemplo, @code{@@float} recebe dois argumentos 
+(separados por vírgula), @var{tipo} e @var{rótulo}. Ambos são opcionais.
 
 @table @var
-@item type
-Specifies the sort of float this is; typically a word such as
-``Figure'', ``Table'', etc.  If this is not given, and @var{label} is,
-any cross-referencing will simply use a bare number.
+@item tipo
+Especifica a classe do flutuador; tipicamente uma palavra como 
+``Figura'', ``Tabela'', etc. Se não for dada, e @var{rótulo} for, 
+quaisquer referências cruzadas simplesmente usarão um número despojado.
 
-@item label
-Specifies a cross-reference label for this float.  If given, this
-float is automatically given a number, and will appear in any
-@code{@@listoffloats} output (@pxref{@code{@@listoffloats}}).  Cross
-references to @var{label} are allowed.
+@item rótulo
+Especifica um rótulo de referência cruzada para este flutuador. Se dado, 
+a este flutuador é automaticamente dado um número, e aparecerá em 
+qualquer saída @code{@@listoffloats} (@pxref{@code{@@listoffloats}}). 
+Referências cruzadas a @var{rótulo} são permitidas.
 
-@cindex Floats, making unnumbered
-@cindex Unnumbered float, creating
-On the other hand, if @var{label} is not given, then the float will
-not be numbered and consequently will not appear in the
-@code{@@listoffloats} output or be cross-referenceable.
+@cindex Flutuadores, fazendo não numerados
+@cindex Flutuador não numerado, criando
+Por outro lado, se @var{rótulo} não for dado, então o flutuador não será 
+numerado e consequentemente não aparecerá na saída @code{@@listoffloats} 
+ou ser referenciável.
 @end table
 
-@noindent Ordinarily, you specify both @var{type} and @var{label}, to get a
-labeled and numbered float.
+@noindent 
+Ordinariamente, você especifica ambos @var{tipo} e @var{rótulo}, para 
+obter um flutuador rotulado e numerado.
 
-@cindex Floats, numbering of
-@cindex Numbering of floats
-In Texinfo, all floats are numbered in the same way: with the chapter
-number (or appendix letter), a period, and the float number, which
-simply counts 1, 2, 3, @dots{}, and is reset at each chapter.  Each
-float type is counted independently.
+@cindex Flutuadores, numeração de
+@cindex Numeração de flutuadores
+Em Texinfo, todos os flutuadores são numerados na mesma maneira: com o 
+número do capítulo (ou letra do apêndice), um ponto, e o número do 
+flutuador, o qual simplesmente conta 1, 2, 3, @dots{}, e é zerado a cada 
+capítulo. Cada tipo de flutuador é contado independentemente.
 
-Floats within an @code{@@unnumbered}, or outside of any chapter, are
-simply numbered consecutively from 1.
+Os flutuadores dentro de @code{@@unnumbered}, ou fora de qualquer 
+capítulo, são numerados simplesmente consecutivamente a partir de 1.
 
-These numbering conventions are not, at present, changeable.
+Essas convenções de numeração não são, atualmente, modificáveis.
 
 
 @node @code{@@caption @@shortcaption}
-@subsection @code{@@caption} & @code{@@shortcaption}
+@subsection @code{@@caption} e @code{@@shortcaption}
+@c Capítulo 10 - Exibições Especiais
+@c Seção 10.1 - Flutuadores
+@c Subseção 10.1.2 - @caption e @shortcaption
 
-@anchor{caption shortcaption}@c old name
+@anchor{caption shortcaption} @c nome antigo
 @findex caption
 @findex shortcaption
 @cindex Captions, for floats
