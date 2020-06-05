@@ -8793,52 +8793,54 @@ Essas convenções de numeração não são, atualmente, modificáveis.
 @cindex Captions, para flutuadores
 @cindex Short captions, para listas de flutuadores
 
-You may write a @code{@@caption} anywhere within a @code{@@float}
-environment, to define a caption for the float.  It is not allowed in
-any other context.  @code{@@caption} takes a single argument, enclosed
-in braces.  Here's an example:
+Você pode escrever um @code{@@caption} em qualquer lugar dentro de um 
+ambiente @code{@@float}, para definir uma para o flutuador.  Não é 
+permitido em qualquer outro contexto.  @code{@@caption} recebe somente 
+um argumento, envolvido em chaves.  Aqui está um exemplo:
 
 @example
 @@float
-An example float, with caption.
-@@caption@{Caption for example float.@}
+Um exemplo de flutuador, com caption.
+@@caption@{Caption para exemplo de flutuador.@}
 @@end float
 @end example
 
-@noindent The output is:
+@noindent A saída é:
 
 @float
-An example float, with caption.
-@caption{Caption for example float.}
+Um exemplo de flutuador, com caption.
+@caption{Caption para exemplo de flutuador.}
 @end float
 
-@code{@@caption} can appear anywhere within the float; it is not
-processed until the @code{@@end float}.  The caption text is usually a
-sentence or two, but may consist of several paragraphs if necessary.
+@code{@@caption} pode aparecer em qualquer lugar dentro do flutuador; 
+@code{@@caption} não é processado até o @code{@@end float}.  O texto do 
+caption geralmente é uma sentença ou duas, porém pode consistir de 
+vários parágrafos se necessário.
 
-In the output, the caption always appears below the float; this is not
-currently changeable.  It is preceded by the float type and/or number,
-as specified to the @code{@@float} command (see the previous section).
+Na saída, o caption sempre aparece abaixo do flutuador; isso atualmente 
+não é modificável.  O caption é precedido pelo número e/ou tipo do 
+flutuador, conforme especificado para o comando @code{@@float} 
+(veja-se a seção anterior).
 
-The @code{@@shortcaption} command likewise may be used only within
-@code{@@float}, and takes a single argument in braces.  The short
-caption text is used instead of the caption text in a list of floats
-(see the next section).  Thus, you can write a long caption for the
-main document, and a short title to appear in the list of floats.  For
-example:
+O comando @code{@@shortcaption} igualmente pode ser usado somente dentro 
+de @code{@@float}, e recebe somente um argumento dentro de chaves.  O 
+texto curto de caption é usado em vez do texto de caption em uma lista 
+de flutuadores (veja-se a próxima seção).  Assim, você pode escrever um 
+caption longo para o documento principal, e um título curto aparecer na 
+lista de flutuadores.  Por exemplo:
 
 @example
 @@float
-... as above ...
-@@shortcaption@{Text for list of floats.@}
+... conforme acima ...
+@@shortcaption@{Texto para a lista de flutuadores.@}
 @@end float
 @end example
 
-The text for @code{@@shortcaption} may not contain comments
-(@code{@@c}), verbatim text (@code{@@verb}), environments such as
-@code{@@example}, footnotes (@code{@@footnote}) or other complex
-constructs.  The same constraints apply to @code{@@caption} unless
-there is a @code{@@shortcaption}.
+O texto para @code{@@shortcaption} pode não conter comentários 
+(@code{@@c}), texto literal (@code{@@verb}), ambientes como 
+@code{@@example}, notas de rodapé (@code{@@footnote}) ou outras 
+construções complexas.  As mesmas restrições se aplicam ao 
+@code{@@caption} a menos que exista um @code{@@shortcaption}.
 
 
 @node @code{@@listoffloats}
