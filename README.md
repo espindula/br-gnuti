@@ -6,7 +6,7 @@ git clone https://github.com/espindula/gnuti-pt_BR.git
 
 
 Direitos autorais (Copyright) da versão modificada traduzida para a língua 
-portuguesa escrita e falada no Brasil: (c) 2016, 2017, 2018, 2019, 2020 
+portuguesa escrita e falada no Brasil: (c) 2016, 2017, 2018, 2019, 2020, 2021 
 Jamenson Ferreira Espindula de Almeida Melo (<jafesp@gmail.com>).
 
   Este trabalho de tradução do Manual do GNU Texinfo é classificado pela 
