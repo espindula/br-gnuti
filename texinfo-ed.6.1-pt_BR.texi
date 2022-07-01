@@ -8794,8 +8794,8 @@ Essas convenções de numeração não são, atualmente, modificáveis.
 @cindex Short captions, para listas de flutuadores
 
 Você pode escrever um @code{@@caption} em qualquer lugar dentro de um 
-ambiente @code{@@float}, para definir uma para o flutuador.  Não é 
-permitido em qualquer outro contexto.  @code{@@caption} recebe somente 
+ambiente @code{@@float}, para definir uma legenda para o flutuador.  Não 
+é permitido em qualquer outro contexto.  @code{@@caption} recebe somente 
 um argumento, envolvido em chaves.  Aqui está um exemplo:
 
 @example
@@ -8845,6 +8845,9 @@ construções complexas.  As mesmas restrições se aplicam ao
 
 @node @code{@@listoffloats}
 @subsection @code{@@listoffloats}: Tabelas de Conteúdos para Flutuadores
+@c Capítulo 10 - Exibições Especiais
+@c Seção 10.1 - Flutuadores
+@c Subseção 10.1.3 - @listoffloats: Tabelas de Conteúdos para Flutuadores
 
 @anchor{listoffloats}@c nome antigo
 @findex listoffloats
@@ -8890,7 +8893,7 @@ Cada linha na lista de flutuadores contém o tipo de flutuador (se
 algum), o número do flutuador, e a legenda, se alguma---o argumento 
 @code{@@shortcaption}, se foi especificado, do contrário o argumento 
 @code{@@caption}. Em Info, o resultado é um menu onde cada flutuador 
-pode ser selecionado. In HTML, cada linha é um link para o flutuador. Em 
+pode ser selecionado. Em HTML, cada linha é um link para o flutuador. Em 
 saída impressa, o número da página é incluído.
 
 Flutuadores não numerados (aqueles sem rótulos de referência cruzada) 
@@ -8898,14 +8901,16 @@ são omitidos da lista de flutuadores.
 
 
 @node Imagens
-@section Inserting Images
+@section Inserindo Imagens
+@c Capítulo 10 - Exibições Especiais
+@c Seção 10.2 - Inserindo Imagens
 
 @cindex Images, inserting
 @cindex Pictures, inserting
 @findex image
 
 Você pode inserir uma imagem dada em um arquivo externo com o comando 
-@code{@@image}. Apesar de imagens poderes ser usadas em qualquer lugar, 
+@code{@@image}. Apesar de imagens poderem ser usadas em qualquer lugar, 
 incluindo o meio de um parágrafo, nós as descrevemos neste capítulo dado 
 que elas (as imagens) são mais frequentemente parte de uma figura 
 exibida ou exemplo.
@@ -8918,6 +8923,9 @@ exibida ou exemplo.
 
 @node Sintaxe da Imagem
 @subsection Sintaxe da Imagem
+@c Capítulo 10 - Exibições Especiais
+@c Seção 10.2 - Inserindo Imagens
+@c Subseção 10.2.1 - Sintaxe da Imagem
 
 Aqui está a sinopse do comando @code{@@image}:
 
@@ -8925,9 +8933,10 @@ Aqui está a sinopse do comando @code{@@image}:
 @@image@{@var{filename}@r{[,} @var{width}@r{[,} @var{height}@r{[,} @var{alttext}@r{[, }@var{extension}@r{]]]]}@}
 @end example
 
-@cindex Formats for images @cindex Image formats O argumento 
-@var{filename} é obrigatório, e não deve ter uma extensão, pois os 
-diferentes processadores suportam formatos diferentes:
+@cindex Formats for images
+@cindex Image formats
+O argumento @var{filename} é obrigatório, e não deve ter uma extensão, 
+pois os diferentes processadores suportam formatos diferentes:
 
 @itemize @bullet
 @item
@@ -9044,6 +9053,9 @@ deveria ser danoso.
 
 @node Escalonamento da Imagem
 @subsection Escalonamento da Imagem
+@c Capítulo 10 - Exibições Especiais
+@c Seção 10.2 - Inserindo Imagens
+@c Subseção 10.2.2 - Escalonamento da Imagem
 
 @cindex Images, scaling
 @cindex Scaling images
