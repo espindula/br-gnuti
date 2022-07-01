@@ -8844,22 +8844,23 @@ construções complexas.  As mesmas restrições se aplicam ao
 
 
 @node @code{@@listoffloats}
-@subsection @code{@@listoffloats}: Tables of Contents for Floats
+@subsection @code{@@listoffloats}: Tabelas de Conteúdos para Flutuadores
 
-@anchor{listoffloats}@c old name
+@anchor{listoffloats}@c nome antigo
 @findex listoffloats
 @cindex List of floats
 @cindex Floats, list of
 @cindex Table of contents, for floats
 
-You can write a @code{@@listoffloats} command to generate a list of
-floats for a given float type (@pxref{@code{@@float}}), analogous to
-the document's overall table of contents.  Typically, it is written in
-its own @code{@@unnumbered} node to provide a heading and structure,
-rather like @code{@@printindex} (@pxref{Imprimindo Índices e Menus}).
+Você pode escrever um comando @code{@@listoffloats} para gerar uma lista 
+de flutuadores para um dado tipo de flutuador (@pxref{@code{@@float}}), 
+semelhante à Tabela de Conteúdo geral do documento. Tipicamente, o 
+comando é escrito no nodo @code{@@unnumbered} dele próprio para prover 
+um cabeçalho e estrutura, mais como @code{@@printindex} 
+(@pxref{Imprimindo Índices e Menus}).
 
-@code{@@listoffloats} takes one optional argument, the float type.
-Here's an example:
+@code{@@listoffloats} recebe um argumento opcional, o tipo de flutuador. 
+Eis um exemplo:
 
 @example
 @@node List of Figures
@@ -8867,9 +8868,9 @@ Here's an example:
 @@listoffloats Figure
 @end example
 
-@noindent And here's what the output from @code{@@listoffloats}
-looks like, given the example figure earlier in this chapter (the Info
-output is formatted as a menu):
+@noindent E aqui está com o que se parece a saída a partir de 
+@code{@@listoffloats}, dada a figura de exemplo anterior neste capítulo 
+(a saída Info está formatada como um menu):
 
 @display
 @ifinfo
@@ -8880,19 +8881,20 @@ output is formatted as a menu):
 @end ifnotinfo
 @end display
 
-Without any argument, @code{@@listoffloats} generates a list of floats
-for which no float type was specified, i.e., no first argument to the
-@code{@@float} command (@pxref{@code{@@float}}).
+Sem qualquer argumento, @code{@@listoffloats} gera uma lista de 
+flutuadores para os quais nenhum tipo de flutuador foi especificado, 
+isto é, sem primeiro argumento para o comando @code{@@float} 
+(@pxref{@code{@@float}}).
 
-Each line in the list of floats contains the float type (if any),
-the float number, and the caption, if any---the @code{@@shortcaption}
-argument, if it was specified, else the @code{@@caption} argument.
-In Info, the result is a menu where each float can be selected.  In
-HTML, each line is a link to the float.  In printed output, the page
-number is included.
+Cada linha na lista de flutuadores contém o tipo de flutuador (se 
+algum), o número do flutuador, e a legenda, se alguma---o argumento 
+@code{@@shortcaption}, se foi especificado, do contrário o argumento 
+@code{@@caption}. Em Info, o resultado é um menu onde cada flutuador 
+pode ser selecionado. In HTML, cada linha é um link para o flutuador. Em 
+saída impressa, o número da página é incluído.
 
-Unnumbered floats (those without cross-reference labels) are omitted
-from the list of floats.
+Flutuadores não numerados (aqueles sem rótulos de referência cruzada) 
+são omitidos da lista de flutuadores.
 
 
 @node Imagens
@@ -8902,10 +8904,11 @@ from the list of floats.
 @cindex Pictures, inserting
 @findex image
 
-You can insert an image given in an external file with the
-@code{@@image} command.  Although images can be used anywhere,
-including the middle of a paragraph, we describe them in this chapter
-since they are most often part of a displayed figure or example.
+Você pode inserir uma imagem dada em um arquivo externo com o comando 
+@code{@@image}. Apesar de imagens poderes ser usadas em qualquer lugar, 
+incluindo o meio de um parágrafo, nós as descrevemos neste capítulo dado 
+que elas (as imagens) são mais frequentemente parte de uma figura 
+exibida ou exemplo.
 
 @menu
 * Sintaxe da Imagem::
@@ -8916,61 +8919,61 @@ since they are most often part of a displayed figure or example.
 @node Sintaxe da Imagem
 @subsection Sintaxe da Imagem
 
-Here is the synopsis of the @code{@@image} command:
+Aqui está a sinopse do comando @code{@@image}:
 
 @example
 @@image@{@var{filename}@r{[,} @var{width}@r{[,} @var{height}@r{[,} @var{alttext}@r{[, }@var{extension}@r{]]]]}@}
 @end example
 
-@cindex Formats for images
-@cindex Image formats
-The @var{filename} argument is mandatory, and must not have an
-extension, because the different processors support different formats:
+@cindex Formats for images @cindex Image formats O argumento 
+@var{filename} é obrigatório, e não deve ter uma extensão, pois os 
+diferentes processadores suportam formatos diferentes:
 
 @itemize @bullet
 @item
 @pindex eps image format
-@TeX{} (DVI output) reads the file @file{@var{filename}.eps}
-(Encapsulated PostScript format).
+@TeX{} (saída DVI) lê o arquivo @file{@var{filename}.eps}
+(formato PostScript Encapsulado).
 
 @item
 @pindex pdftex@r{, and images}
 @pindex png image format
 @pindex jpeg image format
 @pindex pdf image inclusions
-pdf@TeX{} reads @file{@var{filename}.pdf}, @file{@var{filename}.png},
-@file{@var{filename}.jpg}, or @file{@var{filename}.jpeg} (in that
-order).  It also tries uppercase versions of the extensions.  The PDF
-format does not support EPS images, so such must be converted first.
+pdf@TeX{} Lê @file{@var{filename}.pdf}, @file{@var{filename}.png}, 
+@file{@var{filename}.jpg}, ou @file{@var{filename}.jpeg} (nessa ordem). 
+Também tenta as versões em letras maiúsculas das extensões. O formato 
+PDF não suporta imagens EPS, de forma que essas devem ser convertidas 
+primeiro.
 
 @item
-For Info, @code{makeinfo} includes @file{@var{filename}.txt} verbatim
-(more or less as if it were in @code{@@verbatim}).  The Info output
-may also include a reference to @file{@var{filename}.png} or
-@file{@var{filename}.jpg}.  (See below.)
+Para Info, @code{makeinfo} inclui @file{@var{filename}.txt} literal 
+(mais ou menos como se estivesse em @code{@@verbatim}). A saída Info 
+também pode incluir uma referência para @file{@var{filename}.png} ou 
+@file{@var{filename}.jpg}. (Veja-se abaixo).
 
 @item
-For HTML, @code{makeinfo} outputs a reference to
-@file{@var{filename}.png}, @file{@var{filename}.jpg},
-@file{@var{filename}.jpeg} or @file{@var{filename}.gif} (in that
-order).  If none of those exist, it gives an error, and outputs a
-reference to @file{@var{filename}.jpg} anyway.
+Para HTML, @code{makeinfo} emite uma referência para 
+@file{@var{filename}.png}, @file{@var{filename}.jpg}, 
+@file{@var{filename}.jpeg} ou @file{@var{filename}.gif} (nessa ordem). 
+Se nenhum desses exitir, então dá um erro, e emite uma referência para 
+@file{@var{filename}.jpg} de qualquer maneira.
 
 @item
 @cindex SVG images, used in Docbook
-For Docbook, @code{makeinfo} outputs references to
-@file{@var{filename}.eps}, @file{@var{filename}.gif}
-@file{@var{filename}.jpeg}, @file{@var{filename}.jpg},
-@file{@var{filename}.pdf}, @file{@var{filename}.png} and
-@file{@var{filename}.svg}, for every file found.  Also,
-@file{@var{filename}.txt} is included verbatim, if present.  (The
-subsequent Docbook processor is supposed to choose the appropriate one.)
+Para Docbook, @code{makeinfo} emite referências para 
+@file{@var{filename}.eps}, @file{@var{filename}.gif} 
+@file{@var{filename}.jpeg}, @file{@var{filename}.jpg}, 
+@file{@var{filename}.pdf}, @file{@var{filename}.png} e 
+@file{@var{filename}.svg}, para cada arquivo encontrado. Também, 
+@file{@var{filename}.txt} é incluído literalmente, se presente. 
+(Supõe-se que o processador Docbook subsequente escolha o adequado).
 
 @item
-For Info and HTML output, @code{makeinfo} uses the optional fifth
-argument @var{extension} to @code{@@image} for the filename extension,
-if it is specified and the file is found.  Any leading period should
-be included in @var{extension}.  For example:
+Para saída Info e HTML, @code{makeinfo} usa o quinto argumento opcional 
+@var{extension} para @code{@@image} para a extensão de nome de arquivo, 
+se for especificado e o arquivo for encontrado. Qualquer ponto inicial 
+deveria ser incluído em @var{extension}. Por exemplo:
 
 @pindex XPM image format
 @example
@@ -8979,62 +8982,64 @@ be included in @var{extension}.  For example:
 
 @end itemize
 
-If you want to install image files for use by Info readers too, we
-recommend putting them in a subdirectory like @samp{@var{foo}-figures}
-for a package @var{foo}.  Copying the files into
-@code{$(infodir)/@var{foo}-figures/} should be done in your
+Se você deseja instalar arquivos de imagens para uso por leitores Info, 
+então recomenda-se colocá-los em um subdiretório como 
+@samp{@var{foo}-figures} para um pacote @var{foo}. A cópia dos arquivos 
+para @code{$(infodir)/@var{foo}-figures/} deveria ser feita em seu 
 @code{Makefile}.
 
-The @var{width} and @var{height} arguments are described in the next
-section.
+Os argumentos @var{width} e @var{height} estão descritos na próxima 
+seção.
 
-For @TeX{} output, if an image is the only thing in a paragraph it
-will ordinarily be displayed on a line by itself, respecting the
-current environment indentation, but without the normal paragraph
-indentation.  If you want it centered, use @code{@@center}
+Para saída @TeX{}, se uma imagem for a única coisa em um parágrafo, ela 
+ordinariamente será exibida em uma linha própria, respeitando o recuo 
+atual do ambiente, porém sem o recuo normal do parágrafo. Se você quiser 
+a imagem centralizada, então use @code{@@center} 
 (@pxref{@code{@@titlefont @@center @@sp}}).
 
 @cindex Alt attribute for images
 @cindex Images, alternate text for
 @findex @sortas{-} -@r{ (in image alt string)} @c CONSERTE-ME
-For HTML output, @code{makeinfo} sets the @dfn{alt attribute} for
-inline images to the optional @var{alttext} (fourth) argument to
-@code{@@image}, if supplied.  If not supplied, @code{makeinfo} uses
-the full file name of the image being displayed.  The @var{alttext} is
-processed as Texinfo text, so special characters such as @samp{"} and
-@samp{<} and @samp{&} are escaped in the HTML output; also, you can
-get an empty @code{alt} string with @code{@@-} (a command that
-produces no output; @pxref{@code{@@- @@hyphenation}}).
+Para saída HTML, @code{makeinfo} configura o @dfn{alt attribute} para 
+imagens inline para o (quarto) argumento opcional @var{alttext} para 
+@code{@@image}, se fornecido. Se não fornecido, então @code{makeinfo} 
+usa o nome completo de arquivo da imagem sendo exibida. A @var{alttext} 
+é processada como texto Texinfo, de forma que caracteres especiais tais 
+como @samp{"} e @samp{<} e @samp{&} são escapadas na saída HTML; também, 
+você pode obter uma sequência @code{alt} vazia com @code{@@-} (um 
+comando que não produz saída; @pxref{@code{@@- @@hyphenation}}).
 
-For Info output, the @code{alt} string is also processed as Texinfo
-text and output.  In this case, @samp{\} is escaped as @samp{\\} and
-@samp{"} as @samp{\"}; no other escapes are done.
+Para saída Info, a sequência @code{alt} também é processada como texto 
+de Texinfo e saída. Nesse caso, @samp{\} é escapada como @samp{\\} e 
+@samp{"} como @samp{\"}; outros escapes não são feitos.
 
-In Info output, @code{makeinfo} writes a reference to the binary image
-file (trying @var{filename} suffixed with @file{@var{extension}},
-@file{@var{.extension}}, @file{.png}, or @file{.jpg}, in that order)
-if one exists.  It also literally includes the @file{.txt} file if one
-exists.  This way, Info readers which can display images (such as the
-Emacs Info browser, running under X) can do so, whereas Info readers
-which can only use text (such as the standalone Info reader) can
-display the textual version.
+Em saída Info, @code{makeinfo} escreve uma referência para o arquivo 
+binário de imagem (tentando @var{filename} com a extensão 
+@file{@var{extension}}, @file{@var{.extension}}, @file{.png}, ou 
+@file{.jpg}, nessa ordem) se um existir. Também incluir literalmente o 
+arquivo @file{.txt} se um existir. Dessa maneira, os leitores Info que 
+podem exibir imagens (tais como o navegador Emacs Info, sendo executado 
+sob X) podem fazer isso, ao passo que leitores Info que somente podem 
+usar texto (tais como o leitor autônomo Info) podem exibir a versão 
+textual.
 
 @cindex @samp{^@@^H} for images in Info
-The implementation of this is to put the following construct into the
-Info output:
+A implementação para isso é colocar o seguinte construtor na saída de 
+Info:
 
 @example
 ^@@^H[image src="@var{binaryfile}" text="@var{txtfile}"
            alt="@var{alttext} ... ^@@^H]
 @end example
 
-@noindent where @samp{^@@} and @samp{^H} stand for the actual null and
-backspace control characters.  If one of the files is not present, the
-corresponding argument is omitted.
+@noindent onde @samp{^@@} e @samp{^H} significam os caracteres atuais de 
+controle ``null'' e ``backspace''. Se um dos arquivos não estiver 
+presente, então o correspondente argumento é omitido.
 
-The reason for mentioning this here is that older Info browsers (this
-feature was introduced in Texinfo version 4.6) will display the above
-literally, which, although not pretty, should not be harmful.
+A justificativa para se mencionar isso aqui é que navegadores Info mais 
+antigos (essa característica foi introduzida na versão 4.6 de Texinfo) 
+exibirão o acima literalmente, o que, apesar de não ser agradável, não 
+deveria ser danoso.
 
 
 @node Escalonamento da Imagem
