@@ -3,7 +3,11 @@
 Translation project of the "GNU Texinfo Manual", version 6.1, into Brazilian Portuguese.
 
 git clone https://github.com/espindula/gnuti-pt_BR.git
+
 git clone https://gitlab.com/jafesp/gnuti-pt_BR.git
+
+git clone https://salsa.debian.org/jamenson/gnuti-pt_BR.git
+
 
 Direitos autorais (Copyright) da versão modificada traduzida para a 
 língua portuguesa escrita e falada no Brasil: (c) 2016, 2017, 2018, 
