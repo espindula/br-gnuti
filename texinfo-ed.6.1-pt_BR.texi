@@ -9452,245 +9452,139 @@ Alô, você!
 @noindent Entre outros motivos, dessa forma, seguir os links de 
 indexação (em qualquer contexto) acaba antes do material, onde os(as) 
 leitores(as) querem estar, e não depois.
-PAREI
-@cindex Index font types
-By default, entries for a concept index are printed in a small roman
-font and entries for the other indices are printed in a small
-@code{@@code} font.  You may change the way part of an entry is
-printed with the usual Texinfo commands, such as @code{@@file} for
-file names (@pxref{Marcando Texto}), and @code{@@r} for the normal roman
-font (@pxref{Fontes}).
+
+@cindex Tipos de fonte de índice
+Por padrão, as entradas para um índice de conceito são impressas em uma fonte romana pequena e as entradas para os outros índices são impressas em uma fonte @code{@@code} pequena. Você pode mudar a forma como parte de uma entrada é impressa com os comandos usuais do Texinfo, como @code{@@file} para nomes de arquivos (@pxref{Marcando Texto}) e @code{@@r} para a fonte normal roman (@pxref{Fontes}).
 
 @findex sortas
-@cindex sort keys for index entries
-@cindex index sorting
-For the printed output, you may specify an explicit sort key for an
-index entry using @code{@@sortas} immediately following the index
-command.  For example: @samp{@@findex @@sortas@{\@} \ @@r@{(literal
-\ in @@code@{@@@@math@})} sorts the index entry this produces under
-backslash.
+@cindex ordenar chaves para entradas de índice
+@cindex ordenamento de índice
+Para a saída gerada impressa, você pode especificar uma chave explícita de ordenação para uma entrada de índice usando @code{@@sortas} imediatamente depois do comando de índice.  Por exemplo: @samp{@@findex @@sortas@{\@} \ @@r@{(literal \ em @@code@{@@@@math@})} ordena a entrada de índice que isso produz sob barra invertida.
+
 
 @vindex txiindexbackslashignore
 @vindex txiindexhyphenignore
 @vindex txiindexlessthanignore
 @vindex txiindexatsignignore
-To reduce the quantity of sort keys you need to provide explicitly,
-you may choose to ignore certain characters in index entries
-for the purposes of sorting.  The characters that you can
-currently choose to ignore are @samp{\}, @samp{-}, @samp{<}
-and @samp{@@}, which are ignored by giving as an argument to the
-@code{@@set} command, respectively, @code{txiindexbackslashignore},
-@code{txiindexhyphenignore}, @code{txiindexlessthanignore} and
-@code{txiindexatsignignore}.  For example, specifying @samp{@@set
-txiindexbackslashignore} causes the @samp{\mathopsup} entry in the
-index for this manual to be sorted as if it were @samp{mathopsup},
-so that it appears among the other entries beginning `M'.
+Para reduzir a quantidade de chaves de ordenação que você precisa fornecer explicitamente, você pode optar por ignorar determinados caracteres nas entradas de índice para fins de ordenação.  Os caracteres que você pode, atualmente, optar por ignorar são @samp{\}, @samp{-}, @samp{<} e @samp{@@}, que são ignorados fornecendo-se como argumento para o comando @code{@@ set}, respectivamente, @code{txiindexbackslashignore}, @code{txiindexhyphenignore}, @code{txiindexlessthanignore} e @code{txiindexatsignignore}.  Por exemplo, especificar @samp{@@set txiindexbackslashignore} faz com que a entrada @samp{\mathopsup} no índice para este manual seja ordenada como se fosse @samp{mathopsup}, de forma que apareça entre as outras entradas que começam com ` M'.
 
 
-@quotation Caution
-Do not use a colon in an index entry.  In Info, a colon separates the
-menu entry name from the node name, so a colon in the entry itself
-confuses Info.  @xref{Partes de Menu}, for more information about the
-structure of a menu entry.
+@quotation Cuidado
+Não use dois pontos em uma entrada de índice.  No Info, dois pontos separam o nome da entrada de menu do nome do nó, portanto, dois pontos na própria entrada confundem o Info.  @xref{Partes de Menu}, para mais informações relativas a estrutura de uma entrada de menu.
 @end quotation
 
 @node Entradas de Índice
-@section Making Index Entries
-@cindex Index entries, making
-@cindex Entries, making index
+@section Criando Entradas de Índice
+@cindex Entradas de índice, criando
+@cindex Entradas, criando índice
 
-@cindex Writing index entries
-@cindex Index entries, advice on writing
-@cindex Advice on writing entries
-@cindex Capitalization of index entries
-Concept index entries consist of text.  The best way to write an index
-is to devise entries which are terse yet clear.  If you can do this,
-the index usually looks better if the entries are written just as they
-would appear in the middle of a sentence, that is, capitalizing only
-proper names and acronyms that always call for uppercase letters.
-This is the case convention we use in most GNU manuals' indices.
+@cindex Escrevendo entradas de índice
+@cindex Entradas de índice, conselhos sobre redação
+@cindex Conselhos sobre escrever entradas
+@cindex Capitalização de entradas de índice
+As entradas do índice de conceito consistem de texto.  A melhor maneira de escrever um índice é a de elaborar entradas que sejam concisas, mas claras.  Se você puder fazer isso, o índice geralmente parecerá melhor se as entradas forem escritas exatamente como apareceriam no meio de uma frase, ou seja, colocando em maiúscula somente nomes próprios e siglas que sempre exigem letras maiúsculas. Essa é a convenção de caso que nós usamos na maioria dos índices dos manuais GNU.
 
-If you don't see how to make an entry terse yet clear, make it longer
-and clear---not terse and confusing.  If many of the entries are
-several words long, the index may look better if you use a different
-convention: to capitalize the first word of each entry.  Whichever
-case convention you use, use it consistently.
+Se você não sabe como tornar uma entrada concisa, mas clara, torne-a mais longa e clara---não concisa e confusa.  Se muitas das entradas tiverem várias palavras, o índice poderá parecer melhor se você usar uma convenção diferente: colocar em maiúscula a primeira palavra de cada entrada.  Qualquer que seja a convenção de caso que você usar, use-a de consistentemente.
 
-In any event, do not ever capitalize a case-sensitive name such as a C
-or Lisp function name or a shell command; that would be a spelling
-error.  Entries in indices other than the concept index are symbol
-names in programming languages, or program names; these names are
-usually case-sensitive, so likewise use upper- and lowercase as
-required.
+Em qualquer caso, nunca coloque em maiúscula um nome que diferencia maiúsculas de minúsculas, como um nome de função da C ou Lisp ou um comando de shell; isso seria um erro ortográfico.  As entradas em índices diferentes do índice de conceito são nomes de símbolos em linguagens de programação ou nomes de programas; esses nomes geralmente diferenciam maiúsculas de minúsculas, de forma que use letras maiúsculas e minúsculas conforme exigido.
 
-@cindex Unique index entries
-It is a good idea to make index entries unique wherever feasible.
-That way, people using the printed output or online completion of
-index entries don't see undifferentiated lists.  Consider this an
-opportunity to make otherwise-identical index entries be more
-specific, so readers can more easily find the exact place they are
-looking for.
+@cindex Entradas de índice exclusivas
+É uma boa ideia tornar as entradas do índice exclusivas sempre que possível. Dessa forma, as pessoas que usam a saída gerada impressa ou o preenchimento on-line das entradas do índice não enxergarão listas indiferenciadas.  Considere essa uma oportunidade para tornar mais específicas entradas de índice idênticas, de forma que os(as) leitores(as) consigam encontrar mais facilmente o lugar exato que procuram.
 
 
-When you are making index entries, it is good practice to think of the
-different ways people may look for something.  Different people
-@emph{do not} think of the same words when they look something up.  A
-helpful index will have items indexed under all the different words
-that people may use.  For example, one reader may think it obvious
-that the two-letter names for indices should be listed under
-``Índices, two-letter names, since ``Índices'' are the general
-concept.  But another reader may remember the specific concept of
-two-letter names and search for the entry listed as ``Two letter names
-for indices''.  A good index will have both entries and will help both
-readers.
+Quando você estiver criando entradas de índice, é uma boa prática pensar nas diferentes maneiras pelas quais as pessoas podem procurar algo.  Pessoas diferentes @emph{não} pensam nas mesmas palavras quando procuram algo.  Um índice útil terá itens indexados sob todas as palavras diferentes que as pessoas possam usar.  Por exemplo, um(a) leitor(a) pode pensar que é óbvio que os nomes de duas letras para índices deveriam ser listados sob ``Índices, nomes de duas letras, uma vez que ``Índices'' são o conceito geral.  Todavia, outro(a) leitor(a) pode lembrar-se do conceito específico de nomes de duas letras e procurar a entrada listada como ``Nomes de duas letras para índices''.  Um bom índice terá ambas as entradas e ajudará ambos(as) os(as) leitores(as).
 
-Like typesetting, the construction of an index is a skilled art, the
-subtleties of which may not be appreciated until you need to do it
-yourself.
+Assim como a composição tipográfica, a construção de um índice é uma arte especializada, cujas sutilezas possivelmente não sejam apreciadas até que você precise fazê-la você mesmo(a).
 
 
 @node Imprimindo Índices e Menus
-@section Printing Índices and Menus
-@cindex Printing an index
-@cindex Índices, printing and menus
-@cindex Generating menus with indices
-@cindex Menus generated with indices
+@section Imprimindo Índices e Menus
+@cindex Imprimindo um index
+@cindex Índices, imprimindo e menus
+@cindex Gerando menus com índices
+@cindex Menus gerados com índices
+Imprimir um índice significa incluí-lo como parte de um manual ou arquivo do Info. Isso não acontece automaticamente apenas porque você usa @code{@@cindex} ou outros comandos de geração de entrada de índice no arquivo Texinfo; esses apenas faz com que os dados brutos do índice sejam acumulados.  Para gerar um índice, você precisa incluir o comando @code{@@printindex} no local no documento onde deseja que o índice apareça.  Além disso, como parte do processo de criação de um manual impresso, você precisa executar um programa chamado @code{texindex} (@pxref{Cópia Impressa}) para ordenar os dados brutos para produzir um arquivo de índice ordenado.  O arquivo de índice ordenado é o que realmente é usado para imprimir o índice.
 
-To print an index means to include it as part of a manual or Info file.
-This does not happen automatically just because you use @code{@@cindex}
-or other index-entry generating commands in the Texinfo file; those just
-cause the raw data for the index to be accumulated.  To generate an
-index, you must include the @code{@@printindex} command at the place in
-the document where you want the index to appear.  Also, as part of the
-process of creating a printed manual, you must run a program called
-@code{texindex} (@pxref{Cópia Impressa}) to sort the raw data to produce a
-sorted index file.  The sorted index file is what is actually used to
-print the index.
-
-Texinfo offers six separate types of predefined index, which suffice
-in most cases.  @xref{Índices}, for information on this, as well
-defining your own new indices, combining indices, and, most
-importantly advice on writing the actual index entries.  This section
-focuses on printing indices, which is done with the
-@code{@@printindex} command.
+Texinfo oferece seis tipos de índices predefinidos, que são suficientes na maioria dos casos.  @xref{Índices}, para informações a respeito disso, bem como para definir teus próprios novos índices, combinar índices e, o mais importante, conselhos sobre escrever as reais entradas do índice.  Esta seção foca na impressão de índices, o que é feito com o comando @code{@@printindex}.
 
 @findex printindex
-@code{@@printindex} takes one argument, a two-letter index
-abbreviation.  It reads the corresponding sorted index file (for
-printed output), and formats it appropriately into an index.
+@code{@@printindex} recebe um argumento, uma abreviatura de índice de duas letras.  Ele lê o correspondente arquivo ordenado de índice (para saída gerada impressa) e o formata apropriadamente em um índice.
 
-The @code{@@printindex} command does not generate a chapter heading
-for the index, since different manuals have different needs.
-Consequently, you should precede the @code{@@printindex} command with
-a suitable section or chapter command (usually @code{@@appendix} or
-@code{@@unnumbered}) to supply the chapter heading and put the index
-into the table of contents.  Precede the chapter heading with an
-@code{@@node} line as usual.
+O comando @code{@@printindex} não gera um título de capítulo para o índice, pois manuais diferentes tem necessidades diferentes. Consequentemente, você deveria preceder o comando @code{@@printindex} com um adequado comando de seção ou capítulo (geralmente @code{@@appendix} ou @code{@@unnumbered}) para fornecer o título do capítulo e colocar o índice no tabela de conteúdo.  Preceda o título do capítulo com uma linha @code{@@node} como de costume.
 
-For example:
+Por exemplo:
 
 @smallexample
 @group
-@@node Variable Index
-@@unnumbered Variable Index
+@@node Índice Variável
+@@unnumbered Índice Variável
 
 @@printindex vr
 @end group
 
 @group
-@@node Concept Index
-@@unnumbered Concept Index
+@@node Índice de Conceito
+@@unnumbered Índice de Conceito
 
 @@printindex cp
 @end group
 @end smallexample
 
-If you have more than one index, we recommend placing the concept index last.
+Se você tiver mais que um índice, nós recomendamos colocar o índice de conceito por último.
 
 @itemize
 @item
-In printed output, @code{@@printindex} produces a traditional
-two-column index, with dot leaders between the index terms and page
-numbers.
+Na saída gerada impressa, @code{@@printindex} produz um índice tradicional de duas colunas, com líderes de pontos entre os termos do índice e os números das páginas.
 
 @item
-In Info output, @code{@@printindex} produces a special menu containing
-the line number of the entry, relative to the start of the node.  Info
-readers can use this to go to the exact line of an entry, not just the
-containing node.  (Older Info readers will just go to the node.)
-Here's an example:
+Na saída gerada do Info, @code{@@printindex} produz um menu especial contendo o número da linha da entrada, relativo ao início do nó.  Leitores(as) do Info podem usar isso para ir para a linha exata de uma entrada, não apenas para o nó que a contém.  (Leitores(as) mais antigos(as) do Info irão apenas para o nó). Aqui está um exemplo:
 
 @smallexample
-* First index entry:   Top.   (line  7)
+* Primeira entrada de índice:   Topo.   (linha  7)
 @end smallexample
 
-@noindent The actual number of spaces is variable, to right-justify
-the line number; it's been reduced here to make the line fit in the
-printed manual.
+@noindent O número real de espaços é variável, para justificar à direita o número da linha; foi reduzido aqui para que a linha caiba no manual impresso.
 
 @item
-In plain text output, @code{@@printindex} produces the same menu, but
-the line numbers are relative to the start of the file, since that's
-more convenient for that format.
+Na saída gerada de texto simples, @code{@@printindex} produz o mesmo menu, mas os números das linhas são relativos ao início do arquivo, pois isso é mais conveniente para esse formato.
 
 @item
-In HTML output, @code{@@printindex} produces links to the index
-entries.
+Na saída gerada de HTML, @code{@@printindex} produz links para as entradas do índice.
 
 @item
-In XML and Docbook output, it simply records the index to be printed.
+Na saída gerada XML e Docbook, ele simplesmente registra o índice a ser impresso.
 @end itemize
 
 
 @node Combinando Índices
 @section Combinando Índices
-@cindex Combining indices
-@cindex Índices, combining them
+@cindex Combinando índices
+@cindex Índices, combinando-os
 
-Sometimes you will want to combine two disparate indices such as
-functions and concepts, perhaps because you have few enough entries
-that a separate index would look silly.
+Às vezes você irá querer combinar dois índices, como funções e conceitos, talvez porque tenha poucas entradas suficientes que um índice separado pareceria bobo.
 
-You could put functions into the concept index by writing
-@code{@@cindex} commands for them instead of @code{@@findex} commands,
-and produce a consistent manual by printing the concept index with the
-title `Function and Concept Index' and not printing the `Function
-Index' at all; but this is not a robust procedure.  It works only if
-your document is never included as part of another document that is
-designed to have a separate function index; if your document were to
-be included with such a document, the functions from your document and
-those from the other would not end up together.  Also, to make your
-function names appear in the right font in the concept index, you
-would need to enclose every one of them between the braces of
-@code{@@code}.
+Você poderia colocar funções no índice de conceito escrevendo comandos @code{@@cindex} para elas em vez de comandos @code{@@findex} e produzir um manual consistente imprimindo o índice de conceito com o título `Índice de Função e Conceito' e não imprimir o `Índice de Função'; mas esse não é um procedimento robusto.  Ele funciona somente se o teu documento nunca for incluído como parte de outro documento que seja projetado para ter um índice de função separado; se o teu documento fosse incluído em tal documento, as funções oriundas do teu documento e aquelas oriundas do outro não terminariam juntas.  Além disso, para fazer com que os teus nomes de funções apareçam na fonte correta no índice de conceito, você precisaria colocar cada uma delas entre chaves de @code{@@code}.
 
 @menu
-* @code{@@syncodeindex}::               How to merge two indices, using @code{@@code}
-                                 font for the merged-from index.
-* @code{@@synindex}::                   How to merge two indices, using the
-                                 roman font for the merged-from index.
+* @code{@@syncodeindex}::               Como mesclar dois índices, usando a fonte @code{@@code} para o índice mesclado.
+* @code{@@synindex}::                   Como mesclar dois índices, usando a fonte romana para o índice mesclado.
 @end menu
 
 
 @node @code{@@syncodeindex}
-@subsection @code{@@syncodeindex}: Combining indices using @code{@@code}
+@subsection @code{@@syncodeindex}: Combinando índices usando @code{@@code}
 
-@anchor{syncodeindex}@c old name
+@anchor{syncodeindex}@c antigo nome
 @findex syncodeindex
 
-When you want to combine functions and concepts into one index, you
-should index the functions with @code{@@findex} and index the concepts
-with @code{@@cindex}, and use the @code{@@syncodeindex} command to
-redirect the function index entries into the concept index.
+Quando quiser combinar funções e conceitos em um índice, você deveria indexar as funções com @code{@@findex} e indexar os conceitos com @code{@@cindex} e usar o comando @code{@@syncodeindex} para redirecionar as entradas do índice de função para o índice de conceito.
 
-The @code{@@syncodeindex} command takes two arguments; they are the name
-of the index to redirect, and the name of the index to redirect it to.
-The template looks like this:
+O comando @code{@@syncodeindex} recebe dois argumentos; eles são o nome do índice para redirecionar e o nome do índice para o qual redirecioná-lo. O modelo se parece com isto:
 
 @example
 @@syncodeindex @var{from} @var{to}
 @end example
-
+PAREI
 @cindex Predefined names for indices
 @cindex Two letter names for indices
 @cindex Índices, two letter names
