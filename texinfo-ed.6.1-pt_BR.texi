@@ -45,9 +45,10 @@ Este manual é para GNU Texinfo (versão @value{VERSION},
 informação online e um manual impresso a partir de uma fonte única 
 utilizando marcação semântica.
 
-Copyright @copyright{} 2016, 2017, 2018, 2019, 2020, 2021, 2022 da ``versão modificada'' 
-traduzida para a língua portuguesa falada e escrita no Brasil: Jamenson 
-Ferreira Espindula de Almeida Melo <@email{jafesp@@gmail.com}>.
+Copyright @copyright{} 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 
+2024 da ``versão modificada'' traduzida para a língua portuguesa falada 
+e escrita no Brasil: Jamenson Ferreira Espindula de Almeida Melo 
+<@email{jafesp@@gmail.com}>.
 
 Copyright @copyright{} 1988, 1990, 1991, 1992, 1993, 1995, 1996, 1997, 
 1998, 1999, 2001, 2001, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 
@@ -439,11 +440,11 @@ Notas de rodapé
 Índices
 
 * Entradas de Índice::           Escolha palavras diferentes para entradas de índice.
-* Índices Predefinidos::         Utilize índices diferentes para tipos diferentes de entradas.
+* Índices Predefinidos::         Use índices diferentes para tipos diferentes de entradas.
 * Comandos de Indexação::        Como fazer uma entrada de índice.
-* Imprimindo Índices e Menus::   Como imprimir um índice em cópia impressa e gerar menus de índice em Info.
+* Imprimindo Índices e Menus::   Como imprimir um índice em cópia impressa e gerar menus de índice no Info.
 * Combinando Índices::           Como combinar índices.
-* Novos Índices::                Como definir seus próprios índices.
+* Novos Índices::                Como definir teus próprios índices.
 
 Combinando Índices
 
@@ -589,7 +590,7 @@ arquivos included dentro dele; e um arquivo included de amostra.
 
 Formatando e Imprimindo Cópia Impressa
 
-* Use @TeX{}::                     Utilize @TeX{} para formatar para cópia impressa.
+* Use @TeX{}::                     Use @TeX{} para formatar para cópia impressa.
 * Format with @command{texi2dvi}::        A maneira mais simples para formatar.
 * Format with @command{tex}/@command{texindex}::    Formatando com comandos explícitos de shell.
 * Print with @command{lpr}::              Como imprimir.
@@ -1391,11 +1392,11 @@ Inglês e em outras linguagens; veja-se @ref{Inserindo Aspas}.
 @cindex Hyphens in source, two or three in a row
 @cindex Em dash, producing
 @cindex En dash, producing
-Utilize três hifens em uma linha, @samp{---}, para produzir um traço 
+Use três hifens em uma linha, @samp{---}, para produzir um traço 
 longo---como esse (chamado um @dfn{travessão}), utilizado para pontuação 
-em sentenças.  Utilize dois hifens, @samp{--}, para produzir um traço 
+em sentenças.  Use dois hifens, @samp{--}, para produzir um traço 
 médio (chamado um @dfn{traço médio}), utilizado primariamente para 
-intervalos numéricos, como em ``Junho 25--26''.  Utilize um hífen 
+intervalos numéricos, como em ``Junho 25--26''.  Use um hífen 
 simples, @samp{-}, para produzir um hífen padrão utilizado em palavras 
 compostas.  Para exibir na tela, Info reduz três hifens para dois e dois 
 hifens para um (não transitivamente!).  Certamente, qualquer número de 
@@ -1438,7 +1439,7 @@ completamente portáveis.
 
 @item
 @cindex Tabs; don't use!
-@strong{Aviso:} Por último, não utilize caracteres tab em um arquivo 
+@strong{Aviso:} Por último, não use caracteres tab em um arquivo 
 Texinfo! (Exceto, talvez, em modos textuais.)  @TeX{} utiliza fontes de 
 largura variável, o que significa que é impraticável, na melhor das 
 hipóteses, se definir um tab para funcionar em todas as circunstâncias.  
@@ -2339,7 +2340,7 @@ Você pode utilizar os comandos @code{@@titlefont}, @code{@@sp}, e
 impresso.  (Esse é o primeiro de dois métodos para a criação de uma 
 página de título em Texinfo).
 
-Utilize o comando @code{@@titlefont} para selecionar uma fonte larga 
+Use o comando @code{@@titlefont} para selecionar uma fonte larga 
 adequada para o próprio título.  Você pode utilizar @code{@@titlefont} 
 mais que uma vez se você tiver um título especialmente longo.
 
@@ -2356,7 +2357,7 @@ Por exemplo:
 @@titlefont@{Texinfo@}
 @end example
 
-Utilize o comando @code{@@center} no início de uma linha para 
+Use o comando @code{@@center} no início de uma linha para 
 centralizar o restante do texto naquela linha.  Assim,
 
 @example
@@ -2367,7 +2368,7 @@ centralizar o restante do texto naquela linha.  Assim,
 centraliza o título, o qual neste exemplo é ``Texinfo'' impresso na 
 fonte de título.
 
-Utilize o comando @code{@@sp} para inserir espaço vertical.  Por 
+Use o comando @code{@@sp} para inserir espaço vertical.  Por 
 exemplo:
 
 @example
@@ -2434,7 +2435,7 @@ Para títulos longos, o comando @code{@@*} pode ser utilizado para
 especificar as quebras de linha em títulos longos se as quebras 
 automáticas não servirem.  Tais quebras explícitas de linha geralmente 
 são refletidas em todos os formatos de saída; se você desejar somente 
-especificá-las para a saída impressa, utilize um condicional 
+especificá-las para a saída impressa, use um condicional 
 (veja-se @ref{Condicionais}).  Por exemplo:
 
 @example
@@ -2500,9 +2501,9 @@ entre os comandos @code{@@titlepage} e @code{@@end titlepage}.
 
 @findex vskip @r{@TeX{} vertical skip}
 @cindex filll @r{@TeX{} dimension}
-Utilize o comando @code{@@page} para provocar uma quebra de página.  
+Use o comando @code{@@page} para provocar uma quebra de página.  
 Para empurrar o aviso de direitos autorais e o outro texto na página de 
-direitos autorais em direção ao pé da página, utilize o seguinte 
+direitos autorais em direção ao pé da página, use o seguinte 
 encantamento após @code{@@page}:
 
 @example
@@ -2871,7 +2872,7 @@ Quando da produção de saída HTML para um documento, @command{makeinfo}
 escreve um elemento @samp{<meta>} no @samp{<head>} para dar alguma ideia 
 do conteúdo do documento.  Por padrão, essa @dfn{descrição} é o título 
 do documento, tomado a partir do comando @code{@@settitle} 
-(veja-se @ref{@code{@@settitle}}).  Para mudar isso, utilize o ambiente 
+(veja-se @ref{@code{@@settitle}}).  Para mudar isso, use o ambiente 
 @code{@@documentdescription}, como em:
 
 @example
@@ -2966,7 +2967,7 @@ Recomenda-se não incluir qualquer comando @code{@@setchapternewpage} em
 seu fonte de documento de jeito nenhum, dado que tal paginação desejada 
 não é intrínseca ao documento.  Para uma execução particular de 
 impressão em papel, se você não deseja que a saída padrão (sem páginas 
-em branco, mesmos cabeçalhos em todas as páginas) utilize a opção 
+em branco, mesmos cabeçalhos em todas as páginas) use a opção 
 @option{--texinfo} a @command{texi2dvi} para especificar a saída que 
 você deseja.
 
@@ -3273,7 +3274,7 @@ Cada nodo filho grava o nome de nodo pai como o seu ponteiro `Up'.
 A saída Info e HTML originada de @command{makeinfo} para cada nodo 
 inclui vínculos aos nodos `Next', `Previous', e `Up'.  O HTML também 
 utiliza o atributo @code{accesskey} com os valores @samp{n}, @samp{p}, e
-@samp{u}, respectivamente.  Isso permite a pessoas que utilizem 
+@samp{u}, respectivamente.  Isso permite a pessoas que usem 
 navegadores web a seguir a navegação usando (tipicamente) 
 @kbd{M-@var{letter}}, por exemplo, @kbd{M-n} para o nodo `Next', a 
 partir de qualquer lugar dentro do nodo.
@@ -3375,7 +3376,7 @@ escrever um @@-command para o capítulo ou seção e inserir o nome desse
 capítulo ou seção.
 Próximo (e isto é importante!), coloque várias entradas de índices.  
 Usualmente, você encontrará pelo menos duas e frequentemente por volta 
-de quatro ou cinco maneiras de se referir ao nodo no índice.  Utilize-as 
+de quatro ou cinco maneiras de se referir ao nodo no índice.  Use-as 
 todas.  Isso tornará muito mais fácil para as pessoas encontrar o nodo.
 
 Se você desejar, você pode ignorar as linhas @code{@@node} completamente 
@@ -7862,7 +7863,9 @@ entrada produz uma linha de saída, como @code{@@example} e
 @code{@@display}; para um resumo de todos os ambientes, 
 @pxref{Comandos de Inclusão de Blocos}).
 
-Não coloque chaves após um comando @code{@@indent}; elas não são usadas, dado que @code{@@indent} é um comando usado do lado de fora de parágrafos (@pxref{Sintaxe de Comando}).
+Não coloque chaves após um comando @code{@@indent}; elas não são usadas, 
+dado que @code{@@indent} é um comando usado do lado de fora de 
+parágrafos (@pxref{Sintaxe de Comando}).
 
 
 @node @code{@@cartouche}
@@ -7879,7 +7882,9 @@ Em um manual impresso, o comando @code{@@cartouche} desenha uma caixa
 com cantos arredondados em torno do seu conteúdo. Em HTML, um retângulo 
 normal é desenhado. @code{@@cartouche} não tem efeito em saída Info.
 
-Você pode usar esse comando para realçar ainda mais um exemplo ou citação. Por exemplo, você poderia escrever um manual no qual um tipo de exemplo esteja envolvido por um ``cartouche'' para ênfase.
+Você pode usar esse comando para realçar ainda mais um exemplo ou 
+citação. Por exemplo, você poderia escrever um manual no qual um tipo de 
+exemplo esteja envolvido por um ``cartouche'' para ênfase.
 
 Por exemplo,
 
@@ -8383,7 +8388,7 @@ iniciará um parágrafo novo após a tabela, de forma que a linha em branco
 é necessária para que a saída Info seja análoga.
 
 @need 1500
-Por exemplo, a tabela seguite realça o texto na primeira coluna com o 
+Por exemplo, a tabela seguinte realça o texto na primeira coluna com o 
 comando @code{@@samp}:
 
 @example
@@ -8436,7 +8441,7 @@ Os comandos @code{@@ftable} e @code{@@vtable} são os mesmos que o
 comando @code{@@table}, exceto que @code{@@ftable} automaticamente 
 insere cada um dos itens na primeira coluna da tabela no índice de 
 funções e @code{@@vtable} automaticamente insere cada um dos itens na 
-primeira coluna da tabela no índice de variváveis. Apenas os itens na 
+primeira coluna da tabela no índice de variáveis. Apenas os itens na 
 mesma linha que os comandos @code{@@item} ou @code{@@itemx} são 
 indexados, e são indexados exatamente na forma em que aparecem nessa 
 linha. @xref{Índices}, para mais informação acerca de índices.
@@ -9063,71 +9068,74 @@ deveria ser danoso.
 @cindex Height of images
 @cindex Aspect ratio of images
 @cindex Distorting images
-The optional @var{width} and @var{height} arguments to the
-@code{@@image} command (see the previous section) specify the size to
-which to scale the image.  They are only taken into account in @TeX{}.
-If neither is specified, the image is presented in its natural size
-(given in the file); if only one is specified, the other is scaled
-proportionately; and if both are specified, both are respected, thus
-likely distorting the original image by changing its aspect ratio.
+Os argumentos opcionais @var{width} e @var{height} para o comando 
+@code{@@image} (veja-se a seção anterior) especificam o tamanho para o 
+qual escalonar a imagem. Eles somente são levados em consideração no 
+@TeX{}. Se nenhum for especificado, a imagem será apresentada no tamanho 
+natural dela (fornecido no arquivo); se somente um for especificado, o 
+outro será escalonado proporcionalmente; e se ambos forem especificados, 
+ambos serão respeitados, portanto provavelmente distorcendo a imagem 
+original mudando a taxa de aspecto dela.
 
 @cindex Dimensions and image sizes
-The @var{width} and @var{height} may be specified using any valid @TeX{}
-dimension, namely:
+@var{width} e @var{height} podem ser especificados usando qualquer 
+dimensão @TeX{} válida, a saber:
 
 @table @asis
 @item pt
 @cindex Points (dimension)
-point (72.27pt = 1in)
+ponto (72.27pt = 1in)
 @item pc
 @cindex Picas
 pica (1pc = 12pt)
 @item bp
 @cindex Big points
-big point (72bp = 1in)
+ponto grande (72bp = 1in)
 @item in
 @cindex Inches
-inch
+polegada
 @item cm @c CONSERTE-ME
 @cindex Centimeters
-centimeter (2.54cm = 1in)
+centímetro (2.54cm = 1in)
 @item mm
 @cindex Millimeters
-millimeter (10mm = 1cm)
+milímetro (10mm = 1cm)
 @item dd
 @cindex Did@^ot points
-did@^ot point (1157dd = 1238pt)
+ponto de did@^ot (1157dd = 1238pt)
 @item cc
 @cindex Ciceros
 cicero (1cc = 12dd)
 @item sp
 @cindex Scaled points
-scaled point (65536sp = 1pt)
+ponto escalado (65536sp = 1pt)
 @end table
 
 @pindex ridt.eps
-For example, the following will scale a file @file{ridt.eps} to one
-inch vertically, with the width scaled proportionately:
+Por exemplo, o seguinte dimensionará um arquivo @file{ridt.eps} para uma 
+polegada verticalmente, com a largura dimensionada proporcionalmente:
 
 @example
 @@image@{ridt,,1in@}
 @end example
 
 @pindex epsf.tex
-For @code{@@image} to work with @TeX{}, the file @file{epsf.tex} must be
-installed somewhere that @TeX{} can find it.  (The standard location is
-@file{@var{texmf}/tex/generic/dvips/epsf.tex}, where @var{texmf} is a
-root of your @TeX{} directory tree.)  This file is included in the
-Texinfo distribution and is also available from
-@uref{ftp://tug.org/tex/epsf.tex}, among other places.
+Para que o @code{@@image} funcione com o @TeX{}, o arquivo 
+@file{epsf.tex} deve ser instalado em algum lugar onde o @TeX{} possa 
+encontrá-lo. (O local padrão é 
+@file{@var{texmf}/tex/generic/dvips/epsf.tex}, onde @var{texmf} é a raiz 
+da árvore de diretórios do teu @TeX{}). Esse arquivo está incluído na 
+distribuição Texinfo e também está disponível a partir de 
+@uref{ftp://tug.org/tex/epsf.tex}, entre outros lugares.
 
-@code{@@image} can be used within a line as well as for displayed
-figures.  Therefore, if you intend it to be displayed, be sure to leave
-a blank line before the command, or the output will run into the
-preceding text.
+@code{@@image} pode ser usado dentro de uma linha e também para figuras 
+exibidas. Portanto, se você pretende que ele seja exibido, assegure-se 
+de deixar uma linha em branco antes do comando, ou a saída gerada será 
+executada no texto anterior.
 
-Image scaling is presently implemented only in @TeX{}, not in HTML or
-any other sort of output.
+
+Atualmente, o dimensionamento de imagem está implementado somente no 
+@TeX{}, não em HTML ou qualquer outro tipo de saída gerada.
 
 
 @node Notas de Rodapé
@@ -9135,305 +9143,316 @@ any other sort of output.
 @cindex Notas de Rodapé
 @findex footnote
 
-A @dfn{footnote} is for a reference that documents or elucidates the
-primary text.@footnote{A footnote should complement or expand upon the
-primary text, but a reader should not need to read a footnote to
-understand the primary text.  For a thorough discussion of footnotes,
-see @cite{The Chicago Manual of Style}, which is published by the
-University of Chicago Press.}
+Uma @dfn{nota de rodapé} serve para uma referência que documenta ou 
+elucida o texto principal. @footnote{Uma nota de rodapé deveria 
+complementar ou expandir o texto principal, mas o(a) leitor(a) não 
+deveria precisar ler uma nota de rodapé para entender o texto principal. 
+Para uma discussão completa das notas de rodapé, veja-se
+@cite{The Chicago Manual of Style},
+publicado pela University of Chicago Press}.
 
-Footnotes are distracting; use them sparingly at most, and it is best
-to avoid them completely.  Standard bibliographical references are
-usually better placed in a bibliography at the end of a document
-instead of in footnotes throughout.
+As notas de rodapé distraem; use-as com moderação, no máximo, e é melhor 
+evitá-las completamente.  As referências bibliográficas padrão 
+geralmente são melhor colocadas em uma bibliografia, ao final de um 
+documento, em vez de nas notas de rodapé.
 
 @menu
-* Comandos de Notas de Rodapé::           How to write a footnote in Texinfo.
-* Estilos de Notas de Rodapé::             Controlling how footnotes appear in Info.
+* Comandos de Notas de Rodapé::           Como escrever uma nota de rodapé no Texinfo.
+* Estilos de Notas de Rodapé::             Controlando como notas de rodapé aparecem no Info.
 @end menu
 
 
 @node Comandos de Notas de Rodapé
 @subsection Comandos de Notas de Rodapé
 
-In Texinfo, footnotes are created with the @code{@@footnote} command.
-This command is followed immediately by a left brace, then by the text
-of the footnote, and then by a terminating right brace.  Footnotes may
-be of any length (they will be broken across pages if necessary), but
-are usually short.  The template is:
+No Texinfo, as notas de rodapé são criadas com o comando 
+@code{@@footnote}. Esse comando é seguido imediatamente por uma chave 
+esquerda, depois pelo texto da nota de rodapé e por uma chave direita 
+finalizante.  As notas de rodapé podem ter qualquer comprimento (elas 
+serão divididas entre páginas, se necessário), mas geralmente são 
+curtas. O modelo é:
 
 @example
-ordinary text@@footnote@{@var{text of footnote}@}
+texto principal@@footnote@{@var{texto da nota de rodapé}@}
 @end example
 
-As shown here, the @code{@@footnote} command should come right after the
-text being footnoted, with no intervening space; otherwise, the footnote
-marker might end up starting a line.
+Conforme mostrado aqui, o comando @code{@@footnote} deveria vir logo 
+após o texto sendo anotado, sem espaço intermediário; caso contrário, o 
+marcador de nota de rodapé poderá acabar iniciando uma linha.
 
-For example, this clause is followed by a sample footnote@footnote{Here
-is the sample footnote.}; in the Texinfo source, it looks like
-this:
+Por exemplo, esta cláusula é seguida por uma amostra de nota de 
+rodapé@footnote{Aqui está a amostra de nota de rodapé.}; no fonte do 
+Texinfo, se parece com isto:
 
 @example
-@dots{}a sample footnote@@footnote@{Here is the sample
-footnote.@}; in the Texinfo source@dots{}
+@dots{}uma amostra de nota de rodapé@@footnote@{Aqui está a amostra de nota de rodapé.@}; no fonte do Texinfo@dots{}
 @end example
 
-As you can see, this source includes two punctuation marks next to
-each other; in this case, @samp{.@};} is the sequence.  This is normal
-(the first ends the footnote and the second belongs to the sentence
-being footnoted), so don't worry that it looks odd.  (Another style,
-perfectly acceptable, is to put the footnote after punctuation
-belonging to the sentence, as in @samp{;@@footnote@{...}.)
+Como você pode ver, esse fonte inclui dois sinais de pontuação próximos 
+um do outro; nesse caso, @samp{.@};} é a sequência. Isso é normal (o 
+primeiro termina a nota de rodapé e o segundo pertence à frase sendo 
+anotada), de forma que não se preocupe, pois pode parecer estranho. 
+(Outro estilo, perfeitamente aceitável, é colocar a nota de rodapé 
+depois da pontuação pertencente à frase, como em 
+@samp{;@@footnote@{...}).
 
-In a printed manual or book, the reference mark for a footnote is a
-small, superscripted number; the text of the footnote appears at the
-bottom of the page, below a horizontal line.
+Em um manual ou livro impresso, a marca de referência para uma nota de 
+rodapé é um número pequeno e sobrescrito; o texto da nota de rodapé 
+aparece na parte inferior da página, abaixo de uma linha horizontal.
 
-In Info, the reference mark for a footnote is a pair of parentheses
-with the footnote number between them, like this: @samp{(1)}.  The
-reference mark is followed by a cross-reference link to the footnote
-text if footnotes are put in separate Nodos (@pxref{Estilos de Notas de Rodapé}).
+No Info, a marca de referência para uma nota de rodapé é um par de 
+parênteses com o número da nota de rodapé entre eles, assim: @samp{(1)}.  
+A marca de referência é seguida por um link de referência cruzada para o 
+texto da nota de rodapé se as notas de rodapé forem colocadas em Nodos 
+separados (@pxref{Estilos de Notas de Rodapé}).
 
-In the HTML output, footnote references are generally marked with a
-small, superscripted number which is rendered as a hypertext link to
-the footnote text.
+Na saída gerada HTML, as referências às notas de rodapé geralmente são 
+marcadas com um número pequeno e sobrescrito que é renderizado como um 
+link de hipertexto para o texto da nota de rodapé.
 
 @cindex Critical editions
 @cindex Nested footnotes
-Footnotes cannot be nested, and cannot appear in section headings of
-any kind or other ``unusual'' places.
+As notas de rodapé não podem ser aninhadas e não podem aparecer em 
+títulos de seção de qualquer tipo ou em outros locais ``incomuns''.
 
-A final tip: footnotes in the argument of an @code{@@item} command for
-an @code{@@table} must be entirely on the same line as the
-@code{@@item} (as usual).  @xref{Tabelas de Duas Colunas}.
+Uma dica final: as notas de rodapé no argumento de um comando 
+@code{@@item} para um @code{@@table} devem estar inteiramente na mesma 
+linha que o @code{@@item} (como de costume).  @xref{Tabelas de Duas Colunas}.
 
 
 @node Estilos de Notas de Rodapé
 @subsection Estilos de Notas de Rodapé
 
-Info has two footnote styles, which determine where the text of the
-footnote is located:
+O Info tem dois estilos de nota de rodapé, que determinam onde o texto 
+da nota de rodapé está localizado:
 
 @itemize @bullet
 @cindex @samp{@r{End}} node footnote style
 @item
-In the `End' node style, all the footnotes for a single node are
-placed at the end of that node.  The footnotes are separated from the
-rest of the node by a line of dashes with the word @samp{Footnotes}
-within it.  Each footnote begins with an @samp{(@var{n})} reference
-mark.
+No estilo de nó `Fim', todas as notas de rodapé de um nó são colocadas 
+no final desse nó. As notas de rodapé são separadas do resto do nó por 
+uma linha de traços com a palavra @samp{Notas de rodapé} dentro dela.  
+Cada nota de rodapé começa com uma marca de referência @samp{(@var{n})}.
 
 @need 700
 @noindent
-Here is an example of the Info output for a single footnote in the
-end-of-node style:
+Aqui está um exemplo da saída gerada do Info para uma nota de rodapé no 
+estilo de fim de nó:
 
 @example
 @group
---------- Footnotes ---------
+--------- Notas de rodapé ---------
 
-(1)  Here is a sample footnote.
+(1)  Aqui está uma amostra de nota de rodapé.
 @end group
 @end example
 
 @cindex @samp{@r{Separate}} footnote style
 @item
-In the `Separate' node style, all the footnotes for a single
-node are placed in an automatically constructed node of
-their own.  In this style, a ``footnote reference'' follows
-each @samp{(@var{n})} reference mark in the body of the
-node.  The footnote reference is actually a cross-reference
-which you use to reach the footnote node.
+No estilo de nó `Separado', todas as notas de rodapé para um nó são 
+colocadas em um nó próprio construído automaticamente.  Nesse estilo, 
+uma ``referência de nota de rodapé'' segue cada marca de referência 
+@samp{(@var{n})} no corpo do nó.  A referência da nota de rodapé é na 
+verdade uma referência cruzada que você usa para chegar ao nó da nota de 
+rodapé.
 
-The name of the node with the footnotes is constructed
-by appending @w{@samp{-Footnotes}} to the name of the node
-that contains the footnotes. (Consequently, the footnotes'
-node for the @file{Footnotes} node is
-@w{@file{Footnotes-Footnotes}}!)  The footnotes' node has an
-`Up' node pointer that leads back to its parent node.
+O nome do nó com as notas de rodapé é construído anexando-se 
+@w{@samp{-Footnotes}} ao nome do nó que contém as notas de rodapé. 
+(Consequentemente, o nó das notas de rodapé para o nó @file{Footnotes} é 
+@w{@file{Footnotes-Footnotes}})! O nó das notas de rodapé tem um 
+ponteiro de nó `Up' que leva de volta ao nó ancestral dele.
 
 @noindent
-Here is how the first footnote in this manual looks after being
-formatted for Info in the separate node style:
+Aqui está como a primeira nota de rodapé neste manual aparenta depois de 
+ser formatada para o Info no estilo de nó separado:
 
 @smallexample
 @group
-File: texinfo.info  Node: Visão Geral-Footnotes, Up: Visão Geral
+Arquivo: texinfo.info  Nó: Visão Geral-Footnotes, Acima: Visão Geral
 
-(1) The first syllable of "Texinfo" is pronounced like "speck", not
+(1) A primeira sílaba de "Texinfo" é pronunciada como "speck", não
 "hex". @dots{}
 @end group
 @end smallexample
 @end itemize
 
-Unless your document has long and important footnotes (as in, say,
-Gibbon's @cite{Decline and Fall @dots{}}), we recommend the @samp{end}
-style, as it is simpler for readers to follow.
+A menos que teu documento tenha notas de rodapé longas e importantes 
+(como em, por diga-se, @cite{Decline and Fall @dots{}} de Gibbon), nós 
+recomendamos o estilo @samp{end}, pois ele é mais simples para 
+leitores(as) seguirem.
 
 @findex footnotestyle
-Use the @code{@@footnotestyle} command to specify an Info file's
-footnote style.  Write this command at the beginning of a line followed
-by an argument, either @samp{end} for the end node style or
-@samp{separate} for the separate node style.
+Use o comando @code{@@footnotestyle} para especificar um estilo de nota 
+de rodapé de um arquivo do Info.  Escreva esse comando no início de uma 
+linha seguido por um argumento, seja @samp{end} para o estilo de nó 
+final ou @samp{separate} para o estilo do nó separado.
 
 @need 700
-For example,
+Por exemplo,
 
 @example
 @@footnotestyle end
 @end example
 @noindent
-or
+ou
 @example
 @@footnotestyle separate
 @end example
 
-Write a @code{@@footnotestyle} command before or shortly after the
-end-of-header line at the beginning of a Texinfo file.  (You should
-include any @code{@@footnotestyle} command between the start-of-header
-and end-of-header lines, so the region formatting commands will format
-footnotes as specified.)
+Escreva um comando @code{@@footnotestyle} antes ou logo depois da linha 
+de fim de cabeçalho no início de um arquivo Texinfo.  (Você deveria 
+incluir qualquer comando @code{@@footnotestyle} entre as linhas de 
+início de cabeçalho e fim de cabeçalho, de forma que os comandos de 
+formatação de região formatem as notas de rodapé conforme especificado).
 
-In HTML, when the footnote style is @samp{end}, or if the output is
-not split, footnotes are put at the end of the output.  If set to
-@samp{separate}, and the output is split, they are placed in a
-separate file.
+Em HTML, quando o estilo da nota de rodapé for @samp{end}, ou se a saída 
+gerada não for dividida, as notas de rodapé são colocadas no final da 
+saída gerada. Se configurado como @samp{separate} e a saída gerada for 
+dividida, elas serão colocadas em um arquivo separado.
 
 
 @node Índices
 @chapter Índices
 @cindex Índices
 
-Using Texinfo, you can generate indices without having to sort and
-collate entries manually.  In an index, the entries are listed in
-alphabetical order, together with information on how to find the
-discussion of each entry.  In a printed manual, this information
-consists of page numbers.  In an Info file, this information is a menu
-entry leading to the first node referenced.
+Usando o Texinfo, você consegue gerar índices sem ter que ordenar e 
+agrupar as entradas manualmente.  Em um índice, as entradas são listadas 
+em ordem alfabética, juntamente com informações acerca de como encontrar 
+a discussão de cada entrada.  Em um manual impresso, essas informações 
+consistem de números de páginas.  Em um arquivo Info, essa informação é 
+uma entrada de menu que leva para o primeiro nó referenciado.
 
-Texinfo provides several predefined kinds of index: an index for
-functions, an index for variables, an index for concepts, and so on.
-You can combine indices or use them for other than their canonical
-purpose.  Lastly, you can define your own new indices.
+O Texinfo fornece vários tipos predefinidos de índice: um índice para 
+funções, um índice para variáveis, um índice para conceitos e assim por 
+diante. Você pode combinar índices ou usá-los para outros fins que não 
+os canônicos. Por último, você consegue definir teus próprios novos 
+índices.
+
 
 @menu
 * Entradas de Índice::           Escolha palavras diferentes para entradas de índice.
-* Índices Predefinidos::         Utilize índices diferentes para tipos diferentes de entradas.
+* Índices Predefinidos::         Use índices diferentes para tipos diferentes de entradas.
 * Comandos de Indexação::        Como fazer uma entrada de índice.
-* Imprimindo Índices e Menus::   Como imprimir um índice em cópia impressa e gerar menus de índice em Info.
+* Imprimindo Índices e Menus::   Como imprimir um índice em cópia impressa e gerar menus de índice no Info.
 * Combinando Índices::           Como combinar índices.
-* Novos Índices::                Como definir seus próprios índices.
+* Novos Índices::                Como definir teus próprios índices.
 @end menu
 
 
 @node Índices Predefinidos
 @section Índices Predefinidos
 
-Texinfo provides six predefined indices.  Here are their nominal
-meanings, abbreviations, and the corresponding index entry commands:
+Texinfo fornece seis índices predefinidos.  Aqui estão os significados 
+nominais deles, abreviações e os correspondentes comandos de entrada de 
+índice:
 
 @table @samp
 @item cp
 @cindex @code{cp} (concept) index
 @findex cindex
-(@code{@@cindex}) concept index, for general concepts.
+(@code{@@cindex}) índice de conceito, para conceitos gerais.
 @item fn
 @cindex @code{fn} (function) index
 @findex findex
-(@code{@@findex}) function index, for function and function-like
-names (such as entry points of libraries).
+(@code{@@findex}) índice de função, para nomes de funções e semelhantes 
+a funções (como pontos de entrada de bibliotecas).
 @item ky
 @cindex @code{ky} (keystroke) index
 @findex kindex
-(@code{@@kindex}) keystroke index, for keyboard commands.
+(@code{@@kindex}) índice de pressionamento de tecla, para comandos de 
+teclado.
 @item pg
 @cindex @code{pg} (program) index
 @findex pindex
-(@code{@@pindex}) program index, for names of programs.
+(@code{@@pindex}) índice de programas, para nomes de programas.
 @item tp
 @cindex @code{tp} (data type) index
 @findex tindex
-(@code{@@tindex}) data type index, for type names (such as structures
-defined in header files).
+(@code{@@tindex}) índice de tipo de dados, para nomes de tipos (como 
+estruturas definidas em arquivos de cabeçalho).
 @item vr
 @cindex @code{vr} (variable) index
 @findex vindex
-(@code{@@vindex}) variable index, for variable names (such as global
-variables of libraries).
+(@code{@@vindex}) índice de variáveis, para nomes de variáveis ​​(como 
+variáveis ​​globais de bibliotecas).
 @end table
 
 @noindent
-Not every manual needs all of these, and most manuals use only two or
-three at most.  The present manual, for example, has two indices: a
-concept index and an @@-command index (that is actually the function
-index but is called a command index in the chapter heading).
+Nem todo manual precisa de tudo isso, e a maioria dos manuais usa 
+somente dois ou três, no máximo.  O presente manual, por exemplo, tem 
+dois índices: um índice de conceito e um índice de comando @@ (que na 
+verdade é o índice de função, mas é chamado de índice de comando no 
+cabeçalho de capítulo).
 
-You are not required to use the predefined indices strictly for their
-canonical purposes.  For example, suppose you wish to index some C
-preprocessor macros.  You could put them in the function index along
-with actual functions, just by writing @code{@@findex} commands for
-them; then, when you print the ``Function Index'' as an unnumbered
-chapter, you could give it the title `Function and Macro Index' and
-all will be consistent for the reader.
+Você não é obrigado(a) a usar os índices predefinidos estritamente para 
+os fins canônicos deles.  Por exemplo, suponha que você deseje indexar 
+algumas macros do pré-processador C.  Você poderia colocá-las no índice 
+de função junto com as funções reais, apenas escrevendo comandos 
+@code{@@findex} para elas; então, quando você imprimir o ``Índice de 
+Função'' como um capítulo não numerado, você poderia dar a ele o título 
+de `Índice de Função e Macro' e tudo seria consistente para o(a) 
+leitor(a).
 
-On the other hand, it is best not to stray too far from the meaning of
-the predefined indices.  Otherwise, in the event that your text is
-combined with other text from other manuals, the index entries will
-not match up.  Instead, define your own new index 
+Por outro lado, é melhor não se afastar muito do significado dos índices 
+predefinidos.  Do contrário, caso o teu texto seja combinado com outro 
+texto proveniente de outros manuais, as entradas de índice não 
+corresponderão.  Em vez disso, defina teu próprio novo índice 
 (@pxref{Novos Índices}).
 
-We recommend having a single index in the final document whenever
-possible, however many source indices you use, since then readers have
-only one place to look.  Two or more source indices can be combined
-into one output index using the @code{@@synindex} or
-@code{@@syncodeindex} commands (@pxref{Combinando Índices}).
+Nós recomendamos ter um índice no documento final sempre que possível, 
+independentemente de quantos índices de fonte você usar, pois assim 
+os(as) leitores(as) terão somente um lugar para procurar.  Dois ou mais 
+índices de fonte podem ser combinados em um índice de saída gerada, 
+usando-se os comandos @code{@@synindex} ou @code{@@syncodeindex} 
+(@pxref{Combinando Índices}).
 
 
 @node Comandos de Indexação
-@section Defining the Entries of an Index
+@section Definindo as Entradas de um Índice
 
-@cindex Defining indexing entries
-@cindex Index entries
-@cindex Entries for an index
-@cindex Specifying index entries
-@cindex Creating index entries
+@cindex Definindo entradas de indexação
+@cindex Index entries, definindo
+@cindex Entradas para um índice
+@cindex Especificando entradas de índice
+@cindex Criando entradas de índice
 
-The data to make an index come from many individual indexing commands
-scattered throughout the Texinfo source file.  Each command says to add
-one entry to a particular index; after formatting, the index will give
-the current page number or node name as the reference.
+Os dados para criar um índice vem de muitos comandos individuais de 
+indexação espalhados pelo arquivo fonte do Texinfo.  Cada comando diz 
+para adicionar uma entrada para um índice específico; depois da 
+formatação, o índice fornecerá o número da página atual ou o nome do nó 
+como a referência.
 
-An index entry consists of an indexing command at the beginning of a
-line followed, on the rest of the line, by the entry.
+Uma entrada de índice consiste de um comando de indexação no início de 
+uma linha seguido, no restante da linha, pela entrada.
 
-For example, this section begins with the following five entries for
-the concept index:
-
-@example
-@@cindex Defining indexing entries
-@@cindex Index entries, defining
-@@cindex Entries for an index
-@@cindex Specifying index entries
-@@cindex Creating index entries
-@end example
-
-Each predefined index has its own indexing command---@code{@@cindex}
-for the concept index, @code{@@findex} for the function index, and so
-on, as listed in the previous section.
-
-Index entries should precede the visible material that is being
-indexed.  For instance:
+Por exemplo, esta seção começa com as seguintes cinco entradas para o 
+índice de conceito:
 
 @example
-@@cindex hello
-Hello, there!
+@@cindex Definindo entradas de indexação
+@@cindex Entradas de índice, definindo
+@@cindex Entradas para um índice
+@@cindex Especificando entradas de índice
+@@cindex Criando entradas de índice
 @end example
 
-@noindent Among other reasons, that way following indexing links (in
-whatever context) ends up before the material, where readers want to
-be, instead of after.
+Cada índice predefinido tem o próprio comando dele de 
+indexação---@code{@@cindex} para o índice de conceito, @code{@@findex} 
+para o índice de função e assim por diante, conforme listado na seção 
+anterior.
 
+As entradas do índice deveriam preceder o material visível que está 
+sendo indexado.  Por exemplo:
+
+@example
+@@cindex alô
+Alô, você!
+@end example
+
+@noindent Entre outros motivos, dessa forma, seguir os links de 
+indexação (em qualquer contexto) acaba antes do material, onde os(as) 
+leitores(as) querem estar, e não depois.
+PAREI
 @cindex Index font types
 By default, entries for a concept index are printed in a small roman
 font and entries for the other indices are printed in a small
@@ -20111,7 +20130,7 @@ contents.  In Info, the title is underlined with asterisks.
 
 @item @@cindex @var{entry}
 Add @var{entry} to the index of concepts.  @xref{Entradas de Índice, ,
-Defining the Entries of an Index}.
+Definindo as Entradas de um Índice}.
 
 @item @@cite@{@var{reference}@}
 Highlight the name of a book or other reference that has no companion
@@ -20443,7 +20462,7 @@ over-wide lines.  @xref{Overfull hboxes}.
 
 @item @@findex @var{entry}
 Add @var{entry} to the index of functions.  @xref{Entradas de Índice, ,
-Defining the Entries of an Index}.
+Definindo as Entradas de um Índice}.
 
 @item @@firstparagraphindent @var{word}
 Control indentation of the first paragraph after section headers
@@ -20677,7 +20696,7 @@ Indicate the name of a key on a keyboard.  @xref{@code{@@key}}.
 
 @item @@kindex @var{entry}
 Add @var{entry} to the index of keys.
-@xref{Entradas de Índice, , Defining the Entries of an Index}.
+@xref{Entradas de Índice, , Definindo as Entradas de um Índice}.
 
 @item @@L@{@}
 @itemx @@l@{@}
@@ -21081,7 +21100,7 @@ Generate a tie-after accent over the next two characters @var{cc}, as in
 
 @item @@tindex @var{entry}
 Add @var{entry} to the index of data types.  @xref{Entradas de Índice, ,
-Defining the Entries of an Index}.
+Definindo as Entradas de um Índice}.
 
 @item @@title @var{title}
 In a printed manual, set a title flush to the left-hand side of the
@@ -21190,7 +21209,7 @@ fixed-width font).  @xref{@code{@@verbatiminclude}}.
 
 @item @@vindex @var{entry}
 Add @var{entry} to the index of variables.  @xref{Entradas de Índice, ,
-Defining the Entries of an Index}.
+Definindo as Entradas de um Índice}.
 
 @item @@vskip @var{amount}
 In a printed manual, insert whitespace so as to push text on the
