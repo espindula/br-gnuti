@@ -9584,43 +9584,37 @@ O comando @code{@@syncodeindex} recebe dois argumentos; eles são o nome do índ
 @example
 @@syncodeindex @var{from} @var{to}
 @end example
-PAREI
-@cindex Predefined names for indices
-@cindex Two letter names for indices
-@cindex Índices, two letter names
-@cindex Names for indices
-For this purpose, the indices are given two-letter names:
+@cindex Nomes predefinidos para índices
+@cindex Nomes de duas letras para índices
+@cindex Índices, nomes de duas letras
+@cindex Nomes para índices
+Para esse propósito, para os índices são dados nomes de duas letras:
 
 @table @samp
 @item cp
-concept index
+índice de conceito
 @item fn
-function index
+índice de função
 @item vr
-variable index
+índice de variável
 @item ky
-key index
+índice de tecla
 @item pg
-program index
+índice de programa
 @item tp
-data type index
+índice de tipo de dados
 @end table
 
-Write a @code{@@syncodeindex} command before or shortly after the
-end-of-header line at the beginning of a Texinfo file.  For example,
-to merge a function index with a concept index, write the
-following:
+Escreva um comando @code{@@syncodeindex} antes ou logo depois da linha de fim do cabeçalho no início de um arquivo Texinfo. Por exemplo, para mesclar um índice de função com um índice de conceito, escreva o seguinte:
 
 @example
 @@syncodeindex fn cp
 @end example
 
 @noindent
-This will cause all entries designated for the function index to merge
-in with the concept index instead.
+Isso fará com que todas as entradas designadas para o índice de função sejam mescladas com o índice de conceito.
 
-To merge both a variables index and a function index into a concept
-index, write the following:
+Para mesclar ambos, um índice de variáveis ​​e um índice de função, em um índice de conceito, escreva o seguinte:
 
 @example
 @group
@@ -9629,136 +9623,101 @@ index, write the following:
 @end group
 @end example
 
-@cindex Fontes for indices
-The @code{@@syncodeindex} command puts all the entries from the `from'
-index (the redirected index) into the @code{@@code} font, overriding
-whatever default font is used by the index to which the entries are
-now directed.  This way, if you direct function names from a function
-index into a concept index, all the function names are printed in the
-@code{@@code} font as you would expect.
+@cindex Fontes para índices
+O comando @code{@@syncodeindex} coloca todas as entradas oriundas do índice `from' (o índice redirecionado) na fonte @code{@@code}, substituindo qualquer fonte padrão que seja usada pelo índice para o qual as entradas são agora direcionadas. Dessa forma, se você direcionar nomes de funções oriundas de um índice de função para um índice de conceito, todos os nomes de funções serão impressos na fonte @code{@@code} como você esperaria.
 
 
 @node @code{@@synindex}
-@subsection @code{@@synindex}: Combining indices
+@subsection @code{@@synindex}: Combinando índices
 
-@anchor{synindex}@c old name
+@anchor{synindex}@c nome antigo
 @findex synindex
 
-The @code{@@synindex} command is nearly the same as the
-@code{@@syncodeindex} command, except that it does not put the `from'
-index entries into the @code{@@code} font; rather it puts them in the
-roman font.  Thus, you use @code{@@synindex} when you merge a concept
-index into a function index.
+O comando @code{@@synindex} é quase o mesmo que o comando @code{@@syncodeindex}, exceto que não coloca as entradas do índice `from' na fonte @code{@@code}; em vez disso, coloca-os na fonte romana. Assim, você usa @code{@@synindex} ao mesclar um índice de conceito em um índice de função.
 
-@xref{Imprimindo Índices e Menus}, for information about printing an index
-at the end of a book or creating an index menu in an Info file.
+@xref{Imprimindo Índices e Menus}, para informações acerca de imprimir um índice no final de um livro ou criar um menu de índice em um arquivo Info.
 
 
 @node Novos Índices
-@section Defining Novos Índices
+@section Definindo Novos Índices
 
-@cindex Defining new indices
-@cindex Índices, defining new
-@cindex New index defining
+@cindex Definindo novos índices
+@cindex Índices, definindo novos
+@cindex Novos índices, definindo
 @findex defindex
 @findex defcodeindex
 
-In addition to the predefined indices (@pxref{Índices Predefinidos}),
-you may use the @code{@@defindex} and @code{@@defcodeindex} commands
-to define new indices.  These commands create new indexing @@-commands
-with which you mark index entries.  The @code{@@defindex} command is
-used like this:
+Além dos índices predefinidos (@pxref{Índices Predefinidos}), você pode usar os comandos @code{@@defindex} e @code{@@defcodeindex} para definir novos índices. Esses comandos criam novos comandos @@ de indexação com os quais você marca entradas de índice. O comando @code{@@defindex} é usado assim:
 
 @example
 @@defindex @var{name}
 @end example
 
-New index names are usually two-letter words, such as @samp{au}.
-For example:
+Novos nomes de índice geralmente são palavras de duas letras, como @samp{au}.
+Por exemplo:
 
 @example
 @@defindex au
 @end example
 
-This defines a new index, called the @samp{au} index.  At the same
-time, it creates a new indexing command, @code{@@auindex}, that you
-can use to make index entries.  Use this new indexing command just as
-you would use a predefined indexing command.
+Isso define um novo índice, chamado o índice @samp{au}. Ao mesmo tempo, ele cria um novo comando de indexação, @code{@@auindex}, que você pode usar para criar entradas de índice. Use esse novo comando de indexação da mesma forma que usaria um comando de indexação predefinido.
 
-For example, here is a section heading followed by a concept index
-entry and two @samp{au} index entries.
+Por exemplo, aqui está um título de seção seguido por uma entrada de índice de conceito e duas entradas de índice @samp{au}.
 
 @example
-@@section Cognitive Semantics
-@@cindex kinesthetic image schemas
+@@section Semântica Cognitiva
+@@cindex esquemas de imagem cinestésica
 @@auindex Johnson, Mark
 @@auindex Lakoff, George
 @end example
 
 @noindent
-(Evidently, @samp{au} serves here as an abbreviation for ``author''.)
+(Evidentemente, @samp{au} aqui serve como uma abreviação para ``autor''.)
 
-Texinfo constructs the new indexing command by concatenating the name
-of the index with @samp{index}; thus, defining an @samp{xy} index
-leads to the automatic creation of an @code{@@xyindex} command.
+Texinfo constrói o novo comando de indexação concatenando o nome do índice com @samp{index}; portanto, definir um índice @samp{xy} leva à criação automática de um comando @code{@@xyindex}.
 
-Use the @code{@@printindex} command to print the index, as you do with
-the predefined indices.  For example:
+Use o comando @code{@@printindex} para imprimir o índice, como você faz com índices predefinidos. Por exemplo:
 
 @example
 @group
-@@node Author Index
-@@unnumbered Author Index
+@@node Índice de Autor
+@@unnumbered Índice de Autor
 
 @@printindex au
 @end group
 @end example
 
-The @code{@@defcodeindex} is like the @code{@@defindex} command,
-except that, in the printed output, it prints entries in an
-@code{@@code} font by default instead of a roman font.
+O @code{@@defcodeindex} é como o comando @code{@@defindex}, exceto que, na saída impressa, ele imprime entradas em uma fonte @code{@@code} por padrão, em vez de uma fonte romana.
 
-You should define new indices before the end-of-header line of a
-Texinfo file, and (of course) before any @code{@@synindex} or
-@code{@@syncodeindex} commands (@pxref{Cabeçalho do Arquivo do Texinfo}).
+Você deveria definir novos índices antes da linha de fim de cabeçalho de um arquivo Texinfo e (é claro) antes de quaisquer comandos @code{@@synindex} ou @code{@@syncodeindex} (@pxref{Cabeçalho do Arquivo do Texinfo}).
 
-As mentioned earlier (@pxref{Índices Predefinidos}), we recommend having
-a single index in the final document whenever possible, however many
-source indices you use, since then readers have only one place to
-look.
+Conforme mencionado anteriormente (@pxref{Índices Predefinidos}), nós recomendamos ter um índice unitário no documento final sempre que possível, independentemente de quantos índices de fonte você usar, pois assim leitores(as) terão somente um lugar para procurar.
 
-When creating an index, @TeX{} creates a file whose extension is the
-name of the index (@pxref{Names of index files}).  Therefore you
-should avoid using index names that collide with extensions used for
-other purposes, such as @samp{.aux} or @samp{.xml}.
-@command{makeinfo} already reports an error if a new index conflicts
-well-known extension name.
+Ao criar um índice, @TeX{} cria um arquivo cuja extensão é o nome do índice (@pxref{Nomes dos arquivos de índice}). Portanto, você deveria evitar usar nomes de índices que colidam com extensões usadas para outros propósitos, tais como @samp{.aux} ou @samp{.xml}. @command{makeinfo} já informa um erro se um novo índice conflitar com um nome de extensão bem conhecido.
 
 
 @node Inserções
 @chapter Inserções Especiais
-@cindex Inserting special characters and symbols
-@cindex Special insertions
+@cindex Inserindo caracteres especiais e símbolos
+@cindex Inserções especiais
 
-Texinfo provides several commands for inserting characters that have
-special meaning in Texinfo, such as braces, and for other graphic
-elements that do not correspond to simple characters you can type.
+Texinfo fornece vários comandos para inserir caracteres que tenham significado especial no Texinfo, tais como colchetes, e para outros elementos gráficos que não correspondem a caracteres simples que você pode digitar.
 
 @iftex
-These are:
+Esses são:
 
 @itemize @bullet
-@item The Texinfo special characters: @samp{@@ @{@} , \ #}.
-@item Whitespace within and around a sentence.
-@item Accents.
-@item Dots and bullets.
-@item The @TeX{} logo and the copyright symbol.
-@item The euro and pounds currency symbols.
-@item The degrees symbol.
-@item The minus sign.
-@item Mathematical expressions.
-@item Glyphs for examples of programming: evaluation, macros, errors, etc.
-@item Footnotes.
+@item Os caracteres especiais do Texinfo: @samp{@@ @{@} , \ #}.
+@item Espaço em branco dentro e ao redor de uma frase.
+@item Acentos.
+@item Pontos e balas.
+@item O logotipo @TeX{} e o símbolo de direitos autorais.
+@item Os símbolos de moeda euro e libras.
+@item O símbolo de graus.
+@item O sinal de menos.
+@item Expressões matemáticas.
+@item Glifos para exemplos de programação: avaliação, macros, erros, etc.
+@item Notas de rodapé.
 @end itemize
 @end iftex
 
@@ -9777,19 +9736,15 @@ These are:
 
 
 @node Caracteres Especiais
-@section Special Characters: Inserting @@ @{@} , \ #
-@anchor{Braces Atsign}@c previous names for this node
+@section Caracteres Especiais: Inserindo @@ @{@} , \ #
+@anchor{Braces Atsign}@c nomes anteriores para este nó
 @anchor{Atsign Braces Comma}
-@cindex Special characters, inserting
-@cindex Commands to insert special characters
+@cindex Caracteres especiais, inserindo
+@cindex Comandos para inserir caracteres especiais
 
-@samp{@@} and curly braces are the basic special characters in
-Texinfo.  To insert these characters so they appear in text, you must
-put an @samp{@@} in front of these characters to prevent Texinfo from
-misinterpreting them.  Alphabetic commands are also provided.
+@samp{@@} e chaves são os caracteres especiais básicos no Texinfo. Para inserir esses caracteres de forma que apareçam no texto, você precisa colocar um @samp{@@} na frente desses caracteres para evitar que o Texinfo os interprete mal. Comandos alfabéticos também são fornecidos.
 
-The other characters (comma, backslash, hash) are special only in
-restricted contexts, as explained in the respective sections.
+Os demais caracteres (vírgula, barra invertida, cerquilha) são especiais somente em contextos restritos, conforme explicado nas respectivas seções.
 
 @menu
 * Inserindo um Símbolo Arroba::         @code{@@@@}, @code{@@atchar@{@}}.
@@ -9801,147 +9756,103 @@ restricted contexts, as explained in the respective sections.
 
 
 @node Inserindo um Símbolo Arroba
-@subsection Inserting `@@' with @code{@@@@} and @code{@@atchar@{@}}
-@cindex At sign, inserting
-@cindex Inserting @@ @r{(literal @samp{@@})}
+@subsection Inserindo `@@' com @code{@@@@} e @code{@@atchar@{@}}
+@cindex Símbolo arroba, inserindo
+@cindex Inserindo @@ @r{(literal @samp{@@})}
 @findex @sortas{@@} @@ @r{(literal @samp{@@})} @c CONSERTE-ME
 @findex atchar@{@} @r{(literal @samp{@@})}
 
-@code{@@@@} produces a single @samp{@@} character in the output.  Do
-not put braces after an @code{@@@@} command.
+@code{@@@@} produz um caractere @samp{@@} na saída gerada. Não coloque colchetes depois de um comando @code{@@@@}.
 
-@code{@@atchar@{@}} also produces a single @samp{@@} character in the
-output.  It does need following braces, as usual for alphabetic
-commands.  In inline Condicionais (@pxref{Condicionais Inline}), it
-can be necessary to avoid using the literal @samp{@@} character in the
-source (and may be clearer in other contexts).
+@code{@@atchar@{@}} também produz um caractere @samp{@@} na saída gerada. Ele precisa de colchetes seguintes, como de costume para comandos alfabéticos. Em Condicionais inline (@pxref{Condicionais Inline}), pode ser necessário evitar usar o caractere literal @samp{@@} no fonte (e possivelmente seja mais claro em outros contextos).
 
 
 @node Inserindo Chaves
-@subsection Inserting `@{ `@}' with @code{@@@{ @@@}} and @code{@@l rbracechar@{@}}
+@subsection Inserindo `@{ `@}' com @code{@@@{ @@@}} e @code{@@l rbracechar@{@}}
 
 @findex @{ @r{(literal @samp{@{})}
 @findex @} @r{(literal @samp{@}})}
 @findex lbracechar@{@} @r{(literal @samp{@{})}
 @findex rbracechar@{@} @r{(literal @samp{@}})}
-@cindex Braces, inserting
+@cindex Colchetes, inserindo
 
-@code{@@@{} produces a single @samp{@{} in the output, and @code{@@@}}
-produces a single @samp{@}}.  Do not put braces after either an
-@code{@@@{} or an @code{@@@}} command.
+@code{@@@{} produz um @samp{@{} na saída gerada e @code{@@@}} produz um @samp{@}}. Não coloque colchetes depois de um comando @code{@@@{} ou @code{@@@}}.
 
-@code{@@lbracechar@{@}} and @code{@@rbracechar@{@}} also produce
-single @samp{@{} and @samp{@}} characters in the output.  They do need
-following braces, as usual for alphabetic commands.  In inline
-Condicionais (@pxref{Condicionais Inline}), it can be
-necessary to avoid using literal brace characters in the source (and
-may be clearer in other contexts).
+@code{@@lbracechar@{@}} e @code{@@rbracechar@{@}} também produzem caracteres @samp{@{} e @samp{@}} unitários na saída gerada. Eles precisam de colchetes seguintes, como de costume para comandos alfabéticos. Em Condicionais inline (@pxref{Condicionais Inline}), pode ser necessário evitar usar caracteres de colchetes literais no fonte (e possivelmente seja mais claro em outros contextos).
 
 
 @node Inserindo Uma Vírgula
-@subsection Inserting `,' with @code{@@comma@{@}}
+@subsection Inserindo `,' com @code{@@comma@{@}}
 
-@findex comma
-@cindex Comma, inserting
+@findex vírgula
+@cindex Vírgula, inserindo
 
-Ordinarily, a comma `,' is a normal character that can be simply typed
-in your input where you need it.
+Normalmente, uma vírgula `,' é um caractere normal que pode ser simplesmente digitado em tua entrada onde você precisar dela.
 
-However, Texinfo uses the comma as a special character only in one
-context: to separate arguments to those Texinfo commands, such as
-@code{@@acronym} (@pxref{@code{@@acronym}}) and @code{@@xref}
-(@pxref{Referências Cruzadas}), as well as user-defined macros
-(@pxref{Definindo Macros}), which take more than one argument.
+No entanto, Texinfo usa a vírgula como um caractere especial somente em um contexto: para separar argumentos para aqueles comandos do Texinfo, como @code{@@acronym} (@pxref{@code{@@acronym}}) e @code{@@xref} (@pxref{Referências Cruzadas}), bem como macros definidas por usuário(a) (@pxref{Definindo Macros}), que levam mais que um argumento.
 @c CONSERTE-ME
-Since a comma character would confuse Texinfo's parsing for these
-commands, you must use the command @samp{@@comma@{@}} instead if you want
-to pass an actual comma.  Here are some examples:
+Como um caractere de vírgula confundiria a análise do Texinfo para esses comandos, você precisa usar o comando @samp{@@comma@{@}} se quiser passar uma vírgula real. Aqui estão alguns exemplos:
 
 @example
-@@acronym@{ABC, A Bizarre @@comma@{@}@}
-@@xref@{Comma,, The @@comma@{@} symbol@}
-@@mymac@{One argument@@comma@{@} containing a comma@}
+@@acronym@{ABC, Uma @@comma@{@} bizarra@}
+@@xref@{Vírgula,, O símbolo @@comma@{@}@}
+@@mymac@{Um argument@@comma@{@} contendo uma vírgula@}
 @end example
 
-Although @samp{@@comma@{@}} can be used nearly anywhere, there is no
-need for it anywhere except in this unusual case.
+Embora @samp{@@comma@{@}} possa ser usada em praticamente qualquer lugar, não existe necessidade dela em nenhum lugar, exceto nesse caso incomum.
 
-(Incidentally, the name @samp{@@comma} lacks the @samp{char} suffix used
-in its companion commands only for historical reasons.  It didn't seem
-important enough to define a synonym.)
+(Incidentalmente, o nome @samp{@@comma} carece do sufixo @samp{char} usado nos comandos complementares dele somente por razões históricas. Não pareceu importante o suficiente para definir um sinônimo).
 
 
 @node Inserindo uma Barra Invertida
-@subsection Inserting `\' with @code{@@backslashchar@{@}}
+@subsection Inserindo `\' com @code{@@backslashchar@{@}}
 
 @findex backslashchar
-@cindex Backslash, inserting
+@cindex Barra invertida, inserindo
 
-Ordinarily, a backslash `\' is a normal character in Texinfo that can
-be simply typed in your input where you need it.  The result is to
-typeset the backslash from the typewriter font.
+Normalmente, uma barra invertida `\' é um caractere normal no Texinfo que pode ser simplesmente digitado em tua entrada onde você precisar. O resultado é o de compor a barra invertida oriunda da fonte da máquina de escrever.
 
-However, Texinfo uses the backslash as a special character in one
-restricted context: to delimit formal arguments in the bodies of
-user-defined macros (@pxref{Definindo Macros}).
+Porém, Texinfo usa a barra invertida como um caractere especial em um contexto restrito: para delimitar argumentos formais nos corpos de macros definidas por usuário(a) (@pxref{Definindo Macros}).
 
-Due to the vagaries of macro argument parsing, it is more reliable to
-pass an alphabetic command that produces a backslash instead of using
-a literal \.  Hence @code{@@backslashchar@{@}}.  Here is an example
-macro call:
+Devido aos caprichos da análise de argumentos de macro, é mais confiável passar um comando alfabético que produza uma barra invertida em vez de usar uma \ literal. Daí @code{@@backslashchar@{@}}. Aqui está um exemplo de chamada de macro:
 
 @example
-@@mymac@{One argument@@backslashchar@{@} with a backslash@}
+@@mymac@{Um argument@@backslashchar@{@} com uma barra invertida@}
 @end example
 
 @findex \backslash
-Texinfo documents may also use \ as a command character inside
-@code{@@math} (@pxref{Inserindo Fórmulas Matemáticas}).  In this case, @code{@@\} or
-@code{\backslash} produces a ``math'' backslash (from the math symbol
-font), while @code{@@backslashchar@{@}} produces a typewriter
-backslash as usual.
+Documentos do Texinfo também podem usar \ como um caractere de comando dentro de @code{@@math} (@pxref{Inserindo Fórmulas Matemáticas}). Nesse caso, @code{@@\} ou @code{\backslash} produz uma barra invertida ``matematicista'' (proveniente da fonte do símbolo matemático), enquanto @code{@@backslashchar@{@}} produz uma barra invertida de máquina de escrever como sempre.
 
-Although @samp{@@backslashchar@{@}} can be used nearly anywhere, there
-is no need for it except in these unusual cases.
+Embora @samp{@@backslashchar@{@}} possa ser usado em praticamente qualquer lugar, não existe necessidade dele, exceto nesses casos incomuns.
 
 
 @node Inserindo um Símbolo Cerquilha
-@subsection Inserting `#' with @code{@@hashchar@{@}}
+@subsection Inserindo `#' com @code{@@hashchar@{@}}
 
 @findex hashchar@{@} @r{(literal @samp{#})}
-@cindex Inserting #
-@cindex Hash sign, inserting
+@cindex Inserindo #
+@cindex Símbolo cerquilha, inserindo
 
-Ordinarily, a hash `#' is a normal character in Texinfo that can be
-simply typed in your input where you need it.  The result is to
-typeset the hash character from the current font.
+Normalmente, uma cerquilha `#' é um caractere normal no Texinfo que pode ser simplesmente digitado em tua entrada onde você precisar. O resultado é o de compor o caractere cerquilha oriundo da fonte atual.
 
-@cindex Number sign, inserting
-@cindex Octotherp, inserting
-@cindex Sharp sign (not), inserting
-This character has many other names, varying by locale, such as
-``number sign'', ``pound'', and ``octothorp''.  It is also sometimes
-called ``sharp'' or ``sharp sign'' since it vaguely resembles the
-musical symbol by that name.  In situations where Texinfo is used,
-``hash'' is the most common in our experience.
+@cindex Símbolo de número, inserindo
+@cindex Octotherp, inserindo
+@cindex Sinal sustenido (não), inserindo
+Esse caractere tem muitos outros nomes, variando de acordo com a localidade, como ``sinal numérico'', ``libra'' e ``octothorp''. Às vezes também é chamado de ``sustenido'' ou ``sinal sustenido'', uma vez que se assemelha vagamente ao símbolo musical com esse nome. Em situações onde Texinfo é usado, ``cerquilha'' é o mais comum em nossa experiência.
 
-However, Texinfo uses the hash character as a special character in one
-restricted context: to introduce the so-called @code{#line} directive
-and variants (@pxref{External Macro Processors}).
+However, Texinfo uses the hash character as a special character in one restricted context: to introduce the so-called @code{#line} directive and variants (@pxref{External Macro Processors}).
 
-So, in order to typeset an actual hash character in such a place (for
-example, in a program that needs documentation about @code{#line}),
-it's necessary to use @code{@@hashchar@{@}} or some other construct.
-Here's an example:
+No entanto, Texinfo usa o caractere cerquilha como um caractere especial em um contexto restrito: para introduzir a chamada diretiva @code{#line} e variantes (@pxref{External Macro Processors}).
+
+Portanto, para a finalidade de compor um caractere cerquilha real em tal local (por exemplo, em um programa que precisa de documentação acerca de @code{#line}), é necessário usar @code{@@hashchar@{@}} ou alguma outra construção. Aqui está um exemplo:
 
 @example
-@@hashchar@{@} 10 "example.c"
+@@hashchar@{@} 10 "exemplo.c"
 @end example
 
-Although @samp{@@hashchar@{@}} can be used nearly anywhere, there
-is no need for it anywhere except this unusual case.
+Embora @samp{@@hashchar@{@}} possa ser usado em praticamente qualquer lugar, não existe necessidade dele em nenhum lugar, exceto nesse caso incomum.
 
-
+PAREI
 @node Inserindo Caracteres de Citação
 @section Inserindo Caracteres de Citação
 
@@ -15312,8 +15223,8 @@ index to work from.  The @command{texindex} command sorts indices.
 (@command{texi2dvi}, described in the previous section, runs
 @command{tex} and @command{texindex} as necessary.)
 
-@anchor{Names of index files}
-@cindex Names of index files
+@anchor{Nomes dos arquivos de índice}
+@cindex Nomes dos arquivos de índice
 @cindex Index file names
 @code{tex} outputs unsorted index files under names following a
 standard convention: the name of your main input file with any
