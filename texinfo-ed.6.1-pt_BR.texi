@@ -7,8 +7,8 @@
 
 @c Automake exige isto
 @setfilename texinfo-ed.6.1-pt_BR.info
+@documentlanguage pt_BR
 @documentencoding UTF-8
-@documentlanguage pt
 
 @c Automake automaticamente atualiza version-pt_BR.texi @set VERSION e 
 @c @set UPDATED com os valores apropriados.
@@ -234,7 +234,7 @@ Escrevendo um Arquivo Texinfo
 * Sintaxe de Comando::              Comandos @@ são utilizados para formatação.
 * Convenções::                 Regras gerais para se escrever um arquivo Texinfo.
 * Comentários::                    Escrevendo comentários e texto ignorado em geral.
-* Minimo::                     O que um arquivo Texinfo deve ter.
+* Mínimo::                     O que um arquivo Texinfo deve ter.
 * Amostra Curta::                Um arquivo curto Texinfo de amostra.
 
 Iniciando e Finalizando um Arquivo Texinfo
@@ -243,7 +243,7 @@ Iniciando e Finalizando um Arquivo Texinfo
 * Cabeçalho do Arquivo do Texinfo::         As primeiras linhas.
 * Permissões do Documento::        Assegurando-se de que seu manual é livre.
 * Página de Título e Página de Direitos Autorais::  Criando as páginas de título e de direitos autorais.
-* Sumário::                    Como criar um Sumário.
+* Conteúdo::                    Como criar uma tabela do conteúdo.
 * O Nodo Top::                Criando o nodo `Top' e o menu principal.
 * Comandos Globais de Documento::    Afetando a formatação ao longo do documento.
 * Finalizando um Arquivo::               O que está ao final de um arquivo Texinfo?
@@ -290,7 +290,7 @@ Nodos
 * Escrevendo um Nodo::              Como escrever uma linha @code{@@node}.
 * Exigências de Linha de Nodo::      Mantenha os nomes únicos.
 * Primeiro Nodo::                  Como escrever um nodo `Top'.
-* @code{@@top} Command::                Como utilizar o comando @code{@@top}.
+* Comando @code{@@top}::                Como usar o comando @code{@@top}.
 * Ilustração do Menu do Nodo::      Um diagrama, e menus e nodos de amostra.
 * Criação de Ponteiros do @command{makeinfo}::   Permitindo que makeinfo determine os ponteiros de nodo.
 * Menus::                       Listando nodos subordinados.
@@ -325,7 +325,7 @@ Referências cruzadas
 * Comandos de Referências Cruzadas::    Um sumário dos diferentes comandos.
 * Partes de Referências Cruzadas::      Uma Referência Cruzada tem várias partes.
 * @code{@@xref}::                       Inicie uma referência com `Veja' @dots{}
-* Referenciando um Manual como um Todo::   Referência a um manual inteiro.
+* Referenciando Um Manual Como Um Todo::   Referência a um manual inteiro.
 * @code{@@ref}::                        Uma referência para a última parte de uma sentença.
 * @code{@@pxref}::                      Como escrever uma Referência Cruzada entre parênteses.
 * @code{@@anchor}::                     Definindo alvos de Referência Cruzada arbitrários.
@@ -538,8 +538,8 @@ Os Comandos de Definição
 
 Programação Orientada a Objetos
 
-* Variáveis::   Variáveis Orientadas a Objetos.
-* Métodos::     Métodos Orientados a Objetos.
+* Variáveis Orientadas a Objetos::   Variáveis Orientadas a Objetos.
+* Métodos Orientados a Objetos::     Métodos Orientados a Objetos.
 
 Internacionalização
 
@@ -574,9 +574,9 @@ Definindo Novos Comandos Texinfo
 
 Processadores Externos de Macro: Diretivas de Linha
 
-* @samp{#line} Directive::
-* TeX:: @samp{#line} e @TeX{}.
-* Syntax:: Detalhes da Sintaxe @samp{#line}.
+* Diretiva @samp{#line}::
+* @samp{#line} e @TeX{}::
+* Detalhes da Sintaxe @samp{#line}::
 
 Arquivos Include
 
@@ -626,10 +626,10 @@ Formatar com @command{tex}/@command{texindex}
 
 Variáveis de Personalização
 
-* Commands:: Variáveis de Personalização para Comandos @code{@@}.
-* Options::  Variáveis e Opções de Personalização.
-* HTML::     Variáveis de Personalização de HTML.
-* Other::    Outras Variáveis de Personalização.
+* Variáveis de Personalização para Comandos @code{@@}::
+* Variáveis e Opções de Personalização::
+* Variáveis de Personalização de HTML::
+* Outras Variáveis de Personalização::
 
 Criando e Instalando Arquivos Info
 
@@ -640,7 +640,7 @@ Criando um Arquivo Info
 
 * @command{makeinfo} Advantages::         @command{makeinfo} provê melhor verificação de erro.
 * @code{makeinfo} in Emacs::           Como executar @code{makeinfo} a partir do Emacs.
-* @code{texinfo-format} commands::     Dois comandos de formatação Info escritos em Emacs Lisp são uma alternativa a @code{makeinfo}.
+* Comandos @code{texinfo-format}::     Dois comandos de formatação Info escritos em Emacs Lisp são uma alternativa a @code{makeinfo}.
 * Batch Formatting::            Como formatar para Info em modo de lote Emacs.
 * Tag and Split Files::         Como os arquivos marcados e divididos ajudam Info a executar melhor.
 
@@ -1279,12 +1279,12 @@ formatos de infra estrutura de saída, e todas as outras personalizações.
 Em mais detalhes:
 
 @itemize @bullet
-@item Personalização HTML.  Muitos GNU e outros pacotes de software 
+@item Personalização de HTML.  Muitos GNU e outros pacotes de software 
 livre tem sido felizes na utilização das características de 
 personalização de HTML em @command{texi2html} por anos.  Assim, na 
 verdade, duas implementações independentes da linguagem Texinfo foram 
 desenvolvidas, e mantê-las em sincronia não foi simples.  Adicionar a 
-possibilidade de personalização HTML em @command{texi2html} a um 
+possibilidade de personalização de HTML em @command{texi2html} a um 
 programa C tem sido um esforço enorme.
 
 @item Unicode, e suporte multilínguas genericamente, especialmente das 
@@ -1321,7 +1321,7 @@ Texinfo, e dá um arquivo curto de amostra.
 @menu
 * Convenções::                Regras gerais para escrever um arquivo Texinfo.
 * Comentários::                   Escrevendo comentários e texto ignorado em geral.
-* Minimo::                    O que um arquivo Texinfo deve ter.
+* Mínimo::                    O que um arquivo Texinfo deve ter.
 * Amostra Curta::               Um arquivo curto de amostra Texinfo
 @end menu
 
@@ -1780,7 +1780,7 @@ mostrado em leitores Info, e assim por diante.
 * Cabeçalho do Arquivo do Texinfo::         As primeiras linhas.
 * Permissões do Documento::    Assegurando-se de que o seu manual é livre.
 * Página de Título e Página de Direitos Autorais:: Criando as páginas de título e de direitos autorais.
-* Sumário::                    Como criar um sumário.
+* Conteúdo::                    Como criar uma tabela do conteúdo.
 * O Nodo Top::                Criando o nodo `Top' e menu mestre.
 * Comandos Globais de Documento::    Afetando a formatação ao longo do documento.
 * Finalizando um Arquivo::               O que está ao final de um arquivo Texinfo?
@@ -2612,11 +2612,11 @@ página.
 
 
 @node Conteúdo
-@section Gerando um Sumário
-@cindex Table of contents
-@cindex Sumário, table of
-@cindex Short table of contents
-@findex contents
+@section Gerando Uma Tabela do Conteúdo
+@cindex Tabela do conteúdo
+@cindex Conteúdo, tabela do
+@cindex Tabela curta do conteúdo
+@findex conteúdo
 @findex summarycontents
 @findex shortcontents
 
@@ -3238,10 +3238,9 @@ não transformado em Info, HTML, ou outros formatos.
 * Escrevendo um Nodo::              Como escrever uma linha @code{@@node}.
 * Exigências de Linha de Nodo::      Mantenha únicos os nomes.
 * Primeiro Nodo::                  Como escrever um nodo `Top'.
-* @code{@@top} Command::        Como utilizar o comando @code{@@top}.
+* Comando @code{@@top}::           Como usar o comando @code{@@top}.
 * Ilustração do Menu do Nodo::      Um diagrama, e nodos e menus de amostra.
-* Criação de Ponteiros do @command{makeinfo}::   Permitindo que makeinfo 
-determine os ponteiros de nodo.
+* Criação de Ponteiros do @command{makeinfo}::   Permitindo que makeinfo determine os ponteiros de nodo.
 * Menus::                       Listando nodos subordinados.
 @end menu
 
@@ -3592,7 +3591,7 @@ Por exemplo, para GNU, o lugar natural seria @url{http://www.gnu.org/manual/}
 (uma página da web contendo links para a maior parte dos manuais GNU), melhor 
 especificada que apenas @code{/manual/}, se o manual será instalado em 
 @code{www.gnu.org}. Isso pode ser especificado com a variável de personalização 
-@code{TOP_NODE_UP_URL} (veja-se @ref{Variáveis de Personalização HTML}), como em 
+@code{TOP_NODE_UP_URL} (veja-se @ref{Variáveis de Personalização de HTML}), como em 
 
 @example
 $ @kbd{makeinfo --html -c TOP_NODE_UP_URL=/manual/} ...
@@ -3656,7 +3655,7 @@ Assim, na prática, um nodo Top geralmente se parece com isto:
 é baixado e nada pode ser levantado a ele (veja-se 
 @ref{Levantar/abaixar seções}).
 
-@node Ilustração de Menu e Nodo
+@node Ilustração do Menu do Nodo
 @section Ilustração de Menu e Nodo @c Capítulo 4 - Nodos - Seção 4.7
 
 Aqui está uma diagrama que ilustra um arquivo Texinfo com três capítulos, 
@@ -4172,7 +4171,7 @@ Os comandos de @dfn{Estruturamento de Capítulo} do Texinfo dividem um
 documento em uma hierarquia de capítulos, seções, subseções e 
 subsubseções. Esses comandos geram cabeçalhos largos no texto, como o 
 acima. Eles também proveem informação para a geração de índices 
-(@pxref{Conteúdo,, Gerando um Sumário}).
+(@pxref{Conteúdo,, Gerando Uma Tabela do Conteúdo}).
 
 Normalmente você coloca um comando @code{@@node} imediatamente antes de 
 cada comando de Estruturamento de Capítulo. @xref{Nodos}.
@@ -4760,7 +4759,7 @@ partes do mesmo ou de diferentes arquivos Texinfo.
 * Comandos de Referências Cruzadas::    Um sumário dos diferentes comandos.
 * Partes de Referências Cruzadas::      Uma Referência Cruzada tem várias partes.
 * @code{@@xref}::                       Inicie uma referência com `Veja' @dots{}
-* Referenciando um Manual como um Todo::   Referência a um manual inteiro.
+* Referenciando Um Manual Como Um Todo::   Referência a um manual inteiro.
 * @code{@@ref}::                        Uma referência para a última parte de uma sentença.
 * @code{@@pxref}::                      Como escrever uma Referência Cruzada entre parênteses.
 * @code{@@anchor}::                     Definindo alvos de Referência Cruzada arbitrários.
@@ -4770,7 +4769,7 @@ partes do mesmo ou de diferentes arquivos Texinfo.
 @end menu
 
 
-@node References
+@node Referências
 @section Para Que São As Referências Cruzadas
 @c Capítulo 6 - Referências Cruzadas; Seção 6.1 - Para Que São As Referências Cruzadas
 
@@ -4806,7 +4805,7 @@ linhas @code{@@node} para nomear os lugares para os quais você faz
 referências cruzadas.
 
 @need 800
-@node Cross Reference Commands
+@node Comandos de Referências Cruzadas
 @section Diferentes Comandos de Referência Cruzada
 @c Capítulo 6 - Referências Cruzadas; Seção 6.2 - Diferentes Comandos de Referência Cruzada
 @cindex Different cross-reference commands
@@ -4840,7 +4839,7 @@ Computadores. @code{@@inforef} é usado para fazer uma referência a um
 arquivo Info para o qual não existe manual impresso.
 
 
-@node Cross Reference Parts
+@node Partes de Referências Cruzadas
 @section Partes de Uma Referência Cruzada
 @c Capítulo 6 - Referências Cruzadas; Seção 6.3 - Partes de Uma Referência Cruzada
 @cindex Cross-reference parts
@@ -12556,7 +12555,7 @@ This affects typed functions only---not untyped functions, not typed
 variables, etc..  Specifically, it affects the commands in this
 section, and the analogous commands for object-oriented languages,
 namely @code{@@deftypeop} and @code{@@deftypemethod}
-(@pxref{Object-Oriented Methods}).
+(@pxref{Métodos Orientados a Objetos}).
 
 Specifying @code{@@deftypefnnewline off} reverts to the default.
 
@@ -12694,13 +12693,13 @@ variable is a variable that belongs to the class but for which each
 instance has its own value.
 
 @menu
-* Variáveis::   Variáveis Orientadas a Objetos.
-* Métodos::     Métodos Orientados a Objetos.
+* Variáveis Orientadas a Objetos::   Variáveis Orientadas a Objetos.
+* Métodos Orientados a Objetos::     Métodos Orientados a Objetos.
 @end menu
 
 
-@node Object-Oriented Variables
-@subsubsection Object-Oriented Variables
+@node Variáveis Orientadas a Objetos
+@subsubsection Variáveis Orientadas a Objetos
 
 @cindex Variables, object-oriented
 
@@ -12807,8 +12806,8 @@ is a programming language construct that should be marked with
 @end table
 
 
-@node Object-Oriented Methods
-@subsubsection Object-Oriented Methods
+@node Métodos Orientados a Objetos
+@subsubsection Métodos Orientados a Objetos
 
 @cindex Methods, object-oriented
 
@@ -14756,14 +14755,14 @@ may be.  There's a well-known mechanism for this: the so-called
 @samp{#line} directive.  Texinfo supports this.
 
 @menu
-* @samp{#line} Directive::
-* TeX: @samp{#line} and @TeX{}.
-* Syntax: @samp{#line} Syntax Details.
+* Diretiva @samp{#line}::
+* @samp{#line} e @TeX{}::
+* Detalhes da Sintaxe @samp{#line}::
 @end menu
 
 
-@node @samp{#line} Directive
-@subsection @samp{#line} Directive
+@node Diretiva @samp{#line}
+@subsection Diretiva @samp{#line}
 
 @cindex @samp{#line} directive
 
@@ -14811,8 +14810,8 @@ of @code{@@example}.  As mentioned above, @code{#line}-recognition is
 disabled inside verbatim blocks.
 
 
-@node @samp{#line} and @TeX{}
-@subsection @samp{#line} and @TeX{}
+@node @samp{#line} e @TeX{}
+@subsection @samp{#line} e @TeX{}
 
 @cindex @TeX{} and @samp{#line} directives
 @cindex @samp{#line} directives, not processing with @TeX{}
@@ -14854,8 +14853,8 @@ numbers.  This is another example of why we recommend running
 Advantages}).
 
 
-@node @samp{#line} Syntax Details
-@subsection @samp{#line} Syntax Details
+@node Detalhes da Sintaxe @samp{#line}
+@subsection Detalhes da Sintaxe @samp{#line}
 
 @cindex @samp{#line} syntax details
 @cindex Syntax details, @samp{#line}
@@ -14892,7 +14891,7 @@ result is that lines might match which you wouldn't expect, e.g.,
 @hashchar{} 1
 @end example
 
-The possible solutions are described above (@pxref{@samp{#line} Directive}).
+The possible solutions are described above (@pxref{Diretiva @samp{#line}}).
 
 
 @node Arquivos Include
@@ -15526,7 +15525,7 @@ written for the cross-references.
 
 @menu
 * Formatting Partial Documents::
-* Details of @command{texindex}::
+* Detalhes de @command{texindex}::
 @end menu
 
 @node Formatting Partial Documents
@@ -15565,8 +15564,8 @@ sorted index files happen to exist from a previous use of
 you are creating or debugging a document.
 
 
-@node Details of @command{texindex}
-@subsection Details of @command{texindex}
+@node Detalhes de @command{texindex}
+@subsection Detalhes de @command{texindex}
 
 @cindex Braces, in index entries
 In Texinfo version 6, released in 2015, the @command{texindex} program
@@ -16940,7 +16939,7 @@ If not set or otherwise specified, Info output is the default.
 
 The customization variable of the same name is also read; if set, that
 overrides an environment variable setting, but not a command-line
-option.  @xref{Customization Variables and Options}.
+option.  @xref{Variáveis e Opções de Personalização}.
 
 
 @node @command{texi2any} Printed Output
@@ -17085,18 +17084,18 @@ variable to this special ``undefined'' Perl value.
 The sections below give the details for each of these.
 
 @menu
-* Commands: Customization Variables for @@-Commands.
-* Options:  Customization Variables and Options.
-* HTML:     Variáveis de Personalização HTML.
-* Other:    Outras Variáveis de Personalização.
+* Variáveis de Personalização para Comandos @code{@@}::
+* Variáveis e Opções de Personalização::
+* Variáveis de Personalização de HTML::
+* Outras Variáveis de Personalização::
 @end menu
 
 
-@node Customization Variables for @@-Commands
-@subsection Customization Variables for @@-Commands
+@node Variáveis de Personalização para Comandos @code{@@}
+@subsection Variáveis de Personalização para Comandos @code{@@}
 
-@cindex Customization variables for @@-commands
-@cindex @@-commands, customization variables for
+@cindex Variáveis de Personalização para Comandos @code{@@}
+@cindex Comandos @code{@@}, variáveis de personalização para
 
 Each of the following @@-commands has an associated customization
 variable with the same name (minus the leading @code{@@}):
@@ -17128,8 +17127,8 @@ particular formats, but an argument that is already formatted.  This
 is the case, for example, for HTML for @code{documentdescription}.
 
 
-@node Customization Variables and Options
-@subsection Customization Variables and Options
+@node Variáveis e Opções de Personalização
+@subsection Variáveis e Opções de Personalização
 
 @cindex Customization variables for options
 @cindex Options, customization variables for
@@ -17263,8 +17262,8 @@ exec texi2any -c TEXINPUT_OUTPUT_FORMAT=textcontent "$@@"
 @end ftable
 
 
-@node Variáveis de Personalização HTML
-@subsection Variáveis de Personalização HTML
+@node Variáveis de Personalização de HTML
+@subsection Variáveis de Personalização de HTML
 
 This table gives the customization variables which apply to HTML
 output only.  A few other customization variable apply to both HTML
@@ -17298,7 +17297,7 @@ In general, you should set @code{BEFORE_OVERVIEW} if
 @item BASEFILENAME_LENGTH
 For HTML@.  The maximum length of the base filenames; default 245.
 Changing this would make cross-manual references to such long node
-names invalid (@pxref{HTML Xref Link Basics}).
+names invalid (@pxref{Básico do Link HTML Xref}).
 
 @item BEFORE_OVERVIEW
 @itemx BEFORE_TOC_LINES
@@ -17838,7 +17837,7 @@ also output comments.  Default false.
 @item TOP_NODE_UP
 Up node for the Top node; default @samp{(dir)}.  For overriding the
 url in HTML output, see @code{TOP_NODE_UP_URL} in 
-@ref{Variáveis de Personalização HTML}.
+@ref{Variáveis de Personalização de HTML}.
 
 @item TREE_TRANSFORMATIONS
 The associated value is a comma separated list of transformations that
@@ -18192,7 +18191,7 @@ For information on installing the Info file in the Info system,
 @menu
 * @command{makeinfo} Advantages::         @command{makeinfo} provides better error checking.
 * @code{makeinfo} in Emacs::           How to run @code{makeinfo} from Emacs.
-* @code{texinfo-format} commands::     Two Info formatting commands written
+* Comandos @code{texinfo-format}::     Two Info formatting commands written
                                  in Emacs Lisp are an alternative
                                  to @code{makeinfo}.
 * Batch Formatting::            How to format for Info in Emacs batch mode.
@@ -19340,7 +19339,7 @@ for each node.  (@xref{HTML Splitting}.)
 The algorithm was primarily devised by Patrice Dumas in 2003--04.
 
 @menu
-* Link Basics:       HTML Xref Link Basics.
+* Link Basics:       Básico do Link HTML Xref.
 * Node Expansion:    HTML Xref Node Name Expansion.
 * Command Expansion: Expansão de Comando Xref HTML.
 * 8-bit Expansion:   HTML Xref 8-bit Character Expansion.
@@ -19350,7 +19349,7 @@ The algorithm was primarily devised by Patrice Dumas in 2003--04.
 @end menu
 
 
-@node HTML Xref Link Basics
+@node Básico do Link HTML Xref
 @subsection HTML Cross-reference Link Basics
 @cindex HTML cross-reference link basics
 
@@ -19674,7 +19673,7 @@ web.
 @cindex HTML cross-reference mismatch
 @cindex Mismatched HTML cross-reference source and target
 
-As mentioned earlier (@pxref{HTML Xref Link Basics}), the generating
+As mentioned earlier (@pxref{Básico do Link HTML Xref}), the generating
 software may need to guess whether a given manual being cross
 referenced is available in split or monolithic form---and, inevitably,
 it might guess wrong.  However, when the @emph{referent} manual is
@@ -20213,7 +20212,7 @@ any output.  A synonym for @code{@@c}.
 
 @item @@contents
 Print a complete table of contents.  Has no effect in Info, which uses
-menus instead.  @xref{Conteúdo, , Gerando um Sumário}.
+menus instead.  @xref{Conteúdo, , Gerando Uma Tabela do Conteúdo}.
 
 @item @@copying
 Specify copyright holders and copying conditions for the document Pair
@@ -20977,7 +20976,7 @@ Define the short caption for a @code{@@float}.  @xref{@code{@@caption
 @item @@shortcontents
 Print a short table of contents, with chapter-level entries only.  Not
 relevant to Info, which uses menus rather than tables of contents.
-@xref{Conteúdo, , Gerando um Sumário}.
+@xref{Conteúdo, , Gerando Uma Tabela do Conteúdo}.
 
 @item @@shorttitlepage @var{title}
 Generate a minimal title page.  @xref{@code{@@titlepage}}.
@@ -21067,7 +21066,7 @@ have title pages.  @xref{@code{@@title @@subtitle @@author}}.
 
 @item @@summarycontents
 Print a short table of contents.  Synonym for @code{@@shortcontents}.
-@xref{Conteúdo, , Gerando um Sumário}.
+@xref{Conteúdo, , Gerando Uma Tabela do Conteúdo}.
 
 @item @@sup @{@var{text}@}
 Set @var{text} as a superscript.  @xref{Inserindo Subscritos e Sobrescritos}.
