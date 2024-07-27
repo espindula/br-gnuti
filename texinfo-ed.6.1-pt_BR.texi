@@ -9852,72 +9852,54 @@ Portanto, para a finalidade de compor um caractere cerquilha real em tal local (
 
 Embora @samp{@@hashchar@{@}} possa ser usado em praticamente qualquer lugar, não existe necessidade dele em nenhum lugar, exceto nesse caso incomum.
 
-PAREI
 @node Inserindo Caracteres de Citação
 @section Inserindo Caracteres de Citação
 
-@cindex Inserting quote characters
-@cindex Quote characters, inserting
+@cindex Inserindo caracteres de citação
+@cindex Caracteres de citação, inserindo
 
-As explained in the early section on general Texinfo input conventions
-(@pxref{Convenções}), Texinfo source files use the ASCII character
-@code{`} (96 decimal) to produce a left quote (`), and ASCII @code{'}
-(39 decimal) to produce a right quote (').  Doubling these input
-characters (@code{``} and @code{''}) produces double quotes (`` and
-'').  These are the conventions used by @TeX{}.
+Conforme explicado na seção anterior acerca de convenções gerais de entrada do Texinfo (@pxref{Convenções}), arquivos fonte do Texinfo usam o caractere ASCII @code{`} (decimal 96) para produzir uma aspa esquerda (`), e o ASCII @code{'} (decimal 39) para produzir uma aspa direita ('). Duplicar esses caracteres de entrada (@code{``} e @code{''}) produz aspas duplas (`` e ''). Essas são as convenções usadas pelo @TeX{}.
 
-This works all right for text.  However, in examples of computer code,
-readers are especially likely to cut and paste the text
-verbatim---and, unfortunately, some document viewers will mangle these
-characters.  (The free PDF reader @command{xpdf} works fine, but other
-PDF readers, both free and nonfree, have problems.)
+Isso funciona bem para texto. No entanto, em exemplos de código de computador, leitores(as) são especialmente propensos(as) a recortar e colar o texto literalmente---e, infelizmente, alguns visualizadores de documentos estragarão esses caracteres. (O leitor livre de PDF @command{xpdf} funciona bem, mas outros leitores de PDF, tanto livres quanto não livres, tem problemas).
 
-If this is a concern for you, Texinfo provides these two commands:
+Se isso for uma preocupação para você, Texinfo fornece estes dois comandos:
 
 @table @code
 @item @@codequoteundirected @var{on-off}
 @findex codequoteundirected
-@cindex undirected single quote
-causes the output for the @code{'} character in code environments to
-be the undirected single quote, like this:
+@cindex aspas simples indirecionadas
+faz com que a saída gerada para o caractere @code{'} em ambientes de código seja a aspa simples indirecionada, como esta:
+
 @set txicodequoteundirected on
 @code{'}.
 @set txicodequoteundirected off
 
 @item @@codequotebacktick @var{on-off}
 @findex codequotebacktick
-@cindex backtick
-@cindex grave accent, standalone
-causes the output for the @code{`} character in code environments to
-be the backtick character (standalone grave accent), like this:
+@cindex crase
+@cindex acento grave, autônomo
+faz com que a saída gerada para o caractere @code{`} em ambientes de código seja o caractere crase (acento grave autônomo), assim:
+
 @set txicodequotebacktick on
 @code{`}.
 @set txicodequotebacktick off
 @end table
 
-If you want these settings for only part of the document,
-@code{@@codequote... off} will restore the normal behavior, as in
-@code{@@codequoteundirected off}.
+Se você quiser essas configurações somente para parte do documento, @code{@@codequote... off} restaurará o comportamento normal, como em @code{@@codequoteundirected off}.
 
-These settings affect @code{@@code}, @code{@@example}, @code{@@kbd}, 
-@code{@@samp}, @code{@@verb}, and @code{@@verbatim}.  
-@xref{Realçamento Útil}.
+Essas configurações afetam @code{@@code}, @code{@@example}, @code{@@kbd}, @code{@@samp}, @code{@@verb} e @code{@@verbatim}.  @xref{Realçamento Útil}.
 
 @vindex txicodequoteundirected@r{, obsolete variable}
 @vindex txicodequotebacktick@r{, obsolete variable}
-This feature used to be controlled by using @code{@@set} to change the
-values of the corresponding variables @code{txicodequoteundirected}
-and @code{txicodequotebacktick}; they are still supported, but the
-command interface is preferred.
+Esse recurso costumava ser controlado usando-se @code{@@set} para mudar os valores das variáveis ​​correspondentes @code{txicodequoteundirected} e @code{txicodequotebacktick}; elas ainda são suportadas, mas a interface de comando é preferida.
 
 
 @node Inserindo Espaço
 @section Inserindo Espaço
 
-@cindex Inserting space
-@cindex Spacing, inserting
-The following sections describe commands that control spacing of various
-kinds within and after sentences.
+@cindex Inserindo espaço
+@cindex Espaço, inserindo
+As seções a seguir descrevem comandos que controlam espaçamentos de vários tipos dentro e depois de frases.
 
 @menu
 * Espaços Múltiplos::               Inserindo múltiplos espaços.
@@ -9931,223 +9913,154 @@ kinds within and after sentences.
 @node Espaços Múltiplos
 @subsection Espaços Múltiplos
 
-@cindex Multiple spaces
-@cindex Whitespace, inserting
-@cindex Space, inserting horizontal
+@cindex Espaços múltiplos
+@cindex Espaço em branco, inserindo
+@cindex Espaço, inserindo horizontal
 @findex <space>
 @findex <tab>
 @findex <newline>
 
-Ordinarily, multiple whitespace characters (space, tab, and newline)
-are collapsed into a single space.
+Normalmente, vários caracteres de espaço em branco (espaço, tabulação e nova linha) são recolhidos em um espaço.
 
-Occasionally, you may want to produce several consecutive spaces,
-either for purposes of example (e.g., what your program does with
-multiple spaces as input), or merely for purposes of appearance in
-headings or lists.  Texinfo supports three commands:
-@code{@@@kbd{SPACE}}, @code{@@@kbd{TAB}}, and @code{@@@kbd{NL}}, all
-of which insert a single space into the output.  (Here,
-@code{@@@kbd{SPACE}} represents an @samp{@@} character followed by a
-space, i.e., @samp{@@ }, @kbd{TAB} represents an actual tab character,
-and @code{@@@kbd{NL}} represents an @samp{@@} character and end-of-line, 
-i.e., when @samp{@@} is the last character on a line.)
+Ocasionalmente, você pode querer produzir vários espaços consecutivos, seja para fins de exemplo (por exemplo, o que teu programa faz com vários espaços como entrada), ou meramente para fins de aparência em títulos ou listas. Texinfo suporta três comandos: @code{@@@kbd{SPACE}}, @code{@@@kbd{TAB}} e @code{@@@kbd{NL}}, todos os quais inserem um espaço na saída gerada. (Aqui, @code{@@@kbd{SPACE}} representa um caractere @samp{@@} seguido por um espaço, ou seja, @samp{@@ }, @kbd{TAB} representa um caractere de tabulação, e @code{@@@kbd{NL}} representa um caractere @samp{@@} e fim de linha, ou seja, quando @samp{@@} é o último caractere em uma linha).
 
-For example,
+Por exemplo,
 @example
-Spacey@@ @@ @@ @@
-example.
+Exemplo@@ @@ @@ @@
+espaçoso.
 @end example
 
-@noindent produces
+@noindent produz
 
 @example
-Spacey@ @ @ @
-example.
+Exemplo@ @ @ @
+espaçoso.
 @end example
 
-Other possible uses of @code{@@@kbd{SPACE}} have been subsumed by
-@code{@@multitable} (@pxref{Tabelas Multi Colunas}).
+Outros usos possíveis de @code{@@@kbd{SPACE}} foram subsumidos por @code{@@multitable} (@pxref{Tabelas Multi Colunas}).
 
-Do not follow any of these commands with braces.
+Não coloque chaves depois de nenhum desses comandos.
 
-To produce a non-breakable space, see @ref{@code{@@tie}}.
+Para produzir um espaço inquebrável, veja-se @ref{@code{@@tie}}.
 
 
 @node Não Finalizando Uma Frase
 @subsection Não Finalizando Uma Frase
 
-@cindex Not ending a sentence
-@cindex Sentence non-ending punctuation
-@cindex Periods, inserting
-@cindex Spacing, in the middle of sentences
-When a period, exclamation point or question mark is
-at the end of a sentence, slightly more space is
-inserted after it in a typeset manual.
+@cindex Não finalizando uma frase
+@cindex Pontuação sem fim de frase
+@cindex Pontos, inserindo
+@cindex Espaçamento, no meio de frases
+Quando um ponto, ponto de exclamação ou ponto de interrogação estão no final de uma frase, um pouco mais de espaço é inserido depois deles em um manual tipográfico.
 
 @findex <colon> @r{(suppress end-of-sentence space)}
 @findex :
-Usually, Texinfo can determine automatically when a period ends a 
-sentence.  However, special commands are needed in some circumstances.
-Use the @code{@@:} command after a period, question mark, exclamation
-mark or colon that should not be followed by extra space.  This is 
-necessary in the following situations:
+Geralmente, Texinfo consegue determinar automaticamente quando um ponto termina uma frase. No entanto, comandos especiais são necessários em algumas circunstâncias. Use o comando @code{@@:} depois de um ponto, ponto de interrogação, ponto de exclamação ou dois pontos que não deveriam ser seguidos por espaço extra. Isso é necessário nas seguintes situações:
 
 @enumerate
-@item After a period that ends a lowercase abbreviation which is not at 
-the end of a sentences.
+@item Depois de um ponto que finalize uma abreviação em minúscula que não esteja no final de uma frase.
 
-@item When a parenthetical remark in the middle of a sentence (like
-this one!)@: ends with a period, exclamation point or question mark,
-@code{@@:} should be used after the right parenthesis.  Similarly for
-right brackets and right quotes (both single and double).
+@item Quando uma observação entre parênteses no meio de uma frase (como esta!)@: terminar com um ponto, ponto de exclamação ou ponto de interrogação, @code{@@:} deveria ser usado depois do parêntese direito. Da mesma forma para colchetes direitos e aspas direitas (ambas, simples e duplas).
+
 @end enumerate
 
-For example:
+Por exemplo:
 
 @example
-@samp{foo vs.@@: bar (or?)@@: baz},
+@samp{foo vs.@@: bar (ou?)@@: baz},
 @end example
 
 @noindent
-The first line below shows the output, and for comparison, the second 
-line shows the spacing when the @samp{@@:} commands were not used.
+A primeira linha abaixo mostra a saída gerada e, para comparação, a segunda linha mostra o espaçamento quando os comandos @samp{@@:} não foram usados.
 
 @quotation
-foo vs.@: bar (or?)@: baz@*
-foo vs. bar (or?) baz
+foo vs.@: bar (ou?)@: baz@*
+foo vs. bar (ou?) baz
 @end quotation
 
 @iftex
-If you look carefully, you will see a bit of extraneous space after the 
-@samp{vs.}@: and @samp{(or?)}@:.
+Se você olhar atentamente, verá um pouco de espaço não essencial depois de @samp{vs.}@: e @samp{(ou?)}@:.
+
 @end iftex
 
-It may help you to remember what @code{@@:} does by imagining that it 
-stands for an invisible lower-case character that stops a word ending in 
-a period.
+Possivelmente te ajude lembrar o que @code{@@:} faz imaginando que ele representa um caractere minúsculo invisível que impede que uma palavra termine com um ponto final.
 
-A few Texinfo commands force normal interword spacing, so that you
-don't have to insert @code{@@:} where you otherwise would.  These are
-the code-like highlighting commands, @code{@@var}, @code{@@abbr}, and
-@code{@@acronym} (@pxref{Realçamento Útil}).  For example, in
-@samp{@@code@{foo. bar@}} the period is not considered to be the end of a
-sentence, and no extra space is inserted.
+Alguns comandos do Texinfo forçam espaçamento normal entre palavras, de forma que você não tenha que inserir @code{@@:} onde normalmente faria. Esses são os comandos de realçamento semelhantes a código, @code{@@var}, @code{@@abbr} e @code{@@acronym} (@pxref{Realçamento Útil}). Por exemplo, em @samp{@@code@{foo. bar@}} o ponto não é considerado ser o fim de uma frase, e nenhum espaço extra é inserido.
 
-@code{@@:} has no effect on the HTML or Docbook output.
+@code{@@:} não tem efeito na saída HTML ou Docbook.
 
 
 @node Finalizando Uma Frase
 @subsection Finalizando Uma Frase
 
 @cindex Finalizando Uma Frase
-@cindex Sentence ending punctuation
+@cindex Frase, pontuação final
 
-@findex . @r{(end of sentence)}
-@findex ! @r{(end of sentence)}
-@findex ? @r{(end of sentence)}
-@cindex Spacing, at ends of sentences
-As mentioned above, Texinfo normally inserts additional space after
-the end of a sentence.  It uses the same heuristic for this as @TeX{}:
-a sentence ends with a period, exclamation point, or question mark,
-either preceded or followed by optional closing punctuation, and then
-whitespace, and @emph{not} preceded by a capital letter.
+@findex . @r{(fim de frase)}
+@findex ! @r{(fim de frase)}
+@findex ? @r{(fim de frase)}
+@cindex Espaçamento, ao final de frases
+Como mencionado acima, Texinfo normalmente insere espaço adicional depois do fim de uma frase. Ele usa a mesma heurística para isso que o @TeX{}: uma frase termina com um ponto final, ponto de exclamação ou ponto de interrogação, precedido ou seguido por pontuação opcional de fechamento, e, então, espaço em branco, e @emph{não} precedido por uma letra maiúscula.
 
-Use @code{@@.}@: instead of a period, @code{@@!}@: instead of an
-exclamation point, and @code{@@?}@: instead of a question mark at the
-end of a sentence that does end with a capital letter.  Do not put
-braces after any of these commands.  For example:
+Use @code{@@.}@: em vez de um ponto, @code{@@!}@: em vez de um ponto de exclamação e @code{@@?}@: em vez de um ponto de interrogação ao final de uma frase que termine com uma letra maiúscula. Não coloque chaves depois de quaisquer desses comandos. Por exemplo:
 
 @example
-Give it to M.I.B. and to M.E.W@@.  Also, give it to R.J.C@@.
-Give it to M.I.B. and to M.E.W.  Also, give it to R.J.C.
+Dê para M.I.B. e para M.E.W@@. Também, dê para R.J.C@@.
+Dê para M.I.B. e para M.E.W. Também, dê para R.J.C.
 @end example
 
 @noindent
-The output follows.  In printed output and Info, you can see the
-desired extra whitespace after the @samp{W} in the first line.
+A saída gerada segue. Na saída gerada impressa e no Info, você pode ver o espaço em branco extra desejado depois do @samp{W} na primeira linha.
 
 @quotation
-Give it to M.I.B. and to M.E.W@.  Also, give it to R.J.C@.@*
-Give it to M.I.B. and to M.E.W.  Also, give it to R.J.C.
+Dê para M.I.B. e para M.E.W@. Também, dê para R.J.C@.@*
+Dê para M.I.B. e para M.E.W. Também, dê para R.J.C.
 @end quotation
 
-In the HTML output, @code{@@.}@: is equivalent to a simple @samp{.};
-likewise for @code{@@!}@: and @code{@@?}@:.
+Na saída gerada de HTML, @code{@@.}@: é equivalente a um simples @samp{.}; o mesmo vale para @code{@@!}@: e @code{@@?}@:.
 
-@cindex Closing punctuation, and sentence ending
-The ``closing punctuation'' mentioned above is defined as a right
-parenthesis (@samp{)}, right bracket (@samp{]}), or right quote,
-either single or double (@samp{'} and @samp{''}; the many possible
-additional Unicode right quotes are not included).  These characters
-can be thought of as invisible with respect to whether a given period
-ends a sentence.  (This is the same rule as @TeX{}.)  For instance,
-the periods in @samp{foo.) Bar} and @samp{foo.'' Bar} do end
-sentences.
+@cindex Pontuação de fechamento e finalização de frase
+A ``pontuação de fechamento'' mencionada acima é definida como um parêntese direito (@samp{)}, colchete direito (@samp{]}, ou aspa direita, simples ou dupla (@samp{'} e @samp{''}; as muitas aspas direitas Unicode adicionais possíveis não estão incluídas). Esses caracteres podem ser considerados como invisíveis com respeito a se um determinado ponto finaliza uma frase. (Essa é a mesma regra que @TeX{}). Por exemplo, os pontos em @samp{foo.) Bar} e @samp{foo.'' Bar} finalizam frases.
 
-The meanings of @code{@@:} and @code{@@.}, etc.@: in Texinfo are
-designed to work well with the Emacs sentence motion commands
-(@pxref{Sentences,,, emacs, The GNU Emacs Manual}).  It may help to 
-imagine that the @samp{@@} in @samp{@@.}, etc., is an invisible 
-lower-case letter `a' which makes an upper-case letter before it 
-immaterial for the purposes of deciding whether the period ends the 
-sentence.
+Os significados de @code{@@:} e @code{@@.}, etc.@: no Texinfo são projetados para funcionar bem com os comandos de movimento de frase do Emacs (@pxref{Sentences,,, emacs, O Manual do GNU Emacs}). Possivelmente ajude imaginar que o @samp{@@} em @samp{@@.}, etc., é uma letra minúscula invisível `a' que torna uma letra maiúscula antes dela irrelevante para os propósitos de decidir se o ponto final termina a frase.
 
-A few Texinfo commands are not considered as being an abbreviation,
-even though they may end with a capital letter when expanded, so that
-you don't have to insert @code{@@.} and companions.  Notably, this is
-the case for code-like highlighting commands, @code{@@var} arguments
-ending with a capital letter, @code{@@LaTeX}, and @code{@@TeX}.  For
-example, that sentence ended with @samp{... @@code@{@@@@TeX@}.};
-@code{@@.} was not needed.  Similarly, in
-@code{... @@var@{VARNAME@}. Text} the period after @var{VARNAME} ends
-the sentence; there is no need to use @code{@@.}.
+Alguns comandos do Texinfo não são considerados como sendo uma abreviação, mesmo que possam terminar com uma letra maiúscula quando expandidos, de forma que você não tenha que inserir @code{@@.} e acompanhantes. Notavelmente, esse é o caso para comandos de realçamento semelhantes a código, argumentos @code{@@var} terminando com uma letra maiúscula, @code{@@LaTeX} e @code{@@TeX}. Por exemplo, essa frase terminou com @samp{... @@code@{@@@@TeX@}.}; @code{@@.} não foi necessário. Da mesma forma, em @code{... @@var@{VARNAME@}. Texto} o ponto depois de @var{VARNAME} termina a frase; não existe necessidade de usar @code{@@.}.
 
 
 @node @code{@@frenchspacing}
-@subsection @code{@@frenchspacing} @var{val}: Control Sentence Spacing
+@subsection @code{@@frenchspacing} @var{val}: Controle de Espaçamento de Frase
 
-@anchor{frenchspacing}@c old name
+@anchor{frenchspacing}@c Nome antigo
 @findex frenchspacing
-@cindex French spacing
-@cindex Sentences, spacing after
-@cindex Space, after sentences
+@cindex Espaçamento francês
+@cindex Frases, espaçamento depois
+@cindex Espaço, depois de frases
 
-In American typography, it is traditional and correct to put extra
-space at the end of a sentence.  This is the default in Texinfo
-(implemented in Info and printed output; for HTML, we don't try to
-override the browser).  In French typography (and others), this extra
-space is wrong; all spaces are uniform.
+Na tipografia americana, é tradicional e correto colocar espaço extra ao final de uma frase. Esse é o padrão no Texinfo (implementado no Info e na saída gerada impressa; para HTML, nós não tentamos substituir o navegador). Na tipografia francesa (e outras), esse espaço extra é errado; todos os espaços são uniformes.
 
-Therefore Texinfo provides the @code{@@frenchspacing} command to
-control the spacing after punctuation.  It reads the rest of the line
-as its argument, which must be the single word @samp{on} or @samp{off}
-(always these words, regardless of the language of the document).
-Here is an example:
+Portanto, Texinfo fornece o comando @code{@@frenchspacing} para controlar o espaçamento depois da pontuação. Ele lê o resto da linha como argumento, que precisa ser a única palavra @samp{on} ou @samp{off} (sempre essas palavras, independentemente do idioma do documento). Aqui está um exemplo:
 
 @example
 @@frenchspacing on
-This is text. Two sentences. Three sentences. French spacing.
+Isso é texto. Duas frases. Três frases. Espaçamento francês.
 
 @@frenchspacing off
-This is text. Two sentences. Three sentences. Non-French spacing.
+Isso é texto. Duas frases. Três frases. Espaçamento não francês.
 @end example
 
-@noindent produces:
+@noindent produz:
 
 @frenchspacing on
-This is text. Two sentences. Three sentences. French spacing.
+Isso é texto. Duas frases. Três frases. Espaçamento francês.
 
 @frenchspacing off
-This is text. Two sentences. Three sentences. Non-French spacing.
+Isso é texto. Duas frases. Três frases. Espaçamento não francês.
 
-@code{@@frenchspacing} also affects the output after @code{@@.},
-@code{@@!}, and @code{@@?} (@pxref{Finalizando Uma Frase}).
+@code{@@frenchspacing} também afeta a saída gerada depois de @code{@@.}, @code{@@!} e @code{@@?} (@pxref{Finalizando Uma Frase}).
 
-@code{@@frenchspacing} has no effect on the HTML or Docbook output;
-for XML, it outputs a transliteration of itself 
-(@pxref{Formatos de Saída}).
+@code{@@frenchspacing} não tem efeito na saída gerada de HTML ou Docbook; para XML, ele gera uma transliteração dele mesmo (@pxref{Formatos de Saída}).
 
-
+PAREI
 @node @code{@@dmn}
 @subsection @code{@@dmn}@{@var{dimension}@}: Format a Dimension
 
