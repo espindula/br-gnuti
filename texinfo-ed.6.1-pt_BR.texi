@@ -458,7 +458,7 @@ Inserções Especiais
 * Inserindo Espaço::                      Inserindo a quantidade correta de espaços em branco.
 * Inserindo Acentos::                     Inserindo acentos e caracteres especiais.
 * Inserindo Aspas::                       Inserindo aspas.
-* Inserindo Subscripts e Superscripts::   Inserindo sub/superscripts.
+* Inserindo Subscritos e Sobrescritos::   Inserindo sub/sobrescritos.
 * Inserindo Fórmulas Matemáticas::        Formatando expressões matemáticas.
 * Glifos para Texto::                     Inserindo pontos, bullets, símbolos de moedas, etc.
 * Glifos para Programação::               Indicando resultados de avaliação, expansão de macros, erros, etc.
@@ -9727,7 +9727,7 @@ Esses são:
 * Inserindo Espaço::                      Inserindo a quantidade correta de espaços em branco.
 * Inserindo Acentos::                     Inserindo acentos e caracteres especiais.
 * Inserindo Aspas::                       Inserindo aspas.
-* Inserindo Subscripts e Superscripts::   Inserindo sub/superscripts.
+* Inserindo Subscritos e Sobrescritos::   Inserindo sub/sobrescritos.
 * Inserindo Fórmulas Matemáticas::        Formatando expressões matemáticas.
 * Glifos para Texto::                     Inserindo pontos, bullets, símbolos de moedas, etc.
 * Glifos para Programação::               Indicando resultados de avaliação, expansão de macros, erros, etc.
@@ -10060,133 +10060,104 @@ Isso é texto. Duas frases. Três frases. Espaçamento não francês.
 
 @code{@@frenchspacing} não tem efeito na saída gerada de HTML ou Docbook; para XML, ele gera uma transliteração dele mesmo (@pxref{Formatos de Saída}).
 
-PAREI
-@node @code{@@dmn}
-@subsection @code{@@dmn}@{@var{dimension}@}: Format a Dimension
 
-@anchor{dmn}@c old name
-@cindex Thin space between number, dimension
-@cindex Dimension formatting
-@cindex Format a dimension
+@node @code{@@dmn}
+@subsection @code{@@dmn}@{@var{dimension}@}: Formatar uma dimensão
+
+@anchor{dmn}@c nome antigo
+@cindex Espaço fino entre número, dimensão
+@cindex Formatação de dimensão
+@cindex Formatar uma dimensão
 @findex dmn
 
-You can use the @code{@@dmn} command to format a dimension with a
-little extra space in the printed output.  That is, on seeing
-@code{@@dmn}, @TeX{} inserts just enough space for proper typesetting;
-in other output formats, the formatting commands insert no space at
-all.
+Você pode usar o comando @code{@@dmn} para formatar uma dimensão com um pouco de espaço extra na saída gerada impressa. Ou seja, ao ver @code{@@dmn}, @TeX{} insere apenas espaço suficiente para a composição adequada; em outros formatos da saída gerada, os comandos de formatação não inserem espaço algum.
 
-To use the @code{@@dmn} command, write the number and then follow it
-immediately, with no intervening space, by @code{@@dmn}, and then by
-the dimension within braces.  For example,
+Para usar o comando @code{@@dmn}, escreva o número e depois siga-o imediatamente, sem espaço intermediário, por @code{@@dmn}, e depois pela dimensão entre chaves. Por exemplo,
 
 @example
-A4 paper is 8.27@@dmn@{in@} wide.
+Papel A4 tem 8,27@@dmn@{in@} de largura.
 @end example
 
 @noindent
-produces
+produz
 
 @quotation
-A4 paper is 8.27@dmn{in} wide.
+Papel A4 tem 8,27@dmn{in} de largura.
 @end quotation
 
-Not everyone uses this style.  Some people prefer `8.27@tie{}in.'@: or
-`8.27@tie{}inches'.  In these cases, however, you need to use
-@code{@@tie} (@pxref{@code{@@tie}}) or @code{@@w} (@pxref{@code{@@w}})
-so that no line break can occur between the number and the dimension.
-Also, if you write a period after an abbreviation within a sentence
-(as with the `in.'@: above), you should write @samp{@@:} after the
-period to prevent @TeX{} from inserting extra whitespace, as shown
-here.  @xref{Não Finalizando Uma Frase}.
+Nem todo mundo usa esse estilo. Algumas pessoas preferem `8.27@tie{}in.'@: ou `8.27@tie{}inches'. Nesses casos, no entanto, você precisa usar @code{@@tie} (@pxref{@code{@@tie}}) ou @code{@@w} (@pxref{@code{@@w}}) de forma que nenhuma quebra de linha possa ocorrer entre o número e a dimensão. Além disso, se você escrever um ponto depois de uma abreviação dentro de uma frase (como com `in.'@: acima), você deveria escrever @samp{@@:} depois do ponto para evitar que @TeX{} insira espaços em branco extras, como mostrado aqui. @xref{Não Finalizando Uma Frase}.
 
 
 @node Inserindo Acentos
 @section Inserindo Acentos
 
-@cindex Inserting accents
-@cindex Accents, inserting
-@cindex Floating accents, inserting
+@cindex Inserindo acentos
+@cindex Acentos, inserindo
+@cindex Acentos flutuantes, inserindo
 
-Here is a table with the commands Texinfo provides for inserting
-floating accents.  They all need an argument, the character to accent,
-which can either be given in braces as usual (@code{@@'@{e@}}), or, as
-a special case, the braces can be omitted, in which case the argument
-is the next character (@code{@@'e}).  This is to make the source as
-convenient as possible to type and read, since accented characters are
-very common in some languages.
+Aqui está uma tabela com os comandos que Texinfo fornece para inserir acentos flutuantes. Eles todos precisam de um argumento, o caractere a ser acentuado, que pode ou ser fornecido entre chaves como de costume (@code{@@'@{e@}}), ou, como um caso especial, as chaves podem ser omitidas, em cujo caso o argumento é o próximo caractere (@code{@@'e}). Isso é para tornar o fonte o mais conveniente possível para digitar-se e ler-se, já que caracteres acentuados são muito comuns em alguns idiomas.
 
-If the command is alphabetic, such as @code{@@dotaccent}, then there
-must be a space between the command name and argument if braces are
-not used.  If the command is non-alphabetic, such as @code{@@'}, then
-there must @emph{not} be a space; the argument is the very next
-character.
+Se o comando for alfabético, como @code{@@dotaccent}, então precisa existir um espaço entre o nome do comando e o argumento se chaves não forem usadas. Se o comando for não alfabético, como @code{@@'}, então precisa @emph{não} existir um espaço; o argumento é o exato próximo caractere.
 
-Exception: the argument to @code{@@tieaccent} must be enclosed in
-braces (since it is two characters instead of one).
+Exceção: o argumento para @code{@@tieaccent} precisa ser colocado entre chaves (já que são dois caracteres em vez de um).
 
-To get the true accented characters output in Info, not just the ASCII
-transliterations, it is necessary to specify @code{@@documentencoding}
-with an encoding which supports the required characters
-(@pxref{@code{@@documentencoding}}).  In this case, you can also use
-non-ASCII (e.g., pre-accented) characters in the source file.
+Para obter a saída gerada dos verdadeiros caracteres acentuados no Info, não apenas as transliterações ASCII, é necessário especificar-se @code{@@documentencoding} com uma codificação que suporte os caracteres exigidos (@pxref{@code{@@documentencoding}}). Nesse caso, você também pode usar caracteres não ASCII (por exemplo, pré-acentuados) no arquivo fonte.
 
 @findex " @r{(umlaut accent)}
-@cindex Umlaut accent
+@cindex Acento trema
 @findex ' @r{(acute accent)}
-@cindex Acute accent
+@cindex Acento agudo
 @findex = @r{(macron accent)}
-@cindex Macron accent
+@cindex Acento Macron
 @findex ^ @r{(circumflex accent)}
-@cindex Circumflex accent
+@cindex Acento circunflexo
 @findex ` @r{(grave accent)}
-@cindex Grave accent
+@cindex Acento grave
 @findex ~ @r{(tilde accent)}
-@cindex Tilde accent
+@cindex Acento til
 @findex , @r{(cedilla accent)}
-@cindex Cedilla accent
+@cindex Acento cedilha
 @findex dotaccent
-@cindex Dot accent
+@cindex Acento ponto
 @findex H @r{(Hungarian umlaut accent)}
-@cindex Hungarian umlaut accent
+@cindex Acento trema húngaro
 @findex ogonek
-@cindex Ogonek diacritic
+@cindex Diacrítico Ogonek
 @findex ringaccent
-@cindex Ring accent
+@cindex Acento de anel
 @findex tieaccent
-@cindex Tie-after accent
+@cindex Acento de ligação posterior
 @findex u @r{(breve accent)}
-@cindex Breve accent
+@cindex Acento breve
 @findex ubaraccent
-@cindex Underbar accent
+@cindex Acento abaixo da barra
 @findex udotaccent
-@cindex Underdot accent
+@cindex Acento sublinhado
 @findex v @r{(caron)}
-@cindex Hacek accent
-@cindex Check accent
+@cindex Acento Hacek
+@cindex Acento Check
 @cindex Caron
-@multitable {@t{@@questiondown@{@}}} {Output} {caron/hacek/check accent}
-@headitem Command           @tab Output         @tab What
-@item @t{@@"o}              @tab @"o            @tab umlaut accent
-@item @t{@@'o}              @tab @'o            @tab acute accent
-@item @t{@@,@{c@}}          @tab @,{c}          @tab cedilla accent
-@item @t{@@=o}              @tab @=o            @tab macron/overbar accent
-@item @t{@@^o}              @tab @^o            @tab circumflex accent
-@item @t{@@`o}              @tab @`o            @tab grave accent
-@item @t{@@~o}              @tab @~o            @tab tilde accent
-@item @t{@@dotaccent@{o@}}  @tab @dotaccent{o}  @tab overdot accent
-@item @t{@@H@{o@}}          @tab @H{o}          @tab long Hungarian umlaut
+@multitable {@t{@@questiondown@{@}}} {Output} {acento caron/hacek/check}
+@headitem Comando           @tab Saída gerada   @tab O quê
+@item @t{@@"o}              @tab @"o            @tab acento trema
+@item @t{@@'o}              @tab @'o            @tab acento agudo
+@item @t{@@,@{c@}}          @tab @,{c}          @tab acento cedilha
+@item @t{@@=o}              @tab @=o            @tab acento macron/overbar
+@item @t{@@^o}              @tab @^o            @tab acento circunflexo
+@item @t{@@`o}              @tab @`o            @tab acento grave
+@item @t{@@~o}              @tab @~o            @tab acento til
+@item @t{@@dotaccent@{o@}}  @tab @dotaccent{o}  @tab acento overdot
+@item @t{@@H@{o@}}          @tab @H{o}          @tab longo trema húngaro
 @item @t{@@ogonek@{a@}}     @tab @ogonek{a}     @tab ogonek
-@item @t{@@ringaccent@{o@}} @tab @ringaccent{o} @tab ring accent
-@item @t{@@tieaccent@{oo@}} @tab @tieaccent{oo} @tab tie-after accent
-@item @t{@@u@{o@}}          @tab @u{o}          @tab breve accent
-@item @t{@@ubaraccent@{o@}} @tab @ubaraccent{o} @tab underbar accent
-@item @t{@@udotaccent@{o@}} @tab @udotaccent{o} @tab underdot accent
-@item @t{@@v@{o@}}          @tab @v{o}          @tab caron/hacek/check accent
+@item @t{@@ringaccent@{o@}} @tab @ringaccent{o} @tab acento ring
+@item @t{@@tieaccent@{oo@}} @tab @tieaccent{oo} @tab acento de ligação posterior
+@item @t{@@u@{o@}}          @tab @u{o}          @tab acento breve
+@item @t{@@ubaraccent@{o@}} @tab @ubaraccent{o} @tab acento underbar
+@item @t{@@udotaccent@{o@}} @tab @udotaccent{o} @tab acento underdot
+@item @t{@@v@{o@}}          @tab @v{o}          @tab acento caron/hacek/check
 @end multitable
 
-This table lists the Texinfo commands for inserting other characters
-commonly used in languages other than English.
+Esta tabela lista os comandos do Texinfo para inserir outros caracteres comumente usados ​​em idiomas diferentes do inglês.
 
 @findex questiondown
 @cindex @questiondown{}
@@ -10241,118 +10212,96 @@ commonly used in languages other than English.
 @findex TH
 @cindex @TH{}
 @multitable {@t{@@questiondown@{@}}} {oe OE} {es-zet or sharp S}
-@item @t{@@exclamdown@{@}}      @tab @exclamdown{}   @tab upside-down !
-@item @t{@@questiondown@{@}}    @tab @questiondown{} @tab upside-down ?
-@item @t{@@aa@{@} @@AA@{@}}     @tab @aa{} @AA{}     @tab a,A with circle
-@item @t{@@ae@{@} @@AE@{@}}     @tab @ae{} @AE{}     @tab ae,AE ligatures
-@item @t{@@dh@{@} @@DH@{@}}     @tab @dh{} @DH{}     @tab Icelandic eth
-@item @t{@@dotless@{i@}}        @tab @dotless{i}     @tab dotless i
-@item @t{@@dotless@{j@}}        @tab @dotless{j}     @tab dotless j
-@item @t{@@l@{@} @@L@{@}}       @tab @l{} @L{}       @tab suppressed-L,l
-@item @t{@@o@{@} @@O@{@}}       @tab @o{} @O{}       @tab O,o with slash
-@item @t{@@oe@{@} @@OE@{@}}     @tab @oe{} @OE{}     @tab oe,OE ligatures
-@item @t{@@ordf@{@} @@ordm@{@}} @tab @ordf{} @ordm{} @tab Spanish ordinals
-@item @t{@@ss@{@}}              @tab @ss{}           @tab es-zet or sharp S
-@item @t{@@th@{@} @@TH@{@}}     @tab @th{} @TH{}     @tab Icelandic thorn
+@item @t{@@exclamdown@{@}}      @tab @exclamdown{}   @tab ! de cabeça para baixo
+@item @t{@@questiondown@{@}}    @tab @questiondown{} @tab ? de cabeça para baixo
+@item @t{@@aa@{@} @@AA@{@}}     @tab @aa{} @AA{}     @tab a,A com círculo
+@item @t{@@ae@{@} @@AE@{@}}     @tab @ae{} @AE{}     @tab ligaduras ae,AE
+@item @t{@@dh@{@} @@DH@{@}}     @tab @dh{} @DH{}     @tab eth islandês
+@item @t{@@dotless@{i@}}        @tab @dotless{i}     @tab i sem ponto
+@item @t{@@dotless@{j@}}        @tab @dotless{j}     @tab j sem ponto
+@item @t{@@l@{@} @@L@{@}}       @tab @l{} @L{}       @tab L,l suprimido
+@item @t{@@o@{@} @@O@{@}}       @tab @o{} @O{}       @tab O,o com barra
+@item @t{@@oe@{@} @@OE@{@}}     @tab @oe{} @OE{}     @tab ligaduras de oe,OE
+@item @t{@@ordf@{@} @@ordm@{@}} @tab @ordf{} @ordm{} @tab Ordinais espanhóis
+@item @t{@@ss@{@}}              @tab @ss{}           @tab es-zet ou sharp S
+@item @t{@@th@{@} @@TH@{@}}     @tab @th{} @TH{}     @tab thorn islandês
 @end multitable
 
 
 @node Inserindo Aspas
 @section Inserindo Aspas
-@cindex Inserting quotation marks
-@cindex Quotation marks, inserting
+@cindex Inserindo aspas
+@cindex Aspas, inserindo
 
-@cindex Quotation characters (`'), in source
-Use doubled single-quote characters to begin and end quotations:
-@w{@t{`@w{}`@dots{}'@w{}'}}.  @TeX{} converts two single quotes to
-left- and right-hand doubled quotation marks,
-@c this comes out as "like this" in Info, which is just confusing.
+@cindex Caracteres de citação (`'), no fonte
+Use caracteres de aspas simples duplicadas para iniciar e terminar citações:
+@w{@t{`@w{}`@dots{}'@w{}'}}. @TeX{} converte duas aspas simples para marcas duplicadas de citação à esquerda e à direita,
+@c isso aparece como "assim" no Info, o que é simplesmente confuso.
 @iftex
-``like this'',
+``assim'',
 @end iftex
-and Info converts doubled single-quote characters to ASCII
-double-quotes: @w{@t{`@w{}`@dots{}'@w{}'}} becomes @w{@t{"@dots{}"}}.
+e Info converte caracteres duplicados de aspas simples para aspas duplas ASCII: @w{@t{`@w{}`@dots{}'@w{}'}} se torna @w{@t{"@dots{}"}}.
 
-You may occasionally need to produce two consecutive single quotes;
-for example, in documenting a computer language such as Maxima where
-@t{'@w{}'} is a valid command.  You can do this with the input
-@t{'@@w@{@}'}; the empty @code{@@w} command stops the combination into
-the double-quote characters.
+Ocasionalmente, você pode precisar produzir duas aspas simples consecutivas; por exemplo, ao documentar uma linguagem de computador como Maxima, onde @t{'@w{}'} é um comando válido. Você pode fazer isso com a entrada @t{'@@w@{@}'}; o comando vazio @code{@@w} interrompe a combinação nos caracteres de aspas duplas.
 
-@cindex Unicode quotation characters
-@cindex Grave accent, vs. left quote
-The left quote character (@t{`}, ASCII code 96) used in Texinfo is a
-grave accent in ANSI and ISO character set standards.  We use it as a
-quote character because that is how @TeX{} is set up, by default.
+@cindex Caracteres Unicode de citação
+@cindex Acento grave, versus aspa esquerda
+O caractere de aspa esquerda (@t{`}, código ASCII 96) usado no Texinfo é um acento grave nos padrões de conjunto de caracteres ANSI e ISO. Nós o usamos como um caractere de aspas porque assim é como @TeX{} está configurado, por padrão.
 
-Texinfo supports several other quotation marks used in languages other
-than English.  Below is a table with the commands Texinfo provides for
-inserting quotation marks.
+Texinfo suporta várias outras aspas usadas em idiomas diferentes do inglês. Abaixo está uma tabela com os comandos que Texinfo fornece para inserir aspas.
 
 @cindex UTF-8
 @cindex ISO 8859-15
 @cindex Latin 9
 @cindex ISO 8859-1
 @cindex Latin 1
-In order to get the symbols for the quotation marks in encoded Info
-output, it is necessary to specify @code{@@documentencoding UTF-8}.
-(@xref{@code{@@documentencoding}}.)  Double guillemets are also
-present in ISO 8859-1 (aka Latin@tie{}1) and ISO 8859-15 (aka
-Latin@tie{}9).
+Para a finalidade de se obter os símbolos para as aspas na saída gerada codificada do Info, é necessário especificar-se @code{@@documentencoding UTF-8}. (@xref{@code{@@documentencoding}}). Guillemets duplos também estão presentes na ISO 8859-1 (também conhecida como Latin@tie{}1) e na ISO 8859-15 (também conhecida como Latin@tie{}9).
 
-@cindex European Computer Modern fonts
-@cindex EC fonts
-The standard @TeX{} fonts support the usual quotation marks used in
-English (the ones produced with single and doubled ASCII
-single-quotes).  For the other quotation marks, @TeX{} uses European
-Computer Modern (EC) fonts (@file{ecrm1000} and other variants).
-These fonts are freely available, of course; you can download them
-from @url{http://ctan.org/pkg/ec}, among other places.
+@cindex Fontes modernas de Computador Europeu
+@cindex EC fontes
+As fontes padrão do @TeX{} suportam as aspas usuais usadas em inglês (aquelas produzidas com aspas simples de ASCII unitárias e duplicadas). Para as outras aspas, @TeX{} usa fontes European Computer Modern (EC) (@file{ecrm1000} e outras variantes). Essas fontes estão disponíveis gratuitamente, é claro; você pode baixá-las a partir de @url{http://ctan.org/pkg/ec}, entre outros lugares.
 
-@cindex CM-Super fonts
-The free EC fonts are bitmap fonts created with Metafont.  Especially
-for on-line viewing, Type@tie{}1 (vector) versions of the fonts are
-preferable; these are available in the CM-Super font package
-(@url{http://ctan.org/pkg/cm-super}).
+@cindex Fontes CM-Super
+As fontes livres EC são fontes bitmap criadas com Metafont. Especialmente para visualização on-line, as versões Type@tie{}1 (vetor) das fontes são preferíveis; elas estão disponíveis no pacote de fontes CM-Super (@url{http://ctan.org/pkg/cm-super}).
 
-Both distributions include installation instructions.
+Ambas as distribuições incluem instruções de instalação.
 
-@cindex Single quotation marks
-@cindex Double quotation marks
-@cindex Left quotation marks
-@cindex Right quotation marks
+@cindex Aspas simples
+@cindex Aspas duplas
+@cindex Aspas à esquerda
+@cindex Aspas à direita
 @findex quotedblleft
 @cindex `@w{}`
 @findex quoteleft
 @cindex `
-@cindex " (undirected double quote character)
+@cindex " (caractere de aspas duplas não direcionadas)
 @findex quotedblright
 @cindex '@w{}'
 @findex quoteright
 @cindex '
-@cindex Double low-9 quotation mark
-@cindex Single low-9 quotation mark
+@cindex Aspas duplas baixo-9
+@cindex Aspas simples baixo-9
 @findex quotedblbase
-@cindex @quotedblbase{} (double low-9 quotation mark)
+@cindex @quotedblbase{} (aspas duplas baixo-9)
 @findex quotesinglbase
-@cindex @quotesinglbase{} (single low-9 quotation mark)
-@cindex Angle quotation marks
+@cindex @quotesinglbase{} (aspas simples baixo-9)
+@cindex Aspas angulares
 @cindex Guillemets
 @cindex Guillemots
-@cindex French quotation marks
-@cindex Quotation marks, French
-@cindex German quotation marks
-@cindex Quotation marks, German
-@cindex Double guillemets
-@cindex Single guillemets
-@cindex Double angle quotation marks
-@cindex Single angle quotation marks
-@cindex Left-pointing angle quotation marks
-@cindex Right-pointing angle quotation marks
-@cindex Double left-pointing angle quotation mark
-@cindex Double right-pointing angle quotation mark
-@cindex Single left-pointing angle quotation mark
-@cindex Single right-pointing angle quotation mark
+@cindex Aspas francesas
+@cindex Aspas, francesas
+@cindex Aspas alemãs
+@cindex Aspas, alemãs
+@cindex Guillemets duplos
+@cindex Guillemets simples
+@cindex Aspas de ângulo duplo
+@cindex Aspas angulares simples
+@cindex Aspas de ângulo apontando para a esquerda
+@cindex Aspas de ângulo apontando para a direita
+@cindex Aspas duplas de ângulo apontando para a esquerda
+@cindex Aspas duplas de ângulo apontando para a direita
+@cindex Aspas simples de ângulo apontando para a esquerda
+@cindex Aspas simples de ângulo apontando para a direita
 @findex guillemetleft
 @findex guillemotleft
 @cindex @guillemetleft{}
@@ -10363,39 +10312,26 @@ Both distributions include installation instructions.
 @cindex @guilsinglleft{}
 @findex guilsinglright
 @cindex @guilsinglright{}
-@c The third column doesn't have the full text in the prototype so that
-@c the Info output fits within 72 columns.
-@multitable {@t{@@quotedblright@{@} '@w{}'}} {Glyph} {Right-pointing double angle quotation}
-@headitem Command                    @tab Glyph             @tab Unicode name (point)
-@item @verb{.@quotedblleft{} ``.}    @tab @quotedblleft{}   @tab Left double quotation mark (U+201C)
-@item @verb{.@quotedblright{} ''.}   @tab @quotedblright{}  @tab Right double quotation mark (U+201D)
-@item @verb{.@quoteleft{} `.}        @tab @quoteleft{}      @tab Left single quotation mark (U+2018)
-@item @verb{.@quoteright{} '.}       @tab @quoteright{}     @tab Right single quotation mark (U+2019)
-@item @t{@@quotedblbase@{@}}         @tab @quotedblbase{}   @tab Double low-9 quotation mark (U+201E)
-@item @t{@@quotesinglbase@{@}}       @tab @quotesinglbase{} @tab Single low-9 quotation mark (U+201A)
-@item @t{@@guillemetleft@{@}}        @tab @guillemetleft{}  @tab Left-pointing double angle quotation mark (U+00AB)
-@item @t{@@guillemetright@{@}}       @tab @guillemetright{} @tab Right-pointing double angle quotation mark (U+00BB)
-@item @t{@@guilsinglleft@{@}}        @tab @guilsinglleft{}  @tab Single left-pointing angle quotation mark (U+2039)
-@item @t{@@guilsinglright@{@}}       @tab @guilsinglright{} @tab Single right-pointing angle quotation mark (U+203A)
+@c A terceira coluna não tem o texto completo no protótipo,
+@c de forma que a saída gerada do Info cabe em 72 colunas.
+@multitable {@t{@@quotedblright@{@} '@w{}'}} {Glyph} {Aspas duplas apontando para a direita}
+@headitem Comando                    @tab Glifo             @tab Nome Unicode (ponto)
+@item @verb{.@quotedblleft{} ``.}    @tab @quotedblleft{}   @tab Aspas duplas esquerdas (U+201C)
+@item @verb{.@quotedblright{} ''.}   @tab @quotedblright{}  @tab Aspas duplas direitas (U+201D)
+@item @verb{.@quoteleft{} `.}        @tab @quoteleft{}      @tab Aspas simples esquerdas (U+2018)
+@item @verb{.@quoteright{} '.}       @tab @quoteright{}     @tab Aspas simples direitas (U+2019)
+@item @t{@@quotedblbase@{@}}         @tab @quotedblbase{}   @tab Aspas duplas baixo-9 (U+201E)
+@item @t{@@quotesinglbase@{@}}       @tab @quotesinglbase{} @tab Aspas simples baixo-9 (U+201A)
+@item @t{@@guillemetleft@{@}}        @tab @guillemetleft{}  @tab Aspas duplas apontando para a esquerda (U+00AB)
+@item @t{@@guillemetright@{@}}       @tab @guillemetright{} @tab Aspas duplas apontando para a direita (U+00BB)
+@item @t{@@guilsinglleft@{@}}        @tab @guilsinglleft{}  @tab Aspas simples apontando para a esquerda (U+2039)
+@item @t{@@guilsinglright@{@}}       @tab @guilsinglright{} @tab Aspas simples apontando para a direita (U+203A)
 @end multitable
 
-@cindex Auk, bird species
-For the double angle quotation marks, Adobe and @LaTeX{} glyph names
-are also supported:  @code{@@guillemotleft} and
-@code{@@guillemotright}.  These names are incorrect; a
-``guillemot'' is a bird species (a type of auk).
+@cindex Auk, espécies de pássaro
+Para as aspas de ângulo duplo, nomes de glifos da Adobe e @LaTeX{} também são suportados: @code{@@guillemotleft} e @code{@@guillemotright}. Esses nomes estão incorretos; um ``guillemot'' é uma espécie de pássaro (um tipo de auk).
 
-Traditions for quotation mark usage vary to a great extent between
-languages (@url{http://en.wikipedia.org/wiki/Quotation_mark}).
-Texinfo does not provide commands or configurations for typesetting
-quotation marks according to the numerous traditions.  Therefore, you
-have to choose the commands appropriate for the language of your
-manual.  Sometimes aliases (@pxref{@code{@@alias}}) can simplify the
-usage and make the source code more readable.  For example, in German,
-@code{@@quotedblbase} is used for the left double quote, and the right
-double quote is the glyph produced by @code{@@quotedblleft}, which is
-counter-intuitive.  Thus, in this case the following aliases would be
-convenient:
+As tradições para o uso de aspas variam muito entre os idiomas (@url{http://en.wikipedia.org/wiki/Quotation_mark}). Texinfo não fornece comandos ou configurações para composição de aspas de acordo com as numerosas tradições. Portanto, você tem que escolher os comandos apropriados para o idioma do teu manual. Às vezes, apelidos (@pxref{@code{@@alias}}) podem simplificar o uso e tornar o código-fonte mais legível. Por exemplo, em alemão, @code{@@quotedblbase} é usado para as aspas duplas à esquerda, e as aspas duplas à direita são o glifo produzido por @code{@@quotedblleft}, o que é contraintuitivo. Portanto, nesse caso, os seguintes apelidos seriam convenientes:
 
 @example
 @@alias lgqq = quotedblbase
@@ -10403,153 +10339,113 @@ convenient:
 @end example
 
 
-@node Inserindo Subscripts e Superscripts
-@section @code{@@sub} and @code{@@sup}: Inserting Subscripts and Superscripts
+@node Inserindo Subscritos e Sobrescritos
+@section @code{@@sub} e @code{@@sup}: Inserindo Subscritos e Sobrescritos
 
 @findex sub
 @findex sup
-@cindex Subscripts and superscripts, text
+@cindex Subscritos e sobrescritos, texto
 
-You can insert subscripts and superscripts, in either text or math,
-with the @code{@@sub} and @code{@@sup} commands.  (For other
-mathematical expressions, see the next section.)  For example, here is
-a purely textual subscript and superscript:
+Você consegue inserir subscritos e sobrescritos, em texto ou matemática, com os comandos @code{@@sub} e @code{@@sup}. (Para outras expressões matemáticas, veja-se a próxima seção). Por exemplo, aqui está um subscrito e sobrescrito puramente textual:
 
 @example
-here@@sub@{below@}@@sup@{above@}
+aqui@@sub@{abaixo@}@@sup@{acima@}
 @end example
 
-@noindent produces:
+@noindent produz:
 
 @display
-here@sub{below}@sup{above} @c CONSERTE-ME
+aqui@sub{abaixo}@sup{acima} @c CONSERTE-ME
 @end display
 
-@cindex Math italic font
-Inside @code{@@math}, @code{@@sub} and @code{@@sup} produce
-mathematical subscripts and superscripts.  This uses a different font
-in the @TeX{} output (math italic instead of text italic); it makes no
-difference in the other output formats.  Here's an example:
+@cindex Fonte itálica matemática
+Dentro de @code{@@math}, @code{@@sub} e @code{@@sup} produzem subscritos e sobrescritos matemáticos. Isso usa uma fonte diferente na saída gerada do @TeX{} (itálico de matemática, em vez de itálico de texto); não faz diferença nos outros formatos de saída. Aqui está um exemplo:
 
 @example
 @@math@{e@@sup@{x@}@}
 @end example
 
-@noindent produces:
+@noindent produz:
 
 @display
 @math{e@sup{x}}
 @end display
 
-In Info and plain text, regardless of being used inside @code{@@math},
-@code{@@sub@{@var{text}@}} is output as @samp{_@{@var{text}@}} and
-@code{@@sup@{@var{text}@}} as @samp{^@{@var{text}@}}, including the
-literal braces (to mark the beginning and end of the ``script'' text
-to the reader).
+No Info e texto simples, independentemente de ser usado dentro de @code{@@math}, @code{@@sub@{@var{texto}@}} é gerado como @samp{_@{@var{texto}@}} e @code{@@sup@{@var{texto}@}} como @samp{^@{@var{texto}@}}, incluindo as chaves literais (para marcar o início e o fim do texto de ``script'' para o(a) leitor(a)).
 
-When the output format (and display program) permit (@TeX{} math,
-HTML), the superscript is set above the subscript when both commands
-are given consecutively.
+Quando o formato da saída gerada (e o programa de exibição) permite (matemática do @TeX{}, HTML), o sobrescrito é configurado acima do subscrito quando ambos os comandos forem fornecidos consecutivamente.
 
 
 @node Inserindo Fórmulas Matemáticas
-@section @code{@@math}: Inserting Mathematical Expressions
+@section @code{@@math}: Inserindo Expressões Matemáticas
 
-@anchor{math}@c old name
+@anchor{math}@c nome antigo
 @findex math
-@cindex Mathematical expressions, inserting
-@cindex Formulas, mathematical
+@cindex Expressões matemáticas, inserindo
+@cindex Fórmulas, matemática
 
-You can write a short mathematical expression with the @code{@@math}
-command.  Write the mathematical expression between braces, like this:
+Você consegue escrever uma expressão matemática curta com o comando @code{@@math}. Escreva a expressão matemática entre chaves, assim:
 
 @example
 @@math@{(a + b) = (b + a)@}
 @end example
 
 @iftex
-@noindent This produces the following in @TeX{}:
+@noindent Isso produz o seguinte no @TeX{}:
 
 @display
 @math{(a + b) = (b + a)}
 @end display
 
-@noindent and the following in other formats:
+@noindent e o seguinte em outros formatos:
 @end iftex
 @ifnottex
-@noindent This produces the following in Info and HTML:
+@noindent Isso produz o seguinte no Info e em HTML:
 @end ifnottex
 
 @example
 (a + b) = (b + a)
 @end example
 
-@cindex MathML, not used
-The @code{@@math} command has no special effect on the Info and HTML
-output.  @command{makeinfo} expands any @@-commands as usual, but it
-does not try to use produce good mathematical formatting in any way
-(no use of MathML, etc.).  The HTML output is enclosed by
-@code{<em>...</em>}, but nothing more.
+@cindex MathML, não usado
+O comando @code{@@math} não tem efeito especial na saída gerada de Info e de HTML. @command{makeinfo} expande quaisquer comandos @@ como de costume, mas não tenta usar (ou produzir) boa formatação matemática de forma alguma (sem uso de MathML, etc.). A saída gerada de HTML é delimitada por @code{<em>...</em>}, mas nada mais.
 
 @findex \mathopsup
-However, as far as the @TeX{} output is concerned, plain @TeX{}
-mathematical commands are allowed in @code{@@math}, starting with
-@samp{\}.  In essence, @code{@@math} switches into plain @TeX{} math
-mode.  (Exception: the plain @TeX{} command @code{\sup}, which
-typesets the mathematical operator name `sup', must be accessed as
-@code{\mathopsup}, due to the conflict with Texinfo's @code{@@sup}
-command.)
+No entanto, no que diz respeito à saída gerada do @TeX{}, comandos matemáticos simples do @TeX{} são permitidos no @code{@@math}, começando com @samp{\}. Em essência, o @code{@@math} comuta para o modo matemático simples do @TeX{}. (Exceção: o comando simples do @TeX{} @code{\sup}, que tipografa o nome do operador matemático `sup', precisa ser acessado como @code{\mathopsup}, devido ao conflito com o comando @code{@@sup} do Texinfo).
 
-This allows you to use all the plain @TeX{} math control sequences for
-symbols, functions, and so on, and thus get proper formatting in the
-@TeX{} output, at least.
+Isso permite que você use todas as sequências de controle matemático simples do @TeX{} para símbolos, funções e assim por diante, e assim obtenha a formatação adequada na saída gerada do @TeX{}, pelo menos.
 
-The @code{@@sub} and @code{@@sup} commands described in the previous
-section produce subscripts and superscripts in HTML output as well as
-@TeX{}; the plain @TeX{} characters @code{_} and @code{^} for
-subscripts and superscripts are recognized by @TeX{} inside
-@code{@@math}, but do nothing special in HTML or other output formats.
+Os comandos @code{@@sub} e @code{@@sup} descritos na seção anterior produzem subscritos e sobrescritos na saída gerada de HTML, bem como no @TeX{}; os caracteres simples do @TeX{} @code{_} e @code{^} para subscritos e sobrescritos são reconhecidos pelo @TeX{} dentro do @code{@@math}, mas não fazem nada de especial em HTML ou outros formatos de saída.
 
-It's best to use @samp{\} instead of @samp{@@} for any such
-mathematical commands; otherwise, @command{makeinfo} will complain.
-On the other hand, @command{makeinfo} does allow input with matching
-(but unescaped) braces, such as @samp{k_@{75@}}; it complains about
-such bare braces in regular input.
+É melhor usar @samp{\} em vez de @samp{@@} para quaisquer comandos matemáticos desse tipo; caso contrário, @command{makeinfo} reclamará. Por outro lado, @command{makeinfo} permite entrada com chaves correspondentes (inescapadas), como @samp{k_@{75@}}; ele reclama acerca dessas chaves vazias na entrada regular.
 
-Here's an example:
+Aqui está um exemplo:
 
 @example
 @@math@{\sin 2\pi \equiv \cos 3\pi@}
 @end example
 
 @iftex
-@noindent which looks like this in @TeX{}:
+@noindent que se parece com isto no @TeX{}:
 @display
 @math{\sin 2\pi \equiv \cos 3\pi}
 @end display
 
-@noindent but
+@noindent mas
 @end iftex
-@noindent which looks like the input in Info and HTML:
+@noindent que se parece com a entrada no Info e em HTML:
 @example
 \sin 2\pi \equiv \cos 3\pi
 @end example
 
-@findex @sortas{\} \ @r{(literal \ in @code{@@math})} @c CONSERTE-ME
-Since @samp{\} is an escape character inside @code{@@math}, you can
-use @code{@@\} to get a literal backslash (@code{\\} will work in
-@TeX{}, but you'd get the literal two characters @samp{\\} in Info).
-@code{@@\} is not defined outside of @code{@@math}, since a @samp{\}
-ordinarily produces a literal (typewriter) @samp{\}.  You can also use
-@code{@@backslashchar@{@}} in any mode to get a typewriter backslash.
-@xref{Inserindo uma Barra Invertida}.
+@findex @sortas{\} \ @r{(\ literal em @code{@@math})} @c CONSERTE-ME
+Como @samp{\} é um caractere de escape dentro de @code{@@math}, você pode usar @code{@@\} para obter uma barra invertida literal (@code{\\} funcionará no @TeX{}, mas você obteria os dois caracteres literais @samp{\\} no Info). @code{@@\} não está definido fora de @code{@@math}, pois uma @samp{\} normalmente produz uma @samp{\} literal (máquina de escrever). Você também pode usar @code{@@backslashchar@{@}} em qualquer modo para obter uma barra invertida de máquina de escrever. @xref{Inserindo uma Barra Invertida}.
 
-@cindex Displayed equations
-@cindex Equations, displayed
-For displayed equations, you must at present use @TeX{} directly
-(@pxref{Comandos do Formatador Bruto}).
+@cindex Equações exibidas
+@cindex Equações, exibidas
+Para equações exibidas, você precisa, no presente, usar @TeX{} diretamente (@pxref{Comandos do Formatador Bruto}).
 
-
+PAREI
 @node Glifos para Texto
 @section Glifos para Texto
 
@@ -20719,7 +20615,7 @@ Emphasize @var{text} more strongly than @code{@@emph}, by using
 @xref{emph & strong, , Enfatizando Texto}.
 
 @item @@sub @{@var{text}@}
-Set @var{text} as a subscript.  @xref{Inserindo Subscripts e Superscripts}.
+Set @var{text} as a subscript.  @xref{Inserindo Subscritos e Sobrescritos}.
 
 @item @@subheading @var{title}
 Print an unnumbered subsection-like heading, but omit from the table
@@ -20753,7 +20649,7 @@ Print a short table of contents.  Synonym for @code{@@shortcontents}.
 @xref{Conteúdo, , Gerando um Sumário}.
 
 @item @@sup @{@var{text}@}
-Set @var{text} as a superscript.  @xref{Inserindo Subscripts e Superscripts}.
+Set @var{text} as a superscript.  @xref{Inserindo Subscritos e Sobrescritos}.
 
 @item @@syncodeindex @var{from-index} @var{to-index}
 Merge the index named in the first argument into the index named in
