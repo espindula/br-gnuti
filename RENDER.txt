@@ -1,0 +1,6 @@
+Comandos para renderizar o Manual do Texinfo
+
+Formato texto simples (puro):
+============================
+
+makeinfo --plaintext --no-split --output=teste.txt texinfo-ed.6.1-pt_BR.texi
