@@ -12,8 +12,8 @@
 
 @c Automake automaticamente atualiza version-pt_BR.texi @set VERSION e 
 @c @set UPDATED com os valores apropriados.
-@settitle GNU Texinfo @value{VERSION}
 @include version-pt_BR.texi
+@settitle GNU Texinfo @value{VERSION}
 
 @c Define um novo índice para opções de linha de comando.
 @defcodeindex op
@@ -592,7 +592,7 @@ Formatando e Imprimindo Cópia Impressa
 
 * Use @TeX{}::                     Use @TeX{} para formatar para cópia impressa.
 * Format with @command{texi2dvi}::        A maneira mais simples para formatar.
-* Format with @command{tex}/@command{texindex}::    Formatando com comandos explícitos de shell.
+* Formatar com @command{tex}/@command{texindex}::    Formatando com comandos explícitos de shell.
 * Print with @command{lpr}::              Como imprimir.
 * Within Emacs::                Como formatar e imprimir a partir de um shell Emacs.
 * Modo Texinfo Printing::       Como formatar e imprimir em modo Texinfo.
@@ -608,21 +608,21 @@ tamanho das páginas e como imprimir saída escalada.
 * PDF Output::                  Saída em Formato Portável de Documento.
 * Obtaining @TeX{}::               Como obter @TeX{}.
 
-Formatar com @code{@@command{tex}/@code{@@command{texindex}}
+Formatar com @command{tex}/@command{texindex}
 
 * Formatting Partial Documents::
-* Details of code@{@@command{texindex}}::
+* Detalhes de @command{texindex}::
 
-@code{@@command{texi2any}}: O Tradutor Genérico para Texinfo
+@command{texi2any}: O Tradutor Genérico para Texinfo
 
-* Reference Implementation::    @code{@@command{texi2any}}: a implementação de referência.
-* Invoking @code{@@command{texi2any}}::           Executando o tradutor a partir de um shell.
-* @code{@@command{texi2any}} Printed Output::     Chamando @code{@@command{texi2any}}.
+* Reference Implementation::    @command{texi2any}: a implementação de referência.
+* Invoking @command{texi2any}::           Executando o tradutor a partir de um shell.
+* @command{texi2any} Printed Output::     Chamando @command{texi2any}.
 * Pointer Validation::          Como verificar que os ponteiros apontam para algum lugar.
-* Customization Variables::     Configurando @code{@@command{texi2any}}.
+* Customization Variables::     Configurando @command{texi2any}.
 * Internacionalização of Document Strings:: Traduzindo texto inserido pelo programa.
 * Invoking @command{pod2texi}::           Traduzindo POD Perl para Texinfo.
-* @code{@@command{texi2html}}::                   Um ancestral de @code{@@command{texi2any}}.
+* @command{texi2html}::                   Um ancestral de @command{texi2any}.
 
 Variáveis de Personalização
 
@@ -9185,7 +9185,8 @@ rodapé@footnote{Aqui está a amostra de nota de rodapé.}; no fonte do
 Texinfo, se parece com isto:
 
 @example
-@dots{}uma amostra de nota de rodapé@@footnote@{Aqui está a amostra de nota de rodapé.@}; no fonte do Texinfo@dots{}
+@dots{}uma amostra de nota de rodapé@@footnote@{Aqui está a amostra de 
+nota de rodapé.@}; no fonte do Texinfo@dots{}
 @end example
 
 Como você pode ver, esse fonte inclui dois sinais de pontuação próximos 
@@ -9454,23 +9455,46 @@ indexação (em qualquer contexto) acaba antes do material, onde os(as)
 leitores(as) querem estar, e não depois.
 
 @cindex Tipos de fonte de índice
-Por padrão, as entradas para um índice de conceito são impressas em uma fonte romana pequena e as entradas para os outros índices são impressas em uma fonte @code{@@code} pequena. Você pode mudar a forma como parte de uma entrada é impressa com os comandos usuais do Texinfo, como @code{@@file} para nomes de arquivos (@pxref{Marcando Texto}) e @code{@@r} para a fonte normal roman (@pxref{Fontes}).
+Por padrão, as entradas para um índice de conceito são impressas em uma 
+fonte romana pequena e as entradas para os outros índices são impressas 
+em uma fonte @code{@@code} pequena. Você pode mudar a forma como parte 
+de uma entrada é impressa com os comandos usuais do Texinfo, como 
+@code{@@file} para nomes de arquivos (@pxref{Marcando Texto}) e 
+@code{@@r} para a fonte normal roman (@pxref{Fontes}).
 
 @findex sortas
 @cindex ordenar chaves para entradas de índice
 @cindex ordenamento de índice
-Para a saída gerada impressa, você pode especificar uma chave explícita de ordenação para uma entrada de índice usando @code{@@sortas} imediatamente depois do comando de índice.  Por exemplo: @samp{@@findex @@sortas@{\@} \ @@r@{(literal \ em @@code@{@@@@math@})} ordena a entrada de índice que isso produz sob barra invertida.
+Para a saída gerada impressa, você pode especificar uma chave explícita 
+de ordenação para uma entrada de índice usando @code{@@sortas} 
+imediatamente depois do comando de índice.  Por exemplo:
+@samp{@@findex @@sortas@{\@} \ @@r@{(literal \ em @@code@{@@@@math@})}
+ordena a entrada de índice que isso produz sob barra invertida.
 
 
 @vindex txiindexbackslashignore
 @vindex txiindexhyphenignore
 @vindex txiindexlessthanignore
 @vindex txiindexatsignignore
-Para reduzir a quantidade de chaves de ordenação que você precisa fornecer explicitamente, você pode optar por ignorar determinados caracteres nas entradas de índice para fins de ordenação.  Os caracteres que você pode, atualmente, optar por ignorar são @samp{\}, @samp{-}, @samp{<} e @samp{@@}, que são ignorados fornecendo-se como argumento para o comando @code{@@ set}, respectivamente, @code{txiindexbackslashignore}, @code{txiindexhyphenignore}, @code{txiindexlessthanignore} e @code{txiindexatsignignore}.  Por exemplo, especificar @samp{@@set txiindexbackslashignore} faz com que a entrada @samp{\mathopsup} no índice para este manual seja ordenada como se fosse @samp{mathopsup}, de forma que apareça entre as outras entradas que começam com ` M'.
+Para reduzir a quantidade de chaves de ordenação que você precisa 
+fornecer explicitamente, você pode optar por ignorar determinados 
+caracteres nas entradas de índice para fins de ordenação.  Os caracteres 
+que você pode, atualmente, optar por ignorar são @samp{\}, @samp{-}, 
+@samp{<} e @samp{@@}, que são ignorados fornecendo-se como argumento 
+para o comando @code{@@ set}, respectivamente, 
+@code{txiindexbackslashignore}, @code{txiindexhyphenignore}, 
+@code{txiindexlessthanignore} e @code{txiindexatsignignore}.  Por 
+exemplo, especificar @samp{@@set txiindexbackslashignore} faz com que a 
+entrada @samp{\mathopsup} no índice para este manual seja ordenada como 
+se fosse @samp{mathopsup}, de forma que apareça entre as outras entradas 
+que começam com ` M'.
 
 
 @quotation Cuidado
-Não use dois pontos em uma entrada de índice.  No Info, dois pontos separam o nome da entrada de menu do nome do nó, portanto, dois pontos na própria entrada confundem o Info.  @xref{Partes de Menu}, para mais informações relativas a estrutura de uma entrada de menu.
+Não use dois pontos em uma entrada de índice.  No Info, dois pontos 
+separam o nome da entrada de menu do nome do nó, portanto, dois pontos 
+na própria entrada confundem o Info.  @xref{Partes de Menu}, para mais 
+informações relativas a estrutura de uma entrada de menu.
 @end quotation
 
 @node Entradas de Índice
@@ -9482,19 +9506,53 @@ Não use dois pontos em uma entrada de índice.  No Info, dois pontos separam o 
 @cindex Entradas de índice, conselhos sobre redação
 @cindex Conselhos sobre escrever entradas
 @cindex Capitalização de entradas de índice
-As entradas do índice de conceito consistem de texto.  A melhor maneira de escrever um índice é a de elaborar entradas que sejam concisas, mas claras.  Se você puder fazer isso, o índice geralmente parecerá melhor se as entradas forem escritas exatamente como apareceriam no meio de uma frase, ou seja, colocando em maiúscula somente nomes próprios e siglas que sempre exigem letras maiúsculas. Essa é a convenção de caso que nós usamos na maioria dos índices dos manuais GNU.
+As entradas do índice de conceito consistem de texto.  A melhor maneira 
+de escrever um índice é a de elaborar entradas que sejam concisas, mas 
+claras.  Se você puder fazer isso, o índice geralmente parecerá melhor 
+se as entradas forem escritas exatamente como apareceriam no meio de uma 
+frase, ou seja, colocando em maiúscula somente nomes próprios e siglas 
+que sempre exigem letras maiúsculas. Essa é a convenção de caso que nós 
+usamos na maioria dos índices dos manuais GNU.
 
-Se você não sabe como tornar uma entrada concisa, mas clara, torne-a mais longa e clara---não concisa e confusa.  Se muitas das entradas tiverem várias palavras, o índice poderá parecer melhor se você usar uma convenção diferente: colocar em maiúscula a primeira palavra de cada entrada.  Qualquer que seja a convenção de caso que você usar, use-a de consistentemente.
+Se você não sabe como tornar uma entrada concisa, mas clara, torne-a 
+mais longa e clara---não concisa e confusa.  Se muitas das entradas 
+tiverem várias palavras, o índice poderá parecer melhor se você usar uma 
+convenção diferente: colocar em maiúscula a primeira palavra de cada 
+entrada.  Qualquer que seja a convenção de caso que você usar, use-a de 
+consistentemente.
 
-Em qualquer caso, nunca coloque em maiúscula um nome que diferencia maiúsculas de minúsculas, como um nome de função da C ou Lisp ou um comando de shell; isso seria um erro ortográfico.  As entradas em índices diferentes do índice de conceito são nomes de símbolos em linguagens de programação ou nomes de programas; esses nomes geralmente diferenciam maiúsculas de minúsculas, de forma que use letras maiúsculas e minúsculas conforme exigido.
+Em qualquer caso, nunca coloque em maiúscula um nome que diferencia 
+maiúsculas de minúsculas, como um nome de função da C ou Lisp ou um 
+comando de shell; isso seria um erro ortográfico.  As entradas em 
+índices diferentes do índice de conceito são nomes de símbolos em 
+linguagens de programação ou nomes de programas; esses nomes geralmente 
+diferenciam maiúsculas de minúsculas, de forma que use letras maiúsculas 
+e minúsculas conforme exigido.
 
 @cindex Entradas de índice exclusivas
-É uma boa ideia tornar as entradas do índice exclusivas sempre que possível. Dessa forma, as pessoas que usam a saída gerada impressa ou o preenchimento on-line das entradas do índice não enxergarão listas indiferenciadas.  Considere essa uma oportunidade para tornar mais específicas entradas de índice idênticas, de forma que os(as) leitores(as) consigam encontrar mais facilmente o lugar exato que procuram.
+É uma boa ideia tornar as entradas do índice exclusivas sempre que 
+possível. Dessa forma, as pessoas que usam a saída gerada impressa ou o 
+preenchimento on-line das entradas do índice não enxergarão listas 
+indiferenciadas.  Considere essa uma oportunidade para tornar mais 
+específicas entradas de índice idênticas, de forma que os(as) 
+leitores(as) consigam encontrar mais facilmente o lugar exato que 
+procuram.
 
+Quando você estiver criando entradas de índice, é uma boa prática pensar 
+nas diferentes maneiras pelas quais as pessoas podem procurar algo.  
+Pessoas diferentes @emph{não} pensam nas mesmas palavras quando procuram 
+algo.  Um índice útil terá itens indexados sob todas as palavras 
+diferentes que as pessoas possam usar.  Por exemplo, um(a) leitor(a) 
+pode pensar que é óbvio que os nomes de duas letras para índices 
+deveriam ser listados sob ``Índices, nomes de duas letras, uma vez que 
+``Índices'' são o conceito geral.  Todavia, outro(a) leitor(a) pode 
+lembrar-se do conceito específico de nomes de duas letras e procurar a 
+entrada listada como ``Nomes de duas letras para índices''.  Um bom 
+índice terá ambas as entradas e ajudará ambos(as) os(as) leitores(as).
 
-Quando você estiver criando entradas de índice, é uma boa prática pensar nas diferentes maneiras pelas quais as pessoas podem procurar algo.  Pessoas diferentes @emph{não} pensam nas mesmas palavras quando procuram algo.  Um índice útil terá itens indexados sob todas as palavras diferentes que as pessoas possam usar.  Por exemplo, um(a) leitor(a) pode pensar que é óbvio que os nomes de duas letras para índices deveriam ser listados sob ``Índices, nomes de duas letras, uma vez que ``Índices'' são o conceito geral.  Todavia, outro(a) leitor(a) pode lembrar-se do conceito específico de nomes de duas letras e procurar a entrada listada como ``Nomes de duas letras para índices''.  Um bom índice terá ambas as entradas e ajudará ambos(as) os(as) leitores(as).
-
-Assim como a composição tipográfica, a construção de um índice é uma arte especializada, cujas sutilezas possivelmente não sejam apreciadas até que você precise fazê-la você mesmo(a).
+Assim como a composição tipográfica, a construção de um índice é uma 
+arte especializada, cujas sutilezas possivelmente não sejam apreciadas 
+até que você precise fazê-la você mesmo(a).
 
 
 @node Imprimindo Índices e Menus
@@ -9503,14 +9561,37 @@ Assim como a composição tipográfica, a construção de um índice é uma arte
 @cindex Índices, imprimindo e menus
 @cindex Gerando menus com índices
 @cindex Menus gerados com índices
-Imprimir um índice significa incluí-lo como parte de um manual ou arquivo do Info. Isso não acontece automaticamente apenas porque você usa @code{@@cindex} ou outros comandos de geração de entrada de índice no arquivo Texinfo; esses apenas faz com que os dados brutos do índice sejam acumulados.  Para gerar um índice, você precisa incluir o comando @code{@@printindex} no local no documento onde deseja que o índice apareça.  Além disso, como parte do processo de criação de um manual impresso, você precisa executar um programa chamado @code{texindex} (@pxref{Cópia Impressa}) para ordenar os dados brutos para produzir um arquivo de índice ordenado.  O arquivo de índice ordenado é o que realmente é usado para imprimir o índice.
+Imprimir um índice significa incluí-lo como parte de um manual ou 
+arquivo do Info. Isso não acontece automaticamente apenas porque você 
+usa @code{@@cindex} ou outros comandos de geração de entrada de índice 
+no arquivo Texinfo; esses apenas faz com que os dados brutos do índice 
+sejam acumulados.  Para gerar um índice, você precisa incluir o comando 
+@code{@@printindex} no local no documento onde deseja que o índice 
+apareça.  Além disso, como parte do processo de criação de um manual 
+impresso, você precisa executar um programa chamado @code{texindex} 
+(@pxref{Cópia Impressa}) para ordenar os dados brutos para produzir um 
+arquivo de índice ordenado.  O arquivo de índice ordenado é o que 
+realmente é usado para imprimir o índice.
 
-Texinfo oferece seis tipos de índices predefinidos, que são suficientes na maioria dos casos.  @xref{Índices}, para informações a respeito disso, bem como para definir teus próprios novos índices, combinar índices e, o mais importante, conselhos sobre escrever as reais entradas do índice.  Esta seção foca na impressão de índices, o que é feito com o comando @code{@@printindex}.
+Texinfo oferece seis tipos de índices predefinidos, que são suficientes 
+na maioria dos casos.  @xref{Índices}, para informações a respeito 
+disso, bem como para definir teus próprios novos índices, combinar 
+índices e, o mais importante, conselhos sobre escrever as reais entradas 
+do índice.  Esta seção foca na impressão de índices, o que é feito com o 
+comando @code{@@printindex}.
 
 @findex printindex
-@code{@@printindex} recebe um argumento, uma abreviatura de índice de duas letras.  Ele lê o correspondente arquivo ordenado de índice (para saída gerada impressa) e o formata apropriadamente em um índice.
+@code{@@printindex} recebe um argumento, uma abreviatura de índice de 
+duas letras.  Ele lê o correspondente arquivo ordenado de índice (para 
+saída gerada impressa) e o formata apropriadamente em um índice.
 
-O comando @code{@@printindex} não gera um título de capítulo para o índice, pois manuais diferentes tem necessidades diferentes. Consequentemente, você deveria preceder o comando @code{@@printindex} com um adequado comando de seção ou capítulo (geralmente @code{@@appendix} ou @code{@@unnumbered}) para fornecer o título do capítulo e colocar o índice no tabela de conteúdo.  Preceda o título do capítulo com uma linha @code{@@node} como de costume.
+O comando @code{@@printindex} não gera um título de capítulo para o 
+índice, pois manuais diferentes tem necessidades diferentes. 
+Consequentemente, você deveria preceder o comando @code{@@printindex} 
+com um adequado comando de seção ou capítulo (geralmente 
+@code{@@appendix} ou @code{@@unnumbered}) para fornecer o título do 
+capítulo e colocar o índice no tabela de conteúdo.  Preceda o título do 
+capítulo com uma linha @code{@@node} como de costume.
 
 Por exemplo:
 
@@ -9530,29 +9611,42 @@ Por exemplo:
 @end group
 @end smallexample
 
-Se você tiver mais que um índice, nós recomendamos colocar o índice de conceito por último.
+Se você tiver mais que um índice, nós recomendamos colocar o índice de 
+conceito por último.
 
 @itemize
 @item
-Na saída gerada impressa, @code{@@printindex} produz um índice tradicional de duas colunas, com líderes de pontos entre os termos do índice e os números das páginas.
+Na saída gerada impressa, @code{@@printindex} produz um índice 
+tradicional de duas colunas, com líderes de pontos entre os termos do 
+índice e os números das páginas.
 
 @item
-Na saída gerada do Info, @code{@@printindex} produz um menu especial contendo o número da linha da entrada, relativo ao início do nó.  Leitores(as) do Info podem usar isso para ir para a linha exata de uma entrada, não apenas para o nó que a contém.  (Leitores(as) mais antigos(as) do Info irão apenas para o nó). Aqui está um exemplo:
+Na saída gerada do Info, @code{@@printindex} produz um menu especial 
+contendo o número da linha da entrada, relativo ao início do nó.  
+Leitores(as) do Info podem usar isso para ir para a linha exata de uma 
+entrada, não apenas para o nó que a contém.  (Leitores(as) mais 
+antigos(as) do Info irão apenas para o nó). Aqui está um exemplo:
 
 @smallexample
 * Primeira entrada de índice:   Topo.   (linha  7)
 @end smallexample
 
-@noindent O número real de espaços é variável, para justificar à direita o número da linha; foi reduzido aqui para que a linha caiba no manual impresso.
+@noindent O número real de espaços é variável, para justificar à direita 
+o número da linha; foi reduzido aqui para que a linha caiba no manual 
+impresso.
 
 @item
-Na saída gerada de texto simples, @code{@@printindex} produz o mesmo menu, mas os números das linhas são relativos ao início do arquivo, pois isso é mais conveniente para esse formato.
+Na saída gerada de texto simples, @code{@@printindex} produz o mesmo 
+menu, mas os números das linhas são relativos ao início do arquivo, pois 
+isso é mais conveniente para esse formato.
 
 @item
-Na saída gerada de HTML, @code{@@printindex} produz links para as entradas do índice.
+Na saída gerada de HTML, @code{@@printindex} produz links para as 
+entradas do índice.
 
 @item
-Na saída gerada XML e Docbook, ele simplesmente registra o índice a ser impresso.
+Na saída gerada XML e Docbook, ele simplesmente registra o índice a ser 
+impresso.
 @end itemize
 
 
@@ -9561,9 +9655,22 @@ Na saída gerada XML e Docbook, ele simplesmente registra o índice a ser impres
 @cindex Combinando índices
 @cindex Índices, combinando-os
 
-Às vezes você irá querer combinar dois índices, como funções e conceitos, talvez porque tenha poucas entradas suficientes que um índice separado pareceria bobo.
+Às vezes você irá querer combinar dois índices, como funções e 
+conceitos, talvez porque tenha poucas entradas suficientes que um índice 
+separado pareceria bobo.
 
-Você poderia colocar funções no índice de conceito escrevendo comandos @code{@@cindex} para elas em vez de comandos @code{@@findex} e produzir um manual consistente imprimindo o índice de conceito com o título `Índice de Função e Conceito' e não imprimir o `Índice de Função'; mas esse não é um procedimento robusto.  Ele funciona somente se o teu documento nunca for incluído como parte de outro documento que seja projetado para ter um índice de função separado; se o teu documento fosse incluído em tal documento, as funções oriundas do teu documento e aquelas oriundas do outro não terminariam juntas.  Além disso, para fazer com que os teus nomes de funções apareçam na fonte correta no índice de conceito, você precisaria colocar cada uma delas entre chaves de @code{@@code}.
+Você poderia colocar funções no índice de conceito escrevendo comandos 
+@code{@@cindex} para elas em vez de comandos @code{@@findex} e produzir 
+um manual consistente imprimindo o índice de conceito com o título 
+`Índice de Função e Conceito' e não imprimir o `Índice de Função'; mas 
+esse não é um procedimento robusto.  Ele funciona somente se o teu 
+documento nunca for incluído como parte de outro documento que seja 
+projetado para ter um índice de função separado; se o teu documento 
+fosse incluído em tal documento, as funções oriundas do teu documento e 
+aquelas oriundas do outro não terminariam juntas.  Além disso, para 
+fazer com que os teus nomes de funções apareçam na fonte correta no 
+índice de conceito, você precisaria colocar cada uma delas entre chaves 
+de @code{@@code}.
 
 @menu
 * @code{@@syncodeindex}::               Como mesclar dois índices, usando a fonte @code{@@code} para o índice mesclado.
@@ -9577,9 +9684,14 @@ Você poderia colocar funções no índice de conceito escrevendo comandos @code
 @anchor{syncodeindex}@c antigo nome
 @findex syncodeindex
 
-Quando quiser combinar funções e conceitos em um índice, você deveria indexar as funções com @code{@@findex} e indexar os conceitos com @code{@@cindex} e usar o comando @code{@@syncodeindex} para redirecionar as entradas do índice de função para o índice de conceito.
+Quando quiser combinar funções e conceitos em um índice, você deveria 
+indexar as funções com @code{@@findex} e indexar os conceitos com 
+@code{@@cindex} e usar o comando @code{@@syncodeindex} para redirecionar 
+as entradas do índice de função para o índice de conceito.
 
-O comando @code{@@syncodeindex} recebe dois argumentos; eles são o nome do índice para redirecionar e o nome do índice para o qual redirecioná-lo. O modelo se parece com isto:
+O comando @code{@@syncodeindex} recebe dois argumentos; eles são o nome 
+do índice para redirecionar e o nome do índice para o qual 
+redirecioná-lo. O modelo se parece com isto:
 
 @example
 @@syncodeindex @var{from} @var{to}
@@ -9605,16 +9717,21 @@ Para esse propósito, para os índices são dados nomes de duas letras:
 índice de tipo de dados
 @end table
 
-Escreva um comando @code{@@syncodeindex} antes ou logo depois da linha de fim do cabeçalho no início de um arquivo Texinfo. Por exemplo, para mesclar um índice de função com um índice de conceito, escreva o seguinte:
+Escreva um comando @code{@@syncodeindex} antes ou logo depois da linha 
+de fim do cabeçalho no início de um arquivo Texinfo. Por exemplo, para 
+mesclar um índice de função com um índice de conceito, escreva o 
+seguinte:
 
 @example
 @@syncodeindex fn cp
 @end example
 
 @noindent
-Isso fará com que todas as entradas designadas para o índice de função sejam mescladas com o índice de conceito.
+Isso fará com que todas as entradas designadas para o índice de função 
+sejam mescladas com o índice de conceito.
 
-Para mesclar ambos, um índice de variáveis ​​e um índice de função, em um índice de conceito, escreva o seguinte:
+Para mesclar ambos, um índice de variáveis ​​e um índice de função, em um 
+índice de conceito, escreva o seguinte:
 
 @example
 @group
@@ -9624,7 +9741,13 @@ Para mesclar ambos, um índice de variáveis ​​e um índice de função, em 
 @end example
 
 @cindex Fontes para índices
-O comando @code{@@syncodeindex} coloca todas as entradas oriundas do índice `from' (o índice redirecionado) na fonte @code{@@code}, substituindo qualquer fonte padrão que seja usada pelo índice para o qual as entradas são agora direcionadas. Dessa forma, se você direcionar nomes de funções oriundas de um índice de função para um índice de conceito, todos os nomes de funções serão impressos na fonte @code{@@code} como você esperaria.
+O comando @code{@@syncodeindex} coloca todas as entradas oriundas do 
+índice `from' (o índice redirecionado) na fonte @code{@@code}, 
+substituindo qualquer fonte padrão que seja usada pelo índice para o 
+qual as entradas são agora direcionadas. Dessa forma, se você direcionar 
+nomes de funções oriundas de um índice de função para um índice de 
+conceito, todos os nomes de funções serão impressos na fonte 
+@code{@@code} como você esperaria.
 
 
 @node @code{@@synindex}
@@ -9633,9 +9756,15 @@ O comando @code{@@syncodeindex} coloca todas as entradas oriundas do índice `fr
 @anchor{synindex}@c nome antigo
 @findex synindex
 
-O comando @code{@@synindex} é quase o mesmo que o comando @code{@@syncodeindex}, exceto que não coloca as entradas do índice `from' na fonte @code{@@code}; em vez disso, coloca-os na fonte romana. Assim, você usa @code{@@synindex} ao mesclar um índice de conceito em um índice de função.
+O comando @code{@@synindex} é quase o mesmo que o comando 
+@code{@@syncodeindex}, exceto que não coloca as entradas do índice 
+`from' na fonte @code{@@code}; em vez disso, coloca-os na fonte romana. 
+Assim, você usa @code{@@synindex} ao mesclar um índice de conceito em um 
+índice de função.
 
-@xref{Imprimindo Índices e Menus}, para informações acerca de imprimir um índice no final de um livro ou criar um menu de índice em um arquivo Info.
+@xref{Imprimindo Índices e Menus}, para informações acerca de imprimir 
+um índice no final de um livro ou criar um menu de índice em um arquivo 
+Info.
 
 
 @node Novos Índices
@@ -9647,7 +9776,11 @@ O comando @code{@@synindex} é quase o mesmo que o comando @code{@@syncodeindex}
 @findex defindex
 @findex defcodeindex
 
-Além dos índices predefinidos (@pxref{Índices Predefinidos}), você pode usar os comandos @code{@@defindex} e @code{@@defcodeindex} para definir novos índices. Esses comandos criam novos comandos @@ de indexação com os quais você marca entradas de índice. O comando @code{@@defindex} é usado assim:
+Além dos índices predefinidos (@pxref{Índices Predefinidos}), você pode 
+usar os comandos @code{@@defindex} e @code{@@defcodeindex} para definir 
+novos índices. Esses comandos criam novos comandos @@ de indexação com 
+os quais você marca entradas de índice. O comando @code{@@defindex} é 
+usado assim:
 
 @example
 @@defindex @var{name}
@@ -9660,9 +9793,13 @@ Por exemplo:
 @@defindex au
 @end example
 
-Isso define um novo índice, chamado o índice @samp{au}. Ao mesmo tempo, ele cria um novo comando de indexação, @code{@@auindex}, que você pode usar para criar entradas de índice. Use esse novo comando de indexação da mesma forma que usaria um comando de indexação predefinido.
+Isso define um novo índice, chamado o índice @samp{au}. Ao mesmo tempo, 
+ele cria um novo comando de indexação, @code{@@auindex}, que você pode 
+usar para criar entradas de índice. Use esse novo comando de indexação 
+da mesma forma que usaria um comando de indexação predefinido.
 
-Por exemplo, aqui está um título de seção seguido por uma entrada de índice de conceito e duas entradas de índice @samp{au}.
+Por exemplo, aqui está um título de seção seguido por uma entrada de 
+índice de conceito e duas entradas de índice @samp{au}.
 
 @example
 @@section Semântica Cognitiva
@@ -9674,9 +9811,12 @@ Por exemplo, aqui está um título de seção seguido por uma entrada de índice
 @noindent
 (Evidentemente, @samp{au} aqui serve como uma abreviação para ``autor''.)
 
-Texinfo constrói o novo comando de indexação concatenando o nome do índice com @samp{index}; portanto, definir um índice @samp{xy} leva à criação automática de um comando @code{@@xyindex}.
+Texinfo constrói o novo comando de indexação concatenando o nome do 
+índice com @samp{index}; portanto, definir um índice @samp{xy} leva à 
+criação automática de um comando @code{@@xyindex}.
 
-Use o comando @code{@@printindex} para imprimir o índice, como você faz com índices predefinidos. Por exemplo:
+Use o comando @code{@@printindex} para imprimir o índice, como você faz 
+com índices predefinidos. Por exemplo:
 
 @example
 @group
@@ -9687,13 +9827,26 @@ Use o comando @code{@@printindex} para imprimir o índice, como você faz com í
 @end group
 @end example
 
-O @code{@@defcodeindex} é como o comando @code{@@defindex}, exceto que, na saída impressa, ele imprime entradas em uma fonte @code{@@code} por padrão, em vez de uma fonte romana.
+O @code{@@defcodeindex} é como o comando @code{@@defindex}, exceto que, 
+na saída impressa, ele imprime entradas em uma fonte @code{@@code} por 
+padrão, em vez de uma fonte romana.
 
-Você deveria definir novos índices antes da linha de fim de cabeçalho de um arquivo Texinfo e (é claro) antes de quaisquer comandos @code{@@synindex} ou @code{@@syncodeindex} (@pxref{Cabeçalho do Arquivo do Texinfo}).
+Você deveria definir novos índices antes da linha de fim de cabeçalho de 
+um arquivo Texinfo e (é claro) antes de quaisquer comandos 
+@code{@@synindex} ou @code{@@syncodeindex}
+(@pxref{Cabeçalho do Arquivo do Texinfo}).
 
-Conforme mencionado anteriormente (@pxref{Índices Predefinidos}), nós recomendamos ter um índice unitário no documento final sempre que possível, independentemente de quantos índices de fonte você usar, pois assim leitores(as) terão somente um lugar para procurar.
+Conforme mencionado anteriormente (@pxref{Índices Predefinidos}), nós 
+recomendamos ter um índice unitário no documento final sempre que 
+possível, independentemente de quantos índices de fonte você usar, pois 
+assim leitores(as) terão somente um lugar para procurar.
 
-Ao criar um índice, @TeX{} cria um arquivo cuja extensão é o nome do índice (@pxref{Nomes dos arquivos de índice}). Portanto, você deveria evitar usar nomes de índices que colidam com extensões usadas para outros propósitos, tais como @samp{.aux} ou @samp{.xml}. @command{makeinfo} já informa um erro se um novo índice conflitar com um nome de extensão bem conhecido.
+Ao criar um índice, @TeX{} cria um arquivo cuja extensão é o nome do 
+índice (@pxref{Nomes dos arquivos de índice}). Portanto, você deveria 
+evitar usar nomes de índices que colidam com extensões usadas para 
+outros propósitos, tais como @samp{.aux} ou @samp{.xml}. 
+@command{makeinfo} já informa um erro se um novo índice conflitar com um 
+nome de extensão bem conhecido.
 
 
 @node Inserções
@@ -9701,7 +9854,10 @@ Ao criar um índice, @TeX{} cria um arquivo cuja extensão é o nome do índice 
 @cindex Inserindo caracteres especiais e símbolos
 @cindex Inserções especiais
 
-Texinfo fornece vários comandos para inserir caracteres que tenham significado especial no Texinfo, tais como colchetes, e para outros elementos gráficos que não correspondem a caracteres simples que você pode digitar.
+Texinfo fornece vários comandos para inserir caracteres que tenham 
+significado especial no Texinfo, tais como colchetes, e para outros 
+elementos gráficos que não correspondem a caracteres simples que você 
+pode digitar.
 
 @iftex
 Esses são:
@@ -9742,9 +9898,14 @@ Esses são:
 @cindex Caracteres especiais, inserindo
 @cindex Comandos para inserir caracteres especiais
 
-@samp{@@} e chaves são os caracteres especiais básicos no Texinfo. Para inserir esses caracteres de forma que apareçam no texto, você precisa colocar um @samp{@@} na frente desses caracteres para evitar que o Texinfo os interprete mal. Comandos alfabéticos também são fornecidos.
+@samp{@@} e chaves são os caracteres especiais básicos no Texinfo. Para 
+inserir esses caracteres de forma que apareçam no texto, você precisa 
+colocar um @samp{@@} na frente desses caracteres para evitar que o 
+Texinfo os interprete mal. Comandos alfabéticos também são fornecidos.
 
-Os demais caracteres (vírgula, barra invertida, cerquilha) são especiais somente em contextos restritos, conforme explicado nas respectivas seções.
+Os demais caracteres (vírgula, barra invertida, cerquilha) são especiais 
+somente em contextos restritos, conforme explicado nas respectivas 
+seções.
 
 @menu
 * Inserindo um Símbolo Arroba::         @code{@@@@}, @code{@@atchar@{@}}.
@@ -9762,9 +9923,15 @@ Os demais caracteres (vírgula, barra invertida, cerquilha) são especiais somen
 @findex @sortas{@@} @@ @r{(literal @samp{@@})} @c CONSERTE-ME
 @findex atchar@{@} @r{(literal @samp{@@})}
 
-@code{@@@@} produz um caractere @samp{@@} na saída gerada. Não coloque colchetes depois de um comando @code{@@@@}.
+@code{@@@@} produz um caractere @samp{@@} na saída gerada. Não coloque 
+colchetes depois de um comando @code{@@@@}.
 
-@code{@@atchar@{@}} também produz um caractere @samp{@@} na saída gerada. Ele precisa de colchetes seguintes, como de costume para comandos alfabéticos. Em Condicionais inline (@pxref{Condicionais Inline}), pode ser necessário evitar usar o caractere literal @samp{@@} no fonte (e possivelmente seja mais claro em outros contextos).
+@code{@@atchar@{@}} também produz um caractere @samp{@@} na saída 
+gerada. Ele precisa de colchetes seguintes, como de costume para 
+comandos alfabéticos. Em Condicionais inline
+(@pxref{Condicionais Inline}), pode ser necessário evitar usar o 
+caractere literal @samp{@@} no fonte (e possivelmente seja mais claro em 
+outros contextos).
 
 
 @node Inserindo Chaves
@@ -9776,9 +9943,16 @@ Os demais caracteres (vírgula, barra invertida, cerquilha) são especiais somen
 @findex rbracechar@{@} @r{(literal @samp{@}})}
 @cindex Colchetes, inserindo
 
-@code{@@@{} produz um @samp{@{} na saída gerada e @code{@@@}} produz um @samp{@}}. Não coloque colchetes depois de um comando @code{@@@{} ou @code{@@@}}.
+@code{@@@{} produz um @samp{@{} na saída gerada e @code{@@@}} produz um 
+@samp{@}}. Não coloque colchetes depois de um comando @code{@@@{} ou 
+@code{@@@}}.
 
-@code{@@lbracechar@{@}} e @code{@@rbracechar@{@}} também produzem caracteres @samp{@{} e @samp{@}} unitários na saída gerada. Eles precisam de colchetes seguintes, como de costume para comandos alfabéticos. Em Condicionais inline (@pxref{Condicionais Inline}), pode ser necessário evitar usar caracteres de colchetes literais no fonte (e possivelmente seja mais claro em outros contextos).
+@code{@@lbracechar@{@}} e @code{@@rbracechar@{@}} também produzem 
+caracteres @samp{@{} e @samp{@}} unitários na saída gerada. Eles 
+precisam de colchetes seguintes, como de costume para comandos 
+alfabéticos. Em Condicionais inline (@pxref{Condicionais Inline}), pode 
+ser necessário evitar usar caracteres de colchetes literais no fonte (e 
+possivelmente seja mais claro em outros contextos).
 
 
 @node Inserindo Uma Vírgula
@@ -9787,11 +9961,18 @@ Os demais caracteres (vírgula, barra invertida, cerquilha) são especiais somen
 @findex vírgula
 @cindex Vírgula, inserindo
 
-Normalmente, uma vírgula `,' é um caractere normal que pode ser simplesmente digitado em tua entrada onde você precisar dela.
+Normalmente, uma vírgula `,' é um caractere normal que pode ser 
+simplesmente digitado em tua entrada onde você precisar dela.
 
-No entanto, Texinfo usa a vírgula como um caractere especial somente em um contexto: para separar argumentos para aqueles comandos do Texinfo, como @code{@@acronym} (@pxref{@code{@@acronym}}) e @code{@@xref} (@pxref{Referências Cruzadas}), bem como macros definidas por usuário(a) (@pxref{Definindo Macros}), que levam mais que um argumento.
+No entanto, Texinfo usa a vírgula como um caractere especial somente em 
+um contexto: para separar argumentos para aqueles comandos do Texinfo, 
+como @code{@@acronym} (@pxref{@code{@@acronym}}) e @code{@@xref} 
+(@pxref{Referências Cruzadas}), bem como macros definidas por usuário(a) 
+(@pxref{Definindo Macros}), que levam mais que um argumento.
 @c CONSERTE-ME
-Como um caractere de vírgula confundiria a análise do Texinfo para esses comandos, você precisa usar o comando @samp{@@comma@{@}} se quiser passar uma vírgula real. Aqui estão alguns exemplos:
+Como um caractere de vírgula confundiria a análise do Texinfo para esses 
+comandos, você precisa usar o comando @samp{@@comma@{@}} se quiser 
+passar uma vírgula real. Aqui estão alguns exemplos:
 
 @example
 @@acronym@{ABC, Uma @@comma@{@} bizarra@}
@@ -9799,9 +9980,13 @@ Como um caractere de vírgula confundiria a análise do Texinfo para esses coman
 @@mymac@{Um argument@@comma@{@} contendo uma vírgula@}
 @end example
 
-Embora @samp{@@comma@{@}} possa ser usada em praticamente qualquer lugar, não existe necessidade dela em nenhum lugar, exceto nesse caso incomum.
+Embora @samp{@@comma@{@}} possa ser usada em praticamente qualquer 
+lugar, não existe necessidade dela em nenhum lugar, exceto nesse caso 
+incomum.
 
-(Incidentalmente, o nome @samp{@@comma} carece do sufixo @samp{char} usado nos comandos complementares dele somente por razões históricas. Não pareceu importante o suficiente para definir um sinônimo).
+(Incidentalmente, o nome @samp{@@comma} carece do sufixo @samp{char} 
+usado nos comandos complementares dele somente por razões históricas. 
+Não pareceu importante o suficiente para definir um sinônimo).
 
 
 @node Inserindo uma Barra Invertida
@@ -9810,20 +9995,35 @@ Embora @samp{@@comma@{@}} possa ser usada em praticamente qualquer lugar, não e
 @findex backslashchar
 @cindex Barra invertida, inserindo
 
-Normalmente, uma barra invertida `\' é um caractere normal no Texinfo que pode ser simplesmente digitado em tua entrada onde você precisar. O resultado é o de compor a barra invertida oriunda da fonte da máquina de escrever.
+Normalmente, uma barra invertida `\' é um caractere normal no Texinfo 
+que pode ser simplesmente digitado em tua entrada onde você precisar. O 
+resultado é o de compor a barra invertida oriunda da fonte da máquina de 
+escrever.
 
-Porém, Texinfo usa a barra invertida como um caractere especial em um contexto restrito: para delimitar argumentos formais nos corpos de macros definidas por usuário(a) (@pxref{Definindo Macros}).
+Porém, Texinfo usa a barra invertida como um caractere especial em um 
+contexto restrito: para delimitar argumentos formais nos corpos de 
+macros definidas por usuário(a) (@pxref{Definindo Macros}).
 
-Devido aos caprichos da análise de argumentos de macro, é mais confiável passar um comando alfabético que produza uma barra invertida em vez de usar uma \ literal. Daí @code{@@backslashchar@{@}}. Aqui está um exemplo de chamada de macro:
+Devido aos caprichos da análise de argumentos de macro, é mais confiável 
+passar um comando alfabético que produza uma barra invertida em vez de 
+usar uma \ literal. Daí @code{@@backslashchar@{@}}. Aqui está um exemplo 
+de chamada de macro:
 
 @example
 @@mymac@{Um argument@@backslashchar@{@} com uma barra invertida@}
 @end example
 
 @findex \backslash
-Documentos do Texinfo também podem usar \ como um caractere de comando dentro de @code{@@math} (@pxref{Inserindo Fórmulas Matemáticas}). Nesse caso, @code{@@\} ou @code{\backslash} produz uma barra invertida ``matematicista'' (proveniente da fonte do símbolo matemático), enquanto @code{@@backslashchar@{@}} produz uma barra invertida de máquina de escrever como sempre.
+Documentos do Texinfo também podem usar \ como um caractere de comando 
+dentro de @code{@@math} (@pxref{Inserindo Fórmulas Matemáticas}). Nesse 
+caso, @code{@@\} ou @code{\backslash} produz uma barra invertida 
+``matematicista'' (proveniente da fonte do símbolo matemático), enquanto 
+@code{@@backslashchar@{@}} produz uma barra invertida de máquina de 
+escrever como sempre.
 
-Embora @samp{@@backslashchar@{@}} possa ser usado em praticamente qualquer lugar, não existe necessidade dele, exceto nesses casos incomuns.
+Embora @samp{@@backslashchar@{@}} possa ser usado em praticamente 
+qualquer lugar, não existe necessidade dele, exceto nesses casos 
+incomuns.
 
 
 @node Inserindo um Símbolo Cerquilha
@@ -9833,24 +10033,35 @@ Embora @samp{@@backslashchar@{@}} possa ser usado em praticamente qualquer lugar
 @cindex Inserindo #
 @cindex Símbolo cerquilha, inserindo
 
-Normalmente, uma cerquilha `#' é um caractere normal no Texinfo que pode ser simplesmente digitado em tua entrada onde você precisar. O resultado é o de compor o caractere cerquilha oriundo da fonte atual.
+Normalmente, uma cerquilha `#' é um caractere normal no Texinfo que pode 
+ser simplesmente digitado em tua entrada onde você precisar. O resultado 
+é o de compor o caractere cerquilha oriundo da fonte atual.
 
 @cindex Símbolo de número, inserindo
 @cindex Octotherp, inserindo
 @cindex Sinal sustenido (não), inserindo
-Esse caractere tem muitos outros nomes, variando de acordo com a localidade, como ``sinal numérico'', ``libra'' e ``octothorp''. Às vezes também é chamado de ``sustenido'' ou ``sinal sustenido'', uma vez que se assemelha vagamente ao símbolo musical com esse nome. Em situações onde Texinfo é usado, ``cerquilha'' é o mais comum em nossa experiência.
+Esse caractere tem muitos outros nomes, variando de acordo com a 
+localidade, como ``sinal numérico'', ``libra'' e ``octothorp''. Às vezes 
+também é chamado de ``sustenido'' ou ``sinal sustenido'', uma vez que se 
+assemelha vagamente ao símbolo musical com esse nome. Em situações onde 
+Texinfo é usado, ``cerquilha'' é o mais comum em nossa experiência.
 
-However, Texinfo uses the hash character as a special character in one restricted context: to introduce the so-called @code{#line} directive and variants (@pxref{External Macro Processors}).
+No entanto, Texinfo usa o caractere cerquilha como um caractere especial 
+em um contexto restrito: para introduzir a chamada diretiva @code{#line} 
+e variantes (@pxref{External Macro Processors}).
 
-No entanto, Texinfo usa o caractere cerquilha como um caractere especial em um contexto restrito: para introduzir a chamada diretiva @code{#line} e variantes (@pxref{External Macro Processors}).
-
-Portanto, para a finalidade de compor um caractere cerquilha real em tal local (por exemplo, em um programa que precisa de documentação acerca de @code{#line}), é necessário usar @code{@@hashchar@{@}} ou alguma outra construção. Aqui está um exemplo:
+Portanto, para a finalidade de compor um caractere cerquilha real em tal 
+local (por exemplo, em um programa que precisa de documentação acerca de 
+@code{#line}), é necessário usar @code{@@hashchar@{@}} ou alguma outra 
+construção. Aqui está um exemplo:
 
 @example
 @@hashchar@{@} 10 "exemplo.c"
 @end example
 
-Embora @samp{@@hashchar@{@}} possa ser usado em praticamente qualquer lugar, não existe necessidade dele em nenhum lugar, exceto nesse caso incomum.
+Embora @samp{@@hashchar@{@}} possa ser usado em praticamente qualquer 
+lugar, não existe necessidade dele em nenhum lugar, exceto nesse caso 
+incomum.
 
 @node Inserindo Caracteres de Citação
 @section Inserindo Caracteres de Citação
@@ -9858,17 +10069,29 @@ Embora @samp{@@hashchar@{@}} possa ser usado em praticamente qualquer lugar, nã
 @cindex Inserindo caracteres de citação
 @cindex Caracteres de citação, inserindo
 
-Conforme explicado na seção anterior acerca de convenções gerais de entrada do Texinfo (@pxref{Convenções}), arquivos fonte do Texinfo usam o caractere ASCII @code{`} (decimal 96) para produzir uma aspa esquerda (`), e o ASCII @code{'} (decimal 39) para produzir uma aspa direita ('). Duplicar esses caracteres de entrada (@code{``} e @code{''}) produz aspas duplas (`` e ''). Essas são as convenções usadas pelo @TeX{}.
+Conforme explicado na seção anterior acerca de convenções gerais de 
+entrada do Texinfo (@pxref{Convenções}), arquivos fonte do Texinfo usam 
+o caractere ASCII @code{`} (decimal 96) para produzir uma aspa esquerda 
+(`), e o ASCII @code{'} (decimal 39) para produzir uma aspa direita ('). 
+Duplicar esses caracteres de entrada (@code{``} e @code{''}) produz 
+aspas duplas (`` e ''). Essas são as convenções usadas pelo @TeX{}.
 
-Isso funciona bem para texto. No entanto, em exemplos de código de computador, leitores(as) são especialmente propensos(as) a recortar e colar o texto literalmente---e, infelizmente, alguns visualizadores de documentos estragarão esses caracteres. (O leitor livre de PDF @command{xpdf} funciona bem, mas outros leitores de PDF, tanto livres quanto não livres, tem problemas).
+Isso funciona bem para texto. No entanto, em exemplos de código de 
+computador, leitores(as) são especialmente propensos(as) a recortar e 
+colar o texto literalmente---e, infelizmente, alguns visualizadores de 
+documentos estragarão esses caracteres. (O leitor livre de PDF 
+@command{xpdf} funciona bem, mas outros leitores de PDF, tanto livres 
+quanto não livres, tem problemas).
 
-Se isso for uma preocupação para você, Texinfo fornece estes dois comandos:
+Se isso for uma preocupação para você, Texinfo fornece estes dois 
+comandos:
 
 @table @code
 @item @@codequoteundirected @var{on-off}
 @findex codequoteundirected
 @cindex aspas simples indirecionadas
-faz com que a saída gerada para o caractere @code{'} em ambientes de código seja a aspa simples indirecionada, como esta:
+faz com que a saída gerada para o caractere @code{'} em ambientes de 
+código seja a aspa simples indirecionada, como esta:
 
 @set txicodequoteundirected on
 @code{'}.
@@ -9878,20 +10101,29 @@ faz com que a saída gerada para o caractere @code{'} em ambientes de código se
 @findex codequotebacktick
 @cindex crase
 @cindex acento grave, autônomo
-faz com que a saída gerada para o caractere @code{`} em ambientes de código seja o caractere crase (acento grave autônomo), assim:
+faz com que a saída gerada para o caractere @code{`} em ambientes de 
+código seja o caractere crase (acento grave autônomo), assim:
 
 @set txicodequotebacktick on
 @code{`}.
 @set txicodequotebacktick off
 @end table
 
-Se você quiser essas configurações somente para parte do documento, @code{@@codequote... off} restaurará o comportamento normal, como em @code{@@codequoteundirected off}.
+Se você quiser essas configurações somente para parte do documento, 
+@code{@@codequote... off} restaurará o comportamento normal, como em 
+@code{@@codequoteundirected off}.
 
-Essas configurações afetam @code{@@code}, @code{@@example}, @code{@@kbd}, @code{@@samp}, @code{@@verb} e @code{@@verbatim}.  @xref{Realçamento Útil}.
+Essas configurações afetam @code{@@code}, @code{@@example}, 
+@code{@@kbd}, @code{@@samp}, @code{@@verb} e @code{@@verbatim}.  
+@xref{Realçamento Útil}.
 
 @vindex txicodequoteundirected@r{, obsolete variable}
 @vindex txicodequotebacktick@r{, obsolete variable}
-Esse recurso costumava ser controlado usando-se @code{@@set} para mudar os valores das variáveis ​​correspondentes @code{txicodequoteundirected} e @code{txicodequotebacktick}; elas ainda são suportadas, mas a interface de comando é preferida.
+
+Esse recurso costumava ser controlado usando-se @code{@@set} para mudar 
+os valores das variáveis ​​correspondentes @code{txicodequoteundirected} e 
+@code{txicodequotebacktick}; elas ainda são suportadas, mas a interface 
+de comando é preferida.
 
 
 @node Inserindo Espaço
@@ -9899,7 +10131,9 @@ Esse recurso costumava ser controlado usando-se @code{@@set} para mudar os valor
 
 @cindex Inserindo espaço
 @cindex Espaço, inserindo
-As seções a seguir descrevem comandos que controlam espaçamentos de vários tipos dentro e depois de frases.
+
+As seções a seguir descrevem comandos que controlam espaçamentos de 
+vários tipos dentro e depois de frases.
 
 @menu
 * Espaços Múltiplos::               Inserindo múltiplos espaços.
@@ -9920,9 +10154,19 @@ As seções a seguir descrevem comandos que controlam espaçamentos de vários t
 @findex <tab>
 @findex <newline>
 
-Normalmente, vários caracteres de espaço em branco (espaço, tabulação e nova linha) são recolhidos em um espaço.
+Normalmente, vários caracteres de espaço em branco (espaço, tabulação e 
+nova linha) são recolhidos em um espaço.
 
-Ocasionalmente, você pode querer produzir vários espaços consecutivos, seja para fins de exemplo (por exemplo, o que teu programa faz com vários espaços como entrada), ou meramente para fins de aparência em títulos ou listas. Texinfo suporta três comandos: @code{@@@kbd{SPACE}}, @code{@@@kbd{TAB}} e @code{@@@kbd{NL}}, todos os quais inserem um espaço na saída gerada. (Aqui, @code{@@@kbd{SPACE}} representa um caractere @samp{@@} seguido por um espaço, ou seja, @samp{@@ }, @kbd{TAB} representa um caractere de tabulação, e @code{@@@kbd{NL}} representa um caractere @samp{@@} e fim de linha, ou seja, quando @samp{@@} é o último caractere em uma linha).
+Ocasionalmente, você pode querer produzir vários espaços consecutivos, 
+seja para fins de exemplo (por exemplo, o que teu programa faz com 
+vários espaços como entrada), ou meramente para fins de aparência em 
+títulos ou listas. Texinfo suporta três comandos: @code{@@@kbd{SPACE}}, 
+@code{@@@kbd{TAB}} e @code{@@@kbd{NL}}, todos os quais inserem um espaço 
+na saída gerada. (Aqui, @code{@@@kbd{SPACE}} representa um caractere 
+@samp{@@} seguido por um espaço, ou seja, @samp{@@ }, @kbd{TAB} 
+representa um caractere de tabulação, e @code{@@@kbd{NL}} representa um 
+caractere @samp{@@} e fim de linha, ou seja, quando @samp{@@} é o último 
+caractere em uma linha).
 
 Por exemplo,
 @example
@@ -9937,7 +10181,8 @@ Exemplo@ @ @ @
 espaçoso.
 @end example
 
-Outros usos possíveis de @code{@@@kbd{SPACE}} foram subsumidos por @code{@@multitable} (@pxref{Tabelas Multi Colunas}).
+Outros usos possíveis de @code{@@@kbd{SPACE}} foram subsumidos por 
+@code{@@multitable} (@pxref{Tabelas Multi Colunas}).
 
 Não coloque chaves depois de nenhum desses comandos.
 
@@ -9951,16 +10196,28 @@ Para produzir um espaço inquebrável, veja-se @ref{@code{@@tie}}.
 @cindex Pontuação sem fim de frase
 @cindex Pontos, inserindo
 @cindex Espaçamento, no meio de frases
-Quando um ponto, ponto de exclamação ou ponto de interrogação estão no final de uma frase, um pouco mais de espaço é inserido depois deles em um manual tipográfico.
+Quando um ponto, ponto de exclamação ou ponto de interrogação estão no 
+final de uma frase, um pouco mais de espaço é inserido depois deles em 
+um manual tipográfico.
 
 @findex <colon> @r{(suppress end-of-sentence space)}
 @findex :
-Geralmente, Texinfo consegue determinar automaticamente quando um ponto termina uma frase. No entanto, comandos especiais são necessários em algumas circunstâncias. Use o comando @code{@@:} depois de um ponto, ponto de interrogação, ponto de exclamação ou dois pontos que não deveriam ser seguidos por espaço extra. Isso é necessário nas seguintes situações:
+Geralmente, Texinfo consegue determinar automaticamente quando um ponto 
+termina uma frase. No entanto, comandos especiais são necessários em 
+algumas circunstâncias. Use o comando @code{@@:} depois de um ponto, 
+ponto de interrogação, ponto de exclamação ou dois pontos que não 
+deveriam ser seguidos por espaço extra. Isso é necessário nas seguintes 
+situações:
 
 @enumerate
-@item Depois de um ponto que finalize uma abreviação em minúscula que não esteja no final de uma frase.
+@item Depois de um ponto que finalize uma abreviação em minúscula que
+não esteja no final de uma frase.
 
-@item Quando uma observação entre parênteses no meio de uma frase (como esta!)@: terminar com um ponto, ponto de exclamação ou ponto de interrogação, @code{@@:} deveria ser usado depois do parêntese direito. Da mesma forma para colchetes direitos e aspas direitas (ambas, simples e duplas).
+@item Quando uma observação entre parênteses no meio de uma frase (como
+esta!)@: terminar com um ponto, ponto de exclamação ou ponto de 
+interrogação, @code{@@:} deveria ser usado depois do parêntese direito. 
+Da mesma forma para colchetes direitos e aspas direitas (ambas, simples 
+e duplas).
 
 @end enumerate
 
@@ -9971,7 +10228,9 @@ Por exemplo:
 @end example
 
 @noindent
-A primeira linha abaixo mostra a saída gerada e, para comparação, a segunda linha mostra o espaçamento quando os comandos @samp{@@:} não foram usados.
+A primeira linha abaixo mostra a saída gerada e, para comparação, a 
+segunda linha mostra o espaçamento quando os comandos @samp{@@:} não 
+foram usados.
 
 @quotation
 foo vs.@: bar (ou?)@: baz@*
@@ -9979,13 +10238,21 @@ foo vs. bar (ou?) baz
 @end quotation
 
 @iftex
-Se você olhar atentamente, verá um pouco de espaço não essencial depois de @samp{vs.}@: e @samp{(ou?)}@:.
+Se você olhar atentamente, verá um pouco de espaço não essencial depois 
+de @samp{vs.}@: e @samp{(ou?)}@:.
 
 @end iftex
 
-Possivelmente te ajude lembrar o que @code{@@:} faz imaginando que ele representa um caractere minúsculo invisível que impede que uma palavra termine com um ponto final.
+Possivelmente te ajude lembrar o que @code{@@:} faz imaginando que ele 
+representa um caractere minúsculo invisível que impede que uma palavra 
+termine com um ponto final.
 
-Alguns comandos do Texinfo forçam espaçamento normal entre palavras, de forma que você não tenha que inserir @code{@@:} onde normalmente faria. Esses são os comandos de realçamento semelhantes a código, @code{@@var}, @code{@@abbr} e @code{@@acronym} (@pxref{Realçamento Útil}). Por exemplo, em @samp{@@code@{foo. bar@}} o ponto não é considerado ser o fim de uma frase, e nenhum espaço extra é inserido.
+Alguns comandos do Texinfo forçam espaçamento normal entre palavras, de 
+forma que você não tenha que inserir @code{@@:} onde normalmente faria. 
+Esses são os comandos de realçamento semelhantes a código, @code{@@var}, 
+@code{@@abbr} e @code{@@acronym} (@pxref{Realçamento Útil}). Por 
+exemplo, em @samp{@@code@{foo. bar@}} o ponto não é considerado ser o 
+fim de uma frase, e nenhum espaço extra é inserido.
 
 @code{@@:} não tem efeito na saída HTML ou Docbook.
 
@@ -10000,9 +10267,17 @@ Alguns comandos do Texinfo forçam espaçamento normal entre palavras, de forma 
 @findex ! @r{(fim de frase)}
 @findex ? @r{(fim de frase)}
 @cindex Espaçamento, ao final de frases
-Como mencionado acima, Texinfo normalmente insere espaço adicional depois do fim de uma frase. Ele usa a mesma heurística para isso que o @TeX{}: uma frase termina com um ponto final, ponto de exclamação ou ponto de interrogação, precedido ou seguido por pontuação opcional de fechamento, e, então, espaço em branco, e @emph{não} precedido por uma letra maiúscula.
+Como mencionado acima, Texinfo normalmente insere espaço adicional 
+depois do fim de uma frase. Ele usa a mesma heurística para isso que o 
+@TeX{}: uma frase termina com um ponto final, ponto de exclamação ou 
+ponto de interrogação, precedido ou seguido por pontuação opcional de 
+fechamento, e, então, espaço em branco, e @emph{não} precedido por uma 
+letra maiúscula.
 
-Use @code{@@.}@: em vez de um ponto, @code{@@!}@: em vez de um ponto de exclamação e @code{@@?}@: em vez de um ponto de interrogação ao final de uma frase que termine com uma letra maiúscula. Não coloque chaves depois de quaisquer desses comandos. Por exemplo:
+Use @code{@@.}@: em vez de um ponto, @code{@@!}@: em vez de um ponto de 
+exclamação e @code{@@?}@: em vez de um ponto de interrogação ao final de 
+uma frase que termine com uma letra maiúscula. Não coloque chaves depois 
+de quaisquer desses comandos. Por exemplo:
 
 @example
 Dê para M.I.B. e para M.E.W@@. Também, dê para R.J.C@@.
@@ -10010,21 +10285,45 @@ Dê para M.I.B. e para M.E.W. Também, dê para R.J.C.
 @end example
 
 @noindent
-A saída gerada segue. Na saída gerada impressa e no Info, você pode ver o espaço em branco extra desejado depois do @samp{W} na primeira linha.
+A saída gerada segue. Na saída gerada impressa e no Info, você pode ver 
+o espaço em branco extra desejado depois do @samp{W} na primeira linha.
 
 @quotation
 Dê para M.I.B. e para M.E.W@. Também, dê para R.J.C@.@*
 Dê para M.I.B. e para M.E.W. Também, dê para R.J.C.
 @end quotation
 
-Na saída gerada de HTML, @code{@@.}@: é equivalente a um simples @samp{.}; o mesmo vale para @code{@@!}@: e @code{@@?}@:.
+Na saída gerada de HTML, @code{@@.}@: é equivalente a um simples 
+@samp{.}; o mesmo vale para @code{@@!}@: e @code{@@?}@:.
 
 @cindex Pontuação de fechamento e finalização de frase
-A ``pontuação de fechamento'' mencionada acima é definida como um parêntese direito (@samp{)}, colchete direito (@samp{]}, ou aspa direita, simples ou dupla (@samp{'} e @samp{''}; as muitas aspas direitas Unicode adicionais possíveis não estão incluídas). Esses caracteres podem ser considerados como invisíveis com respeito a se um determinado ponto finaliza uma frase. (Essa é a mesma regra que @TeX{}). Por exemplo, os pontos em @samp{foo.) Bar} e @samp{foo.'' Bar} finalizam frases.
+A ``pontuação de fechamento'' mencionada acima é definida como um 
+parêntese direito (@samp{)}, colchete direito (@samp{]}, ou aspa 
+direita, simples ou dupla (@samp{'} e @samp{''}; as muitas aspas 
+direitas Unicode adicionais possíveis não estão incluídas). Esses 
+caracteres podem ser considerados como invisíveis com respeito a se um 
+determinado ponto finaliza uma frase. (Essa é a mesma regra que @TeX{}). 
+Por exemplo, os pontos em @samp{foo.) Bar} e @samp{foo.'' Bar} finalizam 
+frases.
 
-Os significados de @code{@@:} e @code{@@.}, etc.@: no Texinfo são projetados para funcionar bem com os comandos de movimento de frase do Emacs (@pxref{Sentences,,, emacs, O Manual do GNU Emacs}). Possivelmente ajude imaginar que o @samp{@@} em @samp{@@.}, etc., é uma letra minúscula invisível `a' que torna uma letra maiúscula antes dela irrelevante para os propósitos de decidir se o ponto final termina a frase.
+Os significados de @code{@@:} e @code{@@.}, etc.@: no Texinfo são 
+projetados para funcionar bem com os comandos de movimento de frase do 
+Emacs (@pxref{Sentences,,, emacs, O Manual do GNU Emacs}). Possivelmente 
+ajude imaginar que o @samp{@@} em @samp{@@.}, etc., é uma letra 
+minúscula invisível `a' que torna uma letra maiúscula antes dela 
+irrelevante para os propósitos de decidir se o ponto final termina a 
+frase.
 
-Alguns comandos do Texinfo não são considerados como sendo uma abreviação, mesmo que possam terminar com uma letra maiúscula quando expandidos, de forma que você não tenha que inserir @code{@@.} e acompanhantes. Notavelmente, esse é o caso para comandos de realçamento semelhantes a código, argumentos @code{@@var} terminando com uma letra maiúscula, @code{@@LaTeX} e @code{@@TeX}. Por exemplo, essa frase terminou com @samp{... @@code@{@@@@TeX@}.}; @code{@@.} não foi necessário. Da mesma forma, em @code{... @@var@{VARNAME@}. Texto} o ponto depois de @var{VARNAME} termina a frase; não existe necessidade de usar @code{@@.}.
+Alguns comandos do Texinfo não são considerados como sendo uma 
+abreviação, mesmo que possam terminar com uma letra maiúscula quando 
+expandidos, de forma que você não tenha que inserir @code{@@.} e 
+acompanhantes. Notavelmente, esse é o caso para comandos de realçamento 
+semelhantes a código, argumentos @code{@@var} terminando com uma letra 
+maiúscula, @code{@@LaTeX} e @code{@@TeX}. Por exemplo, essa frase 
+terminou com @samp{... @@code@{@@@@TeX@}.}; @code{@@.} não foi 
+necessário. Da mesma forma, em @code{... @@var@{VARNAME@}. Texto} o 
+ponto depois de @var{VARNAME} termina a frase; não existe necessidade de 
+usar @code{@@.}.
 
 
 @node @code{@@frenchspacing}
@@ -10036,9 +10335,17 @@ Alguns comandos do Texinfo não são considerados como sendo uma abreviação, m
 @cindex Frases, espaçamento depois
 @cindex Espaço, depois de frases
 
-Na tipografia americana, é tradicional e correto colocar espaço extra ao final de uma frase. Esse é o padrão no Texinfo (implementado no Info e na saída gerada impressa; para HTML, nós não tentamos substituir o navegador). Na tipografia francesa (e outras), esse espaço extra é errado; todos os espaços são uniformes.
+Na tipografia americana, é tradicional e correto colocar espaço extra ao 
+final de uma frase. Esse é o padrão no Texinfo (implementado no Info e 
+na saída gerada impressa; para HTML, nós não tentamos substituir o 
+navegador). Na tipografia francesa (e outras), esse espaço extra é 
+errado; todos os espaços são uniformes.
 
-Portanto, Texinfo fornece o comando @code{@@frenchspacing} para controlar o espaçamento depois da pontuação. Ele lê o resto da linha como argumento, que precisa ser a única palavra @samp{on} ou @samp{off} (sempre essas palavras, independentemente do idioma do documento). Aqui está um exemplo:
+Portanto, Texinfo fornece o comando @code{@@frenchspacing} para 
+controlar o espaçamento depois da pontuação. Ele lê o resto da linha 
+como argumento, que precisa ser a única palavra @samp{on} ou @samp{off} 
+(sempre essas palavras, independentemente do idioma do documento). Aqui 
+está um exemplo:
 
 @example
 @@frenchspacing on
@@ -10056,9 +10363,12 @@ Isso é texto. Duas frases. Três frases. Espaçamento francês.
 @frenchspacing off
 Isso é texto. Duas frases. Três frases. Espaçamento não francês.
 
-@code{@@frenchspacing} também afeta a saída gerada depois de @code{@@.}, @code{@@!} e @code{@@?} (@pxref{Finalizando Uma Frase}).
+@code{@@frenchspacing} também afeta a saída gerada depois de @code{@@.}, 
+@code{@@!} e @code{@@?} (@pxref{Finalizando Uma Frase}).
 
-@code{@@frenchspacing} não tem efeito na saída gerada de HTML ou Docbook; para XML, ele gera uma transliteração dele mesmo (@pxref{Formatos de Saída}).
+@code{@@frenchspacing} não tem efeito na saída gerada de HTML ou 
+Docbook; para XML, ele gera uma transliteração dele mesmo 
+(@pxref{Formatos de Saída}).
 
 
 @node @code{@@dmn}
@@ -10070,9 +10380,15 @@ Isso é texto. Duas frases. Três frases. Espaçamento não francês.
 @cindex Formatar uma dimensão
 @findex dmn
 
-Você pode usar o comando @code{@@dmn} para formatar uma dimensão com um pouco de espaço extra na saída gerada impressa. Ou seja, ao ver @code{@@dmn}, @TeX{} insere apenas espaço suficiente para a composição adequada; em outros formatos da saída gerada, os comandos de formatação não inserem espaço algum.
+Você pode usar o comando @code{@@dmn} para formatar uma dimensão com um 
+pouco de espaço extra na saída gerada impressa. Ou seja, ao ver 
+@code{@@dmn}, @TeX{} insere apenas espaço suficiente para a composição 
+adequada; em outros formatos da saída gerada, os comandos de formatação 
+não inserem espaço algum.
 
-Para usar o comando @code{@@dmn}, escreva o número e depois siga-o imediatamente, sem espaço intermediário, por @code{@@dmn}, e depois pela dimensão entre chaves. Por exemplo,
+Para usar o comando @code{@@dmn}, escreva o número e depois siga-o 
+imediatamente, sem espaço intermediário, por @code{@@dmn}, e depois pela 
+dimensão entre chaves. Por exemplo,
 
 @example
 Papel A4 tem 8,27@@dmn@{in@} de largura.
@@ -10085,7 +10401,15 @@ produz
 Papel A4 tem 8,27@dmn{in} de largura.
 @end quotation
 
-Nem todo mundo usa esse estilo. Algumas pessoas preferem `8.27@tie{}in.'@: ou `8.27@tie{}inches'. Nesses casos, no entanto, você precisa usar @code{@@tie} (@pxref{@code{@@tie}}) ou @code{@@w} (@pxref{@code{@@w}}) de forma que nenhuma quebra de linha possa ocorrer entre o número e a dimensão. Além disso, se você escrever um ponto depois de uma abreviação dentro de uma frase (como com `in.'@: acima), você deveria escrever @samp{@@:} depois do ponto para evitar que @TeX{} insira espaços em branco extras, como mostrado aqui. @xref{Não Finalizando Uma Frase}.
+Nem todo mundo usa esse estilo. Algumas pessoas preferem 
+`8.27@tie{}in.'@: ou `8.27@tie{}inches'. Nesses casos, no entanto, você 
+precisa usar @code{@@tie} (@pxref{@code{@@tie}}) ou @code{@@w} 
+(@pxref{@code{@@w}}) de forma que nenhuma quebra de linha possa ocorrer 
+entre o número e a dimensão. Além disso, se você escrever um ponto 
+depois de uma abreviação dentro de uma frase (como com `in.'@: acima), 
+você deveria escrever @samp{@@:} depois do ponto para evitar que @TeX{} 
+insira espaços em branco extras, como mostrado aqui.
+@xref{Não Finalizando Uma Frase}.
 
 
 @node Inserindo Acentos
@@ -10095,13 +10419,29 @@ Nem todo mundo usa esse estilo. Algumas pessoas preferem `8.27@tie{}in.'@: ou `8
 @cindex Acentos, inserindo
 @cindex Acentos flutuantes, inserindo
 
-Aqui está uma tabela com os comandos que Texinfo fornece para inserir acentos flutuantes. Eles todos precisam de um argumento, o caractere a ser acentuado, que pode ou ser fornecido entre chaves como de costume (@code{@@'@{e@}}), ou, como um caso especial, as chaves podem ser omitidas, em cujo caso o argumento é o próximo caractere (@code{@@'e}). Isso é para tornar o fonte o mais conveniente possível para digitar-se e ler-se, já que caracteres acentuados são muito comuns em alguns idiomas.
+Aqui está uma tabela com os comandos que Texinfo fornece para inserir 
+acentos flutuantes. Eles todos precisam de um argumento, o caractere a 
+ser acentuado, que pode ou ser fornecido entre chaves como de costume 
+(@code{@@'@{e@}}), ou, como um caso especial, as chaves podem ser 
+omitidas, em cujo caso o argumento é o próximo caractere (@code{@@'e}). 
+Isso é para tornar o fonte o mais conveniente possível para digitar-se e 
+ler-se, já que caracteres acentuados são muito comuns em alguns idiomas.
 
-Se o comando for alfabético, como @code{@@dotaccent}, então precisa existir um espaço entre o nome do comando e o argumento se chaves não forem usadas. Se o comando for não alfabético, como @code{@@'}, então precisa @emph{não} existir um espaço; o argumento é o exato próximo caractere.
+Se o comando for alfabético, como @code{@@dotaccent}, então precisa 
+existir um espaço entre o nome do comando e o argumento se chaves não 
+forem usadas. Se o comando for não alfabético, como @code{@@'}, então 
+precisa @emph{não} existir um espaço; o argumento é o exato próximo 
+caractere.
 
-Exceção: o argumento para @code{@@tieaccent} precisa ser colocado entre chaves (já que são dois caracteres em vez de um).
+Exceção: o argumento para @code{@@tieaccent} precisa ser colocado entre 
+chaves (já que são dois caracteres em vez de um).
 
-Para obter a saída gerada dos verdadeiros caracteres acentuados no Info, não apenas as transliterações ASCII, é necessário especificar-se @code{@@documentencoding} com uma codificação que suporte os caracteres exigidos (@pxref{@code{@@documentencoding}}). Nesse caso, você também pode usar caracteres não ASCII (por exemplo, pré-acentuados) no arquivo fonte.
+Para obter a saída gerada dos verdadeiros caracteres acentuados no Info, 
+não apenas as transliterações ASCII, é necessário especificar-se 
+@code{@@documentencoding} com uma codificação que suporte os caracteres 
+exigidos (@pxref{@code{@@documentencoding}}). Nesse caso, você também 
+pode usar caracteres não ASCII (por exemplo, pré-acentuados) no arquivo 
+fonte.
 
 @findex " @r{(umlaut accent)}
 @cindex Acento trema
@@ -10157,7 +10497,8 @@ Para obter a saída gerada dos verdadeiros caracteres acentuados no Info, não a
 @item @t{@@v@{o@}}          @tab @v{o}          @tab acento caron/hacek/check
 @end multitable
 
-Esta tabela lista os comandos do Texinfo para inserir outros caracteres comumente usados ​​em idiomas diferentes do inglês.
+Esta tabela lista os comandos do Texinfo para inserir outros caracteres 
+comumente usados ​​em idiomas diferentes do inglês.
 
 @findex questiondown
 @cindex @questiondown{}
@@ -10234,35 +10575,61 @@ Esta tabela lista os comandos do Texinfo para inserir outros caracteres comument
 @cindex Aspas, inserindo
 
 @cindex Caracteres de citação (`'), no fonte
-Use caracteres de aspas simples duplicadas para iniciar e terminar citações:
-@w{@t{`@w{}`@dots{}'@w{}'}}. @TeX{} converte duas aspas simples para marcas duplicadas de citação à esquerda e à direita,
+Use caracteres de aspas simples duplicadas para iniciar e terminar 
+citações:
+@w{@t{`@w{}`@dots{}'@w{}'}}. @TeX{} converte duas aspas simples para 
+marcas duplicadas de citação à esquerda e à direita,
 @c isso aparece como "assim" no Info, o que é simplesmente confuso.
 @iftex
 ``assim'',
 @end iftex
-e Info converte caracteres duplicados de aspas simples para aspas duplas ASCII: @w{@t{`@w{}`@dots{}'@w{}'}} se torna @w{@t{"@dots{}"}}.
+e Info converte caracteres duplicados de aspas simples para aspas duplas 
+ASCII: @w{@t{`@w{}`@dots{}'@w{}'}} se torna @w{@t{"@dots{}"}}.
 
-Ocasionalmente, você pode precisar produzir duas aspas simples consecutivas; por exemplo, ao documentar uma linguagem de computador como Maxima, onde @t{'@w{}'} é um comando válido. Você pode fazer isso com a entrada @t{'@@w@{@}'}; o comando vazio @code{@@w} interrompe a combinação nos caracteres de aspas duplas.
+Ocasionalmente, você pode precisar produzir duas aspas simples 
+consecutivas; por exemplo, ao documentar uma linguagem de computador 
+como Maxima, onde @t{'@w{}'} é um comando válido. Você pode fazer isso 
+com a entrada @t{'@@w@{@}'}; o comando vazio @code{@@w} interrompe a 
+combinação nos caracteres de aspas duplas.
 
 @cindex Caracteres Unicode de citação
 @cindex Acento grave, versus aspa esquerda
-O caractere de aspa esquerda (@t{`}, código ASCII 96) usado no Texinfo é um acento grave nos padrões de conjunto de caracteres ANSI e ISO. Nós o usamos como um caractere de aspas porque assim é como @TeX{} está configurado, por padrão.
+O caractere de aspa esquerda (@t{`}, código ASCII 96) usado no Texinfo é 
+um acento grave nos padrões de conjunto de caracteres ANSI e ISO. Nós o 
+usamos como um caractere de aspas porque assim é como @TeX{} está 
+configurado, por padrão.
 
-Texinfo suporta várias outras aspas usadas em idiomas diferentes do inglês. Abaixo está uma tabela com os comandos que Texinfo fornece para inserir aspas.
+Texinfo suporta várias outras aspas usadas em idiomas diferentes do 
+inglês. Abaixo está uma tabela com os comandos que Texinfo fornece para 
+inserir aspas.
 
 @cindex UTF-8
 @cindex ISO 8859-15
 @cindex Latin 9
 @cindex ISO 8859-1
 @cindex Latin 1
-Para a finalidade de se obter os símbolos para as aspas na saída gerada codificada do Info, é necessário especificar-se @code{@@documentencoding UTF-8}. (@xref{@code{@@documentencoding}}). Guillemets duplos também estão presentes na ISO 8859-1 (também conhecida como Latin@tie{}1) e na ISO 8859-15 (também conhecida como Latin@tie{}9).
+
+Para a finalidade de se obter os símbolos para as aspas na saída gerada 
+codificada do Info, é necessário especificar-se
+@code{@@documentencoding UTF-8}. (@xref{@code{@@documentencoding}}).
+Guillemets duplos também estão presentes na ISO 8859-1 (também conhecida 
+como Latin@tie{}1) e na ISO 8859-15 (também conhecida como 
+Latin@tie{}9).
 
 @cindex Fontes modernas de Computador Europeu
 @cindex EC fontes
-As fontes padrão do @TeX{} suportam as aspas usuais usadas em inglês (aquelas produzidas com aspas simples de ASCII unitárias e duplicadas). Para as outras aspas, @TeX{} usa fontes European Computer Modern (EC) (@file{ecrm1000} e outras variantes). Essas fontes estão disponíveis gratuitamente, é claro; você pode baixá-las a partir de @url{http://ctan.org/pkg/ec}, entre outros lugares.
+As fontes padrão do @TeX{} suportam as aspas usuais usadas em inglês 
+(aquelas produzidas com aspas simples de ASCII unitárias e duplicadas). 
+Para as outras aspas, @TeX{} usa fontes European Computer Modern (EC) 
+(@file{ecrm1000} e outras variantes). Essas fontes estão disponíveis 
+gratuitamente, é claro; você pode baixá-las a partir de 
+@url{http://ctan.org/pkg/ec}, entre outros lugares.
 
 @cindex Fontes CM-Super
-As fontes livres EC são fontes bitmap criadas com Metafont. Especialmente para visualização on-line, as versões Type@tie{}1 (vetor) das fontes são preferíveis; elas estão disponíveis no pacote de fontes CM-Super (@url{http://ctan.org/pkg/cm-super}).
+As fontes livres EC são fontes bitmap criadas com Metafont. 
+Especialmente para visualização on-line, as versões Type@tie{}1 (vetor) 
+das fontes são preferíveis; elas estão disponíveis no pacote de fontes 
+CM-Super (@url{http://ctan.org/pkg/cm-super}).
 
 Ambas as distribuições incluem instruções de instalação.
 
@@ -10329,9 +10696,21 @@ Ambas as distribuições incluem instruções de instalação.
 @end multitable
 
 @cindex Auk, espécies de pássaro
-Para as aspas de ângulo duplo, nomes de glifos da Adobe e @LaTeX{} também são suportados: @code{@@guillemotleft} e @code{@@guillemotright}. Esses nomes estão incorretos; um ``guillemot'' é uma espécie de pássaro (um tipo de auk).
+Para as aspas de ângulo duplo, nomes de glifos da Adobe e @LaTeX{} 
+também são suportados: @code{@@guillemotleft} e @code{@@guillemotright}. 
+Esses nomes estão incorretos; um ``guillemot'' é uma espécie de pássaro 
+(um tipo de auk).
 
-As tradições para o uso de aspas variam muito entre os idiomas (@url{http://en.wikipedia.org/wiki/Quotation_mark}). Texinfo não fornece comandos ou configurações para composição de aspas de acordo com as numerosas tradições. Portanto, você tem que escolher os comandos apropriados para o idioma do teu manual. Às vezes, apelidos (@pxref{@code{@@alias}}) podem simplificar o uso e tornar o código-fonte mais legível. Por exemplo, em alemão, @code{@@quotedblbase} é usado para as aspas duplas à esquerda, e as aspas duplas à direita são o glifo produzido por @code{@@quotedblleft}, o que é contraintuitivo. Portanto, nesse caso, os seguintes apelidos seriam convenientes:
+As tradições para o uso de aspas variam muito entre os idiomas 
+(@url{http://en.wikipedia.org/wiki/Quotation_mark}). Texinfo não fornece 
+comandos ou configurações para composição de aspas de acordo com as 
+numerosas tradições. Portanto, você tem que escolher os comandos 
+apropriados para o idioma do teu manual. Às vezes, apelidos 
+(@pxref{@code{@@alias}}) podem simplificar o uso e tornar o código-fonte 
+mais legível. Por exemplo, em alemão, @code{@@quotedblbase} é usado para 
+as aspas duplas à esquerda, e as aspas duplas à direita são o glifo 
+produzido por @code{@@quotedblleft}, o que é contraintuitivo. Portanto, 
+nesse caso, os seguintes apelidos seriam convenientes:
 
 @example
 @@alias lgqq = quotedblbase
@@ -10346,7 +10725,10 @@ As tradições para o uso de aspas variam muito entre os idiomas (@url{http://en
 @findex sup
 @cindex Subscritos e sobrescritos, texto
 
-Você consegue inserir subscritos e sobrescritos, em texto ou matemática, com os comandos @code{@@sub} e @code{@@sup}. (Para outras expressões matemáticas, veja-se a próxima seção). Por exemplo, aqui está um subscrito e sobrescrito puramente textual:
+Você consegue inserir subscritos e sobrescritos, em texto ou matemática, 
+com os comandos @code{@@sub} e @code{@@sup}. (Para outras expressões 
+matemáticas, veja-se a próxima seção). Por exemplo, aqui está um 
+subscrito e sobrescrito puramente textual:
 
 @example
 aqui@@sub@{abaixo@}@@sup@{acima@}
@@ -10359,7 +10741,10 @@ aqui@sub{abaixo}@sup{acima} @c CONSERTE-ME
 @end display
 
 @cindex Fonte itálica matemática
-Dentro de @code{@@math}, @code{@@sub} e @code{@@sup} produzem subscritos e sobrescritos matemáticos. Isso usa uma fonte diferente na saída gerada do @TeX{} (itálico de matemática, em vez de itálico de texto); não faz diferença nos outros formatos de saída. Aqui está um exemplo:
+Dentro de @code{@@math}, @code{@@sub} e @code{@@sup} produzem subscritos 
+e sobrescritos matemáticos. Isso usa uma fonte diferente na saída gerada 
+do @TeX{} (itálico de matemática, em vez de itálico de texto); não faz 
+diferença nos outros formatos de saída. Aqui está um exemplo:
 
 @example
 @@math@{e@@sup@{x@}@}
@@ -10371,9 +10756,15 @@ Dentro de @code{@@math}, @code{@@sub} e @code{@@sup} produzem subscritos e sobre
 @math{e@sup{x}}
 @end display
 
-No Info e texto simples, independentemente de ser usado dentro de @code{@@math}, @code{@@sub@{@var{texto}@}} é gerado como @samp{_@{@var{texto}@}} e @code{@@sup@{@var{texto}@}} como @samp{^@{@var{texto}@}}, incluindo as chaves literais (para marcar o início e o fim do texto de ``script'' para o(a) leitor(a)).
+No Info e texto simples, independentemente de ser usado dentro de 
+@code{@@math}, @code{@@sub@{@var{texto}@}} é gerado como 
+@samp{_@{@var{texto}@}} e @code{@@sup@{@var{texto}@}} como 
+@samp{^@{@var{texto}@}}, incluindo as chaves literais (para marcar o 
+início e o fim do texto de ``script'' para o(a) leitor(a)).
 
-Quando o formato da saída gerada (e o programa de exibição) permite (matemática do @TeX{}, HTML), o sobrescrito é configurado acima do subscrito quando ambos os comandos forem fornecidos consecutivamente.
+Quando o formato da saída gerada (e o programa de exibição) permite 
+(matemática do @TeX{}, HTML), o sobrescrito é configurado acima do 
+subscrito quando ambos os comandos forem fornecidos consecutivamente.
 
 
 @node Inserindo Fórmulas Matemáticas
@@ -10384,7 +10775,8 @@ Quando o formato da saída gerada (e o programa de exibição) permite (matemát
 @cindex Expressões matemáticas, inserindo
 @cindex Fórmulas, matemática
 
-Você consegue escrever uma expressão matemática curta com o comando @code{@@math}. Escreva a expressão matemática entre chaves, assim:
+Você consegue escrever uma expressão matemática curta com o comando 
+@code{@@math}. Escreva a expressão matemática entre chaves, assim:
 
 @example
 @@math@{(a + b) = (b + a)@}
@@ -10408,16 +10800,37 @@ Você consegue escrever uma expressão matemática curta com o comando @code{@@m
 @end example
 
 @cindex MathML, não usado
-O comando @code{@@math} não tem efeito especial na saída gerada de Info e de HTML. @command{makeinfo} expande quaisquer comandos @@ como de costume, mas não tenta usar (ou produzir) boa formatação matemática de forma alguma (sem uso de MathML, etc.). A saída gerada de HTML é delimitada por @code{<em>...</em>}, mas nada mais.
+O comando @code{@@math} não tem efeito especial na saída gerada de Info 
+e de HTML. @command{makeinfo} expande quaisquer comandos @@ como de 
+costume, mas não tenta usar (ou produzir) boa formatação matemática de 
+forma alguma (sem uso de MathML, etc.). A saída gerada de HTML é 
+delimitada por @code{<em>...</em>}, mas nada mais.
 
 @findex \mathopsup
-No entanto, no que diz respeito à saída gerada do @TeX{}, comandos matemáticos simples do @TeX{} são permitidos no @code{@@math}, começando com @samp{\}. Em essência, o @code{@@math} comuta para o modo matemático simples do @TeX{}. (Exceção: o comando simples do @TeX{} @code{\sup}, que tipografa o nome do operador matemático `sup', precisa ser acessado como @code{\mathopsup}, devido ao conflito com o comando @code{@@sup} do Texinfo).
+No entanto, no que diz respeito à saída gerada do @TeX{}, comandos 
+matemáticos simples do @TeX{} são permitidos no @code{@@math}, começando 
+com @samp{\}. Em essência, o @code{@@math} comuta para o modo matemático 
+simples do @TeX{}. (Exceção: o comando simples do @TeX{} @code{\sup}, 
+que tipografa o nome do operador matemático `sup', precisa ser acessado 
+como @code{\mathopsup}, devido ao conflito com o comando @code{@@sup} do 
+Texinfo).
 
-Isso permite que você use todas as sequências de controle matemático simples do @TeX{} para símbolos, funções e assim por diante, e assim obtenha a formatação adequada na saída gerada do @TeX{}, pelo menos.
+Isso permite que você use todas as sequências de controle matemático 
+simples do @TeX{} para símbolos, funções e assim por diante, e assim 
+obtenha a formatação adequada na saída gerada do @TeX{}, pelo menos.
 
-Os comandos @code{@@sub} e @code{@@sup} descritos na seção anterior produzem subscritos e sobrescritos na saída gerada de HTML, bem como no @TeX{}; os caracteres simples do @TeX{} @code{_} e @code{^} para subscritos e sobrescritos são reconhecidos pelo @TeX{} dentro do @code{@@math}, mas não fazem nada de especial em HTML ou outros formatos de saída.
+Os comandos @code{@@sub} e @code{@@sup} descritos na seção anterior 
+produzem subscritos e sobrescritos na saída gerada de HTML, bem como no 
+@TeX{}; os caracteres simples do @TeX{} @code{_} e @code{^} para 
+subscritos e sobrescritos são reconhecidos pelo @TeX{} dentro do 
+@code{@@math}, mas não fazem nada de especial em HTML ou outros formatos 
+de saída.
 
-É melhor usar @samp{\} em vez de @samp{@@} para quaisquer comandos matemáticos desse tipo; caso contrário, @command{makeinfo} reclamará. Por outro lado, @command{makeinfo} permite entrada com chaves correspondentes (inescapadas), como @samp{k_@{75@}}; ele reclama acerca dessas chaves vazias na entrada regular.
+É melhor usar @samp{\} em vez de @samp{@@} para quaisquer comandos 
+matemáticos desse tipo; caso contrário, @command{makeinfo} reclamará. 
+Por outro lado, @command{makeinfo} permite entrada com chaves 
+correspondentes (inescapadas), como @samp{k_@{75@}}; ele reclama acerca 
+dessas chaves vazias na entrada regular.
 
 Aqui está um exemplo:
 
@@ -10439,11 +10852,19 @@ Aqui está um exemplo:
 @end example
 
 @findex @sortas{\} \ @r{(\ literal em @code{@@math})} @c CONSERTE-ME
-Como @samp{\} é um caractere de escape dentro de @code{@@math}, você pode usar @code{@@\} para obter uma barra invertida literal (@code{\\} funcionará no @TeX{}, mas você obteria os dois caracteres literais @samp{\\} no Info). @code{@@\} não está definido fora de @code{@@math}, pois uma @samp{\} normalmente produz uma @samp{\} literal (máquina de escrever). Você também pode usar @code{@@backslashchar@{@}} em qualquer modo para obter uma barra invertida de máquina de escrever. @xref{Inserindo uma Barra Invertida}.
+Como @samp{\} é um caractere de escape dentro de @code{@@math}, você 
+pode usar @code{@@\} para obter uma barra invertida literal (@code{\\} 
+funcionará no @TeX{}, mas você obteria os dois caracteres literais 
+@samp{\\} no Info). @code{@@\} não está definido fora de @code{@@math}, 
+pois uma @samp{\} normalmente produz uma @samp{\} literal (máquina de 
+escrever). Você também pode usar @code{@@backslashchar@{@}} em qualquer 
+modo para obter uma barra invertida de máquina de escrever. 
+@xref{Inserindo uma Barra Invertida}.
 
 @cindex Equações exibidas
 @cindex Equações, exibidas
-Para equações exibidas, você precisa, no presente, usar @TeX{} diretamente (@pxref{Comandos do Formatador Bruto}).
+Para equações exibidas, você precisa, no presente, usar @TeX{} 
+diretamente (@pxref{Comandos do Formatador Bruto}).
 
 PAREI
 @node Glifos para Texto
@@ -14809,7 +15230,7 @@ Details are in the following sections.
 @menu
 * Use @TeX{}::                     Use @TeX{} to format for hardcopy.
 * Format with @command{texi2dvi}::        The simplest way to format.
-* Format with @command{tex}/@command{texindex}::    Formatting with explicit shell commands.
+* Formatar com @command{tex}/@command{texindex}::    Formatting with explicit shell commands.
 * Print with @command{lpr}::              How to print.
 * Within Emacs::                How to format and print from an Emacs shell.
 * Modo Texinfo Printing::       How to format and print in Texinfo mode.
@@ -15003,8 +15424,8 @@ The default is @samp{nomaybe}.  This environment variable is provided
 for troubleshooting purposes, and may change or disappear in the future.
 
 
-@node Format with @command{tex}/@command{texindex}
-@section Format with @command{tex}/@command{texindex}
+@node Formatar com @command{tex}/@command{texindex}
+@section Formatar com @command{tex}/@command{texindex}
 
 @cindex Shell formatting with @code{tex} and @code{texindex}
 @cindex Formatting with @code{tex} and @code{texindex}
