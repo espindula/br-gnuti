@@ -72,7 +72,7 @@ Documentação Livre GNU, versão 1.3 ou qualquer versão posterior
 publicada pela Free Software Foundation; sem Seções Invariantes, com os 
 Textos de Capa Frontal sendo ``Um Manual GNU'', e com os Textos de 
 Quarta Capa como em (a) abaixo.   Uma cópia da licença está incluída na 
-seção intitulada ``Licença de Documentação Livre GNU''.
+seção intitulada ``Licença GNU de Documentação Livre''.
 
 (a) O Texto de Quarta Capa da Free Software Foundation, Inc. (FSF) é: 
 ``Você tem a liberdade de copiar e modificar este manual GNU.   
@@ -213,7 +213,7 @@ Apêndices
 * Cabeçalhos::                    Como escrever cabeçalhos e rodapés de página.
 * Capturando Erros::           Como achar erros na formatação.
 * Especificação do Formato Info::   Detalhes técnicos do formato de arquivo Info.
-* Licença de Documentação Livre GNU:: Copiando este manual.
+* Licença GNU de Documentação Livre:: Copiando este manual.
 * Índice de Comando e Variável::  Um menu contendo comandos e variáveis.
 * Índice Geral::               Um menu cobrindo muitos tópicos.
 
@@ -482,27 +482,27 @@ Inserindo Espaço
 
 Símbolos para Texto
 
-* @code{@@TeX @@LaTeX}::                 Os logos @TeX{}.
+* @code{@@TeX @@LaTeX}::                As logomarcas do @TeX{}.
 * @code{@@copyright}::                  O símbolo de direitos autorais (c em um círculo).
 * @code{@@registeredsymbol}::           O símbolo de marca registrada (R em um círculo).
-* @code{@@dots}::                       Como inserir elipses: @dots{} e @enddots{}
-* @code{@@bullet}::                     Como inserir um bullet: @bullet{}
-* @code{@@euro}::                       Como inserir o símbolo da moeda euro.
-* @code{@@pounds}::                     Como inserir o símbolo de medição quilo.
-* @code{@@textdegree}::                 Como inserir o símbolo de medição graus.
+* @code{@@dots}::                       Como inserir reticências: @dots{} e @enddots{}
+* @code{@@bullet}::                     Como inserir um marcador: @bullet{}
+* @code{@@euro}::                       Como inserir o símbolo da moeda Euro.
+* @code{@@pounds}::                     Como inserir o símbolo da moeda Libras.
+* @code{@@textdegree}::                 Como inserir o símbolo de Graus.
 * @code{@@minus}::                      Como inserir um sinal de menos.
-* @code{@@geq @@leq}::                   Como inserir os sinais maior/menor que ou igual a.
+* @code{@@geq @@leq}::                  Como inserir os sinais maior/menor que ou igual a.
 
 Símbolos para Programação
 
-* Súmario de Glifos::
+* Sumário de Glifos::
 * @code{@@result}::                     Como exibir o resultado da expressão.
 * @code{@@expansion}::                  Como indicar uma expansão.
 * @code{@@print}::                      Como indicar saída gerada.
 * @code{@@error}::                      Como indicar uma mensagem de erro.
 * @code{@@equiv}::                      Como indicar equivalência.
-* @code{@@point}::                      Como indicar a localização do ponto.
-* Sequências de Clique::             Inserindo sequências de uso GUI.
+* @code{@@point}::                      Como indicar o local do ponto.
+* Sequências de Clique::                Inserindo sequências de uso GUI.
 
 Forcando e Prevenindo Quebras
 
@@ -661,13 +661,13 @@ Gerando HTML
 
 Referências Cruzadas HTML
 
-* Link Basics::       Básico do Link HTML Xref.
-* Node Expansion::    Expansão de Nome de Nodo HTML Xref.
-* Command Expansion:: Expansão de Comando HTML Xref.
-* 8-bit Expansion::   Expansão de Carácter de 8 Bits HTML Xref.
-* Mismatch::          Descasamento HTML Xref.
-* Configuration::     Configuração HTML Xref. htmlxref.cnf.
-* Preserving links::  Preservação de Link HTML Xref. MANUAL-noderename.cnf.
+* Básicos de Links:    Básico do Link HTML Xref.
+* Expansão de Nodo:    Expansão de Nome de Nodo HTML Xref.
+* Expansão de Comando: Expansão de Comando HTML Xref.
+* Expansão de 8 bits:  Expansão de Carácter de 8 Bits HTML Xref.
+* Incompatibilidade:   Descasamento HTML Xref.
+* Configuração:        Configuração HTML Xref. htmlxref.cnf.
+* Preservando links:   Preservação de Link HTML Xref. MANUAL-noderename.cnf.
 
 Arquivos de Amostra Texinfo
 
@@ -790,8 +790,8 @@ nossa reputação.
 As condições precisas das licenças para os programas atualmente sendo 
 distribuídos que se relacionem com Texinfo são encontradas nas Licenças 
 Públicas Gerais que os acompanham.   Este manual está coberto pela 
-Licença de Documentação Livre GNU 
-(@pxref{Licença de Documentação Livre GNU}).
+Licença GNU de Documentação Livre 
+(@pxref{Licença GNU de Documentação Livre}).
 
 
 @node Visão Geral
@@ -2197,7 +2197,7 @@ arquivo fonte.
 
 Veja-se @ref{Copyright Notices,,, maintain, GNU Maintainer Information}, para 
 informação adicional. Veja-se @ref{GNU Sample Texts}, para o texto completo a 
-ser utilizado em manuais GNU. Veja-se @ref{Licença de Documentação Livre GNU}, 
+ser utilizado em manuais GNU. Veja-se @ref{Licença GNU de Documentação Livre}, 
 para a própria licença sob a qual GNU e outros manuais livres são 
 distribuídos.
 
@@ -4790,8 +4790,8 @@ informação que eles podem não ter lido.
 Em um manual impresso, uma referência cruzada resulta em uma referência 
 de página, a menos que seja para outro manual, caso no qual a referência 
 cruzada nomeia esse manual. Em Info, uma referência cruzada resulta em 
-uma entrada que você pode seguir usando o comando @samp{f}. 
-(@xref{Help-Xref,, Following cross-references, info, Info}). Em HTML, 
+uma entrada que você pode seguir usando o comando @samp{f}
+(@xref{Help-Xref,, Following cross-references, info, Info}.). Em HTML, 
 uma referência cruzada resulta em um hiperlink.
 
 Os vários comandos de referências cruzadas usam Nodos 
@@ -10865,324 +10865,250 @@ modo para obter uma barra invertida de máquina de escrever.
 Para equações exibidas, você precisa, no presente, usar @TeX{} 
 diretamente (@pxref{Comandos do Formatador Bruto}).
 
-PAREI
 @node Glifos para Texto
 @section Glifos para Texto
 
-@anchor{Glyphs}@c old name
-@anchor{TeX and copyright}@c another old node, now split into two
-@cindex Glyphs for text
-@cindex Textual glyphs
+@anchor{Glyphs}@c nome antigo
+@anchor{TeX and copyright}@c outro nodo antigo, agora dividido em dois
+@cindex Glifos para texto
+@cindex Glifos textuais
 
-Texinfo has support for a few additional glyphs that are commonly used
-in printed text but not available in ASCII@.  Of course, there are
-many thousands more.  It is possible to use Unicode characters as-is
-as far as @code{makeinfo} is concerned, but @TeX{} is not so lucky.
+Texinfo tem suporte para alguns glifos adicionais que são comumente usados ​​em texto impresso, mas não disponíveis em ASCII@. Claro, existem muitos milhares mais. É possível usar caracteres Unicode como estão no que diz respeito ao @code{makeinfo}, mas o @TeX{} não é tão sortudo.
 
 @menu
-* @code{@@TeX @@LaTeX}::                 The @TeX{} logos.
-* @code{@@copyright}::                  The copyright symbol (c in a circle).
-* @code{@@registeredsymbol}::           The registered symbol (R in a circle).
-* @code{@@dots}::                       How to insert ellipses: @dots{} and @enddots{}
-* @code{@@bullet}::                     How to insert a bullet: @bullet{}
-* @code{@@euro}::                       How to insert the euro currency symbol.
-* @code{@@pounds}::                     How to insert the pounds currency symbol.
-* @code{@@textdegree}::                 How to insert the degrees symbol.
-* @code{@@minus}::                      How to insert a minus sign.
-* @code{@@geq @@leq}::                   How to insert greater/less-than-or-equal signs.
+* @code{@@TeX @@LaTeX}::                As logomarcas do @TeX{}.
+* @code{@@copyright}::                  O símbolo de direitos autorais (c em um círculo).
+* @code{@@registeredsymbol}::           O símbolo de marca registrada (R em um círculo).
+* @code{@@dots}::                       Como inserir reticências: @dots{} e @enddots{}
+* @code{@@bullet}::                     Como inserir um marcador: @bullet{}
+* @code{@@euro}::                       Como inserir o símbolo da moeda Euro.
+* @code{@@pounds}::                     Como inserir o símbolo da moeda Libras.
+* @code{@@textdegree}::                 Como inserir o símbolo de Graus.
+* @code{@@minus}::                      Como inserir um sinal de menos.
+* @code{@@geq @@leq}::                  Como inserir os sinais maior/menor que ou igual a.
 @end menu
 
 
 @node @code{@@TeX @@LaTeX}
-@subsection @code{@@TeX}@{@} (@TeX{}) and @code{@@LaTeX}@{@} (@LaTeX{})
+@subsection @code{@@TeX}@{@} (@TeX{}) e @code{@@LaTeX}@{@} (@LaTeX{})
 
-@anchor{tex}@c old name
+@anchor{tex}@c nome antigo
 @findex TeX
 @findex LaTeX
 @cindex Logos, @TeX{}
-@cindex @TeX{} logo
-@cindex @LaTeX{} logo
+@cindex Logomarca do @TeX{}
+@cindex Logomarca do @LaTeX{}
 
-Use the @code{@@TeX@{@}} command to generate `@TeX{}'.  In a printed
-manual, this is a special logo that is different from three ordinary
-letters.  In Info, it just looks like @samp{TeX}.
+Use o comando @code{@@TeX@{@}} para gerar `@TeX{}'. Em um manual impresso, esse é um logotipo especial que é diferente de três letras comuns. No Info, ele se parece apenas com @samp{TeX}.
 
-Similarly, use the @code{@@LaTeX@{@}} command to generate `@LaTeX{}',
-which is even more special in printed manuals (and different from the
-incorrect @code{La@@TeX@{@}}.  In Info, the result is just
-@samp{LaTeX}.  (@LaTeX{} is another macro package built on top of
-@TeX{}, very loosely analogous to Texinfo in that it emphasizes
-logical structure, but much (much) larger.)
+Da mesma forma, use o comando @code{@@LaTeX@{@}} para gerar `@LaTeX{}', que é ainda mais especial em manuais impressos (e diferente do incorreto @code{La@@TeX@{@}}. No Info, o resultado é apenas @samp{LaTeX}. (@LaTeX{} é outro pacote de macro criado com fundamento no @TeX{}, muito vagamente análogo ao Texinfo, pois enfatiza a estrutura lógica, mas muito (muito) maior).
 
-The spelling of these commands are unusual for Texinfo, in that they
-use both uppercase and lowercase letters.
+A grafia desses comandos é incomum no Texinfo, pois eles usam ambas, letras maiúsculas e minúsculas.
 
 
 @node @code{@@copyright}
 @subsection @code{@@copyright@{@}} (@copyright{})
 
-@anchor{copyright symbol}@c old name
+@anchor{copyright symbol}@c nome antigo
 @findex copyright
-@cindex Copyright symbol
+@cindex Símbolo de copyright
 
-Use the @code{@@copyright@{@}} command to generate the copyright
-symbol, `@copyright{}'.  Where possible, this is a @samp{c} inside a
-circle; in Info, this is @samp{(C)}.
+Use o comando @code{@@copyright@{@}} para gerar o símbolo de copyright, `@copyright{}'. Onde possível, esse é um @samp{c} dentro de um círculo; no Info, isso é @samp{(C)}.
 
-Legally, it's not necessary to use the copyright symbol; the English
-word `Copyright' suffices, according to international treaty.
+Juridicamente, não é necessário usar o símbolo de direitos autorais; a palavra em inglês `Copyright' é suficiente, de acordo com tratado internacional.
 
 
 @node @code{@@registeredsymbol}
 @subsection @code{@@registeredsymbol@{@}} (@registeredsymbol{})
 
-@anchor{registered symbol}@c old name
+@anchor{registered symbol}@c nome antigo
 @findex registeredsymbol
-@cindex Registered symbol
+@cindex Símbolo Registrado
 
-Use the @code{@@registeredsymbol@{@}} command to generate the
-registered symbol, `@registeredsymbol{}'.  Where possible, this is an
-@samp{R} inside a circle; in Info, this is @samp{(R)}.
+Use o comando @code{@@registeredsymbol@{@}} para gerar o símbolo de Registrado, `@registeredsymbol{}'. Onde possível, esse é um @samp{R} dentro de um círculo; no Info, isso é @samp{(R)}.
 
 
 @node @code{@@dots}
-@subsection @code{@@dots} (@dots{}) and @code{@@enddots} (@enddots{})
+@subsection @code{@@dots} (@dots{}) e @code{@@enddots} (@enddots{})
 
-@anchor{dots}@c old name
+@anchor{dots}@c nome antigo
 @findex dots
 @findex enddots
-@cindex Inserting dots
-@cindex Inserting ellipsis
-@cindex Dots, inserting
-@cindex Ellipsis, inserting
+@cindex Inserindo pontos
+@cindex Inserindo reticências
+@cindex Pontos, inserindo
+@cindex Reticências, inserindo
 
-@anchor{Dots Bullets}@c old name
+@anchor{Dots Bullets}@c nome antigo
 
-An @dfn{ellipsis} (a sequence of dots) would be spaced wrong when
-typeset as a string of periods, so a special command is used in
-Texinfo: use the @code{@@dots@{@}} command to generate a normal
-ellipsis, which is three dots in a row, appropriately spaced @dots{}
-like so.  To emphasize: do not simply write three periods in the input
-file; that would work for the Info file output, but would produce the
-wrong amount of space between the periods in the printed manual.
+Uma @dfn{ellipsis} (uma sequência de pontos) seria espaçada incorretamente quando tipografada como uma sequência de pontos, de forma que um comando especial é usado no Texinfo: use o comando @code{@@dots@{@}} para gerar uma reticência normal, que são três pontos em uma linha, apropriadamente espaçados @dots{} assim. Para enfatizar: não escreva simplesmente três pontos no arquivo de entrada; isso funcionaria para a saída gerada do arquivo do Info, mas produziria a quantidade errada de espaço entre os pontos no manual impresso.
 @c CONSERTE-ME
-The @code{@@enddots@{@}} command generates an end-of-sentence
-ellipsis, which also has three dots, but with different spacing
-afterwards, @enddots{}  Look closely to see the difference.
+O comando @code{@@enddots@{@}} gera reticências no final da frase, que também tem três pontos, mas com espaçamento diferente depois, @enddots{} . Observe atentamente para ver a diferença.
 
-Here is an ellipsis: @dots{}
-Here are three periods in a row: ...
+Aqui está uma reticência: @dots{} .
+Aqui estão três pontos em uma linha: ... .
 
-In printed (and usually HTML) output, the three periods in a row are
-much closer together than the dots in the ellipsis.
+Na saída gerada impressa (e geralmente em HTML), os três pontos em uma linha estão muito mais próximos um ao outro que os pontos nas reticências.
 
 
 @node @code{@@bullet}
 @subsection @code{@@bullet} (@bullet{})
 
-@anchor{bullet}@c old name
+@anchor{bullet}@c nome antigo
 @findex bullet
 
-Use the @code{@@bullet@{@}} command to generate a large round dot, or
-the closest possible thing to one.  In Info, an asterisk is used.
-Here is a bullet: @bullet{}
+Use o comando @code{@@bullet@{@}} para gerar um ponto redondo grande, ou o mais próximo possível de um. No Info, um asterisco é usado. Aqui está um marcador: @bullet{}
 
-When you use @code{@@bullet} in @code{@@itemize}, you do not need to
-type the braces, because @code{@@itemize} supplies them.
+Ao usar @code{@@bullet} em @code{@@itemize}, você não precisa digitar as chaves, porque @code{@@itemize} as fornece.
 (@pxref{@code{@@itemize}}).
 
 
 @node @code{@@euro}
-@subsection @code{@@euro} (@euro{}): Euro Currency Symbol
+@subsection @code{@@euro} (@euro{}): Símbolo da Moeda Euro
 
-@anchor{euro}@c old name
+@anchor{euro}@c nome antigo
 @findex euro
-@cindex Euro symbol, producing
+@cindex Símbolo do Euro, produzindo
 
-Use the @code{@@euro@{@}} command to generate `@euro{}'.  Where
-possible, this is the symbol for the Euro currency.  Otherwise, the
-word @samp{Euro} is used.
+Use o comando @code{@@euro@{@}} para gerar `@euro{}'. Onde possível, esse é o símbolo da moeda Euro. Caso contrário, a palavra @samp{Euro} é usada.
 
-Texinfo cannot magically synthesize support for the Euro symbol where
-the underlying system (fonts, software, whatever) does not support it.
-Therefore, you may find it preferable to use the word ``Euro''.  (In
-banking contexts, the abbreviation for the Euro is EUR@.)
+Texinfo não pode magicamente sintetizar suporte para o símbolo do Euro onde o sistema subjacente (fontes, software, o que for) não o suporta. Portanto, você pode achar preferível usar a palavra ``Euro''. (Em contextos bancários, a abreviação para o Euro é EUR).
 
-@cindex ISO 8859-15, and Euro
-@cindex Latin 9, and Euro
-In order to get the Euro symbol in encoded Info output, for example,
-it is necessary to specify @code{@@documentencoding ISO-8859-15} or
-@code{@@documentencoding UTF-8} (@xref{@code{@@documentencoding}}.)
-The Euro symbol is in ISO 8859-15 (aka Latin@tie{}9), and is
-@emph{not} in the more widely-used ISO 8859-1 (Latin@tie{}1).
+@cindex ISO 8859-15, e Euro
+@cindex Latin 9, e Euro
+Para a finalidade de obter o símbolo do Euro na saída gerada codificada do Info, por exemplo, é necessário especificar @code{@@documentencoding ISO-8859-15} ou @code{@@documentencoding UTF-8} (@xref{@code{@@documentencoding}}). O símbolo do Euro está na ISO 8859-15 (também conhecida como Latin@tie{}9) e @emph{não} está na mais amplamente usada ISO 8859-1 (Latin@tie{}1).
 
 @pindex feymr10
-@cindex Euro font
-The Euro symbol does not exist in the standard @TeX{} fonts (which
-were designed before the Euro was legislated into existence).
-Therefore, @TeX{} uses an additional font, named @code{feymr10} (along
-with other variables).  It is freely available, of course; you can
-download it from @url{http://ctan.org/pkg/eurosym}, among other
-places.  The distribution includes installation instructions.
+@cindex fonte Euro
+O símbolo do Euro não existe nas fontes padrão do @TeX{} (que foram projetadas antes da existência jurídica do Euro). Portanto, o @TeX{} usa uma fonte adicional, chamada @code{feymr10} (junto com outras variáveis). Ela está disponível gratuitamente, é claro; você consegue baixá-la a partir de @url{http://ctan.org/pkg/eurosym}, entre outros lugares. A distribuição inclui instruções de instalação.
 
 
 @node @code{@@pounds}
-@subsection @code{@@pounds} (@pounds{}): Pounds Sterling
+@subsection @code{@@pounds} (@pounds{}): Libras esterlinas
 
-@anchor{pounds}@c old name
-@findex pounds
-@cindex Pounds symbol
+@anchor{pounds}@c nome antigo
+@findex libras
+@cindex Libras, símbolo
 
-Use the @code{@@pounds@{@}} command to generate `@pounds{}'.  Where
-possible, this is the symbol for the pounds sterling British currency.
-Otherwise, it is @samp{#}.
+Use o comando @code{@@pounds@{@}} para gerar `@pounds{}'. Onde possível, esse é o símbolo para a Libra esterlina, moeda britânica. Caso contrário, é @samp{#}.
 
 
 @node @code{@@textdegree}
-@subsection @code{@@textdegree} (@textdegree{}): Degrees Symbol
+@subsection @code{@@textdegree} (@textdegree{}): símbolo de Graus
 
-@anchor{textdegree}@c old name
+@anchor{textdegree}@c nome antigo
 @findex textdegree
-@cindex Degree symbol
+@cindex símbolo de Graus
 
-Use the @code{@@textdegree@{@}} command to generate `@textdegree{}'.
-Where possible, this is the normal symbol for degrees.  Otherwise,
-it is an @samp{o}.
+Use o comando @code{@@textdegree@{@}} para gerar `@textdegree{}'. Onde possível, esse é o símbolo normal para Graus. Caso contrário, é um @samp{o}.
 
 
 @node @code{@@minus}
-@subsection @code{@@minus} (@minus{}): Inserting a Minus Sign
+@subsection @code{@@minus} (@minus{}): Inserindo um Sinal de Menos
 
-@anchor{minus}@c old name
+@anchor{minus}@c nome antigo
 @findex minus
-@cindex Minus sign
+@cindex Sinal de menos
 
 @cindex Em dash, compared to minus sign
 @cindex Hyphen, compared to minus
-Use the @code{@@minus@{@}} command to generate a minus sign.  In a
-fixed-width font, this is a single hyphen, but in a proportional font,
-the symbol is the customary length for a minus sign---a little longer
-than a hyphen, shorter than an em-dash:
+Use o comando @code{@@minus@{@}} para gerar um sinal de menos. Em uma fonte de largura fixa, isso é um hífen, mas em uma fonte proporcional, o símbolo tem o comprimento habitual para um sinal de menos---um pouco mais longo que um hífen, mais curto que um travessão:
 
 @display
-@samp{@minus{}} is a minus sign generated with @samp{@@minus@{@}},
+@samp{@minus{}} é um sinal de menos gerado com @samp{@@minus@{@}},
 
-`-' is a hyphen generated with the character @samp{-},
+`-' é um hífen gerado com o caractere @samp{-},
 
-`---' is an em-dash for text.
+`---' é um travessão para texto.
 @end display
 
 @noindent
-In the fixed-width font used by Info, @code{@@minus@{@}} is the same
-as a hyphen.
+Na fonte de largura fixa usada pelo Info, @code{@@minus@{@}} é o mesmo que um hífen.
 
-You should not use @code{@@minus@{@}} inside @code{@@code} or
-@code{@@example} because the width distinction is not made in the
-fixed-width font they use.
+Você deveria não usar @code{@@minus@{@}} dentro de @code{@@code} ou @code{@@example} porque a distinção de largura não é feita na fonte de largura fixa que eles usam.
 
-When you use @code{@@minus} to specify the mark beginning each entry
-in an itemized list, you do not need to type the braces
-(@pxref{@code{@@itemize}}).
+Ao usar @code{@@minus} para especificar a marca que inicia cada entrada em uma lista de itens, você não precisa digitar as chaves (@pxref{@code{@@itemize}}).
 
-If you actually want to typeset some math that does a subtraction, it
-is better to use @code{@@math}.  Then the regular @samp{-} character
-produces a minus sign, as in @code{@@math@{a-b@}} 
-(@pxref{Inserindo Fórmulas Matemáticas}).
+Se você realmente quer tipografar alguma matemática que faça uma subtração, é melhor usar @code{@@math}. Então o caractere regular @samp{-} produz um sinal de menos, como em @code{@@math@{a-b@}} (@pxref{Inserindo Fórmulas Matemáticas}).
 
 
 @node @code{@@geq @@leq}
-@subsection @code{@@geq} (@geq{}) and @code{@@leq} (@leq{}): Inserting Relations
+@subsection @code{@@geq} (@geq{}) e @code{@@leq} (@leq{}): Inserindo Relações
 
-@anchor{geq leq}@c old name
+@anchor{geq leq}@c nome antigo
 @findex geq
 @findex leq
 
-Use the @code{@@geq@{@}} and @code{@@leq@{@}} commands to generate
-greater-than-or-equal and less-than-equal-signs, `@geq{}' and
-`@leq{}'.  When those symbols are not available, the ASCII sequences
-@samp{>=} and @samp{<=} are output.
+Use os comandos @code{@@geq@{@}} e @code{@@leq@{@}} para gerar sinais de maior/menor que ou igual a, `@geq{}' e `@leq{}'. Quando esses símbolos não estão disponíveis, as sequências ASCII @samp{>=} e @samp{<=} são geradas.
 
 
 @node Glifos para Programação
 @section Glifos para Programação
 
-@cindex Glyphs for programming
-@cindex Examples, glyphs for
-@cindex Programming, glyphs for
+@cindex Glifos para programação
+@cindex Exemplos, glifos para
+@cindex Programação, glifos para
 
-In Texinfo, code is often illustrated in examples that are delimited
-by @code{@@example} and @code{@@end example}, or by @code{@@lisp} and
-@code{@@end lisp}.  In such examples, you can indicate the results of
-evaluation or an expansion using @samp{@result{}} or
-@samp{@expansion{}}.  Likewise, there are commands to insert glyphs to
-indicate printed output, error messages, equivalence of expressions,
-the location of point in an editor, and GUI operation sequences.
+No Texinfo, o código frequentemente é ilustrado em exemplos que são delimitados por @code{@@example} e @code{@@end example}, ou por @code{@@lisp} e @code{@@end lisp}. Em tais exemplos, você pode indicar os resultados da avaliação ou uma expansão usando @samp{@result{}} ou @samp{@expansion{}}. Da mesma forma, existem comandos para inserir glifos para indicar saída gerada impressa, mensagens de erro, equivalência de expressões, o local do ponto em um editor e sequências de operação da GUI.
 
-The glyph-insertion commands do not need to be used within an example,
-but most often they are.  All glyph-insertion commands are followed by
-empty braces.
+Os comandos de inserção de glifos não precisam ser usados dentro d​e um exemplo, mas na maioria das vezes são. Todos os comandos de inserção de glifos são seguidos por chaves vazias.
 
 @menu
-* Súmario de Glifos::
-* @code{@@result}::                     How to show the result of expression.
-* @code{@@expansion}::                  How to indicate an expansion.
-* @code{@@print}::                      How to indicate generated output.
-* @code{@@error}::                      How to indicate an error message.
-* @code{@@equiv}::                      How to indicate equivalence.
-* @code{@@point}::                      How to indicate the location of point.
-* Sequências de Clique::             Inserting GUI usage sequences.
+* Sumário de Glifos::
+* @code{@@result}::                     Como exibir o resultado da expressão.
+* @code{@@expansion}::                  Como indicar uma expansão.
+* @code{@@print}::                      Como indicar saída gerada.
+* @code{@@error}::                      Como indicar uma mensagem de erro.
+* @code{@@equiv}::                      Como indicar equivalência.
+* @code{@@point}::                      Como indicar o local do ponto.
+* Sequências de Clique::                Inserindo sequências de uso GUI.
 @end menu
 
 
 @node Súmario de Glifos
 @subsection Súmario de Glifos
 
-Here is a summary of the glyph commands:
+Aqui está um resumo dos comandos de glifo:
 
 @table @asis
 @item @result{}
-@code{@@result@{@}} indicates the result of an expression.
+@code{@@result@{@}} indica o resultado de uma expressão.
 
 @item @expansion{}
-@code{@@expansion@{@}} indicates the results of a macro expansion.
+@code{@@expansion@{@}} indica os resultados de uma expansão de macro.
 
 @item @print{}
-@code{@@print@{@}} indicates printed output.
+@code{@@print@{@}} indica saída impressa.
 
 @item @error{}
-@code{@@error@{@}} indicates the following text is an error message.
+@code{@@error@{@}} indica que o texto seguinte é uma mensagem de erro.
 
 @item @equiv{}
-@code{@@equiv@{@}} indicates the exact equivalence of two forms.
+@code{@@equiv@{@}} indica a equivalência exata de duas formas.
 
 @item @point{}
-@code{@@point@{@}} shows the location of point.
+@code{@@point@{@}} mostra o local do ponto.
 
 @item @clicksequence{A @click{} B}
-@code{@@clicksequence@{A @@click@{@} B} indicates a GUI operation
-sequence: first A, then clicking B, or choosing B from a menu, or
-otherwise selecting it.
+@code{@@clicksequence@{A @@click@{@} B} indica uma sequência de operação da GUI: primeiro A, depois clicar em B, ou escolher B em um menu, ou então selecioná-lo.
 @end table
 
 
 @node @code{@@result}
-@subsection @code{@@result@{@}} (@result{}): Result of an Expression
+@subsection @code{@@result@{@}} (@result{}): Resultado de uma Expressão
 
-@anchor{result}@c old name
+@anchor{result}@c nome antigo
 @findex result
-@cindex Result of an expression
-@cindex Indicating evaluation
-@cindex Evaluation glyph
-@cindex Value of an expression, indicating
+@cindex Resultado de uma expressão
+@cindex Indicando avaliação
+@cindex Glifo de avaliação
+@cindex Valor de uma expressão, indicando
 
-Use the @code{@@result@{@}} command to indicate the result of
-evaluating an expression.
+Use o comando @code{@@result@{@}} para indicar o resultado da avaliação de uma expressão.
 
-The @code{@@result@{@}} command is displayed as @samp{@result{}},
-either a double stemmed arrow or (when that is not available) the
-ASCII sequence @samp{=>}.
+O comando @code{@@result@{@}} é exibido como @samp{@result{}}, uma seta com haste dupla ou (quando essa não estiver disponível) como a sequência ASCII @samp{=>}.
 
-Thus, the following,
+Assim, o seguinte,
 
 @lisp
 (cdr '(1 2 3))
@@ -11190,27 +11116,23 @@ Thus, the following,
 @end lisp
 
 @noindent
-may be read as ``@code{(cdr '(1 2 3))} evaluates to @code{(2 3)}''.
+pode ser lido como ``@code{(cdr '(1 2 3))} avalia para @code{(2 3)}''.
 
 
 @node @code{@@expansion}
-@subsection @code{@@expansion@{@}} (@expansion{}): Indicating an Expansion
+@subsection @code{@@expansion@{@}} (@expansion{}): Indicando uma Expansão
 
-@anchor{expansion}@c old name
-@cindex Expansion, indicating
-@cindex Macro expansion, indicating
+@anchor{expansion}@c nome antigo
+@cindex Expansão, Indicando
+@cindex Expansão de Macro, indicando
 @findex expansion
 
-When an expression is a macro call, it expands into a new expression.
-You can indicate the result of the expansion with the
-@code{@@expansion@{@}} command.
+Quando uma expressão é uma chamada de macro, ela se expande para uma nova expressão. Você pode indicar o resultado da expansão com o comando @code{@@expansion@{@}}.
 
-The @code{@@expansion@{@}} command is displayed as
-@samp{@expansion{}}, either a long arrow with a flat base or (when
-that is not available) the ASCII sequence @samp{==>}.
+O comando @code{@@expansion@{@}} é exibido como @samp{@expansion{}}, uma seta longa com uma base plana ou (quando essa não estiver disponível) como a sequência ASCII @samp{==>}.
 
 @need 700
-For example, the following
+Por exemplo, o seguinte
 
 @example
 @group
@@ -11223,7 +11145,7 @@ For example, the following
 @end example
 
 @noindent
-produces
+produz
 
 @lisp
 @group
@@ -11234,18 +11156,17 @@ produces
 @end lisp
 
 @noindent
-which may be read as:
+que pode ser lido como:
 
 @quotation
-@code{(third '(a b c))} expands to @code{(car (cdr (cdr '(a b c))))};
-the result of evaluating the expression is @code{c}.
+@code{(third '(a b c))} expande para @code{(car (cdr (cdr '(a b c))))};
+o resultado da avaliação da expressão é @code{c}.
 @end quotation
 
 @noindent
-Often, as in this case, an example looks better if the
-@code{@@expansion@{@}} and @code{@@result@{@}} commands are indented.
+Frequentemente, como nesse caso, um exemplo aparenta melhor se os comandos @code{@@expansion@{@}} e @code{@@result@{@}} forem recuados.
 
-
+PAREI
 @node @code{@@print}
 @subsection @code{@@print@{@}} (@print{}): Indicating Generated Output
 
@@ -19339,13 +19260,13 @@ for each node.  (@xref{HTML Splitting}.)
 The algorithm was primarily devised by Patrice Dumas in 2003--04.
 
 @menu
-* Link Basics:       Básico do Link HTML Xref.
-* Node Expansion:    HTML Xref Node Name Expansion.
-* Command Expansion: Expansão de Comando Xref HTML.
-* 8-bit Expansion:   HTML Xref 8-bit Character Expansion.
-* Mismatch:          HTML Xref Mismatch.
-* Configuration:     HTML Xref Configuration. htmlxref.cnf.
-* Preserving links:  Preservação de Vínculo Xref HTML. MANUAL-noderename.cnf.
+* Básicos de Links:    Básico do Link HTML Xref.
+* Expansão de Nodo:    Expansão de Nome de Nodo HTML Xref.
+* Expansão de Comando: Expansão de Comando HTML Xref.
+* Expansão de 8 bits:  Expansão de Carácter de 8 Bits HTML Xref.
+* Incompatibilidade:   Descasamento HTML Xref.
+* Configuração:        Configuração HTML Xref. htmlxref.cnf.
+* Preservando links:   Preservação de Link HTML Xref. MANUAL-noderename.cnf.
 @end menu
 
 
@@ -20414,7 +20335,7 @@ Generate dotless i (`@dotless{i}') and dotless j (`@dotless{j}').
 @xref{Inserindo Acentos}.
 
 @item @@dots@{@}
-Generate an ellipsis, @samp{@dots{}}.
+Gerar uma reticência, @samp{@dots{}}.
 @xref{@code{@@dots}}.
 
 @item @@email@{@var{address}[, @var{displayed-text}]@}
@@ -21104,7 +21025,7 @@ Enter @TeX{} completely.  Pair with @code{@@end tex}.
 @xref{Comandos do Formatador Bruto}.
 
 @item @@textdegree@{@}
-Generate the degree symbol.  @xref{@code{@@textdegree}}.
+Gerar o símbolo de Graus.  @xref{@code{@@textdegree}}.
 
 @item @@thischapter
 @itemx @@thischaptername
@@ -21910,9 +21831,9 @@ information about command-line usage of a given program.  @xref{Manual
 Structure Details,,, standards, GNU Coding Standards}.
 
 @item
-@cindex Licença de Documentação Livre GNU, including entire
+@cindex Licença GNU de Documentação Livre, including entire
 @cindex Free Documentation License, including entire
-It is best to include the entire Licença de Documentação Livre GNU in a GNU
+It is best to include the entire Licença GNU de Documentação Livre in a GNU
 manual, unless the manual is only a few pages long.  Of course this
 sample is even shorter than that, but it includes the FDL anyway in
 order to show one conventional way to do so.  The @file{fdl.texi} file
@@ -21920,8 +21841,7 @@ is available on the GNU machines and in the Texinfo and other GNU
 source distributions.
 
 The FDL provides for omitting itself under certain conditions, but in
-that case the sample texts given here have to be modified.  @xref{GNU
-Free Documentation License}.
+that case the sample texts given here have to be modified.  @xref{Licença GNU de Documentação Livre}.
 
 @item
 If the FSF is not the copyright holder, then use the appropriate name.
@@ -21990,7 +21910,7 @@ This manual is for GNU Sample (version @value{VERSION}, @value{UPDATED}).
 
 @menu
 * Invoking sample::
-* Licença de Documentação Livre GNU::
+* Licença GNU de Documentação Livre::
 * Index::
 @end menu
 
@@ -24476,7 +24396,7 @@ such references.
 Here are some examples:
 
 @example
-*note Licença de Documentação Livre GNU::
+*note Licença GNU de Documentação Livre::
 *note Tag table: Info Format Tag Table, for details.
 *Note Visão Geral: (make)Top.
 *Note ^?:^?: (bash)Bourne Shell Builtins.
@@ -24500,16 +24420,10 @@ and the fifth example shows a period being quoted in a node name.
 @xref{Referências Cruzadas}.
 
 
-@node Licença de Documentação Livre GNU
-@appendix Licença de Documentação Livre GNU
+@node Licença GNU de Documentação Livre
+@appendix Licença GNU de Documentação Livre
 
 @include fdl-versao_1.3-pt_BR.texi
-
-
-@node GNU Free Documentation License
-@appendix GNU Free Documentation License
-
-@include fdl-versao_1.3-en_US.texi
 
 
 @node Índice de Comando e Variável
