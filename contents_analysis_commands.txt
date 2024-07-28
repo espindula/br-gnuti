@@ -1,0 +1,20 @@
+Alguns comandos usados para análise de conteúdo
+
+Listar todos os Nodos contidos no arquivo:
+=========================================
+
+nl <<< $( grep --extended-regexp '@node ' texinfo-ed.6.1-en_US.texi ) 1> /tmp/tmp.YKLAw2wGjs/arq1.txt
+nl <<< $( grep --extended-regexp '@node ' texinfo-ed.6.1-pt_BR.texi ) 1> /tmp/tmp.YKLAw2wGjs/arq2.txt
+
+
+Comparar arq1.txt com arq2.txt:
+==============================
+
+less <<< $( diff --side-by-side arq1.txt arq2.txt )
+
+
+Listar todos os Itens de Menu:
+=============================
+
+nl <<< $( grep --extended-regexp '* ' texinfo-ed.6.1-menus-en_US.texi )
+nl <<< $( grep --extended-regexp '* ' texinfo-ed.6.1-menus-pt_BR.texi )
