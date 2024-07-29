@@ -191,7 +191,7 @@ restante do menu lista todos os pontos de baixo nível no documento.
 * Exibições Especiais::            Figuras flutuantes e notas de rodapé.
 * Índices::                     Criando índices.
 * Inserções::                  Inserindo sinais @@-signs, chaves, etc.
-* Quebras::                      Forçando ou prevenindo quebras de página e linha.
+* Quebras::                      Forçando ou impedindo quebras de linha e de página.
 * Comandos de Definição::         Descrevendo uniformemente funções e afins.
 * Internacionalização::        Suporte a outras linguagens diferentes do Inglês.
 * Condicionais::                Especificando texto somente para alguns casos de saída.
@@ -462,7 +462,7 @@ Inserções Especiais
 * Inserindo Fórmulas Matemáticas::        Formatando expressões matemáticas.
 * Glifos para Texto::                     Inserindo pontos, bullets, símbolos de moedas, etc.
 * Glifos para Programação::               Indicando resultados de avaliação, expansão de macros, erros, etc.
-* Inserindo Unicode::                     Inserindo um caracter Unicode por ponto de código.
+* Inserindo Unicode::                     Inserindo um caractere Unicode por ponto de código.
 
 Caracteres Especiais: Inserindo @@ @{@} , \ #
 
@@ -502,20 +502,20 @@ Símbolos para Programação
 * @code{@@error}::                      Como indicar uma mensagem de erro.
 * @code{@@equiv}::                      Como indicar equivalência.
 * @code{@@point}::                      Como indicar o local do ponto.
-* Sequências de Clique::                Inserindo sequências de uso GUI.
+* Sequências de Clique::                Inserindo sequências de uso da GUI.
 
-Forcando e Prevenindo Quebras
+Forçando e Impedindo Quebras
 
-* Comandos de Quebra::              Sumário dos comandos relacionados à quebras.
-* Quebras de Linha::                 Forçando quebras de linha.
-* @code{@@- @@hyphenation}::             Ajudando @TeX{} com pontos de hifenação.
+* Comandos de Quebra::                  Resumo dos comandos relacionados a quebra.
+* Quebras de Linha::                    Forçando quebras de linha.
+* @code{@@- @@hyphenation}::            Ajudando @TeX{} com pontos de hifenação.
 * @code{@@allowcodebreaks}::            Controlando quebras de linhas dentro do texto de @@code.
-* @code{@@w}::                          Prevenindo quebras de linha indesejadas em texto.
+* @code{@@w}::                          Impedindo quebras de linha indesejadas no texto.
 * @code{@@tie}::                        Inserindo um inquebrável, porém variante espaço.
 * @code{@@sp}::                         Inserindo linhas em branco.
 * @code{@@page}::                       Forçando o início de uma página nova.
-* @code{@@group}::                      Prevenindo quebras de página indesejadas.
-* @code{@@need}::                       Outra maneira de prevenir quebras de página indesejadas.
+* @code{@@group}::                      Impedindo quebras de página indesejadas.
+* @code{@@need}::                       Outra maneira de impedir quebras de página indesejadas.
 
 Comandos de Definição
 
@@ -590,23 +590,22 @@ arquivos included dentro dele; e um arquivo included de amostra.
 
 Formatando e Imprimindo Cópia Impressa
 
-* Use @TeX{}::                     Use @TeX{} para formatar para cópia impressa.
-* Format with @command{texi2dvi}::        A maneira mais simples para formatar.
-* Formatar com @command{tex}/@command{texindex}::    Formatando com comandos explícitos de shell.
-* Print with @command{lpr}::              Como imprimir.
-* Within Emacs::                Como formatar e imprimir a partir de um shell Emacs.
-* Modo Texinfo Printing::       Como formatar e imprimir em modo Texinfo.
-* Compile-Command::             Como imprimir utilizando o comando de compilar do Emacs.
-* Requirements Summary::        Sumário de exigências de formatação do @TeX{}.
-* Preparing for @TeX{}::           O que se fazer antes de utilizar o @TeX{}.
-* Overfull hboxes::             O que são e o que se fazer com hboxes superlotados.
-* @code{@@smallbook}::                  Como imprimir livros e manuais formato pequeno.
-* Papel A4::                    Como imprimir em papel A4 ou A5.
-* @code{@@pagesizes}::                  Como imprimir com tamanhos de página personalizados.
-* Cropmarks and Magnification:: Como imprimir marcas para indicar o 
-tamanho das páginas e como imprimir saída escalada.
-* PDF Output::                  Saída em Formato Portável de Documento.
-* Obtaining @TeX{}::               Como obter @TeX{}.
+* Use @TeX{}::                                    Use @TeX{} para formatar para cópia impressa.
+* Formatar com @command{texi2dvi}::               A maneira mais simples para formatar.
+* Formatar com @command{tex}/@command{texindex}:: Formatando com comandos explícitos de shell.
+* Imprimir com @command{lpr}::                    Como imprimir.
+* Dentro do Emacs::                               Como formatar e imprimir a partir de um shell Emacs.
+* Impressão de Modo Texinfo::                     Como formatar e imprimir em modo Texinfo.
+* Comando de Compilação::                         Como imprimir usando o comando de compilar do Emacs.
+* Resumo das Exigências::                         Resumo de exigências de formatação do @TeX{}.
+* Preparando para @TeX{}::                        O que se fazer antes de usar o @TeX{}.
+* hboxes lotados::                                O que são e o que se fazer com hboxes superlotados.
+* @code{@@smallbook}::                            Como imprimir livros e manuais formato pequeno.
+* Papel A4::                                      Como imprimir em papel A4 ou A5.
+* @code{@@pagesizes}::                            Como imprimir com tamanhos de página personalizados.
+* Marcas de Corte e Ampliação::                   Como imprimir marcas para indicar o tamanho das páginas e como imprimir saída escalada.
+* Saída gerada de PDF::                           Saída em Formato Portável de Documento.
+* Obtendo @TeX{}::                                Como obter @TeX{}.
 
 Formatar com @command{tex}/@command{texindex}
 
@@ -9886,7 +9885,7 @@ Esses são:
 * Inserindo Fórmulas Matemáticas::        Formatando expressões matemáticas.
 * Glifos para Texto::                     Inserindo pontos, bullets, símbolos de moedas, etc.
 * Glifos para Programação::               Indicando resultados de avaliação, expansão de macros, erros, etc.
-* Inserindo Unicode::                     Inserindo um caracter Unicode por ponto de código.
+* Inserindo Unicode::                     Inserindo um caractere Unicode por ponto de código.
 @end menu
 
 
@@ -10873,7 +10872,10 @@ diretamente (@pxref{Comandos do Formatador Bruto}).
 @cindex Glifos para texto
 @cindex Glifos textuais
 
-Texinfo tem suporte para alguns glifos adicionais que são comumente usados ​​em texto impresso, mas não disponíveis em ASCII@. Claro, existem muitos milhares mais. É possível usar caracteres Unicode como estão no que diz respeito ao @code{makeinfo}, mas o @TeX{} não é tão sortudo.
+Texinfo tem suporte para alguns glifos adicionais que são comumente 
+usados ​​em texto impresso, mas não disponíveis em ASCII@. Claro, existem 
+muitos milhares mais. É possível usar caracteres Unicode como estão no 
+que diz respeito ao @code{makeinfo}, mas o @TeX{} não é tão sortudo.
 
 @menu
 * @code{@@TeX @@LaTeX}::                As logomarcas do @TeX{}.
@@ -10899,11 +10901,19 @@ Texinfo tem suporte para alguns glifos adicionais que são comumente usados ​�
 @cindex Logomarca do @TeX{}
 @cindex Logomarca do @LaTeX{}
 
-Use o comando @code{@@TeX@{@}} para gerar `@TeX{}'. Em um manual impresso, esse é um logotipo especial que é diferente de três letras comuns. No Info, ele se parece apenas com @samp{TeX}.
+Use o comando @code{@@TeX@{@}} para gerar `@TeX{}'. Em um manual 
+impresso, esse é um logotipo especial que é diferente de três letras 
+comuns. No Info, ele se parece apenas com @samp{TeX}.
 
-Da mesma forma, use o comando @code{@@LaTeX@{@}} para gerar `@LaTeX{}', que é ainda mais especial em manuais impressos (e diferente do incorreto @code{La@@TeX@{@}}. No Info, o resultado é apenas @samp{LaTeX}. (@LaTeX{} é outro pacote de macro criado com fundamento no @TeX{}, muito vagamente análogo ao Texinfo, pois enfatiza a estrutura lógica, mas muito (muito) maior).
+Da mesma forma, use o comando @code{@@LaTeX@{@}} para gerar `@LaTeX{}', 
+que é ainda mais especial em manuais impressos (e diferente do incorreto 
+@code{La@@TeX@{@}}. No Info, o resultado é apenas @samp{LaTeX}. 
+(@LaTeX{} é outro pacote de macro criado com fundamento no @TeX{}, muito 
+vagamente análogo ao Texinfo, pois enfatiza a estrutura lógica, mas 
+muito (muito) maior).
 
-A grafia desses comandos é incomum no Texinfo, pois eles usam ambas, letras maiúsculas e minúsculas.
+A grafia desses comandos é incomum no Texinfo, pois eles usam ambas, 
+letras maiúsculas e minúsculas.
 
 
 @node @code{@@copyright}
@@ -10913,9 +10923,13 @@ A grafia desses comandos é incomum no Texinfo, pois eles usam ambas, letras mai
 @findex copyright
 @cindex Símbolo de copyright
 
-Use o comando @code{@@copyright@{@}} para gerar o símbolo de copyright, `@copyright{}'. Onde possível, esse é um @samp{c} dentro de um círculo; no Info, isso é @samp{(C)}.
+Use o comando @code{@@copyright@{@}} para gerar o símbolo de copyright, 
+`@copyright{}'. Onde possível, esse é um @samp{c} dentro de um círculo; 
+no Info, isso é @samp{(C)}.
 
-Juridicamente, não é necessário usar o símbolo de direitos autorais; a palavra em inglês `Copyright' é suficiente, de acordo com tratado internacional.
+Juridicamente, não é necessário usar o símbolo de direitos autorais; a 
+palavra em inglês `Copyright' é suficiente, de acordo com tratado 
+internacional.
 
 
 @node @code{@@registeredsymbol}
@@ -10925,7 +10939,9 @@ Juridicamente, não é necessário usar o símbolo de direitos autorais; a palav
 @findex registeredsymbol
 @cindex Símbolo Registrado
 
-Use o comando @code{@@registeredsymbol@{@}} para gerar o símbolo de Registrado, `@registeredsymbol{}'. Onde possível, esse é um @samp{R} dentro de um círculo; no Info, isso é @samp{(R)}.
+Use o comando @code{@@registeredsymbol@{@}} para gerar o símbolo de 
+Registrado, `@registeredsymbol{}'. Onde possível, esse é um @samp{R} 
+dentro de um círculo; no Info, isso é @samp{(R)}.
 
 
 @node @code{@@dots}
@@ -10941,14 +10957,25 @@ Use o comando @code{@@registeredsymbol@{@}} para gerar o símbolo de Registrado,
 
 @anchor{Dots Bullets}@c nome antigo
 
-Uma @dfn{ellipsis} (uma sequência de pontos) seria espaçada incorretamente quando tipografada como uma sequência de pontos, de forma que um comando especial é usado no Texinfo: use o comando @code{@@dots@{@}} para gerar uma reticência normal, que são três pontos em uma linha, apropriadamente espaçados @dots{} assim. Para enfatizar: não escreva simplesmente três pontos no arquivo de entrada; isso funcionaria para a saída gerada do arquivo do Info, mas produziria a quantidade errada de espaço entre os pontos no manual impresso.
+Uma @dfn{ellipsis} (uma sequência de pontos) seria espaçada 
+incorretamente quando tipografada como uma sequência de pontos, de forma 
+que um comando especial é usado no Texinfo: use o comando 
+@code{@@dots@{@}} para gerar uma reticência normal, que são três pontos 
+em uma linha, apropriadamente espaçados @dots{} assim. Para enfatizar: 
+não escreva simplesmente três pontos no arquivo de entrada; isso 
+funcionaria para a saída gerada do arquivo do Info, mas produziria a 
+quantidade errada de espaço entre os pontos no manual impresso.
 @c CONSERTE-ME
-O comando @code{@@enddots@{@}} gera reticências no final da frase, que também tem três pontos, mas com espaçamento diferente depois, @enddots{} . Observe atentamente para ver a diferença.
+O comando @code{@@enddots@{@}} gera reticências no final da frase, que 
+também tem três pontos, mas com espaçamento diferente depois, @enddots{} 
+. Observe atentamente para ver a diferença.
 
 Aqui está uma reticência: @dots{} .
 Aqui estão três pontos em uma linha: ... .
 
-Na saída gerada impressa (e geralmente em HTML), os três pontos em uma linha estão muito mais próximos um ao outro que os pontos nas reticências.
+Na saída gerada impressa (e geralmente em HTML), os três pontos em uma 
+linha estão muito mais próximos um ao outro que os pontos nas 
+reticências.
 
 
 @node @code{@@bullet}
@@ -10957,9 +10984,12 @@ Na saída gerada impressa (e geralmente em HTML), os três pontos em uma linha e
 @anchor{bullet}@c nome antigo
 @findex bullet
 
-Use o comando @code{@@bullet@{@}} para gerar um ponto redondo grande, ou o mais próximo possível de um. No Info, um asterisco é usado. Aqui está um marcador: @bullet{}
+Use o comando @code{@@bullet@{@}} para gerar um ponto redondo grande, ou 
+o mais próximo possível de um. No Info, um asterisco é usado. Aqui está 
+um marcador: @bullet{}
 
-Ao usar @code{@@bullet} em @code{@@itemize}, você não precisa digitar as chaves, porque @code{@@itemize} as fornece.
+Ao usar @code{@@bullet} em @code{@@itemize}, você não precisa digitar as 
+chaves, porque @code{@@itemize} as fornece.
 (@pxref{@code{@@itemize}}).
 
 
@@ -10970,17 +11000,32 @@ Ao usar @code{@@bullet} em @code{@@itemize}, você não precisa digitar as chave
 @findex euro
 @cindex Símbolo do Euro, produzindo
 
-Use o comando @code{@@euro@{@}} para gerar `@euro{}'. Onde possível, esse é o símbolo da moeda Euro. Caso contrário, a palavra @samp{Euro} é usada.
+Use o comando @code{@@euro@{@}} para gerar `@euro{}'. Onde possível, 
+esse é o símbolo da moeda Euro. Caso contrário, a palavra @samp{Euro} é 
+usada.
 
-Texinfo não pode magicamente sintetizar suporte para o símbolo do Euro onde o sistema subjacente (fontes, software, o que for) não o suporta. Portanto, você pode achar preferível usar a palavra ``Euro''. (Em contextos bancários, a abreviação para o Euro é EUR).
+Texinfo não pode magicamente sintetizar suporte para o símbolo do Euro 
+onde o sistema subjacente (fontes, software, o que for) não o suporta. 
+Portanto, você pode achar preferível usar a palavra ``Euro''. (Em 
+contextos bancários, a abreviação para o Euro é EUR).
 
 @cindex ISO 8859-15, e Euro
 @cindex Latin 9, e Euro
-Para a finalidade de obter o símbolo do Euro na saída gerada codificada do Info, por exemplo, é necessário especificar @code{@@documentencoding ISO-8859-15} ou @code{@@documentencoding UTF-8} (@xref{@code{@@documentencoding}}). O símbolo do Euro está na ISO 8859-15 (também conhecida como Latin@tie{}9) e @emph{não} está na mais amplamente usada ISO 8859-1 (Latin@tie{}1).
+Para a finalidade de obter o símbolo do Euro na saída gerada codificada 
+do Info, por exemplo, é necessário especificar
+@code{@@documentencoding ISO-8859-15} ou @code{@@documentencoding UTF-8} 
+(@xref{@code{@@documentencoding}}). O símbolo do Euro está na ISO 
+8859-15 (também conhecida como Latin@tie{}9) e @emph{não} está na mais 
+amplamente usada ISO 8859-1 (Latin@tie{}1).
 
 @pindex feymr10
 @cindex fonte Euro
-O símbolo do Euro não existe nas fontes padrão do @TeX{} (que foram projetadas antes da existência jurídica do Euro). Portanto, o @TeX{} usa uma fonte adicional, chamada @code{feymr10} (junto com outras variáveis). Ela está disponível gratuitamente, é claro; você consegue baixá-la a partir de @url{http://ctan.org/pkg/eurosym}, entre outros lugares. A distribuição inclui instruções de instalação.
+O símbolo do Euro não existe nas fontes padrão do @TeX{} (que foram 
+projetadas antes da existência jurídica do Euro). Portanto, o @TeX{} usa 
+uma fonte adicional, chamada @code{feymr10} (junto com outras 
+variáveis). Ela está disponível gratuitamente, é claro; você consegue 
+baixá-la a partir de @url{http://ctan.org/pkg/eurosym}, entre outros 
+lugares. A distribuição inclui instruções de instalação.
 
 
 @node @code{@@pounds}
@@ -10990,7 +11035,9 @@ O símbolo do Euro não existe nas fontes padrão do @TeX{} (que foram projetada
 @findex libras
 @cindex Libras, símbolo
 
-Use o comando @code{@@pounds@{@}} para gerar `@pounds{}'. Onde possível, esse é o símbolo para a Libra esterlina, moeda britânica. Caso contrário, é @samp{#}.
+Use o comando @code{@@pounds@{@}} para gerar `@pounds{}'. Onde possível, 
+esse é o símbolo para a Libra esterlina, moeda britânica. Caso 
+contrário, é @samp{#}.
 
 
 @node @code{@@textdegree}
@@ -11000,7 +11047,9 @@ Use o comando @code{@@pounds@{@}} para gerar `@pounds{}'. Onde possível, esse �
 @findex textdegree
 @cindex símbolo de Graus
 
-Use o comando @code{@@textdegree@{@}} para gerar `@textdegree{}'. Onde possível, esse é o símbolo normal para Graus. Caso contrário, é um @samp{o}.
+Use o comando @code{@@textdegree@{@}} para gerar `@textdegree{}'. Onde 
+possível, esse é o símbolo normal para Graus. Caso contrário, é um 
+@samp{o}.
 
 
 @node @code{@@minus}
@@ -11012,7 +11061,10 @@ Use o comando @code{@@textdegree@{@}} para gerar `@textdegree{}'. Onde possível
 
 @cindex Em dash, compared to minus sign
 @cindex Hyphen, compared to minus
-Use o comando @code{@@minus@{@}} para gerar um sinal de menos. Em uma fonte de largura fixa, isso é um hífen, mas em uma fonte proporcional, o símbolo tem o comprimento habitual para um sinal de menos---um pouco mais longo que um hífen, mais curto que um travessão:
+Use o comando @code{@@minus@{@}} para gerar um sinal de menos. Em uma 
+fonte de largura fixa, isso é um hífen, mas em uma fonte proporcional, o 
+símbolo tem o comprimento habitual para um sinal de menos---um pouco 
+mais longo que um hífen, mais curto que um travessão:
 
 @display
 @samp{@minus{}} é um sinal de menos gerado com @samp{@@minus@{@}},
@@ -11023,13 +11075,21 @@ Use o comando @code{@@minus@{@}} para gerar um sinal de menos. Em uma fonte de l
 @end display
 
 @noindent
-Na fonte de largura fixa usada pelo Info, @code{@@minus@{@}} é o mesmo que um hífen.
+Na fonte de largura fixa usada pelo Info, @code{@@minus@{@}} é o mesmo 
+que um hífen.
 
-Você deveria não usar @code{@@minus@{@}} dentro de @code{@@code} ou @code{@@example} porque a distinção de largura não é feita na fonte de largura fixa que eles usam.
+Você deveria não usar @code{@@minus@{@}} dentro de @code{@@code} ou 
+@code{@@example} porque a distinção de largura não é feita na fonte de 
+largura fixa que eles usam.
 
-Ao usar @code{@@minus} para especificar a marca que inicia cada entrada em uma lista de itens, você não precisa digitar as chaves (@pxref{@code{@@itemize}}).
+Ao usar @code{@@minus} para especificar a marca que inicia cada entrada 
+em uma lista de itens, você não precisa digitar as chaves 
+(@pxref{@code{@@itemize}}).
 
-Se você realmente quer tipografar alguma matemática que faça uma subtração, é melhor usar @code{@@math}. Então o caractere regular @samp{-} produz um sinal de menos, como em @code{@@math@{a-b@}} (@pxref{Inserindo Fórmulas Matemáticas}).
+Se você realmente quer tipografar alguma matemática que faça uma 
+subtração, é melhor usar @code{@@math}. Então o caractere regular 
+@samp{-} produz um sinal de menos, como em @code{@@math@{a-b@}} 
+(@pxref{Inserindo Fórmulas Matemáticas}).
 
 
 @node @code{@@geq @@leq}
@@ -11039,7 +11099,10 @@ Se você realmente quer tipografar alguma matemática que faça uma subtração,
 @findex geq
 @findex leq
 
-Use os comandos @code{@@geq@{@}} e @code{@@leq@{@}} para gerar sinais de maior/menor que ou igual a, `@geq{}' e `@leq{}'. Quando esses símbolos não estão disponíveis, as sequências ASCII @samp{>=} e @samp{<=} são geradas.
+Use os comandos @code{@@geq@{@}} e @code{@@leq@{@}} para gerar sinais de 
+maior/menor que ou igual a, `@geq{}' e `@leq{}'. Quando esses símbolos 
+não estão disponíveis, as sequências ASCII @samp{>=} e @samp{<=} são 
+geradas.
 
 
 @node Glifos para Programação
@@ -11049,9 +11112,18 @@ Use os comandos @code{@@geq@{@}} e @code{@@leq@{@}} para gerar sinais de maior/m
 @cindex Exemplos, glifos para
 @cindex Programação, glifos para
 
-No Texinfo, o código frequentemente é ilustrado em exemplos que são delimitados por @code{@@example} e @code{@@end example}, ou por @code{@@lisp} e @code{@@end lisp}. Em tais exemplos, você pode indicar os resultados da avaliação ou uma expansão usando @samp{@result{}} ou @samp{@expansion{}}. Da mesma forma, existem comandos para inserir glifos para indicar saída gerada impressa, mensagens de erro, equivalência de expressões, o local do ponto em um editor e sequências de operação da GUI.
+No Texinfo, o código frequentemente é ilustrado em exemplos que são 
+delimitados por @code{@@example} e @code{@@end example}, ou por 
+@code{@@lisp} e @code{@@end lisp}. Em tais exemplos, você pode indicar 
+os resultados da avaliação ou uma expansão usando @samp{@result{}} ou 
+@samp{@expansion{}}. Da mesma forma, existem comandos para inserir 
+glifos para indicar saída gerada impressa, mensagens de erro, 
+equivalência de expressões, o local do ponto em um editor e sequências 
+de operação da GUI.
 
-Os comandos de inserção de glifos não precisam ser usados dentro d​e um exemplo, mas na maioria das vezes são. Todos os comandos de inserção de glifos são seguidos por chaves vazias.
+Os comandos de inserção de glifos não precisam ser usados dentro d​e um 
+exemplo, mas na maioria das vezes são. Todos os comandos de inserção de 
+glifos são seguidos por chaves vazias.
 
 @menu
 * Sumário de Glifos::
@@ -11061,7 +11133,7 @@ Os comandos de inserção de glifos não precisam ser usados dentro d​e um exe
 * @code{@@error}::                      Como indicar uma mensagem de erro.
 * @code{@@equiv}::                      Como indicar equivalência.
 * @code{@@point}::                      Como indicar o local do ponto.
-* Sequências de Clique::                Inserindo sequências de uso GUI.
+* Sequências de Clique::                Inserindo sequências de uso da GUI.
 @end menu
 
 
@@ -11090,7 +11162,9 @@ Aqui está um resumo dos comandos de glifo:
 @code{@@point@{@}} mostra o local do ponto.
 
 @item @clicksequence{A @click{} B}
-@code{@@clicksequence@{A @@click@{@} B} indica uma sequência de operação da GUI: primeiro A, depois clicar em B, ou escolher B em um menu, ou então selecioná-lo.
+@code{@@clicksequence@{A @@click@{@} B} indica uma sequência de operação 
+da GUI: primeiro A, depois clicar em B, ou escolher B em um menu, ou 
+então selecioná-lo.
 @end table
 
 
@@ -11104,9 +11178,12 @@ Aqui está um resumo dos comandos de glifo:
 @cindex Glifo de avaliação
 @cindex Valor de uma expressão, indicando
 
-Use o comando @code{@@result@{@}} para indicar o resultado da avaliação de uma expressão.
+Use o comando @code{@@result@{@}} para indicar o resultado da avaliação 
+de uma expressão.
 
-O comando @code{@@result@{@}} é exibido como @samp{@result{}}, uma seta com haste dupla ou (quando essa não estiver disponível) como a sequência ASCII @samp{=>}.
+O comando @code{@@result@{@}} é exibido como @samp{@result{}}, uma seta 
+com haste dupla ou (quando essa não estiver disponível) como a sequência 
+ASCII @samp{=>}.
 
 Assim, o seguinte,
 
@@ -11127,9 +11204,13 @@ pode ser lido como ``@code{(cdr '(1 2 3))} avalia para @code{(2 3)}''.
 @cindex Expansão de Macro, indicando
 @findex expansion
 
-Quando uma expressão é uma chamada de macro, ela se expande para uma nova expressão. Você pode indicar o resultado da expansão com o comando @code{@@expansion@{@}}.
+Quando uma expressão é uma chamada de macro, ela se expande para uma 
+nova expressão. Você pode indicar o resultado da expansão com o comando 
+@code{@@expansion@{@}}.
 
-O comando @code{@@expansion@{@}} é exibido como @samp{@expansion{}}, uma seta longa com uma base plana ou (quando essa não estiver disponível) como a sequência ASCII @samp{==>}.
+O comando @code{@@expansion@{@}} é exibido como @samp{@expansion{}}, uma 
+seta longa com uma base plana ou (quando essa não estiver disponível) 
+como a sequência ASCII @samp{==>}.
 
 @need 700
 Por exemplo, o seguinte
@@ -11164,27 +11245,26 @@ o resultado da avaliação da expressão é @code{c}.
 @end quotation
 
 @noindent
-Frequentemente, como nesse caso, um exemplo aparenta melhor se os comandos @code{@@expansion@{@}} e @code{@@result@{@}} forem recuados.
+Frequentemente, como nesse caso, um exemplo aparenta melhor se os 
+comandos @code{@@expansion@{@}} e @code{@@result@{@}} forem recuados.
 
-PAREI
+
 @node @code{@@print}
-@subsection @code{@@print@{@}} (@print{}): Indicating Generated Output
+@subsection @code{@@print@{@}} (@print{}): Indicando Saída Gerada
 
-@anchor{Print Glyph}@c old name
+@anchor{Print Glyph}@c nome antigo
 @findex print
-@cindex Printed output, indicating
+@cindex Saída impressa, indicando
 
-Sometimes an expression will generate output during its execution.
-You can indicate such displayed output with the @code{@@print@{@}}
-command.
+Às vezes, uma expressão gerará saída durante a execução dela. Você pode 
+indicar tal saída exibida com o comando @code{@@print@{@}}.
 
-The @code{@@print@{@}} command is displayed as @samp{@print{}}, either
-a horizontal dash butting against a vertical bar or (when that is not
-available) the ASCII sequence @samp{-|}.
+O comando @code{@@print@{@}} é exibido como @samp{@print{}}, um traço 
+horizontal encostado em uma barra vertical ou (quando isso não estiver 
+disponível) a sequência ASCII @samp{-|}.
 
-In the following example, the printed text is indicated with
-@samp{@print{}}, and the value of the expression follows on the
-last line.
+No exemplo a seguir, o texto impresso é indicado com @samp{@print{}}, e 
+o valor da expressão segue na última linha.
 
 @lisp
 @group
@@ -11196,7 +11276,7 @@ last line.
 @end lisp
 
 @noindent
-In a Texinfo source file, this example is written as follows:
+Em um arquivo fonte do Texinfo, esse exemplo é escrito como segue:
 
 @lisp
 @group
@@ -11211,64 +11291,64 @@ In a Texinfo source file, this example is written as follows:
 
 
 @node @code{@@error}
-@subsection @code{@@error@{@}} (@error{}): Indicating an Error Message
+@subsection @code{@@error@{@}} (@error{}): Indicando uma Mensagem de Erro
 
-@anchor{Error Glyph}@c old name
-@cindex Error message, indicating
+@anchor{Error Glyph}@c nome antigo
+@cindex Mensagem de erro, indicando
 @findex error
 
-A piece of code may cause an error when you evaluate it.  You can
-designate the error message with the @code{@@error@{@}} command.
+Um pedaço de código pode causar um erro quando você o avalia. Você pode 
+designar a mensagem de erro com o comando @code{@@error@{@}}.
 
-The @code{@@error@{@}} command is displayed as @samp{@error{}}, either
-the word `error' in a box in the printed output, the word error
-followed by an arrow in other formats or (when no arrow is available)
+O comando @code{@@error@{@}} é exibido como @samp{@error{}}, a palavra 
+`error' em uma caixa na saída impressa, a palavra error seguida por uma 
+seta em outros formatos ou (quando nenhuma seta estiver disponível) 
 @samp{error-->}.
 
 @need 700
-Thus,
+Assim,
 
 @example
 @@lisp
 (+ 23 'x)
-@@error@{@} Wrong type argument: integer-or-marker-p, x
+@@error@{@} Argumento de tipo errado: integer-or-marker-p, x
 @@end lisp
 @end example
 
 @noindent
-produces
+produz
 
 @lisp
 (+ 23 'x)
-@error{} Wrong type argument: integer-or-marker-p, x
+@error{} Argumento de tipo errado: integer-or-marker-p, x
 @end lisp
 
 @noindent
-This indicates that the following error message is printed
-when you evaluate the expression:
+Isso indica que a seguinte mensagem de erro é impressa quando você 
+avalia a expressão:
 
 @lisp
-Wrong type argument: integer-or-marker-p, x
+Argumento de tipo errado: integer-or-marker-p, x
 @end lisp
 
-The word @samp{@error{}} itself is not part of the error message.
+A própria palavra @samp{@error{}} não é parte da mensagem de erro.
 
 
 @node @code{@@equiv}
-@subsection @code{@@equiv@{@}} (@equiv{}): Indicating Equivalence
+@subsection @code{@@equiv@{@}} (@equiv{}): Indicando Equivalência
 
-@anchor{Equivalence}@c oldname
-@cindex Equivalence, indicating
+@anchor{Equivalence}@c nome antigo
+@cindex Equivalência, indicando
 @findex equiv
 
-Sometimes two expressions produce identical results.  You can indicate
-the exact equivalence of two forms with the @code{@@equiv@{@}}
-command.  The @code{@@equiv@{@}} command is displayed as
-@samp{@equiv{}}, either a standard mathematical equivalence sign
-(three parallel horizontal lines) or (when that is not available) as
-the ASCII sequence @samp{==}.
+Às vezes, duas expressões produzem resultados idênticos. Você pode 
+indicar a equivalência exata de duas formas com o comando 
+@code{@@equiv@{@}}. O comando @code{@@equiv@{@}} é exibido como 
+@samp{@equiv{}}, um sinal de equivalência matemática padrão (três linhas 
+horizontais paralelas) ou (quando isso não estiver disponível) como a 
+sequência ASCII @samp{==}.
 
-Thus,
+Assim,
 
 @example
 @@lisp
@@ -11277,45 +11357,45 @@ Thus,
 @end example
 
 @noindent
-produces
+produz
 
 @lisp
 (make-sparse-keymap) @equiv{} (list 'keymap)
 @end lisp
 
 @noindent
-This indicates that evaluating @code{(make-sparse-keymap)} produces
-identical results to evaluating @code{(list 'keymap)}.
+Isso indica que avaliar @code{(make-sparse-keymap)} produz resultados 
+idênticos à avaliação de @code{(list 'keymap)}.
 
 
 @node @code{@@point}
-@subsection @code{@@point@{@}} (@point{}): Indicating Point in a Buffer
+@subsection @code{@@point@{@}} (@point{}): Indicando Ponto em um Buffer
 
-@anchor{Point Glyph}@c old name
-@cindex Point, indicating in a buffer
+@anchor{Point Glyph}@c nome antigo
+@cindex Ponto, indicando em um buffer
 @findex point
 
-Sometimes you need to show an example of text in an Emacs buffer.  In
-such examples, the convention is to include the entire contents of the
-buffer in question between two lines of dashes containing the buffer
-name.
+Às vezes, você precisa mostrar um exemplo de texto em um buffer do 
+Emacs. Em tais exemplos, a convenção é a de incluir o conteúdo inteiro 
+do buffer em questão entre duas linhas de traços contendo o nome do 
+buffer.
 
-You can use the @samp{@@point@{@}} command to show the location of
-point in the text in the buffer.  (The symbol for point, of course, is
-not part of the text in the buffer; it indicates the place
-@emph{between} two characters where point is located.)
+Você pode usar o comando @samp{@@point@{@}} para mostrar o local do 
+ponto no texto no buffer. (O símbolo para ponto, é claro, não é parte do 
+texto no buffer; ele indica o lugar @emph{entre} dois caracteres onde o 
+ponto está localizado).
 
-The @code{@@point@{@}} command is displayed as @samp{@point{}}, either
-a pointed star or (when that is not available) the ASCII sequence
+O comando @code{@@point@{@}} é exibido como @samp{@point{}}, uma estrela 
+pontiaguda ou (quando essa não estiver disponível) a sequência ASCII 
 @samp{-!-}.
 
-The following example shows the contents of buffer @file{foo} before
-and after evaluating a Lisp command to insert the word @code{changed}.
+O exemplo a seguir mostra o conteúdo do buffer @file{foo} antes e depois 
+de avaliar um comando Lisp para inserir a palavra @code{changed}.
 
 @example
 @group
 ---------- Buffer: foo ----------
-This is the @point{}contents of foo.
+Este é o @point{}conteúdo de foo.
 ---------- Buffer: foo ----------
 
 @end group
@@ -11323,27 +11403,27 @@ This is the @point{}contents of foo.
 
 @example
 @group
-(insert "changed ")
+(inserção "changed ")
     @result{} nil
 ---------- Buffer: foo ----------
-This is the changed @point{}contents of foo.
+Este é o @point{}conteúdo mudado de foo.
 ---------- Buffer: foo ----------
 
 @end group
 @end example
 
-In a Texinfo source file, the example is written like this:
+Em um arquivo fonte do Texinfo, o exemplo é escrito assim:
 
 @example
 @@example
 ---------- Buffer: foo ----------
-This is the @@point@{@}contents of foo.
+Este é o @@point@{@}conteúdo de foo.
 ---------- Buffer: foo ----------
 
-(insert "changed ")
+(inserção "changed ")
     @@result@{@} nil
 ---------- Buffer: foo ----------
-This is the changed @@point@{@}contents of foo.
+Este é o @@point@{@}conteúdo mudado de foo.
 ---------- Buffer: foo ----------
 @@end example
 @end example
@@ -11352,300 +11432,312 @@ This is the changed @@point@{@}contents of foo.
 @node Sequências de Clique
 @subsection Sequências de Clique
 
-@cindex Click sequences
-@cindex Sequence of clicks
-@cindex GUI click sequence
+@cindex Sequências de cliques
+@cindex Cliques, Sequência
+@cindex Sequência de cliques da GUI
 
 @findex clicksequence
-When documenting graphical interfaces, it is necessary to describe
-sequences such as `Click on @samp{File}, then choose @samp{Open}, then
-@dots{}'.  Texinfo offers commands @code{@@clicksequence} and
-@code{click} to represent this, typically used like this:
+Ao documentar interfaces gráficas, é necessário descrever sequências 
+como `Clique em @samp{Arquivo}, depois escolha @samp{Abrir}, depois 
+@dots{}'. O Texinfo oferece os comandos @code{@@clicksequence} e 
+@code{click} para representar isso, normalmente usados ​​assim:
 
 @example
-@dots{} @@clicksequence@{File @@click@{@} Open@} @dots{}
+@dots{} @@clicksequence@{Arquivo @@click@{@} Abrir@} @dots{}
 @end example
 
 @noindent
-which produces:
+que produz:
 
 @display
-@dots{} @clicksequence{File @click{} Open} @dots{}
+@dots{} @clicksequence{Arquivo @click{} Abrir} @dots{}
 @end display
 
 @findex click
 @findex arrow
-The @code{@@click} command produces a right arrow by default; this
-glyph is also available independently via the command
+O comando @code{@@click} produz uma seta para a direita por padrão; esse 
+glifo também está disponível independentemente por meio do comando 
 @code{@@arrow@{@}}.
 
 @findex clickstyle
-You can change the glyph produced by @code{@@click} with the command
-@code{@@clickstyle}, which takes a command name as its single argument
-on the rest of the line, much like @code{@@itemize} and friends
-(@pxref{@code{@@itemize}}).  The command should produce a glyph, and
-the usual empty braces @samp{@{@}} are omitted.  Here's an example:
+Você pode mudar o glifo produzido por @code{@@click} com o comando 
+@code{@@clickstyle}, que recebe um nome de comando como o único 
+argumento dele no resto da linha, muito parecido com @code{@@itemize} e 
+amigos (@pxref{@code{@@itemize}}). O comando deveria produzir um glifo, 
+e as chaves vazias usuais @samp{@{@}} são omitidas. Aqui está um 
+exemplo:
 
 @example
 @@clickstyle @@result
-@dots{} @@clicksequence@{File @@click@{@} Open@} @dots{}
+@dots{} @@clicksequence@{Arquivo @@click@{@} Abrir@} @dots{}
 @end example
 
 @noindent
-now produces:
+agora produz:
 
 @display
 @clickstyle @result
-@dots{} @clicksequence{File @click{} Open} @dots{}
+@dots{} @clicksequence{Arquivo @click{} Abrir} @dots{}
 @end display
 
 
 @node Inserindo Unicode
-@section Inserting Unicode: @code{@@U}
+@section Inserindo Unicode: @code{@@U}
 
-@cindex Unicode character, inserting
-@cindex Code point of Unicode character, inserting by
+@cindex Unicode caractere, inserindo
+@cindex Ponto de código de caractere Unicode, inserindo por
 @findex U
 
-The command @code{@@U@{@var{hex}@}} inserts a representation of the
-Unicode character U+@var{hex}.  For example, @code{@@U@{0132@}}
-inserts the Dutch `IJ' ligature (poorly shown here as simply the two
-letters `I' and `J').
+O comando @code{@@U@{@var{hex}@}} insere uma representação do caractere 
+Unicode U+@var{hex}. Por exemplo, @code{@@U@{0132@}} insere a ligadura 
+holandesa `IJ' (pobremente mostrada aqui como simplesmente as duas 
+letras `I' e `J').
 
-The @var{hex} value should be at least four hex digits; leading zeros
-are @emph{not} added.  In general, @var{hex} must specify a valid
-normal Unicode character; e.g., U+10FFFF (the very last code point) is
-invalid by definition, and thus cannot be inserted this way.
+O valor @var{hex} deveria ter pelo menos quatro dígitos hexadecimais; 
+zeros à esquerda @emph{não} são adicionados. Em geral, @var{hex} precisa 
+especificar um caractere Unicode normal válido; por exemplo, U+10FFFF (o 
+último ponto de código) é inválido por definição e, portanto, não pode 
+ser inserido dessa forma.
 
-@cindex ASCII, source document portability using
-@code{@@U} is useful for inserting occasional glyphs for which Texinfo
-has no dedicated command, while allowing the Texinfo source to remain
-purely 7-bit ASCII for maximum portability.
+@cindex ASCII, portabilidade de documentos fonte, usando
+@code{@@U} é útil para inserir glifos ocasionais para os quais Texinfo 
+não tem comando dedicado, ao mesmo tempo em que permite que o fonte do 
+Texinfo permaneça puramente ASCII de 7 bits para máxima portabilidade.
 
-@cindex Unicode and @TeX{}
-This command has many limitations---the same limitations as inserting
-Unicode characters in UTF-8 or another binary form.  First and most
-importantly, @TeX{} knows nothing about most of Unicode.  Supporting
-specific additional glyphs upon request is possible, but it's not
-viable for @file{texinfo.tex} to support whole additional scripts
-(Japanese, Urdu, @dots{}).  The @code{@@U} command does nothing to
-change this.  If the specified character is not supported in @TeX{},
-an error is given.  (@xref{@code{@@documentencoding}}.)
+@cindex Unicode e @TeX{}
+Esse comando tem muitas limitações---as mesmas limitações de inserir 
+caracteres Unicode em UTF-8 ou outra forma binária. Primeiro e mais 
+importante, @TeX{} não sabe nada acerca da maioria do Unicode. Suportar 
+glifos adicionais específicos mediante solicitação é possível, mas não é 
+viável para @file{texinfo.tex} suportar scripts adicionais inteiros 
+(japonês, urdu, @dots{}). O comando @code{@@U} não faz nada para mudar 
+isso. Se o caractere especificado não for suportado no @TeX{}, um erro 
+será dado. (@xref{@code{@@documentencoding}}).
 
-@cindex Entity reference in HTML et al.
-@cindex @samp{&#x@var{hex};}, output from @code{@@U}
-In HTML, XML, and Docbook, the output from @code{@@U} is always an
-entity reference of the form @samp{&#x@var{hex};}, as in
-@samp{&#x0132;} for the example above.  This should work even when an
-HTML document uses some other encoding (say, Latin@tie{}1) and the
-given character is not supported in that encoding.
+@cindex Referência de entidade em HTML et al.
+@cindex @samp{&#x@var{hex};}, saída oriunda de @code{@@U}
+Em HTML, XML e Docbook, a saída proveniente de @code{@@U} é sempre uma 
+referência de entidade do formato @samp{&#x@var{hex};}, como em 
+@samp{&#x0132;} para o exemplo acima. Isso deveria funcionar mesmo 
+quando um documento HTML usa alguma outra codificação (digamos, 
+Latin@tie{}1) e o caractere fornecido não é suportado nessa codificação.
 
-@cindex UTF-8, output from @code{@@U}
-In Info and plain text, if the document encoding is specified
-explicitly to be UTF-8, the output will be the UTF-8 representation of
-the character U+@var{hex} (presuming it's a valid character).  In all
-other cases, the output is the ASCII sequence @samp{U+@var{hex}}, as
-in the six ASCII characters @samp{U+0132} for the example above.
+@cindex UTF-8, saída oriunda de @code{@@U}
+No Info e em texto simples, se a codificação do documento for 
+especificada explicitamente como UTF-8, a saída será a representação 
+UTF-8 do caractere U+@var{hex} (presumindo que seja um caractere 
+válido). Em todos os outros casos, a saída é a sequência ASCII 
+@samp{U+@var{hex}}, como nos seis caracteres ASCII @samp{U+0132} para o 
+exemplo acima.
 
-That's all.  No magic!
+Isso é tudo. Sem mágica!
 
 
 @node Quebras
-@chapter Forçando e Evitando Quebras
+@chapter Forçando e Impedindo Quebras
 
-@cindex Forcing line and page breaks
-@cindex Making line and page breaks
-@cindex Preventing line and page breaks
-@cindex Line breaks, awkward
-@cindex Page breaks, awkward
+@cindex Forçando quebras de linha e de página
+@cindex Fazendo quebras de linha e de página
+@cindex Impedindo quebras de linha e de página
+@cindex Quebras de linha, estranhas
+@cindex Quebras de página, estranhas
 
-Line and page breaks can sometimes occur in the `wrong' place in one
-or another form of output.  It's up to you to ensure that text looks
-right in all the output formats.
+Quebras de linha e de página às vezes podem ocorrer no lugar `errado' em 
+uma ou outra forma de saída. Cabe inteiramente a você garantir que o 
+texto aparente corretamente em todos os formatos de saída.
 
-For example, in a printed manual, page breaks may occur awkwardly in
-the middle of an example; to prevent this, you can hold text together
-using a grouping command that keeps the text from being split across
-two pages.  Conversely, you may want to force a page break where none
-would occur normally.
+Por exemplo, em um manual impresso, quebras de página podem ocorrer 
+estranhamente no meio de um exemplo; para impedir isso, você pode manter 
+o texto unido usando um comando de agrupamento que impede que o texto 
+seja dividido em duas páginas. Por outro lado, você pode querer forçar 
+uma quebra de página onde nenhuma ocorreria normalmente.
 
-You can use the break, break prevention, or pagination commands to fix
+You can use the break, break prevention, or pagination commands to fix 
 problematic line and page breaks.
 
+Você pode usar os comandos de Quebra, Prevenção de Quebra ou Paginação 
+para corrigir quebras de linha e de página problemáticas.
+
 @menu
-* Comandos de Quebra::              Summary of break-related commands.
-* Quebras de Linha::                 Forcing line breaks.
-* @code{@@- @@hyphenation}::             Helping @TeX{} with hyphenation points.
-* @code{@@allowcodebreaks}::            Controlling line breaks within @@code text.
-* @code{@@w}::                          Preventing unwanted line breaks in text.
-* @code{@@tie}::                        Inserting an unbreakable but varying space.
-* @code{@@sp}::                         Inserting blank lines.
-* @code{@@page}::                       Forcing the start of a new page.
-* @code{@@group}::                      Preventing unwanted page breaks.
-* @code{@@need}::                       Another way to prevent unwanted page breaks.
+* Comandos de Quebra::                  Resumo dos comandos relacionados a quebra.
+* Quebras de Linha::                    Forçando quebras de linha.
+* @code{@@- @@hyphenation}::            Ajudando @TeX{} com pontos de hifenação.
+* @code{@@allowcodebreaks}::            Controlando quebras de linhas dentro do texto de @@code.
+* @code{@@w}::                          Impedindo quebras de linha indesejadas no texto.
+* @code{@@tie}::                        Inserindo um inquebrável, porém variante espaço.
+* @code{@@sp}::                         Inserindo linhas em branco.
+* @code{@@page}::                       Forçando o início de uma página nova.
+* @code{@@group}::                      Impedindo quebras de página indesejadas.
+* @code{@@need}::                       Outra maneira de impedir quebras de página indesejadas.
 @end menu
 
 
 @node Comandos de Quebra
 @section Comandos de Quebra
 
-The break commands create or allow line and paragraph breaks:
+Os comandos de quebra criam ou permitem quebras de linha e de parágrafo:
 
 @table @code
 @item @@*
-Force a line break.
+Força uma quebra de linha.
 
 @item @@sp @var{n}
-Skip @var{n} blank lines.
+Pula @var{n} linhas em branco.
 
 @item @@-
-Insert a discretionary hyphen.
+Insire um hífen opcional.
 
-@item @@hyphenation@{@var{hy-phen-a-ted words}@}
-Define hyphen points in @var{hy-phen-a-ted words}.
+@item @@hyphenation@{@var{palavras hi-fe-na-das}@}
+Define pontos de hífen em @var{palavras hi-fe-na-das}.
 @end table
 
-These commands hold text together on a single line:
+Esses comandos mantém o texto unido em uma linha:
 
 @table @code
 @item @@w@{@var{text}@}
-Prevent @var{text} from being split and hyphenated across two lines.
+Impede que @var{texto} seja dividido e hifenizado em duas linhas.
 
 @item @@tie@{@}
-Insert a normal interword space at which a line break may not occur.
+Insere um espaço entre palavras normal no qual uma quebra de linha não 
+possa ocorrer.
 @end table
 
-The pagination commands apply only to printed output, since other
-output formats do not have pages.
+Os comandos de paginação aplicam-se somente para a saída impressa, uma 
+vez que outros formatos de saída não tem páginas.
 
 @table @code
 @item @@page
-Start a new page.
+Inicia uma nova página.
 
 @item @@group
-Hold text together that must appear on one page.
+Mantém unido o texto que precisa aparecer em uma página.
 
 @item @@need @var{mils}
-Start a new page if not enough space on this one.
+Inicia uma nova página se não existir espaço suficiente nesta.
 @end table
 
 
 @node Quebras de Linha
-@section @code{@@*} and @code{@@/}: Generate and Allow Quebras de Linha
+@section @code{@@*} e @code{@@/}: Gerar e Permitir Quebras de Linha
 
 @findex * @r{(force line break)}
 @findex / @r{(allow line break)}
-@cindex Line breaks, controlling
-@cindex Controlling line breaks
-@cindex Quebras in a line
-@cindex Force line break
-@cindex Allow line break
+@cindex Quebras de linha, controlando
+@cindex Controlando quebras de linha
+@cindex Quebras em uma linha
+@cindex Forçar quebra de linha
+@cindex Permitir quebra de linha
 
-The @code{@@*} command forces a line break in all output formats.
-The @code{@@/} command allows a line break (printed manual only).
+O comando @code{@@*} força uma quebra de linha em todos os formatos de 
+saída.
+O comando @code{@@/} permite uma quebra de linha (somente manual 
+impresso).
 
-Here is an example with @code{@@*}:
+Aqui está um exemplo com @code{@@*}:
 
 @example
-This sentence is broken @@*into two lines.
+Esta frase está dividida @@*em duas linhas.
 @end example
 
-@noindent produces
+@noindent produz
 
 @example
 @group
-This sentence is broken
-into two lines.
+Esta frase está dividida
+em duas linhas.
 @end group
 @end example
 
-The @code{@@/} command can be useful within long urls or other
-identifiers where @TeX{} can't find a good place to break.  @TeX{}
-will automatically break urls at the natural places 
-(@pxref{Quebra de Linha de URL}), so only use @code{@@/} if you need it.  
-@code{@@/} has no effect in the other output format.
+O comando @code{@@/} pode ser útil em URLs longas ou outros 
+identificadores onde o @TeX{} não consiga encontrar um bom lugar para 
+quebrar. O @TeX{} automaticamente quebrará as URLs nos lugares naturais 
+(@pxref{Quebra de Linha de URL}), de forma que use @code{@@/} somente se 
+você precisar. @code{@@/} não tem efeito no outro formato de saída.
 
 
 @node @code{@@- @@hyphenation}
-@section @code{@@-} and @code{@@hyphenation}: Helping @TeX{} Hyphenate
+@section @code{@@-} e @code{@@hyphenation}: Ajudando @TeX{} Hifenizar
 
-@anchor{- and hyphenation}@c old name
+@anchor{- and hyphenation}@c nome antigo
 @findex @sortas{-} - @r{(discretionary hyphen)} @c CONSERTE-ME
 @findex hyphenation
-@cindex Hyphenation, helping @TeX{} do
-@cindex Fine-tuning, and hyphenation
+@cindex Hifenização, ajudando @TeX{} a fazer
+@cindex Ajuste fino, e hifenização
 
-Although @TeX{}'s hyphenation algorithm is generally pretty good, it
-does miss useful hyphenation points from time to time.  (Or, far more
-rarely, insert an incorrect hyphenation.)  So, for documents with an
-unusual vocabulary or when fine-tuning for a printed edition, you may
-wish to help @TeX{} out.  Texinfo supports two commands for this:
+Embora o algoritmo de hifenização do @TeX{} geralmente seja muito bom, 
+ele perde pontos de hifenização úteis de vez em quando. (Ou, muito mais 
+raramente, insere uma hifenização incorreta). Então, para documentos com 
+um vocabulário incomum ou ao fazer ajustes finos para uma edição 
+impressa, você possivelmente queira ajudar o @TeX{}. Texinfo suporta 
+dois comandos para isso:
 
 @table @code
 @item @@-
-Insert a discretionary hyphen, i.e., a place where @TeX{} can (but does
-not have to) hyphenate.  This is especially useful when you notice an
-overfull hbox is due to @TeX{} missing a hyphenation (@pxref{Overfull
-hboxes}).  @TeX{} will not insert any hyphenation points itself into a
-word containing @code{@@-}.
+Insere um hífen discricionário, ou seja, um lugar onde @TeX{} pode (mas 
+não precisa) hifenizar. Isso é especialmente útil quando você percebe 
+que um hbox cheio demais é devido a @TeX{} carecer de uma hifenização 
+(@pxref{hboxes lotados}). @TeX{} não inserirá ele próprio quaisquer 
+pontos de hifenização em uma palavra contendo @code{@@-}.
 
-@item @@hyphenation@{@var{hy-phen-a-ted words}@}
-Tell @TeX{} how to hyphenate @var{hy-phen-a-ted words}.  As shown, you
-put a @samp{-} at each hyphenation point.  For example:
+@item @@hyphenation@{@var{palavras hi-fe-na-das}@}
+Diz ao @TeX{} como hifenizar @var{palavras hi-fe-na-das}. Como mostrado, 
+você coloca um @samp{-} em cada ponto de hifenização. Por exemplo:
 @example
-@@hyphenation@{man-u-script man-u-scripts@}
+@@hyphenation@{man-u-scrito man-u-scritos@}
 @end example
-@noindent @TeX{} only uses the specified hyphenation points when the
-words match exactly, so give all necessary variants, such as plurals.
+@noindent @TeX{} só usa os pontos de hifenização especificados quando as
+palavras correspondem exatamente, portanto forneça todas as variantes
+necessárias, como plurais.
 @end table
 
-Info, HTML, and other non-@TeX{} output is not hyphenated, so none of
-these commands have any effect there.
+Info, HTML e outras saídas não @TeX{} não são hifenizadas, de forma que 
+nenhum desses comandos tem qualquer efeito ali.
 
 
 @node @code{@@allowcodebreaks}
-@section @code{@@allowcodebreaks}: Control Quebras de Linha in @code{@@code}
+@section @code{@@allowcodebreaks}: Controle Quebras de Linha no @code{@@code}
 
-@anchor{allowcodebreaks}@c old name
+@anchor{allowcodebreaks}@c nome antigo
 @findex allowcodebreaks
-@cindex Quebras, within @code{@@code}
-@cindex @sortas{-} -, breakpoint within @code{@@code} @c CONSERTE-ME
-@cindex Hyphen, breakpoint within @code{@@code}
-@cindex Dash, breakpoint within @code{@@code}
-@cindex _, breakpoint within @code{@@code}
-@cindex Underscore, breakpoint within @code{@@code}
+@cindex Quebras, dentro @code{@@code}
+@cindex @sortas{-} -, ponto de interrupção dentro do @code{@@code} @c CONSERTE-ME
+@cindex Hífen, ponto de interrupção dentro do @code{@@code}
+@cindex Traço, ponto de interrupção dentro do @code{@@code}
+@cindex _, ponto de interrupção dentro do @code{@@code}
+@cindex Sublinhado, ponto de interrupção dentro do @code{@@code}
 
-Ordinarily, @TeX{} considers breaking lines at @samp{-} and @samp{_}
-characters within @code{@@code} and related commands
-(@pxref{@code{@@code}}), more or less as if they were ``empty''
-hyphenation points.
+Normalmente, @TeX{} considera a quebra de linhas nos caracteres @samp{-} 
+e @samp{_} dentro do @code{@@code} e comandos relacionados 
+(@pxref{@code{@@code}}), mais ou menos como se fossem pontos de 
+hifenização ``vazios''.
 
-This is necessary since many manuals, especially for Lisp-family
-languages, must document very long identifiers.  On the other hand,
-some manuals don't have this problems, and you may not wish to allow a
-line break at the underscore in, for example, @code{SIZE_MAX}, or even
-worse, after any of the four underscores in @code{__typeof__}.
+Isso é necessário, pois muitos manuais, especialmente para linguagens da 
+família Lisp, precisam documentar identificadores muito longos. Por 
+outro lado, alguns manuais não tem esse problema, e você pode não 
+desejar permitir uma quebra de linha no sublinhado em, por exemplo, 
+@code{SIZE_MAX}, ou pior ainda, depois de qualquer um dos quatro 
+sublinhados em @code{__typeof__}.
 
-So Texinfo provides this command:
+Assim, Texinfo fornece este comando:
 
 @example
 @@allowcodebreaks false
 @end example
 
-@noindent to prevent from breaking at @samp{-} or @samp{_} within
-@code{@@code}.  You can go back to allowing such breaks with
-@code{@@allowcodebreaks true}.  Write these commands on lines by
-themselves.
+@noindent para impedir quebras em @samp{-} ou @samp{_} dentro de
+@code{@@code}. Você pode voltar a permitir tais quebras com
+@code{@@allowcodebreaks true}. Escreva esses comandos em linhas
+dedicadas.
 
-These commands can be given anywhere in the document.  For example,
-you may have just one problematic paragraph where you need to turn off
-the breaks, but want them in general, or vice versa.
+Esses comandos podem ser dados em qualquer lugar no documento. Por 
+exemplo, você pode ter apenas um parágrafo problemático onde precisa 
+desativar as quebras, mas quer elas em geral, ou vice-versa.
 
-This command has no effect except in HTML and @TeX{} output.
+Esse comando não tem efeito, exceto em saídas HTML e @TeX{}.
 
-
+PAREI
 @node @code{@@w}
-@section @code{@@w}@{@var{text}@}: Prevent Quebras de Linha
+@section @code{@@w}@{@var{text}@}: Impedir Quebras de Linha
 
 @anchor{w}@c old name
 @findex w
@@ -15148,23 +15240,22 @@ print queue, and delete a job from the print queue.
 Details are in the following sections.
 
 @menu
-* Use @TeX{}::                     Use @TeX{} to format for hardcopy.
-* Format with @command{texi2dvi}::        The simplest way to format.
-* Formatar com @command{tex}/@command{texindex}::    Formatting with explicit shell commands.
-* Print with @command{lpr}::              How to print.
-* Within Emacs::                How to format and print from an Emacs shell.
-* Modo Texinfo Printing::       How to format and print in Texinfo mode.
-* Compile-Command::             How to print using Emacs's compile command.
-* Requirements Summary::        @TeX{} formatting requirements summary.
-* Preparing for @TeX{}::           What to do before you use @TeX{}.
-* Overfull hboxes::             What are and what to do with overfull hboxes.
-* @code{@@smallbook}::                  How to print small format books and manuals.
-* Papel A4::                    How to print on A4 or A5 paper.
-* @code{@@pagesizes}::                  How to print with customized page sizes.
-* Cropmarks and Magnification:: How to print marks to indicate the size
-                                 of pages and how to print scaled up output.
-* PDF Output::                  Portable Document Format output.
-* Obtaining @TeX{}::               How to obtain @TeX{}.
+* Use @TeX{}::                                    Use @TeX{} para formatar para cópia impressa.
+* Formatar com @command{texi2dvi}::               A maneira mais simples para formatar.
+* Formatar com @command{tex}/@command{texindex}:: Formatando com comandos explícitos de shell.
+* Imprimir com @command{lpr}::                    Como imprimir.
+* Dentro do Emacs::                               Como formatar e imprimir a partir de um shell Emacs.
+* Impressão de Modo Texinfo::                     Como formatar e imprimir em modo Texinfo.
+* Comando de Compilação::                         Como imprimir usando o comando de compilar do Emacs.
+* Resumo das Exigências::                         Resumo de exigências de formatação do @TeX{}.
+* Preparando para @TeX{}::                        O que se fazer antes de usar o @TeX{}.
+* hboxes lotados::                                O que são e o que se fazer com hboxes superlotados.
+* @code{@@smallbook}::                            Como imprimir livros e manuais formato pequeno.
+* Papel A4::                                      Como imprimir em papel A4 ou A5.
+* @code{@@pagesizes}::                            Como imprimir com tamanhos de página personalizados.
+* Marcas de Corte e Ampliação::                   Como imprimir marcas para indicar o tamanho das páginas e como imprimir saída escalada.
+* Saída gerada de PDF::                           Saída em Formato Portável de Documento.
+* Obtendo @TeX{}::                                Como obter @TeX{}.
 @end menu
 
 
@@ -15928,7 +16019,7 @@ the system directories.  (A leading, trailing, or doubled @samp{:}
 indicates searching the system directories at that point.)
 
 
-@node Overfull hboxes
+@node hboxes lotados
 @section Overfull ``hboxes''
 @cindex Overfull @samp{hboxes}
 @cindex @samp{hbox}, overfull
@@ -20413,7 +20504,7 @@ Highlight the name of a file, buffer, node, directory, etc.
 
 @item @@finalout
 Prevent @TeX{} from printing large black warning rectangles beside
-over-wide lines.  @xref{Overfull hboxes}.
+over-wide lines.  @xref{hboxes lotados}.
 
 @item @@findex @var{entry}
 Add @var{entry} to the index of functions.  @xref{Entradas de Índice, ,
