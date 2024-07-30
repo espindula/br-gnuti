@@ -516,8 +516,8 @@ Comandos de Definição
 
 * Modelos de Comando de Definição::                 Escrevendo descrições utilizando comandos de definição.
 * Linhas de Continuação de Comando de Definição::   Continuando o cabeçalho por sobre linhas de fonte.
-* Argumentos Opcionais::                            Manipulando argumentos opcionais e repetidos.
-* @code{@@deffnx}::                                 Agrupando duas ou mais `primeiras' linhas.
+* Argumentos Opcionais::                            Manuseando argumentos opcionais e repetidos.
+* @code{@@deffnx}::                                 Agrupe duas ou mais `primeiras' linhas.
 * Comandos de Definição em Detalhe::                Referência para todos os comandos de definição.
 * Convenções de Comando de Definição::              Convenções para a escrita de definições.
 * Definição de Função de Amostra::                  Um exemplo.
@@ -11957,8 +11957,8 @@ comandos de definição.
 @menu
 * Modelos de Comando de Definição::                 Escrevendo descrições utilizando comandos de definição.
 * Linhas de Continuação de Comando de Definição::   Continuando o cabeçalho por sobre linhas de fonte.
-* Argumentos Opcionais::                            Manipulando argumentos opcionais e repetidos.
-* @code{@@deffnx}::                                 Agrupando duas ou mais `primeiras' linhas.
+* Argumentos Opcionais::                            Manuseando argumentos opcionais e repetidos.
+* @code{@@deffnx}::                                 Agrupe duas ou mais `primeiras' linhas.
 * Comandos de Definição em Detalhe::                Referência para todos os comandos de definição.
 * Convenções de Comando de Definição::              Convenções para a escrita de definições.
 * Definição de Função de Amostra::                  Um exemplo.
@@ -12054,73 +12054,55 @@ definição de função, incluindo o uso de @code{@@example} dentro da definiç�
 @cindex Linhas de continuação em comandos de definição
 @cindex Cabeçalhos de comando de definição, continuando
 @cindex @sortas{@@} @samp{@@} como continuação em comandos de definição @c CONSERTE-ME
-PAREI
-The heading line of a definition command can get very long. Therefore, Texinfo has a special syntax allowing them to be continued over multiple lines of the source file: a lone @samp{@@} at the end of each line to be continued.  Here's an example:
+
+A linha de título de um comando de definição pode ficar muito longa. Portanto, o Texinfo tem uma sintaxe especial que permite que elas sejam continuadas em várias linhas do arquivo fonte: um solitário @samp{@@} no final de cada linha a ser continuada. Aqui está um exemplo:
 
 @example
 @@defun fn-name @@
   arg1 arg2 arg3
-This is the basic continued defun.
+Essa é a defun básica continuada.
 @@end defun
 @end example
 
 @noindent produz:
 
 @defun fn-name   arg1 arg2 arg3
-This is the basic continued defun.
+Essa é a defun básica continuada.
 @end defun
 
 @noindent
-As you can see, the continued lines are combined, as if they had been
-typed on one source line.
+Como você pode ver, as linhas contínuas estão combinadas, como se tivessem sido digitadas em uma linha do fonte.
 
-Although this example only shows a one-line continuation,
-continuations may extend over any number of lines, in the same way;
-put an @code{@@} at the end of each line to be continued.
+Embora esse exemplo mostre somente uma continuação de uma linha, as continuações podem se estender por qualquer número de linhas, da mesma forma; coloque um @code{@@} no final de cada linha a ser continuada.
 
-@cindex Whitespace, collapsed around continuations
-@cindex Collapsing whitespace around continuations
-In general, any number of spaces or tabs before the @code{@@}
-continuation character are collapsed into a single space.  There is one
-exception: the Texinfo processors will not fully collapse whitespace
-around a continuation inside braces.  For example:
+@cindex Espaço em branco, recolhido em torno de continuações
+@cindex Recolhendo espaços em branco em torno de continuações
+Em geral, qualquer número de espaços ou tabulações antes do caractere de continuação @code{@@} é recolhido em um espaço. Existe uma exceção: os processadores Texinfo não recolherão totalmente espaços em branco em torno de uma continuação dentro de chaves. Por exemplo:
 
 @example
-@@deffn @{Category @@
-  Name@} @dots{}
+@@deffn @{Nome @@
+  Categoria@} @dots{}
 @end example
 
-@noindent The output (not shown) has excess space between `Category'
-and `Name'.  To avoid this, elide the unwanted whitespace in your
-input, or put the continuation @code{@@} outside braces.
+@noindent A saída gerada (não mostrada) tem excesso de espaço entre `Nome' e `Categoria'. Para evitar isso, elimine os espaços em branco indesejados na tua entrada ou coloque a continuação @code{@@} fora das chaves.
 
-@code{@@} does not function as a continuation character in @emph{any}
-other context.  Ordinarily, @samp{@@} followed by a whitespace
-character (space, tab, newline) produces a normal interword space
-(@pxref{Espaços Múltiplos}).
+@code{@@} não funciona como um caractere de continuação em @emph{qualquer} outro contexto. Normalmente, @samp{@@} seguido por um caractere de espaço em branco (espaço, tabulação, nova linha) produz um espaço normal interpalavra (@pxref{Espaços Múltiplos}).
 
 
 @node Argumentos Opcionais
-@section Optional and Repeated Arguments
-@cindex Optional and repeated arguments
-@cindex Repeated and optional arguments
-@cindex Arguments, repeated and optional
-@cindex Syntax, optional & repeated arguments
-@cindex Meta-syntactic chars for arguments
+@section Argumentos Opcionais e Repetidos
+@cindex Argumentos opcionais e repetidos
+@cindex Argumentos repetidos e opcionais
+@cindex Argumentos, repetidos e opcionais
+@cindex Sintaxe, argumentos opcionais e repetidos
+@cindex Caracteres meta-sintáticos para argumentos
 
-@c This is consistent with the Emacs Lisp Reference Manual.
-Some entities take optional or repeated arguments, conventionally
-specified by using square brackets and ellipses: an argument enclosed
-within square brackets is optional, and an argument followed by an
-ellipsis is optional and may be repeated more than once.
+@c Isto está consistente com o Manual de Referência da Lisp do Emacs.
+Algumas entidades aceitam argumentos opcionais ou repetidos, convencionalmente especificados usando-se colchetes e reticências: um argumento entre colchetes é opcional, e um argumento seguido por reticências é opcional e pode ser repetido mais que uma vez.
 
-Thus, [@var{optional-arg}] means that @var{optional-arg} is optional @c CONSERTE-ME
-and @var{repeated-args}@code{@dots{}} stands for zero or more
-arguments.  Parentheses are used when several arguments are grouped
-into additional levels of list structure in Lisp.
+Assim, [@var{argumento-opcional}] significa que @var{argumento-opcional} é opcional e @var{argumentos-repetidos}@code{@dots{}} representa zero ou mais argumentos. Parênteses são usados ​​quando vários argumentos são agrupados em níveis adicionais de estrutura de lista na Lisp.
 
-Here is the @code{@@defspec} line of an example of an imaginary
-(complicated) special form:
+Aqui está a linha @code{@@defspec} de um exemplo de uma forma especial (complicada) imaginária:
 
 @quotation
 @defspec foobar (var [from to [inc]]) body@dots{}
@@ -12128,48 +12110,39 @@ Here is the @code{@@defspec} line of an example of an imaginary
 @end quotation
 
 @noindent
-In this example, the arguments @var{from} and @var{to} are optional,
-but must both be present or both absent.  If they are present,
-@var{inc} may optionally be specified as well.  These arguments are
-grouped with the argument @var{var} into a list, to distinguish them
-from @var{body}, which includes all remaining elements of the
-form.
+In this example, the arguments @var{from} and @var{to} are optional, but must both be present or both absent.  If they are present, @var{inc} may optionally be specified as well.  These arguments are grouped with the argument @var{var} into a list, to distinguish them from @var{body}, which includes all remaining elements of the form.
 
-In a Texinfo source file, this @code{@@defspec} line is written like
-this:
+Nesse exemplo, os argumentos @var{from} e @var{to} são opcionais, mas ambos precisam estar presentes ou ambos ausentes. Se estiverem presentes, @var{inc} opcionalmente pode ser especificado também. Esses argumentos são agrupados com o argumento @var{var} em uma lista, para distingui-los de @var{body}, que inclui todos os elementos restantes da forma.
+
+Em um arquivo fonte do Texinfo, essa linha @code{@@defspec} é escrita assim:
 
 @example
 @@defspec foobar (var [from to [inc]]) body@@dots@{@}
 @end example
 
 @noindent
-The function is listed in the Índice de Comando e Variável under
-@samp{foobar}.
+A função está listada no Índice de Comando e Variável sob @samp{foobar}.
 
 
 @node @code{@@deffnx}
-@section @code{@@deffnx}, et al.: Two or More `First' Lines
+@section @code{@@deffnx}, et al.: Duas ou Mais `Primeiras' Linhas
 
-@anchor{deffnx}@c old node
+@anchor{deffnx}@c nodo antigo
 @findex deffnx
-@cindex Two `First' Lines for @code{@@deffn}
-@cindex Grouping two definitions together
-@cindex Definitions grouped together
+@cindex Duas `Primeiras' Linhas para @code{@@deffn}
+@cindex Agrupando duas definições juntas
+@cindex Definições agrupadas
 
-To create two or more `first' or header lines for a definition, follow
-the first @code{@@deffn} line by a line beginning with
-@code{@@deffnx}.  The @code{@@deffnx} command works exactly like
-@code{@@deffn} except that it does not generate extra vertical white
-space between it and the preceding line.
+Para criar duas ou mais linhas `primeira' ou de cabeçalho para uma definição, siga a primeira linha @code{@@deffn} por uma linha começando com @code{@@deffnx}. O comando @code{@@deffnx} funciona exatamente como @code{@@deffn}, exceto que ele não gera espaço em branco vertical extra entre ele e a linha precedente.
 
 @need 1000
-For example,
+Por exemplo,
 
 @example
 @group
-@@deffn @{Interactive Command@} isearch-forward
-@@deffnx @{Interactive Command@} isearch-backward
-These two search commands are similar except @dots{}
+@@deffn @{Comando Interativo@} isearch-forward
+@@deffnx @{Comando Interativo@} isearch-backward
+Esses dois comandos de pesquisa são semelhantes, exceto @dots{}
 @@end deffn
 @end group
 @end example
@@ -12177,9 +12150,9 @@ These two search commands are similar except @dots{}
 @noindent
 produz
 
-@deffn {Interactive Command} isearch-forward
-@deffnx {Interactive Command} isearch-backward
-These two search commands are similar except @dots{}
+@deffn {Comando Interativo} isearch-forward
+@deffnx {Comando Interativo} isearch-backward
+Esses dois comandos de pesquisa são semelhantes, exceto @dots{}
 @end deffn
 
 @findex defcvx
@@ -12201,27 +12174,19 @@ These two search commands are similar except @dots{}
 @findex defunx
 @findex defvarx
 @findex defvrx
-Each definition command has an `x' form: @code{@@defunx},
-@code{@@defvrx}, @code{@@deftypefunx}, etc.
+Cada comando de definição tem uma forma `x': @code{@@defunx}, @code{@@defvrx}, @code{@@deftypefunx}, etc.
 
-The `x' forms work similarly to @code{@@itemx}
-(@pxref{@code{@@itemx}}).
+As formas `x' funcionam similarmente a @code{@@itemx} (@pxref{@code{@@itemx}}).
 
 
 @node Comandos de Definição em Detalhe
 @section Os Comandos de Definição
 
-Texinfo provides more than a dozen definition commands, all of which
-are described in this section.
+Texinfo fornece mais que uma dúzia de comandos de definição, todos estão descritos nesta seção.
 
-The definition commands automatically enter the name of the entity in
-the appropriate index: for example, @code{@@deffn}, @code{@@defun},
-and @code{@@defmac} enter function names in the index of functions;
-@code{@@defvr} and @code{@@defvar} enter variable names in the index
-of variables.
+Os comandos de definição inserem automaticamente o nome da entidade no índice apropriado: por exemplo, @code{@@deffn}, @code{@@defun} e @code{@@defmac} inserem nomes de funções no índice de funções; @code{@@defvr} e @code{@@defvar} inserem nomes de variáveis ​​no índice de variáveis.
 
-Although the examples that follow mostly illustrate Lisp, the commands
-can be used for other programming languages.
+Embora os exemplos a seguir ilustrem principalmente Lisp, os comandos podem ser usados ​​para outras linguagens de programação.
 
 @menu
 * Comandos de Funções::          Comandos para funções e entidades similares.
@@ -12233,96 +12198,70 @@ can be used for other programming languages.
 @end menu
 
 @node Comandos de Funções
-@subsection Functions and Similar Entities
+@subsection Funções e Entidades Similares
 
-This section describes the commands for describing functions and similar
-entities:
+This section describes the commands for describing functions and similar entities:
+
+Esta seção descreve os comandos para descrever funções e entidades similares:
 
 @table @code
 @findex deffn
-@item @@deffn @var{category} @var{name} @var{arguments}@dots{}
-The @code{@@deffn} command is the general definition command for
-functions, interactive commands, and similar entities that may take
-arguments.  You must choose a term to describe the category of entity
-being defined; for example, ``Function'' could be used if the entity is
-a function.  The @code{@@deffn} command is written at the beginning of a
-line and is followed on the same line by the category of entity being
-described, the name of this particular entity, and its arguments, if
-any.  Terminate the definition with @code{@@end deffn} on a line of its
-own.
+@item @@deffn @var{categoria} @var{nome} @var{argumentos}@dots{}
+O comando @code{@@deffn} é o comando geral de definição para funções, comandos interativos e entidades similares que podem receber argumentos. Você precisa escolher um termo para descrever a categoria da entidade sendo definida; por exemplo, ``Function'' poderia ser usado se a entidade for uma função. O comando @code{@@deffn} é escrito no início de uma linha e é seguido na mesma linha pela categoria da entidade sendo descrita, o nome dessa entidade em particular e os argumentos dela, se existirem. Termine a definição com @code{@@end deffn} em uma linha própria.
 
 @need 750
-For example, here is a definition:
+Por exemplo, aqui está uma definição:
 
 @example
 @group
-@@deffn Command forward-char nchars
-Move point forward @@var@{nchars@} characters.
+@@deffn Comando forward-char nchars
+Move ponto para frente @@var@{nchars@} caracteres.
 @@end deffn
 @end group
 @end example
 
 @noindent
-This shows a rather terse definition for a ``command'' named
-@code{forward-char} with one argument, @var{nchars}.
+Isso mostra uma definição bastante concisa para um ``comando'' chamado @code{forward-char} com um argumento, @var{nchars}.
 
-@code{@@deffn} prints argument names such as @var{nchars} in slanted
-type in the printed output, because we think of these names as
-metasyntactic variables---they stand for the actual argument values.
-Within the text of the description, however, write an argument name
-explicitly with @code{@@var} to refer to the value of the argument.
-In the example above, we used @samp{@@var@{nchars@}} in this way.
+@code{@@deffn} imprime nomes de argumentos como @var{nchars} em tipo inclinado na saída impressa, porque nós pensamos nesses nomes como variáveis ​​metassintáticas---elas representam os valores reais dos argumentos. No texto da descrição, no entanto, escreva um nome de argumento explicitamente com @code{@@var} para se referir ao valor do argumento. No exemplo acima, nós usamos @samp{@@var@{nchars@}} dessa forma.
 
-In the extremely unusual case when an argument name contains
-@samp{--}, or another character sequence which is treated specially
-(@pxref{Convenções}), use @code{@@code} around the special
-characters.  This avoids the conversion to typographic en-dashes and
-em-dashes.
-@c @var also works; that's what we used to recommend.
+No caso extremamente incomum quando um nome de argumento contiver @samp{--}, ou outra sequência de caracteres que seja tratada especialmente (@pxref{Convenções}), use @code{@@code} ao redor dos caracteres especiais. Isso evita a conversão para traços de ligação e travessões tipográficos.
+@c @var também funciona; isso é o que nós costumávamos recomendar.
 
-The template for @code{@@deffn} is:
+O modelo para @code{@@deffn} é:
 
 @example
 @group
-@@deffn @var{category} @var{name} @var{arguments}@dots{}
-@var{body-of-definition}
+@@deffn @var{categoria} @var{nome} @var{argumentos}@dots{}
+@var{corpo-da-definição}
 @@end deffn
 @end group
 @end example
 
 @findex defun
-@item @@defun @var{name} @var{arguments}@dots{}
-The @code{@@defun} command is the definition command for functions.
-@code{@@defun} is equivalent to @samp{@@deffn Function @dots{}}.
-Terminate the definition with @code{@@end defun} on a line of its own.
-Thus, the template is:
+@item @@defun @var{nome} @var{argumentos}@dots{}
+O comando @code{@@defun} é o comando de definição para funções. @code{@@defun} é equivalente a @samp{@@deffn Função @dots{}}. Termine a definição com @code{@@end defun} em uma linha própria. Assim, o modelo é:
 
 @example
 @group
-@@defun @var{function-name} @var{arguments}@dots{}
-@var{body-of-definition}
+@@defun @var{nome-função} @var{argumentos}@dots{}
+@var{corpo-da-definição}
 @@end defun
 @end group
 @end example
 
 @findex defmac
-@item @@defmac @var{name} @var{arguments}@dots{}
-The @code{@@defmac} command is the definition command for macros.
-@code{@@defmac} is equivalent to @samp{@@deffn Macro @dots{}} and
-works like @code{@@defun}.
+@item @@defmac @var{nome} @var{argumentos}@dots{}
+O comando @code{@@defmac} é o comando de definição para macros. @code{@@defmac} é equivalente a @samp{@@deffn Macro @dots{}} e funciona como @code{@@defun}.
 
 @findex defspec
-@item @@defspec @var{name} @var{arguments}@dots{}
-The @code{@@defspec} command is the definition command for special
-forms.  (In Lisp, a special form is an entity much like a function;
-@pxref{Special Forms,,, elisp, GNU Emacs Lisp Reference Manual}.)
-@code{@@defspec} is equivalent to @samp{@@deffn @{Special Form@}
-@dots{}} and works like @code{@@defun}.
+@item @@defspec @var{nome} @var{argumentos}@dots{}
+O comando @code{@@defspec} é o comando de definição para formas especiais. (Na Lisp, uma forma especial é uma entidade muito parecida com uma função; @pxref{Special Forms,,, elisp, GNU Emacs Lisp Reference Manual}). @code{@@defspec} é equivalente a @samp{@@deffn @{Forma Especial@} @dots{}} e funciona como @code{@@defun}.
 @end table
 
-All these commands create entries in the index of functions.
+Todos esses comandos criam entradas no índice de funções.
 
-
+PAREI
 @node Comandos de Variáveis
 @subsection Variables and Similar Entities
 
