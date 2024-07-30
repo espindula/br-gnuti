@@ -32,9 +32,9 @@
 
 @comment %**end of header
 
-@c perceba-se que o autor do documento original em inglês se utilizou 
+@c perceba-se que o autor do documento original em inglês usou 
 @comment das duas formas de indicar que uma linha é um simples 
-@c comentário, ou seja @comment e o seu sinônimo @c.   No "Cartão de 
+@c comentário, ou seja @comment e o sinônimo dele, @c.   No "Cartão de 
 @comment Referência do GNU Texinfo", para Texinfo versão 5.2, está 
 @c descrita uma terceira forma: DEL.   Essa forma não foi aqui testada 
 @comment e, portanto, não se pode afirmar que funciona.
@@ -43,11 +43,11 @@
 Este manual é para GNU Texinfo (versão @value{VERSION}, 
 @value{UPDATED}), um sistema de documentação que pode produzir ambos 
 informação online e um manual impresso a partir de uma fonte única 
-utilizando marcação semântica.
+usando marcação semântica.
 
 Copyright @copyright{} 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 
-2024 da ``versão modificada'' traduzida para a língua portuguesa falada 
-e escrita no Brasil: Jamenson Ferreira Espindula de Almeida Melo 
+2024 da ``versão modificada'' traduzida para o idioma português falado 
+e escrito no Brasil: Jamenson Ferreira Espindula de Almeida Melo 
 <@email{jafesp@@gmail.com}>.
 
 Copyright @copyright{} 1988, 1990, 1991, 1992, 1993, 1995, 1996, 1997, 
@@ -65,17 +65,17 @@ Copyright @copyright{} 1988, 1990, 1991, 1992, 1993, 1995, 1996, 1997,
 2010, 2011, 2012, 2013, 2014, 2015, 2016 Free Software Foundation, Inc.
 
 @quotation
-É concedida permissão para copiar, distribuir e/ou modificar este Manual 
+É concedida permissão para copiar, distribuir e (ou) mudar este Manual 
 para GNU Texinfo (versão @value{VERSION}, @value{UPDATED}), versão 
-traduzida para a língua portuguesa sob os termos da Licença de 
-Documentação Livre GNU, versão 1.3 ou qualquer versão posterior 
+traduzida para o idioma português sob os termos da Licença GNU de 
+Documentação Livre, versão 1.3 ou qualquer versão posterior 
 publicada pela Free Software Foundation; sem Seções Invariantes, com os 
 Textos de Capa Frontal sendo ``Um Manual GNU'', e com os Textos de 
 Quarta Capa como em (a) abaixo.   Uma cópia da licença está incluída na 
 seção intitulada ``Licença GNU de Documentação Livre''.
 
 (a) O Texto de Quarta Capa da Free Software Foundation, Inc. (FSF) é: 
-``Você tem a liberdade de copiar e modificar este manual GNU.   
+``Você tem a liberdade de copiar e mudar este manual GNU.   
 Comprando cópias da FSF você a apoia no desenvolvimento GNU e na 
 promoção da liberdade de software''.
 
@@ -96,25 +96,21 @@ developing GNU and promoting software freedom.''
 
 @dircategory Texinfo documentation system
 @direntry
-* Texinfo: (texinfo).           O formato de documentação GNU.
-* install-info: (texinfo)Invoking install-info. Atualizar entradas 
-info/dir.
+* Texinfo: (texinfo).                           O formato de documentação GNU.
+* install-info: (texinfo)Invoking install-info. Atualizar entradas info/dir.
 * makeinfo: (texinfo)Invoking makeinfo.         Traduzir fonte Texinfo.
-* pod2texi: (pod2texi)Invoking pod2texi.        Traduzir POD Perl para 
-Texinfo.
-* texi2dvi: (texinfo)Format with texi2dvi.      Imprimir documentos 
-Texinfo.
+* pod2texi: (pod2texi)Invoking pod2texi.        Traduzir POD Perl para Texinfo.
+* texi2dvi: (texinfo)Format with texi2dvi.      Imprimir documentos Texinfo.
 * texi2pdf: (texinfo)PDF Output.                Saída PDF para Texinfo.
 * pdftexi2dvi: (texinfo)PDF Output.             Saída PDF para Texinfo.
-* texindex: (texinfo)Format with tex/texindex.  Ordena arquivos de 
-índice Texinfo.
+* texindex: (texinfo)Format with tex/texindex.  Ordena arquivos de índice Texinfo.
 @end direntry
 
 @c Configurar para smallbook se for imprimir no formato para livro 
-@c pequeno, de forma que o exemplo da fonte de livre pequeno atualmente 
-@c está escrito utilizando smallbook; em bigbook, uma gambiarra é 
-@c utilizada para a saída TeX.   Faz-se isso via opção -t a texi2dvi, de 
-@c maneira que essa mesma fonte pode ser utilizada para outros tamanhos 
+@c pequeno, de forma que o exemplo do fonte de livro pequeno atualmente 
+@c está escrito usando smallbook; em bigbook, uma gambiarra é 
+@c usada para a saída TeX.   Faz-se isso via opção -t a texi2dvi, de 
+@c maneira que esse mesmo fonte pode ser usado para outros tamanhos 
 @c de papel também.
 @c smallbook
 @c set smallbook
@@ -167,14 +163,13 @@ Arte da capa por Etienne Suvasa.
 @node Top
 @top Texinfo
 
-Este manual é para GNU Texinfo (versão @value{VERSION}, 
-@value{UPDATED}), um sistema de documentação que pode produzir ambos 
-informação online e um manual impresso a partir de uma fonte única 
-utilizando marcação semântica.
+Este manual é para GNU Texinfo (versão @value{VERSION}, @value{UPDATED}), um
+sistema de documentação que pode produzir ambos informação online e um manual
+impresso a partir de um fonte único usando marcação semântica.
 
-A primeira parte deste menu principal lista os principais pontos neste 
-documento info, incluindo o comando @@-command e índices de conceito.  O 
-restante do menu lista todos os pontos de baixo nível no documento.
+A primeira parte deste menu mestre lista os nodos principais neste documento do
+Info, incluindo o comando @@ e índices de conceito. O restante do menu lista
+todos os nodos de baixo nível no documento.
 @end ifnottex
 
 @menu
@@ -264,7 +259,7 @@ Permissões de Documento
 Páginas de Título e de Direitos Autorais
 
 * @code{@@titlepage}::                  Crie um título para o documento impresso.
-* @code{@@titlefont @@center @@sp}::      Os comandos @code{@@titlefont}, @code{@@center}, e @code{@@sp}.
+* @code{@@titlefont @@center @@sp}::      Os comandos @code{@@titlefont}, @code{@@center} e @code{@@sp}.
 * @code{@@title @@subtitle @@author}::    Os comandos @code{@@title}, @code{@@subtitle}, e @code{@@author}.
 * Direitos Autorais::                   Como escrever o aviso de direitos autorais e incluir permissões de cópia.
 * Geração de Cabeçalho::          Ligar os cabeçalhos de página após as páginas de título e de direitos autorais.
@@ -739,7 +734,7 @@ Construtores de Texto do Formato Info
 @end detailmenu
 @end menu
 
-@c Recompense-se os leitores por terem chegado ao fim do menu :).
+@c Recompensem-se os(as) leitores(as) por terem chegado ao fim do menu :).
 @c Contribuição de Arnold Robbins.
 @quotation
 Documentação é como o sexo: quando ela é boa, ela é muito, muito boa; e 
@@ -755,142 +750,134 @@ quando ela é ruim, é melhor que nada.
 @cindex Software livre
 @cindex Livre, software
 
-GNU Texinfo é @dfn{free software}; isso significa que qualquer pessoa é 
-livre para utilizá-lo e livre para redistribuí-lo sob certas condições.   
-Texinfo não está em domínio público; ele está sob direitos autorais e 
-existem restrições acerca da sua distribuição, porém essas restrições 
-são desenhadas para permitir qualquer coisa que um bom cidadão 
-cooperador desejasse fazer.   O que não for permitido é para tentar 
-prevenir que outras pessoas adicionalmente compartilhem qualquer 
-versão de Texinfo que elas possam obter de você.
+GNU Texinfo é @dfn{free software}; isso significa que qualquer pessoa é livre
+para usá-lo e livre para redistribuí-lo sob certas condições. Texinfo não está
+em domínio público; ele está sob direitos autorais e existem restrições acerca
+da distribuição dele; porém essas restrições estão projetadas para permitir
+qualquer coisa que um(a) bom(a) cidadão(ã) cooperador(a) desejasse fazer. O que
+não for permitido é para tentar impedir que outros(as) adicionalmente
+compartilhem qualquer versão de Texinfo que eles(as) possam obter de você.
 
-Especificamente, deseja-se ter certeza que você tem o direito de doar 
-cópias dos programas que se relacionem a Texinfo, que você receba código 
-fonte ou do contrário possa obtê-lo se você assim o desejar, que você 
-pode modificar esses programas ou utilizar pedaços deles em novos 
-programas livres, e que você sabe que você pode fazer essas coisas.
+Especificamente, nós queremos ter certeza que você tem o direito de doar cópias
+dos programas que se relacionem a Texinfo; que você receba código fonte ou, do
+contrário, possa obtê-lo se assim o desejar; que você pode mudar esses
+programas ou usar pedaços deles em novos programas livres; e que você sabe que
+pode fazer essas coisas.
 
-Para se ter certeza de que qualquer pessoa tem tais direitos, proibiu-se 
-que você prive alguém mais desses direitos.   Por exemplo, se você 
-distribuir cópias dos programas relacionados a Texinfo, você deve 
-necessariamente dar aos receptores todos os direitos que você tem.   
-Você deve necessariamente assegurar-se de que eles, também, recebam ou 
-possam conseguir o código fonte.   E você deve necessariamente 
-informá-los dos direitos deles.
+Para ter certeza de que qualquer pessoa tem tais direitos, nós temos que
+proibir que você prive alguém mais desses direitos. Por exemplo, se você
+distribuir cópias dos programas relacionados a Texinfo, você precisa dar para
+os(as) receptores(as) todos os direitos que você tem. Você precisa assegurar-se
+de que eles(as), também, recebam ou possam conseguir o código fonte.  E você
+precisa informá-los(as) dos direitos deles(as).
 
-Ainda, para a nossa própria proteção, nós devemos estar certos de que 
-qualquer pessoa sabe que não existe garantia para os programas que se 
-relacionem a Texinfo.   Se esses programas forem modificados por 
-qualquer outra pessoa e passados adiante, nós desejamos que seus 
-receptores saibam que o que eles tem não é o que nós distribuímos, de 
-forma que quaisquer problemas introduzidos por outros não refletirão na 
-nossa reputação.
+Além disso, para nossa própria proteção, nós devemos estar certos(as) de que
+qualquer pessoa sabe que não existe garantia para os programas que se
+relacionem a Texinfo. Se esses programas forem modificados por qualquer outra
+pessoa e passados adiante, nós queremos que os(as) receptores(as) deles saibam
+que o que eles(as) tem não é o que nós distribuímos, de forma que quaisquer
+problemas introduzidos por outros(as) não refletirão na nossa reputação.
 
-As condições precisas das licenças para os programas atualmente sendo 
-distribuídos que se relacionem com Texinfo são encontradas nas Licenças 
-Públicas Gerais que os acompanham.   Este manual está coberto pela 
-Licença GNU de Documentação Livre 
-(@pxref{Licença GNU de Documentação Livre}).
+As condições precisas das licenças para os programas atualmente sendo
+distribuídos que se relacionem com Texinfo são encontradas nas Licenças Gerais
+Públicas que os acompanham. Este manual está coberto pela Licença GNU de
+Documentação Livre (@pxref{Licença GNU de Documentação Livre}).
 
 
 @node Visão Geral
 @chapter Visão Geral do Texinfo @c Capítulo 1
 @cindex Visão Geral do Texinfo
-@cindex Texinfo overview
-@cindex Using Texinfo in general
-@cindex Texinfo, introduction to
-@cindex Introduction to Texinfo
+@cindex Texinfo visão geral
+@cindex Usando Texinfo em geral
+@cindex Texinfo, introdução a
+@cindex Introdução a Texinfo
 @anchor{Using Texinfo} @c nodo mesclado
 
-@dfn{Texinfo} é um sistema de documentação que utiliza um arquivo fonte 
-único para produzir ambas informação online e saída impressa.   Isso 
-significa que em vez de escrever vários documentos diferentes, um para 
-cada formato de saída, você precisa somente escrever um documento.
+@dfn{Texinfo} é um sistema de documentação que usa um arquivo fonte único para
+produzir informações online e saída impressa. Isso significa que, em vez de
+escrever vários documentos, um para cada formato de saída, você precisa
+escrever somente um documento.
 
-Ao utilizar Texinfo, você pode criar um documento impresso (via sistema 
-tipográfico @TeX{}) em formato PDF ou PostScript, incluindo capítulos, 
-seções, referências cruzadas, e índices.   A partir do mesmo arquivo 
-fonte Texinfo, você pode criar um arquivo de saída HTML adequado para 
-uso com um navegador web, você pode criar um arquivo Info com 
-características especiais para tornar fácil a navegação da documentação, 
-e também criar um arquivo Docbook ou uma transliteração para o formato 
-XML.
+Usando Texinfo, você consegue criar um documento impresso (via sistema
+tipográfico @TeX{}) em formato PDF ou PostScript, incluindo capítulos, seções,
+referências cruzadas e índices. A partir do mesmo arquivo fonte do Texinfo,
+você consegue criar um arquivo de saída HTML adequado para uso com um navegador
+web; você consegue criar um arquivo do Info com recursos especiais para
+facilitar a navegação da documentação; e também criar um arquivo do Docbook ou
+uma transliteração para o formato XML.
 
-@cindex Source file format
-@cindex Semantic markup
-Um arquivo fonte Texinfo é um arquivo de texto plano contendo texto 
-intercalado com @dfn{comandos @@} (palavras precedidas por um @samp{@@}) 
-que informam aos processadores Texinfo o que fazer.   Os comandos de 
-marcação de Texinfo são quase inteiramente @dfn{semânticos}; isto é, 
-eles especificam o significado pretendido do texto no documento, em vez 
-de instruções de formatação física.   Você pode editar um arquivo 
-Texinfo com qualquer editor de texto, porém é especialmente conveniente 
-se utilizar do GNU Emacs dado que esse editor tem um modo especial, 
-chamado modo Texinfo, que provê várias características relacionadas à 
-Texinfo (@xref{Modo Texinfo}).
+@cindex Formato do arquivo fonte
+@cindex Marcação semântica
+Um arquivo fonte do Texinfo é um arquivo de texto simples contendo texto
+intercalado com @dfn{comandos @@} (palavras precedidas por um @samp{@@}) que
+informam aos processadores Texinfo o que fazer. Os comandos de marcação do
+Texinfo são quase inteiramente @dfn{semânticos}; isto é, eles especificam o
+significado pretendido do texto no documento, em vez de instruções de
+formatação física. Você consegue editar um arquivo do Texinfo com qualquer
+editor de texto, porém é especialmente conveniente se usar o GNU Emacs, dado
+que esse editor tem um modo especial, chamado modo Texinfo, que fornece vários
+recursos relacionados ao Texinfo (@xref{Modo Texinfo}).
 
-@cindex Limited scope of Texinfo
-Texinfo foi concebido especificamente para o propósito de escrever 
-documentação e manuais de software.   Se você deseja escrever um manual 
-bom para o seu programa, Texinfo tem muitas características que 
-espera-se tornarão a sua tarefa mais fácil.   Entretanto, ele quase não 
-provê comandos para controlar a formatação final.   Texinfo não é 
-entendido como um programa de formatação de propósito geral, de modo que 
-se você precisa planejar um jornal, conceber um anúncio luxuoso de 
-revista, ou seguir as exatas exigências de formatação de uma editora, 
-Texinfo pode não ser a ferramenta mais simples.
+@cindex Escopo limitado do Texinfo
+Texinfo foi concebido especificamente para o propósito de escrever documentação
+e manuais de software. Se você quer escrever um bom manual para teu programa,
+Texinfo tem muitos recursos que nós esperamos que tornarão tua tarefa mais
+fácil. Entretanto, ele quase não fornece comandos para controlar a formatação
+final. Texinfo não é destinado a ser um programa de formatação de propósito
+geral, de modo que se você precisa planejar um jornal, conceber um anúncio
+luxuoso de revista, ou seguir as exatas exigências de formatação de uma
+editora, Texinfo pode não ser a ferramenta mais simples.
 
-@cindex Spelling of Texinfo
-@cindex Pronunciation of Texinfo
-Escreva-se ``Texinfo'' com um ``T'' maiúsculo e as outras letras em 
-minúsculas.   A primeira silaba de ``Texinfo'' é pronunciada como 
-``speck'', e não ``hex''.   Essa pronúncia estranha é derivada da 
-pronúncia de @TeX{}.   Pronuncie-se @TeX{} como se o @samp{X} fosse o 
-último som no nome `Bach'.   Na palavra @TeX{}, o @samp{X} é, em vez da 
-letra do Inglês ``ex'', atualmente a letra Grega ``chi''.
+@cindex Escrita de Texinfo
+@cindex Pronúncia de Texinfo
+Escreva-se ``Texinfo'' com um ``T'' maiúsculo e as outras letras em minúsculas.
+A primeira silaba de ``Texinfo'' é pronunciada como ``speck'', e não ``hex''.
+Essa pronúncia estranha é derivada da pronúncia de @TeX{}. Pronuncie-se @TeX{}
+como se o @samp{X} fosse o último som no nome `Bach'. Na palavra @TeX{}, o
+@samp{X} é, em vez da letra do Inglês ``ex'', na verdade a letra Grega ``chi''.
 
-Texinfo é o formato oficial de documentação do projeto GNU.
-Mais informação, incluindo manuais para pacotes GNU, está disponível em 
-@uref{http://www.gnu.org/doc/, página web de documentação GNU}.
+Texinfo é o formato oficial de documentação do projeto GNU. Mais informações,
+incluindo manuais para pacotes GNU, estão disponíveis na
+@uref{http://www.gnu.org/doc/, página web da documentação GNU}.
 
 @menu
-* Relatando Bugs::              Submetendo relatórios efetivos de bugs.
-* Formatos de Saída::              Visão geral dos formatos de saída suportados.
-* Arquivos do Info::                  O que é um arquivo Info?
-* Livros Impressos::               Característica de um livro impresso ou manual.
-* Adicionando Formatos de Saída::       Páginas de manual e implementando novos formatos.
-* Histórico::                     Agradecimentos, contribuidores e gênese.
+* Informando Defeitos::           Submetendo informes efetivos de defeitos.
+* Formatos de Saída::             Visão geral dos formatos de saída suportados.
+* Arquivos do Info::              O que é um arquivo Info?
+* Livros Impressos::              Características de um livro ou manual impresso.
+* Adicionando Formatos de Saída:: Páginas de manual e implementando novos formatos.
+* Histórico::                     Agradecimentos, contribuidores(as) e gênese.
 @end menu
 
 
-@node Relatando Bugs
-@section Relatando Bugs
+@node Informando Defeitos
+@section Informando Defeitos
 
-@cindex Bugs, reporting
-@cindex Suggestions for Texinfo, making
-@cindex Reporting bugs
-Aprecia-se relatórios de defeitos e sugestões para qualquer aspecto do 
-sistema Texinfo: programas, documentação, instalação, etc.   Por favor, 
-envie uma mensagem eletrônica para @email{bug-texinfo@@gnu.org}.
-Você pode obter a versão mais recente de Texinfo via sua home page, 
+@cindex Defeitos, informando
+@cindex Sugestões para Texinfo, fazendo
+@cindex Informando Defeitos
+Nós apreciamos informes de defeitos e de sugestões para qualquer aspecto do
+sistema Texinfo: programas, documentação, instalação, etc. Por favor, envie-os
+para @email{bug-texinfo@@gnu.org}. Você consegue obter a versão mais recente do
+Texinfo por meio da página inicial dele,
 @uref{http://www.gnu.org/software/texinfo}.
 
-@cindex Checklist for bug reports
-Para relatórios de defeitos, por favor inclua informação suficiente para 
-que os mantenedores possam reproduzir o problema.   Falando 
-genericamente, isso significa:
+@cindex Lista de verificação para informes de defeitos
+Para informes de defeitos, por favor, inclua informações suficientes para
+os(as) mantenedores(as) reproduzirem o problema. Falando genericamente, isso
+significa:
 
 @itemize @bullet
-@item O número de versão de Texinfo e o(s) programa(s) ou manual(is) envolvidos.
+@item O número da versão do Texinfo e o(s) programa(s) ou manual(is) envolvido(s).
 @item O conteúdo de quaisquer arquivos de entrada necessários para reproduzir o defeito.
 @item Precisamente como você executou quaisquer programa(s) envolvido(s).
-@item Uma descrição do problema e amostras de quaisquer saída errôneas.
-@item Os nomes e versões do hardware e do sistema operacional.
-@item Qualquer outra coisa que você entenda que pudesse ajudar.
+@item Uma descrição do problema e amostras de quaisquer saídas errôneas.
+@item Nomes e versões do hardware e do sistema operacional.
+@item Qualquer outra coisa que você pense que pudesse ajudar.
 @end itemize
 
-Quando em dúvida se alguma coisa é necessária ou não, inclua-a.   É 
-melhor incluir muito mais que deixar de fora algo importante.
+Quando em dúvida se alguma coisa é necessária ou não, inclua-a. É melhor
+incluir muito mais que deixar de fora algo importante.
 
 É crítico enviar um arquivo de entrada atual que reproduza o problema.
 O que não é crítico é ``simplificar'' o exemplo para a menor entrada 
@@ -898,7 +885,7 @@ possível---a entrada atual com a qual você descobriu o defeito bastará.
 (Certamente, se você fizer experimentos, quanto menor o arquivo de 
 entrada, melhor).
 
-@cindex Patches, contributing
+@cindex Remendos, contribuindo
 Correções (``Patches'') são mais que bem-vindas; se possível, por favor 
 faça-as com @samp{@w{diff -c}} 
 (veja-se @ref{Top,,, diffutils, Comparing and Merging Files}) e inclua as 
@@ -908,15 +895,15 @@ codificação existente.
 
 @node Formatos de Saída
 @section Formatos de Saída
-@cindex Output formats
-@cindex Back-end output formats
+@cindex Formatos de saída
+@cindex Estrutura de rataguarda, formatos de saída
 
 Aqui está uma visão geral breve dos formatos de saída atualmente 
 suportados por Texinfo.
 
 @table @asis
 @item Info
-@cindex Info output, overview
+@cindex Saída gerada do Info, visão geral
 (Gerado via @command{makeinfo}).   O formato Info é em sua maior parte 
 transliteração de texto plano do fonte Texinfo.   Ele adiciona uns 
 poucos caracteres de controle para prover informação de navegação para 
@@ -927,13 +914,13 @@ arquivos. Veja-se @ref{Arquivos do Info}, e
 @ref{Criando e Instalando Arquivos Info}.
 
 @item Plain text
-@cindex Plain text output, overview
+@cindex Saída gerada de texto simples, visão geral
 (Gerado via @command{makeinfo --plaintext}).   Essa é quase a mesma que 
 a saída Info com os caracteres de controle de navegação omitidos.
 
 @item HTML
-@cindex HTML output, overview
-@cindex W3 consortium
+@cindex Saída gerada de HTML, visão geral
+@cindex Consórcio W3
 @cindex Mozilla
 @cindex Lynx
 @cindex Emacs-W3
@@ -954,7 +941,7 @@ linguagem HTML e mais informação relacionada, veja-se
 Veja-se @ref{Gerando HTML}.
 
 @item DVI
-@cindex DVI output, overview
+@cindex Saída gerada DVI, visão geral
 @pindex dvips
 @pindex xdvi
 (Gerado via @command{texi2dvi}).   O formato binário ``DeVIce Independent''
@@ -969,7 +956,7 @@ mais estrita que, as linguagens usuais de @TeX{}: plain @TeX{}, @LaTeX{},
 Con@TeX{}t, etc.).
 
 @item PostScript
-@cindex PostScript output, overview
+@cindex Saída gerada PostScript, visão geral
 (Gerada via @command{texi2dvi --ps}).   PostScript é uma linguagem de 
 descrição de página que se tornou amplamente utilizada por volta de 1985 
 e ainda é utilizada hoje em dia.   
@@ -979,7 +966,7 @@ mais preferências.   Por padrão, Texinfo utiliza o programa
  Veja-se @ref{Top,,, dvips, Dvips}.
 
 @item PDF
-@cindex PDF output, overview
+@cindex Saída gerada PDF, visão geral
 @cindex Beebe, Nelson
 (Gerada via @command{texi2dvi --pdf} ou @command{texi2pdf}).   Esse 
 formato foi desenvolvido por Adobe Systems para troca de documento 
@@ -995,8 +982,8 @@ uma extensão de @TeX{}, para liberar PDF; veja-se
 @uref{http://tug.org/applications/pdftex}. Veja-se @ref{PDF Output}.
 
 @item Docbook
-@cindex Docbook output, overview
-@cindex XML Docbook output, overview
+@cindex Saída gerada Docbook, visão geral
+@cindex Saída gerada XML Docbook, visão geral
 (Gerado via @command{makeinfo --docbook}).   Esse é um formato baseado 
 em XML desenvolvido alguns anos atrás, primariamente para documentação 
 técnica.   Ele por conseguinte assume alguma semelhança, em linhas 
@@ -1005,9 +992,9 @@ Vários conversores de Docbook @emph{para} Texinfo também foram
 desenvolvidos; veja-se as páginas web Texinfo.
 
 @item XML
-@cindex XML Texinfo output, overview
-@cindex Texinfo XML output, overview
-@cindex DTD, for Texinfo XML
+@cindex Saída gerada XML Texinfo, visão geral
+@cindex Saída gerada Texinfo XML, visão geral
+@cindex DTD, para Texinfo XML
 @pindex texinfo.dtd
 @pindex txixml2texi
 (Gerado via @command{makeinfo --xml}).   XML é uma especificação de 
@@ -1029,7 +1016,7 @@ utilitário @file{txixml2texi} para fazer essa transformação de volta.
 
 @node Arquivos do Info
 @section Arquivos do Info
-@cindex Info files
+@cindex Arquivos Info
 
 Conforme mencionado acima, o formato Info é em sua maioria uma 
 transliteração de texto plano do fonte Texinfo, com a adição de uns 
@@ -1063,7 +1050,7 @@ O arquivo @file{dir} no diretório @file{info} serve como o ponto de
 chegada para o sistema Info inteiro.   A partir dele, você pode alcançar 
 os nodos `Top' de cada um dos documentos em um sistema Info completo.
 
-@cindex URI syntax for Info
+@cindex Sintaxe URI para Info
 Se você desejar se referir a um arquivo Info via URI, você pode utilizar 
 a sintaxe (não oficial) exemplificada pelo seguinte.   Isto funciona com 
 Emacs/W3, por exemplo:
@@ -1078,11 +1065,11 @@ O próprio programa @command{info} não segue URIs de qualquer tipo.
 
 @node Livros Impressos
 @section Livros Impressos
-@cindex Printed book and manual characteristics
-@cindex Manual characteristics, printed
-@cindex Book characteristics, printed
-@cindex Texinfo printed book characteristics
-@cindex Characteristics, printed books or manuals
+@cindex Manual e livro impresso, características
+@cindex Características de manual, impresso
+@cindex Características de livro, impresso
+@cindex Características de livro impresso Texinfo
+@cindex Características, manuais e livros impressos
 
 @cindex Knuth, Donald
 Um arquivo Texinfo pode ser formatado e composto como um livro impresso 
@@ -1113,7 +1100,7 @@ Porém, você também pode imprimir em páginas de 7 por 9.25 polegadas
 de tamanho A4 ou A5 (@code{@@afourpaper}, @code{@@afivepaper}).
  Veja-se @ref{@code{@@smallbook}}, e @ref{Papel A4}.
 
-@cindex Literate programming
+@cindex Programação competente
 @TeX{} é livremente distribuível.   Ele é escrito em um super conjunto 
 de Pascal para programação de instrução chamado WEB e pode ser compilado 
 ou em Pascal ou (pelo uso de um programa de conversão que vem com a 
@@ -1129,13 +1116,13 @@ informação sobre como adquirir @TeX{}. Ele não é parte da distribuição Tex
 
 @node Adicionando Formatos de Saída
 @section Adicionando Formatos de Saída
-@cindex Additional output formats
+@cindex Formatos de saída adicionais
 
 Os formatos de saída nas seções anteriores lidam com uma variedade ampla 
 de usos, porém, certamente, sempre existe espaço para mais.
 
-@cindex Output formats, supporting more
-@cindex SGML-tools output format
+@cindex Formatos de saída, suportando mais
+@cindex Ferramentas SGML, formatos de saída
 Se você for um programador e gostaria de contribuir para com o projeto 
 GNU implementando formatos de saída adicionais para Texinfo, isso seria 
 excelente.   A maneira de fazer isso que seria mais útil é escrever uma 
@@ -1151,7 +1138,7 @@ Outra abordagem viável é utilizar a saída XML de Texinfo oriunda de
 essencialmente completa da entrada, porém sem a sintaxe de Texinfo 
 e as peculiaridades de opção, conforme descrito acima.
 
-@cindex Texinfo parsers, discouraging more
+@cindex Analisadores Texinfo, desencorajando mais
 Se você ainda não conseguir resistir à tentação de escrever um programa 
 novo que leia o fonte Texinfo diretamente, permita-nos te dar mais 
 algumas advertências: por favor não subestime a quantidade de trabalho 
@@ -1161,7 +1148,7 @@ você estaria se comprometendo com uma tarefa em andamento.   Você está
 aconselhado a verificar se os testes da linguagem que vem com 
 @command{texi2any} dão resultados corretos com o seu programa novo.
 
-@cindex Man page output, not supported
+@cindex Saída de página de manual, não suportada
 De tempos em tempos, propostas são feitas para gerar páginas de manual 
 Unix tradicionais a partir do fonte Texinfo.   Entretanto, pelo motivo 
 de que as páginas de manual tem um formato convencional estrito, criar 
@@ -1219,7 +1206,7 @@ reconhecidos no arquivo @file{ChangeLog}.   Nossos erros são nossos
 próprios.
 
 @cindex Histórico of Texinfo
-@cindex Texinfo history
+@cindex Texinfo, estória
 @subheading Beginnings
 
 @cindex Scribe
@@ -1328,9 +1315,9 @@ Texinfo, e dá um arquivo curto de amostra.
 @node Convenções
 @section Convenções Sintáticas Gerais
 @cindex Convenções sintáticas gerais
-@cindex Syntactic conventions
-@cindex Convenções, syntactic
-@cindex Characters, basic input
+@cindex Sintáticas, convenções
+@cindex Convenções, sintáticas
+@cindex Caracteres, entrada básica
 @anchor{Formatting Commands} @c nome antigo
 
 Esta seção descreve as convenções gerais utilizadas em todos os 
@@ -1338,7 +1325,7 @@ documentos Texinfo.
 
 @itemize @bullet
 @item
-@cindex Source files, characters used
+@cindex Arquivos fonte, caracteres usados
 Todos os caracteres ASCII imprimíveis, exceto @samp{@@}, @samp{@{} e 
 @samp{@}}, podem aparecer em um arquivo Texinfo e representam eles 
 mesmos.
@@ -1350,13 +1337,13 @@ coloque um carácter @samp{@@} em frente a ele, como isto: @samp{@@@@},
 
 @item
 @cindex @@-commands
-@cindex Formatting commands
+@cindex Formatando, comandos
 Em um arquivo Texinfo, os comandos que você escreve para descrever o 
 conteúdo do manual são precedidos por um carácter @samp{@@}; eles são 
 chamados @dfn{comandos @@}.   (O @samp{@@} em Texinfo tem o mesmo 
 significado que @samp{\} tem em @TeX{} plano).
 
-@cindex Braces, when to use
+@cindex Chaves, quando usar
 Dependendo do que fazem ou quais argumentos@footnote{A palavra 
 argumento é oriunda da maneira como ela é empregada em matemática e não 
 se refere a uma disputa entre duas pessoas; ela se refere a informação 
@@ -1386,11 +1373,11 @@ Texinfo suporta as marcações normais de encapsulamento utilizados em
 Inglês e em outras linguagens; veja-se @ref{Inserindo Aspas}.
 
 @item
-@cindex Multiple dashes in source
-@cindex Dashes in source
-@cindex Hyphens in source, two or three in a row
-@cindex Em dash, producing
-@cindex En dash, producing
+@cindex Vários traços no fonte
+@cindex Traços no fonte
+@cindex Hífens no fonte, dois ou três em uma linha
+@cindex Travessão, produzindo
+@cindex Em dash, produzir
 Use três hifens em uma linha, @samp{---}, para produzir um traço 
 longo---como esse (chamado um @dfn{travessão}), utilizado para pontuação 
 em sentenças.  Use dois hifens, @samp{--}, para produzir um traço 
@@ -2253,7 +2240,7 @@ contém o texto das permissões de cópia que aparece no manual impresso.
 
 @menu
 * @code{@@titlepage}::                  Crie um título para o documento impresso.
-* @code{@@titlefont @@center @@sp}::    Os comandos @code{@@titlefont}, @code{@@center}, e @code{@@sp}.
+* @code{@@titlefont @@center @@sp}::    Os comandos @code{@@titlefont}, @code{@@center} e @code{@@sp}.
 * @code{@@title @@subtitle @@author}::  Os comandos @code{@@title}, @code{@@subtitle}, e @code{@@author}.
 * Direitos Autorais::                   Como escrever o aviso de direitos autorais e incluir permissões de cópia.
 * Geração de Cabeçalho::          Ligue o cabeçalho de página após as páginas de título e de direitos autorais.
@@ -2327,7 +2314,7 @@ em branco.
 
 
 @node @code{@@titlefont @@center @@sp}
-@subsection @code{@@titlefont}, @code{@@center}, e @code{@@sp}
+@subsection @code{@@titlefont}, @code{@@center} e @code{@@sp}
 
 @anchor{titlefont center sp}@c nome antigo
 @findex titlefont
@@ -7326,7 +7313,7 @@ hacking.
 @end example
 
 @noindent
-produces
+produz
 
 @quotation
 As pessoas as vezes me perguntam se é pecado na Igreja do Emacs usar vi. 
@@ -11735,162 +11722,158 @@ desativar as quebras, mas quer elas em geral, ou vice-versa.
 
 Esse comando não tem efeito, exceto em saídas HTML e @TeX{}.
 
-PAREI
+
 @node @code{@@w}
 @section @code{@@w}@{@var{text}@}: Impedir Quebras de Linha
 
-@anchor{w}@c old name
+@anchor{w}@c nome antigo
 @findex w
-@cindex Line breaks, preventing
+@cindex Quebras de linha, impedindo
 
-@code{@@w@{@var{text}@}} outputs @var{text}, while prohibiting line
-breaks within @var{text}.
+@code{@@w@{@var{texto}@}} produz @var{texto}, ao mesmo tempo que proíbe quebras
+de linha dentro de @var{texto}.
 
-@cindex Non-breakable space, fixed
-@cindex Unbreakable space, fixed
-Thus, you can use @code{@@w} to produce a non-breakable space, fixed at
-the width of a normal interword space:
+@cindex Espaço inquebrável, fixo
+@cindex Inquebrável, espaço fixo
+Assim, você pode usar @code{@@w} para produzir um espaço inquebrável, fixado na
+largura de um espaço normal interpalavras:
 
 @example
-@@w@{ @} @@w@{ @} @@w@{ @} indentation.
+@@w@{ @} @@w@{ @} @@w@{ @} recuo.
 @end example
 
-@noindent produces:
+@noindent produz:
 
 @display
-@w{ } @w{ } @w{ } indentation.
+@w{ } @w{ } @w{ } recuo.
 @end display
 
-The space from @code{@@w@{@w{ }@}}, as well as being non-breakable,
-also will not stretch or shrink.  Sometimes that is what you want, for
-instance if you're doing manual indenting.  However, usually you want
-a normal interword space that does stretch and shrink (in the printed
-output); for that, see the @code{@@tie} command in the next section.
+O espaço oriundo de @code{@@w@{@w{ }@}}, além de ser inquebrável, também não
+estica nem encolhe. Às vezes isso é o que você quer, por exemplo, se estiver
+fazendo recuo manual. No entanto, normalmente você quer um espaço normal
+interpalavra que estica e encolhe (na saída impressa); para isso, veja o
+comando @code{@@tie} na próxima seção.
 @c CONSERTE-ME
-@cindex Hyphenation, preventing
-You can also use the @code{@@w} command to prevent @TeX{} from
-automatically hyphenating a long name or phrase that happens to fall
-near the end of a line.  @command{makeinfo} does not ever hyphenate
-words.
+@cindex Hifenização, impedindo
+Você também pode usar o comando @code{@@w} para impedir que o @TeX{} hifenize
+automaticamente um nome longo ou uma frase que esteja perto do fim de uma
+linha. @command{makeinfo} nunca hifeniza palavras.
 @c CONSERTE-ME
-@cindex Keyword expansion, preventing
-@cindex Version control keywords, preventing expansion of
-@cindex $Id expansion, preventing
-You can also use @code{@@w} to avoid unwanted keyword expansion in
-source control systems.  For example, to literally write @t{@w{$}Id$}
-in your document, use @code{@@w@{$@}Id$}.  This trick isn't effective
-in Info or plain text output, though.
+@cindex Expansão de palavras-chave, impedindo
+@cindex Palavras-chave de controle de versão, impedindo expansão de
+@cindex Expansão de $Id, impedindo
+Você também pode usar @code{@@w} para evitar expansão indesejada de
+palavras-chave em sistemas de controle de fonte. Por exemplo, para escrever
+literalmente @t{@w{$}Id$} no teu documento, use @code{@@w@{$@}Id$}. No entanto,
+esse truque não é eficaz no Info ou na saída de texto simples.
 
 
 @node @code{@@tie}
-@section @code{@@tie@{@}}: Inserting an Unbreakable Space
+@section @code{@@tie@{@}}: Inserindo um Espaço Inquebrável
 
-@anchor{tie}@c old name
+@anchor{tie}@c nome antigo
 @findex tie @r{(unbreakable interword space)}
-@cindex Tied space
-@cindex Non-breakable space, variable
-@cindex Unbreakable space, variable
+@cindex Espaço amarrado
+@cindex Espaço inquebrável, variável
+@cindex Inquebrável, espaço variável
 
-The @code{@@tie@{@}} command produces a normal interword space at which
-a line break may not occur.  Always write it with following (empty)
-braces, as usual for commands used within a paragraph.  Here's an
-example:
+O comando @code{@@tie@{@}} produz um espaço normal interpalavra no qual uma
+quebra de linha possivelmente não ocorra. Sempre escreva-o com as seguintes
+chaves (vazias), como de costume para comandos usados ​​dentro de um
+parágrafo. Aqui está um exemplo:
 
 @example
-@@TeX@{@} was written by Donald E.@@tie@{@}Knuth.
+@@TeX@{@} foi escrito por Donald E.@@tie@{@}Knuth.
 @end example
 
-@noindent produces:
+@noindent produz:
 
 @display
-@TeX{} was written by Donald E.@tie{}Knuth.
+@TeX{} foi escrito por Donald E.@tie{}Knuth.
 @end display
 
-There are two important differences between @code{@@tie@{@}} and
+Existem duas diferenças importantes entre @code{@@tie@{@}} e
 @code{@@w@{@w{ }@}}:
 
 @itemize
 @item
-The space produced by @code{@@tie@{@}} will stretch and shrink slightly
-along with the normal interword spaces in the paragraph; the space
-produced by @code{@@w@{@w{ }@}} will not vary.
+O espaço produzido por @code{@@tie@{@}} será esticado e encolhido ligeiramente
+junto com os espaços normais entre palavras no parágrafo; o espaço produzido
+por @code{@@w@{@w{ }@}} não variará.
 
 @item
-@code{@@tie@{@}} allows hyphenation of the surrounding words, while
-@code{@@w@{@w{ }@}} inhibits hyphenation of those words (for @TeX{}nical
-reasons, namely that it produces an @samp{\hbox}).
-
+@code{@@tie@{@}} permite hifenização das palavras ao redor, enquanto
+@code{@@w@{@w{ }@}} inibe a hifenização dessas palavras (por razões
+@TeX{}nológicas, ou seja, porque produz um @samp{\hbox}).
 @end itemize
 
 
 @node @code{@@sp}
-@section @code{@@sp} @var{n}: Insert Blank Lines
+@section @code{@@sp} @var{n}: Inserir Linhas em Branco
 
-@anchor{sp}@c old name
+@anchor{sp}@c nome antigo
 @findex sp @r{(line spacing)}
-@cindex Space, inserting vertical
-@cindex Blank lines
-@cindex Line spacing
+@cindex Espaço, inserindo vertical
+@cindex Linhas em branco
+@cindex Espaçamento entre linhas
 
-A line beginning with and containing only @code{@@sp @var{n}}
-generates @var{n} blank lines of space in both the printed manual and
-the Info file.  @code{@@sp} also forces a paragraph break.  For
-example,
+Uma linha que começa com e contém somente @code{@@sp @var{n}} gera @var{n}
+linhas de espaço em branco tanto no manual impresso quanto no arquivo Info.
+@code{@@sp} também força uma quebra de parágrafo. Por exemplo,
 
 @example
 @@sp 2
 @end example
 
 @noindent
-generates two blank lines.
+gera duas linhas em branco.
 
-The @code{@@sp} command is most often used in the title page.
+O comando @code{@@sp} é usado mais frequentemente na página de título.
 
 
 @node @code{@@page}
-@section @code{@@page}: Start a New Page
+@section @code{@@page}: Comece uma Nova Página
 
-@anchor{page}@c old name
+@anchor{page}@c nome antigo
 @findex page
-@cindex Page breaks, forcing
+@cindex Quebras de página, forçando
 
-A line containing only @code{@@page} starts a new page in a printed
-manual.  In other formats, without the concept of pages, it starts a
-new paragraph.  A @code{@@page} command is often used in the
-@code{@@titlepage} section of a Texinfo file to start the copyright
-page.
+Uma linha contendo somente @code{@@page} inicia uma nova página em um manual
+impresso. Em outros formatos, sem o conceito de páginas, ele inicia um novo
+parágrafo. Um comando @code{@@page} frequentemente é usado na seção
+@code{@@titlepage} de um arquivo do Texinfo para iniciar a página de direitos
+autorais.
 
 
 @node @code{@@group}
-@section @code{@@group}: Prevent Page Quebras
+@section @code{@@group}: Impedir Quebras de Página
 
-@anchor{group}@c old name
+@anchor{group}@c nome antigo
 @findex group
-@cindex Group (hold text together vertically)
-@cindex Holding text together vertically
-@cindex Vertically holding text together
+@cindex Agrupar (manter texto unido verticalmente)
+@cindex Mantendo texto unido verticalmente
+@cindex Verticalmente, mantendo texto unido
 
-The @code{@@group} command (on a line by itself) is used inside an
-@code{@@example} or similar construct to begin an unsplittable vertical
-group, which will appear entirely on one page in the printed output.
-The group is terminated by a line containing only @code{@@end group}.
-These two lines produce no output of their own, and in the Info file
-output they have no effect at all.
+O comando @code{@@group} (em uma linha dedicada) é usado dentro de um
+@code{@@example} ou construção similar para começar um grupo vertical não
+divisível, que aparecerá inteiramente em uma página na saída impressa. O grupo
+é encerrado por uma linha contendo somente @code{@@end group}. Essas duas
+linhas não produzem saída própria e, na saída do arquivo do Info, elas não tem
+efeito algum.
 
-@c Once said that these environments
-@c turn off vertical spacing between ``paragraphs''.
-@c Also, quotation used to work, but doesn't in texinfo-2.72
-Although @code{@@group} would make sense conceptually in a wide
-variety of contexts, its current implementation works reliably only
-within @code{@@example} and variants, and within @code{@@display},
-@code{@@format}, @code{@@flushleft} and @code{@@flushright}.
-@xref{Citações e Exemplos}.  (What all these commands have in
-common is that each line of input produces a line of output.)  In
-other contexts, @code{@@group} can cause anomalous vertical
-spacing.
+@c Uma vez disse que esses ambientes
+@c desativam espaçamento vertical entre ``parágrafos''.
+@c Também, citação costumava funcionar, mas não no texinfo-2.72
+Embora @code{@@group} faça sentido conceitualmente em uma ampla variedade de
+contextos, a implementação atual dele funciona confiavelmente somente dentro de
+@code{@@example} e variantes, e dentro de @code{@@display}, @code{@@format},
+@code{@@flushleft} e @code{@@flushright}. @xref{Citações e Exemplos}. (O que
+todos esses comandos tem em comum é que cada linha de entrada produz uma linha
+de saída). Em outros contextos, @code{@@group} pode causar espaçamento vertical
+anômalo.
 
 @need 750
-This formatting requirement means that you should write:
+Essa exigência de formatação significa que você deveria escrever:
 
 @example
 @group
@@ -11903,78 +11886,73 @@ This formatting requirement means that you should write:
 @end example
 
 @noindent
-with the @code{@@group} and @code{@@end group} commands inside the
-@code{@@example} and @code{@@end example} commands.
+com os comandos @code{@@group} e @code{@@end group} dentro dos comandos
+@code{@@example} e @code{@@end example}.
 
-The @code{@@group} command is most often used to hold an example
-together on one page.  In this Texinfo manual, more than 100 examples
-contain text that is enclosed between @code{@@group} and @code{@@end
-group}.
+O comando @code{@@group} é mais frequentemente usado para manter um exemplo
+junto em uma página. Neste manual Texinfo, mais de 100 exemplos contém texto
+que é colocado entre @code{@@group} e @code{@@end group}.
 
-If you forget to end a group, you may get strange and unfathomable
-error messages when you run @TeX{}.  This is because @TeX{} keeps
-trying to put the rest of the Texinfo file onto the one page and does
-not start to generate error messages until it has processed
-considerable text.  It is a good rule of thumb to look for a missing
-@code{@@end group} if you get incomprehensible error messages in
-@TeX{}.
+Se você esquecer de encerrar um grupo, poderá receber mensagens de erro
+estranhas e incompreensíveis ao executar @TeX{}. Isso ocorre porque @TeX{}
+continua tentando colocar o restante do arquivo Texinfo em uma página e não
+começa a gerar mensagens de erro até que tenha processado texto considerável. É
+uma boa regra prática procurar por um @code{@@end group} ausente se você
+receber mensagens de erro incompreensíveis no @TeX{}.
 
 
 @node @code{@@need}
-@section @code{@@need @var{mils}}: Prevent Page Quebras
+@section @code{@@need @var{mils}}: Impedir Quebras de Página
 
-@anchor{need}@c old name
+@anchor{need}@c nome antigo
 @findex need
-@cindex Need space at page bottom
-@cindex Mils, argument to @code{@@need}
+@cindex Precisa de espaço no final da página
+@cindex Mils, argumento para @code{@@need}
 
-A line containing only @code{@@need @var{n}} starts a new page in a
-printed manual if fewer than @var{n} mils (thousandths of an inch)
-remain on the current page.  Do not use braces around the argument
-@var{n}.  The @code{@@need} command has no effect on other output
-formats since they are not paginated.
+Uma linha contendo somente @code{@@need @var{n}} inicia uma nova página em um
+manual impresso se menos que @var{n} mils (milésimos de polegada) permanecerem
+na página atual. Não use chaves ao redor do argumento @var{n}. O comando
+@code{@@need} não tem efeito em outros formatos de saída, pois eles não são
+paginados.
 
 @need 800
-This paragraph is preceded by a @code{@@need} command that tells
-@TeX{} to start a new page if fewer than 800 mils (eight-tenths
-inch) remain on the page.  It looks like this:
+Este parágrafo é precedido por um comando @code{@@need} que diz ao @TeX{} para
+iniciar uma nova página se restarem menos que 800 mils (oito décimos de
+polegada) na página. Parece algo assim:
 
 @example
 @group
 @@need 800
-This paragraph is preceded by @dots{}
+Este parágrafo é precedido por @dots{}
 @end group
 @end example
 
-@cindex Orphans, preventing
-The @code{@@need} command is useful for preventing orphans: single
-lines at the bottoms of printed pages.
+@cindex Órfãs, linhas, impedindo
+O comando @code{@@need} é útil para evitar órfãs: linhas únicas na parte
+inferior das páginas impressas.
 
 
 @node Comandos de Definição
 @chapter Comandos de Definição
-@cindex Definition commands
+@cindex Comandos de definição
 
-The @code{@@deffn} command and the other @dfn{definition commands}
-enable you to describe functions, variables, macros, commands, user
-options, special forms and other such artifacts in a uniform
-format.
+O comando @code{@@deffn} e os outros @dfn{comandos de definição} te habilitam a
+descrever funções, variáveis, macros, comandos, opções de usuário(a),
+formulários especiais e outros tais artefatos em um formato uniforme.
 
-In the Info file, a definition causes the entity
-category---`Function', `Variable', or whatever---to appear at the
-beginning of the first line of the definition, followed by the
-entity's name and arguments.  In the printed manual, the command
-causes @TeX{} to print the entity's name and its arguments on the left
-margin and print the category next to the right margin.  In both
-output formats, the body of the definition is indented.  Also, the
-name of the entity is entered into the appropriate index:
-@code{@@deffn} enters the name into the index of functions,
-@code{@@defvr} enters it into the index of variables, and so
-on (@pxref{Índices Predefinidos}).
+No arquivo Info, uma definição faz com que a categoria da
+entidade---`Function', `Variable', ou qualquer outra---apareça no início da
+primeira linha da definição, seguida pelo nome e argumentos da entidade. No
+manual impresso, o comando faz com que o @TeX{} imprima o nome da entidade e os
+argumentos dela na margem esquerda e imprima a categoria próximo da margem
+direita. Em ambos os formatos de saída, o corpo da definição é recuado. Além
+disso, o nome da entidade é inserido no índice apropriado: @code{@@deffn}
+insere o nome no índice de funções, @code{@@defvr} insere-o no índice de
+variáveis, e assim por diante (@pxref{Índices Predefinidos}).
 
-A manual need not and should not contain more than one definition for
-a given name.  An appendix containing a summary should use
-@code{@@table} rather than the definition commands.
+Um manual não precisa e não deveria conter mais que uma definição para um nome
+dado. Um anexo contendo um resumo deveria usar @code{@@table} em vez dos
+comandos de definição.
 
 @menu
 * Modelos de Comando de Definição::                 Escrevendo descrições utilizando comandos de definição.
@@ -11988,104 +11966,96 @@ a given name.  An appendix containing a summary should use
 
 
 @node Modelos de Comando de Definição
-@section The Template for a Definition
-@cindex Definition template
-@cindex Template for a definition
+@section O Modelo Para Uma Definição
+@cindex Definição, modelo
+@cindex Modelo para uma definição
 
-The @code{@@deffn} command is used for definitions of entities that
-resemble functions.  To write a definition using the @code{@@deffn}
-command, write the @code{@@deffn} command at the beginning of a line
-and follow it on the same line by the category of the entity, the name
-of the entity itself, and its arguments (if any).  Then write the body
-of the definition on succeeding lines.  (You may embed examples in the
-body.)  Finally, end the definition with an @code{@@end deffn} command
-written on a line of its own.
+O comando @code{@@deffn} é usado para definições de entidades que se assemelham
+a funções. Para escrever uma definição usando o comando @code{@@deffn}, escreva
+o comando @code{@@deffn} no início de uma linha e siga-o na mesma linha pela
+categoria da entidade, o nome da entidade em si e os argumentos dela (se
+existirem). Em seguida, escreva o corpo da definição nas linhas seguintes.
+(Você pode embutir exemplos no corpo). Finalmente, termine a definição com um
+comando @code{@@end deffn} escrito em uma linha própria.
 
-The other definition commands follow the same format: a line with the
-@code{@@def@dots{}} command and whatever arguments are appropriate for
-that command; the body of the definition; and a corresponding
-@code{@@end} line.
+Os outros comandos de definição seguem o mesmo formato: uma linha com o comando
+@code{@@def@dots{}} e quaisquer argumentos apropriados para esse comando; o
+corpo da definição; e uma linha @code{@@end} correspondente.
 
-The template for a definition looks like this:
+O modelo para uma definição se parece com isto:
 
 @example
 @group
-@@deffn @var{category} @var{name} @var{arguments}@dots{}
-@var{body-of-definition}
+@@deffn @var{categoria} @var{nome} @var{argumentos}@dots{}
+@var{corpo-da-definição}
 @@end deffn
 @end group
 @end example
 
 @need 700
 @noindent
-For example,
+Por exemplo,
 
 @example
 @group
 @@deffn Command forward-word count
-This command moves point forward @@var@{count@} words
-(or backward if @@var@{count@} is negative). @dots{}
+Esse comando move o ponto para frente @@var@{count@} palavras (ou para trás, se
+@@var@{count@} for negativo). @dots{}
 @@end deffn
 @end group
 @end example
 
 @noindent
-produces
+produz
 
 @quotation
 @deffn Command forward-word count
-This command moves point forward @var{count} words
-(or backward if @var{count} is negative). @dots{}
+Esse comando move o ponto para frente @var{count} palavras (ou para trás, se
+@var{count} for negativo). @dots{}
 @end deffn
 @end quotation
 
-Capitalize the category name like a title.  If the name of the
-category contains spaces, as in the phrase `Interactive Command',
-enclose it in braces.  For example:
+Coloque o nome da categoria em maiúsculas como um título. Se o nome da
+categoria contiver espaços, como na frase `Comando Interativo', coloque-o entre
+chaves. Por exemplo:
 
 @example
 @group
-@@deffn @{Interactive Command@} isearch-forward
+@@deffn @{Comando Interativo@} isearch-forward
 @dots{}
 @@end deffn
 @end group
 @end example
 
 @noindent
-Otherwise, the second word will be mistaken for the name of the
-entity.  As a general rule, when any of the arguments in the heading
-line @emph{except} the last one are more than one word, you need to
-enclose them in braces.  This may also be necessary if the text
-contains commands, for example, @samp{@{declaraci@@'on@}} if you are
-writing in Spanish.
+Caso contrário, a segunda palavra será confundida com o nome da entidade. Como
+regra geral, quando quaisquer dos argumentos na linha de título, @emph{exceto}
+o último, forem mais que uma palavra, você precisa colocá-los entre chaves.
+Isso também pode ser necessário se o texto contiver comandos, por exemplo,
+@samp{@{declaraci@@'on@}} se você estiver escrevendo em espanhol.
 
-Some of the definition commands are more general than others.  The
-@code{@@deffn} command, for example, is the general definition command
-for functions and the like---for entities that may take arguments.
-When you use this command, you specify the category to which the
-entity belongs.  Three predefined, specialized variations
-(@code{@@defun}, @code{@@defmac}, and @code{@@defspec}) specify the
-category for you: ``Function'', ``Macro'', and ``Special Form''
-respectively.  (In Lisp, a special form is an entity much like a
-function.)  Similarly, the general @code{@@defvr} command is
-accompanied by several specialized variations for describing
-particular kinds of variables.
+Alguns dos comandos de definição são mais gerais que outros. O comando
+@code{@@deffn}, por exemplo, é o comando geral de definição para funções e
+similares---para entidades que possivelmente recebam argumentos. Quando usa
+esse comando, você especifica a categoria à qual a entidade pertence. Três
+variações predefinidas e especializadas (@code{@@defun}, @code{@@defmac} e
+@code{@@defspec}) especificam a categoria para você: ``Função'', ``Macro'' e
+``Forma Especial'' respectivamente. (Em Lisp, uma forma especial é uma entidade
+muito parecida com uma função). Similarmente, o comando geral @code{@@defvr} é
+acompanhado por diversas variações especializadas para descrever tipos
+particulares de variáveis.
 
-@xref{Definição de Função de Amostra}, for a detailed example of a
-function definition, including the use of @code{@@example} inside the
-definition.
+@xref{Definição de Função de Amostra}, para um exemplo detalhado de uma
+definição de função, incluindo o uso de @code{@@example} dentro da definição.
 
 
 @node Linhas de Continuação de Comando de Definição
-@section Definition Command Continuation Lines
-@cindex Continuation lines in definition commands
-@cindex Definition command headings, continuing
-@cindex @sortas{@@} @samp{@@} as continuation in definition commands @c CONSERTE-ME
-
-The heading line of a definition command can get very long.
-Therefore, Texinfo has a special syntax allowing them to be continued
-over multiple lines of the source file: a lone @samp{@@} at the end of
-each line to be continued.  Here's an example:
+@section Linhas de Continuação de Comando de Definição
+@cindex Linhas de continuação em comandos de definição
+@cindex Cabeçalhos de comando de definição, continuando
+@cindex @sortas{@@} @samp{@@} como continuação em comandos de definição @c CONSERTE-ME
+PAREI
+The heading line of a definition command can get very long. Therefore, Texinfo has a special syntax allowing them to be continued over multiple lines of the source file: a lone @samp{@@} at the end of each line to be continued.  Here's an example:
 
 @example
 @@defun fn-name @@
@@ -12094,7 +12064,7 @@ This is the basic continued defun.
 @@end defun
 @end example
 
-@noindent produces:
+@noindent produz:
 
 @defun fn-name   arg1 arg2 arg3
 This is the basic continued defun.
@@ -12205,7 +12175,7 @@ These two search commands are similar except @dots{}
 @end example
 
 @noindent
-produces
+produz
 
 @deffn {Interactive Command} isearch-forward
 @deffnx {Interactive Command} isearch-backward
@@ -12239,7 +12209,7 @@ The `x' forms work similarly to @code{@@itemx}
 
 
 @node Comandos de Definição em Detalhe
-@section The Comandos de Definição
+@section Os Comandos de Definição
 
 Texinfo provides more than a dozen definition commands, all of which
 are described in this section.
@@ -12475,7 +12445,7 @@ For example,
 @end group
 @end example
 
-produces:
+produz:
 
 @quotation
 @deftypefn {Library Function} int foobar  (int @var{foo}, float @var{bar})
@@ -12736,7 +12706,7 @@ name.  For instance:
 @end group
 @end example
 
-@noindent produces:
+@noindent produz:
 @defcv {Class Option} Window border-pattern
 @dots{}
 @end defcv
@@ -12760,7 +12730,7 @@ is a programming language construct that should be marked with
 @end group
 @end example
 
-@noindent produces:
+@noindent produz:
 
 @deftypecv {Class Option} Window @code{int} border-pattern
 @dots{}
@@ -12783,7 +12753,7 @@ instance:
 @end group
 @end example
 
-@noindent produces:
+@noindent produz:
 
 @defivar Window border-pattern
 @dots{}
@@ -12808,7 +12778,7 @@ is a programming language construct that should be marked with
 @end group
 @end example
 
-@noindent produces:
+@noindent produz:
 
 @deftypeivar Window @code{int} border-pattern
 @dots{}
@@ -12948,7 +12918,7 @@ argument actually is of that type.
 
 
 @node Definição de Função de Amostra
-@section A Sample Function Definition
+@section Uma Definição de Função de Amostra
 @cindex Function definitions
 @cindex Command definitions
 @cindex Macro definitions, programming-language
@@ -14267,7 +14237,7 @@ Together: \p\ & \q\.
 @@foo@{a, b@}
 @end example
 
-@noindent produces:
+@noindent produz:
 
 @display
 Together: a & b.
@@ -14287,7 +14257,7 @@ No arguments here.
 @@argless@{@}
 @end example
 
-@noindent produces:
+@noindent produz:
 
 @display
 No arguments here.
@@ -14387,7 +14357,7 @@ Twice: \p\ & \p\.
 @@bar aah
 @end example
 
-@noindent produces:
+@noindent produz:
 
 @display
 Twice: aah & aah.
@@ -14499,7 +14469,7 @@ may be taken as separating the arguments.  For example,
 @@mactwo@{@@value@{fc@},@}
 @end example
 
-@noindent produces:
+@noindent produz:
 
 @display
 Fran@,cois+.
