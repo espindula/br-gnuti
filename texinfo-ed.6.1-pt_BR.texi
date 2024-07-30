@@ -526,8 +526,8 @@ Os Comandos de Definição
 
 * Comandos de Funções::          Comandos para funções e entidades similares.
 * Comandos de Variáveis::        Comandos para variáveis e entidades similares.
-* Funções Digitadas::            Comandos para funções em linguagens digitadas.
-* Variáveis Digitadas::          Comandos para variáveis em linguagens digitadas.
+* Funções Tipadas::              Comandos para funções em linguagens tipadas.
+* Variáveis ​​Tipadas::            Comandos para variáveis em linguagens tipadas.
 * Tipos de Dados::               O comando de definição para tipos de dados.
 * Objetos Abstratos::            Comandos para programação orientada a objetos.
 
@@ -12055,7 +12055,10 @@ definição de função, incluindo o uso de @code{@@example} dentro da definiç�
 @cindex Cabeçalhos de comando de definição, continuando
 @cindex @sortas{@@} @samp{@@} como continuação em comandos de definição @c CONSERTE-ME
 
-A linha de título de um comando de definição pode ficar muito longa. Portanto, o Texinfo tem uma sintaxe especial que permite que elas sejam continuadas em várias linhas do arquivo fonte: um solitário @samp{@@} no final de cada linha a ser continuada. Aqui está um exemplo:
+A linha de título de um comando de definição pode ficar muito longa. Portanto,
+o Texinfo tem uma sintaxe especial que permite que elas sejam continuadas em
+várias linhas do arquivo fonte: um solitário @samp{@@} no final de cada linha a
+ser continuada. Aqui está um exemplo:
 
 @example
 @@defun fn-name @@
@@ -12071,22 +12074,33 @@ Essa é a defun básica continuada.
 @end defun
 
 @noindent
-Como você pode ver, as linhas contínuas estão combinadas, como se tivessem sido digitadas em uma linha do fonte.
+Como você pode ver, as linhas contínuas estão combinadas, como se tivessem sido
+digitadas em uma linha do fonte.
 
-Embora esse exemplo mostre somente uma continuação de uma linha, as continuações podem se estender por qualquer número de linhas, da mesma forma; coloque um @code{@@} no final de cada linha a ser continuada.
+Embora esse exemplo mostre somente uma continuação de uma linha, as
+continuações podem se estender por qualquer número de linhas, da mesma forma;
+coloque um @code{@@} no final de cada linha a ser continuada.
 
 @cindex Espaço em branco, recolhido em torno de continuações
 @cindex Recolhendo espaços em branco em torno de continuações
-Em geral, qualquer número de espaços ou tabulações antes do caractere de continuação @code{@@} é recolhido em um espaço. Existe uma exceção: os processadores Texinfo não recolherão totalmente espaços em branco em torno de uma continuação dentro de chaves. Por exemplo:
+Em geral, qualquer número de espaços ou tabulações antes do caractere de
+continuação @code{@@} é recolhido em um espaço. Existe uma exceção: os
+processadores Texinfo não recolherão totalmente espaços em branco em torno de
+uma continuação dentro de chaves. Por exemplo:
 
 @example
 @@deffn @{Nome @@
   Categoria@} @dots{}
 @end example
 
-@noindent A saída gerada (não mostrada) tem excesso de espaço entre `Nome' e `Categoria'. Para evitar isso, elimine os espaços em branco indesejados na tua entrada ou coloque a continuação @code{@@} fora das chaves.
+@noindent A saída gerada (não mostrada) tem excesso de espaço entre `Nome' e
+`Categoria'. Para evitar isso, elimine os espaços em branco indesejados na tua
+entrada ou coloque a continuação @code{@@} fora das chaves.
 
-@code{@@} não funciona como um caractere de continuação em @emph{qualquer} outro contexto. Normalmente, @samp{@@} seguido por um caractere de espaço em branco (espaço, tabulação, nova linha) produz um espaço normal interpalavra (@pxref{Espaços Múltiplos}).
+@code{@@} não funciona como um caractere de continuação em @emph{qualquer}
+outro contexto. Normalmente, @samp{@@} seguido por um caractere de espaço em
+branco (espaço, tabulação, nova linha) produz um espaço normal interpalavra
+(@pxref{Espaços Múltiplos}).
 
 
 @node Argumentos Opcionais
@@ -12098,11 +12112,18 @@ Em geral, qualquer número de espaços ou tabulações antes do caractere de con
 @cindex Caracteres meta-sintáticos para argumentos
 
 @c Isto está consistente com o Manual de Referência da Lisp do Emacs.
-Algumas entidades aceitam argumentos opcionais ou repetidos, convencionalmente especificados usando-se colchetes e reticências: um argumento entre colchetes é opcional, e um argumento seguido por reticências é opcional e pode ser repetido mais que uma vez.
+Algumas entidades aceitam argumentos opcionais ou repetidos, convencionalmente
+especificados usando-se colchetes e reticências: um argumento entre colchetes é
+opcional, e um argumento seguido por reticências é opcional e pode ser repetido
+mais que uma vez.
 
-Assim, [@var{argumento-opcional}] significa que @var{argumento-opcional} é opcional e @var{argumentos-repetidos}@code{@dots{}} representa zero ou mais argumentos. Parênteses são usados ​​quando vários argumentos são agrupados em níveis adicionais de estrutura de lista na Lisp.
+Assim, [@var{argumento-opcional}] significa que @var{argumento-opcional} é
+opcional e @var{argumentos-repetidos}@code{@dots{}} representa zero ou mais
+argumentos. Parênteses são usados ​​quando vários argumentos são
+agrupados em níveis adicionais de estrutura de lista na Lisp.
 
-Aqui está a linha @code{@@defspec} de um exemplo de uma forma especial (complicada) imaginária:
+Aqui está a linha @code{@@defspec} de um exemplo de uma forma especial
+(complicada) imaginária:
 
 @quotation
 @defspec foobar (var [from to [inc]]) body@dots{}
@@ -12110,9 +12131,17 @@ Aqui está a linha @code{@@defspec} de um exemplo de uma forma especial (complic
 @end quotation
 
 @noindent
-In this example, the arguments @var{from} and @var{to} are optional, but must both be present or both absent.  If they are present, @var{inc} may optionally be specified as well.  These arguments are grouped with the argument @var{var} into a list, to distinguish them from @var{body}, which includes all remaining elements of the form.
+In this example, the arguments @var{from} and @var{to} are optional, but must
+both be present or both absent.  If they are present, @var{inc} may optionally
+be specified as well.  These arguments are grouped with the argument @var{var}
+into a list, to distinguish them from @var{body}, which includes all remaining
+elements of the form.
 
-Nesse exemplo, os argumentos @var{from} e @var{to} são opcionais, mas ambos precisam estar presentes ou ambos ausentes. Se estiverem presentes, @var{inc} opcionalmente pode ser especificado também. Esses argumentos são agrupados com o argumento @var{var} em uma lista, para distingui-los de @var{body}, que inclui todos os elementos restantes da forma.
+Nesse exemplo, os argumentos @var{from} e @var{to} são opcionais, mas ambos
+precisam estar presentes ou ambos ausentes. Se estiverem presentes, @var{inc}
+opcionalmente pode ser especificado também. Esses argumentos são agrupados com
+o argumento @var{var} em uma lista, para distingui-los de @var{body}, que
+inclui todos os elementos restantes da forma.
 
 Em um arquivo fonte do Texinfo, essa linha @code{@@defspec} é escrita assim:
 
@@ -12133,7 +12162,11 @@ A função está listada no Índice de Comando e Variável sob @samp{foobar}.
 @cindex Agrupando duas definições juntas
 @cindex Definições agrupadas
 
-Para criar duas ou mais linhas `primeira' ou de cabeçalho para uma definição, siga a primeira linha @code{@@deffn} por uma linha começando com @code{@@deffnx}. O comando @code{@@deffnx} funciona exatamente como @code{@@deffn}, exceto que ele não gera espaço em branco vertical extra entre ele e a linha precedente.
+Para criar duas ou mais linhas `primeira' ou de cabeçalho para uma definição,
+siga a primeira linha @code{@@deffn} por uma linha começando com
+@code{@@deffnx}. O comando @code{@@deffnx} funciona exatamente como
+@code{@@deffn}, exceto que ele não gera espaço em branco vertical extra entre
+ele e a linha precedente.
 
 @need 1000
 Por exemplo,
@@ -12174,7 +12207,8 @@ Esses dois comandos de pesquisa são semelhantes, exceto @dots{}
 @findex defunx
 @findex defvarx
 @findex defvrx
-Cada comando de definição tem uma forma `x': @code{@@defunx}, @code{@@defvrx}, @code{@@deftypefunx}, etc.
+Cada comando de definição tem uma forma `x': @code{@@defunx}, @code{@@defvrx},
+@code{@@deftypefunx}, etc.
 
 As formas `x' funcionam similarmente a @code{@@itemx} (@pxref{@code{@@itemx}}).
 
@@ -12182,17 +12216,22 @@ As formas `x' funcionam similarmente a @code{@@itemx} (@pxref{@code{@@itemx}}).
 @node Comandos de Definição em Detalhe
 @section Os Comandos de Definição
 
-Texinfo fornece mais que uma dúzia de comandos de definição, todos estão descritos nesta seção.
+Texinfo fornece mais que uma dúzia de comandos de definição, todos estão
+descritos nesta seção.
 
-Os comandos de definição inserem automaticamente o nome da entidade no índice apropriado: por exemplo, @code{@@deffn}, @code{@@defun} e @code{@@defmac} inserem nomes de funções no índice de funções; @code{@@defvr} e @code{@@defvar} inserem nomes de variáveis ​​no índice de variáveis.
+Os comandos de definição inserem automaticamente o nome da entidade no índice
+apropriado: por exemplo, @code{@@deffn}, @code{@@defun} e @code{@@defmac}
+inserem nomes de funções no índice de funções; @code{@@defvr} e @code{@@defvar}
+inserem nomes de variáveis ​​no índice de variáveis.
 
-Embora os exemplos a seguir ilustrem principalmente Lisp, os comandos podem ser usados ​​para outras linguagens de programação.
+Embora os exemplos a seguir ilustrem principalmente Lisp, os comandos podem ser
+usados ​​para outras linguagens de programação.
 
 @menu
 * Comandos de Funções::          Comandos para funções e entidades similares.
 * Comandos de Variáveis::        Comandos para variáveis e entidades similares.
-* Funções Digitadas::            Comandos para funções em linguagens digitadas.
-* Variáveis Digitadas::          Comandos para variáveis em linguagens digitadas.
+* Funções Tipadas::              Comandos para funções em linguagens tipadas.
+* Variáveis ​​Tipadas::            Comandos para variáveis em linguagens tipadas.
 * Tipos de Dados::               O comando de definição para tipos de dados.
 * Objetos Abstratos::            Comandos para programação orientada a objetos.
 @end menu
@@ -12200,14 +12239,19 @@ Embora os exemplos a seguir ilustrem principalmente Lisp, os comandos podem ser 
 @node Comandos de Funções
 @subsection Funções e Entidades Similares
 
-This section describes the commands for describing functions and similar entities:
-
 Esta seção descreve os comandos para descrever funções e entidades similares:
 
 @table @code
 @findex deffn
 @item @@deffn @var{categoria} @var{nome} @var{argumentos}@dots{}
-O comando @code{@@deffn} é o comando geral de definição para funções, comandos interativos e entidades similares que podem receber argumentos. Você precisa escolher um termo para descrever a categoria da entidade sendo definida; por exemplo, ``Function'' poderia ser usado se a entidade for uma função. O comando @code{@@deffn} é escrito no início de uma linha e é seguido na mesma linha pela categoria da entidade sendo descrita, o nome dessa entidade em particular e os argumentos dela, se existirem. Termine a definição com @code{@@end deffn} em uma linha própria.
+O comando @code{@@deffn} é o comando geral de definição para funções, comandos
+interativos e entidades similares que podem receber argumentos. Você precisa
+escolher um termo para descrever a categoria da entidade sendo definida; por
+exemplo, ``Function'' poderia ser usado se a entidade for uma função. O comando
+@code{@@deffn} é escrito no início de uma linha e é seguido na mesma linha pela
+categoria da entidade sendo descrita, o nome dessa entidade em particular e os
+argumentos dela, se existirem. Termine a definição com @code{@@end deffn} em
+uma linha própria.
 
 @need 750
 Por exemplo, aqui está uma definição:
@@ -12221,11 +12265,20 @@ Move ponto para frente @@var@{nchars@} caracteres.
 @end example
 
 @noindent
-Isso mostra uma definição bastante concisa para um ``comando'' chamado @code{forward-char} com um argumento, @var{nchars}.
+Isso mostra uma definição bastante concisa para um ``comando'' chamado
+@code{forward-char} com um argumento, @var{nchars}.
 
-@code{@@deffn} imprime nomes de argumentos como @var{nchars} em tipo inclinado na saída impressa, porque nós pensamos nesses nomes como variáveis ​​metassintáticas---elas representam os valores reais dos argumentos. No texto da descrição, no entanto, escreva um nome de argumento explicitamente com @code{@@var} para se referir ao valor do argumento. No exemplo acima, nós usamos @samp{@@var@{nchars@}} dessa forma.
+@code{@@deffn} imprime nomes de argumentos como @var{nchars} em tipo inclinado
+na saída impressa, porque nós pensamos nesses nomes como variáveis
+​​metassintáticas---elas representam os valores reais dos argumentos.
+No texto da descrição, no entanto, escreva um nome de argumento explicitamente
+com @code{@@var} para se referir ao valor do argumento. No exemplo acima, nós
+usamos @samp{@@var@{nchars@}} dessa forma.
 
-No caso extremamente incomum quando um nome de argumento contiver @samp{--}, ou outra sequência de caracteres que seja tratada especialmente (@pxref{Convenções}), use @code{@@code} ao redor dos caracteres especiais. Isso evita a conversão para traços de ligação e travessões tipográficos.
+No caso extremamente incomum quando um nome de argumento contiver @samp{--}, ou
+outra sequência de caracteres que seja tratada especialmente
+(@pxref{Convenções}), use @code{@@code} ao redor dos caracteres especiais. Isso
+evita a conversão para traços de ligação e travessões tipográficos.
 @c @var também funciona; isso é o que nós costumávamos recomendar.
 
 O modelo para @code{@@deffn} é:
@@ -12240,7 +12293,9 @@ O modelo para @code{@@deffn} é:
 
 @findex defun
 @item @@defun @var{nome} @var{argumentos}@dots{}
-O comando @code{@@defun} é o comando de definição para funções. @code{@@defun} é equivalente a @samp{@@deffn Função @dots{}}. Termine a definição com @code{@@end defun} em uma linha própria. Assim, o modelo é:
+O comando @code{@@defun} é o comando de definição para funções. @code{@@defun}
+é equivalente a @samp{@@deffn Função @dots{}}. Termine a definição com
+@code{@@end defun} em uma linha própria. Assim, o modelo é:
 
 @example
 @group
@@ -12252,71 +12307,72 @@ O comando @code{@@defun} é o comando de definição para funções. @code{@@def
 
 @findex defmac
 @item @@defmac @var{nome} @var{argumentos}@dots{}
-O comando @code{@@defmac} é o comando de definição para macros. @code{@@defmac} é equivalente a @samp{@@deffn Macro @dots{}} e funciona como @code{@@defun}.
+O comando @code{@@defmac} é o comando de definição para macros. @code{@@defmac}
+é equivalente a @samp{@@deffn Macro @dots{}} e funciona como @code{@@defun}.
 
 @findex defspec
 @item @@defspec @var{nome} @var{argumentos}@dots{}
-O comando @code{@@defspec} é o comando de definição para formas especiais. (Na Lisp, uma forma especial é uma entidade muito parecida com uma função; @pxref{Special Forms,,, elisp, GNU Emacs Lisp Reference Manual}). @code{@@defspec} é equivalente a @samp{@@deffn @{Forma Especial@} @dots{}} e funciona como @code{@@defun}.
+O comando @code{@@defspec} é o comando de definição para formas especiais. (Na
+Lisp, uma forma especial é uma entidade muito parecida com uma função;
+@pxref{Special Forms,,, elisp, GNU Emacs Lisp Reference Manual}).
+@code{@@defspec} é equivalente a @samp{@@deffn @{Forma Especial@} @dots{}} e
+funciona como @code{@@defun}.
 @end table
 
 Todos esses comandos criam entradas no índice de funções.
 
-PAREI
-@node Comandos de Variáveis
-@subsection Variables and Similar Entities
 
-Here are the commands for defining variables and similar
-entities:
+@node Comandos de Variáveis
+@subsection Variáveis ​​e Entidades Similares
+
+Aqui estão os comandos para definir variáveis ​​e entidades similares:
 
 @table @code
 @findex defvr
-@item @@defvr @var{category} @var{name}
-The @code{@@defvr} command is a general definition command for
-something like a variable---an entity that records a value.  You must
-choose a term to describe the category of entity being defined; for
-example, ``Variable'' could be used if the entity is a variable.
-Write the @code{@@defvr} command at the beginning of a line and
-follow it on the same line by the category of the entity and the
-name of the entity.
+@item @@defvr @var{categoria} @var{nome}
+O comando @code{@@defvr} é um comando geral de definição para algo como uma
+variável---uma entidade que registra um valor. Você precisa escolher um termo
+para descrever a categoria da entidade sendo definida; por exemplo,
+``Variável'' poderia ser usado se a entidade for uma variável. Escreva o
+comando @code{@@defvr} no início de uma linha e siga-o na mesma linha pela
+categoria da entidade e o nome da entidade.
 
-We recommend capitalizing the category name like a title.  If the name
-of the category contains spaces, as in the name ``User Option'',
-enclose it in braces.  Otherwise, the second word will be mistaken for
-the name of the entity.  For example,
+Nós recomendamos colocar o nome da categoria em maiúsculas como um título. Se o
+nome da categoria contiver espaços, como no nome ``Opção de Usuário(a)'',
+coloque-o entre chaves. Caso contrário, a segunda palavra será confundida com o
+nome da entidade. Por exemplo,
 
 @example
 @group
-@@defvr @{User Option@} fill-column
-This buffer-local variable specifies
-the maximum width of filled lines.
+@@defvr @{Opção de Usuário(a)@} fill-column
+Essa variável local e de buffer especifica a largura máxima das linhas preenchidas.
 @dots{}
 @@end defvr
 @end group
 @end example
 
-Terminate the definition with @code{@@end defvr} on a line of its
-own.
+Termine a definição com @code{@@end defvr} em uma linha própria.
 
-The template is:
+O modelo é:
 
 @example
 @group
-@@defvr @var{category} @var{name}
-@var{body-of-definition}
+@@defvr @var{categoria} @var{nome}
+@var{corpo-da-definição}
 @@end defvr
 @end group
 @end example
 
-@code{@@defvr} creates an entry in the index of variables for @var{name}.
+@code{@@defvr} cria uma entrada no índice de variáveis ​​para
+@var{nome}.
 
 @findex defvar
-@item @@defvar @var{name}
-The @code{@@defvar} command is the definition command for variables.
-@code{@@defvar} is equivalent to @samp{@@defvr Variable
-@dots{}}.
+@item @@defvar @var{nome}
+O comando @code{@@defvar} é o comando de definição para variáveis.
+@code{@@defvar} é equivalente a @samp{@@defvr Variável @dots{}}.
 
 @need 750
-For example:
+Por exemplo:
 
 @example
 @group
@@ -12326,58 +12382,57 @@ For example:
 @end group
 @end example
 
-The template is:
+O modelo é:
 
 @example
 @group
-@@defvar @var{name}
-@var{body-of-definition}
+@@defvar @var{nome}
+@var{corpo-da-definição}
 @@end defvar
 @end group
 @end example
 
-@code{@@defvar} creates an entry in the index of variables for
-@var{name}.
+@code{@@defvar} cria uma entrada no índice de variáveis ​​para
+@var{nome}.
 
 @findex defopt
-@item @@defopt @var{name}
-@cindex User options, marking
-The @code{@@defopt} command is the definition command for @dfn{user
-options}, i.e., variables intended for users to change according to
-taste; Emacs has many such (@pxref{Variáveis,,, emacs, The GNU Emacs
-Manual}).  @code{@@defopt} is equivalent to @samp{@@defvr @{User
-Option@} @dots{}} and works like @code{@@defvar}.  It creates an entry
-in the index of variables.
+@item @@defopt @var{nome}
+@cindex Opções de usuário(a), marcando
+O comando @code{@@defopt} é o comando de definição para @dfn{opções de
+usuário(a)}, ou seja, variáveis ​​destinadas para usuários(as)
+mudarem de acordo com o gosto; Emacs tem muitas dessas (@pxref{Variables,,,
+emacs, The GNU Emacs Manual}). @code{@@defopt} é equivalente a @samp{@@defvr
+@{Opção de Usuário(a)@} @dots{}} e funciona como @code{@@defvar}. Ele cria uma
+entrada no índice de variáveis.
 @end table
 
 
-@node Funções Digitadas
-@subsection Functions in Typed Languages
+@node Funções Tipadas
+@subsection Funções em Linguagens Tipadas
 
-@cindex Typed functions
-@cindex Functions, in typed languages
+@cindex Funções tipadas
+@cindex Funções, em linguagens tipadas
 
-The @code{@@deftypefn} command and its variations are for describing
-functions in languages in which you must declare types of variables
-and functions, such as C and C++.
+O comando @code{@@deftypefn} e as variações dele são para descrever funções em
+linguagens nas quais você precisa declarar tipos de variáveis ​​e
+funções, como C e C++.
 
 @table @code
 @findex deftypefn
-@item @@deftypefn @var{category} @var{data-type} @var{name} @var{arguments}@dots{}
-The @code{@@deftypefn} command is the general definition command for
-functions and similar entities that may take arguments and that are
-typed.  The @code{@@deftypefn} command is written at the beginning of
-a line and is followed on the same line by the category of entity
-being described, the type of the returned value, the name of this
-particular entity, and its arguments, if any.
+@item @@deftypefn @var{categoria} @var{tipo-dados} @var{nome} @var{argumentos}@dots{}
+O comando @code{@@deftypefn} é o comando geral de definição para funções e
+entidades similares que podem receber argumentos e que são tipadas. O comando
+@code{@@deftypefn} é escrito no início de uma linha e é seguido na mesma linha
+pela categoria da entidade sendo descrita, o tipo do valor retornado, o nome
+dessa entidade em particular e os argumentos dela, se existirem.
 
 @need 800
 @noindent
-For example,
+Por exemplo,
 
 @example
 @group
-@@deftypefn @{Library Function@} int foobar @@
+@@deftypefn @{Função de Biblioteca@} int foobar @@
   (int @@var@{foo@}, float @@var@{bar@})
 @dots{}
 @@end deftypefn
@@ -12387,42 +12442,43 @@ For example,
 produz:
 
 @quotation
-@deftypefn {Library Function} int foobar  (int @var{foo}, float @var{bar})
+@deftypefn {Função de Biblioteca} int foobar  (int @var{foo}, float @var{bar})
 @dots{}
 @end deftypefn
 @end quotation
 
-This means that @code{foobar} is a ``library function'' that returns an
-@code{int}, and its arguments are @var{foo} (an @code{int}) and
-@var{bar} (a @code{float}).
+Isso significa que @code{foobar} é uma ``função de biblioteca'' que retorna um
+@code{int}, e os argumentos dela são @var{foo} (um @code{int}) e @var{bar} (um
+@code{float}).
 
-Since in typed languages, the actual names of the arguments are
-typically scattered among data type names and keywords, Texinfo cannot
-find them without help.  You can either (a)@tie{}write everything as
-straight text, and it will be printed in slanted type; (b)@tie{}use
-@code{@@var} for the variable names, which will uppercase the variable
-names in Info and use the slanted typewriter font in printed output;
-(c)@tie{}use @code{@@var} for the variable names and @code{@@code} for
-the type names and keywords, which will be dutifully obeyed.
+Como em linguagens tipadas, os nomes reais dos argumentos são normalmente
+espalhados entre nomes de tipos de dados e palavras-chave, Texinfo não consegue
+encontrá-los sem ajuda. Você pode (a)@tie{}escrever tudo como texto simples, e
+ele será impresso em tipo inclinado; (b)@tie{}usar @code{@@var} para os nomes
+de variáveis, que colocará os nomes de variáveis ​​em maiúsculas no
+Info e usará a fonte de máquina de escrever inclinada na saída impressa;
+(c)@tie{}usar @code{@@var} para os nomes de variáveis ​​e
+@code{@@code} para os nomes de tipos e palavras-chave, que serão obedientemente
+obedecidos.
 
-The template for @code{@@deftypefn} is:
+O modelo para @code{@@deftypefn} é:
 
 @example
 @group
-@@deftypefn @var{category} @var{data-type} @var{name} @var{arguments} @dots{}
-@var{body-of-description}
+@@deftypefn @var{categoria} @var{tipo-dados} @var{nome} @var{argumentos} @dots{}
+@var{corpo-da-descrição}
 @@end deftypefn
 @end group
 @end example
 
 @noindent
-Note that if the @var{category} or @var{data type} is more than one
-word then it must be enclosed in braces to make it a single argument.
+Observe que se @var{categoria} ou @var{tipo-dados} for mais de uma palavra,
+então ele precisa ser colocado entre chaves para torná-lo um argumento
+unitário.
 
-If you are describing a procedure in a language that has packages,
-such as Ada, you might consider using @code{@@deftypefn} in a manner
-somewhat contrary to the convention described in the preceding
-paragraphs.  For example:
+Se você estiver descrevendo um procedimento em uma linguagem que tenha pacotes,
+como Ada, você pode considerar usar @code{@@deftypefn} de uma maneira um tanto
+contrária à convenção descrita nos parágrafos precedentes. Por exemplo:
 
 @example
 @group
@@ -12435,127 +12491,124 @@ paragraphs.  For example:
 @end example
 
 @noindent
-(In these examples the @code{@@deftypefn} arguments are shown using
-continuations (@pxref{Linhas de Continuação de Comando de Definição}), but could be on a
-single line.)
+(Nesses exemplos os argumentos @code{@@deftypefn} são mostrados usando
+continuações (@pxref{Linhas de Continuação de Comando de Definição}), mas
+poderiam estar em uma linha).
 
-In this instance, the procedure is classified as belonging to the
-package @code{stacks} rather than classified as a `procedure' and its
-data type is described as @code{private}.  (The name of the procedure
-is @code{push}, and its arguments are @var{s} and @var{n}.)
+Nesse caso, o procedimento é classificado como pertencente ao pacote
+@code{stacks} em vez de classificado como um `procedimento' e o tipo de dados
+dele está descrito como @code{private}. (O nome do procedimento é @code{push},
+e os argumentos dele são @var{s} e @var{n}).
 
-@code{@@deftypefn} creates an entry in the index of functions for
-@var{name}.
+@code{@@deftypefn} cria uma entrada no índice de funções para @var{nome}.
 
-@item @@deftypefun @var{data-type} @var{name} @var{arguments}@dots{}
+@item @@deftypefun @var{tipo-dados} @var{nome} @var{argumentos}@dots{}
 @findex deftypefun
-The @code{@@deftypefun} command is the specialized definition command
-for functions in typed languages.  The command is equivalent to
-@samp{@@deftypefn Function @dots{}}.  The template is:
+O comando @code{@@deftypefun} é o comando especializado de definição para
+funções em linguagens tipadas. O comando é equivalente a @samp{@@deftypefn
+Função @dots{}}. O modelo é:
 
 @example
 @group
-@@deftypefun @var{type} @var{name} @var{arguments}@dots{}
-@var{body-of-description}
+@@deftypefun @var{tipo} @var{nome} @var{argumentos}@dots{}
+@var{corpo-da-descrição}
 @@end deftypefun
 @end group
 @end example
 
-@code{@@deftypefun} creates an entry in the index of functions for
-@var{name}.
+@code{@@deftypefun} cria uma entrada no índice de funções para @var{nome}.
 
 @end table
 
-@cindex Return type, own line for
+@cindex Tipo de retorno, linha própria para
 @findex deftypefnnewline
-Ordinarily, the return type is printed on the same line as the
-function name and arguments, as shown above.  In source code, GNU
-style is to put the return type on a line by itself.  So Texinfo
-provides an option to do that: @code{@@deftypefnnewline on}.
+Normalmente, o tipo de retorno é impresso na mesma linha que o nome da função e
+os argumentos, como mostrado acima. No código-fonte, o estilo GNU é o de
+colocar o tipo de retorno em uma linha dedicada. Portanto, Texinfo fornece uma
+opção para fazer isso: @code{@@deftypefnnewline on}.
 
-This affects typed functions only---not untyped functions, not typed
-variables, etc..  Specifically, it affects the commands in this
-section, and the analogous commands for object-oriented languages,
-namely @code{@@deftypeop} and @code{@@deftypemethod}
-(@pxref{Métodos Orientados a Objetos}).
+Isso afeta somente funções tipadas---não funções não tipadas, variáveis
+​​não tipadas, etc.. Especificamente, afeta os comandos nesta seção e
+os comandos análogos para linguagens orientadas a objetos, ou seja,
+@code{@@deftypeop} e @code{@@deftypemethod} (@pxref{Métodos Orientados a
+Objetos}).
 
-Specifying @code{@@deftypefnnewline off} reverts to the default.
+Especificar-se @code{@@deftypefnnewline off} reverte para o padrão.
 
 
-@node Variáveis Digitadas
-@subsection Variables in Typed Languages
+@node Variáveis ​​Tipadas
+@subsection Variáveis ​​em Linguagens Tipadas
 
-@cindex Typed variables
-@cindex Variables, in typed languages
+@cindex Variáveis tipadas
+@cindex Variáveis, em linguagens tipadas
 
-Variables in typed languages are handled in a manner similar to
-functions in typed languages.  @xref{Funções Digitadas}.  The general
-definition command @code{@@deftypevr} corresponds to
-@code{@@deftypefn} and the specialized definition command
-@code{@@deftypevar} corresponds to @code{@@deftypefun}.
+Variáveis ​​em linguagens tipadas são manuseadas de forma similar a
+funções em linguagens tipadas. @xref{Funções Tipadas}. O comando geral de
+definição @code{@@deftypevr} corresponde a @code{@@deftypefn} e o comando
+especializado de definição @code{@@deftypevar} corresponde a
+@code{@@deftypefun}.
 
 @table @code
 @findex deftypevr
-@item @@deftypevr @var{category} @var{data-type} @var{name}
-The @code{@@deftypevr} command is the general definition command for
-something like a variable in a typed language---an entity that records
-a value.  You must choose a term to describe the category of the
-entity being defined; for example, ``Variable'' could be used if the
-entity is a variable.
+@item @@deftypevr @var{categoria} @var{tipo-dados} @var{nome}
+O comando @code{@@deftypevr} é o comando geral de definição para algo como uma
+variável em uma linguagem tipada---uma entidade que registra um valor. Você
+precisa escolher um termo para descrever a categoria da entidade sendo
+definida; por exemplo, ``Variável'' poderia ser usado se a entidade for uma
+variável.
 
-The @code{@@deftypevr} command is written at the beginning of a line
-and is followed on the same line by the category of the entity
-being described, the data type, and the name of this particular
-entity.
+O comando @code{@@deftypevr} é escrito no início de uma linha e é seguido na
+mesma linha pela categoria da entidade sendo descrita, o tipo de dados e o nome
+dessa entidade específica.
 
 @need 800
 @noindent
-For example:
+Por exemplo:
 
 @example
 @group
-@@deftypevr @{Global Flag@} int enable
+@@deftypevr @{Sinalizador Global@} int enable
 @dots{}
 @@end deftypevr
 @end group
 @end example
 
 @noindent
-produces the following:
+produz o seguinte:
 
 @quotation
-@deftypevr {Global Flag} int enable
+@deftypevr {Sinalizador Global} int enable
 @dots{}
 @end deftypevr
 @end quotation
 
 @need 800
-The template is:
+O modelo é:
 
 @example
-@@deftypevr @var{category} @var{data-type} @var{name}
-@var{body-of-description}
+@@deftypevr @var{categoria} @var{tipo-dados} @var{nome}
+@var{corpo-da-descrição}
 @@end deftypevr
 @end example
 
 @findex deftypevar
-@item @@deftypevar @var{data-type} @var{name}
-The @code{@@deftypevar} command is the specialized definition command
-for variables in typed languages.  @code{@@deftypevar} is equivalent
-to @samp{@@deftypevr Variable @dots{}}.  The template is:
+@item @@deftypevar @var{tipo-dados} @var{nome}
+O comando @code{@@deftypevar} é o comando especializado de definição para
+variáveis ​​em linguagens tipadas. @code{@@deftypevar} é equivalente
+a @samp{@@deftypevr Variável @dots{}}. O modelo é:
 
 @example
 @group
-@@deftypevar @var{data-type} @var{name}
-@var{body-of-description}
+@@deftypevar @var{tipo-dados} @var{nome}
+@var{corpo-da-descrição}
 @@end deftypevar
 @end group
 @end example
 @end table
 
-These commands create entries in the index of variables.
+Esses comandos criam entradas no índice de variáveis.
 
-
+PAREI
 @node Tipos de Dados
 @subsection Tipos de Dados
 
@@ -12840,7 +12893,7 @@ to the @code{@@defmethod} command with the addition of the
 @end table
 
 The typed commands are affected by the @code{@@deftypefnnewline}
-option (@pxref{Funções Digitadas,, Functions in Typed Languages}).
+option (@pxref{Funções Tipadas,, Funções em Linguagens Tipadas}).
 
 
 @node Convenções de Comando de Definição
@@ -20228,7 +20281,7 @@ entity, and its arguments, if any.  @xref{Comandos de Definição}.
 @item @@deftypefnnewline @var{on-off}
 Specifies whether return types for @code{@@deftypefn} and similar are
 printed on lines by themselves; default is off.  
-@xref{Funções Digitadas,, Functions in Typed Languages}.
+@xref{Funções Tipadas,, Funções em Linguagens Tipadas}.
 
 @item @@deftypefun @var{data-type} @var{function-name} @var{arguments}@dots{}
 @itemx @@deftypefunx @var{data-type} @var{function-name} @var{arguments}@dots{}
