@@ -363,18 +363,18 @@ Programação Orientada a Objetos
 
 Internacionalização
 
-* @code{@@documentlanguage}::           Declarando a linguagem atual.
+* @code{@@documentlanguage}::           Declarando o idioma atual.
 * @code{@@documentencoding}::           Declarando a codificação de entrada.
 
 Texto Visível Condicionalmente
 
 * Comandos Condicionais::             Texto para um dado formato.
 * Não Comandos Condicionais::         Texto para qualquer outro formato que não um dado.
-* Comandos do Formatador Bruto::      Utilizando comandos crus do formatador.
+* Comandos do Formatador Bruto::      Usando comandos do formatador bruto.
 * Condicionais Inline::               Texto condicional delimitado por chaves.
 * @code{@@set @@clear @@value}::      Testes de variáveis e substituições.
 * Testes para Comandos do Texinfo::   Testando se um comando Texinfo está disponível.
-* Aninhamento Condicional::           Utilizando condicionais dentro de condicionais.
+* Aninhamento Condicional::           Usando condicionais dentro de condicionais.
 
 Sinalizadores: @code{@@set}, @code{@@clear}, condicionais, e @code{@@value}
 
@@ -432,14 +432,14 @@ Formatar com @command{tex}/@command{texindex}
 
 @command{texi2any}: O Tradutor Genérico para Texinfo
 
-* Implementação de Referência::    @command{texi2any}: a implementação de referência.
-* Invocando @command{texi2any}::           Executando o tradutor a partir de um shell.
-* Saída Gerada Impressa do @command{texi2any}::     Chamando @command{texi2any}.
-* Validação de Ponteiro::          Como verificar que os ponteiros apontam para algum lugar.
-* Variáveis de Personalização::     Configurando @command{texi2any}.
-* Internacionalização de Strings do Documento:: Traduzindo texto inserido pelo programa.
-* Invocando @command{pod2texi}::           Traduzindo POD Perl para Texinfo.
-* @command{texi2html}::                   Um ancestral de @command{texi2any}.
+* Implementação de Referência::                  @command{texi2any}: a implementação de referência.
+* Invocando @command{texi2any}::                 Executando o tradutor a partir de um shell.
+* Saída Gerada Impressa do @command{texi2any}::  Chamando @command{texi2any}.
+* Validação de Ponteiro::                        Como verificar se os ponteiros apontam para algum lugar.
+* Variáveis de Personalização::                  Configurando @command{texi2any}.
+* Internacionalização de Strings de Documentos:: Traduzindo texto inserido pelo programa.
+* Invocando @command{pod2texi}::                 Traduzindo POD Perl para Texinfo.
+* @command{texi2html}::                          Um ancestral de @command{texi2any}.
 
 Variáveis de Personalização
 
