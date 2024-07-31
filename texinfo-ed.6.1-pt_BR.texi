@@ -215,46 +215,46 @@ Apêndices
 @detailmenu
  --- A Listagem Detalhada do Nodo ---
 
-Visão geral de Texinfo
+Visão geral do Texinfo
 
-* Relatando Bugs::              Submetendo relatórios efetivos de bugs.
-* Formatos de Saída::              Visão geral dos formatos de saída suportados.
-* Arquivos do Info::                  O que é um arquivo Info?
-* Livros Impressos::               Característica de um livro impresso ou manual.
-* Adicionando Formatos de Saída::       Páginas de manual e implementando novos formatos.
+* Informando Defeitos::           Submetendo relatórios efetivos de bugs.
+* Formatos de Saída::             Visão geral dos formatos de saída suportados.
+* Arquivos do Info::              O que é um arquivo Info?
+* Livros Impressos::              Característica de um livro impresso ou manual.
+* Adicionando Formatos de Saída:: Páginas de manual e implementando novos formatos.
 * Histórico::                     Agradecimentos, contribuidores e gênese.
 
-Escrevendo um Arquivo Texinfo
+Escrevendo um Arquivo do Texinfo
 
-* Sintaxe de Comando::              Comandos @@ são utilizados para formatação.
-* Convenções::                 Regras gerais para se escrever um arquivo Texinfo.
-* Comentários::                    Escrevendo comentários e texto ignorado em geral.
-* Mínimo::                     O que um arquivo Texinfo deve ter.
-* Amostra Curta::                Um arquivo curto Texinfo de amostra.
+* Sintaxe de Comando::            Comandos @@ são utilizados para formatação.
+* Convenções::                    Regras gerais para se escrever um arquivo Texinfo.
+* Comentários::                   Escrevendo comentários e texto ignorado em geral.
+* Mínimo::                        O que um arquivo Texinfo deve ter.
+* Amostra Curta::                 Um arquivo curto Texinfo de amostra.
 
 Iniciando e Finalizando um Arquivo Texinfo
 
-* Inicialização de Amostra::            Um início de amostra para um arquivo Texinfo.
-* Cabeçalho do Arquivo do Texinfo::         As primeiras linhas.
-* Permissões do Documento::        Assegurando-se de que seu manual é livre.
-* Página de Título e Página de Direitos Autorais::  Criando as páginas de título e de direitos autorais.
-* Conteúdo::                    Como criar uma tabela do conteúdo.
-* O Nodo Top::                Criando o nodo `Top' e o menu principal.
-* Comandos Globais de Documento::    Afetando a formatação ao longo do documento.
-* Finalizando um Arquivo::               O que está ao final de um arquivo Texinfo?
+* Inicialização de Amostra::                       Um início de amostra para um arquivo Texinfo.
+* Cabeçalho do Arquivo do Texinfo::                As primeiras linhas.
+* Permissões do Documento::                        Assegurando-se de que seu manual é livre.
+* Página de Título e Página de Direitos Autorais:: Criando as páginas de título e de direitos autorais.
+* Conteúdo::                                       Como criar uma tabela do conteúdo.
+* O Nodo Top::                                     Criando o nodo `Top' e o menu principal.
+* Comandos Globais de Documento::                  Afetando a formatação ao longo do documento.
+* Finalizando um Arquivo::                         O que está ao final de um arquivo Texinfo?
 
-Cabeçalho de Arquivo Texinfo
+Cabeçalho do Arquivo Texinfo
 
-* Primeira Linha::                  A primeira linha de um arquivo Texinfo.
-* Início de Cabeçalho::             Formatar uma região exige isso.
-* @code{@@setfilename}::                Informe a Info o nome do arquivo Info.
-* @code{@@settitle}::                   Crie um título para o trabalho impresso.
-* Fim de Cabeçalho::               Formatar uma região exige isso.
+* Primeira Linha::                A primeira linha de um arquivo Texinfo.
+* Início de Cabeçalho::           Formatar uma região exige isso.
+* @code{@@setfilename}::          Informe a Info o nome do arquivo Info.
+* @code{@@settitle}::             Crie um título para o trabalho impresso.
+* Fim de Cabeçalho::              Formatar uma região exige isso.
 
 Permissões de Documento
 
-* @code{@@copying}::                    Declare as permissões de cópia do documento.
-* @code{@@insertcopying}::              Onde inserir as permissões.
+* @code{@@copying}::              Declare as permissões de cópia do documento.
+* @code{@@insertcopying}::        Onde inserir as permissões.
 
 Páginas de Título e de Direitos Autorais
 
@@ -280,24 +280,24 @@ Comandos Globais de Documento
 
 Nodos
 
-* Estrutura do Documento Texinfo::  Como os manuais Texinfo normalmente são organizados.
-* Nomes de Nodo::                  Como escolher nomes de nodo.
-* Escrevendo um Nodo::              Como escrever uma linha @code{@@node}.
-* Exigências de Linha de Nodo::      Mantenha os nomes únicos.
-* Primeiro Nodo::                  Como escrever um nodo `Top'.
-* Comando @code{@@top}::                Como usar o comando @code{@@top}.
-* Ilustração do Menu do Nodo::      Um diagrama, e menus e nodos de amostra.
-* Criação de Ponteiros do @command{makeinfo}::   Permitindo que makeinfo determine os ponteiros de nodo.
-* Menus::                       Listando nodos subordinados.
+* Estrutura do Documento Texinfo::             Como os manuais Texinfo normalmente são organizados.
+* Nomes de Nodo::                              Como escolher nomes de nodo.
+* Escrevendo um Nodo::                         Como escrever uma linha @code{@@node}.
+* Exigências de Linha de Nodo::                Mantenha os nomes únicos.
+* Primeiro Nodo::                              Como escrever um nodo `Top'.
+* Comando @code{@@top}::                       Como usar o comando @code{@@top}.
+* Ilustração do Menu do Nodo::                 Um diagrama, e menus e nodos de amostra.
+* Criação de Ponteiros do @command{makeinfo}:: Permitindo que makeinfo determine os ponteiros de nodo.
+* Menus::                                      Listando nodos subordinados.
 
 Menus
 
-* Escrevendo um Menu::          O que é um menu?
-* Exemplo de Menu::             Entradas de menu de duas e três partes
-* Localização de Menu::         Menus vão ao final de nodos
-* Partes de Menu::              Uma entrada de menu tem três partes
-* Entrada de Menu Menos Desordenada::   Entrada de menu de duas partes
-* Outros Arquivos Info::        Como se referir a um arquivo Info diferente
+* Escrevendo um Menu::                O que é um menu?
+* Exemplo de Menu::                   Entradas de menu de duas e três partes
+* Local de Menu::                     Menus vão ao final de nodos
+* Partes de Menu::                    Uma entrada de menu tem três partes
+* Entrada de Menu Menos Desordenada:: Entrada de menu de duas partes
+* Outros Arquivos Info::              Como se referir a um arquivo Info diferente
 
 Estruturamento de Capítulo
 
@@ -340,7 +340,7 @@ Referências cruzadas
 * Exemplos @code{@@url}::           Exemplos da utilização de todas as formas do @code{@@url}.
 * Quebra de Linha de URL::       Como as linhas são quebradas dentro do texto do @code{@@url}.
 * Formato de Saída PDF @code{@@url}::  Uma opção especial para ocultar links na saída PDF.
-* Cores de PDF::              Colorindo urls e outros links na saída PDF.
+* Cores do PDF::              Colorindo urls e outros links na saída PDF.
 
 Marcando Texto, Palavras e Frases
 
@@ -372,9 +372,9 @@ Enfatizando Texto
 * Capitalização Pequena::        Como utilizar a fonte capitalização pequena.
 * Fontes::                       Comandos variados de fonte para saída impressa.
 
-Encapsulamentos e Exemplos
+Citações e Exemplos
 
-* Comandos de Inclusão de Blocos::    Construtores diferentes para propósitos diferentes.
+* Comandos de Fechamento de Bloco::    Construtores diferentes para propósitos diferentes.
 * @code{@@quotation}::                Escrevendo uma citação.
 * @code{@@indentedblock}::            Bloco de texto recuado a esquerda.
 * @code{@@example}::                  Escrevendo um exemplo em uma fonte de largura fixa.
@@ -412,7 +412,7 @@ Fazendo uma Tabela de Duas Colunas
 
 Exibições Especiais
 
-* Flutuadores::                  Figuras, tabelas, e afins.
+* Flutuações::                  Figuras, tabelas, e afins.
 * Imagens::                      Incluindo gráficos e imagens.
 * Notas de Rodapé::              Escrevendo notas de rodapé.
 
@@ -475,7 +475,7 @@ Inserindo Espaço
 * @code{@@frenchspacing}::          Especificando espaçamento de fim de frase.
 * @code{@@dmn}::                    Formatando uma dimensão.
 
-Símbolos para Texto
+Glifos para Texto
 
 * @code{@@TeX @@LaTeX}::                As logomarcas do @TeX{}.
 * @code{@@copyright}::                  O símbolo de direitos autorais (c em um círculo).
@@ -488,7 +488,7 @@ Símbolos para Texto
 * @code{@@minus}::                      Como inserir um sinal de menos.
 * @code{@@geq @@leq}::                  Como inserir os sinais maior/menor que ou igual a.
 
-Símbolos para Programação
+Glifos para Programação
 
 * Sumário de Glifos::
 * @code{@@result}::                     Como exibir o resultado da expressão.
@@ -527,31 +527,31 @@ Os Comandos de Definição
 * Comandos de Funções::          Comandos para funções e entidades similares.
 * Comandos de Variáveis::        Comandos para variáveis e entidades similares.
 * Funções Tipadas::              Comandos para funções em linguagens tipadas.
-* Variáveis ​​Tipadas::            Comandos para variáveis em linguagens tipadas.
+* Variáveis Tipadas::            Comandos para variáveis em linguagens tipadas.
 * Tipos de Dados::               O comando de definição para tipos de dados.
 * Objetos Abstratos::            Comandos para programação orientada a objetos.
 
 Programação Orientada a Objetos
 
-* Variáveis Orientadas a Objetos::   Variáveis Orientadas a Objetos.
-* Métodos Orientados a Objetos::     Métodos Orientados a Objetos.
+* Variáveis:   Variáveis Orientadas a Objetos.
+* Métodos:     Métodos Orientados a Objetos.
 
 Internacionalização
 
-* @code{@@documentlanguage}::           Declarando a linguagem atual.
+* @code{@@documentlanguage}::           Declarando o idioma atual.
 * @code{@@documentencoding}::           Declarando a codificação de entrada.
 
 Texto Visível Condicionalmente
 
 * Comandos Condicionais::             Texto para um dado formato.
 * Não Comandos Condicionais::         Texto para qualquer outro formato que não um dado.
-* Comandos do Formatador Bruto::      Utilizando comandos crus do formatador.
+* Comandos do Formatador Bruto::      Usando comandos do formatador bruto.
 * Condicionais Inline::               Texto condicional delimitado por chaves.
 * @code{@@set @@clear @@value}::      Testes de variáveis e substituições.
 * Testes para Comandos do Texinfo::   Testando se um comando Texinfo está disponível.
-* Aninhamento Condicional::           Utilizando condicionais dentro de condicionais.
+* Aninhamento Condicional::           Usando condicionais dentro de condicionais.
 
-Parâmetros: @code{@@set}, @code{@@clear}, condicionais, e @code{@@value}
+Sinalizadores: @code{@@set}, @code{@@clear}, condicionais, e @code{@@value}
 
 * @code{@@set @@value}::                 Expandir uma variável de parâmetro para uma sequência de caracteres.
 * @code{@@ifset @@ifclear}::             Formatar uma região se um parâmetro estiver configurado.
@@ -561,27 +561,25 @@ Parâmetros: @code{@@set}, @code{@@clear}, condicionais, e @code{@@value}
 Definindo Novos Comandos Texinfo
 
 * Definindo Macros::             Definindo e indefinindo novos comandos.
-* Invoking Macros::             Utilizando uma macro, uma vez que se definiu uma.
-* Macro Details::               Limitações das macros Texinfo.
+* Invocando Macros::             Utilizando uma macro, uma vez que se definiu uma.
+* Detalhes de Macro::               Limitações das macros Texinfo.
 * @code{@@alias}::                      Apelidos de comandos.
 * @code{@@definfoenclose}::             Salientamento personalizado.
-* External Macro Processors::   Diretivas @code{#line}.
+* Processadores Externos de Macro::   Diretivas @code{#line}.
 
 Processadores Externos de Macro: Diretivas de Linha
 
 * Diretiva @samp{#line}::
-* @samp{#line} e @TeX{}::
-* Detalhes da Sintaxe @samp{#line}::
+* Tex: @samp{#line} e @TeX{}.
+* Sintaxe: Detalhes da Sintaxe @samp{#line}.
 
-Arquivos Include
+Arquivos de Inclusão
 
-* Using Arquivos Include::         Como utilizar o comando @code{@@include}.
-* @code{texinfo-multiple-files-update}:: Como criar e atualizar nodos e 
-menus quando da utilização de arquivos included.
-* Arquivos Include Requirements::  Exigências @code{texinfo-multiple-files-update}.
-* Sample Include File::         Um arquivo exterior de amostra com 
-arquivos included dentro dele; e um arquivo included de amostra.
-* Arquivos Include Evolution::     Como a utilização do comando @code{@@include} mudou ao longo do tempo.
+* Usando Arquivos de Inclusão::         Como utilizar o comando @code{@@include}.
+* @code{texinfo-multiple-files-update}:: Como criar e atualizar nodos e menus quando da utilização de arquivos included.
+* Exigências dos Arquivos de Inclusão::  Exigências @code{texinfo-multiple-files-update}.
+* Arquivo de Inclusão de Amostra::         Um arquivo exterior de amostra com arquivos included dentro dele; e um arquivo included de amostra.
+* Evolução dos Arquivos de Inclusão::     Como a utilização do comando @code{@@include} mudou ao longo do tempo.
 
 Formatando e Imprimindo Cópia Impressa
 
@@ -604,130 +602,130 @@ Formatando e Imprimindo Cópia Impressa
 
 Formatar com @command{tex}/@command{texindex}
 
-* Formatting Partial Documents::
+* Formatando Documentos Parciais::
 * Detalhes de @command{texindex}::
 
 @command{texi2any}: O Tradutor Genérico para Texinfo
 
-* Reference Implementation::    @command{texi2any}: a implementação de referência.
-* Invoking @command{texi2any}::           Executando o tradutor a partir de um shell.
-* @command{texi2any} Printed Output::     Chamando @command{texi2any}.
-* Pointer Validation::          Como verificar que os ponteiros apontam para algum lugar.
-* Customization Variables::     Configurando @command{texi2any}.
-* Internacionalização of Document Strings:: Traduzindo texto inserido pelo programa.
-* Invoking @command{pod2texi}::           Traduzindo POD Perl para Texinfo.
-* @command{texi2html}::                   Um ancestral de @command{texi2any}.
+* Implementação de Referência::                  @command{texi2any}: a implementação de referência.
+* Invocando @command{texi2any}::                 Executando o tradutor a partir de um shell.
+* Saída Gerada Impressa do @command{texi2any}::  Chamando @command{texi2any}.
+* Validação de Ponteiro::                        Como verificar se os ponteiros apontam para algum lugar.
+* Variáveis de Personalização::                  Configurando @command{texi2any}.
+* Internacionalização de Strings de Documentos:: Traduzindo texto inserido pelo programa.
+* Invocando @command{pod2texi}::                 Traduzindo POD Perl para Texinfo.
+* @command{texi2html}::                          Um ancestral de @command{texi2any}.
 
 Variáveis de Personalização
 
-* Variáveis de Personalização para Comandos @code{@@}::
-* Variáveis e Opções de Personalização::
-* Variáveis de Personalização de HTML::
-* Outras Variáveis de Personalização::
+* Comandos: Variáveis de Personalização para Comandos @@.
+* Opções: Variáveis e Opções de Personalização.
+* HTML: Variáveis de Personalização de HTML.
+* Outras: Outras Variáveis de Personalização.
 
 Criando e Instalando Arquivos Info
 
-* Creating an Info File::
+* Criando um Arquivo Info::
 * Instalando Um Arquivo Info::
 
 Criando um Arquivo Info
 
-* @command{makeinfo} Advantages::         @command{makeinfo} provê melhor verificação de erro.
-* @code{makeinfo} in Emacs::           Como executar @code{makeinfo} a partir do Emacs.
+* Vantagens do @command{makeinfo}::         @command{makeinfo} provê melhor verificação de erro.
+* @code{makeinfo} no Emacs::           Como executar @code{makeinfo} a partir do Emacs.
 * Comandos @code{texinfo-format}::     Dois comandos de formatação Info escritos em Emacs Lisp são uma alternativa a @code{makeinfo}.
-* Batch Formatting::            Como formatar para Info em modo de lote Emacs.
-* Tag and Split Files::         Como os arquivos marcados e divididos ajudam Info a executar melhor.
+* Formatação de Lote::            Como formatar para Info em modo de lote Emacs.
+* Arquivos de Etiqueta e de Divisão::         Como os arquivos marcados e divididos ajudam Info a executar melhor.
 
 Instalando um Arquivo Info
 
-* Directory File::              O menu de nível superior para todos os arquivos Info.
-* New Info File::               Listando um novo arquivo Info.
-* Other Info Directories::      Como especificar arquivos Info que estão localizados em outros diretórios.
-* Installing Dir Entries::      Como especificar qual entrada de menu adicionar ao diretório Info.
-* Invoking @command{install-info}::       Opções @code{install-info}.
+* Arquivo de Diretório::              O menu de nível superior para todos os arquivos Info.
+* Novo Arquivo Info::               Listando um novo arquivo Info.
+* Outros Diretórios Info::      Como especificar arquivos Info que estão localizados em outros diretórios.
+* Instalando Entradas de Diretório::      Como especificar qual entrada de menu adicionar ao diretório Info.
+* Invocando @command{install-info}::       Opções @code{install-info}.
 
 Gerando HTML
 
-* HTML Translation::       Detalhes da saída HTML.
-* HTML Splitting::         Como a saída HTML é dividida.
-* HTML CSS::               Influenciando saída HTML com Cascading Style Sheets.
-* HTML Xref::              Referências cruzadas em saída HTML.
+* Tradução de HTML::       Detalhes da saída HTML.
+* Divisão de HTML::         Como a saída HTML é dividida.
+* CSS de HTML::               Influenciando saída HTML com Cascading Style Sheets.
+* Xref de HTML::              Referências cruzadas em saída HTML.
 
 Referências Cruzadas HTML
 
 * Básicos de Links:    Básico do Link HTML Xref.
 * Expansão de Nodo:    Expansão de Nome de Nodo HTML Xref.
 * Expansão de Comando: Expansão de Comando HTML Xref.
-* Expansão de 8 bits:  Expansão de Caractere de 8 Bits HTML Xref.
+* Expansão de 8 bits:  Expansão de Caractere de 8 bits HTML Xref.
 * Incompatibilidade:   Incompatibilidade de Xref HTML.
 * Configuração:        Configuração HTML Xref. htmlxref.cnf.
 * Preservando links:   Preservação de Link HTML Xref. MANUAL-noderename.cnf.
 
 Arquivos de Amostra Texinfo
 
-* Short Sample Texinfo File::
-* GNU Sample Texts::
-* Verbatim Copying License::
-* All-permissive Copying License::
+* Arquivo Curto de Amostra do Texinfo::
+* Textos GNU de Amostra::
+* Licença de Cópia Literal::
+* Licença de Cópia Totalmente Permissiva::
 
-Utilizando o Modo Texinfo
+Usando o Modo Texinfo
 
-* Modo Texinfo Visão Geral::       Como o modo Texinfo pode te ajudar.
-* Emacs Editing::               Adições do modo Texinfo às características de propósito geral de edição do GNU Emacs.
-* Inserting::                   Como inserir comandos @code{@@@@} utilizados frequentemente.
-* Showing the Structure::       Como exibir a estrutura de um arquivo.
+* Visão Geral do Modo Texinfo::       Como o modo Texinfo pode te ajudar.
+* Edição Emacs::               Adições do modo Texinfo às características de propósito geral de edição do GNU Emacs.
+* Inserindo::                   Como inserir comandos @code{@@@@} utilizados frequentemente.
+* Mostrando a Estrutura::       Como exibir a estrutura de um arquivo.
 * Atualizando Nodos e Menus::    Como atualizar ou criar novos nodos e menus.
-* Info Formatting::             Como formatar para Info.
-* Printing::                   Como formatar e imprimir parte ou tudo de um arquivo.
-* Modo Texinfo Summary::        Sumário de todos os comandos do modo Texinfo.
+* Formatação Info::             Como formatar para Info.
+* Impressão::                   Como formatar e imprimir parte ou tudo de um arquivo.
+* Sumário do Modo Texinfo::        Sumário de todos os comandos do modo Texinfo.
 
 Atualizando Nodos e Menus
 
-* Updating Commands::           Cinco principais comandos de atualização.
-* Updating Requirements::       Como estruturar um arquivo Texinfo para a utilização do comando de atualizar.
-* Other Updating Commands::     Como endentar descrições, inserir linhas de nodos que faltam, e atualizar nodos em sequência.
+* Atualizando Comandos::           Cinco principais comandos de atualização.
+* Atualizando Exigências::       Como estruturar um arquivo Texinfo para a utilização do comando de atualizar.
+* Outros Comandos de Atualização::     Como endentar descrições, inserir linhas de nodos que faltam, e atualizar nodos em sequência.
 
 Cabeçalhos de Página
 
-* Cabeçalhos Introduced::         Convenções para se utilizar cabeçalhos de página.
-* Heading Format::              Formatos padrão de cabeçalhos de página.
-* Heading Choice::              Como especificar o tipo do cabeçalho de página.
-* Custom Cabeçalhos::             Como criar seus próprios cabeçalhos e rodapés.
+* Cabeçalhos Introduzidos::         Convenções para se utilizar cabeçalhos de página.
+* Formato do Título::              Formatos padrão de títulos de página.
+* Escolha do Título::              Como especificar o tipo do título da página.
+* Cabeçalhos Personalizados::             Como criar seus próprios cabeçalhos e rodapés.
 
 Capturando Erros
 
-* @command{makeinfo} Preferred::          @code{makeinfo} encontra erros.
-* Debugging with Info::         Como capturar erros com a formatação Info.
-* Debugging with @TeX{}::          Como capturar erros com a formatação @TeX{}.
-* Using @code{texinfo-show-structure}:: Como se utilizar @code{texinfo-show-structure}.
-* Using @code{occur}::                 Como listar todas as linhas contendo um modelo.
-* Running @code{Info-validate}::       Como encontrar nodos mal referenciados.
+* @command{makeinfo} Preferido::          @code{makeinfo} encontra erros.
+* Depurando com Info::         Como capturar erros com a formatação Info.
+* Depurando com @TeX{}::          Como capturar erros com a formatação @TeX{}.
+* Usando @code{texinfo-show-structure}:: Como se usar @code{texinfo-show-structure}.
+* Usando @code{occur}::                 Como listar todas as linhas contendo um modelo.
+* Executando @code{Info-validate}::       Como encontrar nodos mal referenciados.
 
 Encontrando Nodos Mal Referenciados
 
-* Using @code{Info-validate}::         Como executar @code{Info-validate}.
-* Unsplit::                     Como criar um arquivo não dividido.
-* Tagifying::                   Como etiquetar um arquivo.
-* Splitting::                   Como dividir um arquivo manualmente.
+* Usando @code{Info-validate}::         Como executar @code{Info-validate}.
+* Desdividir::                     Como criar um arquivo não dividido.
+* Etiquetando::                   Como etiquetar um arquivo.
+* Dividindo::                   Como dividir um arquivo manualmente.
 
 Especificação de Formato Info
 
-* General:: Desenho Geral do Formato Info.
-* Text::    Construtores de Texto do Formato Info.
+* Geral:: Desenho Geral do Formato Info.
+* Texto::    Construtores de Texto do Formato Info.
 
 Desenho Geral do Formato Info
 
-* Whole::           Manual Completo do Formato Info. Manuais split vs.@: nonsplit.
-* Preamble::        Preâmbulo do Formato Info.
-* Indirect::        Tabela Indireta do Formato Info.
-* Tag table::       Tabela de Etiquetas do Formato Info.
-* Local variables:: Variáveis Local do Formato Info.
-* Regular Nodos::   Nodos Regulares do Formato Info.
+* Inteiro::           Manual Completo do Formato Info. Manuais split vs.@: nonsplit.
+* Preâmbulo::        Preâmbulo do Formato Info.
+* Indireto::        Tabela Indireta do Formato Info.
+* Tabela de etiquetas::       Tabela de Etiquetas do Formato Info.
+* Variáveis locais:: Variáveis Local do Formato Info.
+* Nodos regulares::   Nodos Regulares do Formato Info.
 
 Construtores de Texto do Formato Info
 
 * Menu::  Menu do Formato Info.
-* Image:: Imagem do Formato Info.
+* Imagem:: Imagem do Formato Info.
 * Printindex:: Imprime índices do Formato Info.
 * Xref::  Referências Cruzadas do Formato Info.
 
@@ -2673,7 +2671,7 @@ ignorados.
 Você precisa incluir os comandos 
 @code{@@set@dots{}contentsaftertitlepage} logo no documento (logo após 
 @code{@@setfilename}, por exemplo).   Recomenda-se utilizar 
-@command{texi2dvi} (veja-se @ref{Format with @command{texi2dvi}}) para 
+@command{texi2dvi} (veja-se @ref{Formatar com @command{texi2dvi}}) para 
 especificar isso sem nenhuma alteração do arquivo fonte.   Por exemplo:
 
 @example
@@ -12991,362 +12989,355 @@ Variáveis ​​comuns e opções de usuário(a) são descritas usando um
 formato semelhante àquele para funções, exceto que variáveis ​​não
 recebem argumentos.
 
-PAREI
+
 @node Internacionalização
 @chapter Internacionalização
 
 @cindex Internacionalização
-Texinfo has some support for writing in languages other than English,
-although this area still needs considerable work.  (If you are
-yourself helping to translate the fixed strings written to documents,
-@pxref{Internacionalização of Document Strings}.)
+Texinfo tem algum suporte para escrita em outros idiomas além do inglês, embora
+essa área ainda precise de trabalho considerável. (Se você mesmo(a) estiver
+ajudando a traduzir as strings fixas escritas em documentos,
+@pxref{Internacionalização de Strings de Documentos}).
 
-For a list of the various accented and special characters Texinfo
-supports, see @ref{Inserindo Acentos}.
+Para uma lista dos vários caracteres acentuados e especiais que Texinfo
+suporta, veja-se @ref{Inserindo Acentos}.
 
 @menu
-* @code{@@documentlanguage}::           Declaring the current language.
-* @code{@@documentencoding}::           Declaring the input encoding.
+* @code{@@documentlanguage}::           Declarando o idioma atual.
+* @code{@@documentencoding}::           Declarando a codificação de entrada.
 @end menu
 
 
 @node @code{@@documentlanguage}
-@section @code{@@documentlanguage @var{ll}[_@var{cc}]}: Set the Document Language
+@section @code{@@documentlanguage @var{ll}[_@var{CC}]}: Configurar Idioma do Documento
 @anchor{documentlanguage}
 
 @findex documentlanguage
-@cindex Language, declaring
-@cindex Locale, declaring
-@cindex Document language, declaring
+@cindex Idioma, declarando
+@cindex Localidade, declarando
+@cindex Idioma do documento, declarando
 
-The @code{@@documentlanguage} command declares the current document
-locale.  Write it on a line by itself, near the beginning of the file.
+O comando @code{@@documentlanguage} declara a localidade atual do documento.
+Escreva-o em uma linha dedicada, perto do começo do arquivo.
 
 @example
-@@documentlanguage @var{ll}[_@var{cc}]
+@@documentlanguage @var{ll}[_@var{CC}]
 @end example
 
-Include a two-letter ISO@tie{}639-2 language code (@var{ll}) following
-the command name, optionally followed by an underscore and two-letter
-ISO@tie{}3166 two-letter country code (@var{cc}).  If you have a
-multilingual document, the intent is to be able to use this command
-multiple times, to declare each language change.  If the command is
-not used at all, the default is @code{en_US} for US English.
+Inclua um código de idioma ISO@tie{}639-2 de duas letras (@var{ll}) seguindo o
+nome do comando, opcionalmente seguido por um sublinhado e um código de país
+ISO@tie{}3166 de duas letras (@var{CC}). Se você tiver um documento multi
+idioma, a intenção é a de poder usar esse comando várias vezes para declarar
+cada mudança de idioma. Se o comando não for usado, o padrão é @code{en_US}
+para inglês dos Estados Unidos da América do Norte.
 
-As with GNU Gettext (@pxref{Top,,, gettext, Gettext}), if the country
-code is omitted, the main dialect is assumed where possible.  For
-example, @code{de} is equivalent to @code{de_DE} (German as spoken in
-Germany).
+Assim como com GNU Gettext (@pxref{Top,,, gettext, Gettext}), se o código do
+país for omitido, o dialeto principal é assumido onde possível. Por exemplo,
+@code{de} é equivalente a @code{de_DE} (alemão como falado na Alemanha).
 
-@cindex Document strings, translation of
-For Info and other online output, this command changes the translation 
-of various @dfn{document strings} such as ``see'' in cross-references 
-(@pxref{Referências Cruzadas}), ``Function' in defuns 
-(@pxref{Comandos de Definição}), and so on.  Some strings, such as 
-``Node:'', ``Next:'', ``Menu:'', etc., are keywords in Info output, so 
-are not translated there; they are translated in other output formats.
+@cindex Strings de documentos, tradução de
+Para Info e outras saídas on-line, esse comando muda a tradução de várias
+@dfn{strings de documento}, tais como ``see'' em referências cruzadas
+(@pxref{Referências Cruzadas}), ``Function'' em defuns (@pxref{Comandos de
+Definição}), e assim por diante. Algumas strings, como ``Node:'', ``Next:'',
+``Menu:'', etc., são palavras-chave na saída Info, de forma que não são
+traduzidas lá; elas são traduzidas em outros formatos de saída.
 
 @cindex @file{txi-@var{cc}.tex}
-For @TeX{}, this command causes a file @file{txi-@var{locale}.tex} to
-be read (if it exists).  If @code{@@documentlanguage} argument
-contains the optional @samp{_@var{cc}} suffix, this is tried first.
-For example, with @code{@@documentlanguage de_DE}, @TeX{} first looks
-for @file{txi-de_DE.tex}, then @file{txi-de.tex}.
+Para @TeX{}, esse comando faz com que um arquivo @file{txi-@var{locale}.tex}
+seja lido (se ele existir). Se o argumento @code{@@documentlanguage} contiver o
+sufixo opcional @samp{_@var{cc}}, isso será tentado primeiro. Por exemplo, com
+@code{@@documentlanguage de_DE}, @TeX{} primeiro procura por
+@file{txi-de_DE.tex}, depois por @file{txi-de.tex}.
 
-Such a @file{txi-*} file is intended to redefine the various English
-words used in @TeX{} output, such as `Chapter', `See', and so on.  We
-are aware that individual words like these cannot always be translated
-in isolation, and that a very different strategy would be required for
-ideographic (among other) scripts.  Help in improving Texinfo's
-language support is welcome.
+Esse arquivo @file{txi-*} é destinado a redefinir as várias palavras em inglês
+usadas na saída do @TeX{}, como `Chapter', `See' e assim por diante. Nós
+estamos cientes de que palavras individuais como essas nem sempre podem ser
+traduzidas isoladamente, e que uma estratégia muito diferente seria exigida
+para scripts ideográficos (entre outros). Ajuda para melhorar o suporte a
+idiomas do Texinfo é bem-vinda.
 
-@cindex Hyphenation patterns, language-dependent
-@code{@@documentlanguage} also changes @TeX{}'s current hyphenation
-patterns, if the @TeX{} program being run has the necessary support
-included.  This will generally not be the case for @command{tex}
-itself, but will usually be the case for up-to-date distributions of
-the extended @TeX{} programs @command{etex} (DVI output) and
-@command{pdftex} (PDF output).  @command{texi2dvi} will use the
-extended @TeX{}s if they are available (@pxref{Format with
-@command{texi2dvi}}).
+@cindex Padrões de hifenização, dependentes do idioma
+@code{@@documentlanguage} também muda os padrões de hifenização atuais do
+@TeX{}, se o programa @TeX{} sendo executado tiver o suporte necessário
+incluído. Isso geralmente não será o caso para @command{tex} em si, mas
+geralmente será o caso para distribuições atualizadas dos programas @TeX{}
+estendidos @command{etex} (saída DVI) e @command{pdftex} (saída PDF).
+@command{texi2dvi} usará os @TeX{}s estendidos se estiverem disponíveis
+(@pxref{Formatar com @command{texi2dvi}}).
 
-In September 2006, the W3C Internacionalização Activity released a
-new recommendation for specifying languages:
-@url{http://www.rfc-editor.org/rfc/bcp/bcp47.txt}.  When Gettext
-supports this new scheme, Texinfo will too.
+Em setembro de 2006, a W3C Internationalization Activity lançou uma nova
+recomendação para especificar idiomas:
+@url{http://www.rfc-editor.org/rfc/bcp/bcp47.txt}. Quando Gettext suportar esse
+novo esquema, Texinfo também suportará.
 
-@cindex ISO 639-2 language codes
-@cindex ISO 3166 country codes
-@cindex Language codes
-@cindex Country codes
-Since the lists of language codes and country codes are updated
-relatively frequently, we don't attempt to list them here.  The valid
-language codes are on the official home page for ISO@tie{}639,
-@url{http://www.loc.gov/standards/iso639-2/}.  The country codes and
-the official web site for ISO@tie{}3166 can be found via
+@cindex Códigos de idioma ISO 639-2
+@cindex Códigos de país ISO 3166
+@cindex Códigos de idioma
+@cindex Códigos de país
+Como as listas de códigos de idioma e códigos de país são atualizadas com
+relativa frequência, nós não tentamos listá-los aqui. Os códigos válidos de
+idioma estão na página inicial oficial do ISO@tie{}639,
+@url{http://www.loc.gov/standards/iso639-2/}. Os códigos de país e o site
+oficial do ISO@tie{}3166 podem ser encontrados via
 @url{http://en.wikipedia.org/wiki/ISO_3166}.
 
 
 @node @code{@@documentencoding}
-@section @code{@@documentencoding @var{enc}}: Set Input Encoding
+@section @code{@@documentencoding @var{enc}}: Configurar Codificação de Entrada
 
-@anchor{documentencoding}@c old name
+@anchor{documentencoding}@c nome antigo
 @findex documentencoding
-@cindex Encoding, declaring
-@cindex Input encoding, declaring
-@cindex Character set, declaring
-@cindex Document input encoding
+@cindex Codificação, declarando
+@cindex Codificação de entrada, declarando
+@cindex Conjunto de caracteres, declarando
+@cindex Codificação de entrada do documento
 
-The @code{@@documentencoding} command declares the input document
-encoding, and can also affect the encoding of the output.  Write it on
-a line by itself, with a valid encoding specification following, near
-the beginning of the file.
+O comando @code{@@documentencoding} declara a codificação de entrada do
+documento e também pode afetar a codificação da saída. Escreva-o em uma linha
+dedicada, com uma especificação válida de codificação seguindo, perto do início
+do arquivo.
 
 @example
-@@documentencoding @var{enc}
+@@documentencoding @var{codificação}
 @end example
 
-Texinfo supports these encodings:
+Texinfo suporta estas codificações:
 
 @table @code
 @item US-ASCII
-This has no particular effect, but it's included for completeness.
+Isso não tem nenhum efeito específico, mas foi incluído para fins de
+completude.
 
 @item UTF-8
-The vast global character encoding, expressed in 8-bit bytes.
+A vasta codificação global de caracteres, expressa em bytes de 8 bits.
 
 @item ISO-8859-1
 @itemx ISO-8859-15
 @itemx ISO-8859-2
-@cindex Euro symbol, and encodings
-These specify the standard encodings for Western European (the first
-two) and Eastern European languages (the third), respectively.  ISO
-8859-15 replaces some little-used characters from 8859-1 (e.g.,
-precomposed fractions) with more commonly needed ones, such as the
-Euro symbol (@euro{}).
+@cindex Símbolo do euro e codificações
+Essas especificam as codificações padrão para idiomas da Europa Ocidental (os
+dois primeiros) e da Europa Oriental (o terceiro), respectivamente. A ISO
+8859-15 substitui alguns caracteres pouco usados provenientes ​​da
+8859-1 (por exemplo, frações pré-compostas) por outros mais comumente
+necessários, como o símbolo do Euro (@euro{}).
 
-A full description of the encodings is beyond our scope here;
-one useful reference is @uref{http://czyborra.com/charsets/iso8859.html}.
+Uma descrição completa das codificações está além do nosso escopo aqui; uma
+referência útil é @uref{http://czyborra.com/charsets/iso8859.html}.
 
 @item koi8-r
-This is the commonly used encoding for the Russian language.
+Essa é a codificação comumente usada para o idioma russo.
 
 @item koi8-u
-This is the commonly used encoding for the Ukrainian language.
+Essa é a codificação comumente usada para o idioma ucraniano.
 
 @end table
 
-Specifying an encoding @var{enc} has the following effects:
+Especificar uma codificação @var{codificação} tem os seguintes efeitos:
 
-@cindex Local Variables section, for encoding
-@cindex Info output, and encoding
-In Info output, a so-called `Local Variables' section 
-(@pxref{File Variables,,, emacs, The GNU Emacs Manual}) is output including
-@var{enc}.  This allows Info readers to set the encoding
-appropriately.  It looks like this:
+@cindex Seção Variáveis ​​Locais, para codificação
+@cindex Saída do Info, e codificação
+Na saída do Info, uma seção chamada `Local Variables' (@pxref{File Variables,,,
+emacs, The GNU Emacs Manual}) é gerada incluindo @var{codificação}. Isso
+permite que leitores Info configurem a codificação apropriadamente. Parece com
+algo assim:
 
 @example
 Local Variables:
-coding: @var{enc}
+coding: @var{codificação}
 End:
 @end example
 
-Also, in Info and plain text output, unless the option
-@option{--disable-encoding} is given to @command{makeinfo}, accent
-constructs and special characters, such as @code{@@'e}, are output as
-the actual 8-bit or UTF-8 character in the given encoding where
-possible.
+Além disso, na saída Info e na de texto simples, a menos que a opção
+@option{--disable-encoding} seja fornecida para @command{makeinfo}, construções
+de acentos e caracteres especiais, como @code{@@'e}, são produzidos como o
+caractere real de 8 bits ou UTF-8 na codificação fornecida, onde possível.
 
-@cindex HTML output, and encodings
-@cindex @code{http-equiv}, and charset specification
-@cindex @code{<meta>} HTML tag, and charset specification
-In HTML output, a @samp{<meta>} tag is output, in the @samp{<head>}
-section of the HTML, that specifies @var{enc}.  Web servers and
-browsers cooperate to use this information so the correct encoding is
-used to display the page, if supported by the system.  That looks like
-this:
+@cindex Saída HTML e codificações
+@cindex @code{http-equiv}, e especificação de conjunto de caracteres
+@cindex @code{<meta>} tag HTML, e especificação de conjunto de caracteres
+Na saída HTML, uma tag @samp{<meta>} é gerada, na seção @samp{<head>} do HTML,
+que especifica @var{codificação}. Servidores web e navegadores cooperam para
+usar essas informações, de modo que a codificação correta seja usada para
+exibir a página, se suportada pelo sistema. Isso se parece com isto:
 
 @example
 <meta http-equiv="Content-Type" content="text/html;
-     charset=@var{enc}">
+     charset=@var{codificação}">
 @end example
 
-In XML and Docbook output, UTF-8 is always used for the output,
-according to the conventions of those formats.
+Na saída XML e Docbook, UTF-8 é sempre usado para a saída, de acordo com as
+convenções desses formatos.
 
-@cindex Computer Modern fonts
-In @TeX{} output, the characters which are supported in the standard
-Computer Modern fonts are output accordingly.  For example, this
-means using constructed accents rather than precomposed glyphs.
-Using a missing character generates a warning message, as does
-specifying an unimplemented encoding.
+@cindex Fontes Computer Modern
+Na saída @TeX{}, os caracteres que são suportados nas fontes Computer Modern
+padrão são produzidos adequadamente. Por exemplo, isso significa usar acentos
+construídos em vez de glifos pré-compostos. Usar um caractere ausente gera uma
+mensagem de aviso, assim como especificar uma codificação não implementada.
 
-Although modern @TeX{} systems support nearly every script in use in
-the world, this wide-ranging support is not available in
-@file{texinfo.tex}, and it's not feasible to duplicate or incorporate
-all that effort.  (Our plan to support other scripts is to create a
-@LaTeX{} back-end to @command{texi2any}, where the support is already
-present.)
+Embora os sistemas @TeX{} modernos suportem quase todos os scripts em uso no
+mundo, esse suporte abrangente não está disponível em @file{texinfo.tex}, e não
+é viável duplicar ou incorporar todo esse esforço. (Nosso plano para suportar
+outros scripts é o de criar uma estrutura de retaguarda @LaTeX{} para
+@command{texi2any}, onde o suporte já está presente).
 
-For maximum portability of Texinfo documents across the many different
-user environments in the world, we recommend sticking to 7-bit ASCII
-in the input unless your particular manual needs a substantial amount
-of non-ASCII, e.g., it's written in German.  You can use the
-@code{@@U} command to insert an occasional needed character
+Para portabilidade máxima de documentos Texinfo entre os muitos ambientes de
+usuário(a) diferentes no mundo, nós recomendamos manter ASCII de 7 bits na
+entrada, a menos que teu manual em particular precise de uma quantidade
+substancial de não-ASCII, por exemplo, ele esteja escrito em alemão. Você pode
+usar o comando @code{@@U} para inserir um caractere ocasionalmente necessário
 (@pxref{Inserindo Unicode}).
-
 
 @node Condicionais
 @chapter Texto Condicionalmente Visível
-@cindex Conditionally visible text
-@cindex Text, conditionally visible
-@cindex Visibility of conditional text
-@cindex If text conditionally visible
+@cindex Texto condicionalmente visível
+@cindex Texto, condicionalmente visível
+@cindex Visibilidade de texto condicional
+@cindex Se texto condicionalmente visível
 
-The @dfn{conditional commands} allow you to use different text for
-different output formats, or for general conditions that you define.
-For example, you can use them to specify different text for the
-printed manual and the Info output.
+Os @dfn{comandos condicionais} permitem que você use texto diferente para
+formatos de saída diferentes, ou para condições gerais que você define. Por
+exemplo, você pode usá-los para especificar texto diferente para o manual
+impresso e para a saída Info.
 
-The conditional commands comprise the following categories.
+Os comandos condicionais compreendem as seguintes categorias.
 
 @itemize @bullet
 @item
-Commands specific to an output format (Info, @TeX{}, HTML, @dots{}).
+Comandos específicos para um formato de saída (Info, @TeX{}, HTML, @dots{}).
 
 @item
-Commands specific to any output format @emph{excluding} a given
-one (e.g., not Info, not @TeX{}, @dots{}).
+Comandos específicos para qualquer formato de saída @emph{excluindo} um
+determinado (por exemplo, não Info, não @TeX{}, @dots{}).
 
 @item
-`Raw' formatter text for any output format, passed straight
-through with minimal (but not zero) interpretation of @@-commands.
+Texto do formatador `bruto' para qualquer formato de saída, passado diretamente
+com interpretação mínima (mas não nula) dos comandos @@.
 
 @item
-Format-independent variable substitutions, and testing if a variable
-is set or clear.
+Substituições de variáveis ​​independentes de formato e testagem se
+uma variável está configurada ou limpa.
 
 @end itemize
 
 @menu
 * Comandos Condicionais::             Texto para um dado formato.
 * Não Comandos Condicionais::         Texto para qualquer outro formato que não um dado.
-* Comandos do Formatador Bruto::      Utilizando comandos crus do formatador.
+* Comandos do Formatador Bruto::      Usando comandos do formatador bruto.
 * Condicionais Inline::               Texto condicional delimitado por chaves.
 * @code{@@set @@clear @@value}::      Testes de variáveis e substituições.
 * Testes para Comandos do Texinfo::   Testando se um comando Texinfo está disponível.
-* Aninhamento Condicional::           Utilizando condicionais dentro de condicionais.
+* Aninhamento Condicional::           Usando condicionais dentro de condicionais.
 @end menu
 
 
 @node Comandos Condicionais
 @section Comandos Condicionais
 
-Texinfo has an @code{@@if@var{format}} environment for each output
-format, to allow conditional inclusion of text for a particular output
-format.
+O Texinfo tem um ambiente @code{@@if@var{format}} para cada formato de saída,
+para permitir inclusão condicional de texto para um formato de saída
+específico.
 
 @findex ifinfo
-@code{@@ifinfo} begins segments of text that should be ignored by
-@TeX{} when it typesets the printed manual, and by @command{makeinfo}
-when not producing Info output.  The segment of text appears only in
-the Info file and, for historical compatibility, the plain text
-output.
+@code{@@ifinfo} inicia segmentos de texto que deveriam ser ignorados pelo
+@TeX{} quando ele compuser o manual impresso, e pelo @command{makeinfo} quando
+não produzir saída Info. O segmento de texto aparece somente no arquivo Info e,
+para compatibilidade histórica, na saída de texto simples.
 
 @findex ifdocbook
 @findex ifhtml
 @findex ifplaintext
 @findex iftex
 @findex ifxml
-The environments for the other formats are analogous:
+Os ambientes para os outros formatos são análogos:
 
 @table @code
 @item @@ifdocbook @dots{} @@end ifdocbook
 Text to appear only in the Docbook output.
+Texto para aparecer somente na saída Docbook.
 
 @item @@ifhtml @dots{} @@end ifhtml
-Text to appear only in the HTML output.
+Texto para aparecer somente na saída HTML.
 
 @item @@ifplaintext @dots{} @@end ifplaintext
-Text to appear only in the plain text output.
+Texto para aparecer somente na saída de texto simples.
 
 @item @@iftex @dots{} @@end iftex
-Text to appear only in the printed manual.
+Texto para aparecer somente no manual impresso.
 
 @item @@ifxml @dots{} @@end ifxml
-Text to appear only in the XML output.
+Texto para aparecer somente na saída XML.
 @end table
 
-The @code{@@if@dots{}} and @code{@@end if@dots{}} commands must appear
-on lines by themselves in your source file.  The newlines following
-the commands are (more or less) treated as whitespace, so that the
-conditional text is flowed normally into a surrounding paragraph.
+Os comandos @code{@@if@dots{}} e @code{@@end if@dots{}} precisam aparecer em
+linhas dedicadas no teu arquivo fonte. As quebras de linha que seguem os
+comandos são (mais ou menos) tratadas como espaços em branco, de forma que o
+texto condicional flua normalmente para um parágrafo circundante.
 
-The @code{@@if@dots{}} constructs are intended to conditionalize
-normal Texinfo source; @pxref{Comandos do Formatador Bruto}, for using
-underlying format commands directly.
+As construções @code{@@if@dots{}} são destinadas para condicionar fonte Texinfo
+normal; @pxref{Comandos do Formatador Bruto}, para usar comandos de formatação
+subjacentes diretamente.
 
-Here is an example showing all these Condicionais:
+Aqui está um exemplo mostrando todos esses Condicionais:
 
 @example
 @@iftex
-This text will appear only in the printed manual.
+Este texto aparecerá somente no manual impresso.
 @@end iftex
 @@ifinfo
-However, this text will appear only in Info and plain text.
+No entanto, este texto aparecerá somente em Info e em texto simples.
 @@end ifinfo
 @@ifhtml
-And this text will only appear in HTML.
+E este texto aparecerá somente em HTML.
 @@end ifhtml
 @@ifplaintext
-Whereas this text will only appear in plain text.
+Enquanto este texto aparecerá somente em texto simples.
 @@end ifplaintext
 @@ifxml
-Notwithstanding that this will only appear in XML@.
+Não obstante, isto aparecerá somente em XML@.
 @@end ifxml
 @@ifdocbook
-Nevertheless, this will only appear in Docbook.
+No entanto, isto aparecerá somente em Docbook.
 @@end ifdocbook
 @end example
 
 @noindent
-The preceding example produces the following line:
+O exemplo precedente produz a seguinte linha:
 
 @iftex
-This text will appear only in the printed manual.
+Este texto aparecerá somente no manual impresso.
 @end iftex
 @ifinfo
-However, this text will appear only in Info and plain text.
+No entanto, este texto aparecerá somente em Info e em texto simples.
 @end ifinfo
 @ifhtml
-And this text will only appear in HTML.
+E este texto aparecerá somente em HTML.
 @end ifhtml
 @ifplaintext
-Whereas this text will only appear in plain text.
+Enquanto este texto aparecerá somente em texto simples.
 @end ifplaintext
 @ifxml
-Notwithstanding that this will only appear in XML@.
+Não obstante, isto aparecerá somente em XML@.
 @end ifxml
 @ifdocbook
-Nevertheless, this will only appear in Docbook.
+No entanto, isto aparecerá somente em Docbook.
 @end ifdocbook
 
 @noindent
-Notice that you only see one of the input lines, depending on which
-version of the manual you are reading.
+Observe que você vê somente uma das linhas de entrada, dependendo de qual
+versão do manual estiver lendo.
 
 @findex errormsg
-In complex documents, you may want Texinfo to issue an error message
-in some Condicionais that should not ever be processed.  The
-@code{@@errormsg@{@var{text}@}} command will do this; it takes one
-argument, the text of the error message, which is expanded more or
-less as if it were Info text.
+Em documentos complexos, você pode querer que o Texinfo emita uma mensagem de
+erro em alguns Condicionais que nunca deveriam ser processados. O comando
+@code{@@errormsg@{@var{text}@}} fará isso; ele pega um argumento, o texto da
+mensagem de erro, que é expandido mais ou menos como se fosse um texto do Info.
 
-We mention @code{@@errormsg@{@}} here even though it is not strictly
-related to Condicionais, since in practice it is most likely to be
-useful in that context.  Technically, it can be used anywhere.
-@xref{External Macro Processors}, for a caveat regarding the line
-numbers which @code{@@errormsg} emits in @TeX{}.
+Nós mencionamos @code{@@errormsg@{@}} aqui, embora não esteja estritamente
+relacionado a Condicionais, já que, na prática, é mais provável que seja útil
+nesse contexto. Tecnicamente, ele pode ser usado em qualquer lugar.
+@xref{Processadores Externos de Macro}, para uma ressalva relativa aos números
+de linha que @code{@@errormsg} emite no @TeX{}.
 
 
 @node Não Comandos Condicionais
@@ -13358,8 +13349,8 @@ numbers which @code{@@errormsg} emits in @TeX{}.
 @findex ifnottex
 @findex ifnotxml
 
-You can specify text to be included in any output format @emph{other}
-than a given one with the @code{@@ifnot@dots{}} environments:
+Você pode especificar o texto a ser incluído em qualquer formato de saída
+@emph{diferente} de um determinado, com os ambientes @code{@@ifnot@dots{}}:
 
 @example
 @@ifnotdocbook @dots{} @@end ifnotdocbook
@@ -13371,30 +13362,30 @@ than a given one with the @code{@@ifnot@dots{}} environments:
 @end example
 
 @noindent
-The @code{@@ifnot@dots{}} command and the @code{@@end} command must
-appear on lines by themselves in your actual source file.
+O comando @code{@@ifnot@dots{}} e o comando @code{@@end} precisam aparecer em
+linhas dedicadas no teu arquivo fonte real.
 
-If the output file is being made in the given format, the
-region is @emph{ignored}.  Otherwise, it is included.
+Se o arquivo de saída estiver sendo feito no formato fornecido, a região será
+@emph{ignorada}. Caso contrário, ela será incluída.
 
-There is one exception (for historical compatibility):
-@code{@@ifnotinfo} text is omitted for both Info and plain text
-output, not just Info.  To specify text which appears only in Info and
-not in plain text, use @code{@@ifnotplaintext}, like this:
+Existe uma exceção (para compatibilidade histórica): texto @code{@@ifnotinfo}
+será omitido para ambas saídas, Info e de texto simples, não apenas Info. Para
+especificar texto que apareça somente em Info e não em texto simples, use
+@code{@@ifnotplaintext}, assim:
 
 @example
 @@ifinfo
 @@ifnotplaintext
-This will be in Info, but not plain text.
+Isto estará no Info, mas não em texto simples.
 @@end ifnotplaintext
 @@end ifinfo
 @end example
 
-The regions delimited by these commands are ordinary Texinfo source as
-with @code{@@iftex}, not raw formatter source as with @code{@@tex}
+As regiões delimitadas por esses comandos são fontes Texinfo comuns, como em
+@code{@@iftex}, e não fontes de formatador bruto, como em @code{@@tex}
 (@pxref{Comandos do Formatador Bruto}).
 
-
+PAREI
 @node Comandos do Formatador Bruto
 @section Comandos do Formatador Bruto
 @cindex Raw formatter commands
@@ -14391,8 +14382,7 @@ Also, quite a few macro-related constructs cause problems with @TeX{};
 some of the caveats are listed below.  Thus, if you get macro-related
 errors when producing the printed version of a manual, you might try
 expanding the macros with @command{makeinfo} by invoking
-@command{texi2dvi} with the @samp{-E} option (@pxref{Format with
-@command{texi2dvi}}).  Or, more reliably, eschew Texinfo macros altogether
+@command{texi2dvi} with the @samp{-E} option (@pxref{Formatar com @command{texi2dvi}}).  Or, more reliably, eschew Texinfo macros altogether
 and use a language designed for macro processing, such as M4
 (@pxref{External Macro Processors}).
 
@@ -14784,8 +14774,7 @@ use @command{makeinfo}'s macro expansion options before running
 
 @itemize @bullet
 @item
-If you run @command{texi2dvi} or its variants (@pxref{Format with
-@command{texi2dvi}}), you can pass @option{-E} and @command{texi2dvi}
+If you run @command{texi2dvi} or its variants (@pxref{Formatar com @command{texi2dvi}}), you can pass @option{-E} and @command{texi2dvi}
 will run @command{makeinfo} first to expand macros and eliminate
 @samp{#line}.
 
@@ -15217,8 +15206,8 @@ is not included in the Texinfo package, being a vast suite of software
 in itself.
 
 
-@node Format with @command{texi2dvi}
-@section Format with @command{texi2dvi}
+@node Formatar com @command{texi2dvi}
+@section Formatar com @command{texi2dvi}
 
 @pindex texi2dvi @r{(shell script)}
 @cindex DVI, output in
@@ -15595,7 +15584,7 @@ file directly.
 
 For example, the following commands will (probably) suffice to sort
 the indices, format, and print this manual using the @code{texi2dvi}
-shell script (@pxref{Format with @command{texi2dvi}}).
+shell script (@pxref{Formatar com @command{texi2dvi}}).
 
 @example
 @group
@@ -16068,7 +16057,7 @@ region in ``small'' book size (@pxref{Início de Cabeçalho}).
 @xref{@code{@@small@dots{}}}, for information about commands that make
 it easier to produce examples for a smaller manual.
 
-@xref{Format with @command{texi2dvi}}, and @ref{Preparing for @TeX{}},
+@xref{Formatar com @command{texi2dvi}}, and @ref{Preparing for @TeX{}},
 for other ways to format with @code{@@smallbook} that do not require
 changing the source file.
 
@@ -16098,7 +16087,7 @@ would write the header for this manual:
 @end group
 @end example
 
-@xref{Format with @command{texi2dvi}}, and @ref{Preparing for @TeX{}},
+@xref{Formatar com @command{texi2dvi}}, and @ref{Preparing for @TeX{}},
 for other ways to format for different paper sizes that do not require
 changing the source file.
 
@@ -16147,7 +16136,7 @@ To make more elaborate changes, such as changing any of the page
 margins, you must define a new command in @file{texinfo.tex} or
 @file{texinfo.cnf}.
 
-@xref{Format with @command{texi2dvi}}, and @ref{Preparing for @TeX{}},
+@xref{Formatar com @command{texi2dvi}}, and @ref{Preparing for @TeX{}},
 for other ways to specify @code{@@pagesizes} that do not require
 changing the source file.
 
@@ -16222,7 +16211,7 @@ magnifications.  Be prepared to experiment.
 The simplest way to generate PDF output from Texinfo source is to run
 the convenience script @command{texi2pdf} (or @command{pdftexi2dvi});
 this executes the @command{texi2dvi} script with the @option{--pdf}
-option (@pxref{Format with @command{texi2dvi}}).  If for some reason you
+option (@pxref{Formatar com @command{texi2dvi}}).  If for some reason you
 want to process the document by hand, you can run the @command{pdftex}
 program instead of plain @command{tex}.  That is, run @samp{pdftex
 foo.texi} instead of @samp{tex foo.texi}.
@@ -16308,14 +16297,14 @@ specified within a initialization file.
 The rest of this chapter goes into the details.
 
 @menu
-* Reference Implementation::    @command{texi2any}: the reference implementation.
-* Invoking @command{texi2any}::           Running the translator from a shell.
-* @command{texi2any} Printed Output::     Calling @command{texi2dvi}.
-* Pointer Validation::          How to check that pointers point somewhere.
-* Customization Variables::     Configuring @command{texi2any}.
-* Internacionalização of Document Strings:: Translating program-inserted text.
-* Invoking @command{pod2texi}::           Translating Perl pod to Texinfo.
-* @command{texi2html}::                   An ancestor of @command{texi2any}.
+* Implementação de Referência::                  @command{texi2any}: a implementação de referência.
+* Invocando @command{texi2any}::                 Executando o tradutor a partir de um shell.
+* Saída Gerada Impressa do @command{texi2any}::  Chamando @command{texi2any}.
+* Validação de Ponteiro::                        Como verificar se os ponteiros apontam para algum lugar.
+* Variáveis de Personalização::                  Configurando @command{texi2any}.
+* Internacionalização de Strings de Documentos:: Traduzindo texto inserido pelo programa.
+* Invocando @command{pod2texi}::                 Traduzindo POD Perl para Texinfo.
+* @command{texi2html}::                          Um ancestral de @command{texi2any}.
 @end menu
 
 
@@ -16917,8 +16906,7 @@ tricks together with @file{texinfo.tex}, just invoke
 @command{texi2dvi} directly.
 
 The output format options for this are @option{--dvi},
-@option{--dvipdf}, @option{--pdf}, and @option{--ps}.  @xref{Format
-with @command{texi2dvi}}, for more details on these options and general
+@option{--dvipdf}, @option{--pdf}, and @option{--ps}.  @xref{Formatar com @command{texi2dvi}}, for more details on these options and general
 @command{texi2dvi} operation.  In addition, the @option{--verbose},
 @option{--silent}, and @option{--quiet} options are passed on if
 specified; the @option{-I} and @option{-o} options are likewise passed
@@ -17895,11 +17883,11 @@ transliterate more characters; default true.
 @end vtable
 
 
-@node Internacionalização of Document Strings
-@section Internacionalização of Document Strings
+@node Internacionalização de Strings de Documentos
+@section Internacionalização de Strings de Documentos
 
 @cindex I18n, of document strings
-@cindex Internacionalização of document strings
+@cindex Internacionalização de strings de documentos
 @cindex Document strings, internationalization of
 @cindex Output document strings, internationalization of
 @cindex Translating strings in output documents
@@ -22743,8 +22731,7 @@ then print the file.  Optionally, you may also create indices.  To do
 this, you must run the @code{texindex} command after first running the
 @code{tex} typesetting command; and then you must run the @code{tex}
 command again.  Or else run the @code{texi2dvi} command which
-automatically creates indices as needed (@pxref{Format with
-@command{texi2dvi}}).
+automatically creates indices as needed (@pxref{Formatar com @command{texi2dvi}}).
 
 Often, when you are writing a document, you want to typeset and print
 only part of a file to see what it will look like.  You can use the
