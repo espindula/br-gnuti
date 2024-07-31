@@ -378,10 +378,10 @@ Texto Visível Condicionalmente
 
 Sinalizadores: @code{@@set}, @code{@@clear}, condicionais, e @code{@@value}
 
-* @code{@@set @@value}::                 Expandir uma variável de parâmetro para uma sequência de caracteres.
-* @code{@@ifset @@ifclear}::             Formatar uma região se um parâmetro estiver configurado.
-* @code{@@inlineifset @@inlineifclear}:: Condicionais de parâmetro delimitados por chave.
-* @code{@@value} Example::              Uma maneira fácil de atualizar informação de edição.
+* @code{@@set @@value}::                 Expanda uma variável de sinalização para uma string.
+* @code{@@ifset @@ifclear}::             Formate uma região se um sinalizador estiver configurado.
+* @code{@@inlineifset @@inlineifclear}:: Condicionais de sinalização delimitados por chaves.
+* Exemplo de @code{@@value}::            Uma maneira fácil de atualizar informações de edição.
 
 Definindo Novos Comandos Texinfo
 
