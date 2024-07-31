@@ -553,10 +553,10 @@ Texto Visível Condicionalmente
 
 Sinalizadores: @code{@@set}, @code{@@clear}, condicionais, e @code{@@value}
 
-* @code{@@set @@value}::                 Expandir uma variável de parâmetro para uma sequência de caracteres.
-* @code{@@ifset @@ifclear}::             Formatar uma região se um parâmetro estiver configurado.
-* @code{@@inlineifset @@inlineifclear}:: Condicionais de parâmetro delimitados por chave.
-* @code{@@value} Example::              Uma maneira fácil de atualizar informação de edição.
+* @code{@@set @@value}::                 Expanda uma variável de sinalização para uma string.
+* @code{@@ifset @@ifclear}::             Formate uma região se um sinalizador estiver configurado.
+* @code{@@inlineifset @@inlineifclear}:: Condicionais de sinalização delimitados por chaves.
+* Exemplo de @code{@@value}::            Uma maneira fácil de atualizar informações de edição.
 
 Definindo Novos Comandos Texinfo
 
@@ -10031,7 +10031,7 @@ Texinfo é usado, ``cerquilha'' é o mais comum em nossa experiência.
 
 No entanto, Texinfo usa o caractere cerquilha como um caractere especial 
 em um contexto restrito: para introduzir a chamada diretiva @code{#line} 
-e variantes (@pxref{External Macro Processors}).
+e variantes (@pxref{Processadores Externos de Macro}).
 
 Portanto, para a finalidade de compor um caractere cerquilha real em tal 
 local (por exemplo, em um programa que precisa de documentação acerca de 
@@ -13385,49 +13385,49 @@ As regiões delimitadas por esses comandos são fontes Texinfo comuns, como em
 @code{@@iftex}, e não fontes de formatador bruto, como em @code{@@tex}
 (@pxref{Comandos do Formatador Bruto}).
 
-PAREI
+
 @node Comandos do Formatador Bruto
 @section Comandos do Formatador Bruto
-@cindex Raw formatter commands
+@cindex Comandos do formatador bruto
 
-@cindex @TeX{} commands, using ordinary
-@cindex Ordinary @TeX{} commands, using
-@cindex Commands using raw @TeX{}
-@cindex Plain @TeX{}
+@cindex Comandos do @TeX{}, uso comum
+@cindex Comandos comuns do @TeX{}, usando
+@cindex Comandos, usando @TeX{} bruto
+@cindex @TeX{} simples
 
-The @code{@@if@dots{}} Condicionais just described must be used only
-with normal Texinfo source.  For instance, most features of plain
-@TeX{} will not work within @code{@@iftex}.  The purpose of
-@code{@@if@dots{}} is to provide conditional processing for Texinfo
-source, not provide access to underlying formatting features.  For
-that, Texinfo provides so-called @dfn{raw formatter commands}.  They
-should only be used when truly required (most documents do not need
-them).
+Os Condicionais @code{@@if@dots{}} recém descritos precisam ser usados somente
+com fonte normal do Texinfo. Por exemplo, a maioria dos recursos do @TeX{}
+simples não funcionará dentro do @code{@@iftex}. O propósito do
+@code{@@if@dots{}} é o de fornecer processamento condicional para fonte do
+Texinfo, não fornecer acesso aos recursos de formatação subjacentes. Para isso,
+Texinfo fornece os assim chamados @dfn{comandos do formatador bruto}. Eles
+deveriamm ser usados ​​somente quando verdadeiramente exigidos (a
+maioria dos documentos não precisa deles).
 
 @findex tex
-@cindex Category codes, of plain @TeX{}
-The first raw formatter command is @code{@@tex}.  You can enter plain
-@TeX{} completely, and use @samp{\} in the @TeX{} commands, by
-delineating a region with the @code{@@tex} and @code{@@end tex}
-commands.  All plain @TeX{} commands and category codes are restored
-within a @code{@@tex} region.  The sole exception is that the
-@code{@@} character still introduces a command, so that @code{@@end
-tex} can be recognized.  Texinfo processors will not output material
-in such a region, unless @TeX{} output is being produced.
+@cindex Códigos de categoria, do @TeX{} simples
+O primeiro comando do formatador bruto é o @code{@@tex}. Você consegue entrar
+completamente no @TeX{} simples e usar @samp{\} nos comandos do @TeX{},
+delineando uma região com os comandos @code{@@tex} e @code{@@end tex}. Todos os
+comandos e códigos de categoria do @TeX{} simples são restaurados dentro de uma
+região do @code{@@tex}. A única exceção é a de que o caractere @code{@@} ainda
+introduz um comando, de forma que @code{@@end tex} possa ser reconhecido. Os
+processadores do Texinfo não produzirão material em tal região, a menos que a
+saída @TeX{} esteja sendo produzida.
 
-@findex \gdef @r{within @code{@@tex}}
-@findex \globaldefs @r{within @code{@@tex}}
-In complex cases, you may wish to define new @TeX{} macros within
-@code{@@tex}.  You must use @code{\gdef} to do this, not @code{\def},
-because @code{@@tex} regions are processed in a @TeX{} group.  If you
-need to make several definitions, you may wish to set
-@code{\globaldefs=1} (its value will be restored to zero as usual when
-the group ends at @code{@@end tex}, so it won't cause problems with
-the rest of the document).
+@findex \gdef @r{dentro de @code{@@tex}}
+@findex \globaldefs @r{dentro de @code{@@tex}}
+Em casos complexos, você pode desejar definir novas macros do @TeX{} dentro de
+@code{@@tex}. Você precisa usar @code{\gdef} para fazer isso, não @code{\def},
+porque as regiões de @code{@@tex} são processadas em um grupo do @TeX{}. Se
+você precisar fazer várias definições, você pode desejar configurar
+@code{\globaldefs=1} (o valor dele será restaurado para zero como de costume
+quando o grupo terminar em @code{@@end tex}, de forma que não causará problemas
+com o resto do documento).
 
-@cindex Equation, displayed, in plain @TeX{}
-@cindex Displayed equation, in plain @TeX{}
-As an example, here is a displayed equation written in plain @TeX{}:
+@cindex Equação, exibida, em @TeX{} simples
+@cindex Equação exibida, em @TeX{} simples
+Como um exemplo, aqui está uma equação exibida escrita em @TeX{} simples:
 
 @example
 @@tex
@@ -13438,9 +13438,9 @@ $$ \chi^2 = \sum_@{i=1@}^N
 @end example
 
 @noindent
-The output of this example will appear only in a printed manual.  If
-you are reading this in a format not generated by @TeX{}, you will not
-see the equation that appears in the printed manual.
+A saída desse exemplo aparecerá somente em um manual impresso. Se estiver lendo
+isso em um formato não gerado pelo @TeX{}, você não verá a equação que aparece
+no manual impresso.
 
 @tex
 $$ \chi^2 = \sum_{i=1}^N
@@ -13448,22 +13448,22 @@ $$ \chi^2 = \sum_{i=1}^N
          \over \sigma_i\right)^2 $$
 @end tex
 
-@cindex HTML, including raw
+@cindex HTML, incluindo bruto
 @findex ifhtml
 @findex html
-Analogously, you can use @code{@@ifhtml @dots{} @@end ifhtml} to
-delimit Texinfo source to be included in HTML output only, and
-@code{@@html @dots{} @@end html} for a region of raw HTML.
+Analogamente, você pode usar @code{@@ifhtml @dots{} @@end ifhtml} para
+delimitar o fonte do Texinfo a ser incluído somente na saída HTML, e
+@code{@@html @dots{} @@end html} para uma região do HTML bruto.
 
-@cindex XML, including raw
+@cindex XML, incluindo bruto
 @findex ifxml
 @findex xml
-Likewise, you can use @code{@@ifxml @dots{} @@end ifxml} to delimit
-Texinfo source to be included in XML output only, and @code{@@xml
-@dots{} @@end xml} for a region of raw XML@.  Regions of raw text in
-other formats will also be present in the XML output, but with
-protection of XML characters and within corresponding elements.  For
-example, the raw HTML text:
+Da mesma forma, você pode usar @code{@@ifxml @dots{} @@end ifxml} para
+delimitar o fonte do Texinfo a ser incluído somente na saída XML, e @code{@@xml
+@dots{} @@end xml} para uma região de XML bruto. Regiões de texto bruto em
+outros formatos também estarão presentes na saída XML, mas com proteção de
+caracteres XML e dentro de elementos correspondentes. Por exemplo, o texto HTML
+bruto:
 
 @example
 @group
@@ -13474,7 +13474,7 @@ example, the raw HTML text:
 @end example
 
 @noindent
-will be included in the XML output as:
+será incluído na saída XML como:
 
 @example
 @group
@@ -13484,323 +13484,327 @@ will be included in the XML output as:
 @end group
 @end example
 
-@cindex Docbook, including raw
+@cindex Docbook, incluindo bruto
 @findex ifdocbook
 @findex docbook
-Again likewise, you can use @code{@@ifdocbook @dots{} @@end ifdocbook}
-to delimit Texinfo source to be included in Docbook output only, and
-@code{@@docbook @dots{} @@end docbook} for a region of raw Docbook.
+Novamente, da mesma forma, você pode usar @code{@@ifdocbook @dots{} @@end
+ifdocbook} para delimitar o fonte do Texinfo a ser incluído somente na saída do
+Docbook, e @code{@@docbook @dots{} @@end docbook} para uma região do Docbook
+bruto.
 
-The behavior of newlines in raw regions is unspecified.
+O comportamento de novas linhas em regiões brutas não é especificado.
 
-In all cases, in raw processing, @code{@@} retains the same meaning as
-in the remainder of the document.  Thus, the Texinfo processors must
-recognize and even execute, to some extent, the contents of the raw
-regions, regardless of the final output format.  Therefore, specifying
-changes that globally affect the document inside a raw region leads to
-unpredictable and generally undesirable behavior.  For example, using
-the @code{@@kbdinputstyle} command inside a raw region is undefined.
+Em todos os casos, no processamento bruto, @code{@@} retém o mesmo significado
+que no restante do documento. Assim, os processadores do Texinfo precisam
+reconhecer e até mesmo executar, até certo ponto, o conteúdo das regiões
+brutas, independentemente do formato final da saída. Portanto, especificar
+mudanças que afetem globalmente o documento dentro de uma região bruta leva a
+um comportamento imprevisível e geralmente indesejável. Por exemplo, usar o
+comando @code{@@kbdinputstyle} dentro de uma região bruta é indefinido.
 
-The remedy is simple: don't do that.  Use the raw formatter commands
-for their intended purpose, of providing material directly in the
-underlying format.  When you simply want to give different Texinfo
-specifications for different output formats, use the
-@code{@@if@dots{}} Condicionais and stay in Texinfo syntax.
-
+O remédio é simples: não faça isso. Use os comandos do formatador bruto para o
+propósito pretendido deles, de fornecer material diretamente no formato
+subjacente. Quando você simplesmente quiser dar especificações diferentes do
+Texinfo para formatos diferentes de saída, use os Condicionais
+@code{@@if@dots{}} e permaneça na sintaxe do Texinfo.
 
 
 @node Condicionais Inline
-@section Inline Condicionais: @code{@@inline}, @code{@@inlineifelse}, @code{@@inlineraw}
+@section Condicionais Inline: @code{@@inline}, @code{@@inlineifelse}, @code{@@inlineraw}
 @findex inlinefmt
 @findex inlinefmtifelse
 @findex inlineraw
 @cindex Condicionais Inline
-@cindex Conditional commands, inline
-@cindex Brace-delimited conditional text
-@cindex Newlines, avoiding in Condicionais
-@cindex Whitespace, controlling in Condicionais
+@cindex Comandos condicionais, inline
+@cindex Texto condicional delimitado por chaves
+@cindex Novas linhas, evitando em Condicionais
+@cindex Espaço em branco, controlando em Condicionais
 
-Texinfo provides a set of conditional commands with arguments given
-within braces:
+Texinfo fornece um conjunto de comandos condicionais com argumentos fornecidos
+entre chaves:
 
 @table @code
-@item @@inlinefmt@{@var{format}, @var{text}@}
-Process the Texinfo @var{text} if @var{format} output is being
-generated.
+@item @@inlinefmt@{@var{formato}, @var{texto}@}
+Processa o @var{texto} do Texinfo se a saída @var{formato} estiver sendo
+gerada.
 
-@item @@inlinefmtifelse@{@var{format}, @var{then-text}, @var{else-text}@}
-Process the Texinfo @var{then-text} if @var{format} output is being
-generated; otherwise, process @var{else-text}.
+@item @@inlinefmtifelse@{@var{formato}, @var{texto-então}, @var{texto-docontrário}@}
+Processa o @var{texto-então} do Texinfo se a saída @var{formato} estiver sendo
+gerada; caso contrário, processa @var{texto-docontrário}.
 
-@item @@inlineraw@{@var{format}, @var{text}@}
-Similar, but for raw @var{text} (@pxref{Comandos do Formatador Bruto}).
+@item @@inlineraw@{@var{formato}, @var{texto}@}
+Similar, porém para @var{texto} bruto (@pxref{Comandos do Formatador Bruto}).
 @end table
 
-The supported @var{format} names are:
+Os nomes de @var{formato} suportados são:
 
 @example
 docbook  html  info  plaintext  tex  xml
 @end example
 
-For example,
+Por exemplo,
 
 @example
-@@inlinefmt@{html, @@emph@{HTML-only text@}@}
+@@inlinefmt@{html, @@emph@{texto somente HTML@}@}
 @end example
 
-@noindent is nearly equivalent to
+@noindent é quase equivalente a
 
 @example
 @@ifhtml
-@@emph@{HTML-only text@}
+@@emph@{texto somente HTML@}
 @@end ifhtml
 @end example
 
-@noindent except that no whitespace is added, as happens in the latter
-(environment) case.
+@noindent exceto que nenhum espaço em branco é adicionado, como acontece no
+último caso (ambiente).
 
-In these commands, whitespace is ignored after the comma separating
-the arguments, as usual, but is @emph{not} ignored at the end of
-@var{text}.
+Nesses comandos, o espaço em branco é ignorado depois da vírgula que separa os
+argumentos, como de costume, mas @emph{não} é ignorado no final de @var{texto}.
 
-To insert a literal at sign, left brace, or right brace in one of the
-arguments, you must use the alphabetic commands @code{@@atchar@{@}}
-(@pxref{Inserindo um Símbolo Arroba}), and @code{@@lbracechar@{@}} or
-@code{@@rbracechar@{@}} (@pxref{Inserindo Chaves}), or the parsing
-will become confused.
+Para inserir um sinal de arroba literal, uma chave esquerda ou uma chave
+direita em um dos argumentos, você precisa usar os comandos alfabéticos
+@code{@@atchar@{@}} (@pxref{Inserindo um Símbolo Arroba}) e
+@code{@@lbracechar@{@}} ou @code{@@rbracechar@{@}} (@pxref{Inserindo Chaves}),
+ou a análise se tornará confusa.
 
-With @code{@@inlinefmtifelse}, it is also necessary to use
-@code{@@comma@{@}} to avoid mistaking a @samp{,} in the text for the
-delimiter.  With @code{@@inlinefmt} and @code{@@inlineraw},
-@code{@@comma@{@}} is not required (though it's fine to use it), since
-these commands always have exactly two arguments.
+Com @code{@@inlinefmtifelse}, também é necessário usar @code{@@comma@{@}} para
+evitar confundir uma @samp{,} no texto com o delimitador. Com
+@code{@@inlinefmt} e @code{@@inlineraw}, @code{@@comma@{@}} não é exigido
+(embora seja aceitável usá-lo), pois esses comandos sempre tem exatamente dois
+argumentos.
 
-For @TeX{}, the processed @var{text} cannot contain newline-delimited
-commands.  Text to be ignored (i.e., for non-@TeX{}) can, though.
+Para @TeX{}, o @var{texto} processado não pode conter comandos delimitados por
+nova linha. O texto a ser ignorado (por exemplo, para não-@TeX{}) pode, no
+entanto.
 
-Two other @code{@@inline...} Condicionais complement the
-@code{@@ifset} and @code{@@ifclear} commands; see the next section.
+Dois outros Condicionais @code{@@inline...} complementam os comandos
+@code{@@ifset} e @code{@@ifclear}; veja-se a próxima seção.
 
 
 @node @code{@@set @@clear @@value}
-@section Flags: @code{@@set}, @code{@@clear}, Condicionais, and @code{@@value}
+@section Sinalizadores: @code{@@set}, @code{@@clear}, condicionais e @code{@@value}
 
-@anchor{set clear value}@c old name
-You can direct the Texinfo formatting commands to format or ignore parts
-of a Texinfo file with the @code{@@set}, @code{@@clear}, @code{@@ifset},
-and @code{@@ifclear} commands.
+@anchor{set clear value}@c nome antigo
+Você pode direcionar os comandos de formatação do Texinfo para formatar ou para
+ignorar partes de um arquivo do Texinfo com os comandos @code{@@set},
+@code{@@clear}, @code{@@ifset} e @code{@@ifclear}.
 
-Here are brief descriptions of these commands, see the following
-sections for more details:
+Aqui estão breves descrições desses comandos. Vejam-se as seções a seguir para
+mais detalhes:
 
 @table @code
-@item @@set @var{flag} [@var{value}]
-Set the variable @var{flag}, to the optional @var{value} if specified.
+@item @@set @var{sinalizador} [@var{valor}]
+Configura a variável @var{sinalizador} para o @var{valor} opcional, se
+especificado.
 
-@item @@clear @var{flag}
-Undefine the variable @var{flag}, whether or not it was previously defined.
+@item @@clear @var{sinalizador}
+Desdefine a variável @var{sinalizador}, se ou não ela foi definida
+anteriormente.
 
-@item @@ifset @var{flag}
-If @var{flag} is set, text through the next @code{@@end ifset} command
-is formatted.  If @var{flag} is clear, text through the following
-@code{@@end ifset} command is ignored.
+@item @@ifset @var{sinalizador}
+Se @var{sinalizador} estiver configurado, o texto até o próximo comando
+@code{@@end ifset} será formatado. Se @var{sinalizador} estiver limpo, o texto
+até o comando @code{@@end ifset} seguinte será ignorado.
 
-@item @@inlineifset@{@var{flag}, @var{text}@}
-Brace-delimited version of @code{@@ifset}.
+@item @@inlineifset@{@var{sinalizador}, @var{texto}@}
+Versão delimitada por chaves de @code{@@ifset}.
 
-@item @@ifclear @var{flag}
-If @var{flag} is set, text through the next @code{@@end ifclear} command
-is ignored.  If @var{flag} is clear, text through the following
-@code{@@end ifclear} command is formatted.
+@item @@ifclear @var{sinalizador}
+Se @var{sinalizador} estiver configurado, o texto até o próximo comando
+@code{@@end ifclear} será ignorado. Se @var{sinalizador} estiver limpo, o texto
+até o comando @code{@@end ifclear} seguinte será formatado.
 
-@item @@inlineifclear@{@var{flag}, @var{text}@}
-Brace-delimited version of @code{@@ifclear}.
-
+@item @@inlineifclear@{@var{sinalizador}, @var{texto}@}
+Versão delimitada por chaves de @code{@@ifclear}.
 @end table
 
 @menu
-* @code{@@set @@value}::                 Expand a flag variable to a string.
-* @code{@@ifset @@ifclear}::             Format a region if a flag is set.
-* @code{@@inlineifset @@inlineifclear}:: Brace-delimited flag Condicionais.
-* @code{@@value} Example::              An easy way to update edition information.
+* @code{@@set @@value}::                 Expanda uma variável de sinalização para uma string.
+* @code{@@ifset @@ifclear}::             Formate uma região se um sinalizador estiver configurado.
+* @code{@@inlineifset @@inlineifclear}:: Condicionais de sinalização delimitados por chaves.
+* Exemplo de @code{@@value}::            Uma maneira fácil de atualizar informações de edição.
 @end menu
 
 
 @node @code{@@set @@value}
-@subsection @code{@@set} and @code{@@value}
+@subsection @code{@@set} e @code{@@value}
 
-@anchor{set value}@c old name
+@anchor{set value}@c nome antigo
 @findex set
 @findex value
 @findex clear
 
-You use the @code{@@set} command to specify a value for a flag, which
-is later expanded by the @code{@@value} command.
+Use o comando @code{@@set} para especificar um valor para um sinalizador, que
+posteriormente será expandido pelo comando @code{@@value}.
 
-A @dfn{flag} (aka @dfn{variable}) name is an identifier starting with
-an alphanumeric, @samp{-}, or @samp{_}.  Subsequent characters, if
-any, may not be whitespace, @samp{@@}, braces, angle brackets, or any
-of @samp{~`^+|}; other characters, such as @samp{%}, may work.
-However, it is best to use only letters and numerals in a flag name,
-not @samp{-} or @samp{_} or others---they will work in some contexts,
-but not all, due to limitations in @TeX{}.
+Um nome de @dfn{sinalizador} (também conhecido como @dfn{variável}) é um
+identificador que começa com um alfanumérico, um @samp{-} ou um @samp{_}. Os
+caracteres subsequentes, se existirem, não podem ser espaços em branco,
+@samp{@@}, chaves, colchetes angulares ou quaisquer de @samp{~`^+|}; outros
+caracteres, como @samp{%}, possivelmente funcionem. No entanto, é melhor usar
+somente letras e numerais em um nome de sinalizador, não @samp{-} ou @samp{_}
+ou outros---eles funcionarão em alguns contextos, mas não em todos, devido às
+limitações no @TeX{}.
 
-The value is the remainder of the input line, and can contain anything.
-However, unlike most other commands which take the rest of the line as
-a value, @code{@@set} need not appear at the beginning of a line.
+O valor é o restante da linha de entrada e pode conter qualquer coisa. No
+entanto, diferentemente da maioria dos outros comandos que tomam o restante da
+linha como um valor, @code{@@set} não precisa aparecer no começo de uma linha.
 
-Write the @code{@@set} command like this:
+Escreva o comando @code{@@set} assim:
 
 @example
-@@set foo This is a string.
+@@set foo Esta é uma sequência de caracteres.
 @end example
 
 @noindent
-This sets the value of the flag @code{foo} to ``This is a string.''.
+Isso configura o valor do sinalizador @code{foo} para ``Esta é uma sequência de
+caracteres.''.
 
-The Texinfo formatters then replace a @code{@@value@{@var{flag}@}}
-command with the string to which @var{flag} is set.  Thus, when
-@code{foo} is set as shown above, the Texinfo formatters convert this:
+Os formatadores do Texinfo então substituem um comando
+@code{@@value@{@var{sinalizador}@}} pela string para a qual @var{sinalizador}
+estiver configurado. Assim, quando @code{foo} for configurado como mostrado
+acima, os formatadores do Texinfo convertem isto:
 
 @example
 @group
 @@value@{foo@}
-@exdent @r{to this:}
-This is a string.
+@exdent @r{para isto:}
+Esta é uma sequência de caracteres.
 @end group
 @end example
 
-You can write a @code{@@value} command within a paragraph; but you
-must write a @code{@@set} command on a line of its own.
+Você pode escrever um comando @code{@@value} dentro de um parágrafo; mas
+precisa escrever um comando @code{@@set} em uma linha própria.
 
-If you write the @code{@@set} command like this:
+Se você escrever o comando @code{@@set} assim:
 
 @example
 @@set foo
 @end example
 
 @noindent
-without specifying a string, the value of @code{foo} is the empty string.
+sem especificar uma string, o valor de @code{foo} será a string vazia.
 
-If you clear a previously set flag with @code{@@clear @var{flag}}, a
-subsequent @code{@@value@{flag@}} command will report an error.
+Se você limpar um sinalizador configurado anteriormente com @code{@@clear
+@var{sinalizador}}, um comando @code{@@value@{sinalizador@}} subsequente
+informará um erro.
 
-For example, if you set @code{foo} as follows:
+Por exemplo, se você configurar @code{foo} conforme segue:
 
 @example
-@@set howmuch very, very, very
+@@set quanto muito, muito, muito
 @end example
 
 @noindent
-then the formatters transform
+então os formatadores transformam
 
 @example
 @group
-It is a @@value@{howmuch@} wet day.
+É um dia @@value@{quanto@} chuvoso.
 @exdent @r{into}
-It is a very, very, very wet day.
+É um dia muito, muito, muito chuvoso.
 @end group
 @end example
 
-If you write
+Se você escrever
 
 @example
-@@clear howmuch
+@@clear quanto
 @end example
 
 @noindent
-then the formatters transform
+então os formatadores transformam
 
 @example
 @group
-It is a @@value@{howmuch@} wet day.
-@exdent @r{into}
-It is a @{No value for "howmuch"@} wet day.
+É um dia @@value@{quanto@} chuvoso.
+@exdent @r{em}
+É um dia @{Nenhum valor para "quanto"@} chuvoso.
 @end group
 @end example
 
-@code{@@value} cannot be reliably used as the argument to an accent
-command (@pxref{Inserindo Acentos}).  For example, this fails:
+@code{@@value} não pode ser usado confiavelmente como o argumento para um
+comando de acento (@pxref{Inserindo Acentos}). Por exemplo, isto falha:
 
 @example
-@@set myletter a
-@@'@@value@{myletter@}    @c fails!
+@@set minhaletra a
+@@'@@value@{minhaletra@}    @c falha!
 @end example
 
 
 @node @code{@@ifset @@ifclear}
-@subsection @code{@@ifset} and @code{@@ifclear}
+@subsection @code{@@ifset} e @code{@@ifclear}
 
-@anchor{ifset ifclear}@c old name
+@anchor{ifset ifclear}@c nome antigo
 @findex ifset
 
-When a @var{flag} is set, the Texinfo formatting commands format text
-between subsequent pairs of @code{@@ifset @var{flag}} and @code{@@end
-ifset} commands.  When the @var{flag} is cleared, the Texinfo formatting
-commands do @emph{not} format the text.  @code{@@ifclear} operates
-analogously.
+Quando um @var{sinalizador} é configurado, os comandos de formatação do Texinfo
+formatam o texto entre pares subsequentes de comandos @code{@@ifset
+@var{sinalizador}} e @code{@@end ifset}. Quando o @var{sinalizador} é limpo, os
+comandos de formatação do Texinfo @emph{não} formatam o texto. @code{@@ifclear}
+opera analogamente.
 
-Write the conditionally formatted text between @code{@@ifset @var{flag}}
-and @code{@@end ifset} commands, like this:
+Escreva o texto formatado condicionalmente entre comandos @code{@@ifset
+@var{sinalizador}} e @code{@@end ifset}, assim:
 
 @example
 @group
-@@ifset @var{flag}
-@var{conditional-text}
+@@ifset @var{sinalizador}
+@var{texto-condicional}
 @@end ifset
 @end group
 @end example
 
-For example, you can create one document that has two variants, such as
-a manual for a `large' and `small' model:
+Por exemplo, você pode criar um documento que tenha duas variantes, como um
+manual para um modelo `grande' e para um `pequeno':
 
-@cindex Shrubbery
+@cindex Arbusto
 @example
-You can use this machine to dig up shrubs
-without hurting them.
+Você pode usar esta máquina para desenterrar arbustos sem machucá-los.
 
-@@set large
+@@set grande
 
-@@ifset large
-It can also dig up fully grown trees.
+@@ifset grande
+Ela também pode desenterrar árvores adultas.
 @@end ifset
 
-Remember to replant promptly @dots{}
+Lembre-se de replantar imediatamente @dots{}
 @end example
 
 @noindent
-In the example, the formatting commands will format the text between
-@code{@@ifset large} and @code{@@end ifset} because the @code{large}
-flag is set.
+No exemplo, os comandos de formatação formatarão o texto entre @code{@@ifset
+grande} e @code{@@end ifset} porque o sinalizador @code{grande} está
+configurado.
 
-When @var{flag} is cleared, the Texinfo formatting commands do
-@emph{not} format the text between @code{@@ifset @var{flag}} and
-@code{@@end ifset}; that text is ignored and does not appear in either
-printed or Info output.
+Quando @var{sinalizador} é limpo, os comandos de formatação do Texinfo
+@emph{não} formatam o texto entre @code{@@ifset @var{sinalizador}} e
+@code{@@end ifset}; esse texto é ignorado e não aparece, seja na saída
+impressa, ou na do Info.
 
-For example, if you clear the flag of the preceding example by writing
-an @code{@@clear large} command after the @code{@@set large} command
-(but before the conditional text), then the Texinfo formatting commands
-ignore the text between the @code{@@ifset large} and @code{@@end ifset}
-commands.  In the formatted output, that text does not appear; in both
-printed and Info output, you see only the lines that say, ``You can use
-this machine to dig up shrubs without hurting them.  Remember to replant
-promptly @dots{}''.
+Por exemplo, se você limpar o sinalizador do exemplo precedente escrevendo um
+comando @code{@@clear grande} depois do comando @code{@@set grande} (mas antes
+do texto condicional), então os comandos de formatação do Texinfo ignorarão o
+texto entre os comandos @code{@@ifset grande} e @code{@@end ifset}. Na saída
+formatada, esse texto não aparece; tanto na saída impressa quanto na do Info,
+você vê somente as linhas que dizem: ``Você pode usar esta máquina para
+desenterrar arbustos sem machucá-los. Lembre-se de replantar imediatamente
+@dots{}''.
 
 @findex ifclear
-If a flag is cleared with a @code{@@clear @var{flag}} command, then
-the formatting commands format text between subsequent pairs of
-@code{@@ifclear} and @code{@@end ifclear} commands.  But if the flag
-is set with @code{@@set @var{flag}}, then the formatting commands do
-@emph{not} format text between an @code{@@ifclear} and an @code{@@end
-ifclear} command; rather, they ignore that text.  An @code{@@ifclear}
-command looks like this:
+Se um sinalizador for limpo com um comando @code{@@clear @var{sinalizador}},
+então os comandos de formatação formatam o texto entre pares subsequentes de
+comandos @code{@@ifclear} e @code{@@end ifclear}. Mas se o sinalizador for
+configurado com @code{@@set @var{sinalizador}}, então os comandos de formatação
+@emph{não} formatam o texto entre um comando @code{@@ifclear} e um @code{@@end
+ifclear}; em vez disso, eles ignoram esse texto. Um comando @code{@@ifclear} se
+parece com isto:
 
 @example
-@@ifclear @var{flag}
+@@ifclear @var{sinalizador}
 @end example
 
-
+PAREI
 @node @code{@@inlineifset @@inlineifclear}
 @subsection @code{@@inlineifset} and @code{@@inlineifclear}
 
@@ -14092,7 +14096,7 @@ If you want to do simple text substitution, @code{@@set} and
 * Macro Details::               Limitations of Texinfo macros.
 * @code{@@alias}::                      Command aliases.
 * @code{@@definfoenclose}::             Customized highlighting.
-* External Macro Processors::   @code{#line} directives.
+* Processadores Externos de Macro::   @code{#line} directives.
 @end menu
 
 
@@ -14384,7 +14388,7 @@ errors when producing the printed version of a manual, you might try
 expanding the macros with @command{makeinfo} by invoking
 @command{texi2dvi} with the @samp{-E} option (@pxref{Formatar com @command{texi2dvi}}).  Or, more reliably, eschew Texinfo macros altogether
 and use a language designed for macro processing, such as M4
-(@pxref{External Macro Processors}).
+(@pxref{Processadores Externos de Macro}).
 
 @itemize @bullet
 @item
@@ -14676,8 +14680,8 @@ argument to @code{@@headword}.
 indirectly.
 
 
-@node External Macro Processors
-@section External Macro Processors: Line Directives
+@node Processadores Externos de Macro
+@section Processadores Externos de Macro: Line Directives
 @cindex External macro processors
 @cindex Macro processors, external
 
@@ -17534,7 +17538,7 @@ as @code{OPEN_QUOTE_SYMBOL} (see below).
 
 @item CPP_LINE_DIRECTIVES
 Recognize @code{#line} directives in a ``preprocessing'' pass
-(@pxref{External Macro Processors}); on by default.
+(@pxref{Processadores Externos de Macro}); on by default.
 
 @item DEBUG
 If set, debugging output is generated; default is off (zero).
@@ -20398,7 +20402,7 @@ an error message: @samp{@error{}}.  @xref{@code{@@error}}.
 @item @@errormsg@{@var{msg}@}
 Report @var{msg} as an error to standard error, and exit unsuccessfully.
 Texinfo commands within @var{msg} are expanded to plain text.
-@xref{Condicionais}, and @ref{External Macro Processors}.
+@xref{Condicionais}, and @ref{Processadores Externos de Macro}.
 
 @item @@euro@{@}
 Generate the Euro currency sign.  @xref{@code{@@euro}}.
@@ -20512,7 +20516,7 @@ Generate the long Hungarian umlaut accent over @var{c}, as in @H{o}.
 @item @@hashchar@{@}
 Insert a hash `#' character; only needed when a literal hash would
 introduce @code{#line} directive.  @xref{Inserindo um Símbolo Cerquilha}, and
-@ref{External Macro Processors}.
+@ref{Processadores Externos de Macro}.
 
 @item @@heading @var{title}
 Print an unnumbered section-like heading, but omit from the table of
