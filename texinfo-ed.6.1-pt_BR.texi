@@ -12608,64 +12608,61 @@ a @samp{@@deftypevr Variável @dots{}}. O modelo é:
 
 Esses comandos criam entradas no índice de variáveis.
 
-PAREI
+
 @node Tipos de Dados
 @subsection Tipos de Dados
 
-Here is the command for data types:
+Aqui está o comando para tipos de dados:
 
 @table @code
 @findex deftp
-@item @@deftp @var{category} @var{name} @var{attributes}@dots{}
-The @code{@@deftp} command is the generic definition command for data
-types.  The command is written at the beginning of a line and is
-followed on the same line by the category, by the name of the type
-(which is a word like @code{int} or @code{float}), and then by names of
-attributes of objects of that type.  Thus, you could use this command
-for describing @code{int} or @code{float}, in which case you could use
-@code{data type} as the category.  (A data type is a category of
-certain objects for purposes of deciding which operations can be
-performed on them.)
+@item @@deftp @var{categoria} @var{nome} @var{atributos}@dots{}
+O comando @code{@@deftp} é o comando genérico de definição para tipos de dados.
+O comando é escrito no início de uma linha e é seguido na mesma linha pela
+categoria, pelo nome do tipo (que é uma palavra como @code{int} ou
+@code{float}) e, em seguida, pelos nomes de atributos de objetos desse tipo.
+Portanto, você poderia usar esse comando para descrever @code{int} ou
+@code{float}, em cujo caso você poderia usar @code{tipo de dados} como a
+categoria. (Um tipo de dados é uma categoria de certos objetos para fins de
+decidir quais operações podem ser realizadas sobre neles).
 
-In Lisp, for example,  @dfn{pair} names a particular data
-type, and an object of that type has two slots called the
-@sc{car} and the @sc{cdr}.  Here is how you would write the first line
-of a definition of @code{pair}.
+Na Lisp, por exemplo, @dfn{pair} nomeia um tipo de dado particular, e um objeto
+desse tipo tem dois slots chamados @sc{car} e @sc{cdr}. Aqui está como você
+escreveria a primeira linha de uma definição de @code{pair}.
 
 @example
 @group
-@@deftp @{Data type@} pair car cdr
+@@deftp @{Tipo de dados@} pair car cdr
 @dots{}
 @@end deftp
 @end group
 @end example
 
 @need 950
-The template is:
+O modelo é:
 
 @example
 @group
-@@deftp @var{category} @var{name-of-type} @var{attributes}@dots{}
-@var{body-of-definition}
+@@deftp @var{categoria} @var{nome-do-tipo} @var{atributos}@dots{}
+@var{corpo-da-definição}
 @@end deftp
 @end group
 @end example
 
-@code{@@deftp} creates an entry in the index of data types.
+@code{@@deftp} cria uma entrada no índice de tipos de dados.
 @end table
 
 
 @node Objetos Abstratos
-@subsection Object-Oriented Programming
+@subsection Programação Orientada a Objetos
 
-@cindex Object-oriented programming
+@cindex Programação orientada a objetos
 
-Here are the commands for formatting descriptions about abstract
-objects, such as are used in object-oriented programming.  A class is
-a defined type of abstract object.  An instance of a class is a
-particular object that has the type of the class.  An instance
-variable is a variable that belongs to the class but for which each
-instance has its own value.
+Aqui estão os comandos para formatar descrições acerca de objetos abstratos,
+tais como são usados ​​em programação orientada a objetos. Uma classe
+é um tipo definido de objeto abstrato. Uma instância de uma classe é um objeto
+particular que tem o tipo da classe. Uma variável de instância é uma variável
+que pertence à classe, mas para a qual cada instância tem o próprio valor dela.
 
 @menu
 * Variáveis Orientadas a Objetos::   Variáveis Orientadas a Objetos.
@@ -12676,47 +12673,46 @@ instance has its own value.
 @node Variáveis Orientadas a Objetos
 @subsubsection Variáveis Orientadas a Objetos
 
-@cindex Variables, object-oriented
+@cindex Variáveis, orientadas a objetos
 
-These commands allow you to define different sorts of variables in
-object-oriented programming languages.
+Estes comandos permitem que você defina diferentes tipos de variáveis
+​​em linguagens de programação orientadas a objetos.
 
 @table @code
-@item @@defcv @var{category} @var{class} @var{name}
+@item @@defcv @var{categoria} @var{classe} @var{nome}
 @findex defcv
-The @code{@@defcv} command is the general definition command for
-variables associated with classes in object-oriented programming.  The
-@code{@@defcv} command is followed by three arguments: the category of
-thing being defined, the class to which it belongs, and its
-name.  For instance:
+O comando @code{@@defcv} é o comando geral de definição para variáveis
+​​associadas a classes em programação orientada a objetos. O comando
+@code{@@defcv} é seguido por três argumentos: a categoria da coisa sendo
+definida, a classe à qual ela pertence e o nome dela. Por exemplo:
 
 @example
 @group
-@@defcv @{Class Option@} Window border-pattern
+@@defcv @{Opção da Classe@} Janela padrão-borda
 @dots{}
 @@end defcv
 @end group
 @end example
 
 @noindent produz:
-@defcv {Class Option} Window border-pattern
+@defcv {Opção da Classe} Janela padrão-borda
 @dots{}
 @end defcv
 
-@code{@@defcv} creates an entry in the index of variables.
+@code{@@defcv} cria uma entrada no índice de variáveis.
 
-@item @@deftypecv @var{category} @var{class} @var{data-type} @var{name}
+@item @@deftypecv @var{categoria} @var{classe} @var{tipo-dados} @var{nome}
 @findex deftypecv
-The @code{@@deftypecv} command is the definition command for typed
-class variables in object-oriented programming.  It is analogous to
-@code{@@defcv} with the addition of the @var{data-type} parameter to
-specify the type of the instance variable.  Ordinarily, the data type
-is a programming language construct that should be marked with
-@code{@@code}. For instance:
+O comando @code{@@deftypecv} é o comando de definição para variáveis
+​​de classe tipadas em programação orientada a objetos. Ele é análogo
+ao @code{@@defcv} com a adição do parâmetro @var{tipo-dados} para especificar o
+tipo da variável de instância. Normalmente, o tipo de dado é uma construção da
+linguagem de programação que deveria estar marcada com @code{@@code}. Por
+exemplo:
 
 @example
 @group
-@@deftypecv @{Class Option@} Window @@code@{int@} border-pattern
+@@deftypecv @{Opção da Classe@} Janela @@code@{int@} padrão-borda
 @dots{}
 @@end deftypecv
 @end group
@@ -12724,22 +12720,21 @@ is a programming language construct that should be marked with
 
 @noindent produz:
 
-@deftypecv {Class Option} Window @code{int} border-pattern
+@deftypecv {Opção da Classe} Janela @code{int} padrão-borda
 @dots{}
 @end deftypecv
 
-@code{@@deftypecv} creates an entry in the index of variables.
+@code{@@deftypecv} cria uma entrada no índice de variáveis.
 
-@item @@defivar @var{class} @var{name}
+@item @@defivar @var{classe} @var{nome}
 @findex defivar
-The @code{@@defivar} command is the definition command for instance
-variables in object-oriented programming.  @code{@@defivar} is
-equivalent to @samp{@@defcv @{Instance Variable@} @dots{}}.  For
-instance:
+O comando @code{@@defivar} é o comando de definição para variáveis
+​​de instância em programação orientada a objetos. @code{@@defivar} é
+equivalente a @samp{@@defcv @{Variável da Instância@} @dots{}}. Por exemplo:
 
 @example
 @group
-@@defivar Window border-pattern
+@@defivar Janela padrão-borda
 @dots{}
 @@end defivar
 @end group
@@ -12747,24 +12742,24 @@ instance:
 
 @noindent produz:
 
-@defivar Window border-pattern
+@defivar Janela padrão-borda
 @dots{}
 @end defivar
 
-@code{@@defivar} creates an entry in the index of variables.
+@code{@@defivar} cria uma entrada no índice de variáveis.
 
-@item @@deftypeivar @var{class} @var{data-type} @var{name}
+@item @@deftypeivar @var{classe} @var{tipo-dados} @var{nome}
 @findex deftypeivar
-The @code{@@deftypeivar} command is the definition command for typed
-instance variables in object-oriented programming.  It is analogous to
-@code{@@defivar} with the addition of the @var{data-type} parameter to
-specify the type of the instance variable.  Ordinarily, the data type
-is a programming language construct that should be marked with
-@code{@@code}. For instance:
+O comando @code{@@deftypeivar} é o comando de definição para variáveis
+​​de instância tipadas em programação orientada a objetos. Ele é
+análogo ao @code{@@defivar} com a adição do parâmetro @var{tipo-dados} para
+especificar o tipo da variável de instância. Normalmente, o tipo de dado é uma
+construção da linguagem de programação que deveria estar marcada com
+@code{@@code}. Por exemplo:
 
 @example
 @group
-@@deftypeivar Window @@code@{int@} border-pattern
+@@deftypeivar Janela @@code@{int@} padrão-borda
 @dots{}
 @@end deftypeivar
 @end group
@@ -12772,11 +12767,11 @@ is a programming language construct that should be marked with
 
 @noindent produz:
 
-@deftypeivar Window @code{int} border-pattern
+@deftypeivar Janela @code{int} padrão-borda
 @dots{}
 @end deftypeivar
 
-@code{@@deftypeivar} creates an entry in the index of variables.
+@code{@@deftypeivar} cria uma entrada no índice de variáveis.
 
 @end table
 
@@ -12784,164 +12779,155 @@ is a programming language construct that should be marked with
 @node Métodos Orientados a Objetos
 @subsubsection Métodos Orientados a Objetos
 
-@cindex Methods, object-oriented
+@cindex Métodos, orientados a objetos
 
-These commands allow you to define different sorts of function-like
-entities resembling methods in object-oriented programming languages.
-These entities take arguments, as functions do, but are associated with
-particular classes of objects.
+Esses comandos permitem que você defina diferentes tipos de entidades
+semelhantes a funções que lembram métodos em linguagens de programação
+orientadas a objetos. Essas entidades recebem argumentos, como as funções, mas
+são associadas a classes particulares de objetos.
 
 @table @code
 
 @findex defop
-@item @@defop @var{category} @var{class} @var{name} @var{arguments}@dots{}
-The @code{@@defop} command is the general definition command for these
-method-like entities.
+@item @@defop @var{categoria} @var{classe} @var{nome} @var{argumentos}@dots{}
+O comando @code{@@defop} é o comando geral de definição para essas entidades
+semelhantes a métodos.
 
-For example, some systems have constructs called @dfn{wrappers} that
-are associated with classes as methods are, but that act more like
-macros than like functions.  You could use @code{@@defop Wrapper} to
-describe one of these.
+Por exemplo, alguns sistemas tem construções chamadas @dfn{wrappers} que são
+associadas a classes como métodos, mas que agem mais como macros que como
+funções. Você poderia usar @code{@@defop Wrapper} para descrever uma delas.
 
-Sometimes it is useful to distinguish methods and @dfn{operations}.
-You can think of an operation as the specification for a method.
-Thus, a window system might specify that all window classes have a
-method named @code{expose}; we would say that this window system
-defines an @code{expose} operation on windows in general.  Typically,
-the operation has a name and also specifies the pattern of arguments;
-all methods that implement the operation must accept the same
-arguments, since applications that use the operation do so without
-knowing which method will implement it.
+Ocasionalmente, é útil distinguir métodos e @dfn{operações}. Você pode pensar
+em uma operação como a especificação para um método. Assim, um sistema de
+janelas pode especificar que todas as classes de janelas tem um método chamado
+@code{expor}; nós diríamos que esse sistema de janelas define uma operação
+@code{expor} sobre janelas em geral. Normalmente, a operação tem um nome e
+também especifica o padrão de argumentos; todos os métodos que implementem a
+operação precisam aceitar os mesmos argumentos, já que os aplicativos que usam
+a operação o fazem sem saber qual método a implementará.
 
-Often it makes more sense to document operations than methods.  For
-example, window application developers need to know about the
-@code{expose} operation, but need not be concerned with whether a
-given class of windows has its own method to implement this operation.
-To describe this operation, you would write:
+Frequentemente faz mais sentido documentar operações que métodos. Por exemplo,
+desenvolvedores(as) de aplicativos de janela precisam saber acerca da operação
+@code{expor}, mas não precisam se preocupar se uma determinada classe de
+janelas tem o próprio método dela para implementar essa operação. Para
+descrever essa operação, você escreveria:
 
 @example
-@@defop Operation windows expose
+@@defop Operação janelas expor
 @end example
 
-The @code{@@defop} command is written at the beginning of a line and
-is followed on the same line by the overall name of the category of
-operation, the name of the class of the operation, the name of the
-operation, and its arguments, if any.
+O comando @code{@@defop} é escrito no início de uma linha e é seguido na mesma
+linha pelo nome geral da categoria da operação, pelo nome da classe da
+operação, pelo nome da operação e pelos argumentos dela, se existirem.
 
-The template is:
+O modelo é:
 @example
 @group
-@@defop @var{category} @var{class} @var{name} @var{arguments}@dots{}
-@var{body-of-definition}
+@@defop @var{categoria} @var{classe} @var{nome} @var{argumentos}@dots{}
+@var{corpo-da-definição}
 @@end defop
 @end group
 @end example
 
-@code{@@defop} creates an entry, such as `@code{expose} on
-@code{windows}', in the index of functions.
+@code{@@defop} cria uma entrada, como `@code{expor} sobre @code{janelas}', no
+índice de funções.
 
 @findex deftypeop
-@item @@deftypeop @var{category} @var{class} @var{data-type} @var{name} @var{arguments}@dots{}
-The @code{@@deftypeop} command is the definition command for typed
-operations in object-oriented programming.  It is similar to
-@code{@@defop} with the addition of the @var{data-type} parameter to
-specify the return type of the method.  @code{@@deftypeop} creates an
-entry in the index of functions.
+@item @@deftypeop @var{categoria} @var{classe} @var{tipo-dados} @var{nome} @var{argumentos}@dots{}
+O comando @code{@@deftypeop} é o comando de definição para operações tipadas em
+programação orientada a objetos. Ele é semelhante ao @code{@@defop} com a
+adição do parâmetro @var{tipo-dados} para especificar o tipo de retorno do
+método. @code{@@deftypeop} cria uma entrada no índice de funções.
 
-@item @@defmethod @var{class} @var{name} @var{arguments}@dots{}
+@item @@defmethod @var{classe} @var{nome} @var{argumentos}@dots{}
 @findex defmethod
-The @code{@@defmethod} command is the definition command for methods
-in object-oriented programming.  A method is a kind of function that
-implements an operation for a particular class of objects and its
-subclasses.
+O comando @code{@@defmethod} é o comando de definição para métodos em
+programação orientada a objetos. Um método é um tipo de função que implementa
+uma operação para uma classe particular de objetos e as subclasses dela.
 @ignore
-@c ADR: Who cares?!?
-@c KB: Oh, I don't know, I think this info is crucial!
-In the Lisp Machine, methods actually were functions, but
-they were usually defined with @code{defmethod}.
+@c ADR: Quem se importa?!?
+@c KB: Ah, eu não sei; eu penso que essa informação é crucial! Na Máquina Lisp,
+os métodos eram, na verdade, funções, mas eles geralmente eram definidos com
+@code{defmethod}.
 @end ignore
 
-@code{@@defmethod} is equivalent to @samp{@@defop Method @dots{}}.
-The command is written at the beginning of a line and is followed by
-the name of the class of the method, the name of the method, and its
-arguments, if any.
+@code{@@defmethod} é equivalente a @samp{@@defop Método @dots{}}. O comando é
+escrito no início de uma linha e é seguido pelo nome da classe do método, pelo
+nome do método e pelos argumentos dele, se existirem.
 
 @noindent
-For example:
+Por exemplo:
 @example
 @group
-@@defmethod @code{bar-class} bar-method argument
+@@defmethod @code{classe-barra} método-barra argumento
 @dots{}
 @@end defmethod
 @end group
 @end example
 
 @noindent
-illustrates the definition for a method called @code{bar-method} of
-the class @code{bar-class}.  The method takes an argument.
+ilustra a definição para um método chamado @code{método-barra} da classe
+@code{classe-barra}. O método recebe um argumento.
 
-@code{@@defmethod} creates an entry in the index of functions.
+@code{@@defmethod} cria uma entrada no índice de funções.
 
-@item @@deftypemethod @var{class} @var{data-type} @var{name} @var{arguments}@dots{}
+@item @@deftypemethod @var{classe} @var{tipo-dados} @var{nome} @var{argumentos}@dots{}
 @findex deftypemethod
-The @code{@@deftypemethod} command is the definition command for methods
-in object-oriented typed languages, such as C++ and Java.  It is similar
-to the @code{@@defmethod} command with the addition of the
-@var{data-type} parameter to specify the return type of the method.
-@code{@@deftypemethod} creates an entry in the index of functions.
-
+O comando @code{@@deftypemethod} é o comando de definição para métodos em
+linguagens tipadas e orientadas a objetos, como C++ e Java. Ele é semelhante ao
+comando @code{@@defmethod} com a adição do parâmetro @var{tipo-dados} para
+especificar o tipo de retorno do método. @code{@@deftypemethod} cria uma
+entrada no índice de funções.
 @end table
 
-The typed commands are affected by the @code{@@deftypefnnewline}
-option (@pxref{Funções Tipadas,, Funções em Linguagens Tipadas}).
+Os comandos tipados são afetados pela opção @code{@@deftypefnnewline}
+(@pxref{Funções Tipadas,, Funções em Linguagens Tipadas}).
 
 
 @node Convenções de Comando de Definição
-@section Conventions for Writing Definitions
-@cindex Definition conventions
-@cindex Conventions for writing definitions
+@section Convenções para Escrita de Definições
+@cindex Convenções de definição
+@cindex Convenções para escrever definições
 
-When you write a definition using @code{@@deffn}, @code{@@defun}, or
-one of the other definition commands, please take care to use
-arguments that indicate the meaning, as with the @var{count} argument
-to the @code{forward-word} function.  Also, if the name of an argument
-contains the name of a type, such as @var{integer}, take care that the
-argument actually is of that type.
+Quando você escrever uma definição usando @code{@@deffn}, @code{@@defun} ou um
+dos outros comandos de definição, por favor, tome cuidado para usar argumentos
+que indiquem o significado, como com o argumento @var{count} para a função
+@code{forward-word}. Além disso, se o nome de um argumento contiver o nome de
+um tipo, como @var{integer}, tome cuidado para que o argumento seja realmente
+desse tipo.
 
 
 @node Definição de Função de Amostra
 @section Uma Definição de Função de Amostra
-@cindex Function definitions
-@cindex Command definitions
-@cindex Macro definitions, programming-language
-@cindex Sample function definition
+@cindex Definições de funções
+@cindex Definições de comando
+@cindex Definições de macro, linguagem de programação
+@cindex Definição de função de amostra
 
-A function definition uses the @code{@@defun} and @code{@@end defun}
-commands.  The name of the function follows immediately after the
-@code{@@defun} command and it is followed, on the same line, by the
-parameter list.
+Uma definição de função usa os comandos @code{@@defun} e @code{@@end defun}. O
+nome da função vem imediatamente depois do comando @code{@@defun} e é seguido,
+na mesma linha, pela lista de parâmetros.
 
-Here is a definition from @ref{Calling Functions,,, elisp, The GNU Emacs
-Lisp Reference Manual}.
+Aqui está uma definição oriunda de @ref{Calling Functions,,, elisp, The GNU
+Emacs Lisp Reference Manual}.
 
 @quotation
 @defun apply function &rest arguments
-@code{apply} calls @var{function} with @var{arguments}, just
-like @code{funcall} but with one difference: the last of
-@var{arguments} is a list of arguments to give to
-@var{function}, rather than a single argument.  We also say
-that this list is @dfn{appended} to the other arguments.
+@code{apply} chama @var{function} com @var{arguments}, assim como
+@code{funcall}, mas com uma diferença: o último de @var{arguments} é uma lista
+de argumentos para fornecer para @var{function}, em vez de um argumento
+unitário. Nós também dizemos que essa lista é @dfn{anexada} aos outros
+argumentos.
 
-@code{apply} returns the result of calling @var{function}.
-As with @code{funcall}, @var{function} must either be a Lisp
-function or a primitive function; special forms and macros
-do not make sense in @code{apply}.
+@code{apply} retorna o resultado da chamada de @var{function}. Assim como com
+@code{funcall}, @var{function} precisa ser ou uma função da Lisp ou uma função
+primitiva; formas especiais e macros não fazem sentido em @code{apply}.
 
 @example
 (setq f 'list)
     @result{} list
 (apply f 'x 'y 'z)
-@error{} Wrong type argument: listp, z
+@error{} Argumento de tipo errado: listp, z
 (apply '+ 1 2 '(3 4))
     @result{} 10
 (apply '+ '(1 2 3 4))
@@ -12951,30 +12937,27 @@ do not make sense in @code{apply}.
     @result{} (a b c x y z)
 @end example
 
-An interesting example of using @code{apply} is found in the description
-of @code{mapcar}.
+Um exemplo interessante do uso de @code{apply} é encontrado na descrição de @code{mapcar}.
 @end defun
 @end quotation
 
-In the Texinfo source file, this example looks like this:
+No arquivo fonte do Texinfo, esse exemplo se parece com isto:
 
 @example
 @group
 @@defun apply function &rest arguments
-@@code@{apply@} calls @@var@{function@} with
-@@var@{arguments@}, just like @@code@{funcall@} but with one
-difference: the last of @@var@{arguments@} is a list of
-arguments to give to @@var@{function@}, rather than a single
-argument.  We also say that this list is @@dfn@{appended@}
-to the other arguments.
+@@code@{apply@} chama @@var@{function@} com @@var@{arguments@}, assim como
+@@code@{funcall@}, mas com uma diferença: o último de @@var@{arguments@} é uma
+lista de argumentos para fornecer para @@var@{function@}, em vez de um
+argumento unitário. Nós também dizemos que essa lista é @@dfn@{anexada@} aos
+outros argumentos.
 @end group
 
 @group
-@@code@{apply@} returns the result of calling
-@@var@{function@}.  As with @@code@{funcall@},
-@@var@{function@} must either be a Lisp function or a
-primitive function; special forms and macros do not make
-sense in @@code@{apply@}.
+@@code@{apply@} retorna o resultado da chamada de @@var@{function@}. Assim como
+com @@code@{funcall@}, @@var@{function@} precisa ser ou uma função da Lisp ou
+uma função primitiva; formas especiais e macros não fazem sentido em
+@@code@{apply@}.
 @end group
 
 @group
@@ -12982,7 +12965,7 @@ sense in @@code@{apply@}.
 (setq f 'list)
     @@result@{@} list
 (apply f 'x 'y 'z)
-@@error@{@} Wrong type argument: listp, z
+@@error@{@} Argumento de tipo errado: listp, z
 (apply '+ 1 2 '(3 4))
     @@result@{@} 10
 (apply '+ '(1 2 3 4))
@@ -12994,20 +12977,21 @@ sense in @@code@{apply@}.
 @end group
 
 @group
-An interesting example of using @@code@{apply@} is found
-in the description of @@code@{mapcar@}.
+Um exemplo interessante do uso de @@code@{apply@} é encontrado na descrição de
+@@code@{mapcar@}.
 @@end defun
 @end group
 @end example
 
 @noindent
-In this manual, this function is listed in the Command and Variable
-Index under @code{apply}.
+Neste manual, essa função está listada no Índice de Comandos e Variáveis sob
+@code{apply}.
 
-Ordinary variables and user options are described using a format like
-that for functions except that variables do not take arguments.
+Variáveis ​​comuns e opções de usuário(a) são descritas usando um
+formato semelhante àquele para funções, exceto que variáveis ​​não
+recebem argumentos.
 
-
+PAREI
 @node Internacionalização
 @chapter Internacionalização
 
