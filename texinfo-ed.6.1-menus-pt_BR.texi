@@ -1,23 +1,23 @@
 @menu
 * Condições de Cópia::                   Teus direitos.
 * Visão Geral::                          Texinfo em resumo.
-* Escrevendo um Arquivo do Texinfo::     Formato de um arquivo fonte Texinfo.
-* Iniciando e Finalizando um Arquivo::   Iniciando e fim de um arquivo Texinfo.
-* Nodos::                                Escrevendo Nodos, a unidade básica de Texinfo.
-* Estruturamento de Capítulo::           Criando capítulos, seções, apêndices, etc.
+* Escrevendo um Arquivo do Texinfo::     Formato de um arquivo fonte do Texinfo.
+* Iniciando e Finalizando um Arquivo::   Iniciando e fim de um arquivo do Texinfo.
+* Nodos::                                Escrevendo Nodos, a unidade básica do Texinfo.
+* Estruturamento de Capítulo::           Criando capítulos, seções, anexos, etc.
 * Referências Cruzadas::                 Escrevendo referências cruzadas.
-* Marcando Texto::                       Marcando palavras e frases como código, entrada de teclado, variáveis meta sintáticas, e afins.
+* Marcando Texto::                       Marcando palavras e frases como código, entrada de teclado, variáveis metassintáticas, e afins.
 * Citações e Exemplos::                  Encapsulamentos de bloco, exemplos, etc.
 * Listas e Tabelas::                     Listas de itens ou numeradas, e tabelas.
 * Exibições Especiais::                  Figuras flutuantes e notas de rodapé.
 * Índices::                              Criando índices.
-* Inserções::                            Inserindo sinais @@-signs, chaves, etc.
+* Inserções::                            Inserindo sinais @@, chaves, etc.
 * Quebras::                              Forçando ou impedindo quebras de linha e de página.
 * Comandos de Definição::                Descrevendo uniformemente funções e afins.
 * Internacionalização::                  Suporte a outras linguagens diferentes do Inglês.
 * Condicionais::                         Especificando texto somente para alguns casos de saída.
-* Definindo Novos Comandos do Texinfo::  Macros definidas pelo usuário e apelidos.
-* Arquivos de Inclusão::                 Como incorporar outros arquivos Texinfo.
+* Definindo Novos Comandos do Texinfo::  Macros definidas pelo(a) usuário(a) e apelidos.
+* Arquivos de Inclusão::                 Como incorporar outros arquivos do Texinfo.
 * Cópia Impressa::                       Saída para papel, com @TeX{}.
 * Tradutor Genérico @command{texi2any}:: @command{texi2any}, um conversor para todos os propósitos.
 * Criando e Instalando Arquivos Info::   Detalhes sobre saída Info.
@@ -26,10 +26,10 @@
 
 Anexos
 
-* Detalhes do Comando @@::            Detalhes dos comandos @@ de Texinfo.
-* Dicas::                             Dicas sobre como escrever um documento Texinfo.
+* Detalhes do Comando @@::            Detalhes dos comandos @@ do Texinfo.
+* Dicas::                             Dicas acerca de como escrever um documento do Texinfo.
 * Arquivos de Amostra do Texinfo::    Exemplos completos, incluindo textos completos.
-* Modo Texinfo::                      Utilizando o modo Texinfo do GNU Emacs.
+* Modo Texinfo::                      Usando o modo Texinfo do GNU Emacs.
 * Cabeçalhos::                        Como escrever cabeçalhos e rodapés de página.
 * Capturando Erros::                  Como achar erros na formatação.
 * Especificação do Formato Info::     Detalhes técnicos do formato de arquivo Info.
@@ -268,8 +268,8 @@ Notas de rodapé
 
 Combinando Índices
 
-* @code{@@syncodeindex}::               Como mesclar dois índices, utilizando a fonte @code{@@code} para o índice mesclado a partir de.
-* @code{@@synindex}::                   Como mesclar dois índices, utilizando a fonte roman para o índice mesclado a partir de.
+* @code{@@syncodeindex}::               Como mesclar dois índices, usando a fonte @code{@@code} para o índice mesclado a partir de.
+* @code{@@synindex}::                   Como mesclar dois índices, usando a fonte roman para o índice mesclado a partir de.
 
 Inserções Especiais
 
@@ -339,7 +339,7 @@ Forçando e Impedindo Quebras
 
 Comandos de Definição
 
-* Modelos de Comando de Definição::                 Escrevendo descrições utilizando comandos de definição.
+* Modelos de Comando de Definição::                 Escrevendo descrições usando comandos de definição.
 * Linhas de Continuação de Comando de Definição::   Continuando o cabeçalho por sobre linhas de fonte.
 * Argumentos Opcionais::                            Manuseando argumentos opcionais e repetidos.
 * @code{@@deffnx}::                                 Agrupe duas ou mais `primeiras' linhas.
@@ -374,7 +374,7 @@ Texto Visível Condicionalmente
 * Condicionais Inline::               Texto condicional delimitado por chaves.
 * @code{@@set @@clear @@value}::      Testes de variáveis e substituições.
 * Testes para Comandos do Texinfo::   Testando se um comando Texinfo está disponível.
-* Aninhamento Condicional::           Usando condicionais dentro de condicionais.
+* Aninhamento de Condicional::           Usando condicionais dentro de condicionais.
 
 Sinalizadores: @code{@@set}, @code{@@clear}, condicionais, e @code{@@value}
 
@@ -383,14 +383,14 @@ Sinalizadores: @code{@@set}, @code{@@clear}, condicionais, e @code{@@value}
 * @code{@@inlineifset @@inlineifclear}:: Condicionais de sinalização delimitados por chaves.
 * Exemplo de @code{@@value}::            Uma maneira fácil de atualizar informações de edição.
 
-Definindo Novos Comandos Texinfo
+Definindo Novos Comandos do Texinfo
 
-* Definindo Macros::             Definindo e indefinindo novos comandos.
-* Invocando Macros::             Utilizando uma macro, uma vez que se definiu uma.
-* Detalhes de Macro::               Limitações das macros Texinfo.
-* @code{@@alias}::                      Apelidos de comandos.
-* @code{@@definfoenclose}::             Salientamento personalizado.
-* Processadores Externos de Macro::   Diretivas @code{#line}.
+* Definindo Macros::                Definindo e indefinindo novos comandos.
+* Invocando Macros::                Usando uma macro, uma vez que você a tiver definido.
+* Detalhes de Macro::               Limitações das macros do Texinfo.
+* @code{@@alias}::                  Apelidos de comandos.
+* @code{@@definfoenclose}::         Destaque personalizado.
+* Processadores Externos de Macro:: Diretivas @code{#line}.
 
 Processadores Externos de Macro: Diretivas de Linha
 
