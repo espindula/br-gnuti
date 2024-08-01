@@ -14352,81 +14352,81 @@ Ambos: \p\\q\.
 Ambos: a.
 @end display
 
-PAREI
-@node Macro Details
-@section Macro Details and Caveats
-@cindex Macro details
-@cindex Details of macro usage
-@cindex Caveats for macro usage
 
-@cindex Macro expansion, contexts for
-@cindex Expansion of macros, contexts for
-By design, macro expansion does not happen in the following contexts
-in @command{makeinfo}:
+@node Detalhes de Macro
+@section Detalhes e Ressalvas Acerca de Macro
+@cindex Detalhes de macro
+@cindex Detalhes do uso de macro
+@cindex Ressalvas para uso de macro
+
+@cindex Expansão, macro, contextos para
+@cindex Expansão de macros, contextos para
+Por projeto, expansão de macro não ocorre nos seguintes contextos no @command{makeinfo}:
 
 @itemize @bullet
-@item @code{@@macro} and @code{@@unmacro} lines;
+@item linhas @code{@@macro} e @code{@@unmacro};
 
-@item @code{@@if...} lines, including @code{@@ifset} and similar;
+@item linhas @code{@@if...}, incluindo @code{@@ifset} e similares;
 
 @item @code{@@set}, @code{@@clear}, @code{@@value};
 
-@item @code{@@clickstyle} lines;
+@item linhas @code{@@clickstyle};
 
-@item @code{@@end} lines.
+@item linhas @code{@@end}.
 @end itemize
 
-@noindent Unfortunately, @TeX{} may do some expansion in these situations,
-possibly yielding errors.
+@noindent Infelizmente, o @TeX{} pode fazer alguma expansão nessas situações,
+possivelmente gerando erros.
 
-Also, quite a few macro-related constructs cause problems with @TeX{};
-some of the caveats are listed below.  Thus, if you get macro-related
-errors when producing the printed version of a manual, you might try
-expanding the macros with @command{makeinfo} by invoking
-@command{texi2dvi} with the @samp{-E} option (@pxref{Formatar com @command{texi2dvi}}).  Or, more reliably, eschew Texinfo macros altogether
-and use a language designed for macro processing, such as M4
+Além disso, algumas construções relacionadas a macro causam problemas com
+@TeX{}; algumas das ressalvas estão listadas abaixo. Portanto, se você obtiver
+erros relacionados a macro ao produzir a versão impressa de um manual, você
+pode tentar expandir as macros com @command{makeinfo} invocando
+@command{texi2dvi} com a opção @samp{-E} (@pxref{Formatar com
+@command{texi2dvi}}). Ou, mais confiavelmente, evite completamente as macros do
+Texinfo e use uma linguagem projetada para processamento de macros, como M4
 (@pxref{Processadores Externos de Macro}).
 
 @itemize @bullet
 @item
-As mentioned earlier, macro names must consist entirely of letters.
+Como mencionado anteriormente, os nomes de macro precisam consistir
+inteiramente de letras.
 
 @item
-It is not advisable to redefine any @TeX{} primitive, plain, or
-Texinfo command name as a macro. Unfortunately this is a large and
-open-ended set of names, and the possible resulting errors are
-unpredictable.
+Não é aconselhável redefinir nenhum nome de comando primitivo do @TeX{},
+simples ou Texinfo, como uma macro. Infelizmente, esse é um conjunto de nomes
+grande e aberto, e os possíveis erros resultantes são imprevisíveis.
 
 @item
-Arguments to macros taking more than one argument cannot cross lines.
+Argumentos para macros recebendo mais que um argumento não podem cruzar linhas.
 
 @item
-Macros containing a command which must be on a line by itself, such as
-a conditional, cannot be invoked in the middle of a line.  Similarly,
-macros containing line-oriented commands or text, such as
-@code{@@example} environments, may behave unpredictably in @TeX{}.
+Macros contendo um comando que precisa estar em uma linha própria, como um
+Condicional, não podem ser invocadas no meio de uma linha. Similarmente, macros
+contendo comandos orientados a linha ou texto, como ambientes @code{@@example},
+possivelmente se comportem imprevisivelmente no @TeX{}.
 
 @item
-Texinfo commands in the expansion of a macro in the text of an index 
-entry may end up being typeset as literal text (including an ``@@'' 
-sign), instead of being interpreted with their intended meaning.
+Comandos do Texinfo na expansão de uma macro no texto de uma entrada de índice
+podem acabar sendo tipografados como texto literal (incluindo um sinal ``@@''),
+em vez de serem interpretados com o significado pretendido deles.
 
 @item
-White space is ignored at the beginnings of lines.
+Espaços em branco são ignorados no início das linhas.
 
 @item
-Macros can't be reliably used in the argument to accent commands
+Macros não podem ser usadas confiavelmente no argumento para comandos de acento
 (@pxref{Inserindo Acentos}).
 
 @item
-The backslash escape for commas in macro arguments does not work;
-@code{@@comma@{@}} must be used.
+O escape de barra invertida para vírgulas em argumentos de macro não funciona;
+@code{@@comma@{@}} precisa ser usado.
 
 @item
-Likewise, if you want to pass an argument with the Texinfo command 
-@code{@@,} (to produce a cedilla, see @ref{Inserindo Acentos}), you have 
-to use @code{@@value} or another work-around.  Otherwise, the comma
-may be taken as separating the arguments.  For example,
+Da mesma forma, se você quiser passar um argumento com o comando do Texinfo
+@code{@@,} (para produzir uma cedilha, veja-se @ref{Inserindo Acentos}), você
+tem que usar @code{@@value} ou outra solução alternativa. Caso contrário, a
+vírgula pode ser tomada como separadora dos argumentos. Por exemplo,
 
 @example
 @@macro mactwo@{argfirst, argsecond@}
@@ -14442,25 +14442,25 @@ may be taken as separating the arguments.  For example,
 Fran@,cois+.
 @end display
 
-@c currently @mactwo{Fran@,cois} works in TeX, but @mactwo{Franc@\,cois}
-@c works in makeinfo.  better to avoid commas altogether using this trick.
-@c an alternative to @, could be invented if needed.
+@c Atualmente, @mactwo{Fran@,cois} funciona no TeX, mas @mactwo{Franc@\,cois}
+@c funciona no makeinfo. É melhor evitar vírgulas completamente usando esse
+@c truque. Uma alternativa ao @ poderia ser inventada se necessário.
 
 @item
-Ending a macro body with @samp{@@c} may cause text following the macro
-invocation to be ignored as a comment in @command{makeinfo}.  This is 
-not the case when processing with @TeX{} (in case you really want to 
-comment out following text, use @samp{@@comment} instead).  This was
-often done to ``comment out'' an unwanted newline at the end of a macro 
-body, but this is not necessary any more, as the final newline before 
-@samp{@@end macro} is not included in the macro body anyway.
+Terminar um corpo de macro com @samp{@@c} pode fazer com que o texto após a
+invocação da macro seja ignorado como um comentário no @command{makeinfo}. Esse
+não é o caso ao processar com @TeX{} (caso você realmente queira comentar o
+texto seguinte, use @samp{@@comment} em vez disso). Isso era feito
+frequentemente para ``comentar'' uma nova linha indesejada no final de um corpo
+de macro, mas isso não mais é necessário, pois a nova linha final antes de
+@samp{@@end macro} não é incluída no corpo da macro de qualquer maneira.
 
 @item
-In general, you can't arbitrarily substitute a macro (or
-@code{@@value}) call for Texinfo command arguments, even when the text
-is the same.  Texinfo is not M4 (or even plain @TeX{}).  It might work
-with some commands, it fails with others.  Best not to do it at all.
-For instance, this fails:
+Em geral, você não pode substituir arbitrariamente uma chamada de macro (ou
+@code{@@value}) por argumentos de comando do Texinfo, mesmo quando o texto é o
+mesmo. Texinfo não é M4 (nem mesmo @TeX{} simples). Pode funcionar com alguns
+comandos, mas falha com outros. É melhor não fazer isso de jeito nenhum. Por
+exemplo, isto falha:
 
 @example
 @@macro offmacro
@@ -14470,69 +14470,69 @@ off
 @end example
 
 @noindent
-This looks equivalent to @code{@@headings off}, but for @TeX{}nical
-reasons, it fails with a mysterious error message (namely,
-@samp{Paragraph ended before @@headings was complete}).
+Isso parece equivalente a @code{@@headings off}, mas por motivos
+@TeX{}nológicos, falha com uma mensagem de erro misteriosa (ou seja,
+@samp{Parágrafo terminou antes que @@headings estivesse completo}).
 
 @item
-Macros cannot define macros in the natural way.  To do this, you must
-use Condicionais and raw @TeX{}.  For example:
+Macros não podem definir macros na maneira natural. Para fazer isso, você
+precisa usar Condicionais e @TeX{} bruto. Por exemplo:
 
 @example
 @@ifnottex
-@@macro ctor @{name, arg@}
-@@macro \name\
-something involving \arg\ somehow
+@@macro ctor @{nome, arg@}
+@@macro \nome\
+algo envolvendo \arg\ de alguma forma
 @@end macro
 @@end macro
 @@end ifnottex
 @@tex
 \gdef\ctor#1@{\ctorx#1,@}
-\gdef\ctorx#1,#2,@{\def#1@{something involving #2 somehow@}@}
+\gdef\ctorx#1,#2,@{\def#1@{algo envolvendo #2 de alguma forma@}@}
 @@end tex
 @end example
 @end itemize
 
-The @command{makeinfo} implementation also has the following
-limitations (by design):
+A implementação do @command{makeinfo} também tem as seguintes limitações (por
+projeto):
 
 @itemize
 @item
-@code{@@verbatim} and macros do not mix; for instance, you can't start
-a verbatim block inside a macro and end it outside
-(@pxref{@code{@@verbatim}}).  Starting any environment inside a macro
-and ending it outside may or may not work, for that matter.
+@code{@@verbatim} e macros não se misturam; por exemplo, você não pode iniciar
+um bloco verbatim dentro de uma macro e terminá-lo fora
+(@pxref{@code{@@verbatim}}). Iniciar qualquer ambiente dentro de uma macro e
+terminá-lo fora pode ou não funcionar, nesse caso.
 
 @item
-Macros that completely define macros are ok, but it's not possible to
-have incompletely nested macro definitions.  That is, @code{@@macro}
-and @code{@@end macro} (likewise for @code{@@rmacro}) must be
-correctly paired.  For example, you cannot start a macro definition
-within a macro, and then end that nested definition outside the macro.
+Macros que definem macros completamente são ok, mas não é possível ter
+definições de macro aninhadas incompletamente. Ou seja, @code{@@macro} e
+@code{@@end macro} (da mesma forma para @code{@@rmacro}) precisam ser pareados
+corretamente. Por exemplo, você não pode iniciar uma definição de macro dentro
+de uma macro e, em seguida, terminar essa definição aninhada fora da macro.
 @end itemize
 
-In the @code{makeinfo} implementation before Texinfo 5.0, ends of
-lines from expansion of a @code{@@macro} definition did not end an
-@@-command line-delimited argument (@code{@@chapter}, @code{@@center},
-etc.).  This is no longer the case.  For example:
+Na implementação do @code{makeinfo} antes do Texinfo 5.0, os fins de linhas
+originários da expansão de uma definição do @code{@@macro} não terminavam um
+argumento delimitado por linha do comando @@ (@code{@@chapter},
+@code{@@center}, etc.). Esse não mais é o caso. Por exemplo:
 
 @example
-@@macro twolines@{@}
+@@macro duaslinhas@{@}
 aaa
 bbb
 @@end macro
-@@center @@twolines@{@}
+@@center @@duaslinhas@{@}
 @end example
 
-In the current @code{makeinfo}, this is equivalent to:
+No @code{makeinfo} atual, isso é equivalente a:
 
 @example
 @@center aaa
 bbb
 @end example
 
-@noindent with just @samp{aaa} as the argument to @code{@@center}.  In
-the earlier implementation, it would have been parsed as this:
+@noindent com apenas @samp{aaa} como argumento para @code{@@center}. Na
+implementação anterior, ele teria sido analisado assim:
 
 @example
 @@center aaa bbb
@@ -14540,110 +14540,109 @@ the earlier implementation, it would have been parsed as this:
 
 
 @node @code{@@alias}
-@section @samp{@@alias @var{new}=@var{existing}}
+@section @samp{@@alias @var{novo}=@var{existente}}
 
-@anchor{alias}@c old name
-@cindex Aliases, command
-@cindex Command aliases
+@anchor{alias}@c nome antigo
+@cindex Apelidos, comando
+@cindex Comando, apelidos
 @findex alias
 
-The @samp{@@alias} command defines a new command to be just like an
-existing one.  This is useful for defining additional markup names,
-thus preserving additional semantic information in the input even
-though the output result may be the same.
+O comando @samp{@@alias} define um novo comando para ser exatamente como um
+existente. Isso é útil para definir nomes adicionais de marcação, preservando
+assim informações semânticas adicionais na entrada, mesmo que o resultado da
+saída possa ser o mesmo.
 
-Write the @samp{@@alias} command on a line by itself, followed by the
-new command name, an equals sign, and the existing command name.
-Whitespace around the equals sign is optional and ignored if present.
-Thus:
+Escreva o comando @samp{@@alias} em uma linha própria, seguido pelo novo nome
+do comando, um sinal de igual e o nome do comando existente. O espaço em branco
+ao redor do sinal de igual é opcional e ignorado se presente. Assim:
 
 @example
-@@alias @var{new} = @var{existing}
+@@alias @var{novo} = @var{existente}
 @end example
 
-For example, if your document contains citations for both books and
-some other media (movies, for example), you might like to define a
-macro @code{@@moviecite@{@}} that does the same thing as an ordinary
-@code{@@cite@{@}} but conveys the extra semantic information as well.
-You'd do this as follows:
+Por exemplo, se teu documento contiver citações para livros e algumas outras
+mídias (filmes, por exemplo), você pode querer definir uma macro
+@code{@@moviecite@{@}} que faz a mesma coisa que um @code{@@cite@{@}} comum,
+mas transmite as informações semânticas extras também. Você faria isso conforme
+segue:
 
 @example
 @@alias moviecite = cite
 @end example
 
-Macros do not always have the same effect as aliases, due to vagaries
-of argument parsing.  Also, aliases are much simpler to define than
-macros.  So the command is not redundant.
+Macros nem sempre tem o mesmo efeito que apelidos, devido a caprichos da
+análise de argumentos. Além disso, apelidos são muito mais simples de definir
+que macros. Então o comando não é redundante.
 
-Unfortunately, it's not possible to alias Texinfo environments; for
-example, @code{@@alias lang=example} is an error.
+Infelizmente, não é possível apelidar ambientes do Texinfo; por exemplo,
+@code{@@alias lang=exemplo} é um erro.
 
-Aliases must not be recursive, directly or indirectly.
+Apelidos precisam não serem recursivos, direta ou indiretamente.
 
-It is not advisable to redefine any @TeX{} primitive, plain @TeX{}, or
-Texinfo command name as an alias.  Unfortunately this is a very large
-set of names, and the possible resulting errors from @TeX{} are
-unpredictable.
+Não é aconselhável redefinir nenhum nome de comando do @TeX{} primitivo, do
+@TeX{} simples ou do Texinfo como um apelido. Infelizmente, esse é um conjunto
+muito grande de nomes, e os possíveis erros resultantes oriundos do @TeX{} são
+imprevisíveis.
 
-@command{makeinfo} will accept the same identifiers for aliases as it
-does for macro names, that is, alphanumerics and (except as the first
-character) @samp{-}.
+@command{makeinfo} aceitará os mesmos identificadores para apelidos que aceita
+para nomes de macro, isto é, alfanuméricos e (exceto como o primeiro caractere)
+@samp{-}.
 
 
 @node @code{@@definfoenclose}
-@section @code{@@definfoenclose}: Customized Highlighting
+@section @code{@@definfoenclose}: Destaque Personalizado
 
-@anchor{definfoenclose}@c old name
-@cindex Highlighting, customized
-@cindex Customized highlighting
+@anchor{definfoenclose}@c nome antigo
+@cindex Destaque, personalizado
+@cindex Realce, personalizado
 @findex definfoenclose
 
-An @code{@@definfoenclose} command may be used to define a
-highlighting command for all the non-@TeX{} output formats.  A command
-defined using @code{@@definfoenclose} marks text by enclosing it in
-strings that precede and follow the text.  You can use this to get
-closer control of your output.
+Um comando @code{@@definfoenclose} pode ser usado para definir um comando de
+realce para todos os formatos de saída não @TeX{}. Um comando definido usando
+@code{@@definfoenclose} marca o texto colocando-o entre strings que precedem e
+seguem o texto. Você pode usar isso para obter um controle mais próximo da tua
+saída.
 
-Presumably, if you define a command with @code{@@definfoenclose}, you
-will create a corresponding command for @TeX{}, either in
-@file{texinfo.tex}, @file{texinfo.cnf}, or within an @samp{@@iftex} or
-@samp{@@tex} in your document.
+Presumivelmente, se você definir um comando com @code{@@definfoenclose}, você
+criará um comando correspondente para @TeX{}, ou em @file{texinfo.tex},
+@file{texinfo.cnf}, ou dentro de um @samp{@@iftex} ou @samp{@@tex} no teu
+documento.
 
-Write a @code{@@definfoenclose} command at the beginning of a line
-followed by three comma-separated arguments.  The first argument to
-@code{@@definfoenclose} is the @@-command name (without the
-@code{@@}); the second argument is the start delimiter string; and the
-third argument is the end delimiter string.  The latter two arguments
-enclose the highlighted text in the output.
+Escreva um comando @code{@@definfoenclose} no início de uma linha seguido por
+três argumentos separados por vírgula. O primeiro argumento para
+@code{@@definfoenclose} é o nome do comando @@ (sem o @code{@@}); o segundo
+argumento é a string delimitadora inicial; e o terceiro argumento é a string
+delimitadora final. Os dois últimos argumentos cercam o texto destacado na
+saída.
 
-A delimiter string may contain spaces.  Neither the start nor end
-delimiter is required.  If you do not want a start delimiter but do
-want an end delimiter, you must follow the command name with two
-commas in a row; otherwise, the end delimiter string you intended will
-naturally be (mis)interpreted as the start delimiter string.
+Uma string delimitadora pode conter espaços. Nem o delimitador inicial nem o
+final são exigidos. Se você não quiser um delimitador inicial, mas quiser um
+delimitador final, você precisa seguir o nome do comando com duas vírgulas em
+uma linha; do contrário, a string delimitadora final que você pretendia será
+naturalmente (mal)interpretada como a string delimitadora inicial.
 
-If you do a @code{@@definfoenclose} on the name of a predefined
-command (such as @code{@@emph}, @code{@@strong}, @code{@@t}, or
-@code{@@i}), the enclosure definition will override the built-in
-definition.  We don't recommend this.
+Se você fizer um @code{@@definfoenclose} no nome de um comando predefinido
+(como @code{@@emph}, @code{@@strong}, @code{@@t} ou @code{@@i}), a definição de
+invólucro substituirá a definição interna. Nós não recomendamos isso.
 
-An enclosure command defined this way takes one argument in braces,
-since it is intended for new markup commands (@pxref{Marcando Texto}).
+Um comando de invólucro definido dessa maneira recebe um argumento entre
+chaves, pois é destinado para novos comandos de marcação (@pxref{Marcando
+Texto}).
 
 @findex phoo
-For example, you can write:
+Por exemplo, você pode escrever:
 
 @example
 @@definfoenclose phoo,//,\\
 @end example
 
 @noindent
-near the beginning of a Texinfo file to define @code{@@phoo} as an Info
-formatting command that inserts `//' before and `\\' after the argument
-to @code{@@phoo}.  You can then write @code{@@phoo@{bar@}} wherever you
-want `//bar\\' highlighted in Info.
+perto do início de um arquivo do Texinfo para definir @code{@@phoo} como um
+comando de formatação do Info que insere `//' antes e `\\' depois do argumento
+para @code{@@phoo}. Você pode então escrever @code{@@phoo@{bar@}} onde quiser
+que `//bar\\' seja realçado no Info.
 
-For @TeX{} formatting, you could write
+Para formatação do @TeX{}, você poderia escrever
 
 @example
 @@iftex
@@ -14652,57 +14651,57 @@ For @TeX{} formatting, you could write
 @end example
 
 @noindent
-to define @code{@@phoo} as a command that causes @TeX{} to typeset the
-argument to @code{@@phoo} in italics.
+para definir @code{@@phoo} como um comando que faz com que o @TeX{} tipografe o
+argumento para @code{@@phoo} em itálico.
 
-Each definition applies to its own formatter: one for @TeX{}, the
-other for everything else.  The raw @TeX{} commands need to be in
-@samp{@@iftex}.  @code{@@definfoenclose} command need not be within
-@samp{@@ifinfo}, unless you want to use different definitions for
-different output formats.
+Cada definição se aplica ao próprio formatador dela: uma para @TeX{}, o outra
+para todo o resto. Os comandos do @TeX{} bruto precisam estar em
+@samp{@@iftex}. O comando @code{@@definfoenclose} não precisa estar em
+@samp{@@ifinfo}, a menos que você queira usar definições diferentes para
+formatos de saída diferentes.
 
 @findex headword
-Here is another example: write
+Aqui está outro exemplo: escreva
 
 @example
 @@definfoenclose headword, , :
 @end example
 
 @noindent
-near the beginning of the file, to define @code{@@headword} as an Info
-formatting command that inserts nothing before and a colon after the
-argument to @code{@@headword}.
+perto do início do arquivo, para definir @code{@@headword} como um comando de
+formatação do Info que insere nada antes e dois pontos depois do argumento para
+@code{@@headword}.
 
-@samp{@@definfoenclose} definitions must not be recursive, directly or
-indirectly.
+Definições de @samp{@@definfoenclose} precisam não serem recursivas, direta ou
+indiretamente.
 
 
 @node Processadores Externos de Macro
-@section Processadores Externos de Macro: Line Directives
-@cindex External macro processors
-@cindex Macro processors, external
+@section Processadores Externos de Macro: Diretivas de Linha
+@cindex Processadores externos de macro
+@cindex Processadores macro, externos
 
-Texinfo macros (and its other text substitution facilities) work fine
-in straightforward cases.  If your document needs unusually complex
-processing, however, their fragility and limitations can be a problem.
-In this case, you may want to use a different macro processor
-altogether, such as M4 (@pxref{Top,,, m4, M4}) or CPP (@pxref{Top,,,
+Macros do Texinfo (e os outros recursos dele de substituição de texto)
+funcionam bem em casos simples. Se teu documento precisar de processamento
+incomumente complexo, no entanto, a fragilidade e limitações delas podem ser um
+problema. Nesse caso, você pode querer usar um processador de macro
+completamente diferente, como M4 (@pxref{Top,,, m4, M4}) ou CPP (@pxref{Top,,,
 cpp, The C Preprocessor}).
 
-With one exception, Texinfo does not need to know whether its input is
-``original'' source or preprocessed from some other source file.
-Therefore, you can arrange your build system to invoke whatever
-programs you like to handle macro expansion or other preprocessing
-needs.  Texinfo does not offer built-in support for any particular
-preprocessor, since no one program seemed likely to suffice for the
-requirements of all documents.
+Com uma exceção, o Texinfo não precisa saber se a entrada dele é fonte
+``original'' ou pré-processada a partir de algum outro arquivo fonte. Portanto,
+você pode organizar teu sistema de construção para invocar quaisquer programas
+que você goste para lidar com expansão de macro ou outras necessidades de
+pré-processamento. O Texinfo não oferece suporte interno para nenhum
+pré-processador em particular, já que nenhum programa parecia ser suficiente
+para as exigências de todos os documentos.
 
-@cindex Line numbers, in error messages
-@cindex Error messages, line numbers in
-The one exception is line numbers in error messages.  In that case,
-the line number should refer to the original source file, whatever it
-may be.  There's a well-known mechanism for this: the so-called
-@samp{#line} directive.  Texinfo supports this.
+@cindex Números de linha, em mensagens de erro
+@cindex Mensagens de erro, números de linha em
+A única exceção são os números de linha em mensagens de erro. Nesse caso, o
+número de linha deveria se referir ao arquivo fonte original, seja ele qual
+for. Existe um mecanismo bem conhecido para isso: a assim chamada diretiva
+@samp{#line}. O Texinfo suporta isso.
 
 @menu
 * Diretiva @samp{#line}::
@@ -14714,52 +14713,51 @@ may be.  There's a well-known mechanism for this: the so-called
 @node Diretiva @samp{#line}
 @subsection Diretiva @samp{#line}
 
-@cindex @samp{#line} directive
+@cindex Diretiva @samp{#line}
 
-An input line such as this:
+Uma linha de entrada como esta:
 
 @example
 @hashchar{}line 100 "foo.ptexi"
 @end example
 
-@noindent indicates that the next line was line 100 of the file
-@file{foo.ptexi}, and so that's what an error message should refer to.
-Both M4 (@pxref{Preprocessor features,,, m4, GNU M4}) and CPP
-(@pxref{Line Control,,, cpp, The C Preprocessor}, and
-@ref{Preprocessor Output,,, cpp, The C Preprocessor}) can generate
-such lines.
+@noindent indica que a próxima linha era a linha 100 do arquivo
+@file{foo.ptexi}, e, portanto, isso é ao que uma mensagem de erro deveria se
+referir. Tanto M4 (@pxref{Preprocessor features,,, m4, GNU M4}) quanto CPP
+(@pxref{Line Control,,, cpp, The C Preprocessor} e @ref{Preprocessor Output,,,
+cpp, The C Preprocessor}) podem gerar tais linhas.
 
 @vindex CPP_LINE_DIRECTIVES
-The @command{makeinfo} program recognizes these lines by default,
-except within @code{@@verbatim} blocks (@pxref{@code{@@verbatim}}.
-Their recognition can be turned off completely with
-@code{CPP_LINE_DIRECTIVES} (@pxref{Outras Variáveis de Personalização}),
-though there is normally no reason to do so.
+O programa @command{makeinfo} reconhece essas linhas por padrão, exceto dentro
+dos blocos @code{@@verbatim} (@pxref{@code{@@verbatim}}). O reconhecimento
+delas pode ser desativado completamente com @code{CPP_LINE_DIRECTIVES}
+(@pxref{Outras Variáveis de Personalização}), embora normalmente não haja razão
+para isso.
 
-For those few programs (M4, CPP, Texinfo) which need to document
-@samp{#line} directives and therefore have examples which would
-otherwise match the pattern, the command @code{@@hashchar@{@}} can be
-used (@pxref{Inserindo um Símbolo Cerquilha}).  The example line above looks
-like this in the source for this manual:
+Para aqueles poucos programas (M4, CPP, Texinfo) que precisam documentar
+diretivas @samp{#line} e, portanto, tem exemplos que, de outra forma,
+corresponderiam ao padrão, o comando @code{@@hashchar@{@}} pode ser usado
+(@pxref{Inserindo um Símbolo Cerquilha}). A linha de exemplo acima se parece
+com isto no fonte para este manual:
 
 @example
 @@hashchar@{@}line 100 "foo.ptexi"
 @end example
 
-The @code{@@hashchar} command was added to Texinfo in 2013.  If you
-don't want to rely on it, you can also use @code{@@set} and
-@code{@@value} to insert the literal @samp{#}:
+O comando @code{@@hashchar} foi adicionado ao Texinfo em 2013. Se você não
+quiser depender dele, você também pode usar @code{@@set} e @code{@@value} para
+inserir o literal @samp{#}:
 
 @example
 @@set hash #
 @@value@{hash@}line 1 "example.c"
 @end example
 
-Or, if suitable, a @code{@@verbatim} environment can be used instead
-of @code{@@example}.  As mentioned above, @code{#line}-recognition is
-disabled inside verbatim blocks.
+Ou, se adequado, um ambiente @code{@@verbatim} pode ser usado em vez de
+@code{@@example}. Como mencionado acima, o reconhecimento de @code{#line} é
+desabilitado dentro de blocos verbatim.
 
-
+PAREI
 @node @samp{#line} e @TeX{}
 @subsection @samp{#line} e @TeX{}
 
@@ -17641,7 +17639,7 @@ to use that variable, since it is set by @code{@@documentencoding}
 
 @item MACRO_BODY_IGNORES_LEADING_SPACE
 Ignore white space at the beginning of user defined macro body line,
-mimicking a @TeX{} limitation (@pxref{Macro Details}).  Default off.
+mimicking a @TeX{} limitation (@pxref{Detalhes de Macro}).  Default off.
 
 @item MAX_MACRO_CALL_NESTING
 The maximal number of recursive calls of @@-commands defined through
