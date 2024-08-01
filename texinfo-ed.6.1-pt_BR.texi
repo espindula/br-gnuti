@@ -207,7 +207,7 @@ Anexos
 * Cabeçalhos::                        Como escrever cabeçalhos e rodapés de página.
 * Capturando Erros::                  Como achar erros na formatação.
 * Especificação do Formato Info::     Detalhes técnicos do formato de arquivo Info.
-* Licença de Documentação Livre GNU:: Copiando este manual.
+* Licença GNU de Documentação Livre:: Copiando este manual.
 * Índice de Comando e Variável::      Um menu contendo comandos e variáveis.
 * Índice Geral::                      Um menu cobrindo muitos tópicos.
 
@@ -660,7 +660,7 @@ Referências Cruzadas HTML
 * Configuração:        Configuração HTML Xref. htmlxref.cnf.
 * Preservando links:   Preservação de Link HTML Xref. MANUAL-noderename.cnf.
 
-Arquivos de Amostra Texinfo
+Arquivos de Amostra do Texinfo
 
 * Arquivo Curto de Amostra do Texinfo::
 * Textos GNU de Amostra::
@@ -1295,8 +1295,8 @@ Veja-se @ref{Reference Implementation}, para mais sobre a razão de ser e funç�
 de @command{texi2any}.
 
 
-@node Escrevendo um Arquivo Texinfo
-@chapter Escrevendo um Arquivo Texinfo @c Capítulo 2
+@node Escrevendo um Arquivo do Texinfo
+@chapter Escrevendo um Arquivo do.Texinfo @c Capítulo 2
 
 Este capítulo descreve a sintaxe Texinfo e o que é exigido em um arquivo 
 Texinfo, e dá um arquivo curto de amostra.
@@ -3548,7 +3548,7 @@ veja-se @ref{Criação de Ponteiros do @command{makeinfo}}).
 @cindex Primeiro nodo
 
 O primeiro nodo de um arquivo Texinfo é o nodo @dfn{Top}, exceto em um arquivo 
-incluído (@pxref{Arquivos Include}). O nodo Top deveria conter um 
+incluído (@pxref{Arquivos de Inclusão}). O nodo Top deveria conter um 
 sumário curto, permissões de cópia e um menu mestre. Veja-se @ref{O Nodo Top}, 
 para mais informações sobre o conteúdo e exemplos do nodo Top.
 
@@ -4693,7 +4693,7 @@ cancela um comando @code{@@raisesections}, e vice versa.
 @cindex Arquivos Include, e níveis de seção
 Você pode usar @code{@@lowersections} para incluir texto escrito como um 
 arquivo Texinfo externo ou autônomo em outro arquivo Texinfo como um 
-arquivo interno, arquivo included (@pxref{Arquivos Include}). O uso 
+arquivo interno, arquivo included (@pxref{Arquivos de Inclusão}). O uso 
 típico se parece com isto:
 
 @example
@@ -12397,10 +12397,10 @@ O modelo é:
 @cindex Opções de usuário(a), marcando
 O comando @code{@@defopt} é o comando de definição para @dfn{opções de
 usuário(a)}, ou seja, variáveis ​​destinadas para usuários(as)
-mudarem de acordo com o gosto; Emacs tem muitas dessas (@pxref{Variables,,,
-emacs, The GNU Emacs Manual}). @code{@@defopt} é equivalente a @samp{@@defvr
-@{Opção de Usuário(a)@} @dots{}} e funciona como @code{@@defvar}. Ele cria uma
-entrada no índice de variáveis.
+mudarem de acordo com o gosto; Emacs tem muitas dessas
+(@pxref{Variables,,, emacs, The GNU Emacs Manual}). @code{@@defopt} é
+equivalente a @samp{@@defvr @{Opção de Usuário(a)@} @dots{}} e funciona como
+@code{@@defvar}. Ele cria uma entrada no índice de variáveis.
 @end table
 
 
@@ -12527,8 +12527,8 @@ opção para fazer isso: @code{@@deftypefnnewline on}.
 Isso afeta somente funções tipadas---não funções não tipadas, variáveis
 ​​não tipadas, etc.. Especificamente, afeta os comandos nesta seção e
 os comandos análogos para linguagens orientadas a objetos, ou seja,
-@code{@@deftypeop} e @code{@@deftypemethod} (@pxref{Métodos Orientados a
-Objetos}).
+@code{@@deftypeop} e @code{@@deftypemethod}
+(@pxref{Métodos Orientados a Objetos}).
 
 Especificar-se @code{@@deftypefnnewline off} reverte para o padrão.
 
@@ -13037,10 +13037,11 @@ país for omitido, o dialeto principal é assumido onde possível. Por exemplo,
 @cindex Strings de documentos, tradução de
 Para Info e outras saídas on-line, esse comando muda a tradução de várias
 @dfn{strings de documento}, tais como ``see'' em referências cruzadas
-(@pxref{Referências Cruzadas}), ``Function'' em defuns (@pxref{Comandos de
-Definição}), e assim por diante. Algumas strings, como ``Node:'', ``Next:'',
-``Menu:'', etc., são palavras-chave na saída Info, de forma que não são
-traduzidas lá; elas são traduzidas em outros formatos de saída.
+(@pxref{Referências Cruzadas}), ``Function'' em defuns
+(@pxref{Comandos de Definição}), e assim por diante. Algumas strings, como
+``Node:'', ``Next:'', ``Menu:'', etc., são palavras-chave na saída Info, de
+forma que não são traduzidas lá; elas são traduzidas em outros formatos de
+saída.
 
 @cindex @file{txi-@var{cc}.tex}
 Para @TeX{}, esse comando faz com que um arquivo @file{txi-@var{locale}.tex}
@@ -13136,10 +13137,10 @@ Especificar uma codificação @var{codificação} tem os seguintes efeitos:
 
 @cindex Seção Variáveis ​​Locais, para codificação
 @cindex Saída do Info, e codificação
-Na saída do Info, uma seção chamada `Local Variables' (@pxref{File Variables,,,
-emacs, The GNU Emacs Manual}) é gerada incluindo @var{codificação}. Isso
-permite que leitores Info configurem a codificação apropriadamente. Parece com
-algo assim:
+Na saída do Info, uma seção chamada `Local Variables'
+(@pxref{File Variables,,, emacs, The GNU Emacs Manual}) é gerada incluindo
+@var{codificação}. Isso permite que leitores Info configurem a codificação
+apropriadamente. Parece com algo assim:
 
 @example
 Local Variables:
@@ -13957,11 +13958,11 @@ Bom, @@samp@{@@@@node@} está definido.
 
 Esse condicional também considerará verdadeiros quaisquer novos comandos
 definidos pelo documento via @code{@@macro}, @code{@@alias},
-@code{@@definfoenclose} e @code{@@def@r{(}code@r{)}index} (@pxref{Definindo
-Novos Comandos do Texinfo}). Ressalva: a implementação do @TeX{} informa
-comandos internos do @TeX{}, além de todos os comandos do Texinfo, como sendo
-``definidos''; a implementação do @code{makeinfo} é confiável a esse respeito,
-no entanto.
+@code{@@definfoenclose} e @code{@@def@r{(}code@r{)}index}
+(@pxref{Definindo Novos Comandos do Texinfo}). Ressalva: a implementação do
+@TeX{} informa comandos internos do @TeX{}, além de todos os comandos do
+Texinfo, como sendo ``definidos''; a implementação do @code{makeinfo} é
+confiável a esse respeito, no entanto.
 
 @pindex arquivo @file{NEWS} para Texinfo
 Você pode verificar o arquivo @file{NEWS} na distribuição do fonte do Texinfo e
@@ -14067,8 +14068,8 @@ macros). A macro pode ter qualquer número de @dfn{parâmetros}---texto que voc�
 fornece cada vez que usa a macro.
 
 Aliás, essas macros não tem nada a ver com o comando @code{@@defmac}, que serve
-para documentar macros na área de assunto do manual (@pxref{Modelos de Comando
-de Definição}).
+para documentar macros na área de assunto do manual
+(@pxref{Modelos de Comando de Definição}).
 
 @item
 @samp{@@alias} é uma maneira conveniente para definir um novo nome para um comando existente.
@@ -14084,8 +14085,8 @@ qualquer processador externo de macro e fazer com que o Texinfo reconheça as
 assim chamadas diretivas @code{#line} para informes de erros.
 
 Se você quiser fazer substituição simples de texto, @code{@@set} e
-@code{@@value} são a abordagem mais simples (@pxref{@code{@@set @@clear
-@@value}}).
+@code{@@value} são a abordagem mais simples
+(@pxref{@code{@@set @@clear @@value}}).
 
 @menu
 * Definindo Macros::                Definindo e indefinindo novos comandos.
@@ -14382,10 +14383,10 @@ Além disso, algumas construções relacionadas a macro causam problemas com
 @TeX{}; algumas das ressalvas estão listadas abaixo. Portanto, se você obtiver
 erros relacionados a macro ao produzir a versão impressa de um manual, você
 pode tentar expandir as macros com @command{makeinfo} invocando
-@command{texi2dvi} com a opção @samp{-E} (@pxref{Formatar com
-@command{texi2dvi}}). Ou, mais confiavelmente, evite completamente as macros do
-Texinfo e use uma linguagem projetada para processamento de macros, como M4
-(@pxref{Processadores Externos de Macro}).
+@command{texi2dvi} com a opção @samp{-E}
+(@pxref{Formatar com @command{texi2dvi}}). Ou, mais confiavelmente, evite
+completamente as macros do Texinfo e use uma linguagem projetada para
+processamento de macros, como M4 (@pxref{Processadores Externos de Macro}).
 
 @itemize @bullet
 @item
@@ -14626,8 +14627,8 @@ Se você fizer um @code{@@definfoenclose} no nome de um comando predefinido
 invólucro substituirá a definição interna. Nós não recomendamos isso.
 
 Um comando de invólucro definido dessa maneira recebe um argumento entre
-chaves, pois é destinado para novos comandos de marcação (@pxref{Marcando
-Texto}).
+chaves, pois é destinado para novos comandos de marcação
+(@pxref{Marcando Texto}).
 
 @findex phoo
 Por exemplo, você pode escrever:
@@ -14685,8 +14686,8 @@ Macros do Texinfo (e os outros recursos dele de substituição de texto)
 funcionam bem em casos simples. Se teu documento precisar de processamento
 incomumente complexo, no entanto, a fragilidade e limitações delas podem ser um
 problema. Nesse caso, você pode querer usar um processador de macro
-completamente diferente, como M4 (@pxref{Top,,, m4, M4}) ou CPP (@pxref{Top,,,
-cpp, The C Preprocessor}).
+completamente diferente, como M4 (@pxref{Top,,, m4, M4}) ou CPP
+(@pxref{Top,,, cpp, The C Preprocessor}).
 
 Com uma exceção, o Texinfo não precisa saber se a entrada dele é fonte
 ``original'' ou pré-processada a partir de algum outro arquivo fonte. Portanto,
@@ -14705,8 +14706,8 @@ for. Existe um mecanismo bem conhecido para isso: a assim chamada diretiva
 
 @menu
 * Diretiva @samp{#line}::
-* @samp{#line} e @TeX{}::
-* Detalhes da Sintaxe @samp{#line}::
+* TeX: @samp{#line} e @TeX{}.
+* Sintaxe: Detalhes da Sintaxe @samp{#line}.
 @end menu
 
 
@@ -14724,8 +14725,8 @@ Uma linha de entrada como esta:
 @noindent indica que a próxima linha era a linha 100 do arquivo
 @file{foo.ptexi}, e, portanto, isso é ao que uma mensagem de erro deveria se
 referir. Tanto M4 (@pxref{Preprocessor features,,, m4, GNU M4}) quanto CPP
-(@pxref{Line Control,,, cpp, The C Preprocessor} e @ref{Preprocessor Output,,,
-cpp, The C Preprocessor}) podem gerar tais linhas.
+(@pxref{Line Control,,, cpp, The C Preprocessor} e
+@ref{Preprocessor Output,,, cpp, The C Preprocessor}) podem gerar tais linhas.
 
 @vindex CPP_LINE_DIRECTIVES
 O programa @command{makeinfo} reconhece essas linhas por padrão, exceto dentro
@@ -14757,92 +14758,91 @@ Ou, se adequado, um ambiente @code{@@verbatim} pode ser usado em vez de
 @code{@@example}. Como mencionado acima, o reconhecimento de @code{#line} é
 desabilitado dentro de blocos verbatim.
 
-PAREI
+
 @node @samp{#line} e @TeX{}
 @subsection @samp{#line} e @TeX{}
 
-@cindex @TeX{} and @samp{#line} directives
-@cindex @samp{#line} directives, not processing with @TeX{}
+@cindex @TeX{} e diretivas @samp{#line}
+@cindex Diretivas @samp{#line}, não processando com @TeX{}
 
-As mentioned, @command{makeinfo} recognizes the @samp{#line}
-directives described in the previous section.  However,
-@file{texinfo.tex} does not and cannot.  Therefore, such a line will
-be incorrectly typeset verbatim if @TeX{} sees it.  The solution is to
-use @command{makeinfo}'s macro expansion options before running
-@TeX{}.  There are three approaches:
+Conforme mencionado, @command{makeinfo} reconhece as diretivas @samp{#line}
+descritas na seção anterior. No entanto, @file{texinfo.tex} não reconhece e não
+consegue reconhecer. Portanto, tal linha será incorretamente tipografada
+literal se @TeX{} a vir. A solução é a de usar as opções de expansão de macro
+do @command{makeinfo} antes de executar @TeX{}. Existem três abordagens:
 
 @itemize @bullet
 @item
-If you run @command{texi2dvi} or its variants (@pxref{Formatar com @command{texi2dvi}}), you can pass @option{-E} and @command{texi2dvi}
-will run @command{makeinfo} first to expand macros and eliminate
-@samp{#line}.
+Se você executar @command{texi2dvi} ou as variantes dele
+(@pxref{Formatar com @command{texi2dvi}}), poderá passar @option{-E} e
+@command{texi2dvi} executará @command{makeinfo} primeiro para expandir macros e
+eliminar @samp{#line}.
 
 @item
-If you run @command{makeinfo} or its variants 
-(@pxref{Tradutor Genérico @command{texi2any}}), you can specify 
-@option{--no-ifinfo --iftex -E somefile.out}, and then give 
-@file{somefile.out} to @code{texi2dvi} in a separate command.
+Se você executar @command{makeinfo} ou as variantes dele
+(@pxref{Tradutor Genérico @command{texi2any}}), poderá especificar
+@option{--no-ifinfo --iftex -E algumarquivo.out} e, em seguida, fornecer
+@file{algumarquivo.out} para @code{texi2dvi} em um comando separado.
 
 @item
-Or you can run @option{makeinfo --dvi --Xopt -E}.  (Or @option{--pdf}
-instead of @option{--dvi}.)  @command{makeinfo} will then call
-@command{texi2dvi -E}.
+Ou você pode executar @option{makeinfo --dvi --Xopt -E}. (Ou @option{--pdf} em
+vez de @option{--dvi}). @command{makeinfo} então chamará @command{texi2dvi -E}.
 @end itemize
 
-@findex errormsg@r{, and line numbers in @TeX{}}
-One last caveat regarding use with @TeX{}: since the @code{#line}
-directives are not recognized, the line numbers emitted by the
-@code{@@errormsg@{@}} command (@pxref{Comandos Condicionais}), or by
-@TeX{} itself, are the (incorrect) line numbers from the derived file
-which @TeX{} is reading, rather than the preprocessor-specified line
-numbers.  This is another example of why we recommend running
-@command{makeinfo} for the best diagnostics (@pxref{@command{makeinfo}
-Advantages}).
+@findex errormsg@r{, e números de linha no @TeX{}}
+Uma última ressalva relativa ao uso com @TeX{}: como as diretivas @code{#line}
+não são reconhecidas, os números de linha emitidos pelo comando
+@code{@@errormsg@{@}} (@pxref{Comandos Condicionais}), ou pelo próprio @TeX{},
+são os números de linha (incorretos) provenientes do arquivo derivado que o
+@TeX{} está lendo, em vez dos números de linha especificados pelo
+pré-processador. Esse é outro exemplo do porque nós recomendamos executar
+@command{makeinfo} para os melhores diagnósticos
+(@pxref{Vantagens do @command{makeinfo}}).
 
 
 @node Detalhes da Sintaxe @samp{#line}
 @subsection Detalhes da Sintaxe @samp{#line}
 
-@cindex @samp{#line} syntax details
-@cindex Syntax details, @samp{#line}
-@cindex Regular expression, for @samp{#line}
+@cindex Detalhes da sintaxe @samp{#line}
+@cindex Detalhes da sintaxe, @samp{#line}
+@cindex Expressão regular, para @samp{#line}
 
-Syntax details for the @samp{#line} directive: the @samp{#} character
-can be preceded or followed by whitespace, the word @samp{line} is
-optional, and the file name can be followed by a whitespace-separated
-list of integers (these are so-called ``flags'' output by CPP in some
-cases).  For those who like to know the gory details, the actual
-(Perl) regular expression which is matched is this:
+Detalhes de sintaxe para a diretiva @samp{#line}: o caractere @samp{#} pode ser
+precedido ou seguido por um espaço em branco, a palavra @samp{line} é opcional,
+e o nome do arquivo pode ser seguido por uma lista de inteiros separados por
+espaços em branco (esses são os assim chamados ``sinalizadores'' produzidos
+pelo CPP em alguns casos). Para aqueles(as) que gostam de saber os detalhes
+sangrentos, a expressão regular (Perl) real que é correspondida é esta:
 
 @example
 /^\s*#\s*(line)? (\d+)(( "([^"]+)")(\s+\d+)*)?\s*$/
 @end example
 
-As far as we've been able to tell, the trailing integer flags only
-occur in conjunction with a filename, so that is reflected in the
-regular expression.
+Até onde nós podemos dizer, os sinalizadores de inteiros finais somente ocorrem
+em conjunto com um nome de arquivo, de forma que isso é refletido na expressão
+regular.
 
-As an example, the following is a syntactically valid @samp{#line}
-directive, meaning line 1 of @file{/usr/include/stdio.h}:
+Como exemplo, a seguir está uma diretiva @samp{#line} sintaticamente válida, ou
+seja, a linha 1 de @file{/usr/include/stdio.h}:
 
 @example
 @hashchar{} 1 "/usr/include/stdio.h" 2 3 4
 @end example
 
-Unfortunately, the quoted filename (@samp{"..."}) has to be optional,
-because M4 (especially) can often generate @samp{#line} directives
-within a single file.  Since the @samp{line} is also optional, the
-result is that lines might match which you wouldn't expect, e.g.,
+Infelizmente, o nome de arquivo aspado (@samp{"..."}) tem que ser opcional,
+porque o M4 (especialmente) frequentemente pode gerar diretivas @samp{#line}
+dentro de um arquivo. Como o @samp{line} também é opcional, o resultado é que
+as linhas podem corresponder ao que você não esperaria, por exemplo,
 
 @example
 @hashchar{} 1
 @end example
 
-The possible solutions are described above (@pxref{Diretiva @samp{#line}}).
+As soluções possíveis estão descritas acima (@pxref{Diretiva @samp{#line}}).
 
-
-@node Arquivos Include
-@chapter Arquivos Include
+PAREI
+@node Arquivos de Inclusão
+@chapter Arquivos de Inclusão
 
 @cindex Arquivos Include
 
@@ -18134,19 +18134,16 @@ For information on installing the Info file in the Info system,
 @pxref{Instalando Um Arquivo Info}.
 
 @menu
-* @command{makeinfo} Advantages::         @command{makeinfo} provides better error checking.
-* @code{makeinfo} in Emacs::           How to run @code{makeinfo} from Emacs.
-* Comandos @code{texinfo-format}::     Two Info formatting commands written
-                                 in Emacs Lisp are an alternative
-                                 to @code{makeinfo}.
-* Batch Formatting::            How to format for Info in Emacs batch mode.
-* Tag and Split Files::         How tagged and split files help Info
-                                 to run better.
+* Vantagens do @command{makeinfo}::   @command{makeinfo} fornece melhor verificação de erros.
+* @code{makeinfo} no Emacs::          Como executar @code{makeinfo} a partir do Emacs.
+* Comandos @code{texinfo-format}::    Dois comandos do Info de formatação escritos em Emacs Lisp são uma alternativa ao @code{makeinfo}.
+* Formatação de Lote::                Como formatar para Info no modo de lote do Emacs.
+* Arquivos de Etiqueta e de Divisão:: Como arquivos etiquetados e divididos ajudam o Info a executar melhor.
 @end menu
 
 
-@node @command{makeinfo} Advantages
-@subsection @code{makeinfo} Advantages
+@node Vantagens do @command{makeinfo}
+@subsection Vantagens do @code{makeinfo}
 
 @anchor{makeinfo advantages}@c old name
 
