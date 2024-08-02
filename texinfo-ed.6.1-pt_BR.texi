@@ -296,7 +296,7 @@ Menus
 * Local de Menu::                     Menus vão ao final de nodos
 * Partes de Menu::                    Uma entrada de menu tem três partes
 * Entrada de Menu Menos Desordenada:: Entrada de menu de duas partes
-* Outros Arquivos Info::              Como se referir a um arquivo Info diferente
+* Outros Arquivos do Info::           Como referenciar um arquivo Info diferente
 
 Estruturamento de Capítulo
 
@@ -574,11 +574,11 @@ Processadores Externos de Macro: Diretivas de Linha
 
 Arquivos de Inclusão
 
-* Usando Arquivos de Inclusão::         Como usar o comando @code{@@include}.
-* @code{texinfo-multiple-files-update}:: Como criar e atualizar nodos e menus quando do uso de arquivos included.
-* Exigências dos Arquivos de Inclusão::  Exigências @code{texinfo-multiple-files-update}.
-* Arquivo de Inclusão de Amostra::         Um arquivo exterior de amostra com arquivos included dentro dele; e um arquivo included de amostra.
-* Evolução dos Arquivos de Inclusão::     Como o uso do comando @code{@@include} mudou ao longo do tempo.
+* Usando Arquivos de Inclusão::          Como usar o comando @code{@@include}.
+* @code{texinfo-multiple-files-update}:: Como criar e atualizar nós e menus ao usar arquivos incluídos.
+* Exigências dos Arquivos de Inclusão::  Neccesidades do @code{texinfo-multiple-files-update}.
+* Arquivo de Inclusão de Amostra::       Um arquivo externo de amostra com arquivos incluídos dentro dele; e um arquivo incluído de amostra.
+* Evolução da Inclusão de Arquivos::    Como o uso do comando @code{@@include} mudou ao longo do tempo.
 
 Formatando e Imprimindo Cópia Impressa
 
@@ -3830,12 +3830,12 @@ você usa menus para ir para tais nodos. Os menus não tem efeito em
 manuais impressos e não aparecem neles.
 
 @menu
-* Escrevendo um Menu::          O que é um menu?
-* Exemplo de Menu::             Entradas de menu de duas e três partes
-* Localização de Menu::         Menus vão ao final de nodos
-* Partes de Menu::              Uma entrada de menu tem três partes
-* Entrada de Menu Menos Desordenada::   Entrada de menu de duas partes
-* Outros Arquivos Info::        Como se referir a um arquivo Info diferente
+* Escrevendo um Menu::                O que é um menu?
+* Exemplo de Menu::                   Entradas de menu de duas e três partes
+* Localização de Menu::               Menus vão ao final de nodos
+* Partes de Menu::                    Uma entrada de menu tem três partes
+* Entrada de Menu Menos Desordenada:: Entrada de menu de duas partes
+* Outros Arquivos do Info::           Como referenciar um arquivo Info diferente
 @end menu
 
 @node Escrevendo um Menu
@@ -3971,7 +3971,7 @@ um comentário; ele aparece no menu, porém não é uma entrada.
 
 Dado que nenhum nome de arquivo é especificado com @samp{Arquivos} ou 
 @samp{Buffers}, eles podem ser os nomes de nodos no mesmo arquivo Info 
-(@pxref{Outros Arquivos Info, , Referindo-se a Outros Arquivos Info}).
+(@pxref{Outros Arquivos do Info, , Referenciando Outros Arquivos do Info}).
 
 @node Localização de Menu
 @subsection Localização de Menu
@@ -4090,13 +4090,13 @@ em vez de
 Nós recomendamos usar o nome de nodo para o nome de entrada de menu 
 sempre que possível, dado que isso reduz a confusão visual no menu.
 
-@node Outros Arquivos Info
-@subsection Referindo-se a Outros Arquivos Info
-@cindex Referindo-se a Outros Arquivos Info
-@cindex Nodos em Outros Arquivos Info
-@cindex Outros Arquivos Info' nodos
-@cindex Indo para Outros Arquivos Info' nodos
-@cindex Info; outros arquivos' nodos
+@node Outros Arquivos do Info
+@subsection Referenciando Outros Arquivos do Info
+@cindex Referenciando outros arquivos do Info
+@cindex Nodos em outros arquivos do Info
+@cindex Nodos de outros arquivos do Info
+@cindex Indo para outros nodos de arquivos do Info
+@cindex Info; nodos de outros arquivos
 
 Você pode criar uma entrada de menu que habilite um leitor em Info a ir 
 para um nodo em outro arquivo Info, escrevendo o nome de arquivo entre 
@@ -14840,61 +14840,57 @@ as linhas podem corresponder ao que você não esperaria, por exemplo,
 
 As soluções possíveis estão descritas acima (@pxref{Diretiva @samp{#line}}).
 
-PAREI
+
 @node Arquivos de Inclusão
 @chapter Arquivos de Inclusão
 
-@cindex Arquivos Include
+@cindex Inclusão de Arquivos
 
-When a Texinfo processor sees an @code{@@include} command in a Texinfo
-file, it processes the contents of the file named by the
-@code{@@include} and incorporates them into the output files being
-created.  Include files thus let you keep a single large document as a
-collection of conveniently small parts.
+Quando um processador do Texinfo vê um comando @code{@@include} em um arquivo
+do Texinfo, ele processa o conteúdo do arquivo nomeado pelo @code{@@include} e
+o incorpora aos arquivos de saída sendo criados. Arquivos de inclusão permitem
+que você mantenha um documento grande como uma coleção de partes
+convenientemente pequenas.
 
 @menu
-* Using Arquivos Include::         How to use the @code{@@include} command.
-* @code{texinfo-multiple-files-update}:: How to create and update Nodos and
-                                     menus when using included files.
-* Arquivos Include Requirements::  @code{texinfo-multiple-files-update} needs.
-* Sample Include File::         A sample outer file with included files
-                                     within it; and a sample included file.
-* @code{@@verbatiminclude}::            Including a file verbatim.
-* Arquivos Include Evolution::     How use of the @code{@@include} command
-                                     has changed over time.
+* Usando Arquivos de Inclusão::          Como usar o comando @code{@@include}.
+* @code{texinfo-multiple-files-update}:: Como criar e atualizar nós e menus ao usar arquivos incluídos.
+* Exigências dos Arquivos de Inclusão::  Neccesidades do @code{texinfo-multiple-files-update}.
+* Arquivo de Inclusão de Amostra::       Um arquivo externo de amostra com arquivos incluídos dentro dele; e um arquivo incluído de amostra.
+* Evolução da Inclusão de Arquivos::    Como o uso do comando @code{@@include} mudou ao longo do tempo.
 @end menu
 
 
-@node Using Arquivos Include
-@section How to Use Arquivos Include
+@node Usando Arquivos de Inclusão
+@section Como Usar Arquivos de Inclusão
 
 @findex include
 
-To include another file within a Texinfo file, write the
-@code{@@include} command at the beginning of a line and follow it on
-the same line by the name of a file to be included.  For example:
+Para incluir outro arquivo dentro de um arquivo do Texinfo, escreva o comando
+@code{@@include} no começo de uma linha e siga-o na mesma linha pelo nome de um
+arquivo a ser incluído. Por exemplo:
 
 @example
 @@include buffers.texi
 @end example
 
-@@-commands are expanded in file names.  The one most likely to be
-useful is @code{@@value} (@pxref{@code{@@set @@value}}), and even then
-only in complicated situations.
+comandos @@ são expandidos em nomes de arquivo. O mais provável de ser útil é
+@code{@@value} (@pxref{@code{@@set @@value}}), e mesmo assim somente em
+situações complicadas.
 
-An included file should simply be a segment of text that you expect to
-be included as is into the overall or @dfn{outer} Texinfo file; it
-should not contain the standard beginning and end parts of a Texinfo
-file.  In particular, you should not start an included file with a
-line saying @samp{\input texinfo}; if you do, that text is inserted
-into the output file literally.  Likewise, you should not end an
-included file with a @code{@@bye} command; nothing after @code{@@bye}
-is formatted.
+Um arquivo incluído deveria ser simplesmente um segmento de texto que você
+espera que seja incluído como está no arquivo geral do Texinfo ou no
+@dfn{exterior}; ele não deveria conter as partes padrão de início e fim de um
+arquivo do Texinfo. Em particular, você não deveria iniciar um arquivo incluído
+com uma linha dizendo @samp{\input texinfo}; se fizer isso, esse texto será
+inserido no arquivo de saída literalmente. Da mesma forma, você não deveria
+terminar um arquivo incluído com um comando @code{@@bye}; nada depois de
+@code{@@bye} é formatado.
 
-In the long-ago past, you were required to write an
-@code{@@setfilename} line at the beginning of an included file, but no
-longer.  Now, it does not matter whether you write such a line.  If an
-@code{@@setfilename} line exists in an included file, it is ignored.
+No passado distante, você era obrigado(a) a escrever uma linha
+@code{@@setfilename} no início de um arquivo incluído, mas não mais. Agora, não
+importa se você escrever tal linha. Se uma linha @code{@@setfilename} existir
+em um arquivo incluído, ela será ignorada.
 
 
 @node @code{texinfo-multiple-files-update}
@@ -14902,248 +14898,244 @@ longer.  Now, it does not matter whether you write such a line.  If an
 
 @findex texinfo-multiple-files-update
 
-GNU Emacs Texinfo mode provides the
-@code{texinfo-multiple-files-update} command.  This command creates or
-updates `Next', `Previous', and `Up' pointers of included files as
-well as those in the outer or overall Texinfo file, and it creates or
-updates a main menu in the outer file.  Depending on whether you call
-it with optional arguments, the command updates only the pointers in
-the first @code{@@node} line of the included files or all of them:
+O modo Texinfo do GNU Emacs fornece o comando
+@code{texinfo-multiple-files-update}. Esse comando cria ou atualiza os
+ponteiros `Next', `Previous' e `Up' dos arquivos incluídos, bem como aqueles no
+arquivo externo ou no geral do Texinfo, e cria ou atualiza um menu principal no
+arquivo externo. Dependendo se você o chama com argumentos opcionais, o comando
+atualiza somente os ponteiros na primeira linha @code{@@node} dos arquivos
+incluídos ou todos eles:
 
 @table @kbd
 @item M-x texinfo-multiple-files-update
-Called without any arguments:
+Chamado sem quaisquer argumentos:
 
 @itemize @minus
 @item
-Create or update the `Next', `Previous', and `Up' pointers of the
-first @code{@@node} line in each file included in an outer or overall
-Texinfo file.
+Cria ou atualiza os ponteiros `Next', `Previous' e `Up' da primeira linha
+@code{@@node} em cada arquivo incluído em um arquivo externo ou em um geral do
+Texinfo.
 
 @item
-Create or update the `Top' level node pointers of the outer or
-overall file.
+Cria ou atualiza os ponteiros de nó de nível `Top' do arquivo externo ou do
+geral.
 
 @item
-Create or update a main menu in the outer file.
+Cria ou atualiza um menu principal no arquivo externo.
 @end itemize
 
 @item C-u M-x texinfo-multiple-files-update
-Called with @kbd{C-u} as a prefix argument:
+Chamado com @kbd{C-u} como um argumento de prefixo:
 
 @itemize @minus{}
 @item
-Create or update pointers in the first @code{@@node} line in each
-included file.
+Cria ou atualiza ponteiros na primeira linha @code{@@node} em cada arquivo
+incluído.
 
 @item
-Create or update the `Top' level node pointers of the outer file.
+Cria ou atualiza os ponteiros de nó de nível `Top' do arquivo externo.
 
 @item
-Create and insert a master menu in the outer file.  The master menu
-is made from all the menus in all the included files.
+Cria e insere um menu mestre no arquivo externo. O menu mestre é feito a partir
+de todos os menus em todos os arquivos incluídos.
 @end itemize
 
 @item C-u 8 M-x texinfo-multiple-files-update
-Called with a numeric prefix argument, such as @kbd{C-u 8}:
+Chamado com um argumento numérico de prefixo, como @kbd{C-u 8}:
 
 @itemize @minus
 @item
-Create or update @emph{all} the `Next', `Previous', and `Up' pointers
-of all the included files.
+Cria ou atualiza @emph{todos} os ponteiros `Next', `Previous' e `Up' de todos
+os arquivos incluídos.
 
 @item
-Create or update @emph{all} the menus of all the included
-files.
+Cria ou atualiza @emph{todos} os menus de todos os arquivos incluídos.
 
 @item
-Create or update the `Top' level node pointers of the outer or
-overall file.
+Cria ou atualiza os ponteiros de nó de nível `Top' do arquivo externo ou do
+geral.
 
 @item
-And then create a master menu in the outer file.  This is similar to
-invoking @code{texinfo-master-menu} with an argument when you are
-working with just one file.
+E então cria um menu mestre no arquivo externo. Isso é similar a invocar
+@code{texinfo-master-menu} com um argumento quando você estiver trabalhando com
+apenas um arquivo.
 @end itemize
 @end table
 
-Note the use of the prefix argument in interactive use: with a regular
-prefix argument, just @w{@kbd{C-u}}, the
-@code{texinfo-multiple-files-update} command inserts a master menu;
-with a numeric prefix argument, such as @kbd{C-u 8}, the command
-updates @emph{every} pointer and menu in @emph{all} the files and
-then inserts a master menu.
+Observe o uso do argumento de prefixo no uso interativo: com um argumento
+regular de prefixo, apenas @w{@kbd{C-u}}, o comando
+@code{texinfo-multiple-files-update} insere um menu mestre; com um argumento
+numérico de prefixo, como @kbd{C-u 8}, o comando atualiza @emph{cada} ponteiro
+e cada menu em @emph{todos} os arquivos e então insere um menu mestre.
 
 
-@node Arquivos Include Requirements
-@section Arquivos Include Requirements
-@cindex Arquivos Include requirements
-@cindex Requirements for Arquivos Include
+@node Exigências dos Arquivos de Inclusão
+@section Exigências dos Arquivos de Inclusão
+@cindex Exigências dos Arquivos de Inclusão
+@cindex Exigências para Arquivos de Inclusão
 
-If you plan to use the @code{texinfo-multiple-files-update} command,
-the outer Texinfo file that lists included files within it should
-contain nothing but the beginning and end parts of a Texinfo file, and
-a number of @code{@@include} commands listing the included files.  It
-should not even include indices, which should be listed in an included
-file of their own.
+Se você planeja usar o comando @code{texinfo-multiple-files-update}, o arquivo
+externo do Texinfo que lista os arquivos incluídos dentro dele deveria conter
+nada além das partes inicial e final de um arquivo do Texinfo, e uma série de
+comandos @code{@@include} listando os arquivos incluídos. Ele não deveria nem
+incluir índices, que deveriam ser listados em um arquivo incluído próprio.
 
-Moreover, each of the included files must contain exactly one highest
-level node (conventionally, @code{@@chapter} or equivalent),
-and this node must be the first node in the included file.
-Furthermore, each of these highest level Nodos in each included file
-must be at the same hierarchical level in the file structure.
-Usually, each is a @code{@@chapter}, an @code{@@appendix}, or an
-@code{@@unnumbered} node.  Thus, normally, each included file contains
-one, and only one, chapter or equivalent-level node.
+Além disso, cada um dos arquivos incluídos precisa conter exatamente um nó de
+nível mais alto (convencionalmente, @code{@@chapter} ou equivalente), e esse nó
+precisa ser o primeiro nó no arquivo incluído. Além disso, cada um desses Nodos
+de nível mais alto em cada arquivo incluído precisa estar no mesmo nível
+hierárquico na estrutura do arquivo. Normalmente, cada um é um nó
+@code{@@chapter}, um @code{@@appendix} ou um @code{@@unnumbered}. Assim,
+normalmente, cada arquivo incluído contém um, e somente um, nó de capítulo ou
+nível equivalente.
 
-The outer file should contain only @emph{one} node, the `Top' node.  It
-should @emph{not} contain any Nodos besides the single `Top' node.  The
-@code{texinfo-multiple-files-update} command will not process
-them.
+O arquivo externo deveria conter somente @emph{um} nó, o nó `Top'. Ele
+@emph{não} deveria conter quaisquer Nodos além do nó único `Top'. O comando
+@code{texinfo-multiple-files-update} não os processará.
 
 
-@node Sample Include File
-@section Sample File with @code{@@include}
-@cindex Sample @code{@@include} file
-@cindex Include file sample
-@cindex @code{@@include} file sample
+@node Arquivo de Inclusão de Amostra
+@section Arquivo de Amostra com @code{@@include}
+@cindex Arquivo @code{@@include} de amostra
+@cindex Amostra de arquivo de inclusão
+@cindex Amostra de arquivo @code{@@include}
 
-Here is an example of an outer Texinfo file with @code{@@include} files
-within it before running @code{texinfo-multiple-files-update}, which
-would insert a main or master menu:
+Aqui está um exemplo de um arquivo externo do Texinfo com arquivos
+@code{@@include} dentro dele antes de executar
+@code{texinfo-multiple-files-update}, que inseriria um menu principal ou um
+mestre:
 
 @example
 @group
 \input texinfo @@c -*-texinfo-*-
-@c %**start of header
-@@settitle Include Example
-@c %**end of header
+@c %**início do cabeçalho
+@@settitle Exemplo de Inclusão
+@c %**fim do cabeçalho
 @end group
 
-... @xref{Arquivos Texinfo Modelo}, for
-examples of the rest of the frontmatter ...
+... @xref{Arquivos de Amostra do Texinfo}, para exemplos do restante do matéria
+inicial ...
 
 @group
 @@ifnottex
 @@node Top
-@@top Include Example
+@@top Exemplo de Inclusão
 @@end ifnottex
 @end group
 
 @group
 @@include foo.texinfo
 @@include bar.texinfo
-@@include concept-index.texinfo
+@@include indice-conceitos.texinfo
 @@bye
 @end group
 @end example
 
-An included file, such as @file{foo.texinfo}, might look like this:
+Um arquivo incluído, como @file{foo.texinfo}, pode se parecer com isto:
 
 @example
 @group
-@@node First
-@@chapter First Chapter
+@@node Primeiro
+@@chapter Primeiro Capítulo
 
-Contents of first chapter @dots{}
+Conteúdo do primeiro capítulo @dots{}
 @end group
 @end example
 
-The full contents of @file{concept-index.texinfo} might be as simple as this:
+O conteúdo completo de @file{indice-conceitos.texinfo} pode ser tão simples
+quanto isto:
 
 @example
 @group
-@@node Concept Index
-@@unnumbered Concept Index
+@@node Índice de Conceitos
+@@unnumbered Índice de Conceitos
 
 @@printindex cp
 @end group
 @end example
 
-The outer Texinfo source file for @cite{The GNU Emacs Lisp Reference
-Manual} is named @file{elisp.texi}.  This outer file contains a master
-menu with 417 entries and a list of 41 @code{@@include}
-files.
+O arquivo fonte externo do Texinfo para @cite{The GNU Emacs Lisp Reference
+Manual} é chamado @file{elisp.texi}. Esse arquivo externo contém um menu mestre
+com 417 entradas e uma lista de 41 arquivos @code{@@include}.
 
 
 @node @code{@@verbatiminclude}
-@section @code{@@verbatiminclude} @var{file}: Include a File Verbatim
+@section  @var{arquivo} @code{@@verbatiminclude}: Incluir um Arquivo Literal
 
-@anchor{verbatiminclude}@c old name
+@anchor{verbatiminclude}@c nome antigo
 @findex verbatiminclude
-@cindex Verbatim, include file
-@cindex Including a file verbatim
+@cindex Literal, arquivo de inclusão
+@cindex Incluindo um arquivo literal
 
-You can include the exact contents of a file in the document with the
-@code{@@verbatiminclude} command:
+Você pode incluir o conteúdo exato de um arquivo no documento com o comando
+@code{@@verbatiminclude}:
 
 @example
-@@verbatiminclude @var{filename}
+@@verbatiminclude @var{nomearquivo}
 @end example
 
-The contents of @var{filename} is printed in a verbatim environment
-(@pxref{@code{@@verbatim}}).  Generally, the file is printed exactly
-as it is, with all special characters and white space retained.  No
-indentation is added; if you want indentation, enclose the
-@code{@@verbatiminclude} within @code{@@example}
-(@pxref{@code{@@example}}).
+O conteúdo de @var{nomearquivo} é impresso em um ambiente literal
+(@pxref{@code{@@verbatim}}). Geralmente, o arquivo é impresso exatamente como
+está, com todos os caracteres especiais e espaços em branco retidos. Nenhum
+recuo é adicionado; se você quiser recuo, cerque o @code{@@verbatiminclude}
+dentro de @code{@@example} (@pxref{@code{@@example}}).
 
-The name of the file is taken literally, with a single exception:
-@code{@@value@{@var{var}@}} references are expanded.  This makes it
-possible to include files in other directories within a distribution,
-for instance:
+O nome do arquivo é tomado literalmente, com somente uma exceção: referências
+@code{@@value@{@var{variável}@}} são expandidas. Isso torna possível incluir
+arquivos em outros diretórios dentro de uma distribuição, por exemplo:
 
 @example
 @@verbatiminclude @@value@{top_srcdir@}/NEWS
 @end example
 
-@noindent (You still have to get @code{top_srcdir} defined in the
-first place.)
+@noindent (Você ainda tem de ter @code{top_srcdir} definido em primeiro lugar).
 
-For a method on printing the file contents in a smaller font size, see
-the end of the section on @code{@@verbatim}.
-
-
-@node Arquivos Include Evolution
-@section Evolution of Arquivos Include
-
-When Info was first created, it was customary to create many small
-Info files on one subject.  Each Info file was formatted from its own
-Texinfo source file.  This custom meant that Emacs did not need to
-make a large buffer to hold the whole of a large Info file when
-someone wanted information; instead, Emacs allocated just enough
-memory for the small Info file that contained the particular
-information sought.  This way, Emacs could avoid wasting memory.
-
-References from one file to another were made by referring to the file
-name as well as the node name. (@xref{Outros Arquivos Info, , Referring to
-Outros Arquivos Info}.  Also, see @ref{Quatro e Cinco Argumentos, ,
-@code{@@xref} with Quatro e Cinco Argumentos}.)
-
-Include files were designed primarily as a way to create a single,
-large printed manual out of several smaller Info files.  In a printed
-manual, all the references were within the same document, so @TeX{}
-could automatically determine the references' page numbers.  The Info
-formatting commands used include files only for creating joint
-indices; each of the individual Texinfo files had to be formatted for
-Info individually.  (Each, therefore, required its own
-@code{@@setfilename} line.)
-
-However, because large Info files are now split automatically, it is
-no longer necessary to keep them small.
-
-Nowadays, multiple Texinfo files are used mostly for large documents,
-such as @cite{The GNU Emacs Lisp Reference Manual}, and for projects
-in which several different people write different sections of a
-document simultaneously.
-
-In addition, the Info formatting commands have been extended to work
-with the @code{@@include} command so as to create a single large Info
-file that is split into smaller files if necessary.  This means that
-you can write menus and cross-references without naming the different
-Texinfo files.
+Para um método de impressão do conteúdo do arquivo em um tamanho menor de
+fonte, veja-se o final da seção acerca do @code{@@verbatim}.
 
 
+@node Evolução da Inclusão de Arquivos
+@section Evolução dos Arquivos de Inclusão
+
+Quando o Info foi criado, era costume criar muitos arquivos Info pequenos
+acerca de um assunto. Cada arquivo do Info era formatado a partir do arquivo
+fonte do Texinfo dele próprio. Esse costume significava que o Emacs não
+precisava fazer um buffer grande para manter a íntegra de um grande arquivo do
+Info quando alguém queria informações; em vez disso, o Emacs alocava apenas
+memória suficiente para o pequeno arquivo do Info que continha as informações
+específicas buscadas. Dessa maneira, o Emacs podia evitar desperdício de
+memória.
+
+As referências oriundas de um arquivo para outro foram feitas referindo-se ao
+nome do arquivo e também ao nome do nó.
+(@xref{Outros Arquivos do Info, , Referenciando Outros Arquivos do Info}).
+Veja-se, também,
+(@ref{Quatro e Cinco Argumentos, , @code{@@xref} com quatro e cinco argumentos}).
+
+Os arquivos de inclusão foram projetados principalmente como uma maneira para
+criar um manual impresso grande e unitário a partir de vários arquivos menores
+do Info. Em um manual impresso, todas as referências estavam dentro do mesmo
+documento, de forma que o @TeX{} podia determinar automaticamente os números de
+página das referências. Os comandos de formatação do Info costumavam incluir
+arquivos somente para criar índices conjuntos; cada um dos arquivos individuais
+do Texinfo tinha que ser formatado para Info individualmente. (Cada um,
+portanto, exigia a linha @code{@@setfilename} própria dele).
+
+Entretanto, como arquivos grandes do Info agora são divididos automaticamente,
+não mais é necessário mantê-los pequenos.
+
+Hoje em dia, vários arquivos do Texinfo são usados ​​principalmente
+para documentos grandes, como o @cite{The GNU Emacs Lisp Reference Manual}, e
+para projetos nos quais várias pessoas escrevem seções diferentes de um
+documento simultaneamente.
+
+Além disso, os comandos de formatação do Info foram estendidos para funcionarem
+com o comando @code{@@include}, tão somente para criar um arquivo grande do
+Info que seja dividido em arquivos menores, se necessário. Isso significa que
+você pode escrever menus e referências cruzadas sem nomear os diferentes
+arquivos do Texinfo.
+
+PAREI
 @node Cópia Impressa
 @chapter Formatando e Imprimindo Cópia Impressa
 @cindex Format and print hardcopy
@@ -18470,7 +18462,7 @@ this:
 Each of these menu entries points to the `Top' node of the Info file
 that is named in parentheses.  (The menu entry does not need to
 specify the `Top' node, since Info goes to the `Top' node if no node
-name is mentioned.  @xref{Outros Arquivos Info, , Nodos in Other Info
+name is mentioned.  @xref{Outros Arquivos do Info, , Nodos in Other Info
 Files}.)
 
 Thus, the @samp{Info} entry points to the `Top' node of the
@@ -21684,9 +21676,9 @@ Write notes for yourself at the very end of a Texinfo file after the
 @end itemize
 
 
-@node Arquivos Texinfo Modelo
-@appendix Arquivos Texinfo Modelo
-@cindex Sample Texinfo files
+@node Arquivos de Amostra do Texinfo
+@appendix Arquivos de Amostra do Texinfo
+@cindex Arquivos de amostra do Texinfo
 
 The first example from the first chapter (@pxref{Amostra Curta}) is
 given here in its entirety, without commentary.  The second example
@@ -22398,7 +22390,7 @@ node.
 The menu updating commands remove menu entries that refer to other Info
 files since they do not refer to Nodos within the current buffer.  This
 is a deficiency.  Rather than use menu entries, you can use cross
-references to refer to Outros Arquivos Info.  None of the updating commands
+references to refer to Outros Arquivos do Info.  None of the updating commands
 affect cross-references.
 
 Texinfo mode has five updating commands that are used most often: two
