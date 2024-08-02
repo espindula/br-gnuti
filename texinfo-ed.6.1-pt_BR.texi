@@ -587,7 +587,7 @@ Formatando e Imprimindo Cópia Impressa
 * Formatar com @command{tex}/@command{texindex}:: Formatando com comandos explícitos de shell.
 * Imprimir com @command{lpr}::                    Como imprimir.
 * Dentro do Emacs::                               Como formatar e imprimir a partir de um shell do Emacs.
-* Impressão de Modo Texinfo::                     Como formatar e imprimir em modo Texinfo.
+* Impressão no Modo Texinfo::                     Como formatar e imprimir no Modo Texinfo.
 * Comando de Compilação::                         Como imprimir usando o comando de compilar do Emacs.
 * Resumo das Exigências::                         Resumo de exigências de formatação do @TeX{}.
 * Preparando para @TeX{}::                        O que se fazer antes de usar o @TeX{}.
@@ -602,7 +602,7 @@ Formatando e Imprimindo Cópia Impressa
 Formatar com @command{tex}/@command{texindex}
 
 * Formatando Documentos Parciais::
-* Detalhes de @command{texindex}::
+* Detalhes do @command{texindex}::
 
 @command{texi2any}: O Tradutor Genérico para Texinfo
 
@@ -1948,7 +1948,7 @@ A estranha sequência de caracteres, @samp{%**}, é para assegurar que
 nenhum outro comentário seja acidentalmente tomado por uma linha 
 `start-of-header'.  Você pode modificá-la se você desejar, configurando 
 as variáveis Emacs @code{tex-start-of-header} e/ou 
-@code{tex-end-of-header}. @xref{Modo Texinfo Printing}.
+@code{tex-end-of-header}. @xref{Impressão no Modo Texinfo}.
 
 
 @node @code{@@setfilename}
@@ -3777,7 +3777,7 @@ O programa @code{makeinfo} pode automaticamente determinar ponteiros de
 nodo para um documento hierarquicamente organizado. Essa característica 
 de criação implícita de ponteiro de nodo em @code{makeinfo} liberta você 
 da necessidade de atualizar menus e ponteiros manualmente ou com 
-comandos em modo Texinfo. (@xref{Atualizando Nodos e Menus}). Nós 
+comandos no Modo Texinfo. (@xref{Atualizando Nodos e Menus}). Nós 
 recomendamos enfaticamente tomar vantagem disso.
 
 Para fazer isso, escreva suas linhas @code{@@node} apenas com o nome do 
@@ -9356,8 +9356,8 @@ estruturas definidas em arquivos de cabeçalho).
 @item vr
 @cindex @code{vr} (variable) index
 @findex vindex
-(@code{@@vindex}) índice de variáveis, para nomes de variáveis ​​(como 
-variáveis ​​globais de bibliotecas).
+(@code{@@vindex}) índice de variáveis, para nomes de variáveis (como 
+variáveis globais de bibliotecas).
 @end table
 
 @noindent
@@ -9712,7 +9712,7 @@ seguinte:
 Isso fará com que todas as entradas designadas para o índice de função 
 sejam mescladas com o índice de conceito.
 
-Para mesclar ambos, um índice de variáveis ​​e um índice de função, em um 
+Para mesclar ambos, um índice de variáveis e um índice de função, em um 
 índice de conceito, escreva o seguinte:
 
 @example
@@ -10103,7 +10103,7 @@ Essas configurações afetam @code{@@code}, @code{@@example},
 @vindex txicodequotebacktick@r{, variável obsoleta}
 
 Esse recurso costumava ser controlado usando-se @code{@@set} para mudar 
-os valores das variáveis ​​correspondentes @code{txicodequoteundirected} e 
+os valores das variáveis correspondentes @code{txicodequoteundirected} e 
 @code{txicodequotebacktick}; elas ainda são suportadas, mas a interface 
 de comando é preferida.
 
@@ -10857,7 +10857,7 @@ diretamente (@pxref{Comandos do Formatador Bruto}).
 @cindex Glifos textuais
 
 Texinfo tem suporte para alguns glifos adicionais que são comumente 
-usados ​​em texto impresso, mas não disponíveis em ASCII@. Claro, existem 
+usados em texto impresso, mas não disponíveis em ASCII@. Claro, existem 
 muitos milhares mais. É possível usar caracteres Unicode como estão no 
 que diz respeito ao @code{makeinfo}, mas o @TeX{} não é tão sortudo.
 
@@ -11776,8 +11776,8 @@ esse truque não é eficaz no Info ou na saída de texto simples.
 
 O comando @code{@@tie@{@}} produz um espaço normal interpalavra no qual uma
 quebra de linha possivelmente não ocorra. Sempre escreva-o com as seguintes
-chaves (vazias), como de costume para comandos usados ​​dentro de um
-parágrafo. Aqui está um exemplo:
+chaves (vazias), como de costume para comandos usados dentro de um parágrafo.
+Aqui está um exemplo:
 
 @example
 @@TeX@{@} foi escrito por Donald E.@@tie@{@}Knuth.
@@ -12116,7 +12116,7 @@ mais que uma vez.
 
 Assim, [@var{argumento-opcional}] significa que @var{argumento-opcional} é
 opcional e @var{argumentos-repetidos}@code{@dots{}} representa zero ou mais
-argumentos. Parênteses são usados ​​quando vários argumentos são
+argumentos. Parênteses são usados quando vários argumentos são
 agrupados em níveis adicionais de estrutura de lista na Lisp.
 
 Aqui está a linha @code{@@defspec} de um exemplo de uma forma especial
@@ -12219,16 +12219,16 @@ descritos nesta seção.
 Os comandos de definição inserem automaticamente o nome da entidade no índice
 apropriado: por exemplo, @code{@@deffn}, @code{@@defun} e @code{@@defmac}
 inserem nomes de funções no índice de funções; @code{@@defvr} e @code{@@defvar}
-inserem nomes de variáveis ​​no índice de variáveis.
+inserem nomes de variáveis no índice de variáveis.
 
 Embora os exemplos a seguir ilustrem principalmente Lisp, os comandos podem ser
-usados ​​para outras linguagens de programação.
+usados para outras linguagens de programação.
 
 @menu
 * Comandos de Funções::          Comandos para funções e entidades similares.
 * Comandos de Variáveis::        Comandos para variáveis e entidades similares.
 * Funções Tipadas::              Comandos para funções em linguagens tipadas.
-* Variáveis ​​Tipadas::            Comandos para variáveis em linguagens tipadas.
+* Variáveis Tipadas::            Comandos para variáveis em linguagens tipadas.
 * Tipos de Dados::               O comando de definição para tipos de dados.
 * Objetos Abstratos::            Comandos para programação orientada a objetos.
 @end menu
@@ -12320,9 +12320,9 @@ Todos esses comandos criam entradas no índice de funções.
 
 
 @node Comandos de Variáveis
-@subsection Variáveis ​​e Entidades Similares
+@subsection Variáveis e Entidades Similares
 
-Aqui estão os comandos para definir variáveis ​​e entidades similares:
+Aqui estão os comandos para definir variáveis e entidades similares:
 
 @table @code
 @findex defvr
@@ -12360,8 +12360,7 @@ O modelo é:
 @end group
 @end example
 
-@code{@@defvr} cria uma entrada no índice de variáveis ​​para
-@var{nome}.
+@code{@@defvr} cria uma entrada no índice de variáveis para @var{nome}.
 
 @findex defvar
 @item @@defvar @var{nome}
@@ -12389,14 +12388,14 @@ O modelo é:
 @end group
 @end example
 
-@code{@@defvar} cria uma entrada no índice de variáveis ​​para
+@code{@@defvar} cria uma entrada no índice de variáveis para
 @var{nome}.
 
 @findex defopt
 @item @@defopt @var{nome}
 @cindex Opções de usuário(a), marcando
 O comando @code{@@defopt} é o comando de definição para @dfn{opções de
-usuário(a)}, ou seja, variáveis ​​destinadas para usuários(as)
+usuário(a)}, ou seja, variáveis destinadas para usuários(as)
 mudarem de acordo com o gosto; Emacs tem muitas dessas
 (@pxref{Variables,,, emacs, The GNU Emacs Manual}). @code{@@defopt} é
 equivalente a @samp{@@defvr @{Opção de Usuário(a)@} @dots{}} e funciona como
@@ -12411,7 +12410,7 @@ equivalente a @samp{@@defvr @{Opção de Usuário(a)@} @dots{}} e funciona como
 @cindex Funções, em linguagens tipadas
 
 O comando @code{@@deftypefn} e as variações dele são para descrever funções em
-linguagens nas quais você precisa declarar tipos de variáveis ​​e
+linguagens nas quais você precisa declarar tipos de variáveis e
 funções, como C e C++.
 
 @table @code
@@ -12452,9 +12451,9 @@ Como em linguagens tipadas, os nomes reais dos argumentos são normalmente
 espalhados entre nomes de tipos de dados e palavras-chave, Texinfo não consegue
 encontrá-los sem ajuda. Você pode (a)@tie{}escrever tudo como texto simples, e
 ele será impresso em tipo inclinado; (b)@tie{}usar @code{@@var} para os nomes
-de variáveis, que colocará os nomes de variáveis ​​em maiúsculas no
+de variáveis, que colocará os nomes de variáveis em maiúsculas no
 Info e usará a fonte de máquina de escrever inclinada na saída impressa;
-(c)@tie{}usar @code{@@var} para os nomes de variáveis ​​e
+(c)@tie{}usar @code{@@var} para os nomes de variáveis e
 @code{@@code} para os nomes de tipos e palavras-chave, que serão obedientemente
 obedecidos.
 
@@ -12525,7 +12524,7 @@ colocar o tipo de retorno em uma linha dedicada. Portanto, Texinfo fornece uma
 opção para fazer isso: @code{@@deftypefnnewline on}.
 
 Isso afeta somente funções tipadas---não funções não tipadas, variáveis
-​​não tipadas, etc.. Especificamente, afeta os comandos nesta seção e
+não tipadas, etc.. Especificamente, afeta os comandos nesta seção e
 os comandos análogos para linguagens orientadas a objetos, ou seja,
 @code{@@deftypeop} e @code{@@deftypemethod}
 (@pxref{Métodos Orientados a Objetos}).
@@ -12533,13 +12532,13 @@ os comandos análogos para linguagens orientadas a objetos, ou seja,
 Especificar-se @code{@@deftypefnnewline off} reverte para o padrão.
 
 
-@node Variáveis ​​Tipadas
-@subsection Variáveis ​​em Linguagens Tipadas
+@node Variáveis Tipadas
+@subsection Variáveis em Linguagens Tipadas
 
 @cindex Variáveis tipadas
 @cindex Variáveis, em linguagens tipadas
 
-Variáveis ​​em linguagens tipadas são manuseadas de forma similar a
+Variáveis em linguagens tipadas são manuseadas de forma similar a
 funções em linguagens tipadas. @xref{Funções Tipadas}. O comando geral de
 definição @code{@@deftypevr} corresponde a @code{@@deftypefn} e o comando
 especializado de definição @code{@@deftypevar} corresponde a
@@ -12591,7 +12590,7 @@ O modelo é:
 @findex deftypevar
 @item @@deftypevar @var{tipo-dados} @var{nome}
 O comando @code{@@deftypevar} é o comando especializado de definição para
-variáveis ​​em linguagens tipadas. @code{@@deftypevar} é equivalente
+variáveis em linguagens tipadas. @code{@@deftypevar} é equivalente
 a @samp{@@deftypevr Variável @dots{}}. O modelo é:
 
 @example
@@ -12656,7 +12655,7 @@ O modelo é:
 @cindex Programação orientada a objetos
 
 Aqui estão os comandos para formatar descrições acerca de objetos abstratos,
-tais como são usados ​​em programação orientada a objetos. Uma classe
+tais como são usados em programação orientada a objetos. Uma classe
 é um tipo definido de objeto abstrato. Uma instância de uma classe é um objeto
 particular que tem o tipo da classe. Uma variável de instância é uma variável
 que pertence à classe, mas para a qual cada instância tem o próprio valor dela.
@@ -12701,7 +12700,7 @@ definida, a classe à qual ela pertence e o nome dela. Por exemplo:
 @item @@deftypecv @var{categoria} @var{classe} @var{tipo-dados} @var{nome}
 @findex deftypecv
 O comando @code{@@deftypecv} é o comando de definição para variáveis
-​​de classe tipadas em programação orientada a objetos. Ele é análogo
+de classe tipadas em programação orientada a objetos. Ele é análogo
 ao @code{@@defcv} com a adição do parâmetro @var{tipo-dados} para especificar o
 tipo da variável de instância. Normalmente, o tipo de dado é uma construção da
 linguagem de programação que deveria estar marcada com @code{@@code}. Por
@@ -12726,7 +12725,7 @@ exemplo:
 @item @@defivar @var{classe} @var{nome}
 @findex defivar
 O comando @code{@@defivar} é o comando de definição para variáveis
-​​de instância em programação orientada a objetos. @code{@@defivar} é
+de instância em programação orientada a objetos. @code{@@defivar} é
 equivalente a @samp{@@defcv @{Variável da Instância@} @dots{}}. Por exemplo:
 
 @example
@@ -12985,7 +12984,7 @@ Neste manual, essa função está listada no Índice de Comandos e Variáveis so
 @code{apply}.
 
 Variáveis ​​comuns e opções de usuário(a) são descritas usando um
-formato semelhante àquele para funções, exceto que variáveis ​​não
+formato semelhante àquele para funções, exceto que variáveis não
 recebem argumentos.
 
 
@@ -13118,7 +13117,7 @@ A vasta codificação global de caracteres, expressa em bytes de 8 bits.
 @cindex Símbolo do euro e codificações
 Essas especificam as codificações padrão para idiomas da Europa Ocidental (os
 dois primeiros) e da Europa Oriental (o terceiro), respectivamente. A ISO
-8859-15 substitui alguns caracteres pouco usados provenientes ​​da
+8859-15 substitui alguns caracteres pouco usados provenientes da
 8859-1 (por exemplo, frações pré-compostas) por outros mais comumente
 necessários, como o símbolo do Euro (@euro{}).
 
@@ -14266,7 +14265,7 @@ produzirá a seguinte saída
 @end example
 
 E, de fato, pode. Ou seja, @command{makeinfo} não controla o número de
-argumentos passados ​​para macros de um argumento, de forma que seja
+argumentos passados para macros de um argumento, de forma que seja
 cuidadoso(a) quando você invocá-las.
 
 @item Se uma invocação de macro incluir outro comando (incluindo uma invocação
@@ -15124,7 +15123,7 @@ portanto, exigia a linha @code{@@setfilename} própria dele).
 Entretanto, como arquivos grandes do Info agora são divididos automaticamente,
 não mais é necessário mantê-los pequenos.
 
-Hoje em dia, vários arquivos do Texinfo são usados ​​principalmente
+Hoje em dia, vários arquivos do Texinfo são usados principalmente
 para documentos grandes, como o @cite{The GNU Emacs Lisp Reference Manual}, e
 para projetos nos quais várias pessoas escrevem seções diferentes de um
 documento simultaneamente.
@@ -15146,11 +15145,22 @@ arquivos do Texinfo.
 @cindex Índices, ordenação
 @cindex Ordenação de índices do @TeX{}
 
-Executar o comando @command{texi2dvi} ou @command{texi2pdf} é a maneira mais simples de criar uma saída imprimível. Esses comandos são instalados como parte do pacote do Texinfo.
+Executar o comando @command{texi2dvi} ou @command{texi2pdf} é a maneira mais
+simples de criar uma saída imprimível. Esses comandos são instalados como parte
+do pacote do Texinfo.
 
-Em mais detalhes, três principais comandos de shell são usados ​​para imprimir saída formatada a partir de um manual do Texinfo: um converte o fonte do Texinfo em algo imprimível; um segundo ordena índices; e um terceiro efetivamente imprime o documento formatado. Quando usar os comandos de shell, você pode ou trabalhar diretamente no shell do sistema operacional ou trabalhar em um shell dentro do GNU Emacs (ou algum outro ambiente de computação).
+Em mais detalhes, três principais comandos de shell são usados para
+imprimir saída formatada a partir de um manual do Texinfo: um converte o fonte
+do Texinfo em algo imprimível; um segundo ordena índices; e um terceiro
+efetivamente imprime o documento formatado. Quando usar os comandos de shell,
+você pode ou trabalhar diretamente no shell do sistema operacional ou trabalhar
+em um shell dentro do GNU Emacs (ou algum outro ambiente de computação).
 
-Se estiver usando o GNU Emacs, você pode usar comandos fornecidos pelo modo Texinfo em vez de comandos de shell. Além dos três comandos para formatar um arquivo, ordenar os índices e imprimir o resultado, o modo Texinfo oferece atalhos de teclado para comandos para recentralizar o buffer de saída, mostrar a fila de impressão e deletar um trabalho da fila de impressão.
+Se estiver usando o GNU Emacs, você pode usar comandos fornecidos pelo modo
+Texinfo em vez de comandos de shell. Além dos três comandos para formatar um
+arquivo, ordenar os índices e imprimir o resultado, o modo Texinfo oferece
+atalhos de teclado para comandos para recentralizar o buffer de saída, mostrar
+a fila de impressão e deletar um trabalho da fila de impressão.
 
 Detalhes estão nas seções seguintes.
 
@@ -15160,7 +15170,7 @@ Detalhes estão nas seções seguintes.
 * Formatar com @command{tex}/@command{texindex}:: Formatando com comandos explícitos de shell.
 * Imprimir com @command{lpr}::                    Como imprimir.
 * Dentro do Emacs::                               Como formatar e imprimir a partir de um shell do Emacs.
-* Impressão de Modo Texinfo::                     Como formatar e imprimir em modo Texinfo.
+* Impressão no Modo Texinfo::                     Como formatar e imprimir no Modo Texinfo.
 * Comando de Compilação::                         Como imprimir usando o comando de compilar do Emacs.
 * Resumo das Exigências::                         Resumo de exigências de formatação do @TeX{}.
 * Preparando para @TeX{}::                        O que se fazer antes de usar o @TeX{}.
@@ -15177,9 +15187,12 @@ Detalhes estão nas seções seguintes.
 @node Use @TeX{}
 @section Use @TeX{}
 
-O programa de tipografar chamado @TeX{} é usado para formatar um documento do Texinfo para saída imprimível. @TeX{} é um programa de tipografia muito poderoso e, quando usado corretamente, faz um trabalho excepcionalmente bom.
+O programa de tipografar chamado @TeX{} é usado para formatar um documento do
+Texinfo para saída imprimível. @TeX{} é um programa de tipografia muito
+poderoso e, quando usado corretamente, faz um trabalho excepcionalmente bom.
 
-@xref{Obtendo @TeX{}}, para informações acerca de como obter @TeX{}. Ele não está incluso no pacote do Texinfo, sendo uma vasta suíte de software em si.
+@xref{Obtendo @TeX{}}, para informações acerca de como obter @TeX{}. Ele não
+está incluso no pacote do Texinfo, sendo uma vasta suíte de software em si.
 
 
 @node Formatar com @command{texi2dvi}
@@ -15188,72 +15201,140 @@ O programa de tipografar chamado @TeX{} é usado para formatar um documento do T
 @pindex texi2dvi @r{(script de shell)}
 @cindex DVI, saída em
 
-O programa @code{texi2dvi} cuida de todos os passos para produzir um arquivo DVI do @TeX{} a partir de um documento do Texinfo. Similarmente, @code{texi2pdf} produz um arquivo PDF.
+O programa @code{texi2dvi} cuida de todos os passos para produzir um arquivo
+DVI do @TeX{} a partir de um documento do Texinfo. Similarmente,
+@code{texi2pdf} produz um arquivo PDF.
 
-Para executar @code{texi2dvi} ou @code{texi2pdf} em um arquivo de entrada @file{foo.texi}, faça isto (onde @samp{prompt$ } é o prompt do teu shell):
+Para executar @code{texi2dvi} ou @code{texi2pdf} em um arquivo de entrada
+@file{foo.texi}, faça isto (onde @samp{prompt$ } é o prompt do teu shell):
 
 @example
 prompt$ @kbd{texi2dvi foo.texi}
 prompt$ @kbd{texi2pdf foo.texi}
 @end example
 
-Conforme mostrado nesse exemplo, os nomes dos arquivos de entrada para @code{texi2dvi} e @code{texi2pdf} precisam incluir qualquer extensão, como @samp{.texi}. (Sob MS-DOS e talvez em outras circunstâncias, você possivelmente necessite executar @samp{sh texi2dvi foo.texi} em vez de depender do sistema operacional para invocar o shell no script @samp{texi2dvi}).
+Conforme mostrado nesse exemplo, os nomes dos arquivos de entrada para
+@code{texi2dvi} e @code{texi2pdf} precisam incluir qualquer extensão, como
+@samp{.texi}. (Sob MS-DOS e talvez em outras circunstâncias, você possivelmente
+necessite executar @samp{sh texi2dvi foo.texi} em vez de depender do sistema
+operacional para invocar o shell no script @samp{texi2dvi}).
 
-Para uma lista de todas as opções, execute @samp{texi2dvi --help}. Algumas das opções são discutidas abaixo.
+Para uma lista de todas as opções, execute @samp{texi2dvi --help}. Algumas das
+opções são discutidas abaixo.
 
 @opindex --pdf@r{, para @command{texi2dvi}}
 @pindex pdftexi2dvi
-Com a opção @option{--pdf}, @command{texi2dvi} produz saída PDF em vez de DVI (@pxref{Saída PDF}), executando @command{pdftex} em vez de @command{tex}. Alternativamente, o comando @command{texi2pdf} é uma abreviação para executar @samp{texi2dvi --pdf}. O comando @command{pdftexi2dvi} também é fornecido como uma conveniência para AUC-@TeX{} (@pxref{Top,,, auctex, AUC-@TeX{}}, pois ele prefere meramente antepor @samp{pdf} às ferramentas de produção de DVI para ter ferramentas de produção de PDF.
+Com a opção @option{--pdf}, @command{texi2dvi} produz saída PDF em vez de DVI
+(@pxref{Saída PDF}), executando @command{pdftex} em vez de @command{tex}.
+Alternativamente, o comando @command{texi2pdf} é uma abreviação para executar
+@samp{texi2dvi --pdf}. O comando @command{pdftexi2dvi} também é fornecido como
+uma conveniência para AUC-@TeX{} (@pxref{Top,,, auctex, AUC-@TeX{}}, pois ele
+prefere meramente antepor @samp{pdf} às ferramentas de produção de DVI para ter
+ferramentas de produção de PDF.
 
 @opindex --dvipdf@r{, para @command{texi2dvi}}
 @pindex dvipdfmx
-Com a opção @option{--dvipdf}, @command{texi2dvi} produz saída PDF executando @TeX{} e então um programa DVI-para-PDF: se a variável de ambiente @env{DVIPDF} estiver configurada, esse valor será usado, senão o primeiro programa existente entre @code{dvipdfmx}, @code{dvipdfm}, @code{dvipdf}, @code{dvi2pdf}, @code{dvitopdf}. Esse método geralmente suporta melhor a tipografia de CJK que o @command{pdftex}.
+Com a opção @option{--dvipdf}, @command{texi2dvi} produz saída PDF executando
+@TeX{} e então um programa DVI-para-PDF: se a variável de ambiente @env{DVIPDF}
+estiver configurada, esse valor será usado, senão o primeiro programa existente
+entre @code{dvipdfmx}, @code{dvipdfm}, @code{dvipdf}, @code{dvi2pdf},
+@code{dvitopdf}. Esse método geralmente suporta melhor a tipografia de CJK que
+o @command{pdftex}.
 
 @opindex --ps@r{, para @command{texi2dvi}}
 @pindex dvips
-Com a opção @option{--ps}, @command{texi2dvi} produz PostScript em vez de DVI, executando @command{tex} e então @command{dvips} (@pxref{Top,,, dvips, Dvips}). (Ou o valor da variável de ambiente @env{DVIPS}, se configurada).
+Com a opção @option{--ps}, @command{texi2dvi} produz PostScript em vez de DVI,
+executando @command{tex} e então @command{dvips} (@pxref{Top,,, dvips, Dvips}).
+(Ou o valor da variável de ambiente @env{DVIPS}, se configurada).
 
 @opindex --language@r{, para @command{texi2dvi}}
 @cindex @LaTeX{}, processando com @command{texi2dvi}
-@command{texi2dvi} também pode ser usado para processar arquivos @LaTeX{}. Normalmente, @command{texi2dvi} é capaz de adivinhar o idioma do arquivo de entrada pelo conteúdo e extensão do nome do arquivo dele; no entanto, se ele adivinhar errado, você pode especificar explicitamente o idioma de entrada usando a opção de linha de comando @option{--language=@var{idioma}}, onde @var{idioma} é ou @samp{latex} ou @samp{texinfo}.
+@command{texi2dvi} também pode ser usado para processar arquivos @LaTeX{}.
+Normalmente, @command{texi2dvi} é capaz de adivinhar o idioma do arquivo de
+entrada pelo conteúdo e extensão do nome do arquivo dele; no entanto, se ele
+adivinhar errado, você pode especificar explicitamente o idioma de entrada
+usando a opção de linha de comando @option{--language=@var{idioma}}, onde
+@var{idioma} é ou @samp{latex} ou @samp{texinfo}.
 
 @opindex --command@r{, para @command{texi2dvi}}
-Uma opção útil para @code{texi2dvi} é @samp{--command=@var{comando}}. Isso insere @var{comando} em uma linha própria, depois de uma linha @code{@@setfilename} em uma cópia temporária do arquivo de entrada, antes de executar o @TeX{}. Com isso, você pode especificar diferentes formatos de impressão, tais como @code{@@smallbook} (@pxref{@code{@@smallbook}}), @code{@@afourpaper} (@pxref{Papel A4}) ou @code{@@pagesizes} (@pxref{@code{@@pagesizes}}), sem realmente mudar o fonte do documento. (Você também pode fazer isso em todo o site com @file{texinfo.cnf}; @pxref{Preparando para @TeX{}}).
+Uma opção útil para @code{texi2dvi} é @samp{--command=@var{comando}}. Isso
+insere @var{comando} em uma linha própria, depois de uma linha
+@code{@@setfilename} em uma cópia temporária do arquivo de entrada, antes de
+executar o @TeX{}. Com isso, você pode especificar diferentes formatos de
+impressão, tais como @code{@@smallbook} (@pxref{@code{@@smallbook}}),
+@code{@@afourpaper} (@pxref{Papel A4}) ou @code{@@pagesizes}
+(@pxref{@code{@@pagesizes}}), sem realmente mudar o fonte do documento. (Você
+também pode fazer isso em todo o site com @file{texinfo.cnf};
+@pxref{Preparando para @TeX{}}).
 
-A opção @option{-E} (equivalentemente, @option{-e} e @option{--expand}) faz a expansão de macro do Texinfo usando @command{makeinfo} em vez da implementação do @TeX{} (@pxref{Detalhes de Macro}). Cada implementação tem limitações e vantagens próprias delas. Se essa opção for usada, nenhuma linha no arquivo fonte pode começar com a string @code{@@c@tie{}_texi2dvi} ou com a string @code{@@c@tie{}(_texi2dvi)}.
+A opção @option{-E} (equivalentemente, @option{-e} e @option{--expand}) faz a
+expansão de macro do Texinfo usando @command{makeinfo} em vez da implementação
+do @TeX{} (@pxref{Detalhes de Macro}). Cada implementação tem limitações e
+vantagens próprias delas. Se essa opção for usada, nenhuma linha no arquivo
+fonte pode começar com a string @code{@@c@tie{}_texi2dvi} ou com a string
+@code{@@c@tie{}(_texi2dvi)}.
 
-@command{texi2dvi} usa a opção @option{--build=@var{modo}} para especificar onde a compilação do @TeX{} acontece e, como consequência, como os arquivos auxiliares são tratados. O modo de construção também pode ser configurado usando a variável de ambiente @env{TEXI2DVI_BUILD_MODE}. Os valores válidos para @var{modo} são:
+@command{texi2dvi} usa a opção @option{--build=@var{modo}} para especificar
+onde a compilação do @TeX{} acontece e, como consequência, como os arquivos
+auxiliares são tratados. O modo de construção também pode ser configurado
+usando a variável de ambiente @env{TEXI2DVI_BUILD_MODE}. Os valores válidos
+para @var{modo} são:
 
 @table @samp
 @item local
- Compile no diretório atual, deixando todos os arquivos auxiliares por aí. Esse é o uso tradicional do TeX.
+ Compile no diretório atual, deixando todos os arquivos auxiliares por aí. Esse
+é o uso tradicional do TeX.
 
 @item tidy
- Compile em um diretório local @code{*.t2d}, onde os arquivos auxiliares são deixados. Os arquivos de saída são copiados de volta para o arquivo original.
+ Compile em um diretório local @code{*.t2d}, onde os arquivos auxiliares são
+deixados. Os arquivos de saída são copiados de volta para o arquivo original.
 
  Usar o modo @samp{tidy} traz várias vantagens:
  @itemize -
- @item o diretório atual não fica abarrotado com uma abundância de arquivos temporários.
- @item a desordem pode ser ainda mais reduzida usando @option{--build-dir=diretório}: todos os diretórios @code{*.t2d} são armazenados lá.
- @item a desordem pode ser reduzida a zero usando, por exemplo, @option{--build-dir=/tmp/\$USER.t2d} ou @option{--build-dir=\$HOME/.t2d}.
- @item o arquivo de saída é atualizado depois de cada execução bem-sucedida do @TeX{}, para fins de visualização simultânea da saída gerada. Em uma construção @samp{local}, o visualizador para durante a execução inteira do @TeX{}.
- @item se a compilação falhar, o estado anterior do arquivo de saída será preservado.
- @item As compilações @acronym{PDF} e @acronym{DVI} são mantidas em subdiretórios separados, evitando qualquer possibilidade de incompatibilidade de arquivos auxiliares.
+ @item o diretório atual não fica abarrotado com uma abundância de arquivos
+temporários.
+ @item a desordem pode ser ainda mais reduzida usando
+@option{--build-dir=diretório}: todos os diretórios @code{*.t2d} são
+armazenados lá.
+ @item a desordem pode ser reduzida a zero usando, por exemplo,
+@option{--build-dir=/tmp/\$USER.t2d} ou @option{--build-dir=\$HOME/.t2d}.
+ @item o arquivo de saída é atualizado depois de cada execução bem-sucedida do
+@TeX{}, para fins de visualização simultânea da saída gerada. Em uma construção
+@samp{local}, o visualizador para durante a execução inteira do @TeX{}.
+ @item se a compilação falhar, o estado anterior do arquivo de saída será
+preservado.
+ @item As compilações @acronym{PDF} e @acronym{DVI} são mantidas em
+subdiretórios separados, evitando qualquer possibilidade de incompatibilidade
+de arquivos auxiliares.
  @end itemize
 
- Por outro lado, como a compilação @samp{tidy} ocorre em outro diretório, ocasionalmente o @TeX{} não conseguirá encontrar alguns arquivos (por exemplo, ao usar @code{\graphicspath}): nesse caso, use @option{-I} para especificar os diretórios adicionais a considerar.
+ Por outro lado, como a compilação @samp{tidy} ocorre em outro diretório,
+ocasionalmente o @TeX{} não conseguirá encontrar alguns arquivos (por exemplo,
+ao usar @code{\graphicspath}): nesse caso, use @option{-I} para especificar os
+diretórios adicionais a considerar.
 
 @item clean
- O mesmo que @samp{tidy}, mas remove o diretório auxiliar depois. Cada compilação, portanto, exige o ciclo completo.
+ O mesmo que @samp{tidy}, mas remove o diretório auxiliar depois. Cada
+compilação, portanto, exige o ciclo completo.
 @end table
 
 @pindex etex
 @pindex pdfetex
-@command{texi2dvi} usará @command{etex} (ou @command{pdfetex}) se estiver disponível, porque ele roda mais rápido em alguns casos e fornece informações adicionais de rastreamento ao depurar @file{texinfo.tex}. No entanto, essa versão estendida do @TeX{} não é exigida, e a saída DVI é idêntica. (Hoje em dia, @command{pdftex} e @command{pdfetex} são exatamente os mesmos, mas nós ainda executamos @command{pdfetex} para atender a instalações antigas do @TeX{}).
+@command{texi2dvi} usará @command{etex} (ou @command{pdfetex}) se estiver
+disponível, porque ele roda mais rápido em alguns casos e fornece informações
+adicionais de rastreamento ao depurar @file{texinfo.tex}. No entanto, essa
+versão estendida do @TeX{} não é exigida, e a saída DVI é idêntica. (Hoje em
+dia, @command{pdftex} e @command{pdfetex} são exatamente os mesmos, mas nós
+ainda executamos @command{pdfetex} para atender a instalações antigas do
+@TeX{}).
 
 @cindex gravador de nome de arquivo para @TeX{}
 @cindex linha @samp{\openout} no arquivo de registro
-@command{texi2dvi} tenta detectar arquivos auxiliares gerados pelo @TeX{}, seja usando a opção @option{-recorder} ou procurando por @samp{\openout} no arquivo de registro que uma execução do @TeX{} produz. Você pode controlar como @command{texi2dvi} faz isso com a variável de ambiente @env{TEXI2DVI_USE_RECORDER}. Os valores válidos são:
+@command{texi2dvi} tenta detectar arquivos auxiliares gerados pelo @TeX{}, seja
+usando a opção @option{-recorder} ou procurando por @samp{\openout} no arquivo
+de registro que uma execução do @TeX{} produz. Você pode controlar como
+@command{texi2dvi} faz isso com a variável de ambiente
+@env{TEXI2DVI_USE_RECORDER}. Os valores válidos são:
 
 @table @samp
 @item yes
@@ -15263,138 +15344,141 @@ use a opção @option{-recorder}, sem verificações.
 procure por @samp{\openout} no arquivo de registro, sem verificações.
 
 @item yesmaybe
-verifique se a opção @option{-recorder} é suportada e, se sim, use-a; caso contrário, verifique se o rastreamento de @samp{\openout} no arquivo de registro é suportado e, se sim, use-o; caso contrário, será um erro.
+verifique se a opção @option{-recorder} é suportada e, se sim, use-a; caso
+contrário, verifique se o rastreamento de @samp{\openout} no arquivo de
+registro é suportado e, se sim, use-o; caso contrário, será um erro.
 
 @item nomaybe
-o mesmo que @samp{yesmaybe}, exceto que o rastreamento @samp{\openout} no arquivo de registro é verificado primeiro.
+o mesmo que @samp{yesmaybe}, exceto que o rastreamento @samp{\openout} no
+arquivo de registro é verificado primeiro.
 @end table
 
-O padrão é @samp{nomaybe}. Essa variável de ambiente é fornecida para fins de solução de problemas e possivelmente mude ou desapareça no futuro.
+O padrão é @samp{nomaybe}. Essa variável de ambiente é fornecida para fins de
+solução de problemas e possivelmente mude ou desapareça no futuro.
 
-PAREI
+
 @node Formatar com @command{tex}/@command{texindex}
 @section Formatar com @command{tex}/@command{texindex}
 
-@cindex Shell formatting with @code{tex} and @code{texindex}
-@cindex Formatting with @code{tex} and @code{texindex}
-@cindex DVI file
+@cindex Formatação de shell com @code{tex} e @code{texindex}
+@cindex Formatando com @code{tex} e @code{texindex}
+@cindex Arquivo DVI
 
-You can do the basic formatting of a Texinfo file with the shell
-command @code{tex} followed by the name of the Texinfo file.  For
-example:
+Você pode fazer a formatação básica de um arquivo do Texinfo com o comando de
+shell @code{tex} seguido pelo nome do arquivo do Texinfo. Por exemplo:
 
 @example
 tex foo.texi
 @end example
 
-@noindent @TeX{} will produce a @dfn{DVI file} as well as several auxiliary
-files containing information for indices, cross-references, etc.  The
-DVI file (for @dfn{DeVice Independent} file) can be printed on
-virtually any device, perhaps after a further conversion (see the
-previous section).
+@noindent @TeX{} produzirá um @dfn{arquivo DVI}, bem como vários arquivos
+auxiliares contendo informações para índices, referências cruzadas, etc. O
+arquivo DVI (para arquivo @dfn{DeVice Independent}) pode ser impresso em
+praticamente qualquer dispositivo, talvez depois de uma conversão adicional
+(veja-se a seção anterior).
 
 @pindex texindex
-The @code{tex} formatting command itself does not sort the indices; it
-writes an output file of unsorted index data.  To generate a printed
-index after running the @command{tex} command, you first need a sorted
-index to work from.  The @command{texindex} command sorts indices.
-(@command{texi2dvi}, described in the previous section, runs
-@command{tex} and @command{texindex} as necessary.)
+O comando de formatação @code{tex} em si não ordena os índices; ele escreve um
+arquivo de saída de dados de índices desordenados. Para gerar um índice
+impresso depois de executar o comando @command{tex}, você primeiro precisa de
+um índice ordenado para trabalhar. O comando @command{texindex} ordena índices.
+(@command{texi2dvi}, descrito na seção anterior, executa @command{tex} e
+@command{texindex} conforme necessário).
 
 @anchor{Nomes dos arquivos de índice}
 @cindex Nomes dos arquivos de índice
-@cindex Index file names
-@code{tex} outputs unsorted index files under names following a
-standard convention: the name of your main input file with any
-@samp{.texi} or similar extension replaced by the two letter index
-name.  For example, the raw index output files for the input file
-@file{foo.texi} would be, by default, @file{foo.cp}, @file{foo.vr},
-@file{foo.fn}, @file{foo.tp}, @file{foo.pg} and @file{foo.ky}.  Those
-are exactly the arguments to give to @code{texindex}.
+@cindex Nomes de arquivos de índice
+@code{tex} gera arquivos de índices desordenados sob nomes seguindo uma
+convenção padrão: o nome do teu arquivo de entrada principal com qualquer
+extensão @samp{.texi} ou similar substituída pelo nome de duas letras do
+índice. Por exemplo, os arquivos de saída de índices brutos para o arquivo de
+entrada @file{foo.texi} seriam, por padrão, @file{foo.cp}, @file{foo.vr},
+@file{foo.fn}, @file{foo.tp}, @file{foo.pg} e @file{foo.ky}. Esses são
+exatamente os argumentos a fornecer para @code{texindex}.
 
 @need 1000
-@cindex Wildcards
-@cindex Globbing
-Instead of specifying all the unsorted index file names explicitly,
-it's typical to use @samp{??} as shell wildcards and give the command
-in this form:
+@cindex Curingas
+@cindex Englobamento
+Em vez de especificar-se explicitamente todos os nomes de arquivos de índices
+desordenados, é comum usar @samp{??} como curingas de shell e fornecer o
+comando neste formato:
 
 @example
 texindex foo.??
 @end example
 
 @noindent
-This command will run @code{texindex} on all the unsorted index files,
-including any two letter indices that you have defined yourself using
-@code{@@defindex} or @code{@@defcodeindex}.  You can safely run
-@samp{texindex foo.??} even if there are files with two letter
-extensions that are not index files, such as @samp{foo.el}.  The
-@code{texindex} command reports but otherwise ignores such files.
+Esse comando executará @code{texindex} em todos os arquivos de índices
+desordenados, incluindo quaisquer índices de duas letras que você mesmo(a)
+definiu usando @code{@@defindex} ou @code{@@defcodeindex}. Você pode
+seguramente executar @samp{texindex foo.??}, mesmo se existirem arquivos com
+extensões de duas letras que não sejam arquivos de índice, como @samp{foo.el}.
+O comando @code{texindex} informa, mas, inobstante, ignora esses arquivos.
 
-For each file specified, @code{texindex} generates a sorted index file
-whose name is made by appending @samp{s} to the input file name; for
-example, @file{foo.cps} is made from @file{foo.cp}.  The
-@code{@@printindex} command looks for a file with that name
-(@pxref{Imprimindo Índices e Menus}).  @TeX{} does not read the raw
-index output file, and @code{texindex} does not alter it.
+Para cada arquivo especificado, @code{texindex} gera um arquivo de índice
+ordenado cujo nome é feito anexando @samp{s} ao nome do arquivo de entrada; por
+exemplo, @file{foo.cps} é feito a partir de @file{foo.cp}. O comando
+@code{@@printindex} procura um arquivo com esse nome
+(@pxref{Imprimindo Índices e Menus}). @TeX{} não lê o arquivo de saída de
+índice bruto e @code{texindex} não o altera.
 
-After you have sorted the indices, you need to rerun @code{tex} on the
-Texinfo file.  This regenerates the output file, this time with
-up-to-date index entries.
+Depois de ter ordenado os índices, você precisa reexecutar @code{tex} sobre o
+arquivo do Texinfo. Isso regenera o arquivo de saída, dessa vez com entradas de
+índices atualizadas.
 
-Finally, you may need to run @code{tex} one more time, to get the page
-numbers in the cross-references correct.
+Por fim, você possivelmente precise executar @code{tex} mais uma vez para
+corrigir os números de página nas referências cruzadas.
 
-To summarize, this is a five step process.  (Alternatively, it's a
-one-step process: run @code{texi2dvi}; see the previous section.)
+Para resumir, este é um processo de cinco etapas. (Alternativamente, é um
+processo de uma etapa: execute @code{texi2dvi}; veja-se a seção anterior).
 
 @enumerate
 @item
-Run @code{tex} on your Texinfo file.  This generates a DVI file (with
-undefined cross-references and no indices), and the raw index files
-(with two letter extensions).
+Execute @code{tex} sobre teu arquivo do Texinfo. Isso gera um arquivo DVI (com
+referências cruzadas indefinidas e sem índices) e os arquivos de índices brutos
+(com extensões de duas letras).
 
 @item
-Run @code{texindex} on the raw index files.  This creates the
-corresponding sorted index files (with three letter extensions).
+Execute @code{texindex} sobre os arquivos de índices brutos. Isso cria os
+correspondentes arquivos de índices ordenados (com extensões de três letras).
 
 @item
-Run @code{tex} again on your Texinfo file.  This regenerates the DVI
-file, this time with indices and defined cross-references, but with
-page numbers for the cross-references from the previous run, generally
-incorrect.
+Execute @code{tex} novamente sobre teu arquivo do Texinfo. Isso regenera o
+arquivo DVI, dessa vez com índices e referências cruzadas definidas, mas com
+números de página para as referências cruzadas oriundos da execução anterior,
+geralmente incorretos.
 
 @item
-Sort the indices again, with @code{texindex}.
+Ordene os índices novamente, com @code{texindex}.
 
 @item
-Run @code{tex} one last time.  This time the correct page numbers are
-written for the cross-references.
+Execute @code{tex} uma última vez. Desta vez, os números de página corretos
+serão escritos para as referências cruzadas.
 @end enumerate
 
 @menu
-* Formatting Partial Documents::
-* Detalhes de @command{texindex}::
+* Formatando Documentos Parciais::
+* Detalhes do @command{texindex}::
 @end menu
 
-@node Formatting Partial Documents
-@subsection Formatting Partial Documents
+@node Formatando Documentos Parciais
+@subsection Formatando Documentos Parciais
 
-@cindex Formatting partial documents
-@cindex Partial documents, formatting
-@cindex Chapters, formatting one at a time
-@cindex Auxiliary files, omitting
-@cindex Pointer validation, suppressing
+@cindex Formatando documentos parciais
+@cindex Documentos parciais, formatando
+@cindex Capítulos, formatando um de cada vez
+@cindex Arquivos auxiliares, omitindo
+@cindex Validação de ponteiro, suprimindo
 @findex novalidate
 
-Sometimes you may wish to print a document while you know it is
-incomplete, or to print just one chapter of a document.  In such a
-case, the usual auxiliary files that @TeX{} creates and warnings
-@TeX{} gives about undefined cross-references are just nuisances.  You
-can avoid them with the @code{@@novalidate} command, which you must
-give @emph{before} any sectioning or cross-reference commands.
+Ocasionalmente, você possivelmente deseje imprimir um documento quando sabe que
+ele está incompleto, ou imprimir apenas um capítulo de um documento. Nesse
+caso, os arquivos auxiliares usuais que o @TeX{} cria e os avisos que o @TeX{}
+dá acerca de referências cruzadas indefinidas são apenas incômodos. Você
+consegue evitá-los com o comando @code{@@novalidate}, que você precisa fornecer
+@emph{antes} de quaisquer comandos de seccionamento ou referência cruzada.
 
-Thus, the beginning of your file would look approximately like this:
+Assim, o início do teu arquivo aparentaria aproximadamente assim:
 
 @example
 \input texinfo
@@ -15402,27 +15486,26 @@ Thus, the beginning of your file would look approximately like this:
 @dots{}
 @end example
 
-@noindent @code{@@novalidate} also turns off validation in
-@code{makeinfo}, just like its @code{--no-validate} option
-(@pxref{Pointer Validation}).
+@code{@@novalidate} também desativa a validação no @code{makeinfo}, assim como
+a opção @code{--no-validate} dele (@pxref{Validação de Ponteiro}).
 
-Furthermore, you need not run @code{texindex} each time after you run
-@code{tex}.  The @code{tex} formatting command simply uses whatever
-sorted index files happen to exist from a previous use of
-@code{texindex}.  If those are out of date, that is usually ok while
-you are creating or debugging a document.
+Além disso, você não precisa executar @code{texindex} toda vez depois de
+executar @code{tex}. O comando de formatação @code{tex} simplesmente usa
+quaisquer arquivos de índices ordenados que existam provenientes de um uso
+anterior do @code{texindex}. Se eles estiverem desatualizados, isso geralmente
+é aceitável enquanto você estiver criando ou depurando um documento.
 
 
-@node Detalhes de @command{texindex}
-@subsection Detalhes de @command{texindex}
+@node Detalhes do @command{texindex}
+@subsection Detalhes do @command{texindex}
 
-@cindex Braces, in index entries
-In Texinfo version 6, released in 2015, the @command{texindex} program
-was completely reimplemented.  The principal functional difference is
-that index entries beginning with a left brace or right brace
-(@samp{@{} resp.@: @samp{@}}) can work properly.  For example, these
-simple index entries are processed correctly, including the ``index
-initial'' shown in the index:
+@cindex Chaves, em entradas de índice
+Na versão 6 do Texinfo, lançada em 2015, o programa @command{texindex} foi
+completamente reimplementado. A principal diferença funcional é a de que
+entradas de índice iniciando com uma chave esquerda ou chave direita (@samp{@{}
+resp.@: @samp{@}}) conseguem funcionar corretamente. Por exemplo, essas simples
+entradas de índice são processadas corretamente, incluindo o ``index initial''
+mostrado no índice:
 
 @example
 @@cindex @@@{
@@ -15432,8 +15515,8 @@ initial'' shown in the index:
 @end example
 
 @findex \usebracesinindexestrue
-However, to enable this behavior, it's necessary (for the time being)
-to give a special option to @TeX{} early in a source document:
+Entretanto, para habilitar esse comportamento, é necessário (por enquanto)
+fornecer uma opção especial para o @TeX{} no início de um documento fonte:
 
 @example
 @@tex
@@ -15441,52 +15524,52 @@ to give a special option to @TeX{} early in a source document:
 @@end tex
 @end example
 
-@cindex Sort string, incorrect @samp{|}
-This is because the previous @command{texindex} implementation aborted
-with an incorrect error message (@samp{No page number in \entry...})
-on such index entries when handled in the normal way.  Therefore
-@TeX{} wrote out an incorrect ``sort string'' using the @samp{|}
-character; this did not affect the text of the entry, but the index
-initial was the incorrect @samp{|}, and sorting was not perfect.
+@cindex Ordenar string, incorreto @samp{|}
+Isso ocorre porque a implementação anterior do @command{texindex} abortava com
+uma mensagem de erro incorreta (@samp{Nenhum número de página em \entry...}) em
+tais entradas de índice quando manuseadas da maneira normal. Portanto, o @TeX{}
+escrevia uma ``ordenar string'' incorreta usando o caractere @samp{|}; isso não
+afetava o texto da entrada, mas a inicial do índice era o incorreto @samp{|}, e
+a ordenação não era perfeita.
 
-Because of that fatal error, and because relatively few documents have
-index entries beginning with braces, we want to provide some
-transition time for installations to have the new @command{texindex}.
-At some point in the future, we'll make @code{\usebracesinindexes}
-true by default (the above @TeX{} code will continue to work fine).
+Por causa desse erro fatal, e porque relativamente poucos documentos tem
+entradas de índice iniciando com chaves, nós queremos fornecer algum tempo de
+transição para instalações terem o novo @command{texindex}. Em algum ponto no
+futuro, nós tornaremos @code{\usebracesinindexes} verdadeiro por padrão (o
+código do @TeX{} acima continuará funcionando bem).
 
-@cindex Literate programming, with Texinfo and @code{awk}
-@cindex Texinfo, and literate programming
+@cindex Programação letrada, com Texinfo e @code{awk}
+@cindex Texinfo, e programação letrada
 @cindex Robbins, Arnold
 @pindex texiwebjr
 @pindex ti.twjr
-Although not a matter of functionality, readers may be interested to
-know that the new @command{texindex} is a literate program
-(@url{http://en.wikipedia.org/wiki/Literate_programming}) using
-Texinfo for documentation and (portable) @code{awk} for code.  A
-single source file, @file{texindex/ti.twjr} in this case, produces the
-runnable program, a printable document, and an online document.
+Embora não uma questão de funcionalidade, os(as) leitores(as) possivelmente
+estejam interessados(as) em saber que o novo @command{texindex} é um programa
+letrado (@url{http://en.wikipedia.org/wiki/Literate_programming}) usando
+Texinfo para documentação e @code{awk} (portável) para código. Um arquivo
+fonte, @file{texindex/ti.twjr} nesse caso, produz o programa executável, um
+documento imprimível e um documento online.
 
-The system is called TexiWeb Jr.@: and was created by Arnold
-Robbins, who also wrote the new @command{texindex}.  Not
-coincidentally, he is also the long-time maintainer of @command{gawk}
-(GNU Awk, @pxref{Top,,, gawk, The GNU Awk User's Guide}).  The file
-@file{texindex/Makefile.am} shows example usage of the system.
+O sistema é chamado TexiWeb Jr.@: e foi criado por Arnold Robbins, que também
+escreveu o novo @command{texindex}. Não coincidentemente, ele também é o
+mantenedor de longa data do @command{gawk} (GNU Awk,
+@pxref{Top,,, gawk, The GNU Awk User's Guide}). O arquivo
+@file{texindex/Makefile.am} mostra um exemplo de uso do sistema.
 
 
-@node Print with @command{lpr}
-@section Print with @command{lpr} from Shell
+@node Imprimir com @command{lpr}
+@section Imprimir com @command{lpr} a partir do Shell
 
-@pindex lpr @r{(DVI print command)}
+@pindex lpr @r{(Comando de impressão DVI)}
 
-The way to print a DVI file depends on your system installation.  Two
-common ones are @samp{dvips foo.dvi -o} to make a PostScript file
-first and then print that, and @samp{lpr -d foo.dvi} to print a DVI
-file directly.
+A maneira de imprimir um arquivo DVI depende da instalação do teu sistema. Duas
+comuns são @samp{dvips foo.dvi -o} para criar um arquivo do PostScript primeiro
+e depois imprimi-lo; e @samp{lpr -d foo.dvi} para imprimir um arquivo DVI
+diretamente.
 
-For example, the following commands will (probably) suffice to sort
-the indices, format, and print this manual using the @code{texi2dvi}
-shell script (@pxref{Formatar com @command{texi2dvi}}).
+Por exemplo, os comandos seguintes (provavelmente) serão suficientes para
+ordenar os índices, formatar e imprimir este manual usando o script de shell
+@code{texi2dvi} (@pxref{Formatar com @command{texi2dvi}}).
 
 @example
 @group
@@ -15496,46 +15579,46 @@ lpr texinfo.ps
 @end group
 @end example
 
-Depending on the @code{lpr} setup on your machine, you might able to
-combine the last two steps into @code{lpr -d texinfo.dvi}.
+Dependendo da configuração do @code{lpr} na tua máquina, você poderá combinar
+as duas últimas etapas em @code{lpr -d texinfo.dvi}.
 
-@cindex PCL file, for printing
-You can also generate a PDF file by running @code{texi2pdf} instead of
-@code{texi2dvi}; a PDF is often directly printable.  Or you can
-generate a PCL file by using @code{dvilj} instead of @code{dvips}, if
-you have a printer that prefers that format.
+@cindex Arquivo PCL, para impressão
+Você também pode gerar um arquivo PDF executando @code{texi2pdf} em vez de
+@code{texi2dvi}; um PDF frequentemente é imprimível diretamente. Ou você pode
+gerar um arquivo PCL usando @code{dvilj} em vez de @code{dvips}, se você tiver
+uma impressora que prefira esse formato.
 
-@cindex Shell printing, on MS-DOS/MS-Windows
-@cindex Printing DVI files, on MS-DOS/MS-Windows
-@pindex lpr@r{-d, replacements on MS-DOS/MS-Windows}
-@code{lpr} is a standard program on Unix systems, but it is usually
-absent on MS-DOS/MS-Windows.  If so, just create a PostScript or PDF
-or PCL file, whatever is most convenient, and print that in the usual
-way for your machine (e.g., by sending to the appropriate port,
-usually @samp{PRN}).
+@cindex Impressão de shell, no MS-DOS/MS-Windows
+@cindex Imprimindo arquivos DVI, no MS-DOS/MS-Windows
+@pindex lpr@r{-d, substituições no MS-DOS/MS-Windows}
+@code{lpr} é um programa padrão em sistemas Unix, mas geralmente está ausente
+em MS-DOS/MS-Windows. Se for, basta criar um arquivo PostScript ou PDF ou PCL,
+o que for mais conveniente, e imprimi-lo da maneira usual para tua máquina (por
+exemplo, enviando para a porta apropriada, geralmente @samp{PRN}).
 
 
-@node Within Emacs
-@section Printing From an Emacs Shell
-@cindex Print, format from Emacs shell
-@cindex Format, print from Emacs shell
-@cindex Shell, format, print from
-@cindex Emacs shell, format, print from
-@cindex GNU Emacs shell, format, print from
+@node Dentro do Emacs
+@section Imprimindo a Partir de um Shell do Emacs
+@cindex Imprimir, formatar a partir do shell do Emacs
+@cindex Formatar, imprimir a partir do shell do Emacs
+@cindex Shell, formatar, imprimir a partir de
+@cindex Shell do Emacs, formatar, imprimir a partir de
+@cindex Shell do GNU Emacs, formatar, imprimir a partir de
 
-You can give formatting and printing commands from a shell within GNU
-Emacs, just like any other shell command.  To create a shell within
-Emacs, type @kbd{M-x shell} (@pxref{Shell,,, emacs, The GNU Emacs
-Manual}).  In this shell, you can format and print the document.
-@xref{Impresso, , Format and Print Cópia Impressa}, for details.
+Você consegue fornecer comandos de formatação e de impressão a partir de um
+shell dentro do GNU Emacs, assim como qualquer outro comando de shell. Para
+criar um shell dentro do Emacs, digite @kbd{M-x shell}
+(@pxref{Shell,,, emacs, The GNU Emacs Manual}). Nesse shell, você consegue
+formatar e imprimir o documento.
+@xref{Impresso, , Formatar e Imprimir Cópia Impressa}, para detalhes.
 
-You can switch to and from the shell buffer while @code{tex} is
-running and do other editing.  If you are formatting a long document
-on a slow machine, this can be very convenient.
+Você consegue comutar para e do buffer do shell enquanto @code{tex} estiver
+executando e fazer outras edições. Se você estiver formatando um documento
+longo em uma máquina lenta, isso pode ser muito conveniente.
 
-For example, you can use @code{texi2dvi} from an Emacs shell.  Here is
-one way to use @code{texi2pdf} to format and print @cite{Using and
-Porting GNU CC} from a shell within Emacs:
+Por exemplo, você consegue usar @code{texi2dvi} a partir de um shell do Emacs.
+Aqui está uma maneira de usar @code{texi2pdf} para formatar e imprimir
+@cite{Using and Porting GNU CC} a partir de um shell dentro do Emacs:
 
 @example
 @group
@@ -15544,97 +15627,96 @@ lpr gcc.pdf
 @end group
 @end example
 
-See the next section for more information about formatting
-and printing in Texinfo mode.
+Veja-se a próxima seção para mais informações acerca de formatação e impressão
+no modo Texinfo.
 
 
-@node Modo Texinfo Printing
-@section Formatting and Printing in Modo Texinfo
-@cindex Region printing in Texinfo mode
-@cindex Format and print in Texinfo mode
-@cindex Print and format in Texinfo mode
+@node Impressão no Modo Texinfo
+@section Formatando e Imprimindo no Modo Texinfo
+@cindex Impressão de região no modo Texinfo
+@cindex Formatar e imprimir no modo Texinfo
+@cindex Imprimir e formatar no modo Texinfo
 
-Texinfo mode provides several predefined key commands for @TeX{}
-formatting and printing.  These include commands for sorting indices,
-looking at the printer queue, killing the formatting job, and
-recentering the display of the buffer in which the operations
-occur.
+O modo Texinfo fornece vários comandos de tecla predefinidos para formatação e
+para impressão do @TeX{}. Eles incluem comandos para ordenar índices, olhar a
+fila da impressora, terminar o trabalho de formatação e recentralizar a
+exibição do buffer no qual as operações ocorrem.
 
 @table @kbd
 @item C-c C-t C-b
 @itemx M-x texinfo-tex-buffer
-Run @code{texi2dvi} on the current buffer.
+Execute @code{texi2dvi} no buffer atual.
 
 @item C-c C-t C-r
 @itemx M-x texinfo-tex-region
-Run @TeX{} on the current region.
+Execute @TeX{} na região atual.
 
 @item C-c C-t C-i
 @itemx M-x texinfo-texindex
-Sort the indices of a Texinfo file formatted with
+Ordene os índices de um arquivo do Texinfo formatado com
 @code{texinfo-tex-region}.
 
 @item C-c C-t C-p
 @itemx M-x texinfo-tex-print
-Print a DVI file that was made with @code{texinfo-tex-region} or
+Imprima um arquivo DVI que foi criado com @code{texinfo-tex-region} ou
 @code{texinfo-tex-buffer}.
 
 @item C-c C-t C-q
 @itemx M-x tex-show-print-queue
-Show the print queue.
+Mostre a fila de impressão.
 
 @item C-c C-t C-d
 @itemx M-x texinfo-delete-from-print-queue
-Delete a job from the print queue; you will be prompted for the job
-number shown by a preceding @kbd{C-c C-t C-q} command
+Delete um trabalho da fila de impressão; você será solicitado(a) a informar o
+número do trabalho mostrado por um comando @kbd{C-c C-t C-q} precedente
 (@code{texinfo-show-tex-print-queue}).
 
 @item C-c C-t C-k
 @itemx M-x tex-kill-job
-Kill the currently running @TeX{} job started by either
-@code{texinfo-tex-region} or @code{texinfo-tex-buffer}, or any other
-process running in the Texinfo shell buffer.
+Termine o trabalho @TeX{} executando atualmente iniciado por ou
+@code{texinfo-tex-region} ou @code{texinfo-tex-buffer}, ou qualquer outro
+processo executando no buffer do shell do Texinfo.
 
 @item C-c C-t C-x
 @itemx M-x texinfo-quit-job
-Quit a @TeX{} formatting job that has stopped because of an error by
-sending an @key{x} to it.  When you do this, @TeX{} preserves a record
-of what it did in a @file{.log} file.
+Saia de um trabalho de formatação do @TeX{} que parou devido a um erro enviando
+um @key{x} para ele. Quando você faz isso, o @TeX{} preserva um registro do que
+ele fez em um arquivo @file{.log}.
 
 @item C-c C-t C-l
 @itemx M-x tex-recenter-output-buffer
-Redisplay the shell buffer in which the @TeX{} printing and formatting
-commands are run to show its most recent output.
+Reexiba o buffer do shell no qual os comandos de impressão e de formatação do
+@TeX{} forem executados para mostrar a saída mais recente deles.
 @end table
 
 @need 1000
-Thus, the usual sequence of commands for formatting a buffer is as
-follows (with comments to the right):
+Assim, a sequência usual de comandos para formatar um buffer é a seguinte (com
+comentários à direita):
 
 @example
 @group
-C-c C-t C-b             @r{Run @code{texi2dvi} on the buffer.}
-C-c C-t C-p             @r{Print the DVI file.}
-C-c C-t C-q             @r{Display the printer queue.}
+C-c C-t C-b             @r{Execute @code{texi2dvi} no buffer.}
+C-c C-t C-p             @r{Imprima o arquivo DVI.}
+C-c C-t C-q             @r{Exiba a fila da impressora.}
 @end group
 @end example
 
-The Texinfo mode @TeX{} formatting commands start a subshell in Emacs
-called the @file{*tex-shell*}.  The @code{texinfo-tex-command},
-@code{texinfo-texindex-command}, and @code{tex-dvi-print-command}
-commands are all run in this shell.
+Os comandos de formatação do modo Texinfo do @TeX{} iniciam um subshell no
+Emacs chamado @file{*tex-shell*}. Os comandos @code{texinfo-tex-command},
+@code{texinfo-texindex-command} e @code{tex-dvi-print-command} são todos
+executados nesse shell.
 
-You can watch the commands operate in the @samp{*tex-shell*} buffer,
-and you can switch to and from and use the @samp{*tex-shell*} buffer
-as you would any other shell buffer.
+Você consegue observar os comandos operarem no buffer @samp{*tex-shell*} e
+consegue comutar para e de, e usar o buffer @samp{*tex-shell*} como faria com
+qualquer outro buffer de shell.
 
 @need 1500
-The formatting and print commands depend on the values of several variables.
-The default values are:
+Os comandos de formatação e de impressão dependem dos valores de diversas
+variáveis. Os valores padrão são:
 
 @example
 @group
-    @r{Variable}                              @r{Default value}
+    @r{Variável}                              @r{Valor padrão}
 
 texinfo-texi2dvi-command                  "texi2dvi"
 texinfo-tex-command                       "tex"
@@ -15648,21 +15730,21 @@ tex-show-queue-command                    "lpq"
 @end group
 @end example
 
-You can change the values of these variables with the @kbd{M-x
-set-variable} command 
-(@pxref{Examining, , Examining and Setting Variables, emacs, The GNU Emacs Manual}), 
-or with your @file{.emacs} initialization file 
+Você consegue mudar os valores dessas variáveis com o comando
+@kbd{M-x set-variable}
+(@pxref{Examining, , Examining and Setting Variables, emacs, The GNU Emacs Manual})
+ou com teu arquivo de inicialização @file{.emacs}
 (@pxref{Init File, , , emacs, The GNU Emacs Manual}).
 
-@cindex Customize Emacs package (@t{Development/Docs/Texinfo})
-Beginning with version 20, GNU Emacs offers a user-friendly interface,
-called @dfn{Customize}, for changing values of user-definable variables.
-@xref{Easy Customization, , Easy Customization Interface, emacs, The GNU
-Emacs Manual}, for more details about this.  The Texinfo variables can
-be found in the @samp{Development/Docs/Texinfo} group, once you invoke
-the @kbd{M-x customize} command.
+@cindex Personalize o pacote Emacs (@t{Development/Docs/Texinfo})
+Iniciando com a versão 20, o GNU Emacs oferece uma interface amigável, chamada
+@dfn{Customize}, para mudar valores de variáveis definidas pelo(a) usuário(a).
+@xref{Easy Customization, , Easy Customization Interface, emacs, The GNU Emacs Manual},
+para mais detalhes acerca disso. As variáveis do Texinfo podem ser
+encontradas no grupo @samp{Development/Docs/Texinfo}, uma vez que você invoque
+o comando @kbd{M-x customize}.
 
-
+PAREI
 @node Compile-Command
 @section Usando a Lista de Variáveis Locais
 @cindex Local variables
@@ -16847,8 +16929,8 @@ default is @samp{texi2dvi}.
 invokes @command{texi2dvi}, only diagnostic messages.
 
 
-@node Pointer Validation
-@section Pointer Validation
+@node Validação de Ponteiro
+@section Validação de Ponteiro
 @cindex Pointer validation with @code{makeinfo}
 @cindex Validation of pointers
 
@@ -20641,7 +20723,7 @@ Prevent text from being indented as if it were a new paragraph.
 @item @@novalidate
 Suppress validation of node references and omit creation of auxiliary
 files with @TeX{}.  Use before any sectioning or cross-reference 
-commands.  @xref{Pointer Validation}.
+commands.  @xref{Validação de Ponteiro}.
 
 @item @@O@{@}
 @itemx @@o@{@}
