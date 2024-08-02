@@ -51,7 +51,7 @@ Visão geral do Texinfo
 
 Escrevendo um Arquivo do Texinfo
 
-* Sintaxe de Comando::            Comandos @@ são utilizados para formatação.
+* Sintaxe de Comando::            Comandos @@ são usados para formatação.
 * Convenções::                    Regras gerais para se escrever um arquivo Texinfo.
 * Comentários::                   Escrevendo comentários e texto ignorado em geral.
 * Mínimo::                        O que um arquivo Texinfo deve ter.
@@ -122,7 +122,7 @@ Menus
 * Local de Menu::                     Menus vão ao final de nodos
 * Partes de Menu::                    Uma entrada de menu tem três partes
 * Entrada de Menu Menos Desordenada:: Entrada de menu de duas partes
-* Outros Arquivos Info::              Como se referir a um arquivo Info diferente
+* Outros Arquivos do Info::           Como referenciar um arquivo Info diferente
 
 Estruturamento de Capítulo
 
@@ -162,7 +162,7 @@ Referências cruzadas
 
 @code{@@url}, @code{@@uref@{@var{url}[, @var{text}][, @var{replacement}]@}}
 
-* Exemplos @code{@@url}::           Exemplos da utilização de todas as formas do @code{@@url}.
+* Exemplos @code{@@url}::           Exemplos do uso de todas as formas do @code{@@url}.
 * Quebra de Linha de URL::       Como as linhas são quebradas dentro do texto do @code{@@url}.
 * Formato de Saída PDF @code{@@url}::  Uma opção especial para ocultar links na saída PDF.
 * Cores do PDF::              Colorindo urls e outros links na saída PDF.
@@ -194,7 +194,7 @@ Indicando Definições, Comandos, etc.
 Enfatizando Texto
 
 * @code{@@emph @@strong}::       Como enfatizar texto em Texinfo.
-* Capitalização Pequena::        Como utilizar a fonte capitalização pequena.
+* Capitalização Pequena::        Como usar a fonte capitalização pequena.
 * Fontes::                       Comandos variados de fonte para saída impressa.
 
 Citações e Exemplos
@@ -400,11 +400,11 @@ Processadores Externos de Macro: Diretivas de Linha
 
 Arquivos de Inclusão
 
-* Usando Arquivos de Inclusão::         Como utilizar o comando @code{@@include}.
-* @code{texinfo-multiple-files-update}:: Como criar e atualizar nodos e menus quando da utilização de arquivos included.
-* Exigências dos Arquivos de Inclusão::  Exigências @code{texinfo-multiple-files-update}.
-* Arquivo de Inclusão de Amostra::         Um arquivo exterior de amostra com arquivos included dentro dele; e um arquivo included de amostra.
-* Evolução dos Arquivos de Inclusão::     Como a utilização do comando @code{@@include} mudou ao longo do tempo.
+* Usando Arquivos de Inclusão::          Como usar o comando @code{@@include}.
+* @code{texinfo-multiple-files-update}:: Como criar e atualizar nós e menus ao usar arquivos incluídos.
+* Exigências dos Arquivos de Inclusão::  Neccesidades de @code{texinfo-multiple-files-update}.
+* Arquivo de Inclusão de Amostra::       Um arquivo externo de amostra com arquivos incluídos dentro dele; e um arquivo incluído de amostra.
+* Evolução da Inclusão de Arquivos::     Como o uso do comando @code{@@include} mudou ao longo do tempo.
 
 Formatando e Imprimindo Cópia Impressa
 
@@ -486,7 +486,7 @@ Referências Cruzadas HTML
 * Configuração:        Configuração HTML Xref. htmlxref.cnf.
 * Preservando links:   Preservação de Link HTML Xref. MANUAL-noderename.cnf.
 
-Arquivos de Amostra Texinfo
+Arquivos de Amostra do Texinfo
 
 * Arquivo Curto de Amostra do Texinfo::
 * Textos GNU de Amostra::
@@ -497,7 +497,7 @@ Usando o Modo Texinfo
 
 * Visão Geral do Modo Texinfo::       Como o modo Texinfo pode te ajudar.
 * Edição Emacs::               Adições do modo Texinfo às características de propósito geral de edição do GNU Emacs.
-* Inserindo::                   Como inserir comandos @code{@@@@} utilizados frequentemente.
+* Inserindo::                   Como inserir comandos @code{@@@@} usados frequentemente.
 * Mostrando a Estrutura::       Como exibir a estrutura de um arquivo.
 * Atualizando Nodos e Menus::    Como atualizar ou criar novos nodos e menus.
 * Formatação Info::             Como formatar para Info.
@@ -507,12 +507,12 @@ Usando o Modo Texinfo
 Atualizando Nodos e Menus
 
 * Atualizando Comandos::           Cinco principais comandos de atualização.
-* Atualizando Exigências::       Como estruturar um arquivo Texinfo para a utilização do comando de atualizar.
+* Atualizando Exigências::       Como estruturar um arquivo Texinfo para o uso do comando de atualizar.
 * Outros Comandos de Atualização::     Como endentar descrições, inserir linhas de nodos que faltam, e atualizar nodos em sequência.
 
 Cabeçalhos de Página
 
-* Cabeçalhos Introduzidos::         Convenções para se utilizar cabeçalhos de página.
+* Cabeçalhos Introduzidos::         Convenções para se usar cabeçalhos de página.
 * Formato do Título::              Formatos padrão de títulos de página.
 * Escolha do Título::              Como especificar o tipo do título da página.
 * Cabeçalhos Personalizados::             Como criar seus próprios cabeçalhos e rodapés.
