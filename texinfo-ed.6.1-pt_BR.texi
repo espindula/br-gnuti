@@ -192,7 +192,7 @@ todos os nodos de baixo nível no documento.
 * Condicionais::                         Especificando texto somente para alguns casos de saída.
 * Definindo Novos Comandos do Texinfo::  Macros definidas pelo(a) usuário(a) e apelidos.
 * Arquivos de Inclusão::                 Como incorporar outros arquivos do Texinfo.
-* Cópia Impressa::                       Saída para papel, com @TeX{}.
+* Impresso::                       Saída para papel, com @TeX{}.
 * Tradutor Genérico @command{texi2any}:: @command{texi2any}, um conversor para todos os propósitos.
 * Criando e Instalando Arquivos Info::   Detalhes sobre saída Info.
 * Gerando HTML::                         Detalhes sobre saída HTML.
@@ -586,7 +586,7 @@ Formatando e Imprimindo Cópia Impressa
 * Formatar com @command{texi2dvi}::               A maneira mais simples para formatar.
 * Formatar com @command{tex}/@command{texindex}:: Formatando com comandos explícitos de shell.
 * Imprimir com @command{lpr}::                    Como imprimir.
-* Dentro do Emacs::                               Como formatar e imprimir a partir de um shell Emacs.
+* Dentro do Emacs::                               Como formatar e imprimir a partir de um shell do Emacs.
 * Impressão de Modo Texinfo::                     Como formatar e imprimir em modo Texinfo.
 * Comando de Compilação::                         Como imprimir usando o comando de compilar do Emacs.
 * Resumo das Exigências::                         Resumo de exigências de formatação do @TeX{}.
@@ -596,7 +596,7 @@ Formatando e Imprimindo Cópia Impressa
 * Papel A4::                                      Como imprimir em papel A4 ou A5.
 * @code{@@pagesizes}::                            Como imprimir com tamanhos de página personalizados.
 * Marcas de Corte e Ampliação::                   Como imprimir marcas para indicar o tamanho das páginas e como imprimir saída escalada.
-* Saída gerada de PDF::                           Saída em Formato Portável de Documento.
+* Saída PDF::                                     Saída em Formato Portável de Documento.
 * Obtendo @TeX{}::                                Como obter @TeX{}.
 
 Formatar com @command{tex}/@command{texindex}
@@ -947,7 +947,7 @@ Essa é então lida por um `controlador' DVI, o qual conhece os comandos
 específicos de dispositivo atuais que podem ser visualizados ou 
 impressos, notadamente Dvips para tradução para PostScript 
 (veja-se @ref{Top,,, dvips, Dvips}) e Xdvi para visualização em uma tela X
-(@uref{http://sourceforge.net/projects/xdvi/}). Veja-se @ref{Cópia Impressa}.
+(@uref{http://sourceforge.net/projects/xdvi/}). Veja-se @ref{Impresso}.
 (Esteja avisado de que a linguagem Texinfo é muito diferente de, e muito 
 mais estrita que, as linguagens usuais de @TeX{}: plain @TeX{}, @LaTeX{},
 Con@TeX{}t, etc.).
@@ -976,7 +976,7 @@ objetivos de design;
 @uref{http://tug.org/TUGboat/tb22-3/tb72beebe-pdf.pdf} tem algum 
 conhecimento.   Por padrão, Texinfo usa o programa @command{pdftex}, 
 uma extensão de @TeX{}, para liberar PDF; veja-se
-@uref{http://tug.org/applications/pdftex}. Veja-se @ref{PDF Output}.
+@uref{http://tug.org/applications/pdftex}. Veja-se @ref{Saída PDF}.
 
 @item Docbook
 @cindex Saída gerada Docbook, visão geral
@@ -1107,7 +1107,7 @@ distribuição de @TeX{}) em C.
 Porque um arquivo Texinfo deve necessariamente estar apto a apresentar 
 informação tanto em um terminal somente carácter em formato Info quanto 
 em um livro tipografado, os comandos de formatação que Texinfo suporta 
-são necessariamente limitados. Veja-se @ref{Obtaining @TeX{}}, para 
+são necessariamente limitados. Veja-se @ref{Obtendo @TeX{}}, para 
 informação sobre como adquirir @TeX{}. Ele não é parte da distribuição Texinfo.
 
 
@@ -9551,7 +9551,7 @@ sejam acumulados.  Para gerar um índice, você precisa incluir o comando
 @code{@@printindex} no local no documento onde deseja que o índice 
 apareça.  Além disso, como parte do processo de criação de um manual 
 impresso, você precisa executar um programa chamado @code{texindex} 
-(@pxref{Cópia Impressa}) para ordenar os dados brutos para produzir um 
+(@pxref{Impresso}) para ordenar os dados brutos para produzir um 
 arquivo de índice ordenado.  O arquivo de índice ordenado é o que 
 realmente é usado para imprimir o índice.
 
@@ -15135,42 +15135,31 @@ Info que seja dividido em arquivos menores, se necessário. Isso significa que
 você pode escrever menus e referências cruzadas sem nomear os diferentes
 arquivos do Texinfo.
 
-PAREI
-@node Cópia Impressa
+
+@node Impresso
 @chapter Formatando e Imprimindo Cópia Impressa
-@cindex Format and print hardcopy
-@cindex Printing hardcopy
-@cindex Cópia Impressa, printing it
-@cindex Making a printed manual
-@cindex Sorting indices
-@cindex Índices, sorting
-@cindex @TeX{} index sorting
+@cindex Formatar e imprimir versão impressa
+@cindex Imprimindo versão impressa
+@cindex Versão impressa, imprimindo
+@cindex Fazendo um manual impresso
+@cindex Índices de ordenação
+@cindex Índices, ordenação
+@cindex Ordenação de índices do @TeX{}
 
-Running the @command{texi2dvi} or @command{texi2pdf} command is the
-simplest way to create printable output.  These commands are installed
-as part of the Texinfo package.
+Executar o comando @command{texi2dvi} ou @command{texi2pdf} é a maneira mais simples de criar uma saída imprimível. Esses comandos são instalados como parte do pacote do Texinfo.
 
-In more detail, three major shell commands are used to print formatted
-output from a Texinfo manual: one converts the Texinfo source into
-something printable, a second sorts indices, and a third actually
-prints the formatted document.  When you use the shell commands, you
-can either work directly in the operating system shell or work within
-a shell inside GNU Emacs (or some other computing environment).
+Em mais detalhes, três principais comandos de shell são usados ​​para imprimir saída formatada a partir de um manual do Texinfo: um converte o fonte do Texinfo em algo imprimível; um segundo ordena índices; e um terceiro efetivamente imprime o documento formatado. Quando usar os comandos de shell, você pode ou trabalhar diretamente no shell do sistema operacional ou trabalhar em um shell dentro do GNU Emacs (ou algum outro ambiente de computação).
 
-If you are using GNU Emacs, you can use commands provided by Texinfo
-mode instead of shell commands.  In addition to the three commands to
-format a file, sort the indices, and print the result, Texinfo mode
-offers key bindings for commands to recenter the output buffer, show the
-print queue, and delete a job from the print queue.
+Se estiver usando o GNU Emacs, você pode usar comandos fornecidos pelo modo Texinfo em vez de comandos de shell. Além dos três comandos para formatar um arquivo, ordenar os índices e imprimir o resultado, o modo Texinfo oferece atalhos de teclado para comandos para recentralizar o buffer de saída, mostrar a fila de impressão e deletar um trabalho da fila de impressão.
 
-Details are in the following sections.
+Detalhes estão nas seções seguintes.
 
 @menu
 * Use @TeX{}::                                    Use @TeX{} para formatar para cópia impressa.
 * Formatar com @command{texi2dvi}::               A maneira mais simples para formatar.
 * Formatar com @command{tex}/@command{texindex}:: Formatando com comandos explícitos de shell.
 * Imprimir com @command{lpr}::                    Como imprimir.
-* Dentro do Emacs::                               Como formatar e imprimir a partir de um shell Emacs.
+* Dentro do Emacs::                               Como formatar e imprimir a partir de um shell do Emacs.
 * Impressão de Modo Texinfo::                     Como formatar e imprimir em modo Texinfo.
 * Comando de Compilação::                         Como imprimir usando o comando de compilar do Emacs.
 * Resumo das Exigências::                         Resumo de exigências de formatação do @TeX{}.
@@ -15180,7 +15169,7 @@ Details are in the following sections.
 * Papel A4::                                      Como imprimir em papel A4 ou A5.
 * @code{@@pagesizes}::                            Como imprimir com tamanhos de página personalizados.
 * Marcas de Corte e Ampliação::                   Como imprimir marcas para indicar o tamanho das páginas e como imprimir saída escalada.
-* Saída gerada de PDF::                           Saída em Formato Portável de Documento.
+* Saída PDF::                                     Saída em Formato Portável de Documento.
 * Obtendo @TeX{}::                                Como obter @TeX{}.
 @end menu
 
@@ -15188,179 +15177,101 @@ Details are in the following sections.
 @node Use @TeX{}
 @section Use @TeX{}
 
-The typesetting program called @TeX{} is used to format a Texinfo
-document for printable output.  @TeX{} is a very powerful typesetting
-program and, when used correctly, does an exceptionally good job.
+O programa de tipografar chamado @TeX{} é usado para formatar um documento do Texinfo para saída imprimível. @TeX{} é um programa de tipografia muito poderoso e, quando usado corretamente, faz um trabalho excepcionalmente bom.
 
-@xref{Obtaining @TeX{}}, for information on how to obtain @TeX{}.  It
-is not included in the Texinfo package, being a vast suite of software
-in itself.
+@xref{Obtendo @TeX{}}, para informações acerca de como obter @TeX{}. Ele não está incluso no pacote do Texinfo, sendo uma vasta suíte de software em si.
 
 
 @node Formatar com @command{texi2dvi}
 @section Formatar com @command{texi2dvi}
 
-@pindex texi2dvi @r{(shell script)}
-@cindex DVI, output in
+@pindex texi2dvi @r{(script de shell)}
+@cindex DVI, saída em
 
-The @code{texi2dvi} program takes care of all the steps for producing
-a @TeX{} DVI file from a Texinfo document.  Similarly, @code{texi2pdf}
-produces a PDF file.
+O programa @code{texi2dvi} cuida de todos os passos para produzir um arquivo DVI do @TeX{} a partir de um documento do Texinfo. Similarmente, @code{texi2pdf} produz um arquivo PDF.
 
-To run @code{texi2dvi} or @code{texi2pdf} on an input file
-@file{foo.texi}, do this (where @samp{prompt$ } is your shell prompt):
+Para executar @code{texi2dvi} ou @code{texi2pdf} em um arquivo de entrada @file{foo.texi}, faça isto (onde @samp{prompt$ } é o prompt do teu shell):
 
 @example
 prompt$ @kbd{texi2dvi foo.texi}
 prompt$ @kbd{texi2pdf foo.texi}
 @end example
 
-As shown in this example, the input filenames to @code{texi2dvi} and
-@code{texi2pdf} must include any extension, such as @samp{.texi}.
-(Under MS-DOS and perhaps in other circumstances, you may need to run
-@samp{sh texi2dvi foo.texi} instead of relying on the operating system
-to invoke the shell on the @samp{texi2dvi} script.)
+Conforme mostrado nesse exemplo, os nomes dos arquivos de entrada para @code{texi2dvi} e @code{texi2pdf} precisam incluir qualquer extensão, como @samp{.texi}. (Sob MS-DOS e talvez em outras circunstâncias, você possivelmente necessite executar @samp{sh texi2dvi foo.texi} em vez de depender do sistema operacional para invocar o shell no script @samp{texi2dvi}).
 
-For a list of all the options, run @samp{texi2dvi --help}.  Some of the
-options are discussed below.
+Para uma lista de todas as opções, execute @samp{texi2dvi --help}. Algumas das opções são discutidas abaixo.
 
-@opindex --pdf@r{, for @command{texi2dvi}}
+@opindex --pdf@r{, para @command{texi2dvi}}
 @pindex pdftexi2dvi
-With the @option{--pdf} option, @command{texi2dvi} produces PDF output
-instead of DVI (@pxref{PDF Output}), by running @command{pdftex}
-instead of @command{tex}.  Alternatively, the command
-@command{texi2pdf} is an abbreviation for running @samp{texi2dvi
---pdf}.  The command @command{pdftexi2dvi} is also provided as a
-convenience for AUC-@TeX{} (@pxref{Top,,, auctex, AUC-@TeX{}}, as it
-prefers to merely prepend @samp{pdf} to DVI producing tools to have
-PDF producing tools.
+Com a opção @option{--pdf}, @command{texi2dvi} produz saída PDF em vez de DVI (@pxref{Saída PDF}), executando @command{pdftex} em vez de @command{tex}. Alternativamente, o comando @command{texi2pdf} é uma abreviação para executar @samp{texi2dvi --pdf}. O comando @command{pdftexi2dvi} também é fornecido como uma conveniência para AUC-@TeX{} (@pxref{Top,,, auctex, AUC-@TeX{}}, pois ele prefere meramente antepor @samp{pdf} às ferramentas de produção de DVI para ter ferramentas de produção de PDF.
 
-@opindex --dvipdf@r{, for @command{texi2dvi}}
+@opindex --dvipdf@r{, para @command{texi2dvi}}
 @pindex dvipdfmx
-With the @option{--dvipdf} option, @command{texi2dvi} produces PDF
-output by running @TeX{} and then a DVI-to-PDF program: if the
-@env{DVIPDF} environment variable is set, that value is used, else the
-first program extant among @code{dvipdfmx}, @code{dvipdfm},
-@code{dvipdf}, @code{dvi2pdf}, @code{dvitopdf}.  This method generally
-supports CJK typesetting better than @command{pdftex}.
+Com a opção @option{--dvipdf}, @command{texi2dvi} produz saída PDF executando @TeX{} e então um programa DVI-para-PDF: se a variável de ambiente @env{DVIPDF} estiver configurada, esse valor será usado, senão o primeiro programa existente entre @code{dvipdfmx}, @code{dvipdfm}, @code{dvipdf}, @code{dvi2pdf}, @code{dvitopdf}. Esse método geralmente suporta melhor a tipografia de CJK que o @command{pdftex}.
 
-@opindex --ps@r{, for @command{texi2dvi}}
+@opindex --ps@r{, para @command{texi2dvi}}
 @pindex dvips
-With the @option{--ps} option, @command{texi2dvi} produces PostScript
-instead of DVI, by running @command{tex} and then @command{dvips}
-(@pxref{Top,,, dvips, Dvips}).  (Or the value of the @env{DVIPS}
-environment variable, if set.)
+Com a opção @option{--ps}, @command{texi2dvi} produz PostScript em vez de DVI, executando @command{tex} e então @command{dvips} (@pxref{Top,,, dvips, Dvips}). (Ou o valor da variável de ambiente @env{DVIPS}, se configurada).
 
-@opindex --language@r{, for @command{texi2dvi}}
-@cindex @LaTeX{}, processing with @command{texi2dvi}
-@command{texi2dvi} can also be used to process @LaTeX{} files.
-Normally @command{texi2dvi} is able to guess the input file language
-by its contents and file name extension; however, if it guesses wrong
-you can explicitly specify the input language using
-@option{--language=@var{lang}} command line option, where @var{lang}
-is either @samp{latex} or @samp{texinfo}.
+@opindex --language@r{, para @command{texi2dvi}}
+@cindex @LaTeX{}, processando com @command{texi2dvi}
+@command{texi2dvi} também pode ser usado para processar arquivos @LaTeX{}. Normalmente, @command{texi2dvi} é capaz de adivinhar o idioma do arquivo de entrada pelo conteúdo e extensão do nome do arquivo dele; no entanto, se ele adivinhar errado, você pode especificar explicitamente o idioma de entrada usando a opção de linha de comando @option{--language=@var{idioma}}, onde @var{idioma} é ou @samp{latex} ou @samp{texinfo}.
 
-@opindex --command@r{, for @command{texi2dvi}}
-One useful option to @code{texi2dvi} is @samp{--command=@var{cmd}}.
-This inserts @var{cmd} on a line by itself, after a
-@code{@@setfilename} line in a temporary copy of the input file, before
-running @TeX{}.  With this, you can specify different printing
-formats, such as @code{@@smallbook} (@pxref{@code{@@smallbook}}),
-@code{@@afourpaper} (@pxref{Papel A4}), or @code{@@pagesizes}
-(@pxref{@code{@@pagesizes}}), without actually changing the document
-source.  (You can also do this on a site-wide basis with
-@file{texinfo.cnf}; @pxref{Preparing for @TeX{}}).
+@opindex --command@r{, para @command{texi2dvi}}
+Uma opção útil para @code{texi2dvi} é @samp{--command=@var{comando}}. Isso insere @var{comando} em uma linha própria, depois de uma linha @code{@@setfilename} em uma cópia temporária do arquivo de entrada, antes de executar o @TeX{}. Com isso, você pode especificar diferentes formatos de impressão, tais como @code{@@smallbook} (@pxref{@code{@@smallbook}}), @code{@@afourpaper} (@pxref{Papel A4}) ou @code{@@pagesizes} (@pxref{@code{@@pagesizes}}), sem realmente mudar o fonte do documento. (Você também pode fazer isso em todo o site com @file{texinfo.cnf}; @pxref{Preparando para @TeX{}}).
 
-The option @option{-E} (equivalently, @option{-e} and
-@option{--expand}) does Texinfo macro expansion using
-@command{makeinfo} instead of the @TeX{} implementation (@pxref{Macro
-Details}).  Each implementation has its own limitations and
-advantages.  If this option is used, no line in the source file
-may begin with the string @code{@@c@tie{}_texi2dvi} or the
-string @code{@@c@tie{}(_texi2dvi)}.
+A opção @option{-E} (equivalentemente, @option{-e} e @option{--expand}) faz a expansão de macro do Texinfo usando @command{makeinfo} em vez da implementação do @TeX{} (@pxref{Detalhes de Macro}). Cada implementação tem limitações e vantagens próprias delas. Se essa opção for usada, nenhuma linha no arquivo fonte pode começar com a string @code{@@c@tie{}_texi2dvi} ou com a string @code{@@c@tie{}(_texi2dvi)}.
 
-@command{texi2dvi} takes the @option{--build=@var{mode}} option to 
-specify where the @TeX{} compilation takes place, and, as a
-consequence, how auxiliary files are treated.  The build mode
-can also be set using the environment variable 
-@env{TEXI2DVI_BUILD_MODE}.  The valid values for @var{mode} are:
+@command{texi2dvi} usa a opção @option{--build=@var{modo}} para especificar onde a compilação do @TeX{} acontece e, como consequência, como os arquivos auxiliares são tratados. O modo de construção também pode ser configurado usando a variável de ambiente @env{TEXI2DVI_BUILD_MODE}. Os valores válidos para @var{modo} são:
 
 @table @samp
 @item local
- Compile in the current directory, leaving all the auxiliary
- files around.  This is the traditional TeX use.
+ Compile no diretório atual, deixando todos os arquivos auxiliares por aí. Esse é o uso tradicional do TeX.
 
 @item tidy
- Compile in a local @code{*.t2d} directory, where the auxiliary files
- are left.  Output files are copied back to the original file.
+ Compile em um diretório local @code{*.t2d}, onde os arquivos auxiliares são deixados. Os arquivos de saída são copiados de volta para o arquivo original.
 
- Using the @samp{tidy} mode brings several advantages:
+ Usar o modo @samp{tidy} traz várias vantagens:
  @itemize -
- @item the current directory is not cluttered with plethora of temporary files.
- @item clutter can be even further reduced using @option{--build-dir=dir}: all
-   the @code{*.t2d} directories are stored there.
- @item clutter can be reduced to zero using, e.g.,
-   @option{--build-dir=/tmp/\$USER.t2d} or @option {--build-dir=\$HOME/.t2d}.
- @item the output file is updated after every successful @TeX{} run, for
-   sake of concurrent visualization of the output.  In a @samp{local} build
-   the viewer stops during the whole @TeX{} run.
- @item if the compilation fails, the previous state of the output file
-   is preserved.
- @item @acronym{PDF} and @acronym{DVI} compilation are kept in separate
-   subdirectories
-   preventing any possibility of auxiliary file incompatibility.
+ @item o diretório atual não fica abarrotado com uma abundância de arquivos temporários.
+ @item a desordem pode ser ainda mais reduzida usando @option{--build-dir=diretório}: todos os diretórios @code{*.t2d} são armazenados lá.
+ @item a desordem pode ser reduzida a zero usando, por exemplo, @option{--build-dir=/tmp/\$USER.t2d} ou @option{--build-dir=\$HOME/.t2d}.
+ @item o arquivo de saída é atualizado depois de cada execução bem-sucedida do @TeX{}, para fins de visualização simultânea da saída gerada. Em uma construção @samp{local}, o visualizador para durante a execução inteira do @TeX{}.
+ @item se a compilação falhar, o estado anterior do arquivo de saída será preservado.
+ @item As compilações @acronym{PDF} e @acronym{DVI} são mantidas em subdiretórios separados, evitando qualquer possibilidade de incompatibilidade de arquivos auxiliares.
  @end itemize
 
- On the other hand, because @samp{tidy} compilation takes place in another
- directory, occasionally @TeX{} won't be able to find some files (e.g., when
- using @code{\graphicspath}): in that case, use @option{-I} to specify the
- additional directories to consider.
+ Por outro lado, como a compilação @samp{tidy} ocorre em outro diretório, ocasionalmente o @TeX{} não conseguirá encontrar alguns arquivos (por exemplo, ao usar @code{\graphicspath}): nesse caso, use @option{-I} para especificar os diretórios adicionais a considerar.
 
 @item clean
- Same as @samp{tidy}, but remove the auxiliary directory afterwards.
- Every compilation therefore requires the full cycle.
+ O mesmo que @samp{tidy}, mas remove o diretório auxiliar depois. Cada compilação, portanto, exige o ciclo completo.
 @end table
 
 @pindex etex
 @pindex pdfetex
-@command{texi2dvi} will use @command{etex} (or @command{pdfetex}) if
-it is available, because it runs faster in some cases, and
-provides additional tracing information when debugging
-@file{texinfo.tex}.  Nevertheless, this extended version of @TeX{} is
-not required, and the DVI output is identical.
-(These days, @command{pdftex} and @command{pdfetex} are exactly the
-same, but we still run @command{pdfetex} to cater to ancient @TeX{}
-installations.)
+@command{texi2dvi} usará @command{etex} (ou @command{pdfetex}) se estiver disponível, porque ele roda mais rápido em alguns casos e fornece informações adicionais de rastreamento ao depurar @file{texinfo.tex}. No entanto, essa versão estendida do @TeX{} não é exigida, e a saída DVI é idêntica. (Hoje em dia, @command{pdftex} e @command{pdfetex} são exatamente os mesmos, mas nós ainda executamos @command{pdfetex} para atender a instalações antigas do @TeX{}).
 
-@cindex filename recorder for @TeX{}
-@cindex @samp{\openout} line in log file
-@command{texi2dvi} attempts to detect auxiliary files output by @TeX{}, 
-either by using the @option{-recorder} option, or by scanning for 
-@samp{\openout} in the log file that a run of @TeX{} produces.  You may
-control how @command{texi2dvi} does this with the @env{TEXI2DVI_USE_RECORDER}
-environment variable.  Valid values are:
+@cindex gravador de nome de arquivo para @TeX{}
+@cindex linha @samp{\openout} no arquivo de registro
+@command{texi2dvi} tenta detectar arquivos auxiliares gerados pelo @TeX{}, seja usando a opção @option{-recorder} ou procurando por @samp{\openout} no arquivo de registro que uma execução do @TeX{} produz. Você pode controlar como @command{texi2dvi} faz isso com a variável de ambiente @env{TEXI2DVI_USE_RECORDER}. Os valores válidos são:
 
 @table @samp
 @item yes
-use the @option{-recorder} option, no checks.
+use a opção @option{-recorder}, sem verificações.
 
 @item no
-scan for @samp{\openout} in the log file, no checks.
+procure por @samp{\openout} no arquivo de registro, sem verificações.
 
 @item yesmaybe
-check whether @option{-recorder} option is supported, and if yes
-use it, otherwise check for tracing @samp{\openout} in the log file is 
-supported, and if yes use it, else it is an error.
+verifique se a opção @option{-recorder} é suportada e, se sim, use-a; caso contrário, verifique se o rastreamento de @samp{\openout} no arquivo de registro é suportado e, se sim, use-o; caso contrário, será um erro.
 
 @item nomaybe
-same as @samp{yesmaybe}, except that the @samp{\openout} trace in log 
-file is checked first.
+o mesmo que @samp{yesmaybe}, exceto que o rastreamento @samp{\openout} no arquivo de registro é verificado primeiro.
 @end table
 
-The default is @samp{nomaybe}.  This environment variable is provided 
-for troubleshooting purposes, and may change or disappear in the future.
+O padrão é @samp{nomaybe}. Essa variável de ambiente é fornecida para fins de solução de problemas e possivelmente mude ou desapareça no futuro.
 
-
+PAREI
 @node Formatar com @command{tex}/@command{texindex}
 @section Formatar com @command{tex}/@command{texindex}
 
@@ -15616,7 +15527,7 @@ You can give formatting and printing commands from a shell within GNU
 Emacs, just like any other shell command.  To create a shell within
 Emacs, type @kbd{M-x shell} (@pxref{Shell,,, emacs, The GNU Emacs
 Manual}).  In this shell, you can format and print the document.
-@xref{Cópia Impressa, , Format and Print Cópia Impressa}, for details.
+@xref{Impresso, , Format and Print Cópia Impressa}, for details.
 
 You can switch to and from the shell buffer while @code{tex} is
 running and do other editing.  If you are formatting a long document
@@ -15825,9 +15736,9 @@ For more information, see:
 @end itemize
 
 
-@node Preparing for @TeX{}
-@section Preparing for @TeX{}
-@cindex Preparing for @TeX{}
+@node Preparando para @TeX{}
+@section Preparando para @TeX{}
+@cindex Preparando para @TeX{}
 @cindex @TeX{} input initialization
 @cindex @sortas{profile init} @file{.profile} initialization file @c CONSERTE-ME
 @cindex @sortas{cshrc init} @file{.cshrc} initialization file @c CONSERTE-ME
@@ -16048,7 +15959,7 @@ region in ``small'' book size (@pxref{Início de Cabeçalho}).
 @xref{@code{@@small@dots{}}}, for information about commands that make
 it easier to produce examples for a smaller manual.
 
-@xref{Formatar com @command{texi2dvi}}, and @ref{Preparing for @TeX{}},
+@xref{Formatar com @command{texi2dvi}}, and @ref{Preparando para @TeX{}},
 for other ways to format with @code{@@smallbook} that do not require
 changing the source file.
 
@@ -16078,7 +15989,7 @@ would write the header for this manual:
 @end group
 @end example
 
-@xref{Formatar com @command{texi2dvi}}, and @ref{Preparing for @TeX{}},
+@xref{Formatar com @command{texi2dvi}}, and @ref{Preparando para @TeX{}},
 for other ways to format for different paper sizes that do not require
 changing the source file.
 
@@ -16127,7 +16038,7 @@ To make more elaborate changes, such as changing any of the page
 margins, you must define a new command in @file{texinfo.tex} or
 @file{texinfo.cnf}.
 
-@xref{Formatar com @command{texi2dvi}}, and @ref{Preparing for @TeX{}},
+@xref{Formatar com @command{texi2dvi}}, and @ref{Preparando para @TeX{}},
 for other ways to specify @code{@@pagesizes} that do not require
 changing the source file.
 
@@ -16193,8 +16104,8 @@ nonstandard-@code{\mag} may not print or may print only with certain
 magnifications.  Be prepared to experiment.
 
 
-@node PDF Output
-@section PDF Output
+@node Saída PDF
+@section Saída PDF
 @cindex PDF output
 @cindex Output, in PDF
 
@@ -16240,9 +16151,9 @@ self-contained file, notably including all the fonts that are used, so
 it has its place.
 
 
-@node Obtaining @TeX{}
-@section Obtaining @TeX{}
-@cindex Obtaining @TeX{}
+@node Obtendo @TeX{}
+@section Obtendo @TeX{}
+@cindex Obtendo @TeX{}
 @cindex @TeX{}, how to obtain
 
 @TeX{} is a document formatter that is used by the FSF for its
@@ -22765,7 +22676,7 @@ on a line by itself.  (When you use @code{texinfo-tex-region}, you must
 surround the @code{@@settitle} line with start-of-header and
 end-of-header lines.)
 
-@xref{Cópia Impressa}, for a description of the other @TeX{} related
+@xref{Impresso}, for a description of the other @TeX{} related
 commands, such as @code{tex-show-print-queue}.
 
 @node Modo Texinfo Summary
