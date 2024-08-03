@@ -434,7 +434,7 @@ Formatar com @command{tex}/@command{texindex}
 
 * Implementação de Referência::                  @command{texi2any}: a implementação de referência.
 * Invocando @command{texi2any}::                 Executando o tradutor a partir de um shell.
-* Saída Gerada Impressa do @command{texi2any}::  Chamando @command{texi2any}.
+* Saída Impressa do @command{texi2any}::  Chamando @command{texi2any}.
 * Validação de Ponteiro::                        Como verificar se os ponteiros apontam para algum lugar.
 * Variáveis de Personalização::                  Configurando @command{texi2any}.
 * Internacionalização de Strings de Documentos:: Traduzindo texto inserido pelo programa.
@@ -471,19 +471,19 @@ Instalando um Arquivo Info
 
 Gerando HTML
 
-* Tradução de HTML::       Detalhes da saída HTML.
-* Divisão de HTML::         Como a saída HTML é dividida.
-* CSS de HTML::               Influenciando saída HTML com Cascading Style Sheets.
-* Xref de HTML::              Referências cruzadas em saída HTML.
+* Tradução de HTML:: Detalhes da saída HTML.
+* Divisão de HTML::  Como a saída HTML é dividida.
+* CSS de HTML::      Influenciando a saída HTML com Folhas de Estilo em Cascata.
+* Xref de HTML::     Referências cruzadas em saída HTML.
 
 Referências Cruzadas HTML
 
 * Básicos de Links:    Básico do Link HTML Xref.
-* Expansão de Nodo:    Expansão de Nome de Nodo HTML Xref.
+* Expansão de Nodo:    Expansão Xref de Nome de Nodo do HTML.
 * Expansão de Comando: Expansão de Comando HTML Xref.
 * Expansão de 8 bits:  Expansão de Caractere de 8 bits HTML Xref.
 * Incompatibilidade:   Incompatibilidade de Xref HTML.
-* Configuração:        Configuração HTML Xref. htmlxref.cnf.
+* Configuração:        Configuração Xref do HTML. htmlxref.cnf.
 * Preservando links:   Preservação de Link HTML Xref. MANUAL-noderename.cnf.
 
 Arquivos de Amostra do Texinfo
@@ -519,12 +519,12 @@ Cabeçalhos de Página
 
 Capturando Erros
 
-* @command{makeinfo} Preferido::          @code{makeinfo} encontra erros.
-* Depurando com Info::         Como capturar erros com a formatação Info.
-* Depurando com @TeX{}::          Como capturar erros com a formatação @TeX{}.
+* @command{makeinfo} Preferido::         @code{makeinfo} encontra erros.
+* Depurando com Info::                   Como capturar erros com a formatação Info.
+* Depurando com @TeX{}::                 Como capturar erros com a formatação @TeX{}.
 * Usando @code{texinfo-show-structure}:: Como se usar @code{texinfo-show-structure}.
-* Usando @code{occur}::                 Como listar todas as linhas contendo um modelo.
-* Executando @code{Info-validate}::       Como encontrar nodos mal referenciados.
+* Usando @code{occur}::                  Como listar todas as linhas contendo um modelo.
+* Executando @code{Info-validate}::      Como encontrar nodos mal referenciados.
 
 Encontrando Nodos Mal Referenciados
 

@@ -1,5 +1,11 @@
 Comandos para renderizar o Manual do Texinfo
 
+
+Formato Info (que é o padrão) (linhas preenchidas com somente 68 colunas):
+=========================================================================
+
+texi2any --fill-column=68 --output=teste.info texinfo-ed.6.1-pt_BR.texi
+
 Formato texto simples (puro):
 ============================
 
@@ -10,3 +16,13 @@ Formato HTML (página única):
 ===========================
 
 texi2any --html --no-split --output=teste2.html texinfo-ed.6.1-pt_BR.texi
+
+
+Formato PDF:
+===========
+
+texi2dvi --dvipdf
+
+
+
+Observação: veja-se o Nó "Invocando @command{texi2any}" no Manual do Texinfo.
