@@ -14,6 +14,7 @@
 @c @set UPDATED com os valores apropriados.
 @include version-pt_BR.texi
 @settitle GNU Texinfo @value{VERSION}
+@afourpaper
 
 @c Define um novo índice para opções de linha de comando.
 @defcodeindex op
@@ -608,7 +609,7 @@ Formatar com @command{tex}/@command{texindex}
 
 * Implementação de Referência::                  @command{texi2any}: a implementação de referência.
 * Invocando @command{texi2any}::                 Executando o tradutor a partir de um shell.
-* Saída Gerada Impressa do @command{texi2any}::  Chamando @command{texi2any}.
+* Saída Impressa do @command{texi2any}::         Chamando @command{texi2any}.
 * Validação de Ponteiro::                        Como verificar se os ponteiros apontam para algum lugar.
 * Variáveis de Personalização::                  Configurando @command{texi2any}.
 * Internacionalização de Strings de Documentos:: Traduzindo texto inserido pelo programa.
@@ -645,19 +646,19 @@ Instalando um Arquivo Info
 
 Gerando HTML
 
-* Tradução de HTML::       Detalhes da saída HTML.
-* Divisão de HTML::         Como a saída HTML é dividida.
-* CSS de HTML::               Influenciando saída HTML com Cascading Style Sheets.
-* Xref de HTML::              Referências cruzadas em saída HTML.
+* Tradução de HTML:: Detalhes da saída HTML.
+* Divisão de HTML::  Como a saída HTML é dividida.
+* CSS de HTML::      Influenciando a saída HTML com Folhas de Estilo em Cascata.
+* Xref de HTML::     Referências cruzadas em saída HTML.
 
 Referências Cruzadas HTML
 
 * Básicos de Links:    Básico do Link HTML Xref.
-* Expansão de Nodo:    Expansão de Nome de Nodo HTML Xref.
+* Expansão de Nodo:    Expansão Xref de Nome de Nodo do HTML.
 * Expansão de Comando: Expansão de Comando HTML Xref.
 * Expansão de 8 bits:  Expansão de Caractere de 8 bits HTML Xref.
 * Incompatibilidade:   Incompatibilidade de Xref HTML.
-* Configuração:        Configuração HTML Xref. htmlxref.cnf.
+* Configuração:        Configuração Xref do HTML. htmlxref.cnf.
 * Preservando links:   Preservação de Link HTML Xref. MANUAL-noderename.cnf.
 
 Arquivos de Amostra do Texinfo
@@ -693,12 +694,12 @@ Cabeçalhos de Página
 
 Capturando Erros
 
-* @command{makeinfo} Preferido::          @code{makeinfo} encontra erros.
-* Depurando com Info::         Como capturar erros com a formatação Info.
-* Depurando com @TeX{}::          Como capturar erros com a formatação @TeX{}.
+* @command{makeinfo} Preferido::         @code{makeinfo} encontra erros.
+* Depurando com Info::                   Como capturar erros com a formatação Info.
+* Depurando com @TeX{}::                 Como capturar erros com a formatação @TeX{}.
 * Usando @code{texinfo-show-structure}:: Como se usar @code{texinfo-show-structure}.
-* Usando @code{occur}::                 Como listar todas as linhas contendo um modelo.
-* Executando @code{Info-validate}::       Como encontrar nodos mal referenciados.
+* Usando @code{occur}::                  Como listar todas as linhas contendo um modelo.
+* Executando @code{Info-validate}::      Como encontrar nodos mal referenciados.
 
 Encontrando Nodos Mal Referenciados
 
@@ -1291,7 +1292,7 @@ fácil que o C para qualquer pessoa ler e contribuir com, com os óbvios
 benefícios resultantes.
 @end itemize
 
-Veja-se @ref{Reference Implementation}, para mais sobre a razão de ser e função 
+Veja-se @ref{Implementação de Referência}, para mais sobre a razão de ser e função 
 de @command{texi2any}.
 
 
@@ -2011,7 +2012,7 @@ especificar for ele próprio curto o suficiente.
 Isso ocorre porque os formatadores Info dividem um arquivo longo Info em 
 sub-arquivos curtos indiretos, e os nomeia acrescentando ao final 
 @samp{-1}, @samp{-2}, @dots{}, @samp{-10}, @samp{-11}, e assim por 
-diante, ao nome de arquivo original. (Veja-se @ref{Tag and Split Files}.)  O 
+diante, ao nome de arquivo original. (Veja-se @ref{Arquivos de Etiqueta e de Divisão}.)  O 
 nome de sub-arquivo @file{texinfo.info-10}, por exemplo, é longo demais 
 para sistemas antigos com um limite de 14 caracteres em nomes de 
 arquivo; assim, o nome de arquivo Info para este documento é 
@@ -2023,7 +2024,7 @@ para o sufixo do sub-arquivo, assim produzindo arquivos chamados
 @file{texin-10}, @file{gcc.i12}, etc.
 
 Veja-se também a opção @option{--output} em 
-@ref{Invoking @command{texi2any}}.
+@ref{Invocando @command{texi2any}}.
 
 
 @node @code{@@settitle}
@@ -3179,7 +3180,7 @@ Assim, se você desejar, você pode seguir a linha @code{@@bye} com notas
 arbitrárias.  Também, você pode seguir a linha @code{@@bye} com uma 
 lista de variáveis locais para Emacs, a maioria das vezes tipicamente um 
 @samp{compile-command} 
-(veja-se @ref{Compile-Command,, Usando a Lista de Variáveis Locais}).
+(veja-se @ref{Comando de Compilação,, Usando a Lista de Variáveis Locais}).
 
 
 @node Nodos
@@ -15744,69 +15745,70 @@ para mais detalhes acerca disso. As variáveis do Texinfo podem ser
 encontradas no grupo @samp{Development/Docs/Texinfo}, uma vez que você invoque
 o comando @kbd{M-x customize}.
 
-PAREI
-@node Compile-Command
-@section Usando a Lista de Variáveis Locais
-@cindex Local variables
-@cindex Compile command for formatting
-@cindex Format with the compile command
 
-Yet another way to apply the @TeX{} formatting command to a Texinfo file
-is to put that command in a @dfn{local variables list} at the end of the
-Texinfo file.  You can then specify the @code{tex} or @code{texi2dvi}
-commands as a @code{compile-command} and have Emacs run it by typing
-@kbd{M-x compile}.  This creates a special shell called the
-@file{*compilation*} buffer in which Emacs runs the compile command.
-For example, at the end of the @file{gdb.texi} file, after the
-@code{@@bye}, you could put the following:
+@node Comando de Compilação
+@section Usando a Lista de Variáveis Locais
+@cindex Variáveis locais
+@cindex Comando de compilação para formatação
+@cindex Formatar com o comando de compilar
+
+Outra maneira de aplicar o comando de formatação do @TeX{} a um arquivo do
+Texinfo é a de colocar esse comando em uma @dfn{lista de variáveis locais} no
+final do arquivo do Texinfo. Você pode então especificar os comandos @code{tex}
+ou @code{texi2dvi} como um @code{compile-command} e
+fazer o Emacs executá-lo digitando @kbd{M-x compile}. Isso cria um shell
+especial chamado o buffer @file{*compilation*} no qual o Emacs executa o
+comando de compilar. Por exemplo, no final do arquivo @file{gdb.texi}, depois
+do @code{@@bye}, você poderia colocar o seguinte:
 
 @example
 @group
-Local Variables:
+Variáveis Locais:
 compile-command: "texi2dvi gdb.texi"
 End:
 @end group
 @end example
 
 @noindent
-This technique is most often used by programmers who also compile programs
-this way; see @ref{Compilation, , , emacs, The GNU Emacs Manual}.
+Essa técnica é mais frequentemente usada por programadores(as) que também
+compilam programas dessa maneira; veja-se
+@ref{Compilation, , , emacs, The GNU Emacs Manual}.
 
 
-@node Requirements Summary
-@section @TeX{} Formatting Requirements Summary
-@cindex Requirements for formatting
-@cindex Minimal requirements for formatting
-@cindex Formatting requirements
+@node Resumo das Exigências
+@section Resumo das Exigências de Formatação do @TeX{}
+@cindex Exigências para formatação
+@cindex Exigências mínimas para formatação
+@cindex Exigências de formatação
 
-Every Texinfo file that is to be input to @TeX{} must begin with a
-@code{\input} command:
+Cada arquivo do Texinfo que deva ser entrada para o @TeX{} precisa iniciar com
+um comando @code{\input}:
 
 @example
 \input texinfo
 @end example
 
 @noindent
-This instructs @TeX{} to load the macros it needs to process a Texinfo
-file.
+Isso instrui o @TeX{} a carregar as macros que ele necessita para processar um
+arquivo do Texinfo.
 
-Every Texinfo file must end with a line that terminates @TeX{}'s
-processing and forces out unfinished pages:
+Cada arquivo do Texinfo precisa terminar com uma linha que encerre o
+processamento do @TeX{} e force a saída de páginas inacabadas:
 
 @example
 @@bye
 @end example
 
-Strictly speaking, these two lines are all a Texinfo file needs to be
-processed successfully by @TeX{}.
+Estritamente falando, essas duas linhas são tudo o que um arquivo do Texinfo
+precisa para ser processado com sucesso pelo @TeX{}.
 
-Usually, however, the beginning includes a @code{@@settitle} command
-to define the title of the printed manual, a title page, a copyright
-page, permissions, and a table of contents.  Besides @code{@@bye}, the
-end of a file usually includes indices.  (Not to mention that most
-manuals contain a body of text as well.)
+Geralmente, no entanto, o início inclui um comando @code{@@settitle} para
+definir o título do manual impresso, uma página de título, uma página de
+direitos autorais, permissões e um tabela do conteúdo. Além de @code{@@bye}, o
+fim de um arquivo geralmente inclui índices. (Sem mencionar que a maioria dos
+manuais também contém um corpo de texto).
 
-For more information, see:
+Para mais informações, veja-se:
 
 @itemize @bullet
 @item @ref{@code{@@settitle}}.
@@ -15821,134 +15823,134 @@ For more information, see:
 @node Preparando para @TeX{}
 @section Preparando para @TeX{}
 @cindex Preparando para @TeX{}
-@cindex @TeX{} input initialization
-@cindex @sortas{profile init} @file{.profile} initialization file @c CONSERTE-ME
-@cindex @sortas{cshrc init} @file{.cshrc} initialization file @c CONSERTE-ME
-@cindex Initialization file for @TeX{} input
+@cindex Inicialização de entrada do @TeX{}
+@cindex @sortas{iniciação profile} arquivo de inicialização @file{.profile} @c CONSERTE-ME
+@cindex @sortas{iniciação cshrc} arquivo de inicialização @file{.cshrc} @c CONSERTE-ME
+@cindex Arquivo de inicialização para entrada do @TeX{}
 
-@TeX{} needs to know where to find the @file{texinfo.tex} file that the
-@samp{\input texinfo} command on the first line reads.  The
-@file{texinfo.tex} file tells @TeX{} how to handle @@-commands; it is
-included in all standard GNU distributions.  The latest version
-released for general use is available
-from the usual GNU servers and mirrors:
+@TeX{} precisa saber onde encontrar o arquivo @file{texinfo.tex} que o comando
+@samp{\input texinfo} na primeira linha lê. O arquivo @file{texinfo.tex} diz ao
+@TeX{} como lidar com comandos @@; ele está incluído em todas as distribuições
+GNU padrão. A versão mais recente lançada para uso geral está disponível a
+partir dos servidores e espelhos GNU usuais:
 
 @smalldisplay
 @uref{http://ftp.gnu.org/gnu/texinfo/texinfo.tex}
 @uref{http://ftpmirror.gnu.org/texinfo/texinfo.tex}
 @end smalldisplay
 
-The latest development version is available from the Texinfo source
-repository:
+A versão de desenvolvimento mais recente está disponível a partir do
+repositório de fonte do Texinfo:
+
 @smalldisplay
 @uref{http://svn.savannah.gnu.org/viewvc/trunk/doc/texinfo.tex?root=texinfo&view=log}
 @end smalldisplay
 
-@pindex texinfo.tex@r{, installing}
-@file{texinfo.tex} is essentially a standalone file, and compatibility
-is of utmost concern; so, if you need or want to try a newer version
-than came with your system, it nearly always suffices to download it
-and put it anywhere that @TeX{} will find it (first).  You can replace
-any existing @file{texinfo.tex} with a newer version (of course saving
-the original in case of disaster).
+@pindex texinfo.tex@r{, instalando}
+@file{texinfo.tex} é essencialmente um arquivo independente, e a
+compatibilidade é uma preocupação extrema; então, se você precisa ou quer
+tentar uma versão mais nova que a que veio com teu sistema, quase sempre é
+suficiente baixá-la e colocá-la em qualquer lugar que o @TeX{} a encontre
+(primeiro). Você pode substituir qualquer @file{texinfo.tex} existente por uma
+versão mais nova (claro, salvando a original em caso de desastre).
 
-@pindex epsf.tex@r{, installing}
-Also, you should install @file{epsf.tex}, if it is not already installed
-from another distribution.  More details are at the end of the description
-of the @code{@@image} command (@pxref{Imagens}).
+@pindex epsf.tex@r{, instalando}
+Além disso, você deveria instalar @file{epsf.tex}, se ele ainda não estiver
+instalado a partir de outra distribuição. Mais detalhes estão no final da
+descrição do comando @code{@@image} (@pxref{Imagens}).
 
-@cindex European Computer Modern fonts, installing
-@cindex EC fonts, installing
-@cindex CM-Super fonts, installing
-To use quotation marks other than those used in English, you'll need
-to have the European Computer Modern fonts (e.g., @file{ecrm1000}) and
-(for PDF output) CM-Super fonts (@pxref{Inserindo Aspas}).
+@cindex Fontes European Computer Modern, instalando
+@cindex Fontes EC, instalando
+@cindex Fontes CM-Super, instalando
+Para usar aspas diferentes daquelas usadas em inglês, você precisará ter as
+fontes European Computer Modern (por exemplo, @file{ecrm1000}) e (para saída em
+PDF) as fontes CM-Super (@pxref{Inserindo Aspas}).
 
-@pindex feymr10@r{, installing}
-@cindex Euro font, installing
-To use the @code{@@euro} command, you'll need the @samp{feym*} fonts
-(e.g., @file{feymr10}).  @xref{@code{@@euro}}.
+@pindex feymr10@r{, instalando}
+@cindex Fonte europeia, instalando
+Para usar o comando @code{@@euro}, você precisará das fontes @samp{feym*} (por
+exemplo, @file{feymr10}). @xref{@code{@@euro}}.
 
-All of the above files (and a whole lot more) should be installed by
-default in a reasonable @TeX{} installation.
+Todos os arquivos acima (e muitos outros) deveriam ser instalados por padrão em
+uma instalação razoável do @TeX{}.
 
-@pindex texinfo.cnf @r{installation}
-@cindex Customizing of @TeX{} for Texinfo
-@cindex Site-wide Texinfo configuration file
-Optionally, you may create a file @file{texinfo.cnf} for site configuration.
-This file is read by @TeX{} at the beginning of a Texinfo file.
-You can put any commands you like there, according to local site-wide
-conventions.  They will be read by @TeX{} when processing any Texinfo
-document.  For example, if @file{texinfo.cnf} contains the line
-@samp{@@afourpaper} (@pxref{Papel A4}), then all Texinfo documents
-will be processed with that page size in effect.  If you have nothing
-to put in @file{texinfo.cnf}, you do not need to create it.
+@pindex texinfo.cnf @r{instalação}
+@cindex Personalização do @TeX{} para o Texinfo
+@cindex Arquivo de configuração do Texinfo abrangente ao sítio
+Opcionalmente, você pode criar um arquivo @file{texinfo.cnf} para configuração
+do sítio. Esse arquivo é lido pelo @TeX{} no início de um arquivo do Texinfo.
+Você pode colocar quaisquer comandos que gostar lá, de acordo com as convenções
+locais abrangentes a todo o sítio. Eles serão lidos pelo @TeX{} ao processar
+qualquer documento do Texinfo. Por exemplo, se @file{texinfo.cnf} contiver a
+linha @samp{@@afourpaper} (@pxref{Papel A4}), então todos os documentos do
+Texinfo serão processados com esse tamanho de página em vigor. Se
+você não tiver nada para colocar em @file{texinfo.cnf}, não precisa criá-lo.
 
-@cindex Environment variable @code{TEXINPUTS}
+@cindex Variável de ambiente @code{TEXINPUTS}
 @vindex TEXINPUTS
-If neither of the above locations for these system files suffice, you
-can specify the directories explicitly.  For @file{texinfo.tex}, you
-can do this by writing the complete path for the file after the
-@code{\input} command.  Another way, that works for both
-@file{texinfo.tex} and @file{texinfo.cnf} (and any other file @TeX{}
-might read), is to set the @code{TEXINPUTS} environment variable in
-your @file{.profile} or @file{.cshrc} file.
+Se nenhum dos locais acima para esses arquivos de sistema for suficiente, você
+pode especificar os diretórios explicitamente. Para @file{texinfo.tex}, você
+pode fazer isso escrevendo o caminho completo para o arquivo depois do comando
+@code{\input}. Outra maneira, que funciona para ambos, @file{texinfo.tex} e
+@file{texinfo.cnf} (e qualquer outro arquivo que o @TeX{} possa ler), é a de
+configurar a variável de ambiente @code{TEXINPUTS} no teu arquivo
+@file{.profile} ou @file{.cshrc}.
 
-Whether you use @file{.profile} or @file{.cshrc} depends on
-whether you use a Bourne shell-compatible (@code{sh}, @code{bash},
-@code{ksh}, @dots{}) or C shell-compatible (@code{csh}, @code{tcsh})
-command interpreter, respeictvely.
+Se você usa @file{.profile} ou @file{.cshrc} depende se usa um interpretador de
+comandos compatível com o shell Bourne (@code{sh}, @code{bash}, @code{ksh},
+@dots{}) ou compatível com o shell C (@code{csh}, @code{tcsh}),
+respectivamente.
 
-In a @file{.profile} file, you could use the following @code{sh} command
-sequence:
+Em um arquivo @file{.profile}, você poderia usar a seguinte sequência de
+comandos do @code{sh}:
 
 @example
 @group
-TEXINPUTS=.:/home/me/mylib:
+TEXINPUTS=.:/home/eu/minhabiblioteca:
 export TEXINPUTS
 @end group
 @end example
 
 @need 1000 @c CONSERTE-ME
-While in a @file{.cshrc} file, you could use the following @code{csh}
-command sequence:
+Enquanto em um arquivo @file{.cshrc}, você poderia usar a seguinte sequência de
+comandos do @code{csh}:
 
 @example
-setenv TEXINPUTS .:/home/me/mylib:
+setenv TEXINPUTS .:/home/eu/minhabiblioteca:
 @end example
 
-On MS-DOS/MS-Windows, you'd do this (note the use of the @samp{;}
-character as directory separator, instead of @samp{:}):
+No MS-DOS/MS-Windows, você faria isto (observe o uso do caractere @samp{;} como
+separador de diretório, em vez de @samp{:}):
 
 @example
 @group
-set TEXINPUTS=.;d:/home/me/mylib;c:
+set TEXINPUTS=.;d:/home/eu/minhabiblioteca;c:
 @end group
 @end example
 
 @noindent
-It is customary for DOS/Windows users to put such commands in the
-@file{autoexec.bat} file, or in the Windows registry.
+É costumeiro para usuários(as) de DOS/Windows coloquem tais comandos no arquivo
+@file{autoexec.bat} ou no registro do Windows.
 
 @noindent
-These settings would cause @TeX{} to look for @file{\input} file first
-in the current directory, indicated by the @samp{.}, then in a
-hypothetical user @samp{me}'s @file{mylib} directory, and finally in
-the system directories.  (A leading, trailing, or doubled @samp{:}
-indicates searching the system directories at that point.)
+Essas configurações fariam com que o @TeX{} procurasse o arquivo @file{\input}
+primeiro no diretório atual, indicado por @samp{.}, depois no diretório
+@file{minhabiblioteca} de um(a) usuário(a) hipotético(a) @samp{eu} e,
+finalmente, nos diretórios do sistema. (Um @samp{:} anteposto, posposto ou
+duplo indica a busca nos diretórios do sistema naquele ponto).
 
 
 @node hboxes lotados
-@section Overfull ``hboxes''
-@cindex Overfull @samp{hboxes}
-@cindex @samp{hbox}, overfull
-@cindex Final output
+@section ``hboxes'' Lotados
+@cindex @samp{hboxes} lotados
+@cindex @samp{hbox}, lotado
+@cindex Saída final
 
-@TeX{} is sometimes unable to typeset a line within the normal
-margins.  This most often occurs when @TeX{} comes upon what it
-interprets as a long word that it cannot hyphenate, such as an
-electronic mail network address or a very long identifier.  When this
-happens, @TeX{} prints an error message like this:
+@TeX{} ocasionalmente não consegue tipografar uma linha dentro das margens
+normais. Isso ocorre com mais frequência quando @TeX{} encontra o que
+interpreta como uma palavra longa que ele não consegue hifenizar, como um
+endereço de rede de correio eletrônico ou um identificador muito longo. Quando
+isso acontece, @TeX{} imprime uma mensagem de erro como esta:
 
 @example
 Overfull @@hbox (20.76302pt too wide)
@@ -15956,23 +15958,22 @@ Overfull @@hbox (20.76302pt too wide)
 
 @findex hbox
 @noindent
-(In @TeX{}, lines are in ``horizontal boxes'', hence the term, ``hbox''.
-@samp{@@hbox} is a @TeX{} primitive not used in the Texinfo language.)
+(No @TeX{}, as linhas estão em ``caixas horizontais'', daí o termo ``hbox''.
+@samp{@@hbox} é um primitivo do @TeX{} não usado na linguagem do Texinfo).
 
-@TeX{} also provides the line number in the Texinfo source file and
-the text of the offending line, which is marked at all the places that
-@TeX{} considered hyphenation.  @xref{Debugging with @TeX{}}, for more
-information about typesetting errors.
+@TeX{} também fornece o número da linha no arquivo fonte do Texinfo e o texto
+da linha ofensiva, que é marcado em todos os lugares que @TeX{} considerou
+hifenização. @xref{Depurando com @TeX{}}, para mais informações acerca de erros
+de tipografia.
 
-If the Texinfo file has an overfull hbox, you can rewrite the sentence
-so the overfull hbox does not occur, or you can decide to leave it.  A
-small excursion into the right margin often does not matter and may not
-even be noticeable.
+Se o arquivo do Texinfo tiver um hbox lotado, você pode reescrever a frase, de
+forma que o hbox lotado não ocorra, ou você pode decidir deixá-lo. Uma pequena
+excursão na margem direita frequentemente não importa e possivelmente nem seja
+perceptível.
 
-If you have many overfull boxes and/or an antipathy to rewriting, you
-can coerce @TeX{} into greatly increasing the allowable interword
-spacing, thus (if you're lucky) avoiding many of the bad line breaks,
-like this:
+Se tiver muitas caixas lotadas e (ou) uma antipatia por reescrever, você pode
+forçar o @TeX{} a aumentar bastante o espaçamento permitido entre palavras,
+evitando assim (se tiver sorte) muitas das quebras ruins de linha, como esta:
 
 @findex \emergencystretch
 @example
@@ -15982,25 +15983,25 @@ like this:
 @end example
 
 @noindent
-(You should adjust the fraction as needed.)  This huge value for
-@code{\emergencystretch} cannot be the default, since then the typeset
-output would generally be of noticeably lower quality; its default
-value is @samp{.15\hsize}.  @code{\hsize} is the @TeX{} dimension
-containing the current line width.
+(Você deveria ajustar a fração conforme necessário). Esse valor enorme para
+@code{\emergencystretch} não pode ser o padrão, pois a saída tipografada
+geralmente seria de qualidade visivelmente inferior; o valor padrão dela é
+@samp{.15\hsize}. @code{\hsize} é a dimensão do @TeX{} que contém a largura
+atual da linha.
 
-@cindex Black rectangle in hardcopy
-@cindex Rectangle, black in hardcopy
-@cindex Box, ugly black in hardcopy
-@cindex Ugly black rectangles in hardcopy
-For any overfull boxes you do have, @TeX{} will print a large, ugly,
-black rectangle beside the line that contains the overfull hbox unless
-told otherwise.  This is so you will notice the location of the
-problem if you are correcting a draft.
+@cindex Retângulo preto em impresso
+@cindex Retângulo, preto em impresso
+@cindex Caixa, preto feio em impresso
+@cindex Retângulos pretos feios em impresso
+Para quaisquer caixas lotadas que você tenha, o @TeX{} imprimirá um retângulo
+grande, feio e preto ao lado da linha que contém o hbox lotado, a menos que
+seja informado do contrário. Isso é para que você perceba o local do problema
+se estiver corrigindo um rascunho.
 
 @findex finalout
-To prevent such a monstrosity from marring your final printout, write
-the following in the beginning of the Texinfo file on a line of its own,
-before the @code{@@titlepage} command:
+Para evitar que tal monstruosidade estrague tua impressão final, escreva o
+seguinte no início do arquivo do Texinfo, em uma linha própria, antes do
+comando @code{@@titlepage}:
 
 @example
 @@finalout
@@ -16008,58 +16009,58 @@ before the @code{@@titlepage} command:
 
 
 @node @code{@@smallbook}
-@section @code{@@smallbook}: Printing ``Small'' Books
+@section @code{@@smallbook}: Imprimindo Livros ``Pequenos''
 
-@anchor{smallbook}@c old name
+@anchor{smallbook}@c nome antigo
 @findex smallbook
-@cindex Small book size
-@cindex Book, printing small
-@cindex Page sizes for books
-@cindex Size of printed book
+@cindex Tamanho pequeno do livro
+@cindex Livro, imprimindo pequeno
+@cindex Tamanhos de página para livros
+@cindex Tamanho do livro impresso
 
-By default, @TeX{} typesets pages for printing in an 8.5 by 11 inch
-format.  However, you can direct @TeX{} to typeset a document in a 7 by
-9.25 inch format that is suitable for bound books by inserting the
-following command on a line by itself at the beginning of the Texinfo
-file, before the title page:
+Por padrão, o @TeX{} tipografa páginas para impressão em um formato de 8,5 por
+11 polegadas. No entanto, você pode direcionar o @TeX{} para tipografar um
+documento em um formato de 7 por 9,25 polegadas que seja adequado para livros
+encadernados inserindo o seguinte comando em uma linha própria no início do
+arquivo do Texinfo, antes da página de título:
 
 @example
 @@smallbook
 @end example
 
 @noindent
-(Since many books are about 7 by 9.25 inches, this command might better
-have been called the @code{@@regularbooksize} command, but it came to be
-called the @code{@@smallbook} command by comparison to the 8.5 by 11
-inch format.)
+(Como muitos livros tem cerca de 7 por 9,25 polegadas, esse comando poderia ter
+sido melhor chamado de comando @code{@@regularbooksize}, mas veio a ser chamado
+de comando @code{@@smallbook} por comparação ao formato de 8,5 por 11
+polegadas).
 
-If you write the @code{@@smallbook} command between the
-start-of-header and end-of-header lines, the Texinfo mode @TeX{}
-region formatting command, @code{texinfo-tex-region}, will format the
-region in ``small'' book size (@pxref{Início de Cabeçalho}).
+Se você escrever o comando @code{@@smallbook} entre as linhas de início de
+cabeçalho e fim de cabeçalho, o comando de formatação de região do modo Texinfo
+do @TeX{}, @code{texinfo-tex-region}, formatará a região no tamanho de livro
+``pequeno'' (@pxref{Início de Cabeçalho}).
 
-@xref{@code{@@small@dots{}}}, for information about commands that make
-it easier to produce examples for a smaller manual.
+@xref{@code{@@small@dots{}}}, para informações acerca de comandos que facilitam
+produzir exemplos para um manual menor.
 
-@xref{Formatar com @command{texi2dvi}}, and @ref{Preparando para @TeX{}},
-for other ways to format with @code{@@smallbook} that do not require
-changing the source file.
+@xref{Formatar com @command{texi2dvi}} e @ref{Preparando para @TeX{}} para
+outras maneiras de formatar com @code{@@smallbook} que não exigem mudar o
+arquivo fonte.
 
 
 @node Papel A4
-@section Printing on Papel A4
-@cindex A4 paper, printing on
-@cindex A5 paper, printing on
-@cindex Paper size, A4
-@cindex European A4 paper
+@section Imprimindo em Papel A4
+@cindex Papel A4, imprimindo em
+@cindex Papel A5, imprimindo em
+@cindex Tamanho de papel, A4
+@cindex Papel europeu A4
 @findex afourpaper
 @findex afivepaper
 
-You can tell @TeX{} to format a document for printing on European size
-A4 paper (or A5) with the @code{@@afourpaper} (or @code{@@afivepaper})
-command.  Write the command on a line by itself near the beginning of
-the Texinfo file, before the title page.  For example, this is how you
-would write the header for this manual:
+Você pode dizer ao @TeX{} para formatar um documento para impressão em papel A4
+(ou A5) de tamanho europeu com o comando @code{@@afourpaper} (ou
+@code{@@afivepaper}). Escreva o comando em uma linha própria perto do início do
+arquivo Texinfo, antes da página de título. Por exemplo, isto é como você
+escreveria o cabeçalho para este manual:
 
 @example
 @group
@@ -16071,102 +16072,102 @@ would write the header for this manual:
 @end group
 @end example
 
-@xref{Formatar com @command{texi2dvi}}, and @ref{Preparando para @TeX{}},
-for other ways to format for different paper sizes that do not require
-changing the source file.
+@xref{Formatar com @command{texi2dvi}} e @ref{Preparando para @TeX{}} para
+outras maneiras de formatar para diferentes tamanhos de papel que não exigem
+mudar o arquivo fonte.
 
 @findex afourlatex
 @findex afourwide
-You may or may not prefer the formatting that results from the command
-@code{@@afourlatex}.  There's also @code{@@afourwide} for A4 paper in
-wide format.
+Você pode ou não preferir a formatação que resulta do comando
+@code{@@afourlatex}. Existe também @code{@@afourwide} para papel A4 em formato
+largo.
 
 
 @node @code{@@pagesizes}
-@section @code{@@pagesizes} [@var{width}][, @var{height}]: Custom Page Sizes
-@anchor{pagesizes}@c old node name
+@section @code{@@pagesizes} [@var{largura}][, @var{altura}]: Tamanhos Personalizados de Página
+@anchor{pagesizes}@c nome antigo de nó
 
 @findex pagesizes
-@cindex Custom page sizes
-@cindex Page sizes, customized
-@cindex Text width and height
-@cindex Width of text area
-@cindex Height of text area
-@cindex Depth of text area
+@cindex Tamanhos personalizados de página
+@cindex Tamanhos de página, personalizados
+@cindex Largura e altura do texto
+@cindex Largura da área de texto
+@cindex Altura da área de texto
+@cindex Profundidade da área de texto
 
-You can explicitly specify the height and (optionally) width of the main
-text area on the page with the @code{@@pagesizes} command.  Write this
-on a line by itself near the beginning of the Texinfo file, before the
-title page.  The height comes first, then the width if desired,
-separated by a comma.  Examples:
+Você pode especificar explicitamente a altura e (opcionalmente) a largura da
+área principal de texto na página com o comando @code{@@pagesizes}. Escreva
+isso em uma linha própria perto do começo do arquivo do Texinfo, antes da
+página de título. A altura vem primeiro, depois a largura se desejado,
+separados por uma vírgula. Exemplos:
 
 @example
-@@pagesizes 200mm,150mm  @c for b5 paper
+@@pagesizes 200mm,150mm  @c para papel b5
 @end example
 @noindent and
 @example
-@@pagesizes 11.5in       @c for legal paper
+@@pagesizes 11.5in       @c para papel ofício
 @end example
 
-@cindex B5 paper, printing on
-@cindex Legal paper, printing on
-This would be reasonable for printing on B5-size paper.  To emphasize,
-this command specifies the size of the @emph{text area}, not the size of
-the paper (which is 250@dmn{mm} by 177@dmn{mm} for B5, 14@dmn{in} by
-8.5@dmn{in} for legal).
+@cindex Papel B5, imprimindo em
+@cindex Papel ofício, imprimindo em
+Isso seria razoável para impressão em papel tamanho B5. Para enfatizar, esse
+comando especifica o tamanho da @emph{área de texto}, não o tamanho do papel
+(que é 250@dmn{mm} por 177@dmn{mm} para B5, 14@dmn{in} por 8,5@dmn{in} para
+ofício).
 
-@cindex Margins on page, not controllable
-To make more elaborate changes, such as changing any of the page
-margins, you must define a new command in @file{texinfo.tex} or
+@cindex Margens na página, não controláveis
+Para fazer mudanças mais elaboradas, como mudar qualquer uma das margens da
+página, você precisa definir um novo comando no @file{texinfo.tex} ou
 @file{texinfo.cnf}.
 
-@xref{Formatar com @command{texi2dvi}}, and @ref{Preparando para @TeX{}},
-for other ways to specify @code{@@pagesizes} that do not require
-changing the source file.
+@xref{Formatar com @command{texi2dvi}} e @ref{Preparando para @TeX{}} para
+outras maneiras de especificar @code{@@pagesizes} que não exigem mudar o
+arquivo fonte.
 
 
-@node Cropmarks and Magnification
-@section Cropmarks and Magnification
+@node Marcas de Corte e Ampliação
+@section Marcas de Corte e Ampliação
 
 @findex cropmarks
-@cindex Cropmarks for printing
-@cindex Printing cropmarks
-You can (attempt to) direct @TeX{} to print cropmarks at the corners
-of pages with the @code{@@cropmarks} command.  Write the
-@code{@@cropmarks} command on a line by itself near the beginning of
-the Texinfo file, before the title page, like this:
+@cindex Marcas de corte para impressão
+@cindex Imprimindo marcas de corte
+Você pode (tentar) direcionar o @TeX{} para imprimir marcas de corte nos cantos
+das páginas com o comando @code{@@cropmarks}. Escreva o comando
+@code{@@cropmarks} em uma linha própria, perto do início do arquivo do Texinfo,
+antes da página de título, assim:
 
 @example
 @@cropmarks
 @end example
 
-This command is mainly for printers that typeset several pages on one
-sheet of film; but you can attempt to use it to mark the corners of a
-book set to 7 by 9.25 inches with the @code{@@smallbook} command.
-(Printers will not produce cropmarks for regular sized output that is
-printed on regular sized paper.)  Since different printing machines
-work in different ways, you should explore the use of this command
-with a spirit of adventure.  You may have to redefine the command in
-@file{texinfo.tex}.
+Esse comando é principalmente para impressoras que tipografam várias páginas em
+uma folha de filme; mas, você pode tentar usá-lo para marcar os cantos de um
+livro configurado para 7 por 9,25 polegadas com o comando @code{@@smallbook}.
+(As impressoras não produzirão marcas de corte para saída de tamanho regular
+que seja impressa em papel de tamanho regular). Como diferentes máquinas de
+impressão funcionam de maneiras diferentes, você deveria explorar o uso desse
+comando com um espírito de aventura. Você possivelmente tenha que redefinir o
+comando no @file{texinfo.tex}.
 
-The @code{@@cropmarks} command is recognized and ignored in non-@TeX{}
-output formats.
+O comando @code{@@cropmarks} é reconhecido e ignorado em formatos de saída não
+@TeX{}.
 
-@findex \mag @r{(raw @TeX{} magnification)}
-@cindex Magnified printing
-@cindex Larger or smaller pages
-You can attempt to direct @TeX{} to typeset pages larger or smaller
-than usual with the @code{\mag} @TeX{} command.  Everything that is
-typeset is scaled proportionally larger or smaller.  (@code{\mag}
-stands for ``magnification''.)  This is @emph{not} a Texinfo
-@@-command, but is a raw @TeX{} command that is prefixed with a
-backslash.  You have to write this command between @code{@@tex} and
-@code{@@end tex} (@pxref{Comandos do Formatador Bruto}).
+@findex \mag @r{(ampliação do @TeX{} bruto)}
+@cindex Impressão ampliada
+@cindex Páginas maiores ou menores
+Você pode tentar direcionar o @TeX{} para tipografar páginas maiores ou menores
+que o normal com o comando @code{\mag} do @TeX{}. Tudo que seja tipografado é
+dimensionado proporcionalmente maior ou menor. (@code{\mag} significa
+``ampliação''). Esse @emph{não} é um comando @@ do Texinfo, mas é um comando do
+@TeX{} bruto que é prefixado com uma barra invertida. Você tem que escrever
+esse comando entre @code{@@tex} e @code{@@end tex} (@pxref{Comandos do
+Formatador Bruto}).
 
-Follow the @code{\mag} command with an @samp{=} and then a number that
-is 1000 times the magnification you desire.  For example, to print pages
-at 1.2 normal size, write the following near the beginning of the
-Texinfo file, before the title page:
+Siga o comando @code{\mag} com um @samp{=} e então um número que seja 1.000
+vezes a ampliação que você deseja. Por exemplo, para imprimir páginas em
+tamanho normal 1,2, escreva o seguinte próximo ao início do arquivo do Texinfo,
+antes da página de título:
 
 @example
 @group
@@ -16176,114 +16177,113 @@ Texinfo file, before the title page:
 @end group
 @end example
 
-With some printing technologies, you can print normal-sized copies that
-look better than usual by giving a larger-than-normal master to your
-print shop.  They do the reduction, thus effectively increasing the
-resolution.
+Com algumas tecnologias de impressão, você pode imprimir cópias de tamanho
+normal que parecem melhores que o normal, entregando um mestre maior que o
+normal para tua gráfica. Eles(as) fazem a redução, aumentando assim
+efetivamente a resolução.
 
-Depending on your system, DVI files prepared with a
-nonstandard-@code{\mag} may not print or may print only with certain
-magnifications.  Be prepared to experiment.
+Dependendo do teu sistema, arquivos DVI preparados com um @code{\mag} não
+padrão podem não imprimir ou podem imprimir somente com certas ampliações.
+Esteja preparado(a) para experimentar.
 
 
 @node Saída PDF
 @section Saída PDF
-@cindex PDF output
-@cindex Output, in PDF
+@cindex Saída PDF
+@cindex Saída, em PDF
 
 @pindex pdftex
-The simplest way to generate PDF output from Texinfo source is to run
-the convenience script @command{texi2pdf} (or @command{pdftexi2dvi});
-this executes the @command{texi2dvi} script with the @option{--pdf}
-option (@pxref{Formatar com @command{texi2dvi}}).  If for some reason you
-want to process the document by hand, you can run the @command{pdftex}
-program instead of plain @command{tex}.  That is, run @samp{pdftex
-foo.texi} instead of @samp{tex foo.texi}.
+A maneira mais simples de gerar saída PDF a partir do fonte do Texinfo é a de
+executar o script de conveniência @command{texi2pdf} (ou
+@command{pdftexi2dvi}); isso executa o script @command{texi2dvi} com a opção
+@option{--pdf} (@pxref{Formatar com @command{texi2dvi}}). Se por algum motivo
+você quiser processar o documento manualmente, você pode executar o programa
+@command{pdftex} em vez do @command{tex} simples. Isto é, execute @samp{pdftex
+foo.texi} em vez de @samp{tex foo.texi}.
 
-@dfn{PDF} stands for `Portable Document Format'. It was invented by
-Adobe Systems some years ago for document interchange, based on their
-PostScript language.  Related links:
+@dfn{PDF} significa `Portable Document Format'. Foi inventado pela Adobe
+Systems alguns anos atrás para intercâmbio de documentos, baseados na linguagem
+PostScript deles. Links relacionados:
 
 @itemize
 @item
-GNU GV, a @uref{http://www.gnu.org/software/gv/, Ghostscript-based PDF
-reader}.  (It can also preview PostScript documents.)
+GNU GV, um
+@uref{http://www.gnu.org/software/gv/, Leitor de PDF baseado em Ghostscript}.
+(Ele também consegue pré visualizar documentos PostScript).
 
 @item
-@code{xpdf}, a freely available standalone
-@uref{http://www.foolabs.com/xpdf/, PDF reader} for the X window
-system.
+@code{xpdf}, um @uref{http://www.foolabs.com/xpdf/, leitor de PDF} autônomo e
+disponível livremente para o sistema de janelas X.
 
 @item
-@uref{https://en.wikipedia.org/wiki/Portable_Document_Format, PDF at
-Wikipedia}.
+@uref{https://en.wikipedia.org/wiki/Portable_Document_Format, PDF na Wikipedia}.
 
 @end itemize
 
-At present, Texinfo does not provide @samp{@@ifpdf} or @samp{@@pdf}
-commands as for the other output formats, since PDF documents contain
-many internal low-level offsets and cross-references that would be
-hard or impossible to specify at the Texinfo source level.
+Atualmente, o Texinfo não fornece os comandos @samp{@@ifpdf} ou @samp{@@pdf}
+como para os outros formatos de saída, pois os documentos PDF contém muitos
+deslocamentos internos de baixo nível e referências cruzadas que seriam
+difíceis ou impossíveis de especificar no nível do fonte do Texinfo.
 
-PDF files require dedicated software to be displayed, unlike the plain
-ASCII formats (Info, HTML) that Texinfo supports.  They also tend to
-be much larger than the DVI files output by @TeX{} by default.
-Nevertheless, a PDF file does define an actual typeset document in a
-self-contained file, notably including all the fonts that are used, so
-it has its place.
+Arquivos PDF exigem software dedicado para serem exibidos, diferentemente dos
+formatos ASCII simples (Info, HTML) que o Texinfo suporta. Eles também tendem a
+ser muito maiores que os arquivos DVI produzidos pelo @TeX{} por padrão. No
+entanto, um arquivo PDF define um documento tipografado real em um arquivo
+autocontido, notavelmente incluindo todas as fontes que são usadas, de forma
+que ele tem o lugar dele.
 
 
 @node Obtendo @TeX{}
 @section Obtendo @TeX{}
 @cindex Obtendo @TeX{}
-@cindex @TeX{}, how to obtain
+@cindex @TeX{}, como obter
 
-@TeX{} is a document formatter that is used by the FSF for its
-documentation.  It is the easiest way to get printed output (e.g., PDF
-and PostScript) for Texinfo manuals.  TeX is freely redistributable,
-and you can get it over the Internet or on physical media.  See
+@TeX{} é um formatador de documentos que é usado pela FSF para a documentação
+dela. Ele é a maneira mais fácil de obter saída impressa (por exemplo, PDF e
+PostScript) para manuais do Texinfo. O TeX é redistribuível livremente, e você
+pode obtê-lo pela Internet ou em mídia física. Veja-se
 @url{http://tug.org/texlive}.
 
-@c please keep that text in sync with www.gnu.org/prep/FTP
+@c por favor, mantenha esse texto em sincronia com www.gnu.org/prep/FTP
 
 
 @node Tradutor Genérico @command{texi2any}
 @chapter @command{texi2any}: O Tradutor Genérico para Texinfo
 
-@command{texi2any} is the generic translator for Texinfo that can
-produce different output formats and is highly customizable.  It
-supports these formats:
+@command{texi2any} é o tradutor genérico para Texinfo que consegue produzir
+diferentes formatos de saída e é altamente personalizável. Ele suporta estes
+formatos:
 
 @table @asis
-@item Info (by default, or with @option{--info}),
+@item Info (por padrão, ou com @option{--info}),
 
-@item HTML (with @option{--html}),
+@item HTML (com @option{--html}),
 
-@item plain text (with @option{--plaintext}),
+@item texto simples (com @option{--plaintext}),
 
-@item Docbook (with @option{--docbook}),
+@item Docbook (com @option{--docbook}),
 
-@item Texinfo XML (with @option{--xml}).
+@item XML do Texinfo (com @option{--xml}).
 @end table
 
-@command{makeinfo} is an alias for @command{texi2any}.  By default,
-both @command{texi2any} and @command{makeinfo} generate Info output;
-indeed, there are no differences in behavior based on the name.
+@command{makeinfo} é um apelido para @command{texi2any}. Por padrão, tanto
+@command{texi2any} quanto @command{makeinfo} geram saída Info; de fato, não
+existem diferenças no comportamento baseadas no nome.
 
-Beside these default formats, command line options to
-@command{texi2any} can change many aspects of the output.  Beyond
-that, initialization files provide even more control over the final
-output---nearly anything not specified in the Texinfo input file.
-Initialization files are written in Perl, like the main program, and
-anything which can be specified on the command line can also be
-specified within a initialization file.
+Além desses formatos padrão, as opções de linha de comando para
+@command{texi2any} podem mudar muitos aspectos da saída. Além disso, os
+arquivos de inicialização fornecem ainda mais controle sobre a saída
+final---quase tudo não especificado no arquivo de entrada do Texinfo. Os
+arquivos de inicialização são escritos em Perl, como o programa principal, e
+qualquer coisa que possa ser especificada na linha de comando também pode ser
+especificada dentro de um arquivo de inicialização.
 
-The rest of this chapter goes into the details.
+O restante deste capítulo entra em detalhes.
 
 @menu
 * Implementação de Referência::                  @command{texi2any}: a implementação de referência.
 * Invocando @command{texi2any}::                 Executando o tradutor a partir de um shell.
-* Saída Gerada Impressa do @command{texi2any}::  Chamando @command{texi2any}.
+* Saída Impressa do @command{texi2any}::         Chamando @command{texi2any}.
 * Validação de Ponteiro::                        Como verificar se os ponteiros apontam para algum lugar.
 * Variáveis de Personalização::                  Configurando @command{texi2any}.
 * Internacionalização de Strings de Documentos:: Traduzindo texto inserido pelo programa.
@@ -16292,259 +16292,260 @@ The rest of this chapter goes into the details.
 @end menu
 
 
-@node Reference Implementation
-@section @command{texi2any}: A Texinfo Reference Implementation
+@node Implementação de Referência
+@section @command{texi2any}: Uma Implementação de Referência do Texinfo
 
-@cindex @command{texi2any}, as reference implementation
-@cindex Reference implementation
-@cindex Implementation, @command{texi2any} as reference
+@cindex @command{texi2any}, como implementação de referência
+@cindex Implementação de referência
+@cindex Implementação, @command{texi2any} como referência
 
-Above, we called @command{texi2any} ``the'' translator for Texinfo
-instead of just ``a'' translator, even though (of course) it's
-technically and legally possible for other implementations to be
-written.  The reason is that alternative implementations are very
-likely to have subtle, or not-so-subtle, differences in behavior, and
-thus Texinfo documents would become dependent on the processor.
-Therefore, it is important to have a reference implementation that
-defines parts of the language not fully specified by the manual (often
-intentionally so).  It is equally important to have consistent
-command-line options and other behavior for all processors.
+Acima, nós chamamos @command{texi2any} de ``o'' tradutor para Texinfo em vez de
+apenas ``um'' tradutor, embora (claro) seja técnica e juridicamente possível
+que outras implementações sejam escritas. O motivo é que implementações
+alternativas tem grande probabilidade de ter diferenças sutis, ou não tão
+sutis, no comportamento, e assim os documentos do Texinfo se tornariam
+dependentes do processador. Portanto, é importante ter uma implementação de
+referência que defina partes da linguagem não totalmente especificadas pelo
+manual (frequentemente intencionalmente). É igualmente importante ter opções de
+linha de comando consistentes e outros comportamentos para todos os
+processadores.
 
-@cindex Tree representation of documents
-@cindex Syntax tree representation of documents
-@cindex Abstract syntax tree representation of documents
-For this reason, the once-independent @command{texi2html} Perl Texinfo
-processor was made compatible with the C implementation of
-@command{makeinfo}, to avoid continuing with two different
-implementations (@pxref{Histórico}).  The current implementation,
-@command{texi2any}, serves as the reference implementation.  It
-inherited the design of customization and other features from
-@command{texi2html} (for more on @command{texi2html} compatibility,
-@pxref{@command{texi2html}}).  However, @code{texi2any} is a full
-reimplementation: it constructs a tree-based representation of the
-input document for all back-ends to work from.
+@cindex Representação em árvore de documentos
+@cindex Representação em árvore da sintaxe de documentos
+@cindex Representação abstrata e em árvore da sintaxe de documentos
+Por esse motivo, o processador Perl @command{texi2html} do Texinfo, antes
+independente, foi tornado compatível com a implementação C do
+@command{makeinfo}, para evitar continuar com duas implementações
+(@pxref{Histórico}). A implementação atual, @command{texi2any}, serve como a
+implementação de referência. Ela herdou o projeto de personalização e outros
+recursos de @command{texi2html} (para mais acerca de compatibilidade do
+@command{texi2html}, @pxref{@command{texi2html}}). No entanto, @code{texi2any}
+é uma reimplementação completa: ela constrói uma representação baseada em
+árvore do documento de entrada para todas as estruturas de retaguarda
+trabalharem.
 
-@cindex Texinfo language tests
-@cindex Tests, of Texinfo language
-Extensive tests of the language were developed at the same time as
-@command{texi2any}; we plead with anyone thinking of writing a program
-to parse Texinfo input to at least make use of these tests.
+@cindex Testes de linguagem do Texinfo
+@cindex Testes, da linguagem  do Texinfo
+Testes extensivos da linguagem foram desenvolvidos ao mesmo tempo que
+@command{texi2any}; nós apelamos a qualquer um(a) pensando em escrever um
+programa para analisar a entrada do Texinfo para, pelo menos, fazer uso desses
+testes.
 
-@cindex Examples of using @command{texi2any}
+@cindex Exemplos de uso do @command{texi2any}
 @findex Texinfo::Parser module
-The @command{texi2html} wrapper script (@pxref{@command{texi2html}})
-provides a very simple example of calling @command{texi2any} from a
-shell script; it's in @file{util/texi2html} in the Texinfo sources.
-More consequentially, @command{texi-elements-by-size} is an example
-Perl script using the @code{Texinfo::Parser} module interface; it's
-also in the @file{util} source directory.  (Its functionality may also
-be useful to authors; @pxref{texi-elements-by-size}.)
+O script envolucrador @command{texi2html} (@pxref{@command{texi2html}}) fornece
+um exemplo muito simples de chamada do @command{texi2any} a partir de um script
+de shell; ele está em @file{util/texi2html} nos fontes do Texinfo. Mais
+consequentemente, @command{texi-elements-by-size} é um script Perl de exemplo
+usando a interface do módulo @code{Texinfo::Parser}; ele também está no
+diretório @file{util} do fonte. (A funcionalidade dele também pode ser útil
+para autores(as); @pxref{texi-elements-by-size}).
 
-@cindex Future of Texinfo implementations
-With the release of @command{texi2any} as the reference
-implementation, development of both the C implementation of
-@command{makeinfo} and @command{texi2html} has been halted.  Going
-forward, we ask authors of Texinfo documents to use only
+@cindex Futuro das implementações do Texinfo
+Com o lançamento do @command{texi2any} como a implementação de referência, o
+desenvolvimento tanto da implementação C do @command{makeinfo} quanto do
+@command{texi2html} foi interrompido. Daqui para frente, nós pedimos para
+os(as) autores(as) de documentos do Texinfo que usem somente
 @command{texi2any}.
 
 
-@node Invoking @command{texi2any}
-@section Invoking @command{texi2any}/@command{makeinfo} from a Shell
+@node Invocando @command{texi2any}
+@section Invocando @command{texi2any}/@command{makeinfo} a partir de um Shell
 
-@anchor{Invoking makeinfo}
+@anchor{Invocando makeinfo}
 @pindex makeinfo
 @pindex texi2any
 
-To process a Texinfo file, invoke @command{texi2any} or
-@command{makeinfo} (the two names are synonyms for the same program;
-we'll use the names interchangeably) followed by the name of the
-Texinfo file.  Also select the format you want to output with the
-appropriate command line option (default is Info).  Thus, to create
-the Info file for Bison, type the following to the shell:
+Para processar um arquivo do Texinfo, invoque @command{texi2any} ou
+@command{makeinfo} (os dois nomes são sinônimos para o mesmo programa; nós
+usaremos os nomes intercambiavelmente) seguido pelo nome do arquivo do Texinfo.
+Selecione também o formato que você quer gerar com a opção apropriada de linha
+de comando (padrão é Info). Assim, para criar o arquivo Info para Bison, digite
+o seguinte para o shell:
 
 @example
 texi2any --info bison.texinfo
 @end example
 
-You can specify more than one input file name; each is processed in
-turn.  If an input file name is @samp{-}, standard input is read.
+Você pode especificar mais que um nome de arquivo de entrada; cada um é
+processado por vez. Se um nome de arquivo de entrada for @samp{-}, a entrada
+padrão será lida.
 
-@anchor{@command{makeinfo} Options}
-@c anchor{makeinfo options}@c prev name, but case-insensitive clash
-@cindex @code{makeinfo} options
-@cindex Options for @code{makeinfo}
-@anchor{texi2any Options}
-@cindex @code{texi2any} options
-@cindex Options for @code{texi2any}
+@anchor{Opções do @command{makeinfo}}
+@c anchor{opções do makeinfo}@c nome anterior, mas conflito sem distinção entre maiúsculas e minúsculas
+@cindex Opções do @code{makeinfo}
+@cindex Opções para @code{makeinfo}
+@anchor{Opções do texi2any}
+@cindex Opções do @code{texi2any}
+@cindex Opções para @code{texi2any}
 
-The @command{texi2any} program accept many options.  Perhaps the
-most basic are those that change the output format.  By default,
-@command{texi2any} outputs Info.
+O programa @command{texi2any} aceita muitas opções. Talvez as mais básicas
+sejam aquelas que mudam o formato da saída gerada. Por padrão,
+@command{texi2any} produz Info.
 
-Each command line option is either a long name preceded by @samp{--}
-or a single letter preceded by @samp{-}.  You can use abbreviations
-for the long option names as long as they are unique.
+Cada opção de linha de comando é ou um nome longo precedido por @samp{--} ou
+uma letra precedida por @samp{-}. Você pode usar abreviações para os nomes
+longos de opções, desde que elas sejam únicas.
 
-For example, you could use the following shell command to create an
-Info file for @file{bison.texinfo} in which lines are filled to only
-68 columns:
+Por exemplo, você poderia usar o seguinte comando de shell para criar um
+arquivo Info para @file{bison.texinfo} no qual as linhas sejam preenchidas com
+somente 68 colunas:
 
 @example
 texi2any --fill-column=68 bison.texinfo
 @end example
 
-You can write two or more options in sequence, like this:
+Você pode escrever duas ou mais opções em sequência, assim:
 
 @example
 texi2any --no-split --fill-column=70 @dots{}
 @end example
 
 @noindent
-(This would keep the Info file together as one possibly very long
-file and would also set the fill column to 70.)
+(Isso manteria o arquivo Info unido como um arquivo possivelmente muito longo e
+também configuraria a coluna de preenchimento para 70).
 
-The options are (approximately in alphabetical order):
+As opções são (aproximadamente em ordem alfabética):
 
 @table @code
 @item --commands-in-node-names
 @opindex --commands-in-node-names
-This option now does nothing, but remains for compatibility.  (It used
-to ensure that @@-commands in node names were expanded throughout the
-document, especially @code{@@value}.  This is now done by default.)
+Essa opção agora não faz nada, mas permanece para compatibilidade. (Ela
+costumava garantir que os comandos @@ em nomes de nós fossem expandidos por
+todo o documento, especialmente @code{@@value}. Isso agora é feito por padrão).
 
-@item --conf-dir=@var{path}
-@opindex --conf-dir=@var{path}
-Prepend @var{path} to the directory search list for finding
-customization files that may be loaded with @option{--init-file} (see
-below).  The @var{path} value can be a single directory, or a list of
-several directories separated by the usual path separator character
-(@samp{:} on Unix-like systems, @samp{;} on Windows). @c @xref{Loading
-@c Init Files}.
+@item --conf-dir=@var{caminho}
+@opindex --conf-dir=@var{caminho}
+Pospõe @var{caminho} a lista de pesquisa de diretório para encontrar arquivos
+de personalização que possam ser carregados com @option{--init-file} (veja-se
+abaixo). O valor @var{caminho} pode ser um diretório ou uma lista de vários
+diretórios separados pelo caractere separador de caminho usual (@samp{:} em
+sistemas do tipo Unix, @samp{;} no Windows).
+@c @xref{Carregando Arquivos de Inicialização}.
 
-@item --css-include=@var{file}
+@item --css-include=@var{arquivo}
 @opindex --css-include
-When producing HTML, literally include the contents of @var{file},
-which should contain W3C cascading style sheets specifications, in the
-@samp{<style>} block of the HTML output.  If @var{file} is @samp{-},
-read standard input.  @xref{HTML CSS}.
+Ao produzir HTML, inclui literalmente o conteúdo de @var{arquivo}, que deveria
+conter especificações do W3C de folhas de estilo em cascata, no bloco
+@samp{<style>} da saída gerada em HTML. Se @var{arquivo} for @samp{-}, lê a
+entrada padrão. @xref{CSS de HTML}.
 
 @item --css-ref=@var{url}
 @opindex --css-ref
-When producing HTML, add a @samp{<link>} tag to the output which
-references a cascading style sheet at @var{url}.  This allows using
-standalone style sheets.
+Ao produzir HTML, adiciona uma tag @samp{<link>} à saída que referencia uma
+folha de estilo em cascata em @var{url}. Isso permite usar folhas de estilo
+autônomas.
 
-@item -D @var{var}
-@itemx -D '@var{var} @var{value}'
-@opindex -D @var{var}
-Cause the Texinfo variable @var{var} to be defined.  This is
-equivalent to @code{@@set @var{var}} in the Texinfo file
+@item -D @var{variável}
+@itemx -D '@var{variável} @var{valor}'
+@opindex -D @var{variável}
+Faz com que a variável @var{variável} do Texinfo seja definida. Isso é
+equivalente a @code{@@set @var{variável}} no arquivo do Texinfo
 (@pxref{@code{@@set @@clear @@value}}).
 
-The argument to the option is always one word to the shell; if it
-contains internal whitespace, the first word is taken as the variable
-name and the remainder as the value.  For example, @code{-D 'myvar
-someval'} is equivalent to @code{@@set myvar someval}.
+O argumento para a opção é sempre uma palavra para o shell; se contiver espaços
+em branco internos, a primeira palavra é tomada como o nome da variável e o
+restante como o valor. Por exemplo, @code{-D 'minhavariável algumvalor'} é
+equivalente a @code{@@set minhavariável algumvalor}.
 
 @item --disable-encoding
 @itemx --enable-encoding
 @opindex --disable-encoding
 @opindex --enable-encoding
-By default, or with @option{--enable-encoding}, output accented and
-special characters in Info and plain text output based on
-@samp{@@documentencoding}.  With @option{--disable-encoding}, 7-bit
-ASCII transliterations are output.  @xref{@code{@@documentencoding}},
-and @ref{Inserindo Acentos}.
+Por padrão, ou com @option{--enable-encoding}, produz caracteres acentuados e
+especiais na saída Info e de texto simples baseada em
+@samp{@@documentencoding}. Com @option{--disable-encoding}, transliterações
+ASCII de 7 bits são produzidas. @xref{@code{@@documentencoding}} e
+@ref{Inserindo Acentos}.
 
 @item --docbook
 @opindex --docbook
-Generate Docbook output (rather than Info).
+Gera saída Docbook (em vez de Info).
 
-@item --document-language=@var{lang}
+@item --document-language=@var{idioma}
 @opindex --document-language
-Use @var{lang} to translate Texinfo keywords which end up in the
-output document.  The default is the locale specified by the
-@code{@@documentlanguage} command if there is one, otherwise English
+Usa @var{idioma} para traduzir palavras-chave do Texinfo que acabam no
+documento de saída. O padrão é a localidade especificada pelo comando
+@code{@@documentlanguage} se existir um, caso contrário, inglês
 (@pxref{@code{@@documentlanguage}}).
 
 @item --dvi
 @opindex --dvi
-Generate a TeX DVI file using @command{texi2dvi}, rather than Info
-(@pxref{@command{texi2any} Printed Output}).
+Gera um arquivo DVI do TeX usando @command{texi2dvi}, em vez de Info
+(@pxref{Saída Impressa do @command{texi2any}}).
 
 @item --dvipdf
 @opindex --dvipdf
-Generate a PDF file using @command{texi2dvi --dvipdf}, rather than
-Info (@pxref{@command{texi2any} Printed Output}).
+Gera um arquivo PDF usando @command{texi2dvi --dvipdf}, em vez de Info
+(@pxref{Saída Impressa do @command{texi2any}}).
 
-@item --error-limit=@var{limit}
-@itemx -e @var{limit}
-@opindex --error-limit=@var{limit}
-@opindex -e @var{limit}
-Report @var{LIMIT} errors before aborting (on the assumption that
-continuing would be useless); default 100.
+@item --error-limit=@var{limite}
+@itemx -e @var{limite}
+@opindex --error-limit=@var{limite}
+@opindex -e @var{limite}
+Informa @var{limite} erros antes de abortar (supondo que continuar seria
+inútil); padrão 100.
 
-@item --fill-column=@var{width}
-@itemx -f @var{width}
-@opindex --fill-column=@var{width}
-@opindex -f @var{width}
-Specify the maximum number of columns in a line; this is the
-right-hand edge of a line.  Paragraphs that are filled will be filled
-to this width.  (Filling is the process of breaking up and connecting
-lines so that lines are the same length as or shorter than the number
-specified as the fill column.  Lines are broken between words.) The
-default value is 72.
+@item --fill-column=@var{largura}
+@itemx -f @var{largura}
+@opindex --fill-column=@var{largura}
+@opindex -f @var{largura}
+Especifica o número máximo de colunas em uma linha; essa é a borda direita de
+uma linha. Parágrafos que estejam preenchidos estarão preenchidos com essa
+largura. (Preenchimento é o processo de quebrar e conectar linhas, de forma que
+as linhas tenham o mesmo comprimento ou sejam menores que o número especificado
+como coluna de preenchimento. As linhas são quebradas entre palavras). O valor
+padrão é 72.
 
-@item --footnote-style=@var{style}
-@itemx -s @var{style}
-@opindex --footnote-style=@var{style}
-@opindex -s @var{style}
-Set the footnote style to @var{style}: either @samp{end} for the end
-node style (the default) or @samp{separate} for the separate node
-style.  The value set by this option overrides the value set in a
-Texinfo file by a @code{@@footnotestyle} command 
+@item --footnote-style=@var{estilo}
+@itemx -s @var{estilo}
+@opindex --footnote-style=@var{estilo}
+@opindex -s @var{estilo}
+Configura o estilo da nota de rodapé como @var{estilo}: ou @samp{end} para o
+estilo do nó final (o padrão) ou @samp{separate} para o estilo do nó separado.
+O valor configurado por essa opção substitui o valor configurado em um arquivo
+do Texinfo por um comando @code{@@footnotestyle}
 (@pxref{Estilos de Notas de Rodapé}).
 
-When the footnote style is @samp{separate}, @code{makeinfo} makes a
-new node containing the footnotes found in the current node.  When the
-footnote style is @samp{end}, @code{makeinfo} places the footnote
-references at the end of the current node.
+Quando o estilo da nota de rodapé for @samp{separate}, @code{makeinfo} cria um
+novo nó contendo as notas de rodapé encontradas no nó atual. Quando o estilo da
+nota de rodapé for @samp{end}, @code{makeinfo} coloca as referências da nota de
+rodapé no final do nó atual.
 
-In HTML, when the footnote style is @samp{end}, or if the output is
-not split, footnotes are put at the end of the output.  If set to
-@samp{separate}, and the output is split, they are placed in a
-separate file.
+Em HTML, quando o estilo de nota de rodapé for @samp{end}, ou se a saída não
+for dividida, as notas de rodapé serão colocadas no final da saída. Se
+configurada como @samp{separate}, e a saída for dividida, elas serão colocadas
+em um arquivo separado.
 
 @item --force
 @itemx -F
 @opindex --force
 @opindex -F
-Ordinarily, if the input file has errors, the output files are not
-created.  With this option, they are preserved.
+Normalmente, se o arquivo de entrada tiver erros, os arquivos de saída não
+serão criados. Com essa opção, eles serão preservados.
 
 @item --help
 @itemx -h
-@opindex --help@r{, for @command{texi2any}}
+@opindex --help@r{, para @command{texi2any}}
 @opindex -h
-Print a message with available options and basic usage, then exit
-successfully.
+Imprime uma mensagem com as opções disponíveis e o uso básico e sai com
+sucesso.
 
 @item --html
 @opindex --html
-Generate HTML output (rather than Info).  By default, the HTML output
-is split into one output file per Texinfo source node, and the split
-output is written into a subdirectory based on the name of the
-top-level Info file.  @xref{Gerando HTML}.
+Gera saída HTML (em vez de Info). Por padrão, a saída HTML é dividida em um
+arquivo de saída por nó do fonte do Texinfo, e a saída dividida é escrita em um
+subdiretório baseado no nome do arquivo do Info de nível superior.
+@xref{Gerando HTML}.
 
-@item -I @var{path}
-@opindex -I @var{path}
-Append @var{path} to the directory search list for finding files that
-are included using the @code{@@include} command.  By default,
-@code{texi2any} searches only the current directory.  If @var{path} is
-not given, the current directory is appended.  The @var{path} value
-can be a single directory or a list of several directories separated
-by the usual path separator character (@samp{:} on Unix-like systems,
-@samp{;} on Windows).
+@item -I @var{caminho}
+@opindex -I @var{caminho}
+Pospoẽ @var{caminho} na lista de pesquisa de diretório para encontrar arquivos
+que estejam incluídos usando o comando @code{@@include}. Por padrão,
+@code{texi2any} pesquisa somente o diretório atual. Se @var{caminho} não for
+fornecido, o diretório atual será posposto. O valor de @var{caminho} pode ser
+um diretório ou uma lista de vários diretórios separados pelo caractere usual
+separador de caminho (@samp{:} em sistemas do tipo Unix, @samp{;} no Windows).
 
 @item --ifdocbook
 @opindex --ifdocbook
@@ -16558,67 +16559,63 @@ by the usual path separator character (@samp{:} on Unix-like systems,
 @opindex --iftex
 @itemx --ifxml
 @opindex --ifxml
-For the given format, process @samp{@@if@var{format}} and
-@samp{@@@var{format}} commands, and do not process
-@samp{@@ifnot@var{format}}, regardless of the format being output.
-For instance, if @option{--iftex} is given, then @samp{@@iftex} and
-@samp{@@tex} blocks will be read, and @samp{@@ifnottex} blocks will be
-ignored.
+Para o formato fornecido, processa os comandos @samp{@@if@var{formato}} e
+@samp{@@@var{formato}} e não processa @samp{@@ifnot@var{formato}},
+independentemente do formato sendo gerado. Por exemplo, se @option{--iftex} for
+fornecido, então os blocos @samp{@@iftex} e @samp{@@tex} serão lidos, e os
+blocos @samp{@@ifnottex} serão ignorados.
 
 @item --info
 @opindex --info
-Generate Info output.  By default, if the output file contains more
-than about 300,000 bytes, it is split into shorter subfiles of about
-that size.  The name of the output file and any subfiles is determined
-by @code{@@setfilename} (@pxref{@code{@@setfilename}}).  @xref{Tag and
-Split Files}.
+Gera saída Info. Por padrão, se o arquivo de saída contiver mais que cerca de
+300.000 bytes, ele será dividido em subarquivos menores, de cerca desse
+tamanho. O nome do arquivo de saída, e quaisquer subarquivos, é determinado por
+@code{@@setfilename} (@pxref{@code{@@setfilename}}).
+@xref{Arquivos de Etiqueta e de Divisão}.
 
-@item --init-file=@var{file}
-@opindex --init-file=@var{file}
-Load @var{file} as code to modify the behavior and output of the
-generated manual.  It is customary to use the @code{.pm} or the
-@code{.init} extensions for these customization files, but that is not
-enforced; the @var{file} name can be anything.  The
-@option{--conf-dir} option (see above) can be used to add to the list
-of directories in which these customization files are searched for.
-@c @xref{Loading Init Files}.
+@item --init-file=@var{arquivo}
+@opindex --init-file=@var{arquivo}
+Carrega @var{arquivo} como código para modificar o comportamento e a saída do
+manual gerado. É costumeiro usar as extensões @code{.pm} ou @code{.init} para
+esses arquivos de personalização, mas isso não é obrigatório; o nome
+@var{arquivo} pode ser qualquer coisa. A opção @option{--conf-dir} (veja-se
+acima) pode ser usada para adicionar à lista de diretórios nos quais esses
+arquivos de personalização serão pesquisados.
+@c @xref{Carregando Arquivos de Iniciação}.
 
-@item --internal-links=@var{file}
-@opindex --internal-links=@var{file}
-@cindex Internal links, of HTML
-In HTML mode, output a tab-separated file containing three columns:
-the internal link to an indexed item or item in the table of contents,
-the name of the index (or table of contents) in which it occurs, and
-the term which was indexed or entered.  The items are in the natural
-sorting order for the given element.  This dump can be useful for
-post-processors.
+@item --internal-links=@var{arquivo}
+@opindex --internal-links=@var{arquivo}
+@cindex Links internos, de HTML
+No modo HTML, produz um arquivo separado por tabulações contendo três colunas:
+o link interno para um item indexado ou item no tabela de conteúdo; o nome do
+índice (ou tabela de conteúdo) no qual ele ocorre; e o termo que foi indexado
+ou inserido. Os itens estão na ordem natural de ordenação para o elemento
+fornecido. Esse despejo pode ser útil para pós-processadores.
 
-@item --macro-expand=@var{file}
-@itemx -E @var{file}
-@opindex --macro-expand=@var{file}
-@opindex -E @var{file}
-Output the Texinfo source, with all Texinfo macros expanded, to
-@var{file}.  Normally, the result of macro expansion is used
-internally by @code{makeinfo} and then discarded.
+@item --macro-expand=@var{arquivo}
+@itemx -E @var{arquivo}
+@opindex --macro-expand=@var{arquivo}
+@opindex -E @var{arquivo}
+Gera o fonte do Texinfo, com todas as macros do Texinfo expandidas, para
+@var{arquivo}. Normalmente, o resultado da expansão da macro é usado
+internamente por @code{makeinfo} e então descartado.
 
 @item --no-headers
 @opindex --no-headers
-@cindex Node separators, omitting with @option{--no-headers}
-@cindex Generating plain text files with @option{--no-headers}
-@cindex Menus, omitting with @option{--no-headers}
-Do not include menus or node separator lines in the output.
+@cindex Separadores de nós, omitindo com @option{--no-headers}
+@cindex Gerando arquivos de texto simples com @option{--no-headers}
+@cindex Menus, omitindo com @option{--no-headers}
+Não inclui menus ou linhas separadoras de nós na saída gerada.
 
-When generating Info, this is the same as using @option{--plaintext},
-resulting in a simple plain text file.  Furthermore,
-@code{@@setfilename} is ignored, and output is to standard output
-unless overridden with @option{-o}.  (This behavior is for backward
-compatibility.)
+Ao gerar Info, isso é o mesmo que usar @option{--plaintext}, resultando em um
+arquivo de texto simples. Além disso, @code{@@setfilename} é ignorado, e a
+saída é para a saída padrão, a menos que substituída por @option{-o}. (Esse
+comportamento é para retro compatibilidade).
 
-@cindex Navigation links, omitting
-When generating HTML, and output is split, also output navigation
-links only at the beginning of each file.  If output is not split, do
-not include navigation links at the top of each node at all.
-@xref{Gerando HTML}.
+@cindex Links de navegação, omitindo
+Ao gerar HTML, e a saída for dividida, também produz links de navegação somente
+no começo de cada arquivo. Se a saída não for dividida, não inclui links de
+navegação no topo de cada nó. @xref{Gerando HTML}.
 
 @item --no-ifdocbook
 @opindex --no-ifdocbook
@@ -16632,56 +16629,56 @@ not include navigation links at the top of each node at all.
 @opindex --no-iftex
 @itemx --no-ifxml
 @opindex --no-ifxml
-For the given format, do not process @samp{@@if@var{format}} and
-@samp{@@@var{format}} commands, and do process
-@samp{@@ifnot@var{format}}, regardless of the format being output.
-For instance, if @option{--no-ifhtml} is given, then @samp{@@ifhtml}
-and @samp{@@html} blocks will not be read, and @samp{@@ifnothtml}
-blocks will be.
+Para o formato fornecido, não processa os comandos @samp{@@if@var{formato}} e
+@samp{@@@var{formato}} e processa @samp{@@ifnot@var{formato}},
+independentemente do formato sendo gerado. Por exemplo, se @option{--no-ifhtml}
+for fornecido, então os blocos @samp{@@ifhtml} e @samp{@@html} não serão lidos,
+e os blocos @samp{@@ifnothtml} serão.
 
 @item --no-node-files
 @itemx --node-files
 @opindex --no-node-files
 @opindex --node-files
-When generating HTML, create redirection files for anchors and any
-Nodos not already output with the file name corresponding to the node
-name (@pxref{HTML Xref Node Name Expansion}).  This makes it possible
-for section- and chapter-level cross-manual references to succeed
-(@pxref{HTML Xref Configuration}).
+Ao gerar HTML, cria arquivos de redirecionamento para âncoras e quaisquer Nodos
+ainda não gerados com o nome de arquivo correspondente ao nome do nó
+(@pxref{Expansão Xref de Nome de Nodo do HTML}). Isso torna possível que
+referências entre manuais em nível de seção e de capítulo sejam bem-sucedidas
+(@pxref{Configuração Xref do HTML}).
 
-If the output is split, this is enabled by default.  If the output is
-not split, @option{--node-files} enables the creation of the
-redirection files, in addition to the monolithic main output file.
-@option{--no-node-files} suppresses the creation of redirection files
-in any case.  This option has no effect with any output format other
-than HTML@.  @xref{Gerando HTML}.
+Se a saída for dividida, isso é habilitado por padrão. Se a saída não for
+dividida, @option{--node-files} habilita a criação dos arquivos de
+redirecionamento, além do arquivo de saída principal monolítico.
+@option{--no-node-files} suprime a criação de arquivos de redirecionamento em
+qualquer caso. Essa opção não tem efeito com nenhum formato de saída diferente
+de HTML@. @xref{Gerando HTML}.
 
 @item --no-number-footnotes
 @opindex --no-number-footnotes
-Suppress automatic footnote numbering.  By default, footnotes are
-numbered sequentially within a node, i.e., the current footnote number
-is reset to 1 at the start of each node.
+Suprime numeração automática de notas de rodapé. Por padrão, as notas de rodapé
+são numeradas sequencialmente dentro de um nó, ou seja, o número atual da nota
+de rodapé é reconfigurado para 1 no início de cada nó.
 
 @item --no-number-sections
 @itemx --number-sections
 @opindex --no-number-sections
 @opindex --number-sections
-With @option{--number_sections} (the default), output chapter,
-section, and appendix numbers as in printed manuals.  This works only
-with hierarchically-structured manuals.  You should specify
-@code{--no-number-sections} if your manual is not normally structured.
+Com @option{--number_sections} (o padrão), gera números de capítulos, de seções
+e de anexos como em manuais impressos. Isso funciona somente com manuais
+estruturados hierarquicamente. Você deveria especificar
+@code{--no-number-sections} se teu manual não for normalmente estruturado.
 
 @item --no-pointer-validate
 @itemx --no-validate
 @opindex --no-pointer-validate
 @opindex --no-validate
-@cindex Pointer validation, suppressing from command line
-Suppress the pointer-validation phase of @code{makeinfo}---a dangerous
-thing to do.  This can also be done with the @code{@@novalidate}
-command (@pxref{Use @TeX{}}).  Normally, consistency checks are made
-to ensure that cross-references can be resolved, etc.  @xref{Pointer
-Validation}.
+@cindex Validação de ponteiro, suprimindo a partir da linha de comando
+Suprime a fase de validação de ponteiro de @code{makeinfo}---uma coisa perigosa
+de se fazer. Isso também pode ser feito com o comando @code{@@novalidate}
+(@pxref{Use @TeX{}}). Normalmente, verificações de consistência são feitas para
+garantir que referências cruzadas possam ser resolvidas, etc.
+@xref{Validação de Ponteiro}.
 
+PAREI
 @item --no-warn
 @opindex --no-warn
 Suppress warning messages (but not error messages).
@@ -16749,7 +16746,7 @@ following a section heading, which are not indented.
 @item --pdf
 @opindex --pdf
 Generate a PDF file using @command{texi2dvi --pdf}, rather than Info
-(@pxref{@command{texi2any} Printed Output}).
+(@pxref{Saída Impressa do @command{texi2any}}).
 
 @item --plaintext
 @opindex --plaintext
@@ -16771,7 +16768,7 @@ to standard output by default; this can be overridden with @option{-o}.
 @item --ps
 @opindex --ps
 Generate a PostScript file using @command{texi2dvi --ps}, rather than
-Info (@pxref{@command{texi2any} Printed Output}).
+Info (@pxref{Saída Impressa do @command{texi2any}}).
 
 @item --set-customization-variable @var{var}=@var{value}
 @itemx -c @var{var}=@var{value}
@@ -16848,7 +16845,7 @@ Print the version number, then exit successfully.
 @item --Xopt @var{str}
 @opindex --Xopt @var{str}
 Pass @var{str} (a single shell word) to @command{texi2dvi}; may be
-repeated (@pxref{@command{texi2any} Printed Output}).
+repeated (@pxref{Saída Impressa do @command{texi2any}}).
 
 @item --xml
 @opindex --xml
@@ -16873,8 +16870,8 @@ overrides an environment variable setting, but not a command-line
 option.  @xref{Variáveis e Opções de Personalização}.
 
 
-@node @command{texi2any} Printed Output
-@section @command{texi2any} Printed Output
+@node Saída Impressa do @command{texi2any}
+@section Saída Impressa do @command{texi2any}
 
 @cindex Printed output, through @command{texi2any}
 @cindex Output, printed through @command{texi2any}
@@ -17064,7 +17061,7 @@ is the case, for example, for HTML for @code{documentdescription}.
 @cindex Options, customization variables for
 
 The following table gives the customization variables associated with
-some command line options.  @xref{Invoking @command{texi2any}}, for the
+some command line options.  @xref{Invocando @command{texi2any}}, for the
 meaning of the options.
 
 @multitable @columnfractions 0.5 0.5
@@ -17139,7 +17136,7 @@ forms:
 @itemx xml
 These correspond to the command-line options (and
 @code{TEXINFO_OUTPUT_FORMAT} environment variable values) of the same
-name.  @xref{Invoking @command{texi2any}}.
+name.  @xref{Invocando @command{texi2any}}.
 
 @item debugcount
 Instead of generating a regular output format, output the count of
@@ -17264,14 +17261,14 @@ commands; default @samp{2}.
 @item CHECK_HTMLXREF
 For HTML@.  Check that manuals which are the target of external
 cross-references (@pxref{Quatro e Cinco Argumentos}) are present in
-@file{htmlxref.cnf} (@pxref{HTML Xref Configuration}); default false.
+@file{htmlxref.cnf} (@pxref{Configuração Xref do HTML}); default false.
 
 @item COMPLEX_FORMAT_IN_TABLE
 For HTML@.  If set, use tables for indentation of complex formats; default
 false.
 
 @item CSS_LINES
-For HTML@.  CSS output, automatically determined by default (@pxref{HTML CSS}).
+For HTML@.  CSS output, automatically determined by default (@pxref{CSS de HTML}).
 
 @item DATE_IN_HEADER
 For HTML@.  Put the document generation date in the header; off by default.
@@ -17295,7 +17292,7 @@ default 0.
 @item EXTERNAL_DIR
 For HTML@.  Base directory for external manuals; default none.  It is
 better to use the general external cross-reference mechanism
-(@pxref{HTML Xref Configuration}) than this variable.
+(@pxref{Configuração Xref do HTML}) than this variable.
 
 @item EXTRA_HEAD
 For HTML@.  Additional text appearing within @code{<head>}; default unset.
@@ -17392,7 +17389,7 @@ For HTML@.  Output only one file including the table of contents.  Set
 by default, but only relevant when the output is not split.
 
 @item NO_CSS
-For HTML@.  Do not use CSS; default false.  @xref{HTML CSS}.
+For HTML@.  Do not use CSS; default false.  @xref{CSS de HTML}.
 
 @item NODE_FILE_EXTENSION
 For HTML@.  Extension for node files if @code{NODE_FILENAMES} is set;
@@ -17743,7 +17740,7 @@ reference file, as is done for the tests.  The default is false.
 
 @item TEXI2DVI
 Name of the command used to produce PostScript, PDF, and DVI; default
-@samp{texi2dvi}.  @xref{@command{texi2any} Printed Output}.
+@samp{texi2dvi}.  @xref{Saída Impressa do @command{texi2any}}.
 
 @item TEXI2HTML
 @cindex compatibility, with @command{texi2html}
@@ -18315,7 +18312,7 @@ you can continue working in it.  (When you run
 @code{texinfo-format-region} or @code{texinfo-format-buffer}, you cannot
 use that Emacs for anything else until the command finishes.)
 
-@node Tag and Split Files
+@node Arquivos de Etiqueta e de Divisão
 @subsection Tag Files and Split Files
 @cindex Making a tag table automatically
 @cindex Tag table, making automatically
@@ -18974,10 +18971,10 @@ but we do not as yet describe these in detail.  @xref{Formatos de Saída},
 for a brief overview of all the output formats.
 
 @menu
-* HTML Translation::       Details of the HTML output.
-* HTML Splitting::         How HTML output is split.
-* HTML CSS::               Influencing HTML output with Cascading Style Sheets.
-* HTML Xref::              Cross-references in HTML output.
+* Tradução de HTML:: Detalhes da saída HTML.
+* Divisão de HTML::  Como a saída HTML é dividida.
+* CSS de HTML::      Influenciando a saída HTML com Folhas de Estilo em Cascata.
+* Xref de HTML::     Referências cruzadas em saída HTML.
 @end menu
 
 
@@ -18996,7 +18993,7 @@ portability problems as a bug (@pxref{Informando Defeitos}).
 @pindex html32.pm
 Some known exceptions to HTML@tie{}3.2 (using
 @samp{--init-file=html32.pm} produces strict HTML@tie{}3.2 output;
-@pxref{Invoking @command{texi2any}}):
+@pxref{Invocando @command{texi2any}}):
 
 @enumerate
 @item
@@ -19012,7 +19009,7 @@ is used.
 Entities that are not in the HTML@tie{}3.2 standard are also used.
 
 @item
-CSS is used (@pxref{HTML CSS}).
+CSS is used (@pxref{CSS de HTML}).
 
 @item
 A few HTML@tie{}4 elements are used: @code{thead}, @code{abbr},
@@ -19024,7 +19021,7 @@ To achieve maximum portability and accessibility among browsers (both
 graphical and text-based), systems, and users, the HTML output is
 intentionally quite plain and generic.  It has always been our goal
 for users to be able to customize the output to their wishes via CSS
-(@pxref{HTML CSS}) or other means (@pxref{Customization Variables}.
+(@pxref{CSS de HTML}) or other means (@pxref{Customization Variables}.
 If you cannot accomplish a reasonable customization, feel free to
 report that.
 
@@ -19098,7 +19095,7 @@ insensitive filesystem by setting the customization variable
 @code{CASE_INSENSITIVE_FILENAMES}.
 
 It is also possible to split at chapters or sections with
-@option{--split} (@pxref{Invoking @command{texi2any}}).  In that case,
+@option{--split} (@pxref{Invocando @command{texi2any}}).  In that case,
 the file names are constructed after the name of the node associated
 with the relevant sectioning command.  Also, unless
 @option{--no-node-files} is specified, a redirection file is output
@@ -19137,8 +19134,8 @@ based on the input file name as a last resort
 (@pxref{@code{@@setfilename}}).
 
 
-@node HTML CSS
-@section HTML CSS
+@node CSS de HTML
+@section CSS de HTML
 @cindex HTML, and CSS
 @cindex CSS, and HTML output
 @cindex Cascading Style Sheets, and HTML output
@@ -19267,11 +19264,11 @@ The algorithm was primarily devised by Patrice Dumas in 2003--04.
 
 @menu
 * Básicos de Links:    Básico do Link HTML Xref.
-* Expansão de Nodo:    Expansão de Nome de Nodo HTML Xref.
+* Expansão de Nodo:    Expansão Xref de Nome de Nodo do HTML.
 * Expansão de Comando: Expansão de Comando HTML Xref.
 * Expansão de 8 bits:  Expansão de Caractere de 8 Bits HTML Xref.
 * Incompatibilidade:   Incompatibilidade de Xref HTML.
-* Configuração:        Configuração HTML Xref. htmlxref.cnf.
+* Configuração:        Configuração Xref do HTML. htmlxref.cnf.
 * Preservando links:   Preservação de Link HTML Xref. MANUAL-noderename.cnf.
 @end menu
 
@@ -19291,7 +19288,7 @@ http://@var{host}/@var{dir}/@var{file}.html#@var{target}
 The information to construct a link comes from the node name and
 manual name in the cross-reference command in the Texinfo source
 (@pxref{Referências Cruzadas}), and from @dfn{external information}
-(@pxref{HTML Xref Configuration}).
+(@pxref{Configuração Xref do HTML}).
 
 We now consider each part in turn.
 
@@ -19351,7 +19348,7 @@ option; @command{makeinfo} defaults to split, with the
 @option{--no-split} option overriding this.
 
 Whether the referent manual is split or mono, however, is another bit
-of the external information (@pxref{HTML Xref Configuration}).  By
+of the external information (@pxref{Configuração Xref do HTML}).  By
 default, @command{makeinfo} uses the same form of the referent manual
 as the present manual.
 
@@ -19360,7 +19357,7 @@ manual that the generating software assumes, and the format it's
 actually present in.  @xref{HTML Xref Mismatch}.
 
 
-@node Expansão de Nome de Nodo HTML Xref
+@node Expansão Xref de Nome de Nodo do HTML
 @subsection HTML Cross-reference Node Name Expansion
 @cindex HTML cross-reference node name expansion
 @cindex node name expansion, in HTML cross-references
@@ -19643,7 +19640,7 @@ software generating the cross-reference in the present manual can
 control.
 
 
-@node Configuração HTML Xref
+@node Configuração Xref do HTML
 @subsection HTML Cross-reference Configuration: @file{htmlxref.cnf}
 
 @pindex htmlxref.cnf
@@ -23320,12 +23317,12 @@ For finding problems with the structure of Nodos and chapters, you can use
 command and you can use the @kbd{M-x Info-validate} command.
 
 @menu
-* @command{makeinfo} Preferred::          @code{makeinfo} finds errors.
-* Debugging with Info::         How to catch errors with Info formatting.
-* Debugging with @TeX{}::          How to catch errors with @TeX{} formatting.
-* Using @code{texinfo-show-structure}:: How to use @code{texinfo-show-structure}.
-* Using @code{occur}::                 How to list all lines containing a pattern.
-* Running @code{Info-validate}::       How to find badly referenced Nodos.
+* @command{makeinfo} Preferido::         @code{makeinfo} encontra erros.
+* Depurando com Info::                   Como capturar erros com a formatação Info.
+* Depurando com @TeX{}::                 Como capturar erros com a formatação @TeX{}.
+* Usando @code{texinfo-show-structure}:: Como se usar @code{texinfo-show-structure}.
+* Usando @code{occur}::                  Como listar todas as linhas contendo um modelo.
+* Executando @code{Info-validate}::      Como encontrar nodos mal referenciados.
 @end menu
 
 
@@ -23454,8 +23451,8 @@ from the `Capturando Erros' node by typing @kbd{l}
 (@code{Info-last}).)
 
 
-@node Debugging with @TeX{}
-@section Debugging with @TeX{}
+@node Depurando com @TeX{}
+@section Depurando com @TeX{}
 @cindex Catching errors with @TeX{} formatting
 @cindex Debugging with @TeX{} formatting
 
