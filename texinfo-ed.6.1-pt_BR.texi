@@ -16678,337 +16678,330 @@ de se fazer. Isso também pode ser feito com o comando @code{@@novalidate}
 garantir que referências cruzadas possam ser resolvidas, etc.
 @xref{Validação de Ponteiro}.
 
-PAREI
 @item --no-warn
 @opindex --no-warn
-Suppress warning messages (but not error messages).
+Suprime mensagens de aviso (mas não mensagens de erro).
 
-@item --output=@var{file}
-@itemx -o @var{file}
-@opindex --output=@var{file}
-@opindex -o @var{file}
-Specify that the output should be directed to @var{file}.  This
-overrides any file name specified in a @code{@@setfilename} command
-found in the Texinfo source.  If neither @code{@@setfilename} nor this
-option are specified, the input file name is used to determine the
-output name.  @xref{@code{@@setfilename}}.
+@item --output=@var{arquivo}
+@itemx -o @var{arquivo}
+@opindex --output=@var{arquivo}
+@opindex -o @var{arquivo}
+Especifica que a saída deveria ser direcionada para @var{arquivo}. Isso
+substitui qualquer nome de arquivo especificado em um comando
+@code{@@setfilename} encontrado no fonte do Texinfo. Se nem
+@code{@@setfilename} nem essa opção forem especificadas, o nome do arquivo de
+entrada será usado para determinar o nome de saída.
+@xref{@code{@@setfilename}}.
 
-If @var{file} is @samp{-}, output goes to standard output and
-@samp{--no-split} is implied.
+Se @var{arquivo} for @samp{-}, a saída vai para a saída padrão e
+@samp{--no-split} será implícito.
 
-If @var{file} is a directory or ends with a @samp{/} the usual rules
-are used to determine the output file name (namely, use
-@code{@@setfilename} or the input file name) but the files are written
-to the @var{file} directory.  For example, @samp{makeinfo -o bar/
-foo.texi}, with or without @option{--no-split}, will write
-@file{bar/foo.info}, and possibly other files, under @file{bar/}.
+Se @var{arquivo} for um diretório ou terminar com @samp{/}, as regras usuais
+serão usadas para determinar o nome do arquivo de saída (ou seja, usar
+@code{@@setfilename} ou o nome do arquivo de entrada), mas os arquivos serão
+escritos no diretório @var{arquivo}. Por exemplo, @samp{makeinfo -o bar/
+foo.texi}, com ou sem @option{--no-split}, escreverá @file{bar/foo.info}, e
+possivelmente outros arquivos, sob @file{bar/}.
 
-When generating HTML and output is split, @var{file} is used as the
-name for the directory into which all files are written.  For example,
-@samp{makeinfo -o bar --html foo.texi} will write
-@file{bar/index.html}, among other files.
+Ao gerar HTML e a saída for dividida, @var{arquivo} é usado como o nome para o
+diretório no qual todos os arquivos são escritos. Por exemplo, @samp{makeinfo
+-o bar --html foo.texi} escreverá @file{bar/index.html}, entre outros arquivos.
 
-@item --output-indent=@var{val}
+@item --output-indent=@var{valor}
 @opindex --outputindent
-This option now does nothing, but remains for compatibility.  (It used
-to alter indentation in XML/Docbook output.)
+Essa opção agora não faz nada, mas permanece para compatibilidade. (Ela
+costumava alterar o recuo na saída XML/Docbook).
 
-@item -P @var{path}
-@opindex -P @var{path}
-Prepend @var{path} to the directory search list for @code{@@include}.
-If @var{path} is not given, the current directory is prepended.  See
-@samp{-I} above.
+@item -P @var{caminho}
+@opindex -P @var{caminho}
+Antepõe @var{caminho} na lista de pesquisa de diretório para @code{@@include}.
+Se @var{caminho} não for fornecido, o diretório atual será anteposto. Veja-se
+@samp{-I} acima.
 
-@item --paragraph-indent=@var{indent}
-@itemx -p @var{indent}
-@opindex --paragraph-indent=@var{indent}
-@opindex -p @var{indent}
-Set the paragraph indentation style to @var{indent}.  The value set by
-this option overrides the value set in a Texinfo file by an
-@code{@@paragraphindent} command (@pxref{@code{@@paragraphindent}}).
-The value of @var{indent} is interpreted as follows:
+@item --paragraph-indent=@var{recuo}
+@itemx -p @var{recuo}
+@opindex --paragraph-indent=@var{recuo}
+@opindex -p @var{recuo}
+Configura o estilo de recuo do parágrafo para @var{recuo}. O valor configurado
+por essa opção substitui o valor configurado em um arquivo do Texinfo por um
+comando @code{@@paragraphindent} (@pxref{@code{@@paragraphindent}}). O valor de
+@var{recuo} é interpretado conforme segue:
 
 @table @asis
 @item @samp{asis}
-Preserve any existing indentation (or lack thereof) at the beginnings
-of paragraphs.
+Preserva qualquer recuo existente (ou falta dele) no início dos parágrafos.
 
-@item @samp{0} or @samp{none}
-Delete any existing indentation.
+@item @samp{0} ou @samp{none}
+Deleta qualquer recuo existente.
 
-@item @var{num}
-Indent each paragraph by @var{num} spaces.
+@item @var{número}
+Recua cada parágrafo com @var{número} espaços.
 @end table
 
-The default is to indent by two spaces, except for paragraphs
-following a section heading, which are not indented.
+O padrão é o de recuar dois espaços, exceto para parágrafos seguinte a um
+título de seção, os quais não são recuados.
 
 @item --pdf
 @opindex --pdf
-Generate a PDF file using @command{texi2dvi --pdf}, rather than Info
+Gera um arquivo PDF usando @command{texi2dvi --pdf}, em vez de Info
 (@pxref{Saída Impressa do @command{texi2any}}).
 
 @item --plaintext
 @opindex --plaintext
-@cindex Plain text output with @option{--plaintext}
-@cindex ASCII text output with @option{--plaintext}
-@cindex Generating plain text files with @option{--plaintext}
-@cindex Node separators, omitting with @option{--plaintext}
-@cindex Menus, omitting with @option{--plaintext}
-@cindex @file{INSTALL} file, generating
-Output a plain text file (rather than Info): do not include menus or
-node separator lines in the output.  This results in a straightforward
-plain text file that you can (for example) send in email without
-complications, or include in a distribution (for example, an
-@file{INSTALL} file).
+@cindex Saída de texto simples com @option{--plaintext}
+@cindex Saída de texto ASCII com @option{--plaintext}
+@cindex Gerando arquivos de texto simples com @option{--plaintext}
+@cindex Separadores de nós, omitindo com @option{--plaintext}
+@cindex Menus, omitindo com @option{--plaintext}
+@cindex Arquivo @file{INSTALL}, gerando
+Produz um arquivo de texto simples (em vez de Info): não inclui menus ou linhas
+separadoras de nós na saída. Isso resulta em um arquivo de texto simples direto
+que você pode (por exemplo) enviar em mensagem eletrônica sem complicações, ou
+incluir em uma distribuição (por exemplo, um arquivo @file{INSTALL}).
 
-With this option, @code{@@setfilename} is ignored and the output goes
-to standard output by default; this can be overridden with @option{-o}.
+Com essa opção, @code{@@setfilename} é ignorado e a saída vai para a saída
+padrão por padrão; isso pode ser substituído por @option{-o}.
 
 @item --ps
 @opindex --ps
-Generate a PostScript file using @command{texi2dvi --ps}, rather than
-Info (@pxref{Saída Impressa do @command{texi2any}}).
+Gera um arquivo PostScript usando @command{texi2dvi --ps}, em vez de Info
+(@pxref{Saída Impressa do @command{texi2any}}).
 
-@item --set-customization-variable @var{var}=@var{value}
-@itemx -c @var{var}=@var{value}
-@opindex --set-customization-variable @var{var}=@var{value}
-@opindex -c @var{var}=@var{value}
-Set the customization variable @var{var} to @var{value}.  The @code{=}
-is optional, but both @var{var} and @var{value} must be quoted to the
-shell as necessary so the result is a single word.  Many aspects of
-@command{texi2any} behavior and output may be controlled by
-customization variables, beyond what can be set in the document by
-@@-commands and with other command line switches.  
-@xref{Customization Variables}.
+@item --set-customization-variable @var{variável}=@var{valor}
+@itemx -c @var{variável}=@var{valor}
+@opindex --set-customization-variable @var{variável}=@var{valor}
+@opindex -c @var{variável}=@var{valor}
+Configura a variável de personalização @var{variável} para @var{valor}. O
+@code{=} é opcional, mas tanto @var{variável} quanto @var{valor} precisam ser
+aspados para o shell, conforme necessário, de forma que o resultado seja uma
+palavra. Muitos aspectos do comportamento e da saída de @command{texi2any}
+podem ser controlados por variáveis de personalização, além do que
+pode ser configurado no documento por comandos @@ e com outras chaves de linha
+de comando. @xref{Variáveis de Personalização}.
 
-@item --split=@var{how}
+@item --split=@var{como}
 @itemx --no-split
-@opindex --split=@var{how}
+@opindex --split=@var{como}
 @opindex --no-split
-@cindex Splitting of output files
-@cindex Output file splitting
-@anchor{Splitting Output}
+@cindex Divisão de arquivos de saída
+@cindex Divisão do arquivo de saída
+@anchor{Dividindo Saída}
 @c
-When generating Info, by default large output files are split into
-smaller subfiles, of approximately 300k bytes.  When generating HTML,
-by default each output file contains one node (@pxref{Gerando HTML}). 
- @option{--no-split} suppresses this splitting of the output.
+Ao gerar Info, por padrão, arquivos de saída grandes são divididos em
+subarquivos menores, de aproximadamente 300k bytes. Ao gerar HTML, por padrão,
+cada arquivo de saída contém um nó (@pxref{Gerando HTML}). @option{--no-split}
+suprime essa divisão da saída gerada.
 
-Alternatively, @option{--split=@var{how}} may be used to specify at
-which level the HTML output should be split.  The possible values for
-@var{how} are:
+Alternativamente, @option{--split=@var{como}} pode ser usada para especificar
+em qual nível a saída HTML deveria ser dividida. Os valores possíveis para
+@var{como} são:
 
 @table @samp
 @item chapter
-The output is split at @code{@@chapter} and other sectioning
-@@-commands at this level (@code{@@appendix}, etc.).
+A saída é dividida em @code{@@chapter} e outros comandos @@ de seccionamento
+nesse nível (@code{@@appendix}, etc.).
 
 @item section
-The output is split at @code{@@section} and similar.
+A saída é dividida em @code{@@section} e similares.
 
 @item node
-The output is split at every node.  This is the default.
+A saída é dividida em cada nó. Esse é o padrão.
 @end table
 
-Plain text output can be split similarly to HTML@.  This may be useful
-for extracting sections from a Texinfo document and making them
-available as separate files.
+A saída de texto simples pode ser dividida similarmente ao HTML@. Isso pode ser
+útil para extrair seções a partir de um documento do Texinfo e torná-las
+disponíveis como arquivos separados.
 
-@item --split-size=@var{num}
-@opindex --split-size=@var{num}
-Keep Info files to at most @var{num} characters if possible; default
-is 300,000.  (However, a single node will never be split across Info
-files.)
+@item --split-size=@var{número}
+@opindex --split-size=@var{número}
+Mantém os arquivos Info com no máximo @var{número} caracteres, se possível; o
+padrão é 300.000. (Entretanto, um nó nunca será dividido entre os arquivos
+Info).
 
 @item --transliterate-file-names
 @opindex --transliterate-file-names
-Enable transliteration of 8-bit characters in node names for the
-purpose of file name creation.  @xref{Expansão de Caractere de 8 Bits HTML Xref}.
+Habilita transliteração de caracteres de 8 bits em nomes de nós para o
+propósito de criação de nomes de arquivo. @xref{Expansão Xref de Caractere de 8
+Bits do HTML}.
 
-@item -U @var{var}
-Cause @var{var} to be undefined.  This is equivalent to @code{@@clear
-@var{var}} in the Texinfo file (@pxref{@code{@@set @@clear @@value}}).
+@item -U @var{variável}
+Causa @var{variável} ser indefinida. Isso é equivalente a @code{@@clear
+@var{variável}} no arquivo do Texinfo (@pxref{@code{@@set @@clear @@value}}).
 
 @item --verbose
 @opindex --verbose
-Cause @code{makeinfo} to display messages saying what it is doing.
-Normally, @code{makeinfo} only outputs messages if there are errors or
-warnings.
+Causa @code{makeinfo} exibir mensagens dizendo o que está fazendo. Normalmente,
+@code{makeinfo} somente emite mensagens se existirem erros ou avisos.
 
 @item --version
 @itemx -V
-@opindex --version@r{, for @command{texi2any}}
+@opindex --version@r{, para @command{texi2any}}
 @opindex -V
-Print the version number, then exit successfully.
+Imprime o número da versão, então sai com sucesso.
 
-@item --Xopt @var{str}
-@opindex --Xopt @var{str}
-Pass @var{str} (a single shell word) to @command{texi2dvi}; may be
-repeated (@pxref{Saída Impressa do @command{texi2any}}).
+@item --Xopt @var{string}
+@opindex --Xopt @var{string}
+Passa @var{string} (uma palavra do shell) para @command{texi2dvi}; pode ser
+repetida (@pxref{Saída Impressa do @command{texi2any}}).
 
 @item --xml
 @opindex --xml
-Generate Texinfo XML output (rather than Info).
-
+Gera saída XML do Texinfo (em vez de Info).
 @end table
 
 @vindex TEXINFO_OUTPUT_FORMAT
-@cindex Environment variable @code{TEXINFO_OUTPUT_FORMAT}
-@command{makeinfo} also reads the environment variable
-@env{TEXINFO_OUTPUT_FORMAT} to determine the output format, if not
-overridden by a command line option.  The value should be one of:
+@cindex Variável de ambiente @code{TEXINFO_OUTPUT_FORMAT}
+@command{makeinfo} também lê a variável de ambiente @env{TEXINFO_OUTPUT_FORMAT}
+para determinar o formato de saída, se não substituída por uma opção de linha
+de comando. O valor deveria ser um de:
 
 @example
 docbook  dvi  dvipdf  html  info  pdf  plaintext  ps  xml
 @end example
 
-If not set or otherwise specified, Info output is the default.
+Se não configurada ou, de outra forma, especificada, a saída Info será o
+padrão.
 
-The customization variable of the same name is also read; if set, that
-overrides an environment variable setting, but not a command-line
-option.  @xref{Variáveis e Opções de Personalização}.
+A variável de personalização de mesmo nome também é lida; se configurada, isso
+substitui uma configuração de variável de ambiente, porém não uma opção de
+linha de comando. @xref{Variáveis e Opções de Personalização}.
 
 
 @node Saída Impressa do @command{texi2any}
 @section Saída Impressa do @command{texi2any}
 
-@cindex Printed output, through @command{texi2any}
-@cindex Output, printed through @command{texi2any}
+@cindex Saída impressa, por meio do @command{texi2any}
+@cindex Saída, impressa por meio do @command{texi2any}
 
-To justify the name Texinfo-to-@emph{any}, @command{texi2any} has
-basic support for creating printed output in the various formats:
-@TeX{} DVI, PDF, and PostScript.  This is done via the simple method
-of executing the @command{texi2dvi} program when those output formats
-are requested, after checking the validity of the input to give users
-the benefit of @command{texi2any}'s error checking.  If you don't want
-such error checking, perhaps because your manual plays advanced @TeX{}
-tricks together with @file{texinfo.tex}, just invoke
-@command{texi2dvi} directly.
+Para justificar o nome Texinfo-to-@emph{any}, @command{texi2any} tem suporte
+básico para criar saída impressa nos vários formatos: DVI, PDF e PostScript, do
+@TeX{}. Isso é feito pelo método simples de executar o programa
+@command{texi2dvi} quando esses formatos de saída são solicitados, depois de
+verificar a validade da entrada para dar para os(as) usuários(as) o benefício
+da verificação de erros do @command{texi2any}. Se você não quiser essa
+verificação de erros, talvez porque teu manual faça truques avançados do @TeX{}
+junto com o @file{texinfo.tex}, basta invocar o @command{texi2dvi} diretamente.
 
-The output format options for this are @option{--dvi},
-@option{--dvipdf}, @option{--pdf}, and @option{--ps}.  @xref{Formatar com @command{texi2dvi}}, for more details on these options and general
-@command{texi2dvi} operation.  In addition, the @option{--verbose},
-@option{--silent}, and @option{--quiet} options are passed on if
-specified; the @option{-I} and @option{-o} options are likewise passed
-on with their arguments, and @option{--debug} without its argument.
+As opções de formato de saída para isso são @option{--dvi}, @option{--dvipdf},
+@option{--pdf} e @option{--ps}. @xref{Formatar com @command{texi2dvi}}, para
+mais detalhes acerca dessas opções e da operação geral do @command{texi2dvi}.
+Além disso, as opções @option{--verbose}, @option{--silent} e @option{--quiet}
+são passadas adiante se especificadas; as opções @option{-I} e @option{-o} são,
+da mesma maneira, passadas adiante com os argumentos delas, e @option{--debug}
+sem o argumento dela.
 
-The only option remaining that is related to the @command{texi2dvi}
-invocation is @option{--Xopt}.  Here, just the argument is passed on
-and multiple @option{--Xopt} options accumulate.  This provides a way
-to construct an arbitrary command line for @command{texi2dvi}.  For
-example, running
+A única opção restante que está relacionada à invocação do @command{texi2dvi} é
+@option{--Xopt}. Aqui, apenas o argumento é passado adiante e várias opções
+@option{--Xopt} se acumulam. Isso fornece uma maneira de construir uma linha de
+comando arbitrária para @command{texi2dvi}. Por exemplo, executando
 
 @example
 texi2any --Xopt -t --Xopt @@a4paper --pdf foo.texi
 @end example
 
-@noindent is equivalent to running
+@noindent é equivalente a executar
 
 @example
 texi2dvi -t @@a4paper --pdf foo.texi
 @end example
 
-@noindent except for the validity check.
+@noindent exceto pela verificação de validade.
 
-Although one might wish that other options to @command{texi2any} would
-take effect, they don't.  For example, running @samp{texi2any
---no-number-sections --dvi foo.texi} still results in a DVI file with
-numbered sections.  (Perhaps this could be improved in the future, if
-requests are received.)
+Embora alguém possa desejar que outras opções para @command{texi2any} tivessem
+efeito, elas não tem. Por exemplo, executar @samp{texi2any --no-number-sections
+--dvi foo.texi} ainda resulta em um arquivo DVI com seções numeradas. (Talvez
+isso pudesse ser melhorado no futuro, se solicitações forem recebidas).
 
-The actual name of the command that is invoked is specified by the
-@code{TEXI2DVI} customization variable 
-(@pxref{Outras Variáveis de Personalização}). As you might guess, the 
-default is @samp{texi2dvi}.
+O nome real do comando que é invocado é especificado pela variável de
+personalização @code{TEXI2DVI}
+(@pxref{Outras Variáveis de Personalização}). Como você pode imaginar, o padrão
+é @samp{texi2dvi}.
 
-@command{texi2any} itself does not generate any normal output when it
-invokes @command{texi2dvi}, only diagnostic messages.
+O próprio @command{texi2any} não gera nenhuma saída normal quando invoca o
+@command{texi2dvi}, somente mensagens de diagnóstico.
 
 
 @node Validação de Ponteiro
 @section Validação de Ponteiro
-@cindex Pointer validation with @code{makeinfo}
-@cindex Validation of pointers
+@cindex Validação de ponteiro com @code{makeinfo}
+@cindex Validação de ponteiros
 
-If you do not suppress pointer validation with the
-@samp{--no-validate} option or the @code{@@novalidate} command in the
-source file (@pxref{Use @TeX{}}), @code{makeinfo} will check the
-validity of the Texinfo file.
+Se você não suprimir a validação de ponteiro com a opção @samp{--no-validate}
+ou com o comando @code{@@novalidate} no arquivo fonte (@pxref{Use @TeX{}}),
+@code{makeinfo} verificará a validade do arquivo do Texinfo.
 
-Most validation checks are different depending on whether node
-pointers are explicitly or implicitly determined.  With explicit node
-pointers, here is the list of what is checked:
+A maioria das verificações de validação é diferente, dependendo de se os
+ponteiros de nó são determinados explicitamente ou implicitamente. Com
+ponteiros de nó explícitos, aqui está a lista do que é verificado:
 
 @enumerate
 @item
-If a `Next', `Previous', or `Up' node reference is a reference to a
-node in the current file and is not an external reference such as to
-@file{(dir)}, then the referenced node must exist.
+Se uma referência de nó `Próximo', `Anterior' ou `Acima' for uma referência
+para um nó no arquivo atual e não for uma referência externa, como para
+@file{(diretório)}, então o nó referenciado precisa existir.
 
 @item
-Every node except the `Top' node must have an `Up' pointer.
+Cada nó, exceto o nó `Top', precisa ter um ponteiro `Up'.
 
 @item
-The node referenced by an `Up' pointer must itself reference the
-current node through a menu item, unless the node referenced by `Up'
-has the form @samp{(@var{file})}.
+O nó referenciado por um ponteiro `Up' precisa ele próprio referenciar o nó
+atual por meio de um item de menu, a menos que o nó referenciado por `Up' tenha
+o formato @samp{(@var{arquivo})}.
 @end enumerate
 
-With implicit node pointers, the above error cannot occur, as such.
-(Which is a major reason why we recommend using this feature of
-@code{makeinfo}, and not specifying any node pointers yourself.)
+Com ponteiros de nó implícitos, o erro acima não pode ocorrer, como tal. (Que é
+uma das principais razões pelas quais nós recomendamos usar esse recurso do
+@code{makeinfo}, e não especificar quaisquer ponteiros de nó você mesmo(a)).
 
-Instead, @code{makeinfo} checks that the tree constructed from the
-document's menus matches the tree constructed from the sectioning
-commands.  For example, if a chapter-level menu mentions Nodos
-@var{n1} and @var{n2}, in that order, Nodos @var{n1} and @var{n2} must
-be associated with @code{@@section} commands in the chapter.
+Em vez disso, @code{makeinfo} verifica se a árvore construída a partir dos
+menus do documento corresponde à árvore construída a partir dos comandos de
+seccionamento. Por exemplo, se um menu de nível de capítulo mencionar Nodos
+@var{n1} e @var{n2}, nessa ordem, Nodos @var{n1} e @var{n2} precisam ser
+associados com comandos @code{@@section} no capítulo.
 
-Finally, with both explicit and implicit node pointers,
-@code{makeinfo} checks that every node except the `Top' node is
-referenced in a menu.
+Finalmente, com ponteiros de nó explícitos e implícitos, @code{makeinfo}
+verifica se cada nó, exceto o nó `Top', é referenciado em um menu.
 
 
-@node Customization Variables
-@section Customization Variables
+@node Variáveis de Personalização
+@section Variáveis de Personalização
 
-@quotation Warning
-These customization variable names and meanings may change in any
-Texinfo release.  We always try to avoid incompatible changes, but we
-cannot absolutely promise, since needs change over time.
+@quotation Aviso
+Esses nomes e significados de variáveis de personalização podem mudar em
+qualquer lançamento do Texinfo. Nós sempre tentamos evitar mudanças
+incompatíveis, mas não podemos prometer absolutamente, pois as necessidades
+mudam com o tempo.
 @end quotation
 
-Many aspects of the behavior and output of @command{texi2any} may be
-modified by modifying so-called @dfn{customization variables}.  These
-fall into a few general categories:
+Muitos aspectos do comportamento e da saída do @command{texi2any} podem ser
+modificados modificando as assim chamadas @dfn{variáveis de personalização}.
+Elas se enquadram em algumas categorias gerais:
 
 @itemize @bullet
 @item
-Those associated with @@-commands; for example,
-@code{@@documentlanguage}.
+Aquelas associadas com comandos @@; por exemplo, @code{@@documentlanguage}.
 
 @item
-Those associated with command-line options; for example, the
-customization variable @code{SPLIT} is associated with the
-@option{--split} command-line option, and @code{TEXINFO_OUTPUT_FORMAT}
-allows specifying the output format.
+Aquelas associadas com opções de linha de comando; por exemplo, a variável de
+personalização @code{SPLIT} está associada com a opção de linha de comando
+@option{--split}, e @code{TEXINFO_OUTPUT_FORMAT} permite especificar o formato
+de saída.
 
 @item
-Those associated with customizing the HTML output.
+Aquelas associadas com personalização da saída HTML.
 
 @item
-Other ad hoc variables.
+Outras variáveis ad hoc.
 @end itemize
 
-Customization variables may set on the command line using
-@code{--set-customization-variable '@var{var} @var{value}'} (quoting
-the variable/value pair to the shell) or
-@code{--set-customization-variable @var{var}=@var{value}} (using
-@code{=}).  A special @var{value} is @samp{undef}, which sets the
-variable to this special ``undefined'' Perl value.
+Variáveis de personalização podem ser configuradas na linha de comando usando
+@code{--set-customization-variable '@var{variável} @var{valor}'} (aspando o par
+variável/valor para o shell) ou @code{--set-customization-variable
+@var{variável}=@var{valor}} (usando @code{=}). Um @var{valor} especial é
+@samp{undef}, que configura a variável para esse valor Perl especial
+``undefined''.
 
-The sections below give the details for each of these.
+As seções abaixo fornecem os detalhes para cada uma delas.
 
 @menu
 * Variáveis de Personalização para Comandos @code{@@}::
@@ -17024,8 +17017,8 @@ The sections below give the details for each of these.
 @cindex Variáveis de Personalização para Comandos @code{@@}
 @cindex Comandos @code{@@}, variáveis de personalização para
 
-Each of the following @@-commands has an associated customization
-variable with the same name (minus the leading @code{@@}):
+Cada um dos seguintes comandos @@ tem uma variável de personalização associada
+com o mesmo nome (menos o @code{@@} inicial):
 
 @smallexample
 @@allowcodebreaks @@clickstyle @@codequotebacktick
@@ -17046,26 +17039,26 @@ variable with the same name (minus the leading @code{@@}):
 @@urefbreakstyle @@validatemenus @@xrefautomaticsectiontitle
 @end smallexample
 
-Setting such a customization variable to a value @samp{foo} is similar
-to executing @code{@@@var{cmd} foo}.  It is not exactly the same,
-though, since any side effects of parsing the Texinfo source are not
-redone.  Also, some variables do not take Texinfo code when generating
-particular formats, but an argument that is already formatted.  This
-is the case, for example, for HTML for @code{documentdescription}.
+Configurar uma tal variável de personalização para um valor  @samp{foo} é
+semelhante a executar @code{@@@var{comando} foo}. Não é exatamente o mesmo, no
+entanto, já que quaisquer efeitos colaterais da análise do fonte do Texinfo não
+são refeitos. Além disso, algumas variáveis não recebem código do Texinfo ao
+gerar formatos específicos, mas um argumento que já está formatado. Esse é o
+caso, por exemplo, para HTML para @code{documentdescription}.
 
 
 @node Variáveis e Opções de Personalização
 @subsection Variáveis e Opções de Personalização
 
-@cindex Customization variables for options
-@cindex Options, customization variables for
+@cindex Variáveis de personalização para opções
+@cindex Opções, variáveis de personalização para
 
-The following table gives the customization variables associated with
-some command line options.  @xref{Invocando @command{texi2any}}, for the
-meaning of the options.
+A tabela seguinte fornece as variáveis de personalização associadas com algumas
+opções de linha de comando. @xref{Invocando @command{texi2any}}, para o
+significado das opções.
 
 @multitable @columnfractions 0.5 0.5
-@headitem Option @tab Variable
+@headitem Opção @tab Variável
 @vindex ENABLE_ENCODING
 @item @option{--enable-encoding}   @tab @code{ENABLE_ENCODING}
 @vindex documentlanguage
@@ -17114,15 +17107,14 @@ meaning of the options.
 @item @option{--verbose}           @tab @code{VERBOSE}
 @end multitable
 
-Setting such a customization variable to a value @samp{foo} is
-essentially the same as specifying the @code{--@var{opt}=foo} if the
-option takes an argument, or @code{--@var{opt}} if not.
+Configurar uma tal variável de personalização para um valor @samp{foo} é
+essencialmente o mesmo que especificar o @code{--@var{opção}=foo} se a opção
+receber um argumento, ou @code{--@var{opção}} se não.
 
 @vindex TEXINFO_OUTPUT_FORMAT
-In addition, the customization variable @code{TEXINFO_OUTPUT_FORMAT}
-allows specifying what @code{makeinfo} outputs, either one of the usual
-output formats that can be specified with options, or various other
-forms:
+Além disso, a variável de personalização @code{TEXINFO_OUTPUT_FORMAT} permite
+especificar o que @code{makeinfo} produz, seja um dos formatos usuais de saída
+que podem ser especificados com opções, ou vários outros formatos:
 
 @ftable @samp
 @item docbook
@@ -17134,61 +17126,62 @@ forms:
 @itemx plaintext
 @itemx ps
 @itemx xml
-These correspond to the command-line options (and
-@code{TEXINFO_OUTPUT_FORMAT} environment variable values) of the same
-name.  @xref{Invocando @command{texi2any}}.
+Esses correspondem às opções de linha de comando (e valores da variável de
+ambiente @code{TEXINFO_OUTPUT_FORMAT}) do mesmo nome.
+@xref{Invocando @command{texi2any}}.
 
 @item debugcount
-Instead of generating a regular output format, output the count of
-bytes and lines obtained when converting to Info, and other information.
+Em vez de gerar um formato regular de saída, emite a contagem de bytes e de
+linhas obtidas ao converter para Info e outras informações.
 
 @item debugtree
-@cindex tree representation, for debugging
-@cindex debugging document, with tree representation
-Instead of generating a regular output format, output a text representation
-of the tree obtained by parsing the input texinfo document.
+@cindex representação em árvore, para depuração
+@cindex depurando documento, com representação em árvore
+Em vez de gerar um formato regular de saída, produz uma representação de texto
+da árvore obtida pela análise do documento de entrada do Texinfo.
 
 @item parse
-Do only Texinfo source parsing; there is no output.
+Faz somente análise do fonte do Texinfo; não existe saída gerada.
 
 @item plaintexinfo
-Output the Texinfo source with all the macros, @code{@@include} and
-@code{@@value@{@}} expanded.  This is similar to setting
-@option{--macro-expand}, but instead of being output in addition to
-the normal conversion, output of Texinfo is the main output.
+Produz o fonte do Texinfo com todas as macros, @code{@@include} e
+@code{@@value@{@}} expandidas. Isso é similar a configurar
+@option{--macro-expand}, mas em vez de ser produzido em adição à conversão
+normal, a saída de Texinfo é a saída principal.
 
 @item rawtext
-@cindex raw text output
-Output raw text, with minimal formatting.  For example, footnotes are
-ignored and there is no paragraph filling.  This is used by the parser
-for file names and copyright text in HTML comments, for example.
+@cindex saída de texto bruto
+Produz texto bruto, com formatação mínima. Por exemplo, notas de rodapé são
+ignoradas e não existe preenchimento de parágrafo. Isso é usado pelo analisador
+para nomes de arquivo e texto de direitos de cópia em comentários HTML, por
+exemplo.
 
 @item structure
-Do only Texinfo source parsing and determination of the document
-structure; there is no output.
+Faz somente análise do fonte do Texinfo e determinação da estrutura do
+documento; não existe saída gerada.
 
 @item texinfosxml
-@cindex SXML output
-@cindex S-expressions, output format
-Output the document in TexinfoSXML representation, a syntax for
-writing XML data using Lisp S-expressions.
+@cindex Saída SXML
+@cindex Expressões S, formato de saída
+Produz o documento na representação TexinfoSXML, uma sintaxe para escrever
+dados XML usando expressões S da Lisp.
 
 @item textcontent
-@cindex spell checking
-@cindex word counting
+@cindex verificação ortográfica
+@cindex contagem de palavras
 @pindex detexinfo
-@cindex stripping Texinfo commands
-Output the text content only, stripped of commands; this is useful for
-spell checking or word counting, for example.  The trivial
-@code{detexinfo} script setting this is in the @file{util} directory
-of the Texinfo source as an example.  It's one line:
+@cindex comandos Texinfo de despojamento
+Produz somente o conteúdo do texto, despojado de comandos; isso é útil para
+verificação ortográfica ou contagem de palavras, por exemplo. A script trivial
+@code{detexinfo} configurando isso está no diretório @file{util} do fonte do
+Texinfo como um exemplo. É uma linha:
 
 @example
-exec texi2any -c TEXINPUT_OUTPUT_FORMAT=textcontent "$@@"
+exec texi2any -c TEXINPUT_OUTPUT_FORMAT=conteúdotexto "$@@"
 @end example
 @end ftable
 
-
+PAREI
 @node Variáveis de Personalização de HTML
 @subsection Variáveis de Personalização de HTML
 
@@ -18964,7 +18957,7 @@ other programs.  This chapter gives some details on such HTML output.
 
 @command{makeinfo} has many user-definable customization variables
 with which you can influence the HTML output.  
-@xref{Customization Variables}.
+@xref{Variáveis de Personalização}.
 
 @command{makeinfo} can also produce output in XML and Docbook formats,
 but we do not as yet describe these in detail.  @xref{Formatos de Saída},
@@ -19021,7 +19014,7 @@ To achieve maximum portability and accessibility among browsers (both
 graphical and text-based), systems, and users, the HTML output is
 intentionally quite plain and generic.  It has always been our goal
 for users to be able to customize the output to their wishes via CSS
-(@pxref{CSS de HTML}) or other means (@pxref{Customization Variables}.
+(@pxref{CSS de HTML}) or other means (@pxref{Variáveis de Personalização}.
 If you cannot accomplish a reasonable customization, feel free to
 report that.
 
@@ -19236,7 +19229,7 @@ output.
 
 In addition to the possibilities offered by CSS, @command{makeinfo}
 has many user-definable customization variables with which you can
-influence the HTML output.  @xref{Customization Variables}.
+influence the HTML output.  @xref{Variáveis de Personalização}.
 
 
 @node HTML Xref
@@ -19266,7 +19259,7 @@ The algorithm was primarily devised by Patrice Dumas in 2003--04.
 * Básicos de Links:    Básico do Link HTML Xref.
 * Expansão de Nodo:    Expansão Xref de Nome de Nodo do HTML.
 * Expansão de Comando: Expansão de Comando HTML Xref.
-* Expansão de 8 bits:  Expansão de Caractere de 8 Bits HTML Xref.
+* Expansão de 8 bits:  Expansão Xref de Caractere de 8 Bits do HTML.
 * Incompatibilidade:   Incompatibilidade de Xref HTML.
 * Configuração:        Configuração Xref do HTML. htmlxref.cnf.
 * Preservando links:   Preservação de Link HTML Xref. MANUAL-noderename.cnf.
@@ -19779,7 +19772,7 @@ redirected, via the file @var{manual}@file{-noderename.cnf}, where
 @file{texinfo.texi} would be supplemented by a file
 @file{texinfo-noderename}.cnf.  (This name can be overridden by
 setting the @file{RENAMED_Nodos_FILE} customization variable;
-@pxref{Customization Variables}).
+@pxref{Variáveis de Personalização}).
 
 The file is read in pairs of lines, as follows:
 
