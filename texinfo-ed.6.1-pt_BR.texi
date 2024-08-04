@@ -633,7 +633,7 @@ Criando um Arquivo Info
 * Vantagens do @command{makeinfo}::         @command{makeinfo} provê melhor verificação de erro.
 * @code{makeinfo} no Emacs::           Como executar @code{makeinfo} a partir do Emacs.
 * Comandos @code{texinfo-format}::     Dois comandos de formatação Info escritos em Emacs Lisp são uma alternativa a @code{makeinfo}.
-* Formatação de Lote::            Como formatar para Info em modo de lote Emacs.
+* Formatação em Lote::            Como formatar para Info em modo de lote Emacs.
 * Arquivos de Etiqueta e de Divisão::         Como os arquivos marcados e divididos ajudam Info a executar melhor.
 
 Instalando um Arquivo Info
@@ -17860,196 +17860,191 @@ transliterar mais caracteres; padrão verdadeiro.
 
 @end vtable
 
-PAREI
+
 @node Internacionalização de Strings de Documentos
 @section Internacionalização de Strings de Documentos
 
-@cindex I18n, of document strings
+@cindex I18n, de strings de documento
 @cindex Internacionalização de strings de documentos
-@cindex Document strings, internationalization of
-@cindex Output document strings, internationalization of
-@cindex Translating strings in output documents
+@cindex Strings de documentos, internacionalização de
+@cindex Strings de saída de documento, internacionalização de
+@cindex Traduzindo strings em documentos de saída
 
-@vindex documentlanguage @r{customization variable}
-@command{texi2any} writes fixed strings into the output document at
-various places: cross-references, page footers, the help page,
-alternate text for images, and so on.  The string chosen depends on
-the value of the @code{documentlanguage} at the time of the string
-being output (@pxref{@code{@@documentlanguage}}, for the Texinfo
-command interface).
+@vindex documentlanguage @r{variável de personalização}
+@command{texi2any} escreve strings fixas no documento de saída em vários
+lugares: referências cruzadas, rodapés de página, a página de ajuda, texto
+alternativo para imagens e assim por diante. A string escolhida depende do
+valor do @code{documentlanguage} ao tempo em que a string sendo gerada
+(@pxref{@code{@@documentlanguage}}, para a interface de comando do Texinfo).
 
-@pindex libintl-perl @r{Gettext implementation}
-The Gettext framework is used for those strings (@pxref{Top,,,
-gettext, Gettext}).  The @code{libintl-perl} package is used as the
-@code{gettext} implementation; more specifically, the pure Perl
-implementation is used, so Texinfo can support consistent behavior
-across all platforms and installations, which would not otherwise be
-possible.  @code{libintl-perl} is included in the Texinfo distribution
-and always installed, to ensure that it is available if needed.  It is
-also possible to use the system @code{gettext} (the choice can be made
-at build-time).
+@pindex libintl-perl @r{implementação Gettext}
+O framework Gettext é usado para essas strings
+(@pxref{Top,,, gettext, Gettext}). O pacote @code{libintl-perl} é usado como a
+implementação @code{gettext}; mais especificamente, a implementação Perl pura é
+usada, de forma que o Texinfo pode suportar comportamento consistente em todas
+as plataformas e instalações, o que não seria possível de outra maneira.
+@code{libintl-perl} é incluído na distribuição do Texinfo e sempre instalado,
+para garantir que esteja disponível se necessário. Também é possível usar o
+@code{gettext} do sistema (a escolha pode ser feita em tempo de construção).
 
-@vindex texinfo_document @r{Gettext domain}
-@cindex Perl format strings for translation
-The Gettext domain @samp{texinfo_document} is used for the strings.
-Translated strings are written as Texinfo, and may include
-@@-commands.  In translated strings, the varying parts of the string
-are not usually denoted by @code{%s} and the like, but by
-@samp{@{arg_name@}}.  (This convention is common for @code{gettext} in
-Perl and is fully supported in GNU Gettext; @pxref{perl-format,, Perl
-Format Strings, gettext, GNU Gettext}.)  For example, in the
-following, @samp{@{section@}} will be replaced by the section name:
+@vindex texinfo_document @r{domínio Gettext}
+@cindex Strings de formato Perl para tradução
+O domínio Gettext @samp{texinfo_document} é usado para as strings. Strings
+traduzidas são escritas como Texinfo e podem incluir comandos @@. Em strings
+traduzidas, as partes variáveis da string geralmente não são denotadas por
+@code{%s} e similares, mas por @samp{@{arg_name@}}. (Essa convenção é comum
+para @code{gettext} em Perl e é totalmente suportada no GNU Gettext;
+@pxref{perl-format,, Perl Format Strings, gettext, GNU Gettext}). Por exemplo,
+no seguinte, @samp{@{section@}} será substituído pelo nome da seção:
 
 @example
-see @{section@}
+veja-se @{section@}
 @end example
 
-These Perl-style brace format strings are used for two reasons: first,
-changing the order of @code{printf} arguments is only available since
-Perl@tie{}5.8.0; second, and more importantly, the order of arguments
-is unpredictable, since @@-command expansion may lead to different
-orders depending on the output format.
+Essas strings de formato de chaves no estilo Perl são usadas por dois motivos:
+primeiro, a mudança da ordem dos argumentos de @code{printf} somente está
+disponível desde o Perl@tie{}5.8.0; segundo, e mais importante, a ordem dos
+argumentos é imprevisível, já que a expansão do comando @@ possivelmente leve a
+ordens diferentes dependendo do formato de saída.
 
-The expansion of a translation string is done like this:
+A expansão de uma string de tradução é feita assim:
 
 @enumerate
-@item First, the string is translated.  The locale
-is @var{@@documentlanguage}@code{.}@var{@@documentencoding}.
+@item Primeiro, a string é traduzida. A localidade é
+@var{@@documentlanguage}@code{.}@var{@@documentencoding}.
 
-@cindex @code{us-ascii} encoding, and translations
-If the @var{@@documentlanguage} has the form @samp{ll_CC}, that is
-tried first, and then just @samp{ll}.  If that does not exist, and the
-encoding is not @code{us-ascii}, then @code{us-ascii} is tried.
+@cindex Codificação @code{us-ascii},  traduções
+Se o @var{@@documentlanguage} tiver o formato @samp{ll_CC}, esse será tentado
+primeiro, e então apenas @samp{ll}. Se esse não existir, e a codificação não
+for @code{us-ascii}, então @code{us-ascii} será tentado.
 
-The idea is that if there is a @code{us-ascii} encoding, it means that
-all the characters in the charset may be expressed as @@-commands.
-For example, there is a @code{fr.us-ascii} locale that can accommodate
-any encoding, since all the Latin@tie{}1 characters have associated
-@@-commands.  On the other hand, Japanese has only a translation
-@code{ja.utf-8}, since there are no @@-commands for Japanese
-characters.
+A ideia é a de que se existir uma codificação @code{us-ascii}, isso significa
+que todos os caracteres no conjunto de caracteres podem ser expressos como
+comandos @@. Por exemplo, existe uma localidade, @code{fr.us-ascii}, que pode
+acomodar qualquer codificação, já que todos os caracteres Latin@tie{}1 tem
+comandos @@ associados. Por outro lado, o japonês tem somente uma tradução,
+@code{ja.utf-8}, já que não existem comandos @@ para caracteres japoneses.
 
-@item Next, the string is expanded as Texinfo, and converted.
-The arguments are substituted; for example, @samp{@{arg_name@}} is
-replaced by the corresponding actual argument.
+@item Em seguida, a string é expandida como Texinfo e convertida. Os argumentos
+são substituídos; por exemplo, @samp{@{arg_name@}} é substituído pelo argumento
+real correspondente.
 
 @end enumerate
 
-In the following example, @samp{@{date@}}, @samp{@{program_homepage@}}
-and @samp{@{program@}} are the arguments of the string.  Since they
-are used in @code{@@uref}, their order is not predictable.
-@samp{@{date@}}, @samp{@{program_homepage@}} and @samp{@{program@}} are
-substituted after the expansion:
+No exemplo seguinte, @samp{@{date@}}, @samp{@{program_homepage@}} e
+@samp{@{program@}} são os argumentos da string. Como eles são usados em
+@code{@@uref}, a ordem deles não é previsível. @samp{@{date@}},
+@samp{@{program_homepage@}} e @samp{@{program@}} são substituídos depois da
+expansão:
 
 @example
-Generated on @@emph@{@{date@}@} using
+Gerado em @@emph@{@{date@}@} usando
 @@uref@{@{program_homepage@}, @@emph@{@{program@}@}@}.
 @end example
 
-This approach is admittedly a bit complicated.  Its usefulness is that
-it supports having translations available in different encodings for
-encodings which can be covered by @@-commands, and also specifying how
-the formatting for some commands is done, independently of the output
-format---yet still be language-dependent.  For example, the
-@samp{@@pxref} translation string can be like this:
+Essa abordagem é reconhecidamente um pouco complicada. A utilidade dela é a de
+que ela suporta ter traduções disponíveis em diferentes codificações para
+codificações que podem ser cobertas por comandos @@, e também especifica como a
+formatação para alguns comandos é feita, independentemente do formato de
+saída---mas ainda ser dependente do idioma. Por exemplo, a string de tradução
+@samp{@@pxref} pode ser assim:
 
 @example
-see @{node_file_href@} section `@{section@}\' in @@cite@{@{book@}@}
+veja-se @{node_file_href@} seção `@{section@}\' em @@cite@{@{book@}@}
 @end example
 
 @noindent
-which allows for specifying a string independently of the output
-format, while nevertheless with rich formatting it may be translated
-appropriately in many languages.
+que permite especificar uma string independentemente do formato de saída,
+embora, com formatação avançada, ela possa ser traduzida adequadamente em
+muitos idiomas.
 
 
 @node Invocando @command{pod2texi}
 @section Invocando @command{pod2texi}: Converte POD para Texinfo
 
 @pindex pod2texi
-@cindex Invoking @code{pod2texi}
-@cindex POD, converting to Texinfo
-@cindex Perl POD, converting to Texinfo
+@cindex Invocando @code{pod2texi}
+@cindex POD, convertendo para Texinfo
+@cindex Perl POD, convertendo para Texinfo
 
-The @code{pod2texi} program translates Perl pod documentation file(s)
-to Texinfo.  There are two basic modes of operation: generating a
-standalone manual from each input pod, or (if @code{--base-level=1} or
-higher is given) generating Texinfo subfiles suitable for use
-with @code{@@include}.
+O programa @code{pod2texi} traduz arquivo(s) de documentação do pod do Perl
+para Texinfo. Existem dois modos básicos de operação: gerar um manual
+independente a partir de cada pod de entrada ou (se @code{--base-level=1} ou
+superior for fornecido) gerar subarquivos do Texinfo adequados para uso com
+@code{@@include}.
 
-Although ordinarily this documentation in the Texinfo manual would be
-the best place to look, in this case we have documented all the
-options and examples in the @code{pod2texi} program itself, since it
-may be useful outside of the rest of Texinfo.  Thus, please see the
-output of @code{pod2texi --help}, the version on the web at
+Embora normalmente essa documentação no manual do Texinfo seja o melhor lugar
+para procurar, nesse caso nós documentamos todas as opções e exemplos no
+próprio programa @code{pod2texi}, já que ele pode ser útil fora do resto do
+Texinfo. Portanto, por favor, veja-se a saída do @code{pod2texi --help}, a
+versão na web em
 @url{http://www.gnu.org/software/texinfo/manual/pod2texi.html}, etc.
 
-For an example of using @code{pod2texi} to make Texinfo out of the
-Perl documentation itself, see
+Para um exemplo de uso do @code{pod2texi} para criar o Texinfo a partir da
+própria documentação do Perl, veja-se
 @url{http://svn.savannah.gnu.org/viewvc/trunk/contrib/perldoc-all/?root=texinfo,
-@file{contrib/perldoc-all}} in the Texinfo source distribution (the
-output is available at @url{http://www.gnu.org/software/perl/manual}).
+@file{contrib/perldoc-all}} na distribuição do fonte do Texinfo (a saída está
+disponível em @url{http://www.gnu.org/software/perl/manual}).
 
 
 @node @command{texi2html}
-@section @command{texi2html}: Ancestor of @command{texi2any}
+@section @command{texi2html}: Ancestral de @command{texi2any}
 
 @pindex texi2html
 
 @cindex Cons, Lionel
-Conceptually, the @command{texi2html} program is the parent of today's
-@command{texi2any} program.  @command{texi2html} was developed
-independently, originally by Lionel Cons in 1998; at the time,
-@command{makeinfo} could not generate HTML@.  Many other people
-contributed to @command{texi2html} over the years.
+Conceitualmente, o programa @command{texi2html} é o ascendente do programa
+@command{texi2any} de hoje. O @command{texi2html} foi desenvolvido
+independentemente, originalmente por Lionel Cons em 1998; na época, o
+@command{makeinfo} não conseguia gerar HTML@. Muitas outras pessoas
+contribuíram para o @command{texi2html} ao longo dos anos.
 
-The present @command{texi2any} uses little of the actual code of
-@command{texi2html}, and has quite a different basic approach to the
-implementation (namely, parsing the Texinfo document into a tree), but
-still, there is a family resemblance.
+O @command{texi2any} atual usa pouco do código real do @command{texi2html} e
+tem uma abordagem básica bem diferente para a implementação (ou seja, analisar
+o documento do Texinfo em uma árvore), mas ainda assim, existe uma semelhança
+familiar.
 
-By design, @command{texi2any} supports nearly all the features of
-@command{texi2html} in some way.  However, we did not attempt to
-maintain strict compatibility, so no @command{texi2html} executable is
-installed by the Texinfo package.  An approximation can be run with an
-invocation like this (available as @file{util/texi2html} in the
-Texinfo source):
+Por projeto, @command{texi2any} suporta quase todos os recursos de
+@command{texi2html} de alguma forma. No entanto, nós não tentamos manter
+compatibilidade estrita, de forma que nenhum executável @command{texi2html} é
+instalado pelo pacote do Texinfo. Uma aproximação pode ser executada com uma
+invocação como esta (disponível como @file{util/texi2html} no fonte do
+Texinfo):
 
 @example
 texi2any --set-customization-variable TEXI2HTML=1 ...
 @end example
 
-@noindent but, to emphasize, this is @emph{not} a drop-in replacement
-for the previous @command{texi2html}.  Here are the biggest differences:
+@noindent mas, para enfatizar, isso @emph{não} é um substituto imediato para o
+@command{texi2html} anterior. Aqui estão as maiores diferenças:
 
 @itemize @bullet
-@item Most blatantly, the command line options of @command{texi2html}
-are now customization variables, for the most part.  A table of
-approximate equivalents is given below.
+@item Mais flagrantemente, as opções de linha de comando do @command{texi2html}
+agora são variáveis de personalização, na maior parte. Uma tabela de
+equivalentes aproximados é fornecida abaixo.
 
-@item The program-level customization API is very different in
+@item A API de personalização em nível de programa é muito diferente no
 @command{texi2any}.
 
-@item Índices cannot be split.
+@item Índices não podem ser divididos.
 
-@item Translated strings cannot be customized; we hope to introduce
-this feature in @command{texi2any} in the future.
+@item As strings traduzidas não podem ser personalizadas; nós esperamos
+introduzir esse recurso no @command{texi2any} no futuro.
 
 @end itemize
 
-Aside from the last, we do not intend to reimplement these
-differences.  Therefore, the route forward for authors is alter
-manuals and build processes as necessary to use the new features and
-methods of @command{texi2any}.  The @command{texi2html} maintainers
-(one of whom is the principal author of @command{texi2any}) do not
-intend to make further releases.
+Além do último, nós não pretendemos reimplementar essas diferenças. Portanto, o
+caminho a seguir para autores(as) é o de alterar manuais e processos de
+construção conforme necessário para usar os novos recursos e métodos do
+@command{texi2any}. Os(As) mantenedores(as) do @command{texi2html} (um dos
+quais é o autor principal do @command{texi2any}) não pretendem fazer mais
+lançamentos.
 
-@cindex Options of @command{texi2html}
-@cindex Command-line options of @command{texi2html}
-Here is the table showing @command{texi2html} options and
-corresponding @command{texi2any} customization variables.
-@c (@pxref{texi2any Output Customization,, @command{texi2any} Output
-@c Customization}).
+@cindex Opções do @command{texi2html}
+@cindex Opções de linha de comando do @command{texi2html}
+Aqui está a tabela mostrando opções do @command{texi2html} e variáveis de
+personalização correspondentes do @command{texi2any}.
+@c (@pxref{texi2any Output Customization,, @command{texi2any} Output Customization}).
 
 @multitable {@option{--ignore-preamble-text}} {@code{IGNORE_PREAMBLE_TEXT}}
 @item @option{--toc-links}            @tab @code{TOC_LINKS}
@@ -18066,7 +18061,7 @@ corresponding @command{texi2any} customization variables.
 @item @option{--l2h-tmp}              @tab @code{L2H_TMP}
 @item @option{--l2h-file}             @tab @code{L2H_FILE}
 @item @option{--l2h-clean}            @tab @code{L2H_CLEAN}
-@item @option{--use-Nodos}            @tab @code{USE_NODES}
+@item @option{--use-nodes}            @tab @code{USE_NODES}
 @item @option{--monolithic}           @tab @code{MONOLITHIC}
 @item @option{--top-file}             @tab @code{TOP_FILE}
 @item @option{--toc-file}             @tab @code{TOC_FILE}
@@ -18078,45 +18073,46 @@ corresponding @command{texi2any} customization variables.
 @item @option{--test}                 @tab @code{TEST}
 @end multitable
 
-@cindex @file{texi2oldapi.texi}, for @command{texi2any}
-Finally, any @command{texi2html} users seeking more detailed
-information can check the draft file @file{doc/texi2oldapi.texi} in
-the Texinfo source repository.  It consists mainly of very rough
-notes, but may still be useful to some.
+@cindex @file{texi2oldapi.texi}, para @command{texi2any}
+Finalmente, quaisquer usuários(as) do @command{texi2html} buscando informações
+mais detalhadas pode verificar o arquivo de rascunho
+@file{doc/texi2oldapi.texi} no repositório do fonte do Texinfo. Ele consiste
+principalmente de notas muito grosseiras, mas ainda pode ser útil para
+alguns(mas).
 
 
 @node Criando e Instalando Arquivos Info
 @chapter Criando e Instalando Arquivos Info
 
-This chapter describes how to create and install Info files.
-@xref{Arquivos do Info}, for general information about the file format
-itself.
+Este capítulo descreve como criar e instalar arquivos Info.
+@xref{Arquivos do Info}, para informações gerais acerca do formato do arquivo
+em si.
 
 @menu
-* Creating an Info File::
-* Instalando Um Arquivo Info::
+* Criando um Arquivo do Info::
+* Instalando Um Arquivo do Info::
 @end menu
 
 
-@node Creating an Info File
-@section Creating an Info File
-@cindex Creating an Info file
-@cindex Info, creating an online file
-@cindex Formatting a file for Info
+@node Criando um Arquivo do Info
+@section Criando um Arquivo do Info
+@cindex Criando um arquivo do Info
+@cindex Info, criando um arquivo online
+@cindex Formatando um arquivo para Info
 
-@code{makeinfo} is a program that converts a Texinfo file into an Info
-file, HTML file, or plain text.  @code{texinfo-format-region} and
-@code{texinfo-format-buffer} are GNU Emacs functions that convert
-Texinfo to Info.
+@code{makeinfo} é um programa que converte um arquivo do Texinfo em um arquivo
+do Info, em arquivo HTML ou em texto simples. @code{texinfo-format-region} e
+@code{texinfo-format-buffer} são funções do GNU Emacs que convertem Texinfo
+para Info.
 
-For information on installing the Info file in the Info system,
+Para informações acerca de como instalar o arquivo do Info no sistema Info,
 @pxref{Instalando Um Arquivo Info}.
 
 @menu
 * Vantagens do @command{makeinfo}::   @command{makeinfo} fornece melhor verificação de erros.
 * @code{makeinfo} no Emacs::          Como executar @code{makeinfo} a partir do Emacs.
 * Comandos @code{texinfo-format}::    Dois comandos do Info de formatação escritos em Emacs Lisp são uma alternativa ao @code{makeinfo}.
-* Formatação de Lote::                Como formatar para Info no modo de lote do Emacs.
+* Formatação em Lote::                Como formatar para Info no modo de lote do Emacs.
 * Arquivos de Etiqueta e de Divisão:: Como arquivos etiquetados e divididos ajudam o Info a executar melhor.
 @end menu
 
@@ -18124,93 +18120,90 @@ For information on installing the Info file in the Info system,
 @node Vantagens do @command{makeinfo}
 @subsection Vantagens do @code{makeinfo}
 
-@anchor{makeinfo advantages}@c old name
+@anchor{vantagens do makeinfo}@c nome antigo
 
-The @code{makeinfo} utility creates an Info file from a Texinfo source
-providing better error messages than either of the Emacs formatting
-commands.  We recommend it.  The @code{makeinfo} program is
-independent of Emacs.  You can run @code{makeinfo} in any of three
-ways: from an operating system shell, from a shell inside Emacs, or by
-typing the @kbd{C-c C-m C-r} or the @kbd{C-c C-m C-b} command in
-Texinfo mode in Emacs.
+O utilitário @code{makeinfo} cria um arquivo do Info a partir de um fonte do
+Texinfo, fornecendo melhores mensagens de erro que qualquer um dos comandos de
+formatação do Emacs. Nós o recomendamos. O programa @code{makeinfo} é
+independente do Emacs. Você pode executar o @code{makeinfo} de três maneiras: a
+partir de um shell do sistema operacional; a partir de um shell dentro do
+Emacs; ou digitando o comando @kbd{C-c C-m C-r} ou @kbd{C-c C-m C-b} no modo
+Texinfo no Emacs.
 
-The @code{texinfo-format-region} and the @code{texinfo-format-buffer}
-commands may be useful if you cannot run @code{makeinfo}.
+Os comandos @code{texinfo-format-region} e @code{texinfo-format-buffer}
+possivelmente sejam úteis se você não puder executar @code{makeinfo}.
 
 
-@node @code{makeinfo} in Emacs
-@subsection Running @code{makeinfo} Within Emacs
+@node @code{makeinfo} no Emacs
+@subsection Executando @code{makeinfo} dentro do Emacs
 
-@c anchor{makeinfo in Emacs}@c prev name
-@cindex Running @code{makeinfo} in Emacs
-@cindex @code{makeinfo} inside Emacs
-@cindex Shell, running @code{makeinfo} in
+@c anchor{makeinfo no Emacs}@c nome anterior
+@cindex Executando @code{makeinfo} no Emacs
+@cindex @code{makeinfo} dentro do Emacs
+@cindex Shell, executando @code{makeinfo} em
 
-You can run @code{makeinfo} in GNU Emacs Texinfo mode by using either the
-@code{makeinfo-region} or the @code{makeinfo-buffer} commands.  In
-Texinfo mode, the commands are bound to @kbd{C-c C-m C-r} and @kbd{C-c
-C-m C-b} by default.
+Você pode executar @code{makeinfo} no modo Texinfo do GNU Emacs usando os
+comandos @code{makeinfo-region} ou @code{makeinfo-buffer}. No modo Texinfo, os
+comandos são vinculados a @kbd{C-c C-m C-r} e @kbd{C-c C-m C-b} por padrão.
 
 @table @kbd
 @item C-c C-m C-r
 @itemx M-x makeinfo-region
-Format the current region for Info.
+Formata a região atual para Info.
 @findex makeinfo-region
 
 @item C-c C-m C-b
 @itemx M-x makeinfo-buffer
-Format the current buffer for Info.
+Formata o buffer atual para Info.
 @findex makeinfo-buffer
 @end table
 
-When you invoke @code{makeinfo-region} the output goes to a temporary
-buffer.  When you invoke @code{makeinfo-buffer} output goes to the
-file set with @code{@@setfilename} (@pxref{@code{@@setfilename}}).
+Quando você invoca @code{makeinfo-region} a saída vai para um buffer
+temporário. Quando você invoca @code{makeinfo-buffer} a saída vai para o
+conjunto de arquivos com @code{@@setfilename} (@pxref{@code{@@setfilename}}).
 
-The Emacs @code{makeinfo-region} and @code{makeinfo-buffer} commands
-run the @code{makeinfo} program in a temporary shell buffer.  If
-@code{makeinfo} finds any errors, Emacs displays the error messages in
-the temporary buffer.
+Os comandos @code{makeinfo-region} e @code{makeinfo-buffer} do Emacs executam o
+programa @code{makeinfo} em um buffer temporário de shell. Se @code{makeinfo}
+encontrar quaisquer erros, o Emacs exibe as mensagens de erro no buffer
+temporário.
 
-@cindex Errors, parsing
-@cindex Parsing errors
+@cindex Erros, analisando
+@cindex Analisando erros
 @findex next-error
-You can parse the error messages by typing @kbd{C-x `}
-(@code{next-error}).  This causes Emacs to go to and position the
-cursor on the line in the Texinfo source that @code{makeinfo} thinks
-caused the error.  @xref{Compilation, , Running @code{make} or
-Compilers Generally, emacs, The GNU Emacs Manual}, for more
-information about using the @code{next-error} command.
+Você consegue analisar as mensagens de erro digitando @kbd{C-x `}
+(@code{next-error}). Isso faz com que o Emacs vá e posicione o cursor na linha
+no fonte do Texinfo que @code{makeinfo} pensa que causou o erro.
+@xref{Compilation, , Running @code{make} or Compilers Generally, emacs, The GNU
+Emacs Manual}, para mais informações acerca de usar o comando
+@code{next-error}.
 
-In addition, you can kill the shell in which the @code{makeinfo}
-command is running or make the shell buffer display its most recent
-output.
+Além disso, você pode matar o shell no qual o comando @code{makeinfo} está
+executando ou fazer com que o buffer do shell exiba a saída dele mais recente.
 
 @table @kbd
 @item C-c C-m C-k
 @itemx M-x makeinfo-kill-job
 @findex makeinfo-kill-job
-Kill the current running @code{makeinfo} job
-(from @code{makeinfo-region} or @code{makeinfo-buffer}).
+Mata o atual trabalho do @code{makeinfo} executando (a partir de
+@code{makeinfo-region} ou @code{makeinfo-buffer}).
 
 @item C-c C-m C-l
 @itemx M-x makeinfo-recenter-output-buffer
 @findex makeinfo-recenter-output-buffer
-Redisplay the @code{makeinfo} shell buffer to display its most recent
-output.
+Reexibe o buffer do shell do @code{makeinfo} para exibir a saída dele mais recente.
 @end table
 
 @noindent
-(Note that the parallel commands for killing and recentering a @TeX{}
-job are @kbd{C-c C-t C-k} and @kbd{C-c C-t C-l}.  @xref{Modo Texinfo
-Printing}.)
+(Observe que os comandos paralelos para encerrar e recentralizar um trabalho do
+@TeX{} são @kbd{C-c C-t C-k} e @kbd{C-c C-t C-l}.
+@xref{Impressão no Modo Texinfo}).
 
-You can specify options for @code{makeinfo} by setting the
-@code{makeinfo-options} variable with either the @kbd{M-x
-customize} or the @kbd{M-x set-variable} command, or by setting the
-variable in your @file{.emacs} initialization file.
+Você pode especificar opções para @code{makeinfo} configurando a variável
+@code{makeinfo-options} com o comando @kbd{M-x customize} ou @kbd{M-x
+set-variable}, ou configurando a variável em teu arquivo de inicialização
+@file{.emacs}.
 
-For example, you could write the following in your @file{.emacs} file:
+Por exemplo, você poderia escrever o seguinte no teu arquivo @file{.emacs}:
 
 @example
 @group
@@ -18221,68 +18214,66 @@ For example, you could write the following in your @file{.emacs} file:
 @end example
 
 @noindent
-@c Writing these three cross-references using xref results in
-@c three references to the same named manual, which looks strange.
+@c Escrever essas três referências cruzadas usando xref resulta em três
+@c referências para o mesmo manual nomeado, o que parece estranho.
 @iftex
-For more information, see @ref{@command{makeinfo} Options}, as well as
-``Easy Customization Interface,'' ``Examining and Setting Variables,''
-and ``Init File'' in @cite{The GNU Emacs Manual}.
+Para mais informações, veja-se @ref{Opções do @command{makeinfo}}, bem como
+``Easy Customization Interface'', ``Examining and Setting Variables'' e ``Init
+File'' em @cite{The GNU Emacs Manual}.
 @end iftex
 @ifnottex
-For more information, see@*
+Para mais informações, veja-se@*
 @ref{Easy Customization, , Easy Customization Interface, emacs, The GNU Emacs Manual},@*
 @ref{Examining, , Examining and Setting Variables, emacs, The GNU Emacs Manual},@*
-@ref{Init File, , , emacs, The GNU Emacs Manual}, and@*
-@ref{@command{makeinfo} Options}.
+@ref{Init File, , , emacs, The GNU Emacs Manual} e@*
+@ref{Opções do @command{makeinfo}}.
 @end ifnottex
 
 
 @node Comandos @code{texinfo-format}
-@subsection The @code{texinfo-format@dots{}} Commands
+@subsection Os Comandos @code{texinfo-format@dots{}}
 
-@c anchor{texinfo-format commands}@c prev name
+@c anchor{comandos texinfo-format}@c nome anterior
 
-In GNU Emacs in Texinfo mode, you can format part or all of a Texinfo
-file with the @code{texinfo-format-region} command.  This formats the
-current region and displays the formatted text in a temporary buffer
-called @samp{*Info Region*}.
+No GNU Emacs em modo Texinfo, você pode formatar parte ou todo um arquivo do
+Texinfo com o comando @code{texinfo-format-region}. Isso formata a região atual
+e exibe o texto formatado em um buffer temporário chamado @samp{*Info Region*}.
 
-Similarly, you can format a buffer with the
-@code{texinfo-format-buffer} command.  This command creates a new
-buffer and generates the Info file in it.  Typing @kbd{C-x C-s} will
-save the Info file under the name specified by the
-@code{@@setfilename} line which must be near the beginning of the
-Texinfo file.
+Similarmente, você pode formatar um buffer com o comando
+@code{texinfo-format-buffer}. Esse comando cria um novo buffer e gera o arquivo
+do Info nele. Digitar @kbd{C-x C-s} salvará o arquivo do Info sob o nome
+especificado pela linha @code{@@setfilename}, que precisa estar perto do início
+do arquivo do Texinfo.
 
 @table @kbd
 @item C-c C-e C-r
 @itemx @code{texinfo-format-region}
 @findex texinfo-format-region
-Format the current region for Info.
+Formata a região atual para Info.
 
 @item C-c C-e C-b
 @itemx @code{texinfo-format-buffer}
 @findex texinfo-format-buffer
-Format the current buffer for Info.
+Formata o buffer atual para Info.
 @end table
 
-The @code{texinfo-format-region} and @code{texinfo-format-buffer}
-commands provide you with some error checking, and other functions can
-provide you with further help in finding formatting errors.  These
-procedures are described in an appendix; see @ref{Capturando Erros}.
-However, the @code{makeinfo} program provides better error checking
-(@pxref{@code{makeinfo} in Emacs}).
+Os comandos @code{texinfo-format-region} e @code{texinfo-format-buffer} te
+fornecem alguma verificação de erros, e outras funções podem te fornecer mais
+ajuda para encontrar erros de formatação. Esses procedimentos são descritos em
+um anexo; veja-se @ref{Capturando Erros}. Entretanto, o programa
+@code{makeinfo} fornece melhor verificação de erros
+(@pxref{@code{makeinfo} no Emacs}).
 
-A peculiarity of the @code{texinfo-format-buffer} and
-@code{texinfo-format-region} commands is that they do not indent (nor
-fill) paragraphs that contain @code{@@w} or @code{@@*} commands.
+Uma peculiaridade dos comandos @code{texinfo-format-buffer} e
+@code{texinfo-format-region} é a de que eles não recuam (nem preenchem)
+parágrafos que contenham comandos @code{@@w} ou @code{@@*}.
 
 
-@node Batch Formatting
-@subsection Batch Formatting
-@cindex Batch formatting for Info
-@cindex Info batch formatting
-
+@node Formatação em Lote
+@subsection Formatação em Lote
+@cindex Formatação em lote para o Info
+@cindex Formatação em lote do Info
+PAREI
 You can format Texinfo files for Info using @code{batch-texinfo-format}
 and Emacs batch mode.  You can run Emacs in batch mode from any shell,
 including a shell inside of Emacs.  (@xref{Initial Options,,,
@@ -22563,7 +22554,7 @@ Incidentally, the @code{makeinfo} command will create an Info file for a
 hierarchically organized Texinfo file that lacks `Next', `Previous' and
 `Up' pointers.  Thus, if you can be sure that your Texinfo file will be
 formatted with @code{makeinfo}, you have no need for the update node
-commands.  (@xref{Creating an Info File}, for more information about
+commands.  (@xref{Criando um Arquivo do Info}, for more information about
 @code{makeinfo}.)
 
 
@@ -22689,7 +22680,7 @@ C-c C-m C-b
 M-x makeinfo-buffer
 @end example
 
-@xref{Creating an Info File} for details about Info formatting.
+@xref{Criando um Arquivo do Info} for details about Info formatting.
 
 @node Printing
 @comment node-name,  next,  previous,  up
@@ -23861,7 +23852,7 @@ table and split the file manually.
 You should split a large file or else let the
 @code{texinfo-format-buffer} or @code{makeinfo-buffer} command do it
 for you automatically.  (Generally you will let one of the formatting
-commands do this job for you.  @xref{Creating an Info File}.)
+commands do this job for you.  @xref{Criando um Arquivo do Info}.)
 
 The split-off files are called the indirect subfiles.
 
