@@ -10481,7 +10481,7 @@ fonte.
 @end multitable
 
 Esta tabela lista os comandos do Texinfo para inserir outros caracteres
-comumente usados ​​em idiomas diferentes do inglês.
+comumente usados em idiomas diferentes do inglês.
 
 @findex questiondown
 @cindex @questiondown{}
@@ -12268,8 +12268,8 @@ Isso mostra uma definição bastante concisa para um ``comando'' chamado
 
 @code{@@deffn} imprime nomes de argumentos como @var{nchars} em tipo inclinado
 na saída impressa, porque nós pensamos nesses nomes como variáveis
-​​metassintáticas---elas representam os valores reais dos argumentos.
-No texto da descrição, no entanto, escreva um nome de argumento explicitamente
+metassintáticas---elas representam os valores reais dos argumentos.  No texto
+da descrição, no entanto, escreva um nome de argumento explicitamente
 com @code{@@var} para se referir ao valor do argumento. No exemplo acima, nós
 usamos @samp{@@var@{nchars@}} dessa forma.
 
@@ -12672,14 +12672,14 @@ que pertence à classe, mas para a qual cada instância tem o próprio valor del
 
 @cindex Variáveis, orientadas a objetos
 
-Estes comandos permitem que você defina diferentes tipos de variáveis
-​​em linguagens de programação orientadas a objetos.
+Estes comandos permitem que você defina diferentes tipos de variáveis em
+linguagens de programação orientadas a objetos.
 
 @table @code
 @item @@defcv @var{categoria} @var{classe} @var{nome}
 @findex defcv
 O comando @code{@@defcv} é o comando geral de definição para variáveis
-​​associadas a classes em programação orientada a objetos. O comando
+associadas a classes em programação orientada a objetos. O comando
 @code{@@defcv} é seguido por três argumentos: a categoria da coisa sendo
 definida, a classe à qual ela pertence e o nome dela. Por exemplo:
 
@@ -12747,9 +12747,9 @@ equivalente a @samp{@@defcv @{Variável da Instância@} @dots{}}. Por exemplo:
 
 @item @@deftypeivar @var{classe} @var{tipo-dados} @var{nome}
 @findex deftypeivar
-O comando @code{@@deftypeivar} é o comando de definição para variáveis
-​​de instância tipadas em programação orientada a objetos. Ele é
-análogo ao @code{@@defivar} com a adição do parâmetro @var{tipo-dados} para
+O comando @code{@@deftypeivar} é o comando de definição para variáveis de
+instância tipadas em programação orientada a objetos. Ele é análogo ao
+@code{@@defivar} com a adição do parâmetro @var{tipo-dados} para
 especificar o tipo da variável de instância. Normalmente, o tipo de dado é uma
 construção da linguagem de programação que deveria estar marcada com
 @code{@@code}. Por exemplo:
@@ -12984,9 +12984,8 @@ Um exemplo interessante do uso de @@code@{apply@} é encontrado na descrição d
 Neste manual, essa função está listada no Índice de Comandos e Variáveis sob
 @code{apply}.
 
-Variáveis ​​comuns e opções de usuário(a) são descritas usando um
-formato semelhante àquele para funções, exceto que variáveis não
-recebem argumentos.
+Variáveis comuns e opções de usuário(a) são descritas usando um formato
+semelhante àquele para funções, exceto que variáveis não recebem argumentos.
 
 
 @node Internacionalização
@@ -13135,7 +13134,7 @@ Essa é a codificação comumente usada para o idioma ucraniano.
 
 Especificar uma codificação @var{codificação} tem os seguintes efeitos:
 
-@cindex Seção Variáveis ​​Locais, para codificação
+@cindex Seção Variáveis Locais, para codificação
 @cindex Saída do Info, e codificação
 Na saída do Info, uma seção chamada `Local Variables'
 (@pxref{File Variables,,, emacs, The GNU Emacs Manual}) é gerada incluindo
@@ -13215,8 +13214,8 @@ Texto do formatador `bruto' para qualquer formato de saída, passado diretamente
 com interpretação mínima (mas não nula) dos comandos @@.
 
 @item
-Substituições de variáveis ​​independentes de formato e testagem se
-uma variável está configurada ou limpa.
+Substituições de variáveis independentes de formato e testagem se uma variável
+está configurada ou limpa.
 
 @end itemize
 
@@ -13401,8 +13400,8 @@ simples não funcionará dentro do @code{@@iftex}. O propósito do
 @code{@@if@dots{}} é o de fornecer processamento condicional para fonte do
 Texinfo, não fornecer acesso aos recursos de formatação subjacentes. Para isso,
 Texinfo fornece os assim chamados @dfn{comandos do formatador bruto}. Eles
-deveriamm ser usados ​​somente quando verdadeiramente exigidos (a
-maioria dos documentos não precisa deles).
+deveriamm ser usados somente quando verdadeiramente exigidos (a maioria dos
+documentos não precisa deles).
 
 @findex tex
 @cindex Códigos de categoria, do @TeX{} simples
