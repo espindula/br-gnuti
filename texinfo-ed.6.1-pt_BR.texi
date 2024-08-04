@@ -659,7 +659,7 @@ Referências Cruzadas HTML
 * Expansão de 8 bits:  Expansão de Caractere de 8 bits HTML Xref.
 * Incompatibilidade:   Incompatibilidade de Xref HTML.
 * Configuração:        Configuração do Xref do HTML. htmlxref.cnf.
-* Preservando links:   Preservação de Link HTML Xref. MANUAL-noderename.cnf.
+* Preservando links:   Preservação de Link Xref do HTML. MANUAL-noderename.cnf.
 
 Arquivos de Amostra do Texinfo
 
@@ -3320,7 +3320,7 @@ Por que os nomes de nodo são usados em referências cruzadas, não é
 desejável casualmente modificá-los uma vez publicados.  Tais mudanças de
 nome invalidam as referências a partir de outros manuais, a partir de
 arquivamentos de correspondências, e assim por diante.
-Veja-se @ref{Preservação de Link HTML Xref}.
+Veja-se @ref{Preservação de Link Xref do HTML}.
 
 Os ponteiros a partir de um dado nodo te habilitam a alcançar outros
 nodos e consistem simplesmente dos nomes de tais nodos.  Os ponteiros
@@ -5583,7 +5583,7 @@ Dessa maneira, quaisquer vínculos ao nodo antigo, seja originários de
 outros manuais Texinfo ou páginas web em geral, continuam funcionando.
 Você também pode fazer isso com a característica
 @file{RENAMED_NODE_FILE} de @command{makeinfo}
-(@pxref{Preservação de Link HTML Xref}). Ambos os métodos mantém
+(@pxref{Preservação de Link Xref do HTML}). Ambos os métodos mantém
 links na web funcionando; a única diferença substantiva é que a
 definição de âncoras também torna os nomes de nodo antigos acessíveis
 quando da leitura do documento em Info.
@@ -11106,7 +11106,7 @@ glifos para indicar saída gerada impressa, mensagens de erro,
 equivalência de expressões, o local do ponto em um editor e sequências
 de operação da GUI.
 
-Os comandos de inserção de glifos não precisam ser usados dentro d​e um
+Os comandos de inserção de glifos não precisam ser usados dentro de um
 exemplo, mas na maioria das vezes são. Todos os comandos de inserção de
 glifos são seguidos por chaves vazias.
 
@@ -11425,7 +11425,7 @@ Este é o @@point@{@}conteúdo mudado de foo.
 Ao documentar interfaces gráficas, é necessário descrever sequências
 como `Clique em @samp{Arquivo}, depois escolha @samp{Abrir}, depois
 @dots{}'. O Texinfo oferece os comandos @code{@@clicksequence} e
-@code{click} para representar isso, normalmente usados ​​assim:
+@code{click} para representar isso, normalmente usados assim:
 
 @example
 @dots{} @@clicksequence@{Arquivo @@click@{@} Abrir@} @dots{}
@@ -17485,381 +17485,382 @@ Para HTML@. Relevante somente para comandos de referência cruzada sem nome de
 referência cruzada (segundo argumento). Se configurada para@tie{}1, usa o
 argumento do nome do nó (primeiro) em comandos @@ de referência cruzada para o
 texto exibido como o hiperlink. Se configurada para@tie{}0, usa o nome do nó se
-@code{USE_Nodos} estiver configurado, caso contrário, o nome da seção. Se
+@code{USE_NODES} estiver configurado, caso contrário, o nome da seção. Se
 configurada para @samp{undef}, usa o primeiro argumento em ambientes
 pré-formatados, caso contrário, usa o nome do nó ou o nome da seção, dependendo
-de @code{USE_Nodos}. O padrão é @samp{undef}.
+de @code{USE_NODES}. O padrão é @samp{undef}.
 @end vtable
 
-PAREI
+
 @node Outras Variáveis de Personalização
 @subsection Outras Variáveis de Personalização
 
-This table gives the remaining customization variables, which apply to
-multiple formats, or affect global behavior, or otherwise don't fit
-into the categories of the previous sections.
+Esta tabela fornece as restantes variáveis de personalização, as quais se
+aplicam a vários formatos, afetam o comportamento global ou não se enquadram
+nas categorias das seções anteriores.
 
 @vtable @code
 @item CLOSE_QUOTE_SYMBOL
-When a closing quote is needed, use this character; default @code{&rsquo;}
-in HTML, @code{&#8217;} in Docbook.  The default for Info is the same
-as @code{OPEN_QUOTE_SYMBOL} (see below).
+Quando uma aspa de fechamento for necessária, usa esse caractere; padrão
+@code{&rsquo;} em HTML, @code{&#8217;} em Docbook. O padrão para Info é o mesmo
+que @code{OPEN_QUOTE_SYMBOL} (veja-se abaixo).
 
 @c @item COMPLETE_IMAGE_PATHS
-@c If set, the image files are computed to be relative from the document
-@c directory to the source manual directory, and then to the image.
+@c Se configurada, os arquivos de imagem serão computados para serem relativos
+@c a partir do diretório do documento para o diretório do manual do fonte e,
+@c depois, para a imagem.
 
 @item CPP_LINE_DIRECTIVES
-Recognize @code{#line} directives in a ``preprocessing'' pass
-(@pxref{Processadores Externos de Macro}); on by default.
+Reconhecer diretivas @code{#line} em uma passagem de ``pré-processamento''
+(@pxref{Processadores Externos de Macro}); ligada por padrão.
 
 @item DEBUG
-If set, debugging output is generated; default is off (zero).
-@c The integer value specifies what kinds of debugging output are
-@c generated.  It is a bitmask.  Setting it to 255 ensures having all
-@c available debugging output.
+Se configurada, a saída de depuração é gerada; padrão é desligada (zero).
+@c O valor inteiro especifica quais tipos de saída de depuração são gerados. É
+@c uma máscara de bits. Configurá-la para 255 garante ter todas as saídas de
+@c depuração disponíveis.
 
 @item DOCTYPE
 @vindex SystemLiteral
-For Docbook, HTML, XML@.  Specifies the @code{SystemLiteral}, the
-entity's system identifier.  This is a URI which may be used to
-retrieve the entity, and identifies the canonical DTD for the
-document.  The default value is different for each of HTML, Docbook
-and Texinfo@tie{}XML.
+Para Docbook, HTML, XML@. Especifica o @code{SystemLiteral}, o identificador de
+sistema da entidade. Esse é um URI que pode ser usado para recuperar a entidade
+e identifica o DTD canônico para o documento. O valor padrão é diferente para
+cada HTML, Docbook e Texinfo@tie{}XML.
 
 @item DUMP_TEXI
-For debugging.  If set, no conversion is done, only parsing and macro
-expansion.  If the option @option{--macro-expand} is set, the Texinfo
-source is also expanded to the corresponding file.  Default false.
+Para depuração. Se configurada, nenhuma conversão é feita, somente análise e
+expansão de macro. Se a opção @option{--macro-expand} for configurada, o fonte
+do Texinfo também será expandido para o arquivo correspondente. Padrão falso.
 
 @item DUMP_TREE
-For debugging.  If set, the tree constructed upon parsing a Texinfo
-document is output to standard error; default false.
+Para depuração. Se configurada, a árvore construída ao analisar um documento do
+Texinfo é enviada para erro padrão; padrão falso.
 
 @item ENABLE_ENCODING_USE_ENTITY
-For HTML, XML@.  If @option{--enable-encoding} is set, and there is an
-entity corresponding with the letter or the symbol being output,
-prefer the entity.  Set by default for HTML, but not XML.
+Para HTML, XML@. Se @option{--enable-encoding} estiver configurada, e existir
+uma entidade correspondendo com a letra ou o símbolo sendo produzido, prefira a
+entidade. Configurada por padrão para HTML, mas não para XML.
 
 @item EXTERNAL_CROSSREF_SPLIT
-For cross-references to other manuals, this determines if the other
-manual is considered to be split or monolithic.  By default, it is set
-based on the value of @code{SPLIT}.  @xref{Xref de HTML}, and @pxref{HTML
-Xref Configuration}.
+Para referências cruzadas para outros manuais, isso determina se o outro manual
+é considerado dividido ou monolítico. Por padrão, é configurada baseada no
+valor de @code{SPLIT}. @xref{Xref de HTML} e
+@pxref{Configuração do Xref do HTML}.
 
 @item EXTENSION
-The extension added to the output file name.  The default is different
-for each output format.
+A extensão adicionada ao nome do arquivo de saída. O padrão é diferente para
+cada formato de saída.
 
 @item FIX_TEXINFO
-For ``plain Texinfo'' (see the @code{PLAINTEXINFO} item).  If set to
-false, the resulting Texinfo does not have all errors corrected, such
-as missing @samp{@@end}; default true.  This variable is only
-relevant when expanding Texinfo; other converters always try to
-output something sane even if the input is erroneous.
+Para ``Texinfo simples'' (veja-se o item @code{PLAINTEXINFO}). Se configurada
+para falso, o Texinfo resultante não terá todos os erros corrigidos, tal como
+@samp{@@end} ausente; padrão verdadeiro. Essa variável somente é relevante ao
+expandir Texinfo; outros conversores sempre tentam produzir algo sensato, mesmo
+que a entrada seja errônea.
 
 @c @item IDX_SUMMARY
-@c If set, for each @code{@@printindex} a file named
-@c @file{@var{docname}_@var{idxname}.idx} is created, containing lines of
-@c the form:
+@c Se configurada, para cada @code{@@printindex}, um arquivo chamado
+@c @file{@var{docname}_@var{idxname}.idx} é criado, contendo linhas da forma:
 @c
 @c @example
-@c @var{key} @var{reference}
+@c @var{chave} @var{referência}
 @c @end example
 @c
-@c @noindent sorted alphabetically (case matters).
+@c @noindent ordenado alfabeticamente (diferencia maiúsculas e minúsculas).
 
 @item IGNORE_BEFORE_SETFILENAME
-If set, begin outputting at @code{@@setfilename}, if
-@code{@@setfilename} is present; default true.
+Se configurada, inicia a saída em @code{@@setfilename}, se @code{@@setfilename}
+estiver presente; padrão verdadeiro.
 
 @item IGNORE_SPACE_AFTER_BRACED_COMMAND_NAME
-If set, spaces are ignored after an @@-command that takes braces.
-Default true, matching the @TeX{} behavior.
+Se configurado, espaços são ignorados depois de um comando @@ que receba
+chaves. Padrão verdadeiro, correspondendo ao comportamento do @TeX{}.
 
 @item INDEX_ENTRY_COLON
-Symbol used between the index entry and the associated node or section;
-default @samp{:}.
+Símbolo usado entre a entrada do índice e o nó ou seção associado; padrão
+@samp{:}.
 
 @item INDEX_SPECIAL_CHARS_WARNING
-If set, warn about @samp{:} in index entry, as it leads to invalid entries in
-index menus in output Info files.  For Info and plaintext only.
+Se configurada, avisa acerca de @samp{:} na entrada de índice, pois isso leva a
+entradas inválidas em menus de índice em arquivos de saída do Info. Somente
+para Info e texto simples.
 
 @anchor{INFO_SPECIAL_CHARS_QUOTE}
 @item INFO_SPECIAL_CHARS_QUOTE
-If set, whenever there are problematic characters for Info output in
-places such as node names or menu items, surround the part of the
-construct where they appear with quoting characters, as described in
-@ref{Especificação do Formato Info}.  @xref{Exigências de Linha de Nodo}.
+Se configurada, sempre que existir caracteres problemáticos para a saída Info
+em locais como nomes de nós ou itens de menu, envolva entre aspas a parte da
+construção onde eles aparecem, conforme descrito em
+@ref{Especificação do Formato Info}. @xref{Exigências de Linha de Nodo}.
 
 @item INFO_SPECIAL_CHARS_WARNING
-If set, warn about problematic constructs for Info output (such as the
-string @samp{::}) in node names, menu items, and cross-references;
-default true.  Do not warn about index entries, since parsing problems
-there don't prevent navigation; readers can still relatively easily
-find their way to the node in question.
+Se configurada, avisa acerca de construções problemáticas para saída Info (como
+a string @samp{::}) em nomes de nós, itens de menu e referências cruzadas;
+padrão verdadeiro. Não avisa acerca de entradas de índice, já que problemas de
+análise não impedem a navegação; leitores ainda conseguem relativamente
+facilmente encontrar o caminho para o nó em questão.
 
 @item INLINE_INSERTCOPYING
-If set, @code{@@insertcopying} is replaced by the @code{@@copying}
-content (@pxref{@code{@@copying}}) as if @code{@@insertcopying} were a
-user-defined macro; default false.
+Se configurada, @code{@@insertcopying} será substituído pelo conteúdo de
+@code{@@copying} (@pxref{@code{@@copying}}) como se @code{@@insertcopying}
+fosse uma macro definida por usuário(a); padrão falso.
 
 @item INPUT_ENCODING_NAME
-Normalized encoding name suitable for output.  Should be a usable
-charset name in HTML, typically one of the preferred IANA encoding
-names.  You should not need to use this variable, since it is set by
-@code{@@documentencoding} (@pxref{@code{@@documentencoding}}).
+Nome de codificação normalizado adequado para saída. Deveria ser um nome de
+conjunto de caracteres usável em HTML, tipicamente um dos nomes de codificação
+preferidos da IANA. Você não deveria precisar usar essa variável, pois ela é
+configurada por @code{@@documentencoding} (@pxref{@code{@@documentencoding}}).
 
 @item INPUT_PERL_ENCODING
-Perl encoding used to process the Texinfo source.  You should not need
-to use that variable, since it is set by @code{@@documentencoding}
-(@pxref{@code{@@documentencoding}}).
+Codificação Perl usada para processar o fonte do Texinfo. Você não deveria
+precisar usar essa variável, pois ela é configurada por
+@code{@@documentencoding} (@pxref{@code{@@documentencoding}}).
 
 @item MACRO_BODY_IGNORES_LEADING_SPACE
-Ignore white space at the beginning of user defined macro body line,
-mimicking a @TeX{} limitation (@pxref{Detalhes de Macro}).  Default off.
+Ignora espaço em branco no início da linha do corpo da macro definida por
+usuário(a), imitando uma limitação do @TeX{} (@pxref{Detalhes de Macro}).
+Padrão desligado.
 
 @item MAX_MACRO_CALL_NESTING
-The maximal number of recursive calls of @@-commands defined through
-@code{@@rmacro}; default 100000.  The purpose of this variable is to
-avoid infinite recursions.
+O número máximo de chamadas recursivas de comandos @@ definidos por meio de
+@code{@@rmacro}; padrão 100000. O propósito dessa variável é o de evitar
+recursões infinitas.
 
 @item MENU_ENTRY_COLON
-Symbol used between the menu entry and the description; default
-@samp{:}.
+Símbolo usado entre a entrada do menu e a descrição; padrão @samp{:}.
 
 @item NO_USE_SETFILENAME
-If set, do not use @code{@@setfilename} to set the document name;
-instead, base the output document name only on the input file name.
-The default is false.
+Se configurada, não use @code{@@setfilename} para configurar o nome do
+documento; em vez disso, baseie o nome do documento de saída somente no nome do
+arquivo de entrada. O padrão é falso.
 
 @item NODE_FILENAMES
-If set, node names are used to construct file names.  By default, it
-is set if the output is split by node, or if @code{NODE_FILES} is set
-and the output is split in any way.
+Se configurada, nomes de nó são usados para construir nomes de arquivo. Por
+padrão, é configurada se a saída for dividida por nó, ou se @code{NODE_FILES}
+estiver configurada e a saída for dividida de alguma forma.
 
 @item NODE_NAME_IN_INDEX
-If set, use node names in index entries, otherwise prefer section names;
-default true.
+Se configurada, use nomes de nós em entradas de índice, caso contrário, prefira
+nomes de seção; padrão verdadeiro.
 
 @item NODE_NAME_IN_MENU
-If set, use node names in menu entries, otherwise prefer section names;
-default true.
+Se configurada, use nomes de nós em entradas de menu, caso contrário, prefira
+nomes de seção; padrão verdadeiro.
 
 @item OPEN_QUOTE_SYMBOL
-When an opening quote is needed, e.g., for @samp{@@samp} output, use
-the specified character; default @code{&lsquo;} for HTML,
-@code{&#8216;} for Docbook.  For Info, the default depends on the
-enabled document encoding (@pxref{@code{@@documentencoding}}); if no
-document encoding is set, or the encoding is US-ASCII, etc., @samp{'}
-is used.  This character usually appears as an undirected single quote
-on modern systems.  If the document encoding is Unicode, the Info
-output uses a Unicode left quote.
+Quando uma aspa de abertura for necessária, por exemplo, para a saída do
+@samp{@@samp}, use o caractere especificado; padrão @code{&lsquo;} para HTML,
+@code{&#8216;} para Docbook. Para Info, o padrão depende da codificação
+habilitada do documento (@pxref{@code{@@documentencoding}}); se nenhuma
+codificação de documento estiver configurada, ou a codificação for US-ASCII,
+etc., @samp{'} será usado. Esse caractere geralmente aparece como uma aspa
+simples não direcionada em sistemas modernos. Se a codificação do documento for
+Unicode, a saída Info usará uma aspa esquerda Unicode.
 
 @item OUTPUT_ENCODING_NAME
-Normalized encoding name used for output files.  Should be a usable
-charset name in HTML, typically one of the preferred IANA encoding
-names.  By default, if an input encoding is set (typically through
-@code{@@documentencoding} or @code{INPUT_ENCODING_NAME}), this
-information is used to set the output encoding name.  If no input
-encoding is specified, the default output encoding name may be set by
-the output format.  In particular, the XML-based formats use
-@code{utf-8} for @code{OUTPUT_ENCODING_NAME} if the encoding is not
-otherwise specified.  @xref{@code{@@documentencoding}}.
+Nome de codificação normalizado usado para arquivos de saída. Deveria ser um
+nome de conjunto de caracteres usável em HTML, tipicamente um dos nomes de
+codificação preferidos da IANA. Por padrão, se uma codificação de entrada for
+configurada (tipicamente por meio de @code{@@documentencoding} ou
+@code{INPUT_ENCODING_NAME}), essa informação será usada para configurar o nome
+da codificação de saída. Se nenhuma codificação de entrada for especificada, o
+nome padrão da codificação de saída poderá ser configurado pelo formato de
+saída. Em particular, os formatos baseados em XML usam @code{utf-8} para
+@code{OUTPUT_ENCODING_NAME} se a codificação não for especificada de outra
+maneira. @xref{@code{@@documentencoding}}.
 
 @item OVERVIEW_LINK_TO_TOC
-If set, the cross-references in the Visão Geral link to the corresponding
-Table of Contents entries; default true.
+Se configurada, as referências cruzadas na Visão Geral se lincam às entradas
+correspondentes da Tabela de Conteúdo; padrão verdadeiro.
 
 @item PACKAGE
 @itemx PACKAGE_VERSION
 @itemx PACKAGE_AND_VERSION
 @itemx PACKAGE_URL
 @itemx PACKAGE_NAME
-The implementation's short package name, package version, package name
-and version concatenated, package url, and full package name,
-respectively.  By default, these variables are all set through
-Autoconf, Automake, and @code{configure}.
+O nome curto do pacote de implementação, versão do pacote, nome do pacote e
+versão concatenados, url do pacote e nome completo do pacote, respectivamente.
+Por padrão, essas variáveis são todas configuradas por meio do Autoconf,
+Automake e @code{configure}.
 
 @item PREFIX
-The output file prefix, which is prepended to some output file names.
-By default it is set by @code{@@setfilename} or from the input file
-(@pxref{@code{@@setfilename}}).  How this value is used depends on the
-value of Outras Variáveis de Personalização or command line options, such
-as whether the output is split and @code{NODE_FILENAMES}.  The default
-is unset.
+O prefixo do arquivo de saída, o qual é anteposto a alguns nomes de arquivo de
+saída. Por padrão, ele é configurado por @code{@@setfilename} ou a partir do
+arquivo de entrada (@pxref{@code{@@setfilename}}). Como esse valor é usado
+depende do valor de outras variáveis de personalização ou de opções de linha de
+comando, como se a saída estivesse dividida, e de @code{NODE_FILENAMES}. O
+padrão é desconfigurada.
 
 @item PROGRAM
-Name of the program used.  By default, it is set to the name of the
-program launched, with a trailing @samp{.pl} removed.
+Nome do programa usado. Por padrão, é configurada para o nome do programa
+iniciado, com um @samp{.pl} final removido.
 
-@item RENAMED_Nodos_FILE
-If set, use the value for the renamed Nodos description file.  If not
-set, the file is @file{@var{doc_basename}-noderename.cnf}.
-@xref{Preservação de Link HTML Xref}.
+@item RENAMED_NODES_FILE
+Se configurada, use o valor para o arquivo de descrição de nós renomeados. Se
+não configurada, o arquivo é @file{@var{nome_base_documento}-noderename.cnf}.
+@xref{Preservação de Link Xref do HTML}.
 
-@item RENAMED_Nodos_REDIRECTIONS
-If set, create redirection files for renamed Nodos.  Set by default
-when generating HTML@.
+@item RENAMED_NODES_REDIRECTIONS
+Se configurada, cria arquivos de redirecionamento para nós renomeados.
+Configurada por padrão ao gerar HTML@.
 
 @item SHOW_MENU
 @opindex --no-headers
-If set, Texinfo menus are output.  By default, it is set unless
-generating Docbook or if @option{--no-headers} is specified.
+Se configurada, os menus do Texinfo são emitidos. Por padrão, é configurada, a
+menos que gerando Docbook ou se @option{--no-headers} for especificada.
 
 @item SORT_ELEMENT_COUNT
 @pindex texi-elements-by-size
-@cindex Longest Nodos, finding
-@cindex Sorting Nodos by size
-If set, the name of a file to which a list of elements (Nodos or
-sections, depending on the output format) is dumped, sorted by the
-number of lines they contain after removal of @@-commands; default
-unset.  This is used by the program @code{texi-elements-by-size} in
-the @file{util/} directory of the Texinfo source distribution
+@cindex Nodos mais longos, encontrando
+@cindex Ordenando nós por tamanho
+Se configurada, o nome de um arquivo para o qual uma lista de elementos (nodos
+ou seções, dependendo do formato de saída) é despejada, ordenada pelo número de
+linhas que eles contém depois da remoção de comandos @@; padrão desconfigurada.
+Isso é usado pelo programa @code{texi-elements-by-size} no diretório
+@file{util/} da distribuição do fonte do Texinfo
 (@pxref{texi-elements-by-size}).
 
 @item SORT_ELEMENT_COUNT_WORDS
-When dumping the elements-by-size file (see preceding item), use word
-counts instead of line counts; default false.
+Ao despejar o arquivo de elementos por tamanho (veja-se o item precedente), use
+contagens de palavras em vez de contagens de linhas; padrão falso.
 
 @c @item SPLIT_INDEX
-@c For HTML@.  If set, the output is split, and the output from
-@c @code{@@printindex} happens in a sectioning element at the level of
-@c splitting, then split index pages at the next letter after they have
-@c more than that many entries.  If set to 0, no index splitting.
+@c Para HTML@. Se configurada, a saída é dividida, e a saída proveniente de
+@c @code{@@printindex} acontece em um elemento de seccionamento no nível de
+@c divisão, então divide páginas de índice na próxima letra depois de elas terem
+@c mais que essa quantidade de entradas. Se configurada para 0, nenhuma divisão de
+@c índice.
 
 @item TEST
-If set to true, some variables which are normally dynamically
-generated anew for each run (date, program name, version) are set to
-fixed and given values.  This is useful to compare the output to a
-reference file, as is done for the tests.  The default is false.
+Se configurada para verdadeiro, algumas variáveis que normalmente são geradas
+dinamicamente novamente para cada execução (data, nome do programa, versão) são
+configuradas para valores fixos e fornecidos. Isso é útil para comparar a saída
+com um arquivo de referência, como é feito para os testes. O padrão é falso.
 
 @item TEXI2DVI
-Name of the command used to produce PostScript, PDF, and DVI; default
-@samp{texi2dvi}.  @xref{Saída Impressa do @command{texi2any}}.
+Nome do comando usado para produzir PostScript, PDF e DVI; padrão
+@samp{texi2dvi}. @xref{Saída Impressa do @command{texi2any}}.
 
 @item TEXI2HTML
-@cindex compatibility, with @command{texi2html}
-Generate HTML and try to be as compatible as possible with
-@command{texi2html}; default false.
+@cindex compatibilidade, com @command{texi2html}
+Gere HTML e tente ser o mais compatível possível com @command{texi2html};
+padrão falso.
 
 @item TEXINFO_COLUMN_FOR_DESCRIPTION
-Used with the @code{indent_menu_descriptions} tree transformation,
-described below; default 32 (matching
-@code{texinfo-column-for-description} in Emacs)).
+Usado com a transformação de árvore do @code{indent_menu_descriptions},
+descrita abaixo; padrão 32 (correspondente a
+@code{texinfo-column-for-description} no Emacs)).
 
 @item TEXINFO_DTD_VERSION
-For XML@.  Version of the DTD used in the XML output preamble.  The
-default is set based on a variable in @file{configure.ac}.
+Para XML@. Versão do DTD usado no preâmbulo de saída XML. O padrão é
+configurada baseada em uma variável em @file{configure.ac}.
 
 @item TEXTCONTENT_COMMENT
-For stripped text content output (i.e., when
-@code{TEXINFO_OUTPUT_FORMAT} is set to @code{textcontent}).  If set,
-also output comments.  Default false.
+Para saída de conteúdo de texto despojado (por exemplo, quando
+@code{TEXINFO_OUTPUT_FORMAT} for configurada para @code{textcontent}). Se
+configurada, também emite comentários. Padrão falso.
 
 @item TOP_NODE_UP
-Up node for the Top node; default @samp{(dir)}.  For overriding the
-url in HTML output, see @code{TOP_NODE_UP_URL} in
+Nó superior para o nó Top; padrão @samp{(dir)}. Para substituir a URL na saída
+HTML, veja-se @code{TOP_NODE_UP_URL} em
 @ref{Variáveis de Personalização de HTML}.
 
 @item TREE_TRANSFORMATIONS
-The associated value is a comma separated list of transformations that
-can be applied to the Texinfo tree prior to outputting the result.  If
-more than one is specified, the ordering is irrelevant; each is always
-applied at the necessary point during processing.
+O valor associado é uma lista separada por vírgulas de transformações que podem
+ser aplicadas à árvore do Texinfo antes de emitir o resultado. Se mais que uma
+for especificada, a ordenamento é irrelevante; cada uma é sempre aplicada no
+ponto necessário durante o processamento.
 
-The only one executed by default is
-@samp{move_index_entries_after_items} for HTML and Docbook output.
-Here's an example of updating the master menu in a document:
+O único executado por padrão é @samp{move_index_entries_after_items} para saída
+HTML e Docbook. Aqui está um exemplo de atualização do menu mestre em um
+documento:
 
 @example
 makeinfo \
   -c TREE_TRANSFORMATIONS=regenerate_master_menu \
   -c PLAINTEXINFO=1 \
-  mydoc.texi \
-  -o /tmp/out
+  meudocumento.texi \
+  -o /tmp/saida
 @end example
 
-@noindent (Caveat: Since @code{PLAINTEXINFO} output does expand
-Texinfo macros and Condicionais, it's necessary to remove any such
-differences before installing the updates in the original document.
-This will be remedied in a future release.)
+@noindent (Ressalva: como a saída de @code{PLAINTEXINFO} expande macros e
+condicionais do Texinfo, é necessário remover quaisquer diferenças antes de
+instalar as atualizações no documento original. Isso será remediado em um
+lançamento futuro).
 
-The following transformations are currently supported (many are used
-in the @code{pod2texi} utility distributed with Texinfo;
-@pxref{Invoking @command{pod2texi}}):
+As seguintes transformações são atualmente suportadas (muitas são usadas no
+utilitário @code{pod2texi} distribuído com o Texinfo;
+@pxref{Invocando @command{pod2texi}}):
 
 @ftable @samp
-@item complete_tree_Nodos_menus
-Add menu entries or whole menus for Nodos associated with sections of
-any level, based on the sectioning tree.
+@item complete_tree_nodes_menus
+Adicione entradas de menu ou menus inteiros para nodos associados com seções de
+qualquer nível, baseados na árvore de seccionamento.
 
 @item fill_gaps_in_sectioning
-Adds empty @code{@@unnumbered...} sections in a tree to fill gaps in
-sectioning.  For example, an @code{@@unnumberedsec} will be inserted
-if a @code{@@chapter} is followed by a @code{@@subsection}.
+Adiciona seções @code{@@unnumbered...} vazias em uma árvore para preencher
+lacunas no seccionamento. Por exemplo, um @code{@@unnumberedsec} será inserido
+se um @code{@@chapter} for seguido por um @code{@@subsection}.
 
 @item indent_menu_descriptions
-Reformat menus so that descriptions start at column
+Reformate os menus de forma que as descrições comecem na coluna
 @code{TEXINFO_COLUMN_DESCRIPTION}.
 
-@item insert_Nodos_for_sectioning_commands
-Insert Nodos for sectioning commands lacking a corresponding node.
+@item insert_nodes_for_sectioning_commands
+Insira nodos para comandos de seccionamento carecendo de um nó correspondente.
 
 @item move_index_entries_after_items
-In @code{@@enumerate} and @code{@@itemize}, move index entries
-appearing just before an @code{@@item} to just after the
-@code{@@item}.  Comment lines between index entries are moved too.  As
-mentioned, this is always done for HTML and Docbook output.
+Em @code{@@enumerate} e @code{@@itemize}, mova as entradas de índice que
+aparecem logo antes de um @code{@@item} para logo depois do @code{@@item}. As
+linhas de comentários entre as entradas de índice também são movidas. Como
+mencionado, isso é sempre feito para saídas em HTML e em Docbook.
 
 @item regenerate_master_menu
-Update the Top node master menu, either replacing the (first)
-@code{@@detailmenu} in the Top node menu, or creating it at the end of
-the Top node menu.
+Atualize o menu mestre do nó Top, ou substituindo o (primeiro)
+@code{@@detailmenu} no menu do nó Top ou criando-o no final do menu do nó Top.
 
 @item simple_menu
-Mostly the same as @code{SIMPLE_MENU}: use a simple preformatted style
-for the menu.  It differs from setting @code{SIMPLE_MENU} in that
-@code{SIMPLE_MENU} only has an effect in HTML output.
+Basicamente o mesmo que @code{SIMPLE_MENU}: use um estilo simples pré-formatado
+para o menu. Ele difere da configuração de @code{SIMPLE_MENU} em que
+@code{SIMPLE_MENU} somente tem efeito em saída HTML.
 
 @end ftable
 
-@item USE_Nodos
-Preferentially use Nodos to decide where elements are separated.  If
-set to false, preferentially use sectioning to decide where elements
-are separated.  The default is true.
+@item USE_NODES
+Use preferencialmente nodos para decidir onde os elementos são separados. Se
+configurada para falso, use preferencialmente seccionamento para decidir onde
+os elementos são separados. O padrão é verdadeiro.
 
 @item USE_NODE_TARGET
-If set, use the node associated with a section for the section target
-in cross-references; default true.
+Se configurada, use o nó associado com uma seção para o alvo de seção em
+referências cruzadas; padrão verdadeiro.
 
 @item USE_NUMERIC_ENTITY
-For HTML and XML@.  If set, use numeric entities instead of ASCII
-characters when there is no named entity.  By default, set to true for
-HTML.
+Para HTML e XML@. Se configurada, use entidades numéricas em vez de caracteres
+ASCII quando não existir entidade nomeada. Por padrão, configurada para
+verdadeiro para HTML.
 
 @item USE_UP_NODE_FOR_ELEMENT_UP
-Fill in up sectioning direction with node direction when there is no
-sectioning up direction.  In practice this can only happen when there
-is no @@top section.  Not set by default.
+Preencha a direção de seccionamento para cima com a direção do nó quando não
+existir direção de seccionamento para cima. Na prática, isso somente pode
+acontecer quando não existir seção @@top. Não configurada por padrão.
 
 @item USE_SETFILENAME_EXTENSION
-Default is on for Info, off for other output.  If set, use exactly
-what @code{@@setfilename} gives for the output file name, including
-the extension.  You should not need to explicitly set this variable.
+O padrão é on para Info, off para outras saídas. Se configurada, use exatamente
+o que @code{@@setfilename} fornecer para o nome do arquivo de saída, incluindo
+a extensão. Você não deveria precisar configurar explicitamente essa variável.
 
 @item USE_TITLEPAGE_FOR_TITLE
-Use the full @code{@@titlepage} as the title, not a simple title string;
-default false.
+Use o @code{@@titlepage} completo como título, não uma simples string de
+título; padrão falso.
 
 @item USE_UNIDECODE
 @pindex Text::Unidecode
-If set to false, do not use the @code{Text::Unidecode} Perl module to
-transliterate more characters; default true.
+Se configurada para falso, não use o módulo @code{Text::Unidecode} do Perl para
+transliterar mais caracteres; padrão verdadeiro.
 
 @end vtable
 
-
+PAREI
 @node Internacionalização de Strings de Documentos
 @section Internacionalização de Strings de Documentos
 
@@ -17962,8 +17963,8 @@ format, while nevertheless with rich formatting it may be translated
 appropriately in many languages.
 
 
-@node Invoking @command{pod2texi}
-@section Invoking @command{pod2texi}: Convert POD to Texinfo
+@node Invocando @command{pod2texi}
+@section Invocando @command{pod2texi}: Converte POD para Texinfo
 
 @pindex pod2texi
 @cindex Invoking @code{pod2texi}
@@ -18065,7 +18066,7 @@ corresponding @command{texi2any} customization variables.
 @item @option{--l2h-tmp}              @tab @code{L2H_TMP}
 @item @option{--l2h-file}             @tab @code{L2H_FILE}
 @item @option{--l2h-clean}            @tab @code{L2H_CLEAN}
-@item @option{--use-Nodos}            @tab @code{USE_Nodos}
+@item @option{--use-Nodos}            @tab @code{USE_NODES}
 @item @option{--monolithic}           @tab @code{MONOLITHIC}
 @item @option{--top-file}             @tab @code{TOP_FILE}
 @item @option{--toc-file}             @tab @code{TOC_FILE}
@@ -19265,7 +19266,7 @@ The algorithm was primarily devised by Patrice Dumas in 2003--04.
 * Expansão de 8 bits:  Expansão Xref de Caractere de 8 Bits do HTML.
 * Incompatibilidade:   Incompatibilidade de Xref HTML.
 * Configuração:        Configuração do Xref do HTML. htmlxref.cnf.
-* Preservando links:   Preservação de Link HTML Xref. MANUAL-noderename.cnf.
+* Preservando links:   Preservação de Link Xref do HTML. MANUAL-noderename.cnf.
 @end menu
 
 
@@ -19749,7 +19750,7 @@ usual.  You can get the latest version from
 @url{http://ftpmirror.gnu.org/@/texinfo/@/htmlxref.cnf}.
 
 
-@node Preservação de Link HTML Xref
+@node Preservação de Link Xref do HTML
 @subsection HTML Cross-reference Link Preservation: @var{manual}@file{-noderename.cnf}
 
 @pindex noderename.cnf
