@@ -16160,8 +16160,8 @@ que o normal com o comando @code{\mag} do @TeX{}. Tudo que seja tipografado é
 dimensionado proporcionalmente maior ou menor. (@code{\mag} significa
 ``ampliação''). Esse @emph{não} é um comando @@ do Texinfo, mas é um comando do
 @TeX{} bruto que é prefixado com uma barra invertida. Você tem que escrever
-esse comando entre @code{@@tex} e @code{@@end tex} (@pxref{Comandos do
-Formatador Bruto}).
+esse comando entre @code{@@tex} e @code{@@end tex}
+(@pxref{Comandos do Formatador Bruto}).
 
 Siga o comando @code{\mag} com um @samp{=} e então um número que seja 1.000
 vezes a ampliação que você deseja. Por exemplo, para imprimir páginas em
@@ -16820,8 +16820,8 @@ Info).
 @item --transliterate-file-names
 @opindex --transliterate-file-names
 Habilita transliteração de caracteres de 8 bits em nomes de nós para o
-propósito de criação de nomes de arquivo. @xref{Expansão Xref de Caractere de 8
-Bits do HTML}.
+propósito de criação de nomes de arquivo.
+@xref{Expansão Xref de Caractere de 8 Bits do HTML}.
 
 @item -U @var{variável}
 Causa @var{variável} ser indefinida. Isso é equivalente a @code{@@clear
@@ -17278,12 +17278,9 @@ superior, e antes de elementos especiais, e para rodapés e cabeçalhos; padrão
 @code{<hr>}.
 
 @item DO_ABOUT
-For HTML@.  If set to 0 never do an About special element; if set to 1 always
-do an About special element; default 0. @c @xref{Output Elements Defined}.
-
 Para HTML@. Se configurada para 0, nunca faz um elemento especial About; se
-configurada para 1, sempre faz um elemento especial About; padrão 0. @c
-@xref{Elementos Definidos de Saída}.
+configurada para 1, sempre faz um elemento especial About; padrão 0.
+@c @xref{Elementos Definidos de Saída}.
 
 @item EXTERNAL_DIR
 Para HTML@. Diretório base para manuais externos; padrão nenhum. É melhor usar
