@@ -18702,230 +18702,234 @@ Cada nó `Invoking' para cada programa instalado deveria ter um
 facilmente a documentação para os diferentes programas que podem executar, como
 no tradicional sistema @command{man}.
 
-PAREI
+
 @node Invocando @command{install-info}
 @subsection Invocando @command{install-info}
 
 @pindex install-info
 
-@code{install-info} inserts menu entries from an Info file into the
-top-level @file{dir} file in the Info system (see the previous sections
-for an explanation of how the @file{dir} file works).  @code{install-info}
-also removes menu entries from the @file{dir} file.  It's most often
-run as part of software installation, or when constructing a @file{dir} file
-for all manuals on a system.  Synopsis:
+@code{install-info} insere entradas de menu a partir de um arquivo do Info no
+arquivo @file{dir} de nível superior no sistema Info (vejam-se as seções
+anteriores para uma explicação de como o arquivo @file{dir} funciona).
+@code{install-info} também remove entradas de menu do arquivo @file{dir}. Ele é
+mais frequentemente executado como parte de instalação de software, ou ao
+construir um arquivo @file{dir} para todos os manuais em um sistema. Sinopse:
 
 @example
-install-info [@var{option}@dots{}] [@var{info-file} [@var{dir-file}]]
+install-info [@var{opção}@dots{}] [@var{arquivo-info} [@var{arquivo-dir}]]
 @end example
 
-If @var{info-file} or @var{dir-file} are not specified, the options
-(described below) that define them must be.  There are no compile-time
-defaults, and standard input is never used.  @code{install-info} can
-read only one Info file and write only one @file{dir} file per invocation.
+Se @var{arquivo-info}, ou @var{arquivo-dir} não for especificado, as opções
+(descritas abaixo) que os definem precisam ser. Não existem padrões de tempo de
+compilação, e a entrada padrão nunca é usada. @code{install-info} pode ler
+somente um arquivo do Info e escrever somente um arquivo @file{dir} por
+invocação.
 
-@cindex @file{dir}, created by @code{install-info}
-If @var{dir-file} (however specified) does not exist,
-@code{install-info} creates it if possible (with no entries).
+@cindex @file{dir}, criado por @code{install-info}
+Se @var{arquivo-dir} (como especificado) não existir, @code{install-info} o
+criará, se possível (sem entradas).
 
-@cindex Compressed dir files, reading
-@cindex XZ-compressed dir files, reading
-@cindex Bzipped dir files, reading
-@cindex Lzip-compressed dir files, reading
-@cindex LZMA-compressed dir files, reading
-@cindex Dir files, compressed
-If any input file is compressed with @code{gzip} (@pxref{Top,,, gzip,
-Gzip}), @code{install-info} automatically uncompresses it for reading.
-And if @var{dir-file} is compressed, @code{install-info} also
-automatically leaves it compressed after writing any changes.  If
-@var{dir-file} itself does not exist, @code{install-info} tries to
-open @file{@var{dir-file}.gz}, @file{@var{dir-file}.xz},
-@file{@var{dir-file}.bz2}, @file{@var{dir-file}.lz}, and
-@file{@var{dir-file}.lzma}, in that order.
+@cindex Arquivos dir comprimidos, lendo
+@cindex Arquivos dir comprimidos com XZ, lendo
+@cindex Arquivos dir comprimidos com bzip, lendo
+@cindex Arquivos dir comprimidos com Lzip, lendo
+@cindex Arquivos dir comprimidos com LZMA, lendo
+@cindex Arquivos dir, comprimidos
+Se qualquer arquivo de entrada for comprimido com @code{gzip}
+(@pxref{Top,,, gzip, Gzip}), @code{install-info} o descomprimirá
+automaticamente para leitura. E se @var{arquivo-dir} for comprimido,
+@code{install-info} também o deixará comprimido automaticamente depois de
+escrever quaisquer mudanças. Se @var{arquivo-dir} em si não existir,
+@code{install-info} tentará abrir @file{@var{arquivo-dir}.gz},
+@file{@var{arquivo-dir}.xz}, @file{@var{arquivo-dir}.bz2},
+@file{@var{arquivo-dir}.lz} e @file{@var{arquivo-dir}.lzma}, nessa ordem.
 
-Options:
+Opções:
 
 @table @code
 @item --add-once
-@opindex --add-once@r{, for @command{install-info}}
-Specifies that the entry or entries will only be put into a single section.
+@opindex --add-once@r{, para @command{install-info}}
+Especifica que a entrada ou entradas serão colocadas somente em uma seção.
 
-@item --align=@var{column}
-@opindex --align=@var{column}@r{, for @command{install-info}}
-Specifies the column that the second and subsequent lines of menu entry's
-description will be formatted to begin at.  The default for this option is
-@samp{35}.  It is used in conjunction with the @samp{--max-width} option.
-@var{column} starts counting at 1.
+@item --align=@var{coluna}
+@opindex --align=@var{coluna}@r{, para @command{install-info}}
+Especifica a coluna em que a segunda e as linhas subsequentes da descrição da
+entrada do menu serão formatadas para começar. O padrão para essa opção é
+@samp{35}. Ela é usada em conjunto com a opção @samp{--max-width}. @var{coluna}
+começa contagem em 1.
 
 @item --append-new-sections
-@opindex --append-new-sections@r{, for @command{install-info}}
-Instead of alphabetizing new sections, place them at the end of the DIR file.
+@opindex --append-new-sections@r{, para @command{install-info}}
+Em vez de ordenar alfabeticamente novas seções, coloque-as ao final do arquivo
+DIR.
 
-@item --calign=@var{column}
-@opindex --calign=@var{column}@r{, for @command{install-info}}
-Specifies the column that the first line of menu entry's description will
-be formatted to begin at.  The default for this option is @samp{33}.  It is
-used in conjunction with the @samp{--max-width} option.
-When the name of the menu entry exceeds this column, entry's description
-will start on the following line.
-@var{column} starts counting at 1.
+@item --calign=@var{coluna}
+@opindex --calign=@var{coluna}@r{, para @command{install-info}}
+Especifica a coluna em que a primeira linha da descrição da entrada do menu
+será formatada para começar. O padrão para essa opção é @samp{33}. É usada em
+conjunto com a opção @samp{--max-width}. Quando o nome da entrada do menu
+excede essa coluna, a descrição da entrada começará na linha seguinte.
+@var{coluna} começa contagem em 1.
 
 @item --debug
-@opindex --debug@r{, for @command{install-info}}
-Report what is being done.
+@opindex --debug@r{, para @command{install-info}}
+Informa o que está sendo feito.
 
 @item --delete
-@opindex --delete@r{, for @command{install-info}}
-Delete the entries in @var{info-file} from @var{dir-file}.  The file
-name in the entry in @var{dir-file} must be @var{info-file} (except for
-an optional @samp{.info} in either one).  Don't insert any new entries.
-Any empty sections that result from the removal are also removed.
+@opindex --delete@r{, para @command{install-info}}
+Deleta as entradas em @var{arquivo-info} de @var{arquivo-dir}. O nome do
+arquivo na entrada em @var{arquivo-dir} precisa ser @var{arquivo-info} (exceto
+por um @samp{.info} opcional em qualquer um deles). Não insira quaisquer novas
+entradas. Quaisquer seções vazias que resultem da remoção também serão
+removidas.
 
-@item --description=@var{text}
-@opindex --description=@var{text}@r{, for @command{install-info}}
-Specify the explanatory portion of the menu entry.  If you don't specify
-a description (either via @samp{--entry}, @samp{--item} or this option),
-the description is taken from the Info file itself.
+@item --description=@var{texto}
+@opindex --description=@var{texto}@r{, para @command{install-info}}
+Especifica a parte explicativa da entrada do menu. Se você não especificar uma
+descrição (por meio de @samp{--entry}, @samp{--item} ou dessa opção), a
+descrição será retirada do próprio arquivo do Info.
 
-@item --dir-file=@var{name}
-@opindex --dir-file=@var{name}@r{, for @command{install-info}}
-Specify file name of the Info directory file.  This is equivalent to
-using the @var{dir-file} argument.
+@item --dir-file=@var{nome}
+@opindex --dir-file=@var{nome}@r{, para @command{install-info}}
+Especifica o nome do arquivo do arquivo de diretórios do Info. Isso é
+equivalente a usar o argumento @var{arquivo-dir}.
 
 @item --dry-run
-@opindex --dry-run@r{, for @command{install-info}}
-Same as @samp{--test}.
+@opindex --dry-run@r{, para @command{install-info}}
+Mesmo que @samp{--test}.
 
-@item --entry=@var{text}
-@opindex --entry=@var{text}@r{, for @command{install-info}}
-Insert @var{text} as an Info directory entry; @var{text} should have the
-form of an Info menu item line plus zero or more extra lines starting
-with whitespace.  If you specify more than one entry, they are all
-added.  If you don't specify any entries, they are determined from
-information in the Info file itself.
+@item --entry=@var{texto}
+@opindex --entry=@var{texto}@r{, para @command{install-info}}
+Insire @var{texto} como uma entrada de diretórios do Info; @var{texto} deveria
+ter o formato de uma linha de item de menu do Info mais zero ou mais linhas
+extras começando com espaço em branco. Se você especificar mais que uma
+entrada, todas elas serão adicionadas. Se você não especificar quaisquer
+entradas, elas serão determinadas a partir de informações no próprio arquivo do
+Info.
 
 @item --help
-@opindex --help@r{, for @command{texindex}}
-Display a usage message with basic usage and all available options,
-then exit successfully.
+@opindex --help@r{, para @command{texindex}}
+Exibe uma mensagem de uso com o uso básico e todas as opções disponíveis e
+então sai com sucesso.
 
-@item --info-file=@var{file}
-@opindex --info-file=@var{file}@r{, for @command{install-info}}
-Specify Info file to install in the directory.  This is
-equivalent to using the @var{info-file} argument.
+@item --info-file=@var{arquivo}
+@opindex --info-file=@var{arquivo}@r{, para @command{install-info}}
+Especifica o arquivo do Info para instalar no diretório. Isso é equivalente a
+usar o argumento @var{arquivo-info}.
 
-@item --info-dir=@var{dir}
-@opindex --info-dir=@var{dir}@r{, for @command{install-info}}
-Specify the directory where the directory file @file{dir} resides.
-Equivalent to @samp{--dir-file=@var{dir}/dir}.
+@item --info-dir=@var{diretório}
+@opindex --info-dir=@var{diretório}@r{, para @command{install-info}}
+Especifica o diretório onde o arquivo de diretórios @file{dir} reside.
+Equivalente a @samp{--dir-file=@var{diretório}/dir}.
 
-@item --infodir=@var{dir}
-@opindex --infodir=@var{dir}@r{, for @command{install-info}}
-Same as @samp{--info-dir}.
+@item --infodir=@var{diretório}
+@opindex --infodir=@var{diretório}@r{, para @command{install-info}}
+Mesmo que @samp{--info-dir}.
 
-@item --item=@var{text}
-@opindex --item=@var{text}@r{, for @command{install-info}}
-Same as @samp{--entry=@var{text}}.  An Info directory entry is actually
-a menu item.
+@item --item=@var{texto}
+@opindex --item=@var{texto}@r{, para @command{install-info}}
+Mesmo que @samp{--entry=@var{texto}}. Uma entrada de diretórios do Info é, na
+verdade, um item de menu.
 
 @item --keep-old
-@opindex --keep-old@r{, for @command{install-info}}
-Do not replace pre-existing menu entries.  When @samp{--remove} is specified,
-this option means that empty sections are not removed.
+@opindex --keep-old@r{, para @command{install-info}}
+Não substitui entradas de menu pré-existentes. Quando @samp{--remove} é
+especificado, essa opção significa que seções vazias não são removidas.
 
-@item --max-width=@var{column}
-@opindex --max-width=@var{column}@r{, for @command{install-info}}
-Specifies the column that the menu entry's description will be word-wrapped
-at.  @var{column} starts counting at 1.
+@item --max-width=@var{coluna}
+@opindex --max-width=@var{coluna}@r{, para @command{install-info}}
+Especifica a coluna na qual a descrição da entrada do menu será quebrada.
+@var{coluna} começa contagem em 1.
 
-@item --maxwidth=@var{column}
-@opindex --maxwidth=@var{column}@r{, for @command{install-info}}
-Same as @samp{--max-width}.
+@item --maxwidth=@var{coluna}
+@opindex --maxwidth=@var{coluna}@r{, para @command{install-info}}
+Mesmo que @samp{--max-width}.
 
-@item --menuentry=@var{text}
-@opindex --menuentry=@var{text}@r{, for @command{install-info}}
-Same as @samp{--name}.
+@item --menuentry=@var{texto}
+@opindex --menuentry=@var{texto}@r{, para @command{install-info}}
+Mesmo que @samp{--name}.
 
-@item --name=@var{text}
-@opindex --name=@var{text}@r{, for @command{install-info}}
-Specify the name portion of the menu entry.  If the @var{text} does
-not start with an asterisk @samp{*}, it is presumed to be the text
-after the @samp{*} and before the parentheses that specify the Info
-file.  Otherwise @var{text} is taken verbatim, and is taken as
-defining the text up to and including the first period (a space is
-appended if necessary).  If you don't specify the name (either via
-@samp{--entry}, @samp{--item} or this option), it is taken from the
-Info file itself.  If the Info does not contain the name, the basename
-of the Info file is used.
+@item --name=@var{texto}
+@opindex --name=@var{texto}@r{, para @command{install-info}}
+Especifica a parte do nome da entrada do menu. Se o @var{texto} não começar com
+um asterisco @samp{*}, é presumido ser o texto depois do @samp{*} e antes dos
+parênteses que especificam o arquivo do Info. Caso contrário, @var{texto} é
+tomado literalmente e é tomado como definindo o texto até e incluindo o
+primeiro ponto (um espaço é posposto se necessário). Se você não especificar o
+nome (por meio de @samp{--entry}, @samp{--item} ou dessa opção), ele será
+obtido do próprio arquivo do Info. Se o Info não contiver o nome, o nome base
+do arquivo do Info será usado.
 
 @item --no-indent
-@opindex --no-indent@r{, for @command{install-info}}
-Suppress formatting of new entries into the @file{dir} file.
+@opindex --no-indent@r{, para @command{install-info}}
+Suprime a formatação de novas entradas no arquivo @file{dir}.
 
 @item --quiet
 @itemx --silent
-@opindex --quiet@r{, for @command{install-info}}
-@opindex --silent@r{, for @command{install-info}}
-Suppress warnings, etc., for silent operation.
+@opindex --quiet@r{, para @command{install-info}}
+@opindex --silent@r{, para @command{install-info}}
+Suprime avisos, etc., para operação silenciosa.
 
 @item --remove
-@opindex --remove@r{, for @command{install-info}}
-Same as @samp{--delete}.
+@opindex --remove@r{, para @command{install-info}}
+Mesmo que @samp{--delete}.
 
 @item --remove-exactly
-@opindex --remove-exactly@r{, for @command{install-info}}
-Also like @samp{--delete}, but only entries if the Info file name
-matches exactly; @code{.info} and/or @code{.gz} suffixes are
-@emph{not} ignored.
+@opindex --remove-exactly@r{, para @command{install-info}}
+Também como @samp{--delete}, mas somente entradas se o nome do arquivo do Info
+corresponder exatamente; os sufixos @code{.info} e (ou) @code{.gz} @emph{não}
+são ignorados.
 
-@item --section=@var{sec}
-@opindex --section=@var{sec}@r{, for @command{install-info}}
-Put this file's entries in section @var{sec} of the directory.  If you
-specify more than one section, all the entries are added in each of the
-sections.  If you don't specify any sections, they are determined from
-information in the Info file itself.  If the Info file doesn't specify
-a section, the menu entries are put into the Miscellaneous section.
+@item --section=@var{seção}
+@opindex --section=@var{seção}@r{, para @command{install-info}}
+Coloca as entradas desse arquivo na seção @var{seção} do diretório. Se você
+especificar mais que uma seção, todas as entradas serão adicionadas em cada uma
+das seções. Se você não especificar quaisquer seções, elas serão determinadas a
+partir de informações no próprio arquivo do Info. Se o arquivo do Info não
+especificar uma seção, as entradas do menu serão colocadas na seção
+Miscellaneous.
 
-@item --section @var{regex} @var{sec}
-@opindex --section @var{regex} @var{sec}@r{, for @command{install-info}}
-Same as @samp{--regex=@var{regex} --section=@var{sec} --add-once}.
+@item --section @var{expressãoregular} @var{seção}
+@opindex --section @var{expressãoregular} @var{seção}@r{, para @command{install-info}}
+Mesmo que @samp{--regex=@var{expressãoregular} --section=@var{seção} --add-once}.
 
-@code{install-info} tries to detect when this alternate syntax is used,
-but does not always guess correctly.  Here is the heuristic that
-@code{install-info} uses:
+@code{install-info} tenta detectar quando essa sintaxe alternativa é usada, mas
+nem sempre adivinha corretamente. Aqui está a heurística que
+@code{install-info} usa:
 @enumerate
 @item
-If the second argument to @code{--section} starts with a hyphen, the
-original syntax is presumed.
+Se o segundo argumento para @code{--section} começar com um hífen, a sintaxe
+original será presumida.
 
 @item
-If the second argument to @code{--section} is a file that can be
-opened, the original syntax is presumed.
+Se o segundo argumento para @code{--section} for um arquivo que possa ser
+aberto, a sintaxe original será presumida.
 
 @item
-Otherwise the alternate syntax is used.
+Caso contrário, a sintaxe alternativa será usada.
 @end enumerate
 
-When the heuristic fails because your section title starts with a
-hyphen, or it happens to be a filename that can be opened, the syntax
-should be changed to @samp{--regex=@var{regex} --section=@var{sec}
---add-once}.
+Quando a heurística falha porque o título da tua seção começa com um hífen, ou
+acontece de ser um nome de arquivo que pode ser aberto, a sintaxe deveria ser
+mudada para
+@samp{--regex=@var{expressãoregular} --section=@var{seção} --add-once}.
 
-@item --regex=@var{regex}
-@opindex  --regex=@var{regex}@r{, for @command{install-info}}
-Put this file's entries into any section that matches @var{regex}.  If
-more than one section matches, all of the entries are added in each of the
-sections.  Specify @var{regex} using basic regular expression syntax, more
-or less as used with @command{grep}, for example.
+@item --regex=@var{expressãoregular}
+@opindex --regex=@var{expressãoregular}@r{, para @command{install-info}}
+Coloca as entradas desse arquivo em qualquer seção que corresponda a
+@var{expressãoregular}. Se mais que uma seção corresponder, todas as entradas
+serão adicionadas em cada uma das seções. Especifique @var{expressãoregular}
+usando a sintaxe básica de expressão regular, mais ou menos como usada com
+@command{grep}, por exemplo.
 
 @item --test
-@opindex --test@r{, for @command{install-info}}
-Suppress updating of the directory file.
+@opindex --test@r{, para @command{install-info}}
+Suprime atualização do arquivo de diretórios.
 
 @item --version
-@opindex --version@r{, for @command{install-info}}
-@cindex Version number, for install-info
-Display version information and exit successfully.
+@opindex --version@r{, para @command{install-info}}
+@cindex Número de versão, para install-info
+Exibe informações da versão e sai com sucesso.
 
 @end table
 
@@ -18934,19 +18938,19 @@ Display version information and exit successfully.
 @chapter Gerando HTML
 
 @cindex Gerando HTML
-@cindex Outputting HTML
+@cindex Gerando HTML
 
-@command{makeinfo} generates Info output by default, but given the
-@option{--html} option, it will generate HTML, for web browsers and
-other programs.  This chapter gives some details on such HTML output.
+@command{makeinfo} gera saída do Info por padrão, mas dada a opção
+@option{--html}, ele gerará HTML, para navegadores da web e outros programas.
+Este capítulo fornece alguns detalhes acerca tal saída HTML.
 
-@command{makeinfo} has many user-definable customization variables
-with which you can influence the HTML output.
+@command{makeinfo} tem muitas variáveis de personalização definidas por
+usuário(a) com as quais você pode influenciar a saída HTML.
 @xref{Variáveis de Personalização}.
 
-@command{makeinfo} can also produce output in XML and Docbook formats,
-but we do not as yet describe these in detail.  @xref{Formatos de Saída},
-for a brief overview of all the output formats.
+@command{makeinfo} também pode produzir saída nos formatos XML e Docbook, mas
+nós ainda não os descrevemos em detalhes. @xref{Formatos de Saída}, para uma
+breve visão geral de todos os formatos de saída.
 
 @menu
 * Tradução de HTML:: Detalhes da saída HTML.
@@ -18956,162 +18960,158 @@ for a brief overview of all the output formats.
 @end menu
 
 
-@node HTML Translation
-@section HTML Translation
+@node Tradução de HTML
+@section Tradução de HTML
 
-@cindex HTML translation
+@cindex Tradução de HTML
 
-@cindex HTML output, browser compatibility of
-First, the HTML generated by @command{makeinfo} is standard
-HTML@tie{}4.  It also tries to be compatible with earlier standards
-(e.g., HTML@tie{}2.0, RFC-1866).  Thus, please report output from an
-error-free run of @code{makeinfo} which has practical browser
-portability problems as a bug (@pxref{Informando Defeitos}).
+@cindex Tradução de HTML, compatibilidade do navegador da
+Primeiro, o HTML gerado por @command{makeinfo} é o HTML@tie{}4 padrão. Ele
+também tenta ser compatível com padrões anteriores (por exemplo, HTML@tie{}2.0,
+RFC-1866). Portanto, por favor, informe a saída proveniente de uma execução sem
+erros de @code{makeinfo} que tenha problemas práticos de portabilidade do
+navegador como um defeito (@pxref{Informando Defeitos}).
 
 @pindex html32.pm
-Some known exceptions to HTML@tie{}3.2 (using
-@samp{--init-file=html32.pm} produces strict HTML@tie{}3.2 output;
+Algumas exceções conhecidas ao HTML@tie{}3.2 (usar @samp{--init-file=html32.pm}
+produz uma saída de estrito HTML@tie{}3.2;
 @pxref{Invocando @command{texi2any}}):
 
 @enumerate
 @item
-HTML@tie{}3.2 tables are generated for the @code{@@multitable} command
-(@pxref{Tabelas Multi Colunas}), but they should degrade reasonably in
-browsers without table support.
+As tabelas HTML@tie{}3.2 são geradas para o comando @code{@@multitable}
+(@pxref{Tabelas Multi Colunas}), mas elas deveriam degradar razoavelmente em
+navegadores sem suporte a tabelas.
 
 @item
-The HTML@tie{}4 @samp{lang} attribute on the @samp{<html>} attribute
-is used.
+O atributo @samp{lang} do HTML@tie{}4 no atributo @samp{<html>} é usado.
 
 @item
-Entities that are not in the HTML@tie{}3.2 standard are also used.
+Entidades que não estão no padrão HTML@tie{}3.2 também são usadas.
 
 @item
-CSS is used (@pxref{CSS de HTML}).
+CSS é usado (@pxref{CSS de HTML}).
 
 @item
-A few HTML@tie{}4 elements are used: @code{thead}, @code{abbr},
+Alguns elementos do HTML@tie{}4 são usados: @code{thead}, @code{abbr},
 @code{acronym}.
 
 @end enumerate
 
-To achieve maximum portability and accessibility among browsers (both
-graphical and text-based), systems, and users, the HTML output is
-intentionally quite plain and generic.  It has always been our goal
-for users to be able to customize the output to their wishes via CSS
-(@pxref{CSS de HTML}) or other means (@pxref{Variáveis de Personalização}.
-If you cannot accomplish a reasonable customization, feel free to
-report that.
+Para alcançar a máxima portabilidade e acessibilidade entre navegadores (tanto
+gráficos quanto baseados em texto), sistemas e usuários(as), a saída HTML é
+intencionalmente bem simples e genérica. Isso sempre tem sido nosso objetivo
+para usuários(as) estarem aptos(as) a personalizarem a saída aos desejos
+deles(as) via CSS (@pxref{CSS de HTML}) ou outros meios
+(@pxref{Variáveis de Personalização}. Se você não conseguir realizar uma
+personalização razoável, sinta-se à vontade para informar isso.
 
-However, we do not wish to depart from our basic goal of widest
-readability for the core output.  For example, using fancy CSS may
-make it possible for the HTML output to more closely resemble the
-@TeX{} output in some details, but this result is not even close to
-being worth the ensuing difficulties.
+No entanto, nós não desejamos nos afastarmos do nosso objetivo básico de
+legibilidade mais ampla para a saída principal. Por exemplo, usar CSS
+sofisticado pode tornar possível que a saída HTML se assemelhe mais à saída do
+@TeX{} em alguns detalhes, mas esse resultado não chega nem perto de compensar
+as dificuldades decorrentes.
 
-It is also intentionally not our goal, and not even possible, to pass
-through every conceivable validation test without any diagnostics.
-Different validation tests have different goals, often about pedantic
-enforcement of some standard or another.  Our overriding goal is to
-help users, not blindly comply with standards.
+Também não é intencionalmente nosso objetivo, e nem mesmo possível, passar por
+cada teste concebível de validação sem quaisquer diagnósticos. Testes
+diferentes de validação tem objetivos diferentes, frequentemente acerca da
+aplicação pedante de algum padrão ou outro. Nosso objetivo primordial é o de
+ajudar usuários(as), não cumprir cegamente os padrões.
 
-To repeat what was said at the top: please report output from an
-error-free run of @code{makeinfo} which has @emph{practical} browser
-portability problems as a bug (@pxref{Informando Defeitos}).
+Para repetir o que foi dito acima: por favor, informe a saída oriunda de uma
+execução sem erros do @code{makeinfo} que tenha problemas @emph{práticos} de
+portabilidade do navegador como um defeito (@pxref{Informando Defeitos}).
 
-A few other general points about the HTML output follow.
+Uns poucos outros pontos gerais acerca da saída HTML seguem.
 
-@cindex Navigation bar, in HTML output
-@strong{Navigation bar:} By default, a navigation bar is inserted at the
-start of each node, analogous to Info output.  If the
-@samp{--no-headers} option is used, the navigation bar is only
-inserted at the beginning of split files.  Header @code{<link>}
-elements in split output can support Info-like navigation with
-browsers like Lynx and @w{Emacs W3} which implement this HTML@tie{}1.0
-feature.
+@cindex Barra de navegação, na saída HTML
+@strong{Barra de navegação:} Por padrão, uma barra de navegação é inserida no
+início de cada nó, análogo à saída do Info. Se a opção @samp{--no-headers} for
+usada, a barra de navegação será inserida somente no início dos arquivos
+divididos. Elementos @code{<link>} do cabeçalho na saída dividida podem
+suportar navegação semelhante à Info com navegadores como Lynx e @w{Emacs W3}
+que implementam esse recurso HTML@tie{}1.0.
 
-@cindex Footnote styles, in HTML
-@strong{Footnotes:} for HTML, when the footnote style is @samp{end},
-or if the output is not split, footnotes are put at the end of the
-output.  If the footnoet style is set to @samp{separate}, and the
-output is split, they are placed in a separate file.
-@xref{Estilos de Notas de Rodapé}.
+@cindex Estilos de nota de rodapé, em HTML
+@strong{Notas de rodapé:} para HTML, quando o estilo de nota de rodapé for
+@samp{end}, ou se a saída não for dividida, as notas de rodapé são colocadas no
+final da saída. Se o estilo de nota de rodapé for configurado para
+@samp{separate}, e a saída for dividida, elas serão colocadas em um arquivo
+separado. @xref{Estilos de Notas de Rodapé}.
 
-@cindex Escaping to HTML
-@cindex Raw HTML
-@strong{Raw HTML}: @command{makeinfo} will include segments of Texinfo
-source between @code{@@ifhtml} and @code{@@end ifhtml} in the HTML
-output (but not any of the other Condicionais, by default).  Source
-between @code{@@html} and @code{@@end html} is passed without change
-to the output (i.e., suppressing the normal escaping of input
-@samp{<}, @samp{>} and @samp{&} characters which have special
-significance in HTML)@.  @xref{Comandos Condicionais}.
+@cindex Escapagem para HTML
+@cindex HTML bruto
+@strong{HTML bruto}: @command{makeinfo} incluirá segmentos do fonte do Texinfo
+entre @code{@@ifhtml} e @code{@@end ifhtml} na saída HTML (mas não nenhum dos
+outros Condicionais, por padrão). O fonte entre @code{@@html} e
+@code{@@end html} é passado sem mudanças para a saída (ou seja, suprimindo a
+escapagem normal dos caracteres de entrada @samp{<}, @samp{>} e @samp{&}, os
+quais tem significado especial em HTML)@. @xref{Comandos Condicionais}.
 
 
 @node Divisão de HTML
 @section Divisão de HTML
-@cindex Split HTML output
-@cindex HTML output, split
+@cindex Saída dividida de HTML
+@cindex Saída HTML, dividida
 
-When splitting output at Nodos (which is the default),
-@command{makeinfo} writes HTML output into (basically) one output file
-per Texinfo source @code{@@node}.
+Ao dividir a saída nos nodos (que é o padrão), @command{makeinfo} escreve a
+saída HTML em (basicamente) um arquivo de saída por @code{@@node} do fonte do
+Texinfo.
 
-Each output file name is the node name with spaces replaced by
-@samp{-}'s and special characters changed to @samp{_} followed by
-their code point in hex (@pxref{Xref de HTML}).  This is to make it
-portable and easy to use as a filename.  In the unusual case of two
-different Nodos having the same name after this treatment, they are
-written consecutively to the same file, with HTML anchors so each can
-be referred to independently.
+Cada nome de arquivo de saída é o nome do nó com espaços substituídos por
+@samp{-} e caracteres especiais mudados para @samp{_} seguidos pelo ponto de
+código deles em hexadecimal (@pxref{Xref de HTML}). Isso é para torná-lo
+portável e fácil de usar como um nome de arquivo. No caso incomum de dois nodos
+terem o mesmo nome depois desse tratamento, eles serão escritos
+consecutivamente no mesmo arquivo, com âncoras HTML, de forma que cada um possa
+ser referenciado independentemente.
 
-If @command{makeinfo} is run on a system which does not distinguish
-case in file names, Nodos which are the same except for case (e.g.,
-@samp{index} and @samp{Index}) will also be folded into the same
-output file with anchors.  You can also pretend to be on a case
-insensitive filesystem by setting the customization variable
-@code{CASE_INSENSITIVE_FILENAMES}.
+Se @command{makeinfo} for executado em um sistema que não distingue maiúsculas
+de minúsculas em nomes de arquivo, os nodos que forem os mesmos, exceto por
+maiúsculas e minúsculas (por exemplo, @samp{index} e @samp{Index}), também
+serão guardados no mesmo arquivo de saída com âncoras. Você também pode fingir
+estar em um sistema de arquivos que não diferencia maiúsculas de minúsculas,
+configurando a variável de personalização @code{CASE_INSENSITIVE_FILENAMES}.
 
-It is also possible to split at chapters or sections with
-@option{--split} (@pxref{Invocando @command{texi2any}}).  In that case,
-the file names are constructed after the name of the node associated
-with the relevant sectioning command.  Also, unless
-@option{--no-node-files} is specified, a redirection file is output
-for every node in order to more reliably support cross-references to
-that manual (@pxref{Xref de HTML}).
+Também é possível dividir em capítulos ou seções com @option{--split}
+(@pxref{Invocando @command{texi2any}}). Nesse caso, os nomes dos arquivos são
+construídos depois do nome do nó associado ao relevante comando de
+seccionamento. Além disso, a menos que @option{--no-node-files} seja
+especificada, um arquivo de redirecionamento é gerado para cada nó para a
+finalidade de suportar mais confiavelmente referências cruzadas para esse
+manual (@pxref{Xref de HTML}).
 
-When splitting, the HTML output files are written into a subdirectory,
-with the name chosen as follows:
+Ao dividir, os arquivos de saída HTML são gravados em um subdiretório, com o
+nome escolhido conforme segue:
 
 @enumerate
 @item
-@command{makeinfo} first tries the subdirectory with the base name
-from @code{@@setfilename} (that is, any extension is removed).  For
-example, HTML output for @code{@@setfilename gcc.info} would be
-written into a subdirectory named @samp{gcc/}.
+@command{makeinfo} primeiro tenta o subdiretório com o nome base oriundo de
+@code{@@setfilename} (ou seja, qualquer extensão é removida). Por exemplo, a
+saída HTML para @code{@@setfilename gcc.info} seria escrita em um subdiretório
+chamado @samp{gcc/}.
 
 @item
-If that directory cannot be created for any reason, then
-@command{makeinfo} tries appending @samp{.html} to the directory name.
-For example, output for @code{@@setfilename texinfo} would be written
-to @samp{texinfo.html/}.
+Se esse diretório não puder ser criado por qualquer motivo, então
+@command{makeinfo} tentará pospor @samp{.html} no nome do diretório. Por
+exemplo, a saída para @code{@@setfilename texinfo} seria escrita em
+@samp{texinfo.html/}.
 
 @item
-If the @samp{@var{name}.html} directory can't be created either,
-@code{makeinfo} gives up.
+Se o diretório @samp{@var{nome}.html} também não puder ser criado,
+@code{makeinfo} desistirá.
 
 @end enumerate
 
-@noindent In any case, the top-level output file within the directory
-is always named @samp{index.html}.
+@noindent Em qualquer caso, o arquivo de saída de nível superior dentro do
+diretório é sempre chamado @samp{index.html}.
 
-Monolithic output (@code{--no-split}) is named according to
-@code{@@setfilename} (with any @samp{.info} extension is replaced with
-@samp{.html}), @code{--output} (the argument is used literally), or
-based on the input file name as a last resort
-(@pxref{@code{@@setfilename}}).
+A saída monolítica (@code{--no-split}) é nomeada de acordo com
+@code{@@setfilename} (com qualquer extensão @samp{.info} substituída por
+@samp{.html}), @code{--output} (o argumento é usado literalmente) ou baseada no
+nome do arquivo de entrada como último recurso (@pxref{@code{@@setfilename}}).
 
-
+PAREI
 @node CSS de HTML
 @section CSS de HTML
 @cindex HTML, and CSS
