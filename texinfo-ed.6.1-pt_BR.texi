@@ -654,9 +654,9 @@ Gerando HTML
 Referências Cruzadas HTML
 
 * Fundamentos de Link: Fundamentos do Link Xref do HTML.
-* Expansão de Nodo:    Expansão Xref de Nome de Nodo do HTML.
-* Expansão de Comando: Expansão de Comando HTML Xref.
-* Expansão de 8 bits:  Expansão de Caractere de 8 bits HTML Xref.
+* Expansão de Nodo:    Expansão Xref de Nome de Nó do HTML.
+* Expansão de Comando: Expansão do Comando Xref do HTML.
+* Expansão de 8 bits:  Expansão de Caracteres de 8 bits do Xref do HTML.
 * Incompatibilidade:   Incompatibilidade de Xref do HTML.
 * Configuração:        Configuração do Xref do HTML. htmlxref.cnf.
 * Preservando links:   Preservação de Link Xref do HTML. MANUAL-noderename.cnf.
@@ -888,7 +888,7 @@ Correções (``Patches'') são mais que bem-vindas; se possível, por favor
 faça-as com @samp{@w{diff -c}}
 (veja-se @ref{Top,,, diffutils, Comparing and Merging Files}) e inclua as
 entradas @file{ChangeLog}
-(veja-se @ref{Change Log,,, emacs, The GNU Emacs Manual}), e siga o estilo de
+(veja-se @ref{Change Log,,, emacs, O Manual do GNU Emacs}), e siga o estilo de
 codificação existente.
 
 @node Formatos de Saída
@@ -3461,7 +3461,7 @@ Alguns comandos não fazem sentido em nomes de nodo; por exemplo, ambientes (e.g
 @code{@@sp}), e muitos outros.
 
 Para a lista completa de comandos permitidos, e suas expansões para identificadores
-HTML e nomes de arquivo, veja-se @ref{Expansão de Comando Xref HTML}. As
+HTML e nomes de arquivo, veja-se @ref{Expansão do Comando Xref do HTML}. As
 expansões para Info geralmente são dadas como a principal descrição do comando.
 
 Antes do lançamento de Texinfo 5 em 2013, essa característica era suportada em
@@ -8607,7 +8607,7 @@ de fornecemos uma maneira de alterá-lo no futuro.
 
 Aqui está um exemplo completo de uma tabela multi coluna (o texto é
 originário de @cite{O Manual do GNU Emacs},
-@pxref{Split Window,, Splitting Windows, emacs, The GNU Emacs Manual}): @c Referência externa. Manter sem alteração!
+@pxref{Split Window,, Splitting Windows, emacs, O Manual do GNU Emacs}): @c Referência externa. Manter sem alteração!
 
 @example
 @@multitable @@columnfractions .15 .45 .4
@@ -12398,7 +12398,7 @@ O modelo é:
 O comando @code{@@defopt} é o comando de definição para @dfn{opções de
 usuário(a)}, ou seja, variáveis destinadas para usuários(as)
 mudarem de acordo com o gosto; Emacs tem muitas dessas
-(@pxref{Variables,,, emacs, The GNU Emacs Manual}). @code{@@defopt} é
+(@pxref{Variables,,, emacs, O Manual do GNU Emacs}). @code{@@defopt} é
 equivalente a @samp{@@defvr @{Opção de Usuário(a)@} @dots{}} e funciona como
 @code{@@defvar}. Ele cria uma entrada no índice de variáveis.
 @end table
@@ -13137,7 +13137,7 @@ Especificar uma codificação @var{codificação} tem os seguintes efeitos:
 @cindex Seção Variáveis Locais, para codificação
 @cindex Saída do Info, e codificação
 Na saída do Info, uma seção chamada `Local Variables'
-(@pxref{File Variables,,, emacs, The GNU Emacs Manual}) é gerada incluindo
+(@pxref{File Variables,,, emacs, O Manual do GNU Emacs}) é gerada incluindo
 @var{codificação}. Isso permite que leitores Info configurem a codificação
 apropriadamente. Parece com algo assim:
 
@@ -15608,7 +15608,7 @@ exemplo, enviando para a porta apropriada, geralmente @samp{PRN}).
 Você consegue fornecer comandos de formatação e de impressão a partir de um
 shell dentro do GNU Emacs, assim como qualquer outro comando de shell. Para
 criar um shell dentro do Emacs, digite @kbd{M-x shell}
-(@pxref{Shell,,, emacs, The GNU Emacs Manual}). Nesse shell, você consegue
+(@pxref{Shell,,, emacs, O Manual do GNU Emacs}). Nesse shell, você consegue
 formatar e imprimir o documento.
 @xref{Impresso, , Formatar e Imprimir Cópia Impressa}, para detalhes.
 
@@ -15732,14 +15732,14 @@ tex-show-queue-command                    "lpq"
 
 Você consegue mudar os valores dessas variáveis com o comando
 @kbd{M-x set-variable}
-(@pxref{Examining, , Examining and Setting Variables, emacs, The GNU Emacs Manual})
+(@pxref{Examining, , Examining and Setting Variables, emacs, O Manual do GNU Emacs})
 ou com teu arquivo de inicialização @file{.emacs}
-(@pxref{Init File, , , emacs, The GNU Emacs Manual}).
+(@pxref{Init File, , , emacs, O Manual do GNU Emacs}).
 
 @cindex Personalize o pacote Emacs (@t{Development/Docs/Texinfo})
 Iniciando com a versão 20, o GNU Emacs oferece uma interface amigável, chamada
 @dfn{Customize}, para mudar valores de variáveis definidas pelo(a) usuário(a).
-@xref{Easy Customization, , Easy Customization Interface, emacs, The GNU Emacs Manual},
+@xref{Easy Customization, , Easy Customization Interface, emacs, O Manual do GNU Emacs},
 para mais detalhes acerca disso. As variáveis do Texinfo podem ser
 encontradas no grupo @samp{Development/Docs/Texinfo}, uma vez que você invoque
 o comando @kbd{M-x customize}.
@@ -15771,7 +15771,7 @@ End:
 @noindent
 Essa técnica é mais frequentemente usada por programadores(as) que também
 compilam programas dessa maneira; veja-se
-@ref{Compilation, , , emacs, The GNU Emacs Manual}.
+@ref{Compilation, , , emacs, O Manual do GNU Emacs}.
 
 
 @node Resumo das Exigências
@@ -16640,7 +16640,7 @@ e os blocos @samp{@@ifnothtml} serão.
 @opindex --node-files
 Ao gerar HTML, cria arquivos de redirecionamento para âncoras e quaisquer Nodos
 ainda não gerados com o nome de arquivo correspondente ao nome do nó
-(@pxref{Expansão Xref de Nome de Nodo do HTML}). Isso torna possível que
+(@pxref{Expansão Xref de Nome de Nó do HTML}). Isso torna possível que
 referências entre manuais em nível de seção e de capítulo sejam bem-sucedidas
 (@pxref{Configuração do Xref do HTML}).
 
@@ -16821,7 +16821,7 @@ Info).
 @opindex --transliterate-file-names
 Habilita transliteração de caracteres de 8 bits em nomes de nós para o
 propósito de criação de nomes de arquivo.
-@xref{Expansão Xref de Caractere de 8 Bits do HTML}.
+@xref{Expansão de Caracteres de 8 bits do Xref do HTML}.
 
 @item -U @var{variável}
 Causa @var{variável} ser indefinida. Isso é equivalente a @code{@@clear
@@ -18219,13 +18219,13 @@ Por exemplo, você poderia escrever o seguinte no teu arquivo @file{.emacs}:
 @iftex
 Para mais informações, veja-se @ref{Opções do @command{makeinfo}}, bem como
 ``Easy Customization Interface'', ``Examining and Setting Variables'' e ``Init
-File'' em @cite{The GNU Emacs Manual}.
+File'' em @cite{O Manual do GNU Emacs}.
 @end iftex
 @ifnottex
 Para mais informações, veja-se@*
-@ref{Easy Customization, , Easy Customization Interface, emacs, The GNU Emacs Manual},@*
-@ref{Examining, , Examining and Setting Variables, emacs, The GNU Emacs Manual},@*
-@ref{Init File, , , emacs, The GNU Emacs Manual} e@*
+@ref{Easy Customization, , Easy Customization Interface, emacs, O Manual do GNU Emacs},@*
+@ref{Examining, , Examining and Setting Variables, emacs, O Manual do GNU Emacs},@*
+@ref{Init File, , , emacs, O Manual do GNU Emacs} e@*
 @ref{Opções do @command{makeinfo}}.
 @end ifnottex
 
@@ -18277,7 +18277,7 @@ parágrafos que contenham comandos @code{@@w} ou @code{@@*}.
 Você pode formatar arquivos do Texinfo para o Info usando
 @code{batch-texinfo-format} e o modo lote do Emacs. Você pode executar o Emacs
 no modo lote a partir de qualquer shell, incluindo um shell dentro do Emacs.
-(@xref{Initial Options,,, emacs, The GNU Emacs Manual}).
+(@xref{Initial Options,,, emacs, O Manual do GNU Emacs}).
 
 Aqui está um comando de shell para formatar todos os arquivos que terminam em
 @file{.texinfo} no diretório atual:
@@ -19241,9 +19241,9 @@ O algoritmo foi desenvolvido principalmente por Patrice Dumas em 2003--04.
 
 @menu
 * Fundamentos de Link: Fundamentos do Link Xref do HTML.
-* Expansão de Nodo:    Expansão Xref de Nome de Nodo do HTML.
-* Expansão de Comando: Expansão de Comando HTML Xref.
-* Expansão de 8 bits:  Expansão Xref de Caractere de 8 Bits do HTML.
+* Expansão de Nodo:    Expansão Xref de Nome de Nó do HTML.
+* Expansão de Comando: Expansão do Comando Xref do HTML.
+* Expansão de 8 bits:  Expansão de Caracteres de 8 bits do Xref do HTML.
 * Incompatibilidade:   Incompatibilidade de Xref do HTML.
 * Configuração:        Configuração do Xref do HTML. htmlxref.cnf.
 * Preservando links:   Preservação de Link Xref do HTML. MANUAL-noderename.cnf.
@@ -19330,109 +19330,108 @@ Portanto, pode existir uma incompatibilidade entre o formato do manual
 referente que o software gerador assume e o formato em que ele realmente está
 presente. @xref{Incompatibilidade de Xref do HTML}.
 
-PAREI
-@node Expansão Xref de Nome de Nodo do HTML
-@subsection HTML Cross-reference Node Name Expansion
-@cindex HTML cross-reference node name expansion
-@cindex node name expansion, in HTML cross-references
-@cindex expansion, of node names in HTML cross-references
 
-As mentioned in the previous section, the key part of the HTML cross
-reference algorithm is the conversion of node names in the Texinfo
-source into strings suitable for XHTML identifiers and filenames.  The
-restrictions are similar for each: plain ASCII letters, numbers, and
-the @samp{-} and @samp{_} characters are all that can be used.
-(Although HTML anchors can contain most characters, XHTML is more
-restrictive.)
+@node Expansão Xref de Nome de Nó do HTML
+@subsection Expansão de Nome de Nó de Referência Cruzada do HTML
+@cindex Expansão de nome de nó de referência cruzada do HTML
+@cindex Expansão de nome de nó, em referências cruzados do HTML
+@cindex Expansão, de nomes de nó em referências cruzadas do HTML
 
-Cross-references in Texinfo can refer either to Nodos or anchors
-(@pxref{@code{@@anchor}}).  However, anchors are treated identically
-to Nodos in this context, so we'll continue to say ``node'' names for
-simplicity.
+Conforme mencionado na seção anterior, a parte chave do algoritmo de referência
+cruzada do HTML é a conversão de nomes de nós no fonte do Texinfo em strings
+adequadas para identificadores e nomes de arquivo do XHTML. As restrições são
+semelhantes para cada um: letras ASCII simples, números e os caracteres
+@samp{-} e @samp{_} são tudo o que pode ser usado. (Embora âncoras HTML possam
+conter a maioria dos caracteres, XHTML é mais restritivo).
 
-A special exception: the Top node (@pxref{O Nodo Top}) is always
-mapped to the file @file{index.html}, to match web server software.
-However, the HTML @emph{target} is @samp{Top}.  Thus (in the split case):
+Referências cruzadas no Texinfo podem se referir ou a nodos ou a âncoras
+(@pxref{@code{@@anchor}}). No entanto, âncoras são tratadas identicamente a
+nodos nesse contexto, de forma que nós continuaremos a dizer nomes de ``nós''
+por simplicidade.
+
+Uma exceção especial: o nó Top (@pxref{O Nodo Top}) sempre é mapeado para o
+arquivo @file{index.html}, para corresponder ao software do servidor web. Não
+obstante, o @emph{alvo} do HTML é @samp{Top}. Assim (no caso dividido):
 
 @example
-@@xref@{Top,,, emacs, The GNU Emacs Manual@}.
+@@xref@{Top,,, emacs, O Manual do GNU Emacs@}.
 @result{} <a href="emacs/index.html#Top">
 @end example
 
 @enumerate
 @item
-The standard ASCII letters (a-z and A-Z) are not modified.  All other
-characters may be changed as specified below.
+As letras ASCII padrão (a-z e A-Z) não são modificadas. Todos os outros
+caracteres podem ser mudados conforme especificado abaixo.
 
 @item
-The standard ASCII numbers (0-9) are not modified except when a number
-is the first character of the node name.  In that case, see below.
+Os números ASCII padrão (0-9) não são modificados, exceto quando um número é o
+primeiro caractere do nome do nó. Nesse caso, veja-se abaixo.
 
 @item
-Multiple consecutive space, tab and newline characters are transformed
-into just one space.  (It's not possible to have newlines in node
-names with the current implementation, but we specify it anyway, just
-in case.)
+Vários espaços consecutivos, tabulações e caracteres de nova linha são
+transformados em apenas um espaço. (Não é possível ter novas linhas em nomes de
+nós com a implementação atual, mas nós especificamos isso de qualquer maneira,
+só por precaução).
 
 @item
-Leading and trailing spaces are removed.
+Espaços iniciais e finais são removidos.
 
 @item
-After the above has been applied, each remaining space character is
-converted into a @samp{-} character.
+Depois que o acima tenha sido aplicado, cada caractere de espaço restante é
+convertido em um caractere @samp{-}.
 
 @item
-Other ASCII 7-bit characters are transformed into @samp{_00@var{xx}},
-where @var{xx} is the ASCII character code in (lowercase) hexadecimal.
-This includes @samp{_}, which is mapped to @samp{_005f}.
+Outros caracteres ASCII de 7 bits são transformados em @samp{_00@var{xx}}, onde
+@var{xx} é o código de caractere ASCII em hexadecimal (minúsculo). Isso inclui
+@samp{_}, que é mapeado para @samp{_005f}.
 
 @item
-If the node name does not begin with a letter, the literal string
-@samp{g_t} is prefixed to the result.  (Due to the rules above, that
-string can never occur otherwise; it is an arbitrary choice, standing
-for ``GNU Texinfo''.)  This is necessary because XHTML requires that
-identifiers begin with a letter.
+Se o nome do nó não começar com uma letra, a string literal @samp{g_t} será
+prefixada ao resultado. (Devido às regras acima, essa string nunca pode ocorrer
+de outra forma; é uma escolha arbitrária, significando ``GNU Texinfo''). Isso é
+necessário porque o XHTML exige que os identificadores comecem com uma letra.
 
 @end enumerate
 
-For example:
+Por exemplo:
 
 @example
-@@node A  node --- with _'%
-@result{} A-node-_002d_002d_002d-with-_005f_0027_0025
+@@node Um  nó --- com _'%
+@result{} Um-nó-_002d_002d_002d-com-_005f_0027_0025
 @end example
 
-Example translations of common characters:
+Exemplo de traduções de caracteres comuns:
 
 @itemize @bullet
 @item @samp{_} @result{} @samp{_005f}
 @item @samp{-} @result{} @samp{_002d}
-@item @samp{A  node} @result{} @samp{A-node}
+@item @samp{Um  nó} @result{} @samp{Um-nó}
 @end itemize
 
-On case-folding computer systems, Nodos differing only by case will be
-mapped to the same file.  In particular, as mentioned above, Top
-always maps to the file @file{index.html}.  Thus, on a case-folding
-system, Top and a node named `Index' will both be written to
-@file{index.html}.  Fortunately, the targets serve to distinguish
-these cases, since HTML target names are always case-sensitive,
-independent of operating system.
+Em sistemas computacionais com conversão para minúsculas, nodos que diferem
+somente pela caixa serão mapeados para o mesmo arquivo. Em particular, como
+mencionado acima, Top sempre mapeia para o arquivo @file{index.html}. Assim, em
+um sistema com conversão para minúsculas, Top e um nó chamado `Index' serão
+ambos escritos em @file{index.html}. Felizmente, os alvos servem para
+distinguir esses casos, já que os nomes de alvos do HTML são sempre sensíveis à
+caixa, independente do sistema operacional.
 
 
-@node Expansão de Comando Xref HTML
-@subsection HTML Cross-reference Command Expansion
-@cindex HTML cross-reference command expansion
+@node Expansão do Comando Xref do HTML
+@subsection Expansão do Comando de Referências Cruzadas do HTML
+@cindex Expansão do comando de referências cruzadas do HTML
 
-Node names may contain @@-commands (@pxref{Exigências de Linha de Nodo}).
-This section describes how they are handled.
+Os nomes dos nós podem conter comandos @@
+(@pxref{Exigências de Linha de Nodo}). Esta seção descreve como eles são
+manuseados.
 
-First, comments are removed.
+Primeiro, os comentários são removidos.
 
-Next, any @code{@@value} commands (@pxref{@code{@@set @@value}}) and
-macro invocations (@pxref{Invocando Macros}) are fully expanded.
+Em seguida, quaisquer comandos @code{@@value} (@pxref{@code{@@set @@value}}) e
+invocações de macro (@pxref{Invocando Macros}) são totalmente expandidos.
 
-Then, for the following commands, the command name and braces are removed,
-and the text of the argument is recursively transformed:
+Então, para os comandos a seguir, o nome e as chaves do comando é removido, e o
+texto do argumento é transformado recursivamente:
 
 @example
 @@asis @@b @@cite @@code @@command @@dfn @@dmn @@dotless
@@ -19441,28 +19440,28 @@ and the text of the argument is recursively transformed:
 @@t @@U @@var @@verb @@w
 @end example
 
-@noindent For @code{@@sc}, any letters are capitalized.
+@noindent Para @code{@@sc}, quaisquer letras são maiúsculas.
 
-In addition, the following commands are replaced by constant text, as
-shown below.  If any of these commands have non-empty arguments, as in
-@code{@@TeX@{bad@}}, it is an error, and the result is unspecified.
-In this table, `(space)' means a space character and `(nothing)' means
-the empty string.  The notation `U+@var{hhhh}' means Unicode code
-point @var{hhhh} (in hex, as usual).
+Além disso, os seguintes comandos são substituídos por texto constante, como
+mostrado abaixo. Se qualquer um desses comandos tiver argumentos não vazios,
+como em @code{@@TeX@{ruim@}}, é um erro, e o resultado é inespecificado. Nesta
+tabela, `(espaço)' significa um caractere de espaço e `(nada)' significa a
+string vazia. A notação `U+@var{hhhh}' significa ponto de código Unicode
+@var{hhhh} (em hexadecimal, como de costume).
 
-There are further transformations of many of these expansions to yield
-the final file or other target name, such as space characters to
-@samp{-}, etc., according to the other rules.
+Existem outras transformações de muitas dessas expansões para produzir o
+arquivo final ou outro nome de alvo, como caracteres de espaço para @samp{-},
+etc., de acordo com as outras regras.
 
 @multitable @columnfractions .3 .5
-@item @code{@@(newline)}        @tab (space)
-@item @code{@@(space)}          @tab (space)
-@item @code{@@(tab)}            @tab (space)
+@item @code{@@(newline)}        @tab (espaço)
+@item @code{@@(space)}          @tab (espaço)
+@item @code{@@(tab)}            @tab (espaço)
 @item @code{@@!}                @tab @samp{!}
-@item @code{@@*}                @tab (space)
-@item @code{@@-}                @tab (nothing)
+@item @code{@@*}                @tab (espaço)
+@item @code{@@-}                @tab (nada)
 @item @code{@@.}                @tab @samp{.}
-@item @code{@@:}                @tab (nothing)
+@item @code{@@:}                @tab (nada)
 @item @code{@@?}                @tab @samp{?}
 @item @code{@@@@}               @tab @samp{@@}
 @item @code{@@@{}               @tab @samp{@{}
@@ -19492,83 +19491,79 @@ the final file or other target name, such as space characters to
 @item @code{@@registeredsymbol} @tab U+00AE
 @item @code{@@result}           @tab U+21D2
 @item @code{@@textdegree}       @tab U+00B0
-@item @code{@@tie}              @tab (space)
+@item @code{@@tie}              @tab (espaço)
 @end multitable
 
-Quotation mark @@-commands (@code{@@quotedblright@{@}} and the like),
-are likewise replaced by their Unicode values.  Normal quotation
-@emph{characters} (e.g., ASCII ` and ') are not altered.
-@xref{Inserindo Aspas}.
+Comandos @@ de aspas (@code{@@quotedblright@{@}} e similares) são igualmente
+substituídos pelos valores Unicode deles. @emph{Caracteres} de aspas normais
+(por exemplo, ` e ' do ASCII) não são alterados. @xref{Inserindo Aspas}.
 
-Any @code{@@acronym}, @code{@@abbr}, @code{@@email}, and
-@code{@@image} commands are replaced by their first argument.  (For
-these commands, all subsequent arguments are optional, and ignored
-here.)  @xref{@code{@@acronym}}, and @ref{@code{@@email}}, and @ref{Imagens}.
+Quaisquer comandos @code{@@acronym}, @code{@@abbr}, @code{@@email} e
+@code{@@image} são substituídos pelo primeiro argumento deles. (Para esses
+comandos, todos os argumentos subsequentes são opcionais e ignorados aqui).
+@xref{@code{@@acronym}}, e @ref{@code{@@email}} e @ref{Imagens}.
 
-Accents are handled according to the next section.
+Acentos são manuseados de acordo com a próxima seção.
 
-Any other command is an error, and the result is unspecified.
+Qualquer outro comando é um erro e o resultado é inespecificado.
 
 
-@node Expansão de Caractere de 8 bits HTML Xref
-@subsection HTML Cross-reference 8-bit Character Expansion
-@cindex HTML cross-reference 8-bit character expansion
-@cindex 8-bit characters, in HTML cross-references
-@cindex Expansion of 8-bit characters in HTML cross-references
-@cindex Transliteration of 8-bit characters in HTML cross-references
+@node Expansão de Caracteres de 8 bits do Xref do HTML
+@subsection Expansão de Caracteres de 8 Bits das Referências Cruzadas do HTML
+@cindex Expansão de caracteres de 8 bits das referências cruzadas do HTML
+@cindex Caracteres de 8 bits, em referências cruzadas do HTML
+@cindex Expansão dos caracteres de 8 bits em referências cruzadas do HTML
+@cindex Transliteração dos caracteres de 8 bits em referências cruzadas do HTML
 
-Usually, characters other than plain 7-bit ASCII are transformed into
-the corresponding Unicode code point(s) in Normalization Form@tie{}C,
-which uses precomposed characters where available.  (This is the
-normalization form recommended by the W3C and other bodies.)  This
-holds when that code point is @code{0xffff} or less, as it almost
-always is.
+Usualmente, caracteres diferentes de ASCII simples de 7 bits são transformados
+no(s) correspondente(s) ponto(s) de código Unicode na Forma de
+Normalização@tie{}C, que usa caracteres pré-compostos quando disponíveis. (Esse
+é a forma de normalização recomendada pelo W3C e outros órgãos). Isso vale
+quando esse ponto de código é @code{0xffff} ou menos, como quase sempre é.
 
-These will then be further transformed by the rules above into the
-string @samp{_@var{hhhh}}, where @var{hhhh} is the code point in hex.
+Eles serão então transformados pelas regras acima na string @samp{_@var{hhhh}},
+onde @var{hhhh} é o ponto de código em hexadecimal.
 
-For example, combining this rule and the previous section:
+Por exemplo, combinando esta regra e a seção anterior:
 
 @example
 @@node @@b@{A@} @@TeX@{@} @@u@{B@} @@point@{@}@@enddots@{@}
 @result{} A-TeX-B_0306-_2605_002e_002e_002e
 @end example
 
-Notice: 1)@tie{}@code{@@enddots} expands to three periods which in
-turn expands to three @samp{_002e}'s; 2)@tie{}@code{@@u@{B@}} is a `B'
-with a breve accent, which does not exist as a pre-accented Unicode
-character, therefore expands to @samp{B_0306} (B with combining
-breve).
+Aviso: 1)@tie{}@code{@@enddots} expande para três pontos, os quais, por sua
+vez, expandem para três @samp{_002e}; 2)@tie{}@code{@@u@{B@}} é um `B' com um
+acento breve, que não existe como um caractere Unicode pré-acentuado, portanto
+expande para @samp{B_0306} (B com acento breve combinado).
 
-When the Unicode code point is above @code{0xffff}, the transformation
-is @samp{__@var{xxxxxx}}, that is, two leading underscores followed by
-six hex digits.  Since Unicode has declared that their highest code
-point is @code{0x10ffff}, this is sufficient.  (We felt it was better
-to define this extra escape than to always use six hex digits, since
-the first two would nearly always be zeros.)
+Quando o ponto de código Unicode está acima de @code{0xffff}, a transformação é
+@samp{__@var{xxxxxx}}, ou seja, dois sublinhados iniciais seguidos por seis
+dígitos hexadecimais. Como o Unicode declarou que o ponto de código mais alto
+deles é @code{0x10ffff}, isso é suficiente. (Nós sentimos que era melhor
+definir esse escape extra que sempre usar seis dígitos hexadecimais, já que os
+dois primeiros seriam quase sempre zeros).
 
-This method works fine if the node name consists mostly of ASCII
-characters and contains only few 8-bit ones.  But if the document is
-written in a language whose script is not based on the Latin alphabet
-(for example, Ukrainian), it will create file names consisting almost
-entirely of @samp{_@var{xxxx}} notations, which is inconvenient and
-all but unreadable.  To handle such cases, @command{makeinfo} offers
-the @option{--transliterate-file-names} command line option.  This
-option enables @dfn{transliteration} of node names into ASCII
-characters for the purposes of file name creation and referencing.
-The transliteration is based on phonetic principles, which makes the
-generated file names more easily understanable.
+Esse método funciona bem se o nome do nó consistir principalmente de caracteres
+ASCII e contiver somente alguns de 8 bits. Mas, se o documento estiver escrito
+em um idioma cujo script não é baseado no alfabeto latino (por exemplo,
+ucraniano), ele criará nomes de arquivo consistindo quase inteiramente de
+notações @samp{_@var{xxxx}}, as quais são inconvenientes e quase ilegíveis.
+Para lidar com esses casos, @command{makeinfo} oferece a opção de linha de
+comando @option{--transliterate-file-names}. Essa opção habilita
+@dfn{transliteração} de nomes de nó em caracteres ASCII para os propósitos da
+criação e referenciamento de nome de arquivo. A transliteração é baseada em
+princípios fonéticos, o que torna os nomes gerados de arquivos mais facilmente
+compreensíveis.
 
-@cindex Normalization Form C, Unicode
-For the definition of Unicode Normalization Form@tie{}C, see Unicode
-report UAX#15, @uref{http://www.unicode.org/reports/tr15/}.  Many
-related documents and implementations are available elsewhere on the
-web.
+@cindex Forma de Normalização C, Unicode
+Para a definição da Forma de Normalização@tie{}C do Unicode, veja-se o informe
+Unicode UAX#15, @uref{http://www.unicode.org/reports/tr15/}. Muitos documentos
+e implementações relacionados estão disponíveis em outros lugares na web.
 
-
+PAREI
 @node Incompatibilidade de Xref do HTML
-@subsection HTML Cross-reference Mismatch
-@cindex HTML cross-reference mismatch
+@subsection Incompatibilidade de Referências Cruzadas do HTML
+@cindex Incompatibilidade de referências cruzadas do HTML
 @cindex Mismatched HTML cross-reference source and target
 
 As mentioned earlier (@pxref{Fundamentos do Link Xref do HTML}), the generating
@@ -21790,7 +21785,7 @@ automatically by Automake (@pxref{Top,,, automake, GNU Automake}).  It
 sets the @samp{VERSION} and @samp{UPDATED} values used elsewhere.  If
 your distribution doesn't use Automake, but you do use Emacs, you may
 find the time-stamp.el package helpful (@pxref{Time Stamps,,, emacs,
-The GNU Emacs Manual}).
+O Manual do GNU Emacs}).
 
 @item
 The @code{@@syncodeindex} command reflects the recommendation to use
@@ -22060,7 +22055,7 @@ delimiter, you can jump from chapter title to chapter title with the
 @kbd{C-x ]} (@code{forward-page}) and @kbd{C-x [}
 (@code{backward-page}) commands and narrow to a chapter with the
 @kbd{C-x n p} (@code{narrow-to-page}) command.  (@xref{Pages, , ,emacs,
-The GNU Emacs Manual}, for details about the page commands.)
+O Manual do GNU Emacs}, for details about the page commands.)
 
 You may name a Texinfo file however you wish, but the convention is to
 end a Texinfo file name with one of the extensions
@@ -22268,7 +22263,7 @@ off the region of the buffer that you are interested in by using the
 @kbd{C-x n n} (@code{narrow-to-region}) command and
 @code{texinfo-show-structure} will work on only that region.  To see
 the whole buffer again, use @w{@kbd{C-x n w}} (@code{widen}).
-(@xref{Narrowing, , , emacs, The GNU Emacs Manual}, for more
+(@xref{Narrowing, , , emacs, O Manual do GNU Emacs}, for more
 information about the narrowing commands.)
 
 @vindex page-delimiter
@@ -22279,7 +22274,7 @@ the chapter-level @@-commands.  This enables you to use the @kbd{C-x
 ]} (@code{forward-page}) and @kbd{C-x [} (@code{backward-page})
 commands to move forward and backward by chapter, and to use the
 @kbd{C-x n p} (@code{narrow-to-page}) command to narrow to a chapter.
-@xref{Pages, , , emacs, The GNU Emacs Manual}, for more information
+@xref{Pages, , , emacs, O Manual do GNU Emacs}, for more information
 about the page commands.
 
 
@@ -22464,9 +22459,9 @@ The @code{texinfo-column-for-description} variable specifies the
 column to which menu descriptions are indented.  By default, the value
 is 32 although it can be useful to reduce it to as low as 24.  You
 can set the variable via customization (@pxref{Customization,,,
-emacs, The GNU Emacs Manual}) or with the @kbd{M-x set-variable}
+emacs, O Manual do GNU Emacs}) or with the @kbd{M-x set-variable}
 command (@pxref{Examining, , Examining and Setting Variables, emacs,
-The GNU Emacs Manual}).
+O Manual do GNU Emacs}).
 
 Also, the @code{texinfo-indent-menu-description} command may be used to
 indent existing menu descriptions to a specified column.  Finally, if
@@ -23599,20 +23594,20 @@ commands respectively.  If you move your cursor into the @samp{*Occur*}
 window, you can position the cursor over one of the lines and use the
 @kbd{C-c C-c} command (@code{occur-mode-goto-occurrence}), to jump to
 the corresponding spot in the Texinfo file.  @xref{Other Repeating
-Search, , Using Occur, emacs, The GNU Emacs Manual}, for more
+Search, , Using Occur, emacs, O Manual do GNU Emacs}, for more
 information about @code{occur-mode-goto-occurrence}.
 
 The first line in the @samp{*Occur*} window describes the @dfn{regular
 expression} specified by @var{texinfo-heading-pattern}.  This regular
 expression is the pattern that @code{texinfo-show-structure} looks for.
-@xref{Regexps, , Using Regular Expressions, emacs, The GNU Emacs Manual},
+@xref{Regexps, , Using Regular Expressions, emacs, O Manual do GNU Emacs},
 for more information.
 
 When you invoke the @code{texinfo-show-structure} command, Emacs will
 display the structure of the whole buffer.  If you want to see the
 structure of just a part of the buffer, of one chapter, for example,
 use the @kbd{C-x n n} (@code{narrow-to-region}) command to mark the
-region.  (@xref{Narrowing, , , emacs, The GNU Emacs Manual}.)  This is
+region.  (@xref{Narrowing, , , emacs, O Manual do GNU Emacs}.)  This is
 how the example used above was generated.  (To see the whole buffer
 again, use @kbd{C-x n w} (@code{widen}).)
 
@@ -23644,7 +23639,7 @@ command directly.  To do this, type:
 @noindent
 and then, when prompted, type a @dfn{regexp}, a regular expression for
 the pattern you want to match.  (@xref{Regexps, , Regular Expressions,
-emacs, The GNU Emacs Manual}.)  The @code{occur} command works from
+emacs, O Manual do GNU Emacs}.)  The @code{occur} command works from
 the current location of the cursor in the buffer to the end of the
 buffer.  If you want to run @code{occur} on the whole buffer, place
 the cursor at the beginning of the buffer.
@@ -23662,7 +23657,7 @@ or phrase, end the last word with a @samp{$}; for example,
 all the Nodos that are part of the same chapter or section and
 therefore have the same `Up' pointer.
 
-@xref{Other Repeating Search, , Using Occur, emacs , The GNU Emacs Manual},
+@xref{Other Repeating Search, , Using Occur, emacs , O Manual do GNU Emacs},
 for more information.
 
 
