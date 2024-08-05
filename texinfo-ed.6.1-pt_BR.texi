@@ -703,9 +703,9 @@ Capturando Erros
 
 Encontrando Nodos Mal Referenciados
 
-* Usando @code{Info-validate}::         Como executar @code{Info-validate}.
-* Desdividir::                     Como criar um arquivo não dividido.
-* Etiquetando::                   Como etiquetar um arquivo.
+* Usando @code{Info-validate}:: Como executar @code{Info-validate}.
+* Desdividir::                  Como criar um arquivo não dividido.
+* Etiquetando::                 Como etiquetar um arquivo.
 * Dividindo::                   Como dividir um arquivo manualmente.
 
 Especificação de Formato Info
@@ -4691,7 +4691,7 @@ subseções para seções, e assim por diante. Por outro lado, o comando
 subseções, e assim por diante. Assim, um comando @code{@@lowersections}
 cancela um comando @code{@@raisesections}, e vice versa.
 
-@cindex Arquivos Include, e níveis de seção
+@cindex Arquivos de Inclusão, e níveis de seção
 Você pode usar @code{@@lowersections} para incluir texto escrito como um
 arquivo Texinfo externo ou autônomo em outro arquivo Texinfo como um
 arquivo interno, arquivo included (@pxref{Arquivos de Inclusão}). O uso
@@ -14970,8 +14970,8 @@ e cada menu em @emph{todos} os arquivos e então insere um menu mestre.
 
 @node Exigências dos Arquivos de Inclusão
 @section Exigências dos Arquivos de Inclusão
-@cindex Exigências dos Arquivos de Inclusão
-@cindex Exigências para Arquivos de Inclusão
+@cindex Exigências dos arquivos de inclusão
+@cindex Exigências para arquivos de inclusão
 
 Se você planeja usar o comando @code{texinfo-multiple-files-update}, o arquivo
 externo do Texinfo que lista os arquivos incluídos dentro dele deveria conter
@@ -18273,298 +18273,290 @@ parágrafos que contenham comandos @code{@@w} ou @code{@@*}.
 @subsection Formatação em Lote
 @cindex Formatação em lote para o Info
 @cindex Formatação em lote do Info
-PAREI
-You can format Texinfo files for Info using @code{batch-texinfo-format}
-and Emacs batch mode.  You can run Emacs in batch mode from any shell,
-including a shell inside of Emacs.  (@xref{Initial Options,,,
-emacs, The GNU Emacs Manual}.)
 
-Here is a shell command to format all the files that end in
-@file{.texinfo} in the current directory:
+Você pode formatar arquivos do Texinfo para o Info usando
+@code{batch-texinfo-format} e o modo lote do Emacs. Você pode executar o Emacs
+no modo lote a partir de qualquer shell, incluindo um shell dentro do Emacs.
+(@xref{Initial Options,,, emacs, The GNU Emacs Manual}).
+
+Aqui está um comando de shell para formatar todos os arquivos que terminam em
+@file{.texinfo} no diretório atual:
 
 @example
 emacs -batch -funcall batch-texinfo-format *.texinfo
 @end example
 
 @noindent
-Emacs processes all the files listed on the command line, even if an
-error occurs while attempting to format some of them.
+O Emacs processa todos os arquivos listados na linha de comando, mesmo se um
+erro ocorrer ao tentar formatar alguns deles.
 
-Run @code{batch-texinfo-format} only with Emacs in batch mode as shown;
-it is not interactive.  It kills the batch mode Emacs on completion.
+Execute @code{batch-texinfo-format} somente com Emacs em modo lote, como
+mostrado; não é interativo. Ele mata o Emacs em modo lote ao concluir.
 
-@code{batch-texinfo-format} is convenient if you lack @code{makeinfo}
-and want to format several Texinfo files at once.  When you use Batch
-mode, you create a new Emacs process.  This frees your current Emacs, so
-you can continue working in it.  (When you run
-@code{texinfo-format-region} or @code{texinfo-format-buffer}, you cannot
-use that Emacs for anything else until the command finishes.)
+@code{batch-texinfo-format} é conveniente se você carecer do @code{makeinfo} e
+quiser formatar vários arquivos do Texinfo de uma vez. Quando usa o modo Lote,
+você cria um novo processo do Emacs. Isso libera teu Emacs atual, de forma que
+você continue trabalhando nele. (Quando executa @code{texinfo-format-region} ou
+@code{texinfo-format-buffer}, você não consegue usar esse Emacs para mais nada
+até que o comando termine).
 
 @node Arquivos de Etiqueta e de Divisão
-@subsection Tag Files and Split Files
-@cindex Making a tag table automatically
-@cindex Tag table, making automatically
+@subsection Arquivos de Etiqueta e Arquivos de Divisão
+@cindex Criando uma tabela de etiquetas automaticamente
+@cindex Tabela de etiquetas, fazendo automaticamente
 
-If a Texinfo file has more than 30,000 bytes,
-@code{texinfo-format-buffer} automatically creates a tag table
-for its Info file; @code{makeinfo} always creates a tag table.  With
-a @dfn{tag table}, Info can jump to new Nodos more quickly than it can
-otherwise.
+Se um arquivo do Texinfo tiver mais que 30.000 bytes,
+@code{texinfo-format-buffer} cria automaticamente uma tabela de etiquetas para
+o arquivo dele do Info; @code{makeinfo} sempre cria uma tabela de etiquetas.
+Com uma @dfn{tabela de etiquetas}, Info pode pular para novos Nodos mais
+rapidamente que de outra forma.
 
-@cindex Indirect subfiles
-In addition, if the Texinfo file contains more than about 300,000
-bytes, @code{texinfo-format-buffer} and @code{makeinfo} split the
-large Info file into shorter @dfn{indirect} subfiles of about 300,000
-bytes each.  Big files are split into smaller files so that Emacs does
-not need to make a large buffer to hold the whole of a large Info
-file; instead, Emacs allocates just enough memory for the small, split-off
-file that is needed at the time.  This way, Emacs avoids wasting
-memory when you run Info.  (Before splitting was implemented, Info
-files were always kept short and @dfn{include files} were designed as
-a way to create a single, large printed manual out of the smaller Info
-files.  @xref{Arquivos Include}, for more information.  Include files are
-still used for very large documents, such as @cite{The Emacs Lisp
-Reference Manual}, in which each chapter is a separate file.)
+@cindex Subarquivos indiretos
+Além disso, se o arquivo do Texinfo contiver mais que 300.000 bytes,
+@code{texinfo-format-buffer} e @code{makeinfo} dividem o arquivo grande do Info
+em subarquivos @dfn{indiretos} mais curtos de cerca de 300.000 bytes cada.
+Arquivos grandes são divididos em arquivos menores, de forma que o Emacs não
+precise fazer um buffer grande para armazenar todo um arquivo grande do Info;
+em vez disso, o Emacs aloca apenas memória suficiente para o arquivo pequeno e
+dividido que seja necessária no momento. Dessa forma, o Emacs evita desperdiçar
+memória quando você executa o Info. (Antes da divisão ser implementada, os
+arquivos do Info eram sempre mantidos curtos e @dfn{arquivos de inclusão} foram
+projetados como uma maneira de criar um manual impresso grande a partir dos
+arquivos menores do Info. @xref{Arquivos de Inclusão}, para mais informações.
+Os arquivos de inclusão ainda são usados para documentos muito grandes, como
+@cite{The Emacs Lisp Reference Manual}, no qual cada capítulo é um arquivo
+separado).
 
-When a file is split, Info itself makes use of a shortened version of
-the original file that contains just the tag table and references to
-the files that were split off.  The split-off files are called
-@dfn{indirect} files.
+Quando um arquivo é dividido, o próprio Info faz uso de uma versão abreviada do
+arquivo original que contém apenas a tabela de etiquetas e referências para os
+arquivos que foram divididos. Os arquivos divididos são chamados de arquivos
+@dfn{indiretos}.
 
-The split-off files have names that are created by appending @w{@samp{-1}},
-@w{@samp{-2}}, @w{@samp{-3}} and so on to the file name specified by the
-@code{@@setfilename} command.  The shortened version of the original file
-continues to have the name specified by @code{@@setfilename}.
+Os arquivos divididos tem nomes que são criados pospondo @w{@samp{-1}},
+@w{@samp{-2}}, @w{@samp{-3}} e assim por diante no nome do arquivo especificado
+pelo comando @code{@@setfilename}. A versão abreviada do arquivo original
+continua a ter o nome especificado por @code{@@setfilename}.
 
-At one stage in writing this document, for example, the Info file was saved
-as the file @file{test-texinfo} and that file looked like this:
+Em um estágio da escrita deste documento, por exemplo, o arquivo do Info foi
+salvo como o arquivo @file{test-texinfo} e esse arquivo se parecia com isto:
 
 @example
 @group
-Info file: test-texinfo,    -*-Text-*-
-produced by texinfo-format-buffer
-from file: new-texinfo-manual.texinfo
+Arquivo do Info: test-texinfo,    -*-Text-*-
+produzido por texinfo-format-buffer
+a partir do arquivo: new-texinfo-manual.texinfo
 
 ^_
-Indirect:
+Indireto:
 test-texinfo-1: 102
 test-texinfo-2: 50422
 @end group
 @group
 test-texinfo-3: 101300
 ^_^L
-Tag table:
-(Indirect)
-Node: overview^?104
-Node: info file^?1271
+Tabela de etiquetas:
+(Indireto)
+Nodo: overview^?104
+Nodo: info file^?1271
 @end group
 @group
-Node: printed manual^?4853
-Node: conventions^?6855
+Nodo: printed manual^?4853
+Nodo: conventions^?6855
 @dots{}
 @end group
 @end example
 
 @noindent
-(But @file{test-texinfo} had far more Nodos than are shown here.)  Each of
-the split-off, indirect files, @file{test-texinfo-1},
-@file{test-texinfo-2}, and @file{test-texinfo-3}, is listed in this file
-after the line that says @samp{Indirect:}.  The tag table is listed after
-the line that says @samp{Tag table:}.
+(Mas @file{test-texinfo} tinha muito mais Nodos que os mostrados aqui). Cada um
+dos arquivos indiretos divididos, @file{test-texinfo-1}, @file{test-texinfo-2}
+e @file{test-texinfo-3}, está listado nesse arquivo depois da linha que diz
+@samp{Indireto:}. A tabela de etiquetas está listada depois da linha que diz
+@samp{Tabela de Etiquetas:}.
 
-In the list of indirect files, the number following the file name
-records the cumulative number of bytes in the preceding indirect
-files, not counting the file list itself, the tag table, or any
-permissions text in the first file.  In the tag table, the number
-following the node name records the location of the beginning of the
-node, in bytes from the beginning of the (unsplit) output.
+Na lista de arquivos indiretos, o número seguinte ao nome do arquivo registra o
+número cumulativo de bytes nos arquivos indiretos precedentes, não contando a
+lista de arquivos em si, a tabela de etiquetas ou qualquer texto de permissões
+no primeiro arquivo. Na tabela de etiquetas, o número seguinte ao nome do nó
+registra o local do início do nó, em bytes, a partir do início da saída (não
+dividida).
 
-If you are using @code{texinfo-format-buffer} to create Info files,
-you may want to run the @code{Info-validate} command.  (The
-@code{makeinfo} command does such a good job on its own, you do not
-need @code{Info-validate}.)  However, you cannot run the @kbd{M-x
-Info-validate} node-checking command on indirect files.  For
-information on how to prevent files from being split and how to
-validate the structure of the Nodos, see @ref{Using
-@code{Info-validate}}.
+Se você estiver usando @code{texinfo-format-buffer} para criar arquivos do
+Info, você pode querer executar o comando @code{Info-validate}. (O comando
+@code{makeinfo} faz um trabalho tão bom sozinho, que você não precisa do
+@code{Info-validate}). No entanto, você não pode executar o comando de
+verificação de nó @kbd{M-x Info-validate} sobre arquivos indiretos. Para
+informações acerca de como evitar que arquivos sejam divididos e como validar a
+estrutura dos Nodos, veja-se @ref{Usando @code{Info-validate}}.
 
 
 @node Instalando Um Arquivo Info
 @section Instalando Um Arquivo Info
 @cindex Instalando Um Arquivo Info
-@cindex Info file installation
-@cindex @file{dir} directory for Info installation
+@cindex Instalação de arquivo do Info
+@cindex Diretório @file{dir} para instalação do Info
 
-Info files are usually kept in the @file{info} directory.  You can
-read Info files using the standalone Info program or the Info reader
-built into Emacs.  (@xref{Top,,, info, Info}, for an introduction to
-Info.)
+Arquivos do Info geralmente são mantidos no diretório @file{info}. Você pode
+ler arquivos do Info usando o programa autônomo Info ou o leitor Info integrado
+ao Emacs. (@xref{Top,,, info, Info}, para uma introdução ao Info).
 
 @menu
-* Directory File::              The top level menu for all Info files.
-* New Info File::               Listing a new Info file.
-* Other Info Directories::      How to specify Info files that are
-                                 located in other directories.
-* Installing Dir Entries::      How to specify what menu entry to add
-                                 to the Info directory.
-* Invoking @command{install-info}::       @code{install-info} options.
+* Arquivo de Diretório::             O menu de nível superior para todos os arquivos Info.
+* Novo Arquivo Info::                Listando um novo arquivo Info.
+* Outros Diretórios Info::           Como especificar arquivos Info que estão localizados em outros diretórios.
+* Instalando Entradas de Diretório:: Como especificar qual entrada de menu adicionar ao diretório Info.
+* Invocando @command{install-info}:: Opções do @code{install-info}.
 @end menu
 
 
-@node Directory File
-@subsection The Directory File @file{dir}
+@node Arquivo de Diretório
+@subsection O Arquivo de Diretório @file{dir}
 
-For Info to work, the @file{info} directory must contain a file that
-serves as a top level directory for the Info system.  By convention,
-this file is called @file{dir}.  (You can find the location of this file
-within Emacs by typing @kbd{C-h i} to enter Info and then typing
-@kbd{C-x C-f} to see the pathname to the @file{info} directory.)
+Para que o Info funcione, o diretório @file{info} precisa conter um arquivo que
+sirva como um diretório de nível superior para o sistema Info. Por convenção,
+esse arquivo é chamado @file{dir}. (Você pode encontrar o local desse arquivo
+dentro do Emacs digitando @kbd{C-h i} para entrar no Info e então digitando
+@kbd{C-x C-f} para ver o caminho para o diretório @file{info}).
 
-The @file{dir} file is itself an Info file.  It contains the top level
-menu for all the Info files in the system.  The menu looks like
-this:
+O arquivo @file{dir} é ele próprio um arquivo do Info. Ele contém o menu de
+nível superior para todos os arquivos do Info no sistema. O menu se parece com
+isto:
 
 @example
 @group
 * Menu:
-* Info:    (info).     Documentation browsing system.
-* Emacs:   (emacs).    The extensible, self-documenting
-                      text editor.
-* Texinfo: (texinfo).  With one source file, make
-                      either a printed manual using
-                      @@TeX@{@} or an Info file.
+* Info:    (info).     Sistema de navegação de documentação.
+* Emacs:   (emacs).    O editor de texto extensível e autodocumentado.
+* Texinfo: (texinfo).  Com um arquivo fonte, crie um manual impresso usando @@TeX@{@} ou um arquivo do Info.
 @dots{}
 @end group
 @end example
 
-Each of these menu entries points to the `Top' node of the Info file
-that is named in parentheses.  (The menu entry does not need to
-specify the `Top' node, since Info goes to the `Top' node if no node
-name is mentioned.  @xref{Outros Arquivos do Info, , Nodos in Other Info
-Files}.)
+Cada uma dessas entradas de menu aponta para o nó `Top' do arquivo do Info que
+é nomeado entre parênteses. (A entrada de menu não precisa especificar o nó
+`Top', pois o Info vai para o nó `Top' se nenhum nome de nó for mencionado.
+@xref{Outros Arquivos do Info, , Nodos em Outros Arquivos do Info}).
 
-Thus, the @samp{Info} entry points to the `Top' node of the
-@file{info} file and the @samp{Emacs} entry points to the `Top' node
-of the @file{emacs} file.
+Assim, a entrada @samp{Info} aponta para o nó `Top' do arquivo @file{info} e a
+entrada @samp{Emacs} aponta para o nó `Top' do arquivo @file{emacs}.
 
-In each of the Info files, the `Up' pointer of the `Top' node refers
-back to the @code{dir} file.  For example, the line for the `Top'
-node of the Emacs manual looks like this in Info:
+Em cada um dos arquivos do Info, o ponteiro `Up' do nó `Top' remete de volta ao
+arquivo @code{dir}. Por exemplo, a linha para o nó `Top' do manual do Emacs se
+parece com isto no Info:
 
 @example
 File: emacs  Node: Top, Up: (DIR), Next: Distrib
 @end example
 
 @noindent
-In this case, the @file{dir} file name is written in uppercase
-letters---it can be written in either upper- or lowercase.  This is not
-true in general, it is a special case for @file{dir}.
+Nesse caso, o nome do arquivo @file{dir} é escrito em letras maiúsculas---pode
+ser escrito em letras maiúsculas ou minúsculas. Isso não é verdade em geral; é
+um caso especial para @file{dir}.
 
 
-@node New Info File
-@subsection Listing a New Info File
-@cindex Adding a new Info file
-@cindex Listing a new Info file
-@cindex New Info file, listing it in @file{dir} file
-@cindex Info file, listing a new
-@cindex @file{dir} file listing
+@node Novo Arquivo Info
+@subsection Listando um Novo Arquivo Info
+@cindex Adicionando um novo arquivo Info
+@cindex Listando um novo arquivo Info
+@cindex Novo arquivo Info, listando-o no arquivo @file{dir}
+@cindex Arquivo Info, listando um novo
+@cindex Listagem de arquivos @file{dir}
 
-To add a new Info file to your system, you must write a menu entry to
-add to the menu in the @file{dir} file in the @file{info} directory.
-For example, if you were adding documentation for GDB, you would write
-the following new entry:
+Para adicionar um novo arquivo do Info ao teu sistema, você precisa escrever
+uma entrada de menu para adicionar ao menu no arquivo @file{dir} no diretório
+@file{info}. Por exemplo, se estivesse adicionando documentação para o GDB,
+você escreveria a seguinte nova entrada:
 
 @example
-* GDB: (gdb).           The source-level C debugger.
+* GDB: (gdb).           O depurador C em nível de fonte.
 @end example
 
 @noindent
-The first part of the menu entry is the menu entry name, followed by a
-colon.  The second part is the name of the Info file, in parentheses,
-followed by a period.  The third part is the description.
+A primeira parte da entrada do menu é o nome da entrada do menu, seguido por
+dois pontos. A segunda parte é o nome do arquivo do Info, entre parênteses,
+seguido por um ponto. A terceira parte é a descrição.
 
-The name of an Info file often has a @file{.info} extension.  Thus, the
-Info file for GDB might be called either @file{gdb} or @file{gdb.info}.
-The Info reader programs automatically try the file name both with and
-without @file{.info}@footnote{On MS-DOS/MS-Windows systems, Info will
-try the @file{.inf} extension as well.}; so it is better to avoid
-clutter and not to write @samp{.info} explicitly in the menu entry.  For
-example, the GDB menu entry should use just @samp{gdb} for the file
-name, not @samp{gdb.info}.
+O nome de um arquivo do Info frequentemente tem uma extensão @file{.info}.
+Assim, o arquivo do Info para GDB pode ser chamado de @file{gdb} ou
+@file{gdb.info}. Os programas leitores do Info automaticamente tentam o nome do
+arquivo com e sem @file{.info}@footnote{Em sistemas MS-DOS/MS-Windows, o Info
+tentará a extensão @file{.inf} também.}; de forma que é melhor evitar desordem
+e não escrever @samp{.info} explicitamente na entrada do menu. Por exemplo, a
+entrada do menu do GDB deveria usar apenas @samp{gdb} para o nome do arquivo,
+não @samp{gdb.info}.
 
 
-@node Other Info Directories
-@subsection Arquivos do Info in Other Directories
-@cindex Installing Info in another directory
-@cindex Info installed in another directory
-@cindex Another Info directory
-@cindex @file{dir} files and Info directories
+@node Outros Diretórios Info
+@subsection Arquivos do Info em Outros Diretórios
+@cindex Instalando o Info em outro diretório
+@cindex Info instalado em outro diretório
+@cindex Outro diretório do Info
+@cindex Arquivos @file{dir} e diretórios Info
 
-If an Info file is not in the @file{info} directory, there are three
-ways to specify its location:
+Se um arquivo do Info não estiver no diretório @file{info}, existem três
+maneiras de se especificar o local dele:
 
 @enumerate
 @item
-Write the pathname in the @file{dir} file as the second part of the menu.
+Escreva o nome do caminho no arquivo @file{dir} como a segunda parte do menu.
 
 @item
-Specify the Info directory name in the @code{INFOPATH} environment
-variable in your @file{.profile} or @file{.cshrc} initialization file.
-(Only you and others who set this environment variable will be able to
-find Info files whose location is specified this way.)
+Especifique o nome do diretório do Info na variável de ambiente @code{INFOPATH}
+em teu arquivo de inicialização @file{.profile} ou @file{.cshrc}. (Somente você
+e outros(as) que configuraram essa variável de ambiente poderão encontrar
+arquivos do Info cujo local seja especificado dessa maneira).
 
 @item
-If you are using Emacs, list the name of the file in a second @file{dir}
-file, in its directory; and then add the name of that directory to the
-@code{Info-directory-list} variable in your personal or site
-initialization file.
+Se você estiver usando o Emacs, liste o nome do arquivo em um segundo arquivo
+@file{dir}, no diretório dele; e então adicione o nome desse diretório à
+variável @code{Info-directory-list} no teu arquivo de inicialização pessoal ou
+do sítio.
 
-This variable tells Emacs where to look for @file{dir} files (the files
-must be named @file{dir}).  Emacs merges the files named @file{dir} from
-each of the listed directories.  (In Emacs version 18, you can set the
-@code{Info-directory} variable to the name of only one
-directory.)
+Essa variável diz ao Emacs onde procurar por arquivos @file{dir} (os arquivos
+precisam ser nomeados @file{dir}). O Emacs mescla os arquivos nomeados
+@file{dir} provenientes de cada um dos diretórios listados. (Na versão 18 do
+Emacs, você consegue configurar a variável @code{Info-directory} para o nome de
+somente um diretório).
 @end enumerate
 
-For example, to reach a test file in the @file{/home/bob/info}
-directory, you could add an entry like this to the menu in the
-standard @file{dir} file:
+Por exemplo, para acessar um arquivo de teste no diretório
+@file{/home/bob/info}, você poderia adicionar uma entrada como esta ao menu no
+arquivo padrão @file{dir}:
 
 @example
-* Test: (/home/bob/info/info-test).  Bob's own test file.
+* Teste: (/home/bob/info/info-test).  Arquivo de teste do próprio Bob.
 @end example
 
 @noindent
-In this case, the absolute file name of the @file{info-test} file is
-written as the second part of the menu entry.
+Nesse caso, o nome absoluto do arquivo do arquivo @file{info-test} está escrito
+como a segunda parte da entrada do menu.
 
 @vindex INFOPATH
-@cindex Environment variable @code{INFOPATH}
-If you don't want to edit the system @file{dir} file, you can tell
-Info where to look by setting the @code{INFOPATH} environment variable
-in your shell startup file.  This works with both the Emacs and
-standalone Info readers.
+@cindex Variável de ambiente @code{INFOPATH}
+Se você não quiser editar o arquivo @file{dir} do sistema, você pode dizer ao
+Info onde procurar configurando a variável de ambiente @code{INFOPATH} em teu
+arquivo de inicialização do shell. Isso funciona com o Emacs e com leitores
+Info autônomos.
 
-Specifically, if you use a Bourne-compatible shell such as @code{sh}
-or @code{bash} for your shell command interpreter, you set the
-@code{INFOPATH} environment variable in the @file{.profile}
-initialization file; but if you use @code{csh} or @code{tcsh}, you set
-the variable in the @file{.cshrc} initialization file.  On
-MS-DOS/MS-Windows systems, you must set @code{INFOPATH} in your
-@file{autoexec.bat} file or in the registry.  Each type of shell uses
-a different syntax.
+Especificamente, se usar um shell compatível com Bourne, como @code{sh} ou
+@code{bash} para teu interpretador de comandos de shell, você configura a
+variável de ambiente @code{INFOPATH} no arquivo de inicialização
+@file{.profile}; mas, se usar @code{csh} ou @code{tcsh}, você configura a
+variável no arquivo de inicialização @file{.cshrc}. Em sistemas
+MS-DOS/MS-Windows, você precisa configurar @code{INFOPATH} em teu arquivo
+@file{autoexec.bat} ou no registro. Cada tipo de shell usa uma sintaxe
+diferente.
 
 @itemize @bullet
 @item
-In a @file{.cshrc} file, you could set the @code{INFOPATH}
-variable as follows:
+Em um arquivo @file{.cshrc}, você poderia configurar a variável @code{INFOPATH}
+conforme segue:
 
 @smallexample
 setenv INFOPATH .:~/info:/usr/local/emacs/info
 @end smallexample
 
 @item
-In a @file{.profile} file, you would achieve the same effect by writing:
+Em um arquivo @file{.profile}, você alcançaria o mesmo efeito escrevendo:
 
 @smallexample
 INFOPATH=.:$HOME/info:/usr/local/emacs/info
@@ -18573,9 +18565,9 @@ export INFOPATH
 
 @item
 @pindex autoexec.bat
-In a @file{autoexec.bat} file, you write this command (note the
-use of @samp{;} as the directory separator, and a different syntax for
-using values of other environment variables):
+Em um arquivo @file{autoexec.bat}, você escreve este comando (observe o uso de
+@samp{;} como separador de diretório e uma sintaxe diferente para usar valores
+de outras variáveis de ambiente):
 
 @smallexample
 set INFOPATH=.;%HOME%/info;c:/usr/local/emacs/info
@@ -18583,19 +18575,19 @@ set INFOPATH=.;%HOME%/info;c:/usr/local/emacs/info
 @end itemize
 
 @noindent
-The @samp{.} indicates the current directory as usual.  Emacs uses the
-@code{INFOPATH} environment variable to initialize the value of Emacs's
-own @code{Info-directory-list} variable.  The standalone Info reader
-merges any files named @file{dir} in any directory listed in the
-@env{INFOPATH} variable into a single menu presented to you in the node
-called @samp{(dir)Top}.
+O @samp{.} indica o diretório atual como de costume. O Emacs usa a variável de
+ambiente @code{INFOPATH} para inicializar o valor da variável
+@code{Info-directory-list} do próprio Emacs. O leitor Info autônomo mescla
+quaisquer arquivos chamados @file{dir} em qualquer diretório listado na
+variável @env{INFOPATH} em um menu unitário apresentado a você no nó chamado
+@samp{(dir)Top}.
 
-@cindex Colon, last in @env{INFOPATH}
-However you set @env{INFOPATH}, if its last character is a colon (on
-MS-DOS/MS-Windows systems, use a semicolon instead), this is replaced
-by the default (compiled-in) path.  This gives you a way to augment
-the default path with new directories without having to list all the
-standard places.  For example (using @code{sh} syntax):
+@cindex Dois pontos, último em @env{INFOPATH}
+No entanto, você configura @env{INFOPATH}, se o último caractere dela for dois
+pontos (em sistemas MS-DOS/MS-Windows, use um ponto e vírgula em vez disso),
+ele será substituído pelo caminho padrão (compilado). Isso te dá uma maneira de
+aumentar o caminho padrão com novos diretórios sem ter que listar todos os
+lugares padrão. Por exemplo (usando a sintaxe do @code{sh}):
 
 @example
 INFOPATH=/home/bob/info:
@@ -18603,18 +18595,18 @@ export INFOPATH
 @end example
 
 @noindent
-will search @file{/home/bob/info} first, then the standard directories.
-Leading or doubled colons are not treated specially.
+pesquisará @file{/home/bob/info} primeiro, depois os diretórios padrão. Dois
+pontos iniciais ou duplos não são tratados especialmente.
 
-@cindex @file{dir} file, creating your own
-When you create your own @file{dir} file for use with
-@code{Info-directory-list} or @env{INFOPATH}, it's easiest to start by
-copying an existing @file{dir} file and replace all the text after the
-@samp{* Menu:} with your desired entries.  That way, the punctuation
-and special @kbd{CTRL-_} characters that Info needs will be present.
+@cindex Arquivo @file{dir}, criando o teu próprio
+Ao criar teu próprio arquivo @file{dir} para uso com @code{Info-directory-list}
+ou @env{INFOPATH}, é mais fácil começar copiando um arquivo @file{dir}
+existente e substituir todo o texto depois de @samp{* Menu:} pelas tuas
+entradas desejadas. Dessa maneira, a pontuação e os caracteres especiais
+@kbd{CTRL-_} que o Info precisa estarão presentes.
 
-As one final alternative, which works only with Emacs Info, you can
-change the @code{Info-directory-list} variable.  For example:
+Como uma alternativa final, que funciona somente com o Info do Emacs, você pode
+mudar a variável @code{Info-directory-list}. Por exemplo:
 
 @example
 (add-hook 'Info-mode-hook '(lambda ()
@@ -18623,98 +18615,96 @@ change the @code{Info-directory-list} variable.  For example:
 @end example
 
 
-@node Installing Dir Entries
-@subsection Installing Info Directory Files
+@node Instalando Entradas de Diretório
+@subsection Instalando Arquivos do Diretório do Info
 
-When you install an Info file onto your system, you can use the program
-@code{install-info} to update the Info directory file @file{dir}.
-Normally the makefile for the package runs @code{install-info}, just
-after copying the Info file into its proper installed location.
+Quando instalar um arquivo do Info no teu sistema, você pode usar o programa
+@code{install-info} para atualizar o arquivo @file{dir} de diretórios do Info.
+Normalmente o Makefile para o pacote executa @code{install-info}, logo depois
+de copiar o arquivo do Info para o local de instalação apropriado dele.
 
 @findex dircategory
 @findex direntry
-In order for the Info file to work with @code{install-info}, you include
-the commands @code{@@dircategory} and
-@code{@@direntry}@dots{}@code{@@end direntry} in the Texinfo source
-file.  Use @code{@@direntry} to specify the menu entries to add to the
-Info directory file, and use @code{@@dircategory} to specify which part
-of the Info directory to put it in.  Here is how these commands are used
-in this manual:
+Para a finalidade de que o arquivo do Info funcione com @code{install-info},
+você inclui os comandos @code{@@dircategory} e
+@code{@@direntry}@dots{}@code{@@end direntry} no arquivo fonte do Texinfo. Use
+@code{@@direntry} para especificar as entradas de menu a adicionar ao arquivo
+de diretórios do Info e use @code{@@dircategory} para especificar em qual parte
+do diretório do Info colocá-lo. Aqui está como esses comandos são usados neste
+manual:
 
 @smallexample
-@@dircategory Texinfo documentation system
+@@dircategory Sistema de documentação Texinfo
 @@direntry
-* Texinfo: (texinfo).           The GNU documentation format.
-* install-info: (texinfo)Invoking install-info. @dots{}
+* Texinfo: (texinfo).           O formato da documentação GNU.
+* install-info: (texinfo)Invocando install-info. @dots{}
 @dots{}
 @@end direntry
 @end smallexample
 
-Here's what this produces in the Info file:
+Aqui está o que isso produz no arquivo do Info:
 
 @smallexample
-INFO-DIR-SECTION Texinfo documentation system
+INFO-DIR-SECTION Sistema de documentação Texinfo
 START-INFO-DIR-ENTRY
-* Texinfo: (texinfo).           The GNU documentation format.
-* install-info: (texinfo)Invoking install-info. @dots{}
+* Texinfo: (texinfo).           O formato da documentação GNU.
+* install-info: (texinfo)Invocando install-info. @dots{}
 @dots{}
 END-INFO-DIR-ENTRY
 @end smallexample
 
 @noindent
-The @code{install-info} program sees these lines in the Info file, and
-that is how it knows what to do.
+O programa @code{install-info} vê essas linhas no arquivo do Info e assim é
+como ele sabe o que fazer.
 
-Always use the @code{@@direntry} and @code{@@dircategory} commands near
-the beginning of the Texinfo input, before the first @code{@@node}
-command.  If you use them later on in the input, @code{install-info}
-will not notice them.
+Sempre use os comandos @code{@@direntry} e @code{@@dircategory} perto do começo
+da entrada do Texinfo, antes do primeiro comando @code{@@node}. Se você usá-los
+mais tarde na entrada, @code{install-info} não os notará.
 
-@code{install-info} will automatically reformat the description of the
-menu entries it is adding.  As a matter of convention, the description
-of the main entry (above, @samp{The GNU documentation format}) should
-start at column 32, starting at zero (as in
-@code{what-cursor-position} in Emacs).  This will make it align with
-most others.  Description for individual utilities best start in
-column 48, where possible.  For more information about formatting see
-the @samp{--calign}, @samp{--align}, and @samp{--max-width} options in
-@ref{Invoking @command{install-info}}.
+@code{install-info} automaticamente reformatará a descrição das entradas de
+menu que estiver adicionando. Como uma questão de convenção, a descrição da
+entrada principal (acima, @samp{O formato da documentação GNU}) deveria começar
+na coluna 32, começando em zero (como em @code{what-cursor-position} no Emacs).
+Isso fará com que ela se alinhe com a maioria das outras. A descrição para
+utilitários individuais deve começar na coluna 48, onde possível. Para mais
+informações acerca de formatação, vejam-se as opções @samp{--calign},
+@samp{--align} e @samp{--max-width} em @ref{Invocando @command{install-info}}.
 
-If you use @code{@@dircategory} more than once in the Texinfo source,
-each usage specifies the `current' category; any subsequent
-@code{@@direntry} commands will add to that category.
+Se você usar @code{@@dircategory} mais que uma vez no fonte do Texinfo, cada
+uso especificará a categoria `atual'; quaisquer comandos @code{@@direntry}
+subsequentes adicionarão a essa categoria.
 
-@cindex Free Software Directory
-@cindex Dir categories, choosing
-@cindex Categories, choosing
-When choosing a category name for the @code{@@dircategory} command, we
-recommend consulting the @uref{http://www.gnu.org/directory,
-Free Software Directory}.  If your program is not listed there,
-or listed incorrectly or incompletely, please report the situation to
-the directory maintainers (@url{http://directory.fsf.org}) so that the
-category names can be kept in sync.
+@cindex Diretório de Software Livre
+@cindex Categorias de diretórios, escolhendo
+@cindex Categorias, escolhendo
+Ao escolher um nome de categoria para o comando @code{@@dircategory}, nós
+recomendamos consultar o @uref{http://www.gnu.org/directory, Diretório de
+Software Livre}. Se teu programa não estiver listado lá, ou listado incorreta
+ou incompletamente, por favor, informe a situação para os(as) mantenedores(as)
+do diretório (@url{http://directory.fsf.org}), de forma que os nomes das
+categorias possam ser mantidos em sincronia.
 
-Here are a few examples (see the @file{util/dir-example} file in the
-Texinfo distribution for large sample @code{dir} file):
+Aqui estão alguns exemplos (veja-se o arquivo @file{util/dir-example} na
+distribuição do Texinfo para um grande arquivo @code{dir} de amostra):
 
 @display
 Emacs
-Localization
-Printing
-Software development
-Software libraries
-Text creation and manipulation
+Localização
+Impressão
+Desenvolvimento de software
+Bibliotecas de software
+Criação e manipulação de texto
 @end display
 
-@cindex Invoking Nodos, including in dir file
-Each `Invoking' node for every program installed should have a
-corresponding @code{@@direntry}.  This lets users easily find the
-documentation for the different programs they can run, as with the
-traditional @command{man} system.
+@cindex Invocando nodos, incluindo em arquivo dir
+Cada nó `Invoking' para cada programa instalado deveria ter um
+@code{@@direntry} correspondente. Isso permite que usuários(as) encontrem
+facilmente a documentação para os diferentes programas que podem executar, como
+no tradicional sistema @command{man}.
 
-
-@node Invoking @command{install-info}
-@subsection Invoking @command{install-info}
+PAREI
+@node Invocando @command{install-info}
+@subsection Invocando @command{install-info}
 
 @pindex install-info
 
@@ -20568,7 +20558,7 @@ Include graphics image in external @var{filename} scaled to the given
 @samp{@var{filename}.@var{ext}} in HTML@.  @xref{Imagens}.
 
 @item @@include @var{filename}
-Read the contents of Texinfo source file @var{filename}.  @xref{Arquivos Include}.
+Read the contents of Texinfo source file @var{filename}.  @xref{Arquivos de Inclusão}.
 
 @item @@indent
 Insert paragraph indentation.  @xref{@code{@@indent}}.
@@ -23216,7 +23206,7 @@ For @code{@@include} files only: expands to the name of the current
 @code{@@include} file.  If the current Texinfo source file is not an
 @code{@@include} file, this command has no effect.  This command does
 @emph{not} provide the name of the current Texinfo source file unless
-it is an @code{@@include} file.  (@xref{Arquivos Include}, for more
+it is an @code{@@include} file.  (@xref{Arquivos de Inclusão}, for more
 information about @code{@@include} files.)
 @end table
 
@@ -23705,17 +23695,17 @@ using @code{texinfo-format-region} or @code{texinfo-format-buffer}, or
 if you write an Info file from scratch.
 
 @menu
-* Using @code{Info-validate}::         How to run @code{Info-validate}.
-* Unsplit::                     How to create an unsplit file.
-* Tagifying::                   How to tagify a file.
-* Splitting::                   How to split a file manually.
+* Usando @code{Info-validate}:: Como executar @code{Info-validate}.
+* Desdividir::                  Como criar um arquivo não dividido.
+* Etiquetando::                 Como etiquetar um arquivo.
+* Dividindo::                   Como dividir um arquivo manualmente.
 @end menu
 
 
-@node Using @code{Info-validate}
-@subsection Using @code{Info-validate}
+@node Usando @code{Info-validate}
+@subsection Usando @code{Info-validate}
 
-@cindex Using @code{Info-validate}
+@cindex Usando @code{Info-validate}
 @cindex Info validating a large file
 @cindex Validating a large file
 
@@ -23860,7 +23850,7 @@ Info files are split to save memory.  With smaller files, Emacs does not
 have make such a large buffer to hold the information.
 
 If an Info file has more than 30 Nodos, you should also make a tag
-table for it.  @xref{Using @code{Info-validate}}, for information
+table for it.  @xref{Usando @code{Info-validate}}, for information
 about creating a tag table.  (Again, tag tables are usually created
 automatically by the formatting command; you only need to create a tag
 table yourself if you are doing the job manually.  Most likely, you
