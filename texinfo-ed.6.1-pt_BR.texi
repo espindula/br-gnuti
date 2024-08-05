@@ -657,7 +657,7 @@ Referências Cruzadas HTML
 * Expansão de Nodo:    Expansão Xref de Nome de Nodo do HTML.
 * Expansão de Comando: Expansão de Comando HTML Xref.
 * Expansão de 8 bits:  Expansão de Caractere de 8 bits HTML Xref.
-* Incompatibilidade:   Incompatibilidade de Xref HTML.
+* Incompatibilidade:   Incompatibilidade de Xref do HTML.
 * Configuração:        Configuração do Xref do HTML. htmlxref.cnf.
 * Preservando links:   Preservação de Link Xref do HTML. MANUAL-noderename.cnf.
 
@@ -19111,230 +19111,226 @@ A saída monolítica (@code{--no-split}) é nomeada de acordo com
 @samp{.html}), @code{--output} (o argumento é usado literalmente) ou baseada no
 nome do arquivo de entrada como último recurso (@pxref{@code{@@setfilename}}).
 
-PAREI
+
 @node CSS de HTML
 @section CSS de HTML
-@cindex HTML, and CSS
-@cindex CSS, and HTML output
-@cindex Cascading Style Sheets, and HTML output
+@cindex HTML, e CSS
+@cindex CSS, e saída HTML
+@cindex Folhas de estilo em cascata e saída HTML
 
-Cascading Style Sheets (CSS for short) is an Internet standard for
-influencing the display of HTML documents: see
+Cascading Style Sheets (CSS para abreviar) é um padrão da Internet para
+influenciar a exibição de documentos HTML: veja-se
 @uref{http://www.w3.org/Style/CSS/}.
 
-By default, @command{makeinfo} includes a few simple CSS commands to
-better implement the appearance of some Texinfo environments.  Here
-are two of them, as an example:
+Por padrão, @command{makeinfo} inclui alguns comandos CSS simples para
+implementar melhor a aparência de alguns ambientes do Texinfo. Aqui estão dois
+deles, como um exemplo:
 
 @example
 pre.display @{ font-family:inherit @}
 pre.smalldisplay @{ font-family:inherit; font-size:smaller @}
 @end example
 
-A full explanation of CSS is (far) beyond this manual; please see the
-reference above.  In brief, however, the above tells the web browser
-to use a `smaller' font size for @code{@@smalldisplay} text, and to
-use the same font as the main document for both @code{@@smalldisplay}
-and @code{@@display}.  By default, the HTML @samp{<pre>} command uses
-a monospaced font.
+Uma explicação completa de CSS está (muito) além deste manual; por favor,
+veja-se a referência acima. Em resumo, no entanto, o acima diz ao navegador da
+web para usar um tamanho de fonte `menor' para o texto de @code{@@smalldisplay}
+e para usar a mesma fonte do documento principal para @code{@@smalldisplay} e
+@code{@@display}. Por padrão, o comando @samp{<pre>} do HTML usa uma fonte
+monoespaçada.
 
-You can influence the CSS in the HTML output with two
-@command{makeinfo} options: @option{--css-include=@var{file}} and
+Você pode influenciar o CSS na saída HTML com duas opções do
+@command{makeinfo}: @option{--css-include=@var{arquivo}} e
 @option{--css-ref=@var{url}}.
 
 @pindex texinfo-bright-colors.css
-@cindex Visualizing Texinfo CSS
-The option @option{--css-ref=@var{url}} adds to each output HTML file
-a @samp{<link>} tag referencing a CSS at the given @var{url}.  This
-allows using external style sheets.  You may find the file
-@file{texi2html/examples/texinfo-bright-colors.css} useful for
-visualizing the CSS elements in Texinfo output.
+@cindex CSS de Visualização do Texinfo
+A opção @option{--css-ref=@var{url}} adiciona a cada arquivo de saída HTML uma
+tag @samp{<link>} referenciando um CSS no @var{url} fornecido. Isso permite
+usar folhas de estilo externas. Você pode achar o arquivo
+@file{texi2html/examples/texinfo-bright-colors.css} útil para visualizar os
+elementos CSS na saída do Texinfo.
 
-The option @option{--css-include=@var{file}} includes the contents
-@var{file} in the HTML output, as you might expect.  However, the
-details are somewhat tricky, as described in the following, to provide
-maximum flexibility.
+A opção @option{--css-include=@var{arquivo}} inclui o conteúdo @var{arquivo} na
+saída HTML, como você pode esperar. Entretanto, os detalhes são um pouco
+complicados, conforme descrito a seguir, para fornecer flexibilidade máxima.
 
-@cindex @samp{@@import} specifications, in CSS files
-The CSS file may begin with so-called @samp{@@import} directives,
-which link to external CSS specifications for browsers to use when
-interpreting the document.  Again, a full description is beyond our
-scope here, but we'll describe how they work syntactically, so we can
-explain how @command{makeinfo} handles them.
+@cindex Especificações de @samp{@@import}, em arquivos CSS
+O arquivo CSS pode começar com as assim chamadas diretivas @samp{@@import}, as
+quais lincam especificações externas de CSS para navegadores usarem ao
+interpretar o documento. Novamente, uma descrição completa está além do nosso
+escopo aqui, mas nós descreveremos sintaticamente como elas funcionam, de forma
+que possamos explicar como @command{makeinfo} as manuseia.
 
-@cindex Comentários, in CSS files
-There can be more than one @samp{@@import}, but they have to come
-first in the file, with only whitespace and comments interspersed, no
-normal definitions.  (Technical exception: a @samp{@@charset}
-directive may precede the @samp{@@import}'s.  This does not alter
-@command{makeinfo}'s behavior, it just copies the @samp{@@charset} if
-present.)  Comentários in CSS files are delimited by @samp{/* ... */}, as
-in C@.  An @samp{@@import} directive must be in one of these two forms:
+@cindex Comentários, em arquivos CSS
+Podem existir mais que um @samp{@@import}, mas eles tem que vir primeiro no
+arquivo, com somente espaços em branco e comentários intercalados, sem
+definições normais. (Exceção técnica: uma diretiva @samp{@@charset} pode
+preceder os @samp{@@import}. Isso não altera o comportamento do
+@command{makeinfo}; ele apenas copia o @samp{@@charset} se presente).
+Comentários em arquivos CSS são delimitados por @samp{/* ... */}, como em C@.
+Uma diretiva @samp{@@import} precisa estar em uma destas duas formas:
 
 @example
-@@import url(http://example.org/foo.css);
-@@import "http://example.net/bar.css";
+@@import url(http://exemplo.org/foo.css);
+@@import "http://exemplo.net/bar.css";
 @end example
 
-As far as @command{makeinfo} is concerned, the crucial characters are
-the @samp{@@} at the beginning and the semicolon terminating the
-directive.  When reading the CSS file, it simply copies any such
-@samp{@@}-directive into the output, as follows:
+No que diz respeito a @command{makeinfo}, os caracteres cruciais são o
+@samp{@@} no início e o ponto e vírgula terminando a diretiva. Ao ler o arquivo
+CSS, ele simplesmente copia qualquer diretiva @samp{@@} para a saída, como
+segue:
 
 @itemize
-@item If @var{file} contains only normal CSS declarations, it is
-included after @command{makeinfo}'s default CSS, thus overriding it.
+@item Se @var{arquivo} contiver somente declarações normais CSS, ele será
+incluído depois do CSS padrão do @command{makeinfo}, assim substituindo-o.
 
-@item If @var{file} begins with @samp{@@import} specifications (see
-below), then the @samp{import}'s are included first (they have to come
-first, according to the standard), and then @command{makeinfo}'s
-default CSS is included.  If you need to override @command{makeinfo}'s
-defaults from an @samp{@@import}, you can do so with the @samp{!@:
-important} CSS construct, as in:
+@item Se @var{arquivo} começar com as especificações @samp{@@import} (veja-se
+abaixo), então os @samp{import} serão incluídos primeiro (eles tem de vir
+primeiro, de acordo com o padrão), e então o CSS padrão do @command{makeinfo}
+será incluído. Se você precisar substituir os padrões do @command{makeinfo} a
+partir de um @samp{@@import}, você pode fazer isso com a construção
+@samp{!@: important} do CSS, como em:
+
 @example
-pre.smallexample @{ font-size: inherit ! important @}
+pre.pequenoexemplo @{ font-size: inherit ! important @}
 @end example
 
-@item If @var{file} contains both @samp{@@import} and inline CSS
-specifications, the @samp{@@import}'s are included first, then
-@command{makeinfo}'s defaults, and lastly the inline CSS from
-@var{file}.
+@item Se @var{arquivo} contiver especificações de @samp{@@import} e internas de
+CSS, as de @samp{@@import} serão incluídas primeiro, depois os padrões de
+@command{makeinfo} e, por último, a interna de CSS proveniente de
+@var{arquivo}.
 
-@item Any @@-directive other than @samp{@@import} and @samp{@@charset}
-is treated as a CSS declaration, meaning @command{makeinfo} includes
-its default CSS and then the rest of the file.
+@item Qualquer diretiva @@ diferente de @samp{@@import} e @samp{@@charset} é
+tratada como uma declaração CSS, significando que @command{makeinfo} inclui o
+CSS padrão dele e, em seguida, o restante do arquivo.
 @end itemize
 
-If the CSS file is malformed or erroneous, @command{makeinfo}'s output
-is unspecified.  @command{makeinfo} does not try to interpret the
-meaning of the CSS file in any way; it just looks for the special
-@samp{@@} and @samp{;} characters and blindly copies the text into the
-output.  Comentários in the CSS file may or may not be included in the
-output.
+Se o arquivo CSS estiver malformado ou errôneo, a saída do @command{makeinfo}
+será inespecificada. O @command{makeinfo} não tenta interpretar o significado
+do arquivo CSS de maneira alguma; ele apenas procura pelos caracteres especiais
+@samp{@@} e @samp{;} e copia cegamente o texto para a saída. Comentários no
+arquivo CSS podem ou não ser incluídos na saída.
 
-In addition to the possibilities offered by CSS, @command{makeinfo}
-has many user-definable customization variables with which you can
-influence the HTML output.  @xref{Variáveis de Personalização}.
+Além das possibilidades oferecidas pelo CSS, @command{makeinfo} tem muitas
+variáveis de personalização definíveis por usuário(a) com as quais você
+consegue influenciar a saída HTML. @xref{Variáveis de Personalização}.
 
 
 @node Xref de HTML
-@section HTML Cross-references
-@cindex HTML cross-references
-@cindex Cross-references, in HTML output
+@section Referências Cruzadas de HTML
+@cindex Referências cruzadas de HTML
+@cindex Referências cruzadas, em saída HTML
 
-Cross-references between Texinfo manuals in HTML format become, in the
-end, a standard HTML @code{<a>} link, but the details are
-unfortunately complex.  This section describes the algorithm used in
-detail, so that Texinfo can cooperate with other programs, such as
-@command{texi2html}, by writing mutually compatible HTML files.
+Referências cruzadas entre manuais do Texinfo em formato HTML se tornam, no
+final, um link @code{<a>} padrão do HTML, mas os detalhes são infelizmente
+complexos. Esta seção descreve o algoritmo usado em detalhes, de forma que o
+Texinfo consiga cooperar com outros programas, tais como @command{texi2html},
+escrevendo arquivos HTML mutuamente compatíveis.
 
-This algorithm may or may not be used for links @emph{within} HTML
-output for a Texinfo file.  Since no issues of compatibility arise in
-such cases, we do not need to specify this.
+Este algoritmo pode ou não ser usado para links @emph{dentro} da saída HTML
+para um arquivo do Texinfo. Dado que nenhum problema de compatibilidade surge
+em tais casos, nós não precisamos especificar isso.
 
-We try to support references to such ``external'' manuals in both
-monolithic and split forms.  A @dfn{monolithic} (mono) manual is
-entirely contained in one file, and a @dfn{split} manual has a file
-for each node.  (@xref{Divisão de HTML}.)
+Nós tentamos suportar referências a esses manuais ``externos'' em formatos
+monolíticos e divididos. Um manual @dfn{monolítico} (mono) está inteiramente
+contido em um arquivo, e um manual @dfn{dividido} tem um arquivo para cada nó.
+(@xref{Divisão de HTML}).
 
 @cindex Dumas, Patrice
-The algorithm was primarily devised by Patrice Dumas in 2003--04.
+O algoritmo foi desenvolvido principalmente por Patrice Dumas em 2003--04.
 
 @menu
 * Fundamentos de Link: Fundamentos do Link Xref do HTML.
 * Expansão de Nodo:    Expansão Xref de Nome de Nodo do HTML.
 * Expansão de Comando: Expansão de Comando HTML Xref.
 * Expansão de 8 bits:  Expansão Xref de Caractere de 8 Bits do HTML.
-* Incompatibilidade:   Incompatibilidade de Xref HTML.
+* Incompatibilidade:   Incompatibilidade de Xref do HTML.
 * Configuração:        Configuração do Xref do HTML. htmlxref.cnf.
 * Preservando links:   Preservação de Link Xref do HTML. MANUAL-noderename.cnf.
 @end menu
 
 
 @node Fundamentos do Link Xref do HTML
-@subsection HTML Cross-reference Link Basics
-@cindex HTML cross-reference link basics
+@subsection Fundamentos do Link de Referência Cruzada do HTML
+@cindex Fundamentos do link de referência cruzada do HTML
 
-For our purposes, an HTML link consists of four components: a host
-name, a directory part, a file part, and a target part.  We
-always assume the @code{http} protocol.  For example:
+Para nossos propósitos, um link do HTML consiste de quatro componentes: um nome
+de dispositivo, uma parte de diretório, uma parte de arquivo e uma parte de
+alvo. Nós sempre assumimos o protocolo @code{http}. Por exemplo:
 
 @example
-http://@var{host}/@var{dir}/@var{file}.html#@var{target}
+http://@var{dispositivo}/@var{diretório}/@var{arquivo}.html#@var{alvo}
 @end example
 
-The information to construct a link comes from the node name and
-manual name in the cross-reference command in the Texinfo source
-(@pxref{Referências Cruzadas}), and from @dfn{external information}
+As informações para construir um link vem do nome do nó e do nome do manual no
+comando de referência cruzada no fonte do Texinfo
+(@pxref{Referências Cruzadas}) e de @dfn{informações externas}
 (@pxref{Configuração do Xref do HTML}).
 
-We now consider each part in turn.
+Nós agora consideramos cada parte separadamente.
 
-The @var{host} is hardwired to be the local host.  This could either
-be the literal string @samp{localhost}, or, according to the rules for
-HTML links, the @samp{http://localhost/} could be omitted entirely.
+O @var{dispositivo} é programado para ser o dispositivo local. Isso poderia ser
+ou a string literal @samp{localhost} ou, de acordo com as regras para links
+HTML, o @samp{http://localhost/} poderia ser omitido completamente.
 
-The @var{dir} and @var{file} parts are more complicated, and depend on
-the relative split/mono nature of both the manual being processed and
-the manual that the cross-reference refers to.  The underlying idea is
-that there is one directory for Texinfo manuals in HTML, and a given
-@var{manual} is either available as a monolithic file
-@file{@var{manual}.html}, or a split subdirectory
-@file{@var{manual}/*.html}.  Here are the cases:
+As partes @var{diretório} e @var{arquivo} são mais complicadas e dependem da
+natureza relativa de divisão/mono do manual sendo processado e do manual ao
+qual a referência cruzada se refere. A ideia subjacente é a de que existe um
+diretório para manuais do Texinfo em HTML, e um dado @var{manual} ou está
+disponível como um arquivo monolítico @file{@var{manual}.html} ou como um
+subdiretório dividido @file{@var{manual}/*.html}. Aqui estão os casos:
 
 @itemize @bullet
 @item
-If the present manual is split, and the referent manual is also split,
-the directory is @samp{../@var{referent/}} and the file is the
-expanded node name (described later).
+Se o manual atual estiver dividido, e o manual referente também estiver
+dividido, o diretório será @samp{../@var{referente/}} e o arquivo será o nome
+do nó expandido (descrito posteriormente).
 
 @item
-If the present manual is split, and the referent manual is mono, the
-directory is @samp{../} and the file is @file{@var{referent}.html}.
+Se o manual atual estiver dividido e o manual referente estiver monolítico, o
+diretório será @samp{../} e o arquivo será @file{@var{referente}.html}.
 
 @item
-If the present manual is mono, and the referent manual is split, the
-directory is @file{@var{referent}/} and the file is the expanded node
-name.
+Se o manual atual estiver monolítico e o manual referente estiver dividido, o
+diretório será @file{@var{referente}/} e o arquivo será o nome do nó expandido.
 
 @item
-If the present manual is mono, and the referent manual is also mono,
-the directory is @file{./} (or just the empty string), and the file is
-@file{@var{referent}.html}.
+Se o manual atual estiver monolítico e o manual referente também estiver
+monolítico, o diretório será @file{./} (ou apenas a string vazia), e o arquivo
+será @file{@var{referente}.html}.
 
 @end itemize
 
 @vindex BASEFILENAME_LENGTH
-Another rule, that only holds for filenames, is that base filenames
-are truncated to 245 characters, to allow for an extension to be
-appended and still comply with the 255-character limit which is common
-to many filesystems.  Although technically this can be changed with
-the @code{BASEFILENAME_LENGTH} customization variable
-(@pxref{Outras Variáveis de Personalização}), doing so would make
-cross-manual references to such Nodos invalid.
+Outra regra, que só vale para nomes de arquivo, é que nomes de arquivo base são
+truncados para 245 caracteres, para permitir para uma extensão ser posposta e
+ainda cumprir com o limite de 255 caracteres, o qual é comum a muitos sistemas
+de arquivo. Embora, tecnicamente, isso possa ser mudado com a variável de
+personalização @code{BASEFILENAME_LENGTH}
+(@pxref{Outras Variáveis de Personalização}), fazer isso tornaria referências
+entre manuais para tais nodos inválidas.
 
-Any directory part in the filename argument of the source cross
-reference command is ignored.  Thus, @code{@@xref@{,,,../foo@}} and
-@code{@@xref@{,,,foo@}} both use @samp{foo} as the manual name.  This
-is because any such attempted hardwiring of the directory is very
-unlikely to be useful for both Info and HTML output.
+Qualquer parte de diretório no argumento do nome de arquivo do comando fonte da
+referência cruzada é ignorada. Assim, @code{@@xref@{,,,../foo@}} e
+@code{@@xref@{,,,foo@}} ambos usam @samp{foo} como o nome do manual. Isso é
+porque qualquer tal conexão rígida tentada do diretório dificilmente seja útil
+para ambas as saídas Info e HTML.
 
-Finally, the @var{target} part is always the expanded node name.
+Finalmente, a parte @var{alvo} sempre é o nome do nó expandido.
 
-Whether the present manual is split or mono is determined by user
-option; @command{makeinfo} defaults to split, with the
-@option{--no-split} option overriding this.
+Se o manual atual será dividido ou monolítico é determinado pela opção de
+usuário(a); @command{makeinfo} padroniza para dividir, com a opção
+@option{--no-split} substituindo isso.
 
-Whether the referent manual is split or mono, however, is another bit
-of the external information (@pxref{Configuração do Xref do HTML}).  By
-default, @command{makeinfo} uses the same form of the referent manual
-as the present manual.
+Se o manual referente é dividido ou monolítico, no entanto, é outra parte da
+informação externa (@pxref{Configuração do Xref do HTML}). Por padrão,
+@command{makeinfo} usa o mesmo formato do manual referente como o manual atual.
 
-Thus, there can be a mismatch between the format of the referent
-manual that the generating software assumes, and the format it's
-actually present in.  @xref{HTML Xref Mismatch}.
+Portanto, pode existir uma incompatibilidade entre o formato do manual
+referente que o software gerador assume e o formato em que ele realmente está
+presente. @xref{Incompatibilidade de Xref do HTML}.
 
-
+PAREI
 @node Expansão Xref de Nome de Nodo do HTML
 @subsection HTML Cross-reference Node Name Expansion
 @cindex HTML cross-reference node name expansion
@@ -19570,7 +19566,7 @@ related documents and implementations are available elsewhere on the
 web.
 
 
-@node Incompatibilidade de Xref HTML
+@node Incompatibilidade de Xref do HTML
 @subsection HTML Cross-reference Mismatch
 @cindex HTML cross-reference mismatch
 @cindex Mismatched HTML cross-reference source and target
