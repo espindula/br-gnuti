@@ -687,10 +687,10 @@ Atualizando Nodos e Menus
 
 Cabeçalhos de Página
 
-* Cabeçalhos Introduzidos::         Convenções para se usar cabeçalhos de página.
-* Formato do Título::              Formatos padrão de títulos de página.
-* Escolha do Título::              Como especificar o tipo do título da página.
-* Cabeçalhos Personalizados::             Como criar seus próprios cabeçalhos e rodapés.
+* Cabeçalhos Introduzidos::     Convenções para se usar cabeçalhos de página.
+* Formato do Título::           Formatos padrão de títulos de página.
+* Escolha do Título::           Como especificar o tipo do título da página.
+* Cabeçalhos Personalizados::   Como criar teus próprios cabeçalhos e rodapés.
 
 Capturando Erros
 
@@ -1316,7 +1316,7 @@ Texinfo, e dá um arquivo curto de amostra.
 @cindex Sintáticas, convenções
 @cindex Convenções, sintáticas
 @cindex Caracteres, entrada básica
-@anchor{Formatting Commands} @c nome antigo
+@anchor{Comandos de Formatação} @c nome antigo
 
 Esta seção descreve as convenções gerais usadas em todos os
 documentos Texinfo.
@@ -1334,7 +1334,7 @@ coloque um carácter @samp{@@} em frente a ele, como isto: @samp{@@@@},
 @samp{@@@{}, e @samp{@@@}}.
 
 @item
-@cindex @@-commands
+@cindex Comandos @@
 @cindex Formatando, comandos
 Em um arquivo Texinfo, os comandos que você escreve para descrever o
 conteúdo do manual são precedidos por um carácter @samp{@@}; eles são
@@ -20155,274 +20155,269 @@ da classe da operação, o nome da operação e os argumentos dela, se existirem
 @itemx @@defoptx @var{nome-opção}
 Formata uma descrição para uma opção de usuário(a); equivalente a @samp{@@defvr
 @{Opção de Usuário(a)@} @dots{}}. @xref{Comandos de Definição}.
-PAREI
-@item @@defspec @var{special-form-name} @var{arguments}@dots{}
-@itemx @@defspecx @var{special-form-name} @var{arguments}@dots{}
-Format a description for a special form; equivalent to @samp{@@deffn
-@{Special Form@} @dots{}}.  @xref{Comandos de Definição}.
 
-@item @@deftp @var{category} @var{name-of-type} @var{attributes}@dots{}
-@itemx @@deftpx @var{category} @var{name-of-type} @var{attributes}@dots{}
-Format a description for a data type; its arguments are the category,
-the name of the type (e.g., @samp{int}) , and then the names of
-attributes of objects of that type.  @xref{Comandos de Definição}, and
-@ref{Tipos de Dados}.
+@item @@defspec @var{nome-forma-especial} @var{argumentos}@dots{}
+@itemx @@defspecx @var{nome-forma-especial} @var{argumentos}@dots{}
+Formata uma descrição para uma forma especial; equivalente a @samp{@@deffn
+@{Forma Especial@} @dots{}}. @xref{Comandos de Definição}.
 
-@item @@deftypecv @var{category} @var{class} @var{data-type} @var{name}
-@itemx @@deftypecvx @var{category} @var{class} @var{data-type} @var{name}
-Format a description for a typed class variable in object-oriented programming.
-@xref{Comandos de Definição}, and @ref{Objetos Abstratos}.
+@item @@deftp @var{categoria} @var{nome-do-tipo} @var{atributos}@dots{}
+@itemx @@deftpx @var{categoria} @var{nome-do-tipo} @var{atributos}@dots{}
+Formata uma descrição para um tipo de dado; os argumentos dela são a categoria,
+o nome do tipo (por exemplo, @samp{int}) e, em seguida, os nomes dos atributos
+dos objetos desse tipo. @xref{Comandos de Definição} e @ref{Tipos de Dados}.
 
-@item @@deftypefn @var{category} @var{data-type} @var{name} @var{arguments}@dots{}
-@itemx @@deftypefnx @var{category} @var{data-type} @var{name} @var{arguments}@dots{}
-Format a description for a function or similar entity that may take
-arguments and that is typed.  @code{@@deftypefn} takes as arguments the
-category of entity being described, the type, the name of the
-entity, and its arguments, if any.  @xref{Comandos de Definição}.
+@item @@deftypecv @var{categoria} @var{classe} @var{tipo-dado} @var{nome}
+@itemx @@deftypecvx @var{categoria} @var{classe} @var{tipo-dado} @var{nome}
+Formata uma descrição para uma variável de classe tipada em programação
+orientada a objetos. @xref{Comandos de Definição} e @ref{Objetos Abstratos}.
 
-@item @@deftypefnnewline @var{on-off}
-Specifies whether return types for @code{@@deftypefn} and similar are
-printed on lines by themselves; default is off.
+@item @@deftypefn @var{categoria} @var{tipo-dado} @var{nome} @var{argumentos}@dots{}
+@itemx @@deftypefnx @var{categoria} @var{tipo-dado} @var{nome} @var{argumentos}@dots{}
+Formata uma descrição para uma função ou para entidade similar que pode receber
+argumentos e que é tipada. @code{@@deftypefn} recebe como argumentos a
+categoria da entidade sendo descrita, o tipo, o nome da entidade e os
+argumentos dela, se existirem. @xref{Comandos de Definição}.
+
+@item @@deftypefnnewline @var{ligado-desligado}
+Especifica se os tipos de retorno para @code{@@deftypefn} e similares são
+impressos sozinhos nas linhas; padrão é desligado.
 @xref{Funções Tipadas,, Funções em Linguagens Tipadas}.
 
-@item @@deftypefun @var{data-type} @var{function-name} @var{arguments}@dots{}
-@itemx @@deftypefunx @var{data-type} @var{function-name} @var{arguments}@dots{}
-Format a description for a function in a typed language.
-The command is equivalent to @samp{@@deftypefn Function @dots{}}.
+@item @@deftypefun @var{tipo-dado} @var{nome-função} @var{argumentos}@dots{}
+@itemx @@deftypefunx @var{tipo-dado} @var{nome-função} @var{argumentos}@dots{}
+Formata uma descrição para uma função em uma linguagem tipada. O comando é
+equivalente a @samp{@@deftypefn Função @dots{}}. @xref{Comandos de Definição}.
+
+@item @@deftypeivar @var{classe} @var{tipo-dado} @var{nome-variável}
+@itemx @@deftypeivarx @var{classe} @var{tipo-dado} @var{nome-variável}
+Formata uma descrição para uma variável de instância tipada em programação
+orientada a objetos. @xref{Comandos de Definição} e @ref{Objetos Abstratos}.
+
+@item @@deftypemethod @var{classe} @var{tipo-dado} @var{nome-método} @var{argumentos}@dots{}
+@itemx @@deftypemethodx @var{classe} @var{tipo-dado} @var{nome-método} @var{argumentos}@dots{}
+Formata uma descrição para um método tipado em programação orientada a objetos.
 @xref{Comandos de Definição}.
 
-@item @@deftypeivar @var{class} @var{data-type} @var{variable-name}
-@itemx @@deftypeivarx @var{class} @var{data-type} @var{variable-name}
-Format a description for a typed instance variable in object-oriented
-programming. @xref{Comandos de Definição}, and @ref{Objetos Abstratos}.
+@item @@deftypeop @var{categoria} @var{classe} @var{tipo-dado} @var{nome} @var{argumentos}@dots{}
+@itemx @@deftypeopx @var{categoria} @var{classe} @var{tipo-dado} @var{nome} @var{argumentos}@dots{}
+Formata uma descrição para uma operação tipada em programação orientada a objetos.
+@xref{Comandos de Definição} e @ref{Objetos Abstratos}.
 
-@item @@deftypemethod @var{class} @var{data-type} @var{method-name} @var{arguments}@dots{}
-@itemx @@deftypemethodx @var{class} @var{data-type} @var{method-name} @var{arguments}@dots{}
-Format a description for a typed method in object-oriented programming.
+@item @@deftypevar @var{tipo-dado} @var{nome-variável}
+@itemx @@deftypevarx @var{tipo-dado} @var{nome-variável}
+Formata uma descrição para uma variável em uma linguagem tipada. O comando é
+equivalente a @samp{@@deftypevr Variável @dots{}}.
 @xref{Comandos de Definição}.
 
-@item @@deftypeop @var{category} @var{class} @var{data-type} @var{name} @var{arguments}@dots{}
-@itemx @@deftypeopx @var{category} @var{class} @var{data-type} @var{name} @var{arguments}@dots{}
-Format a description for a typed operation in object-oriented programming.
-@xref{Comandos de Definição}, and @ref{Objetos Abstratos}.
+@item @@deftypevr @var{categoria} @var{tipo-dado} @var{nome}
+@itemx @@deftypevrx @var{categoria} @var{tipo-dado} @var{nome}
+Formata uma descrição para algo como uma variável em uma linguagem tipada---uma
+entidade que registra um valor. Recebe como argumentos a categoria da entidade
+sendo descrita, o tipo e o nome da entidade. @xref{Comandos de Definição}.
 
-@item @@deftypevar @var{data-type} @var{variable-name}
-@itemx @@deftypevarx @var{data-type} @var{variable-name}
-Format a description for a variable in a typed language.  The command is
-equivalent to @samp{@@deftypevr Variable @dots{}}.
-@xref{Comandos de Definição}.
+@item @@defun @var{nome-função} @var{argumentos}@dots{}
+@itemx @@defunx @var{nome-função} @var{argumentos}@dots{}
+Formata uma descrição para uma função; equivalente a @samp{@@deffn Função
+@dots{}}. @xref{Comandos de Definição}.
 
-@item @@deftypevr @var{category} @var{data-type} @var{name}
-@itemx @@deftypevrx @var{category} @var{data-type} @var{name}
-Format a description for something like a variable in a typed
-language---an entity that records a value.  Takes as arguments the
-category of entity being described, the type, and the name of the
-entity.  @xref{Comandos de Definição}.
+@item @@defvar @var{nome-variável}
+@itemx @@defvarx @var{nome-variável}
+Formata uma descrição para uma variável; equivalente a @samp{@@defvr Variável
+@dots{}}. @xref{Comandos de Definição}.
 
-@item @@defun @var{function-name} @var{arguments}@dots{}
-@itemx @@defunx @var{function-name} @var{arguments}@dots{}
-Format a description for a function; equivalent to
-@samp{@@deffn Function @dots{}}.  @xref{Comandos de Definição}.
-
-@item @@defvar @var{variable-name}
-@itemx @@defvarx @var{variable-name}
-Format a description for a variable; equivalent to @samp{@@defvr
-Variable @dots{}}.  @xref{Comandos de Definição}.
-
-@item @@defvr @var{category} @var{name}
-@itemx @@defvrx @var{category} @var{name}
-Format a description for any kind of variable.  @code{@@defvr} takes
-as arguments the category of the entity and the name of the entity.
+@item @@defvr @var{categoria} @var{nome}
+@itemx @@defvrx @var{categoria} @var{nome}
+Formata uma descrição para qualquer tipo de variável. @code{@@defvr} recebe
+como argumentos a categoria da entidade e o nome da entidade.
 @xref{Comandos de Definição}.
 
 @item @@detailmenu
-Mark the (optional) detailed node listing in a master menu.
+Marca a listagem detalhada (opcional) de nós em um menu mestre.
 @xref{Partes do Menu Mestre}.
 
-@item @@dfn@{@var{term}@}
-Indicate the introductory or defining use of a term.  @xref{@code{@@dfn}}.
+@item @@dfn@{@var{termo}@}
+Indica o uso introdutório ou definidor de um termo. @xref{@code{@@dfn}}.
 
 @item @@DH@{@}
 @itemx @@dh@{@}
-Generate the uppercase and lowercase Icelandic letter eth, respectively:
-@DH{}, @dh{}.  @xref{Inserindo Acentos}.
+Gera a letra maiúscula e minúscula islandesa eth, respectivamente: @DH{},
+@dh{}. @xref{Inserindo Acentos}.
 
-@item @@dircategory @var{dirpart}
-Specify a part of the Info directory menu where this file's entry should
-go.  @xref{Installing Dir Entries}.
+@item @@dircategory @var{partediretório}
+Especifica uma parte do menu do diretório do Info onde a entrada desse arquivo
+deveria ficar. @xref{Instalando Entradas de Diretório}.
 
 @item @@direntry
-Begin the Info directory menu entry for this file.  Pair with
-@code{@@end direntry}.  @xref{Installing Dir Entries}.
+Inicia a entrada do menu do diretório do Info para esse arquivo. Emparelha com
+@code{@@end direntry}. @xref{Instalando Entradas de Diretório}.
 
 @item @@display
-Begin a kind of example.  Like @code{@@example} (indent text, do not
-fill), but do not select a new font.  Pair with @code{@@end display}.
+Inicia um tipo de exemplo. Como @code{@@example} (recua texto, não preenche),
+mas não seleciona uma nova fonte. Emparelha com @code{@@end display}.
 @xref{@code{@@display}}.
 
-@item @@dmn@{@var{dimension}@}
-Format a unit of measure, as in 12@dmn{pt}.  Causes @TeX{} to insert a
-thin space before @var{dimension}.  No effect in Info.
-@xref{@code{@@dmn}}.
+@item @@dmn@{@var{dimensão}@}
+Formata uma unidade de medida, como em 12@dmn{pt}. Faz com que @TeX{} insira um
+espaço fino antes de @var{dimensão}. Sem efeito no Info. @xref{@code{@@dmn}}.
 
 @item @@docbook
-Enter Docbook completely.  Pair with @code{@@end docbook}.
+Entra em Docbook completamente. Emparelha com @code{@@end docbook}.
 @xref{Comandos do Formatador Bruto}.
 
 @item @@documentdescription
-Set the document description text, included in the HTML output.  Pair
-with @code{@@end documentdescription}.  @xref{@code{@@documentdescription}}.
+Define o texto de descrição do documento, incluído na saída HTML. Emparelha com
+@code{@@end documentdescription}. @xref{@code{@@documentdescription}}.
 
-@item @@documentencoding @var{enc}
-Declare the input encoding to be @var{enc}.
+@item @@documentencoding @var{codificação}
+Declara a codificação de entrada como @var{codificação}.
 @xref{@code{@@documentencoding}}.
 
 @item @@documentlanguage @var{CC}
-Declare the document language as the two-character ISO-639 abbreviation
-@var{CC}.  @xref{@code{@@documentlanguage}}.
+Declara o idioma do documento como a abreviação ISO-639 de dois caracteres
+@var{CC}. @xref{@code{@@documentlanguage}}.
 
 @item @@dotaccent@{@var{c}@}
 Generate a dot accent over the character @var{c}, as in @dotaccent{o}.
 @xref{Inserindo Acentos}.
 
-@item @@dotless@{@var{i-or-j}@}
-Generate dotless i (`@dotless{i}') and dotless j (`@dotless{j}').
+@item @@dotless@{@var{i-ou-j}@}
+Gera i sem ponto (`@dotless{i}') e j sem ponto (`@dotless{j}').
 @xref{Inserindo Acentos}.
 
 @item @@dots@{@}
-Gerar uma reticência, @samp{@dots{}}.
+Gera uma reticência, @samp{@dots{}}.
 @xref{@code{@@dots}}.
 
-@item @@email@{@var{address}[, @var{displayed-text}]@}
-Indicate an electronic mail address.  @xref{@code{@@email}}.
+@item @@email@{@var{endereço}[, @var{texto-exibido}]@}
+Indica um endereço eletrônico de mensagens. @xref{@code{@@email}}.
 
-@item @@emph@{@var{text}@}
-Emphasize @var{text}, by using @emph{italics} where possible, and
-enclosing in asterisks in Info.  @xref{Ênfase, , Enfatizando Texto}.
+@item @@emph@{@var{texto}@}
+Enfatiza @var{texto}, usando @emph{itálico}, onde possível e cercando com
+asteriscos no Info. @xref{Ênfase, , Enfatizando Texto}.
 
-@item @@end @var{environment}
-Ends @var{environment}, as in @samp{@@end example}.  @xref{Formatting
-Commands,,@@-commands}.
+@item @@end @var{ambiente}
+Termina @var{ambiente}, como em @samp{@@end example}.
+@xref{Comandos de Formatação,,Comandos @@}.
 
 @item @@enddots@{@}
-Generate an end-of-sentence ellipsis, like this: @enddots{}
-@xref{@code{@@dots}}.
+Gera reticências de fim de frase, como esta: @enddots{} @xref{@code{@@dots}}.
 
-@item @@enumerate [@var{number-or-letter}]
-Begin a numbered list, using @code{@@item} for each entry.
-Optionally, start list with @var{number-or-letter}.  Pair with
-@code{@@end enumerate}.  @xref{@code{@@enumerate}}.
+@item @@enumerate [@var{número-ou-letra}]
+Inicia uma lista numerada, usando @code{@@item} para cada entrada.
+Opcionalmente, inicia a lista com @var{número-ou-letra}. Emparelha com
+@code{@@end enumerate}. @xref{@code{@@enumerate}}.
 
-@item @@env@{@var{environment-variable}@}
-Indicate an environment variable name, such as @env{PATH}.
+@item @@env@{@var{variável-ambiente}@}
+Indica um nome de variável de ambiente, como @env{CAMINHO}.
 @xref{@code{@@env}}.
 
 @item @@equiv@{@}
-Indicate to the reader the exact equivalence of two forms with a
-glyph: @samp{@equiv{}}.  @xref{@code{@@equiv}}.
+Indica para o leitor a equivalência exata de duas formas com um glifo:
+@samp{@equiv{}}. @xref{@code{@@equiv}}.
 
 @item @@error@{@}
-Indicate to the reader with a glyph that the following text is
-an error message: @samp{@error{}}.  @xref{@code{@@error}}.
+Indica para o leitor com um glifo que o texto seguinte é uma mensagem de erro:
+@samp{@error{}}. @xref{@code{@@error}}.
 
-@item @@errormsg@{@var{msg}@}
-Report @var{msg} as an error to standard error, and exit unsuccessfully.
-Texinfo commands within @var{msg} are expanded to plain text.
-@xref{Condicionais}, and @ref{Processadores Externos de Macro}.
+@item @@errormsg@{@var{mensagem}@}
+Informa @var{mensagem} como um erro para erro padrão e sai sem sucesso.
+Comandos do Texinfo dentro de @var{mensagem} são expandidos para texto simples.
+@xref{Condicionais} e @ref{Processadores Externos de Macro}.
 
 @item @@euro@{@}
-Generate the Euro currency sign.  @xref{@code{@@euro}}.
+Gera o símbolo da moeda Euro. @xref{@code{@@euro}}.
 
-@item @@evenfooting [@var{left}] @@| [@var{center}] @@| [@var{right}]
-@itemx @@evenheading [@var{left}] @@| [@var{center}] @@| [@var{right}]
-Specify page footings resp.@: headings for even-numbered (left-hand)
-pages.  @xref{Custom Cabeçalhos, ,
-How to Make Your Own Cabeçalhos}.
+@item @@evenfooting [@var{esquerda}] @@| [@var{centro}] @@| [@var{direita}]
+@itemx @@evenheading [@var{esquerda}] @@| [@var{centro}] @@| [@var{direita}]
+Especifica rodapés de página, respectivamente cabeçalhos, para páginas pares (à
+esquerda).
+@xref{Cabeçalhos Personalizados, , Como Fazer Teus Próprios Cabeçalhos}.
 
-@item @@everyfooting [@var{left}] @@| [@var{center}] @@| [@var{right}]
-@itemx @@everyheading [@var{left}] @@| [@var{center}] @@| [@var{right}]
-Specify page footings resp.@: headings for every page.  Not relevant to
-Info.  @xref{Custom Cabeçalhos, , How to Make Your Own Cabeçalhos}.
+@item @@everyfooting [@var{esquerda}] @@| [@var{centro}] @@| [@var{direita}]
+@itemx @@everyheading [@var{esquerda}] @@| [@var{centro}] @@| [@var{direita}]
+Especifica rodapés de página, respectivamente cabeçalhos, para cada página. Não
+relevantr para Info.
+@xref{Cabeçalhos Personalizados, , Como Fazer Teus Próprios Cabeçalhos}.
 
 @item @@example
-Begin an example.  Indent text, do not fill, and select fixed-width
-font.  Pair with @code{@@end example}.  @xref{@code{@@example}}.
+Inicia um exemplo. Recua o texto, não preenche e seleciona fonte de largura
+fixa. Emparelha com @code{@@end example}. @xref{@code{@@example}}.
 
-@item @@exampleindent @var{indent}
-Indent example-like environments by @var{indent} number of spaces
-(perhaps 0).  @xref{@code{@@exampleindent}}.
+@item @@exampleindent @var{recuo}
+Recua ambientes semelhantes a exemplos por @var{recuo} número de espaços
+(talvez 0). @xref{@code{@@exampleindent}}.
 
 @item @@exclamdown@{@}
-Generate an upside-down exclamation point.  @xref{Inserindo Acentos}.
+Gere um ponto de exclamação invertido. @xref{Inserindo Acentos}.
 
-@item @@exdent @var{line-of-text}
-Remove any indentation a line might have.  @xref{@code{@@exdent}}.
+@item @@exdent @var{linha-do-texto}
+Remove qualquer recuo que uma linha possa ter. @xref{@code{@@exdent}}.
 
 @item @@expansion@{@}
-Indicate the result of a macro expansion to the reader with a special
-glyph: @samp{@expansion{}}.  @xref{@code{@@expansion}}.
+Indica o resultado de uma expansão de macro para o leitor com um glifo
+especial: @samp{@expansion{}}. @xref{@code{@@expansion}}.
 
-@item @@file@{@var{filename}@}
-Highlight the name of a file, buffer, node, directory, etc.
-@xref{@code{@@file}}.
+@item @@file@{@var{nomearquivo}@}
+Destaca o nome de um arquivo, buffer, nó, diretório, etc. @xref{@code{@@file}}.
 
 @item @@finalout
-Prevent @TeX{} from printing large black warning rectangles beside
-over-wide lines.  @xref{hboxes lotados}.
+Impede que o @TeX{} imprima grandes retângulos pretos de aviso ao lado de
+linhas muito largas. @xref{hboxes lotados}.
 
-@item @@findex @var{entry}
-Add @var{entry} to the index of functions.  @xref{Entradas de Índice, ,
-Definindo as Entradas de um Índice}.
+@item @@findex @var{entrada}
+Adiciona @var{entrada} ao índice de funções.
+@xref{Entradas de Índice, , Definindo as Entradas de um Índice}.
 
-@item @@firstparagraphindent @var{word}
-Control indentation of the first paragraph after section headers
-according to @var{word}, one of `none' or `insert'.
+@item @@firstparagraphindent @var{palavra}
+Controla o recuo do primeiro parágrafo depois dos cabeçalhos de seção de acordo
+com @var{palavra}, uma de `none' ou `insert'.
 @xref{@code{@@firstparagraphindent}}.
 
 @item @@float
-Environment to define floating material.  Pair with @code{@@end float}.
+Ambiente para definir material flutuante. Emparelha com @code{@@end float}.
 @xref{Flutuadores}.
 
 @item @@flushleft
 @itemx @@flushright
-Do not fill text; left (right) justify every line while leaving the
-right (left) end ragged.  Leave font as is.  Pair with @code{@@end
-flushleft} (@code{@@end flushright}).  @xref{@code{@@flushleft
-@@flushright}}.
+Não preenche texto; justifica cada linha à esquerda (direita), deixando a
+extremidade direita (esquerda) irregular. Deixa a fonte como está. Emparelha
+com @code{@@end flushleft} (@code{@@end flushright}).
+@xref{@code{@@flushleft @@flushright}}.
 
 @item @@fonttextsize @var{10-11}
-Change the size of the main body font in the @TeX{} output.
+Muda o tamanho da fonte do corpo principal na saída do @TeX{}.
 @xref{Fontes}.
 
-@item @@footnote@{@var{text-of-footnote}@}
-Enter a footnote.  Footnote text is printed at the bottom of the page
-by @TeX{}; Info may format in either `End' node or `Separate' node style.
-@xref{Notas de Rodapé}.
+@item @@footnote@{@var{texto-da-notaderodapé}@}
+Insere uma nota de rodapé. O texto da nota de rodapé é impresso na parte
+inferior da página pelo @TeX{}; Info pode formatar ou no estilo de nó `End' ou
+nó `Separate'. @xref{Notas de Rodapé}.
 
-@item @@footnotestyle @var{style}
-Specify an Info file's footnote style, either @samp{end} for the end
-node style or @samp{separate} for the separate node style.
+@item @@footnotestyle @var{estilo}
+Especifica um estilo de nota de rodapé do arquivo do Info, ou @samp{end} para o
+estilo do nó final ou @samp{separate} para o estilo do nó separado.
 @xref{Notas de Rodapé}.
 
 @item @@format
-Begin a kind of example.  Like @code{@@display}, but do not indent.
-Pair with @code{@@end format}.  @xref{@code{@@example}}.
+Inicia um tipo de exemplo. Como @code{@@display}, mas não recua. Emparelha com
+@code{@@end format}. @xref{@code{@@example}}.
 
-@item @@frenchspacing @var{on-off}
-Control spacing after punctuation.  @xref{@code{@@frenchspacing}}.
+@item @@frenchspacing @var{ligado-desligado}
+Controla o espaçamento depois da pontuação. @xref{@code{@@frenchspacing}}.
 
-@item @@ftable @var{formatting-command}
-Begin a two-column table, using @code{@@item} for each entry.
-Automatically enter each of the items in the first column into the
-index of functions.  Pair with @code{@@end ftable}.  The same as
-@code{@@table}, except for indexing.  @xref{@code{@@ftable @@vtable}}.
+@item @@ftable @var{comando-formatação}
+Inicia uma tabela de duas colunas, usando @code{@@item} para cada entrada.
+Insere automaticamente cada um dos itens da primeira coluna no índice de
+funções. Emparelha com @code{@@end ftable}. O mesmo que @code{@@table}, exceto
+pela indexação. @xref{@code{@@ftable @@vtable}}.
 
 @item @@geq@{@}
-Generate a greater-than-or-equal sign, `@geq{}'.  @xref{@code{@@geq @@leq}}.
+Gera um sinal de maior que ou igual a, `@geq{}'. @xref{@code{@@geq @@leq}}.
 
 @item @@group
-Disallow page breaks within following text.  Pair with @code{@@end
-group}.  Ignored in Info.  @xref{@code{@@group}}.
+Desautoriza quebras de página dentro do texto seguinte. Emparelha com
+@code{@@end group}. Ignorado no Info. @xref{@code{@@group}}.
 
 @item @@guillemetleft@{@}
 @itemx @@guillemetright@{@}
@@ -20430,66 +20425,68 @@ group}.  Ignored in Info.  @xref{@code{@@group}}.
 @itemx @@guillemotright@{@}
 @itemx @@guilsinglleft@{@}
 @itemx @@guilsinglright@{@}
-Double and single angle quotation marks: @guillemetleft{}
-@guillemetright{} @guilsinglleft{} @guilsinglright{}.
-@code{@@guillemotleft} and @code{@@guillemotright} are synonyms for
-@code{@@guillemetleft} and @code{@@guillemetright}.
-@xref{Inserindo Aspas}.
+Aspas angulares duplas e simples: @guillemetleft{} @guillemetright{}
+@guilsinglleft{} @guilsinglright{}. @code{@@guillemotleft} e
+@code{@@guillemotright} são sinônimos de @code{@@guillemetleft} e
+@code{@@guillemetright}. @xref{Inserindo Aspas}.
 
 @item @@H@{@var{c}@}
-Generate the long Hungarian umlaut accent over @var{c}, as in @H{o}.
+Gera o acento de trema húngaro longo sobre @var{c}, como em @H{o}.
 
 @item @@hashchar@{@}
-Insert a hash `#' character; only needed when a literal hash would
-introduce @code{#line} directive.  @xref{Inserindo um Símbolo Cerquilha}, and
-@ref{Processadores Externos de Macro}.
+Insere um caractere cerquilha `#'; necessário somente quando uma cerquilha
+literal introduziria a diretiva @code{#line}.
+@xref{Inserindo um Símbolo Cerquilha} e @ref{Processadores Externos de Macro}.
 
-@item @@heading @var{title}
-Print an unnumbered section-like heading, but omit from the table of
-contents.  In Info, the title is underlined with equal signs.
+@item @@heading @var{título}
+Imprime um título não numerado, como uma seção, mas omite da tabela de
+conteúdo. No Info, o título é sublinhado com sinais de igual.
 @xref{@code{@@unnumberedsec @@appendixsec @@heading}}.
 
-@item @@headings @var{on-off-single-double}
-Turn page headings on or off, and/or specify single-sided or double-sided
-page headings for printing.  @xref{@code{@@headings}}.
+@item @@headings @var{ligado-desligado-simples-duplo}
+Ativa ou desativa os títulos de página e (ou) especifica títulos de página de
+um ou de dois lados para impressão. @xref{@code{@@headings}}.
 
 @item @@headitem
-Begin a heading row in a multitable.  @xref{Linhas de Multi Tabelas}.
+Inicia uma linha de cabeçalho em uma multi tabela.
+@xref{Linhas de Multi Tabelas}.
 
-@item @@headitemfont@{@var{text}@}
-Set @var{text} in the font used for multitable heading rows; mostly
-useful in multitable templates.  @xref{Linhas de Multi Tabelas}.
+@item @@headitemfont@{@var{texto}@}
+Configura @var{texto} na fonte usada para linhas de cabeçalho de multi tabelas;
+útil principalmente em modelos de multi tabelas.
+@xref{Linhas de Multi Tabelas}.
 
 @item @@html
-Enter HTML completely.  Pair with @code{@@end html}.
+Entra em HTML completamente. Emparelha com @code{@@end html}.
 @xref{Comandos do Formatador Bruto}.
 
-@item @@hyphenation@{@var{hy-phen-a-ted words}@}
-Explicitly define hyphenation points.  @xref{@code{@@- @@hyphenation}}.
+@item @@hyphenation@{@var{palavras hi-fen-a-das words}@}
+Define explicitamente os pontos de hifenização. @xref{@code{@@- @@hyphenation}}.
 
-@item @@i@{@var{text}@}
-Set @var{text} in an @i{italic} font.  No effect in Info.  @xref{Fontes}.
+@item @@i@{@var{texto}@}
+Configura @var{texto} em uma fonte @i{itálica}. Sem efeito no Info.
+@xref{Fontes}.
 
-@item @@ifclear @var{txivar}
-If the Texinfo variable @var{txivar} is not set, format the following
-text.  Pair with @code{@@end ifclear}.  @xref{@code{@@set @@clear
-@@value}}.
+@item @@ifclear @var{variáveltexinfo}
+Se a variável do Texinfo @var{variáveltexinfo} não estiver configurada, formata
+o texto seguinte. Emparelha com @code{@@end ifclear}.
+@xref{@code{@@set @@clear @@value}}.
 
-@item @@ifcommanddefined @var{txicmd}
-@itemx @@ifcommandnotdefined @var{txicmd}
-If the Texinfo code @samp{@@@var{txicmd}} is (not) defined, format the
-follow text.  Pair with the corresponding @code{@@end ifcommand...}.
-@xref{Testes para Comandos do Texinfo}.
+@item @@ifcommanddefined @var{comandotexinfo}
+@itemx @@ifcommandnotdefined @var{comandotexinfo}
+Se o código do Texinfo @samp{@@@var{comandotexinfo}} (não) estiver definido,
+formata o texto a seguir. Emparelha com o correspondente @code{@@end
+ifcommand...}. @xref{Testes para Comandos do Texinfo}.
 
 @item @@ifdocbook
 @itemx @@ifhtml
 @itemx @@ifinfo
-Begin text that will appear only in the given output format.
-@code{@@ifinfo} output appears in both Info and (for historical
-compatibility) plain text output.  Pair with @code{@@end ifdocbook}
-resp.@: @code{@@end ifhtml} resp.@: @code{@@end ifinfo}.
+Inicia o texto que aparecerá somente no formato de saída fornecido. A saída do
+@code{@@ifinfo} aparece tanto na saída do Info quanto (para compatibilidade
+histórica) em texto simples. Emparelha com @code{@@end ifdocbook},
+respectivamente @code{@@end ifhtml}, respectivamente @code{@@end ifinfo}.
 @xref{Condicionais}.
-
+PAREI
 @item @@ifnotdocbook
 @itemx @@ifnothtml
 @itemx @@ifnotplaintext
@@ -20682,8 +20679,7 @@ Generate the uppercase and lowercase O-with-slash letters, respectively:
 @item  @@oddfooting [@var{left}] @@| [@var{center}] @@| [@var{right}]
 @itemx @@oddheading [@var{left}] @@| [@var{center}] @@| [@var{right}]
 Specify page footings resp.@: headings for odd-numbered (right-hand)
-pages.  @xref{Custom Cabeçalhos, ,
-How to Make Your Own Cabeçalhos}.
+pages.  @xref{Cabeçalhos Personalizados, , Como Fazer Teus Próprios Cabeçalhos}.
 
 @item @@OE@{@}
 @itemx @@oe@{@}
@@ -20992,8 +20988,7 @@ Only allowed in a heading or footing.  Stands for, respectively, the
 number and name of the current chapter (in the format `Chapter 1:
 Title'), the current chapter name only, the current chapter number
 only, the filename, the current page number, and the title of the
-document, respectively.  @xref{Custom Cabeçalhos, , How to Make Your Own
-Cabeçalhos}.
+document, respectively.  @xref{Cabeçalhos Personalizados, , Como Fazer Teus Próprios Cabeçalhos}.
 
 @item @@TH@{@}
 @itemx @@th@{@}
@@ -21028,8 +21023,7 @@ with @code{@@end titlepage}.  Nothing between @code{@@titlepage} and
 @code{@@end titlepage} appears in Info.  @xref{@code{@@titlepage}}.
 
 @item @@today@{@}
-Insert the current date, in `1 Jan 1900' style.  @xref{Custom
-Cabeçalhos, , How to Make Your Own Cabeçalhos}.
+Insert the current date, in `1 Jan 1900' style.  @xref{Cabeçalhos Personalizados, , Como Fazer Teus Próprios Cabeçalhos}.
 
 @item @@top @var{title}
 Mark the topmost @code{@@node} in the file, which must be defined on
@@ -22907,10 +22901,10 @@ Cabeçalhos and footings have no meaning in Info or the other output
 formats.
 
 @menu
-* Cabeçalhos Introduced::         Conventions for using page headings.
-* Heading Format::              Standard page heading formats.
-* Heading Choice::              How to specify the type of page heading.
-* Custom Cabeçalhos::             How to create your own headings and footings.
+* Cabeçalhos Introduzidos::     Convenções para se usar cabeçalhos de página.
+* Formato do Título::           Formatos padrão de títulos de página.
+* Escolha do Título::           Como especificar o tipo do título da página.
+* Cabeçalhos Personalizados::   Como criar teus próprios cabeçalhos e rodapés.
 @end menu
 
 @node Cabeçalhos Introduced
@@ -23052,8 +23046,8 @@ Specify the double-sided heading format, with chapters on new pages.
 Texinfo lacks a @code{@@setchapternewpage even} command.
 
 
-@node Custom Cabeçalhos
-@section How to Make Your Own Cabeçalhos
+@node Cabeçalhos Personalizados
+@section Como Fazer Teus Próprios Cabeçalhos
 
 You can use the standard headings provided with Texinfo or specify
 your own.  By default, Texinfo has no footers, so if you specify them,
