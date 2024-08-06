@@ -5582,7 +5582,7 @@ geralmente é uma boa ideia definir um @code{@@anchor} com o nome antigo.
 Dessa maneira, quaisquer vínculos ao nodo antigo, seja originários de
 outros manuais Texinfo ou páginas web em geral, continuam funcionando.
 Você também pode fazer isso com a característica
-@file{RENAMED_NODE_FILE} de @command{makeinfo}
+@file{RENAMED_NODES_FILE} do @command{makeinfo}
 (@pxref{Preservação de Link Xref do HTML}). Ambos os métodos mantém
 links na web funcionando; a única diferença substantiva é que a
 definição de âncoras também torna os nomes de nodo antigos acessíveis
@@ -19560,123 +19560,121 @@ Para a definição da Forma de Normalização@tie{}C do Unicode, veja-se o infor
 Unicode UAX#15, @uref{http://www.unicode.org/reports/tr15/}. Muitos documentos
 e implementações relacionados estão disponíveis em outros lugares na web.
 
-PAREI
+
 @node Incompatibilidade de Xref do HTML
 @subsection Incompatibilidade de Referências Cruzadas do HTML
 @cindex Incompatibilidade de referências cruzadas do HTML
-@cindex Mismatched HTML cross-reference source and target
+@cindex Origem e alvo das referências cruzadas do HTML incorrespondidos
 
-As mentioned earlier (@pxref{Fundamentos do Link Xref do HTML}), the generating
-software may need to guess whether a given manual being cross
-referenced is available in split or monolithic form---and, inevitably,
-it might guess wrong.  However, when the @emph{referent} manual is
-generated, it is possible to handle at least some mismatches.
+Conforme mencionado anteriormente (@pxref{Fundamentos do Link Xref do HTML}), o
+software gerador pode precisar adivinhar se um manual fornecido sendo
+referenciado cruzadamente está disponível em formato dividido ou
+monolítico---e, inevitavelmente, pode adivinhar errado. No entanto, quando o
+manual do @emph{referente} é gerado, é possível lidar com pelo menos algumas
+incompatibilidades.
 
-In the case where we assume the referent is split, but it is actually
-available in mono, the only recourse would be to generate a
-@file{manual/} subdirectory full of HTML files which redirect back to
-the monolithic @file{manual.html}.  Since this is essentially the same
-as a split manual in the first place, it's not very appealing.
+No caso onde nós assumimos que o referente é dividido, mas ele está realmente
+disponível em monolítico, o único recurso seria gerar um subdiretório
+@file{manual/} cheio de arquivos HTML que redirecionam de volta para o
+monolítico @file{manual.html}. Como isso é essencialmente o mesmo que um manual
+dividido em primeiro lugar, não é muito atraente.
 
-On the other hand, in the case where we assume the referent is mono,
-but it is actually available in split, it is possible to use
-JavaScript to redirect from the putatively monolithic
-@file{manual.html} to the different @file{manual/node.html} files.
-Here's an example:
+Por outro lado, no caso onde nós assumimos que o referente é monolítico, mas
+ele está realmente disponível dividido, é possível usar JavaScript para
+redirecionar a partir do supostamente monolítico @file{manual.html} para os
+diferentes arquivos @file{manual/node.html}. Aqui está um exemplo:
 
 @example
 function redirect() @{
   switch (location.hash) @{
-    case "#Node1":
-      location.replace("manual/Node1.html#Node1"); break;
-    case "#Node2" :
-      location.replace("manual/Node2.html#Node2"); break;
+    case "#Nodo1":
+      location.replace("manual/Nodo1.html#Nodo1"); break;
+    case "#Nodo2" :
+      location.replace("manual/Nodo2.html#Nodo2"); break;
     @dots{}
     default:;
   @}
 @}
 @end example
 
-Then, in the @code{<body>} tag of @file{manual.html}:
+Então, na tag @code{<body>} de @file{manual.html}:
 
 @example
 <body onLoad="redirect();">
 @end example
 
-Once again, this is something the software which generated the
-@emph{referent} manual has to do in advance, it's not something the
-software generating the cross-reference in the present manual can
-control.
+Mais uma vez, isso é algo que o software que gerou o manual @emph{referente}
+tem que fazer com antecedência, não é algo que o software que gera a referência
+cruzada no manual atual pode controlar.
 
 
 @node Configuração do Xref do HTML
-@subsection HTML Cross-reference Configuration: @file{htmlxref.cnf}
+@subsection Configuração de Referência Cruzada do HTML: @file{htmlxref.cnf}
 
 @pindex htmlxref.cnf
-@cindex HTML cross-reference configuration
-@cindex Cross-reference configuration, for HTML
-@cindex Configuration, for HTML cross-manual references
+@cindex Configuração de referência cruzada do HTML
+@cindex Configuração de referência cruzada, para HTML
+@cindex Configuração, para referências do HTML entre manuais
 
-@command{makeinfo} reads a file named @file{htmlxref.cnf} to gather
-information for cross-references to other manuals in HTML output.  It
-is looked for in the following directories:
+@command{makeinfo} lê um arquivo chamado @file{htmlxref.cnf} para reunir
+informações para referências cruzadas para outros manuais na saída HTML. Ele é
+procurado nos seguintes diretórios:
 
 @table @file
 @item ./
-(the current directory)
+(o diretório atual)
 
 @item ./.texinfo/
-(under the current directory)
+(sob o diretório atual)
 
 @item ~/.texinfo/
-(where @code{~} is the current user's home directory)
+(onde @code{~} é o diretório inicial do(a) usuário(a) atual)
 
 @item @var{sysconfdir}/texinfo/
-(where @var{sysconfdir} is the system configuration directory
-specified at compile-time, e.g., @file{/usr/local/etc})
+(onde @var{sysconfdir} é o diretório de sistema da configuração especificado em
+tempo de compilação, por exemplo, @file{/usr/local/etc})
 
 @item @var{datadir}/texinfo/
-(likewise specified at compile time, e.g., @file{/usr/local/share})
-@end table
+(da mesma forma especificado em tempo de compilação, por exemplo,
+@file{/usr/local/share}) @end table
 
-All files found are used, with earlier entries overriding later ones.
-The Texinfo distribution includes a default file which handles many
-GNU manuals; it is installed in the last of the above directories,
-i.e., @file{@var{datadir}/texinfo/htmlxref.cnf}.
+Todos os arquivos encontrados são usados, com entradas anteriores substituindo
+as posteriores. A distribuição do Texinfo inclui um arquivo padrão que lida com
+muitos manuais GNU; ele é instalado no último dos diretórios acima, ou seja,
+@file{@var{datadir}/texinfo/htmlxref.cnf}.
 
-The file is line-oriented.  Lines consisting only of whitespace are
-ignored.  Comentários are indicated with a @samp{#} at the beginning of a
-line, optionally preceded by whitespace.  Since @samp{#} can occur in
-urls (like almost any character), it does not otherwise start a
-comment.
+O arquivo é orientado a linhas. Linhas consistindo somente de espaços em branco
+são ignoradas. Comentários são indicados com um @samp{#} no início de uma
+linha, opcionalmente precedidos por espaços em branco. Como @samp{#} pode
+ocorrer em URLs (como quase qualquer caractere), ele não inicia um comentário.
 
-Each non-blank non-comment line must be either a @dfn{variable
-assignment} or @dfn{manual information}.
+Cada linha não vazia e sem comentário precisa ser ou uma @dfn{atribuição de
+variável} ou uma @dfn{informação de manual}.
 
-A variable assignment line looks like this:
+Uma linha de atribuição de variável se parece com isto:
 
 @example
-@var{varname} = @var{varvalue}
+@var{nomevariável} = @var{valorvariável}
 @end example
 
-Whitespace around the @samp{=} is optional and ignored.  The
-@var{varname} should consist of letters; case is significant.  The
-@var{varvalue} is an arbitrary string, continuing to the end of the
-line.  Variables are then referenced with @samp{$@{@var{varname}@}};
-variable references can occur in the @var{varvalue}.
+Espaço em branco ao redor de @samp{=} é opcional e ignorado. @var{nomevariável}
+deveria consistir de letras; maiúsculas e minúsculas são significativas. O
+@var{valorvariável} é uma string arbitrária, continuando até o fim da linha. As
+variáveis são então referenciadas com @samp{$@{@var{nomevariável}@}};
+referências de variáveis podem ocorrer no @var{valorvariável}.
 
-A manual information line looks like this:
+Uma linha de informação de manual se parece com isto:
 
 @example
-@var{manual} @var{keyword} @var{urlprefix}
+@var{manual} @var{palavrachave} @var{prefixourl}
 @end example
 
 @noindent
-with @var{manual} the short identifier for a manual, @var{keyword}
-being one of: @code{mono}, @code{node}, @code{section},
-@code{chapter}, and @var{urlprefix} described below.  Variable
-references can occur only in the @var{urlprefix}.  For example (used
-in the canonical @file{htmlxref.cnf}):
+com @var{manual} o identificador curto para um manual, @var{palavrachave} sendo
+um de: @code{mono}, @code{node}, @code{section}, @code{chapter} e
+@var{prefixourl} descritos abaixo. Referências de variáveis podem ocorrer
+somente no @var{prefixourl}. Por exemplo (usado no @file{htmlxref.cnf}
+canônico):
 
 @smallexample
 G = http://www.gnu.org
@@ -19687,22 +19685,21 @@ hello section $@{GS@}/hello/manual/html_section/
 hello node    $@{GS@}/hello/manual/html_node/
 @end smallexample
 
-@cindex monolithic manuals, for HTML cross-references
-If the keyword is @code{mono}, @var{urlprefix} gives the host,
-directory, and file name for @var{manual} as one monolithic file.
+@cindex Manuais monolíticos, para referências cruzadas do HTML
+Se a palavra-chave for @code{mono}, @var{prefixourl} fornecerá o dispositivo, o
+diretório e o nome do arquivo para @var{manual} como um arquivo monolítico.
 
-@cindex split manuals, for HTML cross-references
-If the keyword is @code{node}, @code{section}, or @code{chapter},
-@var{urlprefix} gives the host and directory for @var{manual} split
-into Nodos, sections, or chapters, respectively.
+@cindex Manuais divididos, para referências cruzadas do HTML
+Se a palavra-chave for @code{node}, @code{section} ou @code{chapter},
+@var{prefixourl} fornecerá o dispositivo e o diretório para @var{manual}
+dividido em nodos, seções ou capítulos, respectivamente.
 
-When available, @command{makeinfo} will use the ``corresponding''
-value for cross-references between manuals.  That is, when generating
-monolithic output (@option{--no-split}), the @code{mono} url will be
-used, when generating output that is split by node, the @code{node}
-url will be used, etc.  However, if a manual is not available in that
-form, anything that is available can be used.  Here is the search
-order for each style:
+Quando disponível, @command{makeinfo} usará o valor ``corresponding'' para
+referências cruzadas entre manuais. Isto é, ao gerar saída monolítica
+(@option{--no-split}), a URL @code{mono} será usada; ao gerar saída que seja
+dividida por nó, a URL @code{node} será usada, etc. No entanto, se um manual
+não estiver disponível nesse formato, qualquer coisa que esteja disponível pode
+ser usada. Aqui está a ordem de pesquisa para cada estilo:
 
 @smallexample
 node    @result{} node,    section, chapter, mono
@@ -19711,468 +19708,454 @@ chapter @result{} chapter, section, node,    mono
 mono    @result{} mono,    chapter, section, node
 @end smallexample
 
-@opindex --node-files@r{, and HTML cross-references}
-These section- and chapter-level cross-manual references can succeed
-only when the target manual was created using @option{--node-files};
-this is the default for split output.
+@opindex --node-files@r{, e referências cruzadas do HTML}
+Essas referências entre manuais em nível de seção e de capítulo só podem ser
+bem-sucedidas quando o manual alvo foi criado usando @option{--node-files};
+esse é o padrão para saída dividida.
 
-If you have additions or corrections to the @file{htmlxref.cnf}
-distributed with Texinfo, please email @email{bug-texinfo@@gnu.org} as
-usual.  You can get the latest version from
+Se você tiver adições ou correções para o @file{htmlxref.cnf} distribuído com o
+Texinfo, por favor, contate @email{bug-texinfo@@gnu.org} como de costume. Você
+consegue obter a versão mais recente em
 @url{http://ftpmirror.gnu.org/@/texinfo/@/htmlxref.cnf}.
 
 
 @node Preservação de Link Xref do HTML
-@subsection HTML Cross-reference Link Preservation: @var{manual}@file{-noderename.cnf}
+@subsection Preservação de Link de Referência Cruzada do HTML: @var{manual}@file{-noderename.cnf}
 
 @pindex noderename.cnf
 @pindex @var{manual}-noderename.cnf
-@cindex HTML cross-reference link preservation
-@cindex Preserving HTML links to old Nodos
-@cindex Old Nodos, preserving links to
-@cindex Renaming Nodos, and preserving links
-@cindex Links, preserving to renamed Nodos
-@cindex Node renaming, and preserving links
+@cindex Preservação de link de referência cruzada do HTML
+@cindex Preservando links do HTML para antigos nodos
+@cindex Nodos antigos, preservando links para
+@cindex Renomeando nodos, e preservando links
+@cindex Links, preservando para nodos renomeados
+@cindex Renomeação de nós, e preservação de links
 
-Occasionally changes in a program require removing (or renaming) Nodos
-in the manual in order to have the best documentation.  Given the
-nature of the web, however, links may exist anywhere to such a removed
-node (renaming appears the same as removal for this purpose), and it's
-not ideal for those links to simply break.
+Ocasionalmente, mudanças em um programa exigem remover (ou renomear) nodos no
+manual para a finalidade de ter a melhor documentação. Dada a natureza da web,
+no entanto, links podem existir em qualquer lugar para um nó removido (renomear
+parece o mesmo que remover para esse propósito), e não é ideal que esses links
+simplesmente quebrem.
 
-@vindex RENAMED_Nodos_FILE
-Therefore, Texinfo provides a way for manual authors to specify old
-node names and the new Nodos to which the old names should be
-redirected, via the file @var{manual}@file{-noderename.cnf}, where
-@var{manual} is the base name of the manual.  For example, the manual
-@file{texinfo.texi} would be supplemented by a file
-@file{texinfo-noderename}.cnf.  (This name can be overridden by
-setting the @file{RENAMED_Nodos_FILE} customization variable;
+@vindex RENAMED_NODES_FILE
+Portanto, o Texinfo fornece uma maneira para autores(as) de manuais
+especificarem nomes antigos de nós e os novos nós para os quais os nomes
+antigos deveriam ser redirecionados, por meio do arquivo
+@var{manual}@file{-noderename.cnf}, onde @var{manual} é o nome base do manual.
+Por exemplo, o manual @file{texinfo.texi} seria complementado por um arquivo
+@file{texinfo-noderename}.cnf. (Esse nome pode ser substituído configurando-se
+a variável de personalização @file{RENAMED_NODES_FILE};
 @pxref{Variáveis de Personalização}).
 
-The file is read in pairs of lines, as follows:
+O arquivo é lido em pares de linhas, conforme segue:
 
 @example
-@var{old-node-name}
-@@@@@{@} @var{new-node-name}
+@var{nome-antigo-nodo}
+@@@@@{@} @var{nome-novo-nodo}
 @end example
 
-The usual conversion from Texinfo node names to HTML names is applied;
-see this entire section for details (@pxref{Xref de HTML}).  The unusual
-@samp{@@@@@{@}} separator is used because it is not a valid Texinfo
-construct, so can't appear in the node names.
+A conversão usual de nomes de nós do Texinfo para nomes do HTML é aplicada;
+veja-se esta seção inteira para detalhes (@pxref{Xref de HTML}). O separador
+incomum @samp{@@@@@{@}} é usado porque ele não é uma construção válida do
+Texinfo, de forma que não pode aparecer nos nomes de nós.
 
-The effect is that @command{makeinfo} generates a redirect from
-@var{old-node-name} to @var{new-node-name} when producing HTML output.
-Thus, external links to the old node are preserved.
+O efeito é que @command{makeinfo} gera um redirecionamento de
+@var{nome-antigo-nodo} para @var{nome-novo-nodo} ao produzir saída HTML. Assim,
+links externos para o nó antigo são preservados.
 
-Lines consisting only of whitespace are ignored.  Comentários are
-indicated with a @samp{@@c} at the beginning of a line, optionally
-preceded by whitespace.
+Linhas consistindo somente de espaços em branco são ignoradas. Comentários são
+indicados com um @samp{@@c} no início de uma linha, opcionalmente precedidos
+por espaços em branco.
 
-Another approach to preserving links to deleted or renamed Nodos is to
-use anchors (@pxref{@code{@@anchor}}).  There is no effective
-difference between the two approaches.
+Outra abordagem para preservar links para nodos deletados ou renomeados é a de
+usar âncoras (@pxref{@code{@@anchor}}). Não existe diferença efetiva entre as
+duas abordagens.
 
 
 @node Detalhes do Comando @@
 @appendix Detalhes do Comando @@
 
-Here are the details of @@-commands: information about their syntax, a
-list of commands, and information about where commands can appear.
+Aqui estão os detalhes dos comandos @@: informações acerca da sintaxe deles,
+uma lista de comandos e informações relativas a onde os comandos podem
+aparecer.
 
 @node Sintaxe de Comando
-@section @@-Sintaxe de Comando
-@cindex @@-command syntax
-@cindex Syntax, of @@-commands
-@cindex Command syntax
+@section Sintaxe do Comando @@
+@cindex Sintaxe do comando @@
+@cindex Sintaxe, dos comandos @@
+@cindex Sintaxe do comando
 
-Texinfo has the following types of @@-command:
+O Texinfo tem os seguintes tipos de comando @@:
 
 @table @asis
-@item 1. Brace commands
-These commands start with @@ followed by a letter or a word, followed by an
-argument within braces.  For example, the command @code{@@dfn} indicates
-the introductory or defining use of a term; it is used as follows: @samp{In
-Texinfo, @@@@-commands are @@dfn@{mark-up@} commands.}
+@item 1. Comandos de chaves
+Esses comandos começam com @@ seguido por uma letra ou uma palavra, seguida por
+um argumento entre chaves. Por exemplo, o comando @code{@@dfn} indica o uso
+introdutório ou definidor de um termo; ele é usado conforme segue: @samp{No
+Texinfo, comandos @@@@ são comandos de @@dfn@{marcação@}}.
 
-@item 2. Line commands
-These commands occupy an entire line.  The line starts with @@,
-followed by the name of the command (a word); for example, @code{@@center}
-or @code{@@cindex}.  If no argument is needed, the word is followed by
-the end of the line.  If there is an argument, it is separated from
-the command name by a space.  Braces are not used.
+@item 2. Comandos de linha
+Esses comandos ocupam uma linha inteira. A linha começa com @@, seguido pelo
+nome do comando (uma palavra); por exemplo, @code{@@center} ou @code{@@cindex}.
+Se nenhum argumento for necessário, a palavra é seguida pelo fim da linha. Se
+existir um argumento, ele é separado do nome do comando por um espaço. Chaves
+não são usadas.
 
-@item 3. Block commands
-These commands are written at the start of a line, with general text on
-following lines, terminated by a matching @code{@@end} command on a
-line of its own.  For example, @code{@@example}, then the lines of a
-coding example, then @code{@@end example}.  Some of these block commands
-take arguments as line commands do; for example, @code{@@enumerate A}
-opening an environment terminated by @code{@@end enumerate}.  Here
-@samp{A} is the argument.
+@item 3. Comandos de bloco
+Esses comandos são escritos no início de uma linha, com texto geral nas linhas
+seguintes, terminados por um comando @code{@@end} correspondente em uma linha
+própria. Por exemplo, @code{@@example}, depois as linhas de um exemplo de
+codificação, depois @code{@@end example}. Alguns desses comandos de bloco
+recebem argumentos como os comandos de linha; por exemplo, @code{@@enumerate A}
+abrindo um ambiente terminado por @code{@@end enumerate}. Aqui @samp{A} é o
+argumento.
 
-@item 4. Symbol insertion commands with no arguments
-These commands start with @@ followed by a word followed by a
-left and right- brace.  These commands insert special symbols in
-the document; they do not take arguments.  Some examples:
-@code{@@dots@{@}} @result{} @samp{@dots{}}, @code{@@equiv@{@}}
-@result{} @samp{@equiv{}}, @code{@@TeX@{@}} @result{} `@TeX{}', and
-@code{@@bullet@{@}} @result{} @samp{@bullet{}}.
+@item 4. Comandos de inserção de símbolos sem argumentos
+Esses comandos começam com @@ seguido por uma palavra seguida por uma chave
+esquerda e direita. Esses comandos inserem símbolos especiais no documento;
+eles não recebem argumentos. Alguns exemplos: @code{@@dots@{@}} @result{}
+@samp{@dots{}}, @code{@@equiv@{@}} @result{} @samp{@equiv{}}, @code{@@TeX@{@}}
+@result{} `@TeX{}' e @code{@@bullet@{@}} @result{} @samp{@bullet{}}.
 
-@item 5. Non-alphabetic commands
-The names of commands in all of the above categories consist of
-alphabetic characters, almost entirely in lower-case.  Unlike those, the
-non-alphabetic commands commands consist of an @@ followed by a
-punctuation mark or other character that is not part of the Latin
-alphabet.  Non-alphabetic commands are almost always part of text
-within a paragraph.  The non-alphabetic commands include @code{@@@@},
-@code{@@@{}, @code{@@@}}, @code{@@.}, @code{@@@kbd{SPACE}}, and most of
-the accent commands.
+@item 5. Comandos não alfabéticos
+Os nomes dos comandos em todas as categorias acima consistem de caracteres
+alfabéticos, quase inteiramente em letras minúsculas. Ao contrário daqueles, os
+comandos não alfabéticos consistem de um @@ seguido por um sinal de pontuação
+ou outro caractere que não é parte do alfabeto latino. Os comandos não
+alfabéticos quase sempre são parte do texto dentro de um parágrafo. Os comandos
+não alfabéticos incluem @code{@@@@}, @code{@@@{}, @code{@@@}}, @code{@@.},
+@code{@@@kbd{ESPAÇO}} e a maioria dos comandos de acento.
 
-@item 6. Miscellaneous commands
-There are a handful of commands that don't fit into any of the above
-categories; for example, the obsolete command @code{@@refill}, which is
-always used at the end of a paragraph immediately following the final
-period or other punctuation character.  @code{@@refill} takes no
-argument and does not require braces.  Likewise, @code{@@tab} used in a
-@code{@@multitable} block does not take arguments, and is not followed
-by braces.
+@item 6. Comandos diversos
+Existe um punhado de comandos que não se encaixam em nenhuma das categorias
+acima; por exemplo, o comando obsoleto @code{@@refill}, que sempre é usado no
+final de um parágrafo imediatamente seguinte ao ponto final ou outro caractere
+de pontuação. @code{@@refill} não recebe argumentos e não exige chaves. Da
+mesma forma, @code{@@tab} usado em um bloco @code{@@multitable} não recebe
+argumentos e não é seguido por chaves.
 @end table
 
-@cindex Braces and argument syntax
-Thus, the alphabetic commands fall into classes that have
-different argument syntaxes.  You cannot tell to which class a command
-belongs by the appearance of its name, but you can tell by the
-command's meaning: if the command stands for a glyph, it is in
-class 4 and does not require an argument; if it makes sense to use the
-command among other text as part of a paragraph, the command
-is in class 1 and must be followed by an argument in braces.  The
-non-alphabetic commands, such as @code{@@:}, are exceptions to the
-rule; they do not need braces.
+@cindex Chaves e sintaxe de argumento
+Assim, os comandos alfabéticos se enquadram em classes que tem diferentes
+sintaxes de argumento. Você não pode dizer a qual classe um comando pertence
+pela aparência do nome dele, mas pode dizer pelo significado do comando: se o
+comando representa um glifo, ele está na classe 4 e não exige um argumento; se
+faz sentido usar o comando entre outros textos como parte de um parágrafo, o
+comando está na classe 1 e precisa ser seguido por um argumento entre chaves.
+Os comandos não alfabéticos, como @code{@@:}, são exceções à regra; eles não
+precisam de chaves.
 
-The purpose of having different syntax for commands is to make Texinfo
-files easier to read, and also to help the GNU Emacs paragraph and
-filling commands work properly.
+O propósito de ter sintaxe diferente para comandos é o de tornar os arquivos do
+Texinfo mais fáceis de ler e também ajudar os comandos de parágrafo e
+preenchimento do GNU Emacs a funcionarem corretamente.
 
 
-@node Command List
-@section @@-Command List
-@cindex Alphabetical @@-command list
-@cindex List of @@-commands
-@cindex @@-command list
-@cindex Reference to @@-commands
+@node Lista de Comandos
+@section Lista de Comandos @@
+@cindex Lista alfabética dos comandos @@
+@cindex Lista dos comandos @@
+@cindex Comando @@, lista
+@cindex Referência para comandos @@
 
-Here is an alphabetical list of the @@-commands in Texinfo.  Square
-brackets, @t{[}@w{ }@t{]}, indicate optional arguments; an ellipsis,
-@samp{@dots{}}, indicates repeated text.
+Aqui está uma lista alfabética dos comandos @@ no Texinfo. Colchetes, @t{[}@w{
+}@t{]}, indicam argumentos opcionais; reticências, @samp{@dots{}}, indicam
+texto repetido.
 
 @table @code
-@item @@@var{whitespace}
-An @code{@@} followed by a space, tab, or newline produces a normal,
-stretchable, interword space.  @xref{Espaços Múltiplos}.
+@item @@@var{espaço em branco}
+Um @code{@@} seguido por um espaço, tabulação ou nova linha produz um espaço
+entre palavras normal e extensível. @xref{Espaços Múltiplos}.
 
 @item @@!
-Produce an exclamation point that ends a sentence (usually after an
-end-of-sentence capital letter).  @xref{Finalizando Uma Frase}.
+Produz um ponto de exclamação que finaliza uma frase (geralmente depois de uma
+letra maiúscula de fim de frase). @xref{Finalizando Uma Frase}.
 
 @item @@"
 @itemx @@'
-Generate an umlaut or acute accent, respectively, over the next
-character, as in @"o and @'o.  @xref{Inserindo Acentos}.
+Gera um trema ou acento agudo, respectivamente, sobre o próximo caractere, como
+em @"o e @'o. @xref{Inserindo Acentos}.
 
 @item @@*
-Force a line break.  @xref{Quebras de Linha}.
+Força uma quebra de linha. @xref{Quebras de Linha}.
 
 @item @@,@{@var{c}@}
-Generate a cedilla accent under @var{c}, as in @,{c}.
-@xref{Inserindo Acentos}.
+Gera um acento de cedilha sob @var{c}, como em @,{c}. @xref{Inserindo Acentos}.
 
 @item @@-
-Insert a discretionary hyphenation point.  @xref{@code{@@- @@hyphenation}}.
+Insira um ponto de hifenização discricionário. @xref{@code{@@- @@hyphenation}}.
 
 @item @@.
-Produce a period that ends a sentence (usually after an
-end-of-sentence capital letter).  @xref{Finalizando Uma Frase}.
+Produz um ponto que finaliza uma frase (geralmente depois de uma letra
+maiúscula de fim de frase). @xref{Finalizando Uma Frase}.
 
 @item @@/
-Produces no output, but allows a line break.  @xref{Quebras de Linha}.
+Não produz saída, mas permite uma quebra de linha. @xref{Quebras de Linha}.
 
 @item @@:
-Tell @TeX{} to refrain from inserting extra whitespace after an
-immediately preceding period, question mark, exclamation mark, or
-colon, as @TeX{} normally would.  @xref{Não Finalizando Uma Frase}.
+Diz ao @TeX{} para evitar inserir espaços em branco extras depois de um ponto,
+ponto de interrogação, ponto de exclamação ou dois pontos imediatamente
+anterior, como o @TeX{} normalmente faria. @xref{Não Finalizando Uma Frase}.
 
 @item @@=
-Generate a macron (bar) accent over the next character, as in @=o.
+Gera um acento de mácron (barra) sobre o próximo caractere, como em @=o.
 @xref{Inserindo Acentos}.
 
 @item @@?
-Produce a question mark that ends a sentence (usually after an
-end-of-sentence capital letter).  @xref{Finalizando Uma Frase}.
+Produz um ponto de interrogação que finaliza uma frase (geralmente depois de
+uma letra maiúscula de fim de frase). @xref{Finalizando Uma Frase}.
 
 @item @@@@
 @itemx @@atchar@{@}
-Insert an at sign, @samp{@@}.  @xref{Inserindo um Símbolo Arroba}.
+Insere um sinal de arroba, @samp{@@}. @xref{Inserindo um Símbolo Arroba}.
 
 @item @@\
 @itemx @@backslashchar@{@}
-Insert a backslash, @samp{\}; @code{@@backslashchar@{@}} works
-anywhere, while @code{@@\} works only inside @code{@@math}.
-@xref{Inserindo uma Barra Invertida}, and @ref{Inserindo Fórmulas Matemáticas}.
+Insere uma barra invertida, @samp{\}; @code{@@backslashchar@{@}} funciona em
+qualquer lugar, enquanto @code{@@\} funciona somente dentro de @code{@@math}.
+@xref{Inserindo uma Barra Invertida} e @ref{Inserindo Fórmulas Matemáticas}.
 
 @item @@^
 @itemx @@`
-Generate a circumflex (hat) or grave accent, respectively, over the next
-character, as in @^o and @`e.
-@xref{Inserindo Acentos}.
+Gera um acento circunflexo (chapéu) ou grave, respectivamente, sobre o próximo
+caractere, como em @^o e @`e. @xref{Inserindo Acentos}.
 
 @item @@@{
 @itemx @@lbracechar@{@}
-Insert a left brace, @samp{@{}.  @xref{Inserindo Chaves}.
+Insere uma chave esquerda, @samp{@{}. @xref{Inserindo Chaves}.
 
 @item @@@}
 @itemx @@rbracechar@{@}
-Insert a right brace, @samp{@}}.  @xref{Inserindo Chaves}.
+Insere uma chave direita, @samp{@}}. @xref{Inserindo Chaves}.
 
 @item @@~
-Generate a tilde accent over the next character, as in @~N.
+Gera um acento til sobre o próximo caractere, como em @~N.
 @xref{Inserindo Acentos}.
 
 @item @@AA@{@}
 @itemx @@aa@{@}
-Generate the uppercase and lowercase Scandinavian A-ring letters,
-respectively: @AA{}, @aa{}.  @xref{Inserindo Acentos}.
+Gera as letras maiúsculas e minúsculas do anel A escandinavo, respectivamente:
+@AA{}, @aa{}. @xref{Inserindo Acentos}.
 
 @item @@abbr@{@var{abbreviation}@}
-Indicate a general abbreviation, such as `Comput.'.
-@xref{@code{@@abbr}}.
+Indica uma abreviação geral, como `Comput.'. @xref{@code{@@abbr}}.
 
 @item @@acronym@{@var{acronym}@}
-Indicate an acronym in all capital letters, such as `NASA'.
+Indica uma sigla em letras todas maiúsculas, como `NASA'.
 @xref{@code{@@acronym}}.
 
 @item @@AE@{@}
 @itemx @@ae@{@}
-Generate the uppercase and lowercase AE ligatures, respectively:
-@AE{}, @ae{}.  @xref{Inserindo Acentos}.
+Gera as ligaduras AE maiúsculas e minúsculas, respectivamente: @AE{}, @ae{}.
+@xref{Inserindo Acentos}.
 
 @item @@afivepaper
-Change page dimensions for the A5 paper size.  @xref{Papel A4}.
+Muda as dimensões da página para o tamanho de papel A5. @xref{Papel A4}.
 
 @item @@afourlatex
 @itemx @@afourpaper
 @itemx @@afourwide
-Change page dimensions for the A4 paper size.  @xref{Papel A4}.
+Muda as dimensões da página para o tamanho de papel A4. @xref{Papel A4}.
 
-@item @@alias @var{new}=@var{existing}
-Make the command @samp{@@@var{new}} a synonym for the existing command
-@samp{@@@var{existing}}.  @xref{@code{@@alias}}.
+@item @@alias @var{novo}=@var{existente}
+Torna o comando @samp{@@@var{novo}} um sinônimo para o comando existente
+@samp{@@@var{existente}}. @xref{@code{@@alias}}.
 
-@item @@allowcodebreaks @var{true-false}
-Control breaking at @samp{-} and @samp{_} in @TeX{}.
+@item @@allowcodebreaks @var{verdadeiro-falso}
+Controla quebra em @samp{-} e @samp{_} no @TeX{}.
 @xref{@code{@@allowcodebreaks}}.
 
-@item @@anchor@{@var{name}@}
-Define @var{name} as the current location for use as a cross-reference
-target.  @xref{@code{@@anchor}}.
+@item @@anchor@{@var{nome}@}
+Define @var{nome} como o local atual para uso como um alvo de referência
+cruzada. @xref{@code{@@anchor}}.
 
-@item @@appendix @var{title}
-Begin an appendix.  The title appears in the table of contents.  In
-Info, the title is underlined with asterisks.
-@xref{@code{@@unnumbered @@appendix}}.
+@item @@appendix @var{título}
+Inicia um anexo. O título aparece na tabela de conteúdo. No Info, o título é
+sublinhado com asteriscos. @xref{@code{@@unnumbered @@appendix}}.
 
-@item @@appendixsec @var{title}
-@itemx @@appendixsection @var{title}
-Begin an appendix section within an appendix.  The section title
-appears in the table of contents.  In Info, the title is underlined
-with equal signs.  @code{@@appendixsection} is a longer spelling of
-the @code{@@appendixsec} command.
-@xref{@code{@@unnumberedsec @@appendixsec @@heading}}.
+@item @@appendixsec @var{título}
+@itemx @@appendixsection @var{título}
+Inicia uma seção de anexos dentro de um anexo. O título da seção aparece na
+tabela de conteúdo. No Info, o título é sublinhado com sinais de igual.
+@code{@@appendixsection} é uma grafia mais longa do comando
+@code{@@appendixsec}. @xref{@code{@@unnumberedsec @@appendixsec @@heading}}.
 
-@item @@appendixsubsec @var{title}
-Begin an appendix subsection.  The title appears in the table of
-contents.  In Info, the title is underlined with hyphens.
+@item @@appendixsubsec @var{título}
+Inicia uma subseção de anexos. O título aparece na tabela de conteúdo. No Info,
+o título é sublinhado com hifens.
 @xref{@code{@@unnumberedsubsec @@appendixsubsec @@subheading}}.
 
-@item @@appendixsubsubsec @var{title}
-Begin an appendix subsubsection.  The title appears in the table of
-contents.  In Info, the title is underlined with periods.
-@xref{@code{@@subsubsection}}.
+@item @@appendixsubsubsec @var{título}
+Inicia uma subsubseção de anexos. O título aparece na tabela de conteúdo. No
+Info, o título é sublinhado com pontos. @xref{@code{@@subsubsection}}.
 
 @item @@arrow@{@}
-Generate a right arrow glyph: @samp{@arrow{}}.  Used by default
-for @code{@@click}.  @xref{Sequências de Clique}.
+Gera um glifo de seta para a direita: @samp{@arrow{}}. Usado por padrão para
+@code{@@click}. @xref{Sequências de Clique}.
 
 @item @@asis
-Used following @code{@@table}, @code{@@ftable}, and @code{@@vtable} to
-print the table's first column without highlighting (``as is'').
-@xref{@code{@@asis}}.
+Usado segindo @code{@@table}, @code{@@ftable} e @code{@@vtable} para imprimir a
+primeira coluna da tabela sem realçar (``como está''). @xref{@code{@@asis}}.
 
-@item @@author @var{author}
-Typeset @var{author} flushleft and underline it.  @xref{@code{@@title
-@@subtitle @@author}}.
+@item @@author @var{autor(a)}
+Tipografa @var{autor(a)} alinhado à esquerda e sublinhado.
+@xref{@code{@@title @@subtitle @@author}}.
 
-@item @@b@{@var{text}@}
-Set @var{text} in a @b{bold} font.  No effect in Info.  @xref{Fontes}.
+@item @@b@{@var{texto}@}
+Configura @var{texto} em uma fonte @b{negrito}. Sem efeito no Info. @xref{Fontes}.
 
 @item @@bullet@{@}
-Generate a large round dot, @bullet{} (@samp{*} in Info).  Often used
-with @code{@@table}.  @xref{@code{@@bullet}}.
+Gera um ponto redondo grande, @bullet{} (@samp{*} no Info). Geralmente usado
+com @code{@@table}. @xref{@code{@@bullet}}.
 
 @item @@bye
-Stop formatting a file.  The formatters do not see anything in the
-input file following @code{@@bye}.  @xref{Finalizando um Arquivo}.
+Para de formatar um arquivo. Os formatadores não veem nada no arquivo de
+entrada seguinte a @code{@@bye}. @xref{Finalizando um Arquivo}.
 
-@item @@c @var{comment}
-Begin a comment in Texinfo.  The rest of the line does not appear in
-any output.  A synonym for @code{@@comment}.  @kbd{DEL} also
-starts a comment.  @xref{Comentários}.
+@item @@c @var{comentário}
+Inicia um comentário no Texinfo. O restante da linha não aparece em nenhuma
+saída. Um sinônimo para @code{@@comment}. @kbd{DEL} também inicia um
+comentário. @xref{Comentários}.
 
 @item @@caption
-Define the full caption for a @code{@@float}.  @xref{@code{@@caption
-@@shortcaption}}.
+Define a legenda completa para um @code{@@float}.
+@xref{@code{@@caption @@shortcaption}}.
 
 @item @@cartouche
-Highlight an example or quotation by drawing a box with rounded
-corners around it.  Pair with @code{@@end cartouche}.  No effect in
-Info.  @xref{@code{@@cartouche}}.
+Destaca um exemplo ou citação desenhando uma caixa com cantos arredondados ao
+redor. Emparelha com @code{@@end cartouche}. Sem efeito no Info.
+@xref{@code{@@cartouche}}.
 
-@item @@center @var{line-of-text}
-Center the line of text following the command.
+@item @@center @var{linha-de-texto}
+Centraliza a linha de texto seguindo o comando.
 @xref{@code{@@titlefont @@center @@sp}}.
 
-@item @@centerchap @var{line-of-text}
-Like @code{@@chapter}, but centers the chapter title.  @xref{@code{@@chapter}}.
-
-@item @@chapheading @var{title}
-Print an unnumbered chapter-like heading, but omit from the table of
-contents.  In Info, the title is underlined with asterisks.
-@xref{@code{@@majorheading @@chapheading}}.
-
-@item @@chapter @var{title}
-Begin a numbered chapter.  The chapter title appears in the table of
-contents.  In Info, the title is underlined with asterisks.
+@item @@centerchap @var{linha-de-texto}
+Como @code{@@chapter}, mas centraliza o título do capítulo.
 @xref{@code{@@chapter}}.
 
-@item @@cindex @var{entry}
-Add @var{entry} to the index of concepts.  @xref{Entradas de Índice, ,
-Definindo as Entradas de um Índice}.
+@item @@chapheading @var{título}
+Imprime um título não numerado, como um capítulo, mas omite da tabela de
+conteúdo. No Info, o título é sublinhado com asteriscos.
+@xref{@code{@@majorheading @@chapheading}}.
 
-@item @@cite@{@var{reference}@}
-Highlight the name of a book or other reference that has no companion
-Info file.  @xref{@code{@@cite}}.
+@item @@chapter @var{título}
+Inicia um capítulo numerado. O título do capítulo aparece na tabela de
+conteúdo. No Info, o título é sublinhado com asteriscos.
+@xref{@code{@@chapter}}.
 
-@item @@clear @var{flag}
-Unset @var{flag}, preventing the Texinfo formatting commands from
-formatting text between subsequent pairs of @code{@@ifset @var{flag}}
-and @code{@@end ifset} commands, and preventing
-@code{@@value@{@var{flag}@}} from expanding to the value to which
-@var{flag} is set.  @xref{@code{@@set @@clear @@value}}.
+@item @@cindex @var{entrada}
+Adiciona @var{entrada} ao índice de conceitos.
+@xref{Entradas de Índice, , Definindo as Entradas de um Índice}.
+
+@item @@cite@{@var{referência}@}
+Destaca o nome de um livro ou de outra referência que não tenha um arquivo
+complementar do Info. @xref{@code{@@cite}}.
+
+@item @@clear @var{sinalizador}
+Desconfigura @var{sinalizador}, impedindo que os comandos de formatação do
+Texinfo formatem o texto entre pares subsequentes de comandos @code{@@ifset
+@var{sinalizador}} e @code{@@end ifset}, e impedindo que
+@code{@@value@{@var{sinalizador}@}} expanda para o valor para o qual
+@var{sinalizador} está configurada. @xref{@code{@@set @@clear @@value}}.
 
 @item @@click@{@}
-Represent a single ``click'' in a GUI@.  Used within
-@code{@@clicksequence}.  @xref{Sequências de Clique}.
+Representa um ``clique'' em uma GUI@. Usado dentro de @code{@@clicksequence}.
+@xref{Sequências de Clique}.
 
-@item @@clicksequence@{@var{action} @@click@{@} @var{action}@}
-Represent a sequence of clicks in a GUI@.  @xref{Sequências de Clique}.
+@item @@clicksequence@{@var{ação} @@click@{@} @var{ação}@}
+Representa uma sequência de cliques em uma GUI@. @xref{Sequências de Clique}.
 
-@item @@clickstyle @@@var{cmd}
-Execute @@@var{cmd} for each @code{@@click}; the default is
-@code{@@arrow}.  The usual following empty braces on @@@var{cmd} are
-omitted.  @xref{Sequências de Clique}.
+@item @@clickstyle @@@var{comando}
+Executa @@@var{comando} para cada @code{@@click}; o padrão é @code{@@arrow}. As
+chaves vazias usuais seguintes a @@@var{comando} são omitidas.
+@xref{Sequências de Clique}.
 
-@item @@code@{@var{sample-code}@}
-Indicate an expression, a syntactically complete token of a program,
-or a program name.  Unquoted in Info output.  @xref{@code{@@code}}.
+@item @@code@{@var{código-amostra}@}
+Indica uma expressão, um token sintaticamente completo de um programa ou um
+nome de programa. Sem aspas na saída do Info. @xref{@code{@@code}}.
 
-@item @@codequotebacktick @var{on-off}
-@itemx @@codequoteundirected @var{on-off}
-Control output of @code{`} and @code{'} in code examples.
+@item @@codequotebacktick @var{ligado-desligado}
+@itemx @@codequoteundirected @var{ligado-desligado}
+Controla a saída de @code{`} e @code{'} em exemplos de código.
 @xref{Inserindo Caracteres de Citação}.
 
 @item @@comma@{@}
-Insert a comma `,' character; only needed when a literal comma would
-be taken as an argument separator.  @xref{Inserindo Uma Vírgula}.
+Insere um caractere vírgula `,'; necessário somente quando uma vírgula literal
+fosse recebida como separador de argumentos. @xref{Inserindo Uma Vírgula}.
 
-@item @@command@{@var{command-name}@}
-Indicate a command name, such as @command{ls}.  @xref{@code{@@command}}.
+@item @@command@{@var{nome-comando}@}
+Indica um nome de comando, como @command{ls}. @xref{@code{@@command}}.
 
-@item @@comment @var{comment}
-Begin a comment in Texinfo.  The rest of the line does not appear in
-any output.  A synonym for @code{@@c}.
-@xref{Comentários}.
+@item @@comment @var{comentário}
+Inicia um comentário no Texinfo. O restante da linha não aparece em nenhuma
+saída. Um sinônimo para @code{@@c}. @xref{Comentários}.
 
 @item @@contents
-Print a complete table of contents.  Has no effect in Info, which uses
-menus instead.  @xref{Conteúdo, , Gerando Uma Tabela do Conteúdo}.
+Imprime uma tabela completa de conteúdo. Não tem efeito no Info, que usa menus.
+@xref{Conteúdo, , Gerando Uma Tabela do Conteúdo}.
 
 @item @@copying
-Specify copyright holders and copying conditions for the document Pair
-with @code{@@end cartouche}.  @xref{@code{@@copying}}.
+Especifica os(as) titulares dos direitos autorais e as condições de cópia para
+o documento. Emparelha com @code{@@end cartouche}. @xref{@code{@@copying}}.
 
 @item @@copyright@{@}
-Generate the copyright symbol @copyright{}.
-@xref{@code{@@copyright}}.
+Gera o símbolo de direitos autorais @copyright{}. @xref{@code{@@copyright}}.
 
-@item @@defcodeindex @var{index-name}
-Define a new index and its indexing command.  Print entries in an
-@code{@@code} font.  @xref{Novos Índices, , Defining New Índices}.
+@item @@defcodeindex @var{nome-índice}
+Define um novo índice e comando dele de indexação. Imprime entradas em uma
+fonte do @code{@@code}. @xref{Novos Índices, , Definindo Novos Índices}.
 
-@item @@defcv @var{category} @var{class} @var{name}
-@itemx @@defcvx @var{category} @var{class} @var{name}
-Format a description for a variable associated with a class in
-object-oriented programming.  Takes three arguments: the category of
-thing being defined, the class to which it belongs, and its name.
+@item @@defcv @var{categoria} @var{classe} @var{nome}
+@itemx @@defcvx @var{categoria} @var{classe} @var{nome}
+Formata uma descrição para uma variável associada com uma classe em programação
+orientada a objetos. Recebe três argumentos: a categoria da coisa sendo
+definida, a classe à qual ela pertence e o nome dela.
 @xref{Comandos de Definição}.
 
-@item @@deffn @var{category} @var{name} @var{arguments}@dots{}
-@itemx @@deffnx @var{category} @var{name} @var{arguments}@dots{}
-Format a description for a function, interactive command, or similar
-entity that may take arguments.  @code{@@deffn} takes as arguments the
-category of entity being described, the name of this particular
-entity, and its arguments, if any.  @xref{Comandos de Definição}.
+@item @@deffn @var{categoria} @var{nome} @var{argumentos}@dots{}
+@itemx @@deffnx @var{categoria} @var{nome} @var{argumentos}@dots{}
+Formata uma descrição para uma função, comando interativo ou entidade similar
+que pode receber argumentos. @code{@@deffn} recebe como argumentos a categoria
+da entidade sendo descrita, o nome dessa entidade em particular e os argumentos
+dela, se existirem. @xref{Comandos de Definição}.
 
-@item @@defindex @var{index-name}
-Define a new index and its indexing command.  Print entries in a roman
-font.  @xref{Novos Índices, , Defining New Índices}.
+@item @@defindex @var{nome-índice}
+Define um novo índice e o comando dele de indexação. Imprime entradas em uma
+fonte romana. @xref{Novos Índices, , Definindo Novos Índices}.
 
-@item @@definfoenclose @var{newcmd}, @var{before}, @var{after}
-Must be used within @code{@@ifinfo}; create a new command
-@code{@@@var{newcmd}} for Info that marks text by enclosing it in
-strings that precede and follow the text.
-@xref{@code{@@definfoenclose}}.
+@item @@definfoenclose @var{novocomando}, @var{antes}, @var{depois}
+Precisa ser usado dentro de @code{@@ifinfo}; cria um novo comando
+@code{@@@var{novocomando}} para Info que marca o texto cercando-o entre strings
+que precedem e seguem o texto. @xref{@code{@@definfoenclose}}.
 
-@item @@defivar @var{class} @var{instance-variable-name}
-@itemx @@defivarx @var{class} @var{instance-variable-name}
-Format a description for an instance variable in object-oriented
-programming.  The command is equivalent to @samp{@@defcv @{Instance
-Variable@} @dots{}}.  @xref{Comandos de Definição}.
+@item @@defivar @var{classe} @var{instância-variável-nome}
+@itemx @@defivarx @var{classe} @var{instância-variável-nome}
+Formata uma descrição para uma variável de instância em programação orientada a
+objetos. O comando é equivalente a @samp{@@defcv @{Variável de Instância@}
+@dots{}}. @xref{Comandos de Definição}.
 
-@item @@defmac @var{macroname} @var{arguments}@dots{}
-@itemx @@defmacx @var{macroname} @var{arguments}@dots{}
-Format a description for a macro; equivalent to @samp{@@deffn Macro
-@dots{}}.  @xref{Comandos de Definição}.
+@item @@defmac @var{nomemacro} @var{argumentos}@dots{}
+@itemx @@defmacx @var{nomemacro} @var{argumentos}@dots{}
+Formata uma descrição para uma macro; equivalente a @samp{@@deffn Macro
+@dots{}}. @xref{Comandos de Definição}.
 
-@item @@defmethod @var{class} @var{method-name} @var{arguments}@dots{}
-@itemx @@defmethodx @var{class} @var{method-name} @var{arguments}@dots{}
-Format a description for a method in object-oriented programming;
-equivalent to @samp{@@defop Method @dots{}}.
-@xref{Comandos de Definição}.
+@item @@defmethod @var{classe} @var{nome-método} @var{argumentos}@dots{}
+@itemx @@defmethodx @var{classe} @var{nome-método} @var{argumentos}@dots{}
+Formata uma descrição para um método em programação orientada a objetos;
+equivalente a @samp{@@defop Método @dots{}}. @xref{Comandos de Definição}.
 
-@item @@defop @var{category} @var{class} @var{name} @var{arguments}@dots{}
-@itemx @@defopx @var{category} @var{class} @var{name} @var{arguments}@dots{}
-Format a description for an operation in object-oriented programming.
-@code{@@defop} takes as arguments the name of the category of
-operation, the name of the operation's class, the name of the
-operation, and its arguments, if any.  @xref{Comandos de Definição}, and
-@ref{Objetos Abstratos}.
+@item @@defop @var{categoria} @var{classe} @var{nome} @var{argumentos}@dots{}
+@itemx @@defopx @var{categoria} @var{classe} @var{nome} @var{argumentos}@dots{}
+Formata uma descrição para uma operação em programação orientada a objetos.
+@code{@@defop} recebe como argumentos o nome da categoria da operação, o nome
+da classe da operação, o nome da operação e os argumentos dela, se existirem.
+@xref{Comandos de Definição} e @ref{Objetos Abstratos}.
 
-@item @@defopt @var{option-name}
-@itemx @@defoptx @var{option-name}
-Format a description for a user option; equivalent to @samp{@@defvr
-@{User Option@} @dots{}}.  @xref{Comandos de Definição}.
-
+@item @@defopt @var{nome-opção}
+@itemx @@defoptx @var{nome-opção}
+Formata uma descrição para uma opção de usuário(a); equivalente a @samp{@@defvr
+@{Opção de Usuário(a)@} @dots{}}. @xref{Comandos de Definição}.
+PAREI
 @item @@defspec @var{special-form-name} @var{arguments}@dots{}
 @itemx @@defspecx @var{special-form-name} @var{arguments}@dots{}
 Format a description for a special form; equivalent to @samp{@@deffn
