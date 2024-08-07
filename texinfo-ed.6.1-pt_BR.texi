@@ -1388,7 +1388,7 @@ hifens no fonte permanece como estiverem em contextos literais,
 tais como @code{@@code} e @code{@@example}.
 
 @item
-@cindex Form feed characters
+@cindex Caracteres de avanço de formulário
 @cindex @kbd{CTRL-l}
 Os caracteres de alimentação de formulário (@kbd{CTRL-l}) na entrada são
 manipulados conforme segue:
@@ -1422,7 +1422,7 @@ de saída, não é possível se usar alimentações de formulário
 completamente portáveis.
 
 @item
-@cindex Tabs; don't use!
+@cindex Tabulações; não use!
 @strong{Aviso:} Por último, não use caracteres tab em um arquivo
 Texinfo! (Exceto, talvez, em modos textuais.)  @TeX{} usa fontes de
 largura variável, o que significa que é impraticável, na melhor das
@@ -1465,17 +1465,17 @@ como @code{@@settitle}, funcionam sobre uma linha inteira.  Você não
 pode usar @code{@@comment} ou @code{@@c} dentro de uma linha que se
 inicie com um tal comando.
 
-@findex DEL @r{(comment character)}
-@cindex Catcode for comments in @TeX{}
-Em casos de invocações de comando aninhado, definições complicadas de
-macro, etc., @code{@@c} e @code{@@comment} podem provocar um erro quando
-do processamento com @TeX{}.  Por conseguinte, você também pode usar
-o carácter @kbd{DEL}(decimal 127 ASCII, hexadecimal 0x7f, octal 0177)
-como um verdadeiro carácter de comentário @TeX{} (catcode 14, em
-internos @TeX{}).   Tudo na linha após o @kbd{DEL} será ignorado.
+@findex DEL @r{(caractere de comentário)}
+@cindex Código de categoria para comentários no @TeX{}
+Em casos de invocações de comando aninhado, definições complicadas de macro,
+etc., @code{@@c} e @code{@@comment} podem provocar um erro quando do
+processamento com @TeX{}.  Por conseguinte, você também pode usar o caractere
+@kbd{DEL} (decimal 127 ASCII, hexadecimal 0x7f, octal 0177) como um verdadeiro
+caractere de comentário do @TeX{} (código de categoria 14, nos internos do
+@TeX{}). Tudo na linha após o @kbd{DEL} será ignorado.
 
-@cindex Ignored text
-@cindex Unprocessed text
+@cindex Texto ignorado
+@cindex Texto não processado
 @findex ignore
 Você também pode ter trechos longos de texto ignorados pelos
 processadores Texinfo com os comandos @code{@@ignore} e
@@ -1742,9 +1742,9 @@ Este é o segundo item.
 @node Iniciando e Finalizando um Arquivo
 @anchor{Beginning a File} @c old name
 @chapter Começando e Terminando um Arquivo Texinfo @c Capítulo 3
-@cindex Beginning a Texinfo file
-@cindex Texinfo file beginning
-@cindex File beginning
+@cindex Iniciando um arquivo do Texinfo
+@cindex Arquivo do Texinfo, iniciando
+@cindex Iniciamento de arquivo
 
 Este capítulo se estende sobre o arquivo fonte mínimo completo de
 Texinfo previamente dado (veja-se @ref{Amostra Curta}).
@@ -1753,8 +1753,8 @@ Certos pedaços de informação devem necessariamente ser providos no
 início de um arquivo Texinfo, tais como o título do documento e o nodo
 Top.   Um sumário geralmente também é produzido aqui.
 
-@cindex Frontmatter, text in
-Texto simples fora de qualquer comando antes do nodo Top deveria ser
+@cindex Cabeçalho, texto em
+Texto direto fora de qualquer comando antes do nodo Top deveria ser
 evitado.  Tal texto é tratado diferentemente nos diferentes formatos de
 saída: no momento da escrita, é visível em @TeX{} e HTML, por padrão não
 mostrado em leitores Info, e assim por diante.
@@ -1774,7 +1774,7 @@ mostrado em leitores Info, e assim por diante.
 @node Inicialização de Amostra
 @section Exemplo de Início do Arquivo do Texinfo
 
-@cindex Example beginning of Texinfo file
+@cindex Exemplo de início de arquivo Texinfo
 
 A amostra seguinte mostra o que é necessário.  Os elementos dados aqui
 são explanados em maiores detalhes nas seções seguintes.  Outros
@@ -1850,8 +1850,8 @@ Este manual é para @var{programa}, versão @var{versão}.
 
 @node Cabeçalho do Arquivo do Texinfo
 @section Cabeçalho do Arquivo do Texinfo
-@cindex Header for Texinfo files
-@cindex Texinfo file header
+@cindex Cabeçalho para arquivos do Texinfo
+@cindex Cabeçalho de arquivo do Texinfo
 
 Os arquivos Texinfo iniciam com pelo menos duas linhas.  Essas são a
 linha @code{\input texinfo} e a linha @code{@@settitle}.
@@ -1957,8 +1957,8 @@ as variáveis Emacs @code{tex-start-of-header} e/ou
 
 @anchor{setfilename}@c nome antigo
 @findex setfilename
-@cindex Texinfo requires @code{@@setfilename}
-@cindex Output file name, required
+@cindex Texinfo exige @code{@@setfilename}
+@cindex Nome de arquivo de saída, exigido
 
 A linha @code{@@setfilename} especifica o nome do arquivo de saída a ser
 gerado.
@@ -1976,8 +1976,8 @@ Existem duas convenções para a escolha do nome: você ou pode remover a
 extensão (tal como @samp{.texi}) inteiramente do nome do arquivo de
 entrada; ou (recomendado) substitui-lo com a extensão @samp{.info}.
 
-@cindex Ignored before @code{@@setfilename}
-@cindex @samp{\input} source line ignored
+@cindex Ignorado antes de @code{@@setfilename}
+@cindex Linha @samp{\input} do fonte, ignorada
 Quando uma linha @code{@@setfilename} está presente, os processadores
 Texinfo ignoram tudo escrito antes da linha @code{@@setfilename}.  Isso
 é o motivo da primeiríssima linha do arquivo (a linha @code{\input}) não
@@ -2002,9 +2002,9 @@ nome dado não tiver extensão.
 e alguns outros programas ainda podem esperar que ele esteja presente;
 por exemplo, Automake (veja-se @ref{Texinfo,,,automake, GNU Automake}).
 
-@cindex Length of file names
-@cindex File name collision
-@cindex Info file name, choosing
+@cindex Comprimento dos nomes dos arquivos
+@cindex Colisão de nome de arquivo
+@cindex Nome de arquivo do Info, escolhendo
 Apesar que uma extensão @samp{.info} explícita seja preferível, alguns
 sistemas operacionais não conseguem lidar com nomes longos de arquivo.
 Você pode acabar com problemas mesmo quando o nome de arquivo que você
@@ -2032,7 +2032,7 @@ Veja-se também a opção @option{--output} em
 
 @anchor{settitle}@c nome antigo
 @findex settitle
-@cindex Document title, specifying
+@cindex Título de documento, especificando
 
 Um arquivo Texinfo deveria conter uma linha que se pareça com isto:
 
@@ -2051,7 +2051,7 @@ rodapé para saída de lado duplo, no caso de tais cabeçalhos serem
 impressos.  Para mais sobre cabeçalhos para @TeX{}, veja-se
 @ref{Geração de Cabeçalho}.
 
-@cindex @code{<title>} HTML tag
+@cindex Tag @code{<title>} do HTML
 No arquivo HTML produzido por @command{makeinfo}, @var{título} serve
 como o @samp{<título>} do documento.  Ele também se torna a descrição
 padrão do documento na parte @samp{<head>}
@@ -2068,7 +2068,7 @@ ser omitido do @code{@@title}. Veja-se @ref{@code{@@titlepage}}.
 
 @node Fim de Cabeçalho
 @subsection Fim de Cabeçalho
-@cindex End of header line
+@cindex Linha de fim de cabeçalho
 
 Siga as linhas de cabeçalho com uma linha @w{end-of-header}, que é um
 comentário Texinfo que se parece com isto:
@@ -2083,7 +2083,7 @@ Veja-se @ref{Início de Cabeçalho}.
 @node Permissões do Documento
 @section Permissões do Documento
 @cindex Permissões do Documento
-@cindex Copying Permissions
+@cindex Permissões de cópia
 
 O aviso de direitos autorais e permissões de cópia para um documento
 precisam aparecer em vários lugares nos vários formatos de saída de
@@ -2154,20 +2154,20 @@ prescrita:
 Direitos autorais @copyright{} @var{anos} @var{titular-direitos-autorais}.
 @end example
 
-@cindex Copyright word, always in English
-A palavra `Copyright' deve necessariamente estar escrita em Inglês,
-mesmo se o documento estiver de outra forma escrito em outra linguagem.
-Isso é devido ao direito internacional.
+@cindex Palavra Copyright, sempre em inglês
+A palavra `Copyright' deve necessariamente estar escrita em inglês, mesmo se o
+documento estiver escrito em outro idioma. Isso é devido ao direito
+internacional.
 
-@cindex Years, in copyright line
+@cindex Anos, na linha copyright
 A lista dos anos deveria incluir todos os anos nos quais uma versão foi
 completada (mesmo se ela foi publicada em um ano subsequente).  É mais
 simples que cada ano seja escrito individualmente e na íntegra,
 separados por vírgulas.
 
-@cindex Copyright holder for FSF works
-@cindex Holder of copyright for FSF works
-@cindex Owner of copyright for FSF works
+@cindex Titular dos direitos autorais das obras da FSF
+@cindex Obras da FSF, titular dos direitos autorais
+@cindex Dono(a) do copyright das obras da FSF
 O titular (ou titulares) dos direitos autorais é quem quer que detenha
 os direitos autorais legais sobre o trabalho.  No caso de trabalhos
 atribuídos à FSF, o titular é `Free Software Foundation, Inc.'.
@@ -2191,9 +2191,9 @@ distribuídos.
 
 @anchor{insertcopying}@c old name
 @findex insertcopying
-@cindex Copying text, including
-@cindex Permissions text, including
-@cindex Including permissions text
+@cindex Texto de reprodução, incluindo
+@cindex Texto das permissões, incluindo
+@cindex Incluindo texto das permissões
 
 O comando @code{@@insertcopying} simplesmente é escrito em uma linha
 própria, como esta:
@@ -2249,7 +2249,7 @@ contém o texto das permissões de cópia que aparece no manual impresso.
 @subsection @code{@@titlepage}
 
 @anchor{titlepage}@c nome antigo
-@cindex Title page
+@cindex Página de título
 @findex titlepage
 
 Inicie o material para a página de título e seguinte à página de
@@ -2302,8 +2302,8 @@ Você pode usar qualquer método, ou você pode combiná-los; veja os
 exemplos nas seções abaixo.
 
 @findex shorttitlepage
-@cindex Bastard title page
-@cindex Title page, bastard
+@cindex Página orfã de título
+@cindex Página de título, orfã
 Para documentos suficientemente simples, e para a página de anterrosto
 em formatador tradicional de livro, Texinfo também provê um comando,
 @code{@@shorttitlepage}, o qual toma o restante da linha como o título.
@@ -2483,8 +2483,8 @@ página de título, essa página é costumeiramente não numerada.  Portanto,
 em Texinfo, a informação na página de direitos autorais deveria estar
 entre os comandos @code{@@titlepage} e @code{@@end titlepage}.
 
-@findex vskip @r{@TeX{} vertical skip}
-@cindex filll @r{@TeX{} dimension}
+@findex vskip @r{pulo vertical do @TeX{}}
+@cindex filll @r{dimensão do @TeX{}}
 Use o comando @code{@@page} para provocar uma quebra de página.
 Para empurrar o aviso de direitos autorais e o outro texto na página de
 direitos autorais em direção ao pé da página, use o seguinte
@@ -2548,9 +2548,9 @@ plano no mesmo lugar.
 
 @anchor{end titlepage}@c old name
 @cindex Cabeçalhos, page, begin to appear
-@cindex Titlepage end starts headings
-@cindex End titlepage starts headings
-@cindex Generating page headings
+@cindex Fim da página de título inicia cabeçalhos
+@cindex Início de cabeçalhos, fim da página de título
+@cindex Gerando títulos de página
 
 Como todos os comandos @code{@@end} (veja-se @ref{Citações e Exemplos}), o
 comando @code{@@end titlepage} deve estar escrito no início de uma linha
@@ -2655,8 +2655,8 @@ porém não mais se recomenda isso.
 
 @findex setcontentsaftertitlepage
 @findex setshortcontentsaftertitlepage
-@cindex Sumário, after title page
-@cindex Table of contents, after title page
+@cindex Conteúdo, depois da página de título
+@cindex Tabela de conteúdo, depois da página de título
 Entretanto, dado que muitos documentos Texinfo existentes ainda tem o
 @code{@@contents} ao final do manual, se você for um usuário imprimindo
 um manual, você pode desejar forçar que o conteúdo seja impresso após a
@@ -2719,7 +2719,7 @@ fazer isso. Veja-se @ref{Condicionais, , Conditionally Visible Text}).
 @node Exemplo do Nodo Top
 @subsection Exemplo do Nodo Top
 
-@cindex Top node example
+@cindex Exemplo de nó Top
 
 Aqui está um exemplo de um nodo Top.
 
@@ -2748,8 +2748,8 @@ Informação geral adicional.
 
 @node Partes do Menu Mestre
 @subsection Partes de um Menu Mestre
-@cindex Master menu
-@cindex Menu, master
+@cindex Menu mestre
+@cindex Menu, mestre
 @cindex Partes de um Menu Mestre
 
 Um @dfn{menu mestre} é o menu principal.  É costumeiro incluir um menu
@@ -2770,7 +2770,7 @@ A segunda parte contém nodos para os índices.
 
 @item
 @findex detailmenu
-@cindex Detailed menu
+@cindex Menu detalhado
 A terceira e subsequentes partes contém uma listagem dos outros, nodos
 de baixo nível, frequentemente ordenados por capítulo.  Essa maneira, em
 vez de se ir ao longo de um menu intermediário, um investigador pode ir
@@ -2845,11 +2845,11 @@ geralmente são todos dados antes do nodo Top, se forem dados afinal.
 @subsection @code{@@documentdescription}: Texto de Resumo
 @anchor{documentdescription}@c nome antigo
 
-@cindex Document description
-@cindex Description of document
-@cindex Summary of document
-@cindex Abstract of document
-@cindex @code{<meta>} HTML tag, and document description
+@cindex Descrição de documento
+@cindex Descrição do documento
+@cindex Sumário do documento
+@cindex Resumo do documento
+@cindex Tag @code{<meta>} do HTML, e descrição de documento
 @findex documentdescription
 
 Quando da produção de saída HTML para um documento, @command{makeinfo}
@@ -2881,8 +2881,8 @@ antes do primeiro nodo do documento.
 
 @anchor{setchapternewpage}@c nome antigo
 @findex setchapternewpage
-@cindex Starting chapters
-@cindex Pages, starting odd
+@cindex Iniciando capítulos
+@cindex Páginas, iniciando ímpar
 
 Em um oficialmente limitado livro, o texto normalmente é impresso em
 ambos os lados do papel, capítulos iniciam em páginas do lado direito, e
@@ -3024,7 +3024,7 @@ de página. Veja-se @ref{Cabeçalhos, , Cabeçalhos de Página}, para mais infor
 
 @anchor{paragraphindent}@c old name
 @findex paragraphindent
-@cindex Indentando parágrafos, controle de
+@cindex Recuando parágrafos, controle de
 @cindex Controle de recuo de parágrafo
 
 Os processadores de Texinfo podem inserir espaços em branco no início da
@@ -3066,11 +3066,11 @@ especificado. Veja-se @ref{Início de Cabeçalho}.
 
 @anchor{firstparagraphindent}@c nome antigo
 @findex firstparagraphindent
-@cindex First paragraph, suppressing indentation of
-@cindex Suppressing first paragraph indentation
-@cindex Preventing first paragraph indentation
-@cindex Indenting, suppressing of first paragraph
-@cindex Cabeçalhos, indentation after
+@cindex Primeiro parágrafo, suprimindo recuo de
+@cindex Suprimindo primeiro parágrafo, recuo
+@cindex Impedindo recuo do primeiro parágrafo
+@cindex Recuando, supressão do primeiro parágrafo
+@cindex Cabeçalhos, recuo depois de
 
 Conforme você pode ver no presente manual, o primeiro parágrafo em
 qualquer seção não é recuado por padrão.  Tipograficamente, o recuo é um
@@ -3187,7 +3187,7 @@ lista de variáveis locais para Emacs, a maioria das vezes tipicamente um
 @chapter Nodos @c Capítulo 4
 @anchor{node}@anchor{@@node} @c nomes antigos
 
-@cindex Node, defined
+@cindex Nó, definido
 Um @dfn{nodo} é uma região de texto que inicia no comando @code{@@node},
 e continua até o próximo comando @code{@@node}.
 Para especificar um nodo, escreva um comando @code{@@node} no início de
@@ -3232,9 +3232,9 @@ não transformado em Info, HTML, ou outros formatos.
 @node Estrutura do Documento Texinfo
 @section Estrutura do Documento Texinfo
 @cindex Estrutura do Documento Texinfo
-@cindex Document structure, of Texinfo
-@cindex Structure, of Texinfo documents
-@cindex Double structure, of Texinfo documents
+@cindex Documento, estrutura, do Texinfo
+@cindex Estrutura, dos documentos do Texinfo
+@cindex Estrutura dupla, dos documentos do Texinfo
 
 @anchor{Two Paths}@c nome de nodo
 
@@ -3288,7 +3288,7 @@ estrutura paralela convencional.
 @node Nomes de Nodo
 @section Escolhendo Nomes de Nodo
 
-@cindex Node names, choosing
+@cindex Nomes de nó, escolhendo
 O nome de um nodo identifica o nodo.  Para todos os detalhes de nomes de
 nodo, veja-se @ref{Exigências de Linha de Nodo}).
 
@@ -3430,8 +3430,8 @@ Os nomes usados com @code{@@node} tem várias exigências:
 
 @itemize @bullet
 @item
-@cindex Unique node names requirement
-@cindex Node names must be unique
+@cindex Exigência de nomes exclusivos de nós
+@cindex Nomes de nó precisam ser exclusivos
 Todos os nomes de nodo em um arquivo Texinfo devem ser únicos.
 
 Isso significa, por exemplo, que, se você finalizar cada capítulo com um
@@ -3442,8 +3442,8 @@ você pode finalizar cada capítulo com uma seção chamada ``Sumário'',
 contanto que os nomes de nodo para tais seções sejam todos diferentes.
 
 @item
-@cindex Commands in node names
-@cindex @@-commands in node names
+@cindex Comandos em nomes de nó
+@cindex Comandos @@ em nomes de nó
 Os nomes de nodo podem conter @@-commands. A saída é geralmente o
 resultado natural do comando; por exemplo, usar @code{@@TeX@{@}} em um
 nome de nodo resulta no logotipo do @TeX{} sendo exibido, conforme
@@ -3584,12 +3584,12 @@ $ @kbd{makeinfo --html -c TOP_NODE_UP_URL=/manual/} ...
 Todos os links para @code{(dir)} serão substituídos pela URL dada.
 
 @item
-@cindex Nodo Prev do nodo Top
+@cindex Nó Prev do nó Top
 O nodo `Prev' do nodo Top é usualmente ou omitido ou também configurado para
 @file{(dir)}. Qualquer uma está legal.
 
 @item
-@cindex Nodo Next do nodo Top
+@cindex Nó Next do nó Top
 O nodo `Next' do nodo Top deveria ser o primeiro capítulo em seu documento.
 
 @end itemize
@@ -4524,7 +4524,7 @@ capítulo, apenas ``dois níveis abaixo''; @pxref{@code{@@chapter}}.
 @findex unnumberedsubsec
 @findex appendixsubsec
 @findex subheading
-@cindex Subsection-like commands
+@cindex Comandos similares ao Subsection
 
 Os comandos @code{@@unnumberedsubsec}, @code{@@appendixsubsec} e
 @code{@@subheading} são, respectivamente, os equivalentes não numerado,
@@ -4555,7 +4555,7 @@ aparecem no índice. Em Info e texto plano, os comandos do tipo
 @findex unnumberedsubsubsec
 @findex appendixsubsubsec
 @findex subsubheading
-@cindex Subsub sectioning commands
+@cindex Comandos de seccionamento Subsub
 
 O quarto e menor nível de comandos de seccionamento em Texinfo são os
 comandos `subsub'. São eles:
@@ -4612,7 +4612,7 @@ capítulo, apenas ``três níveis abaixo''; @pxref{@code{@@chapter}}.
 @section @code{@@part}: Grupos de Capítulos
 @c Capítulo 5 - Nodos; Seção 5.11 - @code{@@part}: Grupos de Capítulos
 @findex part
-@cindex Part pages
+@cindex Páginas Part
 
 O comando de seccionamento final é o @code{@@part}, para marcar uma
 @dfn{parte} de um manual, isto é, um grupo de capítulos ou (raramente)
@@ -4676,9 +4676,9 @@ levantado para ele.
 @c Capítulo 5 - Nodos; Seção 5.12 - Levantar/abaixar seções: @code{@@raisesections} e @code{@@lowersections}
 @findex raisesections
 @findex lowersections
-@cindex Raising and lowering sections
-@cindex Lowering and raising sections
-@cindex Sections, raising and lowering
+@cindex Elevando e rebaixando seções
+@cindex Rebaixando e elevando seções
+@cindex Seções, elevando e rebaixando
 
 Os comandos @code{@@raisesections} e @code{@@lowersections}
 implicitamente levantam e abaixam o nível hierárquico dos seguintes
@@ -4731,9 +4731,9 @@ uma linha própria.
 
 @node Referências Cruzadas
 @chapter Referências Cruzadas @c Capítulo 6
-@cindex Making cross-references
-@cindex Cross-references
-@cindex References
+@cindex Fazendo referências cruzadas
+@cindex Referências cruzadas
+@cindex Referências
 
 @dfn{Referências cruzadas} são usadas para guiar o leitor para outras
 partes do mesmo ou de diferentes arquivos Texinfo.
@@ -4792,7 +4792,7 @@ referências cruzadas.
 @node Comandos de Referências Cruzadas
 @section Diferentes Comandos de Referência Cruzada
 @c Capítulo 6 - Referências Cruzadas; Seção 6.2 - Diferentes Comandos de Referência Cruzada
-@cindex Different cross-reference commands
+@cindex Diferentes comandos de referência cruzada
 
 Existem três diferentes comandos de referência cruzada:
 
@@ -4826,8 +4826,8 @@ arquivo Info para o qual não existe manual impresso.
 @node Partes de Referências Cruzadas
 @section Partes de Uma Referência Cruzada
 @c Capítulo 6 - Referências Cruzadas; Seção 6.3 - Partes de Uma Referência Cruzada
-@cindex Cross-reference parts
-@cindex Parts of a cross-reference
+@cindex Partes da referência cruzada
+@cindex Partes de uma referência cruzada
 @anchor{Reference Syntax} @c nodo mesclado
 
 Um comando de referência cruzada exige apenas um argumento, o qual é o
@@ -4934,7 +4934,7 @@ Espaços em branco antes ou depois das vírgulas separando esses
 argumentos são ignorados. Para incluir uma vírgula em um dos argumentos,
 use @code{@@comma@{@}} (@pxref{Inserindo Uma Vírgula}).
 
-@cindex Comma after cross-reference
+@cindex Vírgula depois de referência cruzada
 Quando do processamento com TeX, uma vírgula é automaticamente inserida
 após o número da página para referências cruzadas para dentro do mesmo
 manual, a menos que a chave de fechamento do argumento seja seguida por
@@ -4978,8 +4978,8 @@ alertas, você pode configurar a variável de personalização
 
 @anchor{xref}@c nome antigo
 @findex xref
-@cindex Cross-references using @code{@@xref}
-@cindex References using @code{@@xref}
+@cindex Referências cruzadas usando @code{@@xref}
+@cindex Referências usando @code{@@xref}
 
 O comando @code{@@xref} gera uma referência cruzada para o início de uma
 frase.
@@ -4994,7 +4994,7 @@ frase.
 
 @node Um Argumento
 @subsection @code{@@xref} com Um Argumento
-@cindex One-argument form of cross-references
+@cindex Forma de um argumento das referências cruzadas
 
 A forma mais simples do @code{@@xref} pega um argumento, o nome de outro
 nodo no mesmo arquivo Texinfo.
@@ -5027,7 +5027,7 @@ em um manual impresso.
 
 @node Dois Argumentos
 @subsection @code{@@xref} com Dois Argumentos
-@cindex Two-argument form of cross-references
+@cindex Forma de dois argumentos das referências cruzadas
 
 Com dois argumentos, o segundo é usado como um rótulo para a saída
 online.
@@ -5072,7 +5072,7 @@ interfere na análise do arquivo Info.
 
 @node Três Argumentos
 @subsection @code{@@xref} com Três Argumentos
-@cindex Three-argument form of cross-references
+@cindex Forma de três argumentos das referências cruzadas
 
 Um terceiro argumento substitui o nome de nodo na saída @TeX{}. O
 terceiro argumento deveria ser o nome da seção na saída impressa, ou,
@@ -5171,7 +5171,7 @@ adequados.
 
 @node Quatro e Cinco Argumentos
 @subsection @code{@@xref} com Quatro e Cinco Argumentos
-@cindex Four- and five argument forms of cross-references
+@cindex Formas de quatro e cinco argumentos das referências cruzadas
 
 Em uma referência cruzada, um quarto argumento especifica o nome de
 outro arquivo Info, diferente do arquivo no qual a referência aparece, e
@@ -5293,8 +5293,8 @@ todo. Veja a próxima seção.
 @node Referenciando Um Manual Como Um Todo
 @section Referenciando Um Manual Como Um Todo
 @c Capítulo 6 - Referências Cruzadas; Seção 6.5 - Referenciando Um Manual Como Um Todo
-@cindex Manual, referring to as a whole
-@cindex Referring to an entire manual
+@cindex Manual, referenciando como um todo
+@cindex Referenciando a um manual inteiro
 @anchor{Top Node Naming} @c nome antigo
 
 Normalmente, você sempre deve nomear um nodo em uma referência
@@ -5374,8 +5374,8 @@ referências cruzadas de manual inteiro.
 
 @anchor{ref} @c nome antigo
 @findex ref
-@cindex Cross-references using @code{@@ref}
-@cindex References using @code{@@ref}
+@cindex Referências cruzadas usando @code{@@ref}
+@cindex Referências usando @code{@@ref}
 
 @code{@@ref} é aproximadamente o mesmo que @code{@@xref}, exceto que não
 gera um `Veja' na saída impressa, apenas a própria referência. Isso a
@@ -5384,7 +5384,7 @@ torna útil como a última parte de uma frase.
 @noindent
 Por exemplo,
 
-@cindex Hurricanes
+@cindex Furacões
 @example
 Para mais informação, @@pxref@{Isso@}, e @@ref@{Aquilo@}.
 @end example
@@ -5409,7 +5409,7 @@ uma maneira que seja adequada para um manual impresso, porém parecerem
 estranhos no formato Info. Tenha em mente que seu público pode estar
 usando tanto o formato impresso quanto o Info. Por exemplo:
 
-@cindex Sea surges
+@cindex Ondas do mar
 @example
 Os surtos de mar estão descritos na @@ref@{Furacões@}.
 @end example
@@ -5435,8 +5435,8 @@ Os surtos de mar estão descritos na *nota Furacões::.
 
 @anchor{pxref} @c nome antigo
 @findex pxref
-@cindex Cross-references using @code{@@pxref}
-@cindex References using @code{@@pxref}
+@cindex Referências cruzadas usando @code{@@pxref}
+@cindex Referências usando @code{@@pxref}
 
 O comando de referência entre parênteses, @code{@@pxref}, é
 aproximadamente o mesmo que @code{@@xref}, porém é melhor usado no final
@@ -5449,7 +5449,7 @@ a primeira letra maiúscula.
 Com um argumento, uma referência cruzada entre parênteses se parece com
 isto:
 
-@cindex Flooding
+@cindex Inundação
 @example
 @dots{} tempestades causam inundações (@@pxref@{Furacões@}) @dots{}
 @end example
@@ -5532,9 +5532,9 @@ localização interrompe o fluxo de leitura.
 
 @anchor{anchor} @c nome antigo
 @findex anchor
-@cindex Anchors
-@cindex Cross-reference targets, arbitrary
-@cindex Targets for cross-references, arbitrary
+@cindex Âncoras
+@cindex Alvos das referências cruzadas, arbitrários
+@cindex Alvos para referências cruzadas, arbitrários
 
 Uma @dfn{âncora} é uma posição no seu documento, rotulada de forma que
 referências cruzadas possam referenciá-la, exatamente como podem a
@@ -5939,11 +5939,11 @@ referência em Info. @xref{@code{@@xref}}.
 
 @node Marcando Texto
 @chapter Marcação de Texto, Palavras e Frases
-@cindex Paragraph, marking text within
-@cindex Marking words and phrases
-@cindex Words and phrases, marking them
-@cindex Marking text within a paragraph
-@cindex Text, marking up
+@cindex Parágrafo, marcando texto dentro
+@cindex Marcando palavras e frases
+@cindex Palavras e frases, marcando-as
+@cindex Marcando texto dentro de um parágrafo
+@cindex Texto, marcando
 @c Capítulo 7 - Marcação de Texto, Palavras e Frases
 
 Em Texinfo, você pode marcar palavras e frases de várias formas. Os
@@ -6407,7 +6407,7 @@ Em Inglês, as vogais são @samp{a}, @samp{e}, @samp{i}, @samp{o},
 @findex verb
 @cindex Texto literal interno a linha
 
-@cindex Carácter delimitador, para literalidade
+@cindex Caractere delimitador, para literalidade
 Use o comando @code{@@verb} para imprimir uma sequência literal de
 caracteres.
 
@@ -7040,12 +7040,12 @@ seleciona @b{negrito};
 
 @item @@i
 @findex i @r{(itálico)}
-@cindex Italic font
+@cindex Fonte itálica
 seleciona uma fonte @i{itálico};
 
 @item @@r
 @findex r @r{(fonte roman)}
-@cindex Fonte roman
+@cindex Fonte romana
 @cindex Fonte padrão
 seleciona uma fonte @r{roman}, que é a fonte usual na qual o texto é
 impresso. Ela pode ou não ser serif.
@@ -8061,7 +8061,7 @@ Tabelas de duas colunas, opcionalmente com indexação.
 
 @anchor{itemize} @c nome antigo
 @findex itemize
-@cindex Itemization
+@cindex Itemização
 
 O comando @code{@@itemize} produz uma sequência de ``itens'', cada um
 iniciando com uma bola ou outra marca dentro da margem esquerda, e
@@ -8517,9 +8517,9 @@ seções abaixo.
 
 @node Larguras de Colunas Multi Tabelas
 @subsection Larguras de Colunas Multi Tabelas
-@cindex Multitable column widths
-@cindex Column widths, defining for multitables
-@cindex Widths, defining multitable column
+@cindex Larguras de colunas multitabelas
+@cindex Larguras de coluna, definindo para multitabelas
+@cindex Larguras, definindo coluna multitabela
 @c Capítulo 9 - Listas e Tabelas
 @c Seção 9.5 - @multitable: Tabelas Multi Colunas
 @c Subseção 9.5.1 - Larguras de Colunas Multi Tabelas
@@ -8649,7 +8649,7 @@ divide aquela janela.
 
 @node Exibições Especiais
 @chapter Exibições Especiais
-@cindex Special displays
+@cindex Exibições especiais
 @c Capítulo 10 - Exibições Especiais
 
 Os comandos neste capítulo permitem escrever texto que é especialmente
@@ -8778,8 +8778,8 @@ Essas convenções de numeração não são, atualmente, modificáveis.
 @anchor{caption shortcaption} @c nome antigo
 @findex caption
 @findex shortcaption
-@cindex Captions, para flutuadores
-@cindex Short captions, para listas de flutuadores
+@cindex Legendas, para flutuadores
+@cindex Legendas curtas, para listas de flutuadores
 
 Você pode escrever um @code{@@caption} em qualquer lugar dentro de um
 ambiente @code{@@float}, para definir uma legenda para o flutuador.  Não
@@ -8893,8 +8893,8 @@ são omitidos da lista de flutuadores.
 @c Capítulo 10 - Exibições Especiais
 @c Seção 10.2 - Inserindo Imagens
 
-@cindex Images, inserting
-@cindex Pictures, inserting
+@cindex Imagens, inserindo
+@cindex Fotos, inserindo
 @findex image
 
 Você pode inserir uma imagem dada em um arquivo externo com o comando
@@ -8921,8 +8921,8 @@ Aqui está a sinopse do comando @code{@@image}:
 @@image@{@var{filename}@r{[,} @var{width}@r{[,} @var{height}@r{[,} @var{alttext}@r{[, }@var{extension}@r{]]]]}@}
 @end example
 
-@cindex Formats for images
-@cindex Image formats
+@cindex Formatos para imagens
+@cindex Formatos de imagem
 O argumento @var{filename} é obrigatório, e não deve ter uma extensão,
 pois os diferentes processadores suportam formatos diferentes:
 
@@ -8957,7 +8957,7 @@ Se nenhum desses exitir, então dá um erro, e emite uma referência para
 @file{@var{filename}.jpg} de qualquer maneira.
 
 @item
-@cindex SVG images, used in Docbook
+@cindex Imagens SVG, usadas em Docbook
 Para Docbook, @code{makeinfo} emite referências para
 @file{@var{filename}.eps}, @file{@var{filename}.gif}
 @file{@var{filename}.jpeg}, @file{@var{filename}.jpg},
@@ -8994,8 +8994,8 @@ atual do ambiente, porém sem o recuo normal do parágrafo. Se você quiser
 a imagem centralizada, então use @code{@@center}
 (@pxref{@code{@@titlefont @@center @@sp}}).
 
-@cindex Alt attribute for images
-@cindex Images, alternate text for
+@cindex Atributo Alt para imagens
+@cindex Imagens, texto alternativo para
 @findex @sortas{-} -@r{ (in image alt string)} @c CONSERTE-ME
 Para saída HTML, @code{makeinfo} configura o @dfn{atributo alt} para
 imagens inline para o (quarto) argumento opcional @var{alttext} para
@@ -9020,7 +9020,7 @@ sob X) podem fazer isso, ao passo que leitores Info que somente podem
 usar texto (tais como o leitor autônomo Info) podem exibir a versão
 textual.
 
-@cindex @samp{^@@^H} for images in Info
+@cindex @samp{^@@^H} para imagens no Info
 A implementação para isso é colocar o seguinte construtor na saída de
 Info:
 
@@ -9045,12 +9045,12 @@ deveria ser danoso.
 @c Seção 10.2 - Inserindo Imagens
 @c Subseção 10.2.2 - Escalonamento da Imagem
 
-@cindex Images, scaling
-@cindex Scaling images
-@cindex Width of images
-@cindex Height of images
-@cindex Aspect ratio of images
-@cindex Distorting images
+@cindex Imagens, dimensionamento
+@cindex Dimensionando imagens
+@cindex Largura das imagens
+@cindex Altura das imagens
+@cindex Proporção de aspecto das imagens
+@cindex Distorcendo imagens
 Os argumentos opcionais @var{width} e @var{height} para o comando
 @code{@@image} (veja-se a seção anterior) especificam o tamanho para o
 qual escalonar a imagem. Eles somente são levados em consideração no
@@ -9060,38 +9060,38 @@ outro será escalonado proporcionalmente; e se ambos forem especificados,
 ambos serão respeitados, portanto provavelmente distorcendo a imagem
 original mudando a taxa de aspecto dela.
 
-@cindex Dimensions and image sizes
+@cindex Dimensões em tamanhos de imagem
 @var{width} e @var{height} podem ser especificados usando qualquer
 dimensão @TeX{} válida, a saber:
 
 @table @asis
 @item pt
-@cindex Points (dimension)
+@cindex Pontos (dimensão)
 ponto (72.27pt = 1in)
 @item pc
 @cindex Picas
 pica (1pc = 12pt)
 @item bp
-@cindex Big points
+@cindex Pontos grandes
 ponto grande (72bp = 1in)
 @item in
-@cindex Inches
+@cindex Polegadas
 polegada
 @item cm @c CONSERTE-ME
-@cindex Centimeters
+@cindex Centímetros
 centímetro (2.54cm = 1in)
 @item mm
-@cindex Millimeters
+@cindex Milímetros
 milímetro (10mm = 1cm)
 @item dd
-@cindex Did@^ot points
+@cindex Pontos de Did@^ot
 ponto de did@^ot (1157dd = 1238pt)
 @item cc
-@cindex Ciceros
+@cindex Cíceros
 cicero (1cc = 12dd)
 @item sp
-@cindex Scaled points
-ponto escalado (65536sp = 1pt)
+@cindex Pontos escalonados
+ponto escalonado (65536sp = 1pt)
 @end table
 
 @pindex ridt.eps
@@ -9194,8 +9194,8 @@ Na saída gerada HTML, as referências às notas de rodapé geralmente são
 marcadas com um número pequeno e sobrescrito que é renderizado como um
 link de hipertexto para o texto da nota de rodapé.
 
-@cindex Critical editions
-@cindex Nested footnotes
+@cindex Edições críticas
+@cindex Notas de rodapé aninhadas
 As notas de rodapé não podem ser aninhadas e não podem aparecer em
 títulos de seção de qualquer tipo ou em outros locais ``incomuns''.
 
@@ -9211,7 +9211,7 @@ O Info tem dois estilos de nota de rodapé, que determinam onde o texto
 da nota de rodapé está localizado:
 
 @itemize @bullet
-@cindex @samp{@r{End}} node footnote style
+@cindex Estilo de nota de rodapé de nó @samp{@r{End}}
 @item
 No estilo de nó `Fim', todas as notas de rodapé de um nó são colocadas
 no final desse nó. As notas de rodapé são separadas do resto do nó por
@@ -9231,7 +9231,7 @@ estilo de fim de nó:
 @end group
 @end example
 
-@cindex @samp{@r{Separate}} footnote style
+@cindex Estilo de nota de rodapé @samp{@r{Separate}}
 @item
 No estilo de nó `Separado', todas as notas de rodapé para um nó são
 colocadas em um nó próprio construído automaticamente.  Nesse estilo,
@@ -9332,30 +9332,30 @@ nominais deles, abreviações e os correspondentes comandos de entrada de
 
 @table @samp
 @item cp
-@cindex @code{cp} (concept) index
+@cindex Índice @code{cp} (conceito)
 @findex cindex
 (@code{@@cindex}) índice de conceito, para conceitos gerais.
 @item fn
-@cindex @code{fn} (function) index
+@cindex Índice @code{fn} (função)
 @findex findex
 (@code{@@findex}) índice de função, para nomes de funções e semelhantes
 a funções (como pontos de entrada de bibliotecas).
 @item ky
-@cindex @code{ky} (keystroke) index
+@cindex Índice @code{ky} (pressionamento de tecla)
 @findex kindex
 (@code{@@kindex}) índice de pressionamento de tecla, para comandos de
 teclado.
 @item pg
-@cindex @code{pg} (program) index
+@cindex Índice @code{pg} (programa)
 @findex pindex
 (@code{@@pindex}) índice de programas, para nomes de programas.
 @item tp
-@cindex @code{tp} (data type) index
+@cindex Índice @code{tp} (tipo de dado)
 @findex tindex
 (@code{@@tindex}) índice de tipo de dados, para nomes de tipos (como
 estruturas definidas em arquivos de cabeçalho).
 @item vr
-@cindex @code{vr} (variable) index
+@cindex Índice @code{vr} (variável)
 @findex vindex
 (@code{@@vindex}) índice de variáveis, para nomes de variáveis (como
 variáveis globais de bibliotecas).
@@ -9395,7 +9395,7 @@ usando-se os comandos @code{@@synindex} ou @code{@@syncodeindex}
 @section Definindo as Entradas de um Índice
 
 @cindex Definindo entradas de indexação
-@cindex Index entries, definindo
+@cindex Entradas de índice, definindo
 @cindex Entradas para um índice
 @cindex Especificando entradas de índice
 @cindex Criando entradas de índice
@@ -10495,7 +10495,7 @@ comumente usados em idiomas diferentes do inglês.
 @cindex @ae{}
 @findex AE
 @cindex @AE{}
-@cindex Icelandic
+@cindex Islandês
 @cindex Eth
 @findex dh
 @cindex @dh{}
@@ -10517,19 +10517,19 @@ comumente usados em idiomas diferentes do inglês.
 @cindex @oe{}
 @findex OE
 @cindex @OE{}
-@cindex Romance ordinals
-@cindex Ordinals, Romance
-@cindex Feminine ordinal
+@cindex Ordinais de romance
+@cindex Ordinalis, Romance
+@cindex Ordinal feminino
 @findex ordf
 @cindex @ordf{}
-@cindex Masculine ordinal
+@cindex Ordinal masculino
 @findex ordm
 @cindex @ordm{}
 @findex ss
 @cindex @ss{}
 @cindex Es-zet
 @cindex Sharp S
-@cindex German S
+@cindex S alemão
 @cindex Thorn
 @findex th
 @cindex @th{}
@@ -11030,7 +11030,7 @@ contrário, é @samp{#}.
 
 @anchor{textdegree}@c nome antigo
 @findex textdegree
-@cindex símbolo de Graus
+@cindex Símbolo de Graus
 
 Use o comando @code{@@textdegree@{@}} para gerar `@textdegree{}'. Onde
 possível, esse é o símbolo normal para Graus. Caso contrário, é um
@@ -11044,8 +11044,8 @@ possível, esse é o símbolo normal para Graus. Caso contrário, é um
 @findex minus
 @cindex Sinal de menos
 
-@cindex Em dash, compared to minus sign
-@cindex Hyphen, compared to minus
+@cindex Travessão(em dash), comparado ao sinal de menos
+@cindex Hífen, comparado ao sinal menos
 Use o comando @code{@@minus@{@}} para gerar um sinal de menos. Em uma
 fonte de largura fixa, isso é um hífen, mas em uma fonte proporcional, o
 símbolo tem o comprimento habitual para um sinal de menos---um pouco
@@ -13188,11 +13188,11 @@ usar o comando @code{@@U} para inserir um caractere ocasionalmente necessário
 (@pxref{Inserindo Unicode}).
 
 @node Condicionais
-@chapter Texto Condicionalmente Visível
-@cindex Texto condicionalmente visível
-@cindex Texto, condicionalmente visível
+@chapter Texto Visível Condicionalmente
+@cindex Texto visível condicionalmente
+@cindex Texto, visível condicionalmente
 @cindex Visibilidade de texto condicional
-@cindex Se texto condicionalmente visível
+@cindex Se texto visível condicionalmente
 
 Os @dfn{comandos condicionais} permitem que você use texto diferente para
 formatos de saída diferentes, ou para condições gerais que você define. Por
@@ -20486,48 +20486,48 @@ Inicia o texto que aparecerá somente no formato de saída fornecido. A saída d
 histórica) em texto simples. Emparelha com @code{@@end ifdocbook},
 respectivamente @code{@@end ifhtml}, respectivamente @code{@@end ifinfo}.
 @xref{Condicionais}.
-PAREI
+
 @item @@ifnotdocbook
 @itemx @@ifnothtml
 @itemx @@ifnotplaintext
 @itemx @@ifnottex
 @itemx @@ifnotxml
-Begin text to be ignored in one output format but not the others.
-@code{@@ifnothtml} text is omitted from HTML output, etc.  Pair with
-the corresponding @code{@@end ifnot@var{format}}.
-@xref{Condicionais}.
+Inicia o texto a ser ignorado em um formato de saída, mas não nos outros. Texto
+do @code{@@ifnothtml} é omitido da saída HTML, etc. Emparelha com o @code{@@end
+ifnot@var{format}} correspondente. @xref{Condicionais}.
 
 @item @@ifnotinfo
-Begin text to appear in output other than Info and (for historical
-compatibility) plain text.  Pair with @code{@@end ifnotinfo}.
+Inicia o texto a aparecer em uma saída diferente de Info e (para
+compatibilidade histórica) texto simples. Emparelha com @code{@@end ifnotinfo}.
 @xref{Condicionais}.
 
 @item @@ifplaintext
-Begin text that will appear only in the plain text output.
-Pair with @code{@@end ifplaintext}.  @xref{Condicionais}.
+Inicia o texto que aparecerá somente na saída de texto simples. Emparelha com
+@code{@@end ifplaintext}. @xref{Condicionais}.
 
-@item @@ifset @var{txivar}
-If the Texinfo variable @var{txivar} is set, format the following
-text.  Pair with @code{@@end ifset}.  @xref{@code{@@set @@clear
-@@value}}.
+@item @@ifset @var{variáveltexinfo}
+Se a variável do Texinfo @var{variáveltexinfo} estiver configurada, formata o
+texto seguinte. Emparelha com @code{@@end ifset}.
+@xref{@code{@@set @@clear @@value}}.
 
 @item @@iftex
-Begin text to appear only in the @TeX{} output.  Pair with @code{@@end
-iftex}.  @xref{Condicionais, , Conditionally Visible Text}.
+Inicia o texto para aparecer somente na saída do @TeX{}. Emparelha com
+@code{@@end iftex}. @xref{Condicionais, , Texto Visível Condicionalmente}.
 
 @item @@ifxml
-Begin text that will appear only in the XML output.  Pair with
-@code{@@end ifxml}.  @xref{Condicionais}.
+Inicia o texto que aparecerá somente na saída XML. Emparelha com @code{@@end
+ifxml}. @xref{Condicionais}.
 
 @item @@ignore
-Begin text that will not appear in any output.  Pair with @code{@@end
-ignore}.  @xref{Comentários, , Comments and Ignored Text}.
+Inicia um texto que não aparecerá em nenhuma saída. Emparelha com @code{@@end
+ignore}. @xref{Comentários, , Comentários e Texto Ignorado}.
 
-@item @@image@{@var{filename}, [@var{width}], [@var{height}], [@var{alt}], [@var{ext}]@}
-Include graphics image in external @var{filename} scaled to the given
-@var{width} and/or @var{height}, using @var{alt} text and looking for
-@samp{@var{filename}.@var{ext}} in HTML@.  @xref{Imagens}.
-
+@item @@image@{@var{nomearquivo}, [@var{largura}], [@var{altura}], [@var{alternativo}], [@var{extensão}]@}
+Inclui imagem gráfica em @var{nomearquivo} externo dimensionado para
+@var{largura} e (ou) @var{altura} fornecidos, usando texto @var{alternativo} e
+procurando por @samp{@var{nomearquivo}.@var{extensão}} em HTML@.
+@xref{Imagens}.
+PAREI
 @item @@include @var{filename}
 Read the contents of Texinfo source file @var{filename}.  @xref{Arquivos de Inclusão}.
 
