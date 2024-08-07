@@ -302,7 +302,7 @@ Menus
 Estruturamento de Capítulo
 
 * Estruturamento de Árvore::            Um manual é como uma árvore de cabeça para baixo @dots{}
-* Tipos de Comandos Estruturantes::   Como dividir um manual em partes.
+* Tipos de Comandos Estruturantes::     Como dividir um manual em partes.
 * @code{@@chapter}::                    Estruturamento de capítulo.
 * @code{@@unnumbered @@appendix}::
 * @code{@@majorheading @@chapheading}::
@@ -312,7 +312,7 @@ Estruturamento de Capítulo
 * @code{@@unnumberedsubsec @@appendixsubsec @@subheading}::
 * @code{@@subsubsection}::              Comandos para as seções de mais baixo nível.
 * @code{@@part}::                       Coleções de capítulos.
-* Levantar/abaixar seções::        Como modificar o nível hierárquico dos comandos.
+* Elevar/rebaixar seções::              Como mudar o nível hierárquico dos comandos.
 
 Referências cruzadas
 
@@ -369,7 +369,7 @@ Indicando Definições, Comandos, etc.
 Enfatizando Texto
 
 * @code{@@emph @@strong}::       Como enfatizar texto em Texinfo.
-* Capitalização Pequena::        Como usar a fonte capitalização pequena.
+* Versaletes::                   Como usar a fonte de versaletes.
 * Fontes::                       Comandos variados de fonte para saída impressa.
 
 Citações e Exemplos
@@ -399,7 +399,7 @@ Listas e Tabelas
 * Tabelas de Duas Colunas::       Como construir uma tabela de duas colunas.
 * Tabelas Multi Colunas::         Como construir tabelas generalizadas.
 
-Fazendo uma Tabela de Duas Colunas
+Fazendo Uma Tabela de Duas Colunas
 
 * @code{@@table}::                      Como construir uma tabela de duas colunas.
 * @code{@@ftable @@vtable}::            Indexamento automático para tabelas de duas colunas.
@@ -2216,7 +2216,7 @@ importa para propósitos legais, pois o texto está presente.
 
 Similarmente, o texto @code{@@copying} é automaticamente incluído no
 início de cada arquivo de saída HTML, como um comentário HTML.  De novo,
-esse texto não é visível (a menos que o leitor visualize o fonte HTML).
+esse texto não é visível (a menos que o(a) leitor(a) visualize o fonte HTML).
 
 O texto de permissões definido por @code{@@copying} também aparece
 automaticamente no início dos arquivos de saída XML e Docbook.
@@ -2596,7 +2596,7 @@ página.
 
 
 @node Conteúdo
-@section Gerando Uma Tabela do Conteúdo
+@section Gerando Um Sumário
 @cindex Tabela do conteúdo
 @cindex Conteúdo, tabela do
 @cindex Tabela curta do conteúdo
@@ -3637,7 +3637,7 @@ Assim, na prática, um nodo Top geralmente se parece com isto:
 
 @code{@@top} é ignorado ao se levantar ou abaixar seções. Ou seja, nunca
 é baixado e nada pode ser levantado a ele (veja-se
-@ref{Levantar/abaixar seções}).
+@ref{Elevar/rebaixar seções}).
 
 @node Ilustração do Menu do Nodo
 @section Ilustração de Menu e Nodo @c Capítulo 4 - Nodos - Seção 4.7
@@ -4040,7 +4040,7 @@ nome de nodo e um tab, vírgula, enter ou os dois caracteres ``ponto'' e
 
 A terceira parte de uma entrada de menu é uma frase descritiva ou
 sentença. Os nomes de entrada de menu e os nomes de nodo frequentemente
-são curtos; a descrição explana para o leitor a respeito de que se trata
+são curtos; a descrição explana para o(a) leitor(a) a respeito de que se trata
 o nodo. Uma descrição útil complementa o nome de nodo em vez de
 repeti-lo. A descrição, a qual é opcional, pode ser espraiada por várias
 linhas; se isso acontecei, alguns autores preferem recuar a segunda
@@ -4155,24 +4155,24 @@ Os comandos de @dfn{Estruturamento de Capítulo} do Texinfo dividem um
 documento em uma hierarquia de capítulos, seções, subseções e
 subsubseções. Esses comandos geram cabeçalhos largos no texto, como o
 acima. Eles também proveem informação para a geração de índices
-(@pxref{Conteúdo,, Gerando Uma Tabela do Conteúdo}).
+(@pxref{Conteúdo,, Gerando Um Sumário}).
 
 Normalmente você coloca um comando @code{@@node} imediatamente antes de
 cada comando de Estruturamento de Capítulo. @xref{Nodos}.
 
 @menu
-* Estruturamento de Árvore::  Um manual é como uma árvore de cabeça para baixo @dots{}
-* Tipos de Comandos Estruturantes::  Como dividir um manual em partes.
-* @code{@@chapter}::                    Estruturamento de Capítulo.
+* Estruturamento de Árvore::            Um manual é como uma árvore de cabeça para baixo @dots{}
+* Tipos de Comandos Estruturantes::     Como dividir um manual em partes.
+* @code{@@chapter}::                    Estruturamento de capítulo.
 * @code{@@unnumbered @@appendix}::
 * @code{@@majorheading @@chapheading}::
 * @code{@@section}::
 * @code{@@unnumberedsec @@appendixsec @@heading}::
 * @code{@@subsection}::
 * @code{@@unnumberedsubsec @@appendixsubsec @@subheading}::
-* @code{@@subsubsection}::  Comandos para as seções de nível mais baixo.
-* @code{@@part}::           Coleções de capítulos.
-* Levantar/abaixar seções::  Como modificar o nível hierárquico de comandos.
+* @code{@@subsubsection}::              Comandos para as seções de mais baixo nível.
+* @code{@@part}::                       Coleções de capítulos.
+* Elevar/rebaixar seções::              Como mudar o nível hierárquico dos comandos.
 @end menu
 
 
@@ -4671,9 +4671,9 @@ seções (veja a próxima seção). Isto é, nunca é abaixado e nada pode ser
 levantado para ele.
 
 
-@node Levantar/abaixar seções
-@section Levantar/abaixar seções: @code{@@raisesections} e @code{@@lowersections}
-@c Capítulo 5 - Nodos; Seção 5.12 - Levantar/abaixar seções: @code{@@raisesections} e @code{@@lowersections}
+@node Elevar/rebaixar seções
+@section Elevar/rebaixar seções: @code{@@raisesections} e @code{@@lowersections}
+@c Capítulo 5 - Nodos; Seção 5.12 - Elevar/rebaixar seções: @code{@@raisesections} e @code{@@lowersections}
 @findex raisesections
 @findex lowersections
 @cindex Elevando e rebaixando seções
@@ -4735,7 +4735,7 @@ uma linha própria.
 @cindex Referências cruzadas
 @cindex Referências
 
-@dfn{Referências cruzadas} são usadas para guiar o leitor para outras
+@dfn{Referências cruzadas} são usadas para guiar o(a) leitor(a) para outras
 partes do mesmo ou de diferentes arquivos Texinfo.
 
 @menu
@@ -5562,7 +5562,7 @@ Esse exemplo define uma âncora `x-spot' exatamente antes da palavra
 de referência cruzada, conforme mostrado (@pxref{Referências Cruzadas}).
 
 É melhor colocar os comandos @code{@@anchor} exatamente antes da posição
-de que deseja referenciar; dessa maneira o olho do leitor é guiado ao
+de que deseja referenciar; dessa maneira o olho do(a) leitor(a) é guiado ao
 texto correto quando pular para a âncora. Você pode colocar o comando
 @code{@@anchor} em uma linha própria se isso ajudar a legibilidade do
 fonte. Espaços em branco (incluindo novas linhas) são ignorados após
@@ -6777,10 +6777,10 @@ produz:
 @cindex Nomes de família, todas letras maiúsculas
 Em algumas circunstâncias, é convencional imprimir nomes de família em
 letras maiúsculas. Não use @code{@@acronym} para isso, pois um nome não
-é uma sigla. Use @code{@@sc} (@pxref{Capitalização Pequena}).
+é uma sigla. Use @code{@@sc} (@pxref{Versaletes}).
 
 @code{@@abbr} e @code{@@acronym} são comandos intimamente relacionados:
-ambos sinalizam para o leitor que uma forma abreviada está sendo usada,
+ambos sinalizam para o(a) leitor(a) que uma forma abreviada está sendo usada,
 e possivelmente dá um significado. Ao escolher usar esses dois comandos,
 por favor tenha o seguinte em mente.
 
@@ -6903,7 +6903,7 @@ deles, o comando @code{@@r}, tem algum uso regular.
 
 @menu
 * @code{@@emph @@strong}::       Como enfatizar texto em Texinfo.
-* Capitalização Pequena::        Como usar a fonte capitalização pequena.
+* Versaletes::                   Como usar a fonte de versaletes.
 * Fontes::                       Comandos variados de fonte para saída impressa.
 @end menu
 
@@ -6914,7 +6914,7 @@ deles, o comando @code{@@r}, tem algum uso regular.
 @c Seção 7.2 - Enfatizando Texto
 @c Subseção 7.2.1 - @emph{texto} e @strong{texto}
 
-@anchor{emph & strong} @c nome antigo
+@anchor{enfatizar e fortaleçer} @c nome antigo
 @findex comando ``emph''
 @findex comando ``strong''
 @cindex Enfatizando Texto, fonte para
@@ -6952,17 +6952,17 @@ argumento opcional para @code{@@quotation}---@samp{Nota} é permitido lá.
 @end quotation
 
 
-@node Capitalização Pequena
-@subsection @code{@@sc}@{@var{texto}@}: A Fonte de Capitalização Pequena
-@cindex Fonte de capitalização pequena
-@findex sc @r{(fonte de capitalização pequena)}
+@node Versaletes
+@subsection @code{@@sc}@{@var{texto}@}: A Fonte de Versaletes
+@cindex Fonte de versaletes
+@findex sc @r{(fonte de versaletes)}
 @c Capítulo 7 - Marcação de Texto, Palavras e Frases
 @c Seção 7.2 - Enfatizando Texto
-@c Subseção 7.2.2 - @sc{texto}: A Fonte de Capitalização Pequena
+@c Subseção 7.2.2 - @sc{texto}: A Fonte de Versaletes
 
 Use o comando @samp{@@sc} para configurar texto em
-@sc{uma fonte de capitalização pequena} (onde for possível). Escreva o
-texto que você quer que esteja em capitalização pequena entre chaves e
+@sc{uma fonte de versaletes} (onde for possível). Escreva o
+texto que você quer que esteja em versaletes entre chaves e
 em letras minúsculas, como isto:
 
 @example
@@ -6977,14 +6977,14 @@ Richard @sc{Stallman} commenc@'{e} GNU.
 @end display
 
 Como mostrado aqui, nós recomendamos reservar @code{@@sc} para casos
-especiais onde você desejar capitalização pequena tipográfica; nomes de
+especiais onde você desejar versalete tipográfica; nomes de
 família são um desses, especialmente em outros idiomas que não o Inglês,
 embora não existam regras rígidas e rápidas acerca de tais coisas.
 
 @cindex marcação @code{<small>}
 @TeX{} escreve qualquer letra maiúscula entre as chaves de um comando
 @code{@@sc} em letras maiúsculas de tamanho real; apenas letras
-minúsculas são impressas na fonte de capitalização pequena. Na saída
+minúsculas são impressas na fonte de versaletes. Na saída
 Info, o argumento para @code{@@sc} é impresso todo em maiúsculas. Em
 HTML, o argumento é colocado em letras maiúsculas e a saída marcada com
 a marcação @code{<small>} para reduzir o tamanho da fonte, dado que HTML
@@ -8298,9 +8298,9 @@ tópicos.
 
 
 @node Tabelas de Duas Colunas
-@section Construindo Uma Tabela de Duas Colunas
+@section Fazendo Uma Tabela de Duas Colunas
 @c Capítulo 9 - Listas e Tabelas
-@c Seção 9.4 - Construindo Uma Tabela de Duas Colunas
+@c Seção 9.4 - Fazendo Uma Tabela de Duas Colunas
 
 @cindex Tabelas, construindo duas colunas
 @findex tabela
@@ -8320,7 +8320,7 @@ de opções de linha de comando.
 @node @code{@@table}
 @subsection Usando o Comando @code{@@table}
 @c Capítulo 9 - Listas e Tabelas
-@c Seção 9.4 - Construindo Uma Tabela de Duas Colunas
+@c Seção 9.4 - Fazendo Uma Tabela de Duas Colunas
 @c Subseção 9.4.1 - Usando o Comando @table
 
 @anchor{table} @c nome antigo
@@ -8411,7 +8411,7 @@ faz sentido usá-los juntos. Se você deseja recuar uma tabela, tente
 @node @code{@@ftable @@vtable}
 @subsection @code{@@ftable} e @code{@@vtable}
 @c Capítulo 9 - Listas e Tabelas
-@c Seção 9.4 - Construindo Uma Tabela de Duas Colunas
+@c Seção 9.4 - Fazendo Uma Tabela de Duas Colunas
 @c Subseção 9.4.2 - @ftable e @vtable
 
 @anchor{ftable vtable} @c nome antigo
@@ -8442,7 +8442,7 @@ Veja o exemplo para @code{@@table} na seção anterior.
 @node @code{@@itemx}
 @subsection @code{@@itemx}: Segundo e Itens Subsequentes
 @c Capítulo 9 - Listas e Tabelas
-@c Seção 9.4 - Construindo Uma Tabela de Duas Colunas
+@c Seção 9.4 - Fazendo Uma Tabela de Duas Colunas
 @c Subseção 9.4.3 - @itemx: Segundo e Itens Subsequentes
 
 @anchor{itemx} @c nome antigo
@@ -8845,7 +8845,7 @@ construções complexas.  As mesmas restrições se aplicam ao
 
 Você pode escrever um comando @code{@@listoffloats} para gerar uma lista
 de flutuadores para um dado tipo de flutuador (@pxref{@code{@@float}}),
-semelhante à Tabela de Conteúdo geral do documento. Tipicamente, o
+semelhante ao Sumário geral do documento. Tipicamente, o
 comando é escrito no nodo @code{@@unnumbered} dele próprio para prover
 um cabeçalho e estrutura, mais como @code{@@printindex}
 (@pxref{Imprimindo Índices e Menus}).
@@ -9573,7 +9573,7 @@ O comando @code{@@printindex} não gera um título de capítulo para o
 Consequentemente, você deveria preceder o comando @code{@@printindex}
 com um adequado comando de seção ou capítulo (geralmente
 @code{@@appendix} ou @code{@@unnumbered}) para fornecer o título do
-capítulo e colocar o índice no tabela de conteúdo.  Preceda o título do
+capítulo e colocar o índice no sumário.  Preceda o título do
 capítulo com uma linha @code{@@node} como de costume.
 
 Por exemplo:
@@ -16586,8 +16586,8 @@ arquivos de personalização serão pesquisados.
 @opindex --internal-links=@var{arquivo}
 @cindex Links internos, de HTML
 No modo HTML, produz um arquivo separado por tabulações contendo três colunas:
-o link interno para um item indexado ou item no tabela de conteúdo; o nome do
-índice (ou tabela de conteúdo) no qual ele ocorre; e o termo que foi indexado
+o link interno para um item indexado ou item no sumário; o nome do
+índice (ou sumário) no qual ele ocorre; e o termo que foi indexado
 ou inserido. Os itens estão na ordem natural de ordenação para o elemento
 fornecido. Esse despejo pode ser útil para pós-processadores.
 
@@ -17204,7 +17204,7 @@ correspondente aparecerá no final do elemento About; padrão desconfigurada.
 @item AFTER_OVERVIEW
 @itemx AFTER_TOC_LINES
 Para HTML@. Se configurada, o texto correspondente é produzido depois do tabela
-curta de conteúdo para @code{AFTER_OVERVIEW} e depois do tabela de conteúdo
+curta de conteúdo para @code{AFTER_OVERVIEW} e depois do sumário
 para @code{AFTER_TOC_LINES}; caso contrário, uma string padrão é usada. No
 momento da escrita, um elemento @code{</div>} é fechado.
 
@@ -17221,7 +17221,7 @@ inválidas (@pxref{Fundamentos do Link Xref do HTML}).
 @item BEFORE_OVERVIEW
 @itemx BEFORE_TOC_LINES
 Para HTML@. Se configurada, o texto correspondente é produzido antes do tabela
-curta de conteúdo para @code{BEFORE_OVERVIEW} e antes da tabela de conteúdo
+curta de conteúdo para @code{BEFORE_OVERVIEW} e antes do sumário
 para @code{BEFORE_TOC_LINES}, caso contrário, uma string padrão é usada. No
 momento da escrita, um elemento @code{<div ...>} é aberto.
 
@@ -17381,7 +17381,7 @@ Para HTML@. Símbolo usado na frente de entradas de menu quando nomes de nós s�
 usados para formatação de entradas de menu; padrão @samp{&bull;}.
 
 @item MONOLITHIC
-Para HTML@. Produz somente um arquivo incluindo a tabela de conteúdo.
+Para HTML@. Produz somente um arquivo incluindo o sumário.
 Configurada por padrão, mas relevante somente quando a saída não for dividida.
 
 @item NO_CSS
@@ -17670,7 +17670,7 @@ maneira. @xref{@code{@@documentencoding}}.
 
 @item OVERVIEW_LINK_TO_TOC
 Se configurada, as referências cruzadas na Visão Geral se lincam às entradas
-correspondentes da Tabela de Conteúdo; padrão verdadeiro.
+correspondentes do Sumário; padrão verdadeiro.
 
 @item PACKAGE
 @itemx PACKAGE_VERSION
@@ -19969,23 +19969,23 @@ Define @var{nome} como o local atual para uso como um alvo de referência
 cruzada. @xref{@code{@@anchor}}.
 
 @item @@appendix @var{título}
-Inicia um anexo. O título aparece na tabela de conteúdo. No Info, o título é
+Inicia um anexo. O título aparece no sumário. No Info, o título é
 sublinhado com asteriscos. @xref{@code{@@unnumbered @@appendix}}.
 
 @item @@appendixsec @var{título}
 @itemx @@appendixsection @var{título}
-Inicia uma seção de anexos dentro de um anexo. O título da seção aparece na
-tabela de conteúdo. No Info, o título é sublinhado com sinais de igual.
+Inicia uma seção de anexos dentro de um anexo. O título da seção aparece no
+sumário. No Info, o título é sublinhado com sinais de igual.
 @code{@@appendixsection} é uma grafia mais longa do comando
 @code{@@appendixsec}. @xref{@code{@@unnumberedsec @@appendixsec @@heading}}.
 
 @item @@appendixsubsec @var{título}
-Inicia uma subseção de anexos. O título aparece na tabela de conteúdo. No Info,
+Inicia uma subseção de anexos. O título aparece no sumário. No Info,
 o título é sublinhado com hifens.
 @xref{@code{@@unnumberedsubsec @@appendixsubsec @@subheading}}.
 
 @item @@appendixsubsubsec @var{título}
-Inicia uma subsubseção de anexos. O título aparece na tabela de conteúdo. No
+Inicia uma subsubseção de anexos. O título aparece no sumário. No
 Info, o título é sublinhado com pontos. @xref{@code{@@subsubsection}}.
 
 @item @@arrow@{@}
@@ -20092,7 +20092,7 @@ saída. Um sinônimo para @code{@@c}. @xref{Comentários}.
 
 @item @@contents
 Imprime uma tabela completa de conteúdo. Não tem efeito no Info, que usa menus.
-@xref{Conteúdo, , Gerando Uma Tabela do Conteúdo}.
+@xref{Conteúdo, , Gerando Um Sumário}.
 
 @item @@copying
 Especifica os(as) titulares dos direitos autorais e as condições de cópia para
@@ -20313,11 +20313,11 @@ Indica um nome de variável de ambiente, como @env{CAMINHO}.
 @xref{@code{@@env}}.
 
 @item @@equiv@{@}
-Indica para o leitor a equivalência exata de duas formas com um glifo:
+Indica para o(a) leitor(a) a equivalência exata de duas formas com um glifo:
 @samp{@equiv{}}. @xref{@code{@@equiv}}.
 
 @item @@error@{@}
-Indica para o leitor com um glifo que o texto seguinte é uma mensagem de erro:
+Indica para o(a) leitor(a) com um glifo que o texto seguinte é uma mensagem de erro:
 @samp{@error{}}. @xref{@code{@@error}}.
 
 @item @@errormsg@{@var{mensagem}@}
@@ -20355,7 +20355,7 @@ Gere um ponto de exclamação invertido. @xref{Inserindo Acentos}.
 Remove qualquer recuo que uma linha possa ter. @xref{@code{@@exdent}}.
 
 @item @@expansion@{@}
-Indica o resultado de uma expansão de macro para o leitor com um glifo
+Indica o resultado de uma expansão de macro para o(a) leitor(a) com um glifo
 especial: @samp{@expansion{}}. @xref{@code{@@expansion}}.
 
 @item @@file@{@var{nomearquivo}@}
@@ -20527,227 +20527,228 @@ Inclui imagem gráfica em @var{nomearquivo} externo dimensionado para
 @var{largura} e (ou) @var{altura} fornecidos, usando texto @var{alternativo} e
 procurando por @samp{@var{nomearquivo}.@var{extensão}} em HTML@.
 @xref{Imagens}.
-PAREI
-@item @@include @var{filename}
-Read the contents of Texinfo source file @var{filename}.  @xref{Arquivos de Inclusão}.
+
+@item @@include @var{nomearquivo}
+Lê o conteúdo do arquivo fonte do Texinfo @var{nomearquivo}.
+@xref{Arquivos de Inclusão}.
 
 @item @@indent
-Insert paragraph indentation.  @xref{@code{@@indent}}.
+Insere recuo de parágrafo. @xref{@code{@@indent}}.
 
 @item @@indentedblock
-Indent a block of arbitary text on the left.  Pair with @code{@@end
-indentedblock}.  @xref{@code{@@indentedblock}}.
+Recua um bloco de texto arbitrário à esquerda. Emparelha com @code{@@end
+indentedblock}. @xref{@code{@@indentedblock}}.
 
-@item @@indicateurl@{@var{indicateurl}@}
-Indicate text that is a uniform resource locator for the World Wide
-Web.  @xref{@code{@@indicateurl}}.
+@item @@indicateurl@{@var{urlindicação}@}
+Indica o texto que é um localizador uniforme de recursos para a World Wide Web.
+@xref{@code{@@indicateurl}}.
 
-@item @@inforef@{@var{node-name}, [@var{entry-name}], @var{info-file-name}@}
-Make a cross-reference to an Info file for which there is no printed
-manual.  @xref{@code{@@inforef}}.
+@item @@inforef@{@var{nome-nó}, [@var{nome-entrada}], @var{nome-arquivo-info}@}
+Faz uma referência cruzada para um arquivo do Info para o qual não existe
+manual impresso. @xref{@code{@@inforef}}.
 
-@item @@inlinefmt@{@var{fmt}, @var{text}@}
-Insert @var{text} only if the output format is @var{fmt}.
+@item @@inlinefmt@{@var{formato}, @var{texto}@}
+Insere @var{texto} somente se o formato de saída for @var{formato}.
 @xref{Condicionais Inline}.
 
-@item @@inlinefmtifelse@{@var{fmt}, @var{text}, @var{else-text}@}
-Insert @var{text} if the output format is @var{fmt}, else @var{else-text}.
+@item @@inlinefmtifelse@{@var{formato}, @var{texto}, @var{texto-senão}@}
+Insere @var{texto} se o formato de saída for @var{formato}, caso contrário
+@var{texto-senão}.
 
-@item @@inlineifclear@{@var{var}, @var{text}@}
-@itemx @@inlineifset@{@var{var}, @var{text}@}
-Insert @var{text} only if the Texinfo variable @var{var} is (not) set.
+@item @@inlineifclear@{@var{variável}, @var{texto}@}
+@itemx @@inlineifset@{@var{variável}, @var{texto}@}
+Insere @var{texto} somente se a variável do Texinfo @var{variável} (não)
+estiver configurada.
 
-@item @@inlineraw@{@var{fmt}, @var{raw-text}@}
-Insert @var{text} as in a raw conditional, only if the output format
-is @var{fmt}.
+@item @@inlineraw@{@var{formato}, @var{texto-bruto}@}
+Insere @var{texto} como em uma condicional bruta, somente se o formato de saída
+for @var{formato}.
 
-@item \input @var{macro-definitions-file}
-Use the specified macro definitions file.  This command is used only
-in the first line of a Texinfo file to cause @TeX{} to make use of the
-@file{texinfo} macro definitions file.  The @code{\} in @code{\input}
-is used instead of an @code{@@} because @TeX{} does not recognize
-@code{@@} until after it has read the definitions file.
+@item \input @var{arquivo-definições-macro}
+Usa o arquivo de definições de macro especificado. Esse comando é usado somente
+na primeira linha de um arquivo do Texinfo para fazer com que o @TeX{} faça uso
+do arquivo de definições de macro @file{texinfo}. A @code{\} em @code{\input} é
+usada, em vez de um @code{@@}, porque o @TeX{} não reconhece @code{@@} até
+depois de ter lido o arquivo de definições.
 @xref{Cabeçalho do Arquivo do Texinfo}.
 
 @item @@insertcopying
-Insert the text previously defined with the @code{@@copying}
-environment.  @xref{@code{@@insertcopying}}.
+Insere o texto definido anteriormente com o ambiente @code{@@copying}.
+@xref{@code{@@insertcopying}}.
 
 @item @@item
-Indicate the beginning of a marked paragraph for @code{@@itemize} and
-@code{@@enumerate}; indicate the beginning of the text of a first column
-entry for @code{@@table}, @code{@@ftable}, and @code{@@vtable}.
+Indica o início de um parágrafo marcado para @code{@@itemize} e
+@code{@@enumerate}; indica o início do texto de uma entrada de primeira coluna
+para @code{@@table}, @code{@@ftable} e @code{@@vtable}.
 @xref{Listas e Tabelas}.
 
-@item @@itemize @var{mark-generating-character-or-command}
-Begin an unordered list: indented paragraphs with a mark, such as
-@code{@@bullet}, inside the left margin at the beginning of each item.
-Pair with @code{@@end itemize}.  @xref{@code{@@itemize}}.
+@item @@itemize @var{marca-caractere-gerador-ou-comando}
+Inicia uma lista não ordenada: parágrafos recuados com uma marca, como
+@code{@@bullet}, dentro da margem esquerda no início de cada item. Emparelha
+com @code{@@end itemize}. @xref{@code{@@itemize}}.
 
 @item @@itemx
-Like @code{@@item} but do not generate extra vertical space above the
-item text.  Thus, when several items have the same description, use
-@code{@@item} for the first and @code{@@itemx} for the others.
-@xref{@code{@@itemx}}.
+Como @code{@@item}, mas não gera espaço vertical extra acima do texto do item.
+Assim, quando vários itens tiverem a mesma descrição, usa @code{@@item} para o
+primeiro e @code{@@itemx} para os outros. @xref{@code{@@itemx}}.
 
-@item @@kbd@{@var{keyboard-characters}@}
-Indicate characters of input to be typed by users.  @xref{@code{@@kbd}}.
+@item @@kbd@{@var{caracteres-teclado}@}
+Indica caracteres de entrada a serem digitados por usuários(as).
+@xref{@code{@@kbd}}.
 
-@item @@kbdinputstyle @var{style}
-Specify when @code{@@kbd} should use a font distinct from
-@code{@@code} according to @var{style}: @code{code}, @code{distinct},
-@code{example}.  @xref{@code{@@kbd}}.
+@item @@kbdinputstyle @var{estilo}
+Especifica quando @code{@@kbd} deveria usar uma fonte diferente de
+@code{@@code} de acordo com @var{estilo}: @code{code}, @code{distinct},
+@code{example}. @xref{@code{@@kbd}}.
 
-@item @@key@{@var{key-name}@}
-Indicate the name of a key on a keyboard.  @xref{@code{@@key}}.
+@item @@key@{@var{nome-tecla}@}
+Indica o nome de uma tecla em um teclado. @xref{@code{@@key}}.
 
-@item @@kindex @var{entry}
-Add @var{entry} to the index of keys.
+@item @@kindex @var{entrada}
+Adiciona @var{entrada} ao índice de chaves.
 @xref{Entradas de Índice, , Definindo as Entradas de um Índice}.
 
 @item @@L@{@}
 @itemx @@l@{@}
-Generate the uppercase and lowercase Polish suppressed-L letters,
-respectively: @L{}, @l{}.
+Gera as letras L suprimidas, maiúsculas e minúsculas, em polonês,
+respectivamente: @L{}, @l{}.
 
 @item @@LaTeX@{@}
-Generate the @LaTeX{} logo.  @xref{@code{@@TeX @@LaTeX}}.
+Gera o logotipo do @LaTeX{}. @xref{@code{@@TeX @@LaTeX}}.
 
 @item @@leq@{@}
-Generate a less-than-or-equal sign, `@leq{}'.  @xref{@code{@@geq @@leq}}.
+Gera um sinal de menor que ou igual a, `@leq{}'. @xref{@code{@@geq @@leq}}.
 
 @item @@lisp
-Begin an example of Lisp code.  Indent text, do not fill, and select
-fixed-width font.  Pair with @code{@@end lisp}.  @xref{@code{@@lisp}}.
+Inicia um exemplo de código Lisp. Recua o texto, não preenche e seleciona fonte
+de largura fixa. Emparelha com @code{@@end lisp}. @xref{@code{@@lisp}}.
 
 @item @@listoffloats
-Produce a table-of-contents-like listing of @code{@@float}s.
+Produz uma listagem de @code{@@float}s, semelhante a um sumário.
 @xref{@code{@@listoffloats}}.
 
 @item @@lowersections
-Change subsequent chapters to sections, sections to subsections, and so
-on. @xref{Levantar/abaixar seções, , @code{@@raisesections} and
+Muda capítulos subsequentes para seções, seções para subseções e assim por
+diante. @xref{Elevar/rebaixar seções, , @code{@@raisesections} e
 @code{@@lowersections}}.
 
-@item @@macro @var{macroname} @{@var{params}@}
-Define a new Texinfo command @code{@@@var{macroname}@{@var{params}@}}.
-Pair with @code{@@end macro}.  @xref{Definindo Macros}.
+@item @@macro @var{nomemacro} @{@var{parâmetros}@}
+Define um novo comando do Texinfo @code{@@@var{nomemacro}@{@var{parâmetros}@}}.
+Emparelha com @code{@@end macro}. @xref{Definindo Macros}.
 
-@item @@majorheading @var{title}
-Print an unnumbered chapter-like heading, but omit from the table of
-contents.  This generates more vertical whitespace before the heading
-than the @code{@@chapheading} command.  @xref{@code{@@majorheading
-@@chapheading}}.
+@item @@majorheading @var{título}
+Imprime um título não numerado, como um capítulo, mas omite do sumário. Isso
+gera mais espaço em branco vertical antes do título que o comando
+@code{@@chapheading}. @xref{@code{@@majorheading @@chapheading}}.
 
-@item @@math@{@var{mathematical-expression}@}
-Format a mathematical expression.  @xref{Inserindo Fórmulas Matemáticas}.
+@item @@math@{@var{expressão-matemática}@}
+Formata uma expressão matemática. @xref{Inserindo Fórmulas Matemáticas}.
 
 @item @@menu
-Mark the beginning of a menu of Nodos.  No effect in a printed manual.
-Pair with @code{@@end menu}.  @xref{Menus}.
+Marca o início de um menu de nós. Nenhum efeito em um manual impresso.
+Emparelha com @code{@@end menu}. @xref{Menus}.
 
 @item @@minus@{@}
-Generate a minus sign, `@minus{}'.  @xref{@code{@@minus}}.
+Gera um sinal de menos, `@minus{}'. @xref{@code{@@minus}}.
 
-@item @@multitable @var{column-width-spec}
-Begin a multi-column table.  Begin each row with @code{@@item} or
-@code{@@headitem}, and separate columns with @code{@@tab}.  Pair with
-@code{@@end multitable}.  @xref{Larguras de Colunas Multi Tabelas}.
+@item @@multitable @var{coluna-jargura-especificações}
+Inicia uma tabela com várias colunas. Inicie cada linha com @code{@@item} ou
+@code{@@headitem} e separe as colunas com @code{@@tab}. Emparelha com
+@code{@@end multitable}. @xref{Larguras de Colunas Multi Tabelas}.
 
 @item @@need @var{n}
-Start a new page in a printed manual if fewer than @var{n} mils
-(thousandths of an inch) remain on the current page.
-@xref{@code{@@need}}.
+Inicia uma nova página em um manual impresso se menos que @var{n} mils
+(milésimos de polegada) restarem na página atual. @xref{@code{@@need}}.
 
-@item @@node @var{name}, @var{next}, @var{previous}, @var{up}
-Begin a new node.  @xref{Escrevendo um Nodo}.
+@item @@node @var{nome}, @var{próximo}, @var{anterior}, @var{acima}
+Inicia um novo nó. @xref{Escrevendo um Nodo}.
 
 @item @@noindent
-Prevent text from being indented as if it were a new paragraph.
+Evita que o texto seja recuado como se fosse um novo parágrafo.
 @xref{@code{@@noindent}}.
 
 @item @@novalidate
-Suppress validation of node references and omit creation of auxiliary
-files with @TeX{}.  Use before any sectioning or cross-reference
-commands.  @xref{Validação de Ponteiro}.
+Suprime a validação de referências de nó e omite a criação de arquivos
+auxiliares com o @TeX{}. Use antes de quaisquer comandos de seccionamento ou de
+referência cruzada. @xref{Validação de Ponteiro}.
 
 @item @@O@{@}
 @itemx @@o@{@}
-Generate the uppercase and lowercase O-with-slash letters, respectively:
-@O{}, @o{}.
+Gera as letras O com barra, maiúsculas e minúsculas, respectivamente: @O{}, @o{}.
 
-@item  @@oddfooting [@var{left}] @@| [@var{center}] @@| [@var{right}]
-@itemx @@oddheading [@var{left}] @@| [@var{center}] @@| [@var{right}]
-Specify page footings resp.@: headings for odd-numbered (right-hand)
-pages.  @xref{Cabeçalhos Personalizados, , Como Fazer Teus Próprios Cabeçalhos}.
+@item  @@oddfooting [@var{esquerda}] @@| [@var{centro}] @@| [@var{direita}]
+@itemx @@oddheading [@var{esquerda}] @@| [@var{centro}] @@| [@var{direita}]
+Especifica os rodapés das páginas, respectivamente títulos, para páginas
+ímpares (à direita).
+@xref{Cabeçalhos Personalizados, , Como Fazer Teus Próprios Cabeçalhos}.
 
 @item @@OE@{@}
 @itemx @@oe@{@}
-Generate the uppercase and lowercase OE ligatures, respectively:
-@OE{}, @oe{}.  @xref{Inserindo Acentos}.
+Gera as ligaduras OE maiúsculas e minúsculas, respectivamente: @OE{}, @oe{}.
+@xref{Inserindo Acentos}.
 
 @item @@ogonek@{@var{c}@}
-Generate an ogonek diacritic under the next character, as in
-@ogonek{a}.  @xref{Inserindo Acentos}.
+Gera um diacrítico ogonek sob o próximo caractere, como em @ogonek{a}.
+@xref{Inserindo Acentos}.
 
-@item @@option@{@var{option-name}@}
-Indicate a command-line option, such as @option{-l} or
-@option{--help}.  @xref{@code{@@option}}.
+@item @@option@{@var{nome-opção}@}
+Indica uma opção de linha de comando, como @option{-l} ou @option{--help}.
+@xref{@code{@@option}}.
 
 @item @@ordf@{@}
 @itemx @@ordm@{@}
-Generate the feminine and masculine Spanish ordinals, respectively:
-@ordf{}, @ordm{}.  @xref{Inserindo Acentos}.
+Gera os ordinais espanhóis femininos e masculinos, respectivamente: @ordf{},
+@ordm{}. @xref{Inserindo Acentos}.
 
 @item @@page
-Start a new page in a printed manual.  No effect in Info.
+Inicia uma nova página em um manual impresso. Nenhum efeito no Info.
 @xref{@code{@@page}}.
 
-@item @@pagesizes [@var{width}][, @var{height}]
-Change page dimensions.  @xref{pagesizes}.
+@item @@pagesizes [@var{largura}][, @var{altura}]
+Muda dimensões da página. @xref{pagesizes}.
 
-@item @@paragraphindent @var{indent}
-Indent paragraphs by @var{indent} number of spaces (perhaps 0); preserve
-source file indentation if @var{indent} is @code{asis}.
+@item @@paragraphindent @var{recuo}
+Recua parágrafos por @var{recuo} número de espaços (talvez 0); preserva o recuo
+do arquivo fonte se @var{recuo} for @code{asis}.
 @xref{@code{@@paragraphindent}}.
 
-@item @@part @var{title}
-Begin a group of chapters or appendixes; included in the tables of
-contents and produces a page of its own in printed output.
-@xref{@code{@@part}}.
+@item @@part @var{título}
+Inicia um grupo de capítulos ou anexos; incluídos no sumário e produz uma
+página própria na saída impressa. @xref{@code{@@part}}.
 
-@item @@pindex @var{entry}
-Add @var{entry} to the index of programs.  @xref{Entradas de Índice, , Defining
-the Entries of an Index}.
+@item @@pindex @var{entrada}
+Adiciona @var{entrada} ao índice de programas.
+@xref{Entradas de Índice, , Definindo as Entradas de um Índice}.
 
 @item @@point@{@}
-Indicate the position of point in a buffer to the reader with a glyph:
-@samp{@point{}}.  @xref{@code{@@point}}.
+Indica a posição do ponto em um buffer para o(a) leitor(a) com um glifo:
+@samp{@point{}}. @xref{@code{@@point}}.
 
 @item @@pounds@{@}
-Generate the pounds sterling currency sign.
+Gera o símbolo da moeda libras esterlinas.
 @xref{@code{@@pounds}}.
 
 @item @@print@{@}
-Indicate printed output to the reader with a glyph: @samp{@print{}}.
+Indica a saída impressa para o(a) leitor(a) com um glifo: @samp{@print{}}.
 @xref{@code{@@print}}.
 
-@item @@printindex @var{index-name}
-Generate the alphabetized index for @var{index-name} (using two
-columns in a printed manual).  @xref{Imprimindo Índices e Menus}.
+@item @@printindex @var{nome-índice}
+Gera o índice alfabético para @var{nome-índice} (usando duas colunas em um
+manual impresso). @xref{Imprimindo Índices e Menus}.
 
-@item @@pxref@{@var{node}, [@var{entry}], [@var{node-title}], [@var{info-file}], [@var{manual}]@}
-Make a reference that starts with a lowercase `see' in a printed
-manual.  Use within parentheses only.  Only the first argument is
-mandatory.  @xref{@code{@@pxref}}.
+@item @@pxref@{@var{nó}, [@var{entrada}], [@var{título-nó}], [@var{arquivo-info}], [@var{manual}]@}
+Faz uma referência que comece com um `veja' minúsculo em um manual impresso.
+Use somente entre parênteses. Somente o primeiro argumento é obrigatório.
+@xref{@code{@@pxref}}.
 
 @item @@questiondown@{@}
-Generate an upside-down question mark.  @xref{Inserindo Acentos}.
+Gera um ponto de interrogação invertido. @xref{Inserindo Acentos}.
 
 @item @@quotation
-Narrow the margins to indicate text that is quoted from another work.
-Takes optional argument specifying prefix text, e.g., an author name.
-Pair with @code{@@end quotation}.  @xref{@code{@@quotation}}.
+Estreita as margens para indicar texto que seja citado a partir de outro
+trabalho. Recebe argumento opcional especificando texto de prefixo, por
+exemplo, um nome de autor(a). Emparelha com @code{@@end quotation}.
+@xref{@code{@@quotation}}.
 
 @item @@quotedblleft@{@}
 @itemx @@quotedblright@{@}
@@ -20755,228 +20756,225 @@ Pair with @code{@@end quotation}.  @xref{@code{@@quotation}}.
 @itemx @@quoteright@{@}
 @itemx @@quotedblbase@{@}
 @itemx @@quotesinglbase@{@}
-Produce various quotation marks: @quotedblleft{} @quotedblright{}
-@quoteleft{} @quoteright{} @quotedblbase{} @quotesinglbase{}.
-@xref{Inserindo Aspas}.
+Produz várias aspas: @quotedblleft{} @quotedblright{} @quoteleft{}
+@quoteright{} @quotedblbase{} @quotesinglbase{}. @xref{Inserindo Aspas}.
 
-@item @@r@{@var{text}@}
-Set @var{text} in the regular @r{roman} font.  No effect in Info.
+@item @@r@{@var{texto}@}
+Configura @var{texto} na fonte regular @r{romana}. Sem efeito no Info.
 @xref{Fontes}.
 
 @item @@raggedright
-Fill text; left justify every line while leaving the right end ragged.
-Leave font as is.  Pair with @code{@@end raggedright}.  No effect in
-Info.  @xref{@code{@@raggedright}}.
+Preenche texto; justifica à esquerda cada linha, deixando a extremidade direita
+irregular. Deixa a fonte como está. Emparelha com @code{@@end raggedright}. Sem
+efeito no Info. @xref{@code{@@raggedright}}.
 
 @item @@raisesections
-Change subsequent sections to chapters, subsections to sections, and so
-on.  @xref{Levantar/abaixar seções}.
+Muda seções subsequentes para capítulos, subseções para seções e assim por
+diante. @xref{Elevar/rebaixar seções}.
 
-@item @@ref@{@var{node}, [@var{entry}], [@var{node-title}], [@var{info-file}], [@var{manual}]@}
-Make a plain reference that does not start with any special text.
-Follow command with a punctuation mark.  Only the first argument is
-mandatory.  @xref{@code{@@ref}}.
+@item @@ref@{@var{nó}, [@var{entrada}], [@var{título-nó}], [@var{arquivo-info}], [@var{manual}]@}
+Faz uma referência simples que não comece com nenhum texto especial. Siga o
+comando com um sinal de pontuação. Somente o primeiro argumento é obrigatório.
+@xref{@code{@@ref}}.
 
 @item @@refill
 @findex refill
-This command used to refill and indent the paragraph after all the
-other processing has been done.  It is no longer needed, since all
-formatters now automatically refill as needed, but you may still see
-it in the source to some manuals, as it does no harm.
+Esse comando costumava preencher e recuar o parágrafo depois que todo o outro
+processamento tivesse sido feito. Ele não mais é necessário, já que todos os
+formatadores agora preenchem automaticamente conforme necessário, mas você
+ainda pode vê-lo no fonte para alguns manuais, pois não faz mal.
 
 @item @@registeredsymbol@{@}
-Generate the legal symbol @registeredsymbol{}.
+Gera o símbolo jurídico @registeredsymbol{}.
 @xref{@code{@@registeredsymbol}}.
 
 @item @@result@{@}
-Indicate the result of an expression to the reader with a special
-glyph: @samp{@result{}}.  @xref{@code{@@result}}.
+Indica o resultado de uma expressão para o(a) leitor(a) com um glifo especial:
+@samp{@result{}}. @xref{@code{@@result}}.
 
 @item @@ringaccent@{@var{c}@}
-Generate a ring accent over the next character, as in @ringaccent{o}.
+Gera um acento de anel sobre o próximo caractere, como em @ringaccent{o}.
 @xref{Inserindo Acentos}.
 
-@item @@samp@{@var{text}@}
-Indicate a literal example of a sequence of characters, in general.
-Quoted in Info output.  @xref{@code{@@samp}}.
+@item @@samp@{@var{texto}@}
+Indica um exemplo literal de uma sequência de caracteres, em geral. Aspado na
+saída do Info. @xref{@code{@@samp}}.
 
-@item @@sansserif@{@var{text}@}
-Set @var{text} in a @sansserif{sans serif} font if possible.  No
-effect in Info.  @xref{Fontes}.
+@item @@sansserif@{@var{texto}@}
+Configura @var{texto} em uma fonte @sansserif{sans serif} se possível. Sem
+efeito no Info. @xref{Fontes}.
 
-@item @@sc@{@var{text}@}
-Set @var{text} in a small caps font in printed output, and uppercase
-in Info.  @xref{Capitalização Pequena}.
+@item @@sc@{@var{texto}@}
+Configura @var{texto} em fonte de versaletes na saída impressa e em caixa alta
+no Info. @xref{Versaletes}.
 
-@item @@section @var{title}
-Begin a section within a chapter.  The section title appears in the
-table of contents.  In Info, the title is underlined with equal signs.
-Within @code{@@chapter} and @code{@@appendix}, the section title is
-numbered; within @code{@@unnumbered}, the section is unnumbered.
-@xref{@code{@@section}}.
+@item @@section @var{título}
+Inicia uma seção dentro de um capítulo. O título da seção aparece no sumário.
+Em Info, o título é sublinhado com sinais de igual. Dentro de @code{@@chapter}
+e @code{@@appendix}, o título da seção é numerado; dentro de
+@code{@@unnumbered}, a seção não é numerada. @xref{@code{@@section}}.
 
-@item @@set @var{txivar} [@var{string}]
-Define the Texinfo variable @var{txivar}, optionally to the value
-@var{string}.  @xref{@code{@@set @@clear @@value}}.
+@item @@set @var{variáveltexinfo} [@var{string}]
+Define a variável do Texinfo @var{variáveltexinfo}, opcionalmente para o valor
+@var{string}. @xref{@code{@@set @@clear @@value}}.
 
-@item @@setchapternewpage @var{on-off-odd}
-Specify whether chapters start on new pages, and if so, whether on
-odd-numbered (right-hand) new pages.  @xref{@code{@@setchapternewpage}}.
+@item @@setchapternewpage @var{ligado-desligado-ímpar}
+Especifica se os capítulos iniciam em novas páginas e, em caso afirmativo, se
+em novas páginas ímpares (à direita). @xref{@code{@@setchapternewpage}}.
 
 @item @@setcontentsaftertitlepage
-Put the table of contents after the @samp{@@end titlepage} even if the
-@code{@@contents} command is at the end.  @xref{Conteúdo}.
+Coloca o sumário depois do @samp{@@end titlepage}, mesmo que o comando
+@code{@@contents} esteja no final. @xref{Conteúdo}.
 
-@item @@setfilename @var{info-file-name}
-Provide a name to be used for the output files.  This command is ignored
-for @TeX{} formatting.  @xref{@code{@@setfilename}}.
+@item @@setfilename @var{nome-arquivo-info}
+Forneçe um nome a ser usado para os arquivos de saída. Esse comando é ignorado
+para formatação de @TeX{}. @xref{@code{@@setfilename}}.
 
 @item @@setshortcontentsaftertitlepage
-Place the short table of contents after the @samp{@@end titlepage}
-command even if the @code{@@shortcontents} command is at the end.
+Coloca o sumário curto depois do comando @samp{@@end titlepage}, mesmo que o
+comando @code{@@shortcontents} esteja no final.
 @xref{Conteúdo}.
 
-@item @@settitle @var{title}
-Specify the title for page headers in a printed manual, and the
-default document title for HTML @samp{<head>}.
+@item @@settitle @var{título}
+Especifica o título para cabeçalhos de página em um manual impresso e o título
+padrão de documento para @samp{<head>} do HTML.
 @xref{@code{@@settitle}}.
 
 @item @@shortcaption
-Define the short caption for a @code{@@float}.  @xref{@code{@@caption
-@@shortcaption}}.
+Define a legenda curta para um @code{@@float}.
+@xref{@code{@@caption @@shortcaption}}.
 
 @item @@shortcontents
-Print a short table of contents, with chapter-level entries only.  Not
-relevant to Info, which uses menus rather than tables of contents.
-@xref{Conteúdo, , Gerando Uma Tabela do Conteúdo}.
+Imprime um sumário curto, com entradas de nível de capítulo somente. Não é
+relevante para Info, que usa menus em vez de sumários.
+@xref{Conteúdo, , Gerando Um Sumário}.
 
-@item @@shorttitlepage @var{title}
-Generate a minimal title page.  @xref{@code{@@titlepage}}.
+@item @@shorttitlepage @var{título}
+Gera uma página mínima de título. @xref{@code{@@titlepage}}.
 
-@item @@slanted@{@var{text}@}
-Set @var{text} in a @slanted{slanted} font if possible.  No effect
-in Info.  @xref{Fontes}.
+@item @@slanted@{@var{texto}@}
+Configura @var{texto} em uma fonte @slanted{inclinada} se possível. Sem efeito
+no Info. @xref{Fontes}.
 
 @item @@smallbook
-Cause @TeX{} to produce a printed manual in a 7 by 9.25 inch format
-rather than the regular 8.5 by 11 inch format.
-@xref{@code{@@smallbook}}.  Also, see @ref{@code{@@small@dots{}}}.
+Faz com que o @TeX{} produza um manual impresso em um formato de 7 por 9,25
+polegadas em vez do formato regular de 8,5 por 11 polegadas.
+@xref{@code{@@smallbook}}. Veja-se também @ref{@code{@@small@dots{}}}.
 
 @item @@smalldisplay
-Begin a kind of example.  Like @code{@@display}, but use a smaller
-font size where possible.  Pair with @code{@@end smalldisplay}.
+Inicia um tipo de exemplo. Como @code{@@display}, mas usa um tamanho de fonte
+menor onde possível. Emparelha com @code{@@end smalldisplay}.
 @xref{@code{@@small@dots{}}}.
 
 @item @@smallexample
-Begin an example.  Like @code{@@example}, but use a smaller font size
-where possible.  Pair with @code{@@end smallexample}.
+Inicia um exemplo. Como @code{@@example}, mas usa um tamanho de fonte menor
+onde possível. Emparelha com @code{@@end smallexample}.
 @xref{@code{@@small@dots{}}}.
 
 @item @@smallformat
-Begin a kind of example.  Like @code{@@format}, but use a smaller font
-size where possible.  Pair with @code{@@end smallformat}.
+Inicia um tipo de exemplo. Como @code{@@format}, mas usa um tamanho de fonte
+menor onde possível. Emparelha com @code{@@end smallformat}.
 @xref{@code{@@small@dots{}}}.
 
 @item @@smallindentedblock
-Like @code{@@indentedblock}, but use a smaller font size where
-possible.  Pair with @code{@@end smallindentedblock}.
-@xref{@code{@@small@dots{}}}.
+Como @code{@@indentedblock}, mas usa um tamanho de fonte menor onde possível.
+Emparelha com @code{@@end smallindentedblock}. @xref{@code{@@small@dots{}}}.
 
 @item @@smalllisp
-Begin an example of Lisp code.  Same as @code{@@smallexample}.  Pair
-with @code{@@end smalllisp}.  @xref{@code{@@small@dots{}}}.
+Inicia um exemplo de código Lisp. O mesmo que @code{@@smallexample}. Emparelha
+com @code{@@end smalllisp}. @xref{@code{@@small@dots{}}}.
 
 @item @@smallquotation
-Like @code{@@quotation}, but use a smaller font size where possible.
-Pair with @code{@@end smallquotation}.  @xref{@code{@@small@dots{}}}.
+Como @code{@@quotation}, mas usa um tamanho de fonte menor onde possível.
+Emparelha com @code{@@end smallquotation}. @xref{@code{@@small@dots{}}}.
 
-@item @@sortas @{@var{key}@}
-Used in the arguments to index commands to give a string by which the
-index entry should be sorted.  @xref{Comandos de Indexação}.
+@item @@sortas @{@var{chave}@}
+Usado nos argumentos para comandos de indexação para fornecer uma string pela
+qual a entrada do índice deveria ser ordenada. @xref{Comandos de Indexação}.
 
 @item @@sp @var{n}
-Skip @var{n} blank lines.  @xref{@code{@@sp}}.
+Ignora @var{n} linhas em branco. @xref{@code{@@sp}}.
 
 @item @@ss@{@}
-Generate the German sharp-S es-zet letter, @ss{}.
+Gera a letra alemã S sustenido es-zet, @ss{}.
 @xref{Inserindo Acentos}.
 
-@item @@strong @{@var{text}@}
-Emphasize @var{text} more strongly than @code{@@emph}, by using
-@strong{boldface} where possible; enclosed in asterisks in Info.
-@xref{emph & strong, , Enfatizando Texto}.
+@item @@strong @{@var{texto}@}
+Enfatiza @var{texto} com mais força que @code{@@emph}, usando @strong{negrito}
+onde possível; cercado entre asteriscos no Info.
+@xref{enfatizar e fortaleçer, , Enfatizando Texto}.
 
-@item @@sub @{@var{text}@}
-Set @var{text} as a subscript.  @xref{Inserindo Subscritos e Sobrescritos}.
+@item @@sub @{@var{texto}@}
+Configura @var{texto} como um subscrito.
+@xref{Inserindo Subscritos e Sobrescritos}.
 
-@item @@subheading @var{title}
-Print an unnumbered subsection-like heading, but omit from the table
-of contents of a printed manual.  In Info, the title is underlined
-with hyphens.  @xref{@code{@@unnumberedsubsec @@appendixsubsec @@subheading}}.
+@item @@subheading @var{título}
+Imprime um título não numerado, como uma subseção, mas omite do sumário de um
+manual impresso. No Info, o título é sublinhado com hifens.
+@xref{@code{@@unnumberedsubsec @@appendixsubsec @@subheading}}.
 
-@item @@subsection @var{title}
-Begin a subsection within a section.  The subsection title appears in
-the table of contents.  In Info, the title is underlined with hyphens.
-Same context-dependent numbering as @code{@@section}.
-@xref{@code{@@subsection}}.
+@item @@subsection @var{título}
+Inicia uma subseção dentro de uma seção. O título da subseção aparece no
+sumário. No Info, o título é sublinhado com hifens. Mesma numeração dependente
+do contexto que @code{@@section}. @xref{@code{@@subsection}}.
 
-@item @@subsubheading @var{title}
-Print an unnumbered subsubsection-like heading, but omit from the
-table of contents of a printed manual.  In Info, the title is
-underlined with periods.  @xref{@code{@@subsubsection}}.
-
-@item @@subsubsection @var{title}
-Begin a subsubsection within a subsection.  The subsubsection title
-appears in the table of contents.  In Info, the title is underlined
-with periods.  Same context-dependent numbering as @code{@@section}.
+@item @@subsubheading @var{título}
+Imprime um título não numerado, como uma subsubseção, mas omite do sumário de
+um manual impresso. No Info, o título é sublinhado com pontos.
 @xref{@code{@@subsubsection}}.
 
-@item @@subtitle @var{title}
-In a printed manual, set a subtitle in a normal sized font flush to
-the right-hand side of the page.  Not relevant to Info, which does not
-have title pages.  @xref{@code{@@title @@subtitle @@author}}.
+@item @@subsubsection @var{título}
+Inicia uma subsubseção dentro de uma subseção. O título da subsubseção aparece
+no sumário. No Info, o título é sublinhado com pontos. Mesma numeração
+dependente do contexto que @code{@@section}. @xref{@code{@@subsubsection}}.
+
+@item @@subtitle @var{título}
+Em um manual impresso, configura um subtítulo em uma fonte de tamanho normal
+alinhada ao lado direito da página. Não é relevante para Info, que não tem
+páginas de título. @xref{@code{@@title @@subtitle @@author}}.
 
 @item @@summarycontents
-Print a short table of contents.  Synonym for @code{@@shortcontents}.
-@xref{Conteúdo, , Gerando Uma Tabela do Conteúdo}.
+Imprime um sumário curto. Sinônimo para @code{@@shortcontents}.
+@xref{Conteúdo, , Gerando Um Sumário}.
 
-@item @@sup @{@var{text}@}
-Set @var{text} as a superscript.  @xref{Inserindo Subscritos e Sobrescritos}.
+@item @@sup @{@var{texto}@}
+Configura @var{texto} como um sobrescrito.
+@xref{Inserindo Subscritos e Sobrescritos}.
 
-@item @@syncodeindex @var{from-index} @var{to-index}
-Merge the index named in the first argument into the index named in
-the second argument, formatting the entries from the first index with
-@code{@@code}.  @xref{Combinando Índices}.
+@item @@syncodeindex @var{de-índice} @var{para-índice}
+Mescla o índice nomeado no primeiro argumento no índice nomeado no segundo
+argumento, formatando as entradas originárias do primeiro índice com
+@code{@@code}. @xref{Combinando Índices}.
 
-@item @@synindex @var{from-index} @var{to-index}
-Merge the index named in the first argument into the index named in
-the second argument.  Do not change the font of @var{from-index}
-entries.  @xref{Combinando Índices}.
+@item @@synindex @var{de-índice} @var{para-índice}
+Mescla o índice nomeado no primeiro argumento no índice nomeado no segundo
+argumento. Não muda a fonte das entradas de @var{de-índice}.
+@xref{Combinando Índices}.
 
-@item @@t@{@var{text}@}
-Set @var{text} in a @t{fixed-width}, typewriter-like font.  No effect
-in Info.  @xref{Fontes}.
+@item @@t@{@var{texto}@}
+Configura @var{texto} em uma fonte de @t{largura-fixa}, tipo máquina de
+escrever. Sem efeito no Info. @xref{Fontes}.
 
 @item @@tab
-Separate columns in a row of a multitable.  @xref{Linhas de Multi Tabelas}.
+Separa colunas em uma linha de uma multitabela. @xref{Linhas de Multi Tabelas}.
 
-@item @@table @var{formatting-command}
-Begin a two-column table (description list), using @code{@@item} for
-each entry.  Write each first column entry on the same line as
-@code{@@item}.  First column entries are printed in the font resulting
-from @var{formatting-command}.  Pair with @code{@@end table}.
-@xref{Tabelas de Duas Colunas, , Making a Two-column Table}.  Also see
-@ref{@code{@@ftable @@vtable}}, and @ref{@code{@@itemx}}.
+@item @@table @var{comando-formatação}
+Inicia uma tabela de duas colunas (lista de descrição), usando @code{@@item}
+para cada entrada. Escreve cada entrada da primeira coluna na mesma linha que
+@code{@@item}. As entradas da primeira coluna são impressas na fonte resultante
+proveniente de @var{comando-formatação}. Emparelha com @code{@@end table}.
+@xref{Tabelas de Duas Colunas, , Fazendo Uma Tabela de Duas Colunas}. Veja-se
+também @ref{@code{@@ftable @@vtable}} e @ref{@code{@@itemx}}.
 
 @item @@TeX@{@}
-Generate the @TeX{} logo.  @xref{@code{@@TeX @@LaTeX}}.
+Gera o logotipo do @TeX{}. @xref{@code{@@TeX @@LaTeX}}.
 
 @item @@tex
-Enter @TeX{} completely.  Pair with @code{@@end tex}.
+Entra no @TeX{} completamente. Emparelha com @code{@@end tex}.
 @xref{Comandos do Formatador Bruto}.
 
 @item @@textdegree@{@}
-Gerar o símbolo de Graus.  @xref{@code{@@textdegree}}.
+Gera o símbolo de Graus.  @xref{@code{@@textdegree}}.
 
 @item @@thischapter
 @itemx @@thischaptername
@@ -20984,29 +20982,29 @@ Gerar o símbolo de Graus.  @xref{@code{@@textdegree}}.
 @itemx @@thisfile
 @itemx @@thispage
 @itemx @@thistitle
-Only allowed in a heading or footing.  Stands for, respectively, the
-number and name of the current chapter (in the format `Chapter 1:
-Title'), the current chapter name only, the current chapter number
-only, the filename, the current page number, and the title of the
-document, respectively.  @xref{Cabeçalhos Personalizados, , Como Fazer Teus Próprios Cabeçalhos}.
+Permitido somente em um título ou rodapé. Representa, respectivamente, o número
+e o nome do capítulo atual (no formato `Capítulo 1: Título'), somente o nome do
+capítulo atual, somente o número do capítulo atual, o nome do arquivo, o número
+da página atual e o título do documento, respectivamente.
+@xref{Cabeçalhos Personalizados, , Como Fazer Teus Próprios Cabeçalhos}.
 
 @item @@TH@{@}
 @itemx @@th@{@}
-Generate the uppercase and lowercase Icelandic letter thorn, respectively:
-@TH{}, @th{}.  @xref{Inserindo Acentos}.
+Gera a letra maiúscula e minúscula islandesa thorn, respectivamente: @TH{},
+@th{}. @xref{Inserindo Acentos}.
 
 @item @@tie@{@}
-Generate a normal interword space at which a line break is not
-allowed.  @xref{@code{@@tie}}.
+Gera um espaço normal entre palavras no qual uma quebra de linha não é
+permitida. @xref{@code{@@tie}}.
 
 @item @@tieaccent@{@var{cc}@}
-Generate a tie-after accent over the next two characters @var{cc}, as in
-`@tieaccent{oo}'.  @xref{Inserindo Acentos}.
+Gera um acento de ligação sobre os próximos dois caracteres @var{cc}, como em
+`@tieaccent{oo}'. @xref{Inserindo Acentos}.
 
-@item @@tindex @var{entry}
-Add @var{entry} to the index of data types.  @xref{Entradas de Índice, ,
-Definindo as Entradas de um Índice}.
-
+@item @@tindex @var{entrada}
+Adiciona @var{entrada} ao índice de tipos de dados.
+@xref{Entradas de Índice, , Definindo as Entradas de um Índice}.
+PAREI
 @item @@title @var{title}
 In a printed manual, set a title flush to the left-hand side of the
 page in a larger than normal font and underline it with a black rule.
