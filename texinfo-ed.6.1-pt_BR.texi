@@ -21763,70 +21763,69 @@ O nó `Invocando' é um padrão GNU para ajudar os(as) usuários(as) a encontrar
 informações básicas relativas ao uso da linha de comando de um programa
 fornecido.
 @xref{Manual Structure Details,,, standards, Padrões GNU de Codificação}.
-PAREI
-@item
-@cindex Licença GNU de Documentação Livre, including entire
-@cindex Free Documentation License, including entire
-It is best to include the entire Licença GNU de Documentação Livre in a GNU
-manual, unless the manual is only a few pages long.  Of course this
-sample is even shorter than that, but it includes the FDL anyway in
-order to show one conventional way to do so.  The @file{fdl.texi} file
-is available on the GNU machines and in the Texinfo and other GNU
-source distributions.
-
-The FDL provides for omitting itself under certain conditions, but in
-that case the sample texts given here have to be modified.  @xref{Licença GNU de Documentação Livre}.
 
 @item
-If the FSF is not the copyright holder, then use the appropriate name.
+@cindex Licença GNU de Documentação Livre, incluindo inteira
+@cindex Documentação Livre, Licença GNU, incluindo inteira
+É melhor incluir a Licença GNU de Documentação Livre inteira em um manual GNU,
+a menos que o manual tenha somente umas poucas páginas. Claro que esse exemplo
+é ainda mais curto que isso, mas inclui a FDL de qualquer forma para a
+finalidade de mostrar uma maneira convencional de fazer isso. O arquivo
+@file{fdl.texi} está disponível nas máquinas GNU e nas distribuições de fontes
+do Texinfo e outras GNU.
+
+A FDL prevê omissão dela própria sob certas condições, mas nesse caso os textos
+de amostra fornecidos aqui tem de ser modificados.
+@xref{Licença GNU de Documentação Livre}.
 
 @item
-If your manual is published on paper by the FSF or is longer than 400
-pages, you should include the standard FSF cover texts (@pxref{License
-Notices for Documentation,,, maintain, GNU Maintainer Information}).
+Se a FSF não for a titular dos direitos autorais, então use o nome apropriado.
 
 @item
-For documents that express your personal views, feelings or
-experiences, it is more appropriate to use a license permitting only
-verbatim copying, rather than the FDL@.  @xref{Verbatim Copying
-License}.
+Se teu manual for publicado em papel pela FSF ou tiver mais que 400 páginas,
+você deveria incluir os textos de capa padrão da FSF
+(@pxref{License Notices for Documentation,,, maintain, Informações de Mantenedor(a) GNU}).
 
+@item
+Para documentos que expressam tuas opiniões, sentimentos ou experiências
+pessoais, é mais apropriado usar uma licença que permita somente cópias
+literais, em vez da FDL@. @xref{Licença de Cópia Literal}.
 @end itemize
 
-Here is the sample document:
+Aqui está o documento de amostra:
 
 @verbatim
 \input texinfo   @c -*-texinfo-*-
 @comment $Id@w{$}
 @comment %**start of header
-@include version.texi
-@settitle GNU Sample @value{VERSION}
+@include version-pt_BR.texi
+@settitle GNU Amostra @value{VERSION}
 @syncodeindex pg cp
 @comment %**end of header
 @copying
-This manual is for GNU Sample (version @value{VERSION}, @value{UPDATED}),
-which is an example in the Texinfo documentation.
+Este manual é para GNU Amostra (versão @value{VERSION}, @value{UPDATED}), que é
+um exemplo na documentação do Texinfo.
 
 Copyright @copyright{} 2016 Free Software Foundation, Inc.
 
 @quotation
-Permission is granted to copy, distribute and/or modify this document
-under the terms of the GNU Free Documentation License, Version 1.3 or
-any later version published by the Free Software Foundation; with no
-Invariant Sections, with no Front-Cover Texts, and with no Back-Cover
-Texts.  A copy of the license is included in the section entitled
-``GNU Free Documentation License''.
+É concedida permissão para copiar, distribuir e (ou) modificar este documento
+sob os termos da Licença GNU de Documentação Livre, Versão 1.3 ou qualquer
+versão posterior publicada pela Free Software Foundation; sem Seções
+Invariantes, sem Textos de Capa Frontal e sem Textos de Contracapa. Uma cópia
+da licença está incluída na seção intitulada ``Licença GNU de Documentação
+Livre''.
 @end quotation
 @end copying
 
-@dircategory Texinfo documentation system
+@dircategory Sistema Texinfo de documentação
 @direntry
-* sample: (sample)Invoking sample.
+* amostra: (amostra)Invocando amostra.
 @end direntry
 
 @titlepage
-@title GNU Sample
-@subtitle for version @value{VERSION}, @value{UPDATED}
+@title GNU Amostra
+@subtitle para versão @value{VERSION}, @value{UPDATED}
 @author A.U. Thor (@email{bug-sample@@gnu.org})
 @page
 @vskip 0pt plus 1filll
@@ -21837,37 +21836,37 @@ Texts.  A copy of the license is included in the section entitled
 
 @ifnottex
 @node Top
-@top GNU Sample
+@top GNU Amostra
 
-This manual is for GNU Sample (version @value{VERSION}, @value{UPDATED}).
+Este manual é para GNU Amostra (versão @value{VERSION}, @value{UPDATED}).
 @end ifnottex
 
 @menu
-* Invoking sample::
+* Invocando amostra::
 * Licença GNU de Documentação Livre::
-* Index::
+* Índice::
 @end menu
 
 
-@node Invoking sample
-@chapter Invocação de Amostra
+@node Invocando amostra
+@chapter Invocando amostra
 
-@pindex sample
-@cindex invoking @command{sample}
+@pindex amostra
+@cindex invocando @command{amostra}
 
-This is a sample manual.  There is no sample program to
-invoke, but if there were, you could see its basic usage
-and command line options here.
-
-
-@node GNU Free Documentation License
-@appendix GNU Free Documentation License
-
-@include fdl.texi
+Este é um manual de amostra. Não existe um programa de amostra para invocar,
+mas se existisse, você poderia ver o uso básico e opções de linha de comando
+dele aqui.
 
 
-@node Index
-@unnumbered Index
+@node Licença GNU de Documentação Livre
+@appendix Licença GNU de Documentação Livre
+
+@include fdl-versao_1.3-pt_BR.texi
+
+
+@node Índice
+@unnumbered Índice
 
 @printindex cp
 
@@ -21875,64 +21874,64 @@ and command line options here.
 @end verbatim
 
 
-@node Verbatim Copying License
-@section Verbatim Copying License
+@node Licença de Cópia Literal
+@section Licença de Cópia Literal
 
-@cindex Verbatim copying license
-@cindex License for verbatim copying
+@cindex Licença de cópia literal
+@cindex Licença para cópia literal
 
-For software manuals and other documentation, it is critical to use a
-license permitting free redistribution and updating, so that when a free
-program is changed, the documentation can be updated as well.
+Para manuais de software e outras documentações, é fundamental usar uma licença
+que permita redistribuição e atualização livres, de forma que, quando um
+programa livre for mudado, a documentação também possa ser atualizada.
 
-On the other hand, for documents that express your personal views,
-feelings or experiences, it is more appropriate to use a license
-permitting only verbatim copying.
+Por outro lado, para documentos que expressam tuas opiniões, sentimentos ou
+experiências pessoais, é mais apropriado usar uma licença que permita somente
+cópias literais.
 
-Here is sample text for such a license permitting verbatim copying only.
-This is just the license text itself.  For a complete sample document,
-see the previous sections.
+Aqui está um texto de amostra para tal licença permitindo somente cópias
+literais. Este é apenas o texto da licença em si. Para um documento completo de
+amostra, vejam-se as seções anteriores.
 
 @verbatim
 @copying
-This document is a sample for allowing verbatim copying only.
+Este documento é uma amostra para permitir somente cópias literais.
 
 Copyright @copyright{} 2016 Free Software Foundation, Inc.
 
 @quotation
-Permission is granted to make and distribute verbatim copies
-of this entire document without royalty provided the
-copyright notice and this permission notice are preserved.
+É concedida permissão para fazer e distribuir cópias literais deste documento
+inteiro sem royalties, desde que o aviso de direitos autorais e este aviso de
+permissão sejam preservados.
 @end quotation
 @end copying
 @end verbatim
 
 
-@node All-permissive Copying License
-@section All-permissive Copying License
+@node Licença de Cópia Totalmente Permissiva
+@section Licença de Cópia Totalmente Permissiva
 
-@cindex All-permissive copying license
-@cindex License for all-permissive copying
+@cindex Licença de cópia totalmente permissiva
+@cindex Licença para cópia totalmente permissiva
 
-For software manuals and other documentation, it is important to use a
-license permitting free redistribution and updating, so that when a free
-program is changed, the documentation can be updated as well.
+Para manuais de software e outras documentações, é importante usar uma licença
+que permita redistribuição e atualização livres, de forma, que quando um
+programa livre for mudado, a documentação também possa ser atualizada.
 
-On the other hand, for small supporting files, short manuals (under 300
-lines long) and rough documentation (README files, INSTALL files, etc.),
-the full FDL would be overkill.  They can use a simple all-permissive
-license.
+Por outro lado, para pequenos arquivos de suporte, manuais curtos (com menos de
+300 linhas) e documentação rudimentar (arquivos README, arquivos INSTALL,
+etc.), a FDL completa seria um exagero. Eles podem usar uma licença simples
+totalmente permissiva.
 
-Here is sample text for such an all-permissive license.  This is just
-the license text itself.  For a complete sample document, see the
-previous sections.
+Aqui está um texto de amostra para uma tal licença totalmente permissiva. Este
+é apenas o texto da licença em si. Para um documento completo de amostra,
+vejam-se as seções anteriores.
 
 @example
 Copyright @@copyright@{@} 2016 Free Software Foundation, Inc.
 
-Copying and distribution of this file, with or without modification,
-are permitted in any medium without royalty provided the copyright
-notice and this notice are preserved.
+A cópia e a distribuição deste arquivo, com ou sem modificação, são permitidas
+em qualquer meio, sem royalties, desde que o aviso de direitos autorais e este
+aviso sejam preservados.
 @end example
 
 
@@ -21943,261 +21942,256 @@ notice and this notice are preserved.
 @cindex GNU Emacs
 @cindex Emacs
 
-You may edit a Texinfo file with any text editor you choose.  A Texinfo
-file is no different from any other ASCII file.  However, GNU Emacs
-comes with a special mode, called Texinfo mode, that provides Emacs
-commands and tools to help ease your work.
+Você pode editar um arquivo do Texinfo com qualquer editor de texto que
+escolher. Um arquivo do Texinfo não é diferente de qualquer outro arquivo
+ASCII. No entanto, o GNU Emacs vem com um modo especial, chamado modo Texinfo,
+que fornece comandos e ferramentas do Emacs para ajudar a facilitar teu
+trabalho.
 
 @menu
-* Modo Texinfo Visão Geral::       How Texinfo mode can help you.
-* Emacs Editing::               Texinfo mode adds to GNU Emacs' general
-                                  purpose editing features.
-* Inserting::                   How to insert frequently used @@-commands.
-* Showing the Structure::       How to show the structure of a file.
-* Atualizando Nodos e Menus::    How to update or create new Nodos and menus.
-* Info Formatting::             How to format for Info.
-* Printing::                    How to format and print part or all of a file.
-* Modo Texinfo Summary::        Summary of all the Texinfo mode commands.
+* Visão Geral do Modo Texinfo:: Como o modo Texinfo pode te ajudar.
+* Edição Emacs::                Adições do modo Texinfo às características de propósito geral de edição do GNU Emacs.
+* Inserindo::                   Como inserir comandos @code{@@@@} usados frequentemente.
+* Mostrando a Estrutura::       Como exibir a estrutura de um arquivo.
+* Atualizando Nodos e Menus::   Como atualizar ou criar novos nodos e menus.
+* Formatação Info::             Como formatar para Info.
+* Impressão::                   Como formatar e imprimir parte ou tudo de um arquivo.
+* Sumário do Modo Texinfo::     Sumário de todos os comandos do modo Texinfo.
 @end menu
 
-@node Modo Texinfo Visão Geral
-@section Modo Texinfo Visão Geral
+@node Visão Geral do Modo Texinfo
+@section Visão Geral do Modo Texinfo
 
-Texinfo mode provides special features for working with Texinfo files.
-You can:
+O modo Texinfo fornece recursos especiais para trabalhar com arquivos do
+Texinfo. Você pode:
 
 @itemize @bullet
 @item
-Insert frequently used @@-commands.
+Inserir comandos @@ usados frequentemente.
 
 @item
-Automatically create @code{@@node} lines.
+Criar automaticamente linhas @code{@@node}.
 
 @item
-Show the structure of a Texinfo source file.
+Mostrar a estrutura de um arquivo fonte do Texinfo.
 
 @item
-Automatically create or update the `Next',
-`Previous', and `Up' pointers of a node.
+Criar ou atualizar automaticamente os ponteiros `Próximo', `Anterior' e `Acima'
+de um nó.
 
 @item
-Automatically create or update menus.
+Criar ou atualizar menus automaticamente.
 
 @item
-Automatically create a master menu.
+Criar automaticamente um menu mestre.
 
 @item
-Format a part or all of a file for Info.
+Formatar uma parte ou todo um arquivo para o Info.
 
 @item
-Typeset and print part or all of a file.
+Tipografar e imprimir parte ou todo um arquivo.
 @end itemize
 
-Perhaps the two most helpful features are those for inserting frequently
-used @@-commands and for creating node pointers and menus.
+Talvez os dois recursos mais úteis sejam aqueles para inserir comandos @@
+usados frequentemente e para criar ponteiros de nó e menus.
 
-@node Emacs Editing
-@section The Usual GNU Emacs Editing Commands
+@node Edição Emacs
+@section Os Comandos Usuais de Edição do GNU Emacs
 
-In most cases, the usual Text mode commands work the same in Texinfo
-mode as they do in Text mode.  Texinfo mode adds new editing commands
-and tools to GNU Emacs' general purpose editing features.  The major
-difference concerns filling.  In Texinfo mode, the paragraph
-separation variable and syntax table are redefined so that Texinfo
-commands that should be on lines of their own are not inadvertently
-included in paragraphs.  Thus, the @kbd{M-q} (@code{fill-paragraph})
-command will refill a paragraph but not mix an indexing command on a
-line adjacent to it into the paragraph.
+Na maioria dos casos, os comandos usuais do modo Texto funcionam da mesma forma
+no modo Texinfo como no modo Texto. O modo Texinfo adiciona novos comandos e
+ferramentas de edição aos recursos de edição de propósito geral do GNU Emacs. A
+principal diferença diz respeito ao preenchimento. No modo Texinfo, a variável
+de separação de parágrafo e a tabela de sintaxe são redefinidas para a
+finalidade de que os comandos do Texinfo que deveriam estar em linhas próprias
+não sejam inadvertidamente incluídos em parágrafos. Assim, o comando @kbd{M-q}
+(@code{fill-paragraph}) preencherá novamente um parágrafo, mas não misturará um
+comando de indexação em uma linha adjacente a ele no parágrafo.
 
-In addition, Texinfo mode sets the @code{page-delimiter} variable to
-the value of @code{texinfo-chapter-level-regexp}; by default, this is
-a regular expression matching the commands for chapters and their
-equivalents, such as appendices.  With this value for the page
-delimiter, you can jump from chapter title to chapter title with the
-@kbd{C-x ]} (@code{forward-page}) and @kbd{C-x [}
-(@code{backward-page}) commands and narrow to a chapter with the
-@kbd{C-x n p} (@code{narrow-to-page}) command.  (@xref{Pages, , ,emacs,
-O Manual do GNU Emacs}, for details about the page commands.)
+Além disso, o modo Texinfo configura a variável @code{page-delimiter} para o
+valor de @code{texinfo-chapter-level-regexp}; por padrão, essa é uma expressão
+regular que corresponde aos comandos para capítulos e os equivalentes deles,
+como anexos. Com esse valor para o delimitador de página, você pode pular de um
+título de capítulo para um título de capítulo com os comandos @kbd{C-x ]}
+(@code{forward-page}) e @kbd{C-x [} (@code{backward-page}) e restringir a um
+capítulo com o comando @kbd{C-x n p} (@code{narrow-to-page}).
+(@xref{Pages, , ,emacs, O Manual do GNU Emacs}, para detalhes acerca dos
+comandos de página).
 
-You may name a Texinfo file however you wish, but the convention is to
-end a Texinfo file name with one of the extensions
-@file{.texinfo}, @file{.texi}, @file{.txi}, or @file{.tex}.  A longer
-extension is preferred, since it is explicit, but a shorter extension
-may be necessary for operating systems that limit the length of file
-names.  GNU Emacs automatically enters Texinfo mode when you visit a
-file with a @file{.texinfo}, @file{.texi} or @file{.txi}
-extension.  Also, Emacs switches to Texinfo mode
-when you visit a
-file that has @samp{-*-texinfo-*-} in its first line.  If ever you are
-in another mode and wish to switch to Texinfo mode, type @code{M-x
-texinfo-mode}.
+Você pode nomear um arquivo do Texinfo como desejar, mas a convenção é a de
+terminar um nome de arquivo do Texinfo com uma das extensões @file{.texinfo},
+@file{.texi}, @file{.txi} ou @file{.tex}. Uma extensão mais longa é preferível,
+pois é explícita, mas uma extensão mais curta pode ser necessária para sistemas
+operacionais que limitam o comprimento dos nomes de arquivo. O GNU Emacs
+automaticamente entra no modo Texinfo quando você visita um arquivo com uma
+extensão @file{.texinfo}, @file{.texi} ou @file{.txi}. Além disso, o Emacs
+comuta para o modo Texinfo quando você visita um arquivo que tenha
+@samp{-*-texinfo-*-} na primeira linha dele. Se você já estiver em outro modo e
+desejar comutar para o modo Texinfo, digite @code{M-x texinfo-mode}.
 
-Like all other Emacs features, you can customize or enhance Texinfo
-mode as you wish.  In particular, the keybindings are very easy to
-change.  The keybindings described here are the default or standard
-ones.
+Como todos os outros recursos do Emacs, você consegue personalizar ou aprimorar
+o modo Texinfo como desejar. Em particular, as combinações de teclas são muito
+fáceis de mudar. As combinações de teclas descritas aqui são as padrões ou as
+de uso mais comum.
 
-@node Inserting
-@section Inserting Frequently Used Commands
-@cindex Inserting frequently used commands
-@cindex Frequently used commands, inserting
-@cindex Commands, inserting them
+@node Inserindo
+@section Inserindo Comandos Usados Frequentemente
+@cindex Inserindo comandos usados frequentemente
+@cindex Comandos usados frequentemente, inserindo
+@cindex Comandos, inserindo-os
 
-Texinfo mode provides commands to insert various frequently used
-@@-commands into the buffer.  You can use these commands to save
-keystrokes.
+O modo Texinfo fornece comandos para inserir vários comandos @@ usados
+frequentemente no buffer. Você pode usar esses comandos para economizar
+pressionamentos de tecla.
 
-The insert commands are invoked by typing @kbd{C-c} twice and then the
-first letter of the @@-command:
+Os comandos de inserção são invocados digitando @kbd{C-c} duas vezes e depois a
+primeira letra do comando @@:
 
 @table @kbd
 @item  C-c C-c c
 @itemx M-x texinfo-insert-@@code
 @findex texinfo-insert-@@code
-Insert @code{@@code@{@}} and put the
-cursor between the braces.
+Insere @code{@@code@{@}} e coloca o cursor entre as chaves.
 
 @item  C-c C-c d
 @itemx M-x texinfo-insert-@@dfn
 @findex texinfo-insert-@@dfn
-Insert @code{@@dfn@{@}} and put the
-cursor between the braces.
+Insere @code{@@dfn@{@}} e coloca o cursor entre as chaves.
 
 @item  C-c C-c e
 @itemx M-x texinfo-insert-@@end
 @findex texinfo-insert-@@end
-Insert @code{@@end} and attempt to insert the correct following word,
-such as @samp{example} or @samp{table}.  (This command does not handle
-nested lists correctly, but inserts the word appropriate to the
-immediately preceding list.)
+Insere @code{@@end} e tenta inserir a palavra correta seguinte, como
+@samp{example} ou @samp{table}. (Esse comando não lida com listas aninhadas
+corretamente, mas insere a palavra apropriada na lista imediatamente
+precedente).
 
 @item  C-c C-c i
 @itemx M-x texinfo-insert-@@item
 @findex texinfo-insert-@@item
-Insert @code{@@item} and put the
-cursor at the beginning of the next line.
+Insere @code{@@item} e coloca o cursor no início da próxima linha.
 
 @item  C-c C-c k
 @itemx M-x texinfo-insert-@@kbd
 @findex texinfo-insert-@@kbd
-Insert @code{@@kbd@{@}} and put the
-cursor between the braces.
+Insere @code{@@kbd@{@}} e coloca o cursor entre as chaves.
 
 @item  C-c C-c n
 @itemx M-x texinfo-insert-@@node
 @findex texinfo-insert-@@node
-Insert @code{@@node} and a comment line
-listing the sequence for the `Next',
-`Previous', and `Up' Nodos.
-Leave point after the @code{@@node}.
+Insere @code{@@node} e uma linha de comentário listando a sequência para os nós
+`Next', `Previous' e `Up'. Deixa um ponto depois do @code{@@node}.
 
 @item  C-c C-c o
 @itemx M-x texinfo-insert-@@noindent
 @findex texinfo-insert-@@noindent
-Insert @code{@@noindent} and put the
-cursor at the beginning of the next line.
+Insere @code{@@noindent} e coloca o cursor no início da próxima linha.
 
 @item  C-c C-c s
 @itemx M-x texinfo-insert-@@samp
 @findex texinfo-insert-@@samp
-Insert @code{@@samp@{@}} and put the
-cursor between the braces.
+Insere @code{@@samp@{@}} e coloca o cursor entre as chaves.
 
 @item  C-c C-c t
 @itemx M-x texinfo-insert-@@table
 @findex texinfo-insert-@@table
-Insert @code{@@table} followed by a @key{SPC}
-and leave the cursor after the @key{SPC}.
+Insere @code{@@table} seguido de @key{SPC} e deixa o cursor depois de @key{SPC}.
 
 @item  C-c C-c v
 @itemx M-x texinfo-insert-@@var
 @findex texinfo-insert-@@var
-Insert @code{@@var@{@}} and put the
-cursor between the braces.
+Insere @code{@@var@{@}} e coloca o cursor entre as chaves.
 
 @item  C-c C-c x
 @itemx M-x texinfo-insert-@@example
 @findex texinfo-insert-@@example
-Insert @code{@@example} and put the
-cursor at the beginning of the next line.
+Insere @code{@@example} e coloca o cursor no início da próxima linha.
 
-@c M-@{  was the binding for texinfo-insert-braces;
-@c in Emacs 19, backward-paragraph will take this binding.
+@c M-@{  era a vinculação para texinfo-insert-braces;
+@c no Emacs 19, backward-paragraph receberá essa vinculação.
 @item C-c C-c @{
 @itemx M-x texinfo-insert-braces
 @findex texinfo-insert-braces
-Insert @code{@{@}} and put the cursor between the braces.
+Insere @code{@{@}} e coloca o cursor entre as chaves.
 
 @item C-c @}
 @itemx C-c  ]
 @itemx M-x up-list
 @findex up-list
-Move from between a pair of braces forward past the closing brace.
-Typing @kbd{C-c ]} is easier than typing @kbd{C-c @}}, which
-is, however, more mnemonic; hence the two keybindings.  (Also, you can
-move out from between braces by typing @kbd{C-f}.)
+Move de entre um par de chaves para a frente, passando pela chave de
+fechamento. Digitar @kbd{C-c ]} é mais fácil que digitar @kbd{C-c @}}, que é,
+no entanto, mais mnemônico; daí as duas combinações de teclas. (Além disso,
+você pode sair de entre chaves digitando @kbd{C-f}).
 @end table
 
-To put a command such as @w{@code{@@code@{@dots{}@}}} around an
-@emph{existing} word, position the cursor in front of the word and type
-@kbd{C-u 1 C-c C-c c}.  This makes it easy to edit existing plain text.
-The value of the prefix argument tells Emacs how many words following
-point to include between braces---@samp{1} for one word, @samp{2} for
-two words, and so on.  Use a negative argument to enclose the previous
-word or words.  If you do not specify a prefix argument, Emacs inserts
-the @@-command string and positions the cursor between the braces.  This
-feature works only for those @@-commands that operate on a word or words
-within one line, such as @code{@@kbd} and @code{@@var}.
+Para colocar um comando como @w{@code{@@code@{@dots{}@}}} em volta de uma
+palavra @emph{existente}, posicione o cursor na frente da palavra e digite
+@kbd{C-u 1 C-c C-c c}. Isso facilita editar texto simples existente. O valor do
+argumento prefixo informa ao Emacs quantas palavras seguintes ao ponto incluir
+entre chaves---@samp{1} para uma palavra, @samp{2} para duas palavras e assim
+por diante. Use um argumento negativo para cercar a palavra ou palavras
+anterior. Se você não especificar um argumento prefixo, o Emacs insere a string
+do comando @@ e posiciona o cursor entre as chaves. Esse recurso funciona
+somente para os comandos @@ que operam sobre uma palavra ou palavras dentro de
+uma linha, como @code{@@kbd} e @code{@@var}.
 
-This set of insert commands was created after analyzing the frequency
-with which different @@-commands are used in the @cite{GNU Emacs
-Manual} and the @cite{GDB Manual}.  If you wish to add your own insert
-commands, you can bind a keyboard macro to a key, use abbreviations,
-or extend the code in @file{texinfo.el}.
+Esse conjunto de comandos de inserção foi criado depois de analisar a
+frequência com que diferentes comandos @@ são usados no @cite{Manual do GNU
+Emacs} e no @cite{Manual do GDB}. Se desejar adicionar teus próprios comandos
+de inserção, você pode vincular uma macro de teclado a uma tecla, usar
+abreviações ou estender o código em @file{texinfo.el}.
 
 @findex texinfo-start-menu-description
-@cindex Menu description, start
-@cindex Description for menu, start
-@kbd{C-c C-c C-d} (@code{texinfo-start-menu-description}) is an insert
-command that works differently from the other insert commands.  It
-inserts a node's section or chapter title in the space for the
-description in a menu entry line.  (A menu entry has three parts, the
-entry name, the node name, and the description.  Only the node name is
-required, but a description helps explain what the node is about.
-@xref{Partes de Menu, , Partes de Menu}.)
+@cindex Descrição de menu, iniciar
+@cindex Descrição para menu, iniciar
+@kbd{C-c C-c C-d} (@code{texinfo-start-menu-description}) é um comando de
+inserção que funciona diferentemente dos outros comandos de inserção. Ele
+insere o título da seção ou o do capítulo de um nó no espaço para a descrição
+em uma linha de entrada de menu. (Uma entrada de menu tem três partes, o nome
+da entrada, o nome do nó e a descrição. Somente o nome do nó é exigido, mas uma
+descrição ajuda a explicar do que se trata o nó.
+@xref{Partes de Menu, , Partes de Menu}).
 
-To use @code{texinfo-start-menu-description}, position point in a menu
-entry line and type @kbd{C-c C-c C-d}.  The command looks for and copies
-the title that goes with the node name, and inserts the title as a
-description; it positions point at beginning of the inserted text so you
-can edit it.  The function does not insert the title if the menu entry
-line already contains a description.
+Para usar @code{texinfo-start-menu-description}, posicione o ponto em uma linha
+de entrada de menu e digite @kbd{C-c C-c C-d}. O comando procura e copia o
+título que acompanha o nome do nó e insere o título como uma descrição; ele
+posiciona o ponto no início do texto inserido para que você possa editá-lo. A
+função não insere o título se a linha de entrada do menu já contiver uma
+descrição.
 
-This command is only an aid to writing descriptions; it does not do the
-whole job.  You must edit the inserted text since a title tends to use
-the same words as a node name but a useful description uses different
-words.
+Esse comando é somente um auxílio para escrever descrições; ele não faz o
+trabalho todo. Você precisa editar o texto inserido, pois um título tende a
+usar as mesmas palavras que um nome de nó, mas uma descrição útil usa palavras
+diferentes.
 
-@node Showing the Structure
-@section Showing the Sectioning Structure of a File
-@cindex Showing the sectioning structure of a file
-@cindex Sectioning structure of a file, showing
-@cindex Structure of a file, showing
-@cindex Outline of file structure, showing
-@cindex Contents-like outline of file structure
-@cindex File sectioning structure, showing
-@cindex Texinfo file sectioning structure, showing
+@node Mostrando a Estrutura
+@section Mostrando a Estrutura de Seccionamento de um Arquivo
+@cindex Mostrando a estrutura de seccionamento de um arquivo
+@cindex Estrutura de seccionamento de um arquivo, mostrando
+@cindex Estrutura de um arquivo, mostrando
+@cindex Esboço da estrutura do arquivo, mostrando
+@cindex Esboço semelhante ao conteúdo da estrutura do arquivo
+@cindex Estrutura de seccionamento de arquivo, mostrando
+@cindex Estrutura de seccionamento do arquivo do Texinfo, mostrando
 
-You can show the sectioning structure of a Texinfo file by using the
-@kbd{C-c C-s} command (@code{texinfo-show-structure}).  This command
-lists the lines that begin with the @@-commands for @code{@@chapter},
-@code{@@section}, and the like.  It constructs what amounts to a table
-of contents.  These lines are displayed in another buffer called the
-@samp{*Occur*} buffer.  In that buffer, you can position the cursor
-over one of the lines and use the @kbd{C-c C-c} command
-(@code{occur-mode-goto-occurrence}), to jump to the corresponding spot
+You can show the sectioning structure of a Texinfo file by using the @kbd{C-c
+C-s} command (@code{texinfo-show-structure}).  This command lists the lines
+that begin with the @@-commands for @code{@@chapter}, @code{@@section}, and the
+like.  It constructs what amounts to a table of contents.  These lines are
+displayed in another buffer called the @samp{*Occur*} buffer.  In that buffer,
+you can position the cursor over one of the lines and use the @kbd{C-c C-c}
+command (@code{occur-mode-goto-occurrence}), to jump to the corresponding spot
 in the Texinfo file.
 
+Você pode mostrar a estrutura de seccionamento de um arquivo Texinfo usando o
+comando @kbd{C-c C-s} (@code{texinfo-show-structure}). Este comando lista as
+linhas que começam com os comandos @@ para @code{@@chapter}, @code{@@section} e
+similares. Ele constrói o que equivale a um índice. Essas linhas são exibidas
+em outro buffer chamado buffer @samp{*Occur*}. Nesse buffer, você pode
+posicionar o cursor sobre uma das linhas e usar o comando @kbd{C-c C-c}
+(@code{occur-mode-goto-occurrence}) para pular para o ponto correspondente no
+arquivo Texinfo.
+PAREI
 @table @kbd
 @item  C-c C-s
 @itemx M-x texinfo-show-structure
