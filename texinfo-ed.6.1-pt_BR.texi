@@ -1877,7 +1877,7 @@ isto:
 @end group
 @end example
 
-(Veja-se @ref{Textos GNU de Amostra} para textos de amostra completos.)
+(Veja-se @ref{Textos GNU de Amostra} para textos de amostra completos).
 
 @menu
 * Primeira Linha::                  A primeira linha de um arquivo Texinfo.
@@ -21338,198 +21338,192 @@ disso, escreva ``Você pode configurar estas variáveis:''. A expressão anterio
 soa cortada.
 @end itemize
 
-PAREI
+
 @subsubheading Editions, Dates and Versions
 
-Include edition numbers, version numbers, and dates in the
-@code{@@copying} text (for people reading the Texinfo file, and for the
-legal copyright in the output files).  Then use @code{@@insertcopying}
-in the @code{@@titlepage} section for people reading the printed
-output (@pxref{Amostra Curta}).
+Inclua números de edição, números de versão e datas no texto do
+@code{@@copying} (para pessoas que leem o arquivo do Texinfo e para os direitos
+autorais nos arquivos de saída). Em seguida, use @code{@@insertcopying} na
+seção @code{@@titlepage} para pessoas que leem a saída impressa
+(@pxref{Amostra Curta}).
 
-It is easiest to handle such version information using @code{@@set}
-and @code{@@value}.  @xref{Exemplo de @code{@@value}}, and @ref{GNU
-Sample Texts}.
+É mais fácil manusear essas informações de versão usando @code{@@set} e
+@code{@@value}. @xref{Exemplo de @code{@@value}} e @ref{Textos GNU de Amostra}.
 
 
 @subsubheading Comandos de Definição
 
-Definition commands are @code{@@deffn}, @code{@@defun},
-@code{@@defmac}, and the like, and enable you to write descriptions in
-a uniform format.
+Os comandos de definição são @code{@@deffn}, @code{@@defun}, @code{@@defmac} e
+similares, e te habilitam a escrever descrições em um formato uniforme.
 
 @itemize @bullet
 @item
-Write just one definition command for each entity you define with a
-definition command.  The automatic indexing feature creates an index
-entry that leads the reader to the definition.
+Escreva apenas um comando de definição para cada entidade que você definir com
+um comando de definição. O recurso de indexação automática cria uma entrada de
+índice que leva o(a) leitor(a) para a definição.
 
 @item
-Use @code{@@table} @dots{} @code{@@end table} in an appendix that
-contains a summary of functions, not @code{@@deffn} or other definition
-commands.
+Use @code{@@table} @dots{} @code{@@end table} em um anexo que contenha um
+resumo de funções, não @code{@@deffn} ou outros comandos de definição.
 @end itemize
 
 
-@subsubheading Capitalization
+@subsubheading Capitalização
 
 @itemize @bullet
 @item
-Capitalize ``Texinfo''; it is a name.  Do not write the @samp{x} or
-@samp{i} in uppercase.
+Coloque ``Texinfo'' em maiúscula; é um nome. Não escreva @samp{x} ou o @samp{i}
+em maiúsculas.
 
 @item
-Capitalize ``Info''; it is a name.
+Coloque ``Info'' em maiúscula; é um nome.
 
 @item
-Write @TeX{} using the @code{@@TeX@{@}} command.  Note the uppercase
-@samp{T} and @samp{X}.  This command causes the formatters to
-typeset the name according to the wishes of Donald Knuth, who wrote
-@TeX{}.  (Likewise @code{@@LaTeX@{@}} for @LaTeX{}.)
+Escreva @TeX{} usando o comando @code{@@TeX@{@}}. Observe as letras maiúsculas
+@samp{T} e @samp{X}. Esse comando faz com que os formatadores tipografem o nome
+de acordo com os desejos de Donald Knuth, que escreveu o @TeX{}. (Da mesma
+forma @code{@@LaTeX@{@}} para @LaTeX{}).
 @end itemize
 
 
-@subsubheading Spaces
+@subsubheading Espaços
 
-Do not use spaces to format a Texinfo file, except inside of
-@code{@@example} @dots{} @code{@@end example} and other literal
-environments and commands.
+Não use espaços para formatar um arquivo do Texinfo, exceto dentro de
+@code{@@example} @dots{} @code{@@end example} e outros ambientes e comandos
+literais.
 
 @need 700
-For example, @TeX{} fills the following:
+Por exemplo, o @TeX{} preenche o seguinte:
 
 @example
 @group
    @@kbd@{C-x v@}
    @@kbd@{M-x vc-next-action@}
-      Perform the next logical operation
-      on the version-controlled file
-      corresponding to the current buffer.
+      Realize a próxima operação lógica sobre arquivo controlado por versão
+      correspondente ao buffer atual.
 @end group
 @end example
 
 @need 950
 @noindent
-so it looks like this:
+de forma que se pareça com isto:
 
 @iftex
 @quotation
    @kbd{C-x v}
    @kbd{M-x vc-next-action}
-      Perform the next logical operation on the version-controlled file
-      corresponding to the current buffer.
+      Realize a próxima operação lógica sobre arquivo controlado por versão
+      correspondente ao buffer atual.
 @end quotation
 @end iftex
 @ifnottex
 @quotation
-`C-x v' `M-x vc-next-action' Perform the next logical operation on the
-version-controlled file corresponding to the current buffer.
+`C-x v' `M-x vc-next-action' Realize a próxima operação lógica sobre arquivo
+controlado por versão correspondente ao buffer atual.
 @end quotation
 @end ifnottex
 
 @noindent
-In this case, the text should be formatted with
-@code{@@table}, @code{@@item}, and @code{@@itemx}, to create a table.
+Nesse caso, o texto deveria ser formatado com @code{@@table}, @code{@@item} e
+@code{@@itemx} para criar uma tabela.
 
 
-@subsubheading @@code, @@samp, @@var, and @samp{---}
+@subsubheading @@code, @@samp, @@var e @samp{---}
 
 @itemize @bullet
 @item
-Use @code{@@code} around Lisp symbols, including command names.
-For example,
+Use @code{@@code} em torno de símbolos da Lisp, incluindo nomes de comandos.
+Por exemplo,
 
 @example
-The main function is @@code@{vc-next-action@}, @dots{}
+A função principal é @@code@{vc-next-action@}, @dots{}
 @end example
 
 @item
-Avoid putting letters such as @samp{s} immediately after an
-@samp{@@code}.  Such letters look bad.
+Evite colocar letras, como @samp{s}, imediatamente depois de um @samp{@@code}.
+Essas letras parecem ruins.
 
 @item
-Use @code{@@var} around meta-variables.  Do not write angle brackets
-around them.
+Use @code{@@var} em torno de meta-variáveis. Não escreva colchetes angulares em
+torno delas.
 
 @item
-Use three hyphens in a row, @samp{---}, to indicate a long dash.  @TeX{}
-typesets these as a long dash and the Info formatters reduce three
-hyphens to two.
+Use três hifens em uma linha, @samp{---}, para indicar um traço longo. @TeX{}
+os tipografa como um traço longo e os formatadores do Info reduzem três hifens
+para dois.
+
 @end itemize
 
 
-@subsubheading Periods Outside of Quotes
+@subsubheading Pontos Fora das Aspas
 
-Place periods and other punctuation marks @emph{outside} of quotations,
-unless the punctuation is part of the quotation.  This practice goes
-against some publishing conventions in the United States, but enables the
-reader to distinguish between the contents of the quotation and the
-whole passage.
+Coloque pontos e outros sinais de pontuação @emph{fora} das citações, a menos
+que a pontuação faça parte da citação. Essa prática vai contra algumas
+convenções de publicação nos Estados Unidos, mas habilita o(a) leitor(a) a
+distinguir entre o conteúdo da citação e a passagem inteira.
 
-For example, you should write the following sentence with the period
-outside the end quotation marks:
+Por exemplo, você deveria escrever a seguinte frase com o ponto fora das aspas:
 
 @example
-Evidently, @samp{au} is an abbreviation for ``author''.
+Evidentemente, @samp{au} é uma abreviação para ``autor(a)''.
 @end example
 
 @noindent
-since @samp{au} does @emph{not} serve as an  abbreviation for
-@samp{author.} (with a period following the word).
+já que @samp{au} @emph{não} serve como uma abreviação para @samp{autor(a)}.
+(com um ponto seguinte à palavra).
 
 
-@subsubheading Introducing New Terms
+@subsubheading Apresentando Novos Termos
 
 @itemize @bullet
 @item
-Introduce new terms so that a reader who does not know them can
-understand them from context; or write a definition for the term.
+Apresente novos termos, de forma que um(a) leitor(a) que não os conheça consiga
+entendê-los a partir do contexto; ou escreva uma definição para o termo.
 
-For example, in the following, the terms ``check in'', ``register'' and
-``delta'' are all appearing for the first time; the example sentence should be
-rewritten so they are understandable.
+Por exemplo, na seguinte, os termos ``check in'', ``register'' e ``delta''
+estão todos aparecendo pela primeira vez; a frase de exemplo deveria ser
+reescrita, de forma que eles sejam compreensíveis.
 
 @quotation
-The major function assists you in checking in a file to your
-version control system and registering successive sets of changes to
-it as deltas.
+A função principal te auxilia na submissão inicial de um arquivo no teu sistema
+de controle de versão e a registrar conjuntos sucessivos de mudanças para ele
+como deltas.
 @end quotation
 
 @item
-Use the @code{@@dfn} command around a word being introduced, to indicate
-that the reader should not expect to know the meaning already, and
-should expect to learn the meaning from this passage.
+Use o comando @code{@@dfn} ao redor de uma palavra sendo apresentada, para
+indicar que o(a) leitor(a) deveria esperar não saber o significado de antemão,
+e deveria esperar aprender o significado a partir dessa passagem.
 @end itemize
 
 
-@subsubheading Program Invocation Nodos
+@subsubheading Nós de Invocação de Programa
 
-You can invoke programs such as Emacs, GCC, and @code{gawk} from a
-shell.  The documentation for each program should contain a section that
-describes this.  Unfortunately, if the node names and titles for these
-sections are all different, they are difficult for users to find.
+Você pode invocar programas como Emacs, GCC e @code{gawk} a partir de um shell.
+A documentação para cada programa deveria conter uma seção que descreva isso.
+Infelizmente, se os nomes e títulos dos nós para essas seções forem todos
+diferentes, eles são dificeis para usuários(as) encontrar.
 
-So, there is a convention to name such sections with a phrase beginning
-with the word `Invoking', as in `Invoking Emacs'; this way, users can
-find the section easily.
+Portanto, existe uma convenção para nomear essas seções com uma frase que
+começa com a palavra `Invocando', como em `Invocando Emacs'; dessa maneira,
+os(as) usuários(as) conseguem encontrar a seção facilmente.
 
 
-@subsubheading ANSI C Syntax
+@subsubheading Sintaxe ANSI C
 
-When you use @code{@@example} to describe a C function's calling
-conventions, use the ANSI C syntax, like this:
+Ao usar @code{@@example} para descrever as convenções de chamada de uma função
+C, use a sintaxe ANSI C, como esta:
 
 @example
 void dld_init (char *@@var@{path@});
 @end example
 
 @noindent
-And in the subsequent discussion, refer to the argument values by
-writing the same argument names, again highlighted with
-@code{@@var}.
+E na discussão subsequente, refira-se aos valores dos argumentos escrevendo os
+mesmos nomes dos argumentos, novamente destacados com @code{@@var}.
 
 @need 800
-Avoid the obsolete style that looks like this:
+Evite o estilo obsoleto que se parece com este:
 
 @example
 #include <dld.h>
@@ -21538,72 +21532,70 @@ dld_init (path)
   char *path;
 @end example
 
-Also, it is best to avoid writing @code{#include} above the
-declaration just to indicate that the function is declared in a
-header file.  The practice may give the misimpression that the
-@code{#include} belongs near the declaration of the function.  Either
-state explicitly which header file holds the declaration or, better
-yet, name the header file used for a group of functions at the
-beginning of the section that describes the functions.
+Além disso, é melhor evitar escrever @code{#include} acima da declaração apenas
+para indicar que a função está declarada em um arquivo de cabeçalho. A prática
+pode dar a impressão equivocada de que o @code{#include} pertence próximo à
+declaração da função. Declare explicitamente qual arquivo de cabeçalho contém a
+declaração ou, melhor ainda, nomeie o arquivo de cabeçalho usado para um grupo
+de funções no início da seção que descreve as funções.
 
 @anchor{texi-elements-by-size}
-@subsubheading Node Length
+@subsubheading Comprimento do Nó
 
-Keep Nodos (sections) to a reasonable length, whatever reasonable
-might be in the given context.  Don't hesitate break up long Nodos
-into subNodos and have an extensive tree structure; that's what it's
-there for.  Many times, readers will probably try to find a single
-specific point in the manual, using search, indexing, or just plain
-guessing, rather than reading the whole thing from beginning to end.
+Mantenha os nós (seções) em um comprimento razoável, qualquer que seja o
+razoável no contexto dado. Não hesite em dividir nós longos em subnós e ter uma
+extensa estrutura de árvore; é para isso que ela está lá. Muitas vezes, os(as)
+leitores(as) provavelmente tentarão encontrar um ponto específico no manual,
+usando busca, indexação ou apenas simples adivinhação, em vez de ler a coisa
+toda desde o começo até o fim.
 
-You can use the @command{texi-elements-by-size} utility to see a list
-of all Nodos (or sections) in the document, sorted by size (either
-lines or words), to find candidates for splitting.  It's in the
-@file{util/} subdirectory of the Texinfo sources.
+Você pode usar o utilitário @command{texi-elements-by-size} para ver uma lista
+de todos os nós (ou seções) no documento, ordenados por tamanho (ou por linhas
+ou por palavras), para encontrar candidatos para divisão. Ele está no
+subdiretório @file{util/} dos fontes do Texinfo.
 
 
-@subsubheading Bad Examples
+@subsubheading Exemplos Ruins
 
-Here are several examples of bad writing to avoid:
+Aqui estão vários exemplos de escrita ruim para se evitar:
 
-In this example, say, `` @dots{} you must @code{@@dfn}@{check
-in@} the new version.''  That flows better.
-
-@quotation
-When you are done editing the file, you must perform a
-@code{@@dfn}@{check in@}.
-@end quotation
-
-In the following example, say, ``@dots{} makes a unified interface such as VC
-mode possible.''
+Neste exemplo, digamos, `` @dots{} você precisa @code{@@dfn}@{submeter@} a nova
+versão.'' Isso flui melhor.
 
 @quotation
-SCCS, RCS and other version-control systems all perform similar
-functions in broadly similar ways (it is this resemblance which makes
-a unified control mode like this possible).
+Quando terminar de editar o arquivo, você precisa realizar uma
+@code{@@dfn}@{submissão@}.
 @end quotation
 
-And in this example, you should specify what `it' refers to:
+No exemplo seguinte, digamos, ``@dots{} torna possível uma interface unificada,
+como o modo VC.''
 
 @quotation
-If you are working with other people, it assists in coordinating
-everyone's changes so they do not step on each other.
+SCCS, RCS e outros sistemas de controle de versão realizam funções semelhantes
+de maneiras amplamente semelhantes (é essa semelhança que torna possível um
+modo de controle unificado como esse).
+@end quotation
+
+E neste exemplo, você deveria especificar a que `isso' se refere:
+
+@quotation
+Se você estiver trabalhando com outras pessoas, isso ajuda a coordenar as
+mudanças de todas, de forma que elas não atrapalhem umas as outras.
 @end quotation
 
 
-@subsubheading And Finally @dots{}
+@subsubheading E Finalmente @dots{}
 
 @itemize @bullet
 @item
-Pronounce @TeX{} as if the @samp{X} were a Greek `chi', as the last
-sound in the name `Bach'.  But pronounce Texinfo as in `speck':
-``teckinfo''.
+Pronuncie @TeX{} como se @samp{X} fosse um `chi' grego, como o último som do
+nome `Bach'. Mas pronuncie Texinfo como em `speck': ``teckinfo''.
 
 @item
-Write notes for yourself at the very end of a Texinfo file after the
-@code{@@bye}.  None of the formatters process text after the
-@code{@@bye}; it is as if the text were within @code{@@ignore} @dots{}
-@code{@@end ignore}.
+Escreva notas para você mesmo(a) no finalzinho de um arquivo do Texinfo depois
+do @code{@@bye}. Nenhum dos formatadores processa texto depois do @code{@@bye};
+é como se o texto estivesse dentro de @code{@@ignore} @dots{} @code{@@end
+ignore}.
 @end itemize
 
 
@@ -21611,9 +21603,9 @@ Write notes for yourself at the very end of a Texinfo file after the
 @appendix Arquivos de Amostra do Texinfo
 @cindex Arquivos de amostra do Texinfo
 
-The first example from the first chapter (@pxref{Amostra Curta}) is
-given here in its entirety, without commentary.  The second example
-includes the full texts to be used in GNU manuals.
+O primeiro exemplo oriundo do primeiro capítulo (@pxref{Amostra Curta}) é dado
+aqui na íntegra, sem comentários. O segundo exemplo inclui os textos completos
+a serem usados nos manuais GNU.
 
 @menu
 * Arquivo Curto de Amostra do Texinfo::
@@ -21623,75 +21615,74 @@ includes the full texts to be used in GNU manuals.
 @end menu
 
 
-@node Short Sample Texinfo File
+@node Arquivo Curto de Amostra do Texinfo
 @section Amostra Curta
-@cindex Sample Texinfo file, no comments
+@cindex Arquivo de amostra do Texinfo, sem comentários
 
-Here is a complete, short sample Texinfo file.  You can see this file,
-with comments, in the first chapter.  @xref{Amostra Curta}.
+Aqui está um arquivo do Texinfo de amostra completo e curto. Você pode ver esse
+arquivo, com comentários, no primeiro capítulo. @xref{Amostra Curta}.
 
-In a nutshell: The @command{makeinfo} program transforms a Texinfo
-source file such as this into an Info file or HTML; and @TeX{} typesets
-it for a printed manual.
+Resumindo: O programa @command{makeinfo} transforma um arquivo fonte do Texinfo
+como este em um arquivo do Info ou em HTML; e o @TeX{} o tipografa para um
+manual impresso.
 
 
 @sp 1
 @example
 \input texinfo
-@@settitle Sample Manual 1.0
+@@settitle Manual de Amostra 1.0
 
 @@copying
-This is a short example of a complete Texinfo file.
+Este é um curto exemplo de um arquivo completo do Texinfo.
 
 Copyright @@copyright@{@} 2016 Free Software Foundation, Inc.
 @@end copying
 
 @@titlepage
-@@title Sample Title
+@@title Título de Amostra
 @@page
 @@vskip 0pt plus 1filll
 @@insertcopying
 @@end titlepage
 
-@@c Output the table of the contents at the beginning.
+@@c Exibe o sumário no início.
 @@contents
 
 @@ifnottex
 @@node Top
-@@top GNU Sample
+@@top Amostra GNU
 
-This manual is for GNU Sample
-(version @@value@{VERSION@}, @@value@{UPDATED@}).
+Este manual é para Amostra GNU (version @@value@{VERSION@},
+@@value@{UPDATED@}).
 @@end ifnottex
 
 @@menu
-* First Chapter::    The first chapter is the
-                      only chapter in this sample.
-* Index::            Complete index.
+* Primeiro Capítulo:: O primeiro capítulo é o único capítulo nesta amostra.
+* Índice::            ìndice completo.
 @@end menu
 
 
-@@node First Chapter
-@@chapter First Chapter
+@@node Primeiro Capítulo
+@@chapter Primeiro Capítulo
 
-@@cindex chapter, first
+@@cindex capítulo, primeiro
 
-This is the first chapter.
-@@cindex index entry, another
+Este é o primeiro capítulo.
+@@cindex entrada de índice, outra
 
-Here is a numbered list.
+Aqui está uma lista numerada.
 
 @@enumerate
 @@item
-This is the first item.
+Este é o primeiro item.
 
 @@item
-This is the second item.
+Este é o segundo item.
 @@end enumerate
 
 
-@@node Index
-@@unnumbered Index
+@@node Índice
+@@unnumbered Índice
 
 @@printindex cp
 
@@ -21703,77 +21694,76 @@ This is the second item.
 @section Textos GNU de Amostra
 
 @cindex Textos GNU de Amostra
-@cindex Sample texts, GNU
-@cindex Full texts, GNU
+@cindex Textos de amostra, GNU
+@cindex Textos completos, GNU
 
-Following is a sample Texinfo document with the full texts that should
-be used (adapted as necessary) in GNU manuals.
+A seguir está uma amostra de documento do Texinfo com os textos completos que
+deverim ser usados (adaptados conforme necessário) nos manuais GNU.
 
-As well as the legal texts, it also serves as a practical example of how
-many elements in a GNU system can affect the manual.  If you're not
-familiar with all these different elements, don't worry.  They're not
-required and a perfectly good manual can be written without them.
-They're included here nonetheless because many manuals do (or could)
-benefit from them.
+Assim como os textos legais, ele também serve como um exemplo prático de
+quantos elementos em um sistema GNU podem afetar o manual. Se você não está
+familiarizado(a) com todos esses elementos diferentes, não se preocupe. Eles
+não são exigidos e um manual perfeitamente bom pode ser escrito sem eles. Eles
+estão incluídos aqui, no entanto, porque muitos manuais se beneficiam (ou
+poderiam se beneficiar) deles.
 
-@xref{Amostra Curta}, for a minimal example of a Texinfo file.
-@xref{Iniciando e Finalizando um Arquivo}, for a full explanation of that
-minimal example.
+@xref{Amostra Curta}, para um exemplo mínimo de um arquivo do Texinfo.
+@xref{Iniciando e Finalizando um Arquivo}, para uma explicação completa desse
+exemplo mínimo.
 
-Here are some notes on the example:
+Aqui estão algumas observações acerca do exemplo:
 
 @itemize @bullet
 @item
 @cindex $Id
 @cindex CVS $Id
 @cindex RCS $Id
-@cindex Documentation identification
-@cindex Identification of documentation
-The @samp{$Id:} comment is for the CVS
-(@url{http://www.nongnu.org/cvs/}), RCS (@pxref{Top,,, rcs, Revision
-Control System}) and other version control systems, which expand it
-into a string such as:
+@cindex Identificação de documentação
+@cindex Identificação da documentação
+O comentário @samp{$Id:} é para o CVS (@url{http://www.nongnu.org/cvs/}), RCS
+(@pxref{Top,,, rcs, Revision Control System}) e outros sistemas de controle de
+versão, que o expandem em uma string como:
 
 @example
 $Id: texinfo.texi 6987 2016-02-06 08:59:21Z gavin $
 @end example
 
-(This is potentially useful in all sources that use version control,
-not just manuals.)  You may wish to include the @samp{$Id:} comment in
-the @code{@@copying} text, if you want a completely unambiguous
-reference to the documentation source version.
+(Isso é potencialmente útil em todos os fontes que usem controle de versão, não
+apenas manuais). Você pode desejar incluir o comentário @samp{$Id:} no texto do
+@code{@@copying}, se quiser uma referência completamente inequívoca para a
+versão do fonte da documentação.
 
-If you want to literally write @t{@w{$}Id$}, use @code{@@w}:
-@code{@@w@{$@}Id$}.  Unfortunately, this technique does not work in
-plain text output, where it's not clear what should be done.
+Se você quiser escrever literalmente @t{@w{$}Id$}, use @code{@@w}:
+@code{@@w@{$@}Id$}. Infelizmente, essa técnica não funciona em saída de texto
+simples, onde não está claro o que deverua ser feito.
 
 @item
-@pindex automake@r{, and version info}
-@vindex UPDATED @r{Automake variable}
-@vindex VERSION @r{Automake variable}
+@pindex automake@r{, e informações de versão}
+@vindex UPDATED @r{variável do Automake}
+@vindex VERSION @r{variável do Automake}
 @pindex time-stamp.el
-The @file{version.texi} in the @code{@@include} command is maintained
-automatically by Automake (@pxref{Top,,, automake, GNU Automake}).  It
-sets the @samp{VERSION} and @samp{UPDATED} values used elsewhere.  If
-your distribution doesn't use Automake, but you do use Emacs, you may
-find the time-stamp.el package helpful (@pxref{Time Stamps,,, emacs,
-O Manual do GNU Emacs}).
+O @file{version.texi} no comando @code{@@include} é mantido automaticamente
+pelo Automake (@pxref{Top,,, automake, GNU Automake}). Ele configura os valores
+de @samp{VERSION} e de @samp{UPDATED} usados em outros lugares. Se tua
+distribuição não usa o Automake, mas você usa o Emacs, você pode achar o pacote
+time-stamp.el útil (@pxref{Time Stamps,,, emacs, O Manual do GNU Emacs}).
 
 @item
-The @code{@@syncodeindex} command reflects the recommendation to use
-only one index where possible, to make it easier for readers to look up
-index entries.
+O comando @code{@@syncodeindex} reflete a recomendação para usar somente um
+índice onde possível, para facilitar para os(as) leitores(as) a consulta de
+entradas de índice.
 
 @item
-The @code{@@dircategory} is for constructing the Info directory.
-@xref{Installing Dir Entries}, which includes a variety of recommended
-category names.
+O @code{@@dircategory} é para construir o diretório do Info.
+@xref{Instalando Entradas de Diretório}, que inclui uma variedade de nomes
+recomendados de categorias.
 
 @item
-The `Invoking' node is a GNU standard to help users find the basic
-information about command-line usage of a given program.  @xref{Manual
-Structure Details,,, standards, GNU Coding Standards}.
-
+O nó `Invocando' é um padrão GNU para ajudar os(as) usuários(as) a encontrar
+informações básicas relativas ao uso da linha de comando de um programa
+fornecido.
+@xref{Manual Structure Details,,, standards, Padrões GNU de Codificação}.
+PAREI
 @item
 @cindex Licença GNU de Documentação Livre, including entire
 @cindex Free Documentation License, including entire
