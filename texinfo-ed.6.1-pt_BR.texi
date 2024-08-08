@@ -374,7 +374,7 @@ Enfatizando Texto
 
 Citações e Exemplos
 
-* Comandos de Fechamento de Bloco::    Construtores diferentes para propósitos diferentes.
+* Comandos de Cercamento de Blocos::    Construtores diferentes para propósitos diferentes.
 * @code{@@quotation}::                Escrevendo uma citação.
 * @code{@@indentedblock}::            Bloco de texto recuado a esquerda.
 * @code{@@example}::                  Escrevendo um exemplo em uma fonte de largura fixa.
@@ -3833,7 +3833,7 @@ manuais impressos e não aparecem neles.
 @menu
 * Escrevendo um Menu::                O que é um menu?
 * Exemplo de Menu::                   Entradas de menu de duas e três partes
-* Localização de Menu::               Menus vão ao final de nós
+* Local de Menu::               Menus vão ao final de nós
 * Partes de Menu::                    Uma entrada de menu tem três partes
 * Entrada de Menu Menos Desordenada:: Entrada de menu de duas partes
 * Outros Arquivos do Info::           Como referenciar um arquivo Info diferente
@@ -3974,10 +3974,10 @@ Dado que nenhum nome de arquivo é especificado com @samp{Arquivos} ou
 @samp{Buffers}, eles podem ser os nomes de nós no mesmo arquivo Info
 (@pxref{Outros Arquivos do Info, , Referenciando Outros Arquivos do Info}).
 
-@node Localização de Menu
-@subsection Localização de Menu
-@cindex Localização de Menu
-@cindex Menus, Localização de
+@node Local de Menu
+@subsection Local de Menu
+@cindex Local de Menu
+@cindex Menus, Local de
 
 Pode existir ao menos um menu em um nó. Um menu é convencionalmente
 localizado ao final de um nó, sem qualquer texto regular ou comandos
@@ -5702,7 +5702,7 @@ de manual. Também, se o terceiro argumento for dado, o segundo argumento
 * Exemplos @code{@@url}::           Exemplos do uso de todas as formas do @code{@@url}.
 * Quebra de Linha de URL::       Como as linhas são quebradas dentro do texto do @code{@@url}.
 * Formato de Saída PDF @code{@@url}::  Uma opção especial para ocultar links na saída PDF.
-* Cores de PDF::              Colorindo urls e outros links na saída PDF.
+* Cores do PDF::              Colorindo urls e outros links na saída PDF.
 @end menu
 
 @node Exemplos @code{@@url}
@@ -5874,11 +5874,11 @@ conforme mostrado acima. A opção é ignorada quando DVI está sendo
 produzido.
 
 
-@node Cores de PDF
-@subsection Cores de PDF
+@node Cores do PDF
+@subsection Cores do PDF
 @c Capítulo 6 - Referências Cruzadas;
 @c Seção 6.10 - @code{@@url}, @code{@@uref@{@var{url}[, @var{text}][, @var{replacement}]@}}
-@c Subseção 6.10.4 - Cores de PDF
+@c Subseção 6.10.4 - Cores do PDF
 
 @cindex Links coloridos, em saída PDF
 @cindex Links, colorindo em saída PDF
@@ -7127,7 +7127,7 @@ no início daquela linha, e somente com um espaço entre o @code{@@end} e
 o @code{example}.
 
 @menu
-* Comandos de Inclusão de Blocos::    Construtores diferentes para propósitos diferentes.
+* Comandos de Cercamento de Blocos::    Construtores diferentes para propósitos diferentes.
 * @code{@@quotation}::                Escrevendo uma citação.
 * @code{@@indentedblock}::            Bloco de texto recuado a esquerda.
 * @code{@@example}::                  Escrevendo um exemplo em uma fonte de largura fixa.
@@ -7146,10 +7146,10 @@ o @code{example}.
 @end menu
 
 
-@node Comandos de Inclusão de Blocos
-@section Comandos de Inclusão de Blocos
+@node Comandos de Cercamento de Blocos
+@section Comandos de Cercamento de Blocos
 @c Capítulo 8 - Citações e Exemplos
-@c Seção 8.1 - Comandos de Inclusão de Blocos
+@c Seção 8.1 - Comandos de Cercamento de Blocos
 
 Aqui está um resumo de comandos que contém blocos de texto, também
 conhecidos como @dfn{ambientes}. Eles estão mais explicados nas próximas
@@ -7844,7 +7844,7 @@ onde o texto não é preenchido, ele produz um espaço de recuo de
 parágrafo na saída @TeX{}. (Esses ambientes são onde uma linha de
 entrada produz uma linha de saída, como @code{@@example} e
 @code{@@display}; para um resumo de todos os ambientes,
-@pxref{Comandos de Inclusão de Blocos}).
+@pxref{Comandos de Cercamento de Blocos}).
 
 Não coloque chaves após um comando @code{@@indent}; elas não são usadas,
 dado que @code{@@indent} é um comando usado do lado de fora de
