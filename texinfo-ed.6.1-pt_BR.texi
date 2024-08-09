@@ -695,8 +695,8 @@ Cabeçalhos de Página
 Capturando Erros
 
 * @command{makeinfo} Preferido::         @code{makeinfo} encontra erros.
-* Depurando com Info::                   Como capturar erros com a formatação Info.
-* Depurando com @TeX{}::                 Como capturar erros com a formatação @TeX{}.
+* Depuração com Info::                   Como capturar erros com a formatação Info.
+* Depuração com @TeX{}::                 Como capturar erros com a formatação @TeX{}.
 * Usando @code{texinfo-show-structure}:: Como se usar @code{texinfo-show-structure}.
 * Usando @code{occur}::                  Como listar todas as linhas contendo um modelo.
 * Executando @code{Info-validate}::      Como encontrar nós mal referenciados.
@@ -15962,7 +15962,7 @@ Overfull @@hbox (20.76302pt too wide)
 
 @TeX{} também fornece o número da linha no arquivo fonte do Texinfo e o texto
 da linha ofensiva, que é marcado em todos os lugares que @TeX{} considerou
-hifenização. @xref{Depurando com @TeX{}}, para mais informações acerca de erros
+hifenização. @xref{Depuração com @TeX{}}, para mais informações acerca de erros
 de tipografia.
 
 Se o arquivo do Texinfo tiver um hbox lotado, você pode reescrever a frase, de
@@ -23004,37 +23004,37 @@ Especifica o formato de título frente e verso, com capítulos em novas páginas
 @noindent
 Texinfo careçe de um comando @code{@@setchapternewpage even}.
 
-PAREI
+
 @node Cabeçalhos Personalizados
 @section Como Fazer Teus Próprios Cabeçalhos
 
-You can use the standard headings provided with Texinfo or specify
-your own.  By default, Texinfo has no footers, so if you specify them,
-the available page size for the main text will be slightly reduced.
+Você pode usar os títulos de uso mais comum fornecidos com o Texinfo ou
+especificar os teus próprios. Por padrão, o Texinfo não tem rodapés, de forma
+que se você especificá-los, o tamanho de página disponível para o texto
+principal será ligeiramente reduzido.
 
-Texinfo provides six commands for specifying headings and
-footings:
+O Texinfo fornece seis comandos para especificar títulos e rodapés:
 @itemize @bullet
 @item
-@code{@@everyheading} and @code{@@everyfooting} generate page headers and
-footers that are the same for both even- and odd-numbered pages.
+@code{@@everyheading} e @code{@@everyfooting} geram cabeçalhos e rodapés de
+página que são os mesmos para páginas pares e ímpares.
 @item
-@code{@@evenheading} and @code{@@evenfooting} command generate headers
-and footers for even-numbered (left-hand) pages.
+Os comandos @code{@@evenheading} e @code{@@evenfooting} geram cabeçalhos e
+rodapés para páginas pares (lado esquerdo).
 @item
-@code{@@oddheading} and @code{@@oddfooting} generate headers and footers
-for odd-numbered (right-hand) pages.
+@code{@@oddheading} e @code{@@oddfooting} geram cabeçalhos e rodapés para
+páginas ímpares (lado direito).
 @end itemize
 
-Write custom heading specifications in the Texinfo file immediately
-after the @code{@@end titlepage} command.  You must cancel the
-predefined heading commands with the @code{@@headings off} command
-before defining your own specifications.
+Escreva especificações personalizadas de título no arquivo do Texinfo
+imediatamente depois do comando @code{@@end titlepage}. Você precisa cancelar
+os comandos de título predefinidos com o comando @code{@@headings off} antes de
+definir tuas próprias especificações.
 
 @need 1000
-Here is how to tell @TeX{} to place the chapter name at the left, the
-page number in the center, and the date at the right of every header
-for both even- and odd-numbered pages:
+Aqui está como dizer ao @TeX{} para colocar o nome do capítulo à esquerda, o
+número da página no centro e a data à direita de cada cabeçalho para páginas
+pares e ímpares:
 
 @example
 @group
@@ -23044,28 +23044,28 @@ for both even- and odd-numbered pages:
 @end example
 
 @noindent
-You need to divide the left part from the central part and the central
-part from the right part by inserting @samp{@@|} between parts.
-Otherwise, the specification command will not be able to tell where
-the text for one part ends and the next part begins.
+Você precisa dividir a parte esquerda da parte central e a parte central da
+parte direita inserindo @samp{@@|} entre as partes. Caso contrário, o comando
+de especificação não será capaz de dizer onde o texto de uma parte termina e a
+próxima parte começa.
 
-Each part can contain text or @@-commands.  The text is printed as if
-the part were within an ordinary paragraph in the body of the page.
-The @@-commands replace themselves with the page number, date, chapter
-name, or whatever.
+Cada parte pode conter texto ou comandos @@. O texto é impresso como se a parte
+estivesse dentro de um parágrafo comum no corpo da página. Os comandos @@
+substituem eles próprios pelo número da página, data, nome do capítulo ou o que
+for.
 
 @need 950
-Here are the six heading and footing commands:
+Aqui estão os seis comandos de título e rodapé:
 
 @table @code
 @item @@everyheading @var{left} @@| @var{center} @@| @var{right}
 @itemx @@everyfooting @var{left} @@| @var{center} @@| @var{right}
 @findex everyheading
 @findex everyfooting
-The `every' commands specify the format for both even- and odd-numbered
-pages.  These commands are for documents that are printed on one side
-of each sheet of paper, or for documents in which you want symmetrical
-headers or footers.
+Os comandos `every' especificam o formato para páginas pares e ímpares. Esses
+comandos são para documentos que sejam impressos em um lado de cada folha de
+papel, ou para documentos nos quais você queira cabeçalhos ou rodapés
+simétricos.
 
 @item @@evenheading @var{left} @@| @var{center} @@| @var{right}
 @itemx @@oddheading  @var{left} @@| @var{center} @@| @var{right}
@@ -23075,324 +23075,308 @@ headers or footers.
 @findex evenfooting
 @findex oddheading
 @findex oddfooting
-The `even' and `odd' commands specify the format for even-numbered
-pages and odd-numbered pages.  These commands are for books and
-manuals that are printed on both sides of each sheet of paper.
+Os comandos `even' e `odd' especificam o formato para páginas pares e páginas
+ímpares. Esses comandos são para livros e manuais que sejam impressos em ambos
+os lados de cada folha de papel.
 @end table
 
-Use the @samp{@@this@dots{}} series of @@-commands to
-provide the names of chapters
-and sections and the page number.  You can use the
-@samp{@@this@dots{}} commands in the left, center, or right portions
-of headers and footers, or anywhere else in a Texinfo file so long as
-they are between @code{@@iftex} and @code{@@end iftex} commands.
+Use a série @samp{@@this@dots{}} de comandos @@ para fornecer os nomes de
+capítulos e seções e o número da página. Você pode usar os comandos
+@samp{@@this@dots{}} nas partes esquerda, central ou direita dos cabeçalhos e
+rodapés, ou em qualquer outro lugar em um arquivo do Texinfo, desde que estejam
+entre os comandos @code{@@iftex} e @code{@@end iftex}.
 
 @need 1000
-Here are the @samp{@@this@dots{}} commands:
+Aqui estão os comandos @samp{@@this@dots{}}:
 
 @table @code
 @item @@thispage
 @findex thispage
-Expands to the current page number.
+Expande para o número da página atual.
 
 @item @@thissectionname
 @findex thissectionname
-Expands to the name of the current section.
+Expande para o nome da seção atual.
 
 @item @@thissectionnum
 @findex thissectionnum
-Expands to the number of the current section.
+Expande para o número da seção atual.
 
 @item @@thissection
 @findex thissection
-Expands to the number and name of the current section, in the format
-`Section 1: Title'.
+Expande para o número e nome da seção atual, no formato `Seção 1: Título'.
 
 @item @@thischaptername
 @findex thischaptername
-Expands to the name of the current chapter.
+Expande para o nome do capítulo atual.
 
 @item @@thischapternum
 @findex thischapternum
-Expands to the number of the current chapter, or letter of the current
-appendix.
+Expande para o número do capítulo atual ou letra do anexo atual.
 
 @item @@thischapter
 @findex thischapter
-Expands to the number and name of the current
-chapter, in the format `Chapter 1: Title'.
+Expande para o número e nome do capítulo atual, no formato `Capítulo 1:
+Título'.
 
 @item @@thistitle
 @findex thistitle
-Expands to the name of the document, as specified by the
-@code{@@settitle} command.
+Expande para o nome do documento, conforme especificado pelo comando
+@code{@@settitle}.
 
 @item @@thisfile
 @findex thisfile
-For @code{@@include} files only: expands to the name of the current
-@code{@@include} file.  If the current Texinfo source file is not an
-@code{@@include} file, this command has no effect.  This command does
-@emph{not} provide the name of the current Texinfo source file unless
-it is an @code{@@include} file.  (@xref{Arquivos de Inclusão}, for more
-information about @code{@@include} files.)
+Somente para arquivos @code{@@include}: expande para o nome do arquivo
+@code{@@include} atual. Se o arquivo fonte atual do Texinfo não for um arquivo
+@code{@@include}, esse comando não terá efeito. Esse comando @emph{não} fornece
+o nome do arquivo fonte atual do Texinfo, a menos que seja um arquivo
+@code{@@include}. (@xref{Arquivos de Inclusão}, para mais informações acerca de
+arquivos @code{@@include}).
 @end table
 
 @noindent
-You can also use the @code{@@today@{@}} command, which expands to the
-current date, in `1 Jan 1900' format.
+Você também pode usar o comando @code{@@today@{@}}, que expande para a data
+atual, no formato `1 Jan 1900'.
 @findex today
 
-Other @@-commands and text are printed in a header or footer just as
-if they were in the body of a page.  It is useful to incorporate text,
-particularly when you are writing drafts:
+Outros comandos @@ e texto são impressos em um cabeçalho ou rodapé exatamente
+como se estivessem no corpo de uma página. É útil para incorporar texto,
+particularmente quando você estiver escrevendo rascunhos:
 
 @example
 @group
 @@headings off
-@@everyheading @@emph@{Draft!@} @@| @@thispage @@| @@thischapter
-@@everyfooting @@| @@| Version: 0.27: @@today@{@}
+@@everyheading @@emph@{Rascunho!@} @@| @@thispage @@| @@thischapter
+@@everyfooting @@| @@| Versão: 0.27: @@today@{@}
 @end group
 @end example
 
-Beware of overlong titles: they may overlap another part of the
-header or footer and blot it out.
+Cuidado com títulos muito longos: eles podem se sobrepor a outra parte do
+cabeçalho ou rodapé e apagá-la.
 
-If you have very short chapters and/or sections, several of them can
-appear on a single page.  You can specify which chapters and sections
-you want @code{@@thischapter}, @code{@@thissection} and other such
-macros to refer to on such pages as follows:
+Se você tiver capítulos e (ou) seções muito curtos, vários deles podem aparecer
+em uma página. Você pode especificar a quais capítulos e seções você quer que
+@code{@@thischapter}, @code{@@thissection} e outras macros se refiram em tais
+páginas, como segue:
 
 @table @code
-@item @@everyheadingmarks @var{ref}
-@itemx @@everyfootingmarks @var{ref}
+@item @@everyheadingmarks @var{referência}
+@itemx @@everyfootingmarks @var{referência}
 @findex everyheadingmarks
 @findex everyfootingmarks
-The @var{ref} argument can be either @code{top} (the @code{@@this...}
-commands will refer to the chapter/section at the top of a page) or
-@code{bottom} (the commands will reflect the situation at the bottom
-of a page).  These @samp{@@every...} commands specify what to do on
-both even- and odd-numbered pages.
+O argumento @var{referência} pode ser @code{top} (os comandos @code{@@this...}
+se referirão ao capítulo/seção no topo de uma página) ou @code{bottom} (os
+comandos refletirão a situação no final de uma página). Esses comandos
+@samp{@@every...} especificam o que fazer em páginas pares e ímpares.
 
-@item @@evenheadingmarks @var{ref}
-@itemx @@oddheadingmarks @var{ref}
-@itemx @@evenfootingmarks @var{ref}
-@itemx @@oddfootingmarks @var{ref}
+@item @@evenheadingmarks @var{referência}
+@itemx @@oddheadingmarks @var{referência}
+@itemx @@evenfootingmarks @var{referência}
+@itemx @@oddfootingmarks @var{referência}
 @findex evenheadingmarks
 @findex oddheadingmarks
 @findex evenfootingmarks
 @findex oddfootingmarks
-These @samp{@@even...} and @samp{@@odd...} commands specify what to do
-on only even- or odd-numbered pages, respectively.  The @var{ref}
-argument is the same as with the @samp{@@every...} commands.
+Esses comandos @samp{@@even...} e @samp{@@odd...} especificam o que fazer
+somente em páginas pares ou ímpares, respectivamente. O argumento
+@var{referência} é o mesmo dos comandos @samp{@@every...}.
 @end table
 
-Write these commands immediately after the @code{@@...contents}
-commands, or after the @code{@@end titlepage} command if you don't
-have a table of contents or if it is printed at the end of your
-manual.
+Escreva esses comandos imediatamente depois dos comandos @code{@@...contents}
+ou depois do comando @code{@@end titlepage} se você não tiver um sumário ou se
+ele estiver impresso no final do teu manual.
 
-By default the @code{@@this...} commands reflect the situation at the
-bottom of a page both in headings and in footings.
+Por padrão, os comandos @code{@@this...} refletem a situação na parte inferior
+de uma página, tanto nos títulos quanto nos rodapés.
 
 
 @node Capturando Erros
 @appendix Capturando Erros
-@cindex Structure, catching mistakes in
-@cindex Nós, catching mistakes
-@cindex Catching mistakes
-@cindex Correcting mistakes
-@cindex Mistakes, catching
-@cindex Problems, catching
-@cindex Debugging the Texinfo structure
+@cindex Estrutura, capturando erros em
+@cindex Nós, capturando erros
+@cindex Capturando erros
+@cindex Corrigindo erros
+@cindex Erros, capturando
+@cindex Problemas, capturando
+@cindex Depurando a estrutura do Texinfo
 
-Besides mistakes in the content of your documentation, there are two
-kinds of mistake you can make with Texinfo: you can make mistakes with
-@@-commands, and you can make mistakes with the structure of the Nós
-and chapters.
+Além de erros no conteúdo da tua documentação, existem dois tipos de erros que
+você pode cometer com o Texinfo: você pode cometer erros com os comandos @@; e
+pode cometer erros com a estrutura dos nós e dos capítulos.
 
-Emacs has two tools for catching the @@-command mistakes and two for
-catching structuring mistakes.
+O Emacs tem duas ferramentas para detectar erros de comando @@ e duas para
+detectar erros de estruturação.
 
-For finding problems with @@-commands, you can run @TeX{} or a region
-formatting command on the region that has a problem; indeed, you can
-run these commands on each region as you write it.
+Para encontrar problemas com os comandos @@, você pode executar @TeX{} ou um
+comando de formatação de região na região que tenha um problema; na verdade,
+você pode executar esses comandos em cada região conforme você a escreve.
 
-For finding problems with the structure of Nós and chapters, you can use
-@kbd{C-c C-s} (@code{texinfo-show-structure}) and the related @code{occur}
-command and you can use the @kbd{M-x Info-validate} command.
+Para encontrar problemas com a estrutura de nós e capítulos, você pode usar
+@kbd{C-c C-s} (@code{texinfo-show-structure}) e o comando relacionado
+@code{occur}, e você pode usar o comando @kbd{M-x Info-validate}.
 
 @menu
 * @command{makeinfo} Preferido::         @code{makeinfo} encontra erros.
-* Depurando com Info::                   Como capturar erros com a formatação Info.
-* Depurando com @TeX{}::                 Como capturar erros com a formatação @TeX{}.
+* Depuração com Info::                   Como capturar erros com a formatação Info.
+* Depuração com @TeX{}::                 Como capturar erros com a formatação @TeX{}.
 * Usando @code{texinfo-show-structure}:: Como se usar @code{texinfo-show-structure}.
 * Usando @code{occur}::                  Como listar todas as linhas contendo um modelo.
 * Executando @code{Info-validate}::      Como encontrar nós mal referenciados.
 @end menu
 
 
-@node @command{makeinfo} Preferred
-@section @command{makeinfo} Preferred
+@node @command{makeinfo} Preferido
+@section @command{makeinfo} Preferido
 
-@c anchor{makeinfo Preferred}@c prev name
+@c anchor{makeinfo Preferido}@c nome anterior
 
-The @code{makeinfo} program does an excellent job of catching errors
-and reporting them---far better than @code{texinfo-format-region} or
-@code{texinfo-format-buffer}.  In addition, the various functions for
-automatically creating and updating node pointers and menus remove
-many opportunities for human error.
+O programa @code{makeinfo} faz um excelente trabalho de capturar erros e
+informá-los---muito melhor que @code{texinfo-format-region} ou
+@code{texinfo-format-buffer}. Além disso, as várias funções para criar e
+atualizar automaticamente ponteiros de nó e menus removem muitas oportunidades
+de erro humano.
 
-If you can, use the updating commands to create and insert pointers
-and menus.  These prevent many errors.  Then use @code{makeinfo} (or
-its Texinfo mode manifestations, @code{makeinfo-region} and
-@code{makeinfo-buffer}) to format your file and check for other
-errors.  This is the best way to work with Texinfo.  But if you
-cannot use @code{makeinfo}, or your problem is very puzzling, then you
-may want to use the tools described in this appendix.
+Se puder, use os comandos de atualização para criar e inserir ponteiros e
+menus. Eles evitam muitos erros. A seguir use @code{makeinfo} (ou as
+manifestações dele do modo Texinfo, @code{makeinfo-region} e
+@code{makeinfo-buffer}) para formatar teu arquivo e verificar outros erros.
+Essa é a melhor maneira de trabalhar com o Texinfo. Mas se não puder usar
+@code{makeinfo}, ou se teu problema for muito intrigante, então você pode
+querer usar as ferramentas descritas neste anexo.
 
 
-@node Debugging with Info
-@section Catching Errors with Info Formatting
-@cindex Catching errors with Info formatting
-@cindex Debugging with Info formatting
+@node Depuração com Info
+@section Detectando Erros com Formatação Info
+@cindex Detectando erros com formatação Info
+@cindex Depuração com formatação Info
 
-After you have written part of a Texinfo file, you can use the
-@code{texinfo-format-region} or the @code{makeinfo-region} command to
-see whether the region formats properly.
+Depois que tiver escrito parte de um arquivo do Texinfo, você pode usar o
+comando @code{texinfo-format-region} ou @code{makeinfo-region} para ver se a
+região formata corretamente.
 
-Most likely, however, you are reading this section because for some
-reason you cannot use the @code{makeinfo-region} command; therefore, the
-rest of this section presumes that you are using
-@code{texinfo-format-region}.
+Provavelmente, no entanto, você está lendo esta seção porque, por algum motivo,
+não pode usar o comando @code{makeinfo-region}; portanto, o restante desta
+seção presume que você está usando @code{texinfo-format-region}.
 
-If you have made a mistake with an @@-command,
-@code{texinfo-format-region} will stop processing at or after the
-error and display an error message.  To see where in the buffer the
-error occurred, switch to the @samp{*Info Region*} buffer; the cursor
-will be in a position that is after the location of the error.  Also,
-the text will not be formatted after the place where the error
-occurred (or more precisely, where it was detected).
+Se você tiver cometido um erro com um comando @@, @code{texinfo-format-region}
+interromperá o processamento no erro ou depois dele e exibirá uma mensagem de
+erro. Para ver onde no buffer o erro ocorreu, comute para o buffer @samp{*Info
+Region*}; o cursor estará em uma posição que é depois do local do erro. Além
+disso, o texto não será formatado depois do local onde o erro ocorreu (ou mais
+precisamente, onde ele foi detectado).
 
-For example, if you accidentally end a menu with the command @code{@@end
-menus} with an `s' on the end, instead of with @code{@@end menu}, you
-will see an error message that says:
+Por exemplo, se acidentalmente terminar um menu com o comando @code{@@end
+menus} com um `s' no final, em vez de com @code{@@end menu}, você verá uma
+mensagem de erro que diz:
 
 @example
-@@end menus is not handled by texinfo
+@@end menus não é manuseado pelo texinfo
 @end example
 
 @noindent
-The cursor will stop at the point in the buffer where the error
-occurs, or not long after it.  The buffer will look like this:
+O cursor irá parar no ponto no buffer onde o erro ocorre, ou não muito depois
+dele. O buffer se parecerá com isto:
 
 @example
 @group
 ---------- Buffer: *Info Region* ----------
 * Menu:
 
-* Using texinfo-show-structure::  How to use
-                                 `texinfo-show-structure'
-                                 to catch mistakes.
-* Running Info-validate::         How to check for
-                                 unreferenced Nós.
+* Usando texinfo-show-structure:: Como usar `texinfo-show-structure' para detectar erros.
+* Running Info-validate::         Como verificar nós não referenciados.
 @@end menus
 @point{}
 ---------- Buffer: *Info Region* ----------
 @end group
 @end example
 
-The @code{texinfo-format-region} command sometimes provides slightly
-odd error messages.  For example, the following cross-reference fails
-to format:
+O comando @code{texinfo-format-region} ocasionalmente fornece mensagens de erro
+ligeiramente estranhas. Por exemplo, a seguinte referência cruzada falha para
+formatar:
 
 @example
-(@@xref@{Capturando Erros, for more info.)
+(@@xref@{Capturando Erros, para mais informações.)
 @end example
 
 @noindent
-In this case, @code{texinfo-format-region} detects the missing closing
-brace but displays a message that says @samp{Unbalanced parentheses}
-rather than @samp{Unbalanced braces}.  This is because the formatting
-command looks for mismatches between braces as if they were
-parentheses.
+Nesse caso, @code{texinfo-format-region} detecta a chave de fechamento ausente,
+mas exibe uma mensagem que diz @samp{Parênteses desbalanceados} em vez de
+@samp{Chaves desbalanceadas}. Isso ocorre porque o comando de formatação
+procura incompatibilidades entre chaves como se fossem parênteses.
 
-Sometimes @code{texinfo-format-region} fails to detect mistakes.  For
-example, in the following, the closing brace is swapped with the
-closing parenthesis:
+Ocasionalmente, @code{texinfo-format-region} falha em detectar erros. Por
+exemplo, no seguinte, a chave de fechamento é trocada pelo parêntese de
+fechamento:
 
 @example
-(@@xref@{Capturando Erros), for more info.@}
+(@@xref@{Capturando Erros), para mais informações.@}
 @end example
 
 @noindent
-Formatting produces:
+A formatação produz:
 @example
-(*Note for more info.: Capturando Erros)
+(*Observação para mais informações: Capturando Erros)
 @end example
 
-The only way for you to detect this error is to realize that the
-reference should have looked like this:
+A única maneira para você detectar esse erro é a de perceber que a referência
+deveria ter a seguinte aparência:
 
 @example
-(*Note Capturando Erros::, for more info.)
+(*Observação Capturando Erros::, para mais informações)
 @end example
 
-Incidentally, if you are reading this node in Info and type @kbd{f
-@key{RET}} (@code{Info-follow-reference}), you will generate an error
-message that says:
+Aliás, se você estiver lendo este nó no Info e digitar @kbd{f @key{RET}}
+(@code{Info-follow-reference}), você gerará uma mensagem de erro que diz:
 
 @example
-No such node: "Capturando Erros) The only way @dots{}
+Nenhum nó desse tipo: "Capturando Erros) A única maneira @dots{}
 @end example
 
 @noindent
-This is because Info perceives the example of the error as the first
-cross-reference in this node and if you type a @key{RET} immediately
-after typing the Info @kbd{f} command, Info will attempt to go to the
-referenced node.  If you type @kbd{f catch @key{TAB} @key{RET}}, Info
-will complete the node name of the correctly written example and take
-you to the `Capturando Erros' node.  (If you try this, you can return
-from the `Capturando Erros' node by typing @kbd{l}
-(@code{Info-last}).)
+Isso ocorre porque o Info percebe o exemplo do erro como a primeira referência
+cruzada nesse nó e se você digitar um @key{RET} imediatamente depois de digitar
+o comando @kbd{f} do Info, o Info tentará ir para o nó referenciado. Se você
+digitar @kbd{f catch @key{TAB} @key{RET}}, o Info completará o nome do nó do
+exemplo escrito corretamente e te levará para o nó `Capturando Erros'. (Se você
+tentar isso, poderá retornar do nó `Capturando Erros' digitando @kbd{l}
+(@code{Info-last})).
 
 
-@node Depurando com @TeX{}
-@section Depurando com @TeX{}
-@cindex Catching errors with @TeX{} formatting
-@cindex Debugging with @TeX{} formatting
+@node Depuração com @TeX{}
+@section Depuração com @TeX{}
+@cindex Detectando erros com formatação @TeX{}
+@cindex Depuração com formatação @TeX{}
 
-You can also catch mistakes when you format a file with @TeX{}.
+Você também pode detectar erros ao formatar um arquivo com @TeX{}.
 
-Usually, you will want to do this after you have run
-@code{texinfo-format-buffer} (or, better, @code{makeinfo-buffer}) on
-the same file, because @code{texinfo-format-buffer} sometimes displays
-error messages that make more sense than @TeX{}.  (@xref{Debugging
-with Info}, for more information.)
+Normalmente, você vai querer fazer isso depois de ter executado
+@code{texinfo-format-buffer} (ou, melhor, @code{makeinfo-buffer}) no mesmo
+arquivo, porque @code{texinfo-format-buffer} ocasionalmente exibe mensagens de
+erro que fazem mais sentido que @TeX{}. (@xref{Depuração com Info}, para mais
+informações).
 
-For example, @TeX{} was run on a Texinfo file, part of which is shown
-here:
+Por exemplo, @TeX{} foi executado sobre um arquivo do Texinfo, parte do qual é
+mostrado aqui:
 
 @example
 ---------- Buffer: texinfo.texi ----------
-name of the Texinfo file as an extension.  The
-@@samp@{??@} are `wildcards' that cause the shell to
-substitute all the raw index files.  (@@xref@{sorting
-indices, for more information about sorting
-indices.)@@refill
+nome do arquivo do Texinfo como uma extensão. Os @@samp@{??@} são `curingas'
+que fazem o shell substituir todos os arquivos de índices brutos.
+(@@xref@{ordenação de índices, para mais informações acerca de ordenação de
+índices).@@refill
 ---------- Buffer: texinfo.texi ----------
 @end example
 
 @noindent
-(The cross-reference lacks a closing brace.)
-@TeX{} produced the following output, after which it stopped:
-
+(A referência cruzada careçe de uma chave de fechamento). @TeX{} produziu a
+seguinte saída, depois da qual parou:
 @example
 ---------- Buffer: *tex-shell* ----------
-Runaway argument?
-@{sorting indices, for more information about sorting
-indices.) @@refill @@ETC.
-! Paragraph ended before @@xref was complete.
-<to be read again>
+Argumento descontrolado?
+@{ordenação de índices, para mais informações acerca de ordenação de índices).
+@@refill @@ETC.
+! Parágrafo terminou antes que @@xref estive completa.
+<para ser lido novamente>
                   @@par
 l.27
 
@@ -23400,226 +23384,220 @@ l.27
 ---------- Buffer: *tex-shell* ----------
 @end example
 
-In this case, @TeX{} produced an accurate and
-understandable error message:
+Nesse caso, @TeX{} produziu uma mensagem de erro precisa e compreensível:
 
 @example
-Paragraph ended before @@xref was complete.
+Parágrafo terminou antes que @@xref estive completa.
 @end example
 
 @noindent
-@samp{@@par} is an internal @TeX{} command of no relevance to Texinfo.
-@samp{l.27} means that @TeX{} detected the problem on line 27 of the
-Texinfo file.  The @samp{?} is the prompt @TeX{} uses in this
-circumstance.
+@samp{@@par} é um comando interno do @TeX{} sem relevância para o Texinfo.
+@samp{l.27} significa que o @TeX{} detectou o problema na linha 27 do arquivo
+do Texinfo. O @samp{?} é o prompt que o @TeX{} usa nessa circunstância.
 
-Unfortunately, @TeX{} is not always so helpful, and sometimes you must
-truly be a Sherlock Holmes to discover what went wrong.
+Infelizmente, @TeX{} nem sempre é tão útil, e ocasionalmente você precisa ser
+realmente um Sherlock Holmes para descobrir o que deu errado.
 
-In any case, if you run into a problem like this, you can do one of three
-things.
+Em qualquer caso, se enfrentar um problema como esse, você pode fazer uma
+destas três coisas.
 
 @enumerate
 @item
-You can tell @TeX{} to continue running and ignore just this error by
-typing @key{RET} at the @samp{?} prompt.
+Você pode dizer ao @TeX{} para continuar executando e ignorar apenas esse erro
+digitando @key{RET} no prompt @samp{?}.
 
 @item
-You can tell @TeX{} to continue running and to ignore all errors as best
-it can by typing @kbd{r @key{RET}} at the @samp{?} prompt.
+Você pode dizer ao @TeX{} para continuar executando e ignorar todos os erros da
+melhor forma possível digitando @kbd{r @key{RET}} no prompt @samp{?}.
 
-This is often the best thing to do.  However, beware: the one error
-may produce a cascade of additional error messages as its consequences
-are felt through the rest of the file.  To stop @TeX{} when it is
-producing such an avalanche of error messages, type @kbd{C-c} (or
-@kbd{C-c C-c}, if you are running a shell inside Emacs).
+Geralmente, essa é a melhor coisa a fazer. No entanto, cuidado: um erro pode
+produzir uma cascata de mensagens de erro adicionais, pois as consequências
+dele são sentidas por todo o restante do arquivo. Para parar o @TeX{} quando
+ele estiver produzindo uma avalanche de mensagens de erro, digite @kbd{C-c} (ou
+@kbd{C-c C-c}, se estiver executando um shell dentro do Emacs).
 
 @item
-You can tell @TeX{} to stop this run by typing @kbd{x @key{RET}}
-at the @samp{?} prompt.
+Você pode dizer ao @TeX{} para interromper esta execução digitando @kbd{x
+@key{RET}} no prompt @samp{?}.
 @end enumerate
 
-If you are running @TeX{} inside Emacs, you need to switch to the shell
-buffer and line at which @TeX{} offers the @samp{?} prompt.
+Se você estiver executando o @TeX{} dentro do Emacs, precisará comutar para o
+buffer do shell e a linha na qual o @TeX{} oferece o prompt @samp{?}.
 
-Sometimes @TeX{} will format a file without producing error messages even
-though there is a problem.  This usually occurs if a command is not ended
-but @TeX{} is able to continue processing anyhow.  For example, if you fail
-to end an itemized list with the @code{@@end itemize} command, @TeX{} will
-write a DVI file that you can print out.  The only error message that
-@TeX{} will give you is the somewhat mysterious comment:
+Ocasionalmente, o @TeX{} formatará um arquivo sem produzir mensagens de erro,
+mesmo que exista um problema. Isso geralmente ocorre se um comando não for
+finalizado, mas o @TeX{} for capaz de continuar o processamento de qualquer
+maneira. Por exemplo, se você não conseguir finalizar uma lista itemizada com o
+comando @code{@@end itemize}, o @TeX{} escreverá um arquivo DVI que você
+consegue imprimir. A única mensagem de erro que o @TeX{} te fornecerá é o
+comentário um tanto misterioso:
 
 @example
-(@@end occurred inside a group at level 1)
+(@@end ocorreu dentro de um grupo no nível 1)
 @end example
 
 @noindent
-However, if you print the DVI file, you will find that the text
-of the file that follows the itemized list is entirely indented as if
-it were part of the last item in the itemized list.  The error message
-is the way @TeX{} says that it expected to find an @code{@@end}
-command somewhere in the file; but that it could not determine where
-it was needed.
+No entanto, se você imprimir o arquivo DVI, verá que o texto do arquivo que
+segue a lista itemizada está inteiramente recuado como se fosse parte do último
+item na lista itemizada. A mensagem de erro é a maneira como o @TeX{} diz que
+esperava encontrar um comando @code{@@end} em algum lugar no arquivo; mas que
+não poderia determinar onde ele era necessário.
 
-Another source of notoriously hard-to-find errors is a missing
-@code{@@end group} command.  If you ever are stumped by
-incomprehensible errors, look for a missing @code{@@end group} command
-first.
+Outra fonte de erros notoriamente difíceis de encontrar é um comando
+@code{@@end group} ausente. Se você alguma vez ficar perplexo com erros
+incompreensíveis, procure por um comando @code{@@end group} ausente primeiro.
 
-If the Texinfo file lacks header lines,
-@TeX{} may stop in the
-beginning of its run and display output that looks like the following.
-The @samp{*} indicates that @TeX{} is waiting for input.
+Se o arquivo do Texinfo careçer de linhas de cabeçalho, @TeX{} pode parar no
+começo da execução e exibir uma saída que se parece com a seguinte. O @samp{*}
+indica que @TeX{} está esperando por entrada.
 
 @example
-This is TeX, Version 3.14159 (Web2c 7.0)
+Este é o TeX, Versão 3.14159 (Web2c 7.0)
 (test.texinfo [1])
 *
 @end example
 
 @noindent
-In this case, simply type @kbd{\end @key{RET}} after the asterisk.  Then
-write the header lines in the Texinfo file and run the @TeX{} command
-again. (Note the use of the backslash, @samp{\}.  @TeX{} uses @samp{\}
-instead of @samp{@@}; and in this circumstance, you are working
-directly with @TeX{}, not with Texinfo.)
+Nesse caso, simplesmente digite @kbd{\end @key{RET}} depois do asterisco. A
+seguir escreva as linhas de cabeçalho no arquivo do Texinfo e execute o comando
+@TeX{} novamente. (Observe o uso da barra invertida, @samp{\}. @TeX{} usa
+@samp{\} em vez de @samp{@@}; e nessa circunstância, você está trabalhando
+diretamente com @TeX{}, não com Texinfo).
 
-@node Using @code{texinfo-show-structure}
-@section Using @code{texinfo-show-structure}
+@node Usando @code{texinfo-show-structure}
+@section Usando @code{texinfo-show-structure}
 
-@cindex Showing the structure of a file
+@cindex Mostrando a estrutura de um arquivo
 @findex texinfo-show-structure
 
-It is not always easy to keep track of the Nós, chapters, sections, and
-subsections of a Texinfo file.  This is especially true if you are revising
-or adding to a Texinfo file that someone else has written.
+Nem sempre é fácil manter o controle de nós, capítulos, seções e subseções de
+um arquivo do Texinfo. Isso é especialmente verdadeiro se você estiver
+revisando ou adicionando a um arquivo do Texinfo que outra pessoa tenha
+escrito.
 
-In GNU Emacs, in Texinfo mode, the @code{texinfo-show-structure}
-command lists all the lines that begin with the @@-commands that
-specify the structure: @code{@@chapter}, @code{@@section},
-@code{@@appendix}, and so on.  With an argument (@w{@kbd{C-u}}
-as prefix argument, if interactive),
-the command also shows the @code{@@node} lines.  The
-@code{texinfo-show-structure} command is bound to @kbd{C-c C-s} in
-Texinfo mode, by default.
+No GNU Emacs, no modo Texinfo, o comando @code{texinfo-show-structure} lista
+todas as linhas que começam com os comandos @@ que especificam a estrutura:
+@code{@@chapter}, @code{@@section}, @code{@@appendix} e assim por diante. Com
+um argumento (@w{@kbd{C-u}} como argumento de prefixo, se interativo), o
+comando também mostra as linhas @code{@@node}. O comando
+@code{texinfo-show-structure} é vinculado a @kbd{C-c C-s} no modo Texinfo, por
+padrão.
 
-The lines are displayed in a buffer called the @samp{*Occur*} buffer,
-indented by hierarchical level.  For example, here is a part of what was
-produced by running @code{texinfo-show-structure} on this manual:
+As linhas são exibidas em um buffer chamado @samp{*Occur*}, recuado por nível
+hierárquico. Por exemplo, aqui está uma parte do que foi produzido ao executar
+@code{texinfo-show-structure} sobre este manual:
 
 @example
 @group
-Lines matching "^@@\\(chapter \\|sect\\|subs\\|subh\\|
+Linhas correspondentes a "^@@\\(chapter \\|sect\\|subs\\|subh\\|
 unnum\\|major\\|chapheading \\|heading \\|appendix\\)"
-in buffer texinfo.texi.
+no buffer texinfo.texi.
 @dots{}
 4177:@@chapter Nós
-4198:    @@heading Two Paths
-4231:    @@section Node and Menu Illustration
-4337:    @@section The @@code@{@@@@node@} Command
-4393:        @@subheading Choosing Node and Pointer Names
-4417:        @@subsection How to Write a @@code@{@@@@node@} Line
-4469:        @@subsection @@code@{@@@@node@} Line Dicas
+4198:    @@heading Dois Caminhos
+4231:    @@section Ilustração de Nó e Menu
+4337:    @@section O Comando @@code@{@@@@node@}
+4393:        @@subheading Escolhendo Nomes de Nós e Ponteiros
+4417:        @@subsection Como Escrever uma Linha @@code@{@@@@node@}
+4469:        @@subsection Dicas da Linha @@code@{@@@@node@}
 @dots{}
 @end group
 @end example
 
-This says that lines 4337, 4393, and 4417 of @file{texinfo.texi} begin
-with the @code{@@section}, @code{@@subheading}, and @code{@@subsection}
-commands respectively.  If you move your cursor into the @samp{*Occur*}
-window, you can position the cursor over one of the lines and use the
-@kbd{C-c C-c} command (@code{occur-mode-goto-occurrence}), to jump to
-the corresponding spot in the Texinfo file.  @xref{Other Repeating
-Search, , Using Occur, emacs, O Manual do GNU Emacs}, for more
-information about @code{occur-mode-goto-occurrence}.
+Isso diz que as linhas 4337, 4393 e 4417 de @file{texinfo.texi} começam com os
+comandos @code{@@section}, @code{@@subheading} e @code{@@subsection}
+respectivamente. Se você mover teu cursor para a janela @samp{*Occur*}, você
+pode posicionar o cursor sobre uma das linhas e usar o comando @kbd{C-c C-c}
+(@code{occur-mode-goto-occurrence}), para pular para o ponto correspondente no
+arquivo do Texinfo.
+@xref{Other Repeating Search, , Using Occur, emacs, O Manual do GNU Emacs},
+para mais informações acerca de @code{occur-mode-goto-occurrence}.
 
-The first line in the @samp{*Occur*} window describes the @dfn{regular
-expression} specified by @var{texinfo-heading-pattern}.  This regular
-expression is the pattern that @code{texinfo-show-structure} looks for.
-@xref{Regexps, , Using Regular Expressions, emacs, O Manual do GNU Emacs},
-for more information.
+A primeira linha na janela @samp{*Occur*} descreve a @dfn{expressão regular}
+especificada por @var{texinfo-heading-pattern}. Essa expressão regular é o
+padrão que @code{texinfo-show-structure} procura.
+@xref{Regexps, , Using Regular Expressions, emacs, O Manual do GNU Emacs}, para
+mais informações.
 
-When you invoke the @code{texinfo-show-structure} command, Emacs will
-display the structure of the whole buffer.  If you want to see the
-structure of just a part of the buffer, of one chapter, for example,
-use the @kbd{C-x n n} (@code{narrow-to-region}) command to mark the
-region.  (@xref{Narrowing, , , emacs, O Manual do GNU Emacs}.)  This is
-how the example used above was generated.  (To see the whole buffer
-again, use @kbd{C-x n w} (@code{widen}).)
+Quando você invoca o comando @code{texinfo-show-structure}, o Emacs exibirá a
+estrutura do buffer inteiro. Se você quiser ver a estrutura de apenas uma parte
+do buffer, de um capítulo, por exemplo, use o comando @kbd{C-x n n}
+(@code{narrow-to-region}) para marcar a região.
+(@xref{Narrowing, , , emacs, O Manual do GNU Emacs}). É assim que o exemplo
+usado acima foi gerado. (Para ver o buffer inteiro novamente, use @kbd{C-x n w}
+(@code{widen})).
 
-If you call @code{texinfo-show-structure} with a prefix argument by
-typing @w{@kbd{C-u C-c C-s}}, it will list lines beginning with
-@code{@@node} as well as the lines beginning with the @@-sign commands
-for @code{@@chapter}, @code{@@section}, and the like.
+Se você chamar @code{texinfo-show-structure} com um argumento de prefixo
+digitando @w{@kbd{C-u C-c C-s}}, ele listará as linhas começando com
+@code{@@node}, bem como as linhas começando com os comandos de sinal @@ para
+@code{@@chapter}, @code{@@section} e similares.
 
-You can remind yourself of the structure of a Texinfo file by looking at
-the list in the @samp{*Occur*} window; and if you have mis-named a node
-or left out a section, you can correct the mistake.
+Você pode se lembrar da estrutura de um arquivo do Texinfo observando a lista
+na janela @samp{*Occur*}; e se tiver nomeado um nó incorretamente ou deixou uma
+seção de fora, você consegue corrigir o erro.
 
-@node Using @code{occur}
-@section Using @code{occur}
+@node Usando @code{occur}
+@section Usando @code{occur}
 
-@cindex Occurrences, listing with @code{@@occur}
+@cindex Ocorrências, listando com @code{@@occur}
 @findex occur
 
-Sometimes the @code{texinfo-show-structure} command produces too much
-information.  Perhaps you want to remind yourself of the overall structure
-of a Texinfo file, and are overwhelmed by the detailed list produced by
-@code{texinfo-show-structure}.  In this case, you can use the @code{occur}
-command directly.  To do this, type:
+Ocasionalmente, o comando @code{texinfo-show-structure} produz muita
+informação. Talvez você queira se lembrar da estrutura geral de um arquivo do
+Texinfo e esteja sobrecarregado(a) pela lista detalhada produzida por
+@code{texinfo-show-structure}. Nesse caso, você pode usar o comando
+@code{occur} diretamente. Para fazer isso, digite:
 
 @example
 @kbd{M-x occur}
 @end example
 
 @noindent
-and then, when prompted, type a @dfn{regexp}, a regular expression for
-the pattern you want to match.  (@xref{Regexps, , Regular Expressions,
-emacs, O Manual do GNU Emacs}.)  The @code{occur} command works from
-the current location of the cursor in the buffer to the end of the
-buffer.  If you want to run @code{occur} on the whole buffer, place
-the cursor at the beginning of the buffer.
+e então, quando solicitado(a), digite @dfn{regexp}, uma expressão regular para
+o padrão que você quer corresponder.
+(@xref{Regexps, , Regular Expressions, emacs, O Manual do GNU Emacs}). O
+comando @code{occur} funciona a partir da localização atual do cursor no buffer
+até o fim do buffer. Se você quiser executar @code{occur} sobre o buffer
+inteiro, coloque o cursor no começo do buffer.
 
-For example, to see all the lines that contain the word
-@samp{@@chapter} in them, just type @samp{@@chapter}.  This will
-produce a list of the chapters.  It will also list all the sentences
-with @samp{@@chapter} in the middle of the line.
+Por exemplo, para ver todas as linhas que contenham a palavra @samp{@@chapter},
+basta digitar @samp{@@chapter}. Isso produzirá uma lista dos capítulos. Também
+listará todas as frases com @samp{@@chapter} no meio da linha.
 
-If you want to see only those lines that start with the word
-@samp{@@chapter}, type @samp{^@@chapter} when prompted by
-@code{occur}.  If you want to see all the lines that end with a word
-or phrase, end the last word with a @samp{$}; for example,
-@samp{catching mistakes$}.  This can be helpful when you want to see
-all the Nós that are part of the same chapter or section and
-therefore have the same `Up' pointer.
+Se você quiser ver somente aquelas linhas que começam com a palavra
+@samp{@@chapter}, digite @samp{^@@chapter} quando solicitado(a) por
+@code{occur}. Se você quiser ver todas as linhas que terminam com uma palavra
+ou frase, termine a última palavra com @samp{$}; por exemplo, @samp{capturando
+erros$}. Isso pode ser útil quando você quiser ver todos os nós que sejam parte
+do mesmo capítulo ou seção e, portanto, tem o mesmo ponteiro `Acima'.
 
 @xref{Other Repeating Search, , Using Occur, emacs , O Manual do GNU Emacs},
-for more information.
+para mais informações.
 
 
-@node Running @code{Info-validate}
-@section Finding Badly Referenced Nós
+@node Executando @code{Info-validate}
+@section Encontrando Nós Mal Referenciados
 
-@anchor{Running Info-Validate}@c old name
+@anchor{Executando Info-Validate}@c nome antigo
 @findex Info-validate
-@cindex Nós, checking for badly referenced
-@cindex Checking for badly referenced Nós
-@cindex Looking for badly referenced Nós
-@cindex Finding badly referenced Nós
-@cindex Badly referenced Nós
+@cindex Nós, verificando mal referenciados
+@cindex Verificando nós mal referenciados
+@cindex Procurando por nós mal referenciados
+@cindex Encontrando nós mal referenciados
+@cindex Nós mal referenciados
 
-You can use the @code{Info-validate} command to check whether any of
-the `Next', `Previous', `Up' or other node pointers fail to point to a
-node.  This command checks that every node pointer points to an
-existing node.  The @code{Info-validate} command works only on Info
-files, not on Texinfo files.
+Você pode usar o comando @code{Info-validate} para verificar se algum dos
+ponteiros de nó `Próximo', `Anterior', `Acima' ou outros falham em apontar para
+um nó. Esse comando verifica se cada ponteiro de nó aponta para um nó
+existente. O comando @code{Info-validate} funciona somente sobre arquivos do
+Info, não sobre arquivos do Texinfo.
 
-The @code{makeinfo} program validates pointers automatically, so you
-do not need to use the @code{Info-validate} command if you are using
-@code{makeinfo}.  You only may need to use @code{Info-validate} if you
-are unable to run @code{makeinfo} and instead must create an Info file
-using @code{texinfo-format-region} or @code{texinfo-format-buffer}, or
-if you write an Info file from scratch.
+O programa @code{makeinfo} valida ponteiros automaticamente, de forma que você
+não precisa usar o comando @code{Info-validate} se estiver usando
+@code{makeinfo}. Você só pode precisar usar @code{Info-validate} se não
+conseguir executar @code{makeinfo} e, em vez disso, precisar criar um arquivo
+do Info usando @code{texinfo-format-region} ou @code{texinfo-format-buffer}, ou
+se escrever um arquivo do Info desde o zero.
 
 @menu
 * Usando @code{Info-validate}:: Como executar @code{Info-validate}.
@@ -23633,120 +23611,120 @@ if you write an Info file from scratch.
 @subsection Usando @code{Info-validate}
 
 @cindex Usando @code{Info-validate}
-@cindex Info validating a large file
-@cindex Validating a large file
+@cindex Info validando um arquivo grande
+@cindex Validando um arquivo grande
 
-To use @code{Info-validate}, visit the Info file you wish to check and
-type:
+Para usar @code{Info-validate}, visite o arquivo do Info que deseja verificar e
+digite:
 
 @example
 M-x Info-validate
 @end example
 
 @noindent
-Note that the @code{Info-validate} command requires an uppercase
-`I'@.  You may also need to create a tag table before running
-@code{Info-validate}.  @xref{Tagifying}.
+Observe que o comando @code{Info-validate} exige um `I' maiúsculo. Você também
+pode precisar criar uma tabela de etiquetas antes de executar
+@code{Info-validate}. @xref{Etiquetando}.
 
-If your file is valid, you will receive a message that says ``File appears
-valid''.  However, if you have a pointer that does not point to a node,
-error messages will be displayed in a buffer called @samp{*problems in
-info file*}.
+Se teu arquivo for válido, você receberá uma mensagem que diz ``Arquivo parece
+válido''. No entanto, se você tiver um ponteiro que não aponta para um nó,
+mensagens de erro serão exibidas em um buffer chamado @samp{*problemas no
+arquivo info*}.
 
-For example, @code{Info-validate} was run on a test file that contained
-only the first node of this manual.  One of the messages said:
+Por exemplo, @code{Info-validate} foi executado sobre um arquivo de teste que
+continha somente o primeiro nó deste manual. Uma das mensagens dizia:
 
 @example
-In node "Visão Geral", invalid Next: Modo Texinfo
+No nó "Visão Geral", inválido Pŕoximo: Modo Texinfo
 @end example
 
 @noindent
-This meant that the node called @samp{Visão Geral} had a `Next' pointer that
-did not point to anything (which was true in this case, since the test file
-had only one node in it).
+Isso significava que o nó chamado @samp{Visão Geral} tinha um ponteiro
+`Próximo' que não apontava para nada (o que era verdade nesse caso, já que o
+arquivo de teste tinha somente um nó).
 
-Now suppose we add a node named @samp{Modo Texinfo} to our test case
-but we do not specify a `Previous' for this node.  Then we will get
-the following error message:
+Agora, suponha que nós adicionamos um nó chamado @samp{Modo Texinfo} ao nosso
+caso de teste, mas não especificamos um `Anterior' para esse nó. Então,
+obteremos a seguinte mensagem de erro:
 
 @example
-In node "Modo Texinfo", should have Previous: Visão Geral
+No nó "Modo Texinfo", deveria ter Anterior: Visão Geral
 @end example
 
 @noindent
-This is because every `Next' pointer should be matched by a
-`Previous' (in the node where the `Next' points) which points back.
+Isso ocorre porque cada ponteiro `Próximo' deveria ser correspondido por um
+`Anterior' (no nó para onde o `Próximo' aponta), que aponta para trás.
 
-@code{Info-validate} also checks that all menu entries and cross-references
-point to actual Nós.
+@code{Info-validate} também verifica se todas as entradas de menu e referências
+cruzadas apontam para nós reais.
 
-@code{Info-validate} requires a tag table and does not work with files
-that have been split.  (The @code{texinfo-format-buffer} command
-automatically splits large files.)  In order to use @code{Info-validate}
-on a large file, you must run @code{texinfo-format-buffer} with an
-argument so that it does not split the Info file; and you must create a
-tag table for the unsplit file.
+@code{Info-validate} exige uma tabela de etiquetas e não funciona com arquivos
+que tenham sido divididos. (O comando @code{texinfo-format-buffer} divide
+automaticamente arquivos grandes). Para a finalidade de usar
+@code{Info-validate} sobre um arquivo grande, você precisa executar
+@code{texinfo-format-buffer} com um argumento, de forma que ele não divida o
+arquivo do Info; e você precisa criar uma tabela de etiquetas para o arquivo
+não dividido.
 
-@node Unsplit
-@subsection Creating an Unsplit File
-@cindex Creating an unsplit file
-@cindex Unsplit file creation
+@node Desdividir
+@subsection Criando um Arquivo Desdividido
+@cindex Criando um arquivo desdividido
+@cindex Criação de arquivo desdividido
 
-You can run @code{Info-validate} only on a single Info file that has a
-tag table.  The command will not work on the indirect subfiles that
-are generated when a master file is split.  If you have a large file
-(longer than 300,000 bytes or so), you need to run the
-@code{texinfo-format-buffer} or @code{makeinfo-buffer} command in such
-a way that it does not create indirect subfiles.  You will also need
-to create a tag table for the Info file.  After you have done this,
-you can run @code{Info-validate} and look for badly referenced
-Nós.
+Você pode executar @code{Info-validate} somente sobre um arquivo unitário do
+Info que tenha uma tabela de etiquetas. O comando não funcionará sobre os
+subarquivos indiretos que sejam gerados quando um arquivo mestre for dividido.
+Se você tiver um arquivo grande (maior que 300.000 bytes), você precisa
+executar o comando @code{texinfo-format-buffer} ou @code{makeinfo-buffer} de
+tal forma que ele não crie subarquivos indiretos. Você também precisará criar
+uma tabela de etiquetas para o arquivo do Info. Depois de fazer isso, você pode
+executar @code{Info-validate} e procurar por nós referenciados incorretamente.
 
-The first step is to create an unsplit Info file.  To prevent
-@code{texinfo-format-buffer} from splitting a Texinfo file into
-smaller Info files, give a prefix to the @kbd{M-x
-texinfo-format-buffer} command:
+O primeiro passo é o de criar um arquivo do Info desdividido. Para evitar que o
+@code{texinfo-format-buffer} divida um arquivo do Texinfo em arquivos do Info
+menores, forneça um prefixo para o comando @kbd{M-x texinfo-format-buffer}:
 
 @example
 C-u M-x texinfo-format-buffer
 @end example
 
 @noindent
-or else
+ou então
 
 @example
 C-u C-c C-e C-b
 @end example
 
 @noindent
-When you do this, Texinfo will not split the file and will not create
-a tag table for it.
-@cindex Making a tag table manually
-@cindex Tag table, making manually
+Ao fazer isso, o Texinfo não dividirá o arquivo e não criará uma tabela de
+etiquetas para ele.
+@cindex Fazendo uma tabela de etiquetas manualmente
+@cindex Tabela de etiquetas, fazendo manualmente
 
-@node Tagifying
-@subsection Tagifying a File
+@node Etiquetando
+@subsection Etiquetando um Arquivo
 
-After creating an unsplit Info file, you must create a tag table for
-it.  Visit the Info file you wish to tagify and type:
+Depois de criar um arquivo do Info desdividido, você precisa criar uma tabela
+de etiquetas para ele. Visite o arquivo do Info que você deseja etiquetar e
+digite:
 
 @example
 M-x Info-tagify
 @end example
 
 @noindent
-(Note the uppercase @samp{I} in @code{Info-tagify}.)  This creates an
-Info file with a tag table that you can validate.
+(Observe a letra maiúscula @samp{I} no @code{Info-tagify}). Isso cria um
+arquivo do Info com uma tabela de etiquetas que você consegue validar.
 
-The third step is to validate the Info file:
+O terceiro passo é o de validar o arquivo do Info:
 
 @example
 M-x Info-validate
 @end example
 
 @noindent
-(Note the uppercase @samp{I} in @code{Info-validate}.)
-In brief, the steps are:
+(Observe a letra maiúscula @samp{I} no @code{Info-validate}). Resumidamente, as
+etapas são:
 
 @example
 @group
@@ -23756,36 +23734,36 @@ M-x Info-validate
 @end group
 @end example
 
-After you have validated the node structure, you can rerun
-@code{texinfo-format-buffer} in the normal way so it will construct a
-tag table and split the file automatically, or you can make the tag
-table and split the file manually.
+Depois que tiver validado a estrutura do nó, você pode executar novamente
+@code{texinfo-format-buffer} da maneira normal, de forma que ele construirá uma
+tabela de etiquetas e dividirá o arquivo automaticamente; ou você pode criar a
+tabela de etiquetas e dividir o arquivo manualmente.
 
-@node Splitting
-@subsection Splitting a File Manually
-@cindex Splitting an Info file manually
-@cindex Info file, splitting manually
+@node Dividindo
+@subsection Dividindo um Arquivo Manualmente
+@cindex Dividindo um arquivo do Info manualmente
+@cindex Arquivo do Info, dividindo manualmente
 
-You should split a large file or else let the
-@code{texinfo-format-buffer} or @code{makeinfo-buffer} command do it
-for you automatically.  (Generally you will let one of the formatting
-commands do this job for you.  @xref{Criando um Arquivo do Info}.)
+Você deveria dividir um arquivo grande ou então deixar que o comando
+@code{texinfo-format-buffer} ou @code{makeinfo-buffer} faça isso para você
+automaticamente. (Geralmente você deixará um dos comandos de formatação fazer
+esse trabalho para você. @xref{Criando um Arquivo do Info}).
 
-The split-off files are called the indirect subfiles.
+Os arquivos divididos são chamados de subarquivos indiretos.
 
-Info files are split to save memory.  With smaller files, Emacs does not
-have make such a large buffer to hold the information.
+Arquivos do Info são divididos para economizar memória. Com arquivos menores, o
+Emacs não precisa criar um buffer tão grande para manter as informações.
 
-If an Info file has more than 30 Nós, you should also make a tag
-table for it.  @xref{Usando @code{Info-validate}}, for information
-about creating a tag table.  (Again, tag tables are usually created
-automatically by the formatting command; you only need to create a tag
-table yourself if you are doing the job manually.  Most likely, you
-will do this for a large, unsplit file on which you have run
-@code{Info-validate}.)
+Se um arquivo do Info tiver mais de 30 nós, você também deveria criar uma
+tabela de etiquetas para ele. @xref{Usando @code{Info-validate}}, para
+informações acerca de criar uma tabela de etiquetas. (Novamente, as tabelas de
+etiquetas geralmente são criadas automaticamente pelo comando de formatação;
+você só precisa criar uma tabela de etiquetas se estiver fazendo o trabalho
+manualmente. Provavelmente, você fará isso para um arquivo grande e não
+dividido sobre o qual tenha executado @code{Info-validate}).
 
-Visit the Info file you wish to tagify and split and type the two
-commands:
+Visite o arquivo do Info que você deseja etiquetar e dividir e digite os dois
+comandos:
 
 @example
 M-x Info-tagify
@@ -23793,18 +23771,18 @@ M-x Info-split
 @end example
 
 @noindent
-(Note that the @samp{I} in @samp{Info} is uppercase.)
+(Observe que o @samp{I} em @samp{Info} é maiúsculo).
 
-When you use the @code{Info-split} command, the buffer is modified into a
-(small) Info file which lists the indirect subfiles.  This file should be
-saved in place of the original visited file.  The indirect subfiles are
-written in the same directory the original file is in, with names generated
-by appending @samp{-} and a number to the original file name.
+Quando você usa o comando @code{Info-split}, o buffer é modificado em um
+(pequeno) arquivo do Info que lista os subarquivos indiretos. Esse arquivo
+deveria ser salvo no lugar do arquivo original visitado. Os subarquivos
+indiretos são escritos no mesmo diretório em que o arquivo original está, com
+nomes gerados anexando @samp{-} e um número ao nome do arquivo original.
 
-The primary file still functions as an Info file, but it contains just
-the tag table and a directory of subfiles.
+O arquivo principal ainda funciona como um arquivo do Info, mas contém somente
+a tabela de etiquetas e um diretório de subarquivos.
 
-
+PAREI
 @node Especificação do Formato Info
 @appendix Especificação do Formato Info
 
