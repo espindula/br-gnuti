@@ -677,7 +677,7 @@ Usando o Modo Texinfo
 * Atualizando Nós e Menus::    Como atualizar ou criar novos nós e menus.
 * Formatação Info::             Como formatar para Info.
 * Impressão::                   Como formatar e imprimir parte ou tudo de um arquivo.
-* Sumário do Modo Texinfo::        Sumário de todos os comandos do modo Texinfo.
+* Resumo do Modo Texinfo::        Sumário de todos os comandos do modo Texinfo.
 
 Atualizando Nós e Menus
 
@@ -688,8 +688,8 @@ Atualizando Nós e Menus
 Cabeçalhos de Página
 
 * Cabeçalhos Introduzidos::     Convenções para se usar cabeçalhos de página.
-* Formato do Título::           Formatos padrão de títulos de página.
-* Escolha do Título::           Como especificar o tipo do título da página.
+* Formato de Título::           Formatos padrão de títulos de página.
+* Escolha de Título::           Como especificar o tipo do título da página.
 * Cabeçalhos Personalizados::   Como criar teus próprios cabeçalhos e rodapés.
 
 Capturando Erros
@@ -21956,7 +21956,7 @@ trabalho.
 * Atualizando Nós e Menus::   Como atualizar ou criar novos nós e menus.
 * Formatação Info::             Como formatar para Info.
 * Impressão::                   Como formatar e imprimir parte ou tudo de um arquivo.
-* Sumário do Modo Texinfo::     Sumário de todos os comandos do modo Texinfo.
+* Resumo do Modo Texinfo::     Sumário de todos os comandos do modo Texinfo.
 @end menu
 
 @node Visão Geral do Modo Texinfo
@@ -22549,19 +22549,19 @@ argumento (argumento de prefixo, se interativo), o comando
 @code{texinfo-sequential-node-update} atualiza sequencialmente todos os nós na
 região.
 @end table
-PAREI
-@node Info Formatting
-@section Formatting for Info
-@cindex Formatting for Info
-@cindex Running an Info formatter
-@cindex Info formatting
 
-Texinfo mode provides several commands for formatting part or all of a
-Texinfo file for Info.  Often, when you are writing a document, you
-want to format only part of a file---that is, a region.
+@node Formatação Info
+@section Formatação para Info
+@cindex Formatação para Info
+@cindex Executando um formatador do Info
+@cindex Formatação Info
 
-You can use either the @code{texinfo-format-region} or the
-@code{makeinfo-region} command to format a region:
+O modo Texinfo fornece vários comandos para formatar parte ou todo um arquivo
+do Texinfo para Info. Frequentemente, quando estiver escrevendo um documento,
+você vai querer formatar somente parte de um arquivo---ou seja, uma região.
+
+Você pode usar o comando @code{texinfo-format-region} ou @code{makeinfo-region}
+para formatar uma região:
 
 @table @kbd
 @findex texinfo-format-region
@@ -22569,11 +22569,11 @@ You can use either the @code{texinfo-format-region} or the
 @itemx M-x texinfo-format-region
 @itemx C-c C-m C-r
 @itemx M-x makeinfo-region
-Format the current region for Info.
+Formata a região atual para Info.
 @end table
 
-You can use either the @code{texinfo-format-buffer} or the
-@code{makeinfo-buffer} command to format a whole buffer:
+Você pode usar ou o comando @code{texinfo-format-buffer} ou o
+@code{makeinfo-buffer} para formatar um buffer inteiro:
 
 @table @kbd
 @findex texinfo-format-buffer
@@ -22581,11 +22581,12 @@ You can use either the @code{texinfo-format-buffer} or the
 @itemx M-x texinfo-format-buffer
 @itemx C-c C-m C-b
 @itemx M-x makeinfo-buffer
-Format the current buffer for Info.
+Formata o buffer atual para Info.
 @end table
 
 @need 1000
-For example, after writing a Texinfo file, you can type the following:
+Por exemplo, depois de escrever um arquivo do Texinfo, você pode digitar o
+seguinte:
 
 @example
 C-u C-c C-u m
@@ -22594,196 +22595,194 @@ C-u M-x texinfo-master-menu
 @end example
 
 @noindent
-This updates all the Nós and menus.  Then type the following to create
-an Info file:
+Isso atualiza todos os nós e menus. Então digitar o seguinte para criar um
+arquivo do Info:
 
 @example
 C-c C-m C-b
-@exdent or
+@exdent ou
 M-x makeinfo-buffer
 @end example
 
-@xref{Criando um Arquivo do Info} for details about Info formatting.
+@xref{Criando um Arquivo do Info} para detalhes acerca da formatação Info.
 
-@node Printing
-@comment node-name,  next,  previous,  up
-@section Printing
-@cindex Formatting for printing
-@cindex Printing a region or buffer
-@cindex Region formatting and printing
-@cindex Buffer formatting and printing
-@cindex Part of file formatting and printing
+@node Impressão
+@comment nome-nó,  next,  previous,  up
+@section Impressão
+@cindex Formatando para impressão
+@cindex Imprimindo uma região ou buffer
+@cindex Formatação e impressão de região
+@cindex Formatação e impressão de buffer
+@cindex Formatação e impressão de parte do arquivo
 
-Typesetting and printing a Texinfo file is a multi-step process in
-which you first create a file for printing (called a DVI file), and
-then print the file.  Optionally, you may also create indices.  To do
-this, you must run the @code{texindex} command after first running the
-@code{tex} typesetting command; and then you must run the @code{tex}
-command again.  Or else run the @code{texi2dvi} command which
-automatically creates indices as needed (@pxref{Formatar com @command{texi2dvi}}).
+Tipografar e imprimir um arquivo do Texinfo é um processo de várias etapas no
+qual você primeiro cria um arquivo para impressão (chamado de arquivo DVI) e
+então imprime o arquivo. Opcionalmente, você também pode criar índices. Para
+fazer isso, você precisa executar o comando @code{texindex} depois de executar
+primeiro o comando de tipografia @code{tex}; e então você precisa executar o
+comando @code{tex} novamente. Ou então execute o comando @code{texi2dvi} que
+cria índices automaticamente conforme necessário
+(@pxref{Formatar com @command{texi2dvi}}).
 
-Often, when you are writing a document, you want to typeset and print
-only part of a file to see what it will look like.  You can use the
-@code{texinfo-tex-region} and related commands for this purpose.  Use
-the @code{texinfo-tex-buffer} command to format all of a
-buffer.
+Frequentemente, quando você está escrevendo um documento, você quer tipografar
+e imprimir somente parte de um arquivo para ver como ele ficará. Você pode usar
+o @code{texinfo-tex-region} e comandos relacionados para esse propósito. Use o
+comando @code{texinfo-tex-buffer} para formatar todo um buffer.
 
 @table @kbd
 @item  C-c C-t C-b
 @itemx M-x texinfo-tex-buffer
 @findex texinfo-tex-buffer
-Run @code{texi2dvi} on the buffer.  In addition to running @TeX{} on the
-buffer, this command automatically creates or updates indices as
-needed.
+Executa @code{texi2dvi} no buffer. Além de executar @TeX{} no buffer, esse
+comando cria ou atualiza índices automaticamente conforme necessário.
 
 @item  C-c C-t C-r
 @itemx M-x texinfo-tex-region
 @findex texinfo-tex-region
-Run @TeX{} on the region.
+Executa @TeX{} a região.
 
 @item C-c C-t C-i
 @itemx M-x texinfo-texindex
-Run @code{texindex} to sort the indices of a Texinfo file formatted with
-@code{texinfo-tex-region}.  The @code{texinfo-tex-region} command does
-not run @code{texindex} automatically; it only runs the @code{tex}
-typesetting command.  You must run the @code{texinfo-tex-region} command
-a second time after sorting the raw index files with the @code{texindex}
-command.  (Usually, you do not format an index when you format a region,
-only when you format a buffer.  Now that the @code{texi2dvi} command
-exists, there is little or no need for this command.)
+Executa @code{texindex} para ordenar os índices de um arquivo do Texinfo
+formatado com @code{texinfo-tex-region}. O comando @code{texinfo-tex-region}
+não executa @code{texindex} automaticamente; ele executa somente o comando de
+tipografia @code{tex}. Você precisa executar o comando
+@code{texinfo-tex-region} uma segunda vez depois de ordenar os arquivos de
+índices brutos com o comando @code{texindex}. (Normalmente, você não formata um
+índice quando formata uma região, somente quando formata um buffer. Agora que o
+comando @code{texi2dvi} existe, existe pouca ou nenhuma necessidade para esse
+comando).
 
 @item C-c C-t C-p
 @itemx M-x texinfo-tex-print
 @findex texinfo-tex-print
-Print the file (or the part of the file) previously formatted with
-@code{texinfo-tex-buffer} or @code{texinfo-tex-region}.
+Imprime o arquivo (ou parte do arquivo) formatado anteriormente com
+@code{texinfo-tex-buffer} ou @code{texinfo-tex-region}.
 @end table
 
-For @code{texinfo-tex-region} or @code{texinfo-tex-buffer} to work, the
-file @emph{must} start with a @samp{\input texinfo} line and must
-include a @code{@@settitle} line.  The file must end with @code{@@bye}
-on a line by itself.  (When you use @code{texinfo-tex-region}, you must
-surround the @code{@@settitle} line with start-of-header and
-end-of-header lines.)
+Para @code{texinfo-tex-region} ou @code{texinfo-tex-buffer} funcionarem, o
+arquivo @emph{precisa} começar com uma linha @samp{\input texinfo} e precisa
+incluir uma linha @code{@@settitle}. O arquivo precisa terminar com
+@code{@@bye} em uma linha própria. (Quando você usa @code{texinfo-tex-region},
+você precisa cercar a linha @code{@@settitle} com linhas start-of-header e
+end-of-header).
 
-@xref{Impresso}, for a description of the other @TeX{} related
-commands, such as @code{tex-show-print-queue}.
+@xref{Impresso}, para uma descrição dos outros comandos relacionados ao @TeX{},
+como @code{tex-show-print-queue}.
 
-@node Modo Texinfo Summary
-@section Modo Texinfo Summary
+@node Resumo do Modo Texinfo
+@section Resumo do Modo Texinfo
 
-In Texinfo mode, each set of commands has default keybindings that
-begin with the same keys.  All the commands that are custom-created
-for Texinfo mode begin with @kbd{C-c}.  The keys are somewhat
-mnemonic.
+No modo Texinfo, cada conjunto de comandos tem atalhos de teclado padrão que
+começam com as mesmas teclas. Todos os comandos que são criados sob medida para
+o modo Texinfo começam com @kbd{C-c}. As teclas são um tanto mnemônicas.
 
-@subheading Insert Commands
+@subheading Comandos de Inserção
 
-The insert commands are invoked by typing @kbd{C-c} twice and then the
-first letter of the @@-command to be inserted.  (It might make more
-sense mnemonically to use @kbd{C-c C-i}, for `custom insert', but
-@kbd{C-c C-c} is quick to type.)
+Os comandos de inserção são invocados digitando @kbd{C-c} duas vezes e, em
+seguida, a primeira letra do comando @@ a ser inserido. (Pode fazer mais
+sentido mnemonicamente usar @kbd{C-c C-i}, para `inserção personalizada', mas
+@kbd{C-c C-c} é rápido de digitar).
 
 @example
-C-c C-c c       @r{Insert} @samp{@@code}.
-C-c C-c d       @r{Insert} @samp{@@dfn}.
-C-c C-c e       @r{Insert} @samp{@@end}.
-C-c C-c i       @r{Insert} @samp{@@item}.
-C-c C-c n       @r{Insert} @samp{@@node}.
-C-c C-c s       @r{Insert} @samp{@@samp}.
-C-c C-c v       @r{Insert} @samp{@@var}.
-C-c @{       @r{Insert braces.}
+C-c C-c c       @r{Inserir} @samp{@@code}.
+C-c C-c d       @r{Inserir} @samp{@@dfn}.
+C-c C-c e       @r{Inserir} @samp{@@end}.
+C-c C-c i       @r{Inserir} @samp{@@item}.
+C-c C-c n       @r{Inserir} @samp{@@node}.
+C-c C-c s       @r{Inserir} @samp{@@samp}.
+C-c C-c v       @r{Inserir} @samp{@@var}.
+C-c @{          @r{Inserir chaves.}
 C-c ]
-C-c @}       @r{Move out of enclosing braces.}
+C-c @}          @r{Sair das chaves de cercamento.}
 
 @group
-C-c C-c C-d     @r{Insert a node's section title}
-               @r{in the space for the description}
-               @r{in a menu entry line.}
+C-c C-c C-d     @r{Inserir título da seção de um nó}
+                @r{no espaço para a descrição}
+                @r{em uma linha de entrada de menu.}
 @end group
 @end example
 
-@subheading Show Structure
+@subheading Mostrar Estrutura
 
-The @code{texinfo-show-structure} command is often used within a
-narrowed region.
+O comando @code{texinfo-show-structure} é frequentemente usado dentro de uma
+região restrita.
 
 @example
-C-c C-s         @r{List all the headings.}
+C-c C-s         @r{Listar todos os títulos.}
 @end example
 
-@subheading The Master Update Command
+@subheading O Comando Mestre de Atualização
 
-The @code{texinfo-master-menu} command creates a master menu; and can
-be used to update every node and menu in a file as well.
+O comando @code{texinfo-master-menu} cria um menu mestre e também pode ser
+usado para atualizar cada nó e menu em um arquivo.
 
-@c Probably should use @tables in this section.
+@c Provavelmente deveria usar @tables nesta seção.
 @example
 @group
 C-c C-u m
 M-x texinfo-master-menu
-               @r{Create or update a master menu.}
+               @r{Cria ou atualiza um menu mestre.}
 @end group
 
 @group
-C-u C-c C-u m   @r{With @kbd{C-u} as a prefix argument, first}
-               @r{create or update all Nós and regular}
-               @r{menus, and then create a master menu.}
+C-u C-c C-u m   @r{Com @kbd{C-u} como argumento de prefixo, primeiro}
+                @r{cria ou atualiza todos os nós e menus}
+                @r{regulares, e então cria um menu mestre.}
 @end group
 @end example
 
-@subheading Update Pointers
+@subheading Atualizar Ponteiros
 
-The update pointer commands are invoked by typing @kbd{C-c C-u} and
-then either @kbd{C-n} for @code{texinfo-update-node} or @kbd{C-e} for
+Os comandos de atualização de ponteiros são invocados digitando @kbd{C-c C-u} e
+então @kbd{C-n} para @code{texinfo-update-node} ou @kbd{C-e} para
 @code{texinfo-every-node-update}.
 
 @example
-C-c C-u C-n     @r{Update a node.}
-C-c C-u C-e     @r{Update every node in the buffer.}
+C-c C-u C-n     @r{Atualiza um nó}.
+C-c C-u C-e     @r{Atualiza cada nó no buffer.}
 @end example
 
-@subheading Update Menus
+@subheading Atualizar Menus
 
-Invoke the  update menu commands by typing @kbd{C-c C-u}
-and then either @kbd{C-m} for @code{texinfo-make-menu} or
-@kbd{C-a} for @code{texinfo-all-menus-update}.  To update
-both Nós and menus at the same time, precede @kbd{C-c C-u
-C-a} with @kbd{C-u}.
+Invoque os comandos de atualização de menus digitando @kbd{C-c C-u} e então
+@kbd{C-m} para @code{texinfo-make-menu} ou @kbd{C-a} para
+@code{texinfo-all-menus-update}. Para atualizar nós e menus ao mesmo tempo,
+preceda @kbd{C-c C-u C-a} com @kbd{C-u}.
 
 @example
-C-c C-u C-m     @r{Make or update a menu.}
+C-c C-u C-m     @r{Faz ou atualiza um menu.}
 
 @group
-C-c C-u C-a     @r{Make or update all}
-               @r{menus in a buffer.}
+C-c C-u C-a     @r{Faz ou atualiza todos}
+                @r{menus em um buffer.}
 @end group
 
 @group
-C-u C-c C-u C-a @r{With @kbd{C-u} as a prefix argument,}
-               @r{first create or update all Nós and}
-               @r{then create or update all menus.}
+C-u C-c C-u C-a @r{Com @kbd{C-u} como argumento de prefixo,}
+                @r{primeiro cria ou atualiza todos os nós e}
+                @r{então cria ou atualiza todos os menus.}
 @end group
 @end example
 
-@subheading Format for Info
+@subheading Formatar para Info
 
-The Info formatting commands that are written in Emacs Lisp are
-invoked by typing @kbd{C-c C-e} and then either @kbd{C-r} for a region
-or @kbd{C-b} for the whole buffer.
+Os comandos de formatação Info que estão escritos em Emacs Lisp são invocados
+digitando @kbd{C-c C-e} e então @kbd{C-r} para uma região ou @kbd{C-b} para o
+buffer inteiro.
 
-The Info formatting commands that are written in C and based on the
-@code{makeinfo} program are invoked by typing @kbd{C-c C-m} and then
-either @kbd{C-r} for a region or @kbd{C-b} for the whole buffer.
+Os comandos de formatação Info que estão escritos em C e baseados no programa
+@code{makeinfo} são invocados digitando @kbd{C-c C-m} e então @kbd{C-r} para
+uma região ou @kbd{C-b} para o buffer inteiro.
 
 @need 800
 @noindent
-Use the @code{texinfo-format@dots{}} commands:
+Use os comandos @code{texinfo-format@dots{}}:
 
 @example
 @group
-C-c C-e C-r     @r{Format the region.}
-C-c C-e C-b     @r{Format the buffer.}
+C-c C-e C-r     @r{Formatar a região.}
+C-c C-e C-b     @r{Formatar o buffer.}
 @end group
 @end example
 
@@ -22792,60 +22791,60 @@ C-c C-e C-b     @r{Format the buffer.}
 Use @code{makeinfo}:
 
 @example
-C-c C-m C-r     @r{Format the region.}
-C-c C-m C-b     @r{Format the buffer.}
-C-c C-m C-l     @r{Recenter the @code{makeinfo} output buffer.}
-C-c C-m C-k     @r{Kill the @code{makeinfo} formatting job.}
+C-c C-m C-r     @r{Formatar a região.}
+C-c C-m C-b     @r{Formatar o buffer.}
+C-c C-m C-l     @r{Recentralizar o buffer de saída do @code{makeinfo}.}
+C-c C-m C-k     @r{Mata o trabalho de formatação @code{makeinfo}.}
 @end example
 
-@subheading Typeset and Print
+@subheading Tipografia e Impressão
 
-The @TeX{} typesetting and printing commands are invoked by typing
-@kbd{C-c C-t} and then another control command: @kbd{C-r} for
-@code{texinfo-tex-region}, @kbd{C-b} for @code{texinfo-tex-buffer},
-and so on.
+Os comandos de tipografia e impressão do @TeX{} são invocados digitando
+@kbd{C-c C-t} e depois outro comando de controle: @kbd{C-r} para
+@code{texinfo-tex-region}, @kbd{C-b} para @code{texinfo-tex-buffer} e assim por
+diante.
 
 @example
-C-c C-t C-r     @r{Run @TeX{} on the region.}
-C-c C-t C-b     @r{Run} @code{texi2dvi} @r{on the buffer.}
-C-c C-t C-i     @r{Run} @code{texindex}.
-C-c C-t C-p     @r{Print the DVI file.}
-C-c C-t C-q     @r{Show the print queue.}
-C-c C-t C-d     @r{Delete a job from the print queue.}
-C-c C-t C-k     @r{Kill the current @TeX{} formatting job.}
-C-c C-t C-x     @r{Quit a currently stopped @TeX{} formatting job.}
-C-c C-t C-l     @r{Recenter the output buffer.}
+C-c C-t C-r     @r{Executa @TeX{} na região.}
+C-c C-t C-b     @r{Executa} @code{texi2dvi} @r{no buffer.}
+C-c C-t C-i     @r{Executa} @code{texindex}.
+C-c C-t C-p     @r{Imprime o arquivo DVI.}
+C-c C-t C-q     @r{Mostra a fila de impressão.}
+C-c C-t C-d     @r{Deleta um trabalho da fila de impressão.}
+C-c C-t C-k     @r{Mata o trabalho atual de formatação do @TeX{}.}
+C-c C-t C-x     @r{Sai de um trabalho de formatação @TeX{} atualmente parado.}
+C-c C-t C-l     @r{Recentraliza o buffer de saída.}
 @end example
 
 @subheading Outros Comandos de Atualização
 
-The remaining updating commands do not have standard keybindings because
-they are rarely used.
+Os comandos de atualização restantes não tem atalhos padrão de teclado porque
+raramente são usados.
 
 @example
 @group
 M-x texinfo-insert-node-lines
-               @r{Insert missing @code{@@node} lines in region.}
-               @r{With @kbd{C-u} as a prefix argument,}
-               @r{use section titles as node names.}
+               @r{Insere linhas @code{@@node} ausentes na região.}
+               @r{Com @kbd{C-u} como um argumento de prefixo,}
+               @r{usa títulos de seção como nomes de nó.}
 @end group
 
 @group
 M-x texinfo-multiple-files-update
-               @r{Update a multi-file document.}
-               @r{With @kbd{C-u 2} as a prefix argument,}
-               @r{create or update all Nós and menus}
-               @r{in all included files first.}
+               @r{Atualizar um documento multi arquivos.}
+               @r{Com @kbd{C-u 2} como argumento de prefixo,}
+               @r{cria ou atualiza todos os nós e menus}
+               @r{em todos os arquivos incluídos primeiro.}
 @end group
 
 @group
 M-x texinfo-indent-menu-description
-               @r{Indent descriptions.}
+               @r{Recua descrições.}
 @end group
 
 @group
 M-x texinfo-sequential-node-update
-               @r{Insert node pointers in strict sequence.}
+               @r{Insere ponteiros de nó em sequência estrita.}
 @end group
 @end example
 
@@ -22853,164 +22852,159 @@ M-x texinfo-sequential-node-update
 @node Cabeçalhos
 @appendix Cabeçalhos de Página
 @cindex Cabeçalhos
-@cindex Footings
-@cindex Page numbering
-@cindex Page headings
-@cindex Formatting headings and footings
+@cindex Rodapés
+@cindex Numeração de páginas
+@cindex Cabeçalhos de página
+@cindex Formatando títulos e rodapés
 
-Most printed manuals contain headings along the top of every page
-except the title and copyright pages.  Some manuals also contain
-footings. @c HTML output also supports something like these, but in a
-@c completely different way: @pxref{Customizing HTML Page Layout}.
-Cabeçalhos and footings have no meaning in Info or the other output
-formats.
+A maioria dos manuais impressos contém títulos no topo de cada página, exceto
+as páginas de título e copyright. Alguns manuais também contém rodapés.
+@c A saída HTML também suporta algo como esses, mas de uma maneira
+@c completamente diferente: @pxref{Customizing HTML Page Layout}. Cabeçalhos e
+@c rodapés não tem significado no Info ou em outros formatos de saída.
 
 @menu
 * Cabeçalhos Introduzidos::     Convenções para se usar cabeçalhos de página.
-* Formato do Título::           Formatos padrão de títulos de página.
-* Escolha do Título::           Como especificar o tipo do título da página.
+* Formato de Título::           Formatos padrão de títulos de página.
+* Escolha de Título::           Como especificar o tipo do título da página.
 * Cabeçalhos Personalizados::   Como criar teus próprios cabeçalhos e rodapés.
 @end menu
 
-@node Cabeçalhos Introduced
-@section Cabeçalhos Introduced
+@node Cabeçalhos Introduzidos
+@section Cabeçalhos Introduzidos
 
-Texinfo provides standard page heading formats for manuals that are
-printed on one side of each sheet of paper and for manuals that are
-printed on both sides of the paper.  Typically, you will use these
-formats, but you can specify your own format if you wish.
+O Texinfo fornece formatos padrão de cabeçalho de página para manuais que sejam
+impressos em um lado de cada folha de papel e para manuais que sejam impressos
+em ambos os lados do papel. Tipicamente, você usará esses formatos, mas pode
+especificar teu próprio formato se desejar.
 
-In addition, you can specify whether chapters should begin on a new
-page, or merely continue the same page as the previous chapter; and if
-chapters begin on new pages, you can specify whether they must be
-odd-numbered pages.
+Além disso, você pode especificar se os capítulos deveriam começar em uma nova
+página ou simplesmente continuar na mesma página que o capítulo anterior; e se
+os capítulos começarem em novas páginas, você pode especificar se eles precisam
+ser páginas ímpares.
 
-By convention, a book is printed on both sides of each sheet of paper.
-When you open a book, the right-hand page is odd-numbered, and
-chapters begin on right-hand pages---a preceding left-hand page is
-left blank if necessary.  Reports, however, are often printed on just
-one side of paper, and chapters begin on a fresh page immediately
-following the end of the preceding chapter.  In short or informal
-reports, chapters often do not begin on a new page at all, but are
-separated from the preceding text by a small amount of whitespace.
+Por convenção, um livro é impresso em ambos os lados de cada folha de papel.
+Quando você abre um livro, a página da direita é numerada de forma ímpar, e os
+capítulos começam nas páginas da direita---uma página anterior da esquerda é
+deixada em branco, se necessário. Informes, no entanto, frequentemente são
+impressos em apenas um lado do papel, e os capítulos começam em uma nova página
+imediatamente seguinte ao fim do capítulo anterior. Em informes curtos ou
+informais, os capítulos frequentemente não começam em uma nova página, mas são
+separados do texto aprecedente por uma pequena quantidade de espaço em branco.
 
-The @code{@@setchapternewpage} command controls whether chapters begin
-on new pages, and whether one of the standard heading formats is used.
-In addition, Texinfo has several heading and footing commands that you
-can use to generate your own heading and footing formats.
+O comando @code{@@setchapternewpage} controla se os capítulos começam em novas
+páginas e se um dos formatos padrão de título é usado. Além disso, o Texinfo
+tem vários comandos de título e rodapé que você pode usar para gerar teus
+próprios formatos de título e rodapé.
 
-In Texinfo, headings and footings are single lines at the tops and
-bottoms of pages; you cannot create multiline headings or footings.
-Each header or footer line is divided into three parts: a left part, a
-middle part, and a right part.  Any part, or a whole line, may be left
-blank.  Text for the left part of a header or footer line is set
-flushleft; text for the middle part is centered; and, text for the
-right part is set flushright.
+No Texinfo, títulos e rodapés são linhas unitárias nas partes superior e
+inferior das páginas; você não pode criar títulos ou rodapés multilinha. Cada
+linha de cabeçalho ou rodapé é dividida em três partes: uma parte esquerda, uma
+parte do meio e uma parte direita. Qualquer parte, ou uma linha inteira, pode
+ser deixada em branco. O texto para a parte esquerda de uma linha de cabeçalho
+ou rodapé é configurado alinhado à esquerda; o texto para a parte do meio é
+centralizado; e o texto para a parte direita é configurado alinhado à direita.
 
 
-@node Heading Format
-@section Standard Heading Formats
+@node Formato de Título
+@section Formatos de Título de Uso Comum
 
-Texinfo provides two standard heading formats, one for manuals printed
-on one side of each sheet of paper, and the other for manuals printed
-on both sides of the paper.
+O Texinfo fornece dois formatos de cabeçalho de uso mais comum, um para manuais
+impressos em um lado de cada folha de papel e outro para manuais impressos em
+ambos os lados do papel.
 
-By default, nothing is specified for the footing of a Texinfo file,
-so the footing remains blank.
+Por padrão, nada é especificado para o rodapé de um arquivo do Texinfo, de
+forma que o rodapé permanece em branco.
 
-The standard format for single-sided printing consists of a header
-line in which the left-hand part contains the name of the chapter, the
-central part is blank, and the right-hand part contains the page
-number.
+O formato de uso mais comum para impressão em um lado consiste de uma linha de
+cabeçalho na qual a parte esquerda contém o nome do capítulo, a parte central
+fica em branco e a parte direita contém o número da página.
 
 @need 950
-A single-sided page looks like this:
+Uma página de um lado se pareçe com isto:
 
 @example
 @group
-  _______________________
- |                       |
- | chapter   page number |
- |                       |
- | Start of text ...     |
- | ...                   |
- |                       |
+  _________________________
+ |                         |
+ | capítulo  número página |
+ |                         |
+ | Início do texto ...     |
+ | ...                     |
+ |                         |
 @end group
 @end example
 
-The standard format for two-sided printing depends on whether the page
-number is even or odd.  By convention, even-numbered pages are on the
-left- and odd-numbered pages are on the right.  (@TeX{} will adjust the
-widths of the left- and right-hand margins.  Usually, widths are
-correct, but during double-sided printing, it is wise to check that
-pages will bind properly---sometimes a printer will produce output in
-which the even-numbered pages have a larger right-hand margin than the
-odd-numbered pages.)
+O formato de uso mais comum para impressão frente e verso depende se o número
+da página é par ou ímpar. Por convenção, páginas pares ficam à esquerda e
+páginas ímpares ficam à direita. (@TeX{} ajustará as larguras das margens
+esquerda e direita. Normalmente, as larguras estão corretas, mas durante a
+impressão frente e verso, é sensato verificar se as páginas serão encadernadas
+corretamente---ocasionalmente, uma impressora produzirá uma saída na qual as
+páginas pares tem uma margem direita maior que as páginas ímpares).
 
-In the standard double-sided format, the left part of the left-hand
-(even-numbered) page contains the page number, the central part is
-blank, and the right part contains the title (specified by the
-@code{@@settitle} command).  The left part of the right-hand
-(odd-numbered) page contains the name of the chapter, the central part
-is blank, and the right part contains the page number.
+No formato de uso mais comum frente e verso, a parte esquerda da página
+esquerda (numeração par) contém o número da página, a parte central está em
+branco e a parte direita contém o título (especificado pelo comando
+@code{@@settitle}). A parte esquerda da página direita (numeração ímpar) contém
+o nome do capítulo, a parte central fica em branco e a parte direita contém o
+número da página.
 
 @need 750
-Two pages, side by side as in an open book, look like this:
+Duas páginas, lado a lado, como em um livro aberto, se parecem com isto:
 
 @example
 @group
-  _______________________     _______________________
- |                       |   |                       |
- | page number     title |   | chapter   page number |
- |                       |   |                       |
- | Start of text ...     |   | More  text ...        |
- | ...                   |   | ...                   |
- |                       |   |                       |
+  _______________________     _________________________
+ |                       |   |                        |
+ | número página  título |   | capítulo número página |
+ |                       |   |                        |
+ | Início do texto ...   |   | Mais  texto ...        |
+ | ...                   |   | ...                    |
+ |                       |   |                        |
 @end group
 @end example
 
 @noindent
-The chapter name is preceded by the word ``Chapter'', the chapter number
-and a colon.  This makes it easier to keep track of where you are in the
-manual.
+O nome do capítulo é precedido pela palavra ``Capítulo'', o número do capítulo
+e dois pontos. Isso torna mais fácil acompanhar onde você está no manual.
 
-@node Heading Choice
-@section Specifying the Type of Heading
+@node Escolha de Título
+@section Especificando o Tipo de Título
 
-@TeX{} does not begin to generate page headings for a standard Texinfo
-file until it reaches the @code{@@end titlepage} command.  Thus, the
-title and copyright pages are not numbered.  The @code{@@end
-titlepage} command causes @TeX{} to begin to generate page headings
-according to a standard format specified by the
-@code{@@setchapternewpage} command that precedes the
-@code{@@titlepage} section.
+@TeX{} não começa a gerar títulos de página para um arquivo do Texinfo de uso
+mais comum até que ele alcance o comando @code{@@end titlepage}. Portanto, as
+páginas de título e copyright não são numeradas. O comando @code{@@end
+titlepage} faz com que o @TeX{} comece a gerar títulos de página de acordo com
+um formato de uso mais comum especificado pelo comando
+@code{@@setchapternewpage} que precede a seção @code{@@titlepage}.
 
 @need 1000
-There are four possibilities:
+Existem quatro possibilidades:
 
 @table @asis
-@item No @code{@@setchapternewpage} command
-Cause @TeX{} to specify the single-sided heading format, with chapters
-on new pages. This is the same as @code{@@setchapternewpage on}.
+@item Sem comando @code{@@setchapternewpage}
+Faz com que @TeX{} especifique o formato de título de um lado, com capítulos em
+novas páginas. Isso é o mesmo que @code{@@setchapternewpage on}.
 
 @item @code{@@setchapternewpage on}
-Specify the single-sided heading format, with chapters on new pages.
+Especifica o formato de título de lado unitário, com capítulos em novas páginas.
 
 @item @code{@@setchapternewpage off}
-Cause @TeX{} to start a new chapter on the same page as the last page
-of the preceding chapter, after skipping some vertical whitespace.
-Also cause @TeX{} to typeset for single-sided printing.  (You can
-override the headers format with the @code{@@headings double} command;
-@pxref{@code{@@headings}}.)
+Faz com que o @TeX{} inicie um novo capítulo na mesma página da última página
+do capítulo precedente, depois de pular alguns espaços verticais em branco.
+Também faz com que o @TeX{} tipografe para impressão de um lado unitário. (Você
+pode substituir o formato dos cabeçalhos com o comando @code{@@headings
+double}; @pxref{@code{@@headings}}).
 
 @item @code{@@setchapternewpage odd}
-Specify the double-sided heading format, with chapters on new pages.
+Especifica o formato de título frente e verso, com capítulos em novas páginas.
 @end table
 
 @noindent
-Texinfo lacks a @code{@@setchapternewpage even} command.
+Texinfo careçe de um comando @code{@@setchapternewpage even}.
 
-
+PAREI
 @node Cabeçalhos Personalizados
 @section Como Fazer Teus Próprios Cabeçalhos
 
