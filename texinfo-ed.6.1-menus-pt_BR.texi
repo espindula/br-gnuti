@@ -42,7 +42,7 @@ Anexos
 
 Visão geral do Texinfo
 
-* Informando Defeitos::           Submetendo relatórios efetivos de bugs.
+* Informando Defeitos::           Submetendo relatórios efetivos de defeitos.
 * Formatos de Saída::             Visão geral dos formatos de saída suportados.
 * Arquivos do Info::              O que é um arquivo Info?
 * Livros Impressos::              Característica de um livro impresso ou manual.
@@ -83,11 +83,11 @@ Permissões de Documento
 
 Páginas de Título e de Direitos Autorais
 
-* @code{@@titlepage}::                  Crie um título para o documento impresso.
-* @code{@@titlefont @@center @@sp}::      Os comandos @code{@@titlefont}, @code{@@center} e @code{@@sp}.
-* @code{@@title @@subtitle @@author}::    Os comandos @code{@@title}, @code{@@subtitle}, e @code{@@author}.
-* Direitos Autorais::                   Como escrever o aviso de direitos autorais e incluir permissões de cópia.
-* Geração de Cabeçalho::          Ligar os cabeçalhos de página após as páginas de título e de direitos autorais.
+* @code{@@titlepage}::                 Crie um título para o documento impresso.
+* @code{@@titlefont @@center @@sp}::   Os comandos @code{@@titlefont}, @code{@@center} e @code{@@sp}.
+* @code{@@title @@subtitle @@author}:: Os comandos @code{@@title}, @code{@@subtitle}, e @code{@@author}.
+* Direitos Autorais::                  Como escrever o aviso de direitos autorais e incluir permissões de cópia.
+* Geração de Cabeçalho::               Ligar os cabeçalhos de página após as páginas de título e de direitos autorais.
 
 O Nodo `Top' e o Menu Principal
 
@@ -126,32 +126,32 @@ Menus
 
 Estruturamento de Capítulo
 
-* Estruturamento de Árvore::            Um manual é como uma árvore de cabeça para baixo @dots{}
-* Tipos de Comandos Estruturantes::     Como dividir um manual em partes.
-* @code{@@chapter}::                    Estruturamento de capítulo.
+* Estruturamento de Árvore::                                Um manual é como uma árvore de cabeça para baixo @dots{}
+* Tipos de Comandos Estruturantes::                         Como dividir um manual em partes.
+* @code{@@chapter}::                                        Estruturamento de capítulo.
 * @code{@@unnumbered @@appendix}::
 * @code{@@majorheading @@chapheading}::
 * @code{@@section}::
 * @code{@@unnumberedsec @@appendixsec @@heading}::
 * @code{@@subsection}::
-* @code{@@unnumberedsubsec @@appendixsubsec @@subheading}::
-* @code{@@subsubsection}::              Comandos para as seções de mais baixo nível.
-* @code{@@part}::                       Coleções de capítulos.
-* Elevar/rebaixar seções::              Como mudar o nível hierárquico dos comandos.
+* @code{@@unnumberedsubsec @@appendixsubsec @@subheading}:: 
+* @code{@@subsubsection}::                                  Comandos para as seções de mais baixo nível.
+* @code{@@part}::                                           Coleções de capítulos.
+* Elevar/rebaixar seções::                                  Como mudar o nível hierárquico dos comandos.
 
 Referências cruzadas
 
-* Referências::                  Para que são as referências cruzadas.
-* Comandos de Referências Cruzadas::    Um sumário dos diferentes comandos.
-* Partes de Referências Cruzadas::      Uma Referência Cruzada tem várias partes.
-* @code{@@xref}::                       Inicie uma referência com `Veja' @dots{}
-* Referenciando Um Manual Como Um Todo::   Referência a um manual inteiro.
-* @code{@@ref}::                        Uma referência para a última parte de uma sentença.
-* @code{@@pxref}::                      Como escrever uma Referência Cruzada entre parênteses.
-* @code{@@anchor}::                     Definindo alvos de Referência Cruzada arbitrários.
-* @code{@@inforef}::                    Como referenciar um arquivo somente Info.
-* @code{@@url}::                        Como referenciar um Localizador Uniforme de Recursos.
-* @code{@@cite}::                       Como referenciar livros que não estão no sistema Info.
+* Referências::                          Para que são as referências cruzadas.
+* Comandos de Referências Cruzadas::     Um sumário dos diferentes comandos.
+* Partes de Referências Cruzadas::       Uma Referência Cruzada tem várias partes.
+* @code{@@xref}::                        Inicie uma referência com `Veja' @dots{}
+* Referenciando Um Manual Como Um Todo:: Referência a um manual inteiro.
+* @code{@@ref}::                         Uma referência para a última parte de uma sentença.
+* @code{@@pxref}::                       Como escrever uma Referência Cruzada entre parênteses.
+* @code{@@anchor}::                      Definindo alvos de Referência Cruzada arbitrários.
+* @code{@@inforef}::                     Como referenciar um arquivo somente Info.
+* @code{@@url}::                         Como referenciar um Localizador Uniforme de Recursos.
+* @code{@@cite}::                        Como referenciar livros que não estão no sistema Info.
 
 @code{@@xref}
 
@@ -162,15 +162,15 @@ Referências cruzadas
 
 @code{@@url}, @code{@@uref@{@var{url}[, @var{text}][, @var{replacement}]@}}
 
-* Exemplos @code{@@url}::           Exemplos do uso de todas as formas do @code{@@url}.
-* Quebra de Linha de URL::       Como as linhas são quebradas dentro do texto do @code{@@url}.
-* Formato de Saída PDF @code{@@url}::  Uma opção especial para ocultar links na saída PDF.
-* Cores do PDF::              Colorindo urls e outros links na saída PDF.
+* Exemplos @code{@@url}::             Exemplos do uso de todas as formas do @code{@@url}.
+* Quebra de Linha de URL::            Como as linhas são quebradas dentro do texto do @code{@@url}.
+* Formato de Saída PDF @code{@@url}:: Uma opção especial para ocultar links na saída PDF.
+* Cores do PDF::                      Colorindo URLs e outros links na saída PDF.
 
 Marcando Texto, Palavras e Frases
 
 * Indicando::                  Como indicar definições, arquivos, etc.
-* Ênfase::                    Como enfatizar texto.
+* Ênfase::                     Como enfatizar texto.
 
 Indicando Definições, Comandos, etc.
 
@@ -199,22 +199,22 @@ Enfatizando Texto
 
 Citações e Exemplos
 
-* Comandos de Cercamento de Blocos::    Construtores diferentes para propósitos diferentes.
-* @code{@@quotation}::                Escrevendo uma citação.
-* @code{@@indentedblock}::            Bloco de texto recuado a esquerda.
-* @code{@@example}::                  Escrevendo um exemplo em uma fonte de largura fixa.
-* @code{@@verbatim}::                 Escrevendo um exemplo de literal.
-* @code{@@verbatiminclude}::          Incluindo um arquivo de literal.
-* @code{@@lisp}::                     Ilustrando código Lisp.
-* @code{@@small@dots{}}::             Exemplos em uma fonte menor.
-* @code{@@display}::                  Escrevendo um exemplo na fonte atual.
-* @code{@@format}::                   Escrevendo um exemplo sem margens estreitadas.
-* @code{@@exdent}::                   Desfazer recuo em uma linha.
-* @code{@@flushleft @@flushright}::   Empurrando texto alinhado à esquerda ou alinhado à direita.
-* @code{@@raggedright}::              Evitando justificação à direita.
-* @code{@@noindent}::                 Prevenindo recuo de parágrafo.
-* @code{@@indent}::                   Forçando recuo de parágrafo.
-* @code{@@cartouche}::                Desenhando retângulos por todos os lados ao redor do texto.
+* Comandos de Cercamento de Blocos:: Construtores diferentes para propósitos diferentes.
+* @code{@@quotation}::               Escrevendo uma citação.
+* @code{@@indentedblock}::           Bloco de texto recuado a esquerda.
+* @code{@@example}::                 Escrevendo um exemplo em uma fonte de largura fixa.
+* @code{@@verbatim}::                Escrevendo um exemplo de literal.
+* @code{@@verbatiminclude}::         Incluindo um arquivo de literal.
+* @code{@@lisp}::                    Ilustrando código Lisp.
+* @code{@@small@dots{}}::            Exemplos em uma fonte menor.
+* @code{@@display}::                 Escrevendo um exemplo na fonte atual.
+* @code{@@format}::                  Escrevendo um exemplo sem margens estreitadas.
+* @code{@@exdent}::                  Desfazer recuo em uma linha.
+* @code{@@flushleft @@flushright}::  Empurrando texto alinhado à esquerda ou alinhado à direita.
+* @code{@@raggedright}::             Evitando justificação à direita.
+* @code{@@noindent}::                Prevenindo recuo de parágrafo.
+* @code{@@indent}::                  Forçando recuo de parágrafo.
+* @code{@@cartouche}::               Desenhando retângulos por todos os lados ao redor do texto.
 
 Listas e Tabelas
 
@@ -237,7 +237,7 @@ Fazendo Uma Tabela de Duas Colunas
 
 Exibições Especiais
 
-* Flutuações::                  Figuras, tabelas, e afins.
+* Flutuações::                   Figuras, tabelas, e afins.
 * Imagens::                      Incluindo gráficos e imagens.
 * Notas de Rodapé::              Escrevendo notas de rodapé.
 
@@ -269,7 +269,7 @@ Notas de rodapé
 Combinando Índices
 
 * @code{@@syncodeindex}::               Como mesclar dois índices, usando a fonte @code{@@code} para o índice mesclado a partir de.
-* @code{@@synindex}::                   Como mesclar dois índices, usando a fonte roman para o índice mesclado a partir de.
+* @code{@@synindex}::                   Como mesclar dois índices, usando a fonte romana para o índice mesclado a partir de.
 
 Inserções Especiais
 
@@ -374,7 +374,7 @@ Texto Visível Condicionalmente
 * Condicionais Inline::               Texto condicional delimitado por chaves.
 * @code{@@set @@clear @@value}::      Testes de variáveis e substituições.
 * Testes para Comandos do Texinfo::   Testando se um comando Texinfo está disponível.
-* Aninhamento de Condicional::           Usando condicionais dentro de condicionais.
+* Aninhamento de Condicional::        Usando condicionais dentro de condicionais.
 
 Sinalizadores: @code{@@set}, @code{@@clear}, condicionais, e @code{@@value}
 
@@ -402,7 +402,7 @@ Arquivos de Inclusão
 
 * Usando Arquivos de Inclusão::          Como usar o comando @code{@@include}.
 * @code{texinfo-multiple-files-update}:: Como criar e atualizar nós e menus ao usar arquivos incluídos.
-* Exigências dos Arquivos de Inclusão::  Neccesidades de @code{texinfo-multiple-files-update}.
+* Exigências dos Arquivos de Inclusão::  Necessidades de @code{texinfo-multiple-files-update}.
 * Arquivo de Inclusão de Amostra::       Um arquivo externo de amostra com arquivos incluídos dentro dele; e um arquivo incluído de amostra.
 * Evolução da Inclusão de Arquivos::     Como o uso do comando @code{@@include} mudou ao longo do tempo.
 
@@ -422,7 +422,7 @@ Formatando e Imprimindo Cópia Impressa
 * Papel A4::                                      Como imprimir em papel A4 ou A5.
 * @code{@@pagesizes}::                            Como imprimir com tamanhos de página personalizados.
 * Marcas de Corte e Ampliação::                   Como imprimir marcas para indicar o tamanho das páginas e como imprimir saída escalada.
-* Saída PDF::                           Saída em Formato Portável de Documento.
+* Saída PDF::                                     Saída em Formato Portável de Documento.
 * Obtendo @TeX{}::                                Como obter @TeX{}.
 
 Formatar com @command{tex}/@command{texindex}
@@ -434,7 +434,7 @@ Formatar com @command{tex}/@command{texindex}
 
 * Implementação de Referência::                  @command{texi2any}: a implementação de referência.
 * Invocando @command{texi2any}::                 Executando o tradutor a partir de um shell.
-* Saída Impressa do @command{texi2any}::  Chamando @command{texi2any}.
+* Saída Impressa do @command{texi2any}::         Chamando @command{texi2any}.
 * Validação de Ponteiro::                        Como verificar se os ponteiros apontam para algum lugar.
 * Variáveis de Personalização::                  Configurando @command{texi2any}.
 * Internacionalização de Strings de Documentos:: Traduzindo texto inserido pelo programa.
@@ -502,7 +502,7 @@ Usando o Modo Texinfo
 * Atualizando Nodos e Menus::   Como atualizar ou criar novos nodos e menus.
 * Formatação Info::             Como formatar para Info.
 * Impressão::                   Como formatar e imprimir parte ou tudo de um arquivo.
-* Resumo do Modo Texinfo::     Sumário de todos os comandos do modo Texinfo.
+* Resumo do Modo Texinfo::      Sumário de todos os comandos do modo Texinfo.
 
 Atualizando Nodos e Menus
 
@@ -533,26 +533,26 @@ Encontrando Nodos Mal Referenciados
 * Etiquetando::                 Como etiquetar um arquivo.
 * Dividindo::                   Como dividir um arquivo manualmente.
 
-Especificação de Formato Info
+Especificação do Formato do Info
 
-* Geral:: Desenho Geral do Formato Info.
-* Texto::    Construtores de Texto do Formato Info.
+* Geral:                       Esquema Geral do Formato do Info.
+* Texto:                       Construtores de Texto do Formato do Info.
 
-Desenho Geral do Formato Info
+Esquema Geral do Formato do Info
 
-* Inteiro::           Manual Completo do Formato Info. Manuais split vs.@: nonsplit.
-* Preâmbulo::        Preâmbulo do Formato Info.
-* Indireto::        Tabela Indireta do Formato Info.
-* Tabela de etiquetas::       Tabela de Etiquetas do Formato Info.
-* Variáveis locais:: Variáveis Local do Formato Info.
-* Nodos regulares::   Nodos Regulares do Formato Info.
+* Inteiro:                     Manual Inteiro do Formato Info. Manuais divididos versus não divididos.
+* Preâmbulo:                   Preâmbulo do Formato do Info.
+* Indireta:                    Tabela Indireta do Formato do Info.
+* Tabela de etiquetas:         Tabela de Etiquetas do Formato do Info.
+* Variáveis locais:            Variáveis Locais do Formato do Info.
+* Nós Regulares:               Nós Regulares do Formato do Info.
 
 Construtores de Texto do Formato Info
 
-* Menu::  Menu do Formato Info.
-* Imagem:: Imagem do Formato Info.
-* Printindex:: Imprime índices do Formato Info.
-* Xref::  Referências Cruzadas do Formato Info.
+* Menu:                        Menu do Formato do Info.
+* Imagem:                      Imagem do Formato do Info.
+* Printindex:                  Imprime índices do Formato do Info.
+* Xref:                        Referências Cruzadas do Formato do Info.
 
 @end detailmenu
 @end menu
