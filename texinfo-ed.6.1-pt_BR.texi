@@ -708,10 +708,10 @@ Encontrando Nós Mal Referenciados
 * Etiquetando::                 Como etiquetar um arquivo.
 * Dividindo::                   Como dividir um arquivo manualmente.
 
-Especificação de Formato Info
+Especificação do Formato do Info
 
-* Geral:: Desenho Geral do Formato Info.
-* Texto::    Construtores de Texto do Formato Info.
+* Geral:                       Esquema Geral do Formato do Info.
+* Texto:                       Construtores de Texto do Formato do Info.
 
 Desenho Geral do Formato Info
 
@@ -724,10 +724,10 @@ Desenho Geral do Formato Info
 
 Construtores de Texto do Formato Info
 
-* Menu::  Menu do Formato Info.
-* Imagem:: Imagem do Formato Info.
-* Printindex:: Imprime índices do Formato Info.
-* Xref::  Referências Cruzadas do Formato Info.
+* Menu:                        Menu do Formato do Info.
+* Imagem:                      Imagem do Formato do Info.
+* Printindex:                  Imprime índices do Formato do Info.
+* Xref:                        Referências Cruzadas do Formato do Info.
 
 @end detailmenu
 @end menu
@@ -23773,526 +23773,525 @@ nomes gerados anexando @samp{-} e um número ao nome do arquivo original.
 O arquivo principal ainda funciona como um arquivo do Info, mas contém somente
 a tabela de etiquetas e um diretório de sub-arquivos.
 
-PAREI
+
 @node Especificação do Formato Info
 @appendix Especificação do Formato Info
 
-@cindex Info format specification
-@cindex Specification of Info format
-@cindex Definition of Info format
+@cindex Especificação do formato do Info
+@cindex Formato, especificação, do Info
+@cindex Definição do formato do Info
 
-Here we describe the technical details of the Info format.
+Aqui nós descrevemos os detalhes técnicos do formato do Info.
 
-In this formal description, the characters @code{<>*()|=#} are used
-for the language of the description itself.  Other characters are
-literal.  The formal constructs used are typical: @code{<...>}
-indicates a metavariable name, @samp{=} means definition, @samp{*}
-repetition, @samp{?} optional, @samp{()} grouping, @samp{|}
-alternation, @samp{#} comment.  Exception: @samp{*} at the beginning
-of a line is literal.
+Nesta descrição formal, os caracteres @code{<>*()|=#} são usados para o idioma
+da descrição em si. Outros caracteres são literais. As construções formais
+usadas são típicas: @code{<...>} indica um nome de metavariável, @samp{=}
+significa definição, @samp{*} repetição, @samp{?} opcional, @samp{()}
+agrupamento, @samp{|} alternância, @samp{#} comentário. Exceção: @samp{*} no
+início de uma linha é literal.
 
-In general, programs that read Info files should try to be
-case-insensitive to keywords that occur in the file (for example,
-@samp{Tag Table} and @samp{Tag table} should be equivalent) in order to
-support Info-generating programs that use different capitalization.
+Em geral, programas que leem arquivos do Info deveriam tentar não diferenciar
+maiúsculas de minúsculas de palavras-chave que ocorrerem no arquivo (por
+exemplo, @samp{Tabela de Etiquetas} e @samp{Tabela de etiquetas} deveriam ser
+equivalentes) para a finalidade de suportar programas geradores de Info que
+usem capitalização diferente.
 
-The sections in an Info file (such as Nós or tag tables) are separated
-with a sequence:
+As seções em um arquivo do Info (como nós ou tabelas de etiquetas) são
+separadas com uma sequência:
 
 @example
 (^L)?^_(^L)?^J
 @end example
 
 @noindent
-That is, a @samp{CTRL-_} character followed by a newline, with optional
-formfeed characters.  We refer to such sequences as @t{<separator>}.
+Isto é, um caractere @samp{CTRL-_} seguido por uma nova linha, com caracteres
+de avanço de formulário opcionais. Nós nos referimos a tais sequências como
+@t{<separador>}.
 
-We specify literal parentheses (those that are part of the Info
-format) with @t{<lparen>} and @t{<rparen>}, meaning the single
-characters @samp{(} and @samp{)} respectively.  We specify the
-@samp{CTRL-?} character (character number 127) @t{<del>}.  Finally,
-the two-character sequence @samp{^@var{x}} means the single
-character @samp{CTRL-@var{x}}, for any @var{x}.
+Nós especificamos parênteses literais (aqueles que são parte do formato do
+Info) com @t{<lparen>} e @t{<rparen>}, significando os caracteres unitários
+@samp{(} e @samp{)} respectivamente. Nós especificamos o caractere
+@samp{CTRL-?} (número de caractere 127) @t{<del>}. Finalmente, a sequência de
+dois caracteres @samp{^@var{x}} significa o caractere unitário
+@samp{CTRL-@var{x}}, para qualquer @var{x}.
 
-This format definition was written some 25 years after the Info format
-was first devised.  So in the event of conflicts between this
-definition and actual practice, practice wins.  It also assumes some
-general knowledge of Texinfo; it is meant to be a guide for
-implementors rather than a rigid technical standard.  We often refer
-back to other parts of this manual for examples and definitions,
-rather than redundantly spelling out every detail.
+Esta definição de formato foi escrita cerca de 25 anos depois que o formato do
+Info foi concebido. Portanto, no caso de conflitos entre esta definição e a
+prática real, a prática vence. Ela também pressupõe algum conhecimento geral do
+Texinfo; ela foi criada para ser um guia para implementadores(as), em vez de um
+padrão técnico rígido. Frequentemente, nós recorremos a outras partes deste
+manual para exemplos e definições, em vez de soletrar redundantemente cada
+detalhe.
 
 @menu
-* General: Info Format General Layout.
-* Text:    Info Format Text Constructs.
+* Geral:                       Esquema Geral do Formato do Info.
+* Texto:                       Construtores de Texto do Formato do Info.
 @end menu
 
 
-@node Info Format General Layout
-@section Info Format General Layout
+@node Esquema Geral do Formato do Info
+@section Esquema Geral do Formato do Info
 
-This section describes the overall layout of Info manuals.
+Esta seção descreve o esquema geral dos manuais do Info.
 
 @menu
-* Whole:           Info Format Whole Manual. Split vs.@: nonsplit manuals.
-* Preamble:        Info Format Preamble.
-* Indirect:        Info Format Indirect Table.
-* Tag table:       Info Format Tag Table.
-* Local variables: Info Format Local Variables.
-* Regular Nós:   Info Format Regular Nós.
+* Inteiro:                     Manual Inteiro do Formato Info. Manuais divididos versus não divididos.
+* Preâmbulo:                   Preâmbulo do Formato do Info.
+* Indireta:                    Tabela Indireta do Formato do Info.
+* Tabela de etiquetas:         Tabela de Etiquetas do Formato do Info.
+* Variáveis locais:            Variáveis Locais do Formato do Info.
+* Nós Regulares:               Nós Regulares do Formato do Info.
 @end menu
 
 
-@node Info Format Whole Manual
-@subheading Info Format: A Whole Manual
+@node Manual Inteiro do Formato Info
+@subheading Formato do Info: Um Manual Inteiro
 
-@cindex Nonsplit manuals, Info format of
-@cindex Split manuals, Info format of
-@cindex Whole manual, in Info format
+@cindex Manuais não divididos, formato do Info dos
+@cindex Manuais divididos, formato do Info dos
+@cindex Manual inteiro, no formato do Info
 
-To begin, an Info manual is either @dfn{nonsplit} (contained wholly
-within a single file) or @dfn{split} (across several files).
+Para começar, um manual do Info é ou @dfn{não dividido} (contido inteiramente
+em um arquivo) ou @dfn{dividido} (em vários arquivos).
 
-The syntax for a nonsplit manual is:
+A sintaxe para um manual não dividido é:
 
 @example
-    <nonsplit info file> =
-<preamble>
-<node>*
-<tag table>?
-<local variables>?
+    <arquivo não dividido do info> =
+<preâmbulo>
+<nó>*
+<tabela de etiquetas>?
+<variáveis locais>?
 @end example
 
-When split, there is a @dfn{main file}, which contains only pointers
-to the Nós given in other @dfn{subfiles}.  The main file looks
-like this:
+Quando dividido, existe um @dfn{arquivo principal}, que contém somente
+ponteiros para os nós fornecidos em outros @dfn{subarquivos}. O arquivo
+principal se parece com isto:
 
 @example
-    <split info main file> =
-<preamble>
-<indirect table>
-<tag table>
-<local variables>?
+    <arquivo principal dividido do info> =
+<preâmbulo>
+<tabela indireta>
+<tabela de etiquetas>
+<variáveis locais>?
 @end example
 
-The subfiles in a split manual have the following syntax:
+Os subarquivos em um manual dividido tem a seguinte sintaxe:
 
 @example
-    <split info subfile> =
-<preamble>
-<node>*
+    <subarquivo dividido do info> =
+<preâmbulo>
+<nó>*
 @end example
 
-Note that the tag table is not optional for split files, as it is used
-with the indirect table to deduce which subfile a particular node is in.
+Observe que a tabela de etiquetas não é opcional para arquivos divididos, pois
+ela é usada com a tabela indireta para deduzir em qual subarquivo um nó
+específico está.
 
 
-@node Info Format Preamble
-@subheading Info Format: Preamble
+@node Preâmbulo do Formato do Info
+@subheading Formato do Info: Preâmbulo
 
-@cindex Preamble, in Info format
+@cindex Preâmbulo, no formato do Info
 
-The @t{<preamble>} is text at the beginning of all output files.
-It is not intended to be visible by default in an Info viewer, but
-may be displayed upon user request.
+O @t{<preâmbulo>} é um texto no começo de todos os arquivos de saída. Ele não é
+destinado a ser visível por padrão em um visualizador do Info, mas pode ser
+exibido mediante solicitação do(a) usuário(a).
 
 @example
-    <preamble> =
-<identification>       # "This is FILENAME, produced by ..."
-<copying text>         # Expansion of @@copying text.
-<dir entries>          # Derived from @@dircategory and @@direntry.
+    <preâmbulo> =
+<identificação>             # "Este é NOMEARQUIVO, produzido por ..."
+<texto da copiagem>         # Expansão do texto do @@copying.
+<entradas de diretórios>    # Derivadas de @@dircategory e @@direntry.
 @end example
 
 @noindent
-These pieces are:
+Esses pedaços são:
 
 @table @t
-@item <identification line>
-An arbitrary string beginning the output file, followed by a blank
-line.
+@item <linha de identificação>
+Uma sequência arbitrária iniciando o arquivo de saída, seguida por uma linha em
+branco.
 
-@item <copying text>
-The expansion of a @code{@@copying} environment, if the manual has
-one (@pxref{@code{@@copying}}).
+@item <texto da copiagem>
+A expansão de um ambiente @code{@@copying}, se o manual tiver um
+(@pxref{@code{@@copying}}).
 
-@item <dir entries>
-The result of any @code{@@dircategory} and @code{@@direntry}
-commands present in the manual (@pxref{Installing Dir Entries}).
-
+@item <entradas de diretórios>
+O resultado de quaisquer comandos @code{@@dircategory} e @code{@@direntry}
+presentes no manual (@pxref{Instalando Entradas de Diretório}).
 @end table
 
 
-@node Info Format Indirect Table
-@subheading Info Format: Indirect Table
+@node Tabela Indireta do Formato do Info
+@subheading Formato do Info: Tabela Indireta
 
-@cindex Indirect table, in Info format
+@cindex Tabela indireta, no Formato do Info
 
 @example
-    <indirect table> =
-<separator>
-Indirect:
-(<filename>: <bytepos>)*
+    <tabela indireta> =
+<separador>
+Indireta:
+(<nomearquivo>: <posiçãobyte>)*
 @end example
 
-The indirect table is written to the main file in the case of split
-output only.  It specifies, as a decimal integer, the starting byte
-position (zero-based) that the first node of each subfile would have if
-the subfiles were concatenated together in order, not including the
-top-level file.  The first node of actual content is pointed to by the
-first entry.
+A tabela indireta é escrita no arquivo principal somente no caso de saída
+dividida. Ela especifica, como um inteiro decimal, a posição inicial do byte
+(baseada em zero) que o primeiro nó de cada subarquivo teria se os subarquivos
+fossem concatenados em ordem, não incluindo o arquivo de nível superior. O
+primeiro nó do conteúdo real é apontado pela primeira entrada.
 
-As an example, suppose split output is generated for the GDB manual.
-The top-level file @file{gdb.info} will contain something like this:
+Como exemplo, suponha que a saída dividida seja gerada para o manual do GDB. O
+arquivo de nível superior @file{gdb.info} conterá algo como isto:
 
 @example
-<separator>
-Indirect:
+<separador>
+Indireta:
 gdb.info-1: 1878
 gdb.info-2: 295733
 ...
 @end example
 
-This tells Info viewers that the first node of the manual occurs at
-byte 1878 of the file @file{gdb.info-1} (which would be after that file's
-preamble.)  The first node in the @file{gdb.info-2} subfile would start at
-byte 295733 if @file{gdb.info-2} were appended to @file{gdb.info-1},
-including any preamble sections in both files.
+Isso informa aos visualizadores do Info que o primeiro nó do manual ocorre no
+byte 1878 do arquivo @file{gdb.info-1} (que estaria depois do preâmbulo desse
+arquivo). O primeiro nó no subarquivo @file{gdb.info-2} começaria no byte
+295733 se @file{gdb.info-2} fosse posposto a @file{gdb.info-1}, incluindo
+quaisquer seções de preâmbulo em ambos os arquivos.
 
-Unfortunately, Info-creating programs such as @code{makeinfo} have not
-always implemented these rules perfectly, due to various bugs and
-oversights.  Therefore, robust Info viewers should fall back to
-searching ``nearby'' the given position for a node, instead of
-giving up immediately if the position is not exactly at a node beginning.
+Infelizmente, programas de criação do Info, como o @code{makeinfo}, nem sempre
+implementaram essas regras perfeitamente, devido a vários defeitos e descuidos.
+Portanto, visualizadores robustos do Info deveriam voltar a procurar
+``próximo'' à posição fornecida para um nó, em vez de desistir imediatamente se
+a posição não estiver exatamente no início de um nó.
 
 
-@node Info Format Tag Table
-@subheading Info Format: Tag Table
+@node Tabela de Etiquetas do Formato do Info
+@subheading Formato do Info: Tabela de Etiquetas
 
-@cindex Tag table, in Info format
+@cindex Tabela de etiquetas, no formato do Info
 
 @example
-    <tag table> =
-<separator>
-Tag Table:
-(<lparen>Indirect<rparen>)?
-(Node|Ref): <nodeid>^?<bytepos>
-<separator>
-End Tag Table
+    <tabela de etiquetas> =
+<separador>
+Tabela de Etiquetas:
+(<lparen>Indireta<rparen>)?
+(Nó|Ref): <idnó>^?<posiçãobyte>
+<separador>
+Fim Tabela de Etiquetas
 @end example
 
-The @samp{(Indirect)} line appears in the case of split output only.
+A linha @samp{(Indireta)} aparece somente no caso de saída dividida.
 
-The tag table specifies the starting byte position of each node and anchor
-in the file.  In the case of split output, it is only written in the main
-output file.
+A tabela de etiquetas especifica a posição inicial do byte de cada nó e âncora
+no arquivo. No caso de saída dividida, ela é escrita somente no arquivo de
+saída principal.
 
-Each line defines an identifier as either an anchor or a node, as
-specified.  For example, @samp{Node: Top^?1647} says that the node named
-@samp{Top} starts at byte 1647 while @samp{Ref: Visão Geral-Footnote-1^?30045}
-says that the anchor named @samp{Visão Geral-Footnote-1} starts at byte 30045.
-It is an error to define the same identifier both ways.
+Cada linha define um identificador como ou uma âncora ou um nó, conforme
+especificado. Por exemplo, @samp{Node: Top^?1647} diz que o nó chamado
+@samp{Top} começa no byte 1647, enquanto @samp{Ref: Overview-Footnote-1^?30045}
+diz que a âncora chamada @samp{Overview-Footnote-1} começa no byte 30045. É um
+erro definir o mesmo identificador em ambas as formas.
 
-In the case of nonsplit output, the byte positions simply refer to the
-location in the output file.  In the case of split output, the byte
-positions refer to an imaginary file created by concatenating all the
-split files (but not the top-level file).  See the previous section.
+No caso de saída não dividida, as posições de byte simplesmente se referem ao
+local no arquivo de saída. No caso de saída dividida, as posições de byte se
+referem a um arquivo imaginário criado pela concatenação de todos os arquivos
+divididos (mas não o arquivo de nível superior). Veja-se a seção anterior.
 
-Here is an example:
+Aqui está um exemplo:
 
 @example
 ^_
-Tag Table:
-Node: Top^?89
-Node: Ch1^?292
+Tabela de Etiquetas:
+Nó: Top^?89
+Nó: Ch1^?292
 ^_
-End Tag Table
+Fim Tabela de Etiquetas
 @end example
 
 @noindent
-This specifies a manual with two Nós, `Top' and `Ch1', at byte
-positions 89 and 292 respectively.  Because the @samp{(Indirect)} line
-is not present, the manual is not split.
+Isso especifica um manual com dois Nós, `Top' e `Ch1', nas posições de byte 89
+e 292, respectivamente. Como a linha @samp{(Indireta)} não está presente, o
+manual não é dividido.
 
-Preamble sections or other non-node sections of files do not have a tag
-table entry.
+Seções de preâmbulo ou outras seções de arquivos não nós não tem uma entrada na
+tabela de etiquetas.
 
 
-@node Info Format Local Variables
-@subheading Info Format: Local Variables
+@node Variáveis Locais do Formato do Info
+@subheading Formato do Info: Variáveis Locais
 
-@cindex Local variable section, in Info format
+@cindex Seção das variáveis locais, no formato do Info
 
-The local variables section is optional and is currently used to give the
-encoding information.  It may be augmented in the future.
+A seção de variáveis locais é opcional e é usada atualmente para fornecer as
+informações de codificação. Ela pode ser aumentada no futuro.
 
 @example
-    <local variables> =
-<separator>
-Local Variables:
-coding: <encoding>
+    <variáveis locais> =
+<separador>
+Variáveis Locais:
+codificação: <codificação>
 End:
 @end example
 
 @xref{@code{@@documentencoding}}.
 
 
-@node Info Format Regular Nós
-@subheading Info Format: Regular Nós
+@node Nós Regulares do Formato do Info
+@subheading Formato do Info: Nós Regulares
 
-@cindex Info Nós, in Info format
+@cindex Nós do Info, no formato do Info
 
-Regular Nós look like this:
+Nós regulares se parecem com isto:
 
 @example
-    <node> =
-<separator>
-File: <fn>, Node: <id1>, (Next: <id2>, )? (Prev: <id3>, )? Up: <id4>
+    <nó> =
+<separador>
+Arquivo: <fn>, Nó: <id1>, (Próximo: <id2>, )? (Anterior: <id3>, )? Acima: <id4>
 
-<general text, until the next ^_ or end-of-file>
+<texto geral, até o próximo ^_ ou fim-do-arquivo>
 @end example
 
 @noindent
-At least one space or tab must be present after each colon and comma,
-but any number of spaces are ignored.  The @t{<id>} node identifiers have
-following format:
+Pelo menos um espaço ou tabulação precisa estar presente depois de cada dois
+pontos e vírgula, mas qualquer número de espaços é ignorado. Os identificadores
+de nó @t{<id>} tem o seguinte formato:
 
 @example
-   <id> = (<lparen><infofile><rparen>)?(<del>?<nodename><del>?)?
-|  <id> = (<lparen><infofile><rparen>)?(<nodename>)?
+   <id> = (<lparen><arquivoinfo><rparen>)?(<del>?<nomenó><del>?)?
+|  <id> = (<lparen><arquivoinfo><rparen>)?(<nomenó>)?
 @end example
 
-This @t{<node>} defines @t{<id1>} in file @t{<fn>}, which is typically
-either @samp{manualname} or @samp{manualname.info}.  No parenthesized
-@t{<infofile>} component may appear within @t{<id1>}.
+Esse @t{<nó>} define @t{<id1>} no arquivo @t{<fn>}, que normalmente é ou
+@samp{nomemanual} ou @samp{nomemanual.info}. Nenhum componente
+@t{<arquivoinfo>} entre parênteses pode aparecer dentro de @t{<id1>}.
 
-Each of the identifiers after @code{Next}, @code{Prev} and @code{Up}
-refer to Nós or anchors within a file.  These pointers normally
-refer within the same file, but @samp{(dir)} is often used to point to
-the top-level dir file.  If an @t{<infofile>} component is used then
-the node name may be omitted, in which case the node identifier refers
-to the @samp{Top} node within the referenced file.
+Cada um dos identificadores depois de @code{Próximo}, @code{Anterior} e
+@code{Acima} se refere a nós ou âncoras dentro de um arquivo. Esses ponteiros
+normalmente referenciam dentro do mesmo arquivo, mas @samp{(dir)}
+frequentemente é usado para apontar para o arquivo Dir de nível superior. Se um
+componente @t{<arquivoinfo>} for usado, então o nome do nó pode ser omitido,
+caso no qual o identificador do nó se refere ao nó @samp{Top} dentro do arquivo
+referenciado.
 
-The @code{Next} and @code{Prev} pointers are optional.  The @code{Up}
-pointer is technically also optional, although most likely this
-indicates a mistake in the node structuring.  Conventionally, the
-Nós are arranged to form a tree, but this is not a requirement of
-the format.
+Os ponteiros @code{Próximo} e @code{Anterior} são opcionais. O ponteiro
+@code{Acima} tecnicamente também é opcional, embora muito provavelmente isso
+indique um erro na estruturação do nó. Convencionalmente, os nós são
+organizados para formar uma árvore, mas isso não é uma exigência do formato.
 
-Node names containing periods, commas, colons or parentheses
-(including @@-commands which produce any of these) can confuse
-Info readers.
-If it is necessary to refer to a node whose name contains any of
-these, the @t{<nodename>} should be surrounded by a pair of @t{<del>}
-characters.  There is support in @command{makeinfo} for adding these
-characters (@pxref{INFO_SPECIAL_CHARS_QUOTE}); however, we don't
-recommend you make use of this support until such time as Info-reading
-programs that recognize this syntax are common.
-@xref{Exigências de Linha de Nó}.
+Nomes de nós contendo pontos, vírgulas, dois pontos ou parênteses (incluindo
+comandos @@ que produzem qualquer um desses) podem confundir leitores do Info.
+Se for necessário se referir a um nó cujo nome contenha qualquer um desses, o
+@t{<nomenó>} deveria ser cercado por um par de caracteres @t{<del>}. Existe
+suporte no @command{makeinfo} para adicionar esses caracteres
+(@pxref{INFO_SPECIAL_CHARS_QUOTE}); no entanto, nós não recomendamos que você
+faça uso desse suporte até que programas de leitura do Info que reconheçam essa
+sintaxe sejam comuns. @xref{Exigências de Linha de Nó}.
 
-The use of non-ASCII characters in the names of Nós is permitted,
-but can cause problems in cross-references between Nós in Info files
-with different character encodings, and also when node names from many
-different files are listed (for example, with the @option{--apropos}
-option to the standalone Info browser), so we recommend avoiding them
-whenever feasible.  For example, prefer the use of the ASCII
-apostrophe character (@t{'}) to Unicode directional quotes.
+O uso de caracteres não-ASCII nos nomes de nós é permitido, mas pode causar
+problemas em referências cruzadas entre nós em arquivos do Info com diferentes
+codificações de caracteres, e também quando nomes de nós provenientes de muitos
+arquivos forem listados (por exemplo, com a opção @option{--apropos} para o
+navegador autônomo do Info), de forma que nós recomendamos evitá-los sempre que
+possível. Por exemplo, prefira o uso do caractere de apóstrofo do ASCII (@t{'})
+às aspas direcionais do Unicode.
 
-The @t{<general text>} of the node can include the special constructs
-described next.
+O @t{<texto geral>} do nó pode incluir as construções especiais descritas a
+seguir.
 
 
-@node Info Format Text Constructs
-@section Info Format Text Constructs
+@node Construtores de Texto do Formato do Info
+@section Construtores de Texto do Formato do Info
 
-@cindex Info format text constructs
-@cindex text constructs, Info format
+@cindex Construtores de texto do formato do Info
+@cindex Construtores de texto, formato do Info
 
-These special Info constructs can appear within the text of a node.
+Essas construções especiais di Info podem aparecer dentro do texto de um nó.
 
 @menu
-* Menu:  Info Format Menu.
-* Image: Info Format Image.
-* Printindex: Info Format Printindex.
-* Xref:  Info Format Cross Reference.
+* Menu:                        Menu do Formato do Info.
+* Imagem:                      Imagem do Formato do Info.
+* Printindex:                  Imprime índices do Formato do Info.
+* Xref:                        Referências Cruzadas do Formato do Info.
 @end menu
 
 
-@node Info Format Menu
-@subsection Info Format: Menu
+@node Menu do Formato do Info
+@subsection Formato do Info: Menu
 
-@cindex Menus, in Info format
+@cindex Menus, no formato do Info
 
-Conventionally menus appear at the end of Nós, but the Info format
-places no restrictions on their location.
+Convencionalmente, os menus aparecem no final dos nós, mas o formato do Info
+não impõe restrições quanto à localização deles.
 
 @example
     <menu> =
 * Menu:
-(<menu entry> | <menu comment>)*
+(<entrada de menu> | <comentário de menu>)*
 @end example
 
-The parts of a @t{<menu entry>} are also described in
-@ref{Partes de Menu}. They have the same syntax as cross-references
-(@pxref{Info Format Cross Reference}). Índices extend the menu format to
- specify the destination line; @pxref{Info Format Printindex}.
+As partes de uma @t{<entrada de menu>} também estão descritas em
+@ref{Partes de Menu}. Elas tem a mesma sintaxe que referências cruzadas
+(@pxref{Referências Cruzadas do Formato do Info}). Índices estendem o formato
+de menu para especificar a linha de destino;
+@pxref{Imprime índices do Formato do Info}.
 
-A @t{<menu comment>} is any line not beginning with @samp{*} that
-appears either at the beginning of the menu or is separated from a
-menu entry by one or more blank lines.  These comments are intended to
-be displayed as part of the menu, as-is (@pxref{Escrevendo um Menu}).
+Um @t{<comentário de menu>} é qualquer linha não iniciando com @samp{*} que
+aparece ou no início do menu ou é separada de uma entrada de menu por uma ou
+mais linhas em branco. Esses comentários são destinados a serem exibidos como
+parte do menu, como está (@pxref{Escrevendo um Menu}).
 
 
-@node Info Format Image
-@subsection Info Format: Image
+@node Imagem do Formato do Info
+@subsection Formato do Info: Imagem
 
-@cindex Images, in Info format
+@cindex Imagens, no formato do Info
 
-The @code{@@image} command results in the following special directive
-within the Info file (@pxref{Imagens}):
+O comando @code{@@image} resulta na seguinte diretiva especial dentro do
+arquivo do Info (@pxref{Imagens}):
 
 @example
-    <image> =
-^@@^H[image src="<image file>"
-            (text="<txt file contents>")?
-            (alt="<alt text>")?
+    <imagem> =
+^@@^H[imagem src="<arquivo de imagem>"
+            (texto="<conteúdo do arquivo de texto>")?
+            (alt="<texto alternativo>")?
 ^@@^H]
 @end example
 
-The line breaks and indentation in this description are editorial; the
-whitespace between the different parts of the directive in Info files
-is arbitrary.
+As quebras de linha e recuos nesta descrição são editoriais; o espaço em branco
+entre as diferentes partes da diretiva nos arquivos do Info é arbitrário.
 
-In the strings @t{<image file>}, @t{<txt file contents>} and @t{<alt
-text>}, @samp{"} is quoted as @samp{\"} and @samp{\} is quoted as
-@samp{\\}.  The txt and alt specifications are optional.
+Nas strings @t{<arquivo de imagem>}, @t{<conteúdo do arquivo de texto>} e
+@t{<texto alternativo>}, @samp{"} é aspado como @samp{\"} e @samp{\} é aspado
+como @samp{\\}. As especificações de texto e alt são opcionais.
 
-The @t{alt} value serves the same purpose as in HTML: A prose
-description of the image.  In text-only displays or speech systems,
-for example, the @t{alt} value may be used instead of displaying the
-(typically graphical) @t{<image file>}.
+O valor de @t{alt} serve ao mesmo propósito que no HTML: Uma descrição em prosa
+da imagem. Em exibições somente de texto ou em sistemas de fala, por exemplo, o
+valor de @t{alt} pode ser usado em vez de exibir o (tipicamente gráfico)
+@t{<arquivo de imagem>}.
 
-The @t{<txt file contents>}, if present, should be taken as an ASCII
-representation of the image, for possible use on a text-only display.
+O @t{<conteúdo do arquivo de texto>}, se presente, deveria ser considerado uma
+representação ASCII da imagem, para possível uso em uma exibição somente de
+texto.
 
-The format does not prescribe the choice between displaying the
-@t{<image file>}, the @t{<alt text>} or the @t{<txt file contents>}.
+O formato não prescreve a escolha entre exibir o @t{<arquivo de imagem>}, o
+@t{<texto alternativo>} ou o @t{<conteúdo do arquivo de texto>}.
 
 
-@node Info Format Printindex
-@subsection Info Format: Printindex
+@node Imprime índices do Formato do Info
+@subsection Formato do Info: Imprime índices
 
-@cindex Índices, in Info format
+@cindex Índices, no formato do Info
 
-Índices in Info format are generally written as a menu
-(@pxref{Índices}), but with an additional directive at the beginning
-marking this as an index node:
+Índices no formato do Info geralmente são escritos como um menu
+(@pxref{Índices}), mas com uma diretiva adicional no início marcando esse como
+um nó de índice:
 
 @example
-    <printindex> =
-^@@^H[index^@@^H]
+    <imprimeíndice> =
+^@@^H[índice^@@^H]
 * Menu:
 
-<index entry>*
+<entrada de índice>*
 @end example
 
-The @t{<index entry>} items are similar to normal menu entries, but
-the free-format description is replaced by the line number of where
-the entries occurs in the text:
+Os itens @t{<entrada de índice>} são semelhantes às entradas normais de menu,
+mas a descrição de formato livre é substituída pelo número da linha onde as
+entradas ocorrem no texto:
 
 @example
-    <index entry> =
-* <entry text>: <entry node>. <lparen>line <lineno><rparen>
+    <entrada de índice> =
+* <texto de entrada>: <nó de entrada>. <lparen>linha <númerolinha><rparen>
 @end example
 
 @noindent
-The @t{<entry text>} is the index term.  The @t{<lineno>} is an
-unsigned integer, given relative to the start of the @t{<entry node>}.
-There may be arbitrary whitespace after the colon and period, as usual
-in menus, and may be broken across lines.  Here is an example:
+O @t{<texto de entrada>} é o termo de índice. O @t{<númerolinha>} é um inteiro
+não sinalado, fornecido relativo ao início de @t{<nó de entrada>}. Podem
+existir espaços em branco arbitrários depois dos dois pontos e o do ponto, como
+de costume em menus, e podem existir quebras nas linhas. Aqui está um exemplo:
 
 @example
-^@@^H[index^@@^H]
+^@@^H[índice^@@^H]
 * Menu:
 
-* thunder:           Weather Phenomena.             (line 5)
+* trovão:           Fenômenos Meteorológicos.             (line 5)
 @end example
 
-This means that an index entry for `thunder' appears at line 5 of the
-node `Weather Phenomena'.
+Isso significa que uma entrada de índice para `trovão' aparece na linha 5 do nó
+`Fenômenos Meteorológicos'.
 
 
-@node Info Format Cross Reference
-@subsection Info Format: Cross-reference
+@node Referências Cruzadas do Formato do Info
+@subsection Formato do Info: Cross-reference
 
-@cindex Cross-references, in Info format
+@cindex Referências cruzadas, no formato do Info
 
-A general cross-reference in Info format has one of the following two forms:
+Uma referência cruzada geral no formato do Info tem um dos seguintes dois
+formatos:
 
 @example
-    <cross-reference> =
+    <referência-cruzada> =
   * (N|n)ote <id>::
-@c| * (N|n)ote <label>:<id>(.|,)?
-| * (N|n)ote <label>:<id>(.|,)
+@c| * (N|n)ote <rótulo>:<id>(.|,)?
+| * (N|n)ote <rótulo>:<id>(.|,)
 
-     <id> = (<lparen><infofile><rparen>)?(<del>?<nodename><del>?)?
-|    <id> = (<lparen><infofile><rparen>)?(<nodename>)?
-    <label> = <del>?<label text><del>?
+     <id> = (<lparen><arquivoinfo><rparen>)?(<del>?<nomenó><del>?)?
+|    <id> = (<lparen><arquivoinfo><rparen>)?(<nomenó>)?
+    <rótulo> = <del>?<texto do rótulo><del>?
 @end example
 
-No space should occur between the @samp{*} character and the following
-@samp{N} or @samp{n}.  @samp{*Note} should be used at the start of a
-sentence, otherwise @samp{*note} should be used.  (Some Info readers,
-such as the one in Emacs, can display @samp{*Note} and @samp{*note} as
-@samp{See} and @samp{see} respectively.) In both cases, @t{<label
-text>} is descriptive text.
+Nenhum espaço deveria ocorrer entre o caractere @samp{*} e o seguinte @samp{N}
+ou @samp{n}. @samp{*Note} deveria ser usado no início de uma frase, caso
+contrário, @samp{*note} deveria ser usado. (Alguns leitores do Info, como o do
+Emacs, podem exibir @samp{*Note} e @samp{*note} como @samp{See} e @samp{see},
+respectivamente). Em ambos os casos, @t{<texto do rótulo>} é um texto
+descritivo.
 
-In both forms the @t{<id>} refers to a node or anchor, in the same way
-as a reference in the node information line does (@pxref{Info Format
-Regular Nós}).  The optional parenthesized @samp{<infofile>} is the
-filename of the manual being referenced, and the @t{<nodename>} is the
-node or anchor within that manual,
+Em ambas as formas, o @t{<id>} referencia um nó ou âncora, da mesma maneira que
+uma referência na linha de informações do nó faz (@pxref{Nós Regulares do
+Formato do Info}). O @samp{<arquivoinfo>} opcional entre parênteses é o nome do
+arquivo do manual sendo referenciado, e o @t{<nomenó>} é o nó ou âncora dentro
+desse manual.
 
-The second form has a descriptive label.  A cross-reference in this form
-should usually be terminated with a comma or period, to make it
-feasible to find the end of the @t{<id>}.
+A segunda forma tem um rótulo descritivo. Uma referência cruzada nessa forma
+deveria geralmente ser terminada com uma vírgula ou um ponto, para tornar
+viável encontrar o fim do @t{<id>}.
 
-If @t{<label>} contains a colon character (@t{:}), it should be
-surrounded with a pair of @t{<del>} characters.  Likewise, if
-@t{<nodename>} contains problematic characters (such as commas or
-periods), it should be surrounded by a pair of @t{<del>} characters;
-then a terminating comma or period is not needed.
+Se @t{<rótulo>} contiver um caractere de dois pontos (@t{:}), ele deveria ser
+cercado por um par de caracteres @t{<del>}. Da mesma forma, se @t{<nomenó>}
+contiver caracteres problemáticos (como vírgulas ou pontos), ele deveria ser
+cercado por um par de caracteres @t{<del>}; então uma vírgula ou um ponto de
+terminação não é necessária.
 
-As with node names, this quoting mechanism has as of the time of
-writing limited support in Info-reading programs; hence we do not
-recommend using it until this changes.
+Assim como com os nomes de nós, esse mecanismo de aspeamento tem, até o momento
+em que este texto foi escrito, suporte limitado em programas de leitura do
+Info; portanto, nós não recomendamos usá-lo até que isso mude.
 
-The format does not prescribe how to find other manuals to resolve
-such references.
+O formato não prescreve como encontrar outros manuais para resolver tais
+referências.
 
-Here are some examples:
+Aqui estão alguns exemplos:
 
 @example
 *note Licença GNU de Documentação Livre::
-*note Tag table: Info Format Tag Table, for details.
+*note Tabela de etiquetas: Tabela de Etiquetas do Formato do Info, para detalhes.
 *Note Visão Geral: (make)Top.
 *Note ^?:^?: (bash)Bourne Shell Builtins.
 *Note alloca.h: (gnulib)^?alloca.h^?.
 @end example
 
-The first shows a reference to a node in the current manual using the
-short form.
+O primeiro mostra uma referência a um nó no manual atual usando o formato
+curto.
 
-The second also refers to a node in the current manual, namely `Info
-Format Tag Table'; the `Tag table' before the @samp{:} is only a label
-on this particular reference, and the @samp{for details.} is text
-belonging to the sentence, not part of the reference.
+O segundo também referencia um nó no manual atual, chamado `Tabela de Etiquetas
+do Formato do Info'; a `Tabela de etiquetas' antes de @samp{:} é somente um
+rótulo nessa referência específica, e @samp{para detalhes.} é um texto
+pertencente à frase, não parte da referência.
 
-The third example refers to the node `Top' in another manual, namely
-@samp{make}, with `Visão Geral' being the label for this cross-reference.
+O terceiro exemplo referencia o nó `Top' em outro manual, chamado @samp{make},
+com `Visão Geral' sendo o rótulo para essa referência cruzada.
 
-The fourth example shows a colon character being quoted in a label,
-and the fifth example shows a period being quoted in a node name.
-
+O quarto exemplo mostra um caractere de dois pontos sendo aspado em um rótulo,
+e o quinto exemplo mostra um ponto sendo aspado em um nome de nó.
 @xref{Referências Cruzadas}.
 
 
@@ -24305,9 +24304,9 @@ and the fifth example shows a period being quoted in a node name.
 @node Índice de Comando e Variável
 @unnumbered Índice de Comando e Variável
 
-This is an alphabetical list of all the @@-commands, assorted Emacs Lisp
-functions, and several variables.  To make the list easier to use, the
-commands are listed without their preceding @samp{@@}.
+Esta é uma lista alfabética de todos os comandos @@, funções Emacs Lisp
+variadas e diversas variáveis. Para tornar a lista mais fácil de usar, os
+comandos estão listados sem o @samp{@@} precedente.
 
 @printindex fn
 
