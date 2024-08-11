@@ -412,7 +412,7 @@ Fazendo Uma Tabela de Duas Colunas
 
 Exibições Especiais
 
-* Flutuações::                  Figuras, tabelas, e afins.
+* Flutuações::                   Figuras, tabelas, e afins.
 * Imagens::                      Incluindo gráficos e imagens.
 * Notas de Rodapé::              Escrevendo notas de rodapé.
 
@@ -579,7 +579,8 @@ Arquivos de Inclusão
 * @code{texinfo-multiple-files-update}:: Como criar e atualizar nós e menus ao usar arquivos incluídos.
 * Exigências dos Arquivos de Inclusão::  Necessidades do @code{texinfo-multiple-files-update}.
 * Arquivo de Inclusão de Amostra::       Um arquivo externo de amostra com arquivos incluídos dentro dele; e um arquivo incluído de amostra.
-* Evolução da Inclusão de Arquivos::    Como o uso do comando @code{@@include} mudou ao longo do tempo.
+* @code{@@verbatiminclude}::             Incluindo um arquivo literal.
+* Evolução da Inclusão de Arquivos::     Como o uso do comando @code{@@include} mudou ao longo do tempo.
 
 Formatando e Imprimindo Cópia Impressa
 
@@ -625,10 +626,10 @@ Variáveis de Personalização
 
 Criando e Instalando Arquivos Info
 
-* Criando um Arquivo Info::
-* Instalando Um Arquivo Info::
+* Criando um Arquivo do Info::
+* Instalando Um Arquivo do Info::
 
-Criando um Arquivo Info
+Criando um Arquivo do Info
 
 * Vantagens do @command{makeinfo}::         @command{makeinfo} provê melhor verificação de erro.
 * @code{makeinfo} no Emacs::           Como executar @code{makeinfo} a partir do Emacs.
@@ -636,7 +637,7 @@ Criando um Arquivo Info
 * Formatação em Lote::            Como formatar para Info em modo de lote Emacs.
 * Arquivos de Etiqueta e de Divisão::         Como os arquivos marcados e divididos ajudam Info a executar melhor.
 
-Instalando um Arquivo Info
+Instalando Um Arquivo do Info
 
 * Arquivo de Diretório::              O menu de nível superior para todos os arquivos Info.
 * Novo Arquivo Info::               Listando um novo arquivo Info.
@@ -713,14 +714,14 @@ Especificação do Formato do Info
 * Geral:                       Esquema Geral do Formato do Info.
 * Texto:                       Construtores de Texto do Formato do Info.
 
-Desenho Geral do Formato Info
+Esquema Geral do Formato do Info
 
-* Inteiro::           Manual Completo do Formato Info. Manuais split vs.@: nonsplit.
-* Preâmbulo::        Preâmbulo do Formato Info.
-* Indireto::        Tabela Indireta do Formato Info.
-* Tabela de etiquetas::       Tabela de Etiquetas do Formato Info.
-* Variáveis locais:: Variáveis Local do Formato Info.
-* Nós regulares::   Nós Regulares do Formato Info.
+* Inteiro:                     Manual Inteiro do Formato Info. Manuais divididos versus não divididos.
+* Preâmbulo:                   Preâmbulo do Formato do Info.
+* Indireta:                    Tabela Indireta do Formato do Info.
+* Tabela de etiquetas:         Tabela de Etiquetas do Formato do Info.
+* Variáveis locais:            Variáveis Locais do Formato do Info.
+* Nós Regulares:               Nós Regulares do Formato do Info.
 
 Construtores de Texto do Formato Info
 
@@ -1562,7 +1563,7 @@ três partes do arquivo são em sua maioria clichê: quando da escrita de
 um manual, você simplesmente modifica os nomes conforme apropriado.
 
 O arquivo completo, sem os comentários intercalados, é mostrado em
-@ref{Short Sample Texinfo File}.
+@ref{Arquivo Curto de Amostra do Texinfo}.
 
 Veja-se @ref{Iniciando e Finalizando um Arquivo}, para mais documentação acerca dos
 comandos listados aqui.
@@ -3594,7 +3595,7 @@ O nó `Next' do nó Top deveria ser o primeiro capítulo em seu documento.
 
 @end itemize
 
-Veja-se @ref{Instalando Um Arquivo Info}, para mais informação sobre a instalação
+Veja-se @ref{Instalando Um Arquivo do Info}, para mais informação sobre a instalação
 de um arquivo Info no diretório @file{info}.
 
 Geralmente, é melhor deixar os ponteiros completamente e deixar que as ferramentas
@@ -7127,22 +7128,21 @@ no início daquela linha, e somente com um espaço entre o @code{@@end} e
 o @code{example}.
 
 @menu
-* Comandos de Cercamento de Blocos::    Construtores diferentes para propósitos diferentes.
+* Comandos de Cercamento de Blocos::  Construtores diferentes para propósitos diferentes.
 * @code{@@quotation}::                Escrevendo uma citação.
 * @code{@@indentedblock}::            Bloco de texto recuado a esquerda.
 * @code{@@example}::                  Escrevendo um exemplo em uma fonte de largura fixa.
 * @code{@@verbatim}::                 Escrevendo um exemplo de literal.
-* @code{@@verbatiminclude}::          Incluindo um arquivo de literal.
 * @code{@@lisp}::                     Ilustrando código Lisp.
-* @code{@@small@dots{}}::             Exemplos em uma fonte menor.
 * @code{@@display}::                  Escrevendo um exemplo na fonte atual.
 * @code{@@format}::                   Escrevendo um exemplo sem margens estreitadas.
 * @code{@@exdent}::                   Desfazer recuo em uma linha.
 * @code{@@flushleft @@flushright}::   Empurrando texto alinhado à esquerda ou alinhado à direita.
 * @code{@@raggedright}::              Evitando justificação à direita.
-* @code{@@noindent}::                 Prevenindo recuo de parágrafo.
+* @code{@@noindent}::                 Evitando recuo de parágrafo.
 * @code{@@indent}::                   Forçando recuo de parágrafo.
 * @code{@@cartouche}::                Desenhando retângulos por todos os lados ao redor do texto.
+* @code{@@small@dots{}}::             Exemplos em uma fonte menor.
 @end menu
 
 
@@ -8665,17 +8665,17 @@ exibições.
 Outro grupo de comandos é para a criação de notas de rodapé em Texinfo.
 
 @menu
-* Flutuadores::                  Figuras, tabelas, e afins.
+* Flutuações::                   Figuras, tabelas, e afins.
 * Imagens::                      Incluindo gráficos e imagens.
 * Notas de Rodapé::              Escrevendo notas de rodapé.
 @end menu
 
 
-@node Flutuadores
-@section Flutuadores
-@cindex Flutuadores, em geral
+@node Flutuações
+@section Flutuações
+@cindex Flutuações, em geral
 @c Capítulo 10 - Exibições Especiais
-@c Seção 10.1 - Flutuadores
+@c Seção 10.1 - Flutuações
 
 Um @dfn{flutuador} é uma exibição que é configurada a partir do texto
 principal. É tipicamente rotulado como sendo uma ``Figura'', ``Tabela'',
@@ -9314,9 +9314,9 @@ os canônicos. Por último, você consegue definir teus próprios novos
 
 
 @menu
-* Entradas de Índice::           Escolha palavras diferentes para entradas de índice.
 * Índices Predefinidos::         Use índices diferentes para tipos diferentes de entradas.
 * Comandos de Indexação::        Como fazer uma entrada de índice.
+* Entradas de Índice::           Escolha palavras diferentes para entradas de índice.
 * Imprimindo Índices e Menus::   Como imprimir um índice em cópia impressa e gerar menus de índice no Info.
 * Combinando Índices::           Como combinar índices.
 * Novos Índices::                Como definir teus próprios índices.
@@ -14856,7 +14856,8 @@ convenientemente pequenas.
 * @code{texinfo-multiple-files-update}:: Como criar e atualizar nós e menus ao usar arquivos incluídos.
 * Exigências dos Arquivos de Inclusão::  Necessidades do @code{texinfo-multiple-files-update}.
 * Arquivo de Inclusão de Amostra::       Um arquivo externo de amostra com arquivos incluídos dentro dele; e um arquivo incluído de amostra.
-* Evolução da Inclusão de Arquivos::    Como o uso do comando @code{@@include} mudou ao longo do tempo.
+* @code{@@verbatiminclude}::             Incluindo um arquivo literal.
+* Evolução da Inclusão de Arquivos::     Como o uso do comando @code{@@include} mudou ao longo do tempo.
 @end menu
 
 
@@ -17003,18 +17004,18 @@ variável/valor para o shell) ou @code{--set-customization-variable
 As seções abaixo fornecem os detalhes para cada uma delas.
 
 @menu
-* Variáveis de Personalização para Comandos @code{@@}::
-* Variáveis e Opções de Personalização::
-* Variáveis de Personalização de HTML::
-* Outras Variáveis de Personalização::
+* Comandos: Variáveis de Personalização para Comandos @@.
+* Opções: Variáveis e Opções de Personalização.
+* HTML: Variáveis de Personalização de HTML.
+* Outras: Outras Variáveis de Personalização.
 @end menu
 
 
-@node Variáveis de Personalização para Comandos @code{@@}
-@subsection Variáveis de Personalização para Comandos @code{@@}
+@node Variáveis de Personalização para Comandos @@
+@subsection Variáveis de Personalização para Comandos @@
 
-@cindex Variáveis de Personalização para Comandos @code{@@}
-@cindex Comandos @code{@@}, variáveis de personalização para
+@cindex Variáveis de personalização para comandos @@
+@cindex Comandos @@, variáveis de personalização para
 
 Cada um dos seguintes comandos @@ tem uma variável de personalização associada
 com o mesmo nome (menos o @code{@@} inicial):
@@ -18106,7 +18107,7 @@ do Info, em arquivo HTML ou em texto simples. @code{texinfo-format-region} e
 para Info.
 
 Para informações acerca de como instalar o arquivo do Info no sistema Info,
-@pxref{Instalando Um Arquivo Info}.
+@pxref{Instalando Um Arquivo do Info}.
 
 @menu
 * Vantagens do @command{makeinfo}::   @command{makeinfo} fornece melhor verificação de erros.
@@ -18389,9 +18390,9 @@ informações acerca de como evitar que arquivos sejam divididos e como validar 
 estrutura dos Nós, veja-se @ref{Usando @code{Info-validate}}.
 
 
-@node Instalando Um Arquivo Info
-@section Instalando Um Arquivo Info
-@cindex Instalando Um Arquivo Info
+@node Instalando Um Arquivo do Info
+@section Instalando Um Arquivo do Info
+@cindex Instalando um arquivo do Info
 @cindex Instalação de arquivo do Info
 @cindex Diretório @file{dir} para instalação do Info
 
@@ -19636,7 +19637,8 @@ tempo de compilação, por exemplo, @file{/usr/local/etc})
 
 @item @var{datadir}/texinfo/
 (da mesma forma especificado em tempo de compilação, por exemplo,
-@file{/usr/local/share}) @end table
+@file{/usr/local/share})
+@end table
 
 Todos os arquivos encontrados são usados, com entradas anteriores substituindo
 as posteriores. A distribuição do Texinfo inclui um arquivo padrão que lida com
@@ -20376,7 +20378,7 @@ com @var{palavra}, uma de `none' ou `insert'.
 
 @item @@float
 Ambiente para definir material flutuante. Emparelha com @code{@@end float}.
-@xref{Flutuadores}.
+@xref{Flutuações}.
 
 @item @@flushleft
 @itemx @@flushright
@@ -20902,7 +20904,7 @@ Gera a letra alemã S sustenido es-zet, @ss{}.
 @item @@strong @{@var{texto}@}
 Enfatiza @var{texto} com mais força que @code{@@emph}, usando @strong{negrito}
 onde possível; cercado entre asteriscos no Info.
-@xref{enfatizar e fortaleçer, , Enfatizando Texto}.
+@xref{enfatizar e fortalecer, , Enfatizando Texto}.
 
 @item @@sub @{@var{texto}@}
 Configura @var{texto} como um subscrito.
