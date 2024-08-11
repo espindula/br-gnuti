@@ -1518,7 +1518,7 @@ fonte Texinfo com uma linha como esta:
 @@bye
 @end example
 
-@findex \input @r{(raw @TeX{} startup)}
+@findex \input @r{(iniciação do @TeX{} bruto)}
 @noindent
 Aqui está uma explanação:
 
@@ -2315,7 +2315,7 @@ em branco.
 @anchor{titlefont center sp}@c nome antigo
 @findex titlefont
 @findex center
-@findex sp @r{(titlepage line spacing)}
+@findex sp @r{(espaçamento entre linhas da página de título)}
 
 Você pode usar os comandos @code{@@titlefont}, @code{@@sp}, e
 @code{@@center} para criar uma página de título para um documento
@@ -3534,7 +3534,7 @@ esse é o nome que deveria ser usado: sem espaços antes ou depois, e um espaço
 automaticamente normalizado dessa maneira).
 
 @item
-Os ponteiros next/previous/up em linhas @code{@@node} devem ser os nomes dos nós.
+Os ponteiros próximo/anterior/acima em linhas @code{@@node} devem ser os nomes dos nós.
 (É recomendado deixar esses nomes de ponteiros de nó explícitos, os quais
 automaticamente evitam quaisquer problemas aqui;
 veja-se @ref{Criação de Ponteiros do @command{makeinfo}}).
@@ -6614,7 +6614,7 @@ O comando @command{ls} lista o conteúdo de diretórios.
 
 Você deveria escrever o nome de um programa na fonte de texto comum, em
 vez de usar @code{@@command}, se considerá-lo uma nova palavra em
-inglês, como `Emacs' or `Bison'.
+inglês, como `Emacs' ou `Bison'.
 
 Quando escrever uma invocação inteira de comando de shell, como em
 @samp{ls -l}, você deveria usar ou @code{@@samp} ou @code{@@code} a seu
@@ -7018,7 +7018,7 @@ O efeito é reduzir a fonte do corpo para um tamanho de 10@dmn{pt} (o
 padrão é 11@dmn{pt}). Fontes para outros elementos,  tais como seções e
 capítulos, são reduzidas de acordo. Isso somente deveria ser usado em
 conjunto com @code{@@smallbook} (@pxref{@code{@@smallbook}}) ou similar,
-dado que fontes de 10@dmn{pt} em papel padrão (8.5x11 or A4) são muito
+dado que fontes de 10@dmn{pt} em papel padrão (8.5x11 ou A4) são muito
 pequenas. Uma razão para usar esse comando é para economizar páginas, e,
 assim, custo de impressão, para livros físicos.
 
@@ -8785,34 +8785,34 @@ um argumento, envolvido em chaves.  Aqui está um exemplo:
 
 @example
 @@float
-Um exemplo de flutuador, com caption.
-@@caption@{Caption para exemplo de flutuador.@}
+Um exemplo de flutuador, com legenda.
+@@caption@{Legenda para exemplo de flutuador.@}
 @@end float
 @end example
 
 @noindent A saída é:
 
 @float
-Um exemplo de flutuador, com caption.
-@caption{Caption para exemplo de flutuador.}
+Um exemplo de flutuador, com legenda.
+@caption{Legenda para exemplo de flutuador.}
 @end float
 
 @code{@@caption} pode aparecer em qualquer lugar dentro do flutuador;
-@code{@@caption} não é processado até o @code{@@end float}.  O texto do
-caption geralmente é uma sentença ou duas, porém pode consistir de
-vários parágrafos se necessário.
+@code{@@caption} não é processado até o @code{@@end float}.  O texto da legenda
+geralmente é uma frase ou duas, porém pode consistir de vários parágrafos se
+necessário.
 
-Na saída, o caption sempre aparece abaixo do flutuador; isso atualmente
-não é modificável.  O caption é precedido pelo número e/ou tipo do
+Na saída, a legenda sempre aparece abaixo do flutuador; isso atualmente
+não é modificável.  A legenda é precedida pelo número e (ou) tipo do
 flutuador, conforme especificado para o comando @code{@@float}
 (veja-se a seção anterior).
 
 O comando @code{@@shortcaption} igualmente pode ser usado somente dentro
 de @code{@@float}, e recebe somente um argumento dentro de chaves.  O
-texto curto de caption é usado em vez do texto de caption em uma lista
-de flutuadores (veja-se a próxima seção).  Assim, você pode escrever um
-caption longo para o documento principal, e um título curto aparecer na
-lista de flutuadores.  Por exemplo:
+texto curto da legenda usado em vez do texto da legenda em uma lista
+de flutuadores (veja-se a próxima seção).  Assim, você pode escrever uma
+legenda longa para o documento principal, e um título curto aparecer na lista
+de flutuadores.  Por exemplo:
 
 @example
 @@float
@@ -8925,15 +8925,15 @@ pois os diferentes processadores suportam formatos diferentes:
 
 @itemize @bullet
 @item
-@pindex eps image format
+@pindex formato de imagem eps
 @TeX{} (saída DVI) lê o arquivo @file{@var{filename}.eps}
 (formato PostScript Encapsulado).
 
 @item
 @pindex pdftex@r{, e imagens}
-@pindex png image format
-@pindex jpeg image format
-@pindex pdf image inclusions
+@pindex formato de imagem png
+@pindex formato de imagem jpeg
+@pindex inclusões de imagem pdf
 pdf@TeX{} Lê @file{@var{filename}.pdf}, @file{@var{filename}.png},
 @file{@var{filename}.jpg}, ou @file{@var{filename}.jpeg} (nessa ordem).
 Também tenta as versões em letras maiúsculas das extensões. O formato
@@ -8969,7 +8969,7 @@ Para saída Info e HTML, @code{makeinfo} usa o quinto argumento opcional
 se for especificado e o arquivo for encontrado. Qualquer ponto inicial
 deveria ser incluído em @var{extension}. Por exemplo:
 
-@pindex XPM image format
+@pindex formato de imagem XPM
 @example
 @@image@{foo,,,,.xpm@}
 @end example
@@ -9121,7 +9121,7 @@ Atualmente, o dimensionamento de imagem está implementado somente no
 @node Notas de Rodapé
 @section Notas de Rodapé
 @cindex Notas de Rodapé
-@findex footnote
+@findex nota de rodapé
 
 Uma @dfn{nota de rodapé} serve para uma referência que documenta ou
 elucida o texto principal. @footnote{Uma nota de rodapé deveria
@@ -9262,7 +9262,7 @@ A menos que teu documento tenha notas de rodapé longas e importantes
 recomendamos o estilo @samp{end}, pois ele é mais simples para
 leitores(as) seguirem.
 
-@findex footnotestyle
+@findex estilo de nota de rodapé
 Use o comando @code{@@footnotestyle} para especificar um estilo de nota
 de rodapé de um arquivo do Info.  Escreva esse comando no início de uma
 linha seguido por um argumento, seja @samp{end} para o estilo de nó
@@ -9890,18 +9890,18 @@ seções.
 @menu
 * Inserindo um Símbolo Arroba::         @code{@@@@}, @code{@@atchar@{@}}.
 * Inserindo Chaves::                    @code{@@@{ @@@}}, @code{@@l rbracechar@{@}}.
-* Inserindo Uma Vírgula::               , and @code{@@comma@{@}}.
-* Inserindo uma Barra Invertida::       \ and @code{@@backslashchar@{@}}.
-* Inserindo um Símbolo Cerquilha::      # and @code{@@hashchar@{@}}.
+* Inserindo Uma Vírgula::               , e @code{@@comma@{@}}.
+* Inserindo uma Barra Invertida::       \ e @code{@@backslashchar@{@}}.
+* Inserindo um Símbolo Cerquilha::      # e @code{@@hashchar@{@}}.
 @end menu
 
 
 @node Inserindo um Símbolo Arroba
 @subsection Inserindo `@@' com @code{@@@@} e @code{@@atchar@{@}}
 @cindex Símbolo arroba, inserindo
-@cindex Inserindo @@ @r{(literal @samp{@@})}
-@findex @sortas{@@} @@ @r{(literal @samp{@@})} @c CONSERTE-ME
-@findex atchar@{@} @r{(literal @samp{@@})}
+@cindex Inserindo @@ @r{(@samp{@@} literal)}
+@findex @sortas{@@} @@ @r{(@samp{@@} literal)} @c CONSERTE-ME
+@findex atchar@{@} @r{(@samp{@@} literal)}
 
 @code{@@@@} produz um caractere @samp{@@} na saída gerada. Não coloque
 colchetes depois de um comando @code{@@@@}.
@@ -9972,7 +9972,7 @@ Não pareceu importante o suficiente para definir um sinônimo).
 @node Inserindo uma Barra Invertida
 @subsection Inserindo `\' com @code{@@backslashchar@{@}}
 
-@findex backslashchar
+@findex caractere de barra invertida
 @cindex Barra invertida, inserindo
 
 Normalmente, uma barra invertida `\' é um caractere normal no Texinfo
@@ -10009,7 +10009,7 @@ incomuns.
 @node Inserindo um Símbolo Cerquilha
 @subsection Inserindo `#' com @code{@@hashchar@{@}}
 
-@findex hashchar@{@} @r{(literal @samp{#})}
+@findex hashchar@{@} @r{(@samp{#} literal)}
 @cindex Inserindo #
 @cindex Símbolo cerquilha, inserindo
 
@@ -11804,7 +11804,7 @@ por @code{@@w@{@w{ }@}} não variará.
 @section @code{@@sp} @var{n}: Inserir Linhas em Branco
 
 @anchor{sp}@c nome antigo
-@findex sp @r{(line spacing)}
+@findex sp @r{(espaçamento entre linhas)}
 @cindex Espaço, inserindo vertical
 @cindex Linhas em branco
 @cindex Espaçamento entre linhas
@@ -16091,7 +16091,7 @@ separados por uma vírgula. Exemplos:
 @example
 @@pagesizes 200mm,150mm  @c para papel b5
 @end example
-@noindent and
+@noindent e
 @example
 @@pagesizes 11.5in       @c para papel ofício
 @end example
@@ -16931,8 +16931,8 @@ para um nó no arquivo atual e não for uma referência externa, como para
 Cada nó, exceto o nó `Top', precisa ter um ponteiro `Up'.
 
 @item
-O nó referenciado por um ponteiro `Up' precisa ele próprio referenciar o nó
-atual por meio de um item de menu, a menos que o nó referenciado por `Up' tenha
+O nó referenciado por um ponteiro `Acima' precisa ele próprio referenciar o nó
+atual por meio de um item de menu, a menos que o nó referenciado por `Acima' tenha
 o formato @samp{(@var{arquivo})}.
 @end enumerate
 
@@ -17429,7 +17429,7 @@ Para HTML@. Uma URL usada para referências @code{(dir)}; o padrão é
 @code{undef}, significando que as regras normais se aplicam, tipicamente
 levando a um link para @samp{dir.html} originário de uma referência implícita
 ou explícita para @samp{(dir)} (@pxref{Xref de HTML}). Para mais acerca dos
-ponteiros do nó Top, @pxref{Primeiro Nó}. Para substituir o ponteiro Up em
+ponteiros do nó Top, @pxref{Primeiro Nó}. Para substituir o ponteiro Acima em
 outros formatos, veja-se @code{TOP_NODE_UP} em
 @ref{Outras Variáveis de Personalização}.
 
