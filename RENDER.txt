@@ -26,7 +26,7 @@ texi2any --html --output=teste-multi.html texinfo-ed.6.1-pt_BR.texi
 Formato PDF:
 ===========
 
-texi2any --pdf --output=teste.pdf texinfo-ed.6.1-pt_BR.texi
+texi2dvi --pdf texinfo-ed.6.1-pt_BR.texi
 
 
 
