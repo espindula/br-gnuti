@@ -15,13 +15,18 @@ texi2any --plaintext --output=teste.txt texinfo-ed.6.1-pt_BR.texi
 Formato HTML (página única):
 ===========================
 
-texi2any --html --no-split --output=teste2.html texinfo-ed.6.1-pt_BR.texi
+texi2any --html --no-split --output=teste-mono.html texinfo-ed.6.1-pt_BR.texi
 
+
+Formato HTML (multi páginas):
+===========================
+
+texi2any --html --output=teste-multi.html texinfo-ed.6.1-pt_BR.texi
 
 Formato PDF:
 ===========
 
-texi2dvi --dvipdf
+texi2any --pdf --output=teste.pdf texinfo-ed.6.1-pt_BR.texi
 
 
 
