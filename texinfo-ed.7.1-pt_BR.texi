@@ -1,11 +1,5 @@
 \input texinfo.tex    @c -*-texinfo-*-
 
-@c Tudo entre o início/final das linhas de cabeçalho será
-@c ignorado pelos comandos de região {texinfo,makeinfo}-format do
-@c Emacs.   Veja-se o ponto `início de cabeçalho' para mais informação
-@c %**start of header
-
-@c Automake exige isto
 @setfilename texinfo-ed.6.1-pt_BR.info
 @documentlanguage pt_BR
 @documentencoding UTF-8
@@ -25,71 +19,27 @@
 @syncodeindex vr cp
 @syncodeindex pg cp
 
-@c @tex
-@c \global\usebracesinindexestrue
-@c @end tex
-
 @c final
 
-@comment %**end of header
+@c sinaliza para indexar nomes de comandos sem texto extra na entrada
+@ifinfo
+@set commandlookup
+@end ifinfo
+@ifhtml
+@set commandlookup
+@end ifhtml
 
-@c perceba-se que o autor do documento original em inglês usou
-@comment das duas formas de indicar que uma linha é um simples
-@c comentário, ou seja @comment e o sinônimo dele, @c.   No "Cartão de
-@comment Referência do GNU Texinfo", para Texinfo versão 5.2, está
-@c descrita uma terceira forma: DEL.   Essa forma não foi aqui testada
-@comment e, portanto, não se pode afirmar que funciona.
+@microtype on
 
 @copying
-Este manual é para GNU Texinfo (versão @value{VERSION},
-@value{UPDATED}), um sistema de documentação que pode produzir ambos
-informação online e um manual impresso a partir de uma fonte única
-usando marcação semântica.
+Este manual é para GNU Texinfo (versão @value{VERSION}, @value{UPDATED}), um sistema de documentação que consegue produzir informações online e um manual impresso a partir de um fonte usando marcação semântica.
 
-Copyright @copyright{} 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023,
-2024 da ``versão modificada'' traduzida para o idioma português falado
-e escrito no Brasil: Jamenson Ferreira Espindula de Almeida Melo
-<@email{jafesp@@gmail.com}>.
+Copyright @copyright{} 2016-2024 da ``versão modificada'' traduzida para o idioma português escrito e falado no Brasil: Jamenson Ferreira Espindula de Almeida Melo <@email{jafesp@@gmail.com}>.
 
-Copyright @copyright{} 1988, 1990, 1991, 1992, 1993, 1995, 1996, 1997,
-1998, 1999, 2001, 2001, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010,
-2011, 2012, 2013, 2014, 2015, 2016 da versão original escrita em inglês:
-Free Software Foundation, Inc.
-
-This manual is for GNU Texinfo (version @value{VERSION}, @value{UPDATED}),
-a documentation system that can produce both online information and a
-printed manual from a single source using semantic markup.
-
-Copyright @copyright{} 1988, 1990, 1991, 1992, 1993, 1995, 1996, 1997,
-1998, 1999, 2001, 2001, 2003, 2004, 2005, 2006, 2007, 2008, 2009,
-2010, 2011, 2012, 2013, 2014, 2015, 2016 Free Software Foundation, Inc.
+Copyright @copyright{} 1988-2023 da versão original escrita em inglês: Free Software Foundation, Inc.
 
 @quotation
-É concedida permissão para copiar, distribuir e (ou) mudar este Manual
-para GNU Texinfo (versão @value{VERSION}, @value{UPDATED}), versão
-traduzida para o idioma português sob os termos da Licença GNU de
-Documentação Livre, versão 1.3 ou qualquer versão posterior
-publicada pela Free Software Foundation; sem Seções Invariantes, com os
-Textos de Capa Frontal sendo ``Um Manual GNU'', e com os Textos de
-Quarta Capa como em (a) abaixo.   Uma cópia da licença está incluída na
-seção intitulada ``Licença GNU de Documentação Livre''.
-
-(a) O Texto de Quarta Capa da Free Software Foundation, Inc. (FSF) é:
-``Você tem a liberdade de copiar e mudar este manual GNU.
-Comprando cópias da FSF você a apoia no desenvolvimento GNU e na
-promoção da liberdade de software''.
-
-Permission is granted to copy, distribute and/or modify this document
-under the terms of the GNU Free Documentation License, Version 1.3 or
-any later version published by the Free Software Foundation; with no
-Invariant Sections, with the Front-Cover Texts being ``A GNU Manual'',
-and with the Back-Cover Texts as in (a) below.  A copy of the license
-is included in the section entitled ``GNU Free Documentation
-License''.
-
-(a) The FSF's Back-Cover Text is: ``You have the freedom to copy and
-modify this GNU manual.  Buying copies from the FSF supports it in
-developing GNU and promoting software freedom.''
+É concedida permissão para copiar, distribuir e (ou) mudar este documento sob os termos da Licença GNU de Documentação Livre, versão 1.3 ou qualquer versão posterior publicada pela Free Software Foundation; sem Seções Invariantes, com os Textos de Capa Frontal sendo ``Um Manual GNU'', e com os Textos de Quarta Capa como em (a) abaixo.   Uma cópia da licença está incluída na seção intitulada ``Licença GNU de Documentação Livre''.
 @end quotation
 @end copying
 
@@ -97,26 +47,14 @@ developing GNU and promoting software freedom.''
 @direntry
 * Texinfo: (texinfo).                            O formato de documentação GNU.
 * install-info: (texinfo)Invocando install-info. Atualizar entradas info/dir.
-* makeinfo: (texinfo)Invocando makeinfo.         Traduzir fonte Texinfo.
+* texi2any: (texinfo)Invocando texi2any.         Traduzir fonte do Texinfo.
+* makeinfo: (texinfo)Invocando makeinfo.         Traduzir fonte do Texinfo.
 * pod2texi: (pod2texi)Invocando pod2texi.        Traduzir POD Perl para Texinfo.
 * texi2dvi: (texinfo)Formatar com texi2dvi.      Imprimir documentos Texinfo.
 * texi2pdf: (texinfo)Saída PDF.                  Saída PDF para Texinfo.
 * pdftexi2dvi: (texinfo)Saída PDF.               Saída PDF para Texinfo.
 * texindex: (texinfo)Formatar com tex/texindex.  Ordena arquivos de índice Texinfo.
 @end direntry
-
-@c Configurar para smallbook se for imprimir no formato para livro
-@c pequeno, de forma que o exemplo do fonte de livro pequeno atualmente
-@c está escrito usando smallbook; em bigbook, uma gambiarra é
-@c usada para a saída TeX.   Faz-se isso via opção -t a texi2dvi, de
-@c maneira que esse mesmo fonte pode ser usado para outros tamanhos
-@c de papel também.
-@c smallbook
-@c set smallbook
-@c @@clear smallbook
-
-@c Se gostar-se de páginas em branco, adicionar via texi2dvi -t.
-@c setchapternewpage odd
 
 @set txiindexatsignignore
 @set txiindexbackslashignore
@@ -132,9 +70,6 @@ developing GNU and promoting software freedom.''
 @author Robert James Chassell
 @author Richard Matthew Stallman
 
-@c Inclui a Distribuição no título da página, de forma que tais
-@c cabeçalhos são desligados.
-
 @page
 @vskip 0pt plus 1filll
 @insertcopying
@@ -149,8 +84,10 @@ ISBN 1-882114-67-1 @c para a versão 4.0, Setembro de 1999.
 @c ISBN 1-882114-64-7 é para a edição 2.24 de Novembro de 1996.
 @c ISBN 1-882114-63-9 é para a edição 2.20 de 28 de fevereiro de 1995.
 
+@ignore
 @sp 1
 Arte da capa por Etienne Suvasa.
+@end ignore
 @end titlepage
 
 
@@ -158,7 +95,6 @@ Arte da capa por Etienne Suvasa.
 @contents
 
 
-@ifnottex
 @node Top
 @top Texinfo
 
@@ -166,581 +102,15 @@ Este manual é para GNU Texinfo (versão @value{VERSION}, @value{UPDATED}), um
 sistema de documentação que pode produzir ambos informação online e um manual
 impresso a partir de um fonte único usando marcação semântica.
 
+@ifinfo
 A primeira parte deste menu mestre lista os nós principais neste documento do
 Info, incluindo o comando @@ e índices de conceito. O restante do menu lista
 todos os nós de baixo nível no documento.
-@end ifnottex
-
-@menu
-* Condições de Cópia::                   Teus direitos.
-* Visão Geral::                          Texinfo em resumo.
-* Escrevendo um Arquivo do Texinfo::     Formato de um arquivo fonte do Texinfo.
-* Iniciando e Finalizando um Arquivo::   Iniciando e fim de um arquivo do Texinfo.
-* Nós::                                  Escrevendo nós, a unidade básica do Texinfo.
-* Estruturamento de Capítulo::           Criando capítulos, seções, anexos, etc.
-* Referências Cruzadas::                 Escrevendo referências cruzadas.
-* Marcando Texto::                       Marcando palavras e frases como código, entrada de teclado, variáveis meta sintáticas, e afins.
-* Citações e Exemplos::                  Encapsulamentos de bloco, exemplos, etc.
-* Listas e Tabelas::                     Listas de itens ou numeradas, e tabelas.
-* Exibições Especiais::                  Figuras flutuantes e notas de rodapé.
-* Índices::                              Criando índices.
-* Inserções::                            Inserindo sinais @@, chaves, etc.
-* Quebras::                              Forçando ou impedindo quebras de linha e de página.
-* Comandos de Definição::                Descrevendo uniformemente funções e afins.
-* Internacionalização::                  Suporte a outras linguagens diferentes do Inglês.
-* Condicionais::                         Especificando texto somente para alguns casos de saída.
-* Definindo Novos Comandos do Texinfo::  Macros definidas pelo(a) usuário(a) e apelidos.
-* Arquivos de Inclusão::                 Como incorporar outros arquivos do Texinfo.
-* Impresso::                             Saída para papel, com @TeX{}.
-* Tradutor Genérico @command{texi2any}:: @command{texi2any}, um conversor para todos os propósitos.
-* Criando e Instalando Arquivos Info::   Detalhes sobre saída Info.
-* Gerando HTML::                         Detalhes sobre saída HTML.
-@c * Personalização da Saída Gerada do texi2any:: Ajuste fino com arquivos de inicialização.
-
-Anexos
-
-* Detalhes do Comando @@::            Detalhes dos comandos @@ do Texinfo.
-* Dicas::                             Dicas acerca de como escrever um documento do Texinfo.
-* Arquivos de Amostra do Texinfo::    Exemplos completos, incluindo textos completos.
-* Modo Texinfo::                      Usando o modo Texinfo do GNU Emacs.
-* Cabeçalhos::                        Como escrever cabeçalhos e rodapés de página.
-* Capturando Erros::                  Como achar erros na formatação.
-* Especificação do Formato Info::     Detalhes técnicos do formato de arquivo Info.
-* Licença GNU de Documentação Livre:: Copiando este manual.
-* Índice de Comando e Variável::      Um menu contendo comandos e variáveis.
-* Índice Geral::                      Um menu cobrindo muitos tópicos.
-
-@detailmenu
- --- A Listagem Detalhada do Nó ---
-
-Visão geral do Texinfo
-
-* Informando Defeitos::           Submetendo relatórios efetivos de defeitos.
-* Formatos de Saída::             Visão geral dos formatos de saída suportados.
-* Arquivos do Info::              O que é um arquivo Info?
-* Livros Impressos::              Característica de um livro impresso ou manual.
-* Adicionando Formatos de Saída:: Páginas de manual e implementando novos formatos.
-* Histórico::                     Agradecimentos, contribuidores e gênese.
-
-Escrevendo um Arquivo do Texinfo
-
-* Sintaxe de Comando::            Comandos @@ são usados para formatação.
-* Convenções::                    Regras gerais para se escrever um arquivo Texinfo.
-* Comentários::                   Escrevendo comentários e texto ignorado em geral.
-* Mínimo::                        O que um arquivo Texinfo deve ter.
-* Amostra Curta::                 Um arquivo curto Texinfo de amostra.
-
-Iniciando e Finalizando um Arquivo Texinfo
-
-* Inicialização de Amostra::                       Um início de amostra para um arquivo Texinfo.
-* Cabeçalho do Arquivo do Texinfo::                As primeiras linhas.
-* Permissões do Documento::                        Assegurando-se de que seu manual é livre.
-* Página de Título e Página de Direitos Autorais:: Criando as páginas de título e de direitos autorais.
-* Conteúdo::                                       Como criar uma tabela do conteúdo.
-* O Nó Top::                                       Criando o nó `Top' e o menu principal.
-* Comandos Globais de Documento::                  Afetando a formatação ao longo do documento.
-* Finalizando um Arquivo::                         O que está ao final de um arquivo Texinfo?
-
-Cabeçalho do Arquivo Texinfo
-
-* Primeira Linha::                A primeira linha de um arquivo Texinfo.
-* Início de Cabeçalho::           Formatar uma região exige isso.
-* @code{@@setfilename}::          Informe a Info o nome do arquivo Info.
-* @code{@@settitle}::             Crie um título para o trabalho impresso.
-* Fim de Cabeçalho::              Formatar uma região exige isso.
-
-Permissões de Documento
-
-* @code{@@copying}::              Declare as permissões de cópia do documento.
-* @code{@@insertcopying}::        Onde inserir as permissões.
-
-Páginas de Título e de Direitos Autorais
-
-* @code{@@titlepage}::                    Crie um título para o documento impresso.
-* @code{@@titlefont @@center @@sp}::      Os comandos @code{@@titlefont}, @code{@@center} e @code{@@sp}.
-* @code{@@title @@subtitle @@author}::    Os comandos @code{@@title}, @code{@@subtitle}, e @code{@@author}.
-* Direitos Autorais::                     Como escrever o aviso de direitos autorais e incluir permissões de cópia.
-* Geração de Cabeçalho::                  Ligar os cabeçalhos de página após as páginas de título e de direitos autorais.
-
-O Nó `Top' e o Menu Principal
-
-* Exemplo do Nó Top::
-* Partes do Menu Mestre::
-
-Comandos Globais de Documento
-
-* @code{@@documentdescription}::        Sumário de documento para a saída HTML.
-* @code{@@setchapternewpage}::          Iniciar capítulos em páginas do lado direito.
-* @code{@@headings}::                   Uma opção para ligar e desligar cabeçalhos e impressão em ambos ou de um único lado.
-* @code{@@paragraphindent}::            Especifique recuo de parágrafo.
-* @code{@@firstparagraphindent}::       Suprimindo o recuo de primeiro parágrafo.
-* @code{@@exampleindent}::              Especifique o recuo de ambiente.
-
-Nós
-
-* Estrutura do Documento Texinfo::             Como os manuais Texinfo normalmente são organizados.
-* Nomes de Nó::                                Como escolher nomes de nó.
-* Escrevendo um Nó::                           Como escrever uma linha @code{@@node}.
-* Exigências de Linha de Nó::                  Mantenha os nomes únicos.
-* Primeiro Nó::                                Como escrever um nó `Top'.
-* Comando @code{@@top}::                       Como usar o comando @code{@@top}.
-* Ilustração do Menu do Nó::                   Um diagrama, e menus e nós de amostra.
-* Criação de Ponteiros do @command{makeinfo}:: Permitindo que makeinfo determine os ponteiros de nó.
-* Menus::                                      Listando nós subordinados.
-
-Menus
-
-* Escrevendo um Menu::                O que é um menu?
-* Exemplo de Menu::                   Entradas de menu de duas e três partes
-* Local de Menu::                     Menus vão ao final de nós
-* Partes de Menu::                    Uma entrada de menu tem três partes
-* Entrada de Menu Menos Desordenada:: Entrada de menu de duas partes
-* Outros Arquivos do Info::           Como referenciar um arquivo Info diferente
-
-Estruturamento de Capítulo
-
-* Estruturamento de Árvore::            Um manual é como uma árvore de cabeça para baixo @dots{}
-* Tipos de Comandos Estruturantes::     Como dividir um manual em partes.
-* @code{@@chapter}::                    Estruturamento de capítulo.
-* @code{@@unnumbered @@appendix}::
-* @code{@@majorheading @@chapheading}::
-* @code{@@section}::
-* @code{@@unnumberedsec @@appendixsec @@heading}::
-* @code{@@subsection}::
-* @code{@@unnumberedsubsec @@appendixsubsec @@subheading}::
-* @code{@@subsubsection}::              Comandos para as seções de mais baixo nível.
-* @code{@@part}::                       Coleções de capítulos.
-* Elevar/rebaixar seções::              Como mudar o nível hierárquico dos comandos.
-
-Referências cruzadas
-
-* Referências::                          Para que são as referências cruzadas.
-* Comandos de Referências Cruzadas::     Um sumário dos diferentes comandos.
-* Partes de Referências Cruzadas::       Uma Referência Cruzada tem várias partes.
-* @code{@@xref}::                        Inicie uma referência com `Veja' @dots{}
-* Referenciando Um Manual Como Um Todo:: Referência a um manual inteiro.
-* @code{@@ref}::                         Uma referência para a última parte de uma sentença.
-* @code{@@pxref}::                       Como escrever uma Referência Cruzada entre parênteses.
-* @code{@@anchor}::                      Definindo alvos de Referência Cruzada arbitrários.
-* @code{@@inforef}::                     Como referenciar um arquivo somente Info.
-* @code{@@url}::                         Como referenciar um Localizador Uniforme de Recursos.
-* @code{@@cite}::                        Como referenciar livros que não estão no sistema Info.
-
-@code{@@xref}
-
-* Um Argumento::                @code{@@xref} com um argumento.
-* Dois Argumentos::             @code{@@xref} com dois argumentos.
-* Três Argumentos::             @code{@@xref} com três argumentos.
-* Quatro e Cinco Argumentos::   @code{@@xref} com quatro e cinco argumentos.
-
-@code{@@url}, @code{@@uref@{@var{url}[, @var{text}][, @var{replacement}]@}}
-
-* Exemplos @code{@@url}::             Exemplos de uso de todas as formas do @code{@@url}.
-* Quebra de Linha de URL::            Como as linhas são quebradas dentro do texto do @code{@@url}.
-* Formato de Saída PDF @code{@@url}:: Uma opção especial para ocultar links na saída PDF.
-* Cores do PDF::                      Colorindo URLs e outros links na saída PDF.
-
-Marcando Texto, Palavras e Frases
-
-* Indicando::                  Como indicar definições, arquivos, etc.
-* Ênfase::                     Como enfatizar texto.
-
-Indicando Definições, Comandos, etc.
-
-* Realçamento Útil::                    Realçamento provê informação útil.
-* @code{@@code}::                       Indicando código de programa.
-* @code{@@kbd}::                        Mostrando entrada de teclado.
-* @code{@@key}::                        Especificando teclas.
-* @code{@@samp}::                       Indicando uma sequência literal de caracteres.
-* @code{@@verb}::                       Indicando uma sequência literal de caracteres.
-* @code{@@var}::                        Indicando variáveis metassintáticas.
-* @code{@@env}::                        Indicando variáveis de ambiente.
-* @code{@@file}::                       Indicando nomes de arquivo.
-* @code{@@command}::                    Indicando nomes de comando.
-* @code{@@option}::                     Indicando nomes de opção.
-* @code{@@dfn}::                        Especificando definições.
-* @code{@@abbr}::                       Indicando abreviações.
-* @code{@@acronym}::                    Indicando siglas.
-* @code{@@indicateurl}::                Indicando uma URL de exemplo.
-* @code{@@email}::                      Indicando um endereço de correio eletrônico.
-
-Enfatizando Texto
-
-* @code{@@emph @@strong}::       Como enfatizar texto em Texinfo.
-* Versaletes::                   Como usar a fonte de versaletes.
-* Fontes::                       Comandos variados de fonte para saída impressa.
-
-Citações e Exemplos
-
-* Comandos de Cercamento de Blocos::  Construtores diferentes para propósitos diferentes.
-* @code{@@quotation}::                Escrevendo uma citação.
-* @code{@@indentedblock}::            Bloco de texto recuado a esquerda.
-* @code{@@example}::                  Escrevendo um exemplo em uma fonte de largura fixa.
-* @code{@@verbatim}::                 Escrevendo um exemplo de literal.
-* @code{@@verbatiminclude}::          Incluindo um arquivo de literal.
-* @code{@@lisp}::                     Ilustrando código Lisp.
-* @code{@@small@dots{}}::             Exemplos em uma fonte menor.
-* @code{@@display}::                  Escrevendo um exemplo na fonte atual.
-* @code{@@format}::                   Escrevendo um exemplo sem margens estreitadas.
-* @code{@@exdent}::                   Desfazer recuo em uma linha.
-* @code{@@flushleft @@flushright}::   Empurrando texto alinhado à esquerda ou alinhado à direita.
-* @code{@@raggedright}::              Evitando justificação à direita.
-* @code{@@noindent}::                 Prevenindo recuo de parágrafo.
-* @code{@@indent}::                   Forçando recuo de parágrafo.
-* @code{@@cartouche}::                Desenhando retângulos por todos os lados ao redor do texto.
-
-Listas e Tabelas
-
-* Listas de Introdução::          Listas de formatos Texinfo para você.
-* @code{@@itemize}::              Como construir uma lista simples.
-* @code{@@enumerate}::            Como construir uma lista numerada.
-* Tabelas de Duas Colunas::       Como construir uma tabela de duas colunas.
-* Tabelas Multi Colunas::         Como construir tabelas generalizadas.
-
-Fazendo Uma Tabela de Duas Colunas
-
-* @code{@@table}::                      Como construir uma tabela de duas colunas.
-* @code{@@ftable @@vtable}::            Indexamento automático para tabelas de duas colunas.
-* @code{@@itemx}::                      Como colocar mais entradas na primeira coluna.
-
-@code{@@multitable}: Tabelas Multi Coluna
-
-* Larguras de Colunas Multi Tabelas::   Definindo tamanhos de coluna multi tabela.
-* Linhas de Multi Tabelas::             Definindo linhas multi tabela, com exemplos.
-
-Exibições Especiais
-
-* Flutuações::                   Figuras, tabelas, e afins.
-* Imagens::                      Incluindo gráficos e imagens.
-* Notas de Rodapé::              Escrevendo notas de rodapé.
-
-Flutuações
-
-* @code{@@float}::                      Produzindo material que flutua.
-* @code{@@caption @@shortcaption}::     Especificando descrições para flutuações.
-* @code{@@listoffloats}::               Um Sumário para flutuações.
-
-Inserindo Imagens
-
-* Sintaxe da Imagem::
-* Escalonamento da Imagem::
-
-Notas de rodapé
-
-* Comandos de Notas de Rodapé::           Como escrever uma nota de rodapé em Texinfo.
-* Estilos de Notas de Rodapé::            Controlando como as notas de rodapé aparecem em Info.
-
-Índices
-
-* Entradas de Índice::           Escolha palavras diferentes para entradas de índice.
-* Índices Predefinidos::         Use índices diferentes para tipos diferentes de entradas.
-* Comandos de Indexação::        Como fazer uma entrada de índice.
-* Imprimindo Índices e Menus::   Como imprimir um índice em cópia impressa e gerar menus de índice no Info.
-* Combinando Índices::           Como combinar índices.
-* Novos Índices::                Como definir teus próprios índices.
-
-Combinando Índices
-
-* @code{@@syncodeindex}::               Como mesclar dois índices, usando a fonte @code{@@code} para o índice mesclado a partir de.
-* @code{@@synindex}::                   Como mesclar dois índices, usando a fonte romana para o índice mesclado a partir de.
-
-Inserções Especiais
-
-* Caracteres Especiais::                  Inserindo @@ @{@} , \ #
-* Inserindo Caracteres de Citação::       Inserindo aspas a esquerda e a direita, em código.
-* Inserindo Espaço::                      Inserindo a quantidade correta de espaços em branco.
-* Inserindo Acentos::                     Inserindo acentos e caracteres especiais.
-* Inserindo Aspas::                       Inserindo aspas.
-* Inserindo Subscritos e Sobrescritos::   Inserindo sub/sobrescritos.
-* Inserindo Fórmulas Matemáticas::        Formatando expressões matemáticas.
-* Glifos para Texto::                     Inserindo pontos, bullets, símbolos de moedas, etc.
-* Glifos para Programação::               Indicando resultados de avaliação, expansão de macros, erros, etc.
-* Inserindo Unicode::                     Inserindo um caractere Unicode por ponto de código.
-
-Caracteres Especiais: Inserindo @@ @{@} , \ #
-
-* Inserindo um Símbolo Arroba::         @code{@@@@}, @code{@@atchar@{@}}.
-* Inserindo Chaves::                    @code{@@@{ @@@}}, @code{@@l rbracechar@{@}}.
-* Inserindo Uma Vírgula::               , e @code{@@comma@{@}}.
-* Inserindo uma Barra Invertida::       \ e @code{@@backslashchar@{@}}.
-* Inserindo um Símbolo Cerquilha::      # e @code{@@hashchar@{@}}.
-
-Inserindo Espaço
-
-* Espaços Múltiplos::               Inserindo múltiplos espaços.
-* Não Finalizando Uma Frase::       Algumas vezes um ponto ``.'' não finaliza uma frase.
-* Finalizando Uma Frase::           Algumas vezes finaliza.
-* @code{@@frenchspacing}::          Especificando espaçamento de fim de frase.
-* @code{@@dmn}::                    Formatando uma dimensão.
-
-Glifos para Texto
-
-* @code{@@TeX @@LaTeX}::                As logomarcas do @TeX{}.
-* @code{@@copyright}::                  O símbolo de direitos autorais (c em um círculo).
-* @code{@@registeredsymbol}::           O símbolo de marca registrada (R em um círculo).
-* @code{@@dots}::                       Como inserir reticências: @dots{} e @enddots{}
-* @code{@@bullet}::                     Como inserir um marcador: @bullet{}
-* @code{@@euro}::                       Como inserir o símbolo da moeda Euro.
-* @code{@@pounds}::                     Como inserir o símbolo da moeda Libras.
-* @code{@@textdegree}::                 Como inserir o símbolo de Graus.
-* @code{@@minus}::                      Como inserir um sinal de menos.
-* @code{@@geq @@leq}::                  Como inserir os sinais maior/menor que ou igual a.
-
-Glifos para Programação
-
-* Sumário de Glifos::
-* @code{@@result}::                     Como exibir o resultado da expressão.
-* @code{@@expansion}::                  Como indicar uma expansão.
-* @code{@@print}::                      Como indicar saída gerada.
-* @code{@@error}::                      Como indicar uma mensagem de erro.
-* @code{@@equiv}::                      Como indicar equivalência.
-* @code{@@point}::                      Como indicar o local do ponto.
-* Sequências de Clique::                Inserindo sequências de uso da GUI.
-
-Forçando e Impedindo Quebras
-
-* Comandos de Quebra::                  Resumo dos comandos relacionados a quebra.
-* Quebras de Linha::                    Forçando quebras de linha.
-* @code{@@- @@hyphenation}::            Ajudando @TeX{} com pontos de hifenação.
-* @code{@@allowcodebreaks}::            Controlando quebras de linhas dentro do texto de @@code.
-* @code{@@w}::                          Impedindo quebras de linha indesejadas no texto.
-* @code{@@tie}::                        Inserindo um inquebrável, porém variante espaço.
-* @code{@@sp}::                         Inserindo linhas em branco.
-* @code{@@page}::                       Forçando o início de uma página nova.
-* @code{@@group}::                      Impedindo quebras de página indesejadas.
-* @code{@@need}::                       Outra maneira de impedir quebras de página indesejadas.
-
-Comandos de Definição
-
-* Modelos de Comando de Definição::                 Escrevendo descrições usando comandos de definição.
-* Linhas de Continuação de Comando de Definição::   Continuando o cabeçalho por sobre linhas de fonte.
-* Argumentos Opcionais::                            Manuseando argumentos opcionais e repetidos.
-* @code{@@deffnx}::                                 Agrupe duas ou mais `primeiras' linhas.
-* Comandos de Definição em Detalhe::                Referência para todos os comandos de definição.
-* Convenções de Comando de Definição::              Convenções para a escrita de definições.
-* Definição de Função de Amostra::                  Um exemplo.
-
-Os Comandos de Definição
-
-* Comandos de Funções::          Comandos para funções e entidades similares.
-* Comandos de Variáveis::        Comandos para variáveis e entidades similares.
-* Funções Tipadas::              Comandos para funções em linguagens tipadas.
-* Variáveis Tipadas::            Comandos para variáveis em linguagens tipadas.
-* Tipos de Dados::               O comando de definição para tipos de dados.
-* Objetos Abstratos::            Comandos para programação orientada a objetos.
-
-Programação Orientada a Objetos
-
-* Variáveis:   Variáveis Orientadas a Objetos.
-* Métodos:     Métodos Orientados a Objetos.
-
-Internacionalização
-
-* @code{@@documentlanguage}::           Declarando o idioma atual.
-* @code{@@documentencoding}::           Declarando a codificação de entrada.
-
-Texto Visível Condicionalmente
-
-* Comandos Condicionais::             Texto para um dado formato.
-* Não Comandos Condicionais::         Texto para qualquer outro formato que não um dado.
-* Comandos do Formatador Bruto::      Usando comandos do formatador bruto.
-* Condicionais Inline::               Texto condicional delimitado por chaves.
-* @code{@@set @@clear @@value}::      Testes de variáveis e substituições.
-* Testes para Comandos do Texinfo::   Testando se um comando Texinfo está disponível.
-* Aninhamento de Condicional::        Usando condicionais dentro de condicionais.
-
-Sinalizadores: @code{@@set}, @code{@@clear}, condicionais, e @code{@@value}
-
-* @code{@@set @@value}::                 Expanda uma variável de sinalização para uma string.
-* @code{@@ifset @@ifclear}::             Formate uma região se um sinalizador estiver configurado.
-* @code{@@inlineifset @@inlineifclear}:: Condicionais de sinalização delimitados por chaves.
-* Exemplo de @code{@@value}::            Uma maneira fácil de atualizar informações de edição.
-
-Definindo Novos Comandos do Texinfo
-
-* Definindo Macros::                Definindo e indefinindo novos comandos.
-* Invocando Macros::                Usando uma macro, uma vez que você a tiver definido.
-* Detalhes de Macro::               Limitações das macros do Texinfo.
-* @code{@@alias}::                  Apelidos de comandos.
-* @code{@@definfoenclose}::         Destaque personalizado.
-* Processadores Externos de Macro:: Diretivas @code{#line}.
-
-Processadores Externos de Macro: Diretivas de Linha
-
-* Diretiva @samp{#line}::
-* Tex: @samp{#line} e @TeX{}.
-* Sintaxe: Detalhes da Sintaxe @samp{#line}.
-
-Arquivos de Inclusão
-
-* Usando Arquivos de Inclusão::          Como usar o comando @code{@@include}.
-* @code{texinfo-multiple-files-update}:: Como criar e atualizar nós e menus ao usar arquivos incluídos.
-* Exigências dos Arquivos de Inclusão::  Necessidades do @code{texinfo-multiple-files-update}.
-* Arquivo de Inclusão de Amostra::       Um arquivo externo de amostra com arquivos incluídos dentro dele; e um arquivo incluído de amostra.
-* @code{@@verbatiminclude}::             Incluindo um arquivo literal.
-* Evolução da Inclusão de Arquivos::     Como o uso do comando @code{@@include} mudou ao longo do tempo.
-
-Formatando e Imprimindo Cópia Impressa
-
-* Use @TeX{}::                                    Use @TeX{} para formatar para cópia impressa.
-* Formatar com @command{texi2dvi}::               A maneira mais simples para formatar.
-* Formatar com @command{tex}/@command{texindex}:: Formatando com comandos explícitos de shell.
-* Imprimir com @command{lpr}::                    Como imprimir.
-* Dentro do Emacs::                               Como formatar e imprimir a partir de um shell do Emacs.
-* Impressão no Modo Texinfo::                     Como formatar e imprimir no Modo Texinfo.
-* Comando de Compilação::                         Como imprimir usando o comando de compilar do Emacs.
-* Resumo das Exigências::                         Resumo de exigências de formatação do @TeX{}.
-* Preparando para @TeX{}::                        O que se fazer antes de usar o @TeX{}.
-* hboxes lotados::                                O que são e o que se fazer com hboxes superlotados.
-* @code{@@smallbook}::                            Como imprimir livros e manuais formato pequeno.
-* Papel A4::                                      Como imprimir em papel A4 ou A5.
-* @code{@@pagesizes}::                            Como imprimir com tamanhos de página personalizados.
-* Marcas de Corte e Ampliação::                   Como imprimir marcas para indicar o tamanho das páginas e como imprimir saída escalada.
-* Saída PDF::                                     Saída em Formato Portável de Documento.
-* Obtendo @TeX{}::                                Como obter @TeX{}.
-
-Formatar com @command{tex}/@command{texindex}
-
-* Formatando Documentos Parciais::
-* Detalhes do @command{texindex}::
-
-@command{texi2any}: O Tradutor Genérico para Texinfo
-
-* Implementação de Referência::                  @command{texi2any}: a implementação de referência.
-* Invocando @command{texi2any}::                 Executando o tradutor a partir de um shell.
-* Saída Impressa do @command{texi2any}::         Chamando @command{texi2any}.
-* Validação de Ponteiro::                        Como verificar se os ponteiros apontam para algum lugar.
-* Variáveis de Personalização::                  Configurando @command{texi2any}.
-* Internacionalização de Strings de Documentos:: Traduzindo texto inserido pelo programa.
-* Invocando @command{pod2texi}::                 Traduzindo POD Perl para Texinfo.
-* @command{texi2html}::                          Um ancestral de @command{texi2any}.
-
-Variáveis de Personalização
-
-* Comandos: Variáveis de Personalização para Comandos @@.
-* Opções: Variáveis e Opções de Personalização.
-* HTML: Variáveis de Personalização de HTML.
-* Outras: Outras Variáveis de Personalização.
-
-Criando e Instalando Arquivos Info
-
-* Criando um Arquivo do Info::
-* Instalando Um Arquivo do Info::
-
-Criando um Arquivo do Info
-
-* Vantagens do @command{makeinfo}::   @command{makeinfo} provê melhor verificação de erro.
-* @code{makeinfo} no Emacs::          Como executar @code{makeinfo} a partir do Emacs.
-* Comandos @code{texinfo-format}::    Dois comandos de formatação Info escritos em Emacs Lisp são uma alternativa a @code{makeinfo}.
-* Formatação em Lote::                Como formatar para Info em modo de lote Emacs.
-* Arquivos de Etiqueta e de Divisão:: Como os arquivos marcados e divididos ajudam Info a executar melhor.
-
-Instalando Um Arquivo do Info
-
-* Arquivo de Diretório::             O menu de nível superior para todos os arquivos Info.
-* Novo Arquivo Info::                Listando um novo arquivo Info.
-* Outros Diretórios Info::           Como especificar arquivos Info que estão localizados em outros diretórios.
-* Instalando Entradas de Diretório:: Como especificar qual entrada de menu adicionar ao diretório Info.
-* Invocando @command{install-info}:: Opções @code{install-info}.
-
-Gerando HTML
-
-* Tradução de HTML:: Detalhes da saída HTML.
-* Divisão de HTML::  Como a saída HTML é dividida.
-* CSS de HTML::      Influenciando a saída HTML com Folhas de Estilo em Cascata.
-* Xref de HTML::     Referências cruzadas em saída HTML.
-
-Referências Cruzadas HTML
-
-* Fundamentos de Link: Fundamentos do Link Xref do HTML.
-* Expansão de Nó:      Expansão Xref de Nome de Nó do HTML.
-* Expansão de Comando: Expansão do Comando Xref do HTML.
-* Expansão de 8 bits:  Expansão de Caracteres de 8 bits do Xref do HTML.
-* Incompatibilidade:   Incompatibilidade de Xref do HTML.
-* Configuração:        Configuração do Xref do HTML. htmlxref.cnf.
-* Preservando links:   Preservação de Link Xref do HTML. MANUAL-noderename.cnf.
-
-Arquivos de Amostra do Texinfo
-
-* Arquivo Curto de Amostra do Texinfo::
-* Textos GNU de Amostra::
-* Licença de Cópia Literal::
-* Licença de Cópia Totalmente Permissiva::
-
-Usando o Modo Texinfo
-
-* Visão Geral do Modo Texinfo:: Como o modo Texinfo pode te ajudar.
-* Edição Emacs::                Adições do modo Texinfo às características de propósito geral de edição do GNU Emacs.
-* Inserindo::                   Como inserir comandos @code{@@@@} usados frequentemente.
-* Mostrando a Estrutura::       Como exibir a estrutura de um arquivo.
-* Atualizando Nós e Menus::     Como atualizar ou criar novos nós e menus.
-* Formatação Info::             Como formatar para Info.
-* Impressão::                   Como formatar e imprimir parte ou tudo de um arquivo.
-* Resumo do Modo Texinfo::      Sumário de todos os comandos do modo Texinfo.
-
-Atualizando Nós e Menus
-
-* Comandos de Atualização::        Cinco principais comandos de atualização.
-* Exigências de Atualização::      Como estruturar um arquivo do Texinfo para usar o comando de atualização.
-* Outros Comandos de Atualização:: Como recuar descrições, inserir linhas de nós ausentes e atualizar nós em sequência.
-
-Cabeçalhos de Página
-
-* Cabeçalhos Introduzidos::     Convenções para se usar cabeçalhos de página.
-* Formato de Título::           Formatos padrão de títulos de página.
-* Escolha de Título::           Como especificar o tipo do título da página.
-* Cabeçalhos Personalizados::   Como criar teus próprios cabeçalhos e rodapés.
-
-Capturando Erros
-
-* @command{makeinfo} Preferido::         @code{makeinfo} encontra erros.
-* Depuração com Info::                   Como capturar erros com a formatação Info.
-* Depuração com @TeX{}::                 Como capturar erros com a formatação @TeX{}.
-* Usando @code{texinfo-show-structure}:: Como se usar @code{texinfo-show-structure}.
-* Usando @code{occur}::                  Como listar todas as linhas contendo um modelo.
-* Executando @code{Info-validate}::      Como encontrar nós mal referenciados.
-
-Encontrando Nós Mal Referenciados
-
-* Usando @code{Info-validate}:: Como executar @code{Info-validate}.
-* Desdividir::                  Como criar um arquivo não dividido.
-* Etiquetando::                 Como etiquetar um arquivo.
-* Dividindo::                   Como dividir um arquivo manualmente.
-
-Especificação do Formato do Info
-
-* Geral:                       Esquema Geral do Formato do Info.
-* Texto:                       Construtores de Texto do Formato do Info.
-
-Esquema Geral do Formato do Info
-
-* Inteiro:                     Manual Inteiro do Formato Info. Manuais divididos versus não divididos.
-* Preâmbulo:                   Preâmbulo do Formato do Info.
-* Indireta:                    Tabela Indireta do Formato do Info.
-* Tabela de etiquetas:         Tabela de Etiquetas do Formato do Info.
-* Variáveis locais:            Variáveis Locais do Formato do Info.
-* Nós Regulares:               Nós Regulares do Formato do Info.
-
-Construtores de Texto do Formato Info
-
-* Menu:                        Menu do Formato do Info.
-* Imagem:                      Imagem do Formato do Info.
-* Printindex:                  Imprime índices do Formato do Info.
-* Xref:                        Referências Cruzadas do Formato do Info.
-
-@end detailmenu
-@end menu
-
-@c Recompensem-se os(as) leitores(as) por terem chegado ao fim do menu :).
-@c Contribuição de Arnold Robbins.
-@quotation
-Documentação é como o sexo: quando ela é boa, ela é muito, muito boa; e
-quando ela é ruim, é melhor que nada.
----Dick Brandon
-@end quotation
+@end ifinfo
 
 
 @node Condições de Cópia
+@nodedescription Teus direitos.
 @unnumbered Condições de Cópia do Texinfo
 @cindex Condições de cópia
 @cindex Condições para copiar Texinfo
@@ -796,12 +166,10 @@ escrever vários documentos, um para cada formato de saída, você precisa
 escrever somente um documento.
 
 Usando Texinfo, você consegue criar um documento impresso (via sistema
-tipográfico @TeX{}) em formato PDF ou PostScript, incluindo capítulos, seções,
+tipográfico @TeX{}) em formato PDF, incluindo capítulos, seções,
 referências cruzadas e índices. A partir do mesmo arquivo fonte do Texinfo,
-você consegue criar um arquivo de saída HTML adequado para uso com um navegador
-web; você consegue criar um arquivo do Info com recursos especiais para
-facilitar a navegação da documentação; e também criar um arquivo do Docbook ou
-uma transliteração para o formato XML.
+você consegue criar saída HTML adequada para uso com um navegador
+web; você consegue criar um arquivo do Info para uso no GNU Emacs ou outros programas de leitura do Info; e também criar arquivos Docbook, EPUB 3 ou @LaTeX{}.
 
 @cindex Formato do arquivo fonte
 @cindex Marcação semântica
@@ -810,20 +178,12 @@ intercalado com @dfn{comandos @@} (palavras precedidas por um @samp{@@}) que
 informam aos processadores Texinfo o que fazer. Os comandos de marcação do
 Texinfo são quase inteiramente @dfn{semânticos}; isto é, eles especificam o
 significado pretendido do texto no documento, em vez de instruções de
-formatação física. Você consegue editar um arquivo do Texinfo com qualquer
-editor de texto, porém é especialmente conveniente se usar o GNU Emacs, dado
-que esse editor tem um modo especial, chamado modo Texinfo, que fornece vários
-recursos relacionados ao Texinfo (@xref{Modo Texinfo}).
+formatação física.
+
+O GNU Emacs tem um modo especial, chamado modo Texinfo, que fornece vários recursos relacionados ao Texinfo. (@xref{Modo Texinfo}.)
 
 @cindex Escopo limitado do Texinfo
-Texinfo foi concebido especificamente para o propósito de escrever documentação
-e manuais de software. Se você quer escrever um bom manual para teu programa,
-Texinfo tem muitos recursos que nós esperamos que tornarão tua tarefa mais
-fácil. Entretanto, ele quase não fornece comandos para controlar a formatação
-final. Texinfo não é destinado a ser um programa de formatação de propósito
-geral, de modo que se você precisa planejar um jornal, conceber um anúncio
-luxuoso de revista, ou seguir as exatas exigências de formatação de uma
-editora, Texinfo pode não ser a ferramenta mais simples.
+Texinfo foi concebido especificamente para o propósito de escrever documentação de software e manuais. Se você quer escrever um bom manual para teu programa, Texinfo tem muitos recursos que nós esperamos que tornarão teu trabalho mais fácil. No entanto, Texinfo não é destinado para ser um programa de formatação de propósito geral. Ele quase não fornece comandos para controlar a formatação final, de forma que pode ser inapropriado para tuas necessidades se você quiser esquematizar um jornal, conceber um anúncio brilhante de revista ou seguir as exigências exatas de formatação de uma editora.
 
 @cindex Escrita de Texinfo
 @cindex Pronúncia de Texinfo
@@ -837,17 +197,9 @@ Texinfo é o formato oficial de documentação do projeto GNU. Mais informaçõe
 incluindo manuais para pacotes GNU, estão disponíveis na
 @uref{http://www.gnu.org/doc/, página web da documentação GNU}.
 
-@menu
-* Informando Defeitos::           Submetendo informes efetivos de defeitos.
-* Formatos de Saída::             Visão geral dos formatos de saída suportados.
-* Arquivos do Info::              O que é um arquivo Info?
-* Livros Impressos::              Características de um livro ou manual impresso.
-* Adicionando Formatos de Saída:: Páginas de manual e implementando novos formatos.
-* Histórico::                     Agradecimentos, contribuidores(as) e gênese.
-@end menu
-
 
 @node Informando Defeitos
+@nodedescription Submetendo informes eficazes de defeitos.
 @section Informando Defeitos
 
 @cindex Defeitos, informando
@@ -877,31 +229,25 @@ Quando em dúvida se alguma coisa é necessária ou não, inclua-a. É melhor
 incluir muito mais que deixar de fora algo importante.
 
 É crítico enviar um arquivo de entrada atual que reproduza o problema.
-O que não é crítico é ``simplificar'' o exemplo para a menor entrada
-possível---a entrada atual com a qual você descobriu o defeito bastará.
-(Certamente, se você fizer experimentos, quanto menor o arquivo de
-entrada, melhor).
+
+Quaisquer problemas com o leitor do Info no Emacs deveriam ser informados para os(as) desenvolvedores(as) do Emacs: veja-se @ref{Bugs,,, emacs, O Manual do GNU Emacs}.
 
 @cindex Remendos, contribuindo
-Correções (``Patches'') são mais que bem-vindas; se possível, por favor
-faça-as com @samp{@w{diff -c}}
-(veja-se @ref{Top,,, diffutils, Comparing and Merging Files}) e inclua as
-entradas @file{ChangeLog}
-(veja-se @ref{Change Log,,, emacs, O Manual do GNU Emacs}), e siga o estilo de
-codificação existente.
+Remendos são bem-vindos; se possível, por favor, faça-os com @samp{@w{diff -c}}, @samp{@w{diff -u}} (@pxref{,,, diffutils, Comparando e Mesclando Arquivos}), ou @samp{git diff} e inclua entradas de @file{ChangeLog} (@pxref{Change Log,,, standards, Padrões GNU de Codificação}), e siga o estilo existente de codificação.
+
 
 @node Formatos de Saída
+@nodedescription Visão geral dos formatos suportados de saída.
 @section Formatos de Saída
 @cindex Formatos de saída
 @cindex Estrutura de retaguarda, formatos de saída
 
-Aqui está uma visão geral breve dos formatos de saída atualmente
-suportados por Texinfo.
+Aqui está uma visão geral dos formatos de saída atualmente suportados por Texinfo.
 
 @table @asis
+@cindex Saída do Info, visão geral
 @item Info
-@cindex Saída gerada do Info, visão geral
-(Gerado via @command{makeinfo}).   O formato Info é em sua maior parte
+(Gerado via @command{texi2any}.).   O formato Info é em sua maior parte
 transliteração de texto plano do fonte Texinfo.   Ele adiciona uns
 poucos caracteres de controle para prover informação de navegação para
 referências cruzadas, índices, e assim por diante.   O subsistema Emacs
@@ -910,61 +256,49 @@ Info (veja-se @ref{Top,,, info, Info}), e o programa autônomo @command{info}
 arquivos. Veja-se @ref{Arquivos do Info}, e
 @ref{Criando e Instalando Arquivos Info}.
 
-@item Texto simples
 @cindex Saída gerada de texto simples, visão geral
-(Gerado via @command{makeinfo --plaintext}).   Essa é quase a mesma que
+@item Texto simples
+(Gerado via @command{texi2any --plaintext}.).   Essa é quase a mesma que
 a saída Info com os caracteres de controle de navegação omitidos.
 
-@item HTML
 @cindex Saída gerada de HTML, visão geral
-@cindex Consórcio W3
-@cindex Mozilla
-@cindex Lynx
-@cindex Emacs-W3
-(Gerado via @command{makeinfo --html}).   HTML, significando Hyper Text
-Markup Language (Linguagem de Marcação de Hiper Texto), tem se tornado a
-mais comumente usada linguagem para a escrita de documentos na World
-Wide Web (Teia de Alcance Global).   Os navegadores web, tais como
-Mozilla, Lynx, e Emacs-W3, podem renderizar essa linguagem online.
-Existem muitas versões de HTML, também padrões diferentes e variações
-específicas de navegador.   @command{makeinfo} tenta usar um
-subconjunto da linguagem que possa ser interpretado por qualquer
-navegador comum, intencionalmente não se usando de muitas marcações
-mais novas ou menos amplamente suportadas.
-Apesar que a saída nativa é assim até certo ponto plana, ela pode ser
-personalizada em vários níveis, se desejado.   Para detalhes da
-linguagem HTML e mais informação relacionada, veja-se
-@uref{http://www.w3.org/MarkUp/}.
-Veja-se @ref{Gerando HTML}.
+@item HTML
+@c @cindex Mozilla
+@c @cindex Lynx
+@c @cindex Emacs-W3
+(Gerado via @command{texi2any --html}.). HTML, que significa Hyper Text Markup Language, é a linguagem para escrever documentos na World Wide Web. Os navegadores da Web conseguem renderizar essa linguagem online. Existem muitas versões de HTML, tanto diferentes usos mais comuns quanto variações específicas de navegador. @command{texi2any} usa um subconjunto da linguagem que consegue ser interpretado por qualquer navegador comum, intencionalmente não usando muitas etiquetas mais novas ou menos amplamente suportadas. Embora a saída nativa seja, portanto, bastante simples, ela pode ser personalizada em vários níveis, se desejado. @xref{Gerando HTML}.
 
-@item DVI
-@cindex Saída gerada DVI, visão geral
-@pindex dvips
+@cindex Saída EPUB 3, visão geral
+@item EPUB 3
+(Gerada via @command{texi2any --epub3}.). EPUB é um formato projetado para leitura de livros eletrônicos em dispositivos portáteis. É um derivado do HTML@. O formato foi desenvolvido pelo International Digital Publishing Forum (IDPF), que agora faz parte do World Wide Web Consortium (W3C)@. A mais recente grande revisão, EPUB 3, data de 2011.
+
+
+@cindex Saída DVI, visão geral
+@pindex dvips @r{(programa)}
 @pindex xdvi
-(Gerado via @command{texi2dvi}).   O formato binário ``DeVIce Independent''
+@item DVI
+(Gerada via @command{texi2dvi}.).   O formato binário ``DeVIce Independent''
 é liberado pelo programa tipográfico @TeX{} (@uref{http://tug.org}).
 Essa é então lida por um `controlador' DVI, o qual conhece os comandos
 específicos de dispositivo atuais que podem ser visualizados ou
 impressos, notadamente Dvips para tradução para PostScript
 (veja-se @ref{Top,,, dvips, Dvips}) e Xdvi para visualização em uma tela X
-(@uref{http://sourceforge.net/projects/xdvi/}). Veja-se @ref{Impresso}.
-(Esteja avisado de que a linguagem Texinfo é muito diferente de, e muito
-mais estrita que, as linguagens usuais de @TeX{}: plain @TeX{}, @LaTeX{},
-Con@TeX{}t, etc.).
+(@uref{http://sourceforge.net/projects/xdvi/}). Veja-se @ref{Impresso com @TeX{}}.
+(Esteja avisado(a) de que a linguagem do Texinfo é muito diferente das linguagens usuais de @TeX{}: @TeX{} simples, @LaTeX{}, Con@TeX{}t, etc.).
 
-@item PostScript
 @cindex Saída gerada PostScript, visão geral
-(Gerada via @command{texi2dvi --ps}).   PostScript é uma linguagem de
+@item PostScript
+(Gerada via @command{texi2dvi --ps}.).   PostScript é uma linguagem de
 descrição de página que se tornou amplamente usada por volta de 1985
 e ainda é usada hoje em dia.
-@uref{http://en.wikipedia.org/wiki/PostScript} dá uma descrição básica e
+@uref{https://en.wikipedia.org/wiki/PostScript} dá uma descrição básica e
 mais preferências.   Por padrão, Texinfo usa o programa
 @command{dvips} para converter a saída DVI de @TeX{} para PostScript.
  Veja-se @ref{Top,,, dvips, Dvips}.
 
-@item PDF
 @cindex Saída gerada PDF, visão geral
 @cindex Beebe, Nelson
+@item PDF
 (Gerada via @command{texi2dvi --pdf} ou @command{texi2pdf}).   Esse
 formato foi desenvolvido por Adobe Systems para troca de documento
 portável, baseado na linguagem PostScript prévia deles.   O formato pode
@@ -972,46 +306,41 @@ representar a exata aparência de um documento, incluindo fontes e
 gráficos, e suportar escalonamento arbitrário.   Ele é entendido como
 sendo independente de plataforma e facilmente visualizável, entre outros
 objetivos de design;
-@uref{http://en.wikipedia.org/wiki/Portable_Document_Format} e
+@uref{https://en.wikipedia.org/wiki/Portable_Document_Format} e
 @uref{http://tug.org/TUGboat/tb22-3/tb72beebe-pdf.pdf} tem algum
 conhecimento.   Por padrão, Texinfo usa o programa @command{pdftex},
 uma extensão de @TeX{}, para liberar PDF; veja-se
 @uref{http://tug.org/applications/pdftex}. Veja-se @ref{Saída PDF}.
 
-@item Docbook
-@cindex Saída gerada Docbook, visão geral
-@cindex Saída gerada XML Docbook, visão geral
-(Gerado via @command{makeinfo --docbook}).   Esse é um formato baseado
-em XML desenvolvido alguns anos atrás, primariamente para documentação
-técnica.   Ele por conseguinte assume alguma semelhança, em linhas
-gerais, com Texinfo.   Veja-se @uref{http://www.docbook.org}.
-Vários conversores de Docbook @emph{para} Texinfo também foram
-desenvolvidos; veja-se as páginas web Texinfo.
+@cindex Saída LaTeX, visão geral
+@item @LaTeX{}
+(Gerada via @command{texi2any --latex}.). Esse é um sistema de tipografia construído sobre o @TeX{}. Foi lançado originalmente por Leslie Lamport em 1984. O @LaTeX{} adiciona mais definições para aquelas do @TeX{} e tem uma ampla gama de pacotes construídos sobre ele. O @LaTeX{} é onipresente na literatura acadêmica. A versão atual do @LaTeX{} está sob desenvolvimento ativo; mais informações estão disponíveis online em @uref{https://www.latex-project.org/}.
 
-@item XML
-@cindex Saída gerada XML Texinfo, visão geral
-@cindex Saída gerada Texinfo XML, visão geral
+A saída do @LaTeX{} pode ser processada posteriormente em DVI, PostScript ou PDF@. Em teoria, a saída do @LaTeX{} deveria permitir muito mais personalização da saída do que seria possível com a implementação @TeX{} simples do Texinfo.
+
+
+@cindex Saída Docbook, visão geral
+@cindex Saída XML Docbook, visão geral
+@item Docbook
+(Gerada via @command{texi2any --docbook}.).   Esse é um formato baseado em XML desenvolvido, primariamente para documentação técnica.   Ele por conseguinte assume alguma semelhança, em linhas gerais, com Texinfo.   Veja-se @uref{http://www.docbook.org}. Vários conversores de Docbook @emph{para} Texinfo também foram desenvolvidos; veja-se as páginas web Texinfo.
+
+@cindex Saída XML Texinfo, visão geral
+@cindex Saída Texinfo XML, visão geral
 @cindex DTD, para Texinfo XML
 @pindex texinfo.dtd
 @pindex txixml2texi
-(Gerado via @command{makeinfo --xml}).   XML é uma especificação de
-sintaxe genérica usável para qualquer tipo de conteúdo (uma
-referência está em @uref{http://www.w3.org/XML}).   A saída XML de
-@command{makeinfo}, diferente de todos os outros formatos de saída, é
-uma transliteração do fonte Texinfo em vez de saída processada.   Isto
-é, a saída traduz os comandos de marcação Texinfo em sintaxe XML, para
-processamento mais amplo por ferramentas XML.   Os detalhes da saída
-estão definidos em um DTD XML como de costume, o qual está contido em um
-arquivo @file{texinfo.dtd} incluso na distribuição do fonte Texinfo e
-disponível via páginas web Texinfo.
-O XML contém informação suficiente para recriar o conteúdo original,
-exceto para construções sintáticas, tais como macros Texinfo e
-condicionais.   A distribuição do fonte Texinfo inclui um script
-utilitário @file{txixml2texi} para fazer essa transformação de volta.
+@item XML
+(Gerada via @command{texi2any --xml}.). A saída XML do @command{texi2any}, diferente de todos os outros formatos de saída, é uma transliteração do fonte do Texinfo, em vez de uma saída finalizada. Os arquivos XML do Texinfo não podem ser visualizados em navegadores da web ou outros programas.
+
+XML é uma especificação de sintaxe genérica usável para qualquer tipo de conteúdo. (Uma referência está em @uref{http://www.w3.org/XML}.). O propósito da saída XML do Texinfo é o de permitir processamento posterior por ferramentas XML. A sintaxe de saída é definida em um DTD de XML, que está contido em um arquivo @file{texinfo.dtd} incluído na distribuição do fonte do Texinfo.
+
+A distribuição do fonte do Texinfo inclui um script utilitário @file{txixml2texi} para fazer uma transformação reversa para recriar o conteúdo Texinfo original (exceto para macros e condicionais do Texinfo).
+
 @end table
 
 
 @node Arquivos do Info
+@nodedescription O que é um arquivo do Info?
 @section Arquivos do Info
 @cindex Arquivos Info
 
@@ -1022,8 +351,8 @@ navegação, de forma que os programas de leitura Info possam operar sobre
 ele.
 
 Os arquivos Info são quase sempre criados pelo processamento de um
-documento fonte Texinfo.   O comando @command{makeinfo}, também
-conhecido como @command{texi2any}, é o comando principal que converte um
+documento fonte Texinfo.   O comando @command{texi2any}, também
+conhecido como @command{makeinfo}, é o comando principal que converte um
 arquivo Texinfo em um arquivo Info; veja-se
 @ref{Tradutor Genérico @command{texi2any}}.
 
@@ -1061,6 +390,7 @@ O próprio programa @command{info} não segue URIs de qualquer tipo.
 
 
 @node Livros Impressos
+@nodedescription Características de um livro ou manual impresso.
 @section Livros Impressos
 @cindex Manual e livro impresso, características
 @cindex Características de manual, impresso
@@ -1073,45 +403,21 @@ Um arquivo Texinfo pode ser formatado e composto como um livro impresso
 ou um manual.   Para fazer isso, você precisa de @TeX{}, um sofisticado
 programa de tipografia escrito por Donald Knuth da Universidade Stanford.
 
+O Texinfo fornece um arquivo @file{texinfo.tex} que contém as definições que o @TeX{} usa quando tipografa um arquivo do Texinfo. Você pode obter a versão mais recente do @file{texinfo.tex} a partir da página inicial do Texinfo, @uref{http://www.gnu.org/software/texinfo/}.
+
 Um livro baseado em Texinfo é similar a qualquer outro composto,
 trabalho impresso: ele pode ter uma página de título, página de direitos
 autorais, sumário, e prefácio, bem como capítulos, seções e subseções
 numeradas ou não numeradas, cabeçalhos de páginas, referências cruzadas,
 notas de rodapé, e índices.
 
-@TeX{} é um programa tipográfico de propósito geral.   Texinfo provê um
-arquivo @file{texinfo.tex} que contém informação (definições ou
-@dfn{macros}) que @TeX{} usa quando compõe arquivo Texinfo.
-(@file{texinfo.tex} informa a @TeX{} como converter os comandos @@ de
-Texinfo para comandos @TeX{}, os quais @TeX{} pode então processar para
-criar o documento tipografado).   @file{texinfo.tex} contém as
-especificações para imprimir um documento.   Você pode obter a versão
-mais recente de @file{texinfo.tex} a partir da página de Texinfo
-@uref{http://www.gnu.org/software/texinfo/}.
+@TeX{} é muito poderoso e tem muitos recursos ótimos. No entanto, como um arquivo do Texinfo precisa ser capaz de apresentar informações tanto em um terminal somente de caracteres no formato do Info quanto em um livro tipografado, os comandos de formatação que o Texinfo suporta são necessariamente limitados.
 
-Nos Estados Unidos, os documentos são em sua maioria frequentemente
-impressos em páginas de 8.5 por 11 polegadas
-(216@dmn{mm} por 280@dmn{mm}); esse é o tamanho padrão.
-Porém, você também pode imprimir em páginas de 7 por 9.25 polegadas
-(178@dmn{mm} por 235@dmn{mm}, o tamanho @code{@@smallbook}; ou em papel
-de tamanho A4 ou A5 (@code{@@afourpaper}, @code{@@afivepaper}).
- Veja-se @ref{@code{@@smallbook}}, e @ref{Papel A4}.
-
-@cindex Programação competente
-@TeX{} é livremente distribuível.   Ele é escrito em um super conjunto
-de Pascal para programação de instrução chamado WEB e pode ser compilado
-ou em Pascal ou (pelo uso de um programa de conversão que vem com a
-distribuição de @TeX{}) em C.
-
-@TeX{} é muito poderoso e tem um grande número de características.
-Porque um arquivo Texinfo deve necessariamente estar apto a apresentar
-informação tanto em um terminal somente caractere em formato Info quanto
-em um livro tipografado, os comandos de formatação que Texinfo suporta
-são necessariamente limitados. Veja-se @ref{Obtendo @TeX{}}, para
-informação sobre como adquirir @TeX{}. Ele não é parte da distribuição Texinfo.
+@xref{Impresso com @TeX{}}, para mais informações sobre o processamento de um manual com @TeX{}.
 
 
 @node Adicionando Formatos de Saída
+@nodedescription Páginas de manual e implementando novos formatos.
 @section Adicionando Formatos de Saída
 @cindex Formatos de saída adicionais
 
