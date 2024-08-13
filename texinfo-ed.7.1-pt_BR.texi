@@ -32,14 +32,24 @@
 @microtype on
 
 @copying
-Este manual é para GNU Texinfo (versão @value{VERSION}, @value{UPDATED}), um sistema de documentação que consegue produzir informações online e um manual impresso a partir de um fonte usando marcação semântica.
+Este manual é para GNU Texinfo (versão @value{VERSION}, @value{UPDATED}), um
+sistema de documentação que consegue produzir informações online e um manual
+impresso a partir de um fonte usando marcação semântica.
 
-Copyright @copyright{} 2016-2024 da ``versão modificada'' traduzida para o idioma português escrito e falado no Brasil: Jamenson Ferreira Espindula de Almeida Melo <@email{jafesp@@gmail.com}>.
+Copyright @copyright{} 2016-2024 da ``versão modificada'' traduzida para o
+idioma português escrito e falado no Brasil: Jamenson Ferreira Espindula de
+Almeida Melo <@email{jafesp@@gmail.com}>.
 
-Copyright @copyright{} 1988-2023 da versão original escrita em inglês: Free Software Foundation, Inc.
+Copyright @copyright{} 1988-2023 da versão original escrita em inglês: Free
+Software Foundation, Inc.
 
 @quotation
-É concedida permissão para copiar, distribuir e (ou) mudar este documento sob os termos da Licença GNU de Documentação Livre, versão 1.3 ou qualquer versão posterior publicada pela Free Software Foundation; sem Seções Invariantes, com os Textos de Capa Frontal sendo ``Um Manual GNU'', e com os Textos de Quarta Capa como em (a) abaixo.   Uma cópia da licença está incluída na seção intitulada ``Licença GNU de Documentação Livre''.
+É concedida permissão para copiar, distribuir e (ou) mudar este documento sob
+os termos da Licença GNU de Documentação Livre, versão 1.3 ou qualquer versão
+posterior publicada pela Free Software Foundation; sem Seções Invariantes, com
+os Textos de Capa Frontal sendo ``Um Manual GNU'', e com os Textos de Quarta
+Capa como em (a) abaixo.   Uma cópia da licença está incluída na seção
+intitulada ``Licença GNU de Documentação Livre''.
 @end quotation
 @end copying
 
@@ -169,7 +179,9 @@ Usando Texinfo, você consegue criar um documento impresso (via sistema
 tipográfico @TeX{}) em formato PDF, incluindo capítulos, seções,
 referências cruzadas e índices. A partir do mesmo arquivo fonte do Texinfo,
 você consegue criar saída HTML adequada para uso com um navegador
-web; você consegue criar um arquivo do Info para uso no GNU Emacs ou outros programas de leitura do Info; e também criar arquivos Docbook, EPUB 3 ou @LaTeX{}.
+web; você consegue criar um arquivo do Info para uso no GNU Emacs ou outros
+programas de leitura do Info; e também criar arquivos Docbook, EPUB 3 ou
+@LaTeX{}.
 
 @cindex Formato do arquivo fonte
 @cindex Marcação semântica
@@ -180,10 +192,18 @@ Texinfo são quase inteiramente @dfn{semânticos}; isto é, eles especificam o
 significado pretendido do texto no documento, em vez de instruções de
 formatação física.
 
-O GNU Emacs tem um modo especial, chamado modo Texinfo, que fornece vários recursos relacionados ao Texinfo. (@xref{Modo Texinfo}.)
+O GNU Emacs tem um modo especial, chamado modo Texinfo, que fornece vários
+recursos relacionados ao Texinfo. (@xref{Modo Texinfo}.)
 
 @cindex Escopo limitado do Texinfo
-Texinfo foi concebido especificamente para o propósito de escrever documentação de software e manuais. Se você quer escrever um bom manual para teu programa, Texinfo tem muitos recursos que nós esperamos que tornarão teu trabalho mais fácil. No entanto, Texinfo não é destinado para ser um programa de formatação de propósito geral. Ele quase não fornece comandos para controlar a formatação final, de forma que pode ser inapropriado para tuas necessidades se você quiser esquematizar um jornal, conceber um anúncio brilhante de revista ou seguir as exigências exatas de formatação de uma editora.
+Texinfo foi concebido especificamente para o propósito de escrever documentação
+de software e manuais. Se você quer escrever um bom manual para teu programa,
+Texinfo tem muitos recursos que nós esperamos que tornarão teu trabalho mais
+fácil. No entanto, Texinfo não é destinado para ser um programa de formatação
+de propósito geral. Ele quase não fornece comandos para controlar a formatação
+final, de forma que pode ser inapropriado para tuas necessidades se você quiser
+esquematizar um jornal, conceber um anúncio brilhante de revista ou seguir as
+exigências exatas de formatação de uma editora.
 
 @cindex Escrita de Texinfo
 @cindex Pronúncia de Texinfo
@@ -230,10 +250,17 @@ incluir muito mais que deixar de fora algo importante.
 
 É crítico enviar um arquivo de entrada atual que reproduza o problema.
 
-Quaisquer problemas com o leitor do Info no Emacs deveriam ser informados para os(as) desenvolvedores(as) do Emacs: veja-se @ref{Bugs,,, emacs, O Manual do GNU Emacs}.
+Quaisquer problemas com o leitor do Info no Emacs deveriam ser informados para
+os(as) desenvolvedores(as) do Emacs:
+veja-se @ref{Bugs,,, emacs, O Manual do GNU Emacs}.
 
 @cindex Remendos, contribuindo
-Remendos são bem-vindos; se possível, por favor, faça-os com @samp{@w{diff -c}}, @samp{@w{diff -u}} (@pxref{,,, diffutils, Comparando e Mesclando Arquivos}), ou @samp{git diff} e inclua entradas de @file{ChangeLog} (@pxref{Change Log,,, standards, Padrões GNU de Codificação}), e siga o estilo existente de codificação.
+Remendos são bem-vindos; se possível, por favor, faça-os com @samp{@w{diff
+-c}}, @samp{@w{diff -u}}
+(@pxref{,,, diffutils, Comparando e Mesclando Arquivos}), ou @samp{git diff} e
+inclua entradas de @file{ChangeLog}
+(@pxref{Change Log,,, standards, Padrões GNU de Codificação}), e siga o estilo
+existente de codificação.
 
 
 @node Formatos de Saída
@@ -242,7 +269,8 @@ Remendos são bem-vindos; se possível, por favor, faça-os com @samp{@w{diff -c
 @cindex Formatos de saída
 @cindex Estrutura de retaguarda, formatos de saída
 
-Aqui está uma visão geral dos formatos de saída atualmente suportados por Texinfo.
+Aqui está uma visão geral dos formatos de saída atualmente suportados por
+Texinfo.
 
 @table @asis
 @cindex Saída do Info, visão geral
@@ -266,11 +294,23 @@ a saída Info com os caracteres de controle de navegação omitidos.
 @c @cindex Mozilla
 @c @cindex Lynx
 @c @cindex Emacs-W3
-(Gerado via @command{texi2any --html}.). HTML, que significa Hyper Text Markup Language, é a linguagem para escrever documentos na World Wide Web. Os navegadores da Web conseguem renderizar essa linguagem online. Existem muitas versões de HTML, tanto diferentes usos mais comuns quanto variações específicas de navegador. @command{texi2any} usa um subconjunto da linguagem que consegue ser interpretado por qualquer navegador comum, intencionalmente não usando muitas etiquetas mais novas ou menos amplamente suportadas. Embora a saída nativa seja, portanto, bastante simples, ela pode ser personalizada em vários níveis, se desejado. @xref{Gerando HTML}.
+(Gerado via @command{texi2any --html}.). HTML, que significa Hyper Text Markup
+Language, é a linguagem para escrever documentos na World Wide Web. Os
+navegadores da Web conseguem renderizar essa linguagem online. Existem muitas
+versões de HTML, tanto diferentes usos mais comuns quanto variações específicas
+de navegador. @command{texi2any} usa um subconjunto da linguagem que consegue
+ser interpretado por qualquer navegador comum, intencionalmente não usando
+muitas etiquetas mais novas ou menos amplamente suportadas. Embora a saída
+nativa seja, portanto, bastante simples, ela pode ser personalizada em vários
+níveis, se desejado. @xref{Gerando HTML}.
 
 @cindex Saída EPUB 3, visão geral
 @item EPUB 3
-(Gerada via @command{texi2any --epub3}.). EPUB é um formato projetado para leitura de livros eletrônicos em dispositivos portáteis. É um derivado do HTML@. O formato foi desenvolvido pelo International Digital Publishing Forum (IDPF), que agora faz parte do World Wide Web Consortium (W3C)@. A mais recente grande revisão, EPUB 3, data de 2011.
+(Gerada via @command{texi2any --epub3}.). EPUB é um formato projetado para
+leitura de livros eletrônicos em dispositivos portáteis. É um derivado do
+HTML@. O formato foi desenvolvido pelo International Digital Publishing Forum
+(IDPF), que agora faz parte do World Wide Web Consortium (W3C)@. A mais recente
+grande revisão, EPUB 3, data de 2011.
 
 
 @cindex Saída DVI, visão geral
@@ -284,7 +324,8 @@ específicos de dispositivo atuais que podem ser visualizados ou
 impressos, notadamente Dvips para tradução para PostScript
 (veja-se @ref{Top,,, dvips, Dvips}) e Xdvi para visualização em uma tela X
 (@uref{http://sourceforge.net/projects/xdvi/}). Veja-se @ref{Impresso com @TeX{}}.
-(Esteja avisado(a) de que a linguagem do Texinfo é muito diferente das linguagens usuais de @TeX{}: @TeX{} simples, @LaTeX{}, Con@TeX{}t, etc.).
+(Esteja avisado(a) de que a linguagem do Texinfo é muito diferente das
+linguagens usuais de @TeX{}: @TeX{} simples, @LaTeX{}, Con@TeX{}t, etc.).
 
 @cindex Saída gerada PostScript, visão geral
 @item PostScript
@@ -314,15 +355,27 @@ uma extensão de @TeX{}, para liberar PDF; veja-se
 
 @cindex Saída LaTeX, visão geral
 @item @LaTeX{}
-(Gerada via @command{texi2any --latex}.). Esse é um sistema de tipografia construído sobre o @TeX{}. Foi lançado originalmente por Leslie Lamport em 1984. O @LaTeX{} adiciona mais definições para aquelas do @TeX{} e tem uma ampla gama de pacotes construídos sobre ele. O @LaTeX{} é onipresente na literatura acadêmica. A versão atual do @LaTeX{} está sob desenvolvimento ativo; mais informações estão disponíveis online em @uref{https://www.latex-project.org/}.
+(Gerada via @command{texi2any --latex}.). Esse é um sistema de tipografia
+construído sobre o @TeX{}. Foi lançado originalmente por Leslie Lamport em
+1984. O @LaTeX{} adiciona mais definições para aquelas do @TeX{} e tem uma
+ampla gama de pacotes construídos sobre ele. O @LaTeX{} é onipresente na
+literatura acadêmica. A versão atual do @LaTeX{} está sob desenvolvimento
+ativo; mais informações estão disponíveis online em
+@uref{https://www.latex-project.org/}.
 
-A saída do @LaTeX{} pode ser processada posteriormente em DVI, PostScript ou PDF@. Em teoria, a saída do @LaTeX{} deveria permitir muito mais personalização da saída do que seria possível com a implementação @TeX{} simples do Texinfo.
+A saída do @LaTeX{} pode ser processada posteriormente em DVI, PostScript ou
+PDF@. Em teoria, a saída do @LaTeX{} deveria permitir muito mais personalização
+da saída do que seria possível com a implementação @TeX{} simples do Texinfo.
 
 
 @cindex Saída Docbook, visão geral
 @cindex Saída XML Docbook, visão geral
 @item Docbook
-(Gerada via @command{texi2any --docbook}.).   Esse é um formato baseado em XML desenvolvido, primariamente para documentação técnica.   Ele por conseguinte assume alguma semelhança, em linhas gerais, com Texinfo.   Veja-se @uref{http://www.docbook.org}. Vários conversores de Docbook @emph{para} Texinfo também foram desenvolvidos; veja-se as páginas web Texinfo.
+(Gerada via @command{texi2any --docbook}.).   Esse é um formato baseado em XML
+desenvolvido, primariamente para documentação técnica.   Ele por conseguinte
+assume alguma semelhança, em linhas gerais, com Texinfo.   Veja-se
+@uref{http://www.docbook.org}. Vários conversores de Docbook @emph{para}
+Texinfo também foram desenvolvidos; veja-se as páginas web Texinfo.
 
 @cindex Saída XML Texinfo, visão geral
 @cindex Saída Texinfo XML, visão geral
@@ -330,11 +383,20 @@ A saída do @LaTeX{} pode ser processada posteriormente em DVI, PostScript ou PD
 @pindex texinfo.dtd
 @pindex txixml2texi
 @item XML
-(Gerada via @command{texi2any --xml}.). A saída XML do @command{texi2any}, diferente de todos os outros formatos de saída, é uma transliteração do fonte do Texinfo, em vez de uma saída finalizada. Os arquivos XML do Texinfo não podem ser visualizados em navegadores da web ou outros programas.
+(Gerada via @command{texi2any --xml}.). A saída XML do @command{texi2any},
+diferente de todos os outros formatos de saída, é uma transliteração do fonte
+do Texinfo, em vez de uma saída finalizada. Os arquivos XML do Texinfo não
+podem ser visualizados em navegadores da web ou outros programas.
 
-XML é uma especificação de sintaxe genérica usável para qualquer tipo de conteúdo. (Uma referência está em @uref{http://www.w3.org/XML}.). O propósito da saída XML do Texinfo é o de permitir processamento posterior por ferramentas XML. A sintaxe de saída é definida em um DTD de XML, que está contido em um arquivo @file{texinfo.dtd} incluído na distribuição do fonte do Texinfo.
+XML é uma especificação de sintaxe genérica usável para qualquer tipo de
+conteúdo. (Uma referência está em @uref{http://www.w3.org/XML}.). O propósito
+da saída XML do Texinfo é o de permitir processamento posterior por ferramentas
+XML. A sintaxe de saída é definida em um DTD de XML, que está contido em um
+arquivo @file{texinfo.dtd} incluído na distribuição do fonte do Texinfo.
 
-A distribuição do fonte do Texinfo inclui um script utilitário @file{txixml2texi} para fazer uma transformação reversa para recriar o conteúdo Texinfo original (exceto para macros e condicionais do Texinfo).
+A distribuição do fonte do Texinfo inclui um script utilitário
+@file{txixml2texi} para fazer uma transformação reversa para recriar o conteúdo
+Texinfo original (exceto para macros e condicionais do Texinfo).
 
 @end table
 
@@ -403,7 +465,10 @@ Um arquivo Texinfo pode ser formatado e composto como um livro impresso
 ou um manual.   Para fazer isso, você precisa de @TeX{}, um sofisticado
 programa de tipografia escrito por Donald Knuth da Universidade Stanford.
 
-O Texinfo fornece um arquivo @file{texinfo.tex} que contém as definições que o @TeX{} usa quando tipografa um arquivo do Texinfo. Você pode obter a versão mais recente do @file{texinfo.tex} a partir da página inicial do Texinfo, @uref{http://www.gnu.org/software/texinfo/}.
+O Texinfo fornece um arquivo @file{texinfo.tex} que contém as definições que o
+@TeX{} usa quando tipografa um arquivo do Texinfo. Você pode obter a versão
+mais recente do @file{texinfo.tex} a partir da página inicial do Texinfo,
+@uref{http://www.gnu.org/software/texinfo/}.
 
 Um livro baseado em Texinfo é similar a qualquer outro composto,
 trabalho impresso: ele pode ter uma página de título, página de direitos
@@ -411,9 +476,14 @@ autorais, sumário, e prefácio, bem como capítulos, seções e subseções
 numeradas ou não numeradas, cabeçalhos de páginas, referências cruzadas,
 notas de rodapé, e índices.
 
-@TeX{} é muito poderoso e tem muitos recursos ótimos. No entanto, como um arquivo do Texinfo precisa ser capaz de apresentar informações tanto em um terminal somente de caracteres no formato do Info quanto em um livro tipografado, os comandos de formatação que o Texinfo suporta são necessariamente limitados.
+@TeX{} é muito poderoso e tem muitos recursos ótimos. No entanto, como um
+arquivo do Texinfo precisa ser capaz de apresentar informações tanto em um
+terminal somente de caracteres no formato do Info quanto em um livro
+tipografado, os comandos de formatação que o Texinfo suporta são
+necessariamente limitados.
 
-@xref{Impresso com @TeX{}}, para mais informações sobre o processamento de um manual com @TeX{}.
+@xref{Impresso com @TeX{}}, para mais informações sobre o processamento de um
+manual com @TeX{}.
 
 
 @node Adicionando Formatos de Saída
@@ -433,8 +503,9 @@ infraestrutura nova para @command{texi2any}, nossa implementação de
 referência de um analisador Texinfo; ela cria uma representação de
 árvore da entrada de Texinfo que você pode usar para a conversão.
 A documentação no arquivo fonte
-@file{tp/Texinfo/Convert/Converter.pm} é um bom lugar para começar.
-Veja-se @ref{Tradutor Genérico @command{texi2any}}.
+@file{tp/Texinfo/Convert/Converter.pm} é um bom lugar para começar
+(@pxref{Texinfo::Convert::Converter,,,texi2any_internals,documentação dos módulos do Texinfo}).
+@ref{Tradutor Genérico @command{texi2any}}.
 
 Outra abordagem viável é usar a saída XML de Texinfo oriunda de
 @command{texi2any} como sua entrada.   Esse XML é uma representação
@@ -474,98 +545,113 @@ Ele é software GNU escrito por Brendan O'Dea, disponível a partir de
 @uref{http://www.gnu.org/software/help2man}.
 
 
-
 @node Histórico
+@nodedescription Agradecimentos, colaboradores(as) e gênese.
 @section Histórico
 
 @cindex Stallman, Richard M.
 @cindex Chassell, Robert J.
 @cindex Fox, Brian
 @cindex Berry, Karl
-Richard M. Stallman inventou o formato Texinfo, escreveu os
-processadores iniciais, e criou a Edição 1.0 deste manual.
-Robert@tie{}J. Chassell revisou e estendeu imensamente o manual,
-iniciando com a Edição 1.1.   Brian Fox foi responsável pela
-distribuição autônoma de Texinfo até a versão 3.8, e originalmente
-escreveu os programas autônomos @command{makeinfo} e @command{info}.
-Karl Berry continuou a manutenção desde Texinfo 3.8
-(edição do manual 2.22).
-
-@cindex Pinard, Fran@,{c}ois
-@cindex Schwab, Andreas
-@cindex Weinberg, Zack
-@cindex Weisshaus, Melissa
-@cindex Zaretskii, Eli
-@cindex Zuhn, David D.
-Nossos agradecimentos vão para todos que ajudaram a aperfeiçoar este
-trabalho, particularmente os incansáveis Eli Zaretskii e Andreas Schwab,
-que forneceram correções incontáveis.   Fran@,{c}ois Pinard e
-David@tie{}D. Zuhn, incansavelmente gravaram e relataram erros e
-obscuridades.  Zack Weinberg fez o impossível implementando a sintaxe de
-macro em @file{texinfo.tex}.   Obrigado a Melissa Weisshaus por suas
-frequentes revisões de edições quase similares.   Dúzias de outros
-contribuíram com correções e sugestões, eles estão agradecidamente
-reconhecidos no arquivo @file{ChangeLog}.   Nossos erros são nossos
-próprios.
+@cindex Smith, Gavin
+Richard M. Stallman inventou o formato Texinfo, escreveu os processadores
+iniciais e criou a Edição 1.0 deste manual. Robert@tie{}J. Chassell revisou e
+estendeu muito o manual, começando com a Edição 1.1. Brian Fox foi responsável
+pela distribuição autônoma do Texinfo até a versão 3.8. Karl Berry continuou a
+manutenção a partir do Texinfo 3.8 (edição do manual 2.22), e Gavin Smith
+continuou a manutenção desde o Texinfo 6.0.
 
 @cindex Histórico do Texinfo
 @cindex Texinfo, estória
 @subheading Começo
 
+@cindex NLS
+Richard Stallman incluiu um sistema de ajuda de hipertexto on-line chamado Info
+na implementação original do Emacs (em 1975/6). Stallman foi inspirado depois
+de ver uma apresentação alguns anos antes acerca do sistema de hipertexto
+``NLS'' de Douglas Engelbart.
+
+@ignore
+From rms@santafe.edu Sat Jan 23 03:41:05 1999
+Status: RO
+X-VM-v5-Data: ([nil nil nil nil nil nil nil nil nil]
+        [nil nil nil nil nil nil nil nil nil nil nil nil "^Date:" nil nil nil ni
++l nil nil nil nil]
+        nil)
+Reply-to: rms@gnu.org
+Content-Length: 331
+Date: Sat, 23 Jan 1999 01:40:59 -0700 (MST)
+From: Richard Stallman <rms@gnu.org>
+To: bob@rattlesnake.com
+CC: karl@cs.umb.edu, kama@hippo.fido.de, bug-texinfo@gnu.org
+Subject: Re: Q: Algumas questões de história
+
+    Pessoas no MIT também desenvolveram um formato bacana de ajuda on-line chamado Info.
+
+Esse fui eu. Eu desenvolvi o Info como uma espécie de "hipertexto do homem
+pobre" depois que vi uma apresentação acerca do NLS (sistema de hipertexto de
+Englebart). EU PENSO que isso foi em 1974, na verdade antes do Emacs, e que
+depois de desenvolver o Emacs em 1975 eu adaptei o Info para trabalhar com ele.
+@end ignore
+
 @cindex Scribe
 @cindex Reid, Brian
-Nos anos 1970 no CMU, Brian Reid desenvolveu um programa e formato
-chamado Scribe para marcar documentos para impressão.   Ele usou o
-caractere @code{@@} para introduzir comandos, conforme Texinfo faz.
-Muito mais consequencialmente, ele se empenhou em descrever o conteúdo
-dos documentos em vez da formatação, uma ideia inteiramente adotada por
-Texinfo.
+Em outro desenvolvimento, na década de 1970 na CMU, Brian Reid desenvolveu um
+programa e formato chamado Scribe para marcar documentos para impressão. Ele
+usava o caractere @code{@@} para introduzir comandos, como o Texinfo faz. Muito
+mais consequentemente, ele se esforçou para descrever o conteúdo do documento
+em vez da formatação, uma ideia adotada de todo o coração pelo Texinfo.
 
 @cindex Bolio
 @cindex Bo@TeX{}
-Ao mesmo tempo, pessoas no MIT desenvolveram outro, não muito diferente
-formato chamado Bolio.  Esse então foi convertido usando @TeX{} como
-sua linguagem tipográfica: Bo@TeX{}.  A versão mais antiga de Bo@TeX{}
-parece ter sido a 0.02 em 31 de outubro de 1984.
+Enquanto isso, pessoas no MIT desenvolveram outro formato chamado Bolio.
+Richard Stallman (RMS) trabalhou na conversão do Bolio para usar @TeX{} como a
+linguagem dele de tipografia, resultando no Bo@TeX{}. A versão mais antiga do
+Bo@TeX{} parece ter sido 0.02 em 31 de outubro de 1984.
 
-Bo@TeX{} somente poderia ser usado como uma linguagem de marcação
-para documentos serem impressos, não para documentos online.  Richard
-Stallman (RMS) trabalhou em ambos Bolio e Bo@TeX{}.  Ele também
-desenvolveu um formato chique de ajuda on-line chamado Info, e então
-combinou Bo@TeX{} e Info para criar Texinfo, uma linguagem de marcação
-para texto que é entendida para ler ambos online e como cópia impressa.
+O Bo@TeX{} só podia ser usado como uma linguagem de marcação para documentos a
+serem impressos, não para documentos online. RMS combinou o Bo@TeX{} e o Info
+para criar o Texinfo, uma linguagem de marcação para texto que se destina a ser
+lido online e como cópia impressa.
 
-Seguindo em frente, o tradutor original para criar Info foi escrito
-(primariamente por RMS e Bob Chassell) em Emacs Lisp, a saber: o
-@code{texinfo-format-buffer} e outras funções.  No começo dos anos 1990,
-Brian Fox reimplementou o programa de conversão em C, agora chamado
-@command{makeinfo}.
+O tradutor original para criar o Info foi escrito (principalmente por RMS e Bob
+Chassell) em Emacs Lisp, ou seja, o @code{texinfo-format-buffer} e outras
+funções. No início da década de 1990, Brian Fox reimplementou o programa de
+conversão em C, agora chamado @command{makeinfo}, bem como o programa autônomo
+@command{info}.
 
 @subheading Reimplementando in Perl
 
 @cindex Cons, Lionel
 @cindex Dumas, Patrice
-Em 2012, o @command{makeinfo} C foi ele próprio substituído por uma
-implementação Perl chamada genericamente @command{texi2any}.  Essa
-versão suporta o mesmo nível de personalização de saída que
-@command{texi2html}, um programa independente originalmente escrito por
-Lionel Cons, mais tarde com trabalho substancial de muitos outros.  As
-muitas características adicionais necessárias para tornar
-@command{texi2html} uma substituição para @command{makeinfo} foram
-implementadas por Patrice Dumas.  A primeira versão jamais lançada de
-@command{texi2any} foi baseada no código @command{texi2html}.  Essa
-implementação, entretanto, foi abandonada em favor do atual programa,
-que analisa a entrada Texinfo em uma árvore para processamento.  Ele
-ainda suporta quase todas as características de @command{texi2html}.
+Em 2012, o @command{makeinfo} do C foi substituído por uma implementação Perl
+genericamente chamada @command{texi2any}. Essa versão suporta o mesmo nível de
+personalização de saída que @command{texi2html}, um programa independente
+escrito originalmente por Lionel Cons, mais tarde com trabalho substancial de
+muitos(as) outros(as). Os muitos recursos adicionais necessários para tornar
+@command{texi2html} um substituto para @command{makeinfo} foram implementados
+por Patrice Dumas. A primeira versão, nunca lançada, do @command{texi2any} foi
+baseada no código do @command{texi2html}.
 
-O novo programa Perl é muito mais lento que o antigo programa C.
-Nós esperamos que a diferença de velocidade será fechada no futuro,
-porém elas podem jamais ser inteiramente comparáveis.  Então porque nós
-mudamos?  Em poucas palavras, nós pretendemos e esperamos que o presente
-programa seja muito mais fácil que a prévia implementação C de
-@command{makeinfo} para estender para diferentes estilos de saída,
-formatos de infra estrutura de saída, e todas as outras personalizações.
-Em mais detalhes:
+@cindex Representação em árvore de documentos
+@cindex Representação de árvore de sintaxe de documentos
+@cindex Representação abstrata de documentos em árvore de sintaxe
+Essa implementação, no entanto, foi abandonada em favor do programa atual
+(também escrito por Patrice Dumas), que analisa a entrada do Texinfo em uma
+árvore para processamento. Ele herdou o projeto de personalização e outros
+recursos do @command{texi2html} (para mais informações acerca da
+compatibilidade do @command{texi2html}, @pxref{@command{texi2html}}). No
+entanto, o @command{texi2any} é uma reimplementação completa: ele constrói uma
+representação baseada em árvore do documento de entrada para todas as
+estruturas de retaguarda trabalharem.
+
+O novo programa Perl é muito mais lento que o antigo programa C. A lacuna de
+velocidade foi parcialmente fechada desde o primeiro lançamento, mas pode nunca
+ser totalmente comparável. Então, por que nós comutamos? Em resumo, nós
+pretendemos e esperamos que o programa atual seja muito mais fácil que a
+implementação C anterior do @command{makeinfo} para estender a diferentes
+estilos de saída, formatos de saída de estrutura de retaguarda e todas as
+outras personalizações. Em mais detalhes:
 
 @itemize @bullet
 @item Personalização de HTML.  Muitos GNU e outros pacotes de software
@@ -576,46 +662,68 @@ desenvolvidas, e mantê-las em sincronia não foi simples.  Adicionar a
 possibilidade de personalização de HTML em @command{texi2html} a um
 programa C tem sido um esforço enorme.
 
-@item Unicode, e suporte multilínguas genericamente, especialmente das
-linguagens da Ásia Oriental.  Apesar que certamente é perfeitamente
-plausível escrever tal suporte em C, no caso particular de
-@command{makeinfo}, isso teria sido equivalente a reescrever o programa
-inteiro.  Em Perl, muito disso vem essencialmente de graça.
+@item Unicode e suporte multilíngue em geral, especialmente de idiomas do leste
+asiático. Naquela época, fazer isso em C teria sido equivalente a reescrever o
+programa inteiro. Desde então, o analisador e os bits das estruturas de
+retaguarda do conversor foram reescritos em C, mas as estruturas de retaguarda
+do conversor ainda estão principalmente em Perl, que tem um bom suporte
+multilíngue integrado.
 
-@item Infra estrutura adicional.  O código @command{makeinfo} se tornou
-tão complexo ao ponto de que, adicionar uma infra estrutura nova, era bastante
-complexo, exigindo interações complexas com as infra estruturas
-existentes.  Em contraste, nossa implementação Perl provê uma
-representação limpa baseada em árvore para todas as infra estruturas
-funcionarem.  Pessoas tem solicitado numerosas infra estruturas
-diferentes (@LaTeX{}, o mais recente (X)HTML, @dots{}), e elas agora
-serão muito mais viáveis de implementar.  O que conduz ao último item:
+@item Estruturas adicionais de retaguarda. O código do @command{makeinfo}
+tornou-se tão complicado a ponto de adicionar uma nova estrutura de retaguarda
+ser bastante complexo, exigindo interações complexas com estruturas de
+retaguarda existentes. Em contraste, a nova implementação fornece uma
+representação limpa baseada em árvore para todas as estruturas de retaguarda
+trabalharem. As pessoas solicitaram numerosas estruturas de retaguarda
+(@LaTeX{}, o mais recente (X)HTML, @dots{}); essa mudança os tornou muito mais
+viáveis de implementar. O que nos leva ao último item:
 
-@item Tornando as contribuições mais fáceis.  Em geral, devido à
-estrutura mais limpa, o programa Perl deveria ser consideravelmente mais
-fácil que o C para qualquer pessoa ler e contribuir com, com os óbvios
-benefícios resultantes.
+@item Facilitando as contribuições. Em geral, devido à estrutura mais limpa, a
+implementação separada do analisador/estruturas de retaguarda deveria ser
+consideravelmente mais fácil que a implementação anterior do @command{makeinfo}
+do C para qualquer um(a) ler e contribuir, com os benefícios óbvios
+resultantes. Depois de dez anos, as estruturas de retaguarda contribuídas ainda
+estavam para acontecer, mas ainda se acredita que essa estrutura poderia, em
+teoria, se prestar melhor às contribuições.
+
 @end itemize
 
-Veja-se @ref{Implementação de Referência}, para mais sobre a razão de ser e função
-de @command{texi2any}.
+@cindex @command{texi2any}, como implementação de referência
+@cindex Implementação de referência
+@cindex Implementação, @command{texi2any} como referência
+@cindex Testes de linguagem do Texinfo
+@cindex Testes, da linguagem do Texinfo
+@anchor{Implementação de referência}@c
+@command{texi2any} é destinado a ser uma implementação de referência que define
+partes da linguagem não totalmente especificadas pelo manual. Sem tal
+referência, implementações alternativas muito provavelmente teriam diferenças
+sutis, ou não tão sutis, no comportamento, e assim os documentos do Texinfo se
+tornariam dependentes do processador. Também é importante ter opções de linha
+de comando consistentes para todos os processadores. Testes extensivos da
+linguagem e do processador foram desenvolvidos ao mesmo tempo que
+@command{texi2any}; nós encorajamos qualquer um(a) que esteja pensando em
+escrever um programa para analisar a entrada do Texinfo a fazer uso desses
+testes.
+
+@cindex Futuro das implementações do Texinfo
+Com o lançamento do @command{texi2any} como implementação de referência, o
+desenvolvimento tanto da implementação C do @command{makeinfo} quanto do
+@command{texi2html} foi interrompido. Daqui para frente, nós pedimos para
+os(as) autores(as) de documentos do Texinfo que usem somente o
+@command{texi2any}.
 
 
 @node Escrevendo um Arquivo do Texinfo
+@anchor{Iniciando e Terminando um Arquivo}@c nome antigo
+@nodedescription Formato de um arquivo fonte do Texinfo.
 @chapter Escrevendo um Arquivo do.Texinfo @c Capítulo 2
 
 Este capítulo descreve a sintaxe Texinfo e o que é exigido em um arquivo
 Texinfo, e dá um arquivo curto de amostra.
 
-@menu
-* Convenções::                Regras gerais para escrever um arquivo Texinfo.
-* Comentários::                   Escrevendo comentários e texto ignorado em geral.
-* Mínimo::                    O que um arquivo Texinfo deve ter.
-* Amostra Curta::               Um arquivo curto de amostra Texinfo
-@end menu
-
 
 @node Convenções
+@nodedescription Regras gerais para escrever um arquivo do Texinfo.
 @section Convenções Sintáticas Gerais
 @cindex Convenções sintáticas gerais
 @cindex Sintáticas, convenções
