@@ -747,29 +747,19 @@ coloque um caractere @samp{@@} em frente a ele, como isto: @samp{@@@@},
 @samp{@@@{}, e @samp{@@@}}.
 
 @item
-@cindex Comandos @@
+@cindex @sortas{at} Comandos @@
 @cindex Formatando, comandos
-Em um arquivo Texinfo, os comandos que você escreve para descrever o
+Em um arquivo do Texinfo, os comandos que você escreve para descrever o
 conteúdo do manual são precedidos por um caractere @samp{@@}; eles são
-chamados @dfn{comandos @@}.   (O @samp{@@} em Texinfo tem o mesmo
-significado que @samp{\} tem em @TeX{} plano).
+chamados @dfn{comandos @@}. (O @samp{@@} no Texinfo tem o mesmo
+significado que @samp{\} tem no @TeX{} simples).
 
 @cindex Chaves, quando usar
-Dependendo do que fazem ou quais argumentos@footnote{A palavra
-argumento é oriunda da maneira como ela é empregada em matemática e não
-se refere a uma disputa entre duas pessoas; ela se refere a informação
-apresentada ao comando.  De acordo com o @cite{Oxford English
-Dictionary}, a palavra é derivada do Latim para @dfn{tornar claro,
-provar}; então, ela veio a significar `a evidência oferecida como
-prova', o que é dizer `a informação oferecida', o que leva ao seu
-significado matemático.  Em sua outra derivação subjacente, a palavra
-veio a significar `afirmar em um modo contra o qual outros podem fazer
-contra afirmações', o que levou ao significado de `argumento' como uma
-disputa.} receberem, você precisa escrever comandos @@ em suas próprias
-linhas, ou como parte de sentenças.   Como uma regra geral, um comando
-exige chaves se esse comando se misturar entre outro texto; porém, ele
-não necessita das chaves se estiver em sua própria linha.  Para mais
-detalhes da sintaxe de comando Texinfo, veja-se @ref{Sintaxe de Comando}.
+Dependendo do que eles fazem ou de quais argumentos recebam, você precisa
+escrever comandos @@ em linhas próprias, ou como parte de frases. Como regra
+geral, um comando exige chaves se ele se misturar com outro texto; mas não
+precisa de chaves se estiver em uma linha própria. Para mais detalhes da
+sintaxe de comandos do Texinfo, veja-se @ref{Sintaxe do Comando}.
 
 
 @item
@@ -801,20 +791,78 @@ hifens no fonte permanece como estiverem em contextos literais,
 tais como @code{@@code} e @code{@@example}.
 
 @item
-@cindex Caracteres de avanço de formulário
+@emph{Espaço em branco}. Arquivos do Texinfo são arquivos de texto simples
+compostos de linhas terminadas pelo usual caractere de nova linha (avanço de
+linha). Processadores do Texinfo leem a entrada uma linha por vez. Parágrafos
+são terminados por uma linha vazia ou uma linha contendo somente espaços. Uma
+sequência de vários espaços no texto geralmente é tratada da mesma forma que um
+espaço (exceto em modos literais).
+
+@cindex Caractere de avanço de formulário
 @cindex @kbd{CTRL-l}
-Os caracteres de alimentação de formulário (@kbd{CTRL-l}) na entrada são
-manipulados conforme segue:
+Form feed (@kbd{CTRL-l}) characters in normal text end any open paragraph.
+Other ASCII whitespace (tab, carriage return) may be treated the same as space
+characters, although the results may differ depending on output format.  Hence,
+there is not much point in using these in documents.  Non-ASCII spaces, such as
+Unicode ``em space'', are not recognized as whitespace at all and will be
+treated as regular, non-whitespace characters.
+
+However, in verbatim modes, for example in code samples, tab characters may
+produce the correct formatting in the output.
+
+@ignore @c Excessive detail?
+
+To avoid this problem, Texinfo mode in GNU Emacs inserts multiple spaces when
+you press the @key{TAB} key.  Also, you can run @code{untabify} in Emacs to
+convert tabs in a region to multiple spaces, or use the @code{unexpand} command
+from the shell.
+
+@end ignore
+@ignore @c too detailed for the manual, but kept for implementation tips
+@item
+Form feed characters outside of a paragraph are handled as follows:
+
+
+Caracteres de avanço de formulário (@kbd{CTRL-l}) em texto normal encerram
+qualquer parágrafo aberto. Outros espaços em branco ASCII (tabulação, retorno
+de carro) podem ser tratados da mesma forma que caracteres de espaço, embora os
+resultados possam diferir dependendo do formato de saída. Portanto, não existe
+muito sentido em usá-los em documentos. Espaços não ASCII, como Unicode ``em
+space'', não são reconhecidos como espaços em branco e serão tratados como
+caracteres regulares, não espaços em branco.
+
+No entanto, em modos literais, por exemplo, em amostras de código, caracteres
+de tabulação podem produzir a formatação correta na saída.
+
+@ignore @c Detalhes excessivos?
+
+Para evitar esse problema, o modo Texinfo no GNU Emacs insere vários espaços
+quando você pressiona a tecla @key{TAB}. Além disso, você pode executar
+@code{untabify} no Emacs para converter tabulações em uma região para vários
+espaços ou usar o comando @code{unexpand} a partir do shell.
+
+@end ignore
+@ignore @c muito detalhado para o manual, mas mantido para dicas de implementação
+@item
+Caracteres de avanço de formulário fora de um parágrafo são manuseados da
+seguinte forma:
 
 @table @asis
 @item PDF/DVI
-Em texto normal, tratado como finalizante de qualquer parágrafo aberto;
-essencialmente ignorado entre parágrafos.
+Ignorado entre parágrafos.
+
+@item LaTeX
+Ignorado em contextos onde espaços são ignorados, exceto depois de chaves de
+fechamento de comandos específicos (@code{@@caption} por exemplo). Deixado como
+está na saída, caso contrário.
+@c Escrito como @code{\par@{@}}, uma macro do @LaTeX{} que inicia um parágrafo.
 
 @item Info
-Saída como-é entre parágrafos (o uso mais comum deles); em outros
-contextos, eles podem ser tratados como espaços regulares (e então
-consolidados com espaço em branco envolvente).
+Saída como está entre parágrafos (uso mais comum dela); ignorada em contextos
+onde espaços são ignorados, exceto depois de chaves de fechamento de comandos
+específicos (@code{@@caption} por exemplo). Em outros contextos, eles podem ser
+tratados como espaços regulares (e, portanto, consolidados com espaços em
+branco ao redor).
 
 @item HTML
 Escrito como uma entidade numérica, exceto contextos onde espaços são
@@ -826,31 +874,15 @@ Mantenha-os em qualquer lugar; em atributos, encapsulados como
 @samp{\f}; também, @samp{\} é encapsulado como @samp{\\} e uma nova
 linha como @samp{\n}.
 
-@item Docbook
+@item DocBook
 Completamente removidos, dado que não são permitidos.
 @end table
 
-Como você pode ver, por causa dessas exigências diferentes dos formatos
-de saída, não é possível se usar alimentações de formulário
-completamente portáveis.
+Como você pode ver, por causa dessas exigências diferentes dos formatos de
+saída, não é possível se usar alimentações de formulário completamente
+portáveis.
+@end ignore
 
-@item
-@cindex Tabulações; não use!
-@strong{Aviso:} Por último, não use caracteres de tabulação em um arquivo
-Texinfo! (Exceto, talvez, em modos textuais.)  @TeX{} usa fontes de largura
-variável, o que significa que é impraticável, na melhor das hipóteses, se
-definir uma tabulação para funcionar em todas as circunstâncias.
-Consequentemente, @TeX{} trata tabulações como espaços únicos, e isso não é o
-que eles aparentam no fonte. Além disso, @code{makeinfo} não faz nada especial
-com tabulações, e então um caractere de tabulação em teu arquivo de entrada
-geralmente terá uma aparência diferente na saída.
-
-@noindent
-Para evitar esse problema, o modo Texinfo em GNU Emacs insere espaços
-múltiplos quando você pressiona a tecla @key{TAB}.   Ainda, você pode
-executar @code{untabify} em Emacs para converter tabulações em uma região para
-espaços múltiplos, ou usar o comando @code{unexpand} a partir do
-shell.
 @end itemize
 
 
@@ -884,7 +916,8 @@ etc., @code{@@c} e @code{@@comment} podem provocar um erro quando do
 processamento com @TeX{}.  Por conseguinte, você também pode usar o caractere
 @kbd{DEL} (decimal 127 ASCII, hexadecimal 0x7f, octal 0177) como um verdadeiro
 caractere de comentário do @TeX{} (código de categoria 14, nos internos do
-@TeX{}). Tudo na linha após o @kbd{DEL} será ignorado.
+@TeX{}). Tudo na linha depois de @kbd{DEL} será ignorado e a próxima linha será
+mesclada.
 
 @cindex Texto ignorado
 @cindex Texto não processado
@@ -901,26 +934,37 @@ advertências relativamente ao aninhamento de tais comandos, veja-se
 
 
 @node Mínimo
+@nodedescription O que um arquivo do Texinfo precisa ter.
 @section O Que um Arquivo do Texinfo Deve Ter
-@cindex Arquivo mínimo do Texinfo (requisitos)
-@cindex Deve ter no arquivo do Texinfo
-@cindex Obrigatório no arquivo do Texinfo
+@cindex Arquivo mínimo do Texinfo (exigências)
+@cindex Exigido no arquivo do Texinfo
 @cindex Mínimo do arquivo do Texinfo
 
-Por convenção, o nome de um arquivo Texinfo termina com uma das
-extensões @file{.texinfo}, @file{.texi}, @file{.txi}, ou
-@file{.tex}.@footnote{As extensões mais longas são as preferidas, dado
-que elas descrevem mais claramente a um leitor humano a natureza do
-arquivo.  As extensões mais curtas são para sistemas operacionais que
-não conseguem lidar com nomes longos de arquivos.}
+Por convenção, o nome de um arquivo do Texinfo termina com uma das extensões
+@file{.texi}, @file{.texinfo}, @file{.txi} ou @file{.tex}. Usar @file{.tex} é
+desencorajado, pois essa extensão já é usada pelos arquivos de entrada do
+@TeX{} e do @LaTeX{}. A extensão mais comum e recomendada é @file{.texi}. O
+nome de um arquivo do Texinfo deveria conter somente caracteres ASCII.
 
-Para fazer com que seja um manual impresso e outros formatos de saída,
-um arquivo Texinfo deve necessariamente iniciar com linhas como estas:
+O nome da saída gerada é baseado no nome do arquivo de entrada, no caso padrão.
+Primeiro, quaisquer das extensões @file{.texi}, @file{.tex}, @file{.txi} ou
+@file{.texinfo} são removidas do nome do arquivo de entrada; a seguir, a
+extensão específica do formato da saída gerada é adicionada---@file{.html} ao
+gerar HTML, @file{.info} ao gerar Info, etc. O nome da saída gerada deveria
+conter somente caracteres ASCII@footnote{@command{texi2any} consegue manusear
+caracteres não ASCII em nomes de arquivo de entrada, mas caracteres não ASCII
+no nome da saída gerada criarão problemas para alguns formatos de saída,
+especialmente para referências cruzadas.}.
+
+@cindex Exigências para formatação
+@cindex Exigências mínimas para formatação
+@cindex Exigências de formatação
+Para a finalidade de ser transformado em um manual impresso, um arquivo do
+Texinfo precisa iniciar com uma linha como esta:
 
 @example
 @group
 \input texinfo
-@@settitle @var{nome-do-manual}
 @end group
 @end example
 
@@ -933,65 +977,280 @@ fonte Texinfo com uma linha como esta:
 @end example
 
 @findex \input @r{(iniciação do @TeX{} bruto)}
-@noindent
-Aqui está uma explanação:
 
-@itemize @bullet
-@item
-A linha @samp{\input texinfo} manda @TeX{} usar o arquivo
-@file{texinfo.tex}, o qual instrui @TeX{} como traduzir os comandos @@
-Texinfo em comandos de tipografia @TeX{}.  (Note-se o uso da barra
-invertida, @samp{\}; isso é correto para @TeX{}.)
+A linha @code{@@bye} no final do arquivo em uma linha própria informa ao @TeX{}
+que o arquivo está terminado e para parar a formatação. Se deixar isso de fora,
+você será despejado(a) no prompt do @TeX{} no final da execução.
 
-@item
-A linha @code{@@settitle} especifica um título para os cabeçalhos de
-página (ou rodapés) do manual impresso, e o título padrão e descrição de
-documento para o marcador @samp{<head>} em HTML@.  Estritamente falando,
-@code{@@settitle} é opcional---se você não se importar de ver o seu
-documento sendo intitulado `Untitled'.
+Além disso, você normalmente fornecerá um arquivo do Texinfo com um título, uma
+página de título, índices e similares, todos os quais são explicados neste
+manual. Mas o mínimo, que pode ser útil para documentos curtos, é apenas a
+linha no início e a linha no final.
 
-@item
-A linha @code{@@bye} ao final do arquivo em uma linha própria informa
-aos formatadores que o arquivo está finalizado e para parar de formatar.
-Se você deixar isso fora, você será colocado no prompt de @TeX{} ao
-final da execução.
-@end itemize
-
-Além disso, você geralmente proverá um arquivo Texinfo com uma página de
-título, índices, e semelhantes, tudo isso é explanado neste manual.
-Porém, o mínimo, que pode ser útil para documentos curtos, é apenas as
-duas linhas no início e aquela no final.
+Sem informações adicionais, as codificações de entrada e saída são assumidas
+como UTF-8, um conjunto universal de códigos compatível com ASCII de 7 bits.
 
 
+@node Arquivo Curto do Texinfo de Amostra
+@nodedescription Um arquivo curto do Texinfo de amostra.
+@anchor{Amostra Curta}@c
+@anchor{Amostra de Início}@c
+@section Amostra Curta
+@cindex Arquivo do Texinfo de amostra, sem comentários
 
-@node Amostra Curta
-@section Um Arquivo Curto de Amostra do Texinfo
-@cindex Arquivo de amostra do Texinfo, com comentários
-
-Aqui está um curto, porém completo, arquivo Texinfo, de forma que você
-possa ver como um fonte Texinfo se aparenta na prática.  As primeiras
-três partes do arquivo são em sua maioria clichê: quando da escrita de
-um manual, você simplesmente modifica os nomes conforme apropriado.
-
-O arquivo completo, sem os comentários intercalados, é mostrado em
-@ref{Arquivo Curto de Amostra do Texinfo}.
-
-Veja-se @ref{Iniciando e Finalizando um Arquivo}, para mais documentação acerca dos
-comandos listados aqui.
-
-
-@subheading Cabeçalho
-
-@noindent
-O cabeçalho diz a @TeX{} qual arquivo de definições usar, nomeia o
-manual, e realiza outras tais tarefas domésticas.
+Aqui está um arquivo curto de amostra do Texinfo.
 
 @example
 @group
 \input texinfo
-@@settitle Manual de Amostra 1.0
+@@settitle Manual do Sample 1.0
+
+@@copying
+Este é um exemplo curto de um arquivo completo do Texinfo.
+
+Copyright @@copyright@{@} 2016 Free Software Foundation, Inc.
+@@end copying
+
+@@titlepage
+@@title Título do Sample
+@@page
+@@vskip 0pt plus 1filll
+@@insertcopying
+@@end titlepage
+
+@@contents
+
+@@node Top
+@@top GNU Sample
+
+Este manual é para GNU Sample (versão @@value@{VERSION@}, @@value@{UPDATED@}).
+
+@@menu
+* Primeiro Capítulo:: O primeiro capítulo é o único capítulo nesta amostra.
+* Índice::            Índice completo.
+@@end menu
+
+
+@@node Primeiro Capítulo
+@@chapter Primeiro Capítulo
+
+@@cindex capítulo, primeiro
+Este é o primeiro capítulo.
+@@cindex entrada de índice, outra
+
+@group
+Aqui está uma lista numerada.
+
+@@enumerate
+@@item
+Este é o primeiro item.
+
+@@item
+Este é o segundo item.
+@@end enumerate
 @end group
+
+
+@@node Primeira Seção
+@@section Primeira Seção
+
+Primeira seção do primeiro capítulo.
+
+
+@@node Segunda Seção
+@@section Segunda Seção
+
+Segunda seção do primeiro capítulo.
+
+
+@@node Índice
+@@unnumbered Índice
+
+@@printindex cp
+
+@@bye
 @end example
+
+
+@node Cabeçalho do Arquivo do Texinfo
+@nodedescription As primeiras linhas.
+@section Cabeçalho do Arquivo do Texinfo
+@cindex Cabeçalho para arquivos do Texinfo
+@cindex Cabeçalho do arquivo do Texinfo
+
+Arquivos do Texinfo iniciam com a linha:
+
+@example
+\input texinfo
+@end example
+
+A linha @samp{\input texinfo} diz ao @TeX{} para usar o arquivo
+@file{texinfo.tex}, que diz ao @TeX{} como traduzir os comandos @@ do Texinfo
+para comandos de tipográfia do @TeX{}. (Observe o uso da barra invertida,
+@samp{\}; isso é correto para o @TeX{}).
+
+Faz sentido incluir qualquer comando que afete a formatação do documento como
+um todo no cabeçalho. A linha @code{@@settitle} geralmente está presente no
+começo do cabeçalho:
+
+@example
+@@settitle Manual do Sample 1.0
+@end example
+
+A linha @code{@@settitle} especifica um título para os cabeçalhos de página (ou
+rodapés) do manual impresso, e o título padrão e a descrição do documento para
+@samp{<head>} em HTML@. @code{@@synindex} (@pxref{@code{@@synindex}}), por
+exemplo, é outro comando frequentemente incluído no cabeçalho.
+
+O início do arquivo do Texinfo até o primeiro conteúdo que é gerado como parte
+do corpo principal do documento é o @dfn{preâmbulo}. Ele inclui o cabeçalho,
+@ref{Permissões do Documento} e a especificação @ref{Página de Título e Página
+de Copyright}. É importante para o formato de saída do @LaTeX{}, pois o fim do
+preâmbulo é onde a linha @code{\begin@{document@}} é gerada. Em outros formatos
+de saída, ele pode ser usado para determinar como alguma saída especial é
+formatada, por exemplo, a saída @ref{@code{@@copying}} como um comentário no
+início dos arquivos de saída ou o idioma usado nos cabeçalhos de arquivo.
+
+
+@node Primeira Linha
+@subsection A Primeira Linha de um Arquivo do Texinfo
+@nodedescription A primeira linha de um arquivo do Texinfo.
+@cindex A primeira linha de um arquivo do Texinfo
+@cindex Linha inicial de um arquivo do Texinfo
+@cindex Cabeçalho de um arquivo do Texinfo
+
+Cada arquivo do Texinfo que deve ser a entrada de nível superior para @TeX{}
+precisa começar com uma linha semelhante a esta:
+
+@example
+\input texinfo
+@end example
+
+Quando o arquivo for processado pelo @TeX{}, o comando @samp{\input texinfo}
+diz ao @TeX{} para carregar as macros necessárias para processar um arquivo do
+Texinfo. Elas estão em um arquivo chamado @file{texinfo.tex}, que deveria ter
+sido instalado no teu sistema junto com o software @TeX{} ou Texinfo. O @TeX{}
+usa a barra invertida, @samp{\}, para marcar o início de um comando, exatamente
+como o Texinfo usa @samp{@@}. O arquivo @file{texinfo.tex} causa a comutação de
+@samp{\} para @samp{@@}; antes que a comutação ocorra, o @TeX{} exige @samp{\},
+e é por isso que ela aparece no início do arquivo.
+
+Opcionalmente, você pode seguir essa linha com um comentário para informar ao
+GNU Emacs para usar o modo Texinfo quando o arquivo for editado:
+
+@example
+\input texinfo   @@c -*-texinfo-*-
+@end example
+
+@noindent Isso pode ser útil quando o Emacs não detecta automaticamente o tipo
+de arquivo a partir da extensão do arquivo.
+
+
+@node @code{@@setfilename}
+@nodedescription Forneça o nome do arquivo da saída gerada.
+@subsection @code{@@setfilename}: Configure o Nome do Arquivo da Saída Gerada
+
+@anchor{setfilename}@c nome antigo
+@c usado em referências quando a referência não é acerca de @setfilename em
+@c particular, mas acerca do nome do arquivo da saída gerada, seja a partir de
+@c @setfilename ou a partir do nome do arquivo de entrada.
+@anchor{Configurando o Nome do Arquivo da Saída Gerada}
+@findex setfilename
+@cindex Nome do arquivo da saída gerada
+PAREI
+The @code{@@setfilename} line specifies the name of the output file to
+be generated by @command{texi2any}.  This command is ignored for
+@TeX{} formatting.  When present, it should be the first Texinfo
+command (that is, after @samp{\input texinfo}).  Write the
+@code{@@setfilename} command at the beginning of a line and follow it
+on the same line by the Info file name.
+
+@example
+@@setfilename @var{info-file-name}
+@end example
+
+The name must be different from the name of the Texinfo file.
+There are two conventions for choosing the name: you
+can either remove the extension (such as @samp{.texi}) entirely from
+the input file name, or (recommended) replace it with the @samp{.info}
+extension.  It is not advised to base the @code{@@setfilename} name
+on a entirely different name than the input file name.
+
+@cindex Ignored before @code{@@setfilename}
+@cindex @samp{\input} source line ignored
+When a @code{@@setfilename} line is present, the Texinfo processors
+ignore everything written before the @code{@@setfilename} line.  This
+is why the very first line of the file (the @code{\input} line) does
+not show up in the output.
+
+If there is no @code{@@setfilename} line, @command{texi2any} uses the
+input file name to determine the output name (@pxref{Minimum}).  The
+@code{\input} line is still ignored in this processing, as well
+as leading blank lines.
+
+When producing another output format, @command{texi2any} will replace any
+final extension with the output format-specific extension (@samp{html}
+when generating HTML, for example), or add a dot followed by the
+extension (@samp{.html} for HTML) if the given name has no extension.
+
+@@-commands are not allowed in @code{@@setfilename}, except for
+@code{@@@@}, @code{@@@{}, @code{@@@}} and associated @@-commands
+such as @code{@@atchar@{@}}.
+
+@code{@@setfilename} used to be required by the Texinfo processors
+and some other programs.  This should not be the case any more;
+@code{@@setfilename} can be omitted.  If the Texinfo input is
+processed from standard input, without an input file name to deduce the
+base file name from, @code{@@setfilename} could still be relevant.
+This is not the only way, however: @option{--output} option specifies
+the output file name on the @command{texi2any} command-line
+(@pxref{Invoking @command{texi2any}}).
+
+@cindex Length of file names
+@cindex File name collision
+@cindex Info file name, choosing
+Although an explicit @samp{.info} extension is preferable, some
+operating systems cannot handle long file names.  You can run into a
+problem even when the file name you specify is itself short enough.
+This occurs because the Info formatters split a long Info file into
+short indirect subfiles, and name them by appending @samp{-1},
+@samp{-2}, @dots{}, @samp{-10}, @samp{-11}, and so on, to the original
+file name.  (@xref{Tag and Split Files}.)  The subfile name
+@file{texinfo.info-10}, for example, is too long for old systems with
+a 14-character limit on filenames; so the Info file name for this
+document could be @file{texinfo} rather than @file{texinfo.info} on
+such a system.  @code{@@setfilename} is a way to specify an
+alternative name.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 @subheading Descrição Resumida e Direitos Autorais
