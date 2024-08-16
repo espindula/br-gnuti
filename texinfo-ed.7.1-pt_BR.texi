@@ -1222,482 +1222,8 @@ Info para esse documento poderia ser @file{texinfo} em vez de
 especificar um nome alternativo.
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-@subheading Descrição Resumida e Direitos Autorais
-
-Este segmento descreve o documento e contém o aviso de direitos autorais
-e permissões de cópia.  Isso é feito com o comando @code{@@copying}.
-
-@noindent
-Um manual real inclui mais texto aqui, de acordo com a licença sob a
-qual ele é distribuído. Veja-se @ref{Textos GNU de Amostra}.
-
-@example
-@group
-@@copying
-Este é um exemplo curto de um arquivo completo Texinfo, versão 1.0.
-
-Direitos autorais @@copyright@{@} 2016 Free Software Foundation, Inc.
-@@end copying
-@end group
-@end example
-
-@subheading Página de Título, Direitos Autorais, Conteúdo
-
-O segmento de título e direitos autorais contém as páginas de título e
-de direitos autorais para o manual impresso.   O segmento deve
-necessariamente estar incluso entre os comandos @code{@@titlepage} e
-@code{@@end titlepage}.  A página de título e de direitos autorais não
-aparece na saída online.
-
-@noindent
-Nós usamos o comando @code{@@insertcopying} para incluir o texto de
-permissão a partir da seção anterior, em vez de escrevê-lo outra vez; o
-texto é colocado no verso da página de título.  O comando
-@code{@@contents} gera um sumário.
-
-@example
-@group
-@@titlepage
-@@title Título de Amostra
-@end group
-
-@group
-@@c Os dois comandos seguintes iniciam a página de direitos autorais.
-@@page
-@@vskip 0pt plus 1filll
-@@insertcopying
-@@end titlepage
-@end group
-
-@@c Coloca o sumário no início.
-@@contents
-@end example
-
-@subheading Nó `Top' e Menu Mestre
-
-O nó `Top' começa a saída online; ela não aparece no manual impresso.
-Nós repetimos a descrição curta do início do texto @samp{@@copying},
-porém não há a necessidade de se repetir a informação de direitos
-autorais, de forma que nós não usamos @samp{@@insertcopying} aqui.
-
-O próprio comando @samp{@@top} ajuda @command{makeinfo} a determinar o
-relacionamento entre os nós.  O nó `Top' contém, pelo menos, um
-@dfn{menu} de alto nível listando os capítulos, e possivelmente um
-@dfn{Menu Mestre} listando todos os nós no documento inteiro.
-
-
-@example
-@@ifnottex
-@@node Top
-@@top Amostra Curta
-
-Este é um arquivo curto de amostra Texinfo.
-@@end ifnottex
-
-@group
-@@menu
-* Primeiro Capítulo:: O primeiro capítulo é o único capítulo nesta
-amostra.
-* Índice::            Índice completo.
-@@end menu
-@end group
-@end example
-
-
-@subheading O Corpo do Documento
-
-@noindent
-O segmento corpo contém todo o texto do documento, porém não os índices
-ou sumário.  Este exemplo ilustra um nó e um capítulo contendo uma
-lista enumerada.
-
-@example
-@group
-@@node Primeiro Capítulo
-@@chapter Primeiro Capítulo
-
-@@cindex capítulo, primeiro
-@end group
-
-@group
-Este é o primeiro capítulo.
-@@cindex entrada de índice, um outro
-@end group
-
-@group
-Aqui está uma lista numerada.
-
-@@enumerate
-@@item
-Este é o primeiro item.
-
-@@item
-Este é o segundo item.
-@@end enumerate
-@end group
-@end example
-
-
-@subheading O Fim do Documento
-
-Isto pode conter comandos para a impressão de índices, o fecha com o
-comando @code{@@bye}, o qual marca o fim do documento.
-
-@example
-@group
-@@node Índice
-@@unnumbered Índice
-@end group
-
-@group
-@@printindex cp
-
-@@bye
-@end group
-@end example
-
-
-@subheading Alguns Resultados
-
-Aqui está com o que se parece o conteúdo do primeiro capítulo da
-amostra:
-
-@sp 1
-@need 700
-@quotation
-Este é o primeiro capítulo.
-
-Aqui está uma lista numerada.
-
-@enumerate
-@item
-Este é o primeiro item.
-
-@item
-Este é o segundo item.
-@end enumerate
-@end quotation
-
-
-@node Iniciando e Finalizando um Arquivo
-@anchor{Iniciando um Arquivo} @c nome antigo
-@chapter Começando e Terminando um Arquivo Texinfo @c Capítulo 3
-@cindex Iniciando um arquivo do Texinfo
-@cindex Arquivo do Texinfo, iniciando
-@cindex Iniciamento de arquivo
-
-Este capítulo se estende sobre o arquivo fonte mínimo completo de
-Texinfo previamente dado (veja-se @ref{Amostra Curta}).
-
-Certos pedaços de informação devem necessariamente ser providos no
-início de um arquivo Texinfo, tais como o título do documento e o nó
-Top.   Um sumário geralmente também é produzido aqui.
-
-@cindex Cabeçalho, texto em
-Texto direto fora de qualquer comando antes do nó Top deveria ser
-evitado.  Tal texto é tratado diferentemente nos diferentes formatos de
-saída: no momento da escrita, é visível em @TeX{} e HTML, por padrão não
-mostrado em leitores Info, e assim por diante.
-
-@menu
-* Inicialização de Amostra::     Um início de amostra para um arquivo Texinfo.
-* Cabeçalho do Arquivo do Texinfo::         As primeiras linhas.
-* Permissões do Documento::    Assegurando-se de que o seu manual é livre.
-* Página de Título e Página de Direitos Autorais:: Criando as páginas de título e de direitos autorais.
-* Conteúdo::                    Como criar uma tabela do conteúdo.
-* O Nó Top::                Criando o nó `Top' e menu mestre.
-* Comandos Globais de Documento::    Afetando a formatação ao longo do documento.
-* Finalizando um Arquivo::               O que está ao final de um arquivo Texinfo?
-@end menu
-
-
-@node Inicialização de Amostra
-@section Exemplo de Início do Arquivo do Texinfo
-
-@cindex Exemplo de início de arquivo Texinfo
-
-A amostra seguinte mostra o que é necessário.  Os elementos dados aqui
-são explanados em maiores detalhes nas seções seguintes.  Outros
-comandos frequentemente são incluídos no início de arquivos Texinfo,
-porém aqueles aqui são os mais críticos.
-
-Veja-se @ref{Textos GNU de Amostra}, para os textos completos a serem usados em
-manuais GNU.
-
-@example
-\input texinfo
-@@settitle @var{nome-do-manual} @var{versão}
-
-@@copying
-Este manual é para @var{programa}, versão @var{versão}.
-
-Direitos autorais @@copyright@{@} @var{anos} @var{titular-direitos-autorais}.
-
-@group
-@@quotation
-É concedida permissão para @dots{}
-@@end quotation
-@@end copying
-@end group
-
-@group
-@@titlepage
-@@title @var{nome-do-manual-quando-impresso}
-@@subtitle @var{subtítulo-se-algum}
-@@subtitle @var{segundo-subtítulo}
-@@author @var{autor}
-@end group
-
-@group
-@@c  Os dois comandos seguintes
-@@c  iniciam a página de direitos autorais.
-@@page
-@@vskip 0pt plus 1filll
-@@insertcopying
-@end group
-
-Publicado por @dots{}
-@@end titlepage
-
-@@c Então o sumário é impresso no início.
-@@contents
-
-@@ifnottex
-@@node Top
-@@top @var{título}
-
-Este manual é para @var{programa}, versão @var{versão}.
-@@end ifnottex
-
-@group
-@@menu
-* First Chapter::    Iniciando @dots{}
-* Second Chapter::       @dots{} @dots{}
-* Copying::          Seus direitos e liberdades.
-@@end menu
-@end group
-
-@group
-@@node Primeiro Capítulo
-@@chapter Primeiro Capítulo
-
-@@cindex primeiro capítulo
-@@cindex capítulo, primeiro
-@dots{}
-@end group
-@end example
-
-
-@node Cabeçalho do Arquivo do Texinfo
-@section Cabeçalho do Arquivo do Texinfo
-@cindex Cabeçalho para arquivos do Texinfo
-@cindex Cabeçalho de arquivo do Texinfo
-
-Os arquivos Texinfo iniciam com pelo menos duas linhas.  Essas são a
-linha @code{\input texinfo} e a linha @code{@@settitle}.
-
-Também, se você desejar formatar somente parte do arquivo Texinfo em
-Emacs, você deve necessariamente escrever a linha @code{@@settitle}
-entre as linhas `start-of-header' e `end-of-header'.  Essas linhas
-`start-' e `end-of-header' são opcionais, porém elas não produzem danos,
-de forma que você pode muito bem sempre incluí-las.
-
-Qualquer comando que afete a formatação do documento como um todo faz
-sentido incluir no cabeçalho.  @code{@@synindex}
-(veja-se @ref{@code{@@synindex}}), por exemplo, é outro comando frequentemente
-incluído no cabeçalho.
-
-Assim, o início de um arquivo Texinfo se parece aproximadamente com
-isto:
-
-@example
-@group
-\input texinfo
-@@settitle Manual de Amostra 1.0
-@end group
-@end example
-
-(Veja-se @ref{Textos GNU de Amostra} para textos de amostra completos).
-
-@menu
-* Primeira Linha::                  A primeira linha de um arquivo Texinfo.
-* Início de Cabeçalho::             Formatar uma região exige isso.
-* @code{@@setfilename}::        Informe a Info o nome do arquivo Info.
-* @code{@@settitle}::           Crie um título para o trabalho impresso.
-* Fim de Cabeçalho::               Formatar uma região exige isso.
-@end menu
-
-
-@node Primeira Linha
-@subsection A Primeira Linha de um Arquivo do Texinfo
-@cindex Primeira linha de um arquivo do Texinfo
-@cindex Linha de início de um arquivo do Texinfo
-@cindex Cabeçalho de um arquivo do Texinfo
-
-Cada arquivo Texinfo que é para ser a entrada de alto nível para @TeX{}
-deve necessariamente iniciar com uma linha que se parece com isto:
-
-@example
-\input texinfo
-@end example
-
-Quando o arquivo é processado por @TeX{}, o comando @samp{\input
-texinfo} manda @TeX{} carregar as macros necessárias para o
-processamento de um arquivo Texinfo.
-Essas estão em um arquivo chamado @file{texinfo.tex}, o qual deveria ter
-sido instalado em seu sistema juntamente com o software @TeX{} ou
-Texinfo.  @TeX{} usa uma barra invertida, @samp{\}, para marcar o
-início de um comando, exatamente como Texinfo usa @samp{@@}.  O
-arquivo @file{texinfo.tex} provoca a permuta de @samp{\} para @samp{@@};
-antes que a permuta ocorra, @TeX{} exige @samp{\}, o que é o motivo pelo qual
-ela aparece no início do arquivo.
-
-Você pode opcionalmente seguir essa linha com um comentário para
-informar a GNU Emacs para usar o modo Texinfo quando o arquivo for
-editado:
-
-@example
-\input texinfo   @@c -*-texinfo-*-
-@end example
-
-@noindent Isso pode ser útil quando Emacs não detectar automaticamente o
-tipo do arquivo a partir da extensão do arquivo.
-
-@node Início de Cabeçalho
-@subsection Início de Cabeçalho
-@cindex Linha de Início de Cabeçalho
-
-Uma linha `start-of-header' é um comentário Texinfo que se parece com
-isto:
-
-@example
-@@c %**start of header
-@end example
-
-Escreva a linha `start-of-header' na segunda linha de um arquivo
-Texinfo.  Prossiga a linha `start-of-header' com uma linha
-`@code{@@settitle}' e, opcionalmente, com outros comandos que
-globalmente afetam a formatação do documento, tais como
-@code{@@synindex} ou @code{@@footnotestyle}; e então por uma linha
-`end-of-header' (@pxref{Fim de Cabeçalho}).
-
-As linhas `start-' e `end-of-header` te permitem formatar somente parte
-de um arquivo Texinfo para Info ou impressão.
-@xref{Comandos @code{texinfo-format}}.
-
-A estranha sequência de caracteres, @samp{%**}, é para assegurar que
-nenhum outro comentário seja acidentalmente tomado por uma linha
-`start-of-header'.  Você pode modificá-la se você desejar, configurando
-as variáveis Emacs @code{tex-start-of-header} e/ou
-@code{tex-end-of-header}. @xref{Impressão no Modo Texinfo}.
-
-
-@node @code{@@setfilename}
-@subsection @code{@@setfilename}: Configura o Nome do Arquivo de Saída
-
-@anchor{setfilename}@c nome antigo
-@findex setfilename
-@cindex Texinfo exige @code{@@setfilename}
-@cindex Nome de arquivo de saída, exigido
-
-A linha @code{@@setfilename} especifica o nome do arquivo de saída a ser
-gerado.
-Quando presente, ele deveria ser o primeiro comando Texinfo (isto é,
-após @samp{\input texinfo}).
-Escreva o comando @code{@@setfilename} no início de uma linha e siga-o
-na mesma linha pelo nome do arquivo Info.
-
-@example
-@@setfilename @var{nome-arquivo-info}
-@end example
-
-O nome deve necessariamente ser diferente do nome do arquivo Texinfo.
-Existem duas convenções para a escolha do nome: você ou pode remover a
-extensão (tal como @samp{.texi}) inteiramente do nome do arquivo de
-entrada; ou (recomendado) substitui-lo com a extensão @samp{.info}.
-
-@cindex Ignorado antes de @code{@@setfilename}
-@cindex Linha @samp{\input} do fonte, ignorada
-Quando uma linha @code{@@setfilename} está presente, os processadores
-Texinfo ignoram tudo escrito antes da linha @code{@@setfilename}.  Isso
-é o motivo da primeiríssima linha do arquivo (a linha @code{\input}) não
-aparecer na saída.
-
-Se não existir uma linha @code{@@setfilename}, @code{makeinfo} usa o
-arquivo de entrada para determinar o nome de saída: primeiro, qualquer
-das extensões @code{.texi}, @code{.tex}, @code{.txi} ou @code{.texinfo}
-é removida do nome do arquivo de entrada; então, a extensão específica
-do formato de saída é adicionada---@code{.html} quando da geração de
-HTML; @code{.info} quando da geração de Info, etc.  A linha
-@code{\input} ainda é ignorada nesse processamento, bem como as linhas
-em branco iniciais.
-
-Quando da produção de outro formato de saída, @code{makeinfo}
-substituirá qualquer extensão final com a extensão de saída específica
-de formato (@samp{html} quando da geração de HTML, por exemplo), ou
-adicionar um ponto seguido pela extensão (@samp{.html} para HTML), se o
-nome dado não tiver extensão.
-
-@code{@@setfilename} costumava ser exigido pelos processadores Texinfo,
-e alguns outros programas ainda podem esperar que ele esteja presente;
-por exemplo, Automake (veja-se @ref{Texinfo,,,automake, GNU Automake}).
-
-@cindex Comprimento dos nomes dos arquivos
-@cindex Colisão de nome de arquivo
-@cindex Nome de arquivo do Info, escolhendo
-Apesar que uma extensão @samp{.info} explícita seja preferível, alguns
-sistemas operacionais não conseguem lidar com nomes longos de arquivo.
-Você pode acabar com problemas mesmo quando o nome de arquivo que você
-especificar for ele próprio curto o suficiente.
-Isso ocorre porque os formatadores Info dividem um arquivo longo Info em
-sub arquivos curtos indiretos, e os nomeia acrescentando ao final
-@samp{-1}, @samp{-2}, @dots{}, @samp{-10}, @samp{-11}, e assim por
-diante, ao nome de arquivo original. (Veja-se @ref{Arquivos de Etiqueta e de Divisão}.)  O
-nome de subarquivo @file{texinfo.info-10}, por exemplo, é longo demais
-para sistemas antigos com um limite de 14 caracteres em nomes de
-arquivo; assim, o nome de arquivo Info para este documento é
-@file{texinfo} em vez de @file{texinfo.info}.  Quando @code{makeinfo}
-está em execução em sistemas operacionais tais como MS-DOS que impõe
-limites severos sobre nomes de arquivo, ele pode remover alguns
-caracteres do nome original do arquivo para deixar espaço suficiente
-para o sufixo do subarquivo, assim produzindo arquivos chamados
-@file{texin-10}, @file{gcc.i12}, etc.
-
-Veja-se também a opção @option{--output} em
-@ref{Invocando @command{texi2any}}.
-
-
 @node @code{@@settitle}
+@nodedescription Crie um título para o trabalho impresso.
 @subsection @code{@@settitle}: Configura o Título do Documento
 
 @anchor{settitle}@c nome antigo
@@ -1713,27 +1239,146 @@ Um arquivo Texinfo deveria conter uma linha que se pareça com isto:
 Escreva o comando @code{@@settitle} no início de uma linha e siga-o na
 mesma pelo título.  Não escreva nada mais na linha.  O comando
 @code{@@settitle} deveria preceder tudo o que gera saída atual.  O
-melhor lugar para ele é logo após o comando @code{@@setfilename}
+melhor lugar para ele é logo após o comando @code{@@setfilename}, se presente
 (descrito na seção anterior).
 
-Esse comando informa a @TeX{} o título a usar em um cabeçalho ou
-rodapé para saída de lado duplo, no caso de tais cabeçalhos serem
-impressos.  Para mais sobre cabeçalhos para @TeX{}, veja-se
-@ref{Geração de Cabeçalho}.
+Esse comando fornece o título a ser usado em um cabeçalho ou rodapé para saída
+impressa frente e verso, caso tais títulos sejam produzidos. Para mais acerca
+de títulos para saída impressa, veja-se @ref{Geração de Títulos}.
 
 @cindex Etiqueta @code{<title>} do HTML
-No arquivo HTML produzido por @command{makeinfo}, @var{título} serve
-como o @samp{<título>} do documento.  Ele também se torna a descrição
-padrão do documento na parte @samp{<head>}
-(@pxref{@code{@@documentdescription}}).
+Em HTML, @var{title} serve como o @samp{<title>} do documento e se torna a
+descrição padrão do documento na parte @samp{<head>}.
 
-Quando a página de título for usada na saída, o título no comando
-@code{@@settitle} não afeta o título conforme ele aparece na página de
-título.  Assim, os dois não precisam coincidir exatamente.  Uma prática
-que se recomenda é incluir a versão ou número de edição do manual no
-título @code{@@settitle}; na página de título, o número de versão
-geralmente aparece como um @code{@@subtitle}, de forma que ele poderia
-ser omitido do @code{@@title}. Veja-se @ref{@code{@@titlepage}}.
+Quando a página de título é usada na saída gerada, como geralmente é o caso
+para saída impressa, o título no comando @code{@@settitle} não afeta o título
+como ele aparece na página de título. Assim, os dois não precisam não
+corresponder exatamente. Uma prática que nós recomendamos é a de incluir o
+número da versão ou edição do manual no título @code{@@settitle}; na página de
+título, o número da versão geralmente aparece como um @code{@@subtitle}, de
+forma que ele seria omitido do @code{@@title}. @xref{@code{@@titlepage}}.
+
+
+@node Preâmbulo
+@nodedescription Início do arquivo do Texinfo até o primeiro conteúdo.
+@subsection Preâmbulo
+@cindex Preâmbulo
+@cindex Preâmbulo do Texinfo
+
+O @dfn{preâmbulo} começa no início do arquivo do Texinfo e continua até o
+primeiro material diretamente produzido. Ele tipicamente inclui o cabeçalho do
+arquivo (@pxref{Cabeçalho do Arquivo do Texinfo}), o bloco @code{@@copying}
+especificando as permissões do documento (@pxref{@code{@@copying}}) e a
+especificação @code{@@titlepage}
+(@pxref{Página de Título e Página de Direitos Autorais}).
+
+O preâmbulo pode conter comandos que afetam a formatação do documento como um
+todo, mas que não produzem saída, ou não produzem saída imediatamente, como
+@code{@@settitle} (@pxref{@code{@@settitle}}), @code{@@documentlanguage},
+(@pxref{@code{@@documentlanguage}}), comandos que definem os títulos, controlam
+o recuo ou a hifenização, ou o sumário (@pxref{Conteúdo}).
+
+@ignore
+O preâmbulo também pode conter comandos do formatador bruto
+(@pxref{Comandos do Formatador Bruto}), mas não é verificado se o conteúdo
+desses comandos é realmente material do preâmbulo e não saída regular.
+@end ignore
+
+Qualquer texto que inicia um parágrafo, comandos @@ que são formatados como
+citações, tabelas, listas e assim por diante, e @code{@@node} (@pxref{Nós}) e
+comandos de estruturação de capítulos (@pxref{Estruturação de Capítulos})
+encerram o preâmbulo.
+
+O conceito do preâmbulo é significativo para a saída do @LaTeX{}, pois a linha
+@code{\begin@{document@}} é gerada no final do preâmbulo.
+
+Em texto simples, o preâmbulo é simplesmente exibido como de costume no início
+do documento; por exemplo, um @code{@@contents} no preâmbulo é exibido como o
+sumário (@pxref{Conteúdo}).
+
+Também não existe muito tratamento especial do preâmbulo para saída HTML e
+Info. No entanto, algumas configurações atuais no final do preâmbulo podem ser
+usadas para o documento como um todo, independentemente do que se segue. Isso
+pode se aplicar a comandos que especificam o recuo ou o idioma
+(@pxref{@code{@@documentlanguage}}).
+
+Por exemplo, para o documento a seguir, os comentários de cópia de HTML e de
+Info são formatados com @code{@@documentlanguage} configurado como @samp{pt},
+pois é o último @code{@@documentlanguage} antes do final do preâmbulo.
+
+@example
+@group
+\input texinfo
+@@documentlanguage fr
+
+@@copying
+A informação de cópia @@error@{@} algum texto
+@@end copying
+
+@@documentlanguage pt
+
+Texto finalizando o preâmbulo
+
+@@documentlanguage de
+
+@@node Top
+
+@end group
+@end example
+
+
+@node Início e Fim do Cabeçalho
+@nodedescription Formatar uma região no Emacs exige isto.
+@subsection Início e Fim do Cabeçalho para Emacs
+@anchor{Início do Cabeçalho}@c nome antigo
+@cindex Início da linha de cabeçalho
+PAREI
+In Emacs, start- and end-of-header lines can be used to enclose commands that
+globally affect the document in the Texinfo preambule.  This allows you to
+format only part of a Texinfo file for Info or printing.
+@xref{@code{texinfo-format} commands}.
+
+A start-of-header line is a Texinfo comment that looks like this:
+
+@example
+@@c %**start of header
+@end example
+
+Write the start-of-header line on the second line of a Texinfo file.
+Follow the start-of-header commands that globally affect the document
+formatting, such as @code{@@settitle}, @code{@@synindex} or
+@code{@@footnotestyle}; and then by an @w{end-of-header} line.
+
+@anchor{End of Header}@c old name
+@cindex End of header line
+
+A end-of-header line is a Texinfo comment that looks like this:
+
+@example
+@@c %**end of header
+@end example
+
+The odd string of characters, @samp{%**}, is to ensure that no other
+comment is accidentally taken for a start-of-header line.  You can
+change it if you wish by setting the @code{tex-start-of-header} and/or
+@code{tex-end-of-header} Emacs variables.  @xref{Texinfo Mode Printing}.
+
+The start- and end-of-header lines are not part of the Texinfo format
+specification, which is why they are implemented with comments.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 @node Fim de Cabeçalho
@@ -1911,7 +1556,7 @@ contém o texto das permissões de cópia que aparece no manual impresso.
 * @code{@@titlefont @@center @@sp}::    Os comandos @code{@@titlefont}, @code{@@center} e @code{@@sp}.
 * @code{@@title @@subtitle @@author}::  Os comandos @code{@@title}, @code{@@subtitle}, e @code{@@author}.
 * Direitos Autorais::                   Como escrever o aviso de direitos autorais e incluir permissões de cópia.
-* Geração de Cabeçalho::          Ligue o cabeçalho de página após as páginas de título e de direitos autorais.
+* Geração de Títulos::          Ligue o cabeçalho de página após as páginas de título e de direitos autorais.
 @end menu
 
 
@@ -1927,7 +1572,7 @@ direitos autorais com @code{@@titlepage} em uma linha própria e finalize
 com @code{@@end titlepage} em uma linha própria.
 
 O comando @code{@@end titlepage} inicia uma página nova e liga a
-numeração de página (@pxref{Geração de Cabeçalho}).  Todo o material que
+numeração de página (@pxref{Geração de Títulos}).  Todo o material que
 você deseja que apareça em páginas não numeradas deveria ser colocado
 entre os comandos @code{@@titlepage} e @code{@@end titlepage}.
 Você pode forçar que o sumário apareça ali com o comando
@@ -2213,8 +1858,8 @@ plano no mesmo lugar.
 
 
 
-@node Geração de Cabeçalho
-@subsection Geração de Cabeçalho
+@node Geração de Títulos
+@subsection Geração de Títulos
 
 @anchor{end titlepage}@c nome antigo
 @cindex Cabeçalhos, página, começo para aparecer
