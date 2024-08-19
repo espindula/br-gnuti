@@ -1332,39 +1332,198 @@ Texto finalizando o preâmbulo
 @subsection Início e Fim do Cabeçalho para Emacs
 @anchor{Início do Cabeçalho}@c nome antigo
 @cindex Início da linha de cabeçalho
-PAREI
-In Emacs, start- and end-of-header lines can be used to enclose commands that
-globally affect the document in the Texinfo preambule.  This allows you to
-format only part of a Texinfo file for Info or printing.
+
+No Emacs, as linhas de início e fim do cabeçalho podem ser usadas para cercar
+comandos que afetam globalmente o documento no preâmbulo do Texinfo. Isso
+permite que você formate somente parte de um arquivo do Texinfo para Info ou
+impressão.
 @xref{@code{texinfo-format} commands}.
 
-A start-of-header line is a Texinfo comment that looks like this:
+Uma linha de início de cabeçalho é um comentário do Texinfo que se parece com
+isto:
 
 @example
 @@c %**start of header
 @end example
 
-Write the start-of-header line on the second line of a Texinfo file.
-Follow the start-of-header commands that globally affect the document
-formatting, such as @code{@@settitle}, @code{@@synindex} or
-@code{@@footnotestyle}; and then by an @w{end-of-header} line.
+Escreva a linha de início de cabeçalho na segunda linha de um arquivo do
+Texinfo. Siga os comandos de início de cabeçalho que afetam globalmente a
+formatação do documento, como @code{@@settitle}, @code{@@synindex} ou
+@code{@@footnotestyle}; e então por uma linha @w{end-of-header}.
 
-@anchor{End of Header}@c old name
-@cindex End of header line
+@anchor{Fim do Cabeçalho}@c nome antigo
+@cindex Linha de fim do cabeçalho
 
-A end-of-header line is a Texinfo comment that looks like this:
+Uma linha de fim de cabeçalho é um comentário do Texinfo que se parece com
+isto:
 
 @example
 @@c %**end of header
 @end example
 
-The odd string of characters, @samp{%**}, is to ensure that no other
-comment is accidentally taken for a start-of-header line.  You can
-change it if you wish by setting the @code{tex-start-of-header} and/or
-@code{tex-end-of-header} Emacs variables.  @xref{Texinfo Mode Printing}.
+A estranha sequência de caracteres, @samp{%**}, é para garantir que nenhum
+outro comentário seja acidentalmente tomado como uma linha de início de
+cabeçalho. Você pode mudá-la se desejar, configurando as variáveis do Emacs
+@code{tex-start-of-header} e (ou) @code{tex-end-of-header}.
+@xref{Impressão no Modo Texinfo}.
 
-The start- and end-of-header lines are not part of the Texinfo format
-specification, which is why they are implemented with comments.
+As linhas de início e fim do cabeçalho não são parte da especificação do
+formato do Texinfo, e é por isso que são implementadas com comentários.
+
+
+@node Categoria de Diretório
+@nodedescription Uma categoria para um manual.
+@section Categoria de Diretório
+
+@findex dircategory
+@cindex Categorias de diretório, escolhendo
+@cindex Categorias, escolhendo
+Use o comando @code{@@dircategory} para especificar uma categoria para o
+manual. Aqui estão alguns exemplos de nomes de categorias:
+@c oriundo de util/dir-example
+@c nós costumávamos recomendar olhar as categorias do Diretório de Software Livre
+@c mas elas mudaram
+
+@display
+Fundamentos
+Criação e manipulação de texto
+Arquivamento
+Compressão
+Base de dados
+Editores
+Emacs
+Mensagens eletrônicas
+Gráficos
+Localização
+Aplicativos de rede de intercomunicação
+Impressão
+Ciência
+Desenvolvimento de software
+Bibliotecas de software
+Controle de versão
+@end display
+
+Comandos @code{@@dircategory} geralmente são seguidos por blocos
+@code{@@direntry}, que são usados pelo @command{install-info}.
+@xref{Instalando Entradas de Diretório}, para detalhes.
+
+O primeiro comando @code{@@dircategory} em um manual é a categoria para o
+manual inteiro. Usos subsequentes de @code{@@dircategory} configuram a
+categoria somente para blocos @code{@@direntry} seguintes.
+
+
+@node Permissões de Documentos
+@nodedescription Garantindo que teu manual seja livre.
+@anchor{Permissões de Cópia de Software}@c nome antigo de nó
+@section Permissões de Documentos
+@cindex Permissões de documentos
+@cindex Permissões de cópia
+
+Este segmento descreve o documento e contém o aviso de direitos autorais e
+permissões de cópia. Isso é feito com o comando @code{@@copying}. Um manual
+real inclui mais texto aqui, de acordo com a licença sob a qual é distribuído.
+
+@example
+@group
+@@copying
+Este é um exemplo curto de um arquivo completo do Texinfo, versão 1.0.
+
+Copyright @@copyright@{@} 2016 Free Software Foundation, Inc.
+@@end copying
+@end group
+@end example
+
+O aviso de copyright e as permissões de cópia para um documento precisam
+aparecer em vários lugares nos vários formatos da saída gerada do Texinfo.
+Portanto, o Texinfo fornece um comando (@code{@@copying}) para declarar esse
+texto uma vez, e outro comando (@code{@@insertcopying}) para inserir o texto em
+pontos apropriados.
+
+Se o documento for um manual de software, o software tipicamente está sob uma
+licença diferente---para GNU e muitos outros pacotes de software livre, o
+software geralmente é lançado sob a GNU GPL, e os manuais são lançados sob a
+GNU FDL@. É útil declarar a licença do software do manual, mas fornecer o texto
+completo da licença do software não é necessariamente exigido.
+
+
+@node @code{@@copying}
+@nodedescription Declare as permissões de cópia do documento.
+@subsection @code{@@copying}: Declarar Permissões de Cópia
+
+@anchor{copying}@c nome antigo
+@findex copying
+
+O comando @code{@@copying} deveria ser fornecido bem no início do documento; o
+local recomendado é logo depois do material do cabeçalho
+(@pxref{Cabeçalho do Arquivo do Texinfo}). Ele consiste convencionalmente em
+uma ou duas frases acerca do que é o programa, identificação da documentação em
+si, a linha jurídica de copyright e as permissões de cópia. Aqui está um
+exemplo esquelético:
+
+@example
+@@copying
+Este manual é para @var{programa} (versão @var{versão}, atualizado @var{data}),
+que @dots{}
+
+Copyright @@copyright@{@} @var{anos} @var{titular-copyright}.
+
+@@quotation
+Permissão é concedida para @dots{}
+@@end quotation
+@@end copying
+@end example
+
+O @code{@@quotation} não tem significado jurídico; ele está lá para melhorar a
+legibilidade em alguns contextos.
+
+O texto de @code{@@copying} aparece como um comentário no início dos arquivos
+da saída gerada do Info e de HTML. Essas informações também são geradas no
+início dos arquivos da saída gerada do DocBook usando marcação apropriada. Elas
+@emph{não} são geradas implicitamente em texto simples ou em saída impressa;
+cabe inteiramente a você usar @code{@@insertcopying} para emitir as informações
+de cópia. Veja-se a próxima seção para detalhes.
+
+O comando @code{@@copyright@{@}} gera um @samp{c} dentro de um círculo quando o
+formato da saída gerada suportar esse glifo (impressa e HTML sempre suportam,
+por exemplo). Quando o glifo não for suportado na saída gerada, ele gera a
+sequência de três caracteres @samp{(C)}.
+
+O aviso de direitos autorais em si tem o seguinte formato juridicamente
+prescrito:
+
+@example
+Copyright @copyright{} @var{anos} @var{titular-copyright}.
+@end example
+
+@cindex Palavra Copyright, sempre em inglês
+A palavra `Copyright' precisa sempre estar escrita em inglês, mesmo que o
+documento esteja escrito em outro idioma. Isso é devido ao direito
+internacional.
+
+@cindex Anos, na linha de direitos autorais
+A lista de anos deveria incluir todos os anos nos quais uma versão foi
+concluída (mesmo se foi lançada em um ano subsequente). É mais simples que cada
+ano seja escrito individualmente e por completo, separado por vírgulas.
+
+@cindex Titular dos direitos autorais para obras da FSF
+@cindex Obras da FSF, Titular dos direitos autorais das
+@cindex Proprietário(a) dos direitos autorais das obras da FSF
+O(A) proprietário(a) (ou proprietários(as)) dos direitos autorais é quem
+titularizar os direitos autorais sobre a obra. No caso de obras atribuídas à
+FSF, o(a) proprietário(a) é `Free Software Foundation, Inc.'.
+
+A `linha' de copyright pode, na verdade, ser dividida em várias linhas, tanto
+no documento fonte quanto na saída gerada. Isso geralmente acontece para
+documentos com um longo histórico, tendo muitos anos de publicação. Se você
+usar várias linhas, não recue nenhuma delas (ou qualquer outra coisa no bloco
+@code{@@copying}) no arquivo fonte.
+
+@xref{Copyright Notices,,, maintain, Informações do(a) Mantenedor(a) GNU}, para
+informações adicionais. @xref{Textos GNU de Amostra}, para o texto completo a
+ser usado nos manuais GNU. @xref{Licença GNU de Documentação Livre}, para a
+licença em si sob a qual o GNU e outros manuais livres são distribuídos.
+
+PAREI
 
 
 
