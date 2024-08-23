@@ -1523,13 +1523,83 @@ informações adicionais. @xref{Textos GNU de Amostra}, para o texto completo a
 ser usado nos manuais GNU. @xref{Licença GNU de Documentação Livre}, para a
 licença em si sob a qual o GNU e outros manuais livres são distribuídos.
 
+
+@node @code{@@insertcopying}
+@nodedescription Onde inserir as permissões.
+@subsection @code{@@insertcopying}: Incluir Texto de Permissões
+
+@anchor{insertcopying}@c nome antigo
+@findex insertcopying
+@cindex Texto de reprodução, incluindo
+@cindex Texto das permissões, incluindo
+@cindex Incluindo texto das permissões
+
+O comando @code{@@insertcopying} simplesmente é escrito em uma linha
+própria, como esta:
+
+@example
+@@insertcopying
+@end example
+
+Isso insere o texto previamente definido por @code{@@copying}.  Para atender às
+exigências jurídicas, ele precisa ser usado na página de direitos autorais no
+manual impresso (veja-se @ref{Direitos Autorais}).
+
+O próprio comando @code{@@copying} faz com que o texto das permissões
+apareça em um arquivo Info @emph{antes} do primeiro nó.  O texto
+também é copiado no início de cada arquivo dividido de saída Info, como
+é juridicamente necessário. Esse local implica que um humano lendo o
+manual usando Info @emph{não} vê esse texto (exceto quando usar o comando
+avançado @kbd{g *} do Info). Isso não importa para propósitos jurídicos, pois o
+texto está presente. Mas, para obter um texto visível na saída gerada,
+@code{@@insertcopying} deveria ser usado.
+
+Similarmente, o texto @code{@@copying} é automaticamente incluído no
+início de cada arquivo de saída HTML, como um comentário HTML.  De novo,
+esse texto não é visível (a menos que o(a) leitor(a) visualize o fonte HTML).
+
+O texto de permissões definido por @code{@@copying} também aparece
+automaticamente no início dos arquivos de saída Docbook usando marcação
+apropriada. @code{@@insertcopying} pode ser usado para gerar o texto de
+permissão dentro do texto normal.
+
+
+@node Página de Título e Página de Direitos Autorais
+@nodedescription Criação das páginas de título e de direitos autorais.
+@section Páginas de Título e de Direitos Autorais
+
+Em saída impressa, o nome e autor(a) do manual são usualmente impressos em uma
+página de título.   A informação de direitos autorais é geralmente impressa no
+verso de página de título. Esse segmento precisa ser colocado entre os comandos
+@code{@@titlepage} e @code{@@end titlepage}:
+
+@example
+@group
+@@titlepage
+@@title Título de Amostra
+@end group
+
+@group
+@@c Os dois comandos a seguir iniciam a página de direitos autorais.
+@@page
+@@vskip 0pt plus 1filll
+@@insertcopying
+@@end titlepage
+@end group
+@end example
+
+@noindent
+Nós usamos o comando @code{@@insertcopying} para incluir o texto de permissão
+oriundo da seção anterior, em vez de escrevê-lo novamente.
+
+As páginas de título e de direitos autorais aparecem em manuais impressos,
+porém não na maior parte dos outros formatos de saída. Em HTML, a melhor
+maneira de obter uma página de título semelhante a manuais impressos é a de
+configurar a variável de personalização @code{NO_TOP_NODE_OUTPUT}
+(@pxref{@code{NO_TOP_NODE_OUTPUT}}).
+
+
 PAREI
-
-
-
-
-
-
 
 
 
@@ -1660,55 +1730,10 @@ para a própria licença sob a qual GNU e outros manuais livres são
 distribuídos.
 
 
-@node @code{@@insertcopying}
-@subsection @code{@@insertcopying}: Incluir Texto de Permissões
-
-@anchor{insertcopying}@c nome antigo
-@findex insertcopying
-@cindex Texto de reprodução, incluindo
-@cindex Texto das permissões, incluindo
-@cindex Incluindo texto das permissões
-
-O comando @code{@@insertcopying} simplesmente é escrito em uma linha
-própria, como esta:
-
-@example
-@@insertcopying
-@end example
-
-Isso insere o texto previamente definido por @code{@@copying}.  Para
-atender às exigências legais, o texto deve necessariamente ser usado
-na página de direitos autorais no manual impresso (veja-se @ref{Direitos Autorais}).
-
-O próprio comando @code{@@copying} faz com que o texto das permissões
-apareça em um arquivo Info @emph{antes} do primeiro nó.  O texto
-também é copiado no início de cada arquivo dividido de saída Info, como
-é legalmente necessário.  Essa localização implica que um humano lendo o
-manual usando Info @emph{não} vê esse texto (exceto quando da
-uso do comando avançado @kbd{g *} de Info), porém isso não
-importa para propósitos legais, pois o texto está presente.
-
-Similarmente, o texto @code{@@copying} é automaticamente incluído no
-início de cada arquivo de saída HTML, como um comentário HTML.  De novo,
-esse texto não é visível (a menos que o(a) leitor(a) visualize o fonte HTML).
-
-O texto de permissões definido por @code{@@copying} também aparece
-automaticamente no início dos arquivos de saída XML e Docbook.
 
 
-@node Página de Título e Página de Direitos Autorais
-@section Páginas de Título e de Direitos Autorais
 
-Em saída impressa, o nome e autor do manual são usualmente impressos em
-uma página de título.   A informação de direitos autorais é geralmente
-impressa no verso de página de título.
 
-As páginas de título e de direitos autorais aparecem em manuais
-impressos, porém não na maior parte dos outros formatos de saída.  Por
-causa disso, é possível usar vários comandos de tipografia
-ligeiramente obscuros que não são para ser usados no texto
-principal.  Adicionalmente, esta parte do início de um arquio Texinfo
-contém o texto das permissões de cópia que aparece no manual impresso.
 
 @menu
 * @code{@@titlepage}::                  Crie um título para o documento impresso.
