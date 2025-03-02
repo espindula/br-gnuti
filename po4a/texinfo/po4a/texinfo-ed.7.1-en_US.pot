@@ -784,13 +784,13 @@ msgstr ""
 #: texinfo/texinfo-ed.7.1-en_US.texi:299
 #, no-wrap
 msgid "EPUB 3 output, overview"
-msgstr ""
+msgstr "Saída EPUB 3, visão geral"
 
 #. type: item
 #: texinfo/texinfo-ed.7.1-en_US.texi:300
 #, no-wrap
 msgid "EPUB 3"
-msgstr ""
+msgstr "EPUB 3"
 
 #. type: table
 #: texinfo/texinfo-ed.7.1-en_US.texi:307
@@ -801,30 +801,35 @@ msgid ""
 "(IDPF), which is now part of the World Wide Web Consortium (W3C)@.  The "
 "latest major revision, EPUB 3, dates from 2011."
 msgstr ""
+"(Gerada via @command{texi2any --epub3}.) EPUB é um formato projetado para "
+"leitura de livros eletrônicos em dispositivos portáteis. É um derivado do "
+"HTML@. O formato foi desenvolvido pelo International Digital Publishing "
+"Forum (IDPF), que agora faz parte do World Wide Web Consortium (W3C)@. A "
+"mais recente grande revisão, EPUB 3, data de 2011."
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:309
 #, no-wrap
 msgid "DVI output, overview"
-msgstr ""
+msgstr "Saída DVI, visão geral"
 
 #. type: pindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:310
 #, no-wrap
 msgid "dvips @r{(program)}"
-msgstr ""
+msgstr "dvips @r{(programa)}"
 
 #. type: pindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:311
 #, no-wrap
 msgid "xdvi"
-msgstr ""
+msgstr "xdvi"
 
 #. type: item
 #: texinfo/texinfo-ed.7.1-en_US.texi:312
 #, no-wrap
 msgid "DVI"
-msgstr ""
+msgstr "DVI"
 
 #. type: table
 #: texinfo/texinfo-ed.7.1-en_US.texi:323
@@ -838,18 +843,27 @@ msgid ""
 "@TeX{}}.  (Be aware that the Texinfo language is very different from "
 "@TeX{}'s usual languages: plain @TeX{}, @LaTeX{}, Con@TeX{}t, etc.)"
 msgstr ""
+"(Gerada via @command{texi2dvi}.)   O formato binário DeVIce Independent é "
+"liberado pelo programa tipográfico @TeX{} (@uref{http://tug.org}). Essa é "
+"então lida por um `controlador' DVI, o qual conhece os atuais comandos "
+"específicos de dispositivo que podem ser visualizados ou impressos, "
+"notadamente Dvips para tradução para PostScript (veja-se @ref{Top,,, "
+"dvips, Dvips}) e Xdvi para visualização em uma tela do X "
+"(@uref{http://sourceforge.net/projects/xdvi/}). Veja-se @ref{Impresso com "
+"@TeX{}}. (Esteja ciente de que a linguagem do Texinfo é muito diferente das "
+"linguagens usuais do @TeX{}: @TeX{} simples, @LaTeX{}, Con@TeX{}t, etc.)"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:324
 #, no-wrap
 msgid "PostScript output, overview"
-msgstr ""
+msgstr "Saída gerada PostScript, visão geral"
 
 #. type: item
 #: texinfo/texinfo-ed.7.1-en_US.texi:325
 #, no-wrap
 msgid "PostScript"
-msgstr ""
+msgstr "PostScript"
 
 #. type: table
 #: texinfo/texinfo-ed.7.1-en_US.texi:332
@@ -860,24 +874,30 @@ msgid ""
 "and more preferences.  By default, Texinfo uses the @command{dvips} program "
 "to convert @TeX{}'s DVI output to PostScript.  @xref{Top,,, dvips, Dvips}."
 msgstr ""
+"(Gerada via @command{texi2dvi --ps}.)   PostScript é uma linguagem de "
+"descrição de página que se tornou amplamente usada por volta de 1985 e "
+"ainda é usada hoje em dia. @uref{https://en.wikipedia.org/wiki/PostScript} "
+"dá uma descrição básica e mais preferências.   Por padrão, Texinfo usa "
+"o programa @command{dvips} para converter a saída DVI do @TeX{} para "
+"PostScript.  Veja-se @ref{Top,,, dvips, Dvips}."
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:333
 #, no-wrap
 msgid "PDF output, overview"
-msgstr ""
+msgstr "Saída gerada PDF, visão geral"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:334
 #, no-wrap
 msgid "Beebe, Nelson"
-msgstr ""
+msgstr "Beebe, Nelson"
 
 #. type: item
 #: texinfo/texinfo-ed.7.1-en_US.texi:335
 #, no-wrap
 msgid "PDF"
-msgstr ""
+msgstr "PDF"
 
 #. type: table
 #: texinfo/texinfo-ed.7.1-en_US.texi:347
@@ -894,18 +914,30 @@ msgid ""
 "extension of @TeX{}, to output PDF; see "
 "@uref{http://tug.org/applications/pdftex}.  @xref{PDF Output}."
 msgstr ""
+"(Gerada via @command{texi2dvi --pdf} ou @command{texi2pdf}.)   Esse formato "
+"foi desenvolvido pela Adobe Systems para intercâmbio de documento "
+"portável, baseado na linguagem PostScript prévia deles.   Ele consegue "
+"representar a exata aparência de um documento, incluindo fontes e "
+"gráficos, e suportar escalonamento arbitrário.   Ele é entendido como "
+"sendo independente de plataforma e facilmente visualizável, entre outros "
+"objetivos de projeto; "
+"@uref{https://en.wikipedia.org/wiki/Portable_Document_Format} e "
+"@uref{http://tug.org/TUGboat/tb22-3/tb72beebe-pdf.pdf} tem algum "
+"conhecimento.   Por padrão, Texinfo usa o programa @command{pdftex}, uma "
+"extensão de @TeX{}, para gerar PDF; veja-se "
+"@uref{http://tug.org/applications/pdftex}. Veja-se @ref{Saída PDF}."
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:348
 #, no-wrap
 msgid "LaTeX output, overview"
-msgstr ""
+msgstr "Saída LaTeX, visão geral"
 
 #. type: item
 #: texinfo/texinfo-ed.7.1-en_US.texi:349
 #, no-wrap
 msgid "@LaTeX{}"
-msgstr ""
+msgstr "@LaTeX{}"
 
 #. type: table
 #: texinfo/texinfo-ed.7.1-en_US.texi:357
@@ -918,6 +950,13 @@ msgid ""
 "more information is available online at "
 "@uref{https://www.latex-project.org/}."
 msgstr ""
+"(Gerada via @command{texi2any --latex}.) Esse é um sistema de tipografia "
+"construído sobre o @TeX{}. Foi lançado originalmente por Leslie Lamport em "
+"1984. O @LaTeX{} adiciona mais definições para aquelas do @TeX{} e tem uma "
+"ampla gama de pacotes construídos sobre ele. O @LaTeX{} é onipresente na "
+"literatura acadêmica. A versão atual do @LaTeX{} está sob desenvolvimento "
+"ativo; mais informações estão disponíveis online em "
+"@uref{https://www.latex-project.org/}."
 
 #. type: table
 #: texinfo/texinfo-ed.7.1-en_US.texi:362
@@ -927,24 +966,28 @@ msgid ""
 "the output than would be possible with the plain @TeX{} implementation of "
 "Texinfo."
 msgstr ""
+"A saída do @LaTeX{} pode ser processada posteriormente em DVI, PostScript "
+"ou PDF@. Em teoria, a saída do @LaTeX{} deveria permitir muito mais "
+"personalização da saída do que seria possível com a implementação "
+"@TeX{} simples do Texinfo."
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:364
 #, no-wrap
 msgid "DocBook output, overview"
-msgstr ""
+msgstr "Saída Docbook, visão geral"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:365
 #, no-wrap
 msgid "XML DocBook output, overview"
-msgstr ""
+msgstr "Saída XML Docbook, visão geral"
 
 #. type: item
 #: texinfo/texinfo-ed.7.1-en_US.texi:366 texinfo/texinfo-ed.7.1-en_US.texi:839
 #, no-wrap
 msgid "DocBook"
-msgstr ""
+msgstr "Docbook"
 
 #. type: table
 #: texinfo/texinfo-ed.7.1-en_US.texi:373
@@ -955,42 +998,47 @@ msgid ""
 "converters from DocBook @emph{to} Texinfo have also been developed; see the "
 "Texinfo web pages."
 msgstr ""
+"(Gerada via @command{texi2any --docbook}.)   Esse é um formato baseado em "
+"XML, primariamente para documentação técnica.   Ele, por conseguinte, "
+"assume alguma semelhança, em linhas gerais, com Texinfo.   Veja-se "
+"@uref{http://www.docbook.org}. Vários conversores de Docbook @emph{para} "
+"Texinfo também foram desenvolvidos; vejam-se as páginas web do Texinfo."
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:374
 #, no-wrap
 msgid "XML Texinfo output, overview"
-msgstr ""
+msgstr "Saída XML Texinfo, visão geral"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:375
 #, no-wrap
 msgid "Texinfo XML output, overview"
-msgstr ""
+msgstr "Saída Texinfo XML, visão geral"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:376
 #, no-wrap
 msgid "DTD, for Texinfo XML"
-msgstr ""
+msgstr "DTD, para Texinfo XML"
 
 #. type: pindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:377
 #, no-wrap
 msgid "texinfo.dtd"
-msgstr ""
+msgstr "texinfo.dtd"
 
 #. type: pindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:378
 #, no-wrap
 msgid "txixml2texi"
-msgstr ""
+msgstr "txixml2texi"
 
 #. type: item
 #: texinfo/texinfo-ed.7.1-en_US.texi:379 texinfo/texinfo-ed.7.1-en_US.texi:835
 #, no-wrap
 msgid "XML"
-msgstr ""
+msgstr "XML"
 
 #. type: table
 #: texinfo/texinfo-ed.7.1-en_US.texi:385
@@ -1000,6 +1048,11 @@ msgid ""
 "Texinfo source, rather than finished output.  Texinfo XML files cannot be "
 "viewed in web browsers or other programs."
 msgstr ""
+"(Gerada via @command{texi2any --xml}.) A saída XML do @command{texi2any}, "
+"diferente de todos os outros formatos de saída, é uma transliteração do "
+"fonte do Texinfo, em vez de uma saída finalizada. Os arquivos XML do "
+"Texinfo não podem ser visualizados em navegadores da web ou outros "
+"programas."
 
 #. type: table
 #: texinfo/texinfo-ed.7.1-en_US.texi:392
@@ -1010,6 +1063,12 @@ msgid ""
 "is defined in an XML DTD, which is contained in a file @file{texinfo.dtd} "
 "included in the Texinfo source distribution."
 msgstr ""
+"XML é uma especificação genérica de sintaxe usável para qualquer tipo "
+"de conteúdo. (Uma referência está em @uref{http://www.w3.org/XML}.) O "
+"propósito da saída XML do Texinfo é o de permitir processamento posterior "
+"por ferramentas XML. A sintaxe de saída é definida em um DTD de XML, que "
+"está contido em um arquivo @file{texinfo.dtd} incluído na distribuição "
+"do fonte do Texinfo."
 
 #. type: table
 #: texinfo/texinfo-ed.7.1-en_US.texi:397
@@ -1018,23 +1077,26 @@ msgid ""
 "to do a backward transformation to recreate the original Texinfo content "
 "(except for Texinfo macros and conditionals)."
 msgstr ""
+"A distribuição do fonte do Texinfo inclui um script utilitário "
+"@file{txixml2texi} para fazer uma transformação reversa para recriar o "
+"conteúdo Texinfo original (exceto para macros e condicionais do Texinfo)."
 
 #. type: section
 #: texinfo/texinfo-ed.7.1-en_US.texi:401 texinfo/texinfo-ed.7.1-en_US.texi:403
 #, no-wrap
 msgid "Info Files"
-msgstr ""
+msgstr "Arquivos do Info"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:403
 msgid "@nodedescription What is an Info file?"
-msgstr ""
+msgstr "@nodedescription O que é um arquivo do Info?"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:404
 #, no-wrap
 msgid "Info files"
-msgstr ""
+msgstr "Arquivos Info"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:410
@@ -1044,6 +1106,11 @@ msgid ""
 "separate nodes and provide navigational information, so that Info-reading "
 "programs can operate on it."
 msgstr ""
+"Conforme mencionado acima, o formato Info é em sua maioria uma "
+"transliteração de texto plano do fonte Texinfo, com a adição de uns "
+"poucos caracteres de controle para separar nós e fornecer informação de "
+"navegação, de forma que os programas de leitura Info consigam operar sobre "
+"ele."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:415
@@ -1053,6 +1120,10 @@ msgid ""
 "principal command that converts a Texinfo file into an Info file; "
 "@pxref{Generic Translator @command{texi2any}}."
 msgstr ""
+"Os arquivos Info são quase sempre criados pelo processamento de um "
+"documento fonte do Texinfo.  @command{texi2any}, também conhecido como "
+"@command{makeinfo}, é o comando principal que converte um arquivo Texinfo "
+"em um arquivo Info; veja-se @ref{Tradutor Genérico @command{texi2any}}."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:425
@@ -1067,6 +1138,16 @@ msgid ""
 "you can specify specific menu items on the command line (@pxref{Top,,, info, "
 "Info})."
 msgstr ""
+"Geralmente, você adentra um arquivo Info via um nó que, por convenção, "
+"é chamado `Top'.   Esse nó normalmente contém somente um sumário curto "
+"do propósito do arquivo, e um menu amplo por meio do qual o restante do "
+"arquivo é alcançado.   A partir desse nó, você ou pode atravessar o "
+"arquivo sistematicamente, indo de nó a nó; ou você pode ir até um nó "
+"específico listado no menu principal; ou você pode pesquisar no menu de "
+"índice e então ir diretamente ao nó que tenha a informação que você "
+"deseja.   Alternativamente, com programa autônomo Info, você consegue "
+"especificar itens específicos de menu na linha de comando (veja-se "
+"@ref{Top,,, info, Info})."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:430
@@ -1076,6 +1157,10 @@ msgid ""
 "with the advanced Info command @kbd{g *}.  (@xref{Advanced,, Advanced Info "
 "commands, info, Info}.)"
 msgstr ""
+"Se você desejar ler ao longo de um arquivo Info em sequência, como se ele "
+"fosse um manual impresso, você pode teclar @key{ESPAÇO} repetidamente, ou "
+"você percorre o arquivo inteiro com o comando Info avançado @kbd{g *}. "
+"(Veja-se @ref{Advanced,, Advanced Info commands, info, Info}.)"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:434
@@ -1084,12 +1169,15 @@ msgid ""
 "point for the whole Info system.  From it, you can reach the `Top' nodes of "
 "each of the documents in a complete Info system."
 msgstr ""
+"O arquivo @file{dir} no diretório @file{info} serve como o ponto de chegada "
+"para o sistema Info inteiro.   A partir dele, você consegue alcançar os "
+"nós `Top' de cada um dos documentos em um sistema Info completo."
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:435
 #, no-wrap
 msgid "URI syntax for Info"
-msgstr ""
+msgstr "Sintaxe URI para Info"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:439
@@ -1097,6 +1185,9 @@ msgid ""
 "If you wish to refer to an Info file via a URI, you can use the (unofficial) "
 "syntax exemplified by the following.  This works with Emacs/W3, for example:"
 msgstr ""
+"Se você desejar se referir a um arquivo Info via URI, você pode usar a "
+"sintaxe (não oficial) exemplificada pelo seguinte.   Isto funciona com "
+"Emacs/W3, por exemplo:"
 
 #. type: example
 #: texinfo/texinfo-ed.7.1-en_US.texi:443
@@ -1106,58 +1197,61 @@ msgid ""
 "info:///usr/info/emacs#Dissociated%20Press\n"
 "info://localhost/usr/info/emacs#Dissociated%20Press\n"
 msgstr ""
+"info:emacs#Dissociated%20Press\n"
+"info:///usr/info/emacs#Dissociated%20Press\n"
+"info://localhost/usr/info/emacs#Dissociated%20Press\n"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:446
 msgid "The @command{info} program itself does not follow URIs of any kind."
-msgstr ""
+msgstr "O próprio programa @command{info} não segue URIs de qualquer tipo."
 
 #. type: section
 #: texinfo/texinfo-ed.7.1-en_US.texi:448 texinfo/texinfo-ed.7.1-en_US.texi:450
 #, no-wrap
 msgid "Printed Books"
-msgstr ""
+msgstr "Livros Impressos"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:450
 msgid "@nodedescription Characteristics of a printed book or manual."
-msgstr ""
+msgstr "@nodedescription Características de um livro ou manual impresso."
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:451
 #, no-wrap
 msgid "Printed book and manual characteristics"
-msgstr ""
+msgstr "Manual e livro impresso, características"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:452
 #, no-wrap
 msgid "Manual characteristics, printed"
-msgstr ""
+msgstr "Características de manual, impresso"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:453
 #, no-wrap
 msgid "Book characteristics, printed"
-msgstr ""
+msgstr "Características de livro, impresso"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:454
 #, no-wrap
 msgid "Texinfo printed book characteristics"
-msgstr ""
+msgstr "Características de livro impresso Texinfo"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:455
 #, no-wrap
 msgid "Characteristics, printed books or manuals"
-msgstr ""
+msgstr "Características, manuais ou livros impressos"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:457
 #, no-wrap
 msgid "Knuth, Donald"
-msgstr ""
+msgstr "Knuth, Donald"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:462
@@ -1167,6 +1261,10 @@ msgid ""
 "Donald Knuth of Stanford University.  It is not part of the Texinfo "
 "distribution."
 msgstr ""
+"Um arquivo Texinfo pode ser formatado e tipografado como um livro ou um "
+"manual impresso.   Para fazer isso, você precisa do @TeX{}, um sofisticado "
+"programa de tipografia escrito por Donald Knuth da Universidade Stanford. "
+"Ele não é parte da distribuição do Texinfo."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:467
@@ -1176,6 +1274,10 @@ msgid ""
 "version of @file{texinfo.tex} from the Texinfo home page, "
 "@uref{http://www.gnu.org/software/texinfo/}."
 msgstr ""
+"O Texinfo fornece um arquivo @file{texinfo.tex} que contém as definições "
+"que o @TeX{} usa quando tipografa um arquivo do Texinfo. Você consegue "
+"obter a versão mais recente do @file{texinfo.tex} a partir da página "
+"inicial do Texinfo, @uref{http://www.gnu.org/software/texinfo/}."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:472
@@ -1185,6 +1287,11 @@ msgid ""
 "as chapters, numbered or unnumbered sections and subsections, page headers, "
 "cross-references, footnotes, and indices."
 msgstr ""
+"Um livro baseado em Texinfo é similar a qualquer outro trabalho "
+"tipografado, impresso: ele pode ter uma página de título, página de "
+"direitos autorais, sumário, e prefácio, bem como capítulos, seções e "
+"subseções numeradas ou não numeradas, cabeçalhos de páginas, "
+"referências cruzadas, notas de rodapé, e índices."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:477
@@ -1194,6 +1301,11 @@ msgid ""
 "terminal in Info form and in a typeset book, the formatting commands that "
 "Texinfo supports are necessarily limited."
 msgstr ""
+"@TeX{} é muito poderoso e tem muitos recursos ótimos. No entanto, como um "
+"arquivo do Texinfo precisa ser capaz de apresentar informações tanto em um "
+"terminal somente de caracteres no formato do Info quanto em um livro "
+"tipografado, os comandos de formatação que o Texinfo suporta são "
+"necessariamente limitados."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:480
@@ -1201,23 +1313,25 @@ msgid ""
 "@xref{Hardcopy with @TeX{}}, for more information on processing a manual "
 "with @TeX{}."
 msgstr ""
+"@xref{Impresso com @TeX{}}, para mais informações acerca do processamento "
+"de um manual com @TeX{}."
 
 #. type: section
 #: texinfo/texinfo-ed.7.1-en_US.texi:482 texinfo/texinfo-ed.7.1-en_US.texi:484
 #, no-wrap
 msgid "Adding Output Formats"
-msgstr ""
+msgstr "Adicionando Formatos de Saída"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:484
 msgid "@nodedescription Man pages and implementing new formats."
-msgstr ""
+msgstr "@nodedescription Páginas de manual e implementando novos formatos."
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:485
 #, no-wrap
 msgid "Additional output formats"
-msgstr ""
+msgstr "Formatos adicionais de saída"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:489
@@ -1225,18 +1339,20 @@ msgid ""
 "The output formats in the previous sections handle a wide variety of usage, "
 "but of course there is always room for more."
 msgstr ""
+"Os formatos de saída nas seções anteriores lidam com uma variedade ampla "
+"de usos, porém, certamente, sempre existe espaço para mais."
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:490
 #, no-wrap
 msgid "Output formats, supporting more"
-msgstr ""
+msgstr "Formatos de saída, suportando mais"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:491
 #, no-wrap
 msgid "SGML-tools output format"
-msgstr ""
+msgstr "Ferramentas SGML, formatos de saída"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:502
@@ -1251,6 +1367,16 @@ msgid ""
 "(@pxref{Texinfo::Convert::Converter,,,texi2any_internals,Texinfo modules "
 "documentation}).  @xref{Generic Translator @command{texi2any}}."
 msgstr ""
+"Se você for um(a) programador(a) e gostaria de contribuir para com o "
+"projeto GNU implementando formatos adicionais de saída para o Texinfo, isso "
+"seria excelente.   A maneira de fazer isso que seria mais útil é a de "
+"escrever uma estrutura de retaguarda nova para @command{texi2any}, nossa "
+"implementação de referência de um analisador Texinfo; ela cria uma "
+"representação de árvore da entrada de Texinfo que você consegue usar "
+"para a conversão. A documentação no arquivo fonte "
+"@file{tp/Texinfo/Convert/Converter.pm} é um bom lugar para começar "
+"(@pxref{Texinfo::Convert::Converter,,,texi2any_internals,documentação dos "
+"módulos do Texinfo}). @ref{Tradutor Genérico @command{texi2any}}."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:507
@@ -1260,12 +1386,16 @@ msgid ""
 "representation of the input, but without the Texinfo syntax and option "
 "peculiarities, as described above."
 msgstr ""
+"Outra abordagem viável é a de usar a saída XML do Texinfo oriunda do "
+"@command{texi2any} como tua entrada.   Esse XML é uma representação "
+"essencialmente completa da entrada, porém sem as peculiaridades da sintaxe "
+"e de opção do Texinfo, conforme descrito acima."
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:508
 #, no-wrap
 msgid "Texinfo parsers, discouraging more"
-msgstr ""
+msgstr "Analisadores Texinfo, desencorajando mais"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:516
@@ -1278,12 +1408,20 @@ msgid ""
 "the language that come with @command{texi2any} give correct results with "
 "your new program."
 msgstr ""
+"Se você ainda não conseguir resistir à tentação de escrever um programa "
+"novo que leia diretamente o fonte do Texinfo, permita-nos te dar mais "
+"algumas advertências: por favor, não subestime a quantidade de trabalho "
+"exigida.   Texinfo não é de forma alguma uma linguagem simples de se "
+"analisar corretamente, e permanece sob desenvolvimento, de maneira que você "
+"estaria se comprometendo com uma tarefa em andamento.   Você está "
+"aconselhado(a) a verificar se os testes da linguagem que vem com "
+"@command{texi2any} dão resultados corretos com o teu programa novo."
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:517
 #, no-wrap
 msgid "Man page output, not supported"
-msgstr ""
+msgstr "Saída de página de manual, não suportada"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:527
@@ -1297,18 +1435,28 @@ msgid ""
 "information in different ways for different output formats.  You might as "
 "well write the man page directly."
 msgstr ""
+"De tempos em tempos, propostas são feitas para gerar páginas de manual "
+"Unix tradicionais a partir do fonte do Texinfo.   Entretanto, pelo motivo de "
+"que as páginas de manual tem um formato convencional estrito, criar uma "
+"página de manual boa exige um fonte completamente diferente daquele "
+"necessário para as aplicações Texinfo típicas de escrita de um tutorial "
+"de usuário(a) bom e (ou) um bom manual de referência.   Isso torna a "
+"geração de páginas de manual incompatível com o objetivo do projeto do "
+"Texinfo de não ter de documentar a mesma informação de maneiras "
+"diferentes para diferentes formatos de saída.   Você poderia também "
+"escrever a página de manual diretamente."
 
 #. type: pindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:528
 #, no-wrap
 msgid "help2man"
-msgstr ""
+msgstr "help2man"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:529
 #, no-wrap
 msgid "O'Dea, Brendan"
-msgstr ""
+msgstr "O'Dea, Brendan"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:536
@@ -1320,47 +1468,53 @@ msgid ""
 "software written by Brendan O'Dea, available from "
 "@uref{http://www.gnu.org/software/help2man}."
 msgstr ""
+"Como um meio alternativo para suportar páginas de manual, você "
+"possivelmente ache que o programa @command{help2man} seja útil.   Ele gera "
+"uma página de manual tradicional a partir da saída @samp{--help} de um "
+"programa. De fato, as páginas de manual para os programas na distribuição "
+"do Texinfo são geradas com isso. Ele é software GNU escrito por Brendan "
+"O'Dea, disponível a partir de @uref{http://www.gnu.org/software/help2man}."
 
 #. type: section
 #: texinfo/texinfo-ed.7.1-en_US.texi:538 texinfo/texinfo-ed.7.1-en_US.texi:540
 #, no-wrap
 msgid "History"
-msgstr ""
+msgstr "Histórico"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:540
 msgid "@nodedescription Acknowledgements, contributors and genesis."
-msgstr ""
+msgstr "@nodedescription Agradecimentos, colaboradores(as) e gênese."
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:542
 #, no-wrap
 msgid "Stallman, Richard M."
-msgstr ""
+msgstr "Stallman, Richard M."
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:543
 #, no-wrap
 msgid "Chassell, Robert J."
-msgstr ""
+msgstr "Chassell, Robert J."
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:544
 #, no-wrap
 msgid "Fox, Brian"
-msgstr ""
+msgstr "Fox, Brian"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:545
 #, no-wrap
 msgid "Berry, Karl"
-msgstr ""
+msgstr "Berry, Karl"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:546
 #, no-wrap
 msgid "Smith, Gavin"
-msgstr ""
+msgstr "Smith, Gavin"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:554
@@ -1373,30 +1527,36 @@ msgid ""
 "(manual edition 2.22), and Gavin Smith has continued maintenance since "
 "Texinfo 6.0."
 msgstr ""
+"Richard M. Stallman inventou o formato Texinfo, escreveu os processadores "
+"iniciais e criou a Edição 1.0 deste manual. Robert@tie{}J. Chassell "
+"revisou e estendeu muito o manual, começando com a Edição 1.1. Brian Fox "
+"foi responsável pela distribuição autônoma do Texinfo até a versão "
+"3.8. Karl Berry continuou a manutenção a partir do Texinfo 3.8 (edição "
+"do manual 2.22), e Gavin Smith continuou a manutenção desde o Texinfo 6.0."
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:555
 #, no-wrap
 msgid "History of Texinfo"
-msgstr ""
+msgstr "Histórico do Texinfo"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:556
 #, no-wrap
 msgid "Texinfo history"
-msgstr ""
+msgstr "Texinfo, estória"
 
 #. type: subheading
 #: texinfo/texinfo-ed.7.1-en_US.texi:557
 #, no-wrap
 msgid "Beginnings"
-msgstr ""
+msgstr "Começo"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:559
 #, no-wrap
 msgid "NLS"
-msgstr ""
+msgstr "NLS"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:564
@@ -1406,18 +1566,22 @@ msgid ""
 "inspired after seeing a presentation a couple of years earlier on the "
 "``NLS'' hypertext system of Douglas Engelbart."
 msgstr ""
+"Richard Stallman incluiu um sistema de ajuda de hipertexto online chamado "
+"Info na implementação original do Emacs (em 1975/6). Stallman foi "
+"inspirado depois de ver uma apresentação alguns anos antes acerca do "
+"sistema de hipertexto ``NLS'' de Douglas Engelbart."
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:588
 #, no-wrap
 msgid "Scribe"
-msgstr ""
+msgstr "Scribe"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:589
 #, no-wrap
 msgid "Reid, Brian"
-msgstr ""
+msgstr "Reid, Brian"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:595
@@ -1428,18 +1592,24 @@ msgid ""
 "consequentially, it strove to describe document contents rather than "
 "formatting, an idea wholeheartedly adopted by Texinfo."
 msgstr ""
+"Em outro desenvolvimento, na década de 1970 na CMU, Brian Reid desenvolveu "
+"um programa e formato chamado Scribe para marcar documentos para impressão. "
+"Ele usava o caractere @code{@@} para introduzir comandos, como o Texinfo "
+"faz. Muito mais consequentemente, ele se esforçou para descrever o "
+"conteúdo do documento em vez da formatação, uma ideia adotada de todo o "
+"coração pelo Texinfo."
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:596
 #, no-wrap
 msgid "Bolio"
-msgstr ""
+msgstr "Bolio"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:597
 #, no-wrap
 msgid "Bo@TeX{}"
-msgstr ""
+msgstr "Bo@TeX{}"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:602
@@ -1449,6 +1619,10 @@ msgid ""
 "language, resulting in Bo@TeX{}.  The earliest Bo@TeX{} version seems to "
 "have been 0.02 on October 31, 1984."
 msgstr ""
+"Enquanto isso, pessoas no MIT desenvolveram outro formato chamado Bolio. "
+"Richard Stallman (RMS) trabalhou na conversão do Bolio para usar @TeX{} "
+"como a linguagem dele de tipografia, resultando no Bo@TeX{}. A versão mais "
+"antiga do Bo@TeX{} parece ter sido 0.02 em 31 de outubro de 1984."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:607
@@ -1458,6 +1632,10 @@ msgid ""
 "Texinfo, a mark-up language for text that is intended to be read both online "
 "and as printed hard copy."
 msgstr ""
+"O Bo@TeX{} só podia ser usado como uma linguagem de marcação para "
+"documentos a serem impressos, não para documentos online. RMS combinou o "
+"Bo@TeX{} e o Info para criar o Texinfo, uma linguagem de marcação para "
+"texto que se destina a ser lido online e como cópia impressa."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:613
@@ -1468,26 +1646,31 @@ msgid ""
 "program in C, now called @command{makeinfo}, as well as the standalone "
 "@command{info} program."
 msgstr ""
+"O tradutor original para criar o Info foi escrito (principalmente por RMS e "
+"Bob Chassell) em Emacs Lisp, ou seja, o @code{texinfo-format-buffer} e "
+"outras funções. No início da década de 1990, Brian Fox reimplementou o "
+"programa de conversão em C, agora chamado @command{makeinfo}, bem como o "
+"programa autônomo @command{info}."
 
 #. type: subheading
 #: texinfo/texinfo-ed.7.1-en_US.texi:614
 #, no-wrap
 msgid "Reimplementing in Perl"
-msgstr ""
+msgstr "Reimplementando em Perl"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:616
 #: texinfo/texinfo-ed.7.1-en_US.texi:16722
 #, no-wrap
 msgid "Cons, Lionel"
-msgstr ""
+msgstr "Cons, Lionel"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:617
 #: texinfo/texinfo-ed.7.1-en_US.texi:17912
 #, no-wrap
 msgid "Dumas, Patrice"
-msgstr ""
+msgstr "Dumas, Patrice"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:627
@@ -1501,6 +1684,15 @@ msgid ""
 "implemented by Patrice Dumas.  The first, never-released version of "
 "@command{texi2any} was based on the @command{texi2html} code."
 msgstr ""
+"Em 2012, o @command{makeinfo} do C foi substituído por uma implementação "
+"Perl genericamente chamada @command{texi2any}. Essa versão suporta o mesmo "
+"nível de personalização de saída que @command{texi2html}, um programa "
+"independente escrito originalmente por Lionel Cons, mais tarde com trabalho "
+"substancial de muitos(as) outros(as). Os muitos recursos adicionais "
+"necessários para tornar @command{texi2html} um substituto para "
+"@command{makeinfo} foram implementados por Patrice Dumas. A primeira "
+"versão, nunca lançada, do @command{texi2any} foi baseada no código do "
+"@command{texi2html}."
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:628
