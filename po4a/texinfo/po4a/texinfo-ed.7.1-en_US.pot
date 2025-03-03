@@ -2621,6 +2621,8 @@ msgid ""
 "@@settitle Sample Manual 1.0\n"
 "\n"
 msgstr ""
+"@@settitle Manual do Sample 1.0\n"
+"\n"
 
 #. type: example
 #: texinfo/texinfo-ed.7.1-en_US.texi:972
@@ -2630,6 +2632,9 @@ msgid ""
 "This is a short example of a complete Texinfo file.\n"
 "\n"
 msgstr ""
+"@@copying\n"
+"Este é um exemplo curto de um arquivo completo do Texinfo.\n"
+"\n"
 
 #. type: example
 #: texinfo/texinfo-ed.7.1-en_US.texi:975
@@ -2639,6 +2644,9 @@ msgid ""
 "@@end copying\n"
 "\n"
 msgstr ""
+"Copyright @@copyright@{@} 2016 Free Software Foundation, Inc.\n"
+"@@end copying\n"
+"\n"
 
 #. type: example
 #: texinfo/texinfo-ed.7.1-en_US.texi:982
@@ -2652,6 +2660,13 @@ msgid ""
 "@@end titlepage\n"
 "\n"
 msgstr ""
+"@@titlepage\n"
+"@@title Título do Sample\n"
+"@@page\n"
+"@@vskip 0pt plus 1filll\n"
+"@@insertcopying\n"
+"@@end titlepage\n"
+"\n"
 
 #. type: example
 #: texinfo/texinfo-ed.7.1-en_US.texi:984
@@ -2660,6 +2675,8 @@ msgid ""
 "@@contents\n"
 "\n"
 msgstr ""
+"@@contents\n"
+"\n"
 
 #. type: example
 #: texinfo/texinfo-ed.7.1-en_US.texi:987
@@ -2669,6 +2686,9 @@ msgid ""
 "@@top GNU Sample\n"
 "\n"
 msgstr ""
+"@@node Top\n"
+"@@top GNU Sample\n"
+"\n"
 
 #. type: example
 #: texinfo/texinfo-ed.7.1-en_US.texi:990
@@ -2678,6 +2698,9 @@ msgid ""
 "(version @@value@{VERSION@}, @@value@{UPDATED@}).\n"
 "\n"
 msgstr ""
+"Este manual é para GNU Sample\n"
+"(versão @@value@{VERSION@}, @@value@{UPDATED@}).\n"
+"\n"
 
 #. type: example
 #: texinfo/texinfo-ed.7.1-en_US.texi:996
@@ -2690,6 +2713,12 @@ msgid ""
 "@@end menu\n"
 "\n"
 msgstr ""
+"@@menu\n"
+"* Primeiro Capítulo:: O primeiro capítulo é o\n"
+"                      único capítulo nesta amostra.\n"
+"* Índice::            Índice completo.\n"
+"@@end menu\n"
+"\n"
 
 #. type: group
 #: texinfo/texinfo-ed.7.1-en_US.texi:1000
@@ -2700,6 +2729,9 @@ msgid ""
 "@@chapter First Chapter\n"
 "\n"
 msgstr ""
+"@@node Primeiro Capítulo\n"
+"@@chapter Primeiro Capítulo\n"
+"\n"
 
 #. type: group
 #: texinfo/texinfo-ed.7.1-en_US.texi:1004
@@ -2711,6 +2743,10 @@ msgid ""
 "@@cindex index entry, another\n"
 "\n"
 msgstr ""
+"@@cindex capítulo, primeiro\n"
+"Este é o primeiro capítulo.\n"
+"@@cindex entrada de índice, outra\n"
+"\n"
 
 #. type: group
 #: texinfo/texinfo-ed.7.1-en_US.texi:1007
@@ -2720,6 +2756,8 @@ msgid ""
 "Here is a numbered list.\n"
 "\n"
 msgstr ""
+"Aqui está uma lista numerada.\n"
+"\n"
 
 #. type: group
 #: texinfo/texinfo-ed.7.1-en_US.texi:1011
@@ -2731,6 +2769,10 @@ msgid ""
 "This is the first item.\n"
 "\n"
 msgstr ""
+"@@enumerate\n"
+"@@item\n"
+"Este é o primeiro item.\n"
+"\n"
 
 #. type: group
 #: texinfo/texinfo-ed.7.1-en_US.texi:1015
@@ -2740,6 +2782,9 @@ msgid ""
 "This is the second item.\n"
 "@@end enumerate\n"
 msgstr ""
+"@@item\n"
+"Este é o segundo item.\n"
+"@@end enumerate\n"
 
 #. type: group
 #: texinfo/texinfo-ed.7.1-en_US.texi:1020
@@ -2750,6 +2795,9 @@ msgid ""
 "@@section First Section\n"
 "\n"
 msgstr ""
+"@@node Primeira Seção\n"
+"@@section Primeira Seção\n"
+"\n"
 
 #. type: group
 #: texinfo/texinfo-ed.7.1-en_US.texi:1022
@@ -2759,6 +2807,8 @@ msgid ""
 "First section of first chapter.\n"
 "\n"
 msgstr ""
+"Primeira seção do primeiro capítulo.\n"
+"\n"
 
 #. type: group
 #: texinfo/texinfo-ed.7.1-en_US.texi:1026
@@ -2769,6 +2819,9 @@ msgid ""
 "@@section Second Section\n"
 "\n"
 msgstr ""
+"@@node Segunda Seção\n"
+"@@section Segunda Seção\n"
+"\n"
 
 #. type: example
 #: texinfo/texinfo-ed.7.1-en_US.texi:1028
@@ -2777,6 +2830,8 @@ msgid ""
 "Second section of first chapter.\n"
 "\n"
 msgstr ""
+"Segunda seção do primeiro capítulo.\n"
+"\n"
 
 #. type: example
 #: texinfo/texinfo-ed.7.1-en_US.texi:1032
@@ -2787,6 +2842,9 @@ msgid ""
 "@@unnumbered Index\n"
 "\n"
 msgstr ""
+"@@node Índice\n"
+"@@unnumbered Índice\n"
+"\n"
 
 #. type: example
 #: texinfo/texinfo-ed.7.1-en_US.texi:1034
@@ -2796,35 +2854,37 @@ msgid ""
 "@@printindex cp\n"
 "\n"
 msgstr ""
+"@@printindex cp\n"
+"\n"
 
 #. type: section
 #: texinfo/texinfo-ed.7.1-en_US.texi:1039
 #: texinfo/texinfo-ed.7.1-en_US.texi:1041
 #, no-wrap
 msgid "Texinfo File Header"
-msgstr ""
+msgstr "Cabeçalho do Arquivo do Texinfo"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:1041
 msgid "@nodedescription The first lines."
-msgstr ""
+msgstr "@nodedescription As primeiras linhas."
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:1042
 #, no-wrap
 msgid "Header for Texinfo files"
-msgstr ""
+msgstr "Cabeçalho para arquivos do Texinfo"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:1043
 #, no-wrap
 msgid "Texinfo file header"
-msgstr ""
+msgstr "Cabeçalho do arquivo do Texinfo"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:1046
 msgid "Texinfo files start with the line:"
-msgstr ""
+msgstr "Arquivos do Texinfo iniciam com a linha:"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:1055
