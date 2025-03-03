@@ -800,29 +800,6 @@ espaço (exceto em modos literais).
 
 @cindex Caractere de avanço de formulário
 @cindex @kbd{CTRL-l}
-Form feed (@kbd{CTRL-l}) characters in normal text end any open paragraph.
-Other ASCII whitespace (tab, carriage return) may be treated the same as space
-characters, although the results may differ depending on output format.  Hence,
-there is not much point in using these in documents.  Non-ASCII spaces, such as
-Unicode ``em space'', are not recognized as whitespace at all and will be
-treated as regular, non-whitespace characters.
-
-However, in verbatim modes, for example in code samples, tab characters may
-produce the correct formatting in the output.
-
-@ignore @c Excessive detail?
-
-To avoid this problem, Texinfo mode in GNU Emacs inserts multiple spaces when
-you press the @key{TAB} key.  Also, you can run @code{untabify} in Emacs to
-convert tabs in a region to multiple spaces, or use the @code{unexpand} command
-from the shell.
-
-@end ignore
-@ignore @c too detailed for the manual, but kept for implementation tips
-@item
-Form feed characters outside of a paragraph are handled as follows:
-
-
 Caracteres de avanço de formulário (@kbd{CTRL-l}) em texto normal encerram
 qualquer parágrafo aberto. Outros espaços em branco ASCII (tabulação, retorno
 de carro) podem ser tratados da mesma forma que caracteres de espaço, embora os
