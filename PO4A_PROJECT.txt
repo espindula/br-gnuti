@@ -1,0 +1,30 @@
+
+
+Jaboatão dos Guararapes, PE, segunda-feira, 03 de março de 2025.
+Atualização mais recente:
+
+
+ = = = = = = = = = =
+ = = = = = = = = = =
+
+
+Assunto: Projeto "po4a" (diretório "po4a")
+
+
+ = = = = = = = = = =
+ = = = = = = = = = =
+
+
+Comandos para gerar um arquivo Portable Object dentro do diretório 
+"po4a" (subprojeto "texinfo") (executar todos como usuário(a) normal):
+
+cd po4a/
+
+> texinfo/po/pt_BR.po
+
+( po4a --verbose -o no-warn po4a.conf 2>&1 | tee /tmp/po4a.log.txt && exit "${PIPESTATUS}" )
+
+Ao final da execução, o arquivo "pt_BR.po" (inicialmente vazio) estará 
+preenchido com todas as unidades de texto até então traduzidas. Também 
+um arquivo "texinfo-ed.7.1-pt_BR.texi" estará criado dentro do diretório 
+"translated" (po4a/texinfo/translated/).
