@@ -28,3 +28,11 @@ Ao final da execução, o arquivo "pt_BR.po" (inicialmente vazio) estará
 preenchido com todas as unidades de texto até então traduzidas. Também 
 um arquivo "texinfo-ed.7.1-pt_BR.texi" estará criado dentro do diretório 
 "translated" (po4a/texinfo/translated/).
+
+
+Eliminar tradução desatualizada
+(CUIDADO: EXECUTAR DENTRO DO DIRETÓRIO "po4a"):
+
+find . -type f -name '*po' -delete
+
+find . -type f -name '*pt_BR.texi' -delete
