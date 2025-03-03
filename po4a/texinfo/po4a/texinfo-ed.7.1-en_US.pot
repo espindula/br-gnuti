@@ -1698,19 +1698,19 @@ msgstr ""
 #: texinfo/texinfo-ed.7.1-en_US.texi:628
 #, no-wrap
 msgid "Tree representation of documents"
-msgstr ""
+msgstr "Representação de documentos em árvore"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:629
 #, no-wrap
 msgid "Syntax tree representation of documents"
-msgstr ""
+msgstr "Sintaxe, Representação de documentos em árvore"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:630
 #, no-wrap
 msgid "Abstract syntax tree representation of documents"
-msgstr ""
+msgstr "Sintaxe abstrata, Representação de documentos em árvore"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:639
@@ -1723,6 +1723,14 @@ msgid ""
 "reimplementation: it constructs a tree-based representation of the input "
 "document for all back-ends to work from."
 msgstr ""
+"Essa implementação, no entanto, foi abandonada em favor do programa atual "
+"(também escrito por Patrice Dumas), que analisa a entrada do Texinfo em uma "
+"árvore para processamento. Ele herdou o projeto de personalização e "
+"outros recursos do @command{texi2html} (para mais informações acerca da "
+"compatibilidade do @command{texi2html}, @pxref{@command{texi2html}}). No "
+"entanto, o @command{texi2any} é uma reimplementação completa: ele "
+"constrói uma representação baseada em árvore do documento de entrada "
+"para todas as estruturas de retaguarda trabalharem."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:647
@@ -1734,12 +1742,20 @@ msgid ""
 "@command{makeinfo} to extend to different output styles, back-end output "
 "formats, and all other customizations.  In more detail:"
 msgstr ""
+"O novo programa Perl é muito mais lento que o antigo programa C. A lacuna "
+"de velocidade foi parcialmente fechada desde o primeiro lançamento, mas "
+"pode nunca ser totalmente comparável. Então, por que nós comutamos? Em "
+"resumo, nós pretendemos e esperamos que o programa atual seja muito mais "
+"fácil que a implementação C anterior do @command{makeinfo} para estender "
+"a diferentes estilos de saída, formatos de saída de estrutura de "
+"retaguarda e todas as outras personalizações. Em mais detalhes:"
 
 #. type: item
 #: texinfo/texinfo-ed.7.1-en_US.texi:649
 #, no-wrap
 msgid "HTML customization.  Many GNU and other free software packages"
 msgstr ""
+"Personalização de HTML.  Muitos pacotes de software livre GNU e outros"
 
 #. type: itemize
 #: texinfo/texinfo-ed.7.1-en_US.texi:656
@@ -1750,12 +1766,18 @@ msgid ""
 "sync was not simple.  Adding the HTML customization possible in "
 "@command{texi2html} to a C program would have been an enormous effort."
 msgstr ""
+"tem sido felizes no uso das características de personalização de HTML no "
+"@command{texi2html} por anos.  Assim, na verdade, duas implementações "
+"independentes da linguagem Texinfo foram desenvolvidas, e mantê-las em "
+"sincronia não era simples.  Adicionar a possibilidade de personalização "
+"de HTML no @command{texi2html} a um programa C teria sido um esforço enorme."
 
 #. type: item
 #: texinfo/texinfo-ed.7.1-en_US.texi:657
 #, no-wrap
 msgid "Unicode, and multilingual support generally, especially of east"
 msgstr ""
+"Unicode, e suporte multilíngue em geral, especialmente de idiomas do leste"
 
 #. type: itemize
 #: texinfo/texinfo-ed.7.1-en_US.texi:663
@@ -1765,12 +1787,17 @@ msgid ""
 "back-ends have been rewritten in C, but the converter back-ends are still "
 "mostly in Perl which has good multilingual support built in."
 msgstr ""
+"asiático. Naquela época, fazer isso em C teria sido equivalente a "
+"reescrever o programa inteiro. Desde então, o analisador e os bits das "
+"estruturas de retaguarda do conversor foram reescritos em C, mas as "
+"estruturas de retaguarda do conversor ainda estão principalmente em Perl, "
+"que tem um bom suporte multilíngue integrado."
 
 #. type: item
 #: texinfo/texinfo-ed.7.1-en_US.texi:664
 #, no-wrap
 msgid "Additional back-ends.  The @command{makeinfo} code had become"
-msgstr ""
+msgstr "Estruturas adicionais de retaguarda. O código do @command{makeinfo}"
 
 #. type: itemize
 #: texinfo/texinfo-ed.7.1-en_US.texi:671
@@ -1782,12 +1809,20 @@ msgid ""
 "(@LaTeX{}, the latest (X)HTML, @dots{}); this change made them much more "
 "feasible to implement.  Which leads to the last item:"
 msgstr ""
+"complicou-se até o ponto onde adicionar-se uma nova estrutura de retaguarda "
+"era bastante complexo, exigindo interações complexas com estruturas de "
+"retaguarda existentes. Em contraste, a nova implementação fornece uma "
+"representação limpa baseada em árvore para todas as estruturas de "
+"retaguarda trabalharem. Pessoas tem solicitado numerosas estruturas de "
+"retaguarda (@LaTeX{}, o mais recente (X)HTML, @dots{}); essa mudança os "
+"tornou muito mais viáveis de implementar. O que nos leva ao último item:"
 
 #. type: item
 #: texinfo/texinfo-ed.7.1-en_US.texi:672
 #, no-wrap
 msgid "Making contributions easier.  In general, due to the cleaner"
 msgstr ""
+"Facilitando as contribuições. Em geral, devido à estrutura mais limpa, a"
 
 #. type: itemize
 #: texinfo/texinfo-ed.7.1-en_US.texi:679
@@ -1798,41 +1833,47 @@ msgid ""
 "After ten years, contributed back-ends were yet to happen, but it is still "
 "believed that this structure could in theory lend better to contributions."
 msgstr ""
+"implementação separada do analisador/estruturas de retaguarda deveria ser "
+"consideravelmente mais fácil que a implementação C anterior do "
+"@command{makeinfo} para qualquer um(a) ler e contribuir, com os benefícios "
+"óbvios resultantes. Depois de dez anos, as estruturas de retaguarda "
+"contribuídas ainda estavam para acontecer, mas ainda se acredita que essa "
+"estrutura poderia, em teoria, se prestar melhor às contribuições."
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:682
 #, no-wrap
 msgid "@command{texi2any}, as reference implementation"
-msgstr ""
+msgstr "@command{texi2any}, como implementação de referência"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:683
 #, no-wrap
 msgid "Reference implementation"
-msgstr ""
+msgstr "Implementação de referência"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:684
 #, no-wrap
 msgid "Implementation, @command{texi2any} as reference"
-msgstr ""
+msgstr "Implementação, @command{texi2any} como referência"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:685
 #, no-wrap
 msgid "Texinfo language tests"
-msgstr ""
+msgstr "Testes da linguagem do Texinfo"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:686
 #, no-wrap
 msgid "Tests, of Texinfo language"
-msgstr ""
+msgstr "Testes, da linguagem do Texinfo"
 
 #. type: anchor{#1}
 #: texinfo/texinfo-ed.7.1-en_US.texi:698
 msgid "Reference Implementation"
-msgstr ""
+msgstr "Implementação de referência"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:698
@@ -1847,12 +1888,22 @@ msgid ""
 "encourage anyone thinking of writing a program to parse Texinfo input to "
 "make use of these tests."
 msgstr ""
+"@command{texi2any} é destinado a ser uma implementação de referência que "
+"define partes da linguagem não totalmente especificadas pelo manual. Sem "
+"tal referência, implementações alternativas muito provavelmente teriam "
+"diferenças sutis, ou não tão sutis, no comportamento, e assim os "
+"documentos do Texinfo se tornariam dependentes do processador. Também é "
+"importante ter opções de linha de comando consistentes para todos os "
+"processadores. Testes extensivos da linguagem e do processador foram "
+"desenvolvidos ao mesmo tempo que @command{texi2any}; nós encorajamos "
+"qualquer um(a) pensando em escrever um programa para analisar a entrada do "
+"Texinfo a fazer uso desses testes."
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:699
 #, no-wrap
 msgid "Future of Texinfo implementations"
-msgstr ""
+msgstr "Futuro das implementações do Texinfo"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:705
@@ -1862,23 +1913,28 @@ msgid ""
 "@command{texi2html} has been halted.  Going forward, we ask authors of "
 "Texinfo documents to use only @command{texi2any}."
 msgstr ""
+"Com o lançamento do @command{texi2any} como implementação de referência, "
+"o desenvolvimento tanto da implementação C do @command{makeinfo} quanto do "
+"@command{texi2html} foi interrompido. Daqui para frente, nós pedimos para "
+"os(as) autores(as) de documentos do Texinfo que usem somente o "
+"@command{texi2any}."
 
 #. type: chapter
 #: texinfo/texinfo-ed.7.1-en_US.texi:707 texinfo/texinfo-ed.7.1-en_US.texi:710
 #, no-wrap
 msgid "Writing a Texinfo File"
-msgstr ""
+msgstr "Escrevendo um Arquivo do Texinfo"
 
 #.  old name
 #. type: anchor{#1}
 #: texinfo/texinfo-ed.7.1-en_US.texi:710
 msgid "Beginning and Ending a File"
-msgstr ""
+msgstr "Iniciando e Terminando um Arquivo"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:710
 msgid "@nodedescription Format of a Texinfo source file."
-msgstr ""
+msgstr "@nodedescription Formato de um arquivo fonte do Texinfo."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:714
@@ -1886,65 +1942,69 @@ msgid ""
 "This chapter describes Texinfo syntax and what is required in a Texinfo "
 "file, and gives a short sample file."
 msgstr ""
+"Este capítulo descreve a sintaxe do Texinfo e o que é exigido em um "
+"arquivo do Texinfo, e dá um arquivo curto de amostra."
 
 #. type: node
 #: texinfo/texinfo-ed.7.1-en_US.texi:716
 #, no-wrap
 msgid "Conventions"
-msgstr ""
+msgstr "Convenções"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:718
 msgid "@nodedescription General rules for writing a Texinfo file."
-msgstr ""
+msgstr "@nodedescription Regras gerais para escrever um arquivo do Texinfo."
 
 #. type: section
 #: texinfo/texinfo-ed.7.1-en_US.texi:718
 #, no-wrap
 msgid "General Syntactic Conventions"
-msgstr ""
+msgstr "Convenções Sintáticas Gerais"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:719
 #, no-wrap
 msgid "General syntactic conventions"
-msgstr ""
+msgstr "Convenções sintáticas gerais"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:720
 #, no-wrap
 msgid "Syntactic conventions"
-msgstr ""
+msgstr "Sintáticas, convenções"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:721
 #, no-wrap
 msgid "Conventions, syntactic"
-msgstr ""
+msgstr "Convenções, sintáticas"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:722
 #, no-wrap
 msgid "Characters, basic input"
-msgstr ""
+msgstr "Caracteres, entrada básica"
 
 #.  old name
 #. type: anchor{#1}
 #: texinfo/texinfo-ed.7.1-en_US.texi:724
 msgid "Formatting Commands"
-msgstr ""
+msgstr "Comandos de Formatação"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:726
 msgid ""
 "This section describes the general conventions used in all Texinfo documents."
 msgstr ""
+"Esta seção descreve as convenções gerais usadas em todos os documentos "
+"do Texinfo."
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:729
 #, no-wrap
 msgid "Source files, characters used"
-msgstr ""
+msgstr "Arquivos fonte, caracteres usados"
 
 #. type: itemize
 #: texinfo/texinfo-ed.7.1-en_US.texi:737
@@ -1956,18 +2016,25 @@ msgid ""
 "characters into the document, put an @samp{@@} character in front of it, "
 "like this: @samp{@@@@}, @samp{@@@{}, and @samp{@@@}}."
 msgstr ""
+"Todos os caracteres ASCII imprimíveis, exceto @samp{@@}, @samp{@{} e "
+"@samp{@}}, podem aparecer em um arquivo do Texinfo e representam eles "
+"mesmos. @samp{@@} é o caractere de encapsulamento que introduz comandos, "
+"enquanto @samp{@{} e @samp{@}} são usados para envolver argumentos a certos "
+"comandos.   Para colocar um desses caracteres especiais no documento, "
+"coloque um caractere @samp{@@} em frente a ele, como isto: @samp{@@@@}, "
+"@samp{@@@{}, e @samp{@@@}}."
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:739
 #, no-wrap
 msgid "@sortas{at} @@-commands"
-msgstr ""
+msgstr "@sortas{at} Comandos @@"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:740
 #, no-wrap
 msgid "Formatting commands"
-msgstr ""
+msgstr "Formatando, comandos"
 
 #. type: itemize
 #: texinfo/texinfo-ed.7.1-en_US.texi:745
@@ -1977,12 +2044,16 @@ msgid ""
 "@dfn{@@-commands}.  (The @samp{@@} in Texinfo has the same meaning that "
 "@samp{\\} has in plain @TeX{}.)"
 msgstr ""
+"Em um arquivo do Texinfo, os comandos que você escreve para descrever o "
+"conteúdo do manual são precedidos por um caractere @samp{@@}; eles são "
+"chamados de @dfn{comandos @@}. (O @samp{@@} no Texinfo tem o mesmo "
+"significado que o @samp{\\} tem no @TeX{} simples.)"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:746
 #, no-wrap
 msgid "Braces, when to use"
-msgstr ""
+msgstr "Chaves, quando usar"
 
 #. type: itemize
 #: texinfo/texinfo-ed.7.1-en_US.texi:753
@@ -1993,6 +2064,11 @@ msgid ""
 "not need braces if it is on a line of its own.  For more details of Texinfo "
 "command syntax, see @ref{Command Syntax}."
 msgstr ""
+"Dependendo do que eles fazem ou de quais argumentos recebam, você precisa "
+"escrever comandos @@ em linhas próprias, ou como parte de frases. Como "
+"regra geral, um comando exige chaves se ele se misturar com outro texto; mas "
+"não precisa de chaves se estiver em uma linha própria. Para mais detalhes "
+"da sintaxe de comandos do Texinfo, veja-se @ref{Sintaxe do Comando}."
 
 #. type: itemize
 #: texinfo/texinfo-ed.7.1-en_US.texi:759
@@ -2001,6 +2077,9 @@ msgid ""
 "if present.  The exceptions are contexts when whitespace is significant, "
 "e.g., an @code{@@example} environment."
 msgstr ""
+"Espaço em branco seguindo um nome de comando @@ é opcional e (normalmente) "
+"ignorado se presente.  As exceções são contextos quando o espaço em "
+"branco é significativo, por exemplo, um ambiente de @code{@@example}."
 
 #. type: itemize
 #: texinfo/texinfo-ed.7.1-en_US.texi:764
@@ -2008,36 +2087,38 @@ msgid ""
 "Texinfo supports the usual quotation marks used in English and in other "
 "languages; see @ref{Inserting Quotation Marks}."
 msgstr ""
+"Texinfo suporta as aspas normais usadas em Inglês e em outros idiomas; "
+"veja-se @ref{Inserindo Aspas}."
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:766
 #, no-wrap
 msgid "Multiple dashes in source"
-msgstr ""
+msgstr "Vários traços no fonte"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:767
 #, no-wrap
 msgid "Dashes in source"
-msgstr ""
+msgstr "Traços no fonte"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:768
 #, no-wrap
 msgid "Hyphens in source, two or three in a row"
-msgstr ""
+msgstr "Hifens no fonte, dois ou três em uma linha"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:769
 #, no-wrap
 msgid "Em dash, producing"
-msgstr ""
+msgstr "Travessão, produzindo"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:770
 #, no-wrap
 msgid "En dash, producing"
-msgstr ""
+msgstr "Traço de ligação, produzindo"
 
 #. type: itemize
 #: texinfo/texinfo-ed.7.1-en_US.texi:780
@@ -2051,6 +2132,16 @@ msgid ""
 "transitively!).  Of course, any number of hyphens in the source remain as "
 "they are in literal contexts, such as @code{@@code} and @code{@@example}."
 msgstr ""
+"Use três hifens em uma linha, @samp{---}, para produzir um traço "
+"longo---como esse (chamado um @dfn{travessão}), usado para pontuação em "
+"frases.  Use dois hifens, @samp{--}, para produzir um traço médio (chamado "
+"um @dfn{traço de ligação}), usado primariamente para intervalos "
+"numéricos, como em ``Junho 25--26''.  Use um hífen simples, @samp{-}, para "
+"produzir um hífen padrão usado em palavras compostas.  Para exibir na "
+"tela, Info reduz três hifens para dois e dois hifens para um (não "
+"transitivamente!).  Certamente, qualquer número de hifens no fonte "
+"permanece como estiverem em contextos literais, tais como @code{@@code} e "
+"@code{@@example}."
 
 #. type: itemize
 #: texinfo/texinfo-ed.7.1-en_US.texi:788
@@ -2061,18 +2152,24 @@ msgid ""
 "or a line containing only spaces. A sequence of several spaces in text is "
 "usually treated the same as a single space (except in verbatim modes)."
 msgstr ""
+"@emph{Espaço em branco}. Arquivos do Texinfo são arquivos de texto simples "
+"compostos de linhas terminadas pelo usual caractere de nova linha (avanço "
+"de linha). Processadores do Texinfo leem a entrada uma linha por vez. "
+"Parágrafos são terminados por uma linha vazia ou uma linha contendo "
+"somente espaços. Uma sequência de vários espaços no texto geralmente é "
+"tratada da mesma forma que um espaço (exceto em modos literais)."
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:789
 #, no-wrap
 msgid "Form feed character"
-msgstr ""
+msgstr "Caractere de avanço de formulário"
 
 #. type: kbd{#1}
 #: texinfo/texinfo-ed.7.1-en_US.texi:790
 #, no-wrap
 msgid "CTRL-l"
-msgstr ""
+msgstr "CTRL-l"
 
 #. type: itemize
 #: texinfo/texinfo-ed.7.1-en_US.texi:798
@@ -2084,6 +2181,14 @@ msgid ""
 "Non-ASCII spaces, such as Unicode ``em space'', are not recognized as "
 "whitespace at all and will be treated as regular, non-whitespace characters."
 msgstr ""
+"Caracteres de avanço de formulário (@kbd{CTRL-l}) em texto normal encerram "
+"qualquer parágrafo aberto. Outros espaços em branco ASCII (tabulação, "
+"retorno de carro) podem ser tratados da mesma forma que caracteres de "
+"espaço, embora os resultados possam diferir dependendo do formato de "
+"saída. Portanto, não existe muito sentido em usá-los em documentos. "
+"Espaços não ASCII, como Unicode ``em space'', não são reconhecidos como "
+"espaços em branco e serão tratados como caracteres regulares, não "
+"espaços em branco."
 
 #. type: itemize
 #: texinfo/texinfo-ed.7.1-en_US.texi:801
@@ -2091,12 +2196,15 @@ msgid ""
 "However, in verbatim modes, for example in code samples, tab characters may "
 "produce the correct formatting in the output."
 msgstr ""
+"No entanto, em modos literais, por exemplo, em amostras de código, "
+"caracteres de tabulação podem produzir a formatação correta na saída "
+"gerada."
 
 #. type: item
 #: texinfo/texinfo-ed.7.1-en_US.texi:815
 #, no-wrap
 msgid "PDF/DVI"
-msgstr ""
+msgstr "PDF/DVI"
 
 #. type: table
 #: texinfo/texinfo-ed.7.1-en_US.texi:817
@@ -2105,12 +2213,14 @@ msgid ""
 "Ignored between paragraphs.\n"
 "\n"
 msgstr ""
+"Ignorado entre parágrafos.\n"
+"\n"
 
 #. type: findex
 #: texinfo/texinfo-ed.7.1-en_US.texi:818 texinfo/texinfo-ed.7.1-en_US.texi:9566
 #, no-wrap
 msgid "LaTeX"
-msgstr ""
+msgstr "LaTeX"
 
 #. type: table
 #: texinfo/texinfo-ed.7.1-en_US.texi:823
@@ -2121,6 +2231,11 @@ msgid ""
 "in the output otherwise.\n"
 "\n"
 msgstr ""
+"Ignorado em contextos onde espaços são ignorados, exceto depois de "
+"comandos\n"
+"específicos fechando chaves (@code{@@caption} por exemplo). Deixado como\n"
+"está na saída gerada, caso contrário.\n"
+"\n"
 
 #. type: table
 #: texinfo/texinfo-ed.7.1-en_US.texi:829
@@ -2133,6 +2248,15 @@ msgid ""
 "regular spaces (and thus consolidated with surrounding whitespace).\n"
 "\n"
 msgstr ""
+"Saída gerada como está entre parágrafos (uso mais comum dela); ignorada "
+"em contextos\n"
+"onde espaços são ignorados, exceto depois de comandos específicos "
+"fechando chaves\n"
+"(@code{@@caption} por exemplo). Em outros contextos, eles podem ser tratados "
+"como\n"
+"espaços regulares (e, portanto, consolidados com espaços em branco ao "
+"redor).\n"
+"\n"
 
 #. type: table
 #: texinfo/texinfo-ed.7.1-en_US.texi:834
@@ -2143,6 +2267,12 @@ msgid ""
 "ignored.\n"
 "\n"
 msgstr ""
+"Escrito como uma entidade numérica, exceto contextos onde espaços são "
+"ignorados;\n"
+"por exemplo, em @samp{@@footnote@{ ^L foo@}}, a alimentação de formulário "
+"é\n"
+"ignorada.\n"
+"\n"
 
 #. type: table
 #: texinfo/texinfo-ed.7.1-en_US.texi:838
@@ -2153,36 +2283,41 @@ msgid ""
 "}.\n"
 "\n"
 msgstr ""
+"Mantenha-os em qualquer lugar; em atributos, encapsulados como @samp{\\f}; "
+"também,\n"
+"@samp{\\} é encapsulado como @samp{\\\\} e nova linha como @samp{\\n"
+"}.\n"
+"\n"
 
 #. type: table
 #: texinfo/texinfo-ed.7.1-en_US.texi:841
 #, no-wrap
 msgid "Completely removed, as they are not allowed.\n"
-msgstr ""
+msgstr "Completamente removidos, dado que não são permitidos.\n"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:850 texinfo/texinfo-ed.7.1-en_US.texi:852
 #: texinfo/texinfo-ed.7.1-en_US.texi:854
 #, no-wrap
 msgid "Comments"
-msgstr ""
+msgstr "Comentários"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:852
 msgid "@nodedescription Writing comments and ignored text in general."
-msgstr ""
+msgstr "@nodedescription Escrevendo comentários e texto ignorado em geral."
 
 #. type: findex
 #: texinfo/texinfo-ed.7.1-en_US.texi:855
 #, no-wrap
 msgid "comment"
-msgstr ""
+msgstr "comentário"
 
 #. type: findex
 #: texinfo/texinfo-ed.7.1-en_US.texi:856
 #, no-wrap
 msgid "c"
-msgstr ""
+msgstr "c"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:866
@@ -2195,6 +2330,14 @@ msgid ""
 "after the @code{@@c} or @code{@@comment} must be something other than a dash "
 "or alphanumeric, or it will be taken as part of the command.)"
 msgstr ""
+"Você pode escrever comentários em um arquivo do Texinfo usando o comando "
+"@code{@@comment}, o qual pode ser abreviado para @code{@@c}. Tais "
+"comentários são para uma pessoa examinando o arquivo fonte do Texinfo. "
+"Todo o texto em uma linha que se seguir ou a @code{@@comment} ou a "
+"@code{@@c} é um comentário; o restante da linha não aparece na saída "
+"gerada visível.  (Para ser preciso(a), o caractere depois do @code{@@c} ou "
+"do @code{@@comment} deve necessariamente ser algo que não um traço ou "
+"alfanumérico, ou será tomado como sendo parte do comando.)"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:872
@@ -2205,18 +2348,24 @@ msgid ""
 "@code{@@settitle}, work on a whole line.  You cannot use @code{@@comment} or "
 "@code{@@c} within a line beginning with such a command."
 msgstr ""
+"Frequentemente, você pode escrever o @code{@@comment} ou o @code{@@c} no "
+"meio de uma linha, e somente o texto que se seguir depois do comando "
+"@code{@@comment} ou @code{@@c} não aparece; porém alguns comandos, tais "
+"como @code{@@settitle}, funcionam sobre uma linha inteira.  Você não pode "
+"usar @code{@@comment} ou @code{@@c} dentro de uma linha que se inicie com um "
+"tal comando."
 
 #. type: findex
 #: texinfo/texinfo-ed.7.1-en_US.texi:873
 #, no-wrap
 msgid "DEL @r{(comment character)}"
-msgstr ""
+msgstr "DEL @r{(caractere de comentário)}"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:874
 #, no-wrap
 msgid "Catcode for comments in @TeX{}"
-msgstr ""
+msgstr "Código de categoria para comentários no @TeX{}"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:882
@@ -2228,24 +2377,31 @@ msgid ""
 "14, in @TeX{} internals).  Everything on the line after the @kbd{DEL} will "
 "be ignored and the next line will be merged."
 msgstr ""
+"Em casos de invocações aninhadas de comando, definições complicadas de "
+"macro, etc., @code{@@c} e @code{@@comment} podem provocar um erro quando do "
+"processamento com @TeX{}.  Por conseguinte, você também pode usar o "
+"caractere @kbd{DEL} (decimal 127 ASCII, hexadecimal 0x7f, octal 0177) como "
+"um verdadeiro caractere de comentário do @TeX{} (código de categoria 14, "
+"nos internos do @TeX{}). Tudo na linha depois de @kbd{DEL} será ignorado e "
+"a próxima linha será mesclada."
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:883
 #, no-wrap
 msgid "Ignored text"
-msgstr ""
+msgstr "Texto ignorado"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:884
 #, no-wrap
 msgid "Unprocessed text"
-msgstr ""
+msgstr "Texto não processado"
 
 #. type: findex
 #: texinfo/texinfo-ed.7.1-en_US.texi:885
 #, no-wrap
 msgid "ignore"
-msgstr ""
+msgstr "ignore"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:893
@@ -2258,41 +2414,48 @@ msgid ""
 "writing comments.  (For some caveats regarding nesting of such commands, "
 "@pxref{Conditional Nesting}.)"
 msgstr ""
+"Você também pode ter trechos longos de texto ignorados pelos processadores "
+"Texinfo com os comandos @code{@@ignore} e @code{@@end ignore}. Escreva cada "
+"um desses comandos em uma linha própria, iniciando cada comando no começo "
+"da linha.  O texto entre esses dois comandos não aparece na saída gerada "
+"processada.  Você pode usar @code{@@ignore} e @code{@@end ignore} para "
+"escrever comentários.  (Para algumas advertências relativamente ao "
+"aninhamento de tais comandos, veja-se @ref{Aninhamento de Condicional}.)"
 
 #. type: node
 #: texinfo/texinfo-ed.7.1-en_US.texi:895
 #, no-wrap
 msgid "Minimum"
-msgstr ""
+msgstr "Mínimo"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:897
 msgid "@nodedescription What a Texinfo file must have."
-msgstr ""
+msgstr "@nodedescription O que um arquivo do Texinfo precisa ter."
 
 #. type: section
 #: texinfo/texinfo-ed.7.1-en_US.texi:897
 #, no-wrap
 msgid "What a Texinfo File Must Have"
-msgstr ""
+msgstr "O Que um Arquivo do Texinfo Precisa Ter"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:898
 #, no-wrap
 msgid "Minimal Texinfo file (requirements)"
-msgstr ""
+msgstr "Arquivo mínimo do Texinfo (exigências)"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:899
 #, no-wrap
 msgid "Required in Texinfo file"
-msgstr ""
+msgstr "Exigido no arquivo do Texinfo"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:900
 #, no-wrap
 msgid "Texinfo file minimum"
-msgstr ""
+msgstr "Mínimo do arquivo do Texinfo"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:908
@@ -2304,6 +2467,12 @@ msgid ""
 "@file{.texi}.  The name of a Texinfo file should only contain ASCII "
 "characters."
 msgstr ""
+"Por convenção, o nome de um arquivo do Texinfo termina com uma das "
+"extensões @file{.texi}, @file{.texinfo}, @file{.txi} ou @file{.tex}. Usar "
+"@file{.tex} é desencorajado, pois essa extensão já é usada pelos "
+"arquivos de entrada do @TeX{} e do @LaTeX{}. A extensão mais comum e "
+"recomendada é @file{.texi}. O nome de um arquivo do Texinfo deveria conter "
+"somente caracteres ASCII."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:918
@@ -2317,24 +2486,34 @@ msgid ""
 "in input file names, but non ASCII characters in output name will create "
 "problems for some output formats, especially for cross-references.}."
 msgstr ""
+"O nome da saída gerada é baseado no nome do arquivo de entrada, no caso "
+"padrão. Primeiro, quaisquer das extensões @file{.texi}, @file{.tex}, "
+"@file{.txi} ou @file{.texinfo} são removidas do nome do arquivo de entrada; "
+"a seguir, a extensão específica do formato da saída gerada é "
+"adicionada---@file{.html} ao gerar HTML, @file{.info} ao gerar Info, etc. O "
+"nome da saída gerada deveria conter somente caracteres "
+"ASCII@footnote{@command{texi2any} consegue manusear caracteres não ASCII em "
+"nomes de arquivo de entrada, mas caracteres não ASCII no nome da saída "
+"gerada criarão problemas para alguns formatos de saída, especialmente para "
+"referências cruzadas.}."
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:919
 #, no-wrap
 msgid "Requirements for formatting"
-msgstr ""
+msgstr "Exigências para formatação"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:920
 #, no-wrap
 msgid "Minimal requirements for formatting"
-msgstr ""
+msgstr "Exigências mínimas para formatação"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:921
 #, no-wrap
 msgid "Formatting requirements"
-msgstr ""
+msgstr "Exigências de formatação"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:924
@@ -2342,6 +2521,8 @@ msgid ""
 "In order to be made into a printed manual, a Texinfo file must begin with a "
 "line like this:"
 msgstr ""
+"Para a finalidade de ser transformado em um manual impresso, um arquivo do "
+"Texinfo precisa iniciar com uma linha como esta:"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:934
@@ -2349,19 +2530,21 @@ msgid ""
 "The contents of the file follow this beginning, and then you must end the "
 "Texinfo source with a line like this:"
 msgstr ""
+"O conteúdo do arquivo segue esse início, e então você precisa finalizar "
+"o fonte do Texinfo com uma linha como esta:"
 
 #. type: example
 #: texinfo/texinfo-ed.7.1-en_US.texi:937 texinfo/texinfo-ed.7.1-en_US.texi:1036
 #: texinfo/texinfo-ed.7.1-en_US.texi:2169
 #, no-wrap
 msgid "@@bye\n"
-msgstr ""
+msgstr "@@bye\n"
 
 #. type: findex
 #: texinfo/texinfo-ed.7.1-en_US.texi:939
 #, no-wrap
 msgid "\\input @r{(raw @TeX{} startup)}"
-msgstr ""
+msgstr "\\input @r{(iniciação do @TeX{} bruto)}"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:945
@@ -2370,6 +2553,10 @@ msgid ""
 "@TeX{} that the file is ended and to stop formatting.  If you leave this "
 "out, you'll be dumped at @TeX{}'s prompt at the end of the run."
 msgstr ""
+"A linha @code{@@bye} no final do arquivo em uma linha própria informa ao "
+"@TeX{} que o arquivo está terminado e para parar a formatação. Se deixar "
+"isso de fora, você será despejado(a) no prompt do @TeX{} no final da "
+"execução."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:951
@@ -2379,6 +2566,10 @@ msgid ""
 "the minimum, which can be useful for short documents, is just the one line "
 "at the beginning and the one line at the end."
 msgstr ""
+"Além disso, você normalmente fornecerá um arquivo do Texinfo com um "
+"título, uma página de título, índices e similares, todos os quais estão "
+"explicados neste manual. Mas o mínimo, que pode ser útil para documentos "
+"curtos, é apenas a linha no início e a linha no final."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:955
@@ -2386,39 +2577,42 @@ msgid ""
 "Without additional information, the input and output encodings are assumed "
 "to be UTF-8, an universal codeset compatible with 7-bit ASCII."
 msgstr ""
+"Sem informações adicionais, as codificações de entrada e saída são "
+"assumidas como UTF-8, um conjunto universal de códigos compatível com "
+"ASCII de 7 bits."
 
 #. type: node
 #: texinfo/texinfo-ed.7.1-en_US.texi:957
 #, no-wrap
 msgid "Short Sample Texinfo File"
-msgstr ""
+msgstr "Arquivo Curto do Texinfo de Amostra"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:961
 msgid "@nodedescription A short sample Texinfo file."
-msgstr ""
+msgstr "@nodedescription Um arquivo curto do Texinfo de amostra."
 
 #. type: section
 #: texinfo/texinfo-ed.7.1-en_US.texi:961
 #, no-wrap
 msgid "Short Sample"
-msgstr ""
+msgstr "Amostra Curta"
 
 #. type: anchor{#1}
 #: texinfo/texinfo-ed.7.1-en_US.texi:961
 msgid "Sample Beginning"
-msgstr ""
+msgstr "Amostra de Início"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:962
 #, no-wrap
 msgid "Sample Texinfo file, no comments"
-msgstr ""
+msgstr "Arquivo do Texinfo de amostra, sem comentários"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:965
 msgid "Here is a short sample Texinfo file."
-msgstr ""
+msgstr "Aqui está um arquivo curto de amostra do Texinfo."
 
 #. type: example
 #: texinfo/texinfo-ed.7.1-en_US.texi:969
