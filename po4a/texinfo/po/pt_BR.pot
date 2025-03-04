@@ -2894,6 +2894,10 @@ msgid ""
 "@TeX{} typesetting commands.  (Note the use of the backslash, @samp{\\}; "
 "this is correct for @TeX{}.)"
 msgstr ""
+"A linha @samp{\\input texinfo} diz ao @TeX{} para usar o arquivo "
+"@file{texinfo.tex}, que diz ao @TeX{} como traduzir os comandos @@ do "
+"Texinfo para comandos de tipografia do @TeX{}. (Observe o uso da barra "
+"invertida, @samp{\\}; isso é correto para o @TeX{}.)"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:1059
@@ -2902,12 +2906,15 @@ msgid ""
 "whole in the header.  The @code{@@settitle} line is usually present at the "
 "beginning of the header:"
 msgstr ""
+"Faz sentido incluir qualquer comando que afete a formatação do documento "
+"como um todo no cabeçalho. A linha @code{@@settitle} geralmente está "
+"presente no começo do cabeçalho:"
 
 #. type: example
 #: texinfo/texinfo-ed.7.1-en_US.texi:1062
 #, no-wrap
 msgid "@@settitle Sample Manual 1.0\n"
-msgstr ""
+msgstr "@@settitle Manual do Sample 1.0\n"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:1069
@@ -2918,9 +2925,15 @@ msgid ""
 "(@pxref{@code{@@synindex}}), for instance, is another command often included "
 "in the header."
 msgstr ""
+"A linha @code{@@settitle} especifica um título para os cabeçalhos de "
+"página (ou rodapés) do manual impresso, e o título padrão e a "
+"descrição do documento para @samp{<head>} em HTML@. @code{@@synindex} "
+"(@pxref{@code{@@synindex}}), por exemplo, é outro comando frequentemente "
+"incluído no cabeçalho."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:1078
+#, no-wrap
 msgid ""
 "The start of the Texinfo file up to the first content that is output as part "
 "of the main body of the document is the @dfn{preamble}.  It includes the "
@@ -2931,41 +2944,51 @@ msgid ""
 "formatted, for example @ref{@code{@@copying}} output as a comment at the "
 "beginning of output files, or the language used in file headers."
 msgstr ""
+"O início do arquivo do Texinfo até o primeiro conteúdo que é gerado como "
+"parte do corpo principal do documento é o @dfn{preâmbulo}. Ele inclui o "
+"cabeçalho, @ref{Permissões do Documento} e a especificação @ref{Página "
+"de Título e Página de Copyright}. É importante para o formato de saída "
+"do @LaTeX{}, pois o fim do preâmbulo é onde a linha "
+"@code{\begin@{document@}} é gerada. Em outros formatos de saída, ele pode "
+"ser usado para determinar como alguma saída especial é formatada, por "
+"exemplo, a saída @ref{@code{@@copying}} como um comentário no início dos "
+"arquivos de saída ou o idioma usado nos cabeçalhos de arquivo."
 
 #. type: node
 #: texinfo/texinfo-ed.7.1-en_US.texi:1081
 #, no-wrap
 msgid "First Line"
-msgstr ""
+msgstr "Primeira Linha"
 
 #. type: subsection
 #: texinfo/texinfo-ed.7.1-en_US.texi:1082
 #, no-wrap
 msgid "The First Line of a Texinfo File"
-msgstr ""
+msgstr "A Primeira Linha de um Arquivo do Texinfo"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:1084
+#, no-wrap
 msgid "@nodedescription The first line of a Texinfo file."
-msgstr ""
+msgstr "@nodedescription A primeira linha de um arquivo do Texinfo."
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:1084
 #, no-wrap
 msgid "First line of a Texinfo file"
-msgstr ""
+msgstr "Primeira linha de um arquivo do Texinfo"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:1085
 #, no-wrap
 msgid "Beginning line of a Texinfo file"
-msgstr ""
+msgstr "Linha inicial de um arquivo do Texinfo"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:1086
 #, no-wrap
 msgid "Header of a Texinfo file"
-msgstr ""
+msgstr "Cabeçalho de um arquivo do Texinfo"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:1090
@@ -2973,6 +2996,8 @@ msgid ""
 "Every Texinfo file that is to be the top-level input to @TeX{} must begin "
 "with a line that looks like this:"
 msgstr ""
+"Cada arquivo do Texinfo que deva ser a entrada de nível superior para "
+"@TeX{} precisa começar com uma linha semelhante a esta:"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:1104
@@ -2986,6 +3011,15 @@ msgid ""
 "@samp{\\} to @samp{@@}; before the switch occurs, @TeX{} requires @samp{\\}, "
 "which is why it appears at the beginning of the file."
 msgstr ""
+"Quando o arquivo for processado pelo @TeX{}, o comando @samp{\\input "
+"texinfo} diz ao @TeX{} para carregar as macros necessárias para processar "
+"um arquivo do Texinfo. Elas estão em um arquivo chamado @file{texinfo.tex}, "
+"que deveria ter sido instalado no teu sistema ou junto com o software @TeX{} "
+"ou com o Texinfo. O @TeX{} usa a barra invertida, @samp{\\}, para marcar o "
+"início de um comando, exatamente como o Texinfo usa @samp{@@}. O arquivo "
+"@file{texinfo.tex} causa a comutação de @samp{\\} para @samp{@@}; antes "
+"que a comutação ocorra, o @TeX{} exige @samp{\\}, e é por isso que ela "
+"aparece no início do arquivo."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:1107
@@ -2993,6 +3027,8 @@ msgid ""
 "You may optionally follow this line with a comment to tell GNU Emacs to use "
 "Texinfo mode when the file is edited:"
 msgstr ""
+"Opcionalmente, você pode seguir essa linha com um comentário para informar "
+"ao GNU Emacs para usar o modo Texinfo quando o arquivo for editado:"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:1114
