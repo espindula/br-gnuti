@@ -1266,11 +1266,11 @@ citações, tabelas, listas e assim por diante, e @code{@@node} (@pxref{Nós}) e
 comandos de estruturação de capítulos (@pxref{Estruturação de Capítulos})
 encerram o preâmbulo.
 
-O conceito do preâmbulo é significativo para a saída do @LaTeX{}, pois a linha
+O conceito de preâmbulo é significativo para a saída do @LaTeX{}, pois a linha
 @code{\begin@{document@}} é gerada no final do preâmbulo.
 
-Em texto simples, o preâmbulo é simplesmente exibido como de costume no início
-do documento; por exemplo, um @code{@@contents} no preâmbulo é exibido como o
+Em texto simples, o preâmbulo é simplesmente gerado como de costume no início
+do documento; por exemplo, um @code{@@contents} no preâmbulo é gerado como o
 sumário (@pxref{Conteúdo}).
 
 Também não existe muito tratamento especial do preâmbulo para saída HTML e
