@@ -3391,6 +3391,12 @@ msgid ""
 "setting the headings, controlling indentation or hyphenation, or the table "
 "of contents (@pxref{Contents})."
 msgstr ""
+"O preâmbulo pode conter comandos que afetam a formatação do documento "
+"como um todo, mas que não produzem saída, ou não produzem saída "
+"imediatamente, como @code{@@settitle} (@pxref{@code{@@settitle}}), "
+"@code{@@documentlanguage}, (@pxref{@code{@@documentlanguage}}), comandos que "
+"definem os títulos, controlam o recuo ou a hifenização, ou o sumário "
+"(@pxref{Conteúdo})."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:1261
@@ -3399,6 +3405,10 @@ msgid ""
 "quotations, tables, lists and so on, and @code{@@node} (@pxref{Nodes})  and "
 "chapter structuring commands (@pxref{Chapter Structuring}) end the preamble."
 msgstr ""
+"Qualquer texto que inicia um parágrafo, comandos @@ que são formatados "
+"como citações, tabelas, listas e assim por diante, e @code{@@node} "
+"(@pxref{Nós}) e comandos de estruturação de capítulos "
+"(@pxref{Estruturação de Capítulos}) encerram o preâmbulo."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:1264
@@ -3406,6 +3416,8 @@ msgid ""
 "The concept of the preamble is significant for @LaTeX{} output, as the "
 "@code{\\begin@{document@}} line is output at the end of the preamble."
 msgstr ""
+"O conceito de preâmbulo é significativo para a saída do @LaTeX{}, pois a "
+"linha @code{\\begin@{document@}} é gerada no final do preâmbulo."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:1268
@@ -3414,6 +3426,9 @@ msgid ""
 "document; for example, a @code{@@contents} in the preamble is output as the "
 "table of contents (@pxref{Contents})."
 msgstr ""
+"Em texto simples, o preâmbulo é simplesmente gerado como de costume no "
+"início do documento; por exemplo, um @code{@@contents} no preâmbulo é "
+"gerado como o sumário (@pxref{Conteúdo})."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:1274
