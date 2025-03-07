@@ -1314,7 +1314,7 @@ No Emacs, as linhas de início e fim do cabeçalho podem ser usadas para cercar
 comandos que afetam globalmente o documento no preâmbulo do Texinfo. Isso
 permite que você formate somente parte de um arquivo do Texinfo para Info ou
 impressão.
-@xref{@code{texinfo-format} commands}.
+@xref{Comandos @code{texinfo-format}}.
 
 Uma linha de início de cabeçalho é um comentário do Texinfo que se parece com
 isto:
@@ -1410,11 +1410,11 @@ Copyright @@copyright@{@} 2016 Free Software Foundation, Inc.
 @end group
 @end example
 
-O aviso de copyright e as permissões de cópia para um documento precisam
-aparecer em vários lugares nos vários formatos da saída gerada do Texinfo.
-Portanto, o Texinfo fornece um comando (@code{@@copying}) para declarar esse
-texto uma vez, e outro comando (@code{@@insertcopying}) para inserir o texto em
-pontos apropriados.
+O aviso de direitos autorais e as permissões de cópia para um documento
+precisam aparecer em vários lugares nos vários formatos da saída gerada
+do Texinfo. Portanto, o Texinfo fornece um comando (@code{@@copying})
+para declarar esse texto uma vez, e outro comando
+(@code{@@insertcopying}) para inserir o texto em pontos apropriados.
 
 Se o documento for um manual de software, o software tipicamente está sob uma
 licença diferente---para GNU e muitos outros pacotes de software livre, o
@@ -1434,7 +1434,7 @@ O comando @code{@@copying} deveria ser fornecido bem no início do documento; o
 local recomendado é logo depois do material do cabeçalho
 (@pxref{Cabeçalho do Arquivo do Texinfo}). Ele consiste convencionalmente em
 uma ou duas frases acerca do que é o programa, identificação da documentação em
-si, a linha jurídica de copyright e as permissões de cópia. Aqui está um
+si, a linha jurídica de direitos autorais e as permissões de cópia. Aqui está um
 exemplo esquelético:
 
 @example
@@ -1489,11 +1489,11 @@ O(A) proprietário(a) (ou proprietários(as)) dos direitos autorais é quem
 titularizar os direitos autorais sobre a obra. No caso de obras atribuídas à
 FSF, o(a) proprietário(a) é `Free Software Foundation, Inc.'.
 
-A `linha' de copyright pode, na verdade, ser dividida em várias linhas, tanto
-no documento fonte quanto na saída gerada. Isso geralmente acontece para
-documentos com um longo histórico, tendo muitos anos de publicação. Se você
-usar várias linhas, não recue nenhuma delas (ou qualquer outra coisa no bloco
-@code{@@copying}) no arquivo fonte.
+A `linha' de direitos autorais pode, na verdade, ser dividida em várias
+linhas, tanto no documento fonte quanto na saída gerada. Isso geralmente
+acontece para documentos com um longo histórico, tendo muitos anos de
+publicação. Se você usar várias linhas, não recue nenhuma delas (ou
+qualquer outra coisa no bloco @code{@@copying}) no arquivo fonte.
 
 @xref{Copyright Notices,,, maintain, Informações do(a) Mantenedor(a) GNU}, para
 informações adicionais. @xref{Textos GNU de Amostra}, para o texto completo a
@@ -1533,10 +1533,11 @@ texto está presente. Mas, para obter um texto visível na saída gerada,
 
 Similarmente, o texto @code{@@copying} é automaticamente incluído no
 início de cada arquivo de saída HTML, como um comentário HTML.  De novo,
-esse texto não é visível (a menos que o(a) leitor(a) visualize o fonte HTML).
+esse texto não é visível sem @code{@@insertcopying} (a menos que o(a)
+leitor(a) visualize o fonte HTML).
 
 O texto de permissões definido por @code{@@copying} também aparece
-automaticamente no início dos arquivos de saída Docbook usando marcação
+automaticamente no início dos arquivos de saída Docbook usando-se marcação
 apropriada. @code{@@insertcopying} pode ser usado para gerar o texto de
 permissão dentro do texto normal.
 
@@ -1545,8 +1546,8 @@ permissão dentro do texto normal.
 @nodedescription Criação das páginas de título e de direitos autorais.
 @section Páginas de Título e de Direitos Autorais
 
-Em saída impressa, o nome e autor(a) do manual são usualmente impressos em uma
-página de título.   A informação de direitos autorais é geralmente impressa no
+Em saída impressa, o nome e autor(a) do manual usualmente são impressos em uma
+página de título.   A informação de direitos autorais geralmente é impressa no
 verso de página de título. Esse segmento precisa ser colocado entre os comandos
 @code{@@titlepage} e @code{@@end titlepage}:
 
