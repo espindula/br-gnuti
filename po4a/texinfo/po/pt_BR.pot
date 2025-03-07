@@ -4171,18 +4171,19 @@ msgstr ""
 #: texinfo/texinfo-ed.7.1-en_US.texi:1539
 #, no-wrap
 msgid "Titlepage & Copyright Page"
-msgstr ""
+msgstr "Página de Título e Página de Direitos Autorais"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:1541
 msgid "@nodedescription Creating the title and copyright pages."
 msgstr ""
+"@nodedescription Criação das páginas de título e de direitos autorais."
 
 #. type: section
 #: texinfo/texinfo-ed.7.1-en_US.texi:1541
 #, no-wrap
 msgid "Title and Copyright Pages"
-msgstr ""
+msgstr "Páginas de Título e de Direitos Autorais"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:1547
@@ -4192,6 +4193,10 @@ msgid ""
 "the title page.  This segment must be enclosed between @code{@@titlepage} "
 "and @code{@@end titlepage} commands:"
 msgstr ""
+"Em saída impressa, o nome e autor(a) do manual usualmente são impressos em "
+"uma página de título. A informação de direitos autorais geralmente é "
+"impressa no verso da página de título. Esse segmento precisa ser colocado "
+"entre os comandos @code{@@titlepage} e @code{@@end titlepage}:"
 
 #. type: group
 #: texinfo/texinfo-ed.7.1-en_US.texi:1552
@@ -4200,6 +4205,8 @@ msgid ""
 "@@titlepage\n"
 "@@title Sample Title\n"
 msgstr ""
+"@@titlepage\n"
+"@@title Título de Amostra\n"
 
 #. type: group
 #: texinfo/texinfo-ed.7.1-en_US.texi:1560
@@ -4211,6 +4218,11 @@ msgid ""
 "@@insertcopying\n"
 "@@end titlepage\n"
 msgstr ""
+"@@c Os dois comandos a seguir iniciam a página de direitos autorais.\n"
+"@@page\n"
+"@@vskip 0pt plus 1filll\n"
+"@@insertcopying\n"
+"@@end titlepage\n"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:1567
@@ -4218,6 +4230,8 @@ msgid ""
 "We use the @code{@@insertcopying} command to include the permission text "
 "from the previous section, instead of writing it out again."
 msgstr ""
+"Nós usamos o comando @code{@@insertcopying} para incluir o texto de "
+"permissão oriundo da seção anterior, em vez de escrevê-lo novamente."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:1572
@@ -4227,6 +4241,11 @@ msgid ""
 "printed manuals is to set the @code{NO_TOP_NODE_OUTPUT} customization "
 "variable (@pxref{@code{NO_TOP_NODE_OUTPUT}})."
 msgstr ""
+"As páginas de título e de direitos autorais aparecem em manuais impressos, "
+"porém não na maior parte dos outros formatos de saída. Em HTML, a melhor "
+"maneira de obter uma página de título semelhante a manuais impressos é a "
+"de configurar a variável de personalização @code{NO_TOP_NODE_OUTPUT} "
+"(@pxref{@code{NO_TOP_NODE_OUTPUT}})."
 
 #. type: node
 #: texinfo/texinfo-ed.7.1-en_US.texi:1574
