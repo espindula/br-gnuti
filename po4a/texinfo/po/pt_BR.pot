@@ -3605,12 +3605,14 @@ msgstr "Linha de fim do cabeçalho"
 #: texinfo/texinfo-ed.7.1-en_US.texi:1327
 msgid "A end-of-header line is a Texinfo comment that looks like this:"
 msgstr ""
+"Uma linha de fim de cabeçalho é um comentário do Texinfo que se parece "
+"com isto:"
 
 #. type: example
 #: texinfo/texinfo-ed.7.1-en_US.texi:1330
 #, no-wrap
 msgid "@@c %**end of header\n"
-msgstr ""
+msgstr "@@c %**end of header\n"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:1336
@@ -3620,6 +3622,11 @@ msgid ""
 "wish by setting the @code{tex-start-of-header} and/or "
 "@code{tex-end-of-header} Emacs variables.  @xref{Texinfo Mode Printing}."
 msgstr ""
+"A estranha sequência de caracteres, @samp{%**}, é para garantir que nenhum "
+"outro comentário seja acidentalmente tomado como uma linha de início de "
+"cabeçalho. Você pode mudá-la se desejar, configurando as variáveis do "
+"Emacs @code{tex-start-of-header} e (ou) @code{tex-end-of-header}. "
+"@xref{Impressão no Modo Texinfo}."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:1339
@@ -3627,36 +3634,38 @@ msgid ""
 "The start- and end-of-header lines are not part of the Texinfo format "
 "specification, which is why they are implemented with comments."
 msgstr ""
+"As linhas de início e fim do cabeçalho não são parte da especificação "
+"do formato do Texinfo, e é por isso que são implementadas com comentários."
 
 #. type: section
 #: texinfo/texinfo-ed.7.1-en_US.texi:1341
 #: texinfo/texinfo-ed.7.1-en_US.texi:1343
 #, no-wrap
 msgid "Directory Category"
-msgstr ""
+msgstr "Categoria de Diretório"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:1343
 msgid "@nodedescription A category for a manual."
-msgstr ""
+msgstr "@nodedescription Uma categoria para um manual."
 
 #. type: findex
 #: texinfo/texinfo-ed.7.1-en_US.texi:1345
 #, no-wrap
 msgid "dircategory"
-msgstr ""
+msgstr "dircategory"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:1346
 #, no-wrap
 msgid "Dir categories, choosing"
-msgstr ""
+msgstr "Categorias de diretório, escolhendo"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:1347
 #, no-wrap
 msgid "Categories, choosing"
-msgstr ""
+msgstr "Categorias, escolhendo"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:1353
@@ -3664,6 +3673,8 @@ msgid ""
 "Use the @code{@@dircategory} command to specify a category for the manual.  "
 "Here are a few examples of category names:"
 msgstr ""
+"Use o comando @code{@@dircategory} para especificar uma categoria para o "
+"manual. Aqui estão alguns exemplos de nomes de categorias:"
 
 #. type: display
 #: texinfo/texinfo-ed.7.1-en_US.texi:1371
@@ -3686,6 +3697,22 @@ msgid ""
 "Software libraries\n"
 "Version control\n"
 msgstr ""
+"Fundamentos\n"
+"Criação e manipulação de texto\n"
+"Arquivamento\n"
+"Compressão\n"
+"Base de dados\n"
+"Editores\n"
+"Emacs\n"
+"Mensagens eletrônicas\n"
+"Gráficos\n"
+"Localização\n"
+"Aplicativos de rede de intercomunicação\n"
+"Impressão\n"
+"Ciência\n"
+"Desenvolvimento de software\n"
+"Bibliotecas de software\n"
+"Controle de versão\n"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:1376
