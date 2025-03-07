@@ -3880,6 +3880,9 @@ msgid ""
 "@var{date}), which @dots{}\n"
 "\n"
 msgstr ""
+"@@copying\n"
+"Este manual é para @var{programa} (versão @var{versão}, atualizado "
+"@var{data}), que @dots{}\n"
 
 #. type: example
 #: texinfo/texinfo-ed.7.1-en_US.texi:1438
@@ -3888,6 +3891,8 @@ msgid ""
 "Copyright @@copyright@{@} @var{years} @var{copyright-owner}.\n"
 "\n"
 msgstr ""
+"Copyright @@copyright@{@} @var{anos} @var{titular-copyright}.\n"
+"\n"
 
 #. type: example
 #: texinfo/texinfo-ed.7.1-en_US.texi:1443
@@ -3898,6 +3903,10 @@ msgid ""
 "@@end quotation\n"
 "@@end copying\n"
 msgstr ""
+"@@quotation\n"
+"Permissão é concedida para @dots{}\n"
+"@@end quotation\n"
+"@@end copying\n"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:1447
@@ -3905,6 +3914,8 @@ msgid ""
 "The @code{@@quotation} has no legal significance; it's there to improve "
 "readability in some contexts."
 msgstr ""
+"O @code{@@quotation} não tem significado jurídico; ele está lá para "
+"melhorar a legibilidade em alguns contextos."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:1454
@@ -3916,6 +3927,13 @@ msgid ""
 "@code{@@insertcopying} to emit the copying information.  See the next "
 "section for details."
 msgstr ""
+"O texto de @code{@@copying} aparece como um comentário no início dos "
+"arquivos da saída gerada do Info e de HTML. Essas informações também "
+"são geradas no início dos arquivos da saída gerada do DocBook usando-se "
+"marcação apropriada. Elas @emph{não} são geradas implicitamente em texto "
+"simples ou em saída impressa; cabe inteiramente a você usar "
+"@code{@@insertcopying} para emitir as informações de cópia. Veja-se a "
+"próxima seção para detalhes."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:1459
@@ -3925,23 +3943,29 @@ msgid ""
 "instance).  When the glyph is not supported in the output, it generates the "
 "three-character sequence @samp{(C)}."
 msgstr ""
+"O comando @code{@@copyright@{@}} gera um @samp{c} dentro de um círculo "
+"quando o formato da saída gerada suportar esse glifo (impressa e HTML "
+"sempre suportam, por exemplo). Quando o glifo não for suportado na saída "
+"gerada, ele gera a sequência de três caracteres @samp{(C)}."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:1462
 msgid "The copyright notice itself has the following legally-prescribed form:"
 msgstr ""
+"O aviso de direitos autorais em si tem o seguinte formato juridicamente "
+"prescrito:"
 
 #. type: example
 #: texinfo/texinfo-ed.7.1-en_US.texi:1465
 #, no-wrap
 msgid "Copyright @copyright{} @var{years} @var{copyright-owner}.\n"
-msgstr ""
+msgstr "Copyright @copyright{} @var{anos} @var{titular-copyright}.\n"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:1467
 #, no-wrap
 msgid "Copyright word, always in English"
-msgstr ""
+msgstr "Palavra Copyright, sempre em inglês"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:1471
@@ -3949,12 +3973,15 @@ msgid ""
 "The word `Copyright' must always be written in English, even if the document "
 "is otherwise written in another language.  This is due to international law."
 msgstr ""
+"A palavra `Copyright' precisa sempre estar escrita em inglês, mesmo que o "
+"documento esteja escrito em outro idioma. Isso é devido ao direito "
+"internacional."
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:1472
 #, no-wrap
 msgid "Years, in copyright line"
-msgstr ""
+msgstr "Anos, na linha de direitos autorais"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:1477
@@ -3963,24 +3990,28 @@ msgid ""
 "(even if it was released in a subsequent year).  It is simplest for each "
 "year to be written out individually and in full, separated by commas."
 msgstr ""
+"A lista de anos deveria incluir todos os anos nos quais uma versão foi "
+"concluída (mesmo se ela foi lançada em um ano subsequente). É mais "
+"simples que cada ano esteja escrito individualmente e por completo, separado "
+"por vírgulas."
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:1478
 #, no-wrap
 msgid "Copyright holder for FSF works"
-msgstr ""
+msgstr "Titular dos direitos autorais para obras da FSF"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:1479
 #, no-wrap
 msgid "Holder of copyright for FSF works"
-msgstr ""
+msgstr "Obras da FSF, Titular dos direitos autorais das"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:1480
 #, no-wrap
 msgid "Owner of copyright for FSF works"
-msgstr ""
+msgstr "Proprietário(a) dos direitos autorais das obras da FSF"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:1484
@@ -3989,6 +4020,9 @@ msgid ""
 "work.  In the case of works assigned to the FSF, the owner is `Free Software "
 "Foundation, Inc.'."
 msgstr ""
+"O(A) proprietário(a) (ou proprietários(as)) dos direitos autorais é quem "
+"titularizar os direitos autorais sobre a obra. No caso de obras atribuídas "
+"à FSF, o(a) proprietário(a) é `Free Software Foundation, Inc.'."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:1490
@@ -3999,6 +4033,11 @@ msgid ""
 "use several lines, do not indent any of them (or anything else in the "
 "@code{@@copying} block) in the source file."
 msgstr ""
+"A `linha' de direitos autorais pode, na verdade, ser dividida em várias "
+"linhas, tanto no documento fonte quanto na saída gerada. Isso geralmente "
+"acontece para documentos com um longo histórico, tendo muitos anos de "
+"publicação. Se você usar várias linhas, não recue nenhuma delas (ou "
+"qualquer outra coisa no bloco @code{@@copying}) no arquivo fonte."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:1496
@@ -4008,47 +4047,52 @@ msgid ""
 "used in GNU manuals.  @xref{GNU Free Documentation License}, for the license "
 "itself under which GNU and other free manuals are distributed."
 msgstr ""
+"@xref{Copyright Notices,,, maintain, Informações do(a) Mantenedor(a) GNU}, "
+"para informações adicionais. @xref{Textos GNU de Amostra}, para o texto "
+"completo a ser usado nos manuais GNU. @xref{Licença GNU de Documentação "
+"Livre}, para a licença em si sob a qual o GNU e outros manuais livres são "
+"distribuídos."
 
 #. type: node
 #: texinfo/texinfo-ed.7.1-en_US.texi:1498
 #, no-wrap
 msgid "@code{@@insertcopying}"
-msgstr ""
+msgstr "@code{@@insertcopying}"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:1500
 msgid "@nodedescription Where to insert the permissions."
-msgstr ""
+msgstr "@nodedescription Onde inserir as permissões."
 
 #. type: subsection
 #: texinfo/texinfo-ed.7.1-en_US.texi:1500
 #, no-wrap
 msgid "@code{@@insertcopying}: Include Permissions Text"
-msgstr ""
+msgstr "@code{@@insertcopying}: Incluir Texto de Permissões"
 
 #. type: findex
 #: texinfo/texinfo-ed.7.1-en_US.texi:1503
 #, no-wrap
 msgid "insertcopying"
-msgstr ""
+msgstr "insertcopying"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:1504
 #, no-wrap
 msgid "Copying text, including"
-msgstr ""
+msgstr "Texto de reprodução, incluindo"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:1505
 #, no-wrap
 msgid "Permissions text, including"
-msgstr ""
+msgstr "Texto das permissões, incluindo"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:1506
 #, no-wrap
 msgid "Including permissions text"
-msgstr ""
+msgstr "Incluindo texto das permissões"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:1510
@@ -4056,13 +4100,15 @@ msgid ""
 "The @code{@@insertcopying} command is simply written on a line by itself, "
 "like this:"
 msgstr ""
+"O comando @code{@@insertcopying} simplesmente é escrito em uma linha "
+"própria, como esta:"
 
 #. type: example
 #: texinfo/texinfo-ed.7.1-en_US.texi:1513
 #: texinfo/texinfo-ed.7.1-en_US.texi:1829
 #, no-wrap
 msgid "@@insertcopying\n"
-msgstr ""
+msgstr "@@insertcopying\n"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:1518
@@ -4071,6 +4117,9 @@ msgid ""
 "requirements, it must be used on the copyright page in the printed manual "
 "(@pxref{Copyright})."
 msgstr ""
+"Isso insere o texto previamente definido por @code{@@copying}.  Para atender "
+"às exigências jurídicas, ele precisa ser usado na página de direitos "
+"autorais no manual impresso (veja-se @ref{Direitos Autorais})."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:1527
@@ -4083,6 +4132,14 @@ msgid ""
 "not matter for legal purposes, because the text is present.  But to get a "
 "visible text in the output, @code{@@insertcopying} should be used."
 msgstr ""
+"O próprio comando @code{@@copying} faz com que o texto das permissões "
+"apareça em um arquivo Info @emph{antes} do primeiro nó.  O texto também "
+"é copiado no início de cada arquivo dividido de saída Info, como é "
+"juridicamente necessário. Esse local implica que um humano lendo o manual "
+"usando Info @emph{não} vê esse texto (exceto quando usar o comando "
+"avançado @kbd{g *} do Info). Isso não importa para propósitos jurídicos, "
+"pois o texto está presente. Mas, para obter um texto visível na saída "
+"gerada, @code{@@insertcopying} deveria ser usado."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:1532
@@ -4092,6 +4149,10 @@ msgid ""
 "not visible without @code{@@insertcopying} (unless the reader views the HTML "
 "source)."
 msgstr ""
+"Similarmente, o texto @code{@@copying} é automaticamente incluído no "
+"início de cada arquivo de saída HTML, como um comentário HTML.  De novo, "
+"esse texto não é visível sem @code{@@insertcopying} (a menos que o(a) "
+"leitor(a) visualize o fonte HTML)."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:1537
@@ -4101,6 +4162,10 @@ msgid ""
 "@code{@@insertcopying} can be used to output the permission text within "
 "normal text."
 msgstr ""
+"O texto de permissões definido por @code{@@copying} também aparece "
+"automaticamente no início dos arquivos de saída Docbook usando-se "
+"marcação apropriada. @code{@@insertcopying} pode ser usado para gerar o "
+"texto de permissão dentro do texto normal."
 
 #. type: node
 #: texinfo/texinfo-ed.7.1-en_US.texi:1539
