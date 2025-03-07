@@ -3357,12 +3357,13 @@ msgstr "Preâmbulo"
 #: texinfo/texinfo-ed.7.1-en_US.texi:1233
 msgid "@nodedescription Start of the Texinfo file up to first content."
 msgstr ""
+"@nodedescription Início do arquivo do Texinfo até o primeiro conteúdo."
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:1235
 #, no-wrap
 msgid "Texinfo Preamble"
-msgstr ""
+msgstr "Preâmbulo do Texinfo"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:1242
@@ -3373,6 +3374,12 @@ msgid ""
 "the document permissions (@pxref{@code{@@copying}}) and the "
 "@code{@@titlepage} specification (@pxref{Titlepage & Copyright Page})."
 msgstr ""
+"O @dfn{preâmbulo} começa no início do arquivo do Texinfo e continua até "
+"o primeiro material diretamente produzido. Ele tipicamente inclui o "
+"cabeçalho do arquivo (@pxref{Cabeçalho do Arquivo do Texinfo}), o bloco "
+"@code{@@copying} especificando as permissões do documento "
+"(@pxref{@code{@@copying}}) e a especificação @code{@@titlepage} "
+"(@pxref{Página de Título e Página de Direitos Autorais})."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:1249
