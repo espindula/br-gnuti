@@ -3721,6 +3721,9 @@ msgid ""
 "blocks, which are used by @command{install-info}.  @xref{Installing Dir "
 "Entries}, for details."
 msgstr ""
+"Comandos @code{@@dircategory} geralmente são seguidos por uns blocos "
+"@code{@@direntry}, que são usados pelo @command{install-info}. "
+"@xref{Instalando Entradas de Diretório}, para detalhes."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:1380
@@ -3729,36 +3732,39 @@ msgid ""
 "entire manual.  Subsequent uses of @code{@@dircategory} set the category for "
 "following @code{@@direntry} blocks only."
 msgstr ""
+"O primeiro comando @code{@@dircategory} em um manual é a categoria para o "
+"manual inteiro. Usos subsequentes de @code{@@dircategory} configuram a "
+"categoria somente para blocos @code{@@direntry} seguintes."
 
 #. type: section
 #: texinfo/texinfo-ed.7.1-en_US.texi:1382
 #: texinfo/texinfo-ed.7.1-en_US.texi:1385
 #, no-wrap
 msgid "Document Permissions"
-msgstr ""
+msgstr "Permissões de Documentos"
 
-#.  old node name
+#.  nome antigo de nó
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:1385
 msgid "@nodedescription Ensuring your manual is free."
-msgstr ""
+msgstr "@nodedescription Garantindo que teu manual seja livre."
 
 #. type: anchor{#1}
 #: texinfo/texinfo-ed.7.1-en_US.texi:1385
 msgid "Software Copying Permissions"
-msgstr ""
+msgstr "Permissões de Cópia de Software"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:1386
 #, no-wrap
 msgid "Document permissions"
-msgstr ""
+msgstr "Permissões de documentos"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:1387
 #, no-wrap
 msgid "Copying permissions"
-msgstr ""
+msgstr "Permissões de cópia"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:1393
@@ -3768,6 +3774,10 @@ msgid ""
 "real manual includes more text here, according to the license under which it "
 "is distributed."
 msgstr ""
+"Este segmento descreve o documento e contém o aviso de direitos autorais e "
+"permissões de cópia. Isso é feito com o comando @code{@@copying}. Um "
+"manual real inclui mais texto aqui, de acordo com a licença sob a qual ele "
+"é distribuído."
 
 #. type: group
 #: texinfo/texinfo-ed.7.1-en_US.texi:1398
@@ -3777,6 +3787,9 @@ msgid ""
 "This is a short example of a complete Texinfo file, version 1.0.\n"
 "\n"
 msgstr ""
+"@@copying\n"
+"Este é um exemplo curto de um arquivo completo do Texinfo, versão 1.0.\n"
+"\n"
 
 #. type: group
 #: texinfo/texinfo-ed.7.1-en_US.texi:1401
@@ -3785,6 +3798,8 @@ msgid ""
 "Copyright @@copyright@{@} 2016 Free Software Foundation, Inc.\n"
 "@@end copying\n"
 msgstr ""
+"Copyright @@copyright@{@} 2016 Free Software Foundation, Inc.\n"
+"@@end copying\n"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:1409
@@ -3794,6 +3809,11 @@ msgid ""
 "provides a command (@code{@@copying}) to declare this text once, and another "
 "command (@code{@@insertcopying}) to insert the text at appropriate points."
 msgstr ""
+"O aviso de direitos autorais e as permissões de cópia para um documento "
+"precisam aparecer em vários lugares nos vários formatos da saída gerada "
+"do Texinfo. Portanto, o Texinfo fornece um comando (@code{@@copying}) para "
+"declarar esse texto uma vez, e outro comando (@code{@@insertcopying}) para "
+"inserir o texto nos pontos apropriados."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:1416
@@ -3805,29 +3825,35 @@ msgid ""
 "but giving the complete text of the software license is not necessarily "
 "required."
 msgstr ""
+"Se o documento for um manual de software, o software tipicamente está sob "
+"uma licença diferente---para GNU e muitos outros pacotes de software livre, "
+"o software geralmente é lançado sob a GNU GPL, e os manuais são lançados "
+"sob a GNU FDL@. É útil declarar a licença do software do manual, mas "
+"fornecer o texto completo da licença do software não é necessariamente "
+"exigido."
 
 #. type: node
 #: texinfo/texinfo-ed.7.1-en_US.texi:1418
 #, no-wrap
 msgid "@code{@@copying}"
-msgstr ""
+msgstr "@code{@@copying}"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:1420
 msgid "@nodedescription Declare the document's copying permissions."
-msgstr ""
+msgstr "@nodedescription Declare as permissões de cópia do documento."
 
 #. type: subsection
 #: texinfo/texinfo-ed.7.1-en_US.texi:1420
 #, no-wrap
 msgid "@code{@@copying}: Declare Copying Permissions"
-msgstr ""
+msgstr "@code{@@copying}: Declarar Permissões de Cópia"
 
 #. type: findex
 #: texinfo/texinfo-ed.7.1-en_US.texi:1423
 #, no-wrap
 msgid "copying"
-msgstr ""
+msgstr "copying"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:1431
@@ -3838,6 +3864,12 @@ msgid ""
 "program is, identification of the documentation itself, the legal copyright "
 "line, and the copying permissions.  Here is a skeletal example:"
 msgstr ""
+"O comando @code{@@copying} deveria ser fornecido bem no início do "
+"documento; o local recomendado é logo depois do material do cabeçalho "
+"(@pxref{Cabeçalho do Arquivo do Texinfo}). Ele consiste convencionalmente "
+"em uma ou duas frases acerca do que é o programa, identificação da "
+"documentação em si, a linha jurídica de direitos autorais e as "
+"permissões de cópia. Aqui está um exemplo esquelético:"
 
 #. type: example
 #: texinfo/texinfo-ed.7.1-en_US.texi:1436
