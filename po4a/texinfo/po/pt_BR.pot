@@ -3439,6 +3439,11 @@ msgid ""
 "apply to commands specifying the indentation, or the language "
 "(@pxref{@code{@@documentlanguage}})."
 msgstr ""
+"Também não existe muito tratamento especial do preâmbulo para saída HTML "
+"e Info. No entanto, algumas configurações atuais no finalzinho do "
+"preâmbulo podem ser usadas para o documento como um todo, independentemente "
+"do que se segue. Isso pode se aplicar a comandos que especificam o recuo ou "
+"o idioma (@pxref{@code{@@documentlanguage}})."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:1279
@@ -3447,6 +3452,10 @@ msgid ""
 "are formatted with @code{@@documentlanguage} set to @samp{pt}, as it is the "
 "last @code{@@documentlanguage} before the end of the preamble."
 msgstr ""
+"Por exemplo, para o documento a seguir, os comentários de cópia de HTML e "
+"de Info são formatados com @code{@@documentlanguage} configurado como "
+"@samp{pt}, pois é o último @code{@@documentlanguage} antes do final do "
+"preâmbulo."
 
 #. type: group
 #: texinfo/texinfo-ed.7.1-en_US.texi:1284
@@ -3455,6 +3464,8 @@ msgid ""
 "@@documentlanguage fr\n"
 "\n"
 msgstr ""
+"@@documentlanguage fr\n"
+"\n"
 
 #. type: group
 #: texinfo/texinfo-ed.7.1-en_US.texi:1288
@@ -3465,6 +3476,10 @@ msgid ""
 "@@end copying\n"
 "\n"
 msgstr ""
+"@@copying\n"
+"A informação de cópia @@error@{@} algum texto\n"
+"@@end copying\n"
+"\n"
 
 #. type: group
 #: texinfo/texinfo-ed.7.1-en_US.texi:1290
@@ -3473,6 +3488,8 @@ msgid ""
 "@@documentlanguage pt\n"
 "\n"
 msgstr ""
+"@@documentlanguage pt\n"
+"\n"
 
 #. type: group
 #: texinfo/texinfo-ed.7.1-en_US.texi:1292
@@ -3481,6 +3498,8 @@ msgid ""
 "Text ending the preamble\n"
 "\n"
 msgstr ""
+"Texto finalizando o preâmbulo\n"
+"\n"
 
 #. type: group
 #: texinfo/texinfo-ed.7.1-en_US.texi:1294
@@ -3489,6 +3508,8 @@ msgid ""
 "@@documentlanguage de\n"
 "\n"
 msgstr ""
+"@@documentlanguage de\n"
+"\n"
 
 #. type: group
 #: texinfo/texinfo-ed.7.1-en_US.texi:1296
@@ -3497,35 +3518,37 @@ msgid ""
 "@@node Top\n"
 "\n"
 msgstr ""
+"@@node Top\n"
+"\n"
 
 #. type: node
 #: texinfo/texinfo-ed.7.1-en_US.texi:1301
 #, no-wrap
 msgid "Start and End of Header"
-msgstr ""
+msgstr "Início e Fim do Cabeçalho"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:1303
 msgid "@nodedescription Formatting a region in Emacs requires this."
-msgstr ""
+msgstr "@nodedescription Formatar uma região no Emacs exige isto."
 
 #. type: subsection
 #: texinfo/texinfo-ed.7.1-en_US.texi:1303
 #, no-wrap
 msgid "Start and End of Header for Emacs"
-msgstr ""
+msgstr "Início e Fim do Cabeçalho para Emacs"
 
-#.  old name
+#.  nome antigo
 #. type: anchor{#1}
 #: texinfo/texinfo-ed.7.1-en_US.texi:1305
 msgid "Start of Header"
-msgstr ""
+msgstr "Início do Cabeçalho"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:1305
 #, no-wrap
 msgid "Start of header line"
-msgstr ""
+msgstr "Início da linha de cabeçalho"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:1311
@@ -3535,17 +3558,23 @@ msgid ""
 "to format only part of a Texinfo file for Info or printing.  "
 "@xref{@code{texinfo-format} commands}."
 msgstr ""
+"No Emacs, as linhas de início e de fim de cabeçalho podem ser usadas para "
+"cercar comandos que afetam globalmente o documento no preâmbulo do Texinfo. "
+"Isso permite que você formate somente parte de um arquivo do Texinfo para "
+"Info ou impressão. @xref{Comandos @code{texinfo-format}}."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:1313
 msgid "A start-of-header line is a Texinfo comment that looks like this:"
 msgstr ""
+"Uma linha de início de cabeçalho é um comentário do Texinfo que se "
+"parece com isto:"
 
 #. type: example
 #: texinfo/texinfo-ed.7.1-en_US.texi:1316
 #, no-wrap
 msgid "@@c %**start of header\n"
-msgstr ""
+msgstr "@@c %**start of header\n"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:1322
@@ -3555,18 +3584,22 @@ msgid ""
 "such as @code{@@settitle}, @code{@@synindex} or @code{@@footnotestyle}; and "
 "then by an @w{end-of-header} line."
 msgstr ""
+"Escreva a linha de início de cabeçalho na segunda linha de um arquivo do "
+"Texinfo. Siga os comandos de início de cabeçalho que afetam globalmente a "
+"formatação do documento, como @code{@@settitle}, @code{@@synindex} ou "
+"@code{@@footnotestyle}; e então por uma linha @w{end-of-header}."
 
-#.  old name
+#.  nome antigo
 #. type: anchor{#1}
 #: texinfo/texinfo-ed.7.1-en_US.texi:1324
 msgid "End of Header"
-msgstr ""
+msgstr "Fim do Cabeçalho"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:1324
 #, no-wrap
 msgid "End of header line"
-msgstr ""
+msgstr "Linha de fim do cabeçalho"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:1327
