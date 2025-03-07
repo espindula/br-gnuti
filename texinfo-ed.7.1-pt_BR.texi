@@ -1274,7 +1274,7 @@ do documento; por exemplo, um @code{@@contents} no preâmbulo é gerado como o
 sumário (@pxref{Conteúdo}).
 
 Também não existe muito tratamento especial do preâmbulo para saída HTML e
-Info. No entanto, algumas configurações atuais no final do preâmbulo podem ser
+Info. No entanto, algumas configurações atuais no finalzinho do preâmbulo podem ser
 usadas para o documento como um todo, independentemente do que se segue. Isso
 pode se aplicar a comandos que especificam o recuo ou o idioma
 (@pxref{@code{@@documentlanguage}}).
@@ -1310,7 +1310,7 @@ Texto finalizando o preâmbulo
 @anchor{Início do Cabeçalho}@c nome antigo
 @cindex Início da linha de cabeçalho
 
-No Emacs, as linhas de início e fim do cabeçalho podem ser usadas para cercar
+No Emacs, as linhas de início e de fim de cabeçalho podem ser usadas para cercar
 comandos que afetam globalmente o documento no preâmbulo do Texinfo. Isso
 permite que você formate somente parte de um arquivo do Texinfo para Info ou
 impressão.
