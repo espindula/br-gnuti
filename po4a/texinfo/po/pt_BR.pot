@@ -3037,7 +3037,7 @@ msgstr ""
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:1114
 msgid "from the file extension automatically."
-msgstr ""
+msgstr "a partir da extensão do arquivo automaticamente."
 
 #. type: node
 #: texinfo/texinfo-ed.7.1-en_US.texi:1116
@@ -4441,29 +4441,29 @@ msgstr ""
 msgid "@code{@@title}, @code{@@subtitle}, and @code{@@author}"
 msgstr "@code{@@title}, @code{@@subtitle} e @code{@@author}"
 
-#.  old name
+#.  nome antigo
 #. type: anchor{#1}
 #: texinfo/texinfo-ed.7.1-en_US.texi:1643
 msgid "title subtitle author"
-msgstr ""
+msgstr "title subtitle author"
 
 #. type: findex
 #: texinfo/texinfo-ed.7.1-en_US.texi:1643
 #, no-wrap
 msgid "title"
-msgstr ""
+msgstr "title"
 
 #. type: findex
 #: texinfo/texinfo-ed.7.1-en_US.texi:1644
 #, no-wrap
 msgid "subtitle"
-msgstr ""
+msgstr "subtitle"
 
 #. type: findex
 #: texinfo/texinfo-ed.7.1-en_US.texi:1645
 #, no-wrap
 msgid "author"
-msgstr ""
+msgstr "author"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:1650
@@ -4472,6 +4472,9 @@ msgid ""
 "commands to create a title page in which the vertical and horizontal spacing "
 "is done for you automatically."
 msgstr ""
+"Você consegue usar os comandos @code{@@title}, @code{@@subtitle}, e "
+"@code{@@author} para criar uma página de título na qual o espaçamento "
+"vertical e horizontal seja feito para você automaticamente."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:1657
@@ -4482,6 +4485,11 @@ msgid ""
 "block (@pxref{@code{@@quotation}}); except for that, it is an error to use "
 "any of these commands outside of @code{@@titlepage}."
 msgstr ""
+"Escreva os comandos @code{@@title}, @code{@@subtitle}, ou @code{@@author} no "
+"início de uma linha seguido pelo título, subtítulo, ou autor. O comando "
+"@code{@@author} pode ser usado para uma citação em um bloco "
+"@code{@@quotation} (veja-se @ref{@code{@@quotation}}); exceto para isso, é "
+"um erro usar quaisquer desses comandos fora de @code{@@titlepage}."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:1663
@@ -4492,6 +4500,11 @@ msgid ""
 "single line in the source file; it will be broken into multiple lines of "
 "output is needed."
 msgstr ""
+"O comando @code{@@title} normalmente produz uma linha na qual o título é "
+"configurado rente ao lado esquerdo da página em uma fonte mais larga que a "
+"normal. O título é sublinhado com uma linha preta. O título deve "
+"necessariamente ser dado em uma linha no arquivo fonte; ele será quebrado "
+"em múltiplas linhas de saída se necessário."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:1669
@@ -4502,12 +4515,19 @@ msgid ""
 "to specify them for the printed output, use a conditional "
 "(@pxref{Conditionals}).  For example:"
 msgstr ""
+"Para títulos longos, o comando @code{@@*} pode ser usado para especificar "
+"as quebras de linha em títulos longos se as quebras automáticas não "
+"servirem. Tais quebras explícitas de linha geralmente são refletidas em "
+"todos os formatos de saída; se você quiser somente especificá-las para a "
+"saída impressa, use um condicional (veja-se @ref{Condicionais}). Por "
+"exemplo:"
 
 #. type: example
 #: texinfo/texinfo-ed.7.1-en_US.texi:1672
 #, no-wrap
 msgid "@@title This Long Title@@inlinefmt@{tex,@@*@} Is Broken in @@TeX@{@}\n"
 msgstr ""
+"@@title Este Título Longo@@inlinefmt@{tex,@@*@} É Quebrado no @@TeX@{@}\n"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:1676
@@ -4515,6 +4535,8 @@ msgid ""
 "The @code{@@subtitle} command normally sets subtitles in a normal-sized font "
 "flush to the right-hand side of the page."
 msgstr ""
+"O comando @code{@@subtitle} normalmente configura subtítulos em uma fonte "
+"de tamanho normal rente ao lado direito da página."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:1682
@@ -4524,6 +4546,11 @@ msgid ""
 "near the bottom of the title page.  The names are followed by a black rule "
 "that is thinner than the rule that normally underlines the title."
 msgstr ""
+"O comando @code{@@author} normalmente configura os nomes do(a) autor(a) ou "
+"autores(as) em uma fonte de tamanho médio rente ao lado esquerdo da página "
+"em uma linha próxima ao pé da página de título. Os nomes são seguidos "
+"por uma linha preta que é mais fina que a linha que normalmente sublinha o "
+"título."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:1686
@@ -4532,12 +4559,15 @@ msgid ""
 "name or names on the remaining part of the line that starts with an "
 "@code{@@author} command:"
 msgstr ""
+"Existem duas maneiras de se usar o comando @code{@@author}: você consegue "
+"escrever o nome ou nomes na parte restante da linha que inicia com um "
+"comando @code{@@author}:"
 
 #. type: example
 #: texinfo/texinfo-ed.7.1-en_US.texi:1689
 #, no-wrap
 msgid "@@author by Jane Smith and John Doe\n"
-msgstr ""
+msgstr "@@author por Jane Smith e John Doe\n"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:1694
@@ -4545,6 +4575,8 @@ msgid ""
 "or you can write the names one above each other by using multiple "
 "@code{@@author} commands:"
 msgstr ""
+"ou você pode escrever os nomes um acima do outro, usando múltiplos "
+"comandos @code{@@author}:"
 
 #. type: group
 #: texinfo/texinfo-ed.7.1-en_US.texi:1699
@@ -4553,12 +4585,14 @@ msgid ""
 "@@author Jane Smith\n"
 "@@author John Doe\n"
 msgstr ""
+"@@author Jane Smith\n"
+"@@author John Doe\n"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:1704
 #: texinfo/texinfo-ed.7.1-en_US.texi:1772
 msgid "A template for this method looks like this:"
-msgstr ""
+msgstr "Um modelo para esse método se parece com isto:"
 
 #. type: group
 #: texinfo/texinfo-ed.7.1-en_US.texi:1715
@@ -4573,6 +4607,14 @@ msgid ""
 "@dots{}\n"
 "@@end titlepage\n"
 msgstr ""
+"@@titlepage\n"
+"@@title @var{nome-do-manual-quando-impresso}\n"
+"@@subtitle @var{subtítulo-se-algum}\n"
+"@@subtitle @var{segundo-subtítulo}\n"
+"@@author @var{autor}\n"
+"@@page\n"
+"@dots{}\n"
+"@@end titlepage\n"
 
 #. type: node
 #: texinfo/texinfo-ed.7.1-en_US.texi:1719
