@@ -4251,32 +4251,32 @@ msgstr ""
 #: texinfo/texinfo-ed.7.1-en_US.texi:1574
 #, no-wrap
 msgid "@code{@@titlepage}"
-msgstr ""
+msgstr "@code{@@titlepage}"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:1576
 msgid "@nodedescription Create a title for the printed document."
-msgstr ""
+msgstr "@nodedescription Crie um título para o documento impresso."
 
 #. type: item
 #: texinfo/texinfo-ed.7.1-en_US.texi:1576
 #: texinfo/texinfo-ed.7.1-en_US.texi:19706
 #, no-wrap
 msgid "@@titlepage"
-msgstr ""
+msgstr "@@titlepage"
 
 #. type: findex
 #: texinfo/texinfo-ed.7.1-en_US.texi:1579
 #: texinfo/texinfo-ed.7.1-en_US.texi:1580
 #, no-wrap
 msgid "titlepage"
-msgstr ""
+msgstr "titlepage"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:1579
 #, no-wrap
 msgid "Title page"
-msgstr ""
+msgstr "Página de título"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:1585
@@ -4285,6 +4285,9 @@ msgid ""
 "@code{@@titlepage} on a line by itself and end it with @code{@@end "
 "titlepage} on a line by itself."
 msgstr ""
+"Inicie o material para a página de título e seguinte à página de "
+"direitos autorais com @code{@@titlepage} em uma linha própria e finalize-a "
+"com @code{@@end titlepage} em uma linha própria."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:1590
@@ -4294,12 +4297,16 @@ msgid ""
 "appear on unnumbered pages should be put between the @code{@@titlepage} and "
 "@code{@@end titlepage} commands."
 msgstr ""
+"O comando @code{@@end titlepage} inicia uma página nova e liga a "
+"numeração de página (@pxref{Geração de Títulos}).  Todo o material que "
+"você quiser que apareça em páginas não numeradas deveria ser colocado "
+"entre os comandos @code{@@titlepage} e @code{@@end titlepage}."
 
 #. type: findex
 #: texinfo/texinfo-ed.7.1-en_US.texi:1591
 #, no-wrap
 msgid "page@r{, within @code{@@titlepage}}"
-msgstr ""
+msgstr "page@r{, dentro de @code{@@titlepage}}"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:1598
@@ -4311,6 +4318,13 @@ msgid ""
 "have been better named the @code{@@titleandadditionalpages} command, but "
 "that would have been rather long!)"
 msgstr ""
+"Usando o comando @code{@@page}, você consegue forçar uma quebra de página "
+"dentro da região delineada pelos comandos @code{@@titlepage} e @code{@@end "
+"titlepage} e assim criar mais que uma página não numerada. É assim que a "
+"página de direitos autorais é produzida. (O comando @code{@@titlepage} "
+"talvez pudesse ter sido melhor nomeado de comando "
+"@code{@@titleandadditionalpages}, porém isso poderia ter sido até certo "
+"ponto longo!)"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:1610
@@ -4326,6 +4340,18 @@ msgid ""
 "keep track of which manual is for which version of the program.  (The `Top' "
 "node should also contain this information; see @ref{The Top Node}.)"
 msgstr ""
+"Quando você escreve um manual acerca de um programa de computador, você "
+"deveria escrever, na página de título, a versão do programa para a qual o "
+"manual se aplica. Se o manual muda mais frequentemente que o programa ou é "
+"independente dele, você também deveria incluir um número de "
+"edição@footnote{Entendeu-se que é útil se referir a versões de manuais "
+"independentes como `edições' e versões de programas como `versões'; do "
+"contrário, nós achamos que estamos sujeitos a confundir cada um em "
+"conversas, referenciando a ambos, a documentação e o software, com as "
+"mesmas palavras.} para o manual. Isso ajuda os(as) leitores(as) a se "
+"manterem informados(as) sobre qual manual é para qual versão do programa. "
+"(O nó `Top' também deveria conter essa informação; veja-se @ref{O Nó "
+"Top})."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:1618
