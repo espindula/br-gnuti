@@ -4378,24 +4378,29 @@ msgid ""
 "uses uses the @code{@@titlefont}, @code{@@sp}, and @code{@@center} commands "
 "to generate a title page in which the words on the page are centered."
 msgstr ""
+"O Texinfo também fornece um segundo método para criar uma página de "
+"título. Usar comandos de tipografia que não são usados no texto "
+"principal. Esse método usa os comandos @code{@@titlefont}, @code{@@sp} e "
+"@code{@@center} para gerar uma página de título na qual as palavras na "
+"página estão centralizadas."
 
 #. type: findex
 #: texinfo/texinfo-ed.7.1-en_US.texi:1625
 #, no-wrap
 msgid "shorttitlepage"
-msgstr ""
+msgstr "shorttitlepage"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:1626
 #, no-wrap
 msgid "Bastard title page"
-msgstr ""
+msgstr "Página órfã de título"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:1627
 #, no-wrap
 msgid "Title page @subentry bastard"
-msgstr ""
+msgstr "Página de título órfã @subentry"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:1634
@@ -4407,12 +4412,19 @@ msgid ""
 "HTML, @code{@@shorttitlepage} can play the same role as @code{@@settitle}, "
 "if @code{@@settitle} is not set.  @xref{@code{@@settitle}}."
 msgstr ""
+"Para documentos suficientemente simples, e para a página órfã de título "
+"na tradicional página preliminar de livro, o Texinfo também fornece um "
+"comando, @code{@@shorttitlepage}, que leva o restante da linha como o "
+"título. O argumento é tipografado em uma página por si só e seguido por "
+"uma página em branco. No HTML, @code{@@shorttitlepage} consegue desempenhar "
+"o mesmo papel que @code{@@settitle}, se @code{@@settitle} não estiver "
+"configurado. @xref{@code{@@settitle}}."
 
 #. type: node
 #: texinfo/texinfo-ed.7.1-en_US.texi:1636
 #, no-wrap
 msgid "@code{@@title @@subtitle @@author}"
-msgstr ""
+msgstr "@code{@@title @@subtitle @@author}"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:1639
@@ -4420,12 +4432,14 @@ msgid ""
 "@nodedescriptionblock The @code{@@title}, @code{@@subtitle}, and "
 "@code{@@author} commands."
 msgstr ""
+"@nodedescriptionblock Os comandos @code{@@title}, @code{@@subtitle} e "
+"@code{@@author}."
 
 #. type: subsection
 #: texinfo/texinfo-ed.7.1-en_US.texi:1640
 #, no-wrap
 msgid "@code{@@title}, @code{@@subtitle}, and @code{@@author}"
-msgstr ""
+msgstr "@code{@@title}, @code{@@subtitle} e @code{@@author}"
 
 #.  old name
 #. type: anchor{#1}
