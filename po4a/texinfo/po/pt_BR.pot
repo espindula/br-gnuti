@@ -4807,25 +4807,25 @@ msgstr ""
 #: texinfo/texinfo-ed.7.1-en_US.texi:1794
 #, no-wrap
 msgid "Copyright Page"
-msgstr ""
+msgstr "Página de Direitos Autorais"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:1795
 #, no-wrap
 msgid "Copyright page"
-msgstr ""
+msgstr "Página de direitos autorais"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:1796
 #, no-wrap
 msgid "Printed permissions"
-msgstr ""
+msgstr "Permissões impressas"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:1797
 #, no-wrap
 msgid "Permissions, printed"
-msgstr ""
+msgstr "Permissões, impressas"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:1805
@@ -4836,18 +4836,24 @@ msgid ""
 "Therefore, in Texinfo, the information on the copyright page should be "
 "within @code{@@titlepage} and @code{@@end titlepage} commands."
 msgstr ""
+"Por acordo internacional, o aviso de direitos autorais para um livro deve "
+"necessariamente estar ou na página de título ou no verso da página de "
+"título. Quando o aviso de direitos autorais estiver no verso da página de "
+"título, essa página é costumeiramente não numerada.  Portanto, no "
+"Texinfo, a informação na página de direitos autorais deveria estar entre "
+"os comandos @code{@@titlepage} e @code{@@end titlepage}."
 
 #. type: findex
 #: texinfo/texinfo-ed.7.1-en_US.texi:1806
 #, no-wrap
 msgid "vskip @r{@TeX{} vertical skip}"
-msgstr ""
+msgstr "vskip @r{pulo vertical do @TeX{}}"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:1807
 #, no-wrap
 msgid "filll @r{@TeX{} dimension}"
-msgstr ""
+msgstr "filll @r{dimensão do @TeX{}}"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:1811
@@ -4856,12 +4862,16 @@ msgid ""
 "notice and the other text on the copyright page towards the bottom of the "
 "page, use the following incantation after @code{@@page}:"
 msgstr ""
+"Use o comando @code{@@page} para provocar uma quebra de página. Para "
+"empurrar o aviso de direitos autorais e o outro texto na página de direitos "
+"autorais em direção ao pé da página, use o seguinte encantamento depois "
+"de @code{@@page}:"
 
 #. type: example
 #: texinfo/texinfo-ed.7.1-en_US.texi:1814
 #, no-wrap
 msgid "@@vskip 0pt plus 1filll\n"
-msgstr ""
+msgstr "@@vskip 0pt plus 1filll\n"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:1823
@@ -4872,6 +4882,12 @@ msgid ""
 "as needed to push the following text to the bottom of the page.  Note the "
 "use of three @samp{l}s in the word @samp{filll}; this is correct."
 msgstr ""
+"O comando @code{@@vskip} insere espaço em branco na saída @TeX{}; ele é "
+"ignorado em todos os outros formatos de saída. O @samp{0pt plus 1filll} "
+"significa colocar em zero pontos de espaço em branco obrigatório, e tantos "
+"espaços em branco opcionais quantos sejam necessários para empurrar o "
+"texto seguinte para o pé da página. Observe o uso de três @samp{l}s na "
+"palavra @samp{filll}; isso está correto."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:1826
@@ -4879,6 +4895,8 @@ msgid ""
 "To insert the copyright text itself, write @code{@@insertcopying} next "
 "(@pxref{Document Permissions}):"
 msgstr ""
+"Para inserir o próprio texto de direitos autorais, escreva "
+"@code{@@insertcopying} depois (veja-se @ref{Permissões do Documento}):"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:1833
@@ -4886,11 +4904,13 @@ msgid ""
 "Follow the copying text by the publisher, ISBN numbers, cover art credits, "
 "and other such information."
 msgstr ""
+"Siga o texto de direitos autorais pelo(a) editor(a), números ISBN, "
+"créditos da arte de capa, e outras tais informações."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:1835
 msgid "Here is an example putting all this together:"
-msgstr ""
+msgstr "Aqui está um exemplo colocando tudo isso junto:"
 
 #. type: example
 #: texinfo/texinfo-ed.7.1-en_US.texi:1842
@@ -4903,6 +4923,12 @@ msgid ""
 "@@insertcopying\n"
 "\n"
 msgstr ""
+"@@titlepage\n"
+"@dots{}\n"
+"@@page\n"
+"@@vskip 0pt plus 1filll\n"
+"@@insertcopying\n"
+"\n"
 
 #. type: example
 #: texinfo/texinfo-ed.7.1-en_US.texi:1844
@@ -4911,6 +4937,8 @@ msgid ""
 "Published by @dots{}\n"
 "\n"
 msgstr ""
+"Publicado por @dots{}\n"
+"\n"
 
 #. type: example
 #: texinfo/texinfo-ed.7.1-en_US.texi:1847
@@ -4919,6 +4947,8 @@ msgid ""
 "Cover art by @dots{}\n"
 "@@end titlepage\n"
 msgstr ""
+"Arte de capa por @dots{}\n"
+"@@end titlepage\n"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:1853
@@ -4927,6 +4957,10 @@ msgid ""
 "insert the copyright information explicitly if you want it to appear.  For "
 "instance, you could have the following after the copyright page:"
 msgstr ""
+"Nós temos mais um caso especial para considerar: para saída de texto "
+"simples, você deve necessariamente inserir a informação de direitos "
+"autorais explicitamente se quiser que ela apareça. Por exemplo, você "
+"poderia ter o seguinte depois da página de direitos autorais:"
 
 #. type: example
 #: texinfo/texinfo-ed.7.1-en_US.texi:1858
@@ -4936,6 +4970,9 @@ msgid ""
 "@@insertcopying\n"
 "@@end ifplaintext\n"
 msgstr ""
+"@@ifplaintext\n"
+"@@insertcopying\n"
+"@@end ifplaintext\n"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:1862
@@ -4943,31 +4980,35 @@ msgid ""
 "You could include other title-like information for the plain text output in "
 "the same place."
 msgstr ""
+"Você poderia incluir outras informações semelhantes as de título para a "
+"saída de texto simples no mesmo lugar."
 
 #. type: subsection
 #: texinfo/texinfo-ed.7.1-en_US.texi:1864
 #: texinfo/texinfo-ed.7.1-en_US.texi:1866
 #, no-wrap
 msgid "Heading Generation"
-msgstr ""
+msgstr "Geração de Títulos"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:1866
 msgid ""
 "@nodedescription Turn on page headings after the title and copyright pages."
 msgstr ""
+"@nodedescription Ligue o cabeçalho de página depois das páginas de "
+"título e de direitos autorais."
 
-#.  old name
+#.  nome antigo
 #. type: anchor{#1}
 #: texinfo/texinfo-ed.7.1-en_US.texi:1869
 msgid "end titlepage"
-msgstr ""
+msgstr "end titlepage"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:1869
 #, no-wrap
 msgid "Generating page headings"
-msgstr ""
+msgstr "Gerando títulos de página"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:1875
@@ -4976,11 +5017,17 @@ msgid ""
 "one side of each sheet of paper (single-sided printing), and the other for "
 "documents printed on both sides of each sheet (double-sided printing)."
 msgstr ""
+"Texinfo tem dois formatos padrão de cabeçalho de página, um para "
+"documentos impressos em um lado de cada folha de papel (impressão de lado "
+"único), e o outro para documentos impressos em ambos os lados de cada folha "
+"(impressão de lado duplo)."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:1877
 msgid "In full generality, you can control the headings in different ways:"
 msgstr ""
+"Em generalidade plena, você consegue controlar os cabeçalhos de diferentes "
+"maneiras:"
 
 #. type: itemize
 #: texinfo/texinfo-ed.7.1-en_US.texi:1882
@@ -4988,6 +5035,8 @@ msgid ""
 "The conventional way is to write a @code{@@setchapternewpage} command before "
 "the title page commands."
 msgstr ""
+"A maneira convencional é a de escrever um comando "
+"@code{@@setchapternewpage} antes dos comandos de página de título."
 
 #. type: itemize
 #: texinfo/texinfo-ed.7.1-en_US.texi:1888
@@ -4997,6 +5046,11 @@ msgid ""
 "printing and (almost always) no @code{@@setchapternewpage} command for "
 "single-sided printing (@pxref{@code{@@setchapternewpage}})."
 msgstr ""
+"A maioria dos documentos é formatada com os cabeçalhos padrão lado único "
+"ou lado duplo, (ocasionalmente) usando @code{@@setchapternewpage odd} para "
+"impressão em lado duplo e (quase sempre) sem comando "
+"@code{@@setchapternewpage} para impressão de lado único (veja-se "
+"@ref{@code{@@setchapternewpage}})."
 
 #. type: itemize
 #: texinfo/texinfo-ed.7.1-en_US.texi:1894
@@ -5006,6 +5060,10 @@ msgid ""
 "double-sided printing. To turn off headings, write @code{@@headings off}.  "
 "@xref{@code{@@headings}}."
 msgstr ""
+"Alternativamente, você pode usar o comando @code{@@headings} para evitar "
+"que os cabeçalhos de página sejam gerados ou para iniciá-los para, ou "
+"impressão de lado único, ou duplo. Para desligar os cabeçalhos, escreva "
+"@code{@@headings off}. Veja-se @ref{@code{@@headings}}."
 
 #. type: itemize
 #: texinfo/texinfo-ed.7.1-en_US.texi:1898
@@ -5013,12 +5071,14 @@ msgid ""
 "Or, you may specify your own page heading and footing format.  "
 "@xref{Headings}."
 msgstr ""
+"Ou, você pode especificar o teu próprio formato de cabeçalho e de rodapé "
+"de página. @xref{Cabeçalhos}."
 
 #. type: node
 #: texinfo/texinfo-ed.7.1-en_US.texi:1901
 #, no-wrap
 msgid "Contents"
-msgstr ""
+msgstr "Conteúdo"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:1903
