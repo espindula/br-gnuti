@@ -4659,7 +4659,7 @@ msgstr "center"
 #: texinfo/texinfo-ed.7.1-en_US.texi:1728
 #, no-wrap
 msgid "sp @r{(titlepage line spacing)}"
-msgstr ""
+msgstr "sp @r{(espaçamento entre linhas da página de título)}"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:1732
@@ -4667,6 +4667,8 @@ msgid ""
 "You can also use the @code{@@titlefont}, @code{@@sp}, and @code{@@center} "
 "commands to create a title page for a printed document."
 msgstr ""
+"Você também pode usar os comandos @code{@@titlefont}, @code{@@sp} e "
+"@code{@@center} para criar uma página de título para um documento impresso."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:1736
@@ -4675,6 +4677,9 @@ msgid ""
 "title itself.  You can use @code{@@titlefont} more than once if you have an "
 "especially long title."
 msgstr ""
+"Use o comando @code{@@titlefont} para selecionar uma fonte grande adequada "
+"para o título em si. Você pode usar @code{@@titlefont} mais que uma vez se "
+"tiver um título especialmente longo."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:1741
@@ -4684,6 +4689,10 @@ msgid ""
 "you could put a @code{@@settitle} command before the @code{@@titlefont} "
 "command (@pxref{@code{@@settitle}})."
 msgstr ""
+"Para saída HTML, cada comando @code{@@titlefont} produz um cabeçalho "
+"@code{<h1>}, porém o @code{<title>} do documento HTML não é afetado. Para "
+"isso, você poderia colocar colocar um comando @code{@@settitle} antes do "
+"comando @code{@@titlefont} (veja-se @ref{@code{@@settitle}})."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:1744
@@ -4696,13 +4705,13 @@ msgstr ""
 #: texinfo/texinfo-ed.7.1-en_US.texi:13462
 #: texinfo/texinfo-ed.7.1-en_US.texi:18073
 msgid "For example:"
-msgstr ""
+msgstr "Por exemplo:"
 
 #. type: example
 #: texinfo/texinfo-ed.7.1-en_US.texi:1747
 #, no-wrap
 msgid "@@titlefont@{Texinfo@}\n"
-msgstr ""
+msgstr "@@titlefont@{Texinfo@}\n"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:1751
@@ -4710,12 +4719,14 @@ msgid ""
 "Use the @code{@@center} command at the beginning of a line to center the "
 "remaining text on that line.  Thus,"
 msgstr ""
+"Use o comando @code{@@center} no início de uma linha para centralizar o "
+"restante do texto naquela linha. Assim,"
 
 #. type: example
 #: texinfo/texinfo-ed.7.1-en_US.texi:1754
 #, no-wrap
 msgid "@@center @@titlefont@{Texinfo@}\n"
-msgstr ""
+msgstr "@@center @@titlefont@{Texinfo@}\n"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:1759
@@ -4723,18 +4734,20 @@ msgid ""
 "centers the title, which in this example is ``Texinfo'' printed in the title "
 "font."
 msgstr ""
+"centraliza o título, o qual neste exemplo é ``Texinfo'' impresso na fonte "
+"de título."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:1761
 msgid "Use the @code{@@sp} command to insert vertical space.  For example:"
-msgstr ""
+msgstr "Use o comando @code{@@sp} para inserir espaço vertical. Por exemplo:"
 
 #. type: example
 #: texinfo/texinfo-ed.7.1-en_US.texi:1764
 #: texinfo/texinfo-ed.7.1-en_US.texi:10474
 #, no-wrap
 msgid "@@sp 2\n"
-msgstr ""
+msgstr "@@sp 2\n"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:1770
@@ -4742,6 +4755,8 @@ msgid ""
 "This inserts two blank lines on the printed page.  (@xref{@code{@@sp}}, for "
 "more information about the @code{@@sp} command.)"
 msgstr ""
+"Isso insere duas linhas em branco na página impressa. (Veja-se "
+"@ref{@code{@@sp}}, para mais informações acerca do comando @code{@@sp})."
 
 #. type: group
 #: texinfo/texinfo-ed.7.1-en_US.texi:1784
@@ -4757,17 +4772,27 @@ msgid ""
 "@dots{}\n"
 "@@end titlepage\n"
 msgstr ""
+"@@titlepage\n"
+"@@sp 10\n"
+"@@center @@titlefont@{@var{nome-do-manual-quando-impresso}@}\n"
+"@@sp 2\n"
+"@@center @var{subtítulo-se-algum}\n"
+"@@sp 2\n"
+"@@center @var{autor}\n"
+"@dots{}\n"
+"@@end titlepage\n"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:1788
 msgid "The spacing of the example fits an 8.5 by 11 inch manual."
 msgstr ""
+"O espaçamento do exemplo se encaixa em um manual de 8,5 por 11 polegadas."
 
 #. type: node
 #: texinfo/texinfo-ed.7.1-en_US.texi:1790
 #, no-wrap
 msgid "Copyright"
-msgstr ""
+msgstr "Direitos Autorais"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:1793
@@ -4775,6 +4800,8 @@ msgid ""
 "@nodedescriptionblock How to write the copyright notice and include copying "
 "permissions."
 msgstr ""
+"@nodedescriptionblock Como escrever o aviso de direitos autorais e incluir "
+"permissões de cópia."
 
 #. type: subsection
 #: texinfo/texinfo-ed.7.1-en_US.texi:1794
