@@ -5083,49 +5083,49 @@ msgstr "Conteúdo"
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:1903
 msgid "@nodedescription How to create a table of contents."
-msgstr ""
+msgstr "@nodedescription Como criar um sumário."
 
 #. type: section
 #: texinfo/texinfo-ed.7.1-en_US.texi:1903
 #, no-wrap
 msgid "Generating a Table of Contents"
-msgstr ""
+msgstr "Gerando um Sumário"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:1904
 #, no-wrap
 msgid "Table of contents"
-msgstr ""
+msgstr "Sumário"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:1905
 #, no-wrap
 msgid "Contents, table of"
-msgstr ""
+msgstr "Sumário, gerar"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:1906
 #, no-wrap
 msgid "Short table of contents"
-msgstr ""
+msgstr "Sumário curto"
 
 #. type: findex
 #: texinfo/texinfo-ed.7.1-en_US.texi:1907
 #, no-wrap
 msgid "contents"
-msgstr ""
+msgstr "conteúdo"
 
 #. type: findex
 #: texinfo/texinfo-ed.7.1-en_US.texi:1908
 #, no-wrap
 msgid "summarycontents"
-msgstr ""
+msgstr "summarycontents"
 
 #. type: findex
 #: texinfo/texinfo-ed.7.1-en_US.texi:1909
 #, no-wrap
 msgid "shortcontents"
-msgstr ""
+msgstr "shortcontents"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:1916
@@ -5136,13 +5136,18 @@ msgid ""
 "do this, you must use the @code{@@contents} and/or @code{@@summarycontents} "
 "command(s)."
 msgstr ""
+"@code{@@chapter}, @code{@@section}, e outros comandos de estruturamento "
+"(veja-se @ref{Estruturamento de Capítulo}) fornecem a informação para "
+"produzir um sumário, porém eles não fazem com que uma tabela real "
+"apareça no manual. Para fazer isso, você deve necessariamente usar o(s) "
+"comando(s) @code{@@contents} e (ou) @code{@@summarycontents}."
 
 #. type: item
 #: texinfo/texinfo-ed.7.1-en_US.texi:1918
 #: texinfo/texinfo-ed.7.1-en_US.texi:18740
 #, no-wrap
 msgid "@@contents"
-msgstr ""
+msgstr "@@contents"
 
 #. type: table
 #: texinfo/texinfo-ed.7.1-en_US.texi:1925
@@ -5153,25 +5158,31 @@ msgid ""
 "other @code{@@@dots{}heading} commands do not appear in the table of "
 "contents (@pxref{Structuring Command Types})."
 msgstr ""
+"Gera um sumário em um manual impresso, incluindo todos os capítulos, "
+"seções, subseções, etc., bem como apêndices e capítulos não "
+"numerados. Os cabeçalhos gerados por @code{@@majorheading}, "
+"@code{@@chapheading}, e os outros comandos @code{@@@dots{}heading} não "
+"aparecem no sumário (veja-se @ref{Tipos de Comandos Estruturantes})."
 
 #. type: item
 #: texinfo/texinfo-ed.7.1-en_US.texi:1926
 #: texinfo/texinfo-ed.7.1-en_US.texi:19535
 #, no-wrap
 msgid "@@shortcontents"
-msgstr ""
+msgstr "@@shortcontents"
 
 #. type: item
 #: texinfo/texinfo-ed.7.1-en_US.texi:1927
 #: texinfo/texinfo-ed.7.1-en_US.texi:19623
 #, no-wrap
 msgid "@@summarycontents"
-msgstr ""
+msgstr "@@summarycontents"
 
 #. type: table
 #: texinfo/texinfo-ed.7.1-en_US.texi:1929
 msgid "(@code{@@summarycontents} is a synonym for @code{@@shortcontents}.)"
 msgstr ""
+"(@code{@@summarycontents} é um sinônimo para @code{@@shortcontents}.)"
 
 #. type: table
 #: texinfo/texinfo-ed.7.1-en_US.texi:1934
@@ -5181,6 +5192,10 @@ msgid ""
 "subsubsections are omitted.  Only a long manual needs a short table of "
 "contents in addition to the full table of contents."
 msgstr ""
+"Gera um índice curto ou sumário que lista somente os capítulos, "
+"apêndices e capítulos não numerados. Seções, subseções e "
+"subsubseções são omitidas. Somente um manual longo precisa de um índice "
+"curto em adição ao índice completo."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:1943
@@ -5192,6 +5207,13 @@ msgid ""
 "first table of contents page, so don't include any sectioning command such "
 "as @code{@@unnumbered} before them."
 msgstr ""
+"Ambos os comandos de conteúdo deveriam ser escritos em uma linha para cada "
+"um deles, e colocados próximo do início do arquivo, depois do @code{@@end "
+"titlepage} (veja-se @ref{@code{@@titlepage}}), antes de qualquer comando de "
+"seccionamento. Os comandos de conteúdo automaticamente geram um cabeçalho "
+"estilo capítulo no topo da primeira página do sumário, de forma que não "
+"inclua qualquer comando de seccionamento, tal qual @code{@@unnumbered} antes "
+"deles."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:1948
@@ -5200,6 +5222,10 @@ msgid ""
 "formatting commands ignore the contents commands.  But the contents are "
 "included in plain text output and in other output formats, such as HTML."
 msgstr ""
+"Dado que um arquivo Info usa menus em vez de sumários, os comandos de "
+"formatação do Info ignoram os comandos de conteúdo. Porém, o conteúdo "
+"é incluído na saída de texto simples e em outros formatos de saída, tais "
+"como HTML."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:1953
@@ -5209,45 +5235,49 @@ msgid ""
 "the document. The links in the full table of contents point to the main text "
 "of the document."
 msgstr ""
+"Na saída HTML, os links na índice curto apontam para as entradas "
+"correspondentes no índice, em vez do texto do documento. Os links no "
+"índice completo apontam para o texto principal do documento."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:1955
 msgid "@code{@@shortcontents} is not implemented for @LaTeX{} output."
 msgstr ""
+"@code{@@shortcontents} não está implementado para saída do @LaTeX{}."
 
 #. type: node
 #: texinfo/texinfo-ed.7.1-en_US.texi:1957
 #, no-wrap
 msgid "The Top Node"
-msgstr ""
+msgstr "O Nó Top"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:1959
 msgid "@nodedescription Creating the `Top' node and master menu."
-msgstr ""
+msgstr "@nodedescription Criando o nó `Top' e o menu mestre."
 
 #. type: section
 #: texinfo/texinfo-ed.7.1-en_US.texi:1959
 #, no-wrap
 msgid "The `Top' Node and Master Menu"
-msgstr ""
+msgstr "O Nó `Top' e Menu Mestre"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:1960
 #, no-wrap
 msgid "Top node"
-msgstr ""
+msgstr "Nó Top"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:1961
 #, no-wrap
 msgid "Node, @samp{Top}"
-msgstr ""
+msgstr "Nó, @samp{Top}"
 
 #. type: anchor{#1}
 #: texinfo/texinfo-ed.7.1-en_US.texi:1963
 msgid "Top Node Example"
-msgstr ""
+msgstr "Exemplo do Nó Top"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:1968
@@ -5257,6 +5287,10 @@ msgid ""
 "the version number).  The contents of the `Top' node do not appear in "
 "printed output nor in DocBook output."
 msgstr ""
+"O nó `Top' é o nó no qual um(a) leitor(a) acessa um manual Info. Como "
+"tal, ele deveria conter uma descrição muito breve do manual (incluindo o "
+"número de versão). O conteúdo do nó `Top' não aparece em saída "
+"impressa nem na saída DocBook."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:1972
@@ -5265,6 +5299,9 @@ msgid ""
 "containing the title of the document immediately after the @code{@@node Top} "
 "line (@pxref{@code{@@top} Command})."
 msgstr ""
+"É convencional escrever uma linha de comando de seccionamento @code{@@top} "
+"contendo o título do documento imediatamente depois da linha @code{@@node "
+"Top} (veja-se @ref{Comando @code{@@top}})."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:1976
@@ -5273,6 +5310,9 @@ msgid ""
 "text, but there's no need to repeat the copyright information, so we don't "
 "use @samp{@@insertcopying} here."
 msgstr ""
+"Nós repetimos a descrição curta desde o início do texto "
+"@samp{@@copying}, mas não existe necessidade de repetir as informações de "
+"direitos autorais, de forma que nós não usamos @samp{@@insertcopying} aqui."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:1980
@@ -5280,12 +5320,15 @@ msgid ""
 "The `Top' node contains a top-level @dfn{menu} listing the chapters, and "
 "possibly a @dfn{detailed menu} listing all the nodes in the entire document."
 msgstr ""
+"O nó `Top' contém um @dfn{menu} de nível superior listando os capítulos "
+"e, possivelmente, um @dfn{menu detalhado} listando todos os nós no "
+"documento inteiro."
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:1981
 #, no-wrap
 msgid "Top node example"
-msgstr ""
+msgstr "Exemplo de nó Top"
 
 #. type: example
 #: texinfo/texinfo-ed.7.1-en_US.texi:1985
@@ -5295,6 +5338,9 @@ msgid ""
 "@@top Short Sample\n"
 "\n"
 msgstr ""
+"@@node Top\n"
+"@@top Amostra Curta\n"
+"\n"
 
 #. type: example
 #: texinfo/texinfo-ed.7.1-en_US.texi:1987
@@ -5303,6 +5349,8 @@ msgid ""
 "This is a short sample Texinfo file.\n"
 "\n"
 msgstr ""
+"Esta é uma amostra curta do arquivo do Texinfo.\n"
+"\n"
 
 #. type: group
 #: texinfo/texinfo-ed.7.1-en_US.texi:1994
@@ -5314,37 +5362,42 @@ msgid ""
 "* Index::            Complete index.\n"
 "@@end menu\n"
 msgstr ""
+"@@menu\n"
+"* Primeiro Capítulo:: O primeiro capítulo é o\n"
+"                      único capítulo nesta amostra.\n"
+"* Index::             Índice completo.\n"
+"@@end menu\n"
 
 #. type: node
 #: texinfo/texinfo-ed.7.1-en_US.texi:1999
 #: texinfo/texinfo-ed.7.1-en_US.texi:2002
 #, no-wrap
 msgid "Master Menu Parts"
-msgstr ""
+msgstr "Partes do Menu Mestre"
 
 #. type: subsection
 #: texinfo/texinfo-ed.7.1-en_US.texi:2003
 #, no-wrap
 msgid "Parts of a Master Menu"
-msgstr ""
+msgstr "Partes de um Menu Mestre"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:2004
 #, no-wrap
 msgid "Master menu"
-msgstr ""
+msgstr "Menu mestre"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:2005
 #, no-wrap
 msgid "Menu, master"
-msgstr ""
+msgstr "Menu, mestre"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:2006
 #, no-wrap
 msgid "Parts of a master menu"
-msgstr ""
+msgstr "Partes de um menu mestre"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:2013
@@ -5354,6 +5407,10 @@ msgid ""
 "menu, a master menu is enclosed in @code{@@menu} and @code{@@end menu} and "
 "does not appear in the printed output nor in DocBook output."
 msgstr ""
+"Um @dfn{menu mestre} é o menu principal. É costumeiro incluir um menu "
+"detalhado listando todos os nós no documento nesse menu. Como qualquer "
+"outro menu, um menu mestre é envolvido em @code{@@menu} e @code{@@end menu} "
+"e não aparece na saída impressa nem na saída DocBook."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:2017
@@ -5362,18 +5419,21 @@ msgid ""
 "the nodes for the chapters, chapter-like sections, and the appendices, "
 "followed by nodes for the indices."
 msgstr ""
+"O menu mestre contém entradas para os principais nós no arquivo do "
+"Texinfo: os nós para os capítulos, seções do tipo capítulo e os "
+"apêndices, seguidos por nós para os índices."
 
 #. type: findex
 #: texinfo/texinfo-ed.7.1-en_US.texi:2018
 #, no-wrap
 msgid "detailmenu"
-msgstr ""
+msgstr "detailmenu"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:2019
 #, no-wrap
 msgid "Detailed menu"
-msgstr ""
+msgstr "Menu detalhado"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:2028
@@ -5385,6 +5445,13 @@ msgid ""
 "intermediate menu.  If you use a detailed menu in your master menu, mark it "
 "with the @code{@@detailmenu @dots{} @@end detailmenu} environment."
 msgstr ""
+"Você pode escolher seguir essas entradas com um @dfn{menu detalhado}. Isso "
+"lista outros nós de nível inferior, frequentemente ordenados pelo "
+"capítulo. Esses itens podem ser uma conveniência para um inquérito que "
+"pode ir diretamente para um nó específico ao se procurar por informações "
+"específicas, em vez de se passar por um menu intermediário. Se você usar "
+"um menu detalhado no teu menu mestre, marque-o com o ambiente "
+"@code{@@detailmenu @dots{} @@end detailmenu}."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:2033
