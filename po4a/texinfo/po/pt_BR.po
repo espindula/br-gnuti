@@ -5564,7 +5564,7 @@ msgstr "@nodedescription O resto dos nós."
 #: texinfo/texinfo-ed.7.1-en_US.texi:2074
 #, no-wrap
 msgid "Frontmatter, text in"
-msgstr ""
+msgstr "Página preliminar, texto em"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:2080
@@ -5574,6 +5574,10 @@ msgid ""
 "chapter made of three nodes, one for introductory material in the chapter, "
 "and two sections.  The introductory material contains an enumerated list."
 msgstr ""
+"O segmento do corpo contém todo o texto do documento. Um manual é dividido "
+"em um ou mais @dfn{nós} (@pxref{Nós}). O exemplo ilustra um capítulo "
+"feito de três nós, um para material introdutório no capítulo e duas "
+"seções. O material introdutório contém uma lista enumerada."
 
 #. type: group
 #: texinfo/texinfo-ed.7.1-en_US.texi:2099
@@ -5584,12 +5588,16 @@ msgid ""
 "@@end enumerate\n"
 "\n"
 msgstr ""
+"@@item\n"
+"Este é o segundo ítem.\n"
+"@@end enumerate\n"
+"\n"
 
 #. type: group
 #: texinfo/texinfo-ed.7.1-en_US.texi:2111
 #, no-wrap
 msgid "Second section of first chapter.\n"
-msgstr ""
+msgstr "Segunda seção do primeiro capítulo.\n"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:2118
@@ -5599,99 +5607,102 @@ msgid ""
 "output in its own HTML file, it will contain a table of contents for the "
 "chapter."
 msgstr ""
+"Na saída Info, o nó @samp{Primeiro Capítulo} conterá um menu listando as "
+"duas seções no capítulo. Da mesma forma, quando esse nó for gerado no "
+"próprio arquivo HTML, ele conterá um índice para o capítulo."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:2120
 msgid "Here is what the contents of this chapter will look like:"
-msgstr ""
+msgstr "Aqui está com o que o conteúdo desse capítulo se parecerá:"
 
 #. type: chapheading
 #: texinfo/texinfo-ed.7.1-en_US.texi:2124
 #, no-wrap
 msgid "1. First Chapter"
-msgstr ""
+msgstr "1. Primeiro Capítulo"
 
 #. type: quotation
 #: texinfo/texinfo-ed.7.1-en_US.texi:2127
 msgid "This is the first chapter."
-msgstr ""
+msgstr "Este é o primeiro capítulo"
 
 #. type: quotation
 #: texinfo/texinfo-ed.7.1-en_US.texi:2129
 msgid "Here is a numbered list."
-msgstr ""
+msgstr "Aqui está uma lista numerada."
 
 #. type: enumerate
 #: texinfo/texinfo-ed.7.1-en_US.texi:2133
 msgid "This is the first item."
-msgstr ""
+msgstr "Este é o primeiro ítem"
 
 #. type: enumerate
 #: texinfo/texinfo-ed.7.1-en_US.texi:2136
 msgid "This is the second item."
-msgstr ""
+msgstr "Este é o segundo ítem"
 
 #. type: heading
 #: texinfo/texinfo-ed.7.1-en_US.texi:2138
 #, no-wrap
 msgid "1.1 First Section"
-msgstr ""
+msgstr "1.1 Primeira Seção"
 
 #. type: quotation
 #: texinfo/texinfo-ed.7.1-en_US.texi:2141
 msgid "First section of first chapter."
-msgstr ""
+msgstr "Primeira seção do primeiro capítulo."
 
 #. type: heading
 #: texinfo/texinfo-ed.7.1-en_US.texi:2142
 #, no-wrap
 msgid "1.2 Second Section"
-msgstr ""
+msgstr "1.2 Segunda Seção"
 
 #. type: quotation
 #: texinfo/texinfo-ed.7.1-en_US.texi:2145
 msgid "Second section of first chapter."
-msgstr ""
+msgstr "Segunda seção do primeiro capítulo."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:2149
 msgid "into nodes.)"
-msgstr ""
+msgstr "nos nós.)"
 
 #. type: node
 #: texinfo/texinfo-ed.7.1-en_US.texi:2151
 #, no-wrap
 msgid "Ending a File"
-msgstr ""
+msgstr "Terminando um Arquivo"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:2153
 msgid "@nodedescription What is at the end of a Texinfo file?"
-msgstr ""
+msgstr "@nodedescription O que está no final de um arquivo do Texinfo?"
 
 #. type: section
 #: texinfo/texinfo-ed.7.1-en_US.texi:2153
 #, no-wrap
 msgid "Ending a Texinfo File"
-msgstr ""
+msgstr "Terminando um Arquivo do Texinfo"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:2154
 #, no-wrap
 msgid "Ending a Texinfo file"
-msgstr ""
+msgstr "Terminando um arquivo do Texinfo"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:2155
 #, no-wrap
 msgid "Texinfo file ending"
-msgstr ""
+msgstr "Arquivo do Texinfo, terminando"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:2156
 #, no-wrap
 msgid "File ending"
-msgstr ""
+msgstr "Arquivo, terminando"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:2161
@@ -5700,17 +5711,20 @@ msgid ""
 "(@pxref{Printing Indices & Menus}), and the @code{@@bye} command to mark the "
 "last line to be processed.  For example:"
 msgstr ""
+"O final de um arquivo Texinfo deveria incluir comandos para criar índices "
+"(veja-se @ref{Imprimindo Índices e Menus}), e o comando @code{@@bye} para "
+"marcar a última linha a ser processada. Por exemplo:"
 
 #. type: findex
 #: texinfo/texinfo-ed.7.1-en_US.texi:2171
 #, no-wrap
 msgid "bye"
-msgstr ""
+msgstr "bye"
 
 #. type: anchor{#1}
 #: texinfo/texinfo-ed.7.1-en_US.texi:2176
 msgid "File End"
-msgstr ""
+msgstr "Fim de Arquivo"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:2176
@@ -5718,18 +5732,21 @@ msgid ""
 "A @code{@@bye} command terminates Texinfo processing.  It should be on a "
 "line by itself.  Anything following @code{@@bye} is completely ignored."
 msgstr ""
+"Um comando @code{@@bye} termina o processamento Texinfo. Ele deveria estar "
+"em uma linha própria. Qualquer coisa seguinte a @code{@@bye} é "
+"completamente ignorada."
 
 #. type: chapter
 #: texinfo/texinfo-ed.7.1-en_US.texi:2178
 #: texinfo/texinfo-ed.7.1-en_US.texi:2180
 #, no-wrap
 msgid "Nodes"
-msgstr ""
+msgstr "Nós"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:2180
 msgid "@nodedescription Writing nodes, the basic unit of Texinfo."
-msgstr ""
+msgstr "@nodedescription Escrevendo nós, a unidade básica do Texinfo."
 
 #. type: item
 #: texinfo/texinfo-ed.7.1-en_US.texi:2182
@@ -5737,18 +5754,18 @@ msgstr ""
 #: texinfo/texinfo-ed.7.1-en_US.texi:15146
 #, no-wrap
 msgid "node"
-msgstr ""
+msgstr "nó"
 
 #. type: anchor{#1}
 #: texinfo/texinfo-ed.7.1-en_US.texi:2182
 msgid "@@node"
-msgstr ""
+msgstr "@@node"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:2183
 #, no-wrap
 msgid "Node, defined"
-msgstr ""
+msgstr "Nó, definido"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:2190
@@ -5760,6 +5777,12 @@ msgid ""
 "commands for the user to move to related nodes.  The HTML output can be "
 "similarly navigated."
 msgstr ""
+"Um @dfn{nó} é uma região de texto que inicia no comando @code{@@node}, e "
+"continua até o próximo comando @code{@@node}. Para especificar um nó, "
+"escreva um comando @code{@@node} no início de uma linha, e siga-o com o "
+"nome do nó. Os leitores Info exibem um nó por vez, e fornecem comandos "
+"para o(a) usuário(a) se movimentar para nós relacionados. A saída HTML "
+"pode ser navegada similarmente."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:2196
@@ -5770,6 +5793,12 @@ msgid ""
 "sprinkled throughout the text.  Other @@-commands may also be the target of "
 "cross-references (@pxref{@code{@@anchor}}, @pxref{Floats})."
 msgstr ""
+"Nós são usados como os alvos de referências cruzadas. Referências "
+"cruzadas, tais quais aquelas ao final desta frase, são feitas com "
+"@code{@@xref} e comandos relacionados; veja-se @ref{Referências Cruzadas}. "
+"Referências cruzadas podem ser colocadas em qualquer parte do texto. Outros "
+"comandos @@ também podem ser o alvo de referências cruzadas "
+"(@pxref{@code{@@anchor}}, @pxref{Flutuadores})."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:2207
@@ -5784,41 +5813,51 @@ msgid ""
 "document that contains no cross references and will only be printed, not "
 "transformed into Info, HTML, or other formats."
 msgstr ""
+"Normalmente, você coloca um comando de nó imediatamente antes de cada "
+"comando de estruturação de capítulo---por exemplo, uma linha "
+"@code{@@section} ou @code{@@subsection}. (Veja-se @ref{Estruturamento de "
+"Capítulo}.) Você deve necessariamente fazer isso, ainda que você não "
+"pretenda formatar o arquivo para Info. Isso é por que sa'da impressa usa "
+"ambos, nomes @code{@@node} e nomes de estruturação de capítulo, na saída "
+"para referências cruzadas. A única vez que você similarmente usa os "
+"comandos de estruturação de capítulo sem também usar nós é se você "
+"estiver escrevendo um documento que não contenha referências cruzadas e "
+"somente será impresso, não transformado em Info, HTML, ou outros formatos."
 
 #. type: node
 #: texinfo/texinfo-ed.7.1-en_US.texi:2209
 #, no-wrap
 msgid "Writing a Node"
-msgstr ""
+msgstr "Escrevendo um Nó"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:2211
 msgid "@nodedescription How to write a @code{@@node} line."
-msgstr ""
+msgstr "@nodedescription Como escrever uma linha @code{@@node}."
 
 #. type: section
 #: texinfo/texinfo-ed.7.1-en_US.texi:2211
 #, no-wrap
 msgid "Writing a @code{@@node} Line"
-msgstr ""
+msgstr "Escrevendo uma Linha de @code{@@node}"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:2212
 #, no-wrap
 msgid "Writing a @code{@@node} line"
-msgstr ""
+msgstr "Escrevendo uma linha de @code{@@node}"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:2213
 #, no-wrap
 msgid "@code{@@node} line writing"
-msgstr ""
+msgstr "escrita de linha de @code{@@node}"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:2214
 #, no-wrap
 msgid "Node line writing"
-msgstr ""
+msgstr "Escrita de linha de nó"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:2219
@@ -5826,6 +5865,8 @@ msgid ""
 "Write @code{@@node} at the beginning of a line followed by the name of the "
 "node, like this:"
 msgstr ""
+"Escreva @code{@@node} no início de uma linha seguida pelo nome do nó, como "
+"isto:"
 
 #. type: example
 #: texinfo/texinfo-ed.7.1-en_US.texi:2222
