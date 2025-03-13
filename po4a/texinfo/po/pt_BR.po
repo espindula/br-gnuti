@@ -5465,6 +5465,8 @@ msgid ""
 "For example, the master menu for this manual looks like the following (but "
 "has many more entries):"
 msgstr ""
+"Por exemplo, o menu mestre para este manual se parece com o seguinte (porém "
+"tem muito mais entradas):"
 
 #. type: group
 #: texinfo/texinfo-ed.7.1-en_US.texi:2043
@@ -5475,6 +5477,10 @@ msgid ""
 "* Overview::            Texinfo in brief.\n"
 "@dots{}\n"
 msgstr ""
+"@@menu\n"
+"* Condições de Cópia:: Teus direitos.\n"
+"* Visão Geral::        Texinfo em resumo.\n"
+"@dots{}\n"
 
 #. type: group
 #: texinfo/texinfo-ed.7.1-en_US.texi:2047
@@ -5483,6 +5489,8 @@ msgid ""
 "* Command and Variable Index::\n"
 "* General Index::\n"
 msgstr ""
+"* Índice de Comandos e Variáveis::\n"
+"* Índice Geral::\n"
 
 #. type: group
 #: texinfo/texinfo-ed.7.1-en_US.texi:2052
@@ -5492,6 +5500,9 @@ msgid ""
 "--- The Detailed Node Listing ---\n"
 "\n"
 msgstr ""
+"@@detailmenu\n"
+"--- A Listagem Detalhada do Nó ---\n"
+"\n"
 
 #. type: group
 #: texinfo/texinfo-ed.7.1-en_US.texi:2054
@@ -5500,6 +5511,8 @@ msgid ""
 "Overview of Texinfo\n"
 "\n"
 msgstr ""
+"Visão geral do Texinfo\n"
+"\n"
 
 #. type: group
 #: texinfo/texinfo-ed.7.1-en_US.texi:2057
@@ -5508,6 +5521,8 @@ msgid ""
 "* Reporting Bugs:: @dots{}\n"
 "@dots{}\n"
 msgstr ""
+"* Informando Defeitos:: @dots{}\n"
+"@dots{}\n"
 
 #. type: group
 #: texinfo/texinfo-ed.7.1-en_US.texi:2061
@@ -5516,6 +5531,8 @@ msgid ""
 "Beginning a Texinfo File\n"
 "\n"
 msgstr ""
+"Iniciando um Arquivo do Texinfo\n"
+"\n"
 
 #. type: group
 #: texinfo/texinfo-ed.7.1-en_US.texi:2066
@@ -5526,18 +5543,22 @@ msgid ""
 "@@end detailmenu\n"
 "@@end menu\n"
 msgstr ""
+"* Início de Amostra:: @dots{}\n"
+"@dots{}\n"
+"@@end detailmenu\n"
+"@@end menu\n"
 
 #. type: section
 #: texinfo/texinfo-ed.7.1-en_US.texi:2070
 #: texinfo/texinfo-ed.7.1-en_US.texi:2072
 #, no-wrap
 msgid "The Body of the Document"
-msgstr ""
+msgstr "O Corpo do Documento"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:2072
 msgid "@nodedescription The rest of the nodes."
-msgstr ""
+msgstr "@nodedescription O resto dos nós."
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:2074
