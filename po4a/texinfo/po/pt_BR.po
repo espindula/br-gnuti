@@ -5872,7 +5872,7 @@ msgstr ""
 #: texinfo/texinfo-ed.7.1-en_US.texi:2222
 #, no-wrap
 msgid "@@node @var{node-name}\n"
-msgstr ""
+msgstr "@@node @var{nome-do-nó}\n"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:2227
@@ -5881,6 +5881,9 @@ msgid ""
 "the @@-command for the associated chapter or section (if any)  and insert "
 "its name."
 msgstr ""
+"Depois de se ter inserido uma linha @code{@@node}, você deveria "
+"imediatamente escrever um comando @@ para o capítulo ou seção associado "
+"(se existir) e inserir o nome desse(a)."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:2234
@@ -5891,12 +5894,18 @@ msgid ""
 "`Up' pointers, in that order.  Hence, the template for a fully-written-out "
 "node line with `Next', `Previous', and `Up' pointers looks like this:"
 msgstr ""
+"Você pode opcionalmente seguir o argumento de nome de nó para "
+"@code{@@node} com até três argumentos opcionais no restante da mesma "
+"linha, separando os argumentos com vírgulas. Esses são os nomes dos "
+"ponteiros `Próximo', `Anterior', e `Acima', nessa ordem.  Assim, o modelo "
+"para uma linha de nó completamente preenchida com os ponteiros `Próximo', "
+"`Anterior', e `Acima' se parece com isto:"
 
 #. type: example
 #: texinfo/texinfo-ed.7.1-en_US.texi:2237
 #, no-wrap
 msgid "@@node @var{node-name}, @var{next}, @var{previous}, @var{up}\n"
-msgstr ""
+msgstr "@@node @var{nome_do_nó}, @var{next}, @var{previous}, @var{up}\n"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:2246
@@ -5908,30 +5917,37 @@ msgid ""
 "hierarchically organized, as virtually all are, we recommend leaving off all "
 "the pointers and letting @code{texi2any} determine them."
 msgstr ""
+"O argumento @var{nome_do_nó} precisa estar presente, porém os outros são "
+"opcionais. Se você desejar especificar algum, porém não outros, apenas "
+"insira vírgulas conforme necessário, como em: @samp{@@node "
+"meu_nó,,,nó_superior}. Entretanto, se teu documento Texinfo for "
+"hierarquicamente organizado, como virtualmente todos são, nós recomendamos "
+"deixar desligados todos os ponteiros e permitir que @code{texi2any} os "
+"determine."
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:2247
 #, no-wrap
 msgid "Creating pointers with @code{texi2any}"
-msgstr ""
+msgstr "Criando ponteiros com @code{texi2any}"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:2248
 #, no-wrap
 msgid "Pointer creation with @code{texi2any}"
-msgstr ""
+msgstr "Criação de ponteiros com @code{texi2any}"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:2249
 #, no-wrap
 msgid "Automatic pointer creation with @code{texi2any}"
-msgstr ""
+msgstr "Criação automática de ponteiros com @code{texi2any}"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:2250
 #, no-wrap
 msgid "Implicit pointer creation with @code{texi2any}"
-msgstr ""
+msgstr "Criação implícita de ponteiros com @code{texi2any}"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:2258
@@ -5944,6 +5960,13 @@ msgid ""
 "line beginning with @code{@@top} to mark the top-level node in the file.  "
 "@xref{@code{@@top} Command}."
 msgstr ""
+"O programa @code{texi2any} automaticamente determina ponteiros de nó para "
+"um documento hierarquicamente organizado. Para ele fazer isso, cada comando "
+"@code{@@node} deveria ser seguido imediatamente por um comando de "
+"seccionamento, como @code{@@chapter} ou @code{@@section} (exceto que linhas "
+"de comentários podem entrevir). Finalmente, você precisa seguir a linha "
+"@code{@@node} do `Top' com uma linha iniciando com @code{@@top} para marcar "
+"o nó de nível superior no arquivo. @xref{Comando @code{@@top}}."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:2264
@@ -5953,6 +5976,11 @@ msgid ""
 "the order you wish them to appear in the output.  For Info format one can "
 "imagine that the order may not matter, but it matters for the other formats."
 msgstr ""
+"Mesmo quando especificar explicitamente todos os ponteiros, você não pode "
+"escrever os nós no arquivo fonte do Texinfo em uma ordem arbitrária. Você "
+"precisa escrever os nós na ordem que deseja que eles apareçam na saída "
+"gerada. Para o formato Info, alguém pode imaginar que a ordem possivelmente "
+"não importe, mas importa para os outros formatos."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:2272
@@ -5964,6 +5992,13 @@ msgid ""
 "example, if you never intend the document to be printed), so node pointers "
 "may still be specified explicitly, in full generality."
 msgstr ""
+"Na maioria dos casos, você desejará tirar vantagem do recurso de criação "
+"de ponteiros e não redundantemente especificar ponteiros de nó que os "
+"programas possam determinar. Entretanto, não são exigidos que documentos "
+"Texinfo estejam organizados hierarquicamente ou, de fato, contenham comandos "
+"de seccionamento (por exemplo, se você nunca pretender que o documento seja "
+"impresso), de forma que os ponteiros de nó ainda podem ser especificados "
+"explicitamente, em completa generalidade."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:2276
@@ -5972,6 +6007,9 @@ msgid ""
 "update node commands provided by Texinfo mode to insert the names of the "
 "pointers.  (@xref{Updating Nodes and Menus}.)"
 msgstr ""
+"Se você estiver usando o GNU Emacs e quiser ponteiros explícitos, poderá "
+"usar os comandos de atualização de nós fornecidos pelo modo Texinfo para "
+"inserir os nomes dos ponteiros. (@xref{Atualizando Nós e Menus}.)"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:2283
@@ -5983,29 +6021,35 @@ msgid ""
 "proper order.  The comment line helps you keep track of which arguments are "
 "for which pointers."
 msgstr ""
+"Alternativamente, você pode inserir você mesmo(a) os ponteiros `Próximo', "
+"`Anterior' e 'Acima'. Se você fizer isso no Emacs, poderá achar útil usar "
+"o comando de teclado do modo Texinfo @kbd{C-c C-c n}. Esse comando insere "
+"@samp{@@node} e uma linha de comentários listando os nomes dos ponteiros na "
+"ordem apropriada deles. A linha de comentários ajuda você a acompanhar "
+"quais argumentos são para quais ponteiros."
 
 #. type: node
 #: texinfo/texinfo-ed.7.1-en_US.texi:2285
 #, no-wrap
 msgid "Node Names"
-msgstr ""
+msgstr "Nomes de Nó"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:2287
 msgid "@nodedescription How to choose node names."
-msgstr ""
+msgstr "@nodedescription Como escolher nomes de nós."
 
 #. type: section
 #: texinfo/texinfo-ed.7.1-en_US.texi:2287
 #, no-wrap
 msgid "Choosing Node Names"
-msgstr ""
+msgstr "Escolhendo Nomes de Nós"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:2289
 #, no-wrap
 msgid "Node names, choosing"
-msgstr ""
+msgstr "Nomes de nós, escolhendo"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:2292
@@ -6013,22 +6057,24 @@ msgid ""
 "The name of a node identifies the node.  For all the details of node names, "
 "@pxref{Node Line Requirements})."
 msgstr ""
+"O nome de um nó identifica o nó. Para todos os detalhes dos nomes de nós, "
+"@pxref{Exigências da Linha do Nó})."
 
 #.  previous node name
 #. type: anchor{#1}
 #: texinfo/texinfo-ed.7.1-en_US.texi:2295
 msgid "Node Line Tips"
-msgstr ""
+msgstr "Dicas de Linha de Nó"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:2295
 msgid "Here are some suggestions for node names:"
-msgstr ""
+msgstr "Aqui estão algumas sugestões para nomes de nós:"
 
 #. type: itemize
 #: texinfo/texinfo-ed.7.1-en_US.texi:2299
 msgid "Try to pick node names that are informative but short."
-msgstr ""
+msgstr "Tente escolher nomes de nó que sejam informativos, porém curtos."
 
 #. type: itemize
 #: texinfo/texinfo-ed.7.1-en_US.texi:2303
