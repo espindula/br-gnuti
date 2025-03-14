@@ -19,7 +19,9 @@ Primeira execução
 =================
 
 
-Comandos para gerar um arquivo Portable Object Template (POT) inicial dentro do sub diretório "po" do diretório "po4a" (subprojeto "texinfo") (executar todos como usuário(a) normal):
+Comandos para gerar um arquivo Portable Object Template (POT) inicial dentro do
+sub diretório "po" do diretório "po4a" (subprojeto "texinfo") (executar todos
+como usuário(a) normal):
 
 cd po4a/
 
@@ -42,4 +44,7 @@ mkdir -pv texinfo/{po,translated}
 ( po4a --verbose po4a.conf 2>&1 | tee /tmp/po4a.log.txt && exit "${PIPESTATUS}" )
 
 
-Ao final da execução, o arquivo "pt_BR.pot" (inicialmente vazio) estará preenchido com todas as unidades de texto para serem traduzidas. O próximo passo é o de renomear "pt_BR.pot" para "pt_BR.po" e começar a traduzir as unidades de texto.
+Ao final da execução, o arquivo "pt_BR.pot" (inicialmente vazio) estará
+preenchido com todas as unidades de texto para serem traduzidas. O próximo passo
+é o de renomear "pt_BR.pot" para "pt_BR.po" e começar a traduzir as unidades de
+texto.
