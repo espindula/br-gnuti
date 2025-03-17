@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: Texinfo 7.1\n"
 "Report-Msgid-Bugs-To: jafesp@gmail.com\n"
 "POT-Creation-Date: 2025-03-02 00:31-0300\n"
-"PO-Revision-Date: 2025-03-17 13:11-0300\n"
+"PO-Revision-Date: 2025-03-17 14:57-0300\n"
 "Last-Translator: Jamenson Ferreira Espindula de Almeida Melo "
 "<jafesp@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -6121,6 +6121,11 @@ msgid ""
 "manual less user-friendly; for example, in this manual the @samp{@@dots} "
 "node is output as @file{__0040dots.html}."
 msgstr ""
+"Na saída gerada HTML, quaisquer caracteres no nome do nó que não sejam "
+"letras, números ou espaços ASCII simples serão mudados no nome do "
+"arquivo. (@xref{Expansão Xref de Nome de Nó do HTML}.) Isso pode tornar os "
+"URLs para as páginas no teu manual menos amigáveis; por exemplo, neste "
+"manual, o nó @samp{@@dots} é gerado como @file{__0040dots.html}."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:2330
@@ -6131,6 +6136,12 @@ msgid ""
 "way, references from other manuals, from mail archives, and so on are not "
 "invalidated.  @xref{@code{@@anchor}}."
 msgstr ""
+"Como os nomes dos nó são usados em referências cruzadas, não é "
+"desejável mudá-los casualmente uma vez publicados. Quando você deletar ou "
+"renomear um nó, geralmente é uma boa idéia definir um @code{@@anchor} com "
+"o nome antigo. Dessa forma, as referências a partir de outros manuais, a "
+"partir de arquivamentos de correio e assim por diante não serão "
+"invalidados. @xref{@code{@@anchor}}."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:2333
@@ -6138,6 +6149,8 @@ msgid ""
 "The pointers from a given node enable you to reach other nodes and consist "
 "simply of the names of those nodes."
 msgstr ""
+"Os ponteiros a partir de um dado nó te habilitam a atingir outros nós e "
+"consistem simplesmente dos nomes desses nós."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:2340
@@ -6149,6 +6162,11 @@ msgid ""
 "`Previous' node is the same as its `Up' node, both pointers name the same "
 "node."
 msgstr ""
+"Normalmente, um ponteiro do nó `Acima' contém o nome do nó cujo menu "
+"menciona esse nó. O ponteiro do nó `Próximo' contém o nome do nó que "
+"segue o nó atual nesse menu e o ponteiro `Anterior' dele contém o nome do "
+"nó que o precede nesse menu. Quando um nó `Anterior' do nó é o mesmo que "
+"o nó dele `Acima', ambos os ponteiros nomeiam o mesmo nó."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:2344
@@ -6157,57 +6175,60 @@ msgid ""
 "pointer points to the @file{dir} file, which contains the main menu for all "
 "of Info."
 msgstr ""
+"Geralmente, o primeiro nó de um arquivo do Texinfo é o nó `Top', e "
+"ponteiro dele `Acima' aponta para o arquivo @file{dir}, que contém o menu "
+"principal para todos do Info."
 
 #. type: node
 #: texinfo/texinfo-ed.7.1-en_US.texi:2346
 #, no-wrap
 msgid "Node Line Requirements"
-msgstr ""
+msgstr "Exigências da Linha de Nó"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:2348
 msgid "@nodedescription Keep names unique."
-msgstr ""
+msgstr "@nodedescription Mantenha nomes únicos."
 
 #. type: section
 #: texinfo/texinfo-ed.7.1-en_US.texi:2348
 #, no-wrap
 msgid "@code{@@node} Line Requirements"
-msgstr ""
+msgstr "Exigências da Linha de @code{@@node}"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:2350
 #, no-wrap
 msgid "Node line requirements"
-msgstr ""
+msgstr "Exigências da linha de nó"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:2351
 #, no-wrap
 msgid "Restrictions on node names"
-msgstr ""
+msgstr "Restrições a nomes de nó"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:2354
 msgid "Names used with @code{@@node} have several requirements:"
-msgstr ""
+msgstr "Os nomes usados com @code{@@node} tem várias exigências:"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:2357
 #, no-wrap
 msgid "Unique node names requirement"
-msgstr ""
+msgstr "Exigência de nomes únicos de nós"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:2358
 #, no-wrap
 msgid "Node names must be unique"
-msgstr ""
+msgstr "Nomes de nó precisam ser únicos"
 
 #. type: itemize
 #: texinfo/texinfo-ed.7.1-en_US.texi:2360
 msgid "All the node names in a single Texinfo file must be unique."
-msgstr ""
+msgstr "Todos os nomes de nó em um arquivo Texinfo precisam ser únicos."
 
 #. type: itemize
 #: texinfo/texinfo-ed.7.1-en_US.texi:2367
@@ -6218,6 +6239,12 @@ msgid ""
 "and the like.  Thus you can end each chapter with a section called "
 "``Summary'', so long as the node names for those sections are all different."
 msgstr ""
+"Isso significa, por exemplo, que, se você finalizar cada capítulo com um "
+"sumário, você precisa nomear cada nó de sumário diferentemente. Você "
+"não pode simplesmente chamá-los todos de ``Sumário''. Você pode, "
+"entretanto, duplicar os títulos dos capítulos, seções, e afins. Assim, "
+"você pode finalizar cada capítulo com uma seção chamada ``Sumário'', "
+"contanto que os nomes de nó para tais seções sejam todos diferentes."
 
 #. type: itemize
 #: texinfo/texinfo-ed.7.1-en_US.texi:2370
@@ -6225,18 +6252,20 @@ msgid ""
 "Node names, anchor names (@pxref{@code{@@anchor}}), and float labels "
 "(@pxref{@code{@@float}}) must all be unique."
 msgstr ""
+"Nomes de nós, nomes de âncoras (@pxref{@code{@@anchor}}), e rótulos de "
+"flutuadores (@pxref{@code{@@float}}) precisam todos serem únicos."
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:2372
 #, no-wrap
 msgid "Commands in node names"
-msgstr ""
+msgstr "Comandos em nomes de nó"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:2373
 #, no-wrap
 msgid "@sortas{at} @@-commands @subentry in node names"
-msgstr ""
+msgstr "@subentry @sortas{at} de comandos @@ em nomes de nós"
 
 #. type: itemize
 #: texinfo/texinfo-ed.7.1-en_US.texi:2381
@@ -6249,6 +6278,13 @@ msgid ""
 "text.  Cross-references should use @code{@@TeX@{@}} just as the node name "
 "does."
 msgstr ""
+"Nomes de nós podem conter comandos @@@footnote{Antes do lançamento do "
+"Texinfo 5 em 2013, esse recurso era suportado de uma maneira peculiar (a "
+"opção @option{--commands-in-node-names} para @command{makeinfo}). Agora "
+"ele é parte da linguagem. }. Por exemplo, usar-se @code{@@TeX@{@}} em um "
+"nome de nó resulta no logotipo do @TeX{} sendo exibido, como seria em texto "
+"normal. Referências cruzadas deveriam usar @code{@@TeX@{@}}, assim como o "
+"nome de nó usa."
 
 #. type: itemize
 #: texinfo/texinfo-ed.7.1-en_US.texi:2388
@@ -6259,12 +6295,18 @@ msgid ""
 "of commands that are allowed, and their expansion for HTML identifiers and "
 "file names, @pxref{HTML Xref Command Expansion}."
 msgstr ""
+"Alguns comandos não fazem sentido em nomes de nó; por exemplo, ambientes "
+"(por exemplo, @code{@@quotation}), comandos que leem uma linha inteira como "
+"argumento deles (por exemplo, @code{@@sp}), e muitos outros. Para a lista "
+"completa dos comandos que são permitidos, e as expansões deles para "
+"identificadores HTML e nomes de arquivo, veja-se @ref{Expansão do Comando "
+"Xref do HTML}."
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:2390
 #, no-wrap
 msgid "Parentheses in node name"
-msgstr ""
+msgstr "Parêntesis em nome de nó"
 
 #. type: itemize
 #: texinfo/texinfo-ed.7.1-en_US.texi:2394
@@ -6273,47 +6315,50 @@ msgid ""
 "parenthesis, as in @code{(not)allowed}, since this syntax is used to specify "
 "an external manual."
 msgstr ""
+"Um nome de nó não pode iniciar com um abre parênteses precedendo um fecha "
+"parênteses, como em @code{(não)permitido}, dado que tal sintaxe é usada "
+"para especificar um manual externo."
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:2396
 #, no-wrap
 msgid "Colon in node name"
-msgstr ""
+msgstr "Dois pontos em nome de nó"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:2397
 #, no-wrap
 msgid "Comma in node name"
-msgstr ""
+msgstr "Vírgula em nome de nó"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:2398
 #, no-wrap
 msgid "Period in node name"
-msgstr ""
+msgstr "Ponto em nome de nó"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:2399
 #, no-wrap
 msgid "Characters, invalid in node name"
-msgstr ""
+msgstr "Caracteres, inválidos em nome de nó"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:2400
 #, no-wrap
 msgid "Invalid characters in node names"
-msgstr ""
+msgstr "Caracteres inválidos em nome de nó"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:2401
 #, no-wrap
 msgid "Node names, invalid characters in"
-msgstr ""
+msgstr "Nomes de nó, caracteres inválidos em"
 
 #. type: anchor{#1}
 #: texinfo/texinfo-ed.7.1-en_US.texi:2412
 msgid "Info Node Names Constraints"
-msgstr ""
+msgstr "Restrições de Nomes de Nó do Info"
 
 #. type: itemize
 #: texinfo/texinfo-ed.7.1-en_US.texi:2412
@@ -6328,6 +6373,16 @@ msgid ""
 "@code{INFO_SPECIAL_CHARS_QUOTE} to @samp{0} (@pxref{Other Customization "
 "Variables})."
 msgstr ""
+"Infelizmente, você não pode confiavelmente usar pontos, vírgulas ou dois "
+"pontos dentro de um nome de nó; esses podem confundir alguns leitores Info. "
+"@command{texi2any} aspeia nomes e rótulos problemáticos de nós por "
+"padrão, mas alguns leitores Info não reconhecem essa sintaxe. O aspeamento "
+"de nomes e etiquetas de nó faz com que caracteres @code{DEL} "
+"(@samp{Ctrl-?}, número do caractere 127, geralmente renderizado como "
+"@samp{^?}) apareçam em torno do nome. Para remover o aspeamento de nomes e "
+"rótulos de nó, você pode configurar a variável de personalização "
+"@code{INFO_SPECIAL_CHARS_QUOTE} como @samp{0} (@pxref{Outras Variáveis de "
+"Personalização})."
 
 #. type: itemize
 #: texinfo/texinfo-ed.7.1-en_US.texi:2418
