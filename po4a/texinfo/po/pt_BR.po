@@ -6392,6 +6392,11 @@ msgid ""
 "set the customization variable @code{INFO_SPECIAL_CHARS_WARNING} to @samp{0} "
 "(@pxref{Other Customization Variables})."
 msgstr ""
+"@command{texi2any} alerta a respeito de tais usos problemáticos em nomes de "
+"nó, itens de menu e referências cruzadas. Se não quiser ver os alertas, "
+"você pode configurar a variável de personalização "
+"@code{INFO_SPECIAL_CHARS_WARNING} para @samp{0} vejam-se @ref{Outras "
+"Variáveis de Personalização})."
 
 #. type: itemize
 #: texinfo/texinfo-ed.7.1-en_US.texi:2423
@@ -6401,12 +6406,16 @@ msgid ""
 "using either special insertions (@pxref{Inserting a Comma}) or @code{@@asis} "
 "(@pxref{@code{@@asis}}).  For example:"
 msgstr ""
+"Se insistir em usar tais caracteres em nomes de nó, para a finalidade de "
+"não confundir os processadores Texinfo, você precisa ainda encapsular tais "
+"caracteres, usando ou inserções especiais (veja-se @ref{Inserindo Uma "
+"Vírgula}) ou @code{@@asis} (veja-se @ref{@code{@@asis}}). Por exemplo:"
 
 #. type: example
 #: texinfo/texinfo-ed.7.1-en_US.texi:2426
 #, no-wrap
 msgid "@@node foo@@asis@{::@}bar@@comma@{@} baz\n"
-msgstr ""
+msgstr "@@node foo@@asis@{::@}bar@@comma@{@} baz\n"
 
 #. type: itemize
 #: texinfo/texinfo-ed.7.1-en_US.texi:2430
@@ -6414,6 +6423,8 @@ msgid ""
 "As an example of avoiding the special characters, the following is a section "
 "title in this manual:"
 msgstr ""
+"Como um exemplo de se evitar os caracteres especiais, o seguinte é um "
+"título de seção neste manual:"
 
 #. type: example
 #: texinfo/texinfo-ed.7.1-en_US.texi:2433
@@ -6422,40 +6433,43 @@ msgid ""
 "@@section @@code@{@@@@unnumbered@}, @@code@{@@@@appendix@}: Chapters "
 "with@enddots{}\n"
 msgstr ""
+"@@section @@code@{@@@@unnumbered@}, @@code@{@@@@appendix@}: Capítulos "
+"com@enddots{}\n"
 
 #. type: itemize
 #: texinfo/texinfo-ed.7.1-en_US.texi:2437
 msgid "But the corresponding node name lacks the commas and the subtitle:"
 msgstr ""
+"Porém, correspondente nome de nó careçe de vírgulas e do subtítulo:"
 
 #. type: example
 #: texinfo/texinfo-ed.7.1-en_US.texi:2440
 #, no-wrap
 msgid "@@node @@code@{@@@@unnumbered @@@@appendix@}\n"
-msgstr ""
+msgstr "@@node @@code@{@@@@unnumbered @@@@appendix@}\n"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:2442
 #, no-wrap
 msgid "Case in node name"
-msgstr ""
+msgstr "Maiúsculas e minúsculas em nome de nó"
 
 #. type: itemize
 #: texinfo/texinfo-ed.7.1-en_US.texi:2445
 msgid "Case is significant in node names."
-msgstr ""
+msgstr "Maiúsculas e minúsculas são significativas em nomes de nó."
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:2446
 #, no-wrap
 msgid "White space in node name"
-msgstr ""
+msgstr "Espaço em branco em nome de nó"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:2447
 #, no-wrap
 msgid "Spaces in node name"
-msgstr ""
+msgstr "Espaços em nome de nó"
 
 #. type: itemize
 #: texinfo/texinfo-ed.7.1-en_US.texi:2452
@@ -6464,6 +6478,9 @@ msgid ""
 "Multiple whitespace characters ``inside'' a name are collapsed to a single "
 "space.  For example:"
 msgstr ""
+"Os espaços antes e depois dos nomes na linha @samp{@@node} são ignorados. "
+"Caracteres espaços em branco múltiplos ``dentro'' de um nome são "
+"substituídos por um espaço único. Por exemplo:"
 
 #. type: example
 #: texinfo/texinfo-ed.7.1-en_US.texi:2459
@@ -6475,6 +6492,11 @@ msgid ""
 "@@node foo  bar,\n"
 "@@node  foo  bar ,\n"
 msgstr ""
+"@@node foo bar\n"
+"@@node  foo bar,\n"
+"@@node foo bar ,\n"
+"@@node foo  bar,\n"
+"@@node  foo  bar ,\n"
 
 #. type: itemize
 #: texinfo/texinfo-ed.7.1-en_US.texi:2472
