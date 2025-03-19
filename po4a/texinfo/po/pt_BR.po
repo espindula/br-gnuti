@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: Texinfo 7.1\n"
 "Report-Msgid-Bugs-To: jafesp@gmail.com\n"
 "POT-Creation-Date: 2025-03-02 00:31-0300\n"
-"PO-Revision-Date: 2025-03-17 14:57-0300\n"
+"PO-Revision-Date: 2025-03-19 17:09-0300\n"
 "Last-Translator: Jamenson Ferreira Espindula de Almeida Melo "
 "<jafesp@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -6504,35 +6504,37 @@ msgid ""
 "In menu entries, a single internal space should be used in node names or "
 "some versions of some Info readers will not find the node."
 msgstr ""
+"Em entradas de menu, um espaço interno sozinho deveria ser usado em nomes "
+"de nó ou algumas versões de alguns leitores Info não encontrarão o nó."
 
 #. type: node
 #: texinfo/texinfo-ed.7.1-en_US.texi:2475
 #, no-wrap
 msgid "First Node"
-msgstr ""
+msgstr "Primeiro Nó"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:2477
 msgid "@nodedescription How to write a `Top' node."
-msgstr ""
+msgstr "@nodedescription Como escrever um nó `Top'."
 
 #. type: section
 #: texinfo/texinfo-ed.7.1-en_US.texi:2477
 #, no-wrap
 msgid "The First Node"
-msgstr ""
+msgstr "O Primeiro Nó"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:2478
 #, no-wrap
 msgid "Top node is first"
-msgstr ""
+msgstr "Nó Top é primeiro"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:2479
 #, no-wrap
 msgid "First node"
-msgstr ""
+msgstr "Primeiro nó"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:2487
@@ -6544,23 +6546,30 @@ msgid ""
 "of any node should be avoided.  Such text, if present, is not output for "
 "DocBook."
 msgstr ""
+"O primeiro nó de um arquivo Texinfo é o nó @dfn{Top}, exceto em um "
+"arquivo incluído (@pxref{Arquivos de Inclusão}). O nó Top deveria conter "
+"um sumário curto e um menu mestre. Veja-se @ref{O Nó Top} para mais "
+"informações acerca do conteúdo e exemplos de nó Top. Texto reto antes do "
+"nó Top fora de qualquer nó deveria ser evitado. Tal texto, se presente, "
+"não é gerado para DocBook."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:2490
 msgid "Here is a description of the node pointers to be used in the Top node:"
 msgstr ""
+"Aqui está uma descrição dos ponteiros de nó a serem usados no nó Top:"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:2493
 #, no-wrap
 msgid "Up node of Top node"
-msgstr ""
+msgstr "Nó Acima do nó Top"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:2494
 #, no-wrap
 msgid "(dir) as Up node of Top node"
-msgstr ""
+msgstr "(dir) como nó Acima do nó Top"
 
 #. type: itemize
 #: texinfo/texinfo-ed.7.1-en_US.texi:2498
@@ -6569,6 +6578,9 @@ msgid ""
 "its `Up' node the name of a node in another file, where there is a menu that "
 "leads to this file.  Specify the file name in parentheses."
 msgstr ""
+"O nó Top (o qual precisa ser nomeado @samp{top} ou @samp{Top}) deveria ter "
+"como nó dele `Acima' o nome de um nó em outro arquivo, onde existe um menu "
+"que leva a esse arquivo. Especifique o nome de arquivo entre parênteses."
 
 #. type: itemize
 #: texinfo/texinfo-ed.7.1-en_US.texi:2505
@@ -6580,6 +6592,12 @@ msgid ""
 "whole.  (Each directory with Info files is intended to contain a file named "
 "@file{dir}.)"
 msgstr ""
+"Usualmente, todos os arquivos Info estão disponíveis por meio de uma "
+"árvore virtual única do Info, construída a partir de múltiplos "
+"diretórios. Nesse caso, use @samp{(dir)} como o ancestral do nó Top; isso "
+"especifica o nó de nível superior no arquivo @file{dir}, o qual contém o "
+"menu principal para o sistema Info como um todo. (Cada diretório com "
+"arquivos Info é destinado a conter um arquivo chamado @file{dir}.)"
 
 #. type: itemize
 #: texinfo/texinfo-ed.7.1-en_US.texi:2514
@@ -6592,6 +6610,14 @@ msgid ""
 "can be specified with the @code{TOP_NODE_UP_URL} customization variable "
 "(@pxref{HTML Customization Variables}), as in"
 msgstr ""
+"Isso está bom para Info, porém para saída HTML, alguém bem pode querer "
+"que o link Acima oriundo do nó Top vá para algum lugar específico. Por "
+"exemplo, para GNU, o lugar natural seria @url{http://www.gnu.org/manual/} "
+"(uma página da web que coleciona links para a maioria dos manuais GNU), "
+"melhor especificada que apenas @code{/manual/}, se o manual será instalado "
+"em @code{www.gnu.org}. Isso pode ser especificado com a variável de "
+"personalização @code{TOP_NODE_UP_URL} (veja-se @ref{Variáveis de "
+"Personalização de HTML}), como em"
 
 #. type: example
 #: texinfo/texinfo-ed.7.1-en_US.texi:2517
