@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: Texinfo 7.1\n"
 "Report-Msgid-Bugs-To: jafesp@gmail.com\n"
 "POT-Creation-Date: 2025-03-02 00:31-0300\n"
-"PO-Revision-Date: 2025-03-19 17:09-0300\n"
+"PO-Revision-Date: 2025-03-19 18:14-0300\n"
 "Last-Translator: Jamenson Ferreira Espindula de Almeida Melo "
 "<jafesp@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -6623,30 +6623,32 @@ msgstr ""
 #: texinfo/texinfo-ed.7.1-en_US.texi:2517
 #, no-wrap
 msgid "$ @kbd{texi2any --html -c TOP_NODE_UP_URL=/manual/} ...\n"
-msgstr ""
+msgstr "$ @kbd{texi2any --html -c TOP_NODE_UP_URL=/manual/} ...\n"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:2523
 #, no-wrap
 msgid "Prev node of Top node"
-msgstr ""
+msgstr "Nó Anterior do nó Top"
 
 #. type: itemize
 #: texinfo/texinfo-ed.7.1-en_US.texi:2525
 msgid "The `Prev' node of the Top node is usually omitted."
-msgstr ""
+msgstr "O nó `Anterior' do nó Top é usualmente omitido."
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:2527
 #, no-wrap
 msgid "Next node of Top node"
-msgstr ""
+msgstr "Nó Próximo do nó Top"
 
 #. type: itemize
 #: texinfo/texinfo-ed.7.1-en_US.texi:2530
 msgid ""
 "The `Next' node of the Top node should be the first chapter in your document."
 msgstr ""
+"O nó `Próximo' do nó Top deveria ser o primeiro capítulo em teu "
+"documento."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:2535
@@ -6654,6 +6656,8 @@ msgid ""
 "@xref{Installing an Info File}, for more information about installing an "
 "Info file in the @file{info} directory."
 msgstr ""
+"Veja-se @ref{Instalando Um Arquivo do Info}, para mais informações acerca "
+"de instalar um arquivo Info no diretório @file{info}."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:2538
@@ -6661,53 +6665,55 @@ msgid ""
 "It is usually best to leave the pointers off entirely and let the tools "
 "implicitly define them, with this simple result:"
 msgstr ""
+"Geralmente, é melhor deixar os ponteiros completamente desligados e deixar "
+"que as ferramentas os definam implicitamente, com este resultado simples:"
 
 #. type: example
 #: texinfo/texinfo-ed.7.1-en_US.texi:2541
 #, no-wrap
 msgid "@@node Top\n"
-msgstr ""
+msgstr "@@node Top\n"
 
 #. type: node
 #: texinfo/texinfo-ed.7.1-en_US.texi:2544
 #, no-wrap
 msgid "@code{@@top} Command"
-msgstr ""
+msgstr "Comando @code{@@top}"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:2546
 msgid "@nodedescription How to use the @code{@@top} command."
-msgstr ""
+msgstr "@nodedescription Como usar o comando @code{@@top}."
 
 #. type: section
 #: texinfo/texinfo-ed.7.1-en_US.texi:2546
 #, no-wrap
 msgid "The @code{@@top} Sectioning Command"
-msgstr ""
+msgstr "O Comando de Seccionamento @code{@@top}"
 
-#.  old name
-#.  another old name
-#.  yet another name
+#.  nome antigo
+#.  outro nome antigo
+#.  ainda outro nome
 #. type: anchor{#1}
 #: texinfo/texinfo-ed.7.1-en_US.texi:2551
 msgid "top command"
-msgstr ""
+msgstr "comando top"
 
 #. type: anchor{#1}
 #: texinfo/texinfo-ed.7.1-en_US.texi:2551
 msgid "makeinfo top"
-msgstr ""
+msgstr "makeinfo top"
 
 #. type: anchor{#1}
 #: texinfo/texinfo-ed.7.1-en_US.texi:2551
 msgid "makeinfo top command"
-msgstr ""
+msgstr "comando makeinfo top"
 
 #. type: findex
 #: texinfo/texinfo-ed.7.1-en_US.texi:2551
 #, no-wrap
 msgid "top"
-msgstr ""
+msgstr "top"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:2556
@@ -6715,6 +6721,9 @@ msgid ""
 "The @code{@@top} command is a special sectioning command that you should "
 "only use after a @samp{@@node Top} line at the beginning of a Texinfo file."
 msgstr ""
+"O comando @code{@@top} é um comando especial de seccionamento que você "
+"deveria usar somente depois de uma linha @samp{@@node Top} no início de um "
+"arquivo Texinfo."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:2559
@@ -6723,6 +6732,8 @@ msgid ""
 "(@pxref{@code{@@unnumbered @@appendix}}).  In @LaTeX{} @code{\\part*} is "
 "used."
 msgstr ""
+"Ele produz o mesmo tipo de saída que @code{@@unnumbered} (veja-se "
+"@ref{@code{@@unnumbered @@appendix}}). No @LaTeX{} @code{\\part*} é usado."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:2563
@@ -6730,6 +6741,9 @@ msgid ""
 "@code{@@top} is ignored when raising or lowering sections.  That is, it is "
 "never lowered and nothing can be raised to it (@pxref{Raise/lower sections})."
 msgstr ""
+"@code{@@top} é ignorado ao se elevar ou rebaixar seções. Ou seja, ele "
+"nunca é rebaixado e nada pode ser elevado a ele (veja-se "
+"@ref{Elevar/rebaixar seções})."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:2568
@@ -6738,6 +6752,10 @@ msgid ""
 "@code{@@ifnottex} conditional so that it would not appear in printed output "
 "(@pxref{Conditionals}).  Thus, a Top node often looked like this:"
 msgstr ""
+"Costumava ser convencional envolucrar o nó @code{@@top} em um condicional "
+"@code{@@ifnottex}, de forma que ele não aparecesse em saída impressa "
+"(veja-se @ref{Condicionais}). Assim, um nó Top frequentemente se parecia "
+"com isto:"
 
 #. type: example
 #: texinfo/texinfo-ed.7.1-en_US.texi:2573
@@ -6748,6 +6766,10 @@ msgid ""
 "@@top @var{your-manual-title}\n"
 "\n"
 msgstr ""
+"@@ifnottex\n"
+"@@node Top\n"
+"@@top @var{título-teu-manual}\n"
+"\n"
 
 #. type: example
 #: texinfo/texinfo-ed.7.1-en_US.texi:2576
@@ -6756,6 +6778,8 @@ msgid ""
 "@var{very-high-level-summary}\n"
 "@@end ifnottex\n"
 msgstr ""
+"@var{sumário-altíssimo-nível}\n"
+"@@end ifnottex\n"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:2580
@@ -6763,6 +6787,8 @@ msgid ""
 "This is no longer necessary, as the @samp{Top} node is now never output for "
 "printed output.  The @samp{Top} node is not output for DocBook either."
 msgstr ""
+"Isso não mais é necessário, pois o nó @samp{Top} agora nunca é gerado "
+"para saída impressa. O nó @samp{Top} também não é gerado para DocBook."
 
 #. type: section
 #: texinfo/texinfo-ed.7.1-en_US.texi:2582
