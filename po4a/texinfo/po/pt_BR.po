@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: Texinfo 7.1\n"
 "Report-Msgid-Bugs-To: jafesp@gmail.com\n"
 "POT-Creation-Date: 2025-03-02 00:31-0300\n"
-"PO-Revision-Date: 2025-03-19 18:14-0300\n"
+"PO-Revision-Date: 2025-03-20 01:56-0300\n"
 "Last-Translator: Jamenson Ferreira Espindula de Almeida Melo "
 "<jafesp@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -6795,42 +6795,42 @@ msgstr ""
 #: texinfo/texinfo-ed.7.1-en_US.texi:2584
 #, no-wrap
 msgid "Texinfo Document Structure"
-msgstr ""
+msgstr "Estrutura do Documento Texinfo"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:2584
 msgid "@nodedescription Double structure of documents."
-msgstr ""
+msgstr "@nodedescription Estrutura dupla dos documentos."
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:2585
 #, no-wrap
 msgid "Texinfo document structure"
-msgstr ""
+msgstr "Estrutura do documento Texinfo"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:2586
 #, no-wrap
 msgid "Document structure, of Texinfo"
-msgstr ""
+msgstr "Estrutura de documento, do Texinfo"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:2587
 #, no-wrap
 msgid "Structure, of Texinfo documents"
-msgstr ""
+msgstr "Estrutura, dos documentos do Texinfo"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:2588
 #, no-wrap
 msgid "Double structure, of Texinfo documents"
-msgstr ""
+msgstr "Estrutura dupla, dos documentos do Texinfo"
 
-#.  old node name
+#.  antigo nome de nó
 #. type: anchor{#1}
 #: texinfo/texinfo-ed.7.1-en_US.texi:2591
 msgid "Two Paths"
-msgstr ""
+msgstr "Dois Caminhos"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:2596
@@ -6840,6 +6840,10 @@ msgid ""
 "have a menu of the sections in that chapter.  The menus allow the user to "
 "move to the child nodes in the Info output."
 msgstr ""
+"Os nós podem conter @dfn{menus}, os quais contém os nomes de @dfn{nós "
+"descendentes} dentro do nó ancestral; por exemplo, um nó correspondente a "
+"um capítulo teria um menu de seções nesse capítulo. Os menus permitem "
+"que o(a) usuário(a) se movimente para os nós descendentes na saída Info."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:2611
@@ -6857,6 +6861,19 @@ msgid ""
 "the children in the menu of the parent chapter.  Each child node records the "
 "parent node name as its `Up' pointer."
 msgstr ""
+"Adicionalmente, os nós contém @dfn{ponteiros de nó} que nomeiam outros "
+"nós. Os ponteiros `Próximo' e `Anterior' vinculam nós no mesmo nível de "
+"seccionamento em uma cadeia. Conforme você pode imaginar, o ponteiro "
+"`Próximo' vincula ao próximo nó, e o ponteiro `Anterior' vincula ao nó "
+"anterior. Em geral, `Próximo' e `Anterior' referenciam nós no @emph{mesmo "
+"nível hierárquico} no manual, não necessariamente ao próximo nó dentro "
+"do arquivo Texinfo. No arquivo Texinfo, o nó subsequente possivelmente "
+"esteja em um nível inferior---um nó ao nível de seção frequentemente "
+"precisa seguir um nó ao nível de capítulo, por exemplo. Assim, por "
+"exemplo, todos os nós que estejam ao nível de seções dentro de um "
+"capítulo são vinculados juntos, e a ordem nessa cadeia é a mesma que a "
+"ordem dos descendentes no menu do capítulo ancestral. Cada nó descendente "
+"grava o nome de nó do ancestral como ponteiro dele `Acima'."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:2616
@@ -6866,12 +6883,16 @@ msgid ""
 "node.  This is an exception to the rule of `Next' being at the same "
 "hierarchical level."
 msgstr ""
+"Como o nó `Top' é o único nó nesse nível, `Próximo' se refere ao "
+"primeiro nó a seguir, que quase sempre é um nó de capítulo ou ao nível "
+"de capítulo. Essa é uma exceção à regra de `Próximo' estar no mesmo "
+"nível hierárquico."
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:2617
 #, no-wrap
 msgid "@code{accesskey} @subentry in HTML output of nodes"
-msgstr ""
+msgstr "@code{accesskey} @subentry na saída HTML de nós"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:2630
@@ -6888,6 +6909,18 @@ msgid ""
 "always used for the node and menu structure also, as this leads to a "
 "document which is easy to follow."
 msgstr ""
+"A saída Info e HTML para cada nó inclui vínculos para os nós `Próximo', "
+"`Anterior', e `Acima'. O HTML também usa o atributo @code{accesskey} com os "
+"valores @samp{n}, @samp{p}, e @samp{u}, respectivamente. Isso permite que "
+"pessoas que usam navegadores web seguirem a navegação usando (tipicamente) "
+"@kbd{M-@var{letra}}, por exemplo, @kbd{M-n} para o nó `Próximo', a partir "
+"de qualquer lugar dentro do nó. Os ponteiros e menus de nó fornecem "
+"estrutura para arquivos Info, exatamente como capítulos, seções, "
+"subseções e semelhantes fornecem estrutura para livros impressos. As duas "
+"estruturas teoricamente são distintas; na prática, entretanto, a estrutura "
+"de árvore dos livros impressos é também essencialmente sempre usada para "
+"o nó e estrutura de menu, pois isso conduz a um documento que é fácil de "
+"seguir."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:2637
