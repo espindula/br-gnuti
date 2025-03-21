@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: Texinfo 7.1\n"
 "Report-Msgid-Bugs-To: jafesp@gmail.com\n"
 "POT-Creation-Date: 2025-03-02 00:31-0300\n"
-"PO-Revision-Date: 2025-03-20 22:32-0300\n"
+"PO-Revision-Date: 2025-03-21 18:43-0300\n"
 "Last-Translator: Jamenson Ferreira Espindula de Almeida Melo "
 "<jafesp@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -7266,11 +7266,17 @@ msgid ""
 "it is generating the menu automatically, or if no description for the menu "
 "entry was provided in an explicit @code{@@menu} block. (@xref{Menus})."
 msgstr ""
+"@command{texi2any} usa o conteúdo que você fornece com esses comandos ao "
+"gerar menus para o formato de saída Info (e, opcionalmente, para HTML). "
+"@command{texi2any} usa a descrição depois de uma entrada de menu para o "
+"nó se estiver gerando o menu automaticamente ou se nenhuma descrição para "
+"a entrada de menu foi fornecida em um bloco explícito @code{@@menu}. "
+"(@xref{Menus})."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:2790
 msgid "Here is an example of using these commands:"
-msgstr ""
+msgstr "Aqui está um exemplo do uso desses comandos:"
 
 #. type: example
 #: texinfo/texinfo-ed.7.1-en_US.texi:2794
@@ -7280,6 +7286,9 @@ msgid ""
 "@@chapter Tools\n"
 "\n"
 msgstr ""
+"@@node Ferramentas\n"
+"@@chapter Ferramentas\n"
+"\n"
 
 #. type: example
 #: texinfo/texinfo-ed.7.1-en_US.texi:2796
@@ -7288,6 +7297,8 @@ msgid ""
 "This chapter is on different tools you can use.\n"
 "\n"
 msgstr ""
+"Este capítulo é a respeito de diferentes ferramentas que você pode usar.\n"
+"\n"
 
 #. type: example
 #: texinfo/texinfo-ed.7.1-en_US.texi:2800
@@ -7298,6 +7309,10 @@ msgid ""
 "@@section Screwdrivers\n"
 "\n"
 msgstr ""
+"@@node Chaves de fenda\n"
+"@@nodedescription Flathead e Phillips.\n"
+"@@section Chaves de fenda\n"
+"\n"
 
 #. type: example
 #: texinfo/texinfo-ed.7.1-en_US.texi:2802
@@ -7306,6 +7321,8 @@ msgid ""
 "This section is about screwdrivers.\n"
 "\n"
 msgstr ""
+"Esta seção é a respeito de chaves de fenda.\n"
+"\n"
 
 #. type: example
 #: texinfo/texinfo-ed.7.1-en_US.texi:2809
@@ -7319,12 +7336,20 @@ msgid ""
 "@@section Drills\n"
 "\n"
 msgstr ""
+"@@node Brocas\n"
+"@@nodedescriptionblock\n"
+"Fazendo buracos em coisas com chaves elétricas de fenda, controladores de\n"
+"broca, brocas combi, controladores de impacto, brocas martelo, disjuntores\n"
+"e brocas de demolição.\n"
+"@@end nodedescriptionblock\n"
+"@@section Brocas\n"
+"\n"
 
 #. type: example
 #: texinfo/texinfo-ed.7.1-en_US.texi:2811
 #, no-wrap
 msgid "This section is about drills.\n"
-msgstr ""
+msgstr "Esta seção é a respeito de brocas.\n"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:2815
@@ -7332,6 +7357,8 @@ msgid ""
 "In Info output, @command{texi2any} would output the @samp{Tools} node with a "
 "menu as follows:"
 msgstr ""
+"Na saída gerada Info, @command{texi2any} geraria o nó @samp{Ferramentas} "
+"com um menu conforme segue:"
 
 #. type: group
 #: texinfo/texinfo-ed.7.1-en_US.texi:2818
@@ -7341,6 +7368,8 @@ msgid ""
 "* Menu:\n"
 "\n"
 msgstr ""
+"* Menu:\n"
+"\n"
 
 #. type: example
 #: texinfo/texinfo-ed.7.1-en_US.texi:2824
@@ -7352,6 +7381,11 @@ msgid ""
 "                          drills, impact drivers, hammer drills,\n"
 "                          breakers and demolition drills.\n"
 msgstr ""
+"* Chaves de fenda::       Flathead e Phillips.\n"
+"* Brocas::                Fazendo buracos em coisas com chaves\n"
+"                          elétricas de fenda, controladores de broca,\n"
+"                          brocas combi, controladores de impacto, brocas\n"
+"                          martelo, disjuntores e brocas de demolição.\n"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:2827
@@ -7359,18 +7393,18 @@ msgstr ""
 #: texinfo/texinfo-ed.7.1-en_US.texi:2830
 #, no-wrap
 msgid "Menus"
-msgstr ""
+msgstr "Menus"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:2829
 msgid "@nodedescription Listing subordinate nodes."
-msgstr ""
+msgstr "@nodedescription Listando nós subordinados."
 
 #. type: findex
 #: texinfo/texinfo-ed.7.1-en_US.texi:2831
 #, no-wrap
 msgid "menu"
-msgstr ""
+msgstr "menu"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:2838
@@ -7381,6 +7415,11 @@ msgid ""
 "Variables}, under @code{FORMAT_MENU}).  Menus have no role in printed "
 "manuals or other output formats."
 msgstr ""
+"@dfn{Menus} contém ponteiros para subordinar nós. Na saída gerada Info, "
+"você usa menus para ir para tais nós. @command{texi2any} consegue gerar "
+"menus na saída gerada HTML, porém não faz isso por padrão (veja-se "
+"@ref{Outras Variáveis de Personalização} sob @code{FORMAT_MENU}). Os "
+"menus não tem efeito em manuais impressos ou em outros formatos de saída."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:2842
@@ -7389,6 +7428,9 @@ msgid ""
 "for nodes followed by a sectioning command, without an explicit "
 "@code{@@menu} block, and with automatic pointers."
 msgstr ""
+"Os menus são gerados automaticamente pelo @command{texi2any} ao gerar Info "
+"para nós seguidos por um comando de seccionamento, sem um bloco explícito "
+"@code{@@menu} e com ponteiros automáticos."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:2850
@@ -7400,30 +7442,37 @@ msgid ""
 "with nodes, and with node pointers left out, you should only write menus if "
 "you want exact control over the contents and formatting of menus in Info."
 msgstr ""
+"Frequentemente é mais conveniente permitir que @command{texi2any} gere "
+"menus para você, pois você então não tem o ônus de atualizar blocos de "
+"menus no teu fonte do Texinfo quando adicionar, remover ou realocar nós. No "
+"caso usual de um manual organizado hierarquicamente com comandos de "
+"seccionamento associados a nós e com ponteiros de nós deixados de fora, "
+"você deveria escrever menus somente se quiser controle exato sobre o "
+"conteúdo e a formatação de menus no Info."
 
 #. type: subsection
 #: texinfo/texinfo-ed.7.1-en_US.texi:2852
 #: texinfo/texinfo-ed.7.1-en_US.texi:2854
 #, no-wrap
 msgid "Writing a Menu"
-msgstr ""
+msgstr "Escrevendo um Menu"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:2854
 msgid "@nodedescription What is a menu?"
-msgstr ""
+msgstr "@nodedescription O que é um menu?"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:2855
 #, no-wrap
 msgid "Writing a menu"
-msgstr ""
+msgstr "Escrevendo um menu"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:2856
 #, no-wrap
 msgid "Menu writing"
-msgstr ""
+msgstr "Menu, Escrevendo"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:2861
@@ -7432,11 +7481,14 @@ msgid ""
 "menu entry lines or menu comment lines, and then followed by an @code{@@end "
 "menu} command on a line by itself."
 msgstr ""
+"Um menu consiste de um comando @code{@@menu} em uma linha própria, seguido "
+"por linhas de entrada de menu ou de linhas de comentários de menu, e então "
+"seguido por um comando @code{@@end menu} em uma linha própria."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:2863
 msgid "A menu looks like this:"
-msgstr ""
+msgstr "Um menu se parece com isto:"
 
 #. type: group
 #: texinfo/texinfo-ed.7.1-en_US.texi:2868
@@ -7447,6 +7499,9 @@ msgid ""
 "Larger Units of Text\n"
 "\n"
 msgstr ""
+"@@menu\n"
+"Unidades Maiores de Texto\n"
+"\n"
 
 #. type: group
 #: texinfo/texinfo-ed.7.1-en_US.texi:2873
@@ -7458,12 +7513,16 @@ msgid ""
 "                                 several files at once.\n"
 "@@end menu\n"
 msgstr ""
+"* Arquivos::                    Tudo acerca de manuseio de arquivos.\n"
+"* Múltiplos: Buffers.           Múltiplos buffers; editando\n"
+"                                 vários arquivos de uma vez.\n"
+"@@end menu\n"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:2876
 #, no-wrap
 msgid "Spaces, in menus"
-msgstr ""
+msgstr "Espaços, em menus"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:2879
@@ -7471,6 +7530,8 @@ msgid ""
 "In a menu, every line that begins with an @w{@samp{* }} is a @dfn{menu "
 "entry}.  (Note the space after the asterisk.)"
 msgstr ""
+"Em um menu, cada linha que inicie com um @w{@samp{* }} é uma "
+"@dfn{entrada de menu}. (Observe o espaço depois do asterisco.)"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:2885
@@ -7481,6 +7542,11 @@ msgid ""
 "of Text} is such a menu comment line; the two lines starting with @w{@samp{* "
 "}} are menu entries."
 msgstr ""
+"Uma linha que não se inicie com um @w{@samp{* }} também pode aparecer em "
+"um menu. Tal linha não é uma entrada de menu, mas sim uma linha de "
+"@dfn{comentários de menu} que aparece no arquivo Info. No exemplo acima, a "
+"linha @samp{Unidades Maiores de Texto} é uma dessas linhas de comentários "
+"de menu; as duas linhas iniciando com @w{@samp{* }} são entradas de menu."
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:2886
