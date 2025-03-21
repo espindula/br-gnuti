@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: Texinfo 7.1\n"
 "Report-Msgid-Bugs-To: jafesp@gmail.com\n"
 "POT-Creation-Date: 2025-03-02 00:31-0300\n"
-"PO-Revision-Date: 2025-03-20 01:56-0300\n"
+"PO-Revision-Date: 2025-03-20 21:15-0300\n"
 "Last-Translator: Jamenson Ferreira Espindula de Almeida Melo "
 "<jafesp@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -6932,6 +6932,12 @@ msgid ""
 "of sections; similarly, the child nodes of sections are at the level of "
 "subsections."
 msgstr ""
+"Normalmente, a estrutura de seccionamento e a estrutura de nó são "
+"completamente paralelas, com um nó para cada capítulo, seção etc., e com "
+"os nós seguindo o mesmo arranjo hierárquico que o seccionamento. Assim, se "
+"um nó estiver no nível lógico de um capítulo, os nós descendentes dele "
+"estarão no nível das seções; similarmente, os nós descendentes das "
+"seções estarão no nível das subseções."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:2644
@@ -6943,23 +6949,28 @@ msgid ""
 "Texinfo manuals currently in general use do follow the conventional parallel "
 "structure."
 msgstr ""
+"É tecnicamente possível criar documentos do Texinfo com somente uma "
+"estrutura ou a outra, ou para as duas estruturas não serem paralelas ou "
+"para que a estrutura de seccionamento ou a de nó seja diferente da "
+"estrutura convencional. Até onde sabemos, no entanto, todos os manuais do "
+"Texinfo atualmente em uso geral seguem a estrutura paralela convencional."
 
 #. type: node
 #: texinfo/texinfo-ed.7.1-en_US.texi:2646
 #, no-wrap
 msgid "Node Menu Illustration"
-msgstr ""
+msgstr "Ilustração de Menu de Nó"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:2648
 msgid "@nodedescription A diagram, and sample nodes and menus."
-msgstr ""
+msgstr "@nodedescription Um diagrama, e menus e nós de amostra."
 
 #. type: section
 #: texinfo/texinfo-ed.7.1-en_US.texi:2648
 #, no-wrap
 msgid "Node and Menu Illustration"
-msgstr ""
+msgstr "Ilustração de Nó e Menu"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:2652
@@ -6967,6 +6978,8 @@ msgid ""
 "Here is a diagram that illustrates a Texinfo file with three chapters, each "
 "of which contains two sections."
 msgstr ""
+"Aqui está um diagrama que ilustra um arquivo texinfo com três capítulos, "
+"cada um dos quais contém duas seções."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:2658
@@ -6976,6 +6989,11 @@ msgid ""
 "an upside-down tree.  For this reason, the root node is called the `Top' "
 "node, and `Up' node pointers carry you closer to the root."
 msgstr ""
+"A ``raiz'' está no topo do diagrama e as ``folhas'' estão na parte "
+"inferior. É assim que esse diagrama é desenhado convencionalmente; ele "
+"ilustra uma árvore de cabeça para baixo. Por esse motivo, o nó raiz é "
+"chamado de nó `Top' e os ponteiros do nó `Acima' levam você mais perto da "
+"raiz."
 
 #. type: group
 #: texinfo/texinfo-ed.7.1-en_US.texi:2671
