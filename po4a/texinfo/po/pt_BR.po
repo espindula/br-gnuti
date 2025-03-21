@@ -7010,6 +7010,16 @@ msgid ""
 "Section  Section   Section  Section   Section  Section\n"
 "  1.1      1.2       2.1      2.2       3.1      3.2\n"
 msgstr ""
+"                         Top\n"
+"                          |\n"
+"        -------------------------------------\n"
+"       |                  |                  |\n"
+"    Capítulo 1         Capítulo 2         Capítulo 3\n"
+"       |                  |                  |\n"
+"    --------           --------           --------\n"
+"   |        |         |        |         |        |\n"
+" Seção    Seção     Seção    Seção     Seção    Seção\n"
+"  1.1      1.2       2.1      2.2       3.1      3.2\n"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:2677
@@ -7017,6 +7027,9 @@ msgid ""
 "Using explicit pointers (not recommended, but shown for purposes of the "
 "example), the fully-written command to start Chapter@tie{}2 would be this:"
 msgstr ""
+"Usando-se ponteiros explícitos (não recomendados, mas mostrados para fins "
+"do exemplo), o comando totalmente escrito para iniciar o Capítulo@tie{}2 "
+"seria o este:"
 
 #. type: group
 #: texinfo/texinfo-ed.7.1-en_US.texi:2682
@@ -7025,6 +7038,8 @@ msgid ""
 "@@node     Chapter 2,  Chapter 3, Chapter 1, Top\n"
 "@@comment  node-name,  next,      previous,  up\n"
 msgstr ""
+"@@node     Capítulo 2,  Capítulo 3, Capítulo 1, Top\n"
+"@@comment  nome-nó,     próximo,    anterior,   acima\n"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:2692
@@ -7036,6 +7051,11 @@ msgid ""
 "document is hierarchically organized, but the pointer relationships still "
 "obtain."
 msgstr ""
+"Essa linha @code{@@node} diz que o nome desse nó é ``Capítulo@tie{}2'', o "
+"nome do nó `Próximo' é ``Capítulo 3'', o nome do nó `Anterior' é "
+"``Capítulo@tie{}1'' e o nome do nó `Acima' é ``Top''. Você pode (e "
+"deveria) omitir escrever esses nomes de nós se teu documento estiver "
+"hierarquicamente organizado, mas os relacionamentos do ponteiro ainda obtém."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:2696
@@ -7044,6 +7064,9 @@ msgid ""
 "(@xref{Menus}.)  You would write the menu just before the beginning of "
 "Section 2.1, like this:"
 msgstr ""
+"Para ir para as seções 2.1 e 2.2 usando Info, você precisa de um menu "
+"dentro do Capítulo 2. (@xref{Menus}.) Você escreveria o menu pouco antes "
+"do início da Seção 2.1, como este:"
 
 #. type: group
 #: texinfo/texinfo-ed.7.1-en_US.texi:2703
@@ -7054,11 +7077,15 @@ msgid ""
 "   * Sect. 2.2::    Description.\n"
 "   @@end menu\n"
 msgstr ""
+"   @@menu\n"
+"   * Sect. 2.1::    Descrição desta seção.\n"
+"   * Sect. 2.2::    Descrição.\n"
+"   @@end menu\n"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:2707
 msgid "The automatic pointers for the node for Sect.@: 2.1 correspond to:"
-msgstr ""
+msgstr "Os ponteiros automáticos para o nó para Sect.@: 2.1 correspondem a:"
 
 #. type: group
 #: texinfo/texinfo-ed.7.1-en_US.texi:2712
@@ -7067,6 +7094,8 @@ msgid ""
 "@@node     Sect. 2.1, Sect. 2.2, ,         Chapter 2\n"
 "@@comment  node-name, next,      previous, up\n"
 msgstr ""
+"@@node     Sect. 2.1, Sect. 2.2, ,         Capítulo 2\n"
+"@@comment  nome-nó,   próximo,   anterior, acima\n"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:2717
@@ -7074,12 +7103,16 @@ msgid ""
 "Note that no `Prev' pointer is generated, since there is no other node at "
 "the same hierarchical level before Sect.@: 2.1."
 msgstr ""
+"Observe que nenhum ponteiro `Anterior' é gerado, pois não existe outro nó "
+"no mesmo nível hierárquico antes de Sect.@: 2.1."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:2719
 msgid ""
 "Using explicit pointers, the node for Sect.@: 2.1 could be written like this:"
 msgstr ""
+"Usando ponteiros explícitos, o nó para Sect.@: 2.1 poderia ser escrito "
+"assim:"
 
 #. type: group
 #: texinfo/texinfo-ed.7.1-en_US.texi:2724
@@ -7088,6 +7121,8 @@ msgid ""
 "@@node     Sect. 2.1, Sect. 2.2, Chapter 2, Chapter 2\n"
 "@@comment  node-name, next,      previous,  up\n"
 msgstr ""
+"@@node     Sect. 2.1, Sect. 2.2, Capítulo 2, Capítulo 2\n"
+"@@comment  nome-nó,   próximo,   anterior,   acima\n"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:2736
