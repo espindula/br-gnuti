@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: Texinfo 7.1\n"
 "Report-Msgid-Bugs-To: jafesp@gmail.com\n"
 "POT-Creation-Date: 2025-03-02 00:31-0300\n"
-"PO-Revision-Date: 2025-03-20 21:15-0300\n"
+"PO-Revision-Date: 2025-03-20 22:32-0300\n"
 "Last-Translator: Jamenson Ferreira Espindula de Almeida Melo "
 "<jafesp@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -7136,6 +7136,15 @@ msgid ""
 "`leaves').  (A cross-reference can point to a node at any level; see "
 "@ref{Cross References}.)"
 msgstr ""
+"Com ponteiros automáticos, os ponteiros `Próximo' e `Anterior' de um nó "
+"levam a outros nós no mesmo nível---de capítulo para capítulo ou de "
+"seção para seção. Como mostrado, ao usar-se ponteiros explícitos, os "
+"ponteiros também podem liderar em outro lugar, aqui, por exemplo, o "
+"ponteiro `Anterior' aponta para cima. Um ponteiro `Acima' geralmente leva a "
+"um nó no nível acima (mais próximo do nó `Top'; e um `Menu' leva a nós "
+"em um nível abaixo (mais próximo das `folhas'). (Uma referência cruzada "
+"pode apontar para um nó em qualquer nível; veja-se @ref{Referências "
+"Cruzadas}.)"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:2742
@@ -7146,6 +7155,11 @@ msgid ""
 "`Previous' and `Up' pointers lead to nodes that do not correspond, even "
 "loosely, to the next, previous and up node."
 msgstr ""
+"Tecnicamente, os ponteiros explícitos de nós podem te levar a qualquer "
+"nó, independentemente da estrutura do documento; mesmo para nós em um "
+"arquivo Info diferente. No entanto, seria muito confuso para leitores ter "
+"ponteiros `Próximo', `Anterior' e `Acima' levando a nós que não "
+"correspondem, mesmo vagamente, ao nó próximo, anterior e acima."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:2750
@@ -7157,6 +7171,13 @@ msgid ""
 "used.)  The Texinfo processors use this construct to determine the "
 "relationships between nodes and sectioning commands."
 msgstr ""
+"Um comando @code{@@node} e um comando de estruturamento de capítulo são "
+"usados convencionalmente juntos, nessa ordem, geralmente seguidos por "
+"comandos de indexação. (Como mostrado no exemplo acima, você pode seguir "
+"a linha @code{@@node} com uma linha de comentários, por exemplo, para "
+"mostrar qual ponteiro é qual se ponteiros explícitos forem usados.) Os "
+"processadores Texinfo usam esse construto para determinar as relações "
+"entre nós e comandos de seccionamento."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:2754
@@ -7165,6 +7186,9 @@ msgid ""
 "Texinfo File''.  This shows a @code{@@node} line followed by a "
 "@code{@@chapter} line, and then by indexing lines."
 msgstr ""
+"Aqui está o começo do capítulo neste manual chamado ``Finalizando um "
+"Arquivo Texinfo''. Isso mostra uma linha @code{@@node} seguida por uma linha "
+"@code{@@chapter} e, em seguida, por linhas de indexação."
 
 #. type: group
 #: texinfo/texinfo-ed.7.1-en_US.texi:2762
@@ -7176,13 +7200,18 @@ msgid ""
 "@@cindex Texinfo file ending\n"
 "@@cindex File ending\n"
 msgstr ""
+"@@node Finalizando um Arquivo\n"
+"@@chapter Finalizando um Arquivo Texinfo\n"
+"@@cindex Finalizando um arquivo Texinfo\n"
+"@@cindex Finalização de arquivo Texinfo\n"
+"@@cindex Finalização de arquivo\n"
 
 #. type: section
 #: texinfo/texinfo-ed.7.1-en_US.texi:2766
 #: texinfo/texinfo-ed.7.1-en_US.texi:2770
 #, no-wrap
 msgid "Node Descriptions"
-msgstr ""
+msgstr "Descrições de Nó"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:2769
@@ -7190,12 +7219,14 @@ msgid ""
 "@nodedescriptionblock @code{@@nodedescription} and "
 "@code{@@nodedescriptionblock}."
 msgstr ""
+"@nodedescriptionblock @code{@@nodedescription} e "
+"@code{@@nodedescriptionblock}."
 
 #. type: findex
 #: texinfo/texinfo-ed.7.1-en_US.texi:2772
 #, no-wrap
 msgid "nodedescription"
-msgstr ""
+msgstr "nodedescription"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:2777
@@ -7205,12 +7236,16 @@ msgid ""
 "description might elaborate on or extend the information in the node name "
 "itself."
 msgstr ""
+"Você pode fornecer uma breve descrição do propósito de um nó usando o "
+"comando @code{@@nodedescription} seguindo a linha @code{@@node}. Essa "
+"descrição pode elaborar ou estender as informações no próprio nome do "
+"nó."
 
 #. type: findex
 #: texinfo/texinfo-ed.7.1-en_US.texi:2778
 #, no-wrap
 msgid "nodedescriptionblock"
-msgstr ""
+msgstr "nodedescriptionblock"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:2781
@@ -7218,6 +7253,9 @@ msgid ""
 "You can also use a @code{@@nodedescriptionblock} environment to provide a "
 "node description. This may be useful for longer descriptions."
 msgstr ""
+"Você também pode usar um ambiente @code{@@nodedescriptionblock} para "
+"fornecer uma descrição do nó. Isso possivelmente seja útil para "
+"descrições mais longas."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:2788
