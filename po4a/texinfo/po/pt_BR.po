@@ -7926,48 +7926,52 @@ msgid ""
 "node names and cross-references) contains a problematic construct that could "
 "interfere with its parsing in Info.  @xref{Info Node Names Constraints}."
 msgstr ""
+"@command{texi2any} alerta e protege nomes quando o texto de um item de menu "
+"(e nomes e referências cruzadas de nó) contiver uma construção "
+"problemática que puder interferir com a análise dele no Info. "
+"(@xref{Restrições de Nomes de Nó do Info})."
 
 #. type: subsection
 #: texinfo/texinfo-ed.7.1-en_US.texi:3055
 #: texinfo/texinfo-ed.7.1-en_US.texi:3057
 #, no-wrap
 msgid "Less Cluttered Menu Entry"
-msgstr ""
+msgstr "Entrada de Menu Menos Desordenada"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:3057
 msgid "@nodedescription Two part menu entry."
-msgstr ""
+msgstr "@nodedescription Entrada de menu de duas partes."
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:3058
 #, no-wrap
 msgid "Two part menu entry"
-msgstr ""
+msgstr "Entrada de menu de duas partes"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:3059
 #, no-wrap
 msgid "Double-colon menu entries"
-msgstr ""
+msgstr "Entradas dois pontos de menu"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:3060
 #, no-wrap
 msgid "Menu entries with two colons"
-msgstr ""
+msgstr "Entradas de menu com dois ``dois pontos''"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:3061
 #, no-wrap
 msgid "Less cluttered menu entry"
-msgstr ""
+msgstr "Entrada de menu menos desordenada"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:3062
 #, no-wrap
 msgid "Uncluttered menu entry"
-msgstr ""
+msgstr "Entrada de menu organizada"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:3067
@@ -7976,28 +7980,31 @@ msgid ""
 "immediately after the asterisk and space at the beginning of the line and "
 "follow the name with two colons."
 msgstr ""
+"Quando o nome de entrada de menu e o nome de nó são os mesmos, você pode "
+"escrever o nome imediatamente depois do asterisco e espaço no início da "
+"linha e seguir com o nome com dois ``dois pontos''."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:3070
 msgid "For example, write"
-msgstr ""
+msgstr "Por exemplo, escreva"
 
 #. type: example
 #: texinfo/texinfo-ed.7.1-en_US.texi:3074
 #, no-wrap
 msgid "* Name::                        @var{description}\n"
-msgstr ""
+msgstr "* Nome::                        @var{descrição}\n"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:3079
 msgid "instead of"
-msgstr ""
+msgstr "em vez de"
 
 #. type: example
 #: texinfo/texinfo-ed.7.1-en_US.texi:3082
 #, no-wrap
 msgid "* Name: Name.                   @var{description}\n"
-msgstr ""
+msgstr "* Nome: Nome.                   @var{descrição}\n"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:3086
@@ -8005,53 +8012,55 @@ msgid ""
 "We recommend using the node name for the menu entry name whenever possible, "
 "since it reduces visual clutter in the menu."
 msgstr ""
+"Nós recomendamos usar o nome de nó para o nome de entrada de menu sempre "
+"que possível, pois isso reduz a confusão visual no menu."
 
 #. type: node
 #: texinfo/texinfo-ed.7.1-en_US.texi:3088
 #, no-wrap
 msgid "Other Info Files"
-msgstr ""
+msgstr "Outros Arquivos do Info"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:3090
 msgid "@nodedescription How to refer to a different Info file."
-msgstr ""
+msgstr "@nodedescription Como referenciar um arquivo Info diferente."
 
 #. type: subsection
 #: texinfo/texinfo-ed.7.1-en_US.texi:3090
 #, no-wrap
 msgid "Referring to Other Info Files"
-msgstr ""
+msgstr "Referenciando Outros Arquivos do Info"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:3091
 #, no-wrap
 msgid "Referring to other Info files"
-msgstr ""
+msgstr "Referenciando outros arquivos do Info"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:3092
 #, no-wrap
 msgid "Nodes in other Info files"
-msgstr ""
+msgstr "Nós em outros arquivos do Info"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:3093
 #, no-wrap
 msgid "Other Info files' nodes"
-msgstr ""
+msgstr "Nós de outros arquivos do Info"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:3094
 #, no-wrap
 msgid "Going to other Info files' nodes"
-msgstr ""
+msgstr "Indo para outros nós de arquivos do Info"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:3095
 #, no-wrap
 msgid "Info; other files' nodes"
-msgstr ""
+msgstr "Info; nós de outros arquivos"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:3100
@@ -8060,6 +8069,9 @@ msgid ""
 "another Info file by writing the file name in parentheses just before the "
 "node name.  Some examples:"
 msgstr ""
+"Você pode criar uma entrada de menu que habilite um leitor no Info a ir "
+"para um nó em outro arquivo Info, escrevendo o nome de arquivo entre "
+"parênteses um pouco antes do nome do nó. Alguns exemplos:"
 
 #. type: group
 #: texinfo/texinfo-ed.7.1-en_US.texi:3107
@@ -8071,6 +8083,11 @@ msgid ""
 "* (@var{filename})@var{second-node}::                  @var{description}\n"
 "@@end menu\n"
 msgstr ""
+"@@menu\n"
+"* @var{nome-primeira-entrada}:(@var{nome-arquivo})@var{nome-nó}.     "
+"@var{descrição}\n"
+"* (@var{nome-arquivo})@var{segundo-nó}::               @var{descrição}\n"
+"@@end menu\n"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:3114
@@ -8078,6 +8095,9 @@ msgid ""
 "For example, to refer directly to the @samp{Outlining} and @samp{Rebinding} "
 "nodes in the @cite{Emacs Manual}, you could write a menu like this:"
 msgstr ""
+"Por exemplo, para referenciar diretamente os nós @samp{Outlining} e "
+"@samp{Rebinding} no @cite{Manual do Emacs}, você poderia escrever um menu "
+"como este:"
 
 #. type: group
 #: texinfo/texinfo-ed.7.1-en_US.texi:3123
@@ -8090,6 +8110,12 @@ msgid ""
 "                                   meaning of a key.\n"
 "@@end menu\n"
 msgstr ""
+"@@menu\n"
+"* Outlining: Modo Contorno(emacs). O principal modo para\n"
+"                                    se editar contornos.\n"
+"* (emacs)Rebinding::               Como redefinir o\n"
+"                                    significado de uma tecla.\n"
+"@@end menu\n"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:3128
@@ -8097,6 +8123,8 @@ msgid ""
 "If you do not list the node name, but only name the file, then Info presumes "
 "that you are referring to the `Top' node.  Examples:"
 msgstr ""
+"Se você não listar o nome de nó, mas somente nomear o arquivo, então "
+"Info presume que você está se referindo ao nó `Top'. Exemplos:"
 
 #. type: group
 #: texinfo/texinfo-ed.7.1-en_US.texi:3134
@@ -8106,6 +8134,9 @@ msgid ""
 "* (emacs)::             The extensible, self-documenting\n"
 "                         text editor.\n"
 msgstr ""
+"* Info: (info).         Sistema de navegação de documentação.\n"
+"* (emacs)::             O editor de texto, extensível,\n"
+"                         auto-documentador.\n"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:3141
@@ -8115,42 +8146,46 @@ msgid ""
 "to other files.  You must write such menus by hand.  @xref{Updating Nodes "
 "and Menus}."
 msgstr ""
+"Os comandos de atualização de menu do modo Texinfo do GNU Emacs somente "
+"funcionam com nós dentro do buffer atual, de forma que você não consegue "
+"usá-los para criar menus que referenciem outros arquivos. Você precisa "
+"escrever tais menus manualmente. @xref{Atualizando Nós e Menus}."
 
 #. type: chapter
 #: texinfo/texinfo-ed.7.1-en_US.texi:3143
 #: texinfo/texinfo-ed.7.1-en_US.texi:3145
 #, no-wrap
 msgid "Chapter Structuring"
-msgstr ""
+msgstr "Estruturamento de Capítulo"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:3145
 msgid "@nodedescription Creating chapters, sections, appendices, etc."
-msgstr ""
+msgstr "@nodedescription Criando capítulos, seções, apêndices, etc."
 
-#.  old name
+#.  nome antigo
 #. type: anchor{#1}
 #: texinfo/texinfo-ed.7.1-en_US.texi:3147
 msgid "Structuring"
-msgstr ""
+msgstr "Estruturamento"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:3147
 #, no-wrap
 msgid "Chapter structuring"
-msgstr ""
+msgstr "Capítulos, estruturamento de"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:3148
 #, no-wrap
 msgid "Structuring of chapters"
-msgstr ""
+msgstr "Estruturamento de capítulos"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:3149
 #, no-wrap
 msgid "Sectioning"
-msgstr ""
+msgstr "Seccionamento"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:3156
@@ -8161,6 +8196,11 @@ msgid ""
 "provide information for generating the table of contents (@pxref{Contents,, "
 "Generating a Table of Contents})."
 msgstr ""
+"Os comandos de @dfn{estruturamento de capítulo} do Texinfo dividem um "
+"documento em uma hierarquia de capítulos, seções, subseções e "
+"subsubseções. Esses comandos geram cabeçalhos grandes no texto, como o "
+"acima. Eles também fornecem informações para gerar o sumário "
+"(@pxref{Conteúdo,, Gerando Um Sumário})."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:3159
@@ -8168,6 +8208,8 @@ msgid ""
 "Normally you put a @code{@@node} command immediately before each chapter "
 "structuring command.  @xref{Nodes}."
 msgstr ""
+"Normalmente você coloca um comando @code{@@node} imediatamente antes de "
+"cada comando de estruturamento de capítulo. @xref{Nós}."
 
 #. type: node
 #: texinfo/texinfo-ed.7.1-en_US.texi:3161
