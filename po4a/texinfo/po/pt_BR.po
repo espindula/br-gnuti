@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: Texinfo 7.1\n"
 "Report-Msgid-Bugs-To: jafesp@gmail.com\n"
 "POT-Creation-Date: 2025-03-02 00:31-0300\n"
-"PO-Revision-Date: 2025-03-21 18:43-0300\n"
+"PO-Revision-Date: 2025-03-21 21:03-0300\n"
 "Last-Translator: Jamenson Ferreira Espindula de Almeida Melo "
 "<jafesp@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -7530,8 +7530,8 @@ msgid ""
 "In a menu, every line that begins with an @w{@samp{* }} is a @dfn{menu "
 "entry}.  (Note the space after the asterisk.)"
 msgstr ""
-"Em um menu, cada linha que inicie com um @w{@samp{* }} é uma "
-"@dfn{entrada de menu}. (Observe o espaço depois do asterisco.)"
+"Em um menu, cada linha que inicie com um @w{@samp{* }} é uma @dfn{entrada "
+"de menu}. (Observe o espaço depois do asterisco.)"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:2885
@@ -7552,7 +7552,7 @@ msgstr ""
 #: texinfo/texinfo-ed.7.1-en_US.texi:2886
 #, no-wrap
 msgid "Hierarchical documents, and menus"
-msgstr ""
+msgstr "Documentos hierárquicos, e menus"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:2894
@@ -7565,6 +7565,14 @@ msgid ""
 "hierarchically structured document, it is much better to use "
 "cross-references to refer to arbitrary nodes."
 msgstr ""
+"Tecnicamente, menus podem te transportar para qualquer nó, "
+"independentemente da estrutura do documento; mesmo para nós em um arquivo "
+"Info diferente. Entretanto, o recurso de criação implícita de ponteiros "
+"do @command{texi2any} (@pxref{Escrevendo um Nó}) e os comandos de "
+"atualização do modo Texinfo do GNU Emacs funcionam somente para criar "
+"menus de nós subordinados em um documento hierarquicamente estruturado. Em "
+"um documento hierarquicamente estruturado, é muito melhor usar referências "
+"cruzadas para referenciar nós arbitrários."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:2898
@@ -7573,12 +7581,15 @@ msgid ""
 "command.  The menu entry name is what the user types after the @kbd{m} "
 "command."
 msgstr ""
+"No Info, um(a) usuário(a) seleciona um nó com o comando @kbd{m} "
+"(@code{Info-menu}). O nome de entrada de menu é o que o(a) usuário(a) "
+"digita depois do comando @kbd{m}."
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:2898
 #, no-wrap
 msgid "@code{accesskey} @subentry in HTML output of menus"
-msgstr ""
+msgstr "@code{accesskey} @subentry em saída gerada HTML de menus"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:2904
@@ -7588,40 +7599,45 @@ msgid ""
 "using web browsers to follow the first menu entries using (typically) "
 "@kbd{M-@var{digit}}, e.g., @kbd{M-1} for the first entry."
 msgstr ""
+"Na saída HTML, o atributo @code{accesskey} é usado com os valores "
+"@samp{1}@dots{}@samp{9} para as primeiras nove entradas. Isso permite que as "
+"pessoas usando navegadores web sigam as primeiras entradas de menu usando "
+"(tipicamente) @kbd{M-@var{dígito}}, por exemplo, @kbd{M-1} para a primeira "
+"entrada."
 
 #. type: node
 #: texinfo/texinfo-ed.7.1-en_US.texi:2906
 #, no-wrap
 msgid "Menu Example"
-msgstr ""
+msgstr "Exemplo de Menu"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:2908
 msgid "@nodedescription Two and three part menu entries."
-msgstr ""
+msgstr "@nodedescription Entradas de menu de duas e de três partes."
 
 #. type: subsection
 #: texinfo/texinfo-ed.7.1-en_US.texi:2908
 #, no-wrap
 msgid "A Menu Example"
-msgstr ""
+msgstr "Um Exemplo de Menu"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:2909
 #, no-wrap
 msgid "Menu example"
-msgstr ""
+msgstr "Exemplo de menu"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:2910
 #, no-wrap
 msgid "Example menu"
-msgstr ""
+msgstr "Menu de exemplo"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:2915
 msgid "A menu looks like this in Texinfo:"
-msgstr ""
+msgstr "Um menu se pareçe com isto no Texinfo:"
 
 #. type: group
 #: texinfo/texinfo-ed.7.1-en_US.texi:2922
@@ -7632,6 +7648,10 @@ msgid ""
 "* Node name::                   This form is preferred.\n"
 "@@end menu\n"
 msgstr ""
+"@@menu\n"
+"* nome de entrada de menu: Nome de nó. Uma descrição curta.\n"
+"* Nome de nó::                         Essa forma é preferida.\n"
+"@@end menu\n"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:2928
@@ -7647,7 +7667,7 @@ msgstr ""
 #: texinfo/texinfo-ed.7.1-en_US.texi:7067
 #: texinfo/texinfo-ed.7.1-en_US.texi:7153
 msgid "This produces:"
-msgstr ""
+msgstr "Isso produz:"
 
 #. type: group
 #: texinfo/texinfo-ed.7.1-en_US.texi:2935
@@ -7656,11 +7676,13 @@ msgid ""
 "* menu entry name: Node name.   A short description.\n"
 "* Node name::                   This form is preferred.\n"
 msgstr ""
+"* nome de entrada de menu: Nome de nó. Uma descrição curta.\n"
+"* Nome de nó::                         Essa forma é preferida.\n"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:2940
 msgid "Here is an example as you might see it in a Texinfo file:"
-msgstr ""
+msgstr "Aqui está um exemplo como você pode vê-lo em um arquivo Texinfo:"
 
 #. type: group
 #: texinfo/texinfo-ed.7.1-en_US.texi:2961
@@ -7670,6 +7692,9 @@ msgid ""
 "Larger Units of Text\n"
 "\n"
 msgstr ""
+"* Menu:\n"
+"Unidades Maiores de Texto\n"
+"\n"
 
 #. type: group
 #: texinfo/texinfo-ed.7.1-en_US.texi:2965
@@ -7679,6 +7704,9 @@ msgid ""
 "* Multiples: Buffers.           Multiple buffers; editing\n"
 "                                 several files at once.\n"
 msgstr ""
+"* Arquivos::                   Tudo acerca do manuseio de arquivos.\n"
+"* Múltiplos: Buffers.          Múltiplos buffers; editando\n"
+"                                vários arquivos de uma vez.\n"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:2973
@@ -7689,6 +7717,11 @@ msgid ""
 "@samp{Buffers}. The line @samp{Larger Units of Text} is a comment; it "
 "appears in the menu, but is not an entry."
 msgstr ""
+"Nesse exemplo, o menu tem duas entradas. @samp{Arquivos} tanto é um nome de "
+"entrada de menu quanto o nome do nó referenciado por esse nome. "
+"@samp{Múltiplos} é o nome de entrada de menu; ele se refere ao nó chamado "
+"@samp{Buffers}. A linha @samp{Unidades Maiores de Texto} é um comentário; "
+"ela aparece no menu, porém não é uma entrada."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:2977
@@ -7697,30 +7730,33 @@ msgid ""
 "they must be the names of nodes in the same Info file (@pxref{Other Info "
 "Files, , Referring to Other Info Files})."
 msgstr ""
+"Como nenhum nome de arquivo está especificado nem com @samp{Arquivos} nem "
+"com @samp{Buffers}, eles precisam ser os nomes de nós no mesmo arquivo Info "
+"(@pxref{Outros Arquivos do Info, , Referenciando Outros Arquivos do Info})."
 
 #. type: subsection
 #: texinfo/texinfo-ed.7.1-en_US.texi:2979
 #: texinfo/texinfo-ed.7.1-en_US.texi:2981
 #, no-wrap
 msgid "Menu Location"
-msgstr ""
+msgstr "Local de Menu"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:2981
 msgid "@nodedescription Menus go at the ends of nodes."
-msgstr ""
+msgstr "@nodedescription Menus vão nas extremidades dos nós."
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:2982
 #, no-wrap
 msgid "Menu location"
-msgstr ""
+msgstr "Local de Menu"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:2983
 #, no-wrap
 msgid "Location of menus"
-msgstr ""
+msgstr "Menus, Local de"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:2989
@@ -7729,12 +7765,15 @@ msgid ""
 "at the end of a node, without any regular text or additional commands "
 "between the @code{@@end menu} and the beginning of the next node."
 msgstr ""
+"Pode existir ao menos um menu em um nó. Um menu é convencionalmente "
+"localizado ao final de um nó, sem qualquer texto regular ou comandos "
+"adicionais entre o @code{@@end menu} e o início do próximo nó."
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:2990
 #, no-wrap
 msgid "Info format, and menus"
-msgstr ""
+msgstr "Formato Info, e menus"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:2996
@@ -7744,6 +7783,11 @@ msgid ""
 "of the menu in Info output (which has no marker for the end of a menu).  "
 "Thus, a line beginning with @samp{* } will likely be incorrectly handled."
 msgstr ""
+"Essa convenção é útil, dado que um(a) leitor(a) que use o menu poderia "
+"facilmente se esquecer de quaisquer desses textos. Também, quaisquer desses "
+"textos pós menu serão considerados parte do menu na saída Info (a qual "
+"não tem marcador para o final de um menu). Assim, uma linha iniciando com "
+"@samp{* } será igualmente incorretamente manuseada."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:3001
@@ -7753,61 +7797,66 @@ msgid ""
 "moving all but a couple of paragraphs into a new subnode.  Otherwise, it is "
 "easy for readers to miss the menu."
 msgstr ""
+"Geralmente é melhor se um nó com um menu não contiver muito texto. Se "
+"você se encontrar com um monte de texto antes de um menu, geralmente nós "
+"recomendamos mover tudo, exceto alguns parágrafos, para um novo sub nó. Do "
+"contrário, é fácil para os(as) leitores(as) perderem o menu."
 
 #. type: node
 #: texinfo/texinfo-ed.7.1-en_US.texi:3003
 #, no-wrap
 msgid "Menu Parts"
-msgstr ""
+msgstr "Partes de Menu"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:3005
 msgid "@nodedescription A menu entry has three parts."
-msgstr ""
+msgstr "@nodedescription Uma entrada de menu tem três partes."
 
 #. type: subsection
 #: texinfo/texinfo-ed.7.1-en_US.texi:3005
 #, no-wrap
 msgid "The Parts of a Menu"
-msgstr ""
+msgstr "As Partes de um Menu"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:3006
 #, no-wrap
 msgid "Parts of a menu"
-msgstr ""
+msgstr "Partes de um menu"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:3007
 #, no-wrap
 msgid "Menu parts"
-msgstr ""
+msgstr "Menu, partes"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:3008
 #, no-wrap
 msgid "@code{@@menu} parts"
-msgstr ""
+msgstr "Partes de @code{@@menu}"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:3011
 msgid "A menu entry has three parts, only the second of which is required:"
 msgstr ""
+"Uma entrada de menu tem três partes, somente a segunda das quais é exigida:"
 
 #. type: enumerate
 #: texinfo/texinfo-ed.7.1-en_US.texi:3015
 msgid "The menu entry name (optional)."
-msgstr ""
+msgstr "O nome de entrada de menu (opcional)."
 
 #. type: enumerate
 #: texinfo/texinfo-ed.7.1-en_US.texi:3018
 msgid "The name of the node (required)."
-msgstr ""
+msgstr "O nome do nó (exigido)."
 
 #. type: enumerate
 #: texinfo/texinfo-ed.7.1-en_US.texi:3021
 msgid "A description of the item (optional)."
-msgstr ""
+msgstr "Uma descrição do item (opcional)."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:3025
@@ -7815,12 +7864,15 @@ msgid ""
 "The template for a generic menu entry looks like this (but see the next "
 "section for one more possibility):"
 msgstr ""
+"O modelo para uma entrada genérica de menu se parece com isto (porém, "
+"veja-se a próxima seção para mais uma possibilidade):"
 
 #. type: example
 #: texinfo/texinfo-ed.7.1-en_US.texi:3028
 #, no-wrap
 msgid "* @var{menu-entry-name}: @var{node-name}.   @var{description}\n"
 msgstr ""
+"* @var{nome_de_entrada_de_menu}: @var{nome_de_nó}.   @var{descrição}\n"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:3033
@@ -7828,6 +7880,9 @@ msgid ""
 "Follow the menu entry name with a single colon, and follow the node name "
 "with tab, comma, newline, or the two characters period and space (@samp{. })."
 msgstr ""
+"Siga o nome de entrada de menu com dois pontos, e siga o nome de nó com "
+"tabulação, vírgula, nova linha ou os dois caracteres ponto e espaço "
+"(@samp{. })."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:3042
@@ -7840,6 +7895,15 @@ msgid ""
 "line while others prefer to align it with the first (and all others).  It's "
 "up to you.  An empty line, or the next menu entry, ends a description."
 msgstr ""
+"A terceira parte de uma entrada de menu é uma frase descritiva ou "
+"sentença. Os nomes de entrada de menu e os nomes de nó frequentemente são "
+"curtos; a descrição explica para o(a) leitor(a) a respeito de que se trata "
+"o nó. Uma descrição útil complementa o nome de nó em vez de repeti-lo. "
+"A descrição, que é opcional, pode ser espraiada por várias linhas; se "
+"isso acontecer, alguns(mas) autores(as) preferem recuar a segunda linha "
+"enquanto outros(as) preferem alinhá-la com a primeira (e todas as outras). "
+"É completamente com você. Uma linha vazia, ou a próxima entrada de menu, "
+"finaliza a descrição."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:3049
@@ -7849,6 +7913,11 @@ msgid ""
 "names without any extra spaces or some versions of some Info readers will "
 "not find the node (@pxref{Node Line Requirements})."
 msgstr ""
+"Os caracteres de espaço em um menu são preservados como estão na saída "
+"Info; isso te permite formatar o menu como você desejar. Infelizmente, "
+"você precisa digitar os nomes de nó sem quaisquer espaços extras ou "
+"algumas versões de alguns leitores Info não encontrarão o nó "
+"(@pxref{Exigências de Linha de Nó})."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:3053
