@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: Texinfo 7.1\n"
 "Report-Msgid-Bugs-To: jafesp@gmail.com\n"
 "POT-Creation-Date: 2025-03-02 00:31-0300\n"
-"PO-Revision-Date: 2025-03-21 21:03-0300\n"
+"PO-Revision-Date: 2025-03-23 01:40-0300\n"
 "Last-Translator: Jamenson Ferreira Espindula de Almeida Melo "
 "<jafesp@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -8571,20 +8571,20 @@ msgstr "{\\globaldefs=1 \\textfonts \\rm}\n"
 #: texinfo/texinfo-ed.7.1-en_US.texi:3299
 #, no-wrap
 msgid "@code{@@chapter}"
-msgstr ""
+msgstr "@code{@@chapter}"
 
 #. type: section
 #: texinfo/texinfo-ed.7.1-en_US.texi:3300
 #, no-wrap
 msgid "@code{@@chapter}: Chapter Structuring"
-msgstr ""
+msgstr "@code{@@chapter}: Estruturamento de Capítulo"
 
 #. type: item
 #: texinfo/texinfo-ed.7.1-en_US.texi:3303
 #: texinfo/texinfo-ed.7.1-en_US.texi:15139
 #, no-wrap
 msgid "chapter"
-msgstr ""
+msgstr "chapter"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:3310
@@ -8594,6 +8594,10 @@ msgid ""
 "beginning of a line and follow it on the same line by the title of the "
 "chapter.  The chapter is numbered automatically, starting from@tie{}1."
 msgstr ""
+"@code{@@chapter} identifica um capítulo no documento--o nível mais alto da "
+"hierarquia de estruturamento normal do documento.  Escreva o comando no "
+"início de uma linha e o siga na mesma linha pelo título do capítulo.  O "
+"capítulo é numerado automaticamente, iniciando a partir de@tie{}1."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:3314
@@ -8601,42 +8605,45 @@ msgid ""
 "For example, the present chapter in this manual is entitled ``Chapter "
 "Structuring''; the @code{@@chapter} line looks like this:"
 msgstr ""
+"Por exemplo, o capítulo presente neste manual é intitulado "
+"``Estruturamento de Capítulo'';  a linha @code{@@chapter} se parece com "
+"isto:"
 
 #. type: example
 #: texinfo/texinfo-ed.7.1-en_US.texi:3317
 #, no-wrap
 msgid "@@chapter Chapter Structuring\n"
-msgstr ""
+msgstr "@@chapter Estruturamento de Capítulo\n"
 
 #. type: node
 #: texinfo/texinfo-ed.7.1-en_US.texi:3321
 #, no-wrap
 msgid "@code{@@unnumbered @@appendix}"
-msgstr ""
+msgstr "@code{@@unnumbered @@appendix}"
 
 #. type: section
 #: texinfo/texinfo-ed.7.1-en_US.texi:3322
 #, no-wrap
 msgid "@code{@@unnumbered}, @code{@@appendix}: Chapters with Other Labeling"
-msgstr ""
+msgstr "@code{@@unnumbered}, @code{@@appendix}: Capítulos com Outra Rotulagem"
 
-#.  old name
+#.  nome antigo
 #. type: anchor{#1}
 #: texinfo/texinfo-ed.7.1-en_US.texi:3325
 msgid "unnumbered & appendix"
-msgstr ""
+msgstr "unnumbered e appendix"
 
 #. type: findex
 #: texinfo/texinfo-ed.7.1-en_US.texi:3325
 #, no-wrap
 msgid "unnumbered"
-msgstr ""
+msgstr "unnumbered"
 
 #. type: findex
 #: texinfo/texinfo-ed.7.1-en_US.texi:3326
 #, no-wrap
 msgid "appendix"
-msgstr ""
+msgstr "appendix"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:3333
@@ -8647,6 +8654,11 @@ msgid ""
 "instead of by number; appendices are also at the chapter level of "
 "structuring."
 msgstr ""
+"Use o comando @code{@@unnumbered} para iniciar um elemento de nível de "
+"capítulo que aparece sem números de capítulos de qualquer tipo.  Use o "
+"comando @code{@@appendix} para iniciar um apêndice que é rotulado por "
+"letras (`A', `B', @dots{}) em vez de números; apêndices também estão ao "
+"nível de estruturamento do capítulo."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:3337
@@ -8655,12 +8667,15 @@ msgid ""
 "of a line and follow it on the same line by the title, just as with "
 "@code{@@chapter}."
 msgstr ""
+"Escreva um comando @code{@@appendix} ou @code{@@unnumbered} no início de "
+"uma linha e siga-o, na mesma linha, pelo título, exatamente como com "
+"@code{@@chapter}."
 
 #. type: findex
 #: texinfo/texinfo-ed.7.1-en_US.texi:3338
 #, no-wrap
 msgid "centerchap"
-msgstr ""
+msgstr "centerchap"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:3346
@@ -8671,18 +8686,23 @@ msgid ""
 "You are recommended not to use this command, as it may be removed in future "
 "releases of Texinfo."
 msgstr ""
+"Texinfo também fornece um comando @code{@@centerchap}, o qual é análogo a "
+"@code{@@unnumbered}, porém centraliza o argumento dele nas saídas impressa "
+"e HTML.  Esse tipo de escolha estilística geralmente não é oferecida pelo "
+"Texinfo.  Você está recomendado(a) a não usar esse comando, pois ele "
+"possivelmente seja removido em futuros lançamentos do Texinfo."
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:3347
 #, no-wrap
 msgid "DocBook and prefatory sections"
-msgstr ""
+msgstr "Docbook e seções prévias"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:3348
 #, no-wrap
 msgid "Preface, etc., and DocBook"
-msgstr ""
+msgstr "Prefácio, etc., e Docbook"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:3351
@@ -8690,42 +8710,44 @@ msgid ""
 "With @code{@@unnumbered}, if the name of the associated node is one of these "
 "English words (case-insensitive):"
 msgstr ""
+"Com @code{@@unnumbered}, se o nome do nó associado é uma destas palavras "
+"do Inglês (não diferencia maiúsculas de minúsculas):"
 
 #. type: example
 #: texinfo/texinfo-ed.7.1-en_US.texi:3354
 #, no-wrap
 msgid "Acknowledgements  Colophon  Dedication  Preface\n"
-msgstr ""
+msgstr "Acknowledgements  Colophon  Dedication  Preface\n"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:3356
 #, no-wrap
 msgid "@code{<acknowledgements>} DocBook tag"
-msgstr ""
+msgstr "@code{<acknowledgements>} Etiqueta do Docbook"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:3357
 #, no-wrap
 msgid "@code{<colophon>} DocBook tag"
-msgstr ""
+msgstr "@code{<colophon>} Etiqueta do Docbook"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:3358
 #, no-wrap
 msgid "@code{<dedication>} DocBook tag"
-msgstr ""
+msgstr "@code{<dedication>} Etiqueta do Docbook"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:3359
 #, no-wrap
 msgid "@code{<preface>} DocBook tag"
-msgstr ""
+msgstr "@code{<preface>} Etiqueta do Docbook"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:3360
 #, no-wrap
 msgid "@code{<chapter>} DocBook tag"
-msgstr ""
+msgstr "@code{<chapter>} Etiqueta do Docbook"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:3365
@@ -8734,36 +8756,41 @@ msgid ""
 "argument to @code{@@unnumbered} itself can be anything, and is output as the "
 "element title as usual."
 msgstr ""
+"(@code{<preface>}, etc.)@: em vez do padrão @code{<chapter>}.  O argumento "
+"ao próprio @code{@@unnumbered} pode ser qualquer coisa, e é gerado como o "
+"elemento título como de costume."
 
 #. type: node
 #: texinfo/texinfo-ed.7.1-en_US.texi:3367
 #, no-wrap
 msgid "@code{@@majorheading @@chapheading}"
-msgstr ""
+msgstr "@code{@@majorheading @@chapheading}"
 
 #. type: section
 #: texinfo/texinfo-ed.7.1-en_US.texi:3368
 #, no-wrap
 msgid "@code{@@majorheading}, @code{@@chapheading}: Chapter-level Headings"
 msgstr ""
+"@code{@@majorheading}, @code{@@chapheading}: Cabeçalhos de Nível de "
+"Capítulo"
 
-#.  old name
+#.  nome antigo
 #. type: anchor{#1}
 #: texinfo/texinfo-ed.7.1-en_US.texi:3371
 msgid "majorheading & chapheading"
-msgstr ""
+msgstr "majorheading e chapheading"
 
 #. type: findex
 #: texinfo/texinfo-ed.7.1-en_US.texi:3371
 #, no-wrap
 msgid "majorheading"
-msgstr ""
+msgstr "majorheading"
 
 #. type: findex
 #: texinfo/texinfo-ed.7.1-en_US.texi:3372
 #, no-wrap
 msgid "chapheading"
-msgstr ""
+msgstr "chapheading"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:3376
@@ -8771,6 +8798,8 @@ msgid ""
 "The @code{@@majorheading} and @code{@@chapheading} commands produce "
 "chapter-like headings in the body of a document."
 msgstr ""
+"Os comandos @code{@@majorheading} e @code{@@chapheading} produzem "
+"cabeçalhos tipo capítulo no corpo de um documento."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:3380
@@ -8778,6 +8807,8 @@ msgid ""
 "However, neither command produces an entry in the table of contents, and "
 "neither command causes @TeX{} to start a new page in a printed manual."
 msgstr ""
+"Entretanto, nenhum comando produz uma entrada no sumário, e nenhum comando "
+"faz com que @TeX{} inicie uma nova página em um manual impresso."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:3384
@@ -8786,6 +8817,9 @@ msgid ""
 "whitespace before the heading than a @code{@@chapheading} command but is "
 "otherwise the same."
 msgstr ""
+"No @TeX{}, um comando @code{@@majorheading} gera um espaço em branco "
+"vertical mais largo, antes do cabeçalho, que um comando "
+"@code{@@chapheading}, porém, do contrário, é o mesmo."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:3389
@@ -8795,25 +8829,29 @@ msgid ""
 "the lack of numbering and the lack of any association with nodes.  "
 "@xref{@code{@@chapter}}."
 msgstr ""
+"Em outros formatos de saída, os comandos @code{@@majorheading} e "
+"@code{@@chapheading} produzem uma saída semelhante a @code{@@chapter}.  A "
+"diferença é a falta de numeração e a falta de qualquer associação com "
+"nós.  @xref{@code{@@chapter}}."
 
 #. type: node
 #: texinfo/texinfo-ed.7.1-en_US.texi:3391
 #, no-wrap
 msgid "@code{@@section}"
-msgstr ""
+msgstr "@code{@@section}"
 
 #. type: section
 #: texinfo/texinfo-ed.7.1-en_US.texi:3392
 #, no-wrap
 msgid "@code{@@section}: Sections Below Chapters"
-msgstr ""
+msgstr "@code{@@section}: Seções Abaixo de Capítulos"
 
 #. type: item
 #: texinfo/texinfo-ed.7.1-en_US.texi:3395
 #: texinfo/texinfo-ed.7.1-en_US.texi:15143
 #, no-wrap
 msgid "section"
-msgstr ""
+msgstr "section"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:3404
@@ -8826,6 +8864,13 @@ msgid ""
 "labeled `A', the sections are numbered `A.1', `A.2', etc.; within an "
 "@code{@@unnumbered} chapter, the section gets no number."
 msgstr ""
+"Um comando @code{@@section} identifica uma seção dentro de uma unidade de "
+"capítulo, seja ela criada com @code{@@chapter}, @code{@@unnumbered}, ou "
+"@code{@@appendix}, seguindo o esquema de numeração do comando de nível de "
+"capítulo.  Assim, dentro de um capítulo @code{@@chapter} numerado `1', as "
+"seções são numeradas `1.1', `1.2', etc.; dentro de um ``capítulo'' "
+"@code{@@appendix} rotulado `A', as seções são numeradas `A.1', `A.2', "
+"etc.; dentro de um capítulo @code{@@unnumbered}, a seção não é numerada."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:3408
@@ -8833,53 +8878,55 @@ msgid ""
 "To make a section, write the @code{@@section} command at the beginning of a "
 "line and follow it on the same line by the section title.  For example:"
 msgstr ""
+"Para criar uma seção, escreva o comando @code{@@section} no início de uma "
+"linha e siga-o, na mesma linha, pelo título da seção.  Por exemplo:"
 
 #. type: example
 #: texinfo/texinfo-ed.7.1-en_US.texi:3411
 #, no-wrap
 msgid "@@section This is a section\n"
-msgstr ""
+msgstr "@@section Isto é uma seção\n"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:3414
 msgid "Section titles are listed in the table of contents."
-msgstr ""
+msgstr "Títulos de seção são listados no sumário."
 
 #. type: node
 #: texinfo/texinfo-ed.7.1-en_US.texi:3416
 #, no-wrap
 msgid "@code{@@unnumberedsec @@appendixsec @@heading}"
-msgstr ""
+msgstr "@code{@@unnumberedsec @@appendixsec @@heading}"
 
 #. type: section
 #: texinfo/texinfo-ed.7.1-en_US.texi:3417
 #, no-wrap
 msgid "@code{@@unnumberedsec}, @code{@@appendixsec}, @code{@@heading}"
-msgstr ""
+msgstr "@code{@@unnumberedsec}, @code{@@appendixsec}, @code{@@heading}"
 
-#.  old name
+#.  nome antigo
 #. type: anchor{#1}
 #: texinfo/texinfo-ed.7.1-en_US.texi:3420
 msgid "unnumberedsec appendixsec heading"
-msgstr ""
+msgstr "unnumberedsec appendixsec heading"
 
 #. type: findex
 #: texinfo/texinfo-ed.7.1-en_US.texi:3420
 #, no-wrap
 msgid "unnumberedsec"
-msgstr ""
+msgstr "unnumberedsec"
 
 #. type: findex
 #: texinfo/texinfo-ed.7.1-en_US.texi:3421
 #, no-wrap
 msgid "appendixsec"
-msgstr ""
+msgstr "appendixsec"
 
 #. type: findex
 #: texinfo/texinfo-ed.7.1-en_US.texi:3422
 #, no-wrap
 msgid "heading"
-msgstr ""
+msgstr "heading"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:3428
@@ -8888,6 +8935,9 @@ msgid ""
 "commands are, respectively, the unnumbered, appendix-like, and heading-like "
 "equivalents of the @code{@@section} command (see the previous section)."
 msgstr ""
+"Os comandos @code{@@unnumberedsec}, @code{@@appendixsec} e @code{@@heading} "
+"são, respectivamente, os equivalentes não numerado, tipo apêndice e tipo "
+"cabeçalho do comando @code{@@section} (veja-se a seção anterior)."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:3433
@@ -8897,12 +8947,16 @@ msgid ""
 "@code{@@unnumbered} and @code{@@appendix} chapters; again, see the previous "
 "section."
 msgstr ""
+"@code{@@unnumberedsec} e @code{@@appendixsec} não precisam ser usados em "
+"circunstâncias normais, pois @code{@@section} também pode ser usado dentro "
+"de capítulos @code{@@unnumbered} e @code{@@appendix}; novamente, veja-se a "
+"seção anterior."
 
 #. type: item
 #: texinfo/texinfo-ed.7.1-en_US.texi:3435
 #, no-wrap
 msgid "@@unnumberedsec"
-msgstr ""
+msgstr "@@unnumberedsec"
 
 #. type: table
 #: texinfo/texinfo-ed.7.1-en_US.texi:3439
@@ -8910,24 +8964,27 @@ msgid ""
 "The @code{@@unnumberedsec} command may be used within an unnumbered chapter "
 "or within a regular chapter or appendix to produce an unnumbered section."
 msgstr ""
+"O comando @code{@@unnumberedsec} pode ser usado dentro de um capítulo não "
+"numerado ou dentro de um capítulo ou apêndice normal para produzir uma "
+"seção não numerada."
 
 #. type: findex
 #: texinfo/texinfo-ed.7.1-en_US.texi:3440
 #, no-wrap
 msgid "appendixsection"
-msgstr ""
+msgstr "appendixsection"
 
 #. type: item
 #: texinfo/texinfo-ed.7.1-en_US.texi:3441
 #, no-wrap
 msgid "@@appendixsec"
-msgstr ""
+msgstr "@@appendixsec"
 
 #. type: itemx
 #: texinfo/texinfo-ed.7.1-en_US.texi:3442
 #, no-wrap
 msgid "@@appendixsection"
-msgstr ""
+msgstr "@@appendixsection"
 
 #. type: table
 #: texinfo/texinfo-ed.7.1-en_US.texi:3445
@@ -8935,6 +8992,8 @@ msgid ""
 "@code{@@appendixsection} is a longer spelling of the @code{@@appendixsec} "
 "command; the two are synonymous."
 msgstr ""
+"@code{@@appendixsection} é uma escrita mais longa do comando "
+"@code{@@appendixsec}; os dois são sinônimos."
 
 #. type: table
 #: texinfo/texinfo-ed.7.1-en_US.texi:3448
@@ -8942,12 +9001,14 @@ msgid ""
 "Conventionally, the @code{@@appendixsec} or @code{@@appendixsection} command "
 "is used only within appendices."
 msgstr ""
+"Convencionalmente, o comando @code{@@appendixsec} ou "
+"@code{@@appendixsection} é usado somente dentro de apêndices."
 
 #. type: item
 #: texinfo/texinfo-ed.7.1-en_US.texi:3449
 #, no-wrap
 msgid "@@heading"
-msgstr ""
+msgstr "@@heading"
 
 #. type: table
 #: texinfo/texinfo-ed.7.1-en_US.texi:3455
@@ -8958,24 +9019,29 @@ msgid ""
 "example, though pathological and useless locations such as an argument to "
 "another command, etc., are not allowed."
 msgstr ""
+"Você pode usar o comando @code{@@heading} (quase) em qualquer lugar para um "
+"cabeçalho estilo seção que não aparecerá no sumário.  Os comandos da "
+"série @code{@@heading} podem aparecer dentro da maioria dos ambientes, por "
+"exemplo, embora locais patológicos e inúteis como um argumento para outro "
+"comando, etc., não sejam permitidos."
 
 #. type: node
 #: texinfo/texinfo-ed.7.1-en_US.texi:3459
 #, no-wrap
 msgid "@code{@@subsection}"
-msgstr ""
+msgstr "@code{@@subsection}"
 
 #. type: section
 #: texinfo/texinfo-ed.7.1-en_US.texi:3460
 #, no-wrap
 msgid "@code{@@subsection}: Subsections Below Sections"
-msgstr ""
+msgstr "@code{@@subsection}: Subseções Abaixo de Seções"
 
 #. type: findex
 #: texinfo/texinfo-ed.7.1-en_US.texi:3463
 #, no-wrap
 msgid "subsection"
-msgstr ""
+msgstr "subsection"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:3467
@@ -8983,59 +9049,61 @@ msgid ""
 "Subsections are to sections as sections are to chapters; "
 "@pxref{@code{@@section}}.  For example:"
 msgstr ""
+"Subseções estão para seções como seções estão para capítulos; "
+"@pxref{@code{@@section}}.  Por exemplo:"
 
 #. type: example
 #: texinfo/texinfo-ed.7.1-en_US.texi:3470
 #, no-wrap
 msgid "@@subsection This is a subsection\n"
-msgstr ""
+msgstr "@@subsection Esta é uma subseção\n"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:3473
 msgid "Subsection titles are listed in the table of contents."
-msgstr ""
+msgstr "Títulos de subseções são listados no sumário."
 
 #. type: node
 #: texinfo/texinfo-ed.7.1-en_US.texi:3475
 #, no-wrap
 msgid "@code{@@unnumberedsubsec @@appendixsubsec @@subheading}"
-msgstr ""
+msgstr "@code{@@unnumberedsubsec @@appendixsubsec @@subheading}"
 
 #. type: section
 #: texinfo/texinfo-ed.7.1-en_US.texi:3476
 #, no-wrap
 msgid "The @code{@@subsection}-like Commands"
-msgstr ""
+msgstr "Os Comandos do Tipo @code{@@subsection}"
 
-#.  old name
+#.  nome antigo
 #. type: anchor{#1}
 #: texinfo/texinfo-ed.7.1-en_US.texi:3479
 msgid "unnumberedsubsec appendixsubsec subheading"
-msgstr ""
+msgstr "unnumberedsubsec appendixsubsec subheading"
 
 #. type: findex
 #: texinfo/texinfo-ed.7.1-en_US.texi:3479
 #, no-wrap
 msgid "unnumberedsubsec"
-msgstr ""
+msgstr "unnumberedsubsec"
 
 #. type: findex
 #: texinfo/texinfo-ed.7.1-en_US.texi:3480
 #, no-wrap
 msgid "appendixsubsec"
-msgstr ""
+msgstr "appendixsubsec"
 
 #. type: findex
 #: texinfo/texinfo-ed.7.1-en_US.texi:3481
 #, no-wrap
 msgid "subheading"
-msgstr ""
+msgstr "subheading"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:3482
 #, no-wrap
 msgid "Subsection-like commands"
-msgstr ""
+msgstr "Comandos tipo subseção"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:3488
@@ -9045,6 +9113,10 @@ msgid ""
 "appendix-like, and heading-like equivalents of the @code{@@subsection} "
 "command.  (@xref{@code{@@subsection}}.)"
 msgstr ""
+"Os comandos @code{@@unnumberedsubsec}, @code{@@appendixsubsec} e "
+"@code{@@subheading} são, respectivamente, os equivalentes não numerado, "
+"tipo apêndice e tipo cabeçalho do comando @code{@@subsection}.  "
+"(@xref{@code{@@subsection}}.)"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:3493
@@ -9054,6 +9126,10 @@ msgid ""
 "within sections of @code{@@unnumbered} and @code{@@appendix} chapters "
 "(@pxref{@code{@@section}})."
 msgstr ""
+"@code{@@unnumberedsubsec} e @code{@@appendixsubsec} não precisam ser usados "
+"em circunstâncias normais, pois @code{@@subsection} também pode ser usado "
+"dentro de seções de capítulos @code{@@unnumbered} e @code{@@appendix} "
+"(@pxref{@code{@@section}})."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:3501
@@ -9066,48 +9142,55 @@ msgid ""
 "numbers; both of these commands produce headings that appear in the table of "
 "contents."
 msgstr ""
+"Um comando @code{@@subheading} produz um cabeçalho semelhante àquele de "
+"uma subseção, exceto que ele não é numerado e não aparece no sumário.  "
+"Similarmente, um comando @code{@@unnumberedsubsec} produz um cabeçalho não "
+"numerado semelhante àquele de uma subseção e um comando "
+"@code{@@appendixsubsec} produz um cabeçalho tipo subseção rotulado com "
+"uma letra e números; ambos esses comandos produzem cabeçalhos que aparecem "
+"no sumário."
 
 #. type: node
 #: texinfo/texinfo-ed.7.1-en_US.texi:3503
 #, no-wrap
 msgid "@code{@@subsubsection}"
-msgstr ""
+msgstr "@code{@@subsubsection}"
 
 #. type: section
 #: texinfo/texinfo-ed.7.1-en_US.texi:3504
 #, no-wrap
 msgid "@code{@@subsubsection} and Other Subsub Commands"
-msgstr ""
+msgstr "@code{@@subsubsection} e Outros Comandos Subsub"
 
 #. type: findex
 #: texinfo/texinfo-ed.7.1-en_US.texi:3507
 #, no-wrap
 msgid "subsubsection"
-msgstr ""
+msgstr "subsubsection"
 
 #. type: findex
 #: texinfo/texinfo-ed.7.1-en_US.texi:3508
 #, no-wrap
 msgid "unnumberedsubsubsec"
-msgstr ""
+msgstr "unnumberedsubsubsec"
 
 #. type: findex
 #: texinfo/texinfo-ed.7.1-en_US.texi:3509
 #, no-wrap
 msgid "appendixsubsubsec"
-msgstr ""
+msgstr "appendixsubsubsec"
 
 #. type: findex
 #: texinfo/texinfo-ed.7.1-en_US.texi:3510
 #, no-wrap
 msgid "subsubheading"
-msgstr ""
+msgstr "subsubheading"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:3511
 #, no-wrap
 msgid "Subsub sectioning commands"
-msgstr ""
+msgstr "Comandos subsub de seccionamento"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:3515
@@ -9115,12 +9198,14 @@ msgid ""
 "The fourth and lowest level sectioning commands in Texinfo are the `subsub' "
 "commands.  They are:"
 msgstr ""
+"O quarto e mais baixo nível de comandos de seccionamento no Texinfo são os "
+"comandos `subsub'.  Eles são:"
 
 #. type: item
 #: texinfo/texinfo-ed.7.1-en_US.texi:3517
 #, no-wrap
 msgid "@@subsubsection"
-msgstr ""
+msgstr "@@subsubsection"
 
 #. type: table
 #: texinfo/texinfo-ed.7.1-en_US.texi:3521
@@ -9129,12 +9214,15 @@ msgid ""
 "(@xref{@code{@@subsection}}.)  Subsubsection titles appear in the table of "
 "contents."
 msgstr ""
+"Subsubseções estão para subseções como subseções estão para "
+"seções.  (@xref{@code{@@subsection}}.)  Títulos de subsubseções "
+"aparecem no sumário."
 
 #. type: item
 #: texinfo/texinfo-ed.7.1-en_US.texi:3522
 #, no-wrap
 msgid "@@unnumberedsubsubsec"
-msgstr ""
+msgstr "@@unnumberedsubsubsec"
 
 #. type: table
 #: texinfo/texinfo-ed.7.1-en_US.texi:3526
@@ -9143,12 +9231,15 @@ msgid ""
 "numbers.  Otherwise, unnumbered subsubsections are the same as "
 "subsubsections."
 msgstr ""
+"Títulos de subsubseções não numeradas aparecem no sumário, porém "
+"carecem de números.  Do contrário, subsubseções não numeradas são o "
+"mesmo que subsubseções."
 
 #. type: item
 #: texinfo/texinfo-ed.7.1-en_US.texi:3527
 #, no-wrap
 msgid "@@appendixsubsubsec"
-msgstr ""
+msgstr "@@appendixsubsubsec"
 
 #. type: table
 #: texinfo/texinfo-ed.7.1-en_US.texi:3531
@@ -9157,12 +9248,15 @@ msgid ""
 "lettered and numbered appropriately.  They also appear in the table of "
 "contents."
 msgstr ""
+"Convencionalmente, os comandos de apêndice são usados somente para "
+"apêndices e são letrados e numerados apropriadamente.  Eles também "
+"aparecem no sumário."
 
 #. type: item
 #: texinfo/texinfo-ed.7.1-en_US.texi:3532
 #, no-wrap
 msgid "@@subsubheading"
-msgstr ""
+msgstr "@@subsubheading"
 
 #. type: table
 #: texinfo/texinfo-ed.7.1-en_US.texi:3535
@@ -9170,6 +9264,8 @@ msgid ""
 "The @code{@@subsubheading} command may be used anywhere that you want a "
 "small heading that will not appear in the table of contents."
 msgstr ""
+"O comando @code{@@subsubheading} pode ser usado em qualquer lugar que você "
+"quiser um pequeno cabeçalho que não aparecerá no sumário."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:3542
@@ -9180,6 +9276,11 @@ msgid ""
 "@code{@@unnumbered} and @code{@@appendix} chapters "
 "(@pxref{@code{@@section}})."
 msgstr ""
+"Como com subseções, @code{@@unnumberedsubsubsec} e "
+"@code{@@appendixsubsubsec} não precisam ser usados em circunstâncias "
+"normais, pois @code{@@subsubsection} também pode ser usado dentro de "
+"subseções de capítulos @code{@@unnumbered} e @code{@@appendix} "
+"(@pxref{@code{@@section}})."
 
 #. type: node
 #: texinfo/texinfo-ed.7.1-en_US.texi:3544
