@@ -8215,24 +8215,25 @@ msgstr ""
 #: texinfo/texinfo-ed.7.1-en_US.texi:3161
 #, no-wrap
 msgid "Tree Structuring"
-msgstr ""
+msgstr "Estruturamento de Árvore"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:3163
 msgid "@nodedescription A manual is like an upside down tree @dots{}"
 msgstr ""
+"@nodedescription Um manual é como uma árvore de cabeça para baixo @dots{}"
 
 #. type: section
 #: texinfo/texinfo-ed.7.1-en_US.texi:3163
 #, no-wrap
 msgid "Tree Structure of Sections"
-msgstr ""
+msgstr "Estrutura de Árvore das Seções"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:3164
 #, no-wrap
 msgid "Tree structuring"
-msgstr ""
+msgstr "Estruturamento de árvore"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:3171
@@ -8242,6 +8243,11 @@ msgid ""
 "rather as an upside-down tree) with the root at the top and the levels "
 "corresponding to chapters, sections, subsection, and subsubsections."
 msgstr ""
+"Um arquivo Texinfo geralmente é estruturado como um livro com capítulos, "
+"seções, subseções, e afins. Essa estrutura pode ser visualizada como uma "
+"árvore (ou melhor, como uma árvore de cabeça para baixo) com a raiz no "
+"topo e os níveis correspondendo aos capítulos, seções, subseções e "
+"subsubseções."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:3174
@@ -8249,6 +8255,8 @@ msgid ""
 "Here is a diagram that shows a Texinfo file with three chapters, each with "
 "two sections."
 msgstr ""
+"Aqui está um diagrama que mostra um arquivo Texinfo com três capítulos, "
+"cada qual com duas seções."
 
 #. type: group
 #: texinfo/texinfo-ed.7.1-en_US.texi:3187
@@ -8266,6 +8274,17 @@ msgid ""
 "  1.1      1.2       2.1      2.2       3.1      3.2\n"
 "\n"
 msgstr ""
+"                         Top\n"
+"                          |\n"
+"        -------------------------------------\n"
+"       |                  |                  |\n"
+"    Capítulo 1         Capítulo 2         Capítulo 3\n"
+"       |                  |                  |\n"
+"    --------           --------           --------\n"
+"   |        |         |        |         |        |\n"
+" Seção    Seção     Seção    Seção     Seção    Seção\n"
+"  1.1      1.2       2.1      2.2       3.1      3.2\n"
+"\n"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:3193
@@ -8273,6 +8292,8 @@ msgid ""
 "In a Texinfo file that has this structure, the beginning of Chapter 2 would "
 "be written like this:"
 msgstr ""
+"Em um arquivo Texinfo que tenha essa estrutura, o início do Capítulo 2 "
+"poderia ser escrito assim:"
 
 #. type: group
 #: texinfo/texinfo-ed.7.1-en_US.texi:3198
@@ -8281,6 +8302,8 @@ msgid ""
 "@@node    Chapter 2\n"
 "@@chapter Chapter 2\n"
 msgstr ""
+"@@node    Capítulo 2\n"
+"@@chapter Capítulo 2\n"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:3204
@@ -8288,6 +8311,8 @@ msgid ""
 "For purposes of example, here is how it would be written with explicit node "
 "pointers:"
 msgstr ""
+"Para propósitos de exemplo, aqui está como poderia ser escrito com "
+"ponteiros explícitos de nó:"
 
 #. type: group
 #: texinfo/texinfo-ed.7.1-en_US.texi:3209
@@ -8296,6 +8321,8 @@ msgid ""
 "@@node    Chapter 2,  Chapter 3, Chapter 1, Top\n"
 "@@chapter Chapter 2\n"
 msgstr ""
+"@@node    Capítulo 2,  Capítulo 3, Capítulo 1, Top\n"
+"@@chapter Capítulo 2\n"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:3215
@@ -8304,13 +8331,16 @@ msgid ""
 "the @code{@@node} command is described in the previous chapter "
 "(@pxref{Nodes})."
 msgstr ""
+"Os comandos de estruturamento de capítulo estão descritos nas seções que "
+"seguem; o comando @code{@@node} está descrito no capítulo anterior "
+"(@pxref{Nós})."
 
 #. type: section
 #: texinfo/texinfo-ed.7.1-en_US.texi:3217
 #: texinfo/texinfo-ed.7.1-en_US.texi:3218
 #, no-wrap
 msgid "Structuring Command Types"
-msgstr ""
+msgstr "Tipos de Comandos Estruturantes"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:3223
@@ -8319,6 +8349,9 @@ msgid ""
 "contains structuring commands at the levels of chapters, sections, "
 "subsections, and subsubsections:"
 msgstr ""
+"Os comandos de estruturamento de capítulo se dividem em quatro grupos, cada "
+"um dos quais contendo comandos de estruturamento nos níveis de capítulos, "
+"seções, subseções e subsubseções:"
 
 #. type: itemize
 #: texinfo/texinfo-ed.7.1-en_US.texi:3229
@@ -8327,6 +8360,9 @@ msgid ""
 "produce numbered or lettered entries both in the body of a document and in "
 "its table of contents."
 msgstr ""
+"Os comandos tipo @code{@@chapter} e comandos tipo @code{@@appendix} produzem "
+"entradas numeradas ou letradas, ambas no corpo de um documento e no sumário "
+"dele."
 
 #. type: itemize
 #: texinfo/texinfo-ed.7.1-en_US.texi:3236
@@ -8337,6 +8373,11 @@ msgid ""
 "Command}).  An @code{@@unnumbered} section is a normal part of the document "
 "structure."
 msgstr ""
+"Os comandos tipo @code{@@unnumbered} produzem entradas não numeradas, ambas "
+"no corpo de um documento e no sumário dele.  O comando @code{@@top}, o qual "
+"tem um uso especial, é um membro desse grupo (@pxref{Comando "
+"@code{@@top}}).  Uma seção @code{@@unnumbered} é uma parte normal da "
+"estrutura do documento."
 
 #. type: itemize
 #: texinfo/texinfo-ed.7.1-en_US.texi:3242
@@ -8345,6 +8386,10 @@ msgid ""
 "do not appear in a table of contents, are not associated with nodes, and "
 "cannot be cross-referenced.  These heading commands never start a new page."
 msgstr ""
+"Os comandos tipo @code{@@heading} produzem cabeçalhos não numerados "
+"simples que não aparecem em um sumário, não são associados com nós e "
+"não podem ser referenciados cruzadamente.  Esses comandos de cabeçalhos "
+"nunca iniciam uma nova página."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:3249
@@ -8355,6 +8400,12 @@ msgid ""
 "new pages in the printed manual; the @code{@@heading} commands do not.  "
 "@xref{@code{@@setchapternewpage}}."
 msgstr ""
+"Na saída gerada impressa, os comandos de estruturamento de capítulo "
+"produzem cabeçalhos no documento.  Quando um comando "
+"@code{@@setchapternewpage} diz para fazer isso, os comandos "
+"@code{@@chapter}, @code{@@unnumbered} e @code{@@appendix} iniciam novas "
+"páginas no manual impresso; os comandos @code{@@heading} não.  "
+"@xref{@code{@@setchapternewpage}}."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:3254
@@ -8364,6 +8415,10 @@ msgid ""
 "@dots{}) inserted underneath.  For example, the ``Chapter Structuring'' "
 "heading could be:"
 msgstr ""
+"Na saída Info e de texto simples, o comando faz com que o título apareça "
+"em uma linha por si só, com uma linha de um caractere ASCII (@samp{*}, "
+"@samp{=}, @dots{}) inserido por baixo.  Por exemplo, o cabeçalhos de "
+"``Estruturamento de Capítulo'' poderia ser:"
 
 #. type: group
 #: texinfo/texinfo-ed.7.1-en_US.texi:3259
@@ -8372,6 +8427,8 @@ msgid ""
 "5 Chapter Structuring\n"
 "*********************\n"
 msgstr ""
+"5 Estruturamento de Capítulo\n"
+"****************************\n"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:3266
@@ -8380,6 +8437,9 @@ msgid ""
 "@code{@@chapter}, @code{@@apppendix}, @code{@@unnumbered} and "
 "@code{@@chapheading}."
 msgstr ""
+"mesmo nível.  Por exemplo, é o mesmo para os comandos de nível de "
+"capítulo @code{@@chapter}, @code{@@apppendix}, @code{@@unnumbered} e "
+"@code{@@chapheading}."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:3271
@@ -8389,6 +8449,11 @@ msgid ""
 "variable, @pxref{Other Customization Variables}).  The heading element level "
 "is adjusted for the other commands."
 msgstr ""
+"Em HTML, os comandos de nível de capítulo produzem um cabeçalho de nível "
+"@code{<h2>} por padrão (controlado pela variável de personalização "
+"@code{CHAPTER_HEADER_LEVEL}, @pxref{Outras Variáveis de "
+"Personalização}).  O nível do elemento de cabeçalho é ajustado para os "
+"outros comandos."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:3277
@@ -8399,18 +8464,23 @@ msgid ""
 "produced for @code{@@chapter}, and contains any sections or subsections in "
 "the chapter."
 msgstr ""
+"Na saída gerada Docbook, o nível apropriado do elemento é usado.  O "
+"elemento produzido inclui todas as seções seguintes até o próximo "
+"comando no mesmo nível ou superior.  Por exemplo, um elemento "
+"@code{<chapter>} é produzido para @code{@@chapter}, e contém quaisquer "
+"seções ou subseções no capítulo."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:3279
 #: texinfo/texinfo-ed.7.1-en_US.texi:6948
 msgid "Here is a summary:"
-msgstr ""
+msgstr "Aqui está um sumário:"
 
 #. type: tex
 #: texinfo/texinfo-ed.7.1-en_US.texi:3282
 #, no-wrap
 msgid "{\\globaldefs=1 \\smallfonts \\rm}\n"
-msgstr ""
+msgstr "{\\globaldefs=1 \\smallfonts \\rm}\n"
 
 #. type: item
 #: texinfo/texinfo-ed.7.1-en_US.texi:3285
@@ -8418,6 +8488,8 @@ msgstr ""
 msgid ""
 "@tab                              @tab                       @tab No new page"
 msgstr ""
+"@tab                              @tab                       @tab Sem nova "
+"página"
 
 #. type: item
 #: texinfo/texinfo-ed.7.1-en_US.texi:3286
@@ -8426,6 +8498,8 @@ msgid ""
 "@i{Numbered}           @tab @i{Unnumbered}               @tab "
 "@i{Lettered/numbered} @tab @i{Unnumbered}"
 msgstr ""
+"@i{Numerada}           @tab @i{Não numerada}             @tab "
+"@i{Letrada/numerada}  @tab @i{Não numerada}"
 
 #. type: item
 #: texinfo/texinfo-ed.7.1-en_US.texi:3287
@@ -8434,6 +8508,8 @@ msgid ""
 "In contents            @tab In contents                  @tab In "
 "contents           @tab Not in contents"
 msgstr ""
+"No conteúdo            @tab No conteúdo                  @tab No "
+"conteúdo           @tab Não no conteúdo"
 
 #. type: item
 #: texinfo/texinfo-ed.7.1-en_US.texi:3288
@@ -8442,6 +8518,8 @@ msgid ""
 "@tab @code{@@top}                 @tab                       @tab "
 "@code{@@majorheading}"
 msgstr ""
+"@tab @code{@@top}                 @tab                       @tab "
+"@code{@@majorheading}"
 
 #. type: item
 #: texinfo/texinfo-ed.7.1-en_US.texi:3289
@@ -8450,6 +8528,8 @@ msgid ""
 "@code{@@chapter}       @tab @code{@@unnumbered}          @tab "
 "@code{@@appendix} @tab @code{@@chapheading}"
 msgstr ""
+"@code{@@chapter}       @tab @code{@@unnumbered}          @tab "
+"@code{@@appendix} @tab @code{@@chapheading}"
 
 #. type: item
 #: texinfo/texinfo-ed.7.1-en_US.texi:3290
@@ -8458,6 +8538,8 @@ msgid ""
 "@code{@@section}       @tab @code{@@unnumberedsec}       @tab "
 "@code{@@appendixsec} @tab @code{@@heading}"
 msgstr ""
+"@code{@@section}       @tab @code{@@unnumberedsec}       @tab "
+"@code{@@appendixsec} @tab @code{@@heading}"
 
 #. type: item
 #: texinfo/texinfo-ed.7.1-en_US.texi:3291
@@ -8466,6 +8548,8 @@ msgid ""
 "@code{@@subsection}    @tab @code{@@unnumberedsubsec}    @tab "
 "@code{@@appendixsubsec} @tab @code{@@subheading}"
 msgstr ""
+"@code{@@subsection}    @tab @code{@@unnumberedsubsec}    @tab "
+"@code{@@appendixsubsec} @tab @code{@@subheading}"
 
 #. type: item
 #: texinfo/texinfo-ed.7.1-en_US.texi:3292
@@ -8474,12 +8558,14 @@ msgid ""
 "@code{@@subsubsection} @tab @code{@@unnumberedsubsubsec} @tab "
 "@code{@@appendixsubsubsec} @tab @code{@@subsubheading}"
 msgstr ""
+"@code{@@subsubsection} @tab @code{@@unnumberedsubsubsec} @tab "
+"@code{@@appendixsubsubsec} @tab @code{@@subsubheading}"
 
 #. type: tex
 #: texinfo/texinfo-ed.7.1-en_US.texi:3296
 #, no-wrap
 msgid "{\\globaldefs=1 \\textfonts \\rm}\n"
-msgstr ""
+msgstr "{\\globaldefs=1 \\textfonts \\rm}\n"
 
 #. type: node
 #: texinfo/texinfo-ed.7.1-en_US.texi:3299
