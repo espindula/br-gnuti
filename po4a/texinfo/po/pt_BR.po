@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: Texinfo 7.1\n"
 "Report-Msgid-Bugs-To: jafesp@gmail.com\n"
 "POT-Creation-Date: 2025-03-02 00:31-0300\n"
-"PO-Revision-Date: 2025-03-23 01:40-0300\n"
+"PO-Revision-Date: 2025-03-24 22:22-0300\n"
 "Last-Translator: Jamenson Ferreira Espindula de Almeida Melo "
 "<jafesp@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -9286,30 +9286,30 @@ msgstr ""
 #: texinfo/texinfo-ed.7.1-en_US.texi:3544
 #, no-wrap
 msgid "@code{@@part}"
-msgstr ""
+msgstr "@code{@@part}"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:3546
 msgid "@nodedescription Collections of chapters."
-msgstr ""
+msgstr "@nodedescription Coleção de capítulos."
 
 #. type: section
 #: texinfo/texinfo-ed.7.1-en_US.texi:3546
 #, no-wrap
 msgid "@code{@@part}: Groups of Chapters"
-msgstr ""
+msgstr "@code{@@part}: Grupos de Capítulos"
 
 #. type: findex
 #: texinfo/texinfo-ed.7.1-en_US.texi:3547
 #, no-wrap
 msgid "part"
-msgstr ""
+msgstr "part"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:3548
 #, no-wrap
 msgid "Part pages"
-msgstr ""
+msgstr "Páginas Part"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:3554
@@ -9319,6 +9319,11 @@ msgid ""
 "quite differently from the other sectioning commands, to fit with the way "
 "such ``parts'' are conventionally used in books."
 msgstr ""
+"O comando final de seccionamento é o @code{@@part}, para marcar uma "
+"@dfn{parte} de um manual, isto é, um grupo de capítulos ou (raramente) "
+"apêndices.  Isso se comporta bem diferentemente de outros comandos de "
+"seccionamento, para se encaixar com a maneira com que tais ``partes'' "
+"convencionalmente são usadas em livros."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:3559
@@ -9327,12 +9332,16 @@ msgid ""
 "command on a line by itself, including the part title, at the place in the "
 "document you want to mark off as starting that part.  For example:"
 msgstr ""
+"Nenhum comando @code{@@node} é associado com @code{@@part}.  Apenas escreva "
+"o comando em uma linha própria, incluindo o título da parte, no lugar no "
+"documento que você desejar marcar como o início daquela parte.  Por "
+"exemplo:"
 
 #. type: example
 #: texinfo/texinfo-ed.7.1-en_US.texi:3562
 #, no-wrap
 msgid "@@part Part I:@@* The beginning\n"
-msgstr ""
+msgstr "@@part Parte I:@@* O Início\n"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:3566
@@ -9340,6 +9349,9 @@ msgid ""
 "As can be inferred from this example, no automatic numbering or labeling of "
 "the @code{@@part} text is done.  The text is taken as-is."
 msgstr ""
+"Como pode ser inferido a partir desse exemplo, nenhuma numeração ou "
+"rotulamento automático do texto do @code{@@part} é feito.  O texto é "
+"tomado como está."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:3571
@@ -9348,6 +9360,10 @@ msgid ""
 "@code{@@part} line.  To produce the intended output, it must be followed by "
 "a chapter-level command (including its node).  Thus, to continue the example:"
 msgstr ""
+"Por causa das partes não serem associadas com nós, nenhum texto geral pode "
+"seguir a linha @code{@@part}.  Para produzir a saída pretendida, ela "
+"precisa ser seguida por um comando de nível de capítulo (incluindo o nó "
+"dela).  Assim, para continuar o exemplo:"
 
 #. type: example
 #: texinfo/texinfo-ed.7.1-en_US.texi:3574
@@ -9356,6 +9372,8 @@ msgid ""
 "@@part Part I:@@* The beginning\n"
 "\n"
 msgstr ""
+"@@part Parte I:@@* O Início\n"
+"\n"
 
 #. type: example
 #: texinfo/texinfo-ed.7.1-en_US.texi:3578
@@ -9365,6 +9383,9 @@ msgid ""
 "@@chapter Introduction\n"
 "...\n"
 msgstr ""
+"@@node Introdução\n"
+"@@chapter Introdução\n"
+"...\n"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:3590
@@ -9379,6 +9400,16 @@ msgid ""
 "pagination (@pxref{@code{@@setchapternewpage}}).  In the @LaTeX{} output, "
 "the @code{@@part} is output as @code{\\part}."
 msgstr ""
+"Na saída gerada do @TeX{}, o texto do @code{@@part} é incluído em ambos "
+"os sumários, o normal e o curto, (@pxref{Conteúdo}), sem um número de "
+"página (dado que é a convenção normal).  Adicionalmente, uma ``página "
+"de parte'' é gerada no corpo do documento, com apenas o texto do "
+"@code{@@part}.  No exemplo acima, o @code{@@*} causa uma quebra de linha na "
+"página de parte (porém, é substituída por um espaço no sumário).  Essa "
+"página de parte sempre é forçada a estar em uma página ímpar (a "
+"direita), independentemente da paginação do capítulo "
+"(@pxref{@code{@@setchapternewpage}}).  Na saída gerada do @LaTeX{}, o "
+"@code{@@part} é gerado como @code{\\part}."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:3594
@@ -9387,6 +9418,9 @@ msgid ""
 "tables of contents, and a heading is included in the main document text, as "
 "part of the following chapter or appendix node."
 msgstr ""
+"Na saída gerada de HTML, o texto do @code{@@part} similarmente é incluído "
+"no sumário, e um cabeçalho é incluído no texto principal do documento, "
+"como parte do nó seguinte do capítulo ou apêndice."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:3598
@@ -9395,11 +9429,15 @@ msgid ""
 "chapters, up to the next @code{<part>}.  A @code{<part>} containing chapters "
 "is also closed at an appendix."
 msgstr ""
+"Na saída gerada Docbook, o elemento @code{<part>} inclui todos os "
+"capítulos seguintes, até o próximo @code{<part>}.  Um @code{<part>} "
+"contendo capítulos também é fechado em um apêndice."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:3600
 msgid "In the Info and plain text output, @code{@@part} has no effect."
 msgstr ""
+"Na saída gerada de Info e de texto simples, @code{@@part} não tem efeito."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:3603
@@ -9407,53 +9445,57 @@ msgid ""
 "@code{@@part} is ignored when raising or lowering sections (see next "
 "section).  That is, it is never lowered and nothing can be raised to it."
 msgstr ""
+"@code{@@part} é ignorado quando do levantamento ou do rebaixamento de "
+"seções (veja-se a próxima seção).  Isto é, ele nunca é rebaixado e "
+"nada pode ser levantado para ele."
 
 #. type: node
 #: texinfo/texinfo-ed.7.1-en_US.texi:3605
 #, no-wrap
 msgid "Raise/lower sections"
-msgstr ""
+msgstr "Elevar/rebaixar seções"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:3607
 msgid "@nodedescription How to change commands' hierarchical level."
-msgstr ""
+msgstr "@nodedescription Como mudar nível hierárquico dos comandos."
 
 #. type: section
 #: texinfo/texinfo-ed.7.1-en_US.texi:3607
 #, no-wrap
 msgid "Raise/lower Sections: @code{@@raisesections} and @code{@@lowersections}"
 msgstr ""
+"Elevar/rebaixar Seções: @code{@@raisesections} e @code{@@lowersections}"
 
 #. type: findex
 #: texinfo/texinfo-ed.7.1-en_US.texi:3608
 #, no-wrap
 msgid "raisesections"
-msgstr ""
+msgstr "raisesections"
 
 #. type: findex
 #: texinfo/texinfo-ed.7.1-en_US.texi:3609
 #, no-wrap
 msgid "lowersections"
-msgstr ""
+msgstr "lowersections"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:3610
 #, no-wrap
 msgid "Raising and lowering sections"
-msgstr ""
+msgstr "Elevando e rebaixando seções"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:3611
 #, no-wrap
 msgid "Lowering and raising sections"
-msgstr ""
+msgstr "Rebaixando e elevando seções"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:3612
 #, no-wrap
 msgid "Sections, raising and lowering"
-msgstr ""
+msgstr "Seções, elevando e rebaixando"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:3617
@@ -9462,6 +9504,9 @@ msgid ""
 "raise and lower the hierarchical level of following chapters, sections and "
 "the other sectioning commands (excluding parts)."
 msgstr ""
+"Os comandos @code{@@raisesections} e @code{@@lowersections} implicitamente "
+"elevam e rebaixam o nível hierárquico dos seguintes capítulos, seções e "
+"dos outros comandos de seccionamento (excluindo as partes)."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:3623
@@ -9472,12 +9517,17 @@ msgid ""
 "Thus, a @code{@@lowersections} command cancels a @code{@@raisesections} "
 "command, and vice versa."
 msgstr ""
+"Isto é, o comando @code{@@raisesections} muda seções para capítulos, "
+"subseções para seções, e assim por diante.  Por outro lado, o comando "
+"@code{@@lowersections} muda capítulos para seções, seções para "
+"subseções, e assim por diante.  Assim, um comando @code{@@lowersections} "
+"cancela um comando @code{@@raisesections}, e vice versa."
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:3624
 #, no-wrap
 msgid "Include files, and section levels"
-msgstr ""
+msgstr "Arquivos de inclusão, e níveis de seção"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:3630
@@ -9488,6 +9538,12 @@ msgid ""
 "Texinfo file as an inner, included file (@pxref{Include Files}).  Typical "
 "usage looks like this:"
 msgstr ""
+"Por uma questão prática, geralmente você quer somente elevar ou rebaixar "
+"grandes pedaços, normalmente em arquivos externos.  Você consegue usar "
+"@code@@lowersections} para incluir texto escrito, como um arquivo do Texinfo "
+"externo ou independente, em outro arquivo do Texinfo, como um arquivo "
+"interno e incluído (@pxref{Arquivos de Inclusão}).  O uso típico se "
+"parece com o isto:"
 
 #. type: example
 #: texinfo/texinfo-ed.7.1-en_US.texi:3635
@@ -9497,11 +9553,14 @@ msgid ""
 "@@include somefile.texi\n"
 "@@raisesections\n"
 msgstr ""
+"@@lowersections\n"
+"@@include algum_arquivo.texi\n"
+"@@raisesections\n"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:3639
 msgid "sections in the main file would also be lowered.)"
-msgstr ""
+msgstr "seções no arquivo principal também poderiam ser rebaixadas.)"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:3643
@@ -9509,6 +9568,9 @@ msgid ""
 "If the included file being lowered has a @code{@@top} node, you'll need to "
 "conditionalize its inclusion with a flag (@pxref{@code{@@set @@value}})."
 msgstr ""
+"Se o arquivo de inclusão sendo rebaixado tiver um nó @code{@@top}, você "
+"precisará condicionar a inclusão dele com um sinalizador "
+"(@pxref{@code{@@set @@value}})."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:3649
@@ -9518,6 +9580,11 @@ msgid ""
 "@code{@@lowersections} commands throughout the document will likely lead to "
 "errors (unless the menus in your document are all generated automatically)."
 msgstr ""
+"Quaisquer menus no resultado final tem que levar em conta a elevação e o "
+"rebaixamento, de forma que intercalar arbitrariamente comandos "
+"@code{@@raisesections} e @code{@@lowersections} por todo o documento muito "
+"provavelmente levará a erros (a menos que os menus no teu documento sejam "
+"todos automaticamente gerados)."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:3657
@@ -9529,6 +9596,13 @@ msgid ""
 "will not work with @command{texi2any}'s feature of implicitly determining "
 "node pointers, since the menu structure cannot be represented correctly."
 msgstr ""
+"O uso repetido dos comandos continua a elevar ou a rebaixar o nível "
+"hierárquico um passo de cada vez.  Uma tentativa de elevar `capítulo' "
+"acima reproduz comandos de capítulo; uma tentativa de rebaixar "
+"`subsubseção' abaixo reproduz comandos subsubseção.  Também, "
+"subsubseções rebaixadas e capítulos elevados não funcionarão com o "
+"recurso do @command{texi2any} de implicitamente determinar ponteiros de nó, "
+"dado que a estrutura de menu não pode ser representada corretamente."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:3660
@@ -9536,36 +9610,38 @@ msgid ""
 "Write each @code{@@raisesections} and @code{@@lowersections} command on a "
 "line of its own."
 msgstr ""
+"Escreva cada comando @code{@@raisesections} e @code{@@lowersections} em uma "
+"linha própria."
 
 #. type: node
 #: texinfo/texinfo-ed.7.1-en_US.texi:3662
 #, no-wrap
 msgid "Cross References"
-msgstr ""
+msgstr "Referências Cruzadas"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:3664
 msgid "@nodedescription Writing cross-references."
-msgstr ""
+msgstr "@nodedescription Escrevendo referências cruzadas."
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:3664
 #: texinfo/texinfo-ed.7.1-en_US.texi:3666
 #, no-wrap
 msgid "Cross-references"
-msgstr ""
+msgstr "Referências cruzadas"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:3665
 #, no-wrap
 msgid "Making cross-references"
-msgstr ""
+msgstr "Fazendo referências cruzadas"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:3667
 #, no-wrap
 msgid "References"
-msgstr ""
+msgstr "Referências"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:3671
@@ -9573,6 +9649,8 @@ msgid ""
 "@dfn{Cross-references} are used to refer the reader to other parts of the "
 "same or different Texinfo files."
 msgstr ""
+"@dfn{Referências cruzadas} são usadas para guiar o(a) leitor(a) para "
+"outras partes do mesmo ou de diferentes arquivo(s) Texinfo."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:3679
@@ -9584,6 +9662,13 @@ msgid ""
 "reason, such creations should contain many cross-references to help readers "
 "find other information that they may not have read."
 msgstr ""
+"Use referências cruzadas para fornecer acesso a informações que sejam "
+"detalhadas demais para o contexto atual, ou incidental.  Um sistema de ajuda "
+"online ou um manual de referência não é como um romance; poucos(as) leem "
+"tais documentos em sequência a partir do início até o final.  Em vez "
+"disso, as pessoas buscam o que precisam.  Por essa razão, tais criações "
+"deveriam conter muitas referências cruzadas para ajudar os(as) leitores(as) "
+"a achar outras informações que eles(as) podem não ter lido."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:3688
@@ -9597,6 +9682,15 @@ msgid ""
 "cross-references unless it is to another manual, in which case the "
 "cross-reference names that manual."
 msgstr ""
+"Em um manual impresso, uma referência cruzada resulta em uma referência de "
+"página, a menos que ela seja completamente para outro manual, caso no qual "
+"a referência cruzada nomeia esse manual.  No Info, uma referência cruzada "
+"resulta em uma entrada que você pode seguir usando o comando @samp{f} do "
+"Info.  (@xref{Help-Xref,, Following cross-references, info, Info}.)  Em "
+"HTML, uma referência cruzada resulta em um hiperlink.  No DocBook, o "
+"elemento @code{<link>} é usado para referências cruzadas, a menos que ele "
+"seja para outro manual, caso no qual a referência cruzada nomeia esse "
+"manual."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:3697
@@ -9610,41 +9704,50 @@ msgid ""
 "(or @code{@@anchor} anchors) in order to name the places to which you make "
 "cross-references."
 msgstr ""
+"Os vários comandos de referências cruzadas usam nós, âncoras "
+"(@pxref{@code{@@anchor}}) ou rótulos de flutuação "
+"(@pxref{@code{@@float}}) para definir locais de referências cruzadas.  "
+"Quando o @TeX{} gera um arquivo DVI, ele grava cada número de página do "
+"local da referência cruzada e usa os números de página na produção das "
+"referências.  Assim, mesmo se você estiver escrevendo um manual que será "
+"somente impresso, e não usado online, você precisa, ainda assim, escrever "
+"linhas @code{@@node} (ou âncoras @code{@@anchor}) para a finalidade de "
+"nomear os lugares para os quais você faz referências cruzadas."
 
 #. type: node
 #: texinfo/texinfo-ed.7.1-en_US.texi:3701
 #, no-wrap
 msgid "Cross Reference Commands"
-msgstr ""
+msgstr "Comandos de Referência Cruzada"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:3703
 msgid "@nodedescription A summary of the different commands."
-msgstr ""
+msgstr "@nodedescription Um sumário dos diferentes comandos."
 
 #. type: section
 #: texinfo/texinfo-ed.7.1-en_US.texi:3703
 #, no-wrap
 msgid "Different Cross-reference Commands"
-msgstr ""
+msgstr "Diferentes Comandos de Referência Cruzada"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:3704
 #, no-wrap
 msgid "Different cross-reference commands"
-msgstr ""
+msgstr "Diferentes comandos de referência cruzada"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:3707
 msgid "There are three different cross-reference commands:"
-msgstr ""
+msgstr "Existem três comandos de referência cruzada:"
 
 #. type: code{#1}
 #: texinfo/texinfo-ed.7.1-en_US.texi:3709
 #: texinfo/texinfo-ed.7.1-en_US.texi:4223
 #, no-wrap
 msgid "@@xref"
-msgstr ""
+msgstr "@@xref"
 
 #. type: table
 #: texinfo/texinfo-ed.7.1-en_US.texi:3713
@@ -9652,13 +9755,16 @@ msgid ""
 "Used to start a sentence with an Info cross-reference saying @samp{*Note "
 "@var{name}: @var{node}.} or with @w{`See @dots{}'} in other output formats."
 msgstr ""
+"Usado para iniciar uma frase com uma referência cruzada do Info dizendo "
+"@samp{*Observação @var{nome}: @var{nó}.} ou com @w{`Veja-se @dots{}'} em "
+"outros formatos de saída."
 
 #. type: code{#1}
 #: texinfo/texinfo-ed.7.1-en_US.texi:3714
 #: texinfo/texinfo-ed.7.1-en_US.texi:4237
 #, no-wrap
 msgid "@@ref"
-msgstr ""
+msgstr "@@ref"
 
 #. type: table
 #: texinfo/texinfo-ed.7.1-en_US.texi:3719
@@ -9667,13 +9773,17 @@ msgid ""
 "cross-reference saying @samp{*note @var{name}: @var{node}.}, and just the "
 "reference in other output formats, without the preceding `See'."
 msgstr ""
+"Usado dentro de, ou mais frequentemente, ao final de uma frase; produz uma "
+"referência cruzada do Info dizendo @samp{*observação @var{nome}: "
+"@var{nó}.}, e apenas a referência em outros formatos de saída, sem o "
+"precedente `Veja-se'."
 
 #. type: code{#1}
 #: texinfo/texinfo-ed.7.1-en_US.texi:3720
 #: texinfo/texinfo-ed.7.1-en_US.texi:4297
 #, no-wrap
 msgid "@@pxref"
-msgstr ""
+msgstr "@@pxref"
 
 #. type: table
 #: texinfo/texinfo-ed.7.1-en_US.texi:3725
@@ -9683,6 +9793,10 @@ msgid ""
 "@samp{*note} in Info, and with a lowercase `see' in the other output "
 "formats.  (@samp{p} is for `parenthesis'.)"
 msgstr ""
+"Usado dentro de parênteses, ao final de uma frase, ou, do contrário, antes "
+"de pontuação, para fazer uma referência.  A saída gerada dele inicia com "
+"um @samp{*observação} em letras minúsculas no Info, e com um `veja-se' em "
+"outros formatos de saída.  (@samp{p} é para `parênteses'.)"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:3732
@@ -9692,41 +9806,45 @@ msgid ""
 "books and manuals.  @code{@@url} produces a @acronym{URL}, for example a "
 "reference to a page on the World Wide Web."
 msgstr ""
+"Adicionalmente, existem comandos para produzir referências para documentos "
+"fora do sistema Texinfo.  O comando @code{@@cite} é usado para fazer "
+"referências para livros e manuais.  @code{@@url} produz um @acronym{URL}, "
+"por exemplo uma referência para uma página na Rede Mundial de Computadores."
 
 #. type: node
 #: texinfo/texinfo-ed.7.1-en_US.texi:3734
 #, no-wrap
 msgid "Cross Reference Parts"
-msgstr ""
+msgstr "Partes de Referência Cruzada"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:3736
 msgid "@nodedescription A cross-reference has several parts."
-msgstr ""
+msgstr "@nodedescription Uma referência cruzada tem várias partes."
 
 #. type: section
 #: texinfo/texinfo-ed.7.1-en_US.texi:3736
 #, no-wrap
 msgid "Parts of a Cross-reference"
-msgstr ""
+msgstr "Partes de Uma Referência Cruzada"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:3737
 #, no-wrap
 msgid "Cross-reference parts"
-msgstr ""
+msgstr "Partes da referência cruzada"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:3738
 #, no-wrap
 msgid "Parts of a cross-reference"
-msgstr ""
+msgstr "Partes de uma referência cruzada"
 
-#.  merged node
+#.  nó mesclado
 #. type: anchor{#1}
 #: texinfo/texinfo-ed.7.1-en_US.texi:3740
 msgid "Reference Syntax"
-msgstr ""
+msgstr "Sintaxe de Referência"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:3746
@@ -9736,6 +9854,10 @@ msgid ""
 "four additional arguments.  The template for a full five argument "
 "cross-reference looks like this:"
 msgstr ""
+"Um comando de referência cruzada exige somente um argumento, que é o nome "
+"do nó para o qual ele se refere.  Um comando de referência cruzada pode "
+"conter até quatro argumentos adicionais.  O modelo para uma referência "
+"cruzada completa de cinco argumentos se parece com isto:"
 
 #. type: group
 #: texinfo/texinfo-ed.7.1-en_US.texi:3751
@@ -9744,11 +9866,13 @@ msgid ""
 "@@xref@{@var{node-name}, @var{online-label}, @var{printed-label},\n"
 "@var{manual-name}, @var{printed-manual-title}@}\n"
 msgstr ""
+"@@xref@{@var{nome-nó}, @var{rótulo-online}, @var{rótulo-impresso},\n"
+"@var{nome-manual}, @var{título-manual-impresso}@}\n"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:3755
 msgid "The five possible arguments for a cross-reference are:"
-msgstr ""
+msgstr "Os cinco possíveis argumentos para uma referência cruzada são:"
 
 #. type: enumerate
 #: texinfo/texinfo-ed.7.1-en_US.texi:3765
@@ -9760,6 +9884,13 @@ msgid ""
 "(@pxref{@code{@@anchor}}), or @code{@@float} (@pxref{@code{@@float}}) with a "
 "label.  This argument is required (except for reference to whole manuals)."
 msgstr ""
+"O nome do nó ou da âncora.  Isso é o local para onde a referência "
+"cruzada leva você.  Em um documento impresso, o local do nó fornece a "
+"referência de página somente para referências dentro do mesmo documento.  "
+"Use @code{@@node} para definir o nó (@pxref{Escrevendo um Nó}), "
+"@code{@@anchor} (@pxref{@code{@@anchor}}), ou @code{@@float} "
+"(@pxref{@code{@@float}}) com um rótulo.  Esse argumento é exigido (exceto "
+"para referência para manuais inteiros)."
 
 #. type: enumerate
 #: texinfo/texinfo-ed.7.1-en_US.texi:3769
