@@ -2144,8 +2144,9 @@ First section of first chapter.
 Second section of first chapter.
 @end quotation
 
-@noindent (In the Info and HTML output, the chapter would also be split
-into nodes.)
+@noindent
+(In the Info and HTML output, the chapter would also be split into
+nodes.)
 
 
 @node Ending a File
@@ -2465,7 +2466,8 @@ single space.  For example:
 @c @node @  foo @: @* bar,
 @c However, it is best to leave those special cases non documented
 
-@noindent all define the same node, namely @samp{foo bar}.
+@noindent
+all define the same node, namely @samp{foo bar}.
 @c FIXME to be removed.  In 2022 both Info readers find the node.
 In menu entries, a single internal space should be used in node
 names or some versions of some Info readers will not find the node.
@@ -3259,8 +3261,9 @@ For example, the ``Chapter Structuring'' heading could be:
 @end group
 @end example
 
-@noindent The underlining character is the same for all the commands at the
-same level.  For instance, it is the same for the chapter-level commands
+@noindent
+The underlining character is the same for all the commands at the same
+level.  For instance, it is the same for the chapter-level commands
 @code{@@chapter}, @code{@@apppendix}, @code{@@unnumbered} and
 @code{@@chapheading}.
 
@@ -3358,8 +3361,9 @@ Acknowledgements  Colophon  Dedication  Preface
 @cindex @code{<dedication>} DocBook tag
 @cindex @code{<preface>} DocBook tag
 @cindex @code{<chapter>} DocBook tag
-@noindent then the DocBook output uses corresponding special tags
-(@code{<preface>}, etc.)@: instead of the default @code{<chapter>}.
+@noindent
+then the DocBook output uses corresponding special tags
+(@code{<preface>}, etc.)@: instead of the default @code{<chapter>}.  
 The argument to @code{@@unnumbered} itself can be anything, and is
 output as the element title as usual.
 
@@ -3634,8 +3638,9 @@ included file (@pxref{Include Files}).  Typical usage looks like this:
 @@raisesections
 @end example
 
-@noindent (Without the @code{@@raisesections}, all the subsequent
-sections in the main file would also be lowered.)
+@noindent
+(Without the @code{@@raisesections}, all the subsequent sections in
+the main file would also be lowered.)
 
 If the included file being lowered has a @code{@@top} node, you'll
 need to conditionalize its inclusion with a flag (@pxref{@code{@@set
@@ -3818,8 +3823,8 @@ with a command such as @samp{@@:}.  For example,
 See Hurricanes, page @var{ppp} --- for the details
 @end quotation
 
-@noindent instead of
-@w{`See Hurricanes, page @var{ppp}, --- for the details'}.
+@noindent
+instead of @w{`See Hurricanes, page @var{ppp}, --- for the details'}.
 
 @command{texi2any} warns and protect names when the text of a cross-reference
 (and node names and menu items) contains a problematic construct that could
