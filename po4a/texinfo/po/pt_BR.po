@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: Texinfo 7.1\n"
 "Report-Msgid-Bugs-To: jafesp@gmail.com\n"
 "POT-Creation-Date: 2025-03-25 02:01-0300\n"
-"PO-Revision-Date: 2025-03-25 03:00-0300\n"
+"PO-Revision-Date: 2025-03-25 23:03-0300\n"
 "Last-Translator: Jamenson Ferreira Espindula de Almeida Melo "
 "<jafesp@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -9770,7 +9770,7 @@ msgid ""
 "@var{name}: @var{node}.} or with @w{`See @dots{}'} in other output formats."
 msgstr ""
 "Usado para iniciar uma frase com uma referência cruzada do Info dizendo "
-"@samp{*Observação @var{nome}: @var{nó}.} ou com @w{`Veja-se @dots{}'} em "
+"@samp{*Observe @var{nome}: @var{nó}.} ou com @w{`Veja-se @dots{}'} em "
 "outros formatos de saída."
 
 #. type: code{#1}
@@ -10011,9 +10011,9 @@ msgid ""
 "and in the Info output produces @w{@samp{*Note Another Section:: for more "
 "info}}."
 msgstr ""
-"com TeX produz @w{`Veja Outra Seção, página @var{ppp}, para mais "
-"informações'}, e na saída Info produz @w{@samp{*Observação Outra "
-"Seção:: para mais informações}}."
+"com TeX produz @w{`Veja-se Outra Seção, página @var{ppp}, para mais "
+"informações'}, e na saída Info produz @w{@samp{*Observe Outra Seção:: "
+"para mais informações}}."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:3821
@@ -10029,14 +10029,14 @@ msgstr ""
 #. type: quotation
 #: texinfo/texinfo-ed.7.1-en_US.texi:3824
 msgid "See Hurricanes, page @var{ppp} --- for the details"
-msgstr "Veja Furacões, página @var{ppp} --- para os detalhes"
+msgstr "Veja-se Furacões, página @var{ppp} --- para os detalhes"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:3828
 #, fuzzy
 #| msgid "See Hurricanes, page @var{ppp} --- for the details"
 msgid "instead of @w{`See Hurricanes, page @var{ppp}, --- for the details'}."
-msgstr "Veja Furacões, página @var{ppp} --- para os detalhes"
+msgstr "Veja-se Furacões, página @var{ppp} --- para os detalhes"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:3832
@@ -10156,7 +10156,7 @@ msgstr "produz"
 #: texinfo/texinfo-ed.7.1-en_US.texi:3856
 #, no-wrap
 msgid "*Note Tropical Storms::.\n"
-msgstr "*Observação Tempestades Tropicais::."
+msgstr "*Observe Tempestades Tropicais::."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:3860
@@ -10173,7 +10173,7 @@ msgstr "no Info e"
 #. type: quotation
 #: texinfo/texinfo-ed.7.1-en_US.texi:3863
 msgid "See Section 3.1 [Tropical Storms], page 24."
-msgstr "Veja Seção 3.1 [Tempestades Tropicais], página 24."
+msgstr "Veja-se Seção 3.1 [Tempestades Tropicais], página 24."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:3867
@@ -10264,12 +10264,12 @@ msgstr "produz:"
 #: texinfo/texinfo-ed.7.1-en_US.texi:3897
 #, no-wrap
 msgid "*Note Lightning: Electrical Effects.\n"
-msgstr "*Observação Relâmpago: Efeitos Elétricos.\n"
+msgstr "*Observe Relâmpago: Efeitos Elétricos.\n"
 
 #. type: quotation
 #: texinfo/texinfo-ed.7.1-en_US.texi:3904
 msgid "See Section 5.2 [Electrical Effects], page 57."
-msgstr "Veja Seção 5.2 [Efeitos Elétricos], página 57."
+msgstr "Veja-se Seção 5.2 [Efeitos Elétricos], página 57."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:3908
@@ -10342,13 +10342,13 @@ msgstr ""
 #: texinfo/texinfo-ed.7.1-en_US.texi:3949
 #, no-wrap
 msgid "*Note Lightning: Electrical Effects, for details.\n"
-msgstr ""
+msgstr "*Observe Relâmpago: Efeitos Elétricos, para detalhes.\n"
 
 #. type: quotation
 #: texinfo/texinfo-ed.7.1-en_US.texi:3956
 #: texinfo/texinfo-ed.7.1-en_US.texi:3984
 msgid "See Section 5.2 [Thunder and Lightning], page 57, for details."
-msgstr ""
+msgstr "Veja-se Seção 5.2 [Trovão e Relâmpago], página 57, para detalhes."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:3964
@@ -10357,6 +10357,9 @@ msgid ""
 "argument serves for both.  (Note how two commas, side by side, mark the "
 "empty second argument.)"
 msgstr ""
+"Se um terceiro argumento for dado e o segundo estiver vazio, então o "
+"terceiro argumento serve para ambos.  (Observe como duas vírgulas, lado a "
+"lado, marcam o segundo argumento vazio.)"
 
 #. type: group
 #: texinfo/texinfo-ed.7.1-en_US.texi:3969
@@ -10365,12 +10368,14 @@ msgid ""
 "@@xref@{Electrical Effects, , Thunder and Lightning@},\n"
 "for details.\n"
 msgstr ""
+"@@xref@{Efeitos Elétricos, , Trovão e Relâmpago@},\n"
+"para detalhes.\n"
 
 #. type: example
 #: texinfo/texinfo-ed.7.1-en_US.texi:3977
 #, no-wrap
 msgid "*Note Thunder and Lightning: Electrical Effects, for details.\n"
-msgstr ""
+msgstr "*Observe Trovão e Relâmpago: Efeitos Elétricos, para detalhes.\n"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:3992
@@ -10379,6 +10384,9 @@ msgid ""
 "The potentially problematic character in this context is the colon.  "
 "@xref{Info Node Names Constraints}."
 msgstr ""
+"O terceiro argumento para referências cruzadas compartilha restrições com "
+"nomes de nó.  O carácter potencialmente problemático nesse contexto é o "
+"dois pontos.  @xref{Restrições de Nomes de Nó do Info}."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:3997
@@ -10388,12 +10396,16 @@ msgid ""
 "nearly so), and with the first and third arguments only if the node name and "
 "title are different."
 msgstr ""
+"De um ponto de vista prático, geralmente é melhor escrever referências "
+"cruzadas apenas com o primeiro argumento se o nome do nó e o título da "
+"seção forem os mesmos (ou quase), e com o primeiro e terceiro argumentos "
+"somente se o nome de nó e título forem diferentes."
 
 #. type: findex
 #: texinfo/texinfo-ed.7.1-en_US.texi:3998
 #, no-wrap
 msgid "xrefautomaticsectiontitle"
-msgstr ""
+msgstr "xrefautomaticsectiontitle"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:4002
@@ -10402,12 +10414,15 @@ msgid ""
 "default in cross-references (an explicitly specified third argument still "
 "takes precedence):"
 msgstr ""
+"Texinfo oferece uma configuração para usar o título da seção em vez dos "
+"nomes de nó por padrão em referências cruzadas (um terceiro argumento "
+"explicitamente especificado ainda tem precedência):"
 
 #. type: example
 #: texinfo/texinfo-ed.7.1-en_US.texi:4005
 #, no-wrap
 msgid "@@xrefautomaticsectiontitle on\n"
-msgstr ""
+msgstr "@@xrefautomaticsectiontitle on\n"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:4014
@@ -10420,29 +10435,36 @@ msgid ""
 "@code{@@xrefautomaticsectiontitle} is on, the sections names are used in "
 "node headers instead of the node names when possible."
 msgstr ""
+"Tipicamente essa linha seria dada próxima do início do documento e usada "
+"para o manual inteiro.  Porém, você pode desativá-la se quiser "
+"(@code{@@xrefautomaticsectiontitle off}), por exemplo, se estiver incluindo "
+"algum outro subdocumento que não tenha nomes adequados de seção.  Essa "
+"configuração também se aplica a cabeçalhos de nó no HTML, se "
+"@code{@@xrefautomaticsectiontitle} estiver ligado; os nomes de seções são "
+"usados em cabeçalhos de nó em vez dos nomes de nó quando possível."
 
 #. type: node
 #: texinfo/texinfo-ed.7.1-en_US.texi:4016
 #, no-wrap
 msgid "Four and Five Arguments"
-msgstr ""
+msgstr "Quatro e Cinco Argumentos"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:4018
 msgid "@nodedescription @code{@@xref} with four and five arguments."
-msgstr ""
+msgstr "@nodedescription @code{@@xref} com quatro e cinco argumentos."
 
 #. type: subsection
 #: texinfo/texinfo-ed.7.1-en_US.texi:4018
 #, no-wrap
 msgid "@code{@@xref} with Four and Five Arguments"
-msgstr ""
+msgstr "@code{@@xref} com Quatro e Cinco Argumentos"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:4019
 #, no-wrap
 msgid "Four- and five argument forms of cross-references"
-msgstr ""
+msgstr "Formas de quatro e cinco argumentos das referências cruzadas"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:4024
@@ -10451,11 +10473,14 @@ msgid ""
 "manual, different from the file in which the reference appears, and a fifth "
 "argument specifies its title as a printed manual."
 msgstr ""
+"Em uma referência cruzada, um quarto argumento especifica o nome de outro "
+"manual, diferente do arquivo no qual a referência aparece, e um quinto "
+"argumento especifica o título dele como um manual impresso."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:4028
 msgid "The full template is:"
-msgstr ""
+msgstr "O modelo completo é:"
 
 #. type: group
 #: texinfo/texinfo-ed.7.1-en_US.texi:4033
@@ -10464,6 +10489,8 @@ msgid ""
 "@@xref@{@var{node-name}, @var{online-label}, @var{printed-label},\n"
 "@var{manual-name}, @var{printed-manual-title}@}.\n"
 msgstr ""
+"@@xref@{@var{nome-nó}, @var{rótulo-online}, @var{rótulo-impresso},\n"
+"@var{nome-manual}, @var{título-manual-impresso}@}.\n"
 
 #. type: example
 #: texinfo/texinfo-ed.7.1-en_US.texi:4043
@@ -10472,17 +10499,19 @@ msgid ""
 "@@xref@{Electrical Effects, Lightning, Thunder and Lightning,\n"
 "weather, An Introduction to Meteorology@}.\n"
 msgstr ""
+"@@xref@{Efeitos Elétricos, Relâmpago, Trovão e Relâmpago,\n"
+"clima, Uma Introdução à Meteorologia@}.\n"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:4047
 msgid "produces this output in Info:"
-msgstr ""
+msgstr "produz esta saída no Info:"
 
 #. type: example
 #: texinfo/texinfo-ed.7.1-en_US.texi:4050
 #, no-wrap
 msgid "*Note Lightning: (weather)Electrical Effects.\n"
-msgstr ""
+msgstr "*Observe Relâmpago: (clima)Efeitos Elétricos.\n"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:4057
@@ -10492,11 +10521,15 @@ msgid ""
 "are used to construct the hyperlink URL (@pxref{HTML Xref}), while the link "
 "text is based on the label."
 msgstr ""
+"Como você pode ver, o nome do manual está entre parênteses e precede o "
+"nome do nó.  No HTML, o nome do manual e o nome do nó são usados para "
+"construir o URL de hiperlink (@pxref{Xref de HTML}), enquanto o texto do "
+"link é baseado no rótulo."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:4060
 msgid "In a printed manual, the reference looks like this:"
-msgstr ""
+msgstr "Em um manual impresso, a referência se parece com isto:"
 
 #. type: quotation
 #: texinfo/texinfo-ed.7.1-en_US.texi:4064
@@ -10505,6 +10538,8 @@ msgid ""
 "See section ``Thunder and Lightning'' in @cite{An Introduction to "
 "Meteorology}."
 msgstr ""
+"Veja-se seção ``Trovão e Relâmpago'' em @cite{Uma Introdução à "
+"Meteorologia}."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:4070
@@ -10513,6 +10548,10 @@ msgid ""
 "reference lacks a page number since the page a reference refers when that "
 "reference is to another manual cannot be known."
 msgstr ""
+"O título do manual impresso é tipografado como @code{@@cite}; e a "
+"referência careçe de um número de página, pois a página a qual uma "
+"referência se refere quando essa referência é para outro manual não pode "
+"ser conhecida."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:4075
@@ -10522,6 +10561,10 @@ msgid ""
 "description, will be used as the cross-reference name in online formats.  "
 "For example,"
 msgstr ""
+"Próximo caso: frequentemente você deixará de fora o segundo argumento "
+"quando usar a versão longa de @code{@@xref}.  Nesse caso, o terceiro "
+"argumento, a descrição do tópico, será usado como o nome da referência "
+"cruzada em formatos online.  Por exemplo,"
 
 #. type: example
 #: texinfo/texinfo-ed.7.1-en_US.texi:4079
@@ -10530,12 +10573,14 @@ msgid ""
 "@@xref@{Electrical Effects, , Thunder and Lightning,\n"
 "weather, An Introduction to Meteorology@}.\n"
 msgstr ""
+"@@xref@{Efeitos Elétricos, , Trovão e Relâmpago,\n"
+"clima, Uma Introdução à Meteorologia@}.\n"
 
 #. type: group
 #: texinfo/texinfo-ed.7.1-en_US.texi:4087
 #, no-wrap
 msgid "*Note Thunder and Lightning: (weather)Electrical Effects.\n"
-msgstr ""
+msgstr "*Observe Trovão e Relâmpago: (clima)Efeitos Elétricos.\n"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:4104
@@ -10544,6 +10589,9 @@ msgid ""
 "manual, you may also leave out the section title.  In this case, the node "
 "name is used in both instances.  For example,"
 msgstr ""
+"Próximo caso: se o nome do nó e o título da seção forem os mesmos no "
+"outro manual, você também pode deixar de fora o título da seção.  Nesse "
+"caso, o nome de nó é usado em ambas as instâncias.  Por exemplo,"
 
 #. type: example
 #: texinfo/texinfo-ed.7.1-en_US.texi:4108
@@ -10552,18 +10600,22 @@ msgid ""
 "@@xref@{Electrical Effects,,,\n"
 "weather, An Introduction to Meteorology@}.\n"
 msgstr ""
+"@@xref@{Efeitos Elétricos,,,\n"
+"clima, Uma Introdução à Meteorologia@}.\n"
 
 #. type: group
 #: texinfo/texinfo-ed.7.1-en_US.texi:4116
 #, no-wrap
 msgid "*Note (weather)Electrical Effects::.\n"
-msgstr ""
+msgstr "*Observe (clima)Efeitos Elétricos::.\n"
 
 #. type: quotation
 #: texinfo/texinfo-ed.7.1-en_US.texi:4125
 msgid ""
 "See section ``Electrical Effects'' in @cite{An Introduction to Meteorology}."
 msgstr ""
+"Veja-se seção ``Efeitos Elétricos'' em @cite{Uma Introdução à "
+"Meteorologia}."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:4138
@@ -10577,6 +10629,15 @@ msgid ""
 "If the printed manual title argument is missing, the manual name will be "
 "used instead in printed output."
 msgstr ""
+"Em geral, não existe razão para ter um argumento de nome de manual sem um "
+"argumento de manual impresso, a menos que nenhum manual impresso seja "
+"gerado.  Você também pode querer se referir a outro arquivo de manual que "
+"esteja dentro de um manual impresso---quando vários arquivos do Texinfo "
+"forem incorporados ao mesmo manual impresso, mas puderem criar arquivos de "
+"saída separados em outros formatos de saída.  Nesse caso, você precisa "
+"especificar somente o quarto argumento, e não o quinto.  Se o argumento de "
+"título do manual impresso estiver ausente, o nome do manual será usado na "
+"saída impressa."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:4144
@@ -10587,6 +10648,11 @@ msgid ""
 "example, an empty manual name or a reference to the printed manual formatted "
 "in a similar way to the printed output."
 msgstr ""
+"Um argumento de título de manual impresso sem um argumento de manual online "
+"é de pouco uso, a menos que somente um manual impresso seja gerado a partir "
+"do fonte do Texinfo.  O resultado em formatos online depende do formato e "
+"pode ser, por exemplo, um nome vazio de manual ou uma referência para o "
+"manual impresso formatado de maneira semelhante para a saída impressa."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:4148
@@ -10595,41 +10661,44 @@ msgid ""
 "fourth and fifth, to refer to another manual as a whole.  See the next "
 "section."
 msgstr ""
+"Finalmente, também é permitido deixar de fora todos os argumentos, "
+"@emph{exceto} o quarto e quinto, para referenciar outro manual como um "
+"todo.  Veja-se a próxima seção."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:4150
 msgid "@lowersections"
-msgstr ""
+msgstr "@lowersections"
 
 #. type: section
 #: texinfo/texinfo-ed.7.1-en_US.texi:4152
 #: texinfo/texinfo-ed.7.1-en_US.texi:4154
 #, no-wrap
 msgid "Referring to a Manual as a Whole"
-msgstr ""
+msgstr "Referenciamento para um Manual como um Todo"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:4154
 msgid "@nodedescription Refer to an entire manual."
-msgstr ""
+msgstr "@nodedescription Referência para um manual inteiro."
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:4155
 #, no-wrap
 msgid "Manual, referring to as a whole"
-msgstr ""
+msgstr "Manual, referenciamento para como um todo"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:4156
 #, no-wrap
 msgid "Referring to an entire manual"
-msgstr ""
+msgstr "Referenciamento para um manual inteiro"
 
-#.  old name
+#.  nome antigo
 #. type: anchor{#1}
 #: texinfo/texinfo-ed.7.1-en_US.texi:4158
 msgid "Top Node Naming"
-msgstr ""
+msgstr "Nomeação do Nó Top"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:4163
@@ -10639,6 +10708,10 @@ msgid ""
 "particular section within it.  In this case, giving any section name is an "
 "unnecessary distraction."
 msgstr ""
+"Normalmente, você sempre precisa nomear um nó em uma referência cruzada.  "
+"Entretanto, não é incomum querer se referir a outro manual como um todo, "
+"em vez de uma seção em particular dentro dele.  Nesse caso, dar-se algum "
+"nome de seção é uma distração desnecessária."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:4169
@@ -10649,29 +10722,34 @@ msgid ""
 "printed output includes no node or section name.  (The Info output includes "
 "@samp{Top} if it was given.)  For example,"
 msgstr ""
+"Assim, com referências cruzadas para outros manuais (@pxref{Quatro e Cinco "
+"Argumentos}), se o primeiro argumento for ou @samp{Top} (primeira letra "
+"maiúscula exatamente dessa maneira) ou inteiramente omitido, e o terceiro "
+"argumento for omitido, a saída impressa não inclui nome de nó ou de "
+"seção.  (A saída Info inclui @samp{Top} se foi dado.)  Por exemplo,"
 
 #. type: example
 #: texinfo/texinfo-ed.7.1-en_US.texi:4172
 #, no-wrap
 msgid "@@xref@{Top,,, make, The GNU Make Manual@}.\n"
-msgstr ""
+msgstr "@@xref@{Top,,, make, O Manual do GNU Make@}.\n"
 
 #. type: group
 #: texinfo/texinfo-ed.7.1-en_US.texi:4180
 #, no-wrap
 msgid "*Note (make)Top::.\n"
-msgstr ""
+msgstr "*Observe (make)Top::.\n"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:4185
 #: texinfo/texinfo-ed.7.1-en_US.texi:23244
 msgid "and"
-msgstr ""
+msgstr "e"
 
 #. type: quotation
 #: texinfo/texinfo-ed.7.1-en_US.texi:4188
 msgid "See @cite{The GNU Make Manual}."
-msgstr ""
+msgstr "Veja-se @cite{O Manual do GNU Make}."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:4193
@@ -10679,6 +10757,8 @@ msgid ""
 "Info readers will go to the Top node of the manual whether or not the `Top' "
 "node is explicitly specified."
 msgstr ""
+"Leitores Info irão para o nó Top do manual se o nó `Top' estiver "
+"explicitamente especificado ou não."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:4198
@@ -10688,29 +10768,34 @@ msgid ""
 "to the @code{@@xref} command.  Using this idiom, to make a cross-reference "
 "to @cite{The GNU Make Manual}, you would write:"
 msgstr ""
+"Também é possível (e é prática histórica) referenciar um manual "
+"inteiro especificando-se o nó `Top' e uma entrada apropriada para o "
+"terceiro argumento para o comando @code{@@xref}.  Usando esse dialeto, para "
+"fazer uma referência cruzada para @cite{O Manual do GNU Make}, você "
+"poderia escrever:"
 
 #. type: example
 #: texinfo/texinfo-ed.7.1-en_US.texi:4201
 #, no-wrap
 msgid "@@xref@{Top,, Overview, make, The GNU Make Manual@}.\n"
-msgstr ""
+msgstr "@@xref@{Top,, Visão Geral, make, O Manual do GNU Make@}.\n"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:4205
 #: texinfo/texinfo-ed.7.1-en_US.texi:4329
 msgid "which produces"
-msgstr ""
+msgstr "que produz:"
 
 #. type: example
 #: texinfo/texinfo-ed.7.1-en_US.texi:4208
 #, no-wrap
 msgid "*Note Overview: (make)Top.\n"
-msgstr ""
+msgstr "*Observe Visão Geral: (make)Top.\n"
 
 #. type: quotation
 #: texinfo/texinfo-ed.7.1-en_US.texi:4215
 msgid "See section ``Overview'' in @cite{The GNU Make Manual}."
-msgstr ""
+msgstr "Veja-se seção ``Visão Geral'' in @cite{O Manual do GNU Make}."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:4226
@@ -10722,6 +10807,12 @@ msgid ""
 "first name is a principal reason why omitting the third argument in "
 "whole-manual cross-references is preferable."
 msgstr ""
+"Nesse exemplo, @samp{Top} é o nome do primeiro nó e @samp{Visão Geral} é "
+"o nome da primeira seção do manual.  Não existe convenção amplamente "
+"usada para nomear a primeira seção em um manual impresso; isso é apenas o "
+"que o manual do Make usa.  Essa arbitrariedade do primeiro nome é a razão "
+"principal pela qual é preferível omitir-se o terceiro argumento em "
+"referências cruzadas de manual inteiro."
 
 #. type: node
 #: texinfo/texinfo-ed.7.1-en_US.texi:4228
