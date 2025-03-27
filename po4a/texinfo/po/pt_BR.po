@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: Texinfo 7.1\n"
 "Report-Msgid-Bugs-To: jafesp@gmail.com\n"
 "POT-Creation-Date: 2025-03-25 02:01-0300\n"
-"PO-Revision-Date: 2025-03-27 02:33-0300\n"
+"PO-Revision-Date: 2025-03-27 04:00-0300\n"
 "Last-Translator: Jamenson Ferreira Espindula de Almeida Melo "
 "<jafesp@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -11276,12 +11276,14 @@ msgid ""
 "@code{@@link} produces a plain hyperlink in output formats that support it, "
 "including in HTML, DocBook, @LaTeX{} and online PDF@.  The template is:"
 msgstr ""
+"@code{@@link} produz um hiperlink simples nos formatos de saída que o "
+"suportam, incluindo em HTML, DocBook, @LaTeX{} e PDF online@.  O modelo é:"
 
 #. type: example
 #: texinfo/texinfo-ed.7.1-en_US.texi:4428
 #, no-wrap
 msgid "@@link@{@var{node-name}, @var{label}, @var{manual-name}@}\n"
-msgstr ""
+msgstr "@@link@{@var{nome-nó}, @var{rótulo}, @var{nome-manual}@}\n"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:4436
@@ -11292,6 +11294,11 @@ msgid ""
 "manual that the target appears within; if not given, the reference is to the "
 "current manual."
 msgstr ""
+"@var{nome-nó} é o nome do nó ou âncora alvo.  Ou um ou ambos de "
+"@var{rótulo} e @var{nome-manual} podem ser omitidos.  @var{rótulo}, se "
+"fornecido, é o texto a se usar para o link.  @var{nome-manual} é o nome do "
+"manual externo em que o alvo aparece; Se não fornecido, a referência é "
+"para o manual atual."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:4440
@@ -11300,6 +11307,9 @@ msgid ""
 "produce any extra text around the link label in Info or printed output that "
 "would mark it as a cross-reference."
 msgstr ""
+"@code{@@link} tem saída gerada semelhante a @code{@@ref}, exceto que ele "
+"produz algum texto extra em torno do rótulo do link no Info ou na saída "
+"impressa que o marcaria como uma referência cruzada."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:4448
@@ -11311,6 +11321,13 @@ msgid ""
 "manual.  For example, you might use @code{@@link} in a code sample to "
 "reference documentation of a symbol in a programming library."
 msgstr ""
+"Tenha cuidado ao usar @code{@@link} para produzir links que sejam "
+"necessários para um(a) usuário(a) se mover em um manual, pois esses links "
+"não farão nada nesses formatos de saída.  @code{@@link} é melhor usado "
+"para adicionar links de conveniência que, no entanto, não são essenciais "
+"para um(a) leitor(a) entender o texto do manual.  Por exemplo, você pode "
+"usar @code{@@link} em uma amostra de código para referenciar documentação "
+"de um símbolo em uma biblioteca de programação."
 
 #. type: node
 #: texinfo/texinfo-ed.7.1-en_US.texi:4451
