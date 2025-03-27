@@ -1,0 +1,1 @@
+( LC_ALL=C po4a --no-update po4a.conf 2>&1 | tee logs/`date "+%Y-%m-%d-%H-%M-%S"`-po4a.log.txt && exit "${PIPESTATUS}" )
