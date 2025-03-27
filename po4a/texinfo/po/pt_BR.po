@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: Texinfo 7.1\n"
 "Report-Msgid-Bugs-To: jafesp@gmail.com\n"
 "POT-Creation-Date: 2025-03-25 02:01-0300\n"
-"PO-Revision-Date: 2025-03-27 04:00-0300\n"
+"PO-Revision-Date: 2025-03-27 06:20-0300\n"
 "Last-Translator: Jamenson Ferreira Espindula de Almeida Melo "
 "<jafesp@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -11333,36 +11333,36 @@ msgstr ""
 #: texinfo/texinfo-ed.7.1-en_US.texi:4451
 #, no-wrap
 msgid "@code{@@inforef}"
-msgstr ""
+msgstr "@code{@@inforef}"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:4453
 msgid "@nodedescription How to refer to an Info-only file."
-msgstr ""
+msgstr "@nodedescription Como referenciar somente um arquivo Info."
 
 #. type: section
 #: texinfo/texinfo-ed.7.1-en_US.texi:4453
 #, no-wrap
 msgid "@code{@@inforef}: Cross-references to Info-only Material"
-msgstr ""
+msgstr "@code{@@inforef}: Referências cruzadas para material unicamente Info"
 
 #. type: findex
 #: texinfo/texinfo-ed.7.1-en_US.texi:4456
 #, no-wrap
 msgid "inforef"
-msgstr ""
+msgstr "inforef"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:4457
 #, no-wrap
 msgid "Cross-references using @code{@@inforef}"
-msgstr ""
+msgstr "Referências cruzadas usando @code{@@inforef}"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:4458
 #, no-wrap
 msgid "References using @code{@@inforef}"
-msgstr ""
+msgstr "Referências usando @code{@@inforef}"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:4467
@@ -11374,32 +11374,39 @@ msgid ""
 "output can be obtained with @code{@@xref}, @code{@@ref} or @code{@@pxref} "
 "with the Info file name as the fourth argument and no fifth argument."
 msgstr ""
+"@code{@@inforef} é usado para fazer referências cruzadas para documentos "
+"Info---mesmo a partir de um manual impresso.  Isso originalmente era usado "
+"para arquivos Info que não fossem gerados a partir de algum fonte Texinfo.  "
+"O comando agora está obsoleto e não deveria ser usado.  Adicionalmente a "
+"ter pouco uso, saída similar pode ser obtida com @code{@@xref}, "
+"@code{@@ref} ou @code{@@pxref} com o nome do arquivo Info como o quarto "
+"argumento e sem quinto argumento."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:4470
 msgid ""
 "The command takes either two or three arguments, in the following order:"
-msgstr ""
+msgstr "O comando recebe ou dois ou três argumentos, na seguinte ordem:"
 
 #. type: enumerate
 #: texinfo/texinfo-ed.7.1-en_US.texi:4474
 msgid "The node name."
-msgstr ""
+msgstr "O nome do nó."
 
 #. type: enumerate
 #: texinfo/texinfo-ed.7.1-en_US.texi:4477
 msgid "The cross-reference name (optional)."
-msgstr ""
+msgstr "O nome da referência cruzada (opcional)."
 
 #. type: enumerate
 #: texinfo/texinfo-ed.7.1-en_US.texi:4480
 msgid "The Info file name."
-msgstr ""
+msgstr "O nome do arquivo Info."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:4484
 msgid "The template is:"
-msgstr ""
+msgstr "O modelo é:"
 
 #. type: example
 #: texinfo/texinfo-ed.7.1-en_US.texi:4487
@@ -11408,17 +11415,19 @@ msgid ""
 "@@inforef@{@var{node-name}, @var{cross-reference-name}, "
 "@var{info-file-name}@}\n"
 msgstr ""
+"@@inforef@{@var{nome-nó}, @var{nome-referência-cruzada}, "
+"@var{nome-arquivo-info}@}\n"
 
 #. type: node
 #: texinfo/texinfo-ed.7.1-en_US.texi:4490
 #, no-wrap
 msgid "@code{@@url}"
-msgstr ""
+msgstr "@code{@@url}"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:4492
 msgid "@nodedescription How to refer to a uniform resource locator."
-msgstr ""
+msgstr "@nodedescription Como referenciar um localizador uniforme de recursos."
 
 #. type: section
 #: texinfo/texinfo-ed.7.1-en_US.texi:4492
@@ -11426,32 +11435,34 @@ msgstr ""
 msgid ""
 "@code{@@url}, @code{@@uref@{@var{url}[, @var{text}][, @var{replacement}]@}}"
 msgstr ""
+"@code{@@url}, @code{@@uref@{@var{url}[, @var{texto}][, "
+"@var{substituição}]@}}"
 
 #. type: findex
 #: texinfo/texinfo-ed.7.1-en_US.texi:4496
 #: texinfo/texinfo-ed.7.1-en_US.texi:4507
 #, no-wrap
 msgid "uref"
-msgstr ""
+msgstr "uref"
 
 #. type: findex
 #: texinfo/texinfo-ed.7.1-en_US.texi:4496
 #: texinfo/texinfo-ed.7.1-en_US.texi:4498
 #, no-wrap
 msgid "url"
-msgstr ""
+msgstr "url"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:4496
 #, no-wrap
 msgid "URL @subentry referring to"
-msgstr ""
+msgstr "URL @subentry referenciando"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:4499
 #, no-wrap
 msgid "@code{href}, producing HTML"
-msgstr ""
+msgstr "@code{href}, produzindo HTML"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:4506
@@ -11463,6 +11474,12 @@ msgid ""
 "a link people can follow, use @code{@@indicateurl}, "
 "@pxref{@code{@@indicateurl}}.)"
 msgstr ""
+"@code{@@url} produz uma referência para um Localizador Uniforme de Recursos "
+"(URL@:).  Ele recebe um argumento obrigatório, a URL@:, e dois argumentos "
+"opcionais que controlam o texto que é exibido.  Em saída HTML e PDF, "
+"@code{@@url} produz um link que você consegue seguir.  (Para meramente "
+"indicar uma URL sem criar um link que as pessoas possam seguir, use "
+"@code{@@indicateurl}, @pxref{@code{@@indicateurl}}.)"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:4513
@@ -11472,6 +11489,10 @@ msgid ""
 "produce a working link, but in practice @code{@@url} was almost always "
 "misused.  So we've changed the meaning.)"
 msgstr ""
+"@code{@@uref} é um sinônimo para @code{@@url}.  (Originalmente, "
+"@code{@@url} tinha o significado de @code{@@indicateurl} e @code{@@uref} era "
+"obrigado a produzir um link funcional, porém, na prática, @code{@@url} "
+"quase sempre era mal usado.  Então, nós mudamos o significado.)"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:4517
@@ -11480,12 +11501,15 @@ msgid ""
 "the URL itself); in output formats other than HTML, the URL is output in "
 "addition to this text."
 msgstr ""
+"O segundo argumento, se especificado, é o texto a exibir (o padrão é a "
+"URL em si); em formatos de saída diferentes de HTML, a URL é gerada em "
+"adição a esse texto."
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:4518
 #, no-wrap
 msgid "Man page, reference to"
-msgstr ""
+msgstr "Página de manual, referência a"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:4523
@@ -11495,30 +11519,34 @@ msgid ""
 "already sufficiently referential, as in a man page.  Also, if the third "
 "argument is given, the second argument is ignored."
 msgstr ""
+"O terceiro argumento, se especificado, é o texto a exibir, mas nesse caso a "
+"URL não é gerada em nenhum formato.  Isso é útil quando o texto já é "
+"suficientemente referencial, como em uma página de manual.  Além disso, se "
+"o terceiro argumento for fornecido, o segundo argumento será ignorado."
 
 #. type: subsection
 #: texinfo/texinfo-ed.7.1-en_US.texi:4525
 #: texinfo/texinfo-ed.7.1-en_US.texi:4527
 #, no-wrap
 msgid "@code{@@url} Examples"
-msgstr ""
+msgstr "Exemplos @code{@@url}"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:4527
 msgid "@nodedescription Examples of using all the forms of @code{@@url}."
-msgstr ""
+msgstr "@nodedescription Exemplos de se usar todas as formas do @code{@@url}."
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:4529
 #, no-wrap
 msgid "@code{@@url}, examples of using"
-msgstr ""
+msgstr "@code{@@url}, exemplos de uso"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:4530
 #, no-wrap
 msgid "URL @subentry examples of displaying"
-msgstr ""
+msgstr "URL @subentry exemplos de exibição"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:4535
@@ -11527,29 +11555,32 @@ msgid ""
 "one argument.  The given URL is both the target and the visible text of the "
 "link:"
 msgstr ""
+"Primeiro, aqui está um exemplo da forma mais simples de @code{@@url}, com "
+"apenas um argumento.  A URL fornecida é tanto o alvo quanto o texto "
+"visível do link:"
 
 #. type: example
 #: texinfo/texinfo-ed.7.1-en_US.texi:4538
 #, no-wrap
 msgid "The official GNU ftp site is @@url@{http://ftp.gnu.org/gnu@}.\n"
-msgstr ""
+msgstr "O sítio FTP GNU oficial é @@url@{http://ftp.gnu.org/gnu@}.\n"
 
 #. type: display
 #: texinfo/texinfo-ed.7.1-en_US.texi:4544
 #, no-wrap
 msgid "The official GNU ftp site is @url{http://ftp.gnu.org/gnu}.\n"
-msgstr ""
+msgstr "O sítio FTP GNU oficial é @url{http://ftp.gnu.org/gnu}.\n"
 
 #. type: subsubheading
 #: texinfo/texinfo-ed.7.1-en_US.texi:4546
 #, no-wrap
 msgid "Two-argument form of @code{@@url}"
-msgstr ""
+msgstr "Forma de dois argumentos de @code{@@url}"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:4549
 msgid "Here is an example of the two-argument form:"
-msgstr ""
+msgstr "Aqui está um exemplo da forma de dois argumentos:"
 
 #. type: example
 #: texinfo/texinfo-ed.7.1-en_US.texi:4552
@@ -11558,6 +11589,8 @@ msgid ""
 "The official @@url@{http://ftp.gnu.org/gnu, GNU ftp site@}\n"
 "holds programs and texts.\n"
 msgstr ""
+"O @@url@{http://ftp.gnu.org/gnu, sítio FTP GNU oficial@}\n"
+"mantém programas e textos.\n"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:4556
@@ -11565,7 +11598,7 @@ msgstr ""
 #: texinfo/texinfo-ed.7.1-en_US.texi:9543
 #: texinfo/texinfo-ed.7.1-en_US.texi:10133
 msgid "which produces:"
-msgstr ""
+msgstr "o que produz:"
 
 #. type: display
 #: texinfo/texinfo-ed.7.1-en_US.texi:4559
@@ -11574,11 +11607,13 @@ msgid ""
 "The official @url{http://ftp.gnu.org/gnu, GNU ftp site}\n"
 "holds programs and texts.\n"
 msgstr ""
+"O @url{http://ftp.gnu.org/gnu, sítio FTP GNU oficial}\n"
+"mantém programas e textos.\n"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:4563
 msgid "The HTML output is this:"
-msgstr ""
+msgstr "A saída gerada HTML é esta:"
 
 #. type: example
 #: texinfo/texinfo-ed.7.1-en_US.texi:4566
@@ -11587,6 +11622,8 @@ msgid ""
 "The official <a href=\"http://ftp.gnu.org/gnu\">GNU ftp site</a>\n"
 "holds programs and texts.\n"
 msgstr ""
+"O <a href=\"http://ftp.gnu.org/gnu\">sítio FTP GNU oficial</a>\n"
+"mantém programas e textos.\n"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:4570
@@ -11602,34 +11639,36 @@ msgid ""
 "The official GNU ftp site (http://ftp.gnu.org/gnu)\n"
 "holds programs and texts.\n"
 msgstr ""
+"O sítio FTP GNU oficial (http://ftp.gnu.org/gnu)\n"
+"mantém programas e textos.\n"
 
 #. type: subsubheading
 #: texinfo/texinfo-ed.7.1-en_US.texi:4575
 #, no-wrap
 msgid "Three-argument form of @code{@@url}"
-msgstr ""
+msgstr "Forma de três argumentos de @code{@@url}"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:4578
 msgid "Finally, an example of the three-argument form:"
-msgstr ""
+msgstr "Finalmente, um exemplo da forma de três argumentos:"
 
 #. type: example
 #: texinfo/texinfo-ed.7.1-en_US.texi:4580
 #, no-wrap
 msgid "The @@url@{/man.cgi/1/ls,,ls@} program @dots{}\n"
-msgstr ""
+msgstr "O programa @@url@{/man.cgi/1/ls,,ls@} @dots{}\n"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:4584
 msgid "which, except for HTML, produces:"
-msgstr ""
+msgstr "o qual, exceto para HTML, produz:"
 
 #. type: display
 #: texinfo/texinfo-ed.7.1-en_US.texi:4586
 #, no-wrap
 msgid "The @url{/man.cgi/1/ls,,ls} program @dots{}\n"
-msgstr ""
+msgstr "O programa @url{/man.cgi/1/ls,,ls} @dots{}\n"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:4590
