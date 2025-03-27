@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: Texinfo 7.1\n"
 "Report-Msgid-Bugs-To: jafesp@gmail.com\n"
 "POT-Creation-Date: 2025-03-25 02:01-0300\n"
-"PO-Revision-Date: 2025-03-25 23:03-0300\n"
+"PO-Revision-Date: 2025-03-27 00:33-0300\n"
 "Last-Translator: Jamenson Ferreira Espindula de Almeida Melo "
 "<jafesp@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -10818,30 +10818,30 @@ msgstr ""
 #: texinfo/texinfo-ed.7.1-en_US.texi:4228
 #, no-wrap
 msgid "@code{@@xref}"
-msgstr ""
+msgstr "@code{@@xref}"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:4230
 msgid "@nodedescription Begin a reference with `See' @dots{}"
-msgstr ""
+msgstr "@nodedescription Iniciar uma referência com `Veja-se' @dots{}"
 
 #. type: findex
 #: texinfo/texinfo-ed.7.1-en_US.texi:4233
 #, no-wrap
 msgid "xref"
-msgstr ""
+msgstr "xref"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:4234
 #, no-wrap
 msgid "Cross-references using @code{@@xref}"
-msgstr ""
+msgstr "Referências cruzadas usando @code{@@xref}"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:4235
 #, no-wrap
 msgid "References using @code{@@xref}"
-msgstr ""
+msgstr "Referências usando @code{@@xref}"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:4240
@@ -10849,35 +10849,37 @@ msgid ""
 "The @code{@@xref} command generates a cross-reference for the beginning of a "
 "sentence.  Examples of using @code{@@xref} are in previous sections."
 msgstr ""
+"O comando @code{@@xref} gera uma referência cruzada para o início de uma "
+"frase.  Exemplo de uso do @code{@@xref} estão em seções anteriores."
 
 #. type: node
 #: texinfo/texinfo-ed.7.1-en_US.texi:4242
 #, no-wrap
 msgid "@code{@@ref}"
-msgstr ""
+msgstr "@code{@@ref}"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:4244
 msgid "@nodedescription A reference for the last part of a sentence."
-msgstr ""
+msgstr "@nodedescription Uma referência para a última parte de uma frase."
 
 #. type: findex
 #: texinfo/texinfo-ed.7.1-en_US.texi:4247
 #, no-wrap
 msgid "ref"
-msgstr ""
+msgstr "ref"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:4248
 #, no-wrap
 msgid "Cross-references using @code{@@ref}"
-msgstr ""
+msgstr "Referências cruzadas usando @code{@@ref}"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:4249
 #, no-wrap
 msgid "References using @code{@@ref}"
-msgstr ""
+msgstr "Referências usando @code{@@ref}"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:4254
@@ -10886,34 +10888,37 @@ msgid ""
 "generate a `See' in the output, just the reference itself.  This makes it "
 "useful as the last part of a sentence."
 msgstr ""
+"@code{@@ref} é aproximadamente o mesmo que @code{@@xref}, exceto que não "
+"gera um `Veja-se' na saída gerada, apenas a referência em si.  Isso a "
+"torna útil como a última parte de uma frase."
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:4258
 #, no-wrap
 msgid "Hurricanes"
-msgstr ""
+msgstr "Furacões"
 
 #. type: example
 #: texinfo/texinfo-ed.7.1-en_US.texi:4261
 #, no-wrap
 msgid "For more information, @@pxref@{This@}, and @@ref@{That@}.\n"
-msgstr ""
+msgstr "Para mais informações, @@pxref@{Isso@}, e @@ref@{Aquilo@}.\n"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:4265
 msgid "produces in Info:"
-msgstr ""
+msgstr "produz em Info:"
 
 #. type: example
 #: texinfo/texinfo-ed.7.1-en_US.texi:4268
 #, no-wrap
 msgid "For more information, *note This::, and *note That::.\n"
-msgstr ""
+msgstr "Para mais informações, *observe Isso::, e *observe Aquilo::.\n"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:4272
 msgid "and in printed output:"
-msgstr ""
+msgstr "e em saída impressa:"
 
 #. type: quotation
 #: texinfo/texinfo-ed.7.1-en_US.texi:4276
@@ -10921,6 +10926,8 @@ msgid ""
 "For more information, see Section 1.1 [This], page 1, and Section 1.2 "
 "[That], page 2."
 msgstr ""
+"Para mais informações, veja-se Seção 1.1 [Isso], página 1, e Seção "
+"1.2 [Aquilo], página 2."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:4282
@@ -10930,68 +10937,74 @@ msgid ""
 "Bear in mind that your audience could be using both the printed and other "
 "output formats such as Info.  For example:"
 msgstr ""
+"O comando @code{@@ref} pode instigar os(as) escritores(as) a se expressarem "
+"de uma maneira que seja adequada para um manual impresso, porém parecerem "
+"estranhos(as) no formato Info.  Tenha em mente que teu público poderia "
+"estar usando ambos, o impresso e outros formatos de saída, como o Info.  "
+"Por exemplo:"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:4283
 #, no-wrap
 msgid "Sea surges"
-msgstr ""
+msgstr "Ondas do mar"
 
 #. type: example
 #: texinfo/texinfo-ed.7.1-en_US.texi:4286
 #, no-wrap
 msgid "Sea surges are described in @@ref@{Hurricanes@}.\n"
-msgstr ""
+msgstr "Ondas do mar estão descritas em @@ref@{Furacões@}.\n"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:4290
 msgid "looks ok in the printed output:"
-msgstr ""
+msgstr "aparenta ok na saída impressa:"
 
 #. type: quotation
 #: texinfo/texinfo-ed.7.1-en_US.texi:4293
 msgid "Sea surges are described in Section 6.7 [Hurricanes], page 72."
-msgstr ""
+msgstr "Ondas do mar estão descritas na Seção 6.7 [Furacões], página 72."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:4297
 msgid "but is awkward to read in Info, ``note'' being a verb:"
-msgstr ""
+msgstr "porém, é estranho ler no Info, ``observe'' sendo um verbo:"
 
 #. type: example
 #: texinfo/texinfo-ed.7.1-en_US.texi:4300
 #, no-wrap
 msgid "Sea surges are described in *note Hurricanes::.\n"
-msgstr ""
+msgstr "Ondas do mar estão descritas em *observe Furacões::.\n"
 
 #. type: node
 #: texinfo/texinfo-ed.7.1-en_US.texi:4303
 #, no-wrap
 msgid "@code{@@pxref}"
-msgstr ""
+msgstr "@code{@@pxref}"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:4305
 msgid "@nodedescription How to write a parenthetical cross-reference."
 msgstr ""
+"@nodedescription Como escrever uma referência cruzada entre parênteses."
 
 #. type: findex
 #: texinfo/texinfo-ed.7.1-en_US.texi:4308
 #, no-wrap
 msgid "pxref"
-msgstr ""
+msgstr "pxref"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:4309
 #, no-wrap
 msgid "Cross-references using @code{@@pxref}"
-msgstr ""
+msgstr "Referências cruzadas usando @code{@@pxref}"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:4310
 #, no-wrap
 msgid "References using @code{@@pxref}"
-msgstr ""
+msgstr "Referências usando @code{@@pxref}"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:4317
@@ -11001,35 +11014,46 @@ msgid ""
 "from @code{@@xref} in that the reference is typeset with a lowercase `see' "
 "rather than an uppercase `See'.  In Info, @samp{*note} is output."
 msgstr ""
+"O comando de referência entre parênteses, @code{@@pxref}, é "
+"aproximadamente o mesmo que @code{@@xref}, porém ele é melhor usado dentro "
+"de parênteses.  O comando difere do @code{@@xref} em que a referência é "
+"tipografada com um `veja' em letras minúsculas em vez de um `Veja' em letra "
+"maiúscula.  No Info, @samp{*observe} é gerado."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:4320
 msgid "With one argument, a parenthetical cross-reference looks like this:"
 msgstr ""
+"Com um argumento, uma referência cruzada entre parênteses se parece com "
+"isto:"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:4321
 #, no-wrap
 msgid "Flooding"
-msgstr ""
+msgstr "Inundação"
 
 #. type: example
 #: texinfo/texinfo-ed.7.1-en_US.texi:4324
 #, no-wrap
 msgid "@dots{} storms cause flooding (@@pxref@{Hurricanes@}) @dots{}\n"
 msgstr ""
+"@dots{} tempestades causam inundações (@@pxref@{Furacões@}) @dots{}\n"
 
 #. type: group
 #: texinfo/texinfo-ed.7.1-en_US.texi:4333
 #, no-wrap
 msgid "@dots{} storms cause flooding (*note Hurricanes::) @dots{}\n"
 msgstr ""
+"@dots{} tempestades causam inundações (*observe Furacões::) @dots{}\n"
 
 #. type: quotation
 #: texinfo/texinfo-ed.7.1-en_US.texi:4341
 msgid ""
 "@dots{} storms cause flooding (see Section 6.7 [Hurricanes], page 72) @dots{}"
 msgstr ""
+"@dots{} tempestades causam inundações (veja-se Seção 6.7 [Furacões], "
+"página 72) @dots{}"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:4353
@@ -11041,12 +11065,19 @@ msgid ""
 "circumstances the latter is preferable, as this makes it clear in the Info "
 "output that the word ``see'' should be present."
 msgstr ""
+"Em versões passadas do Texinfo, não era permitido escrever-se pontuação "
+"depois de um @code{@@pxref}, de forma que ele poderia ser usado "
+"@emph{somente} antes de um parêntese de fechamento.  Esse não mais é o "
+"caso.  O efeito de @samp{@@pxref@{@var{nome-nó}@}} é semelhante àquele de "
+"@samp{veja-se @@ref@{@var{nome-nó}@}}.  No entanto, em muitas "
+"circunstâncias, o último é preferível, pois esse torna claro na saída "
+"Info que a palavra ``veja-se'' deveria estar presente."
 
 #. type: node
 #: texinfo/texinfo-ed.7.1-en_US.texi:4355
 #, no-wrap
 msgid "@code{@@anchor}"
-msgstr ""
+msgstr "@code{@@anchor}"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:4357
