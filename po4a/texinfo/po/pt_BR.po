@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: Texinfo 7.1\n"
 "Report-Msgid-Bugs-To: jafesp@gmail.com\n"
 "POT-Creation-Date: 2025-03-25 02:01-0300\n"
-"PO-Revision-Date: 2025-03-27 00:33-0300\n"
+"PO-Revision-Date: 2025-03-27 02:33-0300\n"
 "Last-Translator: Jamenson Ferreira Espindula de Almeida Melo "
 "<jafesp@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -11082,37 +11082,37 @@ msgstr "@code{@@anchor}"
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:4357
 msgid "@nodedescription Defining arbitrary cross-reference targets"
-msgstr ""
+msgstr "@nodedescription Definindo alvos arbitrários de referências cruzadas"
 
 #. type: section
 #: texinfo/texinfo-ed.7.1-en_US.texi:4357
 #, no-wrap
 msgid "@code{@@anchor}: Defining Arbitrary Cross-reference Targets"
-msgstr ""
+msgstr "@code{@@anchor}: Definindo Alvos Arbitrários de Referências Cruzadas"
 
 #. type: findex
 #: texinfo/texinfo-ed.7.1-en_US.texi:4360
 #, no-wrap
 msgid "anchor"
-msgstr ""
+msgstr "anchor"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:4361
 #, no-wrap
 msgid "Anchors"
-msgstr ""
+msgstr "Âncoras"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:4362
 #, no-wrap
 msgid "Cross-reference targets, arbitrary"
-msgstr ""
+msgstr "Alvos das referências cruzadas, arbitrários"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:4363
 #, no-wrap
 msgid "Targets for cross-references, arbitrary"
-msgstr ""
+msgstr "Alvos para referências cruzadas, arbitrários"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:4369
@@ -11122,6 +11122,10 @@ msgid ""
 "anchor with the @code{@@anchor} command, and give the label as a normal "
 "brace-delimited argument.  For example:"
 msgstr ""
+"Uma @dfn{âncora} é uma posição no teu documento, rotulada de forma que "
+"referências cruzadas consigam referenciá-la, exatamente como conseguem "
+"para nós.  Você cria uma âncora com o comando @code{@@anchor}, e dá o "
+"rótulo como um argumento normal delimitado por chaves.  Por exemplo:"
 
 #. type: example
 #: texinfo/texinfo-ed.7.1-en_US.texi:4374
@@ -11131,6 +11135,9 @@ msgid ""
 "@dots{}\n"
 "@@xref@{x-spot,,the spot@}.\n"
 msgstr ""
+"Isso marca o ponto @@anchor@{x-spot@}.\n"
+"@dots{}\n"
+"@@xref@{x-spot,,o ponto@}.\n"
 
 #. type: example
 #: texinfo/texinfo-ed.7.1-en_US.texi:4383
@@ -11140,6 +11147,9 @@ msgid ""
 "@dots{}\n"
 "See [the spot], page 1.\n"
 msgstr ""
+"Isso marca o ponto.\n"
+"@dots{}\n"
+"Veja-se [o ponto], página 1.\n"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:4389
@@ -11149,6 +11159,11 @@ msgid ""
 "refer to it later with an @code{@@xref} or other cross reference command, as "
 "shown (@pxref{Cross References})."
 msgstr ""
+"Como você pode ver, o comando @code{@@anchor} em si não produz saída.  "
+"Esse exemplo define uma âncora `x-spot' exatamente antes da palavra "
+"`ponto'. Você pode referenciá-la depois com um @code{@@xref} ou outro "
+"comando de referência cruzada, conforme mostrado (@pxref{Referências "
+"Cruzadas})."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:4395
@@ -11159,6 +11174,12 @@ msgid ""
 "by itself if that helps readability of the source.  Whitespace (including "
 "newlines) is ignored after @code{@@anchor}."
 msgstr ""
+"É melhor colocar comandos @code{@@anchor} exatamente antes da posição que "
+"você deseja referenciar; dessa maneira o olho do(a) leitor(a) é guiado "
+"para o texto correto quando pular para a âncora.  Você pode colocar o "
+"comando @code{@@anchor} em uma linha própria se isso ajudar a legibilidade "
+"do fonte.  Espaços em branco (incluindo novas linhas) são ignorados depois "
+"de @code{@@anchor}."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:4403
@@ -11170,6 +11191,14 @@ msgid ""
 "labels could also appear in menus (@pxref{Menus}) and node direction "
 "pointers (@pxref{Writing a Node}), although this is not recommended."
 msgstr ""
+"Nomes de âncora, nomes de nó e rótulos de flutuação não podem "
+"conflitar.  Para as âncoras, nós e rótulos de flutuação são dados "
+"tratamento similar de algumas maneiras; por exemplo, o comando "
+"@code{goto-node} recebe ou um nome de âncora ou um nome de nó como "
+"argumento.  (@xref{Ir para nó,,, info, Info}.).  Nomes de âncoras e "
+"rótulos de flutuação também poderiam aparecer em menus (@pxref{Menus}) e "
+"em ponteiros de direção de nó (@pxref{Escrevendo um Nó}), embora isso "
+"não seja recomendado."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:4406
@@ -11177,12 +11206,15 @@ msgid ""
 "Anchor names share the same constraints as nodes on the characters that can "
 "be included (@pxref{Info Node Names Constraints})."
 msgstr ""
+"Nomes de âncora compartilham as mesmas restrições que nós acerca de "
+"caracteres que podem ser incluídos (@pxref{Restrições de Nomes de Nó do "
+"Info})."
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:4407
 #, no-wrap
 msgid "Nodes, deleting or renaming"
-msgstr ""
+msgstr "Nós, deletando ou renomeando"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:4412
@@ -11192,47 +11224,51 @@ msgid ""
 "links to the old node, whether from other Texinfo manuals or general web "
 "pages, keep working."
 msgstr ""
+"Por causa dessa dualidade, quando você deleta ou renomeia um nó, "
+"geralmente é uma boa ideia definir um @code{@@anchor} com o nome antigo.  "
+"Dessa maneira, quaisquer links para o nó antigo, sejam originários de "
+"outros manuais Texinfo ou de páginas web em geral, continuam funcionando."
 
 #. type: node
 #: texinfo/texinfo-ed.7.1-en_US.texi:4414
 #, no-wrap
 msgid "@code{@@link}"
-msgstr ""
+msgstr "@code{@@link}"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:4416
 msgid "@nodedescription How to make a plain link."
-msgstr ""
+msgstr "@nodedescription Como fazer um link simples."
 
 #. type: section
 #: texinfo/texinfo-ed.7.1-en_US.texi:4416
 #, no-wrap
 msgid "@code{@@link}: Plain, unadorned hyperlink"
-msgstr ""
+msgstr "@code{@@link}: Simples, hiperlink desadornado"
 
 #. type: findex
 #: texinfo/texinfo-ed.7.1-en_US.texi:4417
 #, no-wrap
 msgid "link"
-msgstr ""
+msgstr "link"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:4418
 #, no-wrap
 msgid "Cross-references using @code{@@link}"
-msgstr ""
+msgstr "Referências cruzadas usando @code{@@link}"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:4419
 #, no-wrap
 msgid "Plain link"
-msgstr ""
+msgstr "Link simples"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:4420
 #, no-wrap
 msgid "Plain hyperlink"
-msgstr ""
+msgstr "Hiperlink simples"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:4425
