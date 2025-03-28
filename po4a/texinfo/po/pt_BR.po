@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: Texinfo 7.1\n"
 "Report-Msgid-Bugs-To: jafesp@gmail.com\n"
 "POT-Creation-Date: 2025-03-25 02:01-0300\n"
-"PO-Revision-Date: 2025-03-27 06:20-0300\n"
+"PO-Revision-Date: 2025-03-28 04:45-0300\n"
 "Last-Translator: Jamenson Ferreira Espindula de Almeida Melo "
 "<jafesp@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -11673,31 +11673,32 @@ msgstr "O programa @url{/man.cgi/1/ls,,ls} @dots{}\n"
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:4590
 msgid "but with HTML:"
-msgstr ""
+msgstr "mas com HTML:"
 
 #. type: example
 #: texinfo/texinfo-ed.7.1-en_US.texi:4592
 #, no-wrap
 msgid "The <a href=\"/man.cgi/1/ls\">ls</a> program @dots{}\n"
-msgstr ""
+msgstr "O programa <a href=\"/man.cgi/1/ls\">ls</a> @dots{}\n"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:4597
 msgid ""
 "By the way, some people prefer to display URLs in the unambiguous format:"
 msgstr ""
+"A propósito, algumas pessoas preferem exibir URLs no inequívoco formato:"
 
 #. type: display
 #: texinfo/texinfo-ed.7.1-en_US.texi:4600
 #, no-wrap
 msgid "<URL:http://@var{host}/@var{path}>\n"
-msgstr ""
+msgstr "<URL:http://@var{dispositivo}/@var{caminho}>\n"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:4603
 #, no-wrap
 msgid "@code{<URL...>} convention, not used"
-msgstr ""
+msgstr "@code{<URL...>} convenção, não usada"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:4608
@@ -11707,30 +11708,35 @@ msgid ""
 "be useful any software that tries to detect URLs in text already has to "
 "detect them without the @samp{<URL:}."
 msgstr ""
+"Você pode usar essa forma no arquivo de entrada de desejar.  Nós sentimos "
+"que não é necessário incluir o @samp{<URL:} e @samp{>} na saída gerada, "
+"pois, para ser útil, qualquer software que tente detectar URLs em texto já "
+"tem de detectá-las sem o @samp{<URL:}."
 
 #. type: subsection
 #: texinfo/texinfo-ed.7.1-en_US.texi:4610
 #: texinfo/texinfo-ed.7.1-en_US.texi:4612
 #, no-wrap
 msgid "URL Line Breaking"
-msgstr ""
+msgstr "Quebra de Linha de URL"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:4612
 msgid "@nodedescription How lines are broken within @code{@@url} text."
 msgstr ""
+"@nodedescription Como linhas são quebradas dentro de texto de @code{@@url}."
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:4614
 #, no-wrap
 msgid "Line breaks @subentry URLs"
-msgstr ""
+msgstr "Quebras de linha @subentry URLs"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:4615
 #, no-wrap
 msgid "Breakpoints within URLs"
-msgstr ""
+msgstr "Pontos de interrupção dentro de URLs"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:4621
@@ -11740,6 +11746,11 @@ msgid ""
 "not between two @samp{/} characters).  A tiny amount of stretchable space is "
 "also inserted around these characters to help with line breaking."
 msgstr ""
+"@TeX{} permite quebra de linha dentro de URLs com apenas alguns caracteres "
+"(os quais são especiais em URLs): @samp{&}, @samp{.}, @samp{#}, @samp{?} e "
+"@samp{/} (mas não entre dois caracteres @samp{/}).  Uma pequena quantidade "
+"de espaço elástico também é inserida em torno desses caracteres para "
+"ajudar com a quebra de linha."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:4625
@@ -11748,12 +11759,16 @@ msgid ""
 "URLs.  If you need to allow breaks at other characters you can insert "
 "@code{@@/} as needed (@pxref{Line Breaks})."
 msgstr ""
+"Para saída gerada HTML, navegadores modernos também farão quebra de linha "
+"dentro de URLs exibidas.  Se precisar permitir quebras em outros caracteres, "
+"você pode inserir @code{@@/} conforme necessário (@pxref{Quebras de "
+"Linha})."
 
 #. type: findex
 #: texinfo/texinfo-ed.7.1-en_US.texi:4626
 #, no-wrap
 msgid "urefbreakstyle"
-msgstr ""
+msgstr "urefbreakstyle"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:4632
@@ -11763,57 +11778,61 @@ msgid ""
 "character.  This can be controlled with the @code{@@urefbreakstyle} command "
 "(this command has effect only in @TeX{}):"
 msgstr ""
+"Por padrão, no @TeX{}, quaisquer de tais quebras em caracteres especiais "
+"ocorrerão depois do caractere.  Algumas pessoas preferem que tais quebras "
+"aconteçam antes do caractere especial.  Isso pode ser controlado com o "
+"comando @code{@@urefbreakstyle} (esse comando tem efeito somente no @TeX{}):"
 
 #. type: example
 #: texinfo/texinfo-ed.7.1-en_US.texi:4635
 #, no-wrap
 msgid "@@urefbreakstyle @var{how}\n"
-msgstr ""
+msgstr "@@urefbreakstyle @var{como}\n"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:4639
 msgid "where the argument @var{how} is one of these words:"
-msgstr ""
+msgstr "onde o argumento @var{como} é uma destas palavras:"
 
 #. type: vindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:4640
 #, no-wrap
 msgid "after@r{, value for @code{@@urefbreakstyle}}"
-msgstr ""
+msgstr "after@r{, valor para @code{@@urefbreakstyle}}"
 
 #. type: vindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:4641
 #, no-wrap
 msgid "before@r{, value for @code{@@urefbreakstyle}}"
-msgstr ""
+msgstr "before@r{, valor para @code{@@urefbreakstyle}}"
 
 #. type: vindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:4642
 #, no-wrap
 msgid "none@r{, value for @code{@@urefbreakstyle}}"
-msgstr ""
+msgstr "none@r{, valor para @code{@@urefbreakstyle}}"
 
 #. type: item
 #: texinfo/texinfo-ed.7.1-en_US.texi:4644
 #, no-wrap
 msgid "after"
-msgstr ""
+msgstr "after"
 
 #. type: table
 #: texinfo/texinfo-ed.7.1-en_US.texi:4646
 msgid "(the default) Potentially break after the special characters."
-msgstr ""
+msgstr "(O padrão) Potencialmente quebra depois dos caracteres especiais."
 
 #. type: item
 #: texinfo/texinfo-ed.7.1-en_US.texi:4646
 #, no-wrap
 msgid "before"
-msgstr ""
+msgstr "before"
 
 #. type: table
 #: texinfo/texinfo-ed.7.1-en_US.texi:4648
 msgid "Potentially break before the special characters."
-msgstr ""
+msgstr "Potencialmente quebra antes dos caracteres especiais."
 
 #. type: code{#1}
 #: texinfo/texinfo-ed.7.1-en_US.texi:4648
@@ -11821,7 +11840,7 @@ msgstr ""
 #: texinfo/texinfo-ed.7.1-en_US.texi:23097
 #, no-wrap
 msgid "none"
-msgstr ""
+msgstr "none"
 
 #. type: table
 #: texinfo/texinfo-ed.7.1-en_US.texi:4651
@@ -11829,30 +11848,33 @@ msgid ""
 "Do not consider breaking at the special characters at all; any potential "
 "breaks must be manually inserted."
 msgstr ""
+"Não considera a quebra em caracteres especiais em absoluto; quaisquer "
+"quebras potenciais precisam ser inseridas manualmente."
 
 #. type: subsection
 #: texinfo/texinfo-ed.7.1-en_US.texi:4654
 #: texinfo/texinfo-ed.7.1-en_US.texi:4656
 #, no-wrap
 msgid "@code{@@url} PDF Output Format"
-msgstr ""
+msgstr "@code{@@url} Formato de Saída PDF"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:4656
 msgid "@nodedescription A special option to hide links in PDF output."
 msgstr ""
+"@nodedescription Uma opção especial para ocultar links na saída PDF."
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:4658
 #, no-wrap
 msgid "PDF output of URLs"
-msgstr ""
+msgstr "Saída PDF de URLs"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:4659
 #, no-wrap
 msgid "URLs, PDF output of"
-msgstr ""
+msgstr "URLs, saída PDF de"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:4666
@@ -11863,12 +11885,18 @@ msgid ""
 "pages).  Texinfo provides a PDF-specific option for this, which must be used "
 "inside @code{@@tex}:"
 msgstr ""
+"Se o propósito final de um PDF for somente para ser visto online, talvez "
+"similar a HTML de alguma maneira incipiente, você pode não querer que as "
+"URLs sejam incluídas no texto visível (exatamente como as URLs não são "
+"visíveis para leitores(as) de páginas da web).  Texinfo fornece uma "
+"opção específica de PDF para isso, a qual precisa ser usada dentro de "
+"@code{@@tex}:"
 
 #. type: findex
 #: texinfo/texinfo-ed.7.1-en_US.texi:4667
 #, no-wrap
 msgid "\\urefurlonlylinktrue"
-msgstr ""
+msgstr "\\urefurlonlylinktrue"
 
 #. type: example
 #: texinfo/texinfo-ed.7.1-en_US.texi:4672
@@ -11878,6 +11906,9 @@ msgid ""
 "\\global\\urefurlonlylinktrue\n"
 "@@end tex\n"
 msgstr ""
+"@@tex\n"
+"\\global\\urefurlonlylinktrue\n"
+"@@end tex\n"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:4678
@@ -11887,6 +11918,10 @@ msgid ""
 "Ordinarily, the visible output would include both the label and the url: "
 "`GNU (@url{http://www.gnu.org})'."
 msgstr ""
+"O resultado é que @code{@@url@{http://www.gnu.org, GNU@}} tem a saída "
+"gerada visível de apenas `GNU', com um alvo de link de "
+"@url{http://www.gnu.org}.  Normalmente, a saída gerada visível incluiria "
+"tanto o rótulo quanto a URL: `GNU (@url{http://www.gnu.org})'."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:4684
@@ -11897,6 +11932,11 @@ msgid ""
 "unconditionally within @code{@@tex}, as shown above.  It is ignored when DVI "
 "is being produced."
 msgstr ""
+"Essa opção somente tem efeito quando a saída PDF for produzida com o "
+"programa pdf@TeX{}, não com outras maneiras de se obter de Texinfo para PDF "
+"(por exemplo, @TeX{} para DVI para PDF)@.  Consequentemente, está certo se "
+"especificar essa opção incondicionalmente dentro de @code{@@tex}, conforme "
+"mostrado acima.  Ela é ignorada quando DVI está sendo produzido."
 
 #. type: node
 #: texinfo/texinfo-ed.7.1-en_US.texi:4686
