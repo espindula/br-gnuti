@@ -1,3 +1,9 @@
+# Brazilian Portuguese translations for GNU Texinfo documentation
+# Copyright (C) 2025 Jamenson Ferreira Espindula de Almeida Melo
+# This file is distributed under the GNU Free Documentation License, 
+# Version 1.3 or any later version published by the Free Software 
+# Foundation.
+#
 # Projeto de tradução da documentação do sistema de documentação GNU 
 # Texinfo
 # Copyright (C) 2025 Jamenson Ferreira Espindula de Almeida Melo
@@ -11,7 +17,7 @@ msgstr ""
 "Project-Id-Version: Texinfo 7.1\n"
 "Report-Msgid-Bugs-To: jafesp@gmail.com\n"
 "POT-Creation-Date: 2025-03-25 02:01-0300\n"
-"PO-Revision-Date: 2025-03-29 01:00-0300\n"
+"PO-Revision-Date: 2025-03-29 03:00-0300\n"
 "Last-Translator: Jamenson Ferreira Espindula de Almeida Melo "
 "<jafesp@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -12455,31 +12461,31 @@ msgstr "Indica um endereço de correio eletrônico.  @xref{@code{@@email}}."
 #: texinfo/texinfo-ed.7.1-en_US.texi:4846
 #, no-wrap
 msgid "@code{@@code}"
-msgstr ""
+msgstr "@code{@@code}"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:4848
 msgid "@nodedescription Indicating program code."
-msgstr ""
+msgstr "@nodedescription Indicando código de programa."
 
 #. type: subsection
 #: texinfo/texinfo-ed.7.1-en_US.texi:4848
 #, no-wrap
 msgid "@code{@@code}@{@var{sample-code}@}"
-msgstr ""
+msgstr "@code{@@code}@{@var{código-amostra}@}"
 
 #. type: item
 #: texinfo/texinfo-ed.7.1-en_US.texi:4851
 #: texinfo/texinfo-ed.7.1-en_US.texi:4991
 #, no-wrap
 msgid "code"
-msgstr ""
+msgstr "code"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:4853
 #, no-wrap
 msgid "Syntactic tokens, indicating"
-msgstr ""
+msgstr "Tokens sintáticos, indicando"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:4857
@@ -12487,24 +12493,27 @@ msgid ""
 "Use the @code{@@code} command to indicate text that is a piece of a program "
 "and which consists of entire syntactic tokens.  Enclose the text in braces."
 msgstr ""
+"Use o comando @code{@@code} para indicar texto que seja um pedaço de um "
+"programa e que consiste de tokens sintáticos inteiros.  Coloque o texto "
+"entre chaves."
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:4858
 #, no-wrap
 msgid "Expressions in a program, indicating"
-msgstr ""
+msgstr "Expressões em um programa, indicando"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:4859
 #, no-wrap
 msgid "Keywords, indicating"
-msgstr ""
+msgstr "Palavras chave, indicando"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:4860
 #, no-wrap
 msgid "Reserved words, indicating"
-msgstr ""
+msgstr "Palavras reservadas, indicando"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:4864
@@ -12513,6 +12522,9 @@ msgid ""
 "name of a variable or function used in a program, or for a keyword in a "
 "programming language."
 msgstr ""
+"Assim, você deveria usar @code{@@code} para uma expressão em um programa, "
+"para o nome de uma variável ou função usada em um programa ou para uma "
+"palavra chave em uma linguagem de programação."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:4869
@@ -12522,12 +12534,16 @@ msgid ""
 "are produced by writing @samp{@@code@{@@@@code@}} and "
 "@samp{@@code@{@@@@samp@}} in the Texinfo source, respectively."
 msgstr ""
+"Use @code{@@code} para nomes de comando em linguagens que remontam "
+"linguagens de programação, como Texinfo.  Por exemplo, @code{@@code} e "
+"@code{@@samp} são produzidos escrevendo-se @samp{@@code@{@@@@code@}} e "
+"@samp{@@code@{@@@@samp@}} no fonte Texinfo, respectivamente."
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:4870
 #, no-wrap
 msgid "Case, not altering in @code{@@code}"
-msgstr ""
+msgstr "Maiúscula, não alterando em @code{@@code}"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:4880
@@ -12541,6 +12557,16 @@ msgid ""
 "that.  If you do not want to start a sentence with a command name written "
 "all in lowercase, you should rearrange the sentence."
 msgstr ""
+"É incorreto alterar a primeira letra de uma palavra dentro de um comando "
+"@code{@@code} quando ele aparecer no início de uma frase.  A maioria das "
+"linguagens de programação diferencia maiúsculas de minúsculas.  Em C, "
+"por exemplo, @code{Printf} é diferente do identificador @code{printf}, e "
+"possivelmente seja um erro de ortografia.  Mesmo em linguagens que não "
+"diferenciam maiúsculas de minúsculas, é confuso para um(a) leitor(a) "
+"humano(a) ver identificadores escritos de diferentes maneiras.  Escolha uma "
+"grafia e sempre a use.  Se não quiser iniciar uma frase com um nome de "
+"comando escrito todo em letras minúsculas, você deveria reorganizar a "
+"frase."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:4883
@@ -12548,22 +12574,24 @@ msgid ""
 "The @code{@@code} argument is typeset in a typewriter (monospace) font.  "
 "where the output format allows this.  For example,"
 msgstr ""
+"O argumento @code{@@code} é tipografado em uma fonte de máquina de "
+"escrever (mono espaçada).  Por exemplo,"
 
 #. type: example
 #: texinfo/texinfo-ed.7.1-en_US.texi:4886
 #, no-wrap
 msgid "The function returns @@code@{nil@}.\n"
-msgstr ""
+msgstr "A função retorna @@code@{nulo@}.\n"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:4890
 msgid "produces this:"
-msgstr ""
+msgstr "produz isto:"
 
 #. type: quotation
 #: texinfo/texinfo-ed.7.1-en_US.texi:4893
 msgid "The function returns @code{nil}."
-msgstr ""
+msgstr "A função retorna @code{nulo}."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:4896
@@ -12571,16 +12599,19 @@ msgid ""
 "Here are some cases for which it is preferable @emph{not} to use "
 "@code{@@code}:"
 msgstr ""
+"Aqui estão alguns casos para os quais é preferível @emph{não} se usar "
+"@code{@@code}:"
 
 #. type: itemize
 #: texinfo/texinfo-ed.7.1-en_US.texi:4900
 msgid "For shell command names, such as @command{ls} (use @code{@@command})."
 msgstr ""
+"Para nomes de comando de shell, como @command{ls} (use @code{@@command})."
 
 #. type: itemize
 #: texinfo/texinfo-ed.7.1-en_US.texi:4903
 msgid "For environment variables, such as @env{TEXINPUTS} (use @code{@@env})."
-msgstr ""
+msgstr "Para variáveis de ambiente, como @env{TEXINPUTS} (use @code{@@env})."
 
 #. type: itemize
 #: texinfo/texinfo-ed.7.1-en_US.texi:4907
@@ -12588,6 +12619,8 @@ msgid ""
 "For shell options, such as @samp{-c}, when such options stand alone (use "
 "@code{@@option})."
 msgstr ""
+"Para opções de shell, como @samp{-c}, quando tais opções sejam "
+"independentes (use @code{@@option})."
 
 #. type: itemize
 #: texinfo/texinfo-ed.7.1-en_US.texi:4912
@@ -12596,6 +12629,9 @@ msgid ""
 "rather than @code{@@code}.  In this case, the rule is to choose the more "
 "pleasing format."
 msgstr ""
+"Um comando inteiro de shell frequentemente parece melhor se escrito "
+"usando-se @code{@@samp} em vez de @code{@@code}.  Nesse caso, a regra é "
+"escolher o formato mais agradável."
 
 #. type: itemize
 #: texinfo/texinfo-ed.7.1-en_US.texi:4918
@@ -12604,6 +12640,10 @@ msgid ""
 "you are writing about @samp{goto-ch}, which is just a part of the name for "
 "the @code{goto-char} Emacs Lisp function, you should use @code{@@samp}."
 msgstr ""
+"Para uma sequência de caracteres menor que um token sintático.  Por "
+"exemplo, se estiver escrevendo acerca de @samp{goto-ch}, que apenas é parte "
+"do nome para a função @code{goto-char} da Emacs Lisp, você deveria usar "
+"@code{@@samp}."
 
 #. type: itemize
 #: texinfo/texinfo-ed.7.1-en_US.texi:4929
@@ -12618,6 +12658,16 @@ msgid ""
 "use @code{@@code} for the names of the Emacs Lisp functions that the "
 "keystroke commands invoke."
 msgstr ""
+"Em geral, quando escrever acerca dos caracteres usados em um token; por "
+"exemplo, não use @code{@@code} quando estiver explicando quais letras ou "
+"símbolos imprimíveis podem ser usados nos nomes das funções.  (Use "
+"@code{@@samp}.)  Ainda, você não deveria usar @code{@@code} para marcar "
+"texto que seja considerado entrada para programas, a menos que a entrada "
+"seja escrita em uma linguagem que seja semelhante a uma linguagem de "
+"programação.  Por exemplo, você não deveria usar @code{@@code} para os "
+"comandos de toques de teclas do GNU Emacs (use @code{@@kbd} em vez disso), "
+"embora você possa usar @code{@@code} para os nomes das funções da Emacs "
+"Lisp que os comandos de toques de teclas invocam."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:4938
@@ -12629,6 +12679,11 @@ msgid ""
 "to the browser's behavior.  For Info, it seems better never to make such "
 "breaks."
 msgstr ""
+"Por padrão, @TeX{} considerará quebrar linhas nos caracteres @samp{-} e "
+"@samp{_} dentro do @code{@@code} e comandos relacionados.  Isso pode ser "
+"controlado com @code{@@allowcodebreaks} (@pxref{@code{@@allowcodebreaks}}).  "
+"Na saída gerada HTML, quebrar linhas depende inteiramente do comportamento "
+"do navegador.  Para Info, parece melhor nunca fazer tais quebras."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:4948
@@ -12642,35 +12697,43 @@ msgid ""
 "@code{OPEN_QUOTE_SYMBOL} and @code{CLOSE_QUOTE_SYMBOL} customization "
 "variables (@pxref{Other Customization Variables})."
 msgstr ""
+"Para Info e texto simples, as aspas normalmente são geradas em torno da "
+"saída gerada do comando @code{@@code} e comandos relacionados (por exemplo, "
+"@code{@@kbd}, @code{@@command}), exceto em contextos tipo máquina de "
+"escrever, como o ambiente @code{@@example} (@pxref{@code{@@example}}) e o "
+"@code{@@code} em si, etc.  Para controlar quais aspas são inseridas por "
+"@command{texi2any} na saída gerada do @samp{@@code}, etc., vejam-se as "
+"variáveis de personalização @code{OPEN_QUOTE_SYMBOL} e "
+"@code{CLOSE_QUOTE_SYMBOL} (@pxref{Outras Variáveis de Personalização})."
 
 #. type: node
 #: texinfo/texinfo-ed.7.1-en_US.texi:4951
 #, no-wrap
 msgid "@code{@@kbd}"
-msgstr ""
+msgstr "@code{@@kbd}"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:4953
 msgid "@nodedescription Showing keyboard input."
-msgstr ""
+msgstr "@nodedescription Exibindo entrada de teclado."
 
 #. type: subsection
 #: texinfo/texinfo-ed.7.1-en_US.texi:4953
 #, no-wrap
 msgid "@code{@@kbd}@{@var{keyboard-characters}@}"
-msgstr ""
+msgstr "@code{@@kbd}@{@var{caracteres-de-teclado}@}"
 
 #. type: findex
 #: texinfo/texinfo-ed.7.1-en_US.texi:4956
 #, no-wrap
 msgid "kbd"
-msgstr ""
+msgstr "kbd"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:4957
 #, no-wrap
 msgid "Keyboard input"
-msgstr ""
+msgstr "Entrada de teclado"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:4961
@@ -12678,23 +12741,26 @@ msgid ""
 "Use the @code{@@kbd} command for characters of input to be typed by users.  "
 "For example, to refer to the characters @kbd{M-a}, write:"
 msgstr ""
+"Use o comando @code{@@kbd} para caracteres de entrada a serem digitados por "
+"usuários(as).  Por exemplo, para referenciar os caracteres @kbd{M-a}, "
+"escreva:"
 
 #. type: example
 #: texinfo/texinfo-ed.7.1-en_US.texi:4964
 #, no-wrap
 msgid "@@kbd@{M-a@}\n"
-msgstr ""
+msgstr "@@kbd@{M-a@}\n"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:4968
 msgid "and to refer to the characters @kbd{M-x shell}, write:"
-msgstr ""
+msgstr "e para referenciar os caracteres @kbd{M-x shell}, escreva:"
 
 #. type: example
 #: texinfo/texinfo-ed.7.1-en_US.texi:4971
 #, no-wrap
 msgid "@@kbd@{M-x shell@}\n"
-msgstr ""
+msgstr "@@kbd@{M-x shell@}\n"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:4973
