@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: Texinfo 7.1\n"
 "Report-Msgid-Bugs-To: jafesp@gmail.com\n"
 "POT-Creation-Date: 2025-03-25 02:01-0300\n"
-"PO-Revision-Date: 2025-03-28 04:45-0300\n"
+"PO-Revision-Date: 2025-03-29 01:00-0300\n"
 "Last-Translator: Jamenson Ferreira Espindula de Almeida Melo "
 "<jafesp@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -11942,24 +11942,24 @@ msgstr ""
 #: texinfo/texinfo-ed.7.1-en_US.texi:4686
 #, no-wrap
 msgid "@code{@@cite}"
-msgstr ""
+msgstr "@code{@@cite}"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:4688
 msgid "@nodedescription How to refer to books not in the Info system."
-msgstr ""
+msgstr "@nodedescription Como referenciar livros fora do sistema Info."
 
 #. type: section
 #: texinfo/texinfo-ed.7.1-en_US.texi:4688
 #, no-wrap
 msgid "@code{@@cite}@{@var{reference}@}"
-msgstr ""
+msgstr "@code{@@cite}@{@var{referência}@}"
 
 #. type: findex
 #: texinfo/texinfo-ed.7.1-en_US.texi:4691
 #, no-wrap
 msgid "cite"
-msgstr ""
+msgstr "cite"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:4697
@@ -11969,6 +11969,10 @@ msgid ""
 "selects a slanted font in the printed manual, and generates quotation marks "
 "in the Info file."
 msgstr ""
+"Use o comando @code{@@cite} para o nome de um livro que careça de um "
+"arquivo complementar Info.  Por exemplo, nós poderíamos referenciar "
+"@cite{Um Livro}.  O comando seleciona uma fonte inclinada no manual impresso "
+"e gera aspas no arquivo Info."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:4701
@@ -11977,36 +11981,39 @@ msgid ""
 "command since a reader can easily follow such a reference in Info.  "
 "@xref{@code{@@xref}}."
 msgstr ""
+"Se um livro for escrito em Texinfo, é melhor usar um comando de referência "
+"cruzada, pois um(a) leitor(a) consegue facilmente seguir tal referência no "
+"Info. @xref{@code{@@xref}}."
 
 #. type: section
 #: texinfo/texinfo-ed.7.1-en_US.texi:4702
 #: texinfo/texinfo-ed.7.1-en_US.texi:4704
 #, no-wrap
 msgid "PDF Colors"
-msgstr ""
+msgstr "Cores do PDF"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:4704
 msgid "@nodedescription Colorizing URLs and other links in PDF output."
-msgstr ""
+msgstr "@nodedescription Colorindo URLs e outros links na saída PDF."
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:4706
 #, no-wrap
 msgid "Colored links, in PDF output"
-msgstr ""
+msgstr "Links coloridos, em saída PDF"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:4707
 #, no-wrap
 msgid "Links, coloring in PDF output"
-msgstr ""
+msgstr "Links, colorindo em saída PDF"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:4708
 #, no-wrap
 msgid "URLs, coloring in PDF output"
-msgstr ""
+msgstr "URLs, colorindo em saída PDF"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:4715
@@ -12017,18 +12024,24 @@ msgid ""
 "provides a PDF-specific option for specifying these colors, which must be "
 "used inside @code{@@tex}:"
 msgstr ""
+"Por padrão, links de URLs e de referências cruzadas são impressos em "
+"preto na saída gerada PDF.  Muito ocasionalmente, entretanto, você pode "
+"querer realçar tais links ``vivos'' com uma cor diferente, como é feito "
+"comumente em páginas da web.  Texinfo fornece uma opção específica de "
+"PDF para se especificar essas cores, a qual precisa ser usada dentro de "
+"@code{@@tex}:"
 
 #. type: findex
 #: texinfo/texinfo-ed.7.1-en_US.texi:4716
 #, no-wrap
 msgid "\\linkcolor"
-msgstr ""
+msgstr "\\linkcolor"
 
 #. type: findex
 #: texinfo/texinfo-ed.7.1-en_US.texi:4717
 #, no-wrap
 msgid "\\urlcolor"
-msgstr ""
+msgstr "\\urlcolor"
 
 #. type: example
 #: texinfo/texinfo-ed.7.1-en_US.texi:4723
@@ -12039,6 +12052,10 @@ msgid ""
 "\\global\\def\\urlcolor@{0 1 0@}   % green\n"
 "@@end tex\n"
 msgstr ""
+"@@tex\n"
+"\\global\\def\\linkcolor@{1 0 0@}  % vermelha\n"
+"\\global\\def\\urlcolor@{0 1 0@}   % verde\n"
+"@@end tex\n"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:4728
@@ -12047,12 +12064,15 @@ msgid ""
 "URL and any textual label), while @code{\\linkcolor} changes the color for "
 "cross-references to nodes, etc.  They are independent."
 msgstr ""
+"@code{\\urlcolor} muda a cor da saída gerada @code{@@url} (tanto a URL "
+"real, quanto qualquer rótulo textual), ao passo que @code{\\linkcolor} muda "
+"a cor para referências cruzadas para nós, etc.  Elas são independentes."
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:4729
 #, no-wrap
 msgid "RGB color specification."
-msgstr ""
+msgstr "especificação de cor RGB."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:4732
@@ -12060,6 +12080,8 @@ msgid ""
 "The three given values must be numbers between 0 and 1, specifying the "
 "amount of red, green, and blue respectively."
 msgstr ""
+"Os três valores fornecidos precisam ser números entre 0 e 1, especificando "
+"a quantidade de vermelho, verde e azul, respectivamente."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:4738
@@ -12070,6 +12092,12 @@ msgid ""
 "option unconditionally within @code{@@tex}, as shown above.  It is ignored "
 "when DVI is being produced."
 msgstr ""
+"Essas definições somente tem um efeito quando a saída gerada PDF for "
+"produzida com o programa pdf@TeX{}, não com outros meios de se obter de "
+"Texinfo para PDF (por exemplo, @TeX{} para DVI para PDF)@.  "
+"Consequentemente, está certo se especificar essa opção incondicionalmente "
+"dentro de @code{@@tex}, conforme mostrado acima.  Ela é ignorada quando DVI "
+"está sendo produzido."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:4741
@@ -12077,12 +12105,14 @@ msgid ""
 "We do not recommend colorizing just for fun; unless you have a specific "
 "reason to use colors, best to skip it."
 msgstr ""
+"Nós não recomendamos colorir apenas por diversão; a menos que você tenha "
+"um motivo específico para usar cores, melhor ignorá-las."
 
 #. type: node
 #: texinfo/texinfo-ed.7.1-en_US.texi:4745
 #, no-wrap
 msgid "Marking Text"
-msgstr ""
+msgstr "Marcando Texto"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:4749
@@ -12090,42 +12120,44 @@ msgid ""
 "@nodedescriptionblock Marking words and phrases as code, keyboard input, "
 "meta-syntactic variables, and the like."
 msgstr ""
+"@nodedescriptionblock Marcando palavras e frases como código, entrada do "
+"teclado, variáveis meta-sintáticas e similares."
 
 #. type: chapter
 #: texinfo/texinfo-ed.7.1-en_US.texi:4750
 #, no-wrap
 msgid "Marking Text, Words and Phrases"
-msgstr ""
+msgstr "Marcação de Texto, Palavras e Frases"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:4751
 #, no-wrap
 msgid "Paragraph, marking text within"
-msgstr ""
+msgstr "Parágrafo, marcando texto dentro"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:4752
 #, no-wrap
 msgid "Marking words and phrases"
-msgstr ""
+msgstr "Marcando palavras e frases"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:4753
 #, no-wrap
 msgid "Words and phrases, marking them"
-msgstr ""
+msgstr "Palavras e frases, marcando-as"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:4754
 #, no-wrap
 msgid "Marking text within a paragraph"
-msgstr ""
+msgstr "Marcando texto dentro de um parágrafo"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:4755
 #, no-wrap
 msgid "Text, marking up"
-msgstr ""
+msgstr "Texto, marcando"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:4763
@@ -12136,35 +12168,41 @@ msgid ""
 "occurrence, a metasyntactic variable, or a symbol used in a program.  Also, "
 "you can emphasize text, in several different ways."
 msgstr ""
+"No Texinfo, você consegue marcar palavras e frases de várias maneiras.  Os "
+"processadores do Texinfo usam essa informação para determinar como "
+"realçar o texto.  Você pode especificar, por exemplo, quando uma palavra "
+"ou frase é uma ocorrência definidora, uma variável metassintática ou um "
+"símbolo usado em um programa.  Também, você pode enfatizar texto, de "
+"diferentes maneiras."
 
 #. type: node
 #: texinfo/texinfo-ed.7.1-en_US.texi:4765
 #, no-wrap
 msgid "Indicating"
-msgstr ""
+msgstr "Indicando"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:4767
 msgid "@nodedescription How to indicate definitions, files, etc."
-msgstr ""
+msgstr "@nodedescription Como indicar definições, arquivos, etc."
 
 #. type: section
 #: texinfo/texinfo-ed.7.1-en_US.texi:4767
 #, no-wrap
 msgid "Indicating Definitions, Commands, etc."
-msgstr ""
+msgstr "Indicando Definições, Comandos, etc."
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:4769
 #, no-wrap
 msgid "Highlighting text"
-msgstr ""
+msgstr "Realçando texto"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:4770
 #, no-wrap
 msgid "Indicating commands, definitions, etc."
-msgstr ""
+msgstr "Indicando comandos, definições, etc."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:4777
@@ -12175,35 +12213,42 @@ msgid ""
 "supports it.  If the email address was simply marked as ``print in a "
 "typewriter font'', that would not be possible."
 msgstr ""
+"Texinfo tem comandos para indicar exatamente a que tipo de objeto um pedaço "
+"de texto se refere.  Por exemplo, endereços de correio eletrônico são "
+"marcados por @code{@@email}; dessa maneira, o resultado pode ser um link "
+"vivo para enviar mensagem eletrônica quando o formato de saída a "
+"suportar.  Se o endereço de correio eletrônico simplesmente fosse marcado "
+"como ``imprimir em uma fonte de máquina de escrever'', isso não seria "
+"possível."
 
 #. type: node
 #: texinfo/texinfo-ed.7.1-en_US.texi:4779
 #, no-wrap
 msgid "Useful Highlighting"
-msgstr ""
+msgstr "Realçamento Útil"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:4781
 msgid "@nodedescription Highlighting provides useful information."
-msgstr ""
+msgstr "@nodedescription Realçamento fornece informação útil."
 
 #. type: subsection
 #: texinfo/texinfo-ed.7.1-en_US.texi:4781
 #, no-wrap
 msgid "Highlighting Commands are Useful"
-msgstr ""
+msgstr "Comandos de Realçamento são Úteis"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:4784
 msgid "The commands serve a variety of purposes:"
-msgstr ""
+msgstr "Os comandos servem a uma variedade de propósitos:"
 
 #. type: item
 #: texinfo/texinfo-ed.7.1-en_US.texi:4786
 #: texinfo/texinfo-ed.7.1-en_US.texi:18794
 #, no-wrap
 msgid "@@code@{@var{sample-code}@}"
-msgstr ""
+msgstr "@@code@{@var{código-modelo}@}"
 
 #. type: table
 #: texinfo/texinfo-ed.7.1-en_US.texi:4789
@@ -12211,38 +12256,42 @@ msgid ""
 "Indicate text that is a literal example of a piece of a program.  "
 "@xref{@code{@@code}}."
 msgstr ""
+"Indica texto que é um exemplo literal de um pedaço de um programa.  "
+"@xref{@code{@@code}}."
 
 #. type: item
 #: texinfo/texinfo-ed.7.1-en_US.texi:4790
 #: texinfo/texinfo-ed.7.1-en_US.texi:19337
 #, no-wrap
 msgid "@@kbd@{@var{keyboard-characters}@}"
-msgstr ""
+msgstr "@@kbd@{@var{caracteres-de-teclado}@}"
 
 #. type: table
 #: texinfo/texinfo-ed.7.1-en_US.texi:4792
 msgid "Indicate keyboard input.  @xref{@code{@@kbd}}."
-msgstr ""
+msgstr "Indica entrada de teclado.  @xref{@code{@@kbd}}."
 
 #. type: item
 #: texinfo/texinfo-ed.7.1-en_US.texi:4793
 #: texinfo/texinfo-ed.7.1-en_US.texi:19345
 #, no-wrap
 msgid "@@key@{@var{key-name}@}"
-msgstr ""
+msgstr "@@key@{@var{nome-de-tecla}@}"
 
 #. type: table
 #: texinfo/texinfo-ed.7.1-en_US.texi:4796
 msgid ""
 "Indicate the conventional name for a key on a keyboard.  @xref{@code{@@key}}."
 msgstr ""
+"Indica o nome convencional para uma tecla em um teclado.  "
+"@xref{@code{@@key}}."
 
 #. type: item
 #: texinfo/texinfo-ed.7.1-en_US.texi:4797
 #: texinfo/texinfo-ed.7.1-en_US.texi:19563
 #, no-wrap
 msgid "@@samp@{@var{text}@}"
-msgstr ""
+msgstr "@@samp@{@var{texto}@}"
 
 #. type: table
 #: texinfo/texinfo-ed.7.1-en_US.texi:4800
@@ -12250,82 +12299,84 @@ msgid ""
 "Indicate text that is a literal example of a sequence of characters.  "
 "@xref{@code{@@samp}}."
 msgstr ""
+"Indica texto que é um exemplo literal de uma sequência de caracteres.  "
+"@xref{@code{@@samp}}."
 
 #. type: item
 #: texinfo/texinfo-ed.7.1-en_US.texi:4801
 #, no-wrap
 msgid "@@verb@{@var{text}@}"
-msgstr ""
+msgstr "@@verb@{@var{texto}@}"
 
 #. type: table
 #: texinfo/texinfo-ed.7.1-en_US.texi:4804
 msgid "Write a verbatim sequence of characters.  @xref{@code{@@verb}}."
-msgstr ""
+msgstr "Escreve uma sequência literal de caracteres.  @xref{@code{@@verb}}."
 
 #. type: item
 #: texinfo/texinfo-ed.7.1-en_US.texi:4805
 #: texinfo/texinfo-ed.7.1-en_US.texi:19847
 #, no-wrap
 msgid "@@var@{@var{metasyntactic-variable}@}"
-msgstr ""
+msgstr "@@var@{@var{variável-metassintática}@}"
 
 #. type: table
 #: texinfo/texinfo-ed.7.1-en_US.texi:4807
 msgid "Indicate a metasyntactic variable.  @xref{@code{@@var}}."
-msgstr ""
+msgstr "Indica uma variável metassintática.  @xref{@code{@@var}}."
 
 #. type: item
 #: texinfo/texinfo-ed.7.1-en_US.texi:4808
 #: texinfo/texinfo-ed.7.1-en_US.texi:19056
 #, no-wrap
 msgid "@@env@{@var{environment-variable}@}"
-msgstr ""
+msgstr "@@env@{@var{variável-de-ambiente}@}"
 
 #. type: table
 #: texinfo/texinfo-ed.7.1-en_US.texi:4810
 msgid "Indicate an environment variable.  @xref{@code{@@env}}."
-msgstr ""
+msgstr "Indica uma variável de ambiente.  @xref{@code{@@env}}."
 
 #. type: item
 #: texinfo/texinfo-ed.7.1-en_US.texi:4811
 #, no-wrap
 msgid "@@file@{@var{file-name}@}"
-msgstr ""
+msgstr "@@file@{@var{nome-arquivo}@}"
 
 #. type: table
 #: texinfo/texinfo-ed.7.1-en_US.texi:4813
 msgid "Indicate the name of a file.  @xref{@code{@@file}}."
-msgstr ""
+msgstr "Indica o nome de um arquivo.  @xref{@code{@@file}}."
 
 #. type: item
 #: texinfo/texinfo-ed.7.1-en_US.texi:4814
 #: texinfo/texinfo-ed.7.1-en_US.texi:18807
 #, no-wrap
 msgid "@@command@{@var{command-name}@}"
-msgstr ""
+msgstr "@@command@{@var{nome-comando}@}"
 
 #. type: table
 #: texinfo/texinfo-ed.7.1-en_US.texi:4817
 msgid "Indicate the name of a command.  @xref{@code{@@command}}."
-msgstr ""
+msgstr "Indica o nome de um comando.  @xref{@code{@@command}}."
 
 #. type: item
 #: texinfo/texinfo-ed.7.1-en_US.texi:4818
 #, no-wrap
 msgid "@@option@{@var{option}@}"
-msgstr ""
+msgstr "@@option@{@var{opção}@}"
 
 #. type: table
 #: texinfo/texinfo-ed.7.1-en_US.texi:4821
 msgid "Indicate a command-line option.  @xref{@code{@@option}}."
-msgstr ""
+msgstr "Indica uma opção de linha de comando.  @xref{@code{@@option}}."
 
 #. type: item
 #: texinfo/texinfo-ed.7.1-en_US.texi:4822
 #: texinfo/texinfo-ed.7.1-en_US.texi:18983
 #, no-wrap
 msgid "@@dfn@{@var{term}@}"
-msgstr ""
+msgstr "@@dfn@{@var{termo}@}"
 
 #. type: table
 #: texinfo/texinfo-ed.7.1-en_US.texi:4825
@@ -12333,48 +12384,49 @@ msgstr ""
 msgid ""
 "Indicate the introductory or defining use of a term.  @xref{@code{@@dfn}}."
 msgstr ""
+"Indica o uso introdutório ou definidor de um termo.  @xref{@code{@@dfn}}."
 
 #. type: item
 #: texinfo/texinfo-ed.7.1-en_US.texi:4826
 #: texinfo/texinfo-ed.7.1-en_US.texi:18771
 #, no-wrap
 msgid "@@cite@{@var{reference}@}"
-msgstr ""
+msgstr "@@cite@{@var{referência}@}"
 
 #. type: table
 #: texinfo/texinfo-ed.7.1-en_US.texi:4828
 msgid "Indicate the name of a book.  @xref{@code{@@cite}}."
-msgstr ""
+msgstr "Indica o nome de um livro.  @xref{@code{@@cite}}."
 
 #. type: item
 #: texinfo/texinfo-ed.7.1-en_US.texi:4829
 #: texinfo/texinfo-ed.7.1-en_US.texi:18658
 #, no-wrap
 msgid "@@abbr@{@var{abbreviation}@}"
-msgstr ""
+msgstr "@@abbr@{@var{abreviação}@}"
 
 #. type: table
 #: texinfo/texinfo-ed.7.1-en_US.texi:4831
 msgid "Indicate an abbreviation, such as `Comput.'."
-msgstr ""
+msgstr "Indica uma abreviação, como `Comput.'."
 
 #. type: item
 #: texinfo/texinfo-ed.7.1-en_US.texi:4832
 #: texinfo/texinfo-ed.7.1-en_US.texi:18662
 #, no-wrap
 msgid "@@acronym@{@var{acronym}@}"
-msgstr ""
+msgstr "@@acronym@{@var{sigla}@}"
 
 #. type: table
 #: texinfo/texinfo-ed.7.1-en_US.texi:4834
 msgid "Indicate an acronym.  @xref{@code{@@acronym}}."
-msgstr ""
+msgstr "Indica uma sigla.  @xref{@code{@@acronym}}."
 
 #. type: item
 #: texinfo/texinfo-ed.7.1-en_US.texi:4835
 #, no-wrap
 msgid "@@indicateurl@{@var{uniform-resource-locator}@}"
-msgstr ""
+msgstr "@@indicateurl@{@var{localizador-uniforme-de-recurso}@}"
 
 #. type: table
 #: texinfo/texinfo-ed.7.1-en_US.texi:4839
@@ -12383,18 +12435,21 @@ msgid ""
 "@xref{@code{@@indicateurl}}.  (Use @code{@@url} (@pxref{@code{@@url}}) for "
 "live URLs.)"
 msgstr ""
+"Indica um exemplo (isto é, não funcional) de localizador uniforme de "
+"recurso.  @xref{@code{@@indicateurl}}.  (Use @code{@@url} "
+"(@pxref{@code{@@url}}) para URLs vivas.)"
 
 #. type: item
 #: texinfo/texinfo-ed.7.1-en_US.texi:4840
 #, no-wrap
 msgid "@@email@{@var{email-address}[, @var{displayed-text}]@}"
-msgstr ""
+msgstr "@@email@{@var{endereço-de-email}[, @var{texto-exibido}]@}"
 
 #. type: table
 #: texinfo/texinfo-ed.7.1-en_US.texi:4842
 #: texinfo/texinfo-ed.7.1-en_US.texi:19039
 msgid "Indicate an electronic mail address.  @xref{@code{@@email}}."
-msgstr ""
+msgstr "Indica um endereço de correio eletrônico.  @xref{@code{@@email}}."
 
 #. type: node
 #: texinfo/texinfo-ed.7.1-en_US.texi:4846
