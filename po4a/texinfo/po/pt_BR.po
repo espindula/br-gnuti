@@ -17,7 +17,7 @@ msgstr ""
 "Project-Id-Version: Texinfo 7.1\n"
 "Report-Msgid-Bugs-To: jafesp@gmail.com\n"
 "POT-Creation-Date: 2025-03-25 02:01-0300\n"
-"PO-Revision-Date: 2025-03-29 03:00-0300\n"
+"PO-Revision-Date: 2025-03-31 08:00-0300\n"
 "Last-Translator: Jamenson Ferreira Espindula de Almeida Melo "
 "<jafesp@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -12766,13 +12766,13 @@ msgstr "@@kbd@{M-x shell@}\n"
 #: texinfo/texinfo-ed.7.1-en_US.texi:4973
 #, no-wrap
 msgid "User input"
-msgstr ""
+msgstr "Entrada de usuário(a)"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:4974
 #, no-wrap
 msgid "Slanted typewriter font, for @code{@@kbd}"
-msgstr ""
+msgstr "Fonte inclinada de máquina de escrever, para @code{@@kbd}"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:4979
@@ -12782,12 +12782,17 @@ msgid ""
 "users can distinguish the characters that they are supposed to type from "
 "those that the computer outputs."
 msgstr ""
+"Por padrão, o comando @code{@@kbd} produz uma fonte diferente (máquina de "
+"escrever inclinada em vez da de máquina de escrever normal, onde o formato "
+"da saída gerada permitir), de forma que os(as) usuários(as) consigam "
+"distinguir os caracteres que deveriam supostamente digitar a partir daqueles "
+"que o computador gera."
 
 #. type: findex
 #: texinfo/texinfo-ed.7.1-en_US.texi:4980
 #, no-wrap
 msgid "kbdinputstyle"
-msgstr ""
+msgstr "kbdinputstyle"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:4986
@@ -12797,36 +12802,40 @@ msgid ""
 "command has no effect on Info output.  Write this command at the beginning "
 "of a line with a single word as an argument, one of the following:"
 msgstr ""
+"Dado que o uso de @code{@@kbd} varia de manual para manual, você pode "
+"controlar a fonte comutando com o comando @code{@@kbdinputstyle}.  Esse "
+"comando não tem efeito sobre a saída Info.  Escreva esse comando no "
+"início de uma linha com uma palavra como um argumento, uma das seguintes:"
 
 #. type: vindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:4987
 #, no-wrap
 msgid "distinct@r{, value for @code{@@kbdinputstyle}}"
-msgstr ""
+msgstr "distinct@r{, valor para @code{@@kbdinputstyle}}"
 
 #. type: vindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:4988
 #, no-wrap
 msgid "example@r{, value for @code{@@kbdinputstyle}}"
-msgstr ""
+msgstr "example@r{, valor para @code{@@kbdinputstyle}}"
 
 #. type: vindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:4989
 #, no-wrap
 msgid "code@r{, value for @code{@@kbdinputstyle}}"
-msgstr ""
+msgstr "code@r{, valor para @code{@@kbdinputstyle}}"
 
 #. type: table
 #: texinfo/texinfo-ed.7.1-en_US.texi:4993
 msgid "Always use the same font for @code{@@kbd} as @code{@@code}."
-msgstr ""
+msgstr "Sempre use a mesma fonte para @code{@@kbd} como @code{@@code}."
 
 #. type: findex
 #: texinfo/texinfo-ed.7.1-en_US.texi:4993
 #: texinfo/texinfo-ed.7.1-en_US.texi:6084
 #, no-wrap
 msgid "example"
-msgstr ""
+msgstr "example"
 
 #. type: table
 #: texinfo/texinfo-ed.7.1-en_US.texi:4996
@@ -12834,17 +12843,19 @@ msgid ""
 "Use the distinguishing font for @code{@@kbd} only in @code{@@example} and "
 "similar environments."
 msgstr ""
+"Use a fonte de distinção para @code{@@kbd} somente em @code{@@example} e "
+"ambientes similares."
 
 #. type: item
 #: texinfo/texinfo-ed.7.1-en_US.texi:4996
 #, no-wrap
 msgid "distinct"
-msgstr ""
+msgstr "distinct"
 
 #. type: table
 #: texinfo/texinfo-ed.7.1-en_US.texi:4998
 msgid "(the default) Always use the distinguishing font for @code{@@kbd}."
-msgstr ""
+msgstr "(o padrão) Sempre use a fonte de distinção para @code{@@kbd}."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:5004
@@ -12854,12 +12865,16 @@ msgid ""
 "described more verbosely as ``press the @samp{r} key and then press the "
 "@key{RETURN} key'':"
 msgstr ""
+"Você consegue embutir outro comando @@ dentro das chaves de um comando "
+"@code{@@kbd}.  Aqui, por exemplo, está a maneira para descrever um comando "
+"que seria descrito mais detalhadamente como ``pressione a tecla @samp{r} e "
+"então pressione a tecla @key{RETURN}'':"
 
 #. type: example
 #: texinfo/texinfo-ed.7.1-en_US.texi:5007
 #, no-wrap
 msgid "@@kbd@{r @@key@{RET@}@}\n"
-msgstr ""
+msgstr "@@kbd@{r @@key@{RET@}@}\n"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:5012
@@ -12867,6 +12882,8 @@ msgid ""
 "This produces: @kbd{r @key{RET}}.  (The present manual uses the default for "
 "@code{@@kbdinputstyle}.)"
 msgstr ""
+"Isso produz: @kbd{r @key{RET}}.  (O presente manual usa o padrão para "
+"@code{@@kbdinputstyle})."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:5015
@@ -12874,6 +12891,8 @@ msgid ""
 "You also use the @code{@@kbd} command if you are spelling out the letters "
 "you type; for example:"
 msgstr ""
+"Você também usa o comando @code{@@kbd} se estiver soletrando as letras que "
+"digitar; por exemplo:"
 
 #. type: example
 #: texinfo/texinfo-ed.7.1-en_US.texi:5019
@@ -12882,6 +12901,8 @@ msgid ""
 "To give the @@code@{logout@} command,\n"
 "type the characters @@kbd@{l o g o u t @@key@{RET@}@}.\n"
 msgstr ""
+"Para dar o comando @@code@{logout@},\n"
+"digite os caracteres @@kbd@{l o g o u t @@key@{RET@}@}.\n"
 
 #. type: quotation
 #: texinfo/texinfo-ed.7.1-en_US.texi:5027
@@ -12889,6 +12910,8 @@ msgid ""
 "To give the @code{logout} command, type the characters @kbd{l o g o u t "
 "@key{RET}}."
 msgstr ""
+"Para dar o comando @code{logout}, digite os caracteres @kbd{l o g o u t "
+"@key{RET}}."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:5032
@@ -12897,29 +12920,33 @@ msgid ""
 "explicitly want to mention a space character as one of the characters of "
 "input, write @kbd{@@key@{SPC@}} for it.)"
 msgstr ""
+"(Além disso, esse exemplo mostra que você pode adicionar espaços para "
+"maior clareza.  Se você explicitamente quiser mencionar um caractere "
+"espaço como um dos caracteres da entrada, escreva @kbd{@@key@{SPC@}} para "
+"ele.)"
 
 #. type: node
 #: texinfo/texinfo-ed.7.1-en_US.texi:5034
 #, no-wrap
 msgid "@code{@@key}"
-msgstr ""
+msgstr "@code{@@key}"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:5036
 msgid "@nodedescription Specifying keys."
-msgstr ""
+msgstr "@nodedescription Especificando teclas."
 
 #. type: subsection
 #: texinfo/texinfo-ed.7.1-en_US.texi:5036
 #, no-wrap
 msgid "@code{@@key}@{@var{key-name}@}"
-msgstr ""
+msgstr "@code{@@key}@{@var{nome-tecla}@}"
 
 #. type: findex
 #: texinfo/texinfo-ed.7.1-en_US.texi:5039
 #, no-wrap
 msgid "key"
-msgstr ""
+msgstr "key"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:5043
@@ -12927,12 +12954,14 @@ msgid ""
 "Use the @code{@@key} command for the conventional name for a key on a "
 "keyboard, as in:"
 msgstr ""
+"Use o comando @code{@@key} para o nome convencional para uma tecla em um "
+"teclado, como em:"
 
 #. type: example
 #: texinfo/texinfo-ed.7.1-en_US.texi:5046
 #, no-wrap
 msgid "@@key@{RET@}\n"
-msgstr ""
+msgstr "@@key@{RET@}\n"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:5051
@@ -12941,6 +12970,9 @@ msgid ""
 "command when the sequence of characters to be typed includes one or more "
 "keys that are described by name."
 msgstr ""
+"Você pode usar o comando @code{@@key} dentro do argumento de um comando "
+"@code{@@kbd} quando a sequência de caracteres a ser digitada incluir uma ou "
+"mais teclas que sejam descritas por nome."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:5054
@@ -12948,6 +12980,8 @@ msgid ""
 "For example, to produce @kbd{C-x @key{ESC}} and @kbd{M-@key{TAB}} you would "
 "type:"
 msgstr ""
+"Por exemplo, para produzir @kbd{C-x @key{ESC}} e @kbd{M-@key{TAB}} você "
+"digitaria:"
 
 #. type: example
 #: texinfo/texinfo-ed.7.1-en_US.texi:5058
@@ -12956,75 +12990,77 @@ msgid ""
 "@@kbd@{C-x @@key@{ESC@}@}\n"
 "@@kbd@{M-@@key@{TAB@}@}\n"
 msgstr ""
+"@@kbd@{C-x @@key@{ESC@}@}\n"
+"@@kbd@{M-@@key@{TAB@}@}\n"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:5061
 msgid "Here is a list of the recommended names for keys:"
-msgstr ""
+msgstr "Aqui está uma lista dos nomes recomendados para teclas:"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:5061
 #, no-wrap
 msgid "Recommended names for keys"
-msgstr ""
+msgstr "Nomes recomendados para teclas"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:5062
 #, no-wrap
 msgid "Keys, recommended names"
-msgstr ""
+msgstr "Teclas, nomes recomendados"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:5063
 #, no-wrap
 msgid "Names recommended for keys"
-msgstr ""
+msgstr "Nomes recomendados para teclas"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:5064
 #, no-wrap
 msgid "Abbreviations for keys"
-msgstr ""
+msgstr "Abreviações para teclas"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:5065
 #, no-wrap
 msgid "Control keys, specifying"
-msgstr ""
+msgstr "Teclas de controle, especificando"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:5066
 #, no-wrap
 msgid "Meta keys, specifying"
-msgstr ""
+msgstr "Teclas Meta, especificando"
 
 #. type: item
 #: texinfo/texinfo-ed.7.1-en_US.texi:5070
 #, no-wrap
 msgid "SPC"
-msgstr ""
+msgstr "SPC"
 
 #. type: table
 #: texinfo/texinfo-ed.7.1-en_US.texi:5072
 msgid "Space"
-msgstr ""
+msgstr "Espaço"
 
 #. type: item
 #: texinfo/texinfo-ed.7.1-en_US.texi:5072
 #, no-wrap
 msgid "RET"
-msgstr ""
+msgstr "RET"
 
 #. type: table
 #: texinfo/texinfo-ed.7.1-en_US.texi:5074
 msgid "Return"
-msgstr ""
+msgstr "Retorno"
 
 #. type: item
 #: texinfo/texinfo-ed.7.1-en_US.texi:5074
 #, no-wrap
 msgid "LFD"
-msgstr ""
+msgstr "LFD"
 
 #. type: table
 #: texinfo/texinfo-ed.7.1-en_US.texi:5077
@@ -13032,89 +13068,92 @@ msgid ""
 "Linefeed (however, since most keyboards nowadays do not have a Linefeed key, "
 "it might be better to call this character @kbd{C-j})"
 msgstr ""
+"Alimentação de Linha (no entanto, como a maioria dos teclados hoje em dia "
+"não tem uma tecla de alimentação de linha, talvez seja melhor chamar esse "
+"caractere @kbd{C-j})"
 
 #. type: item
 #: texinfo/texinfo-ed.7.1-en_US.texi:5077
 #, no-wrap
 msgid "TAB"
-msgstr ""
+msgstr "TAB"
 
 #. type: table
 #: texinfo/texinfo-ed.7.1-en_US.texi:5079
 msgid "Tab"
-msgstr ""
+msgstr "Tabulação"
 
 #. type: item
 #: texinfo/texinfo-ed.7.1-en_US.texi:5079
 #, no-wrap
 msgid "BS"
-msgstr ""
+msgstr "BS"
 
 #. type: table
 #: texinfo/texinfo-ed.7.1-en_US.texi:5081
 msgid "Backspace"
-msgstr ""
+msgstr "Backspace"
 
 #. type: item
 #: texinfo/texinfo-ed.7.1-en_US.texi:5081
 #, no-wrap
 msgid "ESC"
-msgstr ""
+msgstr "ESC"
 
 #. type: table
 #: texinfo/texinfo-ed.7.1-en_US.texi:5083
 msgid "Escape"
-msgstr ""
+msgstr "Escape"
 
 #. type: item
 #: texinfo/texinfo-ed.7.1-en_US.texi:5083
 #, no-wrap
 msgid "DELETE"
-msgstr ""
+msgstr "DELETE"
 
 #. type: table
 #: texinfo/texinfo-ed.7.1-en_US.texi:5085
 msgid "Delete"
-msgstr ""
+msgstr "Delete"
 
 #. type: item
 #: texinfo/texinfo-ed.7.1-en_US.texi:5085
 #, no-wrap
 msgid "SHIFT"
-msgstr ""
+msgstr "SHIFT"
 
 #. type: table
 #: texinfo/texinfo-ed.7.1-en_US.texi:5087
 msgid "Shift"
-msgstr ""
+msgstr "Shift"
 
 #. type: item
 #: texinfo/texinfo-ed.7.1-en_US.texi:5087
 #, no-wrap
 msgid "CTRL"
-msgstr ""
+msgstr "CTRL"
 
 #. type: table
 #: texinfo/texinfo-ed.7.1-en_US.texi:5089
 msgid "Control"
-msgstr ""
+msgstr "Control"
 
 #. type: item
 #: texinfo/texinfo-ed.7.1-en_US.texi:5089
 #, no-wrap
 msgid "META"
-msgstr ""
+msgstr "META"
 
 #. type: table
 #: texinfo/texinfo-ed.7.1-en_US.texi:5091
 msgid "Meta"
-msgstr ""
+msgstr "Meta"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:5094
 #, no-wrap
 msgid "META key"
-msgstr ""
+msgstr "META, tecla"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:5102
@@ -13127,29 +13166,36 @@ msgid ""
 "@samp{@@kbd@{Meta-a@}} to produce @kbd{Meta-a} and @samp{@@key@{META@}} to "
 "produce @key{META}."
 msgstr ""
+"Existem sutilezas para se lidar com palavras como `meta' ou `ctrl', que são "
+"nomes de teclas modificadoras.  Quando mencionar um caractere no qual a "
+"tecla modificadora for usada, como @kbd{Meta-a}, use o comando @code{@@kbd} "
+"sozinho; não use o comando @code{@@key}; porém, quando estiver se "
+"referindo à tecla modificadora isoladamente, use o comando @code{@@key}.  "
+"Por exemplo, escreva @samp{@@kbd@{Meta-a@}} para produzir @kbd{Meta-a} e "
+"@samp{@@key@{META@}} para produzir @key{META}."
 
 #. type: node
 #: texinfo/texinfo-ed.7.1-en_US.texi:5104
 #, no-wrap
 msgid "@code{@@samp}"
-msgstr ""
+msgstr "@code{@@samp}"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:5106
 msgid "@nodedescription Indicating a literal sequence of characters."
-msgstr ""
+msgstr "@nodedescription Indicando uma sequência literal de caracteres."
 
 #. type: subsection
 #: texinfo/texinfo-ed.7.1-en_US.texi:5106
 #, no-wrap
 msgid "@code{@@samp}@{@var{text}@}"
-msgstr ""
+msgstr "@code{@@samp}@{@var{texto}@}"
 
 #. type: findex
 #: texinfo/texinfo-ed.7.1-en_US.texi:5109
 #, no-wrap
 msgid "samp"
-msgstr ""
+msgstr "samp"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:5115
@@ -13159,6 +13205,11 @@ msgid ""
 "Enclose the text in braces.  The argument appears within single quotation "
 "marks; in addition, it is printed in a fixed-width font."
 msgstr ""
+"Use o comando @code{@@samp} para indicar texto que seja um exemplo literal "
+"ou `amostra' de uma sequência de caracteres em um arquivo, cadeia de "
+"caracteres, padrão, etc.  Coloque o texto entre chaves.  O argumento "
+"aparece dentro de aspas simples; além disso, ele é impresso em uma fonte "
+"de largura fixa."
 
 #. type: example
 #: texinfo/texinfo-ed.7.1-en_US.texi:5119
@@ -13167,11 +13218,15 @@ msgid ""
 "To match @@samp@{foo@} at the end of the line,\n"
 "use the regexp @@samp@{foo$@}.\n"
 msgstr ""
+"Para corresponder @@samp@{foo@} no final da linha,\n"
+"use a expressão regular @@samp@{foo$@}.\n"
 
 #. type: quotation
 #: texinfo/texinfo-ed.7.1-en_US.texi:5127
 msgid "To match @samp{foo} at the end of the line, use the regexp @samp{foo$}."
 msgstr ""
+"Para corresponder @samp{foo} no final da linha, use a expressão regular "
+"@samp{foo$}."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:5136
