@@ -17,7 +17,7 @@ msgstr ""
 "Project-Id-Version: Texinfo 7.1\n"
 "Report-Msgid-Bugs-To: jafesp@gmail.com\n"
 "POT-Creation-Date: 2025-03-25 02:01-0300\n"
-"PO-Revision-Date: 2025-03-31 08:00-0300\n"
+"PO-Revision-Date: 2025-04-01 12:00-0300\n"
 "Last-Translator: Jamenson Ferreira Espindula de Almeida Melo "
 "<jafesp@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -13238,6 +13238,13 @@ msgid ""
 "@code{@@code}.  Basically, @code{@@samp} is a catchall for whatever is not "
 "covered by @code{@@code}, @code{@@kbd}, @code{@@key}, @code{@@command}, etc."
 msgstr ""
+"Sempre que estiver se referindo a caracteres únicos, você deveria usar "
+"@code{@@samp}, a menos que @code{@@kbd} ou @code{@@key} sejam mais "
+"apropriados.  Além disso, você pode usar @code{@@samp} para declarações "
+"inteiras em C e para comandos inteiros do shell---nesse caso, @code{@@samp} "
+"frequentemente parece melhor que @code{@@code}.  Basicamente, @code{@@samp} "
+"é um pega tudo para o que não for coberto por @code{@@code}, @code{@@kbd}, "
+"@code{@@key}, @code{@@command}, etc."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:5142
@@ -13248,6 +13255,11 @@ msgid ""
 "In the following sentence, for example, the commas and period are outside of "
 "the braces:"
 msgstr ""
+"Somente inclua sinais de pontuação entre chaves se eles fizerem parte da "
+"sequência de caracteres que você estiver especificando.  Escreva sinais de "
+"pontuação fora das chaves se tais sinais de pontuação fizerem parte do "
+"texto em Inglês que envolva a sequência de caracteres.  Na frase seguinte, "
+"por exemplo, as vírgulas e pontos estão fora das chaves:"
 
 #. type: group
 #: texinfo/texinfo-ed.7.1-en_US.texi:5148
@@ -13257,6 +13269,9 @@ msgid ""
 "@@samp@{i@}, @@samp@{o@}, @@samp@{u@}, and sometimes\n"
 "@@samp@{y@}.\n"
 msgstr ""
+"Em Inglês, as vogais são @@samp@{a@}, @@samp@{e@},\n"
+"@@samp@{i@}, @@samp@{o@}, @@samp@{u@}, e, ocasionalmente,\n"
+"@@samp@{y@}.\n"
 
 #. type: quotation
 #: texinfo/texinfo-ed.7.1-en_US.texi:5158
@@ -13264,47 +13279,51 @@ msgid ""
 "In English, the vowels are @samp{a}, @samp{e}, @samp{i}, @samp{o}, @samp{u}, "
 "and sometimes @samp{y}."
 msgstr ""
+"Em Inglês, as vogais são @samp{a}, @samp{e}, @samp{i}, @samp{o}, @samp{u}, "
+"e, ocasionalmente, @samp{y}."
 
 #. type: node
 #: texinfo/texinfo-ed.7.1-en_US.texi:5161
 #, no-wrap
 msgid "@code{@@verb}"
-msgstr ""
+msgstr "@code{@@verb}"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:5163
 msgid "@nodedescription Indicating a verbatim sequence of characters."
-msgstr ""
+msgstr "@nodedescription Indicando uma sequência de caracteres literais."
 
 #. type: subsection
 #: texinfo/texinfo-ed.7.1-en_US.texi:5163
 #, no-wrap
 msgid "@code{@@verb}@{@var{char}@var{text}@var{char}@}"
-msgstr ""
+msgstr "@code{@@verb}@{@var{char}@var{text}@var{char}@}"
 
 #. type: findex
 #: texinfo/texinfo-ed.7.1-en_US.texi:5166
 #, no-wrap
 msgid "verb"
-msgstr ""
+msgstr "verb"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:5167
 #, no-wrap
 msgid "Verbatim in-line text"
-msgstr ""
+msgstr "Texto literal interno à linha"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:5169
 #, no-wrap
 msgid "Delimiter character, for verbatim"
-msgstr ""
+msgstr "Caractere delimitador, para literalidade"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:5172
 msgid ""
 "Use the @code{@@verb} command to print a verbatim sequence of characters."
 msgstr ""
+"Use o comando @code{@@verb} para imprimir uma sequência de caracteres "
+"literais."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:5176
@@ -13313,6 +13332,10 @@ msgid ""
 "any unique delimiter character.  Enclose the verbatim text, including the "
 "delimiters, in braces.  Text is printed in a fixed-width font:"
 msgstr ""
+"Semelhante ao comando @code{\\verb} do @LaTeX{}, o texto literal pode ser "
+"aspeado usando-se qualquer caractere delimitador único.  Coloque o texto "
+"literal, incluindo os delimitadores, entre chaves.  O texto é impresso em "
+"uma fonte de largura fixa:"
 
 #. type: example
 #: texinfo/texinfo-ed.7.1-en_US.texi:5180
@@ -13321,6 +13344,8 @@ msgid ""
 "How many @@verb@{|@@|@}-escapes does one need to print this\n"
 "@@verb@{.@@a @@b.@@c.@} string or @@verb@{+@@'e?`@{@}!`\\+@} this?\n"
 msgstr ""
+"Quantos @@verb@{|@@|@} de escape alguém precisa para imprimir esta\n"
+"sequência @@verb@{.@@a @@b.@@c.@} ou esta @@verb@{+@@'e?`@{@}!`\\+@}?\n"
 
 #. type: example
 #: texinfo/texinfo-ed.7.1-en_US.texi:5188
@@ -13329,6 +13354,8 @@ msgid ""
 "How many @verb{|@|}-escapes does one need to print this\n"
 "@verb{.@a @b.@c.} string or @verb{+@'e?`{}!`\\+} this?\n"
 msgstr ""
+"Quantos @verb{|@|} de escape alguém precisa para imprimir esta\n"
+"sequência @verb{.@a @b.@c.} ou esta @verb{+@'e?`{}!`\\+}?\n"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:5195
@@ -13339,6 +13366,11 @@ msgid ""
 "usual.  With @code{@@verb}, nothing is special except the delimiter "
 "character you choose."
 msgstr ""
+"Isso está em contraste com @code{@@samp} (veja-se a seção anterior), "
+"@code{@@code} e comandos semelhantes; naqueles casos, o argumento é texto "
+"normal do Texinfo, onde os três caracteres @code{@@@{@}} são especiais, "
+"como de costume.  Com @code{@@verb}, nada é especial, exceto o caractere "
+"delimitador que você escolher."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:5199
@@ -13347,6 +13379,9 @@ msgid ""
 "above.  As another example, @samp{@@verb@{...@}} prints a single "
 "(fixed-width) period."
 msgstr ""
+"O próprio caractere delimitador pode aparecer dentro do texto literal, "
+"conforme mostrado acima.  Como outro exemplo, @samp{@@verb@{...@}} imprime "
+"um ponto (largura fixa)."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:5204
@@ -13355,29 +13390,33 @@ msgid ""
 "particular, it does not work to use @code{@@verb} in anything related to "
 "cross-referencing, such as section titles or figure captions."
 msgstr ""
+"Não é confiável usar-se @code{@@verb} dentro de outras construções do "
+"Texinfo.  Em particular, não funciona usar-se @code{@@verb} em nada "
+"relacionado a referências cruzadas, como títulos de seção ou legendas de "
+"figuras."
 
 #. type: node
 #: texinfo/texinfo-ed.7.1-en_US.texi:5206
 #, no-wrap
 msgid "@code{@@var}"
-msgstr ""
+msgstr "@code{@@var}"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:5208
 msgid "@nodedescription Indicating metasyntactic variables."
-msgstr ""
+msgstr "@nodedescription Indicando variáveis metassintáticas."
 
 #. type: subsection
 #: texinfo/texinfo-ed.7.1-en_US.texi:5208
 #, no-wrap
 msgid "@code{@@var}@{@var{metasyntactic-variable}@}"
-msgstr ""
+msgstr "@code{@@var}@{@var{variável-metassintática}@}"
 
 #. type: findex
 #: texinfo/texinfo-ed.7.1-en_US.texi:5211
 #, no-wrap
 msgid "var"
-msgstr ""
+msgstr "var"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:5218
@@ -13388,6 +13427,11 @@ msgid ""
 "documentation of a function to describe the arguments that are passed to "
 "that function."
 msgstr ""
+"Use o comando @code{@@var} para indicar variáveis metassintáticas.  Uma "
+"@dfn{variável metassintática} é algo que representa outro pedaço de "
+"texto.  Por exemplo, você deveria usar uma variável metassintática na "
+"documentação de uma função para descrever os argumentos que sejam "
+"passados para aquela função."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:5223
@@ -13397,6 +13441,11 @@ msgid ""
 "For example, the Emacs Lisp variable @code{texinfo-tex-command} is not a "
 "metasyntactic variable; it is properly formatted using @code{@@code}."
 msgstr ""
+"Não use @code{@@var} para os nomes de variáveis normais em programas de "
+"computador.  Esses são nomes específicos, de forma que @code{@@code} é "
+"correto para eles.  Por exemplo, a variável @code{texinfo-tex-command} da "
+"Emacs Lisp não é uma variável metassintática; ela é formatada "
+"adequadamente usando-se @code{@@code}."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:5226
@@ -13404,6 +13453,8 @@ msgid ""
 "Do not use @code{@@var} for environment variables either; @code{@@env} is "
 "correct for them (see the next section)."
 msgstr ""
+"Tampouco use @code{@@var} para variáveis de ambiente; @code{@@env} é "
+"correto para elas (veja-se a próxima seção)."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:5238
@@ -13418,6 +13469,17 @@ msgid ""
 "txicodevaristt} to make this change now (@pxref{@code{@@set @@value}}).  "
 "Note that this flag does nothing in @LaTeX{} output.}"
 msgstr ""
+"O efeito de @code{@@var} no arquivo Info é o de mudar a escrita do "
+"argumento para letras todas maiúsculas.  No manual impresso, o argumento é "
+"gerado em tipo inclinado.  @footnote{Na saída gerada do @TeX{}, "
+"@code{@@var} atualmente usa uma fonte inclinada de máquina de escrever em "
+"contextos de código como @code{@@code} ou @code{@@example}.  Nós "
+"planejamos mudar isso no proóximo lançamento para usar uma fonte inclinada "
+"e de largura variável em todos os contextos.  Para evitar essa mudança, "
+"configure o sinalizador @samp{txicodevaristt} usando @code{@@set}; "
+"especifique @samp{@@clear txicodevaristt} para fazer essa mudança agora "
+"(@pxref{@code{@@set @@value}}).  Observe que esse sinalizador não faz nada "
+"na saída gerada do @LaTeX{}.}"
 
 #. type: example
 #: texinfo/texinfo-ed.7.1-en_US.texi:5245
@@ -13426,11 +13488,14 @@ msgid ""
 "To delete file @@var@{filename@},\n"
 "type @@samp@{rm @@var@{filename@}@}.\n"
 msgstr ""
+"Para deletar o arquivo @@var@{nomearquivo@},\n"
+"digite @@samp@{rm @@var@{nomearquivo@}@}.\n"
 
 #. type: quotation
 #: texinfo/texinfo-ed.7.1-en_US.texi:5252
 msgid "To delete file @var{filename}, type @samp{rm @var{filename}}."
 msgstr ""
+"Para deletar o arquivo @var{nomearquivo}, digite @samp{rm @var{nomearquivo}}."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:5257
@@ -13438,6 +13503,8 @@ msgid ""
 "(Note that @code{@@var} may appear inside @code{@@code}, @code{@@samp}, "
 "@code{@@file}, etc.)"
 msgstr ""
+"(Observe que @code{@@var} pode aparecer dentro de @code{@@code}, "
+"@code{@@samp}, @code{@@file}, etc.)"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:5262
@@ -13446,18 +13513,22 @@ msgid ""
 "hyphens to make it more readable.  Thus, the Texinfo source for the "
 "illustration of how to begin a Texinfo manual looks like this:"
 msgstr ""
+"Escreva uma variável metassintática toda em letras minúsculas e sem "
+"espaços, e use hifens para torná-la mais legível.  Assim, o fonte do "
+"Texinfo para a ilustração de como iniciar um manual Texinfo se parece com "
+"isto:"
 
 #. type: group
 #: texinfo/texinfo-ed.7.1-en_US.texi:5267
 #, no-wrap
 msgid "@@@@settitle @@var@{name-of-manual@}\n"
-msgstr ""
+msgstr "@@@@settitle @@var@{nome-do-manual@}\n"
 
 #. type: group
 #: texinfo/texinfo-ed.7.1-en_US.texi:5277
 #, no-wrap
 msgid "@@settitle @var{name-of-manual}\n"
-msgstr ""
+msgstr "@@settitle @var{nome-do-manual}\n"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:5282
@@ -13465,40 +13536,42 @@ msgid ""
 "In some documentation styles, metasyntactic variables are shown with angle "
 "brackets, for example:"
 msgstr ""
+"Em alguns estilos de documentação, as variáveis metassintáticas são "
+"mostradas com colchetes angulares, por exemplo:"
 
 #. type: example
 #: texinfo/texinfo-ed.7.1-en_US.texi:5285
 #, no-wrap
 msgid "@dots{}, type rm <filename>\n"
-msgstr ""
+msgstr "@dots{}, digite rm <nomearquivo>\n"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:5289
 msgid "However, that is not the style that Texinfo uses."
-msgstr ""
+msgstr "Entretanto, esse não é o estilo que Texinfo usa."
 
 #. type: node
 #: texinfo/texinfo-ed.7.1-en_US.texi:5297
 #, no-wrap
 msgid "@code{@@env}"
-msgstr ""
+msgstr "@code{@@env}"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:5299
 msgid "@nodedescription Indicating environment variables."
-msgstr ""
+msgstr "@nodedescription Indicando variáveis de ambiente."
 
 #. type: subsection
 #: texinfo/texinfo-ed.7.1-en_US.texi:5299
 #, no-wrap
 msgid "@code{@@env}@{@var{environment-variable}@}"
-msgstr ""
+msgstr "@code{@@env}@{@var{variável-ambiente}@}"
 
 #. type: findex
 #: texinfo/texinfo-ed.7.1-en_US.texi:5302
 #, no-wrap
 msgid "env"
-msgstr ""
+msgstr "env"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:5308
@@ -13508,46 +13581,51 @@ msgid ""
 "@emph{meta}syntactic variables; use @code{@@var} for those (see the previous "
 "section)."
 msgstr ""
+"Use o comando @code{@@env} para indicar variáveis de ambiente, conforme "
+"usadas por muitos sistemas operacionais, incluindo GNU@.  Não a use para "
+"variáveis @emph{meta}ssintáticas; use @code{@@var} para essas (veja-se a "
+"seção anterior)."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:5311
 msgid ""
 "@code{@@env} is equivalent to @code{@@code} in its effects.  For example:"
 msgstr ""
+"@code{@@env} é equivalente a @code{@@code} nos efeitos dele.  Por exemplo:"
 
 #. type: example
 #: texinfo/texinfo-ed.7.1-en_US.texi:5314
 #, no-wrap
 msgid "The @@env@{PATH@} environment variable @dots{}\n"
-msgstr ""
+msgstr "A variável de ambiente @@env@{PATH@} @dots{}\n"
 
 #. type: quotation
 #: texinfo/texinfo-ed.7.1-en_US.texi:5319
 msgid "The @env{PATH} environment variable @dots{}"
-msgstr ""
+msgstr "A variável de ambiente @env{PATH} @dots{}"
 
 #. type: node
 #: texinfo/texinfo-ed.7.1-en_US.texi:5322
 #, no-wrap
 msgid "@code{@@file}"
-msgstr ""
+msgstr "@code{@@file}"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:5324
 msgid "@nodedescription Indicating file names."
-msgstr ""
+msgstr "@nodedescription Indicando nomes de arquivos."
 
 #. type: subsection
 #: texinfo/texinfo-ed.7.1-en_US.texi:5324
 #, no-wrap
 msgid "@code{@@file}@{@var{file-name}@}"
-msgstr ""
+msgstr "@code{@@file}@{@var{nome-arquivo}@}"
 
 #. type: findex
 #: texinfo/texinfo-ed.7.1-en_US.texi:5327
 #, no-wrap
 msgid "file"
-msgstr ""
+msgstr "file"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:5333
@@ -13557,12 +13635,18 @@ msgid ""
 "the command for file name suffixes.  Do not use @code{@@file} for symbols in "
 "a programming language; use @code{@@code}."
 msgstr ""
+"Use o comando @code{@@file} para indicar texto que seja o nome de um "
+"arquivo, buffer, ou diretório, ou seja o nome de um nó no Info.  Você "
+"também consegue usar o comando para sufixos de nome de arquivo.  Não use "
+"@code{@@file} para símbolos em uma linguagem de programação; use "
+"@code{@@code}."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:5336
 msgid ""
 "@code{@@file} is equivalent to @code{code} in its effects.  For example,"
 msgstr ""
+"@code{@@file} é equivalente a @code{code} nos efeitos dele.  Por exemplo,"
 
 #. type: example
 #: texinfo/texinfo-ed.7.1-en_US.texi:5340
@@ -13571,11 +13655,14 @@ msgid ""
 "The @@file@{.el@} files are in\n"
 "the @@file@{/usr/local/emacs/lisp@} directory.\n"
 msgstr ""
+"Os arquivos @@file@{.el@} estão no\n"
+"diretório @@file@{/usr/local/emacs/lisp@}.\n"
 
 #. type: quotation
 #: texinfo/texinfo-ed.7.1-en_US.texi:5348
 msgid "The @file{.el} files are in the @file{/usr/local/emacs/lisp} directory."
 msgstr ""
+"Os arquivos @file{.el} estão no diretório @file{/usr/local/emacs/lisp}."
 
 #. type: node
 #: texinfo/texinfo-ed.7.1-en_US.texi:5351
