@@ -17,7 +17,7 @@ msgstr ""
 "Project-Id-Version: Texinfo 7.1\n"
 "Report-Msgid-Bugs-To: jafesp@gmail.com\n"
 "POT-Creation-Date: 2025-03-25 02:01-0300\n"
-"PO-Revision-Date: 2025-04-01 12:00-0300\n"
+"PO-Revision-Date: 2025-04-03 12:00-0300\n"
 "Last-Translator: Jamenson Ferreira Espindula de Almeida Melo "
 "<jafesp@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -13668,36 +13668,36 @@ msgstr ""
 #: texinfo/texinfo-ed.7.1-en_US.texi:5351
 #, no-wrap
 msgid "@code{@@command}"
-msgstr ""
+msgstr "@code{@@command}"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:5353
 msgid "@nodedescription Indicating command names."
-msgstr ""
+msgstr "@nodedescription Indicando nomes de comandos."
 
 #. type: subsection
 #: texinfo/texinfo-ed.7.1-en_US.texi:5353
 #, no-wrap
 msgid "@code{@@command}@{@var{command-name}@}"
-msgstr ""
+msgstr "@code{@@command}@{@var{nome-comando}@}"
 
 #. type: findex
 #: texinfo/texinfo-ed.7.1-en_US.texi:5356
 #, no-wrap
 msgid "command"
-msgstr ""
+msgstr "command"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:5357
 #, no-wrap
 msgid "Command names, indicating"
-msgstr ""
+msgstr "Nomes de comandos, indicando"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:5358
 #, no-wrap
 msgid "Program names, indicating"
-msgstr ""
+msgstr "Nomes de programas, indicando"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:5362
@@ -13705,23 +13705,27 @@ msgid ""
 "Use the @code{@@command} command to indicate command names, such as "
 "@command{ls} or @command{cc}."
 msgstr ""
+"Use o comando @code{@@command} para indicar os nomes de comandos, como "
+"@command{ls} ou @command{cc}."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:5365
 msgid ""
 "@code{@@command} is equivalent to @code{@@code} in its effects.  For example:"
 msgstr ""
+"@code{@@command} é equivalente a @code{@@code} nos efeitos dele.  Por "
+"exemplo:"
 
 #. type: example
 #: texinfo/texinfo-ed.7.1-en_US.texi:5368
 #, no-wrap
 msgid "The command @@command@{ls@} lists directory contents.\n"
-msgstr ""
+msgstr "O comando @@command@{ls@} lista conteúdo de diretórios.\n"
 
 #. type: quotation
 #: texinfo/texinfo-ed.7.1-en_US.texi:5373
 msgid "The command @command{ls} lists directory contents."
-msgstr ""
+msgstr "O comando @command{ls} lista conteúdo de diretórios."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:5378
@@ -13730,6 +13734,9 @@ msgid ""
 "than using @code{@@command}, if you regard it as a new English word, such as "
 "`Emacs' or `Bison'."
 msgstr ""
+"Você deveria escrever o nome de um programa na fonte comum de texto, em vez "
+"de usar @code{@@command}, se considerá-lo uma nova palavra do inglês, como "
+"`Emacs' ou `Bison'."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:5381
@@ -13737,29 +13744,32 @@ msgid ""
 "When writing an entire shell command invocation, as in @samp{ls -l}, you "
 "should use either @code{@@samp} or @code{@@code} at your discretion."
 msgstr ""
+"Quando escrever uma invocação inteira de comando de shell, como em "
+"@samp{ls -l}, você deveria usar ou @code{@@samp} ou @code{@@code} a teu "
+"critério."
 
 #. type: node
 #: texinfo/texinfo-ed.7.1-en_US.texi:5383
 #, no-wrap
 msgid "@code{@@option}"
-msgstr ""
+msgstr "@code{@@option}"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:5385
 msgid "@nodedescription Indicating option names."
-msgstr ""
+msgstr "@nodedescription Indicando nomes de opções."
 
 #. type: subsection
 #: texinfo/texinfo-ed.7.1-en_US.texi:5385
 #, no-wrap
 msgid "@code{@@option}@{@var{option-name}@}"
-msgstr ""
+msgstr "@code{@@option}@{@var{nome-opção}@}"
 
 #. type: findex
 #: texinfo/texinfo-ed.7.1-en_US.texi:5388
 #, no-wrap
 msgid "option"
-msgstr ""
+msgstr "option"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:5393
@@ -13768,46 +13778,51 @@ msgid ""
 "example, @option{-l} or @option{--version} or "
 "@option{--output=@var{filename}}."
 msgstr ""
+"Use o comando @code{@@option} para indicar uma opção de linha de comando; "
+"por exemplo, @option{-l} ou @option{--version} ou "
+"@option{--output=@var{nomearquivo}}."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:5396
 msgid ""
 "@code{@@option} is equivalent to @code{@@code} in its effects.  For example:"
 msgstr ""
+"@code{@@option} é equivalente a @code{@@code} nos efeitos dele.  Por "
+"exemplo:"
 
 #. type: example
 #: texinfo/texinfo-ed.7.1-en_US.texi:5399
 #, no-wrap
 msgid "The option @@option@{-l@} produces a long listing.\n"
-msgstr ""
+msgstr "A opção @@option@{-l@} produz uma listagem longa.\n"
 
 #. type: quotation
 #: texinfo/texinfo-ed.7.1-en_US.texi:5404
 msgid "The option @option{-l} produces a long listing."
-msgstr ""
+msgstr "A opção @option{-l} produz uma listagem longa."
 
 #. type: node
 #: texinfo/texinfo-ed.7.1-en_US.texi:5407
 #, no-wrap
 msgid "@code{@@dfn}"
-msgstr ""
+msgstr "@code{@@dfn}"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:5409
 msgid "@nodedescription Specifying definitions."
-msgstr ""
+msgstr "@nodedescription Especificando definições."
 
 #. type: subsection
 #: texinfo/texinfo-ed.7.1-en_US.texi:5409
 #, no-wrap
 msgid "@code{@@dfn}@{@var{term}@}"
-msgstr ""
+msgstr "@code{@@dfn}@{@var{termo}@}"
 
 #. type: findex
 #: texinfo/texinfo-ed.7.1-en_US.texi:5412
 #, no-wrap
 msgid "dfn"
-msgstr ""
+msgstr "dfn"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:5421
@@ -13819,17 +13834,23 @@ msgid ""
 "@code{@@dfn}.  The command selects a slanted font in the printed manual, and "
 "generates double quotation marks in the Info file.  For example:"
 msgstr ""
+"Use o comando @code{@@dfn} para identificar o uso introdutório ou definidor "
+"de um termo técnico.  Use o comando somente em passagens cujo propósito "
+"seja o de introduzir um termo que será usado novamente ou que o(a) "
+"leitor(a) deva saber.  A mera menção de passagem de um termo pela primeira "
+"vez não merece @code{@@dfn}.  O comando seleciona uma fonte inclinada no "
+"manual impresso, e gera aspas duplas no arquivo Info.  Por exemplo:"
 
 #. type: example
 #: texinfo/texinfo-ed.7.1-en_US.texi:5424
 #, no-wrap
 msgid "Getting rid of a file is called @@dfn@{deleting@} it.\n"
-msgstr ""
+msgstr "Livrar-se de um arquivo é chamado @@dfn@{deletar@} ele.\n"
 
 #. type: quotation
 #: texinfo/texinfo-ed.7.1-en_US.texi:5431
 msgid "Getting rid of a file is called @dfn{deleting} it."
-msgstr ""
+msgstr "Livrar-se de um arquivo é chamado @dfn{deletar} ele."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:5437
@@ -13839,35 +13860,39 @@ msgid ""
 "explicitly that it is a definition, but it should contain the information of "
 "a definition---it should make the meaning clear."
 msgstr ""
+"Como uma regra geral, uma frase contendo a ocorrência definidora de um "
+"termo deveria ser uma definição do termo.  A frase não precisa dizer "
+"explicitamente que é uma definição, mas deveria conter a informação de "
+"uma definição---ela deveria tornar claro o significado."
 
 #. type: node
 #: texinfo/texinfo-ed.7.1-en_US.texi:5439
 #, no-wrap
 msgid "@code{@@abbr}"
-msgstr ""
+msgstr "@code{@@abbr}"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:5441
 msgid "@nodedescription Indicating abbreviations."
-msgstr ""
+msgstr "@nodedescription Indicando abreviações."
 
 #. type: subsection
 #: texinfo/texinfo-ed.7.1-en_US.texi:5441
 #, no-wrap
 msgid "@code{@@abbr}@{@var{abbreviation}[, @var{meaning}]@}"
-msgstr ""
+msgstr "@code{@@abbr}@{@var{abreviação}[, @var{significado}]@}"
 
 #. type: findex
 #: texinfo/texinfo-ed.7.1-en_US.texi:5444
 #, no-wrap
 msgid "abbr"
-msgstr ""
+msgstr "abbr"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:5446
 #, no-wrap
 msgid "Abbreviations, tagging"
-msgstr ""
+msgstr "Abreviações, etiquetando"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:5452
@@ -13878,6 +13903,11 @@ msgid ""
 "abbreviations, you may prefer to omit periods, as in @samp{@@abbr@{Mr@} "
 "Stallman}."
 msgstr ""
+"Você pode usar o comando @code{@@abbr} para abreviações gerais.  A "
+"abreviação é fornecida como o argumento único entre chaves, como em "
+"@samp{@@abbr@{Comput.@}}.  Por uma questão de estilo, ou para abreviações "
+"específicas, você possivelmente prefira omitir pontos, como em "
+"@samp{@@abbr@{Mr@} Stallman}."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:5455
@@ -13885,6 +13915,8 @@ msgid ""
 "@code{@@abbr} accepts an optional second argument, intended to be used for "
 "the meaning of the abbreviation."
 msgstr ""
+"@code{@@abbr} aceita um segundo argumento opcional, destinado a ser usado "
+"para o significado da abreviação."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:5462
@@ -13896,6 +13928,12 @@ msgid ""
 "Texinfo automatically assumes periods within the abbreviation do not end a "
 "sentence."
 msgstr ""
+"Se a abreviação finalizar com uma letra minúscula e um ponto, e não "
+"estiver no final de uma frase, e não tiver segundo argumento, lembre-se de "
+"usar o comando @code{@@.} (@pxref{Finalizando Uma Frase}) para obter o "
+"espaçamento correto.  Entretanto, você não tem de usar @code{@@.} dentro "
+"da abreviação em si; Texinfo automaticamente presume que pontos dentro da "
+"abreviação não finalizam uma frase."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:5467
