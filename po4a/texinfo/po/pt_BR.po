@@ -17,7 +17,7 @@ msgstr ""
 "Project-Id-Version: Texinfo 7.1\n"
 "Report-Msgid-Bugs-To: jafesp@gmail.com\n"
 "POT-Creation-Date: 2025-03-25 02:01-0300\n"
-"PO-Revision-Date: 2025-04-03 12:00-0300\n"
+"PO-Revision-Date: 2025-04-03 14:00-0300\n"
 "Last-Translator: Jamenson Ferreira Espindula de Almeida Melo "
 "<jafesp@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -13943,18 +13943,22 @@ msgid ""
 "argument is present, it is printed in parentheses after the abbreviation.  "
 "For instance:"
 msgstr ""
+"Em formatos de saída com etiqueta apropriada, como HTML e DocBook, essa "
+"etiqueta é usada.  Do contrário, o primeiro argumento é impresso como "
+"está; se o segundo argumento estiver presente, ele é impresso entre "
+"parênteses depois da abreviação.  Por exemplo:"
 
 #. type: example
 #: texinfo/texinfo-ed.7.1-en_US.texi:5470
 #, no-wrap
 msgid "@@abbr@{Comput. J., Computer Journal@}\n"
-msgstr ""
+msgstr "@@abbr@{Comput. J., Jornal do Computador@}\n"
 
 #. type: display
 #: texinfo/texinfo-ed.7.1-en_US.texi:5477
 #, no-wrap
 msgid "@abbr{Comput. J., Computer Journal}\n"
-msgstr ""
+msgstr "@abbr{Comput. J., Jornal do Computador}\n"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:5482
@@ -13963,41 +13967,44 @@ msgid ""
 "the @code{@@acronym} command instead.  See the next section for more on the "
 "usage of these two commands."
 msgstr ""
+"Para abreviações consistindo de todas as letras maiúsculas, você "
+"possivelmente prefira usar o comando @code{@@acronym}.  Veja-se a próxima "
+"seção para mais acerca do uso desses dois comandos."
 
 #. type: node
 #: texinfo/texinfo-ed.7.1-en_US.texi:5484
 #, no-wrap
 msgid "@code{@@acronym}"
-msgstr ""
+msgstr "@code{@@acronym}"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:5486
 msgid "@nodedescription Indicating acronyms."
-msgstr ""
+msgstr "@nodedescription Indicando siglas."
 
 #. type: subsection
 #: texinfo/texinfo-ed.7.1-en_US.texi:5486
 #, no-wrap
 msgid "@code{@@acronym}@{@var{acronym}[, @var{meaning}]@}"
-msgstr ""
+msgstr "@code{@@acronym}@{@var{sigla}[, @var{significado}]@}"
 
 #. type: findex
 #: texinfo/texinfo-ed.7.1-en_US.texi:5489
 #, no-wrap
 msgid "acronym"
-msgstr ""
+msgstr "acronym"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:5491
 #, no-wrap
 msgid "NASA, as acronym"
-msgstr ""
+msgstr "NASA, como sigla"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:5492
 #, no-wrap
 msgid "Acronyms, tagging"
-msgstr ""
+msgstr "Siglas, etiquetando"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:5499
@@ -14008,6 +14015,11 @@ msgid ""
 "style, or for particular acronyms, you may prefer to use periods, as in "
 "@samp{@@acronym@{N.A.S.A.@}}."
 msgstr ""
+"Você pode usar o comando @code{@@acronym} para abreviações escritas todas "
+"em letras maiúsculas, como `@acronym{NASA}'.  A abreviação é fornecida "
+"como o único argumento entre chaves, como em @samp{@@acronym@{NASA@}}.  Por "
+"uma questão de estilo, ou para siglas específicas, você possivelmente "
+"prefira usar pontos, como em @samp{@@acronym@{N.A.S.A.@}}."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:5502
@@ -14015,6 +14027,8 @@ msgid ""
 "@code{@@acronym} accepts an optional second argument, intended to be used "
 "for the meaning of the acronym."
 msgstr ""
+"@code{@@acronym} aceita um segundo argumento opcional, destinado a ser usado "
+"para o significado da sigla."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:5506
@@ -14023,6 +14037,9 @@ msgid ""
 "argument, remember to use the @code{@@.} or similar command (@pxref{Ending a "
 "Sentence}) to get the correct spacing."
 msgstr ""
+"Se a sigla estiver no final de uma frase, e se não existir segundo "
+"argumento, lembre-se de usar o @code{@@.} ou comando similar "
+"(@pxref{Finalizando Uma Frase}) para obter o espaçamento correto."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:5512
@@ -14032,6 +14049,11 @@ msgid ""
 "output, if the second argument is present, it is printed in parentheses "
 "after the acronym.  In HTML and DocBook the appropriate tag is used."
 msgstr ""
+"No @TeX{}, a sigla é impressa em fonte ligeiramente menor.  Na saída Info, "
+"o argumento é impresso como está.  Em qualquer formato, e na saída "
+"@LaTeX{}, se o segundo argumento estiver presente, ele é impresso entre "
+"parênteses depois da sigla.  Em HTML e em Docbook a etiqueta apropriada é "
+"usada."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:5515
@@ -14039,24 +14061,26 @@ msgid ""
 "For instance (since GNU is a recursive acronym, we use @code{@@acronym} "
 "recursively):"
 msgstr ""
+"Por exemplo (dado que GNU é uma sigla recursiva, nós usamos "
+"@code{@@acronym} recursivamente):"
 
 #. type: example
 #: texinfo/texinfo-ed.7.1-en_US.texi:5518
 #, no-wrap
 msgid "@@acronym@{GNU, @@acronym@{GNU@}'s Not Unix@}\n"
-msgstr ""
+msgstr "@@acronym@{GNU, @@acronym@{GNU@} Não é Unix@}\n"
 
 #. type: display
 #: texinfo/texinfo-ed.7.1-en_US.texi:5525
 #, no-wrap
 msgid "@acronym{GNU, @acronym{GNU}'s Not Unix}\n"
-msgstr ""
+msgstr "@acronym{GNU, @acronym{GNU} Não é Unix}\n"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:5527
 #, no-wrap
 msgid "Family names, in all capitals"
-msgstr ""
+msgstr "Nomes de família, todas letras maiúsculas"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:5531
@@ -14065,6 +14089,9 @@ msgid ""
 "capitals.  Don't use @code{@@acronym} for this, since a name is not an "
 "acronym.  Use @code{@@sc} instead (@pxref{Smallcaps})."
 msgstr ""
+"Em algumas circunstâncias, é convencional imprimir nomes de família em "
+"letras maiúsculas.  Não use @code{@@acronym} para isso, pois um nome não "
+"é uma sigla.  Use @code{@@sc} (@pxref{Versaletes})."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:5536
@@ -14074,6 +14101,10 @@ msgid ""
 "a meaning.  When choosing whether to use these two commands, please bear the "
 "following in mind."
 msgstr ""
+"@code{@@abbr} e @code{@@acronym} são comandos intimamente relacionados: "
+"ambos sinalizam para o(a) leitor(a) que uma forma abreviada está sendo "
+"usada, e possivelmente forneça um significado.  Ao escolher quando usar "
+"esses dois comandos, por favor tenha o seguinte em mente."
 
 #. type: itemize
 #: texinfo/texinfo-ed.7.1-en_US.texi:5544
@@ -14083,6 +14114,11 @@ msgid ""
 "some sources also include syllable acronyms like `Usenet', hybrids like "
 "`@acronym{SIGGRAPH}', and unpronounceable initialisms like `@acronym{FBI}'."
 msgstr ""
+"No uso comum do Inglês, siglas são um subconjunto de abreviações: elas "
+"incluem palavras pronunciáveis como `@acronym{NATO}', `radar' e `snafu'; "
+"algumas fontes também incluem siglas de siglas, como `Usenet'; híbridas, "
+"como `@acronym{SIGGRAPH}'; e inicialismos impronunciáveis como "
+"`@acronym{FBI}'."
 
 #. type: itemize
 #: texinfo/texinfo-ed.7.1-en_US.texi:5548
@@ -14090,6 +14126,8 @@ msgid ""
 "In Texinfo, an acronym (but not an abbreviation) should consist only of "
 "capital letters and periods, no lowercase."
 msgstr ""
+"No Texinfo, uma sigla (mas não uma abreviação) deveria consistir somente "
+"de letras maiúsculas e pontos, não minúsculas."
 
 #. type: itemize
 #: texinfo/texinfo-ed.7.1-en_US.texi:5552
@@ -14097,6 +14135,8 @@ msgid ""
 "In @TeX{}, an acronym (but not an abbreviation) is printed in a slightly "
 "smaller font."
 msgstr ""
+"No @TeX{}, uma sigla (mas não uma abreviação) é impressa em uma fonte "
+"ligeiramente menor."
 
 #. type: itemize
 #: texinfo/texinfo-ed.7.1-en_US.texi:5561
@@ -14108,6 +14148,13 @@ msgid ""
 "consider is to avoid @code{@@acronym} and just typeset everything as normal "
 "text in all capitals: @samp{GNU}, producing the output `GNU'."
 msgstr ""
+"Geralmente acaba sendo bastante difícil e (ou) demorado usar-se "
+"consistentemente @code{@@acronym} para todas as sequências de letras "
+"maiúsculas.  Além do mais, parece estranho para algumas siglas estar no "
+"tamanho normal da fonte e outras estarem menores.  Assim, uma abordagem mais "
+"simples que você possivelmente deseje considerar é a de evitar "
+"@code{@@acronym} e apenas tipografar tudo como texto normal todo em "
+"maiúsculas: @samp{GNU}, produzindo a saída `GNU'."
 
 #. type: itemize
 #: texinfo/texinfo-ed.7.1-en_US.texi:5566
@@ -14115,35 +14162,38 @@ msgid ""
 "In general, it's not essential to use either of these commands for all "
 "abbreviations; use your judgment.  Text is perfectly readable without them."
 msgstr ""
+"Em geral, não é essencial usar-se quaisquer desses comandos para todas as "
+"abreviações; use teu bom senso.  O texto é perfeitamente legível sem "
+"eles."
 
 #. type: node
 #: texinfo/texinfo-ed.7.1-en_US.texi:5569
 #, no-wrap
 msgid "@code{@@indicateurl}"
-msgstr ""
+msgstr "@code{@@indicateurl}"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:5571
 msgid "@nodedescription Indicating an example URL."
-msgstr ""
+msgstr "@nodedescription Indicando um URL de exemplo."
 
 #. type: subsection
 #: texinfo/texinfo-ed.7.1-en_US.texi:5571
 #, no-wrap
 msgid "@code{@@indicateurl}@{@var{uniform-resource-locator}@}"
-msgstr ""
+msgstr "@code{@@indicateurl}@{@var{localizador-uniforme-de-recurso}@}"
 
 #. type: findex
 #: texinfo/texinfo-ed.7.1-en_US.texi:5574
 #, no-wrap
 msgid "indicateurl"
-msgstr ""
+msgstr "indicateurl"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:5575
 #, no-wrap
 msgid "URL @subentry indicating"
-msgstr ""
+msgstr "URL @subentry indicando"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:5583
@@ -14154,6 +14204,11 @@ msgid ""
 "for that, @pxref{@code{@@url}}).  @code{@@indicateurl} is useful for URLs "
 "which do not actually exist.  For example:"
 msgstr ""
+"Use o comando @code{@@indicateurl} para indicar um localizador uniforme de "
+"recursos na Internet.  Isso é puramente para propósitos de marcação e "
+"não produz um linque que você possa seguir (use o comando @code{@@url} ou "
+"@code{@@uref} para isso, @pxref{@code{@@url}}).  @code{@@indicateurl} é "
+"útil para URLs que não existem realmente.  Por exemplo:"
 
 #. type: example
 #: texinfo/texinfo-ed.7.1-en_US.texi:5586
@@ -14161,12 +14216,14 @@ msgstr ""
 msgid ""
 "For example, the URL might be @@indicateurl@{http://example.org/path@}.\n"
 msgstr ""
+"Por exemplo, a URL poderia ser @@indicateurl@{http://exemplo.org/path@}.\n"
 
 #. type: display
 #: texinfo/texinfo-ed.7.1-en_US.texi:5593
 #, no-wrap
 msgid "For example, the URL might be @indicateurl{http://example.org/path}.\n"
 msgstr ""
+"Por exemplo, a URL poderia ser @indicateurl{http://exemplo.org/path}.\n"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:5597
@@ -14174,29 +14231,32 @@ msgid ""
 "The output from @code{@@indicateurl} is usually like that of @code{@@samp} "
 "(@pxref{@code{@@samp}})."
 msgstr ""
+"A saída oriunda de @code{@@indicateurl} geralmente é semelhante àquela de "
+"@code{@@samp} (@pxref{@code{@@samp}})."
 
 #. type: node
 #: texinfo/texinfo-ed.7.1-en_US.texi:5599
 #, no-wrap
 msgid "@code{@@email}"
-msgstr ""
+msgstr "@code{@@email}"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:5601
 msgid "@nodedescription Indicating an electronic mail address."
-msgstr ""
+msgstr "@nodedescription Indicando um endereço eletrônico de correio."
 
 #. type: subsection
 #: texinfo/texinfo-ed.7.1-en_US.texi:5601
 #, no-wrap
 msgid "@code{@@email}@{@var{email-address}[, @var{displayed-text}]@}"
 msgstr ""
+"@code{@@email}@{@var{endereço-correio-eletrônico}[, @var{texto-exibido}]@}"
 
 #. type: findex
 #: texinfo/texinfo-ed.7.1-en_US.texi:5604
 #, no-wrap
 msgid "email"
-msgstr ""
+msgstr "email"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:5609
@@ -14205,12 +14265,15 @@ msgid ""
 "takes one mandatory argument, the address, and one optional argument, the "
 "text to display (the default is the address itself)."
 msgstr ""
+"Use o comando @code{@@email} para indicar um endereço de correio "
+"eletrônico.  Ele recebe um argumento obrigatório, o endereço, e um "
+"argumento opcional, o texto a exibir (o padrão é o próprio endereço)."
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:5610
 #, no-wrap
 msgid "Mailto link"
-msgstr ""
+msgstr "Linque para EMail"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:5616
@@ -14221,6 +14284,11 @@ msgid ""
 "a @samp{mailto} link usually brings up a mail composition window.  For "
 "example:"
 msgstr ""
+"No Info, o endereço é mostrado entre colchetes angulares, precedido pelo "
+"texto a exibir, se existir.  Na saída impressa, os colchetes angulares são "
+"omitidos.  Na saída HTML e DocBook, @code{@@email} produz um linque "
+"@samp{mailto}.  No HTML, um linque @samp{mailto} geralmente abre uma janela "
+"de composição de mensagem.  Por exemplo:"
 
 #. type: example
 #: texinfo/texinfo-ed.7.1-en_US.texi:5620
@@ -14229,6 +14297,8 @@ msgid ""
 "Send bug reports to @@email@{bug-texinfo@@@@gnu.org@},\n"
 "suggestions to the @@email@{bug-texinfo@@@@gnu.org, same place@}.\n"
 msgstr ""
+"Envie informes de defeitos para @@email@{bug-texinfo@@@@gnu.org@},\n"
+"sugestões para o @@email@{bug-texinfo@@@@gnu.org, algum lugar@}.\n"
 
 #. type: display
 #: texinfo/texinfo-ed.7.1-en_US.texi:5628
@@ -14237,29 +14307,31 @@ msgid ""
 "Send bug reports to @email{bug-texinfo@@gnu.org},\n"
 "suggestions to the @email{bug-texinfo@@gnu.org, same place}.\n"
 msgstr ""
+"Envie informes de defeitos para @email{bug-texinfo@@gnu.org},\n"
+"sugestões para o @email{bug-texinfo@@gnu.org, algum lugar}.\n"
 
 #. type: node
 #: texinfo/texinfo-ed.7.1-en_US.texi:5631
 #, no-wrap
 msgid "Emphasis"
-msgstr ""
+msgstr "Ênfase"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:5633
 msgid "@nodedescription How to emphasize text."
-msgstr ""
+msgstr "@nodedescription Como enfatizar texto."
 
 #. type: section
 #: texinfo/texinfo-ed.7.1-en_US.texi:5633
 #, no-wrap
 msgid "Emphasizing Text"
-msgstr ""
+msgstr "Enfatizando Texto"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:5634
 #, no-wrap
 msgid "Emphasizing text"
-msgstr ""
+msgstr "Enfatizando texto"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:5644
@@ -14272,47 +14344,55 @@ msgid ""
 "which text will be output.  These commands have no effect in Info and only "
 "one of them, the @code{@@r} command, has any regular use."
 msgstr ""
+"Normalmente, Texinfo muda a fonte para marcar palavras no texto de acordo "
+"com a categoria a que as palavras pertencem; um exemplo é o comando "
+"@code{@@code}.  Na maioria das vezes, essa é a melhor maneira para marcar "
+"palavras.  Entretanto, ocasionalmente, você desejará enfatizar texto sem "
+"indicar uma categoria.  Texinfo tem dois comandos para fazer isso.  Além "
+"disso, Texinfo tem vários comandos que especificam a fonte na qual o texto "
+"será gerado.  Esses comandos não tem efeito no Info e somente um deles, o "
+"comando @code{@@r}, tem algum uso regular."
 
 #. type: node
 #: texinfo/texinfo-ed.7.1-en_US.texi:5646
 #, no-wrap
 msgid "@code{@@emph @@strong}"
-msgstr ""
+msgstr "@code{@@emph @@strong}"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:5648
 msgid "@nodedescription How to emphasize text in Texinfo."
-msgstr ""
+msgstr "@nodedescription Como enfatizar texto no Texinfo."
 
 #. type: subsection
 #: texinfo/texinfo-ed.7.1-en_US.texi:5648
 #, no-wrap
 msgid "@code{@@emph}@{@var{text}@} and @code{@@strong}@{@var{text}@}"
-msgstr ""
+msgstr "@code{@@emph}@{@var{texto}@} e @code{@@strong}@{@var{texto}@}"
 
-#.  oldname
+#.  nome antigo
 #. type: anchor{#1}
 #: texinfo/texinfo-ed.7.1-en_US.texi:5651
 msgid "emph & strong"
-msgstr ""
+msgstr "enfatizar e fortalecer"
 
 #. type: findex
 #: texinfo/texinfo-ed.7.1-en_US.texi:5651
 #, no-wrap
 msgid "emph"
-msgstr ""
+msgstr "emph"
 
 #. type: findex
 #: texinfo/texinfo-ed.7.1-en_US.texi:5652
 #, no-wrap
 msgid "strong"
-msgstr ""
+msgstr "strong"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:5653
 #, no-wrap
 msgid "Emphasizing text, font for"
-msgstr ""
+msgstr "Enfatização de texto, fonte para"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:5660
@@ -14323,6 +14403,11 @@ msgid ""
 "output, @code{@@emph} surrounds the text with underscores (@samp{_}), and "
 "@code{@@strong} puts asterisks around the text."
 msgstr ""
+"Os comandos @code{@@emph} e @code{@@strong} são para ênfase; "
+"@code{@@strong} é mais forte.  Na saída impressa, @code{@@emph} produz "
+"@emph{itálico} e @code{@@strong} produz @strong{negrito}.  Na saída Info, "
+"@code{@@emph} envolve o texto com sublinhados (@samp{_}), e @code{@@strong} "
+"coloca asteriscos em volta do texto."
 
 #. type: group
 #: texinfo/texinfo-ed.7.1-en_US.texi:5667
@@ -14331,13 +14416,15 @@ msgid ""
 "@@strong@{Caution:@} @@samp@{rm * .[^.]*@}\n"
 "removes @@emph@{all@} files in the directory.\n"
 msgstr ""
+"@@strong@{Cuidado:@} @@samp@{rm * .[^.]*@}\n"
+"remove @@emph@{todos@} os arquivos no diretório.\n"
 
 #. type: table
 #: texinfo/texinfo-ed.7.1-en_US.texi:5672
 #: texinfo/texinfo-ed.7.1-en_US.texi:10849
 #: texinfo/texinfo-ed.7.1-en_US.texi:11283
 msgid "produces the following:"
-msgstr ""
+msgstr "produz o seguinte:"
 
 #. type: quotation
 #: texinfo/texinfo-ed.7.1-en_US.texi:5676
@@ -14345,6 +14432,8 @@ msgid ""
 "@strong{Caution}: @samp{rm * .[^.]*} removes @emph{all} files in the "
 "directory."
 msgstr ""
+"@strong{Cuidado}: @samp{rm * .[^.]*} remove @emph{todos} os arquivos no "
+"diretório."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:5681
@@ -14353,13 +14442,16 @@ msgid ""
 "effect, a typographical element, such as the word `Caution' in the preceding "
 "example."
 msgstr ""
+"O comando @code{@@strong} raramente é usado, exceto para marcar o que é, "
+"na verdade, um elemento tipográfico, como a palavra `Cuidado' no exemplo "
+"precedente."
 
 #. type: quotation
 #: texinfo/texinfo-ed.7.1-en_US.texi:5682
 #: texinfo/texinfo-ed.7.1-en_US.texi:6141
 #, no-wrap
 msgid "Caution"
-msgstr ""
+msgstr "Cuidado"
 
 #. type: quotation
 #: texinfo/texinfo-ed.7.1-en_US.texi:5688
@@ -14369,35 +14461,40 @@ msgid ""
 "as @strong{Please notice} or @strong{Caution} instead, or the optional "
 "argument to @code{@@quotation}---@samp{Note} is allowable there."
 msgstr ""
+"Não use @code{@@strong} com a palavra @samp{Observação} seguida por um "
+"espaço; Info confundirá a combinação para uma referência cruzada.  Use "
+"uma frase, como @strong{Por favor note} ou @strong{Cuidado} em vez disso, ou "
+"o argumento opcional para @code{@@quotation}---@samp{Observação} é "
+"permitido lá."
 
 #. type: node
 #: texinfo/texinfo-ed.7.1-en_US.texi:5691
 #, no-wrap
 msgid "Smallcaps"
-msgstr ""
+msgstr "Versaletes"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:5693
 msgid "@nodedescription How to use the small caps font."
-msgstr ""
+msgstr "@nodedescription Como usar a fonte de versaletes."
 
 #. type: subsection
 #: texinfo/texinfo-ed.7.1-en_US.texi:5693
 #, no-wrap
 msgid "@code{@@sc}@{@var{text}@}: The Small Caps Font"
-msgstr ""
+msgstr "@code{@@sc}@{@var{texto}@}: A Fonte de Versaletes"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:5694
 #, no-wrap
 msgid "Small caps font"
-msgstr ""
+msgstr "Fonte de versaletes"
 
 #. type: findex
 #: texinfo/texinfo-ed.7.1-en_US.texi:5695
 #, no-wrap
 msgid "sc"
-msgstr ""
+msgstr "sc"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:5700
@@ -14406,18 +14503,21 @@ msgid ""
 "possible).  Write the text you want to be in small caps between braces in "
 "lowercase, like this:"
 msgstr ""
+"Use o comando @samp{@@sc} para configurar texto em @sc{uma fonte de "
+"versaletes} (onde possível).  Escreva o texto que você quer que esteja em "
+"versaletes entre chaves e em letras minúsculas, como isto:"
 
 #. type: example
 #: texinfo/texinfo-ed.7.1-en_US.texi:5703
 #, no-wrap
 msgid "Richard @@sc@{Stallman@} a commenc@'{e} le projet GNU.\n"
-msgstr ""
+msgstr "Richard @@sc@{Stallman@} a commenc@'{e} le projet GNU.\n"
 
 #. type: display
 #: texinfo/texinfo-ed.7.1-en_US.texi:5710
 #, no-wrap
 msgid "Richard @sc{Stallman} a commenc@'{e} le projet GNU.\n"
-msgstr ""
+msgstr "Richard @sc{Stallman} a commenc@'{e} le projet GNU.\n"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:5716
@@ -14427,12 +14527,16 @@ msgid ""
 "languages other than English, though there are no hard-and-fast rules about "
 "such things."
 msgstr ""
+"Como mostrado aqui, nós recomendamos reservar @code{@@sc} para casos "
+"especiais onde você queira versalete tipográfica; nomes de família são "
+"um desses, especialmente em outros idiomas diferentes do Inglês, embora "
+"não existam regras rígidas acerca de tais coisas."
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:5717
 #, no-wrap
 msgid "@code{<small>} tag"
-msgstr ""
+msgstr "etiqueta @code{<small>}"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:5725
@@ -14445,6 +14549,14 @@ msgid ""
 "easily represent true small caps.  In @LaTeX{}, a command setting small caps "
 "fonts is output."
 msgstr ""
+"@TeX{} tipografa quaisquer letras maiúsculas entre as chaves de um comando "
+"@code{@@sc} em letras maiúsculas de tamanho real; somente letras "
+"minúsculas são impressas na fonte de versaletes.  Na saída Info, o "
+"argumento para @code{@@sc} é impresso todo em maiúsculas.  Em HTML, o "
+"argumento é colocado em letras maiúsculas e a saída marcada com a "
+"etiqueta @code{<small>} para reduzir o tamanho da fonte, pois o HTML não "
+"consegue facilmente representar versaletes verdadeiras.  No @LaTeX{}, um "
+"comando configurando fontes de versaletes é gerado."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:5728
@@ -14452,6 +14564,8 @@ msgid ""
 "Overall, we recommend using standard upper- and lowercase letters wherever "
 "possible."
 msgstr ""
+"No geral, nós recomendamos usar letras padrão maiúsculas e minúsculas "
+"sempre que possível."
 
 #. type: node
 #: texinfo/texinfo-ed.7.1-en_US.texi:5730
