@@ -1,1 +1,10 @@
+( LC_ALL=C po4a po4a.conf 2>&1 | tee logs/`date "+%Y-%m-%d-%H-%M-%S"`-po4a.log.txt && exit "${PIPESTATUS}" )
+
+Situação um: com arquivos PO e POT vazios, o comando acima gera os textos para se traduzir.
+
+Situação dois: com arquivos PO e POT existentes (já com material traduzido), o comando acima atualiza os arquivos PO e POT existentes (mantém os textos já traduzidos e, eventualmente, gera textos novos para traduzir)
+
+
 ( LC_ALL=C po4a --no-update po4a.conf 2>&1 | tee logs/`date "+%Y-%m-%d-%H-%M-%S"`-po4a.log.txt && exit "${PIPESTATUS}" )
+
+Observação: o comando acima somente gera o arquivo final traduzido (substitui os textos originais pelos textos traduzidos)
