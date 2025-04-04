@@ -17,7 +17,7 @@ msgstr ""
 "Project-Id-Version: Texinfo 7.1\n"
 "Report-Msgid-Bugs-To: jafesp@gmail.com\n"
 "POT-Creation-Date: 2025-03-25 02:01-0300\n"
-"PO-Revision-Date: 2025-04-03 14:00-0300\n"
+"PO-Revision-Date: 2025-04-04 14:00-0300\n"
 "Last-Translator: Jamenson Ferreira Espindula de Almeida Melo "
 "<jafesp@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -14571,48 +14571,48 @@ msgstr ""
 #: texinfo/texinfo-ed.7.1-en_US.texi:5730
 #, no-wrap
 msgid "Fonts"
-msgstr ""
+msgstr "Fontes"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:5732
 msgid "@nodedescription Various font commands for printed output."
-msgstr ""
+msgstr "@nodedescription Vários comandos de fonte para saída impressa."
 
 #. type: subsection
 #: texinfo/texinfo-ed.7.1-en_US.texi:5732
 #, no-wrap
 msgid "Fonts for Printing"
-msgstr ""
+msgstr "Fontes para Impressão"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:5733
 #, no-wrap
 msgid "Fonts for printing"
-msgstr ""
+msgstr "Fontes para impressão"
 
 #. type: findex
 #: texinfo/texinfo-ed.7.1-en_US.texi:5735
 #, no-wrap
 msgid "fonttextsize"
-msgstr ""
+msgstr "fonttextsize"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:5736
 #, no-wrap
 msgid "Font size, reducing"
-msgstr ""
+msgstr "Tamanho de fonte, reduzindo"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:5737
 #, no-wrap
 msgid "Reducing font size"
-msgstr ""
+msgstr "Reduzindo tamanho de fonte"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:5738
 #, no-wrap
 msgid "Smaller fonts"
-msgstr ""
+msgstr "Fontes menores"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:5744
@@ -14622,18 +14622,22 @@ msgid ""
 "other output.  It takes a single argument on the remainder of the line, "
 "which must be either @samp{10} or @samp{11}.  For example:"
 msgstr ""
+"Texinfo fornece um comando para mudar o tamanho da fonte principal do corpo "
+"na saída impressa para um documento: @code{@@fonttextsize}.  Ele não tem "
+"efeito em outra saída.  Ele recebe um argumento no restante da linha, o "
+"qual precisa ser ou @samp{10} ou @samp{11}.  Por exemplo:"
 
 #. type: example
 #: texinfo/texinfo-ed.7.1-en_US.texi:5747
 #, no-wrap
 msgid "@@fonttextsize 10\n"
-msgstr ""
+msgstr "@@fonttextsize 10\n"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:5749
 #, no-wrap
 msgid "Printing cost, reducing"
-msgstr ""
+msgstr "Custo de impressão, reduzindo"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:5757
@@ -14645,6 +14649,13 @@ msgid ""
 "fonts on standard paper (8.5x11 or A4) are too small.  One reason to use "
 "this command is to save pages, and hence printing cost, for physical books."
 msgstr ""
+"O efeito é o de reduzir a fonte do corpo para um tamanho de 10@dmn{pt} (o "
+"padrão é 11@dmn{pt}).  Fontes para outros elementos, tais como seções e "
+"capítulos, são reduzidas de acordo.  Isso somente deveria ser usado em "
+"conjunto com @code{@@smallbook} (@pxref{@code{@@smallbook}}) ou similar, "
+"pois fontes de 10@dmn{pt} em papel padrão (8.5x11 ou A4) são muito "
+"pequenas.  Uma razão para se usar esse comando é para economizar páginas, "
+"e, assim, custo de impressão, para livros físicos."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:5760
@@ -14652,6 +14663,8 @@ msgid ""
 "Texinfo does not at present have commands to switch the font family to use, "
 "or more general size-changing commands."
 msgstr ""
+"Texinfo atualmente não tem comandos para alternar a família da fonte a se "
+"usar, ou comandos de mudança de tamanho mais gerais."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:5765
@@ -14661,94 +14674,98 @@ msgid ""
 "They have no effect in Info.  All the commands apply to a following argument "
 "surrounded by braces."
 msgstr ""
+"Texinfo também fornece vários comandos de fonte que especificam mudanças "
+"de fonte no manual impresso e (onde possível) na saída HTML e DocBook.  "
+"Eles não tem efeito no Info.  Todos os comandos se aplicam a um argumento "
+"seguinte cercados por chaves."
 
 #. type: findex
 #: texinfo/texinfo-ed.7.1-en_US.texi:5767
 #, no-wrap
 msgid "b @r{(bold font)}"
-msgstr ""
+msgstr "b @r{(fonte negrito)}"
 
 #. type: findex
 #: texinfo/texinfo-ed.7.1-en_US.texi:5769
 #, no-wrap
 msgid "b"
-msgstr ""
+msgstr "b"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:5771
 #, no-wrap
 msgid "Bold font"
-msgstr ""
+msgstr "Fonte negrito"
 
 #. type: item
 #: texinfo/texinfo-ed.7.1-en_US.texi:5772
 #, no-wrap
 msgid "@@b"
-msgstr ""
+msgstr "@@b"
 
 #. type: table
 #: texinfo/texinfo-ed.7.1-en_US.texi:5774
 msgid "selects @b{bold} face;"
-msgstr ""
+msgstr "seleciona face @b{negrito};"
 
 #. type: findex
 #: texinfo/texinfo-ed.7.1-en_US.texi:5775
 #, no-wrap
 msgid "i @r{(italic font)}"
-msgstr ""
+msgstr "i @r{(fonte itálica)}"
 
 #. type: findex
 #: texinfo/texinfo-ed.7.1-en_US.texi:5777
 #, no-wrap
 msgid "i"
-msgstr ""
+msgstr "i"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:5779
 #, no-wrap
 msgid "Italic font"
-msgstr ""
+msgstr "Fonte itálica"
 
 #. type: item
 #: texinfo/texinfo-ed.7.1-en_US.texi:5780
 #, no-wrap
 msgid "@@i"
-msgstr ""
+msgstr "@@i"
 
 #. type: table
 #: texinfo/texinfo-ed.7.1-en_US.texi:5782
 msgid "selects an @i{italic} font;"
-msgstr ""
+msgstr "seleciona uma fonte @i{itálica};"
 
 #. type: findex
 #: texinfo/texinfo-ed.7.1-en_US.texi:5783
 #, no-wrap
 msgid "r @r{(roman font)}"
-msgstr ""
+msgstr "r @r{(fonte romana)}"
 
 #. type: findex
 #: texinfo/texinfo-ed.7.1-en_US.texi:5785
 #, no-wrap
 msgid "r"
-msgstr ""
+msgstr "r"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:5787
 #, no-wrap
 msgid "Roman font"
-msgstr ""
+msgstr "Fonte romana"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:5788
 #, no-wrap
 msgid "Default font"
-msgstr ""
+msgstr "Fonte padrão"
 
 #. type: item
 #: texinfo/texinfo-ed.7.1-en_US.texi:5789
 #, no-wrap
 msgid "@@r"
-msgstr ""
+msgstr "@@r"
 
 #. type: table
 #: texinfo/texinfo-ed.7.1-en_US.texi:5792
@@ -14756,100 +14773,104 @@ msgid ""
 "selects a @r{roman} font, which is the usual font in which text is printed.  "
 "It may or may not be seriffed."
 msgstr ""
+"seleciona uma fonte @r{romana}, que é a fonte usual na qual o texto é "
+"impresso.  Ela pode ou não ser serifada."
 
 #. type: findex
 #: texinfo/texinfo-ed.7.1-en_US.texi:5793
 #, no-wrap
 msgid "sansserif"
-msgstr ""
+msgstr "sansserif"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:5794
 #, no-wrap
 msgid "Sans serif font"
-msgstr ""
+msgstr "Fonte sans serifa"
 
 #. type: item
 #: texinfo/texinfo-ed.7.1-en_US.texi:5795
 #, no-wrap
 msgid "@@sansserif"
-msgstr ""
+msgstr "@@sansserif"
 
 #. type: table
 #: texinfo/texinfo-ed.7.1-en_US.texi:5797
 msgid "selects a @sansserif{sans serif} font;"
-msgstr ""
+msgstr "seleciona uma fonte @sansserif{sans serifa};"
 
 #. type: findex
 #: texinfo/texinfo-ed.7.1-en_US.texi:5798
 #, no-wrap
 msgid "slanted"
-msgstr ""
+msgstr "slanted"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:5799
 #, no-wrap
 msgid "Slanted font"
-msgstr ""
+msgstr "Fonte inclinada"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:5800
 #, no-wrap
 msgid "Oblique font"
-msgstr ""
+msgstr "Fonte oblíqua"
 
 #. type: item
 #: texinfo/texinfo-ed.7.1-en_US.texi:5801
 #, no-wrap
 msgid "@@slanted"
-msgstr ""
+msgstr "@@slanted"
 
 #. type: table
 #: texinfo/texinfo-ed.7.1-en_US.texi:5803
 msgid "selects a @slanted{slanted} font;"
-msgstr ""
+msgstr "seleciona uma fonte @slanted{inclinada};"
 
 #. type: findex
 #: texinfo/texinfo-ed.7.1-en_US.texi:5804
 #, no-wrap
 msgid "t @r{(typewriter font)}"
-msgstr ""
+msgstr "t @r{(fonte de máquina de escrever)}"
 
 #. type: findex
 #: texinfo/texinfo-ed.7.1-en_US.texi:5806
 #, no-wrap
 msgid "t"
-msgstr ""
+msgstr "t"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:5808
 #, no-wrap
 msgid "Monospace font"
-msgstr ""
+msgstr "Fonte mono espaçada"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:5809
 #, no-wrap
 msgid "Fixed-width font"
-msgstr ""
+msgstr "Fonte de tamanho fixo"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:5810
 #, no-wrap
 msgid "Typewriter font"
-msgstr ""
+msgstr "Fonte de máquina de escrever"
 
 #. type: item
 #: texinfo/texinfo-ed.7.1-en_US.texi:5811
 #, no-wrap
 msgid "@@t"
-msgstr ""
+msgstr "@@t"
 
 #. type: table
 #: texinfo/texinfo-ed.7.1-en_US.texi:5813
 msgid ""
 "selects the @t{fixed-width}, typewriter-style font used by @code{@@code};"
 msgstr ""
+"seleciona a fonte de @t{tamanho fixo}, estilo máquina de escrever usada por "
+"@code{@@code};"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:5825
@@ -14858,6 +14879,9 @@ msgid ""
 "comments in the standard roman font instead of the fixed-width font.  This "
 "looks better in printed output."
 msgstr ""
+"O comando @code{@@r} pode ser útil em ambientes tipo exemplo, para escrever "
+"comentários na fonte romana padrão em vez da fonte de largura fixa.  Isso "
+"aparenta melhor na saída impressa."
 
 #. type: group
 #: texinfo/texinfo-ed.7.1-en_US.texi:5833
@@ -14867,12 +14891,15 @@ msgid ""
 "(+ 2 2)    ; @@r@{Add two plus two.@}\n"
 "@@end lisp\n"
 msgstr ""
+"@@lisp\n"
+"(+ 2 2)    ; @@r@{Adiciona dois mais dois.@}\n"
+"@@end lisp\n"
 
 #. type: lisp
 #: texinfo/texinfo-ed.7.1-en_US.texi:5841
 #, no-wrap
 msgid "(+ 2 2)    ; @r{Add two plus two.}\n"
-msgstr ""
+msgstr "(+ 2 2)    ; @r{Adiciona dois mais dois.}\n"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:5848
@@ -14883,18 +14910,24 @@ msgid ""
 "@t{foo} with @code{@@code@{foo@}} producing @code{foo}.)  Here are some "
 "possible reasons for using @code{@@t} instead of @code{@@code}:"
 msgstr ""
+"O comando @code{@@t} ocasionalmente pode ser útil para se produzir saída "
+"em uma fonte de máquina de escrever onde isso for suportado, mas nenhuma "
+"distinção com aspas é necessária no Info ou em texto simples.  "
+"(Compare-se @code{@@t@{foo@}} produzindo @t{foo} com @code{@@code@{foo@}} "
+"produzindo @code{foo}.)  Aqui estão alguns possíveis motivos para se usar "
+"@code{@@t} em vez de @code{@@code}:"
 
 #. type: item
 #: texinfo/texinfo-ed.7.1-en_US.texi:5850
 #, no-wrap
 msgid "The argument is a single character"
-msgstr ""
+msgstr "O argumento é um caractere único"
 
 #. type: item
 #: texinfo/texinfo-ed.7.1-en_US.texi:5851
 #, no-wrap
 msgid "There are already quotes of some kind enclosing the argument"
-msgstr ""
+msgstr "Já existem aspas de algum tipo cercando o argumento"
 
 #. type: item
 #: texinfo/texinfo-ed.7.1-en_US.texi:5852
