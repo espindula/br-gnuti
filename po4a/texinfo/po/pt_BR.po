@@ -17,7 +17,7 @@ msgstr ""
 "Project-Id-Version: Texinfo 7.1\n"
 "Report-Msgid-Bugs-To: jafesp@gmail.com\n"
 "POT-Creation-Date: 2025-04-04 13:52-0300\n"
-"PO-Revision-Date: 2025-04-04 14:00-0300\n"
+"PO-Revision-Date: 2025-04-05 19:00-0300\n"
 "Last-Translator: Jamenson Ferreira Espindula de Almeida Melo "
 "<jafesp@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -15261,31 +15261,31 @@ msgstr ""
 #: texinfo/texinfo-ed.7.1-en_US.texi:5949
 #, no-wrap
 msgid "@code{@@quotation}"
-msgstr ""
+msgstr "@code{@@quotation}"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:5951
 msgid "@nodedescription Writing a quotation."
-msgstr ""
+msgstr "@nodedescription Escrevendo uma citação."
 
 #. type: section
 #: texinfo/texinfo-ed.7.1-en_US.texi:5951
 #, no-wrap
 msgid "@code{@@quotation}: Block Quotations"
-msgstr ""
+msgstr "@code{@@quotation}: Citações de Bloco"
 
 #. type: findex
 #: texinfo/texinfo-ed.7.1-en_US.texi:5953
 #: texinfo/texinfo-ed.7.1-en_US.texi:5955
 #, no-wrap
 msgid "quotation"
-msgstr ""
+msgstr "citação"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:5954
 #, no-wrap
 msgid "Quotations"
-msgstr ""
+msgstr "Citações"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:5959
@@ -15293,6 +15293,8 @@ msgid ""
 "The text of a quotation is processed like normal text (regular font, text is "
 "filled) except that:"
 msgstr ""
+"O texto de uma citação é processado como texto normal (fonte regular, "
+"texto é preenchido), exceto que:"
 
 #. type: itemize
 #: texinfo/texinfo-ed.7.1-en_US.texi:5965
@@ -15301,12 +15303,17 @@ msgid ""
 "quotation is indented; the right margin may also be closer to the center of "
 "the page"
 msgstr ""
+"a margem esquerda está mais próxima do centro da página, de forma que a "
+"totalidade da citação esteja recuada; a margem direita também pode estar "
+"mais próxima do centro da página"
 
 #. type: itemize
 #: texinfo/texinfo-ed.7.1-en_US.texi:5968
 msgid ""
 "the first lines of paragraphs are indented no more than other lines; and"
 msgstr ""
+"as primeiras linhas de parágrafos não são recuadas mais que outras "
+"linhas; e"
 
 #. type: itemize
 #: texinfo/texinfo-ed.7.1-en_US.texi:5972
@@ -15314,6 +15321,8 @@ msgid ""
 "an @code{@@author} command may be given to specify the author of the "
 "quotation."
 msgstr ""
+"um comando @code{@@author} pode ser fornecido para se especificar o autor da "
+"citação."
 
 #. type: quotation
 #: texinfo/texinfo-ed.7.1-en_US.texi:5979
@@ -15323,6 +15332,10 @@ msgid ""
 "often used to indicate text that is excerpted from another (real or "
 "hypothetical) printed work."
 msgstr ""
+"Este é um exemplo de texto escrito entre um comando @code{@@quotation} e um "
+"comando @code{@@end quotation}.  Um comando @code{@@quotation} é usado mais "
+"frequentemente para indicar texto que é extraído a partir de outro "
+"trabalho impresso (real ou hipotético)."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:5986
@@ -15332,6 +15345,10 @@ msgid ""
 "beginning with and containing only @code{@@end quotation}.  The @code{@@end "
 "quotation} line will likewise disappear from the output."
 msgstr ""
+"Escreva um comando @code{@@quotation} como texto sozinho em uma linha.  Essa "
+"linha desaparecerá da saída.  Marque o final da citação com uma linha "
+"iniciando com e contendo somente @code{@@end quotation}.  A linha do "
+"@code{@@end quotation} também desaparecerá da saída."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:5991
@@ -15341,6 +15358,10 @@ msgid ""
 "quotation in bold or otherwise emphasized, and followed with a @samp{:}.  "
 "For example:"
 msgstr ""
+"@code{@@quotation} aceita um argumento opcional, fornecido no restante da "
+"linha.  Esse texto, se presente, é incluído no início da citação, em "
+"negrito, ou, caso contrário, enfatizado, e seguido com um @samp{:}.  Por "
+"exemplo:"
 
 #. type: example
 #: texinfo/texinfo-ed.7.1-en_US.texi:5997
@@ -15351,6 +15372,10 @@ msgid ""
 "a foo.\n"
 "@@end quotation\n"
 msgstr ""
+"@@quotation Observação\n"
+"Isto é\n"
+"um foo.\n"
+"@@end quotation\n"
 
 #. type: quotation
 #: texinfo/texinfo-ed.7.1-en_US.texi:6002
