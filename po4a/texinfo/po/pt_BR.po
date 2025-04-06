@@ -17,7 +17,7 @@ msgstr ""
 "Project-Id-Version: Texinfo 7.1\n"
 "Report-Msgid-Bugs-To: jafesp@gmail.com\n"
 "POT-Creation-Date: 2025-04-05 18:55-0300\n"
-"PO-Revision-Date: 2025-04-06 18:30-0300\n"
+"PO-Revision-Date: 2025-04-06 19:30-0300\n"
 "Last-Translator: Jamenson Ferreira Espindula de Almeida Melo "
 "<jafesp@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16678,36 +16678,37 @@ msgstr ""
 #: texinfo/texinfo-ed.7.1-en_US.texi:6561
 #, no-wrap
 msgid "@code{@@cartouche}"
-msgstr ""
+msgstr "@code{@@cartouche}"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:6563
 msgid "@nodedescription Drawing rounded rectangles around text."
 msgstr ""
+"@nodedescription Desenhando retângulos arredondados ao redor do texto."
 
 #. type: section
 #: texinfo/texinfo-ed.7.1-en_US.texi:6563
 #, no-wrap
 msgid "@code{@@cartouche}: Rounded Rectangles"
-msgstr ""
+msgstr "@code{@@cartouche}: Retângulos Arredondados"
 
 #. type: findex
 #: texinfo/texinfo-ed.7.1-en_US.texi:6566
 #, no-wrap
 msgid "cartouche"
-msgstr ""
+msgstr "cartouche"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:6567
 #, no-wrap
 msgid "Box with rounded corners"
-msgstr ""
+msgstr "Caixa com cantos arredondados"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:6568
 #, no-wrap
 msgid "Rounded rectangles, around text"
-msgstr ""
+msgstr "Retângulos arredondados, ao redor do texto"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:6575
@@ -16718,6 +16719,11 @@ msgid ""
 "main flow.  You can also further highlight an example or quotation with "
 "@code{@@cartouche}."
 msgstr ""
+"Onde o formato da saída gerada permitir, o comando @code{@@cartouche} "
+"desenha uma caixa com cantos arredondados ao redor do conteúdo dele.  No "
+"HTML, um retângulo normal é desenhado.  Você consegue usar esse comando "
+"para isolar uma parte do manual do fluxo principal.  Você também consegue "
+"realçar ainda mais um exemplo ou citação com @code{@@cartouche}."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:6578
@@ -16725,6 +16731,8 @@ msgid ""
 "For instance, you could write a manual in which one type of example is "
 "surrounded by a cartouche for emphasis.  For example,"
 msgstr ""
+"Por exemplo, você poderia escrever um manual no qual um tipo de exemplo "
+"esteja envolvido por um @code{@@cartouche} para ênfase.  Por exemplo,"
 
 #. type: example
 #: texinfo/texinfo-ed.7.1-en_US.texi:6586
@@ -16737,6 +16745,12 @@ msgid ""
 "@@end example\n"
 "@@end cartouche\n"
 msgstr ""
+"@@cartouche\n"
+"@@example\n"
+"% pwd\n"
+"/usr/local/share/emacs\n"
+"@@end example\n"
+"@@end cartouche\n"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:6591
@@ -16744,6 +16758,8 @@ msgid ""
 "surrounds the two-line example with a box with rounded corners, in the "
 "printed manual."
 msgstr ""
+"envolve o exemplo de duas linhas com uma caixa com cantos arredondados, no "
+"manual impresso."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:6594
@@ -16751,6 +16767,8 @@ msgid ""
 "The output from the example looks like this (if you're reading this in Info, "
 "you'll see the @code{@@cartouche} had no effect):"
 msgstr ""
+"A saída gerada oriunda do exemplo se parece com isto (se você estiver "
+"lendo isto no Info, você verá que o @code{@@cartouche} não teve efeito):"
 
 #. type: example
 #: texinfo/texinfo-ed.7.1-en_US.texi:6599
@@ -16759,6 +16777,8 @@ msgid ""
 "% pwd\n"
 "/usr/local/share/emacs\n"
 msgstr ""
+"% pwd\n"
+"/usr/local/share/emacs\n"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:6606
@@ -16768,11 +16788,15 @@ msgid ""
 "bold or otherwise emphasized at the beginning of the cartouche, and is "
 "centered in some output formats."
 msgstr ""
+"@code{@@cartouche} recebe um argumento opcional, fornecido no restante da "
+"linha.  Esse texto, se presente, é o título do @code{@@cartouche}.  Ele é "
+"gerado em negrito ou, de outra maneira, enfatizado no início do "
+"@code{@@cartouche} e é centralizado em alguns formatos de saída."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:6608
 msgid "The following example illustrates a cartouche with a title:"
-msgstr ""
+msgstr "O seguinte exemplo ilustra um @code{@@cartouche} com um título:"
 
 #. type: example
 #: texinfo/texinfo-ed.7.1-en_US.texi:6614
@@ -16783,16 +16807,20 @@ msgid ""
 "flow of the text.\n"
 "@@end cartouche\n"
 msgstr ""
+"@@cartouche Importante\n"
+"Texto explicando algo importante fora do fluxo\n"
+"principal do texto.\n"
+"@@end cartouche\n"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:6617
 msgid "The cartouche with a title looks like this:"
-msgstr ""
+msgstr "O @code{@@cartouche} com um título se pareçe com isto:"
 
 #. type: cartouche
 #: texinfo/texinfo-ed.7.1-en_US.texi:6621
 msgid "Text explaining something important out of the main flow of the text."
-msgstr ""
+msgstr "Texto explicando algo importante fora do fluxo principal do texto."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:6625
@@ -16800,83 +16828,85 @@ msgid ""
 "A cartouche is output on a single page in printed output, similarly to "
 "@code{@@group} (@pxref{@code{@@group}})."
 msgstr ""
+"Um @code{@@cartouche} é gerado em uma página na saída gerada impressa, "
+"semelhante ao @code{@@group} (@pxref{@code{@@group}})."
 
 #. type: node
 #: texinfo/texinfo-ed.7.1-en_US.texi:6627
 #, no-wrap
 msgid "small"
-msgstr ""
+msgstr "small"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:6629
 msgid "@nodedescription Examples in a smaller font."
-msgstr ""
+msgstr "@nodedescription Exemplos em uma fonte menor."
 
 #. type: section
 #: texinfo/texinfo-ed.7.1-en_US.texi:6629
 #, no-wrap
 msgid "@code{@@small@dots{}} Block Commands"
-msgstr ""
+msgstr "@code{@@small@dots{}} Comandos de Bloco"
 
 #. type: findex
 #: texinfo/texinfo-ed.7.1-en_US.texi:6631
 #, no-wrap
 msgid "smallexample"
-msgstr ""
+msgstr "smallexample"
 
 #. type: findex
 #: texinfo/texinfo-ed.7.1-en_US.texi:6632
 #, no-wrap
 msgid "smallformat"
-msgstr ""
+msgstr "smallformat"
 
 #. type: findex
 #: texinfo/texinfo-ed.7.1-en_US.texi:6633
 #, no-wrap
 msgid "smalllisp"
-msgstr ""
+msgstr "smalllisp"
 
 #. type: findex
 #: texinfo/texinfo-ed.7.1-en_US.texi:6634
 #, no-wrap
 msgid "smallquotation"
-msgstr ""
+msgstr "smallquotation"
 
 #. type: findex
 #: texinfo/texinfo-ed.7.1-en_US.texi:6635
 #, no-wrap
 msgid "smalldisplay"
-msgstr ""
+msgstr "smalldisplay"
 
 #. type: findex
 #: texinfo/texinfo-ed.7.1-en_US.texi:6636
 #, no-wrap
 msgid "smallindentedblock"
-msgstr ""
+msgstr "smallindentedblock"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:6637
 #, no-wrap
 msgid "Small examples"
-msgstr ""
+msgstr "Small, exemplos"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:6638
 #, no-wrap
 msgid "Examples in smaller fonts"
-msgstr ""
+msgstr "Exemplos em fontes menores"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:6639
 #, no-wrap
 msgid "Quotations in smaller fonts"
-msgstr ""
+msgstr "Citações em fontes menores"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:6640
 #, no-wrap
 msgid "Lisp examples in smaller fonts"
-msgstr ""
+msgstr "Exemplos da Lisp em fontes menores"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:6647
@@ -16886,6 +16916,10 @@ msgid ""
 "@code{@@smallindentedblock}, @code{@@smalldisplay}, @code{@@smallexample}, "
 "@code{@@smallformat}, and @code{@@smalllisp}."
 msgstr ""
+"Adicionalmente ao @code{@@example} regular e comandos similares, Texinfo tem "
+"comandos ``small'' estilo exemplo.  Esses são @code{@@smallquotation}, "
+"@code{@@smallindentedblock}, @code{@@smalldisplay}, @code{@@smallexample}, "
+"@code{@@smallformat} e @code{@@smalllisp}."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:6650
@@ -16893,6 +16927,8 @@ msgid ""
 "In most output formats, the @code{@@small@dots{}} commands are equivalent to "
 "their non-small companion commands."
 msgstr ""
+"Na maioria dos formatos de saída gerada, os comandos @code{@@small@dots{}} "
+"são equivalentes aos comandos complementares deles não ``small''."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:6655
@@ -16902,6 +16938,10 @@ msgid ""
 "code examples can contain longer lines and still fit on a page without "
 "needing to be rewritten."
 msgstr ""
+"Na saída gerada impressa, entretanto, os comandos @code{@@small@dots{}} "
+"tipografam texto em uma fonte menor que os comandos de exemplo não "
+"``small''.  Assim, por exemplo, exemplos de código podem conter linhas mais "
+"longas e ainda caberem em uma página sem a necessidade de serem reescritos."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:6659
@@ -16910,6 +16950,9 @@ msgid ""
 "@code{@@end small@dots{}}.  For example, pair @code{@@smallexample} with "
 "@code{@@end smallexample}."
 msgstr ""
+"Marque o fim de um bloco @code{@@small@dots{}} com um correspondente "
+"@code{@@end small@dots{}}.  Por exemplo, emparelhe @code{@@smallexample} com "
+"@code{@@end smallexample}."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:6662
@@ -16917,6 +16960,9 @@ msgid ""
 "Here is an example of the font used by the @code{@@smallexample} command (in "
 "most output formats, the output will be the same as usual):"
 msgstr ""
+"Aqui está um exemplo da fonte usada pelo comando @code{@@smallexample} (na "
+"maioria dos formatos de saída, a saída gerada será a mesma como de "
+"costume):"
 
 #. type: smallexample
 #: texinfo/texinfo-ed.7.1-en_US.texi:6670
@@ -16929,6 +16975,12 @@ msgid ""
 "change the software or use pieces of it in new free\n"
 "programs; and that you know you can do these things.\n"
 msgstr ""
+"@dots{} para ter certeza de que você tem a liberdade de\n"
+"distribuir cópias de software livre (e cobrar por\n"
+"esse serviço se você desejar), que você receba o código\n"
+"fonte ou consiga obtê-lo se quiser, que você pode\n"
+"mudar o software ou usar partes dele em novos\n"
+"programas livres; e que você sabe que você pode fazer essas coisas.\n"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:6677
@@ -16939,6 +16991,11 @@ msgid ""
 "behavior in other respects---whether filling is done and whether margins are "
 "narrowed."
 msgstr ""
+"Os comandos @code{@@small@dots{}} usam o mesmo estilo de fonte que as "
+"contrapartes normais deles: @code{@@smallexample} e @code{@@smalllisp} usam "
+"uma fonte de largura fixa, e os demais usam a fonte regular.  Eles também "
+"tem o mesmo comportamento em outros aspectos---quando o preenchimento é "
+"feito e quando as margens são estreitadas."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:6681
@@ -16947,6 +17004,9 @@ msgid ""
 "@code{@@example} instead of @code{@@smallexample}), unless you have a good "
 "reason for it."
 msgstr ""
+"Como regra geral, é melhor usar apenas os comandos regulares (como "
+"@code{@@example} em vez de @code{@@smallexample}), a menos que você tenha "
+"um bom motivo para ele."
 
 #. type: chapter
 #: texinfo/texinfo-ed.7.1-en_US.texi:6683
