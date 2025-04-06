@@ -17,7 +17,7 @@ msgstr ""
 "Project-Id-Version: Texinfo 7.1\n"
 "Report-Msgid-Bugs-To: jafesp@gmail.com\n"
 "POT-Creation-Date: 2025-04-05 18:55-0300\n"
-"PO-Revision-Date: 2025-04-05 19:00-0300\n"
+"PO-Revision-Date: 2025-04-05 22:30-0300\n"
 "Last-Translator: Jamenson Ferreira Espindula de Almeida Melo "
 "<jafesp@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -15573,30 +15573,30 @@ msgstr ""
 #: texinfo/texinfo-ed.7.1-en_US.texi:6080
 #, no-wrap
 msgid "@code{@@example}"
-msgstr ""
+msgstr "@code{@@example}"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:6082
 msgid "@nodedescription Writing an example in a fixed-width font."
-msgstr ""
+msgstr "@nodedescription Escrevendo um exemplo em uma fonte de largura fixa."
 
 #. type: section
 #: texinfo/texinfo-ed.7.1-en_US.texi:6082
 #, no-wrap
 msgid "@code{@@example}: Example Text"
-msgstr ""
+msgstr "@code{@@example}: Texto de Exemplo"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:6086
 #, no-wrap
 msgid "Examples, formatting them"
-msgstr ""
+msgstr "Exemplos, formatando-os"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:6087
 #, no-wrap
 msgid "Formatting examples"
-msgstr ""
+msgstr "Formatando exemplos"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:6093
@@ -15606,6 +15606,10 @@ msgid ""
 "fragments within sentences, use the @code{@@code} command or its relatives "
 "instead (@pxref{@code{@@code}})."
 msgstr ""
+"O ambiente @code{@@example} é usado para indicar entrada ou saída de "
+"computador que não seja parte do texto em execução.  Se você quiser "
+"embutir fragmentos de código em frases, use o comando @code{@@code} ou os "
+"parentes dele (@pxref{@code{@@code}})."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:6097
@@ -15613,6 +15617,8 @@ msgid ""
 "Write an @code{@@example} command at the beginning of a line by itself.  "
 "Mark the end of the block with @code{@@end example}.  For example,"
 msgstr ""
+"Escreva um comando @code{@@example} sozinho no início de uma linha.  Marque "
+"o final do bloco com @code{@@end example}.  Por exemplo,"
 
 #. type: example
 #: texinfo/texinfo-ed.7.1-en_US.texi:6103
@@ -15623,6 +15629,10 @@ msgid ""
 " cp foo @@var@{dest2@}\n"
 "@@end example\n"
 msgstr ""
+"@@example\n"
+"cp foo @@var@{dest1@}; \\\n"
+" cp foo @@var@{dest2@}\n"
+"@@end example\n"
 
 #. type: example
 #: texinfo/texinfo-ed.7.1-en_US.texi:6111
@@ -15631,6 +15641,8 @@ msgid ""
 "cp foo @var{dest1}; \\\n"
 " cp foo @var{dest2}\n"
 msgstr ""
+"cp foo @var{dest1}; \\\n"
+" cp foo @var{dest2}\n"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:6119
@@ -15641,6 +15653,12 @@ msgid ""
 "expanded; if you want the output to be the input verbatim, use the "
 "@code{@@verbatim} environment instead (@pxref{@code{@@verbatim}})."
 msgstr ""
+"A saída gerada usa uma fonte de largura fixa e é recuada.  Cada linha no "
+"arquivo de entrada é uma linha na saída gerada; isto é, o texto fonte "
+"não é preenchido.  Espaços extras e linhas em branco são "
+"significativos.  Comandos do Texinfo @emph{são} expandidos; se você quiser "
+"que a saída gerada seja a entrada literal, use o ambiente @code{@@verbatim} "
+"em vez disso (@pxref{@code{@@verbatim}})."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:6125
@@ -15650,6 +15668,10 @@ msgid ""
 "example above.  The @code{@@noindent} command prevents a piece of text from "
 "being indented as if it were a new paragraph (@pxref{@code{@@noindent}})."
 msgstr ""
+"Exemplos frequentemente estão, falando logicamente, ``no meio'' de um "
+"parágrafo, e o texto que continua após não deveria ser recuado, como no "
+"exemplo acima.  O comando @code{@@noindent} evita que um pedaço de texto "
+"seja recuado como se fosse um parágrafo novo (@pxref{@code{@@noindent}}."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:6128
@@ -15657,6 +15679,8 @@ msgid ""
 "If you wish to use the normal roman font for a code comment, you can use the "
 "@code{@@r} command (@pxref{Fonts})."
 msgstr ""
+"Se você desejar usar a fonte romana normal para um comentário de código, "
+"você pode usar o comando @code{@@r} (@pxref{Fontes})."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:6134
@@ -15666,6 +15690,11 @@ msgid ""
 "are output as class names, prefixed by the string @samp{user-}.  This may be "
 "useful for adding syntax highlighting to manuals for code samples."
 msgstr ""
+"Você pode opcionalmente fornecer argumentos para o comando "
+"@code{@@example}, separados por vírgulas, se existir mais que um.  Na "
+"saída gerada HTML, quaisquer argumentos desse tipo são gerados como nomes "
+"de classe, prefixados pela string @samp{user-}.  Isso pode ser útil para "
+"adicionar realce de sintaxe para manuais para amostras de código."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:6141
@@ -15677,6 +15706,13 @@ msgid ""
 "further processing, but for now nothing definitive is recommended.  Perhaps "
 "this will change in future Texinfo releases."
 msgstr ""
+"Nós recomendamos que, ao fornecer vários argumentos para @code{@@example}, "
+"você use o primeiro argumento para especificar a linguagem do código (por "
+"exemplo@: @samp{C}, @samp{lisp}, @samp{Cplusplus}).  Você pode encontrar "
+"usos para outros argumentos, como fornecer uma dica de formatação ou "
+"marcar amostras de código para extração e processamento posterior, mas "
+"por enquanto nada definitivo é recomendado.  Talvez isso mude em "
+"lançamentos futuros do Texinfo."
 
 #. type: quotation
 #: texinfo/texinfo-ed.7.1-en_US.texi:6146
@@ -15685,35 +15721,38 @@ msgid ""
 "except in verbatim environments.)  @TeX{} treats tabs as single spaces, and "
 "that is not what they look like."
 msgstr ""
+"Não use tabulações nas linhas de um exemplo! (Ou em qualquer outro lugar "
+"no Texinfo, exceto em ambientes literais.)  @TeX{} trata tabulações como "
+"espaços simples, e não é isso que elas parecem."
 
 #. type: node
 #: texinfo/texinfo-ed.7.1-en_US.texi:6149
 #, no-wrap
 msgid "@code{@@verbatim}"
-msgstr ""
+msgstr "@code{@@verbatim}"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:6151
 msgid "@nodedescription Writing a verbatim example."
-msgstr ""
+msgstr "@nodedescription Escrevendo um exemplo literal."
 
 #. type: section
 #: texinfo/texinfo-ed.7.1-en_US.texi:6151
 #, no-wrap
 msgid "@code{@@verbatim}: Literal Text"
-msgstr ""
+msgstr "@code{@@verbatim}: Texto Literal"
 
 #. type: findex
 #: texinfo/texinfo-ed.7.1-en_US.texi:6154
 #, no-wrap
 msgid "verbatim"
-msgstr ""
+msgstr "verbatim"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:6155
 #, no-wrap
 msgid "Verbatim environment"
-msgstr ""
+msgstr "Ambiente verbatim"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:6162
@@ -15724,6 +15763,11 @@ msgid ""
 "Texinfo commands).  This is especially useful for including automatically "
 "generated files in a Texinfo manual."
 msgstr ""
+"Use o ambiente @code{@@verbatim} para imprimir texto que pode conter "
+"caracteres especiais ou comandos que não deveriam ser interpretados, como "
+"saída ou entrada de computador (@code{@@example} interpreta o texto dele "
+"como comandos regulares do Texinfo).  Isso é útil especialmente para "
+"incluir arquivos gerados automaticamente em um manual do Texinfo."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:6167
@@ -15733,6 +15777,10 @@ msgid ""
 "including tabs.  The text is typeset in a fixed-width font, and not indented "
 "or filled."
 msgstr ""
+"Em geral, a saída gerada será exatamente a mesma que a entrada.  Nenhuma "
+"substituição de caracteres é feita; por exemplo, todos os espaços e "
+"linhas em branco são significantes, incluindo tabulações.  O texto é "
+"tipografado em uma fonte de largura fixa, e não recuado ou preenchido."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:6173
@@ -15743,6 +15791,10 @@ msgid ""
 "of a line by itself.  The @code{@@end verbatim} will also disappear from the "
 "output."
 msgstr ""
+"Escreva um comando @code{@@verbatim} sozinho no início de uma linha.  Essa "
+"linha desaparecerá da saída gerada.  Marque o final do bloco literal com "
+"um comando @code{@@end verbatim}, também escrito sozinho no início de uma "
+"linha.  O @code{@@end verbatim} também desaparecerá da saída gerada."
 
 #. type: example
 #: texinfo/texinfo-ed.7.1-en_US.texi:6183
@@ -15755,11 +15807,19 @@ msgid ""
 "@}\n"
 "@@end verbatim\n"
 msgstr ""
+"@@verbatim\n"
+"@{\n"
+"@var{<tab>}@@command com caracteres estranhos: @@'e\n"
+"expanda@var{<tab>}me\n"
+"@}\n"
+"@@end verbatim\n"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:6187
 msgid "(where @var{<tab>} stands for a literal tab character).  This produces:"
 msgstr ""
+"(onde @var{<tab>} significa um caractere literal de tabulação).  Isso "
+"produz:"
 
 #. type: verbatim
 #: texinfo/texinfo-ed.7.1-en_US.texi:6193
@@ -15770,6 +15830,10 @@ msgid ""
 "expand\tme\n"
 "}\n"
 msgstr ""
+"{\n"
+"\t@command com caracteres estranhos: @'e\n"
+"expanda\tme\n"
+"}\n"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:6200
@@ -15780,18 +15844,23 @@ msgid ""
 "Blank lines between the beginning @code{@@verbatim} and the ending "
 "@code{@@end verbatim} will appear in the output."
 msgstr ""
+"Como as linhas contendo @code{@@verbatim} e @code{@@end verbatim} não "
+"produzem saída, tipicamente você deveria colocar uma linha em branco antes "
+"do @code{@@verbatim} e outra linha em branco depois do @code{@@end "
+"verbatim}.  Linhas em branco entre o @code{@@verbatim} iniciante e o "
+"@code{@@end verbatim} finalizante aparecerão na saída gerada."
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:6201
 #, no-wrap
 msgid "Verbatim, small"
-msgstr ""
+msgstr "Verbatim, pequeno"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:6202
 #, no-wrap
 msgid "Small verbatim"
-msgstr ""
+msgstr "Literal, pequeno"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:6205
@@ -15799,6 +15868,8 @@ msgid ""
 "You can get a ``small'' verbatim by enclosing the @code{@@verbatim} in an "
 "@code{@@smallformat} environment, as shown here:"
 msgstr ""
+"Você consegue obter um literal ``pequeno'' colocando o @code{@@verbatim} em "
+"um ambiente @code{@@smallformat}, conforme mostrado aqui:"
 
 #. type: example
 #: texinfo/texinfo-ed.7.1-en_US.texi:6212
@@ -15810,6 +15881,11 @@ msgid ""
 "@@end verbatim\n"
 "@@end smallformat\n"
 msgstr ""
+"@@smallformat\n"
+"@@verbatim\n"
+"... ainda literal, porém em uma fonte menor ...\n"
+"@@end verbatim\n"
+"@@end smallformat\n"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:6216
@@ -15817,11 +15893,13 @@ msgid ""
 "Finally, a word of warning: it is not reliable to use @code{@@verbatim} "
 "inside other Texinfo constructs."
 msgstr ""
+"Finalmente, uma palavra de alerta: não é confiável usar @code{@@verbatim} "
+"dentro de outras construções do Texinfo."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:6218
 msgid "See also @ref{@code{@@verbatiminclude}}."
-msgstr ""
+msgstr "Veja-se também @ref{@code{@@verbatiminclude}}."
 
 #. type: node
 #: texinfo/texinfo-ed.7.1-en_US.texi:6220
