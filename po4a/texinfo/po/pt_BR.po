@@ -17,7 +17,7 @@ msgstr ""
 "Project-Id-Version: Texinfo 7.1\n"
 "Report-Msgid-Bugs-To: jafesp@gmail.com\n"
 "POT-Creation-Date: 2025-04-05 18:55-0300\n"
-"PO-Revision-Date: 2025-04-05 22:30-0300\n"
+"PO-Revision-Date: 2025-04-06 00:30-0300\n"
 "Last-Translator: Jamenson Ferreira Espindula de Almeida Melo "
 "<jafesp@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -15905,35 +15905,35 @@ msgstr "Veja-se também @ref{@code{@@verbatiminclude}}."
 #: texinfo/texinfo-ed.7.1-en_US.texi:6220
 #, no-wrap
 msgid "@code{@@lisp}"
-msgstr ""
+msgstr "@code{@@lisp}"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:6222
 msgid "@nodedescription Illustrating Lisp code."
-msgstr ""
+msgstr "@nodedescription Ilustrando código Lisp."
 
 #. type: section
 #: texinfo/texinfo-ed.7.1-en_US.texi:6222
 #, no-wrap
 msgid "@code{@@lisp}: Marking a Lisp Example"
-msgstr ""
+msgstr "@code{@@lisp}: Marcando um Exemplo da Lisp"
 
 #. type: findex
 #: texinfo/texinfo-ed.7.1-en_US.texi:6225
 #, no-wrap
 msgid "lisp"
-msgstr ""
+msgstr "lisp"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:6226
 #, no-wrap
 msgid "Lisp example"
-msgstr ""
+msgstr "Exemplo Lisp"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:6229
 msgid "The @code{@@lisp} command was used for Lisp code:"
-msgstr ""
+msgstr "O comando @code{@@lisp} era usado para código da Lisp:"
 
 #. type: example
 #: texinfo/texinfo-ed.7.1-en_US.texi:6234
@@ -15943,11 +15943,14 @@ msgid ""
 "Example lisp code\n"
 "@@end lisp\n"
 msgstr ""
+"@@lisp\n"
+"Código lisp de exemplo\n"
+"@@end lisp\n"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:6238
 msgid "This is now synonymous with the following:"
-msgstr ""
+msgstr "Isso agora é sinônimo com o seguinte:"
 
 #. type: example
 #: texinfo/texinfo-ed.7.1-en_US.texi:6243
@@ -15957,6 +15960,9 @@ msgid ""
 "Example lisp code\n"
 "@@end example\n"
 msgstr ""
+"@@example lisp\n"
+"Código lisp de exemplo\n"
+"@@end example\n"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:6249
@@ -15966,35 +15972,39 @@ msgid ""
 "evaluates only and all the Lisp code in a Texinfo file.  Then you can use "
 "the Texinfo file as a Lisp library."
 msgstr ""
+"Use @code{@@lisp} para preservar informações relativas à natureza do "
+"exemplo.  Isso é útil, por exemplo, se você escrever uma função que "
+"avalia somente e todo o código Lisp em um arquivo do Texinfo.  Então você "
+"consegue usar o arquivo do Texinfo como uma biblioteca Lisp."
 
 #. type: node
 #: texinfo/texinfo-ed.7.1-en_US.texi:6251
 #, no-wrap
 msgid "@code{@@display}"
-msgstr ""
+msgstr "@code{@@display}"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:6253
 msgid "@nodedescription Writing an example in the current font."
-msgstr ""
+msgstr "@nodedescription Escrevendo um exemplo na fonte atual."
 
 #. type: section
 #: texinfo/texinfo-ed.7.1-en_US.texi:6253
 #, no-wrap
 msgid "@code{@@display}: Examples Using the Text Font"
-msgstr ""
+msgstr "@code{@@display}: Exemplos Usando a Fonte de Texto"
 
 #. type: findex
 #: texinfo/texinfo-ed.7.1-en_US.texi:6256
 #, no-wrap
 msgid "display"
-msgstr ""
+msgstr "exibição"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:6257
 #, no-wrap
 msgid "Display formatting"
-msgstr ""
+msgstr "Formatação de exibição"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:6263
@@ -16004,6 +16014,10 @@ msgid ""
 "@code{@@example}.  Each line of input still produces a line of output, and "
 "the output is still indented."
 msgstr ""
+"O comando @code{@@display} inicia outro tipo de ambiente, onde a fonte é "
+"deixada inalterada, não comutada para máquina de escrever como com "
+"@code{@@example}.  Cada linha da entrada ainda produz uma linha de saída, e "
+"a saída gerada ainda é recuada."
 
 #. type: display
 #: texinfo/texinfo-ed.7.1-en_US.texi:6268
@@ -16013,29 +16027,32 @@ msgid ""
 "and an @code{@@end display} command.  The @code{@@display} command\n"
 "indents the text, but does not fill it.\n"
 msgstr ""
+"Este é um exemplo de texto escrito entre um comando @code{@@display}\n"
+"e um comando @code{@@end display}.  O comando @code{@@display}\n"
+"recua o texto, mas não o preenche.\n"
 
 #. type: node
 #: texinfo/texinfo-ed.7.1-en_US.texi:6271
 #, no-wrap
 msgid "@code{@@format}"
-msgstr ""
+msgstr "@code{@@format}"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:6273
 msgid "@nodedescription Writing an example without narrowed margins."
-msgstr ""
+msgstr "@nodedescription Escrevendo um exemplo sem margens estreitadas."
 
 #. type: section
 #: texinfo/texinfo-ed.7.1-en_US.texi:6273
 #, no-wrap
 msgid "@code{@@format}: Examples Using the Full Line Width"
-msgstr ""
+msgstr "@code{@@format}: Exemplos Usando a Largura Total da Linha"
 
 #. type: findex
 #: texinfo/texinfo-ed.7.1-en_US.texi:6276
 #, no-wrap
 msgid "format"
-msgstr ""
+msgstr "formato"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:6281
@@ -16044,6 +16061,9 @@ msgid ""
 "the text unindented.  Like @code{@@display}, it does not select the "
 "fixed-width font.  Thus,"
 msgstr ""
+"O comando @code{@@format} é similar a @code{@@display}, exceto que deixa o "
+"texto sem recuo.  Como @code{@@display}, ele não seleciona a fonte de "
+"largura fixa.  Assim,"
 
 #. type: group
 #: texinfo/texinfo-ed.7.1-en_US.texi:6290
@@ -16056,6 +16076,12 @@ msgid ""
 "the @@code@{@@@@format@} command does not fill the text.\n"
 "@@end format\n"
 msgstr ""
+"@@format\n"
+"Este é um exemplo de texto escrito entre um comando @@code@{@@@@format@}\n"
+"e um comando @@code@{@@@@end format@}.   Como você pode ver\n"
+"a partir deste exemplo,\n"
+"o comando @@code@{@@@@format@} não preenche o texto.\n"
+"@@end format\n"
 
 #. type: group
 #: texinfo/texinfo-ed.7.1-en_US.texi:6302
@@ -16066,35 +16092,39 @@ msgid ""
 "from this example,\n"
 "the @code{@@format} command does not fill the text.\n"
 msgstr ""
+"Este é um exemplo de texto escrito entre um comando @code{@@format}\n"
+"e um comando @code{@@end format}.  Como você pode ver\n"
+"a partir deste exemplo,\n"
+"o comando @code{@@format} não preenche o texto.\n"
 
 #. type: node
 #: texinfo/texinfo-ed.7.1-en_US.texi:6306
 #, no-wrap
 msgid "@code{@@exdent}"
-msgstr ""
+msgstr "@code{@@exdent}"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:6308
 msgid "@nodedescription Undo indentation on a line."
-msgstr ""
+msgstr "@nodedescription Desfazer recuo em uma linha."
 
 #. type: section
 #: texinfo/texinfo-ed.7.1-en_US.texi:6308
 #, no-wrap
 msgid "@code{@@exdent}: Undoing a Line's Indentation"
-msgstr ""
+msgstr "@code{@@exdent}: Desfazendo o Recuo de Uma Linha"
 
 #. type: findex
 #: texinfo/texinfo-ed.7.1-en_US.texi:6311
 #, no-wrap
 msgid "exdent"
-msgstr ""
+msgstr "exdent"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:6312
 #, no-wrap
 msgid "Indentation undoing"
-msgstr ""
+msgstr "Recuo, desfazendo"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:6319
@@ -16105,11 +16135,16 @@ msgid ""
 "the text.  The text on an @code{@@exdent} line is also printed in the roman "
 "font where the output format allows this."
 msgstr ""
+"O comando @code{@@exdent} remove qualquer recuo que uma linha possa ter.  O "
+"comando é escrito no início de uma linha e se aplica somente ao texto que "
+"segue o comando que esteja na mesma linha.  Não use chaves em volta do "
+"texto.  O texto em uma linha @code{@@exdent} também é impresso na fonte "
+"romana onde o formato da saída gerada permitir isso."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:6321
 msgid "@code{@@exdent} is usually used within examples.  Thus,"
-msgstr ""
+msgstr "@code{@@exdent} normalmente é usado dentro de exemplos.  Assim,"
 
 #. type: group
 #: texinfo/texinfo-ed.7.1-en_US.texi:6330
@@ -16122,18 +16157,24 @@ msgid ""
 "The @@@@end example comes on the next line.\n"
 "@@end example\n"
 msgstr ""
+"@@example\n"
+"Esta linha segue um comando @@@@example.\n"
+"@@exdent Esta linha está desrecuada.\n"
+"Esta linha segue a linha desrecuada.\n"
+"O @@@@end example vem na próxima linha.\n"
+"@@end example\n"
 
 #. type: group
 #: texinfo/texinfo-ed.7.1-en_US.texi:6339
 #, no-wrap
 msgid "This line follows an @@example command.\n"
-msgstr ""
+msgstr "Esta linha segue um comando @@example.\n"
 
 #. type: exdent
 #: texinfo/texinfo-ed.7.1-en_US.texi:6339
 #, no-wrap
 msgid "This line is exdented."
-msgstr ""
+msgstr "Esta linha está desrecuada."
 
 #. type: group
 #: texinfo/texinfo-ed.7.1-en_US.texi:6342
@@ -16142,6 +16183,8 @@ msgid ""
 "This line follows the exdented line.\n"
 "The @@end example comes on the next line.\n"
 msgstr ""
+"Esta linha segue a linha desrecuada.\n"
+"O @@end example vem na próxima linha.\n"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:6348
@@ -16150,11 +16193,14 @@ msgid ""
 "un-indent text by ending the example and returning the page to its normal "
 "width."
 msgstr ""
+"Na prática, o comando @code{@@exdent} raramente é usado.  Geralmente, "
+"você desrecua texto finalizando o exemplo e retornando a página para a "
+"largura normal dela."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:6350
 msgid "@code{@@exdent} does not have an effect in all output formats."
-msgstr ""
+msgstr "@code{@@exdent} não tem efeito em todos os formatos de saída."
 
 #. type: node
 #: texinfo/texinfo-ed.7.1-en_US.texi:6353
