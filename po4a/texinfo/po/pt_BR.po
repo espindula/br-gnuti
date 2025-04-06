@@ -17,7 +17,7 @@ msgstr ""
 "Project-Id-Version: Texinfo 7.1\n"
 "Report-Msgid-Bugs-To: jafesp@gmail.com\n"
 "POT-Creation-Date: 2025-04-05 18:55-0300\n"
-"PO-Revision-Date: 2025-04-06 00:30-0300\n"
+"PO-Revision-Date: 2025-04-06 18:30-0300\n"
 "Last-Translator: Jamenson Ferreira Espindula de Almeida Melo "
 "<jafesp@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16206,48 +16206,49 @@ msgstr "@code{@@exdent} não tem efeito em todos os formatos de saída."
 #: texinfo/texinfo-ed.7.1-en_US.texi:6353
 #, no-wrap
 msgid "@code{@@flushleft @@flushright}"
-msgstr ""
+msgstr "@code{@@flushleft @@flushright}"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:6355
 msgid "@nodedescription Pushing text flush left or flush right."
 msgstr ""
+"@nodedescription Enviando texto alinhado à esquerda ou alinhado à direita."
 
 #. type: section
 #: texinfo/texinfo-ed.7.1-en_US.texi:6355
 #, no-wrap
 msgid "@code{@@flushleft} and @code{@@flushright}"
-msgstr ""
+msgstr "@code{@@flushleft} e @code{@@flushright}"
 
-#.  old name
+#.  nome antigo
 #. type: anchor{#1}
 #: texinfo/texinfo-ed.7.1-en_US.texi:6358
 msgid "flushleft & flushright"
-msgstr ""
+msgstr "flushleft e flushright"
 
 #. type: findex
 #: texinfo/texinfo-ed.7.1-en_US.texi:6358
 #, no-wrap
 msgid "flushleft"
-msgstr ""
+msgstr "flushleft"
 
 #. type: findex
 #: texinfo/texinfo-ed.7.1-en_US.texi:6359
 #, no-wrap
 msgid "flushright"
-msgstr ""
+msgstr "flushright"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:6360
 #, no-wrap
 msgid "Ragged right, without filling"
-msgstr ""
+msgstr "Direita irregular, sem preencher"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:6361
 #, no-wrap
 msgid "Ragged left, without filling"
-msgstr ""
+msgstr "Esquerda irregular, sem preencher"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:6369
@@ -16258,6 +16259,12 @@ msgid ""
 "@code{@@flushleft} and @code{@@flushright} commands are ended by @code{@@end "
 "flushleft} and @code{@@end flushright} commands on lines of their own."
 msgstr ""
+"Os comandos @code{@@flushleft} e @code{@@flushright} alinham as extremidades "
+"das linhas nas margens esquerda e direita de uma página, mas não preenchem "
+"o texto.  Os comandos são escritos em linhas próprias, sem chaves.  Os "
+"comandos @code{@@flushleft} e @code{@@flushright} são finalizados pelos "
+"comandos @code{@@end flushleft} e @code{@@end flushright} em próprias "
+"linhas."
 
 #. type: group
 #: texinfo/texinfo-ed.7.1-en_US.texi:6379
@@ -16268,6 +16275,10 @@ msgid ""
 "written flushleft.\n"
 "@@end flushleft\n"
 msgstr ""
+"@@flushleft\n"
+"Este texto está\n"
+"escrito alinhado à esquerda.\n"
+"@@end flushleft\n"
 
 #. type: flushleft
 #: texinfo/texinfo-ed.7.1-en_US.texi:6389
@@ -16276,6 +16287,8 @@ msgid ""
 "This text is\n"
 "written flushleft.\n"
 msgstr ""
+"Este texto está\n"
+"escrito alinhado à esquerda.\n"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:6395
@@ -16283,6 +16296,8 @@ msgid ""
 "@code{@@flushright} produces the type of indentation often used in the "
 "return address of letters.  For example,"
 msgstr ""
+"@code{@@flushright} produz o tipo de recuo frequentemente usado no endereço "
+"de retorno de cartas.  Por exemplo,"
 
 #. type: group
 #: texinfo/texinfo-ed.7.1-en_US.texi:6404
@@ -16295,6 +16310,12 @@ msgid ""
 "left end ragged.\n"
 "@@end flushright\n"
 msgstr ""
+"@@flushright\n"
+"Aqui está um exemplo de texto escrito\n"
+"alinhado à direita.  O comando @@code@{@@flushright@}\n"
+"justifica à direita de cada linha, mas deixa a\n"
+"extremidade esquerda irregular.\n"
+"@@end flushright\n"
 
 #. type: flushright
 #: texinfo/texinfo-ed.7.1-en_US.texi:6415
@@ -16305,35 +16326,39 @@ msgid ""
 "right justifies every line but leaves the\n"
 "left end ragged.\n"
 msgstr ""
+"Aqui está um exemplo de texto escrito\n"
+"alinhado à direita.  O comando @code{@@flushright}\n"
+"justifica à direita de cada linha, mas deixa a\n"
+"extremidade esquerda irregular.\n"
 
 #. type: node
 #: texinfo/texinfo-ed.7.1-en_US.texi:6418
 #, no-wrap
 msgid "@code{@@raggedright}"
-msgstr ""
+msgstr "@code{@@raggedright}"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:6420
 msgid "@nodedescription Avoiding justification on the right."
-msgstr ""
+msgstr "@nodedescription Evitando justificação à direita."
 
 #. type: section
 #: texinfo/texinfo-ed.7.1-en_US.texi:6420
 #, no-wrap
 msgid "@code{@@raggedright}: Ragged Right Text"
-msgstr ""
+msgstr "@code{@@raggedright}: Texto Irregular à Direita"
 
 #. type: findex
 #: texinfo/texinfo-ed.7.1-en_US.texi:6423
 #, no-wrap
 msgid "raggedright"
-msgstr ""
+msgstr "raggedright"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:6424
 #, no-wrap
 msgid "Ragged right, with filling"
-msgstr ""
+msgstr "Irregular à direita, com preenchimento"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:6434
@@ -16345,6 +16370,13 @@ msgid ""
 "effect in output formats where text is justified on the left, but not in "
 "output formats where text is always set ragged right, such as Info or HTML."
 msgstr ""
+"O @code{@@raggedright} preenche texto como de costume, mas o texto só é "
+"justificado à esquerda; a margem direita fica irregular.  O comando é "
+"escrito em uma linha própria, sem chaves.  O comando @code{@@raggedright} "
+"é finalizado por @code{@@end raggedright} em uma linha própria.  Esse "
+"comando somente tem efeito em formatos de saída onde o texto seja "
+"justificado à esquerda, mas não em formatos de saída onde o texto sempre "
+"seja configurado como irregular à direita, como Info ou HTML."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:6439
@@ -16353,11 +16385,15 @@ msgid ""
 "lists of commands with long names, when it is known in advance that "
 "justifying the text on both margins will make the paragraph look bad."
 msgstr ""
+"O comando @code{@@raggedright} pode ser útil com parágrafos contendo "
+"listas de comandos com nomes longos, quando for sabido antecipadamente que "
+"justificar o texto em ambas as margens fará com que o parágrafo aparente "
+"ruim."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:6441
 msgid "An example (from elsewhere in this manual):"
-msgstr ""
+msgstr "Um exemplo (originário de outro lugar neste manual):"
 
 #. type: group
 #: texinfo/texinfo-ed.7.1-en_US.texi:6450
@@ -16370,6 +16406,12 @@ msgid ""
 "@@code@{@@@@guilsinglleft@@@{@@@}@}, @@code@{@@@@guilsinglright@@@{@@@}@}.\n"
 "@@end raggedright\n"
 msgstr ""
+"@@raggedright\n"
+"Comandos para aspas de ângulo duplo e único:\n"
+"@@code@{@@@@guillemetleft@@@{@@@}@}, @@code@{@@@@guillemetright@@@{@@@}@},\n"
+"@@code@{@@@@guillemotleft@@@{@@@}@}, @@code@{@@@@guillemotright@@@{@@@}@},\n"
+"@@code@{@@@@guilsinglleft@@@{@@@}@}, @@code@{@@@@guilsinglright@@@{@@@}@}.\n"
+"@@end raggedright\n"
 
 #. type: raggedright
 #: texinfo/texinfo-ed.7.1-en_US.texi:6461
@@ -16379,47 +16421,51 @@ msgid ""
 "@code{@@guillemotleft@{@}}, @code{@@guillemotright@{@}}, "
 "@code{@@guilsinglleft@{@}}, @code{@@guilsinglright@{@}}."
 msgstr ""
+"Comandos para aspas de ângulo duplo e único: @code{@@guillemetleft@{@}}, "
+"@code{@@guillemetright@{@}}, @code{@@guillemotleft@{@}}, "
+"@code{@@guillemotright@{@}}, @code{@@guilsinglleft@{@}}, "
+"@code{@@guilsinglright@{@}}."
 
 #. type: node
 #: texinfo/texinfo-ed.7.1-en_US.texi:6464
 #, no-wrap
 msgid "@code{@@noindent}"
-msgstr ""
+msgstr "@code{@@noindent}"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:6466
 msgid "@nodedescription Preventing paragraph indentation."
-msgstr ""
+msgstr "@nodedescription Evitando recuo de parágrafo."
 
 #. type: section
 #: texinfo/texinfo-ed.7.1-en_US.texi:6466
 #, no-wrap
 msgid "@code{@@noindent}: Omitting Indentation"
-msgstr ""
+msgstr "@code{@@noindent}: Omitindo Recuo"
 
 #. type: findex
 #: texinfo/texinfo-ed.7.1-en_US.texi:6469
 #, no-wrap
 msgid "noindent"
-msgstr ""
+msgstr "noindent"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:6470
 #, no-wrap
 msgid "Omitting indentation"
-msgstr ""
+msgstr "Omitindo recuo"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:6471
 #, no-wrap
 msgid "Suppressing indentation"
-msgstr ""
+msgstr "Suprimindo recuo"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:6472
 #, no-wrap
 msgid "Indentation, omitting"
-msgstr ""
+msgstr "Recuo, omitindo"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:6480
@@ -16431,6 +16477,13 @@ msgid ""
 "text.  You can also disable indentation for all paragraphs globally with "
 "@code{@@paragraphindent} (@pxref{@code{@@paragraphindent}})."
 msgstr ""
+"Um exemplo ou outra inclusão pode quebrar um parágrafo em segmentos.  "
+"Normalmente, os formatadores recuam o texto que segue um exemplo como um "
+"parágrafo novo.  Você consegue evitar isso caso a caso escrevendo "
+"@code{@@noindent} no início de uma linha, precedendo o texto de "
+"continuação.  Você também consegue desabilitar o recuo para todos os "
+"parágrafos globalmente com @code{@@paragraphindent} "
+"(@pxref{@code{@@paragraphindent}})."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:6483
@@ -16438,6 +16491,8 @@ msgid ""
 "Here is an example showing how to eliminate the normal indentation of the "
 "text after an @code{@@example}, a common situation:"
 msgstr ""
+"Aqui está um exemplo mostrando como eliminar o recuo normal do texto depois "
+"de um @code{@@example}, uma situação comum:"
 
 #. type: group
 #: texinfo/texinfo-ed.7.1-en_US.texi:6489
@@ -16448,6 +16503,10 @@ msgid ""
 "@@end example\n"
 "\n"
 msgstr ""
+"@@example\n"
+"Este é um exemplo\n"
+"@@end example\n"
+"\n"
 
 #. type: group
 #: texinfo/texinfo-ed.7.1-en_US.texi:6494
@@ -16458,12 +16517,16 @@ msgid ""
 "beginning of the line is fully flush left with the\n"
 "line that follows after it.\n"
 msgstr ""
+"@@noindent\n"
+"Esta linha não está recuada.  Como você pode ver, o\n"
+"início da linha está alinhado totalmente com a\n"
+"linha que segue depois dele.\n"
 
 #. type: example
 #: texinfo/texinfo-ed.7.1-en_US.texi:6503
 #, no-wrap
 msgid "This is an example\n"
-msgstr ""
+msgstr "Este é um exemplo\n"
 
 #. type: display
 #: texinfo/texinfo-ed.7.1-en_US.texi:6509
@@ -16473,6 +16536,9 @@ msgid ""
 "beginning of the line is fully flush left with the\n"
 "line that follows after it.\n"
 msgstr ""
+"Esta linha não está recuada.  Como você pode ver, o\n"
+"início da linha está alinhado totalmente com a\n"
+"linha que segue depois dele.\n"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:6517
@@ -16484,6 +16550,11 @@ msgid ""
 "middle of a paragraph or inside an environment (@pxref{Quotations and "
 "Examples})."
 msgstr ""
+"O uso padrão do @code{@@indent} é exatamente como acima: no início do que "
+"seria de outro modo um parágrafo, para eliminar o recuo que normalmente "
+"acontece ali.  Ele ou pode ser seguido por texto ou estar em uma linha "
+"própria.  Não existe razão para usá-lo em outros contextos, como no meio "
+"de um parágrafo ou dentro de um ambiente (@pxref{Citações e Exemplos})."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:6522
@@ -16493,6 +16564,10 @@ msgid ""
 "does not generate a blank line, and neither does an @code{@@end} line for an "
 "environment."
 msgstr ""
+"Você consegue controlar o número de linhas em branco na saída do arquivo "
+"Info ajustando a entrada conforme desejado: uma linha contendo apenas "
+"@code{@@noindent} não gera uma linha em branco, e nem uma linha "
+"@code{@@end} para um ambiente."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:6526
@@ -16501,47 +16576,50 @@ msgid ""
 "since @code{@@noindent} is a command used outside of paragraphs "
 "(@pxref{Command Syntax})."
 msgstr ""
+"Não coloque chaves depois de um comando @code{@@noindent}; elas não "
+"usadas, pois @code{@@noindent} é um comando usado fora de parágrafos "
+"(@pxref{Sintaxe de Comando})."
 
 #. type: node
 #: texinfo/texinfo-ed.7.1-en_US.texi:6528
 #, no-wrap
 msgid "@code{@@indent}"
-msgstr ""
+msgstr "@code{@@indent}"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:6530
 msgid "@nodedescription Forcing paragraph indentation."
-msgstr ""
+msgstr "@nodedescription Forçando recuo de parágrafo."
 
 #. type: section
 #: texinfo/texinfo-ed.7.1-en_US.texi:6530
 #, no-wrap
 msgid "@code{@@indent}: Forcing Indentation"
-msgstr ""
+msgstr "@code{@@indent}: Forçando Recuo"
 
 #. type: findex
 #: texinfo/texinfo-ed.7.1-en_US.texi:6533
 #, no-wrap
 msgid "indent"
-msgstr ""
+msgstr "indent"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:6534
 #, no-wrap
 msgid "Forcing indentation"
-msgstr ""
+msgstr "Forçando recuo"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:6535
 #, no-wrap
 msgid "Inserting indentation"
-msgstr ""
+msgstr "Inserindo recuo"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:6536
 #, no-wrap
 msgid "Indentation, forcing"
-msgstr ""
+msgstr "Recuo, forçando"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:6543
@@ -16551,6 +16629,10 @@ msgid ""
 "to be indented.  For instance, this paragraph (the first in this section) is "
 "indented using an @code{@@indent} command."
 msgstr ""
+"@indent Para complementar o comando @code{@@noindent} (veja-se a seção "
+"anterior), Texinfo fornece o comando @code{@@indent} para forçar que um "
+"parágrafo seja recuado.  Por exemplo, este parágrafo (o primeiro nesta "
+"seção) está recuado usando um comando @code{@@indent}."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:6548
@@ -16560,6 +16642,10 @@ msgid ""
 "(@pxref{@code{@@paragraphindent}}).  It can either be followed by text or be "
 "on a line by itself."
 msgstr ""
+"E, de fato, o primeiro parágrafo de uma seção é o lugar mais provável "
+"para se usar @code{@@indent}, para substituir o comportamento normal de não "
+"recuo ali (@pxref{@code{@@paragraphindent}}).  Ele ou pode ser seguido por "
+"texto ou estar em uma linha própria."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:6555
@@ -16570,6 +16656,12 @@ msgid ""
 "output, such as @code{@@example} and @code{@@display}; for a summary of all "
 "environments, @pxref{Block Enclosing Commands}.)"
 msgstr ""
+"Como um caso especial, quando @code{@@indent} for usado em um ambiente onde "
+"o texto não estiver preenchido, ele produz um espaço de recuo de "
+"parágrafo na saída @TeX{}.  (Esses ambientes são onde uma linha de "
+"entrada produz uma linha de saída, como @code{@@example} e "
+"@code{@@display}; para um resumo de todos os ambientes, @pxref{Comandos de "
+"Cercamento de Blocos}.)"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:6559
@@ -16578,6 +16670,9 @@ msgid ""
 "@code{@@indent} is a command used outside of paragraphs (@pxref{Command "
 "Syntax})."
 msgstr ""
+"Não coloque chaves depois de um comando @code{@@indent}; elas não são "
+"usadas, pois @code{@@indent} é um comando usado fora de parágrafos "
+"(@pxref{Sintaxe de Comando})."
 
 #. type: node
 #: texinfo/texinfo-ed.7.1-en_US.texi:6561
