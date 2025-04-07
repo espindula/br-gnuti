@@ -17,7 +17,7 @@ msgstr ""
 "Project-Id-Version: Texinfo 7.1\n"
 "Report-Msgid-Bugs-To: jafesp@gmail.com\n"
 "POT-Creation-Date: 2025-04-05 18:55-0300\n"
-"PO-Revision-Date: 2025-04-07 16:00-0300\n"
+"PO-Revision-Date: 2025-04-07 18:30-0300\n"
 "Last-Translator: Jamenson Ferreira Espindula de Almeida Melo "
 "<jafesp@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17446,30 +17446,30 @@ msgstr "Segundo item externo."
 #: texinfo/texinfo-ed.7.1-en_US.texi:6888
 #, no-wrap
 msgid "@code{@@enumerate}"
-msgstr ""
+msgstr "@code{@@enumerate}"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:6890
 msgid "@nodedescription How to construct a numbered list."
-msgstr ""
+msgstr "@nodedescription Como construir uma lista numerada."
 
 #. type: section
 #: texinfo/texinfo-ed.7.1-en_US.texi:6890
 #, no-wrap
 msgid "@code{@@enumerate}: Making a Numbered or Lettered List"
-msgstr ""
+msgstr "@code{@@enumerate}: Fazendo Uma Lista Numerada ou Com Letras"
 
 #. type: findex
 #: texinfo/texinfo-ed.7.1-en_US.texi:6893
 #, no-wrap
 msgid "enumerate"
-msgstr ""
+msgstr "enumerate"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:6894
 #, no-wrap
 msgid "Enumeration"
-msgstr ""
+msgstr "Enumeração"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:6899
@@ -17478,6 +17478,9 @@ msgid ""
 "except that the labels on the items are successive integers or letters "
 "instead of bullets."
 msgstr ""
+"@code{@@enumerate} é como @code{@@itemize} (@pxref{@code{@@itemize}}), "
+"exceto que os rótulos nos itens são inteiros ou letras sucessivos em vez "
+"de bolas."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:6907
@@ -17490,6 +17493,12 @@ msgid ""
 "letter, such as @samp{a} or @samp{A}, the command starts the list with that "
 "letter."
 msgstr ""
+"Escreva o comando @code{@@enumerate} no início de uma linha.  O comando "
+"não exige um argumento, mas aceita ou um número ou uma letra como uma "
+"opção.  Sem um argumento, @code{@@enumerate} inicia a lista com o número "
+"@samp{1}.  Com um argumento numérico, como @samp{3}, o comando inicia a "
+"lista com aquele número.  Com uma letra maiúscula ou minúscula, como "
+"@samp{a} ou @samp{A}, o comando inicia a lista com aquela letra."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:6913
@@ -17499,6 +17508,10 @@ msgid ""
 "the enumeration.  It is ok to have text following the @code{@@item}, and the "
 "text for an item can continue for several paragraphs."
 msgstr ""
+"Escreva o texto da lista numerada da mesma maneira que uma lista de itens: "
+"escreva a linha iniciando com @code{@@item} no início de cada item na "
+"enumeração.  Está correto ter texto seguindo o @code{@@item}, e o texto "
+"para um item pode continuar por vários parágrafos."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:6916
@@ -17506,11 +17519,13 @@ msgid ""
 "You should put a blank line between entries in the list.  This generally "
 "makes it easier to read the Info file."
 msgstr ""
+"Você deveria colocar uma linha em branco entre as entradas na lista.  Isso "
+"geralmente torna mais fácil ler o arquivo Info."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:6919
 msgid "Here is an example of @code{@@enumerate} without an argument:"
-msgstr ""
+msgstr "Aqui está um exemplo do @code{@@enumerate} sem um argumento:"
 
 #. type: group
 #: texinfo/texinfo-ed.7.1-en_US.texi:6925
@@ -17521,6 +17536,10 @@ msgid ""
 "Underlying causes.\n"
 "\n"
 msgstr ""
+"@@enumerate\n"
+"@@item\n"
+"Causas subjacentes.\n"
+"\n"
 
 #. type: group
 #: texinfo/texinfo-ed.7.1-en_US.texi:6929
@@ -17530,21 +17549,24 @@ msgid ""
 "Proximate causes.\n"
 "@@end enumerate\n"
 msgstr ""
+"@@item\n"
+"Causas imediatas.\n"
+"@@end enumerate\n"
 
 #. type: enumerate
 #: texinfo/texinfo-ed.7.1-en_US.texi:6938
 msgid "Underlying causes."
-msgstr ""
+msgstr "Causas subjacentes."
 
 #. type: enumerate
 #: texinfo/texinfo-ed.7.1-en_US.texi:6941
 msgid "Proximate causes."
-msgstr ""
+msgstr "Causas imediatas."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:6944
 msgid "Here is an example with an argument of @kbd{3}:"
-msgstr ""
+msgstr "Aqui está um exemplo com um argumento de @kbd{3}:"
 
 #. type: group
 #: texinfo/texinfo-ed.7.1-en_US.texi:6950
@@ -17555,6 +17577,10 @@ msgid ""
 "Predisposing causes.\n"
 "\n"
 msgstr ""
+"@@enumerate 3\n"
+"@@item\n"
+"Causas predisponentes.\n"
+"\n"
 
 #. type: group
 #: texinfo/texinfo-ed.7.1-en_US.texi:6953
@@ -17564,6 +17590,9 @@ msgid ""
 "Precipitating causes.\n"
 "\n"
 msgstr ""
+"@@item\n"
+"Causas precipitantes.\n"
+"\n"
 
 #. type: group
 #: texinfo/texinfo-ed.7.1-en_US.texi:6957
@@ -17573,21 +17602,24 @@ msgid ""
 "Perpetuating causes.\n"
 "@@end enumerate\n"
 msgstr ""
+"@@item\n"
+"Causas perpetuantes.\n"
+"@@end enumerate\n"
 
 #. type: enumerate
 #: texinfo/texinfo-ed.7.1-en_US.texi:6966
 msgid "Predisposing causes."
-msgstr ""
+msgstr "Causas predisponentes."
 
 #. type: enumerate
 #: texinfo/texinfo-ed.7.1-en_US.texi:6969
 msgid "Precipitating causes."
-msgstr ""
+msgstr "Causas precipitantes."
 
 #. type: enumerate
 #: texinfo/texinfo-ed.7.1-en_US.texi:6972
 msgid "Perpetuating causes."
-msgstr ""
+msgstr "Causas perpetuantes."
 
 #. type: enumerate
 #: texinfo/texinfo-ed.7.1-en_US.texi:6982
@@ -17595,11 +17627,13 @@ msgid ""
 "Without an argument, produce a numbered list, with the first item "
 "numbered@tie{}1."
 msgstr ""
+"Sem um argumento, produz uma lista numerada, com o primeiro item "
+"numerado@tie{}1."
 
 #. type: code{#1}
 #: texinfo/texinfo-ed.7.1-en_US.texi:6985
 msgid "@@enumerate @var{unsigned-integer}"
-msgstr ""
+msgstr "@@enumerate @var{inteiro-desinalado}"
 
 #. type: enumerate
 #: texinfo/texinfo-ed.7.1-en_US.texi:6989
@@ -17608,11 +17642,14 @@ msgid ""
 "number.  You can use this to continue a list that you interrupted with other "
 "text."
 msgstr ""
+"Com um argumento numérico (desinalado), inicia uma lista numerada com "
+"aquele número.  Você pode usar isso para continuar uma lista que você "
+"interrompeu com outro texto."
 
 #. type: code{#1}
 #: texinfo/texinfo-ed.7.1-en_US.texi:6992
 msgid "@@enumerate @var{upper-case-letter}"
-msgstr ""
+msgstr "@@enumerate @var{letra-maiúscula}"
 
 #. type: enumerate
 #: texinfo/texinfo-ed.7.1-en_US.texi:6996
@@ -17620,11 +17657,13 @@ msgid ""
 "With an uppercase letter as argument, start a list in which each item is "
 "marked by a letter, beginning with that uppercase letter."
 msgstr ""
+"Com uma letra maiúscula como argumento, inicia uma lista na qual cada item "
+"é marcado por uma letra, iniciando com aquela letra maiúscula."
 
 #. type: code{#1}
 #: texinfo/texinfo-ed.7.1-en_US.texi:6999
 msgid "@@enumerate @var{lower-case-letter}"
-msgstr ""
+msgstr "@@enumerate @var{letra-minúscula}"
 
 #. type: enumerate
 #: texinfo/texinfo-ed.7.1-en_US.texi:7003
@@ -17632,43 +17671,47 @@ msgid ""
 "With a lowercase letter as argument, start a list in which each item is "
 "marked by a letter, beginning with that lowercase letter."
 msgstr ""
+"Com uma letra minúscula como argumento, inicia uma lista na qual cada item "
+"é marcado por uma letra, iniciando com aquela letra minúscula."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:7006
 msgid "You can also nest enumerated lists, as in an outline."
 msgstr ""
+"Você também pode aninhar listas enumeradas, como em uma estrutura de "
+"tópicos."
 
 #. type: node
 #: texinfo/texinfo-ed.7.1-en_US.texi:7008
 #, no-wrap
 msgid "Two-column Tables"
-msgstr ""
+msgstr "Tabelas de Duas Colunas"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:7010
 #: texinfo/texinfo-ed.7.1-en_US.texi:7024
 msgid "@nodedescription How to construct a two-column table."
-msgstr ""
+msgstr "@nodedescription Como construir uma tabela de duas colunas."
 
 #. type: section
 #: texinfo/texinfo-ed.7.1-en_US.texi:7010
 #, no-wrap
 msgid "Making a Two-column Table"
-msgstr ""
+msgstr "Fazendo Uma Tabela de Duas Colunas"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:7012
 #, no-wrap
 msgid "Tables, making two-column"
-msgstr ""
+msgstr "Tabelas, fazendo duas colunas"
 
-#.  old name
+#.  nome antigo
 #. type: anchor{#1}
 #: texinfo/texinfo-ed.7.1-en_US.texi:7013
 #: texinfo/texinfo-ed.7.1-en_US.texi:7027
 #, no-wrap
 msgid "table"
-msgstr ""
+msgstr "tabela"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:7020
@@ -17679,24 +17722,29 @@ msgid ""
 "especially useful for glossaries, explanatory exhibits, and command-line "
 "option summaries."
 msgstr ""
+"@code{@@table} é similar a @code{@@itemize} (@pxref{@code{@@itemize}}), mas "
+"permite que você especifique um nome ou uma linha de título para cada "
+"item.  O comando @code{@@table} é usado para produzir tabelas de duas "
+"colunas, e é especialmente útil para glossários, exibições "
+"explicativas, e resumos de opções de linha de comando."
 
 #. type: node
 #: texinfo/texinfo-ed.7.1-en_US.texi:7022
 #, no-wrap
 msgid "@code{@@table}"
-msgstr ""
+msgstr "@code{@@table}"
 
 #. type: subsection
 #: texinfo/texinfo-ed.7.1-en_US.texi:7024
 #, no-wrap
 msgid "Using the @code{@@table} Command"
-msgstr ""
+msgstr "Usando o Comando @code{@@table}"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:7028
 #, no-wrap
 msgid "Definition lists, typesetting"
-msgstr ""
+msgstr "Listas de definição, tipografando"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:7032
@@ -17705,6 +17753,9 @@ msgid ""
 "is typically used when you have a list of items and a brief text with each "
 "one, such as a list of definitions."
 msgstr ""
+"Use o comando @code{@@table} para produzir uma tabela de duas colunas.  Esse "
+"comando tipicamente é usado quando você tem uma lista de itens e um texto "
+"breve com cada um, como uma lista de definições."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:7040
@@ -17717,13 +17768,20 @@ msgid ""
 "will cause the text in the first column to be output as if it had been the "
 "argument to a @code{@@code} command."
 msgstr ""
+"Escreva o comando @code{@@table} no início de uma linha, depois de uma "
+"linha em branco, e siga-o, na mesma linha, com um argumento que seja um "
+"comando ``indicante'', como @code{@@code}, @code{@@samp}, @code{@@var}, "
+"@code{@@option}, ou @code{@@kbd} (@pxref{Indicando}).  Esse comando será "
+"aplicado ao texto na primeira coluna.  Por exemplo, @code{@@table @@code} "
+"fará com que o texto na primeira coluna seja gerado como se ele tivesse "
+"sido o argumento para um comando @code{@@code}."
 
 #. type: item
 #: texinfo/texinfo-ed.7.1-en_US.texi:7042
 #: texinfo/texinfo-ed.7.1-en_US.texi:18715
 #, no-wrap
 msgid "@@asis"
-msgstr ""
+msgstr "@@asis"
 
 #. type: code{#1}
 #: texinfo/texinfo-ed.7.1-en_US.texi:7042
@@ -17732,7 +17790,7 @@ msgstr ""
 #: texinfo/texinfo-ed.7.1-en_US.texi:23139
 #, no-wrap
 msgid "asis"
-msgstr ""
+msgstr "asis"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:7047
@@ -17742,6 +17800,10 @@ msgid ""
 "@code{@@table}, the first column entries are output without added "
 "highlighting (``as is'')."
 msgstr ""
+"Você pode usar o comando @code{@@asis} como um argumento para "
+"@code{@@table}.  @code{@@asis} é um comando que não faz nada: se você "
+"usar esse comando depois de @code{@@table}, as entradas da primeira coluna "
+"serão geradas sem realçamento adicionado (``como está'')."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:7054
@@ -17753,12 +17815,18 @@ msgid ""
 "suitable predefined command) is acceptable.  @xref{Defining New Texinfo "
 "Commands}."
 msgstr ""
+"O comando @code{@@table} funciona com outros comandos além daqueles "
+"mencionados explicitamente aqui.  Entretanto, você só pode usar comandos "
+"predefinidos do Texinfo que recebam um argumento entre chaves.  Você não "
+"pode confiavelmente usar um comando novo definido com @code{@@macro}, embora "
+"um @code{@@alias} (para um comando predefinido adequado) seja aceitável.  "
+"@xref{Definindo Novos Comandos do Texinfo}."
 
 #. type: findex
 #: texinfo/texinfo-ed.7.1-en_US.texi:7055
 #, no-wrap
 msgid "item @r{in @code{@@table}}"
-msgstr ""
+msgstr "item @r{em @code{@@table}}"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:7064
@@ -17772,6 +17840,14 @@ msgid ""
 "first column (including any footnotes).  You do not need to type anything "
 "for an empty second column."
 msgstr ""
+"Inicie cada entrada da tabela com um comando @code{@@item} no início de uma "
+"linha.  Escreva o texto para a primeira coluna na mesma linha que o comando "
+"@code{@@item}.  Escreva o texto para a segunda coluna na linha seguinte à "
+"linha do @code{@@item} e em linhas subsequentes.  Você pode escrever "
+"quantas linhas de texto de apoio desejar, até mesmo vários parágrafos.  "
+"Mas, somente o texto na mesma linha que @code{@@item} será colocado na "
+"primeira coluna (incluindo quaisquer notas de rodapé).  Você não precisa "
+"digitar nada para uma segunda coluna vazia."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:7068
@@ -17780,6 +17856,9 @@ msgid ""
 "blank line in the Info file, which looks better unless the entries are very "
 "brief."
 msgstr ""
+"Normalmente, você deveria colocar uma linha em branco entre entradas de "
+"tabela.  Isso coloca uma linha em branco no arquivo Info, o que aparenta "
+"melhor, a menos que as entradas sejam muito breves."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:7072
@@ -17787,6 +17866,9 @@ msgid ""
 "End the table with a line consisting of @code{@@end table}.  Follow the end "
 "of the table by a blank line for consistent formatting across output formats."
 msgstr ""
+"Finalize a tabela com uma linha consistindo de @code{@@end table}.  Siga o "
+"fim da tabela por uma linha em branco para formatação consistente entre "
+"formatos de saída."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:7078
@@ -17794,6 +17876,8 @@ msgid ""
 "For example, the following table highlights the text in the first column "
 "with the @code{@@samp} command:"
 msgstr ""
+"Por exemplo, a tabela seguinte realça o texto na primeira coluna com o "
+"comando @code{@@samp}:"
 
 #. type: group
 #: texinfo/texinfo-ed.7.1-en_US.texi:7085
@@ -17805,6 +17889,11 @@ msgid ""
 "@@samp@{foo@}.\n"
 "\n"
 msgstr ""
+"@@table @@samp\n"
+"@@item foo\n"
+"Este é o texto para\n"
+"@@samp@{foo@}.\n"
+"\n"
 
 #. type: group
 #: texinfo/texinfo-ed.7.1-en_US.texi:7089
@@ -17814,28 +17903,31 @@ msgid ""
 "Text for @@samp@{bar@}.\n"
 "@@end table\n"
 msgstr ""
+"@@item bar\n"
+"Texto para @@samp@{bar@}.\n"
+"@@end table\n"
 
 #. type: item
 #: texinfo/texinfo-ed.7.1-en_US.texi:7096
 #, no-wrap
 msgid "foo"
-msgstr ""
+msgstr "foo"
 
 #. type: table
 #: texinfo/texinfo-ed.7.1-en_US.texi:7099
 msgid "This is the text for @samp{foo}."
-msgstr ""
+msgstr "Este é o texto para @samp{foo}."
 
 #. type: item
 #: texinfo/texinfo-ed.7.1-en_US.texi:7099
 #, no-wrap
 msgid "bar"
-msgstr ""
+msgstr "bar"
 
 #. type: table
 #: texinfo/texinfo-ed.7.1-en_US.texi:7101
 msgid "Text for @samp{bar}."
-msgstr ""
+msgstr "Texto para @samp{bar}."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:7105
@@ -17843,6 +17935,8 @@ msgid ""
 "If you want to list two or more named items with a single block of text, use "
 "the @code{@@itemx} command.  (@xref{@code{@@itemx}}.)"
 msgstr ""
+"Se você quiser listar dois ou mais itens nomeados com um bloco único de "
+"texto, use o comando @code{@@itemx}.  (@xref{@code{@@itemx}}.)"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:7111
@@ -17853,53 +17947,58 @@ msgid ""
 "@code{@@quotation} (@pxref{@code{@@quotation}}) or @code{@@indentedblock} "
 "(@pxref{@code{@@indentedblock}})."
 msgstr ""
+"O comando @code{@@table} (@pxref{@code{@@table}}) não é suportado dentro "
+"do @code{@@display}.  Como @code{@@display} é orientado a linha, não faz "
+"sentido usá-los juntos.  Se você desejar recuar uma tabela, tente "
+"@code{@@quotation} (@pxref{@code{@@quotation}}) ou @code{@@indentedblock} "
+"(@pxref{@code{@@indentedblock}})."
 
 #. type: node
 #: texinfo/texinfo-ed.7.1-en_US.texi:7113
 #, no-wrap
 msgid "@code{@@ftable @@vtable}"
-msgstr ""
+msgstr "@code{@@ftable @@vtable}"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:7115
 msgid "@nodedescription Automatic indexing for two-column tables."
-msgstr ""
+msgstr "@nodedescription Indexamento automático para tabelas de duas colunas."
 
 #. type: subsection
 #: texinfo/texinfo-ed.7.1-en_US.texi:7115
 #, no-wrap
 msgid "@code{@@ftable} and @code{@@vtable}"
-msgstr ""
+msgstr "@code{@@ftable} e @code{@@vtable}"
 
-#.  old name
+#.  nome antigo
 #. type: anchor{#1}
 #: texinfo/texinfo-ed.7.1-en_US.texi:7118
 msgid "ftable vtable"
-msgstr ""
+msgstr "ftable vtable"
 
 #. type: findex
 #: texinfo/texinfo-ed.7.1-en_US.texi:7118
 #, no-wrap
 msgid "ftable"
-msgstr ""
+msgstr "ftable"
 
 #. type: findex
 #: texinfo/texinfo-ed.7.1-en_US.texi:7119
 #, no-wrap
 msgid "vtable"
-msgstr ""
+msgstr "vtable"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:7120
 #, no-wrap
 msgid "Tables with indexing"
-msgstr ""
+msgstr "Tabelas com indexação"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:7121
 #, no-wrap
 msgid "Indexing table entries automatically"
-msgstr ""
+msgstr "Indexando entradas de tabela automaticamente"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:7132
@@ -17914,6 +18013,15 @@ msgid ""
 "form that they appear on that line.  @xref{Indices}, for more information "
 "about indices."
 msgstr ""
+"Os comandos @code{@@ftable} e @code{@@vtable} são os mesmos que o comando "
+"@code{@@table}, exceto que @code{@@ftable} automaticamente insere cada um "
+"dos itens na primeira coluna da tabela no índice de funções e "
+"@code{@@vtable} automaticamente insere cada um dos itens na primeira coluna "
+"da tabela no índice de variáveis.  Isso simplifica a tarefa de criar "
+"índices.  Somente os itens na mesma linha que os comandos @code{@@item} ou "
+"@code{@@itemx} são indexados, e são indexados exatamente na forma em que "
+"aparecem nessa linha.  @xref{Índices}, para mais informações acerca de "
+"índices."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:7139
@@ -17924,11 +18032,16 @@ msgid ""
 "would for a @code{@@table} command; and end the table with an @code{@@end "
 "ftable} or @code{@@end vtable} command on a line by itself."
 msgstr ""
+"Inicie uma tabela de duas colunas usando @code{@@ftable} ou @code{@@vtable} "
+"escrevendo o comando @@ no início de uma linha, seguido na mesma linha por "
+"um argumento que seja um comando do Texinfo, como @code{@@code}, exatamente "
+"como você faria para um comando @code{@@table}; e termine a tabela com um "
+"comando @code{@@end ftable} ou @code{@@end vtable} em uma linha própria."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:7141
 msgid "See the example for @code{@@table} in the previous section."
-msgstr ""
+msgstr "Veja-se o exemplo para @code{@@table} na seção anterior."
 
 #. type: node
 #: texinfo/texinfo-ed.7.1-en_US.texi:7143
