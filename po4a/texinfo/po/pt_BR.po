@@ -17,7 +17,7 @@ msgstr ""
 "Project-Id-Version: Texinfo 7.1\n"
 "Report-Msgid-Bugs-To: jafesp@gmail.com\n"
 "POT-Creation-Date: 2025-04-05 18:55-0300\n"
-"PO-Revision-Date: 2025-04-06 19:30-0300\n"
+"PO-Revision-Date: 2025-04-07 16:00-0300\n"
 "Last-Translator: Jamenson Ferreira Espindula de Almeida Melo "
 "<jafesp@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17013,30 +17013,30 @@ msgstr ""
 #: texinfo/texinfo-ed.7.1-en_US.texi:6685
 #, no-wrap
 msgid "Lists and Tables"
-msgstr ""
+msgstr "Listas e Tabelas"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:6685
 msgid "@nodedescription Itemized or numbered lists, and tables."
-msgstr ""
+msgstr "@nodedescription Listas itenizadas ou numeradas, e tabelas."
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:6686
 #, no-wrap
 msgid "Making lists and tables"
-msgstr ""
+msgstr "Construindo listas e tabelas"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:6687
 #, no-wrap
 msgid "Lists and tables, making"
-msgstr ""
+msgstr "Listas e tabelas, construindo"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:6688
 #, no-wrap
 msgid "Tables and lists, making"
-msgstr ""
+msgstr "Tabelas e listas, construindo"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:6693
@@ -17045,18 +17045,21 @@ msgid ""
 "or numbered; two-column tables can highlight the items in the first column; "
 "multi-column tables are also supported."
 msgstr ""
+"Texinfo tem várias maneiras de construir listas e tabelas.  As listas podem "
+"ser marcadas ou numeradas; tabelas de duas colunas podem realçar os itens "
+"na primeira coluna; tabelas multi colunas também são suportadas."
 
 #. type: section
 #: texinfo/texinfo-ed.7.1-en_US.texi:6695
 #: texinfo/texinfo-ed.7.1-en_US.texi:6697
 #, no-wrap
 msgid "Introducing Lists"
-msgstr ""
+msgstr "Listas Introducentes"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:6697
 msgid "@nodedescription Texinfo formats lists for you."
-msgstr ""
+msgstr "@nodedescription Texinfo formata listas para você."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:6702
@@ -17065,6 +17068,9 @@ msgid ""
 "enumerated list.  This last feature is useful if you modify the list, since "
 "you do not need to renumber it yourself."
 msgstr ""
+"Texinfo automaticamente recua o texto em listas ou tabelas, e numera uma "
+"lista numerada.  Esse último recurso é útil se você modificar a lista, "
+"pois não precisa renumerá-la você mesmo(a)."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:6708
@@ -17075,6 +17081,11 @@ msgid ""
 "you write formatting information on the same line as the beginning "
 "@@-command."
 msgstr ""
+"Listas numeradas e tabelas iniciam com o comando @@ apropriado no início de "
+"uma linha, e finalizam com o correspondente comando @code{@@end} em uma "
+"linha própria.  Os comandos de tabela e de lista de itens também exigem "
+"que você escreva informações de formatação na mesma linha do comando @@ "
+"de inicialização."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:6714
@@ -17085,6 +17096,11 @@ msgid ""
 "formatting command such as @code{@@bullet}, and end the list with an "
 "@code{@@end itemize} command."
 msgstr ""
+"Inicie uma lista numerada, por exemplo, com um comando @code{@@enumerate} e "
+"finalize a lista com um comando @code{@@end enumerate}.  Inicie uma lista de "
+"itens com um comando @code{@@itemize}, seguido na mesma linha por um comando "
+"de formatação como @code{@@bullet}, e finalize a lista com um comando "
+"@code{@@end itemize}."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:6717
@@ -17092,107 +17108,111 @@ msgid ""
 "Precede each element of a list with an @code{@@item} or @code{@@itemx} "
 "command."
 msgstr ""
+"Preceda cada elemento de uma lista com um comando @code{@@item} ou "
+"@code{@@itemx}."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:6721
 msgid "Here is an itemized list of the different kinds of table and lists:"
-msgstr ""
+msgstr "Aqui está uma lista de itens dos diferentes tipos de tabela e listas:"
 
 #. type: table
 #: texinfo/texinfo-ed.7.1-en_US.texi:6725
 #: texinfo/texinfo-ed.7.1-en_US.texi:6740
 #: texinfo/texinfo-ed.7.1-en_US.texi:6756
 msgid "Itemized lists with and without bullets."
-msgstr ""
+msgstr "Listas de itens com e sem marcações."
 
 #. type: table
 #: texinfo/texinfo-ed.7.1-en_US.texi:6728
 #: texinfo/texinfo-ed.7.1-en_US.texi:6743
 #: texinfo/texinfo-ed.7.1-en_US.texi:6759
 msgid "Enumerated lists, using numbers or letters."
-msgstr ""
+msgstr "Listas numeradas, usando números ou letras."
 
 #. type: enumerate
 #: texinfo/texinfo-ed.7.1-en_US.texi:6731
 #: texinfo/texinfo-ed.7.1-en_US.texi:6746
 msgid "Two-column tables with highlighting."
-msgstr ""
+msgstr "Tabelas de duas colunas com realçamento."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:6736
 msgid "Here is an enumerated list with the same items:"
-msgstr ""
+msgstr "Aqui está uma lista numerada com os mesmos itens:"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:6752
 msgid ""
 "And here is a two-column table with the same items and their @w{@@-commands}:"
 msgstr ""
+"E aqui está uma tabela de duas colunas com os mesmos itens e os comandos "
+"@w{@@} dela:"
 
 #. type: item
 #: texinfo/texinfo-ed.7.1-en_US.texi:6754
 #, no-wrap
 msgid "@@itemize"
-msgstr ""
+msgstr "@@itemize"
 
 #. type: code{#1}
 #: texinfo/texinfo-ed.7.1-en_US.texi:6757
 #: texinfo/texinfo-ed.7.1-en_US.texi:6979
 #, no-wrap
 msgid "@@enumerate"
-msgstr ""
+msgstr "@@enumerate"
 
 #. type: item
 #: texinfo/texinfo-ed.7.1-en_US.texi:6760
 #, no-wrap
 msgid "@@table"
-msgstr ""
+msgstr "@@table"
 
 #. type: itemx
 #: texinfo/texinfo-ed.7.1-en_US.texi:6761
 #, no-wrap
 msgid "@@ftable"
-msgstr ""
+msgstr "@@ftable"
 
 #. type: itemx
 #: texinfo/texinfo-ed.7.1-en_US.texi:6762
 #, no-wrap
 msgid "@@vtable"
-msgstr ""
+msgstr "@@vtable"
 
 #. type: table
 #: texinfo/texinfo-ed.7.1-en_US.texi:6764
 msgid "Two-column tables, optionally with indexing."
-msgstr ""
+msgstr "Tabelas de duas colunas, opcionalmente com indexação."
 
 #. type: node
 #: texinfo/texinfo-ed.7.1-en_US.texi:6767
 #, no-wrap
 msgid "@code{@@itemize}"
-msgstr ""
+msgstr "@code{@@itemize}"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:6769
 msgid "@nodedescription How to construct a simple list."
-msgstr ""
+msgstr "@nodedescription Como construir uma lista simples."
 
 #. type: section
 #: texinfo/texinfo-ed.7.1-en_US.texi:6769
 #, no-wrap
 msgid "@code{@@itemize}: Making an Itemized List"
-msgstr ""
+msgstr "@code{@@itemize}: Construindo Uma Lista de Itens"
 
 #. type: findex
 #: texinfo/texinfo-ed.7.1-en_US.texi:6772
 #, no-wrap
 msgid "itemize"
-msgstr ""
+msgstr "itemize"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:6773
 #, no-wrap
 msgid "Itemization"
-msgstr ""
+msgstr "Itenização"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:6778
@@ -17200,12 +17220,15 @@ msgid ""
 "The @code{@@itemize} command produces a sequence of ``items'', each starting "
 "with a bullet or other mark inside the left margin, and generally indented."
 msgstr ""
+"O comando @code{@@itemize} produz uma sequência de ``itens'', cada um "
+"iniciando com uma bola ou outra marca dentro da margem esquerda, e "
+"geralmente recuados."
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:6779
 #, no-wrap
 msgid "@code{@@w}, for blank items"
-msgstr ""
+msgstr "@code{@@w}, para itens em branco"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:6791
@@ -17221,12 +17244,22 @@ msgid ""
 "but still want logical items, use @code{@@w@{@}} (in this case the braces "
 "are required)."
 msgstr ""
+"Inicie uma lista de itens escrevendo @code{@@itemize} no início de uma "
+"linha.  Siga o comando, na mesma linha, com um caractere ou um comando do "
+"Texinfo que gere uma marca.  Geralmente, você usará @code{@@bullet} depois "
+"do @code{@@itemize}, mas você pode usar @code{@@minus}, ou qualquer comando "
+"ou caractere que resulte em um caractere único no arquivo Info.  (Quando "
+"escrever o comando de marca como @code{@@bullet} depois de um comando "
+"@code{@@itemize}, você pode omitir o @samp{@{@}}.)  Se você não "
+"especificar um comando de marca, o padrão é @code{@@bullet}.  Se você "
+"não quiser nenhuma marca em absoluto, mas ainda quiser itens lógicos, use "
+"@code{@@w@{@}} (nesse caso as chaves são obrigatórias)."
 
 #. type: findex
 #: texinfo/texinfo-ed.7.1-en_US.texi:6792
 #, no-wrap
 msgid "item @r{in @code{@@itemize}}"
-msgstr ""
+msgstr "item @r{em @code{@@itemize}}"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:6796
@@ -17235,6 +17268,9 @@ msgid ""
 "@code{@@item}.  Text can follow on the same line as the @code{@@item}.  The "
 "text of an item can continue for more than one paragraph."
 msgstr ""
+"Depois do @code{@@itemize}, escreva teus itens, cada um iniciando com "
+"@code{@@item}.  O texto pode seguir na mesma linha que @code{@@item}.  O "
+"texto de um item pode continuar por mais que um parágrafo."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:6801
@@ -17244,6 +17280,10 @@ msgid ""
 "just want indented text and not a list of items, use @code{@@indentedblock}; "
 "@pxref{@code{@@indentedblock}}."
 msgstr ""
+"Deveria existir ao menos um @code{@@item} dentro do ambiente "
+"@code{@@itemize}.  Se nenhum estiver presente, @code{texi2any} fornecerá um "
+"alerta.  Se você quiser apenas texto recuado e não uma lista de itens, use "
+"@code{@@indentedblock}; @pxref{@code{@@indentedblock}}."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:6806
@@ -17252,6 +17292,10 @@ msgid ""
 "the first, are automatically moved (internally) to after the @code{@@item}, "
 "so the output is as expected.  Historically this has been a common practice."
 msgstr ""
+"As entradas de índice e comentários que são fornecidos antes de um "
+"@code{@@item} incluindo o primeiro, são automaticamente movidos "
+"(internamente) para depois do @code{@@item}, de forma que a saída gerada "
+"esteja como esperada.  Historicamente essa tem sido uma prática comum."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:6811
@@ -17261,6 +17305,10 @@ msgid ""
 "Except when the entries are very brief, these blank lines make the list look "
 "better."
 msgstr ""
+"Geralmente, você deveria colocar uma linha em branco entre os itens.  Isso "
+"coloca uma linha em branco no arquivo Info.  (O @TeX{} insere o espaço "
+"vertical apropriado em qualquer caso.)  Exceto quando as entradas forem "
+"muito breves, esses espaços em branco fazem a lista aparentar melhor."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:6815
@@ -17269,6 +17317,9 @@ msgid ""
 "produces.  @code{@@bullet} produces an @samp{*} in Info and a round dot in "
 "other output formats."
 msgstr ""
+"Aqui está um exemplo do uso de @code{@@itemize}, seguido pela saída que "
+"ele produz.  @code{@@bullet} produz um @samp{*} no Info e um ponto redondo "
+"em outros formatos de saída."
 
 #. type: group
 #: texinfo/texinfo-ed.7.1-en_US.texi:6821
@@ -17279,6 +17330,10 @@ msgid ""
 "Some text for foo.\n"
 "\n"
 msgstr ""
+"@@itemize @@bullet\n"
+"@@item\n"
+"Algum texto para foo.\n"
+"\n"
 
 #. type: group
 #: texinfo/texinfo-ed.7.1-en_US.texi:6826
@@ -17289,16 +17344,20 @@ msgid ""
 "for bar.\n"
 "@@end itemize\n"
 msgstr ""
+"@@item\n"
+"Algum texto\n"
+"para bar.\n"
+"@@end itemize\n"
 
 #. type: itemize
 #: texinfo/texinfo-ed.7.1-en_US.texi:6836
 msgid "Some text for foo."
-msgstr ""
+msgstr "Algum texto para foo."
 
 #. type: itemize
 #: texinfo/texinfo-ed.7.1-en_US.texi:6840
 msgid "Some text for bar."
-msgstr ""
+msgstr "Algum texto para bar."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:6845
@@ -17306,6 +17365,8 @@ msgid ""
 "Itemized lists may be embedded within other itemized lists.  Here is a list "
 "marked with dashes embedded in a list marked with bullets:"
 msgstr ""
+"Listas de itens podem ser embutidas em outras listas de itens.  Aqui está "
+"uma lista marcada com traços embutida em uma lista marcada com bolas:"
 
 #. type: group
 #: texinfo/texinfo-ed.7.1-en_US.texi:6851
@@ -17316,6 +17377,10 @@ msgid ""
 "First item.\n"
 "\n"
 msgstr ""
+"@@itemize @@bullet\n"
+"@@item\n"
+"Primeiro item.\n"
+"\n"
 
 #. type: group
 #: texinfo/texinfo-ed.7.1-en_US.texi:6855
@@ -17326,6 +17391,10 @@ msgid ""
 "Inner item.\n"
 "\n"
 msgstr ""
+"@@itemize @@minus\n"
+"@@item\n"
+"Item interno.\n"
+"\n"
 
 #. type: group
 #: texinfo/texinfo-ed.7.1-en_US.texi:6859
@@ -17336,6 +17405,10 @@ msgid ""
 "@@end itemize\n"
 "\n"
 msgstr ""
+"@@item\n"
+"Segundo item interno.\n"
+"@@end itemize\n"
+"\n"
 
 #. type: group
 #: texinfo/texinfo-ed.7.1-en_US.texi:6863
@@ -17345,26 +17418,29 @@ msgid ""
 "Second outer item.\n"
 "@@end itemize\n"
 msgstr ""
+"@@item\n"
+"Segundo item externo.\n"
+"@@end itemize\n"
 
 #. type: itemize
 #: texinfo/texinfo-ed.7.1-en_US.texi:6873
 msgid "First item."
-msgstr ""
+msgstr "Primeiro item."
 
 #. type: itemize
 #: texinfo/texinfo-ed.7.1-en_US.texi:6877
 msgid "Inner item."
-msgstr ""
+msgstr "Item interno."
 
 #. type: itemize
 #: texinfo/texinfo-ed.7.1-en_US.texi:6880
 msgid "Second inner item."
-msgstr ""
+msgstr "Segundo item interno."
 
 #. type: itemize
 #: texinfo/texinfo-ed.7.1-en_US.texi:6884
 msgid "Second outer item."
-msgstr ""
+msgstr "Segundo item externo."
 
 #. type: node
 #: texinfo/texinfo-ed.7.1-en_US.texi:6888
