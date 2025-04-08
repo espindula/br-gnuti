@@ -17,7 +17,7 @@ msgstr ""
 "Project-Id-Version: Texinfo 7.1\n"
 "Report-Msgid-Bugs-To: jafesp@gmail.com\n"
 "POT-Creation-Date: 2025-04-05 18:55-0300\n"
-"PO-Revision-Date: 2025-04-07 18:30-0300\n"
+"PO-Revision-Date: 2025-04-08 19:30-0300\n"
 "Last-Translator: Jamenson Ferreira Espindula de Almeida Melo "
 "<jafesp@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18047,31 +18047,31 @@ msgstr "Veja-se o exemplo para @code{@@table} na seção anterior."
 #: texinfo/texinfo-ed.7.1-en_US.texi:7143
 #, no-wrap
 msgid "@code{@@itemx}"
-msgstr ""
+msgstr "@code{@@itemx}"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:7145
 msgid "@nodedescription How to put more entries in the first column."
-msgstr ""
+msgstr "@nodedescription Como colocar mais entradas na primeira coluna."
 
 #. type: subsection
 #: texinfo/texinfo-ed.7.1-en_US.texi:7145
 #, no-wrap
 msgid "@code{@@itemx}: Second and Subsequent Items"
-msgstr ""
+msgstr "@code{@@itemx}: Segundo e Itens Subsequentes"
 
 #. type: findex
 #: texinfo/texinfo-ed.7.1-en_US.texi:7148
 #: texinfo/texinfo-ed.7.1-en_US.texi:7149
 #, no-wrap
 msgid "itemx"
-msgstr ""
+msgstr "itemx"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:7148
 #, no-wrap
 msgid "Two named items for @code{@@table}"
-msgstr ""
+msgstr "Dois itens nomeados para @code{@@table}"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:7154
@@ -18080,6 +18080,9 @@ msgid ""
 "first column entries for the same item, each of which should appear on a "
 "line of its own."
 msgstr ""
+"Use o comando @code{@@itemx} dentro de uma tabela quando você tiver duas ou "
+"mais entradas de primeira coluna para o mesmo item, cada uma das quais "
+"deveria aparecer em uma linha própria."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:7158
@@ -18088,6 +18091,9 @@ msgid ""
 "entries; @code{@@itemx} must always follow an @code{@@item} command, with no "
 "blank line intervening."
 msgstr ""
+"Use @code{@@item} para a primeira entrada, e @code{@@itemx} para todas as "
+"entradas subsequentes; @code{@@itemx} sempre precisa seguir um comando "
+"@code{@@item}, sem linhas em branco entre eles."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:7163
@@ -18097,6 +18103,10 @@ msgid ""
 "output formats.  If you have multiple consecutive @code{@@itemx} commands, "
 "do not insert any blank lines between them."
 msgstr ""
+"O comando @code{@@itemx} funciona exatamente como @code{@@item}, exceto que "
+"não gera espaço vertical extra acima do texto da primeira coluna em alguns "
+"formatos de saída.  Se você tiver múltiplos comandos @code{@@itemx} "
+"consecutivos, não insira quaisquer linhas em branco entre eles."
 
 #. type: group
 #: texinfo/texinfo-ed.7.1-en_US.texi:7175
@@ -18110,18 +18120,25 @@ msgid ""
 "character or string.\n"
 "@@end table\n"
 msgstr ""
+"@@table @@code\n"
+"@@item upcase\n"
+"@@itemx downcase\n"
+"Essas duas funções aceitam um caractere ou uma sequência de caracteres\n"
+"como argumento, e retornam o correspondente caractere ou a sequência de\n"
+"caracteres escrito em letras maiúsculas (minúsculas).\n"
+"@@end table\n"
 
 #. type: item
 #: texinfo/texinfo-ed.7.1-en_US.texi:7182
 #, no-wrap
 msgid "upcase"
-msgstr ""
+msgstr "upcase"
 
 #. type: itemx
 #: texinfo/texinfo-ed.7.1-en_US.texi:7183
 #, no-wrap
 msgid "downcase"
-msgstr ""
+msgstr "downcase"
 
 #. type: table
 #: texinfo/texinfo-ed.7.1-en_US.texi:7187
@@ -18129,6 +18146,9 @@ msgid ""
 "These two functions accept a character or a string as argument, and return "
 "the corresponding uppercase (lowercase)  character or string."
 msgstr ""
+"Essas duas funções aceitam um caractere ou uma sequência de caracteres "
+"como argumento, e retornam o correspondente caractere ou a sequência de "
+"caracteres escrito em letras maiúsculas (minúsculas)."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:7192
@@ -18136,35 +18156,37 @@ msgid ""
 "(Note also that this example illustrates multi-line supporting text in a "
 "two-column table.)"
 msgstr ""
+"(Observe também que esse exemplo ilustra texto de apoio multi linha em uma "
+"tabela de duas colunas.)"
 
 #. type: node
 #: texinfo/texinfo-ed.7.1-en_US.texi:7194
 #, no-wrap
 msgid "Multi-column Tables"
-msgstr ""
+msgstr "Tabelas Multi Colunas"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:7196
 msgid "@nodedescription How to construct generalized tables."
-msgstr ""
+msgstr "@nodedescription Como construir tabelas generalizadas."
 
 #. type: section
 #: texinfo/texinfo-ed.7.1-en_US.texi:7196
 #, no-wrap
 msgid "@code{@@multitable}: Multi-column Tables"
-msgstr ""
+msgstr "@code{@@multitable}: Tabelas Multi Colunas"
 
 #. type: findex
 #: texinfo/texinfo-ed.7.1-en_US.texi:7198
 #, no-wrap
 msgid "multitable"
-msgstr ""
+msgstr "multitable"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:7199
 #, no-wrap
 msgid "Tables, making multi-column"
-msgstr ""
+msgstr "Tabelas, fazendo multi colunas"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:7203
@@ -18172,6 +18194,8 @@ msgid ""
 "@code{@@multitable} allows you to construct tables with any number of "
 "columns, with each column having any width you like."
 msgstr ""
+"@code{@@multitable} permite que você construa tabelas com qualquer número "
+"de colunas, com cada coluna tendo qualquer largura que você goste."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:7208
@@ -18181,36 +18205,41 @@ msgid ""
 "columns separated by a @code{@@tab} command.  Finally, @code{@@end "
 "multitable} completes the table.  Details in the sections below."
 msgstr ""
+"Você define as larguras da coluna em uma linha @code{@@multitable} "
+"própria, e escreve cada linha da tabela real seguindo um comando "
+"@code{@@item}, com colunas separadas por um comando @code{@@tab}.  "
+"Finalmente, @code{@@end multitable} completa a tabela.  Detalhes nas "
+"seções abaixo."
 
 #. type: subsection
 #: texinfo/texinfo-ed.7.1-en_US.texi:7210
 #: texinfo/texinfo-ed.7.1-en_US.texi:7212
 #, no-wrap
 msgid "Multitable Column Widths"
-msgstr ""
+msgstr "Larguras de Colunas de Multi Tabelas"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:7212
 msgid "@nodedescription Defining multitable column widths."
-msgstr ""
+msgstr "@nodedescription Definindo larguras de colunas de multi tabelas."
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:7213
 #, no-wrap
 msgid "Multitable column widths"
-msgstr ""
+msgstr "Larguras de colunas de multi tabelas"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:7214
 #, no-wrap
 msgid "Column widths, defining for multitables"
-msgstr ""
+msgstr "Larguras de colunas, definindo para multi tabelas"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:7215
 #, no-wrap
 msgid "Widths, defining multitable column"
-msgstr ""
+msgstr "Larguras, definindo coluna de multi tabelas"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:7221
@@ -18220,18 +18249,23 @@ msgid ""
 "supported.  In either case, the widths are defined entirely on the same line "
 "as the @code{@@multitable} command."
 msgstr ""
+"Você pode definir as larguras de coluna para uma multi tabela de duas "
+"maneiras: como frações do comprimento da linha; ou com uma linha de "
+"protótipo.  Mesclagem dos dois métodos não é suportada.  Em qualquer "
+"caso, as larguras são definidas inteiramente na mesma linha que o comando "
+"@code{@@multitable}."
 
 #. type: findex
 #: texinfo/texinfo-ed.7.1-en_US.texi:7224
 #, no-wrap
 msgid "columnfractions"
-msgstr ""
+msgstr "columnfractions"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:7225
 #, no-wrap
 msgid "Line length, column widths as fraction of"
-msgstr ""
+msgstr "Comprimento de linha, larguras de coluna como fração de"
 
 #. type: enumerate
 #: texinfo/texinfo-ed.7.1-en_US.texi:7230
@@ -18241,12 +18275,16 @@ msgid ""
 "leading zero is allowed and ignored) after the @code{@@multitable} command, "
 "as in:"
 msgstr ""
+"Para especificar larguras de coluna como frações do comprimento de linha, "
+"escreva @code{@@columnfractions} e os números decimais (presumivelmente "
+"menor que 1; um zero no início é permitido e ignorado) depois do comando "
+"@code{@@multitable}, como em:"
 
 #. type: example
 #: texinfo/texinfo-ed.7.1-en_US.texi:7233
 #, no-wrap
 msgid "@@multitable @@columnfractions .33 .33 .33\n"
-msgstr ""
+msgstr "@@multitable @@columnfractions .33 .33 .33\n"
 
 #. type: enumerate
 #: texinfo/texinfo-ed.7.1-en_US.texi:7237
@@ -18254,6 +18292,9 @@ msgid ""
 "The fractions need not add up exactly to 1.0, as these do not.  This allows "
 "you to produce tables that do not need the full line length."
 msgstr ""
+"As frações não precisam totalizar exatamente 1.0, como essas não fazem.  "
+"Isso permite que você produza tabelas que não precisam do comprimento "
+"total da linha."
 
 #. type: enumerate
 #: texinfo/texinfo-ed.7.1-en_US.texi:7242
@@ -18262,12 +18303,16 @@ msgid ""
 "wider than you might expect, relative to the other columns.  This is due to "
 "spacing between columns being included in the width of the other columns."
 msgstr ""
+"Ao usar @code{@@columnfractions}, a coluna mais à esquerda pode parecer um "
+"pouco mais larga que você esperaria, relativa às outras colunas.  Isso é "
+"devido ao espaçamento entre colunas estar incluído na largura das outras "
+"colunas."
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:7244
 #, no-wrap
 msgid "Prototype row, column widths defined by"
-msgstr ""
+msgstr "Linha de protótipo, larguras de coluna definidas por"
 
 #. type: enumerate
 #: texinfo/texinfo-ed.7.1-en_US.texi:7247
@@ -18275,12 +18320,14 @@ msgid ""
 "To specify a prototype row, write the longest entry for each column enclosed "
 "in braces after the @code{@@multitable} command.  For example:"
 msgstr ""
+"Para especificar uma linha de protótipo, escreva a entrada mais longa para "
+"cada coluna entre chaves depois do comando @code{@@multitable}.  Por exemplo:"
 
 #. type: example
 #: texinfo/texinfo-ed.7.1-en_US.texi:7250
 #, no-wrap
 msgid "@@multitable @{some text for column one@} @{for column two@}\n"
-msgstr ""
+msgstr "@@multitable @{algum texto para a coluna um@} @{para a coluna dois@}\n"
 
 #. type: enumerate
 #: texinfo/texinfo-ed.7.1-en_US.texi:7255
@@ -18288,11 +18335,13 @@ msgid ""
 "The first column will then have the width of the typeset `some text for "
 "column one', and the second column the width of `for column two'."
 msgstr ""
+"A primeira coluna terá então a largura do tipografado `algum texto para a "
+"coluna um' e a segunda coluna a largura de `para a coluna dois'."
 
 #. type: enumerate
 #: texinfo/texinfo-ed.7.1-en_US.texi:7257
 msgid "The prototype entries need not appear in the table itself."
-msgstr ""
+msgstr "As entradas de protótipo não precisam aparecer na tabela em si."
 
 #. type: enumerate
 #: texinfo/texinfo-ed.7.1-en_US.texi:7261
@@ -18301,47 +18350,50 @@ msgid ""
 "contain Texinfo commands; markup commands such as @code{@@code} are "
 "particularly likely to be useful."
 msgstr ""
+"Apesar que nós usamos texto simples nesse exemplo, as entradas de "
+"protótipo podem conter comandos do Texinfo; comandos de marcação, como "
+"@code{@@code}, são particularmente prováveis de serem úteis."
 
 #. type: enumerate
 #: texinfo/texinfo-ed.7.1-en_US.texi:7263
 msgid "Prototype rows have no effect in HTML output."
-msgstr ""
+msgstr "Linhas de protótipo não tem efeito na saída HTML."
 
 #. type: subsection
 #: texinfo/texinfo-ed.7.1-en_US.texi:7267
 #: texinfo/texinfo-ed.7.1-en_US.texi:7269
 #, no-wrap
 msgid "Multitable Rows"
-msgstr ""
+msgstr "Linhas de Multi Tabelas"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:7269
 msgid "@nodedescription Defining multitable rows, with examples."
-msgstr ""
+msgstr "@nodedescription Definindo linhas de multi tabelas, com exemplos."
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:7271
 #, no-wrap
 msgid "Multitable rows"
-msgstr ""
+msgstr "Linhas de multi tabelas"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:7272
 #, no-wrap
 msgid "Rows, of a multitable"
-msgstr ""
+msgstr "Linhas, de uma multi tabela"
 
 #. type: findex
 #: texinfo/texinfo-ed.7.1-en_US.texi:7274
 #, no-wrap
 msgid "item @r{in @code{@@multitable}}"
-msgstr ""
+msgstr "item @r{em @code{@@multitable}}"
 
 #. type: findex
 #: texinfo/texinfo-ed.7.1-en_US.texi:7275
 #, no-wrap
 msgid "tab"
-msgstr ""
+msgstr "tab"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:7281
@@ -18352,24 +18404,29 @@ msgid ""
 "breaks are not special within the table body, and you may break input lines "
 "in your source file as necessary."
 msgstr ""
+"Depois do comando @code{@@multitable} definindo as larguras de colunas "
+"(veja-se a seção anterior), você inicia cada linha no corpo de uma multi "
+"tabela com @code{@@item}, e separa as entradas de coluna com @code{@@tab}.  "
+"Quebras de linha não são especiais dentro do corpo da tabela, e você pode "
+"quebrar linhas de entrada em teu arquivo fonte se necessário."
 
 #. type: findex
 #: texinfo/texinfo-ed.7.1-en_US.texi:7282
 #, no-wrap
 msgid "headitem"
-msgstr ""
+msgstr "headitem"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:7283
 #, no-wrap
 msgid "Heading row, in table"
-msgstr ""
+msgstr "Linha de cabeçalho, em tabela"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:7284
 #, no-wrap
 msgid "@code{<thead>} HTML/DocBook tag"
-msgstr ""
+msgstr "Etiqueta @code{<thead>} do HTML/DocBook"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:7290
@@ -18379,18 +18436,23 @@ msgid ""
 "HTML and DocBook output uses the @code{<thead>} tag.  In Info, the heading "
 "row is followed by a separator line made of dashes (@samp{-} characters)."
 msgstr ""
+"Você também pode usar @code{@@headitem} em vez de @code{@@item} para "
+"produzir uma @dfn{linha de cabeçalho}.  A saída do @TeX{} para tal linha "
+"é em negrito, e a saída HTML e DocBook usa a etiqueta @code{<thead>}.  No "
+"Info, a linha de cabeçalho é seguida por uma linha separadora feita de "
+"traços (caracteres @samp{-})."
 
 #. type: findex
 #: texinfo/texinfo-ed.7.1-en_US.texi:7291
 #, no-wrap
 msgid "headitemfont"
-msgstr ""
+msgstr "headitemfont"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:7292
 #, no-wrap
 msgid "Font for multitable heading rows"
-msgstr ""
+msgstr "Fonte para linhas de cabeçalho multi tabelas"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:7298
@@ -18401,6 +18463,11 @@ msgid ""
 "that particular font style, in case we provide a way to change it in the "
 "future."
 msgstr ""
+"O comando @code{@@headitemfont} pode ser usado em modelos quando as entradas "
+"em uma linha @code{@@headitem} precisarem ser usadas em um modelo.  É um "
+"sinônimo para @code{@@b}, mas usar @code{@@headitemfont} evita qualquer "
+"dependência daquele estilo específico de fonte, no caso de nós "
+"fornecermos uma maneira de mudá-lo no futuro."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:7302
@@ -18409,6 +18476,9 @@ msgid ""
 "@cite{The GNU Emacs Manual}, @pxref{Split Window,, Splitting Windows, emacs, "
 "The GNU Emacs Manual}):"
 msgstr ""
+"Aqui está um exemplo completo de uma tabela multi colunas (o texto é "
+"originário de @cite{O Manual do GNU Emacs}, @pxref{Split Window,, Splitting "
+"Windows, emacs, O Manual do GNU Emacs}):"
 
 #. type: example
 #: texinfo/texinfo-ed.7.1-en_US.texi:7319
@@ -18430,64 +18500,80 @@ msgid ""
 "split that window.\n"
 "@@end multitable\n"
 msgstr ""
+"@@multitable @@columnfractions .15 .45 .4\n"
+"@@headitem Tecla @@tab Comando @@tab Descrição\n"
+"@@item C-x 2\n"
+"@@tab @@code@{split-window-vertically@}\n"
+"@@tab Divide a janela selecionada em duas janelas,\n"
+"com uma acima da outra.\n"
+"@@item C-x 3\n"
+"@@tab @@code@{split-window-horizontally@}\n"
+"@@tab Divide a janela selecionada em duas janelas\n"
+"posicionadas lado a lado.\n"
+"@@item C-Mouse-2\n"
+"@@tab\n"
+"@@tab Na linha de modo ou barra de rolagem de uma janela,\n"
+"divide aquela janela.\n"
+"@@end multitable\n"
 
 #. type: multitable
 #: texinfo/texinfo-ed.7.1-en_US.texi:7326
 msgid "@headitem Key"
-msgstr ""
+msgstr "@headitem Tecla"
 
 #. type: multitable
 #: texinfo/texinfo-ed.7.1-en_US.texi:7326
 msgid "Command"
-msgstr ""
+msgstr "Comando"
 
 #. type: multitable
 #: texinfo/texinfo-ed.7.1-en_US.texi:7326
 msgid "Description"
-msgstr ""
+msgstr "Descrição"
 
 #. type: item
 #: texinfo/texinfo-ed.7.1-en_US.texi:7326
 #, no-wrap
 msgid "C-x 2"
-msgstr ""
+msgstr "C-x 2"
 
 #. type: code{#1}
 #: texinfo/texinfo-ed.7.1-en_US.texi:7330
 msgid "split-window-vertically"
-msgstr ""
+msgstr "split-window-vertically"
 
 #. type: multitable
 #: texinfo/texinfo-ed.7.1-en_US.texi:7330
 msgid "Split the selected window into two windows, with one above the other."
-msgstr ""
+msgstr "Divide a janela selecionada em duas janelas, com uma acima da outra."
 
 #. type: item
 #: texinfo/texinfo-ed.7.1-en_US.texi:7330
 #, no-wrap
 msgid "C-x 3"
-msgstr ""
+msgstr "C-x 3"
 
 #. type: code{#1}
 #: texinfo/texinfo-ed.7.1-en_US.texi:7334
 msgid "split-window-horizontally"
-msgstr ""
+msgstr "split-window-horizontally"
 
 #. type: multitable
 #: texinfo/texinfo-ed.7.1-en_US.texi:7334
 msgid "Split the selected window into two windows positioned side by side."
-msgstr ""
+msgstr "Divide a janela selecionada em duas janelas posicionadas lado a lado."
 
 #. type: item
 #: texinfo/texinfo-ed.7.1-en_US.texi:7334
 #, no-wrap
 msgid "C-Mouse-2"
-msgstr ""
+msgstr "C-Mouse-2"
 
 #. type: multitable
 #: texinfo/texinfo-ed.7.1-en_US.texi:7338
 msgid "In the mode line or scroll bar of a window, split that window."
 msgstr ""
+"Na linha de modo ou barra de rolagem de uma janela, divide aquela janela."
 
 #. type: chapter
 #: texinfo/texinfo-ed.7.1-en_US.texi:7341
