@@ -17,7 +17,7 @@ msgstr ""
 "Project-Id-Version: Texinfo 7.1\n"
 "Report-Msgid-Bugs-To: jafesp@gmail.com\n"
 "POT-Creation-Date: 2025-04-05 18:55-0300\n"
-"PO-Revision-Date: 2025-04-08 19:30-0300\n"
+"PO-Revision-Date: 2025-04-09 20:15-0300\n"
 "Last-Translator: Jamenson Ferreira Espindula de Almeida Melo "
 "<jafesp@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18580,18 +18580,18 @@ msgstr ""
 #: texinfo/texinfo-ed.7.1-en_US.texi:7343
 #, no-wrap
 msgid "Special Displays"
-msgstr ""
+msgstr "Exibições Especiais"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:7343
 msgid "@nodedescription Floating figures and footnotes."
-msgstr ""
+msgstr "@nodedescription Figuras flutuantes e notas de rodapé."
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:7344
 #, no-wrap
 msgid "Special displays"
-msgstr ""
+msgstr "Exibições especiais"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:7349
@@ -18599,6 +18599,9 @@ msgid ""
 "The commands in this chapter allow you to write text that is specially "
 "displayed (output format permitting), outside of the normal document flow."
 msgstr ""
+"Os comandos neste capítulo permitem que você escreva texto que seja "
+"especialmente exibido (permissão de formato de saída), fora do fluxo "
+"normal do documento."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:7354
@@ -18608,11 +18611,16 @@ msgid ""
 "captioned, and/or referred to from elsewhere in the document.  Images are "
 "often included in these displays."
 msgstr ""
+"Um conjunto de tais comandos é para criar ``flutuações'', isto é, "
+"figuras, tabelas, e afins, configuradas a partir do texto principal, "
+"possivelmente numeradas, legendadas, e (ou) referenciadas a partir de outro "
+"lugar no documento.  As imagens frequentemente são incluídas nessas "
+"exibições."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:7356
 msgid "Another group of commands is for creating footnotes in Texinfo."
-msgstr ""
+msgstr "Outro grupo de comandos é para criar notas de rodapé no Texinfo."
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:7358
@@ -18620,12 +18628,12 @@ msgstr ""
 #: texinfo/texinfo-ed.7.1-en_US.texi:7361
 #, no-wrap
 msgid "Floats"
-msgstr ""
+msgstr "Flutuações"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:7360
 msgid "@nodedescription Figures, tables, and the like."
-msgstr ""
+msgstr "@nodedescription Figuras, tabelas, e afins."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:7366
@@ -18634,12 +18642,15 @@ msgid ""
 "typically labeled as being a ``Figure'', ``Table'', ``Example'', or some "
 "similar type."
 msgstr ""
+"Uma @dfn{flutuação} é uma exibição que é configurada a partir do texto "
+"principal.  É tipicamente rotulada como sendo uma ``Figura'', ``Tabela'', "
+"``Exemplo'' ou algum tipo similar."
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:7367
 #, no-wrap
 msgid "Floating, not yet implemented"
-msgstr ""
+msgstr "Flutuando, ainda não implementado"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:7375
@@ -18652,35 +18663,42 @@ msgid ""
 "location, more or less as if it were an @code{@@group} "
 "(@pxref{@code{@@group}})."
 msgstr ""
+"Uma flutuação é assim nomeada porque, a princípio, ela pode ser movida "
+"para o pé ou topo da página atual, ou para uma página seguinte, na saída "
+"impressa.  (Flutuação não faz sentido em outros formatos de saída.)  Em "
+"cada formato de saída, exceto para @LaTeX{}, no entanto, essa flutuação "
+"infelizmente ainda não está implementada.  Em vez disso, o material "
+"flutuante simplesmente é gerado no local atual, mais ou menos como se fosse "
+"um @code{@@group} (@pxref{@code{@@group}})."
 
 #. type: node
 #: texinfo/texinfo-ed.7.1-en_US.texi:7377
 #, no-wrap
 msgid "@code{@@float}"
-msgstr ""
+msgstr "@code{@@float}"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:7379
 msgid "@nodedescription Producing floating material."
-msgstr ""
+msgstr "@nodedescription Produzindo material flutuante."
 
 #. type: subsection
 #: texinfo/texinfo-ed.7.1-en_US.texi:7379
 #, no-wrap
 msgid "@code{@@float} [@var{type}][,@var{label}]: Floating Material"
-msgstr ""
+msgstr "@code{@@float} [@var{tipo}][,@var{rótulo}]: Material Flutuante"
 
 #. type: findex
 #: texinfo/texinfo-ed.7.1-en_US.texi:7382
 #, no-wrap
 msgid "float"
-msgstr ""
+msgstr "float"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:7383
 #, no-wrap
 msgid "Float environment"
-msgstr ""
+msgstr "Ambiente de flutuação"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:7388
@@ -18689,6 +18707,9 @@ msgid ""
 "separate between @code{@@float} and @code{@@end float} commands, on lines by "
 "themselves."
 msgstr ""
+"Para produzir material flutuante, circunde o material que você quer que "
+"seja exibido separado entre os comandos @code{@@float} e @code{@@end float}, "
+"em suas linhas próprias."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:7393
@@ -18698,6 +18719,11 @@ msgid ""
 "(@pxref{Multi-column Tables}).  However, the contents of the float can be "
 "anything.  Here's an example with simple text:"
 msgstr ""
+"Material flutuante frequentemente usa @code{@@image} para exibir um gráfico "
+"já existente (@pxref{Imagens}), ou @code{@@multitable} para exibir uma "
+"tabela (@pxref{Tabelas Multi Colunas}).  Entretanto, o conteúdo da "
+"flutuação pode ser qualquer coisa.  Aqui está um exemplo com texto "
+"simples:"
 
 #. type: example
 #: texinfo/texinfo-ed.7.1-en_US.texi:7398
@@ -18707,16 +18733,19 @@ msgid ""
 "This is an example float.\n"
 "@@end float\n"
 msgstr ""
+"@@float Figura,fig:ex1\n"
+"Esta é uma flutuação de exemplo.\n"
+"@@end float\n"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:7402
 msgid "And the output:"
-msgstr ""
+msgstr "E a saída gerada:"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:7405
 msgid "@float Figure,fig:ex1 This is an example float."
-msgstr ""
+msgstr "@float Figura,fig:ex1 Esta é uma flutuação de exemplo."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:7409
@@ -18724,12 +18753,14 @@ msgid ""
 "As shown in the example, @code{@@float} takes two arguments (separated by a "
 "comma), @var{type} and @var{label}.  Both are optional."
 msgstr ""
+"Como mostrado no exemplo, @code{@@float} recebe dois argumentos (separados "
+"por uma vírgula), @var{tipo} e @var{rótulo}.  Ambos são opcionais."
 
 #. type: item
 #: texinfo/texinfo-ed.7.1-en_US.texi:7411
 #, no-wrap
 msgid "type"
-msgstr ""
+msgstr "tipo"
 
 #. type: table
 #: texinfo/texinfo-ed.7.1-en_US.texi:7415
@@ -18738,12 +18769,15 @@ msgid ""
 "``Table'', etc.  If this is not given, and @var{label} is, any "
 "cross-referencing will simply use a bare number."
 msgstr ""
+"Especifica a classe da flutuação; tipicamente uma palavra como ``Figura'', "
+"``Tabela'', etc.  Se não for fornecida, e @var{rótulo} for, quaisquer "
+"referências cruzadas simplesmente usarão um número despojado."
 
 #. type: item
 #: texinfo/texinfo-ed.7.1-en_US.texi:7416
 #, no-wrap
 msgid "label"
-msgstr ""
+msgstr "rótulo"
 
 #. type: table
 #: texinfo/texinfo-ed.7.1-en_US.texi:7423
@@ -18754,18 +18788,24 @@ msgid ""
 "allowed.  For example, @samp{see @@ref@{fig:ex1@}} will produce see "
 "@ref{fig:ex1}."
 msgstr ""
+"Especifica um rótulo de referência cruzada para essa flutuação.  Se "
+"fornecido, a essa flutuação será automaticamente fornecido um número, e "
+"aparecerá em qualquer saída @code{@@listoffloats} "
+"(@pxref{@code{@@listoffloats}}).  Referências cruzadas para @var{rótulo} "
+"são permitidas.  Por exemplo, @samp{veja-se @@ref@{fig:ex1@}} produzirá "
+"veja-se @ref{fig:ex1}."
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:7425
 #, no-wrap
 msgid "Floats @subentry making unnumbered"
-msgstr ""
+msgstr "Flutuações @subentry fazendo não numeradas"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:7426
 #, no-wrap
 msgid "Unnumbered float, creating"
-msgstr ""
+msgstr "Flutuação não numerada, criando"
 
 #. type: table
 #: texinfo/texinfo-ed.7.1-en_US.texi:7430
@@ -18774,6 +18814,9 @@ msgid ""
 "numbered and consequently will not appear in the @code{@@listoffloats} "
 "output or be cross-referenceable."
 msgstr ""
+"Por outro lado, se @var{rótulo} não for fornecido, então a flutuação "
+"não será numerada e consequentemente não aparecerá na saída "
+"@code{@@listoffloats} ou será referenciável cruzadamente."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:7435
@@ -18781,6 +18824,8 @@ msgid ""
 "Ordinarily, you specify both @var{type} and @var{label}, to get a labeled "
 "and numbered float."
 msgstr ""
+"Ordinariamente, você especifica ambos @var{tipo} e @var{rótulo}, para "
+"obter uma flutuação rotulada e numerada."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:7443
@@ -18792,18 +18837,25 @@ msgid ""
 "environment, with names based on the @code{@@float} type with anything else "
 "than letters and @samp{-} removed."
 msgstr ""
+"Na saída do @LaTeX{}, o código que carrega o pacote @code{float} é gerado "
+"no preâmbulo se @code{@@float} estiver presente.  Um @code{@@float} com o "
+"tipo @samp{figure} ou @samp{table} (sem distinção de maiúsculas e "
+"minúsculas) já está definido pelo pacote.  Outros tipos de flutuação "
+"levam para a definição de um novo ambiente de flutuação, com nomes "
+"baseados no tipo de @code{@@float}, com nada mais que letras e @samp{-} "
+"removido."
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:7444
 #, no-wrap
 msgid "Floats @subentry numbering of"
-msgstr ""
+msgstr "Flutuações @subentry numeração de"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:7445
 #, no-wrap
 msgid "Numbering of floats"
-msgstr ""
+msgstr "Numeração de flutuações"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:7450
@@ -18813,6 +18865,10 @@ msgid ""
 "2, 3, @dots{}, and is reset at each chapter.  Each float type is counted "
 "independently."
 msgstr ""
+"No Texinfo, todas as flutuações são numeradas da mesma maneira: com o "
+"número do capítulo (ou letra do apêndice), um ponto, e o número da "
+"flutuação, o qual simplesmente conta 1, 2, 3, @dots{}, e é zerado a cada "
+"capítulo.  Cada tipo de flutuação é contado independentemente."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:7453
@@ -18820,58 +18876,60 @@ msgid ""
 "Floats within an @code{@@unnumbered}, or outside of any chapter, are simply "
 "numbered consecutively from 1."
 msgstr ""
+"Flutuações dentro de um @code{@@unnumbered}, ou fora de qualquer "
+"capítulo, simplesmente são numeradas consecutivamente a partir de 1."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:7455
 msgid "These numbering conventions are not, at present, changeable."
-msgstr ""
+msgstr "Essas convenções de numeração não são, atualmente, mudáveis."
 
 #. type: node
 #: texinfo/texinfo-ed.7.1-en_US.texi:7457
 #, no-wrap
 msgid "@code{@@caption @@shortcaption}"
-msgstr ""
+msgstr "@code{@@caption @@shortcaption}"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:7459
 msgid "@nodedescription Specifying descriptions for floats."
-msgstr ""
+msgstr "@nodedescription Especificando descrições para flutuações."
 
 #. type: subsection
 #: texinfo/texinfo-ed.7.1-en_US.texi:7459
 #, no-wrap
 msgid "@code{@@caption} & @code{@@shortcaption}"
-msgstr ""
+msgstr "@code{@@caption} e @code{@@shortcaption}"
 
-#.  old name
+#.  nome antigo
 #. type: anchor{#1}
 #: texinfo/texinfo-ed.7.1-en_US.texi:7462
 msgid "caption shortcaption"
-msgstr ""
+msgstr "caption shortcaption"
 
 #. type: findex
 #: texinfo/texinfo-ed.7.1-en_US.texi:7462
 #, no-wrap
 msgid "caption"
-msgstr ""
+msgstr "caption"
 
 #. type: findex
 #: texinfo/texinfo-ed.7.1-en_US.texi:7463
 #, no-wrap
 msgid "shortcaption"
-msgstr ""
+msgstr "shortcaption"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:7464
 #, no-wrap
 msgid "Captions, for floats"
-msgstr ""
+msgstr "Legendas, para flutuações"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:7465
 #, no-wrap
 msgid "Short captions, for lists of floats"
-msgstr ""
+msgstr "Legendas curtas, para listas de flutuações"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:7471
@@ -18881,6 +18939,10 @@ msgid ""
 "other context.  @code{@@caption} takes a single argument, enclosed in "
 "braces.  Here's an example:"
 msgstr ""
+"Você pode escrever um @code{@@caption} em qualquer lugar dentro de um "
+"ambiente @code{@@float}, para definir uma legenda para a flutuação.  Não "
+"é permitido em qualquer outro contexto.  @code{@@caption} recebe um "
+"argumento, circundado por chaves.  Aqui está um exemplo:"
 
 #. type: example
 #: texinfo/texinfo-ed.7.1-en_US.texi:7477
@@ -18891,6 +18953,10 @@ msgid ""
 "@@caption@{Caption for example float.@}\n"
 "@@end float\n"
 msgstr ""
+"@@float\n"
+"Um exemplo de flutuação, com legenda.\n"
+"@@caption@{Legenda para flutuação de exemplo.@}\n"
+"@@end float\n"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:7481
