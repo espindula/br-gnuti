@@ -17,7 +17,7 @@ msgstr ""
 "Project-Id-Version: Texinfo 7.1\n"
 "Report-Msgid-Bugs-To: jafesp@gmail.com\n"
 "POT-Creation-Date: 2025-04-05 18:55-0300\n"
-"PO-Revision-Date: 2025-04-09 20:15-0300\n"
+"PO-Revision-Date: 2025-04-09 22:45-0300\n"
 "Last-Translator: Jamenson Ferreira Espindula de Almeida Melo "
 "<jafesp@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18970,6 +18970,8 @@ msgstr "Saída LaTeX, visão geral"
 msgid ""
 "@float An example float, with caption.  @caption{Caption for example float.}"
 msgstr ""
+"@float Uma flutuação de exemplo, com legenda.  @caption{Legenda para "
+"flutuação de exemplo.}"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:7490
@@ -18978,6 +18980,10 @@ msgid ""
 "until the @code{@@end float}.  The caption text is usually a sentence or "
 "two, but may consist of several paragraphs if necessary."
 msgstr ""
+"@code{@@caption} pode aparecer em qualquer lugar dentro da flutuação; ele "
+"não é processado até o @code{@@end float}.  O texto da legenda geralmente "
+"é uma frase ou duas, porém pode consistir de vários parágrafos se "
+"necessário."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:7494
@@ -18986,6 +18992,10 @@ msgid ""
 "currently changeable.  It is preceded by the float type and/or number, as "
 "specified to the @code{@@float} command (see the previous section)."
 msgstr ""
+"Na saída gerada, a legenda sempre aparece abaixo da flutuação; isso "
+"atualmente não é mudável.  Ela é precedida pelo tipo e (ou) número da "
+"flutuação, conforme especificado para o comando @code{@@float} (veja-se a "
+"seção anterior)."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:7501
@@ -18996,6 +19006,12 @@ msgid ""
 "section).  Thus, you can write a long caption for the main document, and a "
 "short title to appear in the list of floats.  For example:"
 msgstr ""
+"O comando @code{@@shortcaption} igualmente pode ser usado somente dentro de "
+"@code{@@float}, e recebe um argumento entre chaves.  O texto curto da "
+"legenda é usado em vez do texto da legenda em uma lista de flutuações "
+"(veja-se a próxima seção).  Assim, você pode escrever uma legenda longa "
+"para o documento principal, e um título curto para aparecer na lista de "
+"flutuações.  Por exemplo:"
 
 #. type: example
 #: texinfo/texinfo-ed.7.1-en_US.texi:7507
@@ -19006,6 +19022,10 @@ msgid ""
 "@@shortcaption@{Text for list of floats.@}\n"
 "@@end float\n"
 msgstr ""
+"@@float\n"
+"... conforme acima ...\n"
+"@@shortcaption@{Texto para lista de flutuações.@}\n"
+"@@end float\n"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:7516
@@ -19018,47 +19038,54 @@ msgid ""
 "will lead to an error when formatted, unless there is a "
 "@code{@@shortcaption}."
 msgstr ""
+"O texto para @code{@@shortcaption} pode não conter comentários "
+"(@code{@@c}), texto literal (@code{@@verb}), ambientes como "
+"@code{@@example}, notas de rodapé (@code{@@footnote}), parágrafos "
+"múltiplos ou outras construções complexas.  As mesmas restrições se "
+"aplicam ao @code{@@caption}, a menos que exista um @code{@@shortcaption}.  "
+"No @LaTeX{}, um @code{@@caption} multi parágrafos levará a um erro quando "
+"formatado, a menos que exista um @code{@@shortcaption}."
 
 #. type: node
 #: texinfo/texinfo-ed.7.1-en_US.texi:7518
 #, no-wrap
 msgid "@code{@@listoffloats}"
-msgstr ""
+msgstr "@code{@@listoffloats}"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:7520
 msgid "@nodedescription A table of contents for floats."
-msgstr ""
+msgstr "@nodedescription Um sumário para flutuações."
 
 #. type: subsection
 #: texinfo/texinfo-ed.7.1-en_US.texi:7520
 #, no-wrap
 msgid "@code{@@listoffloats}: Tables of Contents for Floats"
-msgstr ""
+msgstr "@code{@@listoffloats}: Sumários para Flutuações"
 
 #. type: findex
 #: texinfo/texinfo-ed.7.1-en_US.texi:7523
 #, no-wrap
 msgid "listoffloats"
-msgstr ""
+msgstr "listoffloats"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:7524
 #, no-wrap
 msgid "List of floats"
-msgstr ""
+msgstr "Lista de flutuações"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:7525
 #, no-wrap
 msgid "Floats @subentry list of"
-msgstr ""
+msgstr "Flutuações @subentry lista de"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:7526
 #, no-wrap
 msgid "Table of contents, for floats"
-msgstr ""
+msgstr "Sumário, para flutuações"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:7533
@@ -19069,6 +19096,11 @@ msgid ""
 "@code{@@unnumbered} node to provide a heading and structure, rather like "
 "@code{@@printindex} (@pxref{Printing Indices & Menus})."
 msgstr ""
+"Você pode escrever um comando @code{@@listoffloats} para gerar uma lista de "
+"flutuações para um dado tipo de flutuação (@pxref{@code{@@float}}), "
+"análogo ao sumário geral do documento.  Tipicamente, ele é escrito no nó "
+"@code{@@unnumbered} dele próprio para fornecer um cabeçalho e estrutura, "
+"mais como @code{@@printindex} (@pxref{Imprimindo Índices e Menus})."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:7536
@@ -19076,6 +19108,8 @@ msgid ""
 "@code{@@listoffloats} takes one optional argument, the float type.  Here's "
 "an example:"
 msgstr ""
+"@code{@@listoffloats} recebe um argumento opcional, o tipo de flutuação.  "
+"Aqui está exemplo:"
 
 #. type: example
 #: texinfo/texinfo-ed.7.1-en_US.texi:7541
@@ -19085,6 +19119,9 @@ msgid ""
 "@@unnumbered List of Figures\n"
 "@@listoffloats Figure\n"
 msgstr ""
+"@@node Lista de Figuras\n"
+"@@unnumbered Lista de Figuras\n"
+"@@listoffloats Figura\n"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:7547
@@ -19093,6 +19130,9 @@ msgid ""
 "which no float type was specified, i.e., no first argument to the "
 "@code{@@float} command (@pxref{@code{@@float}})."
 msgstr ""
+"Sem nenhum argumento, @code{@@listoffloats} gera uma lista de flutuações "
+"para os quais nenhum tipo de flutuação foi especificado, ou seja, nenhum "
+"primeiro argumento para o comando @code{@@float} (@pxref{@code{@@float}})."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:7550
@@ -19100,17 +19140,19 @@ msgid ""
 "Here's what the output from @code{@@listoffloats} looks like, given the "
 "example figure earlier in this chapter:"
 msgstr ""
+"Aqui está com o que se parece a saída gerada a partir de "
+"@code{@@listoffloats}, dada a figura de exemplo anterior neste capítulo:"
 
 #. type: display
 #: texinfo/texinfo-ed.7.1-en_US.texi:7554
 #, no-wrap
 msgid "*      Figure 12.1:      fig:ex1.\n"
-msgstr ""
+msgstr "*      Figura 12.1:      fig:ex1.\n"
 
 #. type: ifnotinfo
 #: texinfo/texinfo-ed.7.1-en_US.texi:7558
 msgid "@listoffloats Figure"
-msgstr ""
+msgstr "@listoffloats Figura"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:7564
@@ -19120,6 +19162,11 @@ msgid ""
 "argument, if it was specified, else the @code{@@caption} argument.  The page "
 "number may also be included, depending on output format."
 msgstr ""
+"Geralmente, cada linha na lista de flutuações contém o tipo de "
+"flutuação (se existir), o número da flutuação, e a legenda, se "
+"existir---o argumento @code{@@shortcaption}, se foi especificado, do "
+"contrário o argumento @code{@@caption}.  O número da página também pode "
+"ser incluído, dependendo do formato da saída gerada."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:7567
@@ -19127,6 +19174,8 @@ msgid ""
 "Unnumbered floats (those without cross-reference labels) are omitted from "
 "the list of floats."
 msgstr ""
+"Flutuações não numerados (aquelas sem rótulos de referência cruzada) "
+"são omitidos da lista de flutuações."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:7571
@@ -19134,6 +19183,9 @@ msgid ""
 "The formatting of @code{@@listoffloats} depends on the output format.  In "
 "Info, for example, a @code{@@listoffloats} is formatted as a menu."
 msgstr ""
+"A formatação de @code{@@listoffloats} depende do formato da saída "
+"gerada.  No Info, por exemplo, um @code{@@listoffloats} é formatado como um "
+"menu."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:7576
@@ -19143,36 +19195,41 @@ msgid ""
 "@samp{table} (case insensitive) float type.  For other float types, a "
 "specific @code{\\listof} command is output."
 msgstr ""
+"Na saída @LaTeX, @code{\\listoffigures} é gerado para o tipo de "
+"flutuação @samp{figure} (sem distinção entre maiúsculas e minúsculas), "
+"@code{\\listoftables} é gerado para o tipo de flutuação @samp{table} (sem "
+"distinção entre maiúsculas e minúsculas).  Para outros tipos de "
+"flutuação, um comando @code{\\listof} específico é gerado."
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:7578
 #: texinfo/texinfo-ed.7.1-en_US.texi:7582
 #, no-wrap
 msgid "Images"
-msgstr ""
+msgstr "Imagens"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:7580
 msgid "@nodedescription Including graphics and images."
-msgstr ""
+msgstr "@nodedescription Incluindo gráficos e imagens."
 
 #. type: section
 #: texinfo/texinfo-ed.7.1-en_US.texi:7580
 #, no-wrap
 msgid "Inserting Images"
-msgstr ""
+msgstr "Inserindo Imagens"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:7583
 #, no-wrap
 msgid "Pictures, inserting"
-msgstr ""
+msgstr "Fotos, inserindo"
 
 #. type: findex
 #: texinfo/texinfo-ed.7.1-en_US.texi:7584
 #, no-wrap
 msgid "image"
-msgstr ""
+msgstr "image"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:7590
@@ -19182,18 +19239,22 @@ msgid ""
 "paragraph, we describe them in this chapter since they are most often part "
 "of a displayed figure or example."
 msgstr ""
+"Você pode inserir uma imagem fornecida em um arquivo externo com o comando "
+"@code{@@image}.  Embora imagens possam ser usadas em qualquer lugar, "
+"incluindo o meio de um parágrafo, nós as descrevemos neste capítulo, pois "
+"elas são mais frequentemente parte de uma figura ou exemplo exibida."
 
 #. type: subsection
 #: texinfo/texinfo-ed.7.1-en_US.texi:7592
 #: texinfo/texinfo-ed.7.1-en_US.texi:7593
 #, no-wrap
 msgid "Image Syntax"
-msgstr ""
+msgstr "Sintaxe da Imagem"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:7596
 msgid "Here is the synopsis of the @code{@@image} command:"
-msgstr ""
+msgstr "Aqui está a sinopse do comando @code{@@image}:"
 
 #. type: example
 #: texinfo/texinfo-ed.7.1-en_US.texi:7599
@@ -19202,18 +19263,20 @@ msgid ""
 "@@image@{@var{filename}@r{[,} @var{width}@r{[,} @var{height}@r{[,} "
 "@var{alttext}@r{[, }@var{extension}@r{]]]]}@}\n"
 msgstr ""
+"@@image@{@var{nomearquivo}@r{[,} @var{largura}@r{[,} @var{altura}@r{[,} "
+"@var{alttexto}@r{[, }@var{extensão}@r{]]]]}@}"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:7601
 #, no-wrap
 msgid "Formats for images"
-msgstr ""
+msgstr "Formatos para imagens"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:7602
 #, no-wrap
 msgid "Image formats"
-msgstr ""
+msgstr "Formatos de imagem"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:7605
@@ -19221,12 +19284,14 @@ msgid ""
 "The @var{filename} argument is mandatory, and must not have an extension, "
 "because the different processors support different formats:"
 msgstr ""
+"O argumento @var{nomearquivo} é obrigatório, e precisa não ter uma "
+"extensão, pois os diferentes processadores suportam formatos diferentes:"
 
 #. type: pindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:7608
 #, no-wrap
 msgid "eps image format"
-msgstr ""
+msgstr "formato de imagem eps"
 
 #. type: itemize
 #: texinfo/texinfo-ed.7.1-en_US.texi:7611
@@ -19234,30 +19299,32 @@ msgid ""
 "@TeX{} (DVI output) reads the file @file{@var{filename}.eps} (Encapsulated "
 "PostScript format)."
 msgstr ""
+"@TeX{} (saída DVI) lê o arquivo @file{@var{nomearquivo}.eps} (Formato "
+"encapsulado PostScript)."
 
 #. type: pindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:7613
 #, no-wrap
 msgid "pdftex@r{, and images}"
-msgstr ""
+msgstr "pdftex@r{, e imagens}"
 
 #. type: pindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:7614
 #, no-wrap
 msgid "png image format"
-msgstr ""
+msgstr "formato de imagem png"
 
 #. type: pindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:7615
 #, no-wrap
 msgid "jpeg image format"
-msgstr ""
+msgstr "formato de imagem jpeg"
 
 #. type: pindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:7616
 #, no-wrap
 msgid "pdf image inclusions"
-msgstr ""
+msgstr "inclusões de imagem pdf"
 
 #. type: itemize
 #: texinfo/texinfo-ed.7.1-en_US.texi:7621
@@ -19268,6 +19335,11 @@ msgid ""
 "versions of the extensions.  The PDF format does not support EPS images, so "
 "such must be converted first."
 msgstr ""
+"@TeX{} (saída PDF) lê @file{@var{nomearquivo}.pdf}, "
+"@file{@var{nomearquivo}.png}, @file{@var{nomearquivo}.jpg}, ou "
+"@file{@var{nomearquivo}.jpeg} (nessa ordem).  Ele também tenta as versões "
+"em letras maiúsculas das extensões.  O formato PDF não suporta imagens "
+"EPS, de forma que essas precisam ser convertidas primeiro."
 
 #. type: itemize
 #: texinfo/texinfo-ed.7.1-en_US.texi:7627
@@ -19276,6 +19348,10 @@ msgid ""
 "it were in @code{@@verbatim}).  The Info output may also include a reference "
 "to @file{@var{filename}.png} or @file{@var{filename}.jpg}.  (See below.)"
 msgstr ""
+"No Info, @file{@var{nomearquivo}.txt} é incluído literalmente (mais ou "
+"menos como se estivesse em @code{@@verbatim}).  A saída Info também pode "
+"incluir uma referência para @file{@var{nomearquivo}.png} ou "
+"@file{@var{nomearquivo}.jpg}.  (Veja-se abaixo.)"
 
 #. type: itemize
 #: texinfo/texinfo-ed.7.1-en_US.texi:7634
@@ -19286,12 +19362,17 @@ msgid ""
 "exist, it gives an error, and outputs a reference to "
 "@file{@var{filename}.jpg} anyway."
 msgstr ""
+"Em HTML, uma referência para @file{@var{nomearquivo}.png}, "
+"@file{@var{nomearquivo}.jpg}, @file{@var{nomearquivo}.jpeg} ou "
+"@file{@var{nomearquivo}.gif} (nessa ordem) é gerada.  Se nenhum desses "
+"existir, fornece um erro, e gera uma referência para "
+"@file{@var{nomearquivo}.jpg} de qualquer maneira."
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:7636
 #, no-wrap
 msgid "SVG images, used in DocBook"
-msgstr ""
+msgstr "Imagens SVG, usadas em DocBook"
 
 #. type: itemize
 #: texinfo/texinfo-ed.7.1-en_US.texi:7644
@@ -19304,6 +19385,13 @@ msgid ""
 "present.  (The subsequent DocBook processor is supposed to choose the "
 "appropriate one.)"
 msgstr ""
+"Em DocBook, referências para @file{@var{nomearquivo}.eps}, "
+"@file{@var{nomearquivo}.gif}, @file{@var{nomearquivo}.jpeg}, "
+"@file{@var{nomearquivo}.jpg}, @file{@var{nomearquivo}.pdf}, "
+"@file{@var{nomearquivo}.png} e @file{@var{nomearquivo}.svg} são geradas, "
+"para cada arquivo encontrado.  Também, @file{@var{nomearquivo}.txt} é "
+"incluído literalmente, se presente.  (Supõe-se que o processador DocBook "
+"subsequente escolha o adequado.)"
 
 #. type: itemize
 #: texinfo/texinfo-ed.7.1-en_US.texi:7649
@@ -19312,6 +19400,9 @@ msgid ""
 "subsequent @LaTeX{} processor is supposed to choose the appropriate image "
 "type."
 msgstr ""
+"Para @LaTeX{}, @file{@var{nomearquivo}} sem nenhuma extensão é usado; "
+"supõe-se que o processador @LaTeX{} subsequente escolha o tipo apropriado "
+"de imagem."
 
 #. type: itemize
 #: texinfo/texinfo-ed.7.1-en_US.texi:7655
@@ -19321,18 +19412,22 @@ msgid ""
 "file is found.  Any leading period should be included in @var{extension}.  "
 "For example:"
 msgstr ""
+"Para saída Info e HTML, o quinto argumento opcional @var{extensão} para "
+"@code{@@image} é usado para a extensão de arquivo, se ele for especificado "
+"e o arquivo for encontrado.  Qualquer ponto inicial deveria ser incluído em "
+"@var{extensão}.  Por exemplo:"
 
 #. type: pindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:7656
 #, no-wrap
 msgid "XPM image format"
-msgstr ""
+msgstr "formato de imagem XPM"
 
 #. type: example
 #: texinfo/texinfo-ed.7.1-en_US.texi:7659
 #, no-wrap
 msgid "@@image@{foo,,,,.xpm@}\n"
-msgstr ""
+msgstr "@@image@{foo,,,,.xpm@}\n"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:7668
@@ -19342,12 +19437,19 @@ msgid ""
 "@var{foo}.  Copying the files into @code{$(infodir)/@var{foo}-figures/} "
 "should be done in your @code{Makefile}."
 msgstr ""
+"Se você quiser instalar arquivos de imagens para uso por leitores Info "
+"também, nós recomendamos colocá-los em um subdiretório como "
+"@samp{@var{foo}-figuras} para um pacote @var{foo}.  A cópia dos arquivos "
+"para @code{$(infodir)/@var{foo}-figuras/} deveria ser feita em teu "
+"@code{Makefile}."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:7671
 msgid ""
 "The @var{width} and @var{height} arguments are described in the next section."
 msgstr ""
+"Os argumentos @var{largura} e @var{altura} estão descritos na próxima "
+"seção."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:7677
@@ -19358,6 +19460,11 @@ msgid ""
 "is especially important for @TeX{} output to get correct paragraph "
 "indentation."
 msgstr ""
+"Se uma imagem for a primeira coisa em um parágrafo e seguida por mais "
+"texto, então você deveria preceder o comando @code{@@image} por "
+"@code{@@indent} ou @code{@@noindent} para indicar o início da formatação "
+"do parágrafo.  Isso é especialmente importante para saída @TeX{} para "
+"obter o recuo correto do parágrafo."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:7680
@@ -19365,24 +19472,26 @@ msgid ""
 "Use @code{@@center} to center an image (@pxref{@code{@@titlefont @@center "
 "@@sp}})."
 msgstr ""
+"Use @code{@@center} para centralizar uma imagem (@pxref{@code{@@titlefont "
+"@@center @@sp}})."
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:7681
 #, no-wrap
 msgid "Alt attribute for images"
-msgstr ""
+msgstr "Atributo Alt para imagens"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:7682
 #, no-wrap
 msgid "Images @subentry alternate text for"
-msgstr ""
+msgstr "Imagens @subentry texto alternativo para"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:7683
 #, no-wrap
 msgid "@sortas{-} -@r{ (in image alt string)}"
-msgstr ""
+msgstr "@sortas{-} -@r{ (na sequência de caracteres alt da imagem)}"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:7692
@@ -19395,6 +19504,14 @@ msgid ""
 "you can get an empty @code{alt} string with @code{@@-} (a command that "
 "produces no output; @pxref{@code{@@- @@hyphenation}})."
 msgstr ""
+"Para saída HTML, o @dfn{atributo alt} para imagens inline é configurado "
+"para o (quarto) argumento opcional @var{alttexto} para @code{@@image}, se "
+"fornecido.  Se não fornecido, o nome completo de arquivo da imagem sendo "
+"exibida será usado.  O @var{alttexto} é processado como texto do Texinfo, "
+"de forma que caracteres especiais, tais como @samp{\"} e @samp{<} e "
+"@samp{&}, são escapados na saída gerada HTML; também, você pode obter "
+"uma sequência de caracteres @code{alt} vazia com @code{@@-} (um comando que "
+"não produz saída; @pxref{@code{@@- @@hyphenation}})."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:7696
@@ -19403,6 +19520,9 @@ msgid ""
 "and output.  In this case, @samp{\\} is escaped as @samp{\\\\} and @samp{\"} "
 "as @samp{\\\"}; no other escapes are done."
 msgstr ""
+"Para saída Info, a sequência @code{alttexto} também é processada como "
+"texto e saída do Texinfo.  Nesse caso, @samp{\\} é escapada como "
+"@samp{\\\\} e @samp{\"} como @samp{\\\"}; outros escapes não são feitos."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:7705
@@ -19415,12 +19535,20 @@ msgid ""
 "browser, running under X) can do so, whereas Info readers which can only use "
 "text (such as the standalone Info reader) can display the textual version."
 msgstr ""
+"Na saída Info, uma referência para o arquivo binário da imagem é escrita "
+"(tentando @var{nomearquivo} sufixado com @file{@var{extensão}}, "
+"@file{@var{.extensão}}, @file{.png}, ou @file{.jpg}, nessa ordem) se um "
+"existir.  O arquivo @file{.txt} também é incluído literalmente, se um "
+"existir.  Dessa maneira, leitores Info que consigam exibir imagens (tais "
+"como o navegador Info do Emacs, executando sob X) podem fazer isso, ao passo "
+"que leitores Info que somente consigam usar texto (tais como o leitor "
+"autônomo Info) conseguem exibir a versão textual."
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:7708
 #, no-wrap
 msgid "@samp{^@@^H} for images in Info"
-msgstr ""
+msgstr "@samp{^@@^H} para imagens no Info"
 
 #. type: example
 #: texinfo/texinfo-ed.7.1-en_US.texi:7715
@@ -19429,6 +19557,8 @@ msgid ""
 "^@@^H[image src=\"@var{binaryfile}\" text=\"@var{txtfile}\"\n"
 "           alt=\"@var{alttext} ... ^@@^H]\n"
 msgstr ""
+"^@@^H[image src=\"@var{arquivobinário}\" text=\"@var{arquivotxt}\"\n"
+"           alt=\"@var{alttexto} ... ^@@^H]\n"
 
 #. type: subsection
 #: texinfo/texinfo-ed.7.1-en_US.texi:7728
