@@ -17,7 +17,7 @@ msgstr ""
 "Project-Id-Version: Texinfo 7.1\n"
 "Report-Msgid-Bugs-To: jafesp@gmail.com\n"
 "POT-Creation-Date: 2025-04-05 18:55-0300\n"
-"PO-Revision-Date: 2025-04-09 22:45-0300\n"
+"PO-Revision-Date: 2025-04-10 01:00-0300\n"
 "Last-Translator: Jamenson Ferreira Espindula de Almeida Melo "
 "<jafesp@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19565,43 +19565,43 @@ msgstr ""
 #: texinfo/texinfo-ed.7.1-en_US.texi:7729
 #, no-wrap
 msgid "Image Scaling"
-msgstr ""
+msgstr "Escalonamento da Imagem"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:7731
 #, no-wrap
 msgid "Images @subentry scaling"
-msgstr ""
+msgstr "Imagens @subentry dimensionamento"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:7732
 #, no-wrap
 msgid "Scaling images"
-msgstr ""
+msgstr "Dimensionando imagens"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:7733
 #, no-wrap
 msgid "Width of images"
-msgstr ""
+msgstr "Largura das imagens"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:7734
 #, no-wrap
 msgid "Height of images"
-msgstr ""
+msgstr "Altura das imagens"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:7735
 #, no-wrap
 msgid "Aspect ratio of images"
-msgstr ""
+msgstr "Proporção de aspecto das imagens"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:7736
 #, no-wrap
 msgid "Distorting images"
-msgstr ""
+msgstr "Distorcendo imagens"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:7741
@@ -19610,6 +19610,10 @@ msgid ""
 "command (see the previous section) specify the size to which to scale the "
 "image.  They are only taken into account in printed output."
 msgstr ""
+"Os argumentos opcionais @var{largura} e @var{altura} para o comando "
+"@code{@@image} (veja-se a seção anterior) especificam o tamanho para o "
+"qual escalonar a imagem.  Eles somente são levados em consideração na "
+"saída impressa."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:7746
@@ -19619,12 +19623,17 @@ msgid ""
 "proportionately; and if both are specified, both are respected, thus likely "
 "distorting the original image by changing its aspect ratio."
 msgstr ""
+"No @TeX{}, se nenhum for especificado, a imagem será apresentada no tamanho "
+"natural dela (fornecido no arquivo); se somente um for especificado, o outro "
+"será escalonado proporcionalmente; e se ambos forem especificados, ambos "
+"serão respeitados, portanto provavelmente distorcendo a imagem original "
+"mudando a proporção de aspecto dela."
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:7747
 #, no-wrap
 msgid "Dimensions and image sizes"
-msgstr ""
+msgstr "Dimensões em tamanhos de imagem"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:7750
@@ -19632,166 +19641,168 @@ msgid ""
 "The @var{width} and @var{height} may be specified using any valid @TeX{} "
 "dimension, namely:"
 msgstr ""
+"A @var{largura} e a @var{altura} podem ser especificadas usando qualquer "
+"dimensão válida do @TeX{}, a saber:"
 
 #. type: item
 #: texinfo/texinfo-ed.7.1-en_US.texi:7752
 #, no-wrap
 msgid "pt"
-msgstr ""
+msgstr "pt"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:7753
 #, no-wrap
 msgid "Points (dimension)"
-msgstr ""
+msgstr "Pontos (dimensão)"
 
 #. type: table
 #: texinfo/texinfo-ed.7.1-en_US.texi:7755
 msgid "point (72.27pt = 1in)"
-msgstr ""
+msgstr "ponto (72.27pt = 1in)"
 
 #. type: item
 #: texinfo/texinfo-ed.7.1-en_US.texi:7755
 #, no-wrap
 msgid "pc"
-msgstr ""
+msgstr "pc"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:7756
 #, no-wrap
 msgid "Picas"
-msgstr ""
+msgstr "Picas"
 
 #. type: table
 #: texinfo/texinfo-ed.7.1-en_US.texi:7758
 msgid "pica (1pc = 12pt)"
-msgstr ""
+msgstr "pica (1pc = 12pt)"
 
 #. type: item
 #: texinfo/texinfo-ed.7.1-en_US.texi:7758
 #, no-wrap
 msgid "bp"
-msgstr ""
+msgstr "bp"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:7759
 #, no-wrap
 msgid "Big points"
-msgstr ""
+msgstr "Pontos grandes"
 
 #. type: table
 #: texinfo/texinfo-ed.7.1-en_US.texi:7761
 msgid "big point (72bp = 1in)"
-msgstr ""
+msgstr "ponto grande (72bp = 1in)"
 
 #. type: item
 #: texinfo/texinfo-ed.7.1-en_US.texi:7761
 #, no-wrap
 msgid "in"
-msgstr ""
+msgstr "in"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:7762
 #, no-wrap
 msgid "Inches"
-msgstr ""
+msgstr "Polegadas"
 
 #. type: table
 #: texinfo/texinfo-ed.7.1-en_US.texi:7764
 msgid "inch"
-msgstr ""
+msgstr "Polegada"
 
 #. type: item
 #: texinfo/texinfo-ed.7.1-en_US.texi:7764
 #, no-wrap
 msgid "cm"
-msgstr ""
+msgstr "cm"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:7765
 #, no-wrap
 msgid "Centimeters"
-msgstr ""
+msgstr "Centímetros"
 
 #. type: table
 #: texinfo/texinfo-ed.7.1-en_US.texi:7767
 msgid "centimeter (2.54cm = 1in)"
-msgstr ""
+msgstr "centímetro (2.54cm = 1in)"
 
 #. type: item
 #: texinfo/texinfo-ed.7.1-en_US.texi:7767
 #, no-wrap
 msgid "mm"
-msgstr ""
+msgstr "mm"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:7768
 #, no-wrap
 msgid "Millimeters"
-msgstr ""
+msgstr "Milímetros"
 
 #. type: table
 #: texinfo/texinfo-ed.7.1-en_US.texi:7770
 msgid "millimeter (10mm = 1cm)"
-msgstr ""
+msgstr "milímetro (10mm = 1cm)"
 
 #. type: item
 #: texinfo/texinfo-ed.7.1-en_US.texi:7770
 #, no-wrap
 msgid "dd"
-msgstr ""
+msgstr "dd"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:7771
 #, no-wrap
 msgid "Did@^ot points"
-msgstr ""
+msgstr "Pontos de Did@^ot"
 
 #. type: table
 #: texinfo/texinfo-ed.7.1-en_US.texi:7773
 msgid "did@^ot point (1157dd = 1238pt)"
-msgstr ""
+msgstr "ponto de did@^ot (1157dd = 1238pt)"
 
 #. type: item
 #: texinfo/texinfo-ed.7.1-en_US.texi:7773
 #, no-wrap
 msgid "cc"
-msgstr ""
+msgstr "cc"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:7774
 #, no-wrap
 msgid "Ciceros"
-msgstr ""
+msgstr "Cíceros"
 
 #. type: table
 #: texinfo/texinfo-ed.7.1-en_US.texi:7776
 msgid "cicero (1cc = 12dd)"
-msgstr ""
+msgstr "cicero (1cc = 12dd)"
 
 #. type: findex
 #: texinfo/texinfo-ed.7.1-en_US.texi:7776
 #: texinfo/texinfo-ed.7.1-en_US.texi:10508
 #, no-wrap
 msgid "sp"
-msgstr ""
+msgstr "sp"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:7777
 #, no-wrap
 msgid "Scaled points"
-msgstr ""
+msgstr "Pontos escalonados"
 
 #. type: table
 #: texinfo/texinfo-ed.7.1-en_US.texi:7779
 msgid "scaled point (65536sp = 1pt)"
-msgstr ""
+msgstr "ponto escalonado (65536sp = 1pt)"
 
 #. type: pindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:7781
 #, no-wrap
 msgid "ridt.eps"
-msgstr ""
+msgstr "ridt.eps"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:7784
@@ -19799,18 +19810,20 @@ msgid ""
 "For example, the following will scale a file @file{ridt.eps} to one inch "
 "vertically, with the width scaled proportionately:"
 msgstr ""
+"Por exemplo, o seguinte dimensionará um arquivo @file{ridt.eps} para uma "
+"polegada verticalmente, com a largura dimensionada proporcionalmente:"
 
 #. type: example
 #: texinfo/texinfo-ed.7.1-en_US.texi:7787
 #, no-wrap
 msgid "@@image@{ridt,,1in@}\n"
-msgstr ""
+msgstr "@@image@{ridt,,1in@}\n"
 
 #. type: pindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:7789
 #, no-wrap
 msgid "epsf.tex"
-msgstr ""
+msgstr "epsf.tex"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:7796
@@ -19822,6 +19835,12 @@ msgid ""
 "distribution and is also available from @uref{ftp://tug.org/tex/epsf.tex}, "
 "among other places."
 msgstr ""
+"Para @code{@@image} funcionar com @TeX{}, o arquivo @file{epsf.tex} precisa "
+"ser instalado em algum lugar onde o @TeX{} consiga encontrá-lo.  (O local "
+"padrão é @file{@var{texmf}/tex/generic/dvips/epsf.tex}, onde @var{texmf} "
+"é a raiz da árvore de diretórios do teu @TeX{}.)  Esse arquivo está "
+"incluído na distribuição Texinfo e também está disponível a partir de "
+"@uref{ftp://tug.org/tex/epsf.tex}, entre outros lugares."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:7801
@@ -19830,6 +19849,10 @@ msgid ""
 "Therefore, if you intend it to be displayed, be sure to leave a blank line "
 "before the command, or the output will run into the preceding text."
 msgstr ""
+"@code{@@image} pode ser usado dentro de uma linha bem como para figuras "
+"exibidas.  Portanto, se você pretende que ele seja exibido, assegure-se de "
+"deixar uma linha em branco antes do comando, ou a saída gerada executará "
+"no texto anterior."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:7804
@@ -19837,6 +19860,8 @@ msgid ""
 "Image scaling is presently implemented only in printed output, not in any "
 "other sort of output."
 msgstr ""
+"Dimensionamento de imagem atualmente está implementado somente na saída "
+"impressa, não em qualquer outro tipo de saída gerada."
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:7806
@@ -19844,18 +19869,18 @@ msgstr ""
 #: texinfo/texinfo-ed.7.1-en_US.texi:7809
 #, no-wrap
 msgid "Footnotes"
-msgstr ""
+msgstr "Notas de Rodapé"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:7808
 msgid "@nodedescription Writing footnotes."
-msgstr ""
+msgstr "@nodedescription Escrevendo notas de rodapé."
 
 #. type: findex
 #: texinfo/texinfo-ed.7.1-en_US.texi:7810
 #, no-wrap
 msgid "footnote"
-msgstr ""
+msgstr "footnote"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:7818
@@ -19866,6 +19891,12 @@ msgid ""
 "text.  For a thorough discussion of footnotes, see @cite{The Chicago Manual "
 "of Style}, which is published by the University of Chicago Press.}"
 msgstr ""
+"Uma @dfn{nota de rodapé} serve para uma referência que documenta ou "
+"elucida o texto principal.@footnote{Uma nota de rodapé deveria complementar "
+"ou expandir o texto principal, mas um(a) leitor(a) não deveria precisar ler "
+"uma nota de rodapé para entender o texto principal.  Para uma discussão "
+"completa das notas de rodapé, veja-se @cite{The Chicago Manual of Style}, "
+"publicado pela University of Chicago Press.}"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:7823
@@ -19875,18 +19906,22 @@ msgid ""
 "better placed in a bibliography at the end of a document instead of in "
 "footnotes throughout."
 msgstr ""
+"As notas de rodapé distraem; use-as com moderação, no máximo, e é "
+"melhor evitá-las completamente.  As referências bibliográficas padrão "
+"geralmente ficam melhor situadas em uma bibliografia, ao final de um "
+"documento, que em notas de rodapé ao longo do texto."
 
 #. type: subsection
 #: texinfo/texinfo-ed.7.1-en_US.texi:7825
 #: texinfo/texinfo-ed.7.1-en_US.texi:7827
 #, no-wrap
 msgid "Footnote Commands"
-msgstr ""
+msgstr "Comandos de Notas de Rodapé"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:7827
 msgid "@nodedescription How to write a footnote in Texinfo."
-msgstr ""
+msgstr "@nodedescription Como escrever uma nota de rodapé no Texinfo."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:7834
@@ -19897,12 +19932,18 @@ msgid ""
 "length (they will be broken across pages if necessary), but are usually "
 "short.  The template is:"
 msgstr ""
+"No Texinfo, as notas de rodapé são criadas com o comando "
+"@code{@@footnote}.  Esse comando é seguido imediatamente por uma chave "
+"esquerda, depois pelo texto da nota de rodapé e por uma chave direita "
+"finalizante.  As notas de rodapé podem ser de qualquer comprimento (elas "
+"serão quebradas entre páginas, se necessário), mas geralmente são "
+"curtas.  O modelo é:"
 
 #. type: example
 #: texinfo/texinfo-ed.7.1-en_US.texi:7837
 #, no-wrap
 msgid "ordinary text@@footnote@{@var{text of footnote}@}\n"
-msgstr ""
+msgstr "texto principal@@footnote@{@var{texto da nota de rodapé}@}\n"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:7842
@@ -19911,6 +19952,9 @@ msgid ""
 "text being footnoted, with no intervening space; otherwise, the footnote "
 "marker might end up starting a line."
 msgstr ""
+"Conforme mostrado aqui, o comando @code{@@footnote} deveria vir logo depois "
+"do texto sendo anotado, sem espaço intermediário; caso contrário, o "
+"marcador de nota de rodapé poderá acabar iniciando uma linha."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:7846
@@ -19918,6 +19962,9 @@ msgid ""
 "For example, this clause is followed by a sample footnote@footnote{Here is "
 "the sample footnote.}; in the Texinfo source, it looks like this:"
 msgstr ""
+"Por exemplo, esta cláusula é seguida por uma nota de rodapé de "
+"amostra@footnote{Aqui está a nota de rodapé de amostra.}; no fonte do "
+"Texinfo, se parece com isto:"
 
 #. type: example
 #: texinfo/texinfo-ed.7.1-en_US.texi:7850
@@ -19926,6 +19973,8 @@ msgid ""
 "@dots{}a sample footnote@@footnote@{Here is the sample\n"
 "footnote.@}; in the Texinfo source@dots{}\n"
 msgstr ""
+"@dots{}uma de nota de rodapé de amostra@@footnote@{Aqui está a\n"
+"nota de rodapé de amostra.@}; no fonte do Texinfo@dots{}\n"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:7858
@@ -19937,6 +19986,12 @@ msgid ""
 "to put the footnote after punctuation belonging to the sentence, as in "
 "@samp{;@@footnote@{...}.)"
 msgstr ""
+"Como você pode ver, esse fonte inclui dois sinais de pontuação próximos "
+"um do outro; nesse caso, @samp{.@};} é a sequência.  Isso é normal (o "
+"primeiro termina a nota de rodapé e o segundo pertence à frase sendo "
+"anotada), de forma que não se preocupe que pareça estranho.  (Outro "
+"estilo, perfeitamente aceitável, é o de colocar a nota de rodapé depois "
+"da pontuação pertencente à frase, como em @samp{;@@footnote@{...}.)"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:7862
@@ -19945,6 +20000,9 @@ msgid ""
 "superscripted number; the text of the footnote appears at the bottom of the "
 "page, below a horizontal line."
 msgstr ""
+"Em formatos de saída impressa, a marca de referência para uma nota de "
+"rodapé é um número pequeno e sobrescrito; o texto da nota de rodapé "
+"aparece na parte inferior da página, abaixo de uma linha horizontal."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:7867
@@ -19954,6 +20012,11 @@ msgid ""
 "followed by a cross-reference link to the footnote text if footnotes are put "
 "in separate nodes (@pxref{Footnote Styles})."
 msgstr ""
+"No Info, a marca de referência para uma nota de rodapé é um par de "
+"parênteses com o número da nota de rodapé entre eles, assim: @samp{(1)}.  "
+"A marca de referência é seguida por um linque de referência cruzada para "
+"o texto da nota de rodapé se as notas de rodapé forem colocadas em nós "
+"separados (@pxref{Estilos de Notas de Rodapé})."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:7871
@@ -19962,18 +20025,21 @@ msgid ""
 "superscripted number which is rendered as a hypertext link to the footnote "
 "text."
 msgstr ""
+"Na saída gerada HTML, as referências de notas de rodapé geralmente são "
+"marcadas com um número pequeno e sobrescrito que é renderizado como um "
+"linque de hipertexto para o texto da nota de rodapé."
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:7872
 #, no-wrap
 msgid "Critical editions"
-msgstr ""
+msgstr "Edições críticas"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:7873
 #, no-wrap
 msgid "Nested footnotes"
-msgstr ""
+msgstr "Notas de rodapé aninhadas"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:7876
@@ -19981,6 +20047,8 @@ msgid ""
 "Footnotes cannot be nested, and cannot appear in section headings of any "
 "kind or other ``unusual'' places."
 msgstr ""
+"As notas de rodapé não podem ser aninhadas e não podem aparecer em "
+"títulos de seção de qualquer tipo ou em outros locais ``incomuns''."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:7880
@@ -19989,18 +20057,21 @@ msgid ""
 "@code{@@table} must be entirely on the same line as the @code{@@item} (as "
 "usual).  @xref{Two-column Tables}."
 msgstr ""
+"Uma dica final: as notas de rodapé no argumento de um comando @code{@@item} "
+"para um @code{@@table} precisam estar inteiramente na mesma linha que o "
+"@code{@@item} (como de costume).  @xref{Tabelas de Duas Colunas}."
 
 #. type: subsection
 #: texinfo/texinfo-ed.7.1-en_US.texi:7882
 #: texinfo/texinfo-ed.7.1-en_US.texi:7884
 #, no-wrap
 msgid "Footnote Styles"
-msgstr ""
+msgstr "Estilos de Notas de Rodapé"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:7884
 msgid "@nodedescription Controlling how footnotes appear."
-msgstr ""
+msgstr "@nodedescription Controlando como notas de rodapé aparecem."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:7889
@@ -20008,25 +20079,28 @@ msgid ""
 "Online formats have two footnote styles, which determine where the text of "
 "the footnote is located, the @samp{end} and @samp{separate} footnote style."
 msgstr ""
+"Formatos online tem dois estilos de nota de rodapé, que determinam onde o "
+"texto da nota de rodapé está localizado, o estilo de notas de rodapé "
+"@samp{end} e o @samp{separate}."
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:7891
 #, no-wrap
 msgid "@samp{end} node footnote style"
-msgstr ""
+msgstr "Estilo de nota de rodapé de nó @samp{end}"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:7892
 #, no-wrap
 msgid "Footnote style @subentry @samp{end}"
-msgstr ""
+msgstr "Estilo de nota de rodapé @subentry @samp{end}"
 
 #. type: findex
 #: texinfo/texinfo-ed.7.1-en_US.texi:7893
 #: texinfo/texinfo-ed.7.1-en_US.texi:18513
 #, no-wrap
 msgid "end"
-msgstr ""
+msgstr "end"
 
 #. type: table
 #: texinfo/texinfo-ed.7.1-en_US.texi:7899
@@ -20036,6 +20110,11 @@ msgid ""
 "rest of the node by a line of dashes with the word @samp{Footnotes} within "
 "it.  Each footnote begins with an @samp{(@var{n})} reference mark."
 msgstr ""
+"Para Info, no estilo de nó @samp{end}, todas as notas de rodapé para um "
+"nó estão situadas no final desse nó.  As notas de rodapé são separadas "
+"do resto do nó por uma linha de traços com a palavra @samp{Notas de "
+"rodapé} dentro dela.  Cada nota de rodapé começa com uma marca de "
+"referência @samp{(@var{n})}."
 
 #. type: table
 #: texinfo/texinfo-ed.7.1-en_US.texi:7904
@@ -20043,6 +20122,8 @@ msgid ""
 "Here is an example of the Info output for a single footnote in the "
 "end-of-node style:"
 msgstr ""
+"Aqui está um exemplo da saída Info para uma nota de rodapé no estilo de "
+"fim de nó:"
 
 #. type: group
 #: texinfo/texinfo-ed.7.1-en_US.texi:7908
@@ -20051,12 +20132,14 @@ msgid ""
 "--------- Footnotes ---------\n"
 "\n"
 msgstr ""
+"--------- Notas de rodapé ---------\n"
+"\n"
 
 #. type: group
 #: texinfo/texinfo-ed.7.1-en_US.texi:7910
 #, no-wrap
 msgid "(1)  Here is a sample footnote.\n"
-msgstr ""
+msgstr "(1)  Aqui está uma nota de rodapé de amostra.\n"
 
 #. type: table
 #: texinfo/texinfo-ed.7.1-en_US.texi:7915
@@ -20064,24 +20147,27 @@ msgid ""
 "In HTML, when the footnote style is @samp{end}, or if the output is not "
 "split, footnotes are put at the end of each output file."
 msgstr ""
+"Em HTML, quando o estilo da nota de rodapé for @samp{end}, ou se a saída "
+"não for dividida, as notas de rodapé são colocadas no final de cada "
+"arquivo de saída."
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:7916
 #, no-wrap
 msgid "@samp{separate} footnote style"
-msgstr ""
+msgstr "Estilo de nota de rodapé @samp{separate}"
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:7917
 #, no-wrap
 msgid "Footnote style @subentry @samp{separate}"
-msgstr ""
+msgstr "Estilo de nota de rodapé @subentry @samp{separate}"
 
 #. type: item
 #: texinfo/texinfo-ed.7.1-en_US.texi:7918
 #, no-wrap
 msgid "separate"
-msgstr ""
+msgstr "separate"
 
 #. type: table
 #: texinfo/texinfo-ed.7.1-en_US.texi:7925
@@ -20092,6 +20178,12 @@ msgid ""
 "in the body of the node.  The footnote reference is actually a "
 "cross-reference which you use to reach the footnote node."
 msgstr ""
+"Para Info, no estilo de nó @samp{separate}, todas as notas de rodapé para "
+"um nó são colocadas em um nó próprio construído automaticamente.  Nesse "
+"estilo, uma ``referência de nota de rodapé'' segue cada marca de "
+"referência @samp{(@var{n})} no corpo do nó.  A referência da nota de "
+"rodapé é, na verdade, uma referência cruzada que você usa para atingir o "
+"nó da nota de rodapé."
 
 #. type: table
 #: texinfo/texinfo-ed.7.1-en_US.texi:7932
@@ -20102,6 +20194,11 @@ msgid ""
 "@w{@file{Footnotes-Footnotes}}!)  The footnotes' node has an `Up' node "
 "pointer that leads back to its parent node."
 msgstr ""
+"O nome do nó com as notas de rodapé é construído pospondo-se "
+"@w{@samp{-Footnotes}} ao nome do nó que contém as notas de rodapé.  "
+"(Consequentemente, o nó das notas de rodapé para o nó @file{Footnotes} é "
+"@w{@file{Footnotes-Footnotes}})!  O nó das notas de rodapé tem um ponteiro "
+"de nó `Acima' que leva de volta para o nó ancestral dele."
 
 #. type: table
 #: texinfo/texinfo-ed.7.1-en_US.texi:7936
@@ -20109,6 +20206,8 @@ msgid ""
 "Here is how the first footnote in this manual looks after being formatted "
 "for Info in the separate node style:"
 msgstr ""
+"Aqui está como a primeira nota de rodapé neste manual aparenta depois de "
+"ser formatada para o Info no estilo de nó separar:"
 
 #. type: group
 #: texinfo/texinfo-ed.7.1-en_US.texi:7940
@@ -20117,6 +20216,9 @@ msgid ""
 "File: texinfo.info  Node: Overview-Footnotes, Up: Overview\n"
 "\n"
 msgstr ""
+"Arquivo: texinfo.info  Nó: Visão Geral-Notas de rodapé, Acima: Visão "
+"Geral\n"
+"\n"
 
 #. type: group
 #: texinfo/texinfo-ed.7.1-en_US.texi:7943
@@ -20125,6 +20227,8 @@ msgid ""
 "(1) The first syllable of \"Texinfo\" is pronounced like\n"
 "\"speck\", not \"hex\". @dots{}\n"
 msgstr ""
+"(1) A primeira sílaba de \"Texinfo\" é pronunciada como\n"
+"\"speck\", não \"hex\". @dots{}\n"
 
 #. type: table
 #: texinfo/texinfo-ed.7.1-en_US.texi:7948
@@ -20132,6 +20236,8 @@ msgid ""
 "In HTML, when the footnote style is @samp{separate}, and the output is "
 "split, footnotes are placed in a separate file."
 msgstr ""
+"Em HTML, quando o estilo da nota de rodapé for @samp{separate} e a saída "
+"for dividida, as notas de rodapé são colocadas em um arquivo separado."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:7953
@@ -20140,13 +20246,17 @@ msgid ""
 "@cite{Decline and Fall @dots{}}), we recommend the @samp{end} style, as it "
 "is simpler for readers to follow."
 msgstr ""
+"A menos que teu documento tenha notas de rodapé longas e importantes (como "
+"em, por diga-se, @cite{Decline and Fall @dots{}} de Gibbon), nós "
+"recomendamos o estilo @samp{end}, pois ele é mais simples para leitores(as) "
+"seguirem."
 
 #. type: vindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:7954
 #: texinfo/texinfo-ed.7.1-en_US.texi:14847
 #, no-wrap
 msgid "footnotestyle"
-msgstr ""
+msgstr "estilo de nota de rodapé"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:7959
@@ -20156,12 +20266,16 @@ msgid ""
 "@samp{end} for the end node style or @samp{separate} for the separate node "
 "style."
 msgstr ""
+"Use o comando @code{@@footnotestyle} para especificar o estilo de nota de "
+"rodapé.  Escreva esse comando no início de uma linha seguido por um "
+"argumento, seja @samp{end} para o estilo de nó fim ou @samp{separate} para "
+"o estilo do nó separar."
 
 #. type: example
 #: texinfo/texinfo-ed.7.1-en_US.texi:7965
 #, no-wrap
 msgid "@@footnotestyle end\n"
-msgstr ""
+msgstr "@@footnotestyle end\n"
 
 #. type: exdent
 #: texinfo/texinfo-ed.7.1-en_US.texi:7968
@@ -20169,18 +20283,19 @@ msgstr ""
 #: texinfo/texinfo-ed.7.1-en_US.texi:21210
 #, no-wrap
 msgid "or"
-msgstr ""
+msgstr "ou"
 
 #. type: example
 #: texinfo/texinfo-ed.7.1-en_US.texi:7970
 #, no-wrap
 msgid "@@footnotestyle separate\n"
-msgstr ""
+msgstr "@@footnotestyle separate\n"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:7973
 msgid "Write a @code{@@footnotestyle} command in the Texinfo file preamble."
 msgstr ""
+"Escreva um comando @code{@@footnotestyle} no preâmbulo do arquivo Texinfo."
 
 #. type: cindex
 #: texinfo/texinfo-ed.7.1-en_US.texi:7975
@@ -20188,12 +20303,12 @@ msgstr ""
 #: texinfo/texinfo-ed.7.1-en_US.texi:7978
 #, no-wrap
 msgid "Indices"
-msgstr ""
+msgstr "Índices"
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:7977
 msgid "@nodedescription Creating indices."
-msgstr ""
+msgstr "@nodedescription Criando índices."
 
 #. type: Plain text
 #: texinfo/texinfo-ed.7.1-en_US.texi:7986
