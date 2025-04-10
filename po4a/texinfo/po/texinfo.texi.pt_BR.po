@@ -19264,7 +19264,7 @@ msgid ""
 "@var{alttext}@r{[, }@var{extension}@r{]]]]}@}\n"
 msgstr ""
 "@@image@{@var{nomearquivo}@r{[,} @var{largura}@r{[,} @var{altura}@r{[,} "
-"@var{alttexto}@r{[, }@var{extensão}@r{]]]]}@}"
+"@var{alttexto}@r{[, }@var{extensão}@r{]]]]}@}\n"
 
 #. type: cindex
 #: texinfo/texinfo.texi:7601
@@ -20335,18 +20335,24 @@ msgid ""
 "can combine indices or use them for other than their canonical purpose.  "
 "Lastly, you can define your own new indices."
 msgstr ""
+"O Texinfo fornece vários tipos predefinidos de índice: um índice para "
+"funções, um índice para variáveis, um índice para conceitos e assim por "
+"diante.  Você pode combinar índices ou usá-los para outros fins que não "
+"os canônicos.  Por último, você consegue definir teus próprios novos "
+"índices."
 
 #. type: section
 #: texinfo/texinfo.texi:7993
 #: texinfo/texinfo.texi:7995
 #, no-wrap
 msgid "Predefined Indices"
-msgstr ""
+msgstr "Índices Predefinidos"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:7995
 msgid "@nodedescription Use different indices for different kinds of entries."
 msgstr ""
+"@nodedescription Use índices diferentes para tipos diferentes de entradas."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:7999
@@ -20354,61 +20360,64 @@ msgid ""
 "Texinfo provides six predefined indices.  Here are their nominal meanings, "
 "abbreviations, and the corresponding index entry commands:"
 msgstr ""
+"Texinfo fornece seis índices predefinidos.  Aqui estão os significados "
+"nominais deles, abreviações e os correspondentes comandos de entrada de "
+"índice:"
 
 #. type: item
 #: texinfo/texinfo.texi:8001
 #: texinfo/texinfo.texi:8423
 #, no-wrap
 msgid "cp"
-msgstr ""
+msgstr "cp"
 
 #. type: cindex
 #: texinfo/texinfo.texi:8002
 #, no-wrap
 msgid "@code{cp} (concept) index"
-msgstr ""
+msgstr "Índice @code{cp} (conceito)"
 
 #. type: findex
 #: texinfo/texinfo.texi:8003
 #, no-wrap
 msgid "cindex"
-msgstr ""
+msgstr "cindex"
 
 #. type: findex
 #: texinfo/texinfo.texi:8004
 #, no-wrap
 msgid "cpindex"
-msgstr ""
+msgstr "cpindex"
 
 #. type: table
 #: texinfo/texinfo.texi:8006
 msgid "(@code{@@cindex}) Concept index, for general concepts."
-msgstr ""
+msgstr "(@code{@@cindex}) Índice de conceito, para conceitos gerais."
 
 #. type: item
 #: texinfo/texinfo.texi:8006
 #: texinfo/texinfo.texi:8425
 #, no-wrap
 msgid "fn"
-msgstr ""
+msgstr "fn"
 
 #. type: cindex
 #: texinfo/texinfo.texi:8007
 #, no-wrap
 msgid "@code{fn} (function) index"
-msgstr ""
+msgstr "Índice @code{fn} (função)"
 
 #. type: findex
 #: texinfo/texinfo.texi:8008
 #, no-wrap
 msgid "findex"
-msgstr ""
+msgstr "findex"
 
 #. type: findex
 #: texinfo/texinfo.texi:8009
 #, no-wrap
 msgid "fnindex"
-msgstr ""
+msgstr "fnindex"
 
 #. type: table
 #: texinfo/texinfo.texi:8012
@@ -20416,91 +20425,95 @@ msgid ""
 "(@code{@@findex}) Function index, for function and function-like names (such "
 "as entry points of libraries)."
 msgstr ""
+"(@code{@@findex}) Índice de Função, para nomes de funções e semelhantes "
+"a funções (como pontos de entrada de bibliotecas)."
 
 #. type: item
 #: texinfo/texinfo.texi:8012
 #: texinfo/texinfo.texi:8427
 #, no-wrap
 msgid "ky"
-msgstr ""
+msgstr "ky"
 
 #. type: cindex
 #: texinfo/texinfo.texi:8013
 #, no-wrap
 msgid "@code{ky} (keystroke) index"
-msgstr ""
+msgstr "Índice @code{ky} (pressionamento de tecla)"
 
 #. type: findex
 #: texinfo/texinfo.texi:8014
 #, no-wrap
 msgid "kindex"
-msgstr ""
+msgstr "kindex"
 
 #. type: findex
 #: texinfo/texinfo.texi:8015
 #, no-wrap
 msgid "kyindex"
-msgstr ""
+msgstr "kyindex"
 
 #. type: table
 #: texinfo/texinfo.texi:8017
 msgid "(@code{@@kindex}) Keystroke index, for keyboard commands."
 msgstr ""
+"(@code{@@kindex}) Índice de pressionamento de tecla, para comandos de "
+"teclado."
 
 #. type: item
 #: texinfo/texinfo.texi:8017
 #: texinfo/texinfo.texi:8429
 #, no-wrap
 msgid "pg"
-msgstr ""
+msgstr "pg"
 
 #. type: cindex
 #: texinfo/texinfo.texi:8018
 #, no-wrap
 msgid "@code{pg} (program) index"
-msgstr ""
+msgstr "@cindex Índice @code{pg} (programa)"
 
 #. type: findex
 #: texinfo/texinfo.texi:8019
 #, no-wrap
 msgid "pindex"
-msgstr ""
+msgstr "pindex"
 
 #. type: findex
 #: texinfo/texinfo.texi:8020
 #, no-wrap
 msgid "pgindex"
-msgstr ""
+msgstr "pgindex"
 
 #. type: table
 #: texinfo/texinfo.texi:8022
 msgid "(@code{@@pindex}) Program index, for names of programs."
-msgstr ""
+msgstr "(@code{@@pindex}) Índice de programas, para nomes de programas."
 
 #. type: item
 #: texinfo/texinfo.texi:8022
 #: texinfo/texinfo.texi:8431
 #, no-wrap
 msgid "tp"
-msgstr ""
+msgstr "tp"
 
 #. type: cindex
 #: texinfo/texinfo.texi:8023
 #, no-wrap
 msgid "@code{tp} (data type) index"
-msgstr ""
+msgstr "Índice @code{tp} (tipo de dado)"
 
 #. type: findex
 #: texinfo/texinfo.texi:8024
 #, no-wrap
 msgid "tindex"
-msgstr ""
+msgstr "tindex"
 
 #. type: findex
 #: texinfo/texinfo.texi:8025
 #, no-wrap
 msgid "tpindex"
-msgstr ""
+msgstr "tpindex"
 
 #. type: table
 #: texinfo/texinfo.texi:8028
@@ -20508,31 +20521,33 @@ msgid ""
 "(@code{@@tindex}) Data type index, for type names (such as structures "
 "defined in header files)."
 msgstr ""
+"(@code{@@tindex}) Índice de tipo de dados, para nomes de tipos (como "
+"estruturas definidas em arquivos de cabeçalho)."
 
 #. type: item
 #: texinfo/texinfo.texi:8028
 #: texinfo/texinfo.texi:8433
 #, no-wrap
 msgid "vr"
-msgstr ""
+msgstr "vr"
 
 #. type: cindex
 #: texinfo/texinfo.texi:8029
 #, no-wrap
 msgid "@code{vr} (variable) index"
-msgstr ""
+msgstr "Índice @code{vr} (variável)"
 
 #. type: findex
 #: texinfo/texinfo.texi:8030
 #, no-wrap
 msgid "vindex"
-msgstr ""
+msgstr "vindex"
 
 #. type: findex
 #: texinfo/texinfo.texi:8031
 #, no-wrap
 msgid "vrindex"
-msgstr ""
+msgstr "vrindex"
 
 #. type: table
 #: texinfo/texinfo.texi:8034
@@ -20540,6 +20555,8 @@ msgid ""
 "(@code{@@vindex}) Variable index, for variable names (such as library global "
 "variables)."
 msgstr ""
+"(@code{@@vindex}) Índice de variáveis, para nomes de variáveis (como "
+"variáveis globais de bibliotecas)."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:8041
@@ -20549,6 +20566,11 @@ msgid ""
 "and an @@-command index. (The latter is actually the function index but is "
 "called a command index in the chapter heading.)"
 msgstr ""
+"Nem todo manual precisa de tudo isso, e a maioria dos manuais usa somente "
+"dois ou três, no máximo.  O presente manual, por exemplo, tem dois "
+"índices: um índice de conceitos e um índice de comandos @@ (o último na "
+"verdade é o índice de função, mas é chamado de índice de comandos no "
+"cabeçalho de capítulo.)"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:8049
@@ -20561,6 +20583,13 @@ msgid ""
 "give it the title `Function and Macro Index' and all will be consistent for "
 "the reader."
 msgstr ""
+"Você não é obrigado(a) a usar os índices predefinidos estritamente para "
+"os fins canônicos deles.  Por exemplo, suponha que você deseje indexar "
+"algumas macros do preprocessador C.  Você poderia colocá-las no índice de "
+"função junto com as funções reais, apenas escrevendo comandos "
+"@code{@@findex} para elas; então, quando imprimir o ``Índice de Função'' "
+"como um capítulo não numerado, você poderia dar a ele o título de "
+"`Índice de Função e Macro' e tudo seria consistente para o(a) leitor(a)."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:8055
@@ -20570,6 +20599,11 @@ msgid ""
 "other text from other manuals, the index entries will not match up.  "
 "Instead, define your own new index (@pxref{New Indices})."
 msgstr ""
+"Por outro lado, é melhor não se afastar muito do significado dos índices "
+"predefinidos.  Do contrário, caso o teu texto seja combinado com outro "
+"texto proveniente de outros manuais, as entradas de índice não "
+"corresponderão.  Em vez disso, defina teu próprio novo índice "
+"(@pxref{Novos Índices})."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:8061
@@ -20580,6 +20614,12 @@ msgid ""
 "by using the @code{@@synindex} or @code{@@syncodeindex} commands "
 "(@pxref{Combining Indices})."
 msgstr ""
+"Nós recomendamos ter um índice no documento final sempre que possível, "
+"independentemente de quantos índices de fonte você usar, pois assim os(as) "
+"leitores(as) terão somente um lugar para procurar.  Dois ou mais índices "
+"de fonte podem ser combinados em um índice de saída gerada, usando-se os "
+"comandos @code{@@synindex} ou @code{@@syncodeindex} (@pxref{Combinando "
+"Índices})."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:8064
@@ -20587,6 +20627,9 @@ msgid ""
 "Index entry commands based on the the two letter index names are also valid, "
 "for example @code{@@cpindex} can be used instead of @code{@@cindex}."
 msgstr ""
+"Comandos de entrada de índice baseados em nomes de índice de duas letras "
+"também são válidos, por exemplo, @code{@@cpindex} pode ser usado em vez "
+"de @code{@@cindex}."
 
 #. type: node
 #: texinfo/texinfo.texi:8066
