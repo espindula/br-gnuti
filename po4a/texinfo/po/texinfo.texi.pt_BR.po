@@ -17,7 +17,7 @@ msgstr ""
 "Project-Id-Version: Texinfo 7.1\n"
 "Report-Msgid-Bugs-To: jafesp@gmail.com\n"
 "POT-Creation-Date: 2025-04-05 18:55-0300\n"
-"PO-Revision-Date: 2025-04-11 16:20-0300\n"
+"PO-Revision-Date: 2025-04-11 20:40-0300\n"
 "Last-Translator: Jamenson Ferreira Espindula de Almeida Melo "
 "<jafesp@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21263,7 +21263,7 @@ msgstr ""
 #: texinfo/texinfo.texi:8289
 #, no-wrap
 msgid "Printing Indices & Menus"
-msgstr ""
+msgstr "Imprimindo Índices e Menus"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:8291
@@ -21271,42 +21271,44 @@ msgid ""
 "@nodedescription How to print an index in hardcopy and generate index menus "
 "in Info."
 msgstr ""
+"@nodedescription Como imprimir um índice em cópia impressa e gerar menus "
+"de índice no Info."
 
 #. type: section
 #: texinfo/texinfo.texi:8291
 #, no-wrap
 msgid "Printing Indices and Menus"
-msgstr ""
+msgstr "Imprimindo Índices e Menus"
 
 #. type: cindex
 #: texinfo/texinfo.texi:8292
 #, no-wrap
 msgid "Printing an index"
-msgstr ""
+msgstr "Imprimindo um índice"
 
 #. type: cindex
 #: texinfo/texinfo.texi:8293
 #, no-wrap
 msgid "Indices, printing and menus"
-msgstr ""
+msgstr "Índices, imprimindo e menus"
 
 #. type: cindex
 #: texinfo/texinfo.texi:8294
 #, no-wrap
 msgid "Generating menus with indices"
-msgstr ""
+msgstr "Gerando menus com índices"
 
 #. type: cindex
 #: texinfo/texinfo.texi:8295
 #, no-wrap
 msgid "Menus generated with indices"
-msgstr ""
+msgstr "Menus gerados com índices"
 
 #. type: findex
 #: texinfo/texinfo.texi:8298
 #, no-wrap
 msgid "printindex"
-msgstr ""
+msgstr "printindex"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:8305
@@ -21318,6 +21320,12 @@ msgid ""
 "generating commands in the Texinfo file; those just cause the raw data for "
 "the index to be accumulated."
 msgstr ""
+"@code{@@printindex} recebe um argumento, uma abreviação de duas letras do "
+"índice.  Você precisa incluir o comando @code{@@printindex} no local do "
+"documento onde quiser que o índice apareça.  Isso não acontece "
+"automaticamente só porque você usa @code{@@cindex} ou outros comandos "
+"geradores de entradas de índice no arquivo Texinfo; esses somente fazem com "
+"que os dados brutos para o índice sejam acumulados."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:8311
@@ -21327,6 +21335,11 @@ msgid ""
 "supply the chapter heading and put the index into the table of contents.  "
 "Precede the chapter heading with an @code{@@node} line as usual."
 msgstr ""
+"Você deveria preceder o comando @code{@@printindex} com um comando adequado "
+"de seção ou capítulo (geralmente @code{@@appendix} ou "
+"@code{@@unnumbered}) para fornecer o título do capítulo e inserir o "
+"índice no sumário.  Preceda o título do capítulo com uma linha "
+"@code{@@node}, como de costume."
 
 #. type: group
 #: texinfo/texinfo.texi:8318
@@ -21336,12 +21349,15 @@ msgid ""
 "@@unnumbered Variable Index\n"
 "\n"
 msgstr ""
+"@@node Índice Variável\n"
+"@@unnumbered Índice Variável\n"
+"\n"
 
 #. type: group
 #: texinfo/texinfo.texi:8320
 #, no-wrap
 msgid "@@printindex vr\n"
-msgstr ""
+msgstr "@@printindex vr\n"
 
 #. type: group
 #: texinfo/texinfo.texi:8325
@@ -21352,13 +21368,16 @@ msgid ""
 "@@unnumbered Concept Index\n"
 "\n"
 msgstr ""
+"@@node Índice de Conceito\n"
+"@@unnumbered Índice de Conceito\n"
+"\n"
 
 #. type: group
 #: texinfo/texinfo.texi:8327
 #: texinfo/texinfo.texi:13944
 #, no-wrap
 msgid "@@printindex cp\n"
-msgstr ""
+msgstr "@@printindex cp\n"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:8332
@@ -21366,17 +21385,21 @@ msgid ""
 "The text @samp{Index} needs to appear in the name of the node containing the "
 "index for the index to be found by Info readers."
 msgstr ""
+"O texto @samp{Index} precisa aparecer no nome do nó que contém o índice "
+"para que o índice seja encontrado por leitores Info."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:8334
 msgid ""
 "If you have more than one index, we recommend placing the concept index last."
 msgstr ""
+"Se você tiver mais que um índice, nós recomendamos colocar o índice de "
+"conceito por último."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:8336
 msgid "Other details of index output in output formats:"
-msgstr ""
+msgstr "Outros detalhes da saída do índice em formatos de saída:"
 
 #. type: itemize
 #: texinfo/texinfo.texi:8343
@@ -21386,6 +21409,11 @@ msgid ""
 "the raw data to produce a sorted index file.  The sorted index file is what "
 "is actually used to print the index."
 msgstr ""
+"Como parte do processo de criação de um manual impresso com o @TeX, você "
+"executa um programa chamado @command{texindex} (@pxref{Cópia impressa com "
+"@TeX{}}) para ordenar os dados brutos para produzir um arquivo de índice "
+"ordenado.  O arquivo de índice ordenado é o que, na verdade, é usado para "
+"imprimir o índice."
 
 #. type: itemize
 #: texinfo/texinfo.texi:8346
@@ -21393,6 +21421,9 @@ msgid ""
 "@code{@@printindex} reads the corresponding sorted index file and produces a "
 "traditional two-column index, with index terms and page numbers."
 msgstr ""
+"@code{@@printindex} lê o correspondente arquivo de índice ordenado e "
+"produz um índice tradicional de duas colunas, com termos de índice e "
+"números de página."
 
 #. type: itemize
 #: texinfo/texinfo.texi:8353
@@ -21402,12 +21433,17 @@ msgid ""
 "can use this to go to the exact line of an entry, not just the containing "
 "node.  (Older Info readers will just go to the node.)  Here's an example:"
 msgstr ""
+"Na saída Info, @code{@@printindex} produz um menu especial contendo o "
+"número da linha da entrada, relativo ao início do nó.  Leitores Info "
+"podem usar isso para ir para a linha exata de uma entrada, não apenas para "
+"o nó que a contém.  (Leitores Info mais antigos irão apenas para o nó.)  "
+"Aqui está um exemplo:"
 
 #. type: example
 #: texinfo/texinfo.texi:8356
 #, no-wrap
 msgid "* First index entry:   Top.   (line  7)\n"
-msgstr ""
+msgstr "* Primeira entrada de índice:   Topo.   (linha  7)\n"
 
 #. type: itemize
 #: texinfo/texinfo.texi:8362
@@ -21416,42 +21452,49 @@ msgid ""
 "menu in Info, showing the line number of each entry relative to the start of "
 "the file."
 msgstr ""
+"Na saída de texto simples, a formatação de @code{@@printindex} geralmente "
+"é semelhante a um menu no Info, mostrando o número da linha de cada "
+"entrada relativa ao início do arquivo."
 
 #. type: itemize
 #: texinfo/texinfo.texi:8366
 msgid ""
 "In HTML output, @code{@@printindex} produces links to the index entries."
 msgstr ""
+"Na saída HTML, @code{@@printindex} produz linques para as entradas do "
+"índice."
 
 #. type: itemize
 #: texinfo/texinfo.texi:8369
 msgid ""
 "In DocBook and @LaTeX{} output, it simply records the index to be printed."
 msgstr ""
+"Na saída DocBook e @LaTeX{}, ele simplesmente registra o índice a ser "
+"impresso."
 
 #. type: section
 #: texinfo/texinfo.texi:8372
 #: texinfo/texinfo.texi:8374
 #, no-wrap
 msgid "Combining Indices"
-msgstr ""
+msgstr "Combinando Índices"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:8374
 msgid "@nodedescription How to combine indices."
-msgstr ""
+msgstr "@nodedescription Como combinar índices."
 
 #. type: cindex
 #: texinfo/texinfo.texi:8375
 #, no-wrap
 msgid "Combining indices"
-msgstr ""
+msgstr "Combinando índices"
 
 #. type: cindex
 #: texinfo/texinfo.texi:8376
 #, no-wrap
 msgid "Indices, combining them"
-msgstr ""
+msgstr "Índices, combinando-os"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:8381
@@ -21460,6 +21503,9 @@ msgid ""
 "and concepts, perhaps because you have few enough entries that a separate "
 "index would look silly."
 msgstr ""
+"Às vezes você irá querer combinar dois índices, como funções e "
+"conceitos, talvez porque tenha poucas entradas suficientes que um índice "
+"separado pareceria bobo."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:8394
@@ -21476,6 +21522,18 @@ msgid ""
 "index, you would need to enclose every one of them between the braces of "
 "@code{@@code}."
 msgstr ""
+"Você poderia colocar funções no índice de conceito escrevendo comandos "
+"@code{@@cindex} para elas em vez de comandos @code{@@findex} e produzir um "
+"manual consistente imprimindo o índice de conceito com o título `Índice "
+"de Função e Conceito' e não imprimir o `Índice de Função' em absoluto; "
+"mas esse não é um procedimento robusto.  Ele funciona somente se o teu "
+"documento nunca for incluído como parte de outro documento que seja "
+"projetado para ter um índice de função separado; se o teu documento fosse "
+"incluído em tal documento, as funções oriundas do teu documento e aquelas "
+"oriundas do outro não terminariam juntas.  Além disso, para fazer com que "
+"os teus nomes de funções apareçam na fonte correta no índice de "
+"conceito, você precisaria circundar cada uma delas entre chaves de "
+"@code{@@code}."
 
 #. type: node
 #: texinfo/texinfo.texi:8396
