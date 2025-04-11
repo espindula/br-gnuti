@@ -17,7 +17,7 @@ msgstr ""
 "Project-Id-Version: Texinfo 7.1\n"
 "Report-Msgid-Bugs-To: jafesp@gmail.com\n"
 "POT-Creation-Date: 2025-04-05 18:55-0300\n"
-"PO-Revision-Date: 2025-04-10 17:00-0300\n"
+"PO-Revision-Date: 2025-04-11 16:20-0300\n"
 "Last-Translator: Jamenson Ferreira Espindula de Almeida Melo "
 "<jafesp@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20635,48 +20635,48 @@ msgstr ""
 #: texinfo/texinfo.texi:8066
 #, no-wrap
 msgid "Indexing Commands"
-msgstr ""
+msgstr "Comandos de Indexação"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:8068
 msgid "@nodedescription How to make an index entry."
-msgstr ""
+msgstr "@nodedescription Como fazer uma entrada de índice."
 
 #. type: section
 #: texinfo/texinfo.texi:8068
 #, no-wrap
 msgid "Defining the Entries of an Index"
-msgstr ""
+msgstr "Definindo as Entradas de um Índice"
 
 #. type: cindex
 #: texinfo/texinfo.texi:8070
 #, no-wrap
 msgid "Defining indexing entries"
-msgstr ""
+msgstr "Definindo entradas de indexação"
 
 #. type: cindex
 #: texinfo/texinfo.texi:8071
 #, no-wrap
 msgid "Index entries"
-msgstr ""
+msgstr "Entradas de índice"
 
 #. type: cindex
 #: texinfo/texinfo.texi:8072
 #, no-wrap
 msgid "Entries for an index"
-msgstr ""
+msgstr "Entradas para um índice"
 
 #. type: cindex
 #: texinfo/texinfo.texi:8073
 #, no-wrap
 msgid "Specifying index entries"
-msgstr ""
+msgstr "Especificando entradas de índice"
 
 #. type: cindex
 #: texinfo/texinfo.texi:8074
 #, no-wrap
 msgid "Creating index entries"
-msgstr ""
+msgstr "Criando entradas de índice"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:8080
@@ -20686,6 +20686,11 @@ msgid ""
 "entry to a particular index; after formatting, the index will give the "
 "current page number or node name as the reference."
 msgstr ""
+"Os dados para criar um índice vem de muitos comandos individuais de "
+"indexação espalhados pelo arquivo fonte do Texinfo.  Cada comando diz para "
+"adicionar uma entrada para um índice específico; depois da formatação, o "
+"índice fornecerá o número da página atual ou o nome do nó como a "
+"referência."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:8083
@@ -20693,6 +20698,8 @@ msgid ""
 "An index entry consists of an indexing command at the beginning of a line "
 "followed, on the rest of the line, by the entry."
 msgstr ""
+"Uma entrada de índice consiste de um comando de indexação no início de "
+"uma linha seguido, no restante da linha, pela entrada."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:8086
@@ -20700,6 +20707,8 @@ msgid ""
 "For example, this section begins with the following five entries for the "
 "concept index:"
 msgstr ""
+"Por exemplo, esta seção começa com as seguintes cinco entradas para o "
+"índice de conceito:"
 
 #. type: example
 #: texinfo/texinfo.texi:8093
@@ -20711,6 +20720,11 @@ msgid ""
 "@@cindex Specifying index entries\n"
 "@@cindex Creating index entries\n"
 msgstr ""
+"@@cindex Definindo entradas de indexação\n"
+"@@cindex Entradas de índice, definindo\n"
+"@@cindex Entradas para um índice\n"
+"@@cindex Especificando entradas de índice\n"
+"@@cindex Criando entradas de índice\n"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:8098
@@ -20719,6 +20733,10 @@ msgid ""
 "concept index, @code{@@findex} for the function index, and so on, as listed "
 "in the previous section."
 msgstr ""
+"Cada índice predefinido tem o próprio comando dele de "
+"indexação---@code{@@cindex} para o índice de conceito, @code{@@findex} "
+"para o índice de função e assim por diante, conforme listado na seção "
+"anterior."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:8101
@@ -20726,6 +20744,8 @@ msgid ""
 "Index entries should precede the visible material that is being indexed.  "
 "For instance:"
 msgstr ""
+"As entradas do índice deveriam preceder o material visível que estiver "
+"sendo indexado.  Por exemplo:"
 
 #. type: example
 #: texinfo/texinfo.texi:8105
@@ -20734,6 +20754,8 @@ msgid ""
 "@@cindex hello\n"
 "Hello, there!\n"
 msgstr ""
+"@@cindex alô\n"
+"Alô, você!\n"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:8111
@@ -20741,6 +20763,9 @@ msgid ""
 "Among other reasons, that way following indexing links (in whatever context) "
 "ends up before the material, where readers want to be, instead of after."
 msgstr ""
+"Entre outros motivos, dessa maneira, seguir os linques de indexação (em "
+"qualquer contexto) acaba antes do material, onde os(as) leitores(as) querem "
+"estar, em vez de depois."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:8117
@@ -20749,12 +20774,16 @@ msgid ""
 "colon in index entries, as this may confuse some Info readers.  @xref{Menu "
 "Parts} for more information about the structure of a menu entry."
 msgstr ""
+"No Info, um índice geralmente é formatado como um menu.  Tente evitar usar "
+"dois pontos nas entradas de índice, pois isso pode confundir alguns "
+"leitores Info.  @xref{Partes de Menu} para mais informações acerca da "
+"estrutura de uma entrada de menu."
 
 #. type: cindex
 #: texinfo/texinfo.texi:8118
 #, no-wrap
 msgid "Index font types"
-msgstr ""
+msgstr "Tipos de fonte de índice"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:8125
@@ -20765,24 +20794,30 @@ msgid ""
 "such as @code{@@file} for file names (@pxref{Marking Text}), and @code{@@r} "
 "for the normal roman font (@pxref{Fonts})."
 msgstr ""
+"Por padrão, as entradas para um índice de conceito são impressas em uma "
+"fonte romana e as entradas para os outros índices são impressas em uma "
+"fonte de máquina de escrever.  Você pode mudar a maneira como parte de uma "
+"entrada é impressa com os comandos usuais do Texinfo, como @code{@@file} "
+"para nomes de arquivos (@pxref{Marcando Texto}) e @code{@@r} para a fonte "
+"normal romana (@pxref{Fontes})."
 
 #. type: findex
 #: texinfo/texinfo.texi:8126
 #, no-wrap
 msgid "sortas"
-msgstr ""
+msgstr "sortas"
 
 #. type: cindex
 #: texinfo/texinfo.texi:8127
 #, no-wrap
 msgid "sort keys for index entries"
-msgstr ""
+msgstr "ordenar chaves para entradas de índice"
 
 #. type: cindex
 #: texinfo/texinfo.texi:8128
 #, no-wrap
 msgid "index sorting"
-msgstr ""
+msgstr "ordenamento de índice"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:8134
@@ -20792,30 +20827,35 @@ msgid ""
 "entry.  For example: @samp{@@findex @@sortas@{\\@} \\ @@r@{(literal \\ in "
 "@@code@{@@@@math@})} sorts the index entry this produces under backslash."
 msgstr ""
+"Você pode especificar uma chave explícita de ordenação para uma entrada "
+"de índice usando @code{@@sortas} seguindo ou o comando de índice ou o "
+"texto da entrada.  Por exemplo: @samp{@@findex @@sortas@{\\@} \\ "
+"@@r@{(literal \\ em @@code@{@@@@math@})} ordena a entrada de índice que "
+"isso produz sob barra invertida."
 
 #. type: vindex
 #: texinfo/texinfo.texi:8135
 #, no-wrap
 msgid "txiindexbackslashignore"
-msgstr ""
+msgstr "txiindexbackslashignore"
 
 #. type: vindex
 #: texinfo/texinfo.texi:8136
 #, no-wrap
 msgid "txiindexhyphenignore"
-msgstr ""
+msgstr "txiindexhyphenignore"
 
 #. type: vindex
 #: texinfo/texinfo.texi:8137
 #, no-wrap
 msgid "txiindexlessthanignore"
-msgstr ""
+msgstr "txiindexlessthanignore"
 
 #. type: vindex
 #: texinfo/texinfo.texi:8138
 #, no-wrap
 msgid "txiindexatsignignore"
-msgstr ""
+msgstr "txiindexatsignignore"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:8151
@@ -20832,6 +20872,18 @@ msgid ""
 "with `M'.  This avoids the need to provide explicit sort keys for index "
 "entries containing these characters."
 msgstr ""
+"Você pode escolher ignorar determinados caracteres nas entradas de índice "
+"para fins de ordenação.  Os caracteres que você pode, atualmente, "
+"escolher ignorar são @samp{\\}, @samp{-}, @samp{<} e @samp{@@}, que são "
+"ignorados fornecendo-se como um argumento para o comando @code{@@set}, "
+"respectivamente, @code{txiindexbackslashignore}, "
+"@code{txiindexhyphenignore}, @code{txiindexlessthanignore} e "
+"@code{txiindexatsignignore}.  Por exemplo, especificar @samp{@@set "
+"txiindexbackslashignore} faz com que a entrada @samp{\\mathopsup} no índice "
+"para este manual seja ordenada como se fosse @samp{mathopsup}, de forma que "
+"ela apareça entre as outras entradas começando com `M'.  Isso evita a "
+"necessidade de fornecer chaves explícitas de ordenação para entradas de "
+"índice contendo esses caracteres."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:8155
@@ -20840,6 +20892,9 @@ msgid ""
 "sort key.  To avoid this, specify a @code{@@sortas} directive in the index "
 "entry.  For example:"
 msgstr ""
+"Ao usar essas opções, é possível obter uma entrada de índice com uma "
+"chave vazia de ordenação.  Para evitar isso, especifique uma diretiva "
+"@code{@@sortas} na entrada de índice.  Por exemplo:"
 
 #. type: example
 #: texinfo/texinfo.texi:8159
@@ -20848,46 +20903,48 @@ msgid ""
 "@@set txiindexbackslashignore\n"
 "@@findex @@sortas@{\\@} \\\n"
 msgstr ""
+"@@set txiindexbackslashignore\n"
+"@@findex @@sortas@{\\@} \\\n"
 
 #. type: node
 #: texinfo/texinfo.texi:8162
 #, no-wrap
 msgid "Advanced Indexing"
-msgstr ""
+msgstr "Indexação Avançada"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:8164
 msgid "@nodedescription Advanced indexing commands."
-msgstr ""
+msgstr "@nodedescription Comandos avançados de indexação."
 
 #. type: section
 #: texinfo/texinfo.texi:8164
 #, no-wrap
 msgid "Advanced Indexing Commands"
-msgstr ""
+msgstr "Comandos Avançados de Indexação"
 
 #. type: cindex
 #: texinfo/texinfo.texi:8165
 #, no-wrap
 msgid "Indexing, advanced"
-msgstr ""
+msgstr "Indexação, avançada"
 
 #. type: cindex
 #: texinfo/texinfo.texi:8166
 #, no-wrap
 msgid "Advanced indexing"
-msgstr ""
+msgstr "Indexação avançada"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:8169
 msgid "Texinfo provides several further commands for indexing."
-msgstr ""
+msgstr "O Texinfo fornece vários outros comandos para indexação."
 
 #. type: findex
 #: texinfo/texinfo.texi:8170
 #, no-wrap
 msgid "subentry"
-msgstr ""
+msgstr "subentry"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:8175
@@ -20897,6 +20954,10 @@ msgid ""
 "separating the parts of such an entry with the @code{@@subentry} command. "
 "Such commands might look like this:"
 msgstr ""
+"Primeiro, você pode criar entradas de índice @dfn{multi nível}, "
+"permitindo agrupar muitos subtópicos relacionados sob o mesmo tópico de "
+"nível superior.  Você faz isso separando as partes de cada entrada com o "
+"comando @code{@@subentry}.  Esses comandos podem se pareçer com isto:"
 
 #. type: example
 #: texinfo/texinfo.texi:8179
@@ -20905,11 +20966,13 @@ msgid ""
 "@@cindex Superhumans @@subentry villains\n"
 "@@cindex Superhumans @@subentry heroes\n"
 msgstr ""
+"@@cindex Superhumanos(as) @@subentry vilões(ãs)\n"
+"@@cindex Superhumanos(as) @@subentry heróis(ínas)\n"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:8182
 msgid "You may have up to three levels in an entry:"
-msgstr ""
+msgstr "Você pode ter até três níveis em uma entrada:"
 
 #. type: example
 #: texinfo/texinfo.texi:8186
@@ -20918,6 +20981,8 @@ msgid ""
 "@@cindex coffee makers @@subentry electric @@subentry pink\n"
 "@@cindex coffee makers @@subentry electric @@subentry blue\n"
 msgstr ""
+"@@cindex cafeteiras @@subentry elétricas @@subentry rosa\n"
+"@@cindex cafeteiras @@subentry elétricas @@subentry azul\n"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:8191
@@ -20926,12 +20991,15 @@ msgid ""
 "the three parts of an entry to cause them to sort differently than they "
 "would by default."
 msgstr ""
+"Você pode usar o comando @code{@@sortas} mencionado anteriormente com "
+"qualquer uma ou todas as três partes de uma entrada para fazer com que elas "
+"ordenem diferentemente do que fariam por padrão."
 
 #. type: findex
 #: texinfo/texinfo.texi:8192
 #, no-wrap
 msgid "seeentry"
-msgstr ""
+msgstr "seeentry"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:8195
@@ -20939,12 +21007,14 @@ msgid ""
 "Second, you may provide an index entry that points to another, using the "
 "@code{@@seeentry} (``see entry'') command. For example:"
 msgstr ""
+"Segundo, você pode fornecer uma entrada de índice que aponte para outra, "
+"usando o comando @code{@@seeentry} (``veja-se entrada'').  Por exemplo:"
 
 #. type: example
 #: texinfo/texinfo.texi:8198
 #, no-wrap
 msgid "@@cindex Indexes @@seeentry@{Indices@}\n"
-msgstr ""
+msgstr "@@cindex Índices @@seeentry@{Expoentes@}\n"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:8203
@@ -20953,12 +21023,15 @@ msgid ""
 "reader to the other entry where they will find all the information they are "
 "looking for."
 msgstr ""
+"Essa entrada deveria ser única no teu documento; a ideia é a de "
+"redirecionar o(a) leitor(a) para a outra entrada, onde eles(as) encontrarão "
+"todas as informações que procuram."
 
 #. type: findex
 #: texinfo/texinfo.texi:8204
 #, no-wrap
 msgid "seealso"
-msgstr ""
+msgstr "seealso"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:8208
@@ -20967,6 +21040,9 @@ msgid ""
 "command. These entries go along with regular entries, and are grouped "
 "together with them in the final printed index. For example:"
 msgstr ""
+"Finalmente, você pode fornecer uma entrada ``veja-se também'' usando o "
+"comando @code{@@seealso}.  Essas entradas acompanham as entradas regulares e "
+"são agrupadas com elas no índice impresso final.  Por exemplo:"
 
 #. type: example
 #: texinfo/texinfo.texi:8215
@@ -20978,6 +21054,11 @@ msgid ""
 "@@cindex Coffee @@subentry Decaffeinated\n"
 "@@cindex Coffee @@seealso@{Tea@}\n"
 msgstr ""
+"@@cindex Café\n"
+"@@cindex Café @@subentry Com leite e açúcar\n"
+"@@cindex Café @@subentry Com donuts\n"
+"@@cindex Café @@subentry Descafeinado\n"
+"@@cindex Café @@seealso@{Chá@}\n"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:8222
@@ -20987,6 +21068,11 @@ msgid ""
 "program, which sorts the index entries and generates the indexing formatting "
 "commands, takes care of placing commas in the correct places for you."
 msgstr ""
+"Ao usar todos esses três comandos avançados, @emph{não} coloque uma "
+"vírgula entre as diferentes partes do texto do índice.  O programa "
+"@command{texindex}, que ordena as entradas do índice e gera os comandos de "
+"formatação de indexação, se encarrega de colocar as vírgulas nos "
+"lugares corretos para você."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:8226
@@ -20995,6 +21081,9 @@ msgid ""
 "advanced commands with braces; place the commands with braces at the "
 "beginning or at the end of the entry."
 msgstr ""
+"Não interrompa um índice ou uma entrada @code{@@subentry} com "
+"@code{@@sortas} ou comandos avançados com chaves; coloque os comandos com "
+"chaves no início ou no final da entrada."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:8229
@@ -21002,59 +21091,61 @@ msgid ""
 "These features are the most useful with printed documents, and when "
 "translating Texinfo to DocBook."
 msgstr ""
+"Esses recursos são mais úteis com documentos impressos e ao se traduzir "
+"Texinfo para DocBook."
 
 #. type: node
 #: texinfo/texinfo.texi:8231
 #, no-wrap
 msgid "Index Entries"
-msgstr ""
+msgstr "Entradas de Índice"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:8233
 msgid "@nodedescription Choose different words for index entries."
-msgstr ""
+msgstr "@nodedescription Escolha palavras diferentes para entradas de índice."
 
 #. type: section
 #: texinfo/texinfo.texi:8233
 #, no-wrap
 msgid "Making Index Entries"
-msgstr ""
+msgstr "Criando Entradas de Índice"
 
 #. type: cindex
 #: texinfo/texinfo.texi:8234
 #, no-wrap
 msgid "Index entries, making"
-msgstr ""
+msgstr "Entradas de índice, criando"
 
 #. type: cindex
 #: texinfo/texinfo.texi:8235
 #, no-wrap
 msgid "Entries, making index"
-msgstr ""
+msgstr "Entradas, criando índice"
 
 #. type: cindex
 #: texinfo/texinfo.texi:8237
 #, no-wrap
 msgid "Writing index entries"
-msgstr ""
+msgstr "Escrevendo entradas de índice"
 
 #. type: cindex
 #: texinfo/texinfo.texi:8238
 #, no-wrap
 msgid "Index entries, advice on writing"
-msgstr ""
+msgstr "Entradas de índice, conselhos acerca de redação"
 
 #. type: cindex
 #: texinfo/texinfo.texi:8239
 #, no-wrap
 msgid "Advice on writing entries"
-msgstr ""
+msgstr "Conselhos acerca de se escrever entradas"
 
 #. type: cindex
 #: texinfo/texinfo.texi:8240
 #, no-wrap
 msgid "Capitalization of index entries"
-msgstr ""
+msgstr "Capitalização de entradas de índice"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:8247
@@ -21066,6 +21157,13 @@ msgid ""
 "acronyms that always call for uppercase letters.  This is the case "
 "convention we use in most GNU manuals' indices."
 msgstr ""
+"As entradas do índice de conceito consistem de texto.  A melhor maneira de "
+"escrever um índice é a de elaborar entradas que sejam concisas, mas "
+"claras.  Se você conseguir fazer isso, o índice geralmente parecerá "
+"melhor se as entradas forem escritas exatamente como apareceriam no meio de "
+"uma frase, ou seja, capitalizando somente nomes próprios e siglas que "
+"sempre exijam letras maiúsculas.  Essa é uma convenção de maiúsculas e "
+"minúsculas que nós usamos na maioria dos índices dos manuais GNU."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:8253
@@ -21076,6 +21174,12 @@ msgid ""
 "capitalize the first word of each entry.  Whichever case convention you use, "
 "use it consistently."
 msgstr ""
+"Se você não sabe como tornar uma entrada concisa, mas clara, torne-a mais "
+"longa e clara---não concisa e confusa.  Se muitas das entradas tiverem "
+"várias palavras, o índice pode parecer melhor se você usar uma "
+"convenção diferente: maiusculizar a primeira palavra de cada entrada.  "
+"Qualquer que seja a convenção de maiúsculas e minúsculas que você usar, "
+"use-a de consistentemente."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:8260
@@ -21086,12 +21190,19 @@ msgid ""
 "programming languages, or program names; these names are usually "
 "case-sensitive, so likewise use upper- and lowercase as required."
 msgstr ""
+"Em qualquer caso, nunca maiuscule um nome que diferencia maiúsculas de "
+"minúsculas, como um nome de função da C ou Lisp ou um comando de shell; "
+"isso seria um erro ortográfico.  Entradas em índices diferentes do índice "
+"de conceito são nomes de símbolos em linguagens de programação ou nomes "
+"de programas; esses nomes geralmente diferenciam maiúsculas de minúsculas, "
+"de forma que, igualmente, use letras maiúsculas e minúsculas conforme "
+"exigido."
 
 #. type: cindex
 #: texinfo/texinfo.texi:8261
 #, no-wrap
 msgid "Unique index entries"
-msgstr ""
+msgstr "Entradas exclusivas de índice"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:8270
@@ -21103,6 +21214,14 @@ msgid ""
 "easily find the exact place they are looking for.  The advanced indexing "
 "features described in @ref{Advanced Indexing} can help with this, as well."
 msgstr ""
+"É uma boa ideia tornar as entradas do índice únicas sempre que "
+"possível.  Dessa forma, as pessoas que usarem a saída gerada impressa ou a "
+"completação online das entradas do índice não enxergarão listas "
+"indiferenciadas.  Considere essa uma oportunidade para tornar mais "
+"específicas entradas de índice idênticas, de forma que os(as) "
+"leitores(as) consigam encontrar mais facilmente o lugar exato que procuram.  "
+"Os recursos avançados de indexação descritos em @ref{Indexação "
+"Avançada} podem ajudar com isso também."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:8283
@@ -21118,6 +21237,17 @@ msgid ""
 "``Two letter names for indices''.  A good index will have both entries and "
 "will help both readers."
 msgstr ""
+"Quando você estiver criando entradas de índice, é uma boa prática pensar "
+"nas diferentes maneiras pelas quais as pessoas podem procurar algo.  Pessoas "
+"diferentes @emph{não} pensam nas mesmas palavras quando procuram algo.  Um "
+"índice útil terá itens indexados sob todas as palavras diferentes que as "
+"pessoas possam usar.  Por exemplo, um(a) leitor(a) pode pensar que é óbvio "
+"que os nomes de duas letras para índices deveriam ser listados sob "
+"``Índices, nomes de duas letras'', uma vez que ``Índices'' são o conceito "
+"geral.  Todavia, outro(a) leitor(a) pode lembrar-se do conceito específico "
+"de nomes de duas letras e procurar a entrada listada como ``Nomes de duas "
+"letras para índices''.  Um bom índice terá ambas as entradas e ajudará "
+"ambos(as) os(as) leitores(as)."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:8287
@@ -21125,6 +21255,9 @@ msgid ""
 "Like typesetting, the construction of an index is a skilled art, the "
 "subtleties of which may not be appreciated until you need to do it yourself."
 msgstr ""
+"Como tipografar, a construção de um índice é uma arte especializada, "
+"cujas sutilezas possivelmente não sejam apreciadas até que você precise "
+"fazê-la você mesmo(a)."
 
 #. type: node
 #: texinfo/texinfo.texi:8289
