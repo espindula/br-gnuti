@@ -17,7 +17,7 @@ msgstr ""
 "Project-Id-Version: Texinfo 7.1\n"
 "Report-Msgid-Bugs-To: jafesp@gmail.com\n"
 "POT-Creation-Date: 2025-04-05 18:55-0300\n"
-"PO-Revision-Date: 2025-04-11 21:05-0300\n"
+"PO-Revision-Date: 2025-04-12 20:00-0300\n"
 "Last-Translator: Jamenson Ferreira Espindula de Almeida Melo "
 "<jafesp@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21726,7 +21726,7 @@ msgstr ""
 #: texinfo/texinfo.texi:8469
 #, no-wrap
 msgid "@code{@@synindex}"
-msgstr ""
+msgstr "@code{@@synindex}"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:8471
@@ -21734,18 +21734,20 @@ msgid ""
 "@nodedescription How to merge two indices, using the roman font for the "
 "merged-from index."
 msgstr ""
+"@nodedescription Como mesclar dois índices, usando a fonte romana para o "
+"índice mesclado."
 
 #. type: subsection
 #: texinfo/texinfo.texi:8471
 #, no-wrap
 msgid "@code{@@synindex}: Combining Indices"
-msgstr ""
+msgstr "@code{@@synindex}: Combinando Índices"
 
 #. type: findex
 #: texinfo/texinfo.texi:8474
 #, no-wrap
 msgid "synindex"
-msgstr ""
+msgstr "synindex"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:8481
@@ -21756,6 +21758,11 @@ msgid ""
 "Thus, you use @code{@@synindex} when you merge a concept index into a "
 "function index."
 msgstr ""
+"O comando @code{@@synindex} é quase o mesmo que o comando "
+"@code{@@syncodeindex}, exceto que não coloca as entradas do índice `de' na "
+"fonte do @code{@@code}; em vez disso, coloca-os na fonte romana.  Assim, "
+"você usa @code{@@synindex} ao mesclar um índice de conceito em um índice "
+"de função."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:8484
@@ -21763,53 +21770,55 @@ msgid ""
 "@xref{Printing Indices & Menus}, for information about printing an index at "
 "the end of a book or creating an index menu in an Info file."
 msgstr ""
+"@xref{Imprimindo Índices e Menus}, para informações acerca de imprimir um "
+"índice no final de um livro ou criar um menu de índice em um arquivo Info."
 
 #. type: node
 #: texinfo/texinfo.texi:8486
 #, no-wrap
 msgid "New Indices"
-msgstr ""
+msgstr "Novos Índices"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:8488
 msgid "@nodedescription How to define your own indices."
-msgstr ""
+msgstr "@nodedescription Como definir teus próprios índices."
 
 #. type: section
 #: texinfo/texinfo.texi:8488
 #, no-wrap
 msgid "Defining New Indices"
-msgstr ""
+msgstr "Definindo Novos Índices"
 
 #. type: cindex
 #: texinfo/texinfo.texi:8490
 #, no-wrap
 msgid "Defining new indices"
-msgstr ""
+msgstr "Definindo novos índices"
 
 #. type: cindex
 #: texinfo/texinfo.texi:8491
 #, no-wrap
 msgid "Indices, defining new"
-msgstr ""
+msgstr "Índices, definindo novos"
 
 #. type: cindex
 #: texinfo/texinfo.texi:8492
 #, no-wrap
 msgid "New index defining"
-msgstr ""
+msgstr "Novos índices, definindo"
 
 #. type: findex
 #: texinfo/texinfo.texi:8493
 #, no-wrap
 msgid "defindex"
-msgstr ""
+msgstr "defindex"
 
 #. type: findex
 #: texinfo/texinfo.texi:8494
 #, no-wrap
 msgid "defcodeindex"
-msgstr ""
+msgstr "defcodeindex"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:8501
@@ -21819,12 +21828,17 @@ msgid ""
 "indices.  These commands create new indexing @@-commands with which you mark "
 "index entries.  The @code{@@defindex} command is used like this:"
 msgstr ""
+"Além dos índices predefinidos (@pxref{Índices Predefinidos}), você pode "
+"usar os comandos @code{@@defindex} e @code{@@defcodeindex} para definir "
+"novos índices.  Esses comandos criam novos comandos @@ de indexação com "
+"os quais você marca entradas de índice.  O comando @code{@@defindex} é "
+"usado assim:"
 
 #. type: example
 #: texinfo/texinfo.texi:8504
 #, no-wrap
 msgid "@@defindex @var{name}\n"
-msgstr ""
+msgstr "@@defindex @var{nome}\n"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:8508
@@ -21832,12 +21846,14 @@ msgid ""
 "New index names are usually two-letter words, such as @samp{au}.  For "
 "example:"
 msgstr ""
+"Novos nomes de índice geralmente são palavras de duas letras, como "
+"@samp{au}.  Por exemplo:"
 
 #. type: example
 #: texinfo/texinfo.texi:8511
 #, no-wrap
 msgid "@@defindex au\n"
-msgstr ""
+msgstr "@@defindex au\n"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:8517
@@ -21847,6 +21863,11 @@ msgid ""
 "index entries.  Use this new indexing command just as you would use a "
 "predefined indexing command."
 msgstr ""
+"Isso define um novo índice, chamado o índice @samp{au}.  Ao mesmo tempo, "
+"ele cria um novo comando de indexação, @code{@@auindex}, que você "
+"consegue usar para fazer entradas de índice.  Use esse novo comando de "
+"indexação exatamente como você usaria um comando de indexação "
+"predefinido."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:8520
@@ -21854,6 +21875,8 @@ msgid ""
 "For example, here is a section heading followed by a concept index entry and "
 "two @samp{au} index entries."
 msgstr ""
+"Por exemplo, aqui está um título de seção seguido por uma entrada de "
+"índice de conceito e duas entradas de índice @samp{au}."
 
 #. type: example
 #: texinfo/texinfo.texi:8526
@@ -21864,11 +21887,16 @@ msgid ""
 "@@auindex Johnson, Mark\n"
 "@@auindex Lakoff, George\n"
 msgstr ""
+"@@section Semântica Cognitiva\n"
+"@@cindex esquemas de imagem cinestésica\n"
+"@@auindex Johnson, Mark\n"
+"@@auindex Lakoff, George\n"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:8530
 msgid "(Evidently, @samp{au} serves here as an abbreviation for ``author''.)"
 msgstr ""
+"(Evidentemente, @samp{au} aqui serve como uma abreviação para ``autor''.)"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:8534
@@ -21877,6 +21905,9 @@ msgid ""
 "index with @samp{index}; thus, defining an @samp{xy} index leads to the "
 "automatic creation of an @code{@@xyindex} command."
 msgstr ""
+"Texinfo constrói o novo comando de indexação concatenando o nome do "
+"índice com @samp{index}; portanto, definir um índice @samp{xy} leva à "
+"criação automática de um comando @code{@@xyindex}."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:8537
@@ -21884,6 +21915,8 @@ msgid ""
 "Use the @code{@@printindex} command to print the index, as you do with the "
 "predefined indices.  For example:"
 msgstr ""
+"Use o comando @code{@@printindex} para imprimir o índice, como você faz "
+"com índices predefinidos.  Por exemplo:"
 
 #. type: group
 #: texinfo/texinfo.texi:8542
@@ -21893,12 +21926,15 @@ msgid ""
 "@@unnumbered Author Index\n"
 "\n"
 msgstr ""
+"@@node Índice de Autor\n"
+"@@unnumbered Índice de Autor\n"
+"\n"
 
 #. type: group
 #: texinfo/texinfo.texi:8544
 #, no-wrap
 msgid "@@printindex au\n"
-msgstr ""
+msgstr "@@printindex au\n"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:8550
@@ -21907,6 +21943,9 @@ msgid ""
 "except that, in the printed output, it prints entries in an @code{@@code} "
 "font by default instead of in a roman font."
 msgstr ""
+"O @code{@@defcodeindex} é como o comando @code{@@defindex}, exceto que, na "
+"saída impressa, ele imprime entradas em uma fonte do @code{@@code} por "
+"padrão, em vez de uma fonte romana."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:8554
@@ -21915,6 +21954,10 @@ msgid ""
 "file, and (of course) before any @code{@@synindex} or @code{@@syncodeindex} "
 "commands (@pxref{Texinfo File Header})."
 msgstr ""
+"Você deveria definir novos índices antes da linha de fim de cabeçalho de "
+"um arquivo Texinfo e (é claro) antes de quaisquer comandos "
+"@code{@@synindex} ou @code{@@syncodeindex} (@pxref{Cabeçalho do Arquivo do "
+"Texinfo})."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:8559
@@ -21923,6 +21966,10 @@ msgid ""
 "single index in the final document whenever possible (no matter how many "
 "source indices you use), since then readers have only one place to look."
 msgstr ""
+"Conforme mencionado anteriormente (@pxref{Índices Predefinidos}), nós "
+"recomendamos ter um índice no documento final sempre que possível "
+"(independentemente de quantos índices de fonte você usar), pois assim "
+"leitores(as) terão somente um lugar para procurar."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:8566
@@ -21933,35 +21980,41 @@ msgid ""
 "@samp{.aux} or @samp{.xml}.  @command{texi2any} already reports an error if "
 "a new index conflicts well-known extension name."
 msgstr ""
+"Ao criar um índice, @TeX{} cria um arquivo cuja extensão é o nome do "
+"índice (@pxref{Nomes dos arquivos de índice}).  Portanto, você deveria "
+"evitar usar nomes de índices que colidam com extensões usadas para outros "
+"propósitos, tais como @samp{.aux} ou @samp{.xml}.  @command{texi2any} já "
+"informa um erro se um novo índice conflitar com um nome de extensão bem "
+"conhecido."
 
 #. type: node
 #: texinfo/texinfo.texi:8568
 #, no-wrap
 msgid "Insertions"
-msgstr ""
+msgstr "Inserções"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:8570
 msgid "@nodedescription Inserting @@-signs, braces, etc."
-msgstr ""
+msgstr "@nodedescription Inserindo sinais @@, chaves, etc."
 
 #. type: chapter
 #: texinfo/texinfo.texi:8570
 #, no-wrap
 msgid "Special Insertions"
-msgstr ""
+msgstr "Inserções Especiais"
 
 #. type: cindex
 #: texinfo/texinfo.texi:8571
 #, no-wrap
 msgid "Inserting special characters and symbols"
-msgstr ""
+msgstr "Inserindo caracteres e símbolos especiais"
 
 #. type: cindex
 #: texinfo/texinfo.texi:8572
 #, no-wrap
 msgid "Special insertions"
-msgstr ""
+msgstr "Inserções especiais"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:8577
@@ -21970,46 +22023,50 @@ msgid ""
 "meaning in Texinfo, such as braces, and for other graphic elements that do "
 "not correspond to simple characters you can type."
 msgstr ""
+"Texinfo fornece vários comandos para inserir caracteres que tenham "
+"significado especial no Texinfo, tais como chaves, e para outros elementos "
+"gráficos que não correspondam a caracteres simples que você consiga "
+"digitar."
 
 #. type: node
 #: texinfo/texinfo.texi:8579
 #, no-wrap
 msgid "Special Characters"
-msgstr ""
+msgstr "Caracteres Especiais"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:8581
 msgid "@nodedescription Inserting @@ @{@} , \\ # &"
-msgstr ""
+msgstr "@nodedescription Inserindo @@ @{@} , \\ # &"
 
 #. type: section
 #: texinfo/texinfo.texi:8581
 #, no-wrap
 msgid "Special Characters: Inserting @@ @{@} , \\ # &"
-msgstr ""
+msgstr "Caracteres Especiais: Inserindo @@ @{@} , \\ # &"
 
-#.  previous names for this node
+#.  nomes anteriores para este nó
 #. type: anchor{#1}
 #: texinfo/texinfo.texi:8584
 msgid "Braces Atsign"
-msgstr ""
+msgstr "Chaves Sinal de Arroba"
 
 #. type: anchor{#1}
 #: texinfo/texinfo.texi:8584
 msgid "Atsign Braces Comma"
-msgstr ""
+msgstr "Sinal de Arroba Chaves Vírgula"
 
 #. type: cindex
 #: texinfo/texinfo.texi:8584
 #, no-wrap
 msgid "Special characters, inserting"
-msgstr ""
+msgstr "Caracteres especiais, inserindo"
 
 #. type: cindex
 #: texinfo/texinfo.texi:8585
 #, no-wrap
 msgid "Commands to insert special characters"
-msgstr ""
+msgstr "Comandos para inserir caracteres especiais"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:8591
@@ -22019,6 +22076,10 @@ msgid ""
 "front of these characters to prevent Texinfo from misinterpreting them.  "
 "Alphabetic commands are also provided."
 msgstr ""
+"@samp{@@} e chaves são os caracteres especiais básicos no Texinfo.  Para "
+"inserir esses caracteres de forma que apareçam no texto, você precisa "
+"colocar um @samp{@@} na frente desses caracteres para evitar que o Texinfo "
+"os interprete mal. Comandos alfabéticos também são fornecidos."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:8594
@@ -22026,53 +22087,56 @@ msgid ""
 "The other characters (comma, backslash, hash, ampersand) are special only in "
 "restricted contexts, as explained in the respective sections."
 msgstr ""
+"Os demais caracteres (vírgula, barra invertida, cerquilha, e comercial) "
+"são especiais somente em contextos restritos, conforme explicado nas "
+"respectivas seções."
 
 #. type: node
 #: texinfo/texinfo.texi:8596
 #, no-wrap
 msgid "Inserting an Atsign"
-msgstr ""
+msgstr "Inserindo um Símbolo Arroba"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:8598
 msgid "@nodedescription @code{@@@@}, @code{@@atchar@{@}}."
-msgstr ""
+msgstr "@nodedescription @code{@@@@}, @code{@@atchar@{@}}."
 
 #. type: subsection
 #: texinfo/texinfo.texi:8598
 #, no-wrap
 msgid "Inserting `@@' with @code{@@@@} and @code{@@atchar@{@}}"
-msgstr ""
+msgstr "Inserindo `@@' com @code{@@@@} e @code{@@atchar@{@}}"
 
 #. type: cindex
 #: texinfo/texinfo.texi:8599
 #, no-wrap
 msgid "At sign, inserting"
-msgstr ""
+msgstr "Símbolo arroba, inserindo"
 
 #. type: cindex
 #: texinfo/texinfo.texi:8600
 #, no-wrap
 msgid "Inserting @@ @r{(literal @samp{@@})}"
-msgstr ""
+msgstr "Inserindo @@ @r{(@samp{@@} literal)}"
 
 #. type: findex
 #: texinfo/texinfo.texi:8601
 #, no-wrap
 msgid "@sortas{@@} @@ @r{(literal @samp{@@})}"
-msgstr ""
+msgstr "@sortas{@@} @@ @r{(@samp{@@} literal)}"
 
 #. type: findex
 #: texinfo/texinfo.texi:8603
 #, no-wrap
 msgid "@sortas{@@} @@"
-msgstr ""
+msgstr "@sortas{@@} @@"
 
 #. type: findex
 #: texinfo/texinfo.texi:8605
 #, no-wrap
 msgid "atchar"
-msgstr ""
+msgstr "atchar"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:8609
@@ -22080,6 +22144,8 @@ msgid ""
 "@code{@@@@} produces a single @samp{@@} character in the output.  Do not put "
 "braces after an @code{@@@@} command."
 msgstr ""
+"@code{@@@@} produz um caractere @samp{@@} na saída gerada.  Não coloque "
+"chaves depois de um comando @code{@@@@}."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:8615
@@ -22090,65 +22156,70 @@ msgid ""
 "avoid using the literal @samp{@@} character in the source (and may be "
 "clearer in other contexts)."
 msgstr ""
+"@code{@@atchar@{@}} também produz um caractere @samp{@@} na saída gerada.  "
+"Ele precisa de chaves seguintes, como de costume para comandos "
+"alfabéticos.  Em condicionais inline (@pxref{Condicionais Inline}), pode "
+"ser necessário evitar usar o caractere literal @samp{@@} no fonte (e "
+"possivelmente seja mais claro em outros contextos)."
 
 #. type: node
 #: texinfo/texinfo.texi:8617
 #, no-wrap
 msgid "Inserting Braces"
-msgstr ""
+msgstr "Inserindo Chaves"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:8619
 msgid "@nodedescription @code{@@@{ @@@}}, @code{@@l rbracechar@{@}}."
-msgstr ""
+msgstr "@nodedescription @code{@@@{ @@@}}, @code{@@l rbracechar@{@}}."
 
 #. type: subsection
 #: texinfo/texinfo.texi:8619
 #, no-wrap
 msgid "Inserting `@{ `@}' with @code{@@@{ @@@}} and @code{@@l rbracechar@{@}}"
-msgstr ""
+msgstr "Inserindo `@{ `@}' com @code{@@@{ @@@}} e @code{@@l rbracechar@{@}}"
 
 #. type: findex
 #: texinfo/texinfo.texi:8621
 #, no-wrap
 msgid "@{ @r{(literal @samp{@{})}"
-msgstr ""
+msgstr "@{ @r{(@samp{@{} literal)}"
 
 #. type: findex
 #: texinfo/texinfo.texi:8622
 #, no-wrap
 msgid "@} @r{(literal @samp{@}})}"
-msgstr ""
+msgstr "@} @r{(@samp{@}} literal)}"
 
 #. type: findex
 #: texinfo/texinfo.texi:8624
 #, no-wrap
 msgid "@{"
-msgstr ""
+msgstr "@{"
 
 #. type: findex
 #: texinfo/texinfo.texi:8625
 #, no-wrap
 msgid "@}"
-msgstr ""
+msgstr "@}"
 
 #. type: findex
 #: texinfo/texinfo.texi:8627
 #, no-wrap
 msgid "lbracechar"
-msgstr ""
+msgstr "lbracechar"
 
 #. type: findex
 #: texinfo/texinfo.texi:8628
 #, no-wrap
 msgid "rbracechar"
-msgstr ""
+msgstr "rbracechar"
 
 #. type: cindex
 #: texinfo/texinfo.texi:8629
 #, no-wrap
 msgid "Braces, inserting"
-msgstr ""
+msgstr "Chaves, inserindo"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:8634
@@ -22157,6 +22228,9 @@ msgid ""
 "produces a single @samp{@}}.  Do not put braces after either an @code{@@@{} "
 "or an @code{@@@}} command."
 msgstr ""
+"@code{@@@{} produz um @samp{@{} na saída gerada e @code{@@@}} produz um "
+"@samp{@}}.  Não coloque chaves depois de um comando @code{@@@{} ou "
+"@code{@@@}}."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:8641
@@ -22167,35 +22241,41 @@ msgid ""
 "(@pxref{Inline Conditionals}), it can be necessary to avoid using literal "
 "brace characters in the source (and may be clearer in other contexts)."
 msgstr ""
+"@code{@@lbracechar@{@}} e @code{@@rbracechar@{@}} também produzem "
+"caracteres @samp{@{} e @samp{@}} únicos na saída gerada.  Eles precisam de "
+"chaves seguintes, como de costume para comandos alfabéticos.  Em "
+"condicionais inline (@pxref{Condicionais Inline}), pode ser necessário "
+"evitar usar caracteres de chaves literais no fonte (e possivelmente seja "
+"mais claro em outros contextos)."
 
 #. type: node
 #: texinfo/texinfo.texi:8643
 #, no-wrap
 msgid "Inserting a Comma"
-msgstr ""
+msgstr "Inserindo Uma Vírgula"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:8645
 msgid "@nodedescription , and @code{@@comma@{@}}."
-msgstr ""
+msgstr "@nodedescription , e @code{@@comma@{@}}."
 
 #. type: subsection
 #: texinfo/texinfo.texi:8645
 #, no-wrap
 msgid "Inserting `,' with @code{@@comma@{@}}"
-msgstr ""
+msgstr "Inserindo `,' com @code{@@comma@{@}}"
 
 #. type: findex
 #: texinfo/texinfo.texi:8647
 #, no-wrap
 msgid "comma"
-msgstr ""
+msgstr "comma"
 
 #. type: cindex
 #: texinfo/texinfo.texi:8648
 #, no-wrap
 msgid "Comma, inserting"
-msgstr ""
+msgstr "Vírgula, inserindo"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:8652
@@ -22203,6 +22283,8 @@ msgid ""
 "Ordinarily, a comma `,' is a normal character that can be simply typed in "
 "your input where you need it."
 msgstr ""
+"Normalmente, uma vírgula `,' é um caractere normal que pode ser "
+"simplesmente digitado em tua entrada onde você precisar dela."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:8659
@@ -22214,6 +22296,12 @@ msgid ""
 "well as user-defined macros (@pxref{Defining Macros}), which take more than "
 "one argument."
 msgstr ""
+"No entanto, Texinfo usa a vírgula como um caractere especial somente em um "
+"contexto: para separar argumentos para aqueles comandos do Texinfo, como "
+"@code{@@node} (@pxref{Exigências da Linha de Nó}), @code{@@acronym} "
+"(@pxref{@code{@@acronym}}) e @code{@@xref} (@pxref{Referências Cruzadas}), "
+"bem como macros definidas por usuário(a) (@pxref{Definindo Macros}), que "
+"recebem mais que um argumento."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:8663
@@ -22222,6 +22310,9 @@ msgid ""
 "you must use the command @samp{@@comma@{@}} instead if you want to pass an "
 "actual comma.  Here are some examples:"
 msgstr ""
+"Como um caractere de vírgula confundiria a análise do Texinfo para esses "
+"comandos, você precisa usar o comando @samp{@@comma@{@}} se quiser passar "
+"uma vírgula real.  Aqui estão alguns exemplos:"
 
 #. type: example
 #: texinfo/texinfo.texi:8668
@@ -22231,6 +22322,9 @@ msgid ""
 "@@xref@{Comma,, The @@comma@{@} symbol@}\n"
 "@@mymac@{One argument@@comma@{@} containing a comma@}\n"
 msgstr ""
+"@@acronym@{ABC, Uma @@comma@{@} Bizarra@}\n"
+"@@xref@{Vírgula,, O símbolo @@comma@{@}@}\n"
+"@@mymac@{Um argumento@@comma@{@} contendo uma vírgula@}\n"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:8672
@@ -22238,6 +22332,8 @@ msgid ""
 "Although @samp{@@comma@{@}} can be used nearly anywhere, there is no need "
 "for it anywhere except in this unusual case."
 msgstr ""
+"Embora @samp{@@comma@{@}} possa ser usado em praticamente qualquer lugar, "
+"não existe necessidade dele em nenhum lugar, exceto nesse caso incomum."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:8676
@@ -22246,35 +22342,38 @@ msgid ""
 "its companion commands only for historical reasons.  It didn't seem "
 "important enough to define a synonym.)"
 msgstr ""
+"(Incidentalmente, o nome @samp{@@comma} carece do sufixo @samp{char} usado "
+"nos comandos complementares dele somente por motivos históricos.  Não "
+"pareceu importante o suficiente para definir um sinônimo.)"
 
 #. type: node
 #: texinfo/texinfo.texi:8678
 #, no-wrap
 msgid "Inserting a Backslash"
-msgstr ""
+msgstr "Inserindo uma Barra Invertida"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:8680
 msgid "@nodedescription \\ and @code{@@backslashchar@{@}}."
-msgstr ""
+msgstr "@nodedescription \\ e @code{@@backslashchar@{@}}."
 
 #. type: subsection
 #: texinfo/texinfo.texi:8680
 #, no-wrap
 msgid "Inserting `\\' with @code{@@backslashchar@{@}}"
-msgstr ""
+msgstr "Inserindo `\\' com @code{@@backslashchar@{@}}"
 
 #. type: findex
 #: texinfo/texinfo.texi:8682
 #, no-wrap
 msgid "backslashchar"
-msgstr ""
+msgstr "backslashchar"
 
 #. type: cindex
 #: texinfo/texinfo.texi:8683
 #, no-wrap
 msgid "Backslash, inserting"
-msgstr ""
+msgstr "Barra invertida, inserindo"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:8688
@@ -22283,6 +22382,10 @@ msgid ""
 "simply typed in your input where you need it.  The result is to typeset the "
 "backslash from the typewriter font."
 msgstr ""
+"Normalmente, uma barra invertida `\\' é um caractere normal no Texinfo que "
+"pode ser simplesmente digitado em tua entrada onde você precisar.  O "
+"resultado é o de tipografar a barra invertida oriunda da fonte da máquina "
+"de escrever."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:8692
@@ -22291,6 +22394,9 @@ msgid ""
 "context: to delimit formal arguments in the bodies of user-defined macros "
 "(@pxref{Defining Macros})."
 msgstr ""
+"No entanto, Texinfo usa a barra invertida como um caractere especial em um "
+"contexto restrito: para delimitar argumentos formais nos corpos de macros "
+"definidas por usuário(a) (@pxref{Definindo Macros})."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:8697
@@ -22299,30 +22405,34 @@ msgid ""
 "an alphabetic command that produces a backslash instead of using a literal "
 "\\.  Hence @code{@@backslashchar@{@}}.  Here is an example macro call:"
 msgstr ""
+"Devido aos caprichos da análise de argumentos de macro, é mais confiável "
+"passar um comando alfabético que produza uma barra invertida em vez de usar "
+"uma \\ literal.  Daí @code{@@backslashchar@{@}}.  Aqui está um exemplo de "
+"chamada de macro:"
 
 #. type: example
 #: texinfo/texinfo.texi:8700
 #, no-wrap
 msgid "@@mymac@{One argument@@backslashchar@{@} with a backslash@}\n"
-msgstr ""
+msgstr "@@mymac@{Um argumento@@backslashchar@{@} com uma barra invertida@}\n"
 
 #. type: findex
 #: texinfo/texinfo.texi:8702
 #, no-wrap
 msgid "\\backslash"
-msgstr ""
+msgstr "\\backslash"
 
 #. type: findex
 #: texinfo/texinfo.texi:8703
 #, no-wrap
 msgid "@sortas{\\} \\ @r{(literal @samp{\\} in math)}"
-msgstr ""
+msgstr "@sortas{\\} \\ @r{(@samp{\\} literal na matemática)}"
 
 #. type: findex
 #: texinfo/texinfo.texi:8705
 #, no-wrap
 msgid "@sortas{\\} \\"
-msgstr ""
+msgstr "@sortas{\\} \\"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:8712
@@ -22332,6 +22442,12 @@ msgid ""
 "@code{\\backslash} produce a ``math'' backslash (from the math symbol font), "
 "while @code{@@backslashchar@{@}} produces a typewriter backslash as usual."
 msgstr ""
+"Documentos do Texinfo também podem usar \\ como um caractere de comando "
+"dentro de @code{@@math} (@pxref{Inserindo Fórmulas Matemáticas}).  Nesse "
+"caso, @code{@@\\} ou @code{\\backslash} produz uma barra invertida "
+"``matematicista'' (proveniente da fonte do símbolo matemático), enquanto "
+"@code{@@backslashchar@{@}} produz uma barra invertida de máquina de "
+"escrever como sempre."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:8715
@@ -22339,6 +22455,8 @@ msgid ""
 "Although @samp{@@backslashchar@{@}} can be used nearly anywhere, there is no "
 "need for it except in these unusual cases."
 msgstr ""
+"Embora @samp{@@backslashchar@{@}} possa ser usado em praticamente qualquer "
+"lugar, não existe necessidade dele, exceto nesses casos incomuns."
 
 #. type: node
 #: texinfo/texinfo.texi:8717
