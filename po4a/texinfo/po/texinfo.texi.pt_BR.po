@@ -17,7 +17,7 @@ msgstr ""
 "Project-Id-Version: Texinfo 7.1\n"
 "Report-Msgid-Bugs-To: jafesp@gmail.com\n"
 "POT-Creation-Date: 2025-04-05 18:55-0300\n"
-"PO-Revision-Date: 2025-04-12 20:00-0300\n"
+"PO-Revision-Date: 2025-04-12 21:00-0300\n"
 "Last-Translator: Jamenson Ferreira Espindula de Almeida Melo "
 "<jafesp@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -22462,36 +22462,36 @@ msgstr ""
 #: texinfo/texinfo.texi:8717
 #, no-wrap
 msgid "Inserting a Hashsign"
-msgstr ""
+msgstr "Inserindo um Símbolo Cerquilha"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:8719
 msgid "@nodedescription # and @code{@@hashchar@{@}}."
-msgstr ""
+msgstr "@nodedescription # e @code{@@hashchar@{@}}."
 
 #. type: subsection
 #: texinfo/texinfo.texi:8719
 #, no-wrap
 msgid "Inserting `#' with @code{@@hashchar@{@}}"
-msgstr ""
+msgstr "Inserindo `#' com @code{@@hashchar@{@}}"
 
 #. type: findex
 #: texinfo/texinfo.texi:8721
 #, no-wrap
 msgid "hashchar"
-msgstr ""
+msgstr "hashchar"
 
 #. type: cindex
 #: texinfo/texinfo.texi:8722
 #, no-wrap
 msgid "Inserting #"
-msgstr ""
+msgstr "Inserindo #"
 
 #. type: cindex
 #: texinfo/texinfo.texi:8723
 #, no-wrap
 msgid "Hash sign, inserting"
-msgstr ""
+msgstr "Símbolo cerquilha, inserindo"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:8728
@@ -22500,24 +22500,27 @@ msgid ""
 "typed in your input where you need it.  The result is to typeset the hash "
 "character from the current font."
 msgstr ""
+"Normalmente, uma cerquilha `#' é um caractere normal no Texinfo que pode "
+"ser simplesmente digitado em tua entrada onde você precisar.  O resultado "
+"é o de tipografar o caractere cerquilha oriundo da fonte atual."
 
 #. type: cindex
 #: texinfo/texinfo.texi:8729
 #, no-wrap
 msgid "Number sign, inserting"
-msgstr ""
+msgstr "Símbolo de número, inserindo"
 
 #. type: cindex
 #: texinfo/texinfo.texi:8730
 #, no-wrap
 msgid "Octotherp, inserting"
-msgstr ""
+msgstr "Octotherp, inserindo"
 
 #. type: cindex
 #: texinfo/texinfo.texi:8731
 #, no-wrap
 msgid "Sharp sign (not), inserting"
-msgstr ""
+msgstr "Sinal sustenido (não), inserindo"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:8737
@@ -22528,6 +22531,11 @@ msgid ""
 "name.  In situations where Texinfo is used, ``hash'' is the most common in "
 "our experience."
 msgstr ""
+"Esse caractere tem muitos outros nomes, variando por local, como ``sinal "
+"numérico'', ``libra'' e ``octothorp''.  Às vezes também é chamado de "
+"``sustenido'' ou ``sinal sustenido'', pois ele se assemelha vagamente ao "
+"símbolo musical com esse nome.  Em situações onde Texinfo seja usado, "
+"``cerquilha'' é o mais comum em nossa experiência."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:8741
@@ -22536,6 +22544,9 @@ msgid ""
 "restricted context: to introduce the so-called @code{#line} directive and "
 "variants (@pxref{External Macro Processors})."
 msgstr ""
+"No entanto, Texinfo usa o caractere cerquilha como um caractere especial em "
+"um contexto restrito: para introduzir a assim chamada diretiva @code{#line} "
+"e variantes (@pxref{Processadores Externos de Macro})."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:8746
@@ -22545,12 +22556,16 @@ msgid ""
 "necessary to use @code{@@hashchar@{@}} or some other construct.  Here's an "
 "example:"
 msgstr ""
+"Portanto, para a finalidade de tipografar um caractere cerquilha real em tal "
+"local (por exemplo, em um programa que precise de documentação acerca de "
+"@code{#line}), é necessário usar @code{@@hashchar@{@}} ou alguma outra "
+"construção.  Aqui está um exemplo:"
 
 #. type: example
 #: texinfo/texinfo.texi:8749
 #, no-wrap
 msgid "@@hashchar@{@} 10 \"example.c\"\n"
-msgstr ""
+msgstr "@@hashchar@{@} 10 \"exemplo.c\"\n"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:8753
@@ -22558,53 +22573,55 @@ msgid ""
 "Although @samp{@@hashchar@{@}} can be used nearly anywhere, there is no need "
 "for it anywhere except this unusual case."
 msgstr ""
+"Embora @samp{@@hashchar@{@}} possa ser usado em praticamente qualquer lugar, "
+"não existe necessidade dele em nenhum lugar, exceto nesse caso incomum."
 
 #. type: node
 #: texinfo/texinfo.texi:8755
 #, no-wrap
 msgid "Inserting an Ampersand"
-msgstr ""
+msgstr "Inserindo um e comercial"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:8757
 msgid "@nodedescription & and @code{@@ampchar@{@}}."
-msgstr ""
+msgstr "@nodedescription & e @code{@@ampchar@{@}}."
 
 #. type: subsection
 #: texinfo/texinfo.texi:8757
 #, no-wrap
 msgid "Inserting `&' with @code{@@&} and @code{@@ampchar@{@}}"
-msgstr ""
+msgstr "Inserindo `&' com @code{@@&} e @code{@@ampchar@{@}}"
 
 #. type: findex
 #: texinfo/texinfo.texi:8759
 #, no-wrap
 msgid "ampchar"
-msgstr ""
+msgstr "ampchar"
 
 #. type: findex
 #: texinfo/texinfo.texi:8760
 #, no-wrap
 msgid "& @r{(literal @samp{&})}"
-msgstr ""
+msgstr "& @r{(@samp{&} literal)}"
 
 #. type: findex
 #: texinfo/texinfo.texi:8762
 #, no-wrap
 msgid "&"
-msgstr ""
+msgstr "&"
 
 #. type: cindex
 #: texinfo/texinfo.texi:8764
 #, no-wrap
 msgid "Inserting &"
-msgstr ""
+msgstr "Inserindo &"
 
 #. type: cindex
 #: texinfo/texinfo.texi:8765
 #, no-wrap
 msgid "Ampersand, inserting"
-msgstr ""
+msgstr "E comercial, inserindo"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:8770
@@ -22613,6 +22630,9 @@ msgid ""
 "simply typed in your input where you need it.  The result is to typeset the "
 "ampersand character."
 msgstr ""
+"Normalmente, um ``e'' comercial ``&'' é um caractere comum no Texinfo que "
+"pode ser simplesmente digitado na tua entrada, onde você precisar.  O "
+"resultado é a tipografia do caractere ``e'' comercial."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:8778
@@ -22624,6 +22644,14 @@ msgid ""
 "Emacs Lisp keywords. @xref{A Sample Function Description,,, elisp, GNU Emacs "
 "Lisp Reference Manual}.} (@pxref{Def Cmd Conventions}).  For example:"
 msgstr ""
+"No entanto, o caractere ``e'' comercial é tratado especialmente em apenas "
+"um contexto restrito.  No argumento para um comando de definição "
+"(@pxref{Comandos de Definição}), um ``e'' comercial seguido por uma série "
+"de letras pode ser tipografado especialmente ao se processar com @TeX{} "
+"@footnote{Essa sintaxe é usada para palavras-chave da Lisp do Emacs. "
+"@xref{Uma Descrição de Função de Amostra,,, elisp, Manual de Referência "
+"da Lisp do GNU Emacs}.} (@pxref{Convenções de Comandos de Definição}).  "
+"Por exemplo:"
 
 #. type: example
 #: texinfo/texinfo.texi:8783
@@ -22633,6 +22661,9 @@ msgid ""
 "@@code@{foo@} described here.\n"
 "@@end defun\n"
 msgstr ""
+"@@defun foo inteiro1 &optional inteiro2 &rest inteiros\n"
+"@@code@{foo@} descrito aqui.\n"
+"@@end defun\n"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:8788
@@ -22640,6 +22671,8 @@ msgid ""
 "may have @samp{&optional} and @samp{&rest} formatted in bold, even without "
 "any @@-command involved."
 msgstr ""
+"pode ter @samp{&optional} e @samp{&rest} formatados em negrito, mesmo sem "
+"nenhum comando @@ envolvido."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:8792
@@ -22648,6 +22681,9 @@ msgid ""
 "use @code{@@&} or some other construct.  Here's an example of a C++ function "
 "taking a reference as a parameter:"
 msgstr ""
+"Portanto, para a finalidade de tipografar um ``e'' comercial nesse contexto, "
+"é necessário usar @code{@@&} ou alguma outra construção.  Aqui está um "
+"exemplo de uma função C++ que recebe uma referência como parâmetro:"
 
 #. type: example
 #: texinfo/texinfo.texi:8797
@@ -22657,6 +22693,9 @@ msgid ""
 "Documentation of @@code@{foo@}.\n"
 "@@end deftypefn\n"
 msgstr ""
+"@@deftypefn Função int foo (const std::vector<int>@@& @@var@{bar@})\n"
+"Documentação de @@code@{foo@}.\n"
+"@@end deftypefn\n"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:8801
@@ -22669,12 +22708,12 @@ msgstr "Este é o primeiro capítulo"
 #: texinfo/texinfo.texi:8802
 #, no-wrap
 msgid "Function int foo (const std::vector<int>@& @var{bar})"
-msgstr ""
+msgstr "Função int foo (const std::vector<int>@& @var{bar})"
 
 #. type: deftypefn
 #: texinfo/texinfo.texi:8804
 msgid "Documentation of @code{foo}."
-msgstr ""
+msgstr "Documentação de @code{foo}."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:8808
@@ -22682,6 +22721,9 @@ msgid ""
 "Although @samp{@@&} and @samp{@@ampchar@{@}} can be used nearly anywhere, "
 "there is no need for them anywhere except this unusual case."
 msgstr ""
+"Embora @samp{@@&} e @samp{@@ampchar@{@}} possam ser usados ​​em quase "
+"qualquer lugar, não existe necessidade deles em nenhum lugar, exceto nesse "
+"caso incomum."
 
 #. type: section
 #: texinfo/texinfo.texi:8810
