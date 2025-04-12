@@ -17,7 +17,7 @@ msgstr ""
 "Project-Id-Version: Texinfo 7.1\n"
 "Report-Msgid-Bugs-To: jafesp@gmail.com\n"
 "POT-Creation-Date: 2025-04-05 18:55-0300\n"
-"PO-Revision-Date: 2025-04-11 20:40-0300\n"
+"PO-Revision-Date: 2025-04-11 21:05-0300\n"
 "Last-Translator: Jamenson Ferreira Espindula de Almeida Melo "
 "<jafesp@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21539,7 +21539,7 @@ msgstr ""
 #: texinfo/texinfo.texi:8396
 #, no-wrap
 msgid "@code{@@syncodeindex}"
-msgstr ""
+msgstr "@code{@@syncodeindex}"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:8398
@@ -21547,18 +21547,20 @@ msgid ""
 "@nodedescription How to merge two indices, using @code{@@code} font for the "
 "merged-from index."
 msgstr ""
+"@nodedescription Como mesclar dois índices, usando a fonte do @code{@@code} "
+"para o índice mesclado."
 
 #. type: subsection
 #: texinfo/texinfo.texi:8398
 #, no-wrap
 msgid "@code{@@syncodeindex}: Combining Indices Using @code{@@code}"
-msgstr ""
+msgstr "@code{@@syncodeindex}: Combinando Índices Usando @code{@@code}"
 
 #. type: findex
 #: texinfo/texinfo.texi:8401
 #, no-wrap
 msgid "syncodeindex"
-msgstr ""
+msgstr "syncodeindex"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:8407
@@ -21568,6 +21570,10 @@ msgid ""
 "@code{@@cindex}, and use the @code{@@syncodeindex} command to redirect the "
 "function index entries into the concept index."
 msgstr ""
+"Quando quiser combinar funções e conceitos em um índice, você deveria "
+"indexar as funções com @code{@@findex} e indexar os conceitos com "
+"@code{@@cindex} e usar o comando @code{@@syncodeindex} para redirecionar as "
+"entradas do índice de função para o índice de conceito."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:8411
@@ -21576,71 +21582,75 @@ msgid ""
 "the index to redirect, and the name of the index to redirect it to.  The "
 "template looks like this:"
 msgstr ""
+"O comando @code{@@syncodeindex} recebe dois argumentos; eles são o nome do "
+"índice para redirecionar e o nome do índice para o qual redirecioná-lo.  "
+"O modelo se parece com isto:"
 
 #. type: example
 #: texinfo/texinfo.texi:8414
 #, no-wrap
 msgid "@@syncodeindex @var{from} @var{to}\n"
-msgstr ""
+msgstr "@@syncodeindex @var{de} @var{para}\n"
 
 #. type: cindex
 #: texinfo/texinfo.texi:8416
 #, no-wrap
 msgid "Predefined names for indices"
-msgstr ""
+msgstr "Nomes predefinidos para índices"
 
 #. type: cindex
 #: texinfo/texinfo.texi:8417
 #, no-wrap
 msgid "Two letter names for indices"
-msgstr ""
+msgstr "Nomes de duas letras para índices"
 
 #. type: cindex
 #: texinfo/texinfo.texi:8418
 #, no-wrap
 msgid "Indices, two letter names"
-msgstr ""
+msgstr "Índices, nomes de duas letras"
 
 #. type: cindex
 #: texinfo/texinfo.texi:8419
 #, no-wrap
 msgid "Names for indices"
-msgstr ""
+msgstr "Nomes para índices"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:8421
 msgid "For this purpose, the indices are given two-letter names:"
 msgstr ""
+"Para esse propósito, para os índices são fornecidos nomes de duas letras:"
 
 #. type: table
 #: texinfo/texinfo.texi:8425
 msgid "Concept index"
-msgstr ""
+msgstr "Índice de conceito"
 
 #. type: table
 #: texinfo/texinfo.texi:8427
 msgid "Function index"
-msgstr ""
+msgstr "Índice de função"
 
 #. type: table
 #: texinfo/texinfo.texi:8429
 msgid "Key index"
-msgstr ""
+msgstr "Índice de tecla"
 
 #. type: table
 #: texinfo/texinfo.texi:8431
 msgid "Program index"
-msgstr ""
+msgstr "Índice de programa"
 
 #. type: table
 #: texinfo/texinfo.texi:8433
 msgid "Data type index"
-msgstr ""
+msgstr "Índice de tipo de dados"
 
 #. type: table
 #: texinfo/texinfo.texi:8435
 msgid "Variable index"
-msgstr ""
+msgstr "Índice de variável"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:8441
@@ -21649,12 +21659,16 @@ msgid ""
 "end-of-header line at the beginning of a Texinfo file.  For example, to "
 "merge a function index with a concept index, write the following:"
 msgstr ""
+"Escreva um comando @code{@@syncodeindex} antes ou logo depois da linha de "
+"fim do cabeçalho no início de um arquivo Texinfo.  Por exemplo, para "
+"mesclar um índice de função com um índice de conceito, escreva o "
+"seguinte:"
 
 #. type: example
 #: texinfo/texinfo.texi:8444
 #, no-wrap
 msgid "@@syncodeindex fn cp\n"
-msgstr ""
+msgstr "@@syncodeindex fn cp\n"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:8449
@@ -21662,6 +21676,8 @@ msgid ""
 "This causes all entries designated for the function index to merge in with "
 "the concept index instead."
 msgstr ""
+"Isso fará com que todas as entradas designadas para o índice de função "
+"sejam mescladas com o índice de conceito."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:8452
@@ -21669,6 +21685,8 @@ msgid ""
 "To merge both a variable index and a function index into a concept index, "
 "write the following:"
 msgstr ""
+"Para mesclar ambos, um índice de variável e um índice de função, em um "
+"índice de conceito, escreva o seguinte:"
 
 #. type: group
 #: texinfo/texinfo.texi:8457
@@ -21677,12 +21695,14 @@ msgid ""
 "@@syncodeindex vr cp\n"
 "@@syncodeindex fn cp\n"
 msgstr ""
+"@@syncodeindex vr cp\n"
+"@@syncodeindex fn cp\n"
 
 #. type: cindex
 #: texinfo/texinfo.texi:8460
 #, no-wrap
 msgid "Fonts for indices"
-msgstr ""
+msgstr "Fontes para índices"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:8467
@@ -21694,6 +21714,13 @@ msgid ""
 "index, all the function names are printed in the @code{@@code} font as you "
 "would expect."
 msgstr ""
+"O comando @code{@@syncodeindex} coloca todas as entradas oriundas do índice "
+"`de' (o índice redirecionado) na fonte do @code{@@code}, substituindo "
+"qualquer fonte padrão que seja usada pelo índice para o qual as entradas "
+"sejam agora direcionadas.  Dessa forma, se você direcionar nomes de "
+"funções oriundas de um índice de função para um índice de conceito, "
+"todos os nomes de funções serão impressos na fonte do @code{@@code} como "
+"você esperaria."
 
 #. type: node
 #: texinfo/texinfo.texi:8469
