@@ -17,7 +17,7 @@ msgstr ""
 "Project-Id-Version: Texinfo 7.1\n"
 "Report-Msgid-Bugs-To: jafesp@gmail.com\n"
 "POT-Creation-Date: 2025-04-13 00:11-0300\n"
-"PO-Revision-Date: 2025-04-12 23:00-0300\n"
+"PO-Revision-Date: 2025-04-13 01:10-0300\n"
 "Last-Translator: Jamenson Ferreira Espindula de Almeida Melo "
 "<jafesp@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -23022,60 +23022,60 @@ msgstr "@code{@@:} não tem efeito na saída HTML ou DocBook."
 #: texinfo/texinfo.texi:8999
 #, no-wrap
 msgid "Ending a Sentence"
-msgstr ""
+msgstr "Finalizando Uma Frase"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:8997
 msgid "@nodedescription Sometimes it does."
-msgstr ""
+msgstr "@nodedescription Algumas vezes finaliza."
 
 #. type: cindex
 #: texinfo/texinfo.texi:9000
 #, no-wrap
 msgid "Sentence ending punctuation"
-msgstr ""
+msgstr "Pontuação de final de frase"
 
 #. type: findex
 #: texinfo/texinfo.texi:9002
 #, no-wrap
 msgid ". @r{(end of sentence)}"
-msgstr ""
+msgstr ". @r{(fim de frase)}"
 
 #. type: findex
 #: texinfo/texinfo.texi:9003
 #, no-wrap
 msgid "! @r{(end of sentence)}"
-msgstr ""
+msgstr "! @r{(fim de frase)}"
 
 #. type: findex
 #: texinfo/texinfo.texi:9004
 #, no-wrap
 msgid "? @r{(end of sentence)}"
-msgstr ""
+msgstr "? @r{(fim de frase)}"
 
 #. type: findex
 #: texinfo/texinfo.texi:9006
 #, no-wrap
 msgid "."
-msgstr ""
+msgstr "."
 
 #. type: findex
 #: texinfo/texinfo.texi:9007
 #, no-wrap
 msgid "!"
-msgstr ""
+msgstr "!"
 
 #. type: findex
 #: texinfo/texinfo.texi:9008
 #, no-wrap
 msgid "?"
-msgstr ""
+msgstr "?"
 
 #. type: cindex
 #: texinfo/texinfo.texi:9010
 #, no-wrap
 msgid "Spacing, at ends of sentences"
-msgstr ""
+msgstr "Espaçamento, ao final de frases"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:9016
@@ -23086,6 +23086,12 @@ msgid ""
 "followed by optional closing punctuation, and then whitespace, and "
 "@emph{not} preceded by a capital letter."
 msgstr ""
+"Como mencionado acima, Texinfo normalmente insere espaço adicional depois "
+"do fim de uma frase.  Ele usa a mesma heurística para isso que o @TeX{}: "
+"uma frase termina com um ponto final, ponto de exclamação ou ponto de "
+"interrogação, seja precedido ou seguido por pontuação opcional de "
+"fechamento, e, então, espaço em branco, e @emph{não} precedido por uma "
+"letra maiúscula."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:9021
@@ -23095,6 +23101,10 @@ msgid ""
 "that does end with a capital letter.  Do not put braces after any of these "
 "commands.  For example:"
 msgstr ""
+"Use @code{@@.}@: em vez de um ponto, @code{@@!}@: em vez de um ponto de "
+"exclamação e @code{@@?}@: em vez de um ponto de interrogação ao final de "
+"uma frase que termine com uma letra maiúscula.  Não coloque chaves depois "
+"de quaisquer desses comandos.  Por exemplo:"
 
 #. type: example
 #: texinfo/texinfo.texi:9025
@@ -23103,6 +23113,8 @@ msgid ""
 "Give it to M.I.B. and to M.E.W@@.  Also, give it to R.J.C@@.\n"
 "Give it to M.I.B. and to M.E.W.  Also, give it to R.J.C.\n"
 msgstr ""
+"Dê para M.I.B. e para M.E.W@@.  Também, dê para R.J.C@@.\n"
+"Dê para M.I.B. e para M.E.W.  Também, dê para R.J.C.\n"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:9030
@@ -23110,6 +23122,8 @@ msgid ""
 "The output follows.  In printed output and Info, you can see the desired "
 "extra whitespace after the @samp{W} in the first line."
 msgstr ""
+"A saída gerada segue.  Na saída gerada impressa e no Info, você pode ver "
+"o espaço em branco extra desejado depois do @samp{W} na primeira linha."
 
 #. type: quotation
 #: texinfo/texinfo.texi:9034
@@ -23117,6 +23131,8 @@ msgid ""
 "Give it to M.I.B. and to M.E.W@.  Also, give it to R.J.C@.@* Give it to "
 "M.I.B. and to M.E.W.  Also, give it to R.J.C."
 msgstr ""
+"Dê para M.I.B. e para M.E.W@.  Também, dê para R.J.C@.@* Dê para M.I.B. "
+"e para M.E.W.  Também, dê para R.J.C."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:9038
@@ -23124,12 +23140,14 @@ msgid ""
 "In other output formats, @code{@@.}@: is equivalent to a simple @samp{.}; "
 "likewise for @code{@@!}@: and @code{@@?}@:."
 msgstr ""
+"Em outros formatos de saída, @code{@@.}@: é equivalente a um simples "
+"@samp{.}; o mesmo vale para @code{@@!}@: e @code{@@?}@:."
 
 #. type: cindex
 #: texinfo/texinfo.texi:9039
 #, no-wrap
 msgid "Closing punctuation, and sentence ending"
-msgstr ""
+msgstr "Pontuação de fechamento, e finalização de frase"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:9048
@@ -23142,6 +23160,13 @@ msgid ""
 "is the same rule as @TeX{}.)  For instance, the periods in @samp{foo.) Bar} "
 "and @samp{foo.'' Bar} do end sentences."
 msgstr ""
+"A ``pontuação de fechamento'' mencionada acima é definida como um "
+"parêntese à direita (@samp{)}), colchete à direita (@samp{]}), ou aspa à "
+"direita, seja simples ou dupla (@samp{'} e @samp{''}; as muitas aspas "
+"Unicode adicionais à direita possíveis não estão incluídas).  Esses "
+"caracteres podem ser considerados invisíveis com respeito a se um ponto "
+"fornecido finaliza uma frase.  (Essa é a mesma regra do @TeX{}.)  Por "
+"exemplo, os pontos em @samp{foo.) Bar} e @samp{foo.'' Bar} finalizam frases."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:9056
@@ -23153,6 +23178,12 @@ msgid ""
 "upper-case letter before it immaterial for the purposes of deciding whether "
 "the period ends the sentence."
 msgstr ""
+"Os significados de @code{@@:} e @code{@@.}, etc.@: no Texinfo são "
+"projetados para funcionar bem com os comandos de movimento de frase do Emacs "
+"(@pxref{Sentences,,, emacs, O Manual do GNU Emacs}).  Possivelmente ajude "
+"imaginar que o @samp{@@} em @samp{@@.}, etc., é uma letra minúscula "
+"invisível `a' que torna uma letra maiúscula antes dela irrelevante para os "
+"propósitos de decidir se o ponto final termina a frase."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:9066
@@ -23166,6 +23197,16 @@ msgid ""
 "needed.  Similarly, in @code{... @@var@{VARNAME@}. Text} the period after "
 "@var{VARNAME} ends the sentence; there is no need to use @code{@@.}."
 msgstr ""
+"Alguns comandos do Texinfo não são considerados como sendo uma "
+"abreviação, mesmo que possam terminar com uma letra maiúscula quando "
+"expandidos, de forma que você não tenha que inserir @code{@@.} e "
+"acompanhantes.  Notavelmente, esse é o caso para comandos de realçamento "
+"tipo código, argumentos @code{@@var} terminando com uma letra maiúscula, "
+"@code{@@LaTeX} e @code{@@TeX}.  Por exemplo, essa frase terminou com "
+"@samp{... @@code@{@@@@TeX@}.}; @code{@@.} não foi necessário.  Da mesma "
+"forma, em @code{... @@var@{NOMEVARIÁVEL@}. Texto} o ponto depois de "
+"@var{NOMEVARIÁVEL} termina a frase; não existe necessidade de usar "
+"@code{@@.}."
 
 #. type: node
 #: texinfo/texinfo.texi:9068
