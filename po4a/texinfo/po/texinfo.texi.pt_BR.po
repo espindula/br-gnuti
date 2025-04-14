@@ -17,7 +17,7 @@ msgstr ""
 "Project-Id-Version: Texinfo 7.1\n"
 "Report-Msgid-Bugs-To: jafesp@gmail.com\n"
 "POT-Creation-Date: 2025-04-13 00:11-0300\n"
-"PO-Revision-Date: 2025-04-13 01:10-0300\n"
+"PO-Revision-Date: 2025-04-13 23:30-0300\n"
 "Last-Translator: Jamenson Ferreira Espindula de Almeida Melo "
 "<jafesp@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -23212,42 +23212,42 @@ msgstr ""
 #: texinfo/texinfo.texi:9068
 #, no-wrap
 msgid "@code{@@frenchspacing}"
-msgstr ""
+msgstr "@code{@@frenchspacing}"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:9070
 msgid "@nodedescription Specifying end-of-sentence spacing."
-msgstr ""
+msgstr "@nodedescription Especificando espaçamento de fim de frase."
 
 #. type: subsection
 #: texinfo/texinfo.texi:9070
 #, no-wrap
 msgid "@code{@@frenchspacing} @var{val}: Control Sentence Spacing"
-msgstr ""
+msgstr "@code{@@frenchspacing} @var{val}: Espaçamento de Controle de Frase"
 
 #. type: findex
 #: texinfo/texinfo.texi:9073
 #, no-wrap
 msgid "frenchspacing"
-msgstr ""
+msgstr "frenchspacing"
 
 #. type: cindex
 #: texinfo/texinfo.texi:9074
 #, no-wrap
 msgid "French spacing"
-msgstr ""
+msgstr "Espaçamento francês"
 
 #. type: cindex
 #: texinfo/texinfo.texi:9075
 #, no-wrap
 msgid "Sentences, spacing after"
-msgstr ""
+msgstr "Frases, espaçamento depois"
 
 #. type: cindex
 #: texinfo/texinfo.texi:9076
 #, no-wrap
 msgid "Space, after sentences"
-msgstr ""
+msgstr "Espaço, depois de frases"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:9083
@@ -23257,6 +23257,11 @@ msgid ""
 "and printed output, not in other output formats).  In French typography (and "
 "others), this extra space is wrong; all spaces are uniform."
 msgstr ""
+"Na tipografia americana, é tradicional e correto colocar espaço extra ao "
+"final de uma frase.  Esse é o padrão no Texinfo (implementado no Info e na "
+"saída gerada impressa; não em outros formatos de saída).  Na tipografia "
+"francesa (e outras), esse espaço extra é errado; todos os espaços são "
+"uniformes."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:9089
@@ -23266,6 +23271,11 @@ msgid ""
 "which must be the single word @samp{on} or @samp{off} (always these words, "
 "regardless of the language of the document).  Here is an example:"
 msgstr ""
+"Portanto, Texinfo fornece o comando @code{@@frenchspacing} para controlar o "
+"espaçamento depois da pontuação.  Ele lê o resto da linha como "
+"argumento, que precisa ser a única palavra @samp{on} ou @samp{off} (sempre "
+"essas palavras, independentemente do idioma do documento).  Aqui está um "
+"exemplo:"
 
 #. type: example
 #: texinfo/texinfo.texi:9093
@@ -23275,6 +23285,9 @@ msgid ""
 "This is text. Two sentences. Three sentences. French spacing.\n"
 "\n"
 msgstr ""
+"@@frenchspacing on\n"
+"Isso é texto. Duas frases. Três frases. Espaçamento francês.\n"
+"\n"
 
 #. type: example
 #: texinfo/texinfo.texi:9096
@@ -23283,6 +23296,8 @@ msgid ""
 "@@frenchspacing off\n"
 "This is text. Two sentences. Three sentences. Non-French spacing.\n"
 msgstr ""
+"@@frenchspacing off\n"
+"Isso é texto. Duas frases. Três frases. Espaçamento não francês.\n"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:9103
@@ -23290,6 +23305,8 @@ msgid ""
 "@frenchspacing on This is text. Two sentences. Three sentences. French "
 "spacing."
 msgstr ""
+"@frenchspacing on Isso é texto. Duas frases. Três frases. Espaçamento "
+"francês."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:9106
@@ -23297,6 +23314,8 @@ msgid ""
 "@frenchspacing off This is text. Two sentences. Three sentences. Non-French "
 "spacing."
 msgstr ""
+"@frenchspacing off Isso é texto. Duas frases. Três frases. Espaçamento "
+"não francês."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:9109
@@ -23304,52 +23323,55 @@ msgid ""
 "@code{@@frenchspacing} also affects the output after @code{@@.}, @code{@@!}, "
 "and @code{@@?} (@pxref{Ending a Sentence})."
 msgstr ""
+"@code{@@frenchspacing} também afeta a saída gerada depois de @code{@@.}, "
+"@code{@@!} e @code{@@?} (@pxref{Finalizando Uma Frase})."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:9111
 msgid "@code{@@frenchspacing} has no effect on the HTML or DocBook output."
 msgstr ""
+"@code{@@frenchspacing} não tem efeito na saída gerada de HTML ou DocBook."
 
 #. type: node
 #: texinfo/texinfo.texi:9113
 #, no-wrap
 msgid "@code{@@dmn}"
-msgstr ""
+msgstr "@code{@@dmn}"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:9115
 msgid "@nodedescription Formatting a dimension."
-msgstr ""
+msgstr "@nodedescription Formatando uma dimensão."
 
 #. type: subsection
 #: texinfo/texinfo.texi:9115
 #, no-wrap
 msgid "@code{@@dmn}@{@var{dimension}@}: Format a Dimension"
-msgstr ""
+msgstr "@code{@@dmn}@{@var{dimensão}@}: Formatar uma Dimensão"
 
 #. type: findex
 #: texinfo/texinfo.texi:9118 texinfo/texinfo.texi:9121
 #, no-wrap
 msgid "dmn"
-msgstr ""
+msgstr "dmn"
 
 #. type: cindex
 #: texinfo/texinfo.texi:9118
 #, no-wrap
 msgid "Thin space between number, dimension"
-msgstr ""
+msgstr "Espaço fino entre número, dimensão"
 
 #. type: cindex
 #: texinfo/texinfo.texi:9119
 #, no-wrap
 msgid "Dimension formatting"
-msgstr ""
+msgstr "Formatação de dimensão"
 
 #. type: cindex
 #: texinfo/texinfo.texi:9120
 #, no-wrap
 msgid "Format a dimension"
-msgstr ""
+msgstr "Formatar uma dimensão"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:9126
@@ -23358,6 +23380,10 @@ msgid ""
 "space for proper typesetting inserted in printed output.  In other output "
 "formats, the formatting commands insert no space at all."
 msgstr ""
+"Você pode usar o comando @code{@@dmn} para formatar uma dimensão com "
+"exatamente espaço suficiente para tipografia adequada inserida na saída "
+"gerada impressa.  Em outros formatos de saída gerada, os comandos de "
+"formatação não inserem espaço algum."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:9130
@@ -23366,17 +23392,20 @@ msgid ""
 "immediately, with no intervening space, by @code{@@dmn}, and then by the "
 "dimension within braces.  For example,"
 msgstr ""
+"Para usar o comando @code{@@dmn}, escreva o número e depois siga-o "
+"imediatamente, sem espaço intermediário, por @code{@@dmn}, e depois pela "
+"dimensão entre chaves.  Por exemplo,"
 
 #. type: example
 #: texinfo/texinfo.texi:9133
 #, no-wrap
 msgid "A4 paper is 8.27@@dmn@{in@} wide.\n"
-msgstr ""
+msgstr "Papel A4 tem 8,27@@dmn@{in@} de largura.\n"
 
 #. type: quotation
 #: texinfo/texinfo.texi:9140
 msgid "A4 paper is 8.27@dmn{in} wide."
-msgstr ""
+msgstr "Papel A4 tem 8,27@dmn{in} de largura."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:9150
@@ -23389,35 +23418,44 @@ msgid ""
 "you should write @samp{@@:} after the period to avoid inserting extra "
 "whitespace in printed output, as shown here.  @xref{Not Ending a Sentence}."
 msgstr ""
+"Nem todo mundo usa esse estilo.  Algumas pessoas preferem `8.27@tie{}in.'@: "
+"ou `8.27@tie{}inches'.  Nesses casos, no entanto, você precisa usar "
+"@code{@@tie} (@pxref{@code{@@tie}}) ou @code{@@w} (@pxref{@code{@@w}}) de "
+"forma que nenhuma quebra de linha possa ocorrer entre o número e a "
+"dimensão.  Além disso, se você escrever um ponto depois de uma "
+"abreviação dentro de uma frase (como com `in.'@: acima), você deveria "
+"escrever @samp{@@:} depois do ponto para evitar inserir espaços em branco "
+"extras na saída gerada, como mostrado aqui.  @xref{Não Finalizando Uma "
+"Frase}."
 
 #. type: section
 #: texinfo/texinfo.texi:9152 texinfo/texinfo.texi:9154
 #, no-wrap
 msgid "Inserting Accents"
-msgstr ""
+msgstr "Inserindo Acentos"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:9154
 msgid "@nodedescription Inserting accents and special characters."
-msgstr ""
+msgstr "@nodedescription Inserindo acentos e caracteres especiais."
 
 #. type: cindex
 #: texinfo/texinfo.texi:9156
 #, no-wrap
 msgid "Inserting accents"
-msgstr ""
+msgstr "Inserindo acentos"
 
 #. type: cindex
 #: texinfo/texinfo.texi:9157
 #, no-wrap
 msgid "Accents, inserting"
-msgstr ""
+msgstr "Acentos, inserindo"
 
 #. type: cindex
 #: texinfo/texinfo.texi:9158
 #, no-wrap
 msgid "Floating accents, inserting"
-msgstr ""
+msgstr "Acentos flutuantes, inserindo"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:9167
@@ -23429,6 +23467,13 @@ msgid ""
 "(@code{@@'e}).  This is to make the source as convenient as possible to type "
 "and read, since accented characters are very common in some languages."
 msgstr ""
+"Aqui está uma tabela com os comandos que Texinfo fornece para inserir "
+"acentos flutuantes.  Eles todos precisam de um argumento, o caractere a "
+"acentuar, que pode ou ser fornecido entre chaves como de costume "
+"(@code{@@'@{e@}}), ou, como um caso especial, as chaves podem ser omitidas, "
+"em cujo caso o argumento é o próximo caractere (@code{@@'e}).  Isso é "
+"para tornar o fonte o mais conveniente possível para digitar-se e ler-se, "
+"já que caracteres acentuados são muito comuns em alguns idiomas."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:9173
@@ -23438,6 +23483,11 @@ msgid ""
 "the command is non-alphabetic, such as @code{@@'}, then there must "
 "@emph{not} be a space; the argument is the very next character."
 msgstr ""
+"Se o comando for alfabético, como @code{@@dotaccent}, então precisa "
+"existir um espaço entre o nome do comando e o argumento se chaves não "
+"forem usadas.  Se o comando for não alfabético, como @code{@@'}, então "
+"precisa @emph{não} existir um espaço; o argumento é o exato próximo "
+"caractere."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:9176
@@ -23445,6 +23495,8 @@ msgid ""
 "Exception: the argument to @code{@@tieaccent} must be enclosed in braces "
 "(since it is two characters instead of one)."
 msgstr ""
+"Exceção: o argumento para @code{@@tieaccent} precisa estar circundado de "
+"chaves (já que são dois caracteres em vez de um)."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:9182
@@ -23455,381 +23507,390 @@ msgid ""
 "@command{texi2any} (@pxref{@code{@@documentencoding}}).  ASCII "
 "transliterations are used if the encoded characters are not output."
 msgstr ""
+"Na saída Info e de texto simples, as construções de acento são geradas "
+"como caracteres acentuados verdadeiros se a codificação do documento "
+"suportar os caracteres exigidos, a menos que a opção "
+"@option{--disable-encoding} seja fornecida para o @command{texi2any} "
+"(@pxref{@code{@@documentencoding}}).  Transliterações ASCII são usadas se "
+"os caracteres codificados não forem gerados."
 
 #. type: findex
 #: texinfo/texinfo.texi:9183
 #, no-wrap
 msgid "\" @r{(umlaut accent)}"
-msgstr ""
+msgstr "\" @r{(acento trema)}"
 
 #. type: cindex
 #: texinfo/texinfo.texi:9184
 #, no-wrap
 msgid "Umlaut accent"
-msgstr ""
+msgstr "Acento trema"
 
 #. type: findex
 #: texinfo/texinfo.texi:9185
 #, no-wrap
 msgid "' @r{(acute accent)}"
-msgstr ""
+msgstr "' @r{(acento agudo)}"
 
 #. type: cindex
 #: texinfo/texinfo.texi:9186
 #, no-wrap
 msgid "Acute accent"
-msgstr ""
+msgstr "Acento agudo"
 
 #. type: findex
 #: texinfo/texinfo.texi:9187
 #, no-wrap
 msgid "= @r{(macron accent)}"
-msgstr ""
+msgstr "= @r{(acento macron)}"
 
 #. type: cindex
 #: texinfo/texinfo.texi:9188
 #, no-wrap
 msgid "Macron accent"
-msgstr ""
+msgstr "Acento macron"
 
 #. type: findex
 #: texinfo/texinfo.texi:9189
 #, no-wrap
 msgid "^ @r{(circumflex accent)}"
-msgstr ""
+msgstr "^ @r{(acento circunflexo)}"
 
 #. type: cindex
 #: texinfo/texinfo.texi:9190
 #, no-wrap
 msgid "Circumflex accent"
-msgstr ""
+msgstr "Acento circunflexo"
 
 #. type: findex
 #: texinfo/texinfo.texi:9191
 #, no-wrap
 msgid "` @r{(grave accent)}"
-msgstr ""
+msgstr "` @r{(acento grave)}"
 
 #. type: cindex
 #: texinfo/texinfo.texi:9192
 #, no-wrap
 msgid "Grave accent"
-msgstr ""
+msgstr "Acento grave"
 
 #. type: findex
 #: texinfo/texinfo.texi:9193
 #, no-wrap
 msgid "~ @r{(tilde accent)}"
-msgstr ""
+msgstr "~ @r{(acento til)}"
 
 #. type: cindex
 #: texinfo/texinfo.texi:9194
 #, no-wrap
 msgid "Tilde accent"
-msgstr ""
+msgstr "Acento til"
 
 #. type: findex
 #: texinfo/texinfo.texi:9195
 #, no-wrap
 msgid ", @r{(cedilla accent)}"
-msgstr ""
+msgstr ", @r{(acento cedilha)}"
 
 #. type: cindex
 #: texinfo/texinfo.texi:9196
 #, no-wrap
 msgid "Cedilla accent"
-msgstr ""
+msgstr "Acento cedilha"
 
 #. type: findex
 #: texinfo/texinfo.texi:9197
 #, no-wrap
 msgid "dotaccent"
-msgstr ""
+msgstr "dotaccent"
 
 #. type: cindex
 #: texinfo/texinfo.texi:9198
 #, no-wrap
 msgid "Dot accent"
-msgstr ""
+msgstr "Acento ponto"
 
 #. type: findex
 #: texinfo/texinfo.texi:9199
 #, no-wrap
 msgid "H @r{(Hungarian umlaut accent)}"
-msgstr ""
+msgstr "H @r{(acento trema húngaro)}"
 
 #. type: cindex
 #: texinfo/texinfo.texi:9200
 #, no-wrap
 msgid "Hungarian umlaut accent"
-msgstr ""
+msgstr "Acento trema húngaro"
 
 #. type: findex
 #: texinfo/texinfo.texi:9201
 #, no-wrap
 msgid "ogonek"
-msgstr ""
+msgstr "ogonek"
 
 #. type: cindex
 #: texinfo/texinfo.texi:9202
 #, no-wrap
 msgid "Ogonek diacritic"
-msgstr ""
+msgstr "Diacrítico Ogonek"
 
 #. type: findex
 #: texinfo/texinfo.texi:9203
 #, no-wrap
 msgid "ringaccent"
-msgstr ""
+msgstr "ringaccent"
 
 #. type: cindex
 #: texinfo/texinfo.texi:9204
 #, no-wrap
 msgid "Ring accent"
-msgstr ""
+msgstr "Acento de anel"
 
 #. type: findex
 #: texinfo/texinfo.texi:9205
 #, no-wrap
 msgid "tieaccent"
-msgstr ""
+msgstr "tieaccent"
 
 #. type: cindex
 #: texinfo/texinfo.texi:9206
 #, no-wrap
 msgid "Tie-after accent"
-msgstr ""
+msgstr "Acento de ligação posterior"
 
 #. type: findex
 #: texinfo/texinfo.texi:9207
 #, no-wrap
 msgid "u @r{(breve accent)}"
-msgstr ""
+msgstr "u @r{(acento breve)}"
 
 #. type: cindex
 #: texinfo/texinfo.texi:9208
 #, no-wrap
 msgid "Breve accent"
-msgstr ""
+msgstr "Acento breve"
 
 #. type: findex
 #: texinfo/texinfo.texi:9209
 #, no-wrap
 msgid "ubaraccent"
-msgstr ""
+msgstr "ubaraccent"
 
 #. type: cindex
 #: texinfo/texinfo.texi:9210
 #, no-wrap
 msgid "Underbar accent"
-msgstr ""
+msgstr "Acento sub barra"
 
 #. type: findex
 #: texinfo/texinfo.texi:9211
 #, no-wrap
 msgid "udotaccent"
-msgstr ""
+msgstr "udotaccent"
 
 #. type: cindex
 #: texinfo/texinfo.texi:9212
 #, no-wrap
 msgid "Underdot accent"
-msgstr ""
+msgstr "Acento sublinhado"
 
 #. type: findex
 #: texinfo/texinfo.texi:9213
 #, no-wrap
 msgid "v @r{(caron)}"
-msgstr ""
+msgstr "v @r{(caron)}"
 
 #. type: cindex
 #: texinfo/texinfo.texi:9214
 #, no-wrap
 msgid "Hacek accent"
-msgstr ""
+msgstr "Acento Hacek"
 
 #. type: cindex
 #: texinfo/texinfo.texi:9215
 #, no-wrap
 msgid "Check accent"
-msgstr ""
+msgstr "Acento Check"
 
 #. type: cindex
 #: texinfo/texinfo.texi:9216
 #, no-wrap
 msgid "Caron"
-msgstr ""
+msgstr "Caron"
 
 #. type: findex
 #: texinfo/texinfo.texi:9218
 #, no-wrap
 msgid "\""
-msgstr ""
+msgstr "\""
 
 #. type: cindex
 #: texinfo/texinfo.texi:9219 texinfo/texinfo.texi:9361
 #, no-wrap
 msgid "'"
-msgstr ""
+msgstr "'"
 
 #. type: findex
 #: texinfo/texinfo.texi:9220
 #, no-wrap
 msgid "="
-msgstr ""
+msgstr "="
 
 #. type: findex
 #: texinfo/texinfo.texi:9221
 #, no-wrap
 msgid "^"
-msgstr ""
+msgstr "^"
 
 #. type: code{#1}
 #: texinfo/texinfo.texi:9222 texinfo/texinfo.texi:9356
 #, no-wrap
 msgid "`"
-msgstr ""
+msgstr "`"
 
 #. type: findex
 #: texinfo/texinfo.texi:9223
 #, no-wrap
 msgid "~"
-msgstr ""
+msgstr "~"
 
 #. type: findex
 #: texinfo/texinfo.texi:9224
 #, no-wrap
 msgid ","
-msgstr ""
+msgstr ","
 
 #. type: findex
 #: texinfo/texinfo.texi:9225
 #, no-wrap
 msgid "H"
-msgstr ""
+msgstr "H"
 
 #. type: findex
 #: texinfo/texinfo.texi:9226
 #, no-wrap
 msgid "u"
-msgstr ""
+msgstr "u"
 
 #. type: findex
 #: texinfo/texinfo.texi:9227
 #, no-wrap
 msgid "v"
-msgstr ""
+msgstr "v"
 
 #. type: multitable
 #: texinfo/texinfo.texi:9231 texinfo/texinfo.texi:9399
 msgid "@headitem Command"
-msgstr ""
+msgstr "@headitem Comando"
 
 #. type: multitable
 #: texinfo/texinfo.texi:9231
 msgid "Output"
-msgstr ""
+msgstr "Saída gerada"
 
 #. type: multitable
 #: texinfo/texinfo.texi:9231
 msgid "What"
-msgstr ""
+msgstr "O quê"
 
 #. type: item
 #: texinfo/texinfo.texi:9231
 #, no-wrap
 msgid "@t{@@\"o}              @tab @\"o            @tab umlaut accent"
-msgstr ""
+msgstr "@t{@@\"o}              @tab @\"o            @tab acento trema"
 
 #. type: item
 #: texinfo/texinfo.texi:9232
 #, no-wrap
 msgid "@t{@@'o}              @tab @'o            @tab acute accent"
-msgstr ""
+msgstr "@t{@@'o}              @tab @'o            @tab acento agudo"
 
 #. type: item
 #: texinfo/texinfo.texi:9233
 #, no-wrap
 msgid "@t{@@,@{c@}}          @tab @,{c}          @tab cedilla accent"
-msgstr ""
+msgstr "@t{@@,@{c@}}          @tab @,{c}          @tab acento cedilha"
 
 #. type: item
 #: texinfo/texinfo.texi:9234
 #, no-wrap
 msgid "@t{@@=o}              @tab @=o            @tab macron/overbar accent"
 msgstr ""
+"@t{@@=o}              @tab @=o            @tab acento macron/sobre barra"
 
 #. type: item
 #: texinfo/texinfo.texi:9235
 #, no-wrap
 msgid "@t{@@^o}              @tab @^o            @tab circumflex accent"
-msgstr ""
+msgstr "@t{@@^o}              @tab @^o            @tab acento circunflexo"
 
 #. type: item
 #: texinfo/texinfo.texi:9236
 #, no-wrap
 msgid "@t{@@`o}              @tab @`o            @tab grave accent"
-msgstr ""
+msgstr "@t{@@`o}              @tab @`o            @tab acento grave"
 
 #. type: item
 #: texinfo/texinfo.texi:9237
 #, no-wrap
 msgid "@t{@@~o}              @tab @~o            @tab tilde accent"
-msgstr ""
+msgstr "@t{@@~o}              @tab @~o            @tab acento til"
 
 #. type: item
 #: texinfo/texinfo.texi:9238
 #, no-wrap
 msgid "@t{@@dotaccent@{o@}}  @tab @dotaccent{o}  @tab overdot accent"
-msgstr ""
+msgstr "@t{@@dotaccent@{o@}}  @tab @dotaccent{o}  @tab acento sobre ponto"
 
 #. type: item
 #: texinfo/texinfo.texi:9239
 #, no-wrap
 msgid "@t{@@H@{o@}}          @tab @H{o}          @tab long Hungarian umlaut"
-msgstr ""
+msgstr "@t{@@H@{o@}}          @tab @H{o}          @tab trema longo húngaro"
 
 #. type: item
 #: texinfo/texinfo.texi:9240
 #, no-wrap
 msgid "@t{@@ogonek@{a@}}     @tab @ogonek{a}     @tab ogonek"
-msgstr ""
+msgstr "@t{@@ogonek@{a@}}     @tab @ogonek{a}     @tab ogonek"
 
 #. type: item
 #: texinfo/texinfo.texi:9241
 #, no-wrap
 msgid "@t{@@ringaccent@{o@}} @tab @ringaccent{o} @tab ring accent"
-msgstr ""
+msgstr "@t{@@ringaccent@{o@}} @tab @ringaccent{o} @tab acento de anel"
 
 #. type: item
 #: texinfo/texinfo.texi:9242
 #, no-wrap
 msgid "@t{@@tieaccent@{oo@}} @tab @tieaccent{oo} @tab tie-after accent"
 msgstr ""
+"@t{@@tieaccent@{oo@}} @tab @tieaccent{oo} @tab acento de ligação posterior"
 
 #. type: item
 #: texinfo/texinfo.texi:9243
 #, no-wrap
 msgid "@t{@@u@{o@}}          @tab @u{o}          @tab breve accent"
-msgstr ""
+msgstr "@t{@@u@{o@}}          @tab @u{o}          @tab acento breve"
 
 #. type: item
 #: texinfo/texinfo.texi:9244
 #, no-wrap
 msgid "@t{@@ubaraccent@{o@}} @tab @ubaraccent{o} @tab underbar accent"
-msgstr ""
+msgstr "@t{@@ubaraccent@{o@}} @tab @ubaraccent{o} @tab acento sub barra"
 
 #. type: item
 #: texinfo/texinfo.texi:9245
 #, no-wrap
 msgid "@t{@@udotaccent@{o@}} @tab @udotaccent{o} @tab underdot accent"
-msgstr ""
+msgstr "@t{@@udotaccent@{o@}} @tab @udotaccent{o} @tab acento sub ponto"
 
 #. type: item
 #: texinfo/texinfo.texi:9246
 #, no-wrap
 msgid "@t{@@v@{o@}}          @tab @v{o}          @tab caron/hacek/check accent"
 msgstr ""
+"@t{@@v@{o@}}          @tab @v{o}          @tab acento caron/hacek/check"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:9251
@@ -23837,6 +23898,8 @@ msgid ""
 "This table lists the Texinfo commands for inserting other characters "
 "commonly used in languages other than English."
 msgstr ""
+"Esta tabela lista os comandos do Texinfo para inserir outros caracteres "
+"comumente usados em idiomas diferentes do inglês."
 
 #. type: findex
 #: texinfo/texinfo.texi:9252
