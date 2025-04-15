@@ -17,7 +17,7 @@ msgstr ""
 "Project-Id-Version: Texinfo 7.1\n"
 "Report-Msgid-Bugs-To: jafesp@gmail.com\n"
 "POT-Creation-Date: 2025-04-13 00:11-0300\n"
-"PO-Revision-Date: 2025-04-15 10:35-0300\n"
+"PO-Revision-Date: 2025-04-15 11:10-0300\n"
 "Last-Translator: Jamenson Ferreira Espindula de Almeida Melo "
 "<jafesp@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -24797,12 +24797,18 @@ msgid ""
 "course; you can download them from @url{http://ctan.org/pkg/ec}, among other "
 "places."
 msgstr ""
+"As fontes padrão do @TeX{} suportam as aspas usuais usadas em inglês "
+"(aquelas produzidas com aspas simples de ASCII unitárias e duplicadas).  "
+"Para as outras aspas, @TeX{} usa fontes European Computer Modern (EC) "
+"(@file{ecrm1000} e outras variantes).  Essas fontes estão disponíveis "
+"livremente, é claro; você consegue baixá-las a partir de "
+"@url{http://ctan.org/pkg/ec}, entre outros lugares."
 
 #. type: cindex
 #: texinfo/texinfo.texi:9426
 #, no-wrap
 msgid "CM-Super fonts"
-msgstr ""
+msgstr "Fontes CM-Super"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:9431
@@ -24812,11 +24818,15 @@ msgid ""
 "these are available in the CM-Super font package "
 "(@url{http://ctan.org/pkg/cm-super})."
 msgstr ""
+"As fontes livres EC são fontes bitmap criadas com Metafont.  Especialmente "
+"para visualização online, as versões Type@tie{}1 (vetor) das fontes são "
+"preferíveis; elas estão disponíveis no pacote de fontes CM-Super "
+"(@url{http://ctan.org/pkg/cm-super})."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:9433
 msgid "Both distributions include installation instructions."
-msgstr ""
+msgstr "Ambas as distribuições incluem instruções de instalação."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:9445
@@ -24832,6 +24842,16 @@ msgid ""
 "@code{@@quotedblleft}, which is counterintuitive.  Thus, in this case the "
 "following aliases would be convenient:"
 msgstr ""
+"As tradições para uso de aspas variam muito entre os idiomas "
+"(@url{https://en.wikipedia.org/wiki/Quotation_mark}).  Texinfo não fornece "
+"comandos ou configurações para tipografar aspas de acordo com as numerosas "
+"tradições.  Portanto, você tem que escolher os comandos apropriados para "
+"o idioma do teu manual.  Às vezes, apelidos (@pxref{@code{@@alias}}) "
+"conseguem simplificar o uso e tornar o código-fonte mais legível.  Por "
+"exemplo, em alemão, @code{@@quotedblbase} é usado para a aspa dupla à "
+"esquerda, e a aspa dupla à direita é o glifo produzido por "
+"@code{@@quotedblleft}, o que é contraintuitivo.  Assim, nesse caso, os "
+"seguintes apelidos seriam convenientes:"
 
 #. type: example
 #: texinfo/texinfo.texi:9449
@@ -24840,41 +24860,43 @@ msgid ""
 "@@alias lgqq = quotedblbase\n"
 "@@alias rgqq = quotedblleft\n"
 msgstr ""
+"@@alias lgqq = quotedblbase\n"
+"@@alias rgqq = quotedblleft\n"
 
 #. type: node
 #: texinfo/texinfo.texi:9452
 #, no-wrap
 msgid "Inserting Subscripts and Superscripts"
-msgstr ""
+msgstr "Inserindo Subscritos e Sobrescritos"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:9454
 msgid "@nodedescription Inserting sub/superscripts."
-msgstr ""
+msgstr "@nodedescription Inserindo sub/sobrescritos."
 
 #. type: section
 #: texinfo/texinfo.texi:9454
 #, no-wrap
 msgid "@code{@@sub} and @code{@@sup}: Inserting Subscripts and Superscripts"
-msgstr ""
+msgstr "@code{@@sub} e @code{@@sup}: Inserindo Subscritos e Sobrescritos"
 
 #. type: findex
 #: texinfo/texinfo.texi:9456
 #, no-wrap
 msgid "sub"
-msgstr ""
+msgstr "sub"
 
 #. type: findex
 #: texinfo/texinfo.texi:9457
 #, no-wrap
 msgid "sup"
-msgstr ""
+msgstr "sup"
 
 #. type: cindex
 #: texinfo/texinfo.texi:9458
 #, no-wrap
 msgid "Subscripts and superscripts, text"
-msgstr ""
+msgstr "Subscritos e sobrescritos, texto"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:9462
@@ -24882,18 +24904,20 @@ msgid ""
 "You can insert subscripts and superscripts with the @code{@@sub} and "
 "@code{@@sup} commands.  For example:"
 msgstr ""
+"Você consegue inserir subscritos e sobrescritos com os comandos "
+"@code{@@sub} e @code{@@sup}.  Por exemplo:"
 
 #. type: example
 #: texinfo/texinfo.texi:9465
 #, no-wrap
 msgid "here@@sub@{below@}@@sup@{above@}\n"
-msgstr ""
+msgstr "aqui@@sub@{abaixo@}@@sup@{acima@}\n"
 
 #. type: display
 #: texinfo/texinfo.texi:9472
 #, no-wrap
 msgid "here@sub{below}@sup{above}\n"
-msgstr ""
+msgstr "aqui@sub{abaixo}@sup{acima}\n"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:9478
@@ -24903,6 +24927,10 @@ msgid ""
 "@samp{^@{@var{text}@}}, including the literal braces (to mark the beginning "
 "and end of the ``script'' text to the reader)."
 msgstr ""
+"No Info e texto simples, @code{@@sub@{@var{texto}@}} atualmente é gerado "
+"como @samp{_@{@var{texto}@}} e @code{@@sup@{@var{texto}@}} como "
+"@samp{^@{@var{texto}@}}, incluindo as chaves literais (para marcar o início "
+"e o fim do texto de ``roteiro'' para o(a) leitor(a))."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:9482
@@ -24911,6 +24939,9 @@ msgid ""
 "the superscript is set above the subscript when both commands are given "
 "consecutively."
 msgstr ""
+"Quando o formato da saída gerada (e o programa de exibição) permite "
+"(saída impressa, HTML), o sobrescrito é configurado acima do subscrito "
+"quando ambos os comandos forem fornecidos consecutivamente."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:9486
@@ -24918,6 +24949,8 @@ msgid ""
 "For subscripts and superscripts in mathematical expressions, it is better to "
 "use @TeX{}'s @samp{_} and @samp{^} characters.  See the next section."
 msgstr ""
+"Para subscritos e sobrescritos em expressões matemáticas, é melhor usar "
+"os caracteres @samp{_} e @samp{^} do @TeX.  Veja-se a próxima seção."
 
 #. type: node
 #: texinfo/texinfo.texi:9488
