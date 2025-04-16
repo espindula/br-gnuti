@@ -17,7 +17,7 @@ msgstr ""
 "Project-Id-Version: Texinfo 7.1\n"
 "Report-Msgid-Bugs-To: jafesp@gmail.com\n"
 "POT-Creation-Date: 2025-04-13 00:11-0300\n"
-"PO-Revision-Date: 2025-04-15 11:10-0300\n"
+"PO-Revision-Date: 2025-04-16 04:45-0300\n"
 "Last-Translator: Jamenson Ferreira Espindula de Almeida Melo "
 "<jafesp@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -24956,36 +24956,37 @@ msgstr ""
 #: texinfo/texinfo.texi:9488
 #, no-wrap
 msgid "Inserting Math"
-msgstr ""
+msgstr "Inserindo Fórmulas Matemáticas"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:9490
 msgid "@nodedescription Formatting mathematical expressions."
-msgstr ""
+msgstr "@nodedescription Formatando expressões matemáticas."
 
 #. type: section
 #: texinfo/texinfo.texi:9490
 #, no-wrap
 msgid "@code{@@math} and @code{@@displaymath}: Formatting Mathematics"
 msgstr ""
+"@code{@@math} e @code{@@displaymath}: Formatando Expressões Matemáticas"
 
 #. type: findex
 #: texinfo/texinfo.texi:9493
 #, no-wrap
 msgid "math"
-msgstr ""
+msgstr "math"
 
 #. type: cindex
 #: texinfo/texinfo.texi:9494
 #, no-wrap
 msgid "Mathematical expressions, inserting"
-msgstr ""
+msgstr "Expressões matemáticas, inserindo"
 
 #. type: cindex
 #: texinfo/texinfo.texi:9495
 #, no-wrap
 msgid "Formulas, mathematical"
-msgstr ""
+msgstr "Fórmulas, matemáticas"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:9499
@@ -24994,6 +24995,9 @@ msgid ""
 "@code{@@math} command.  Write the @TeX{} math notation between braces, like "
 "this:"
 msgstr ""
+"Você consegue escrever uma expressão matemática, equação ou fórmula "
+"usando o comando @code{@@math}.  Escreva a notação matemática do @TeX{} "
+"entre chaves, assim:"
 
 #. type: example
 #: texinfo/texinfo.texi:9502
@@ -25001,6 +25005,7 @@ msgstr ""
 msgid ""
 "@@math@{\\partial_\\alpha \\partial^\\alpha A^\\beta = \\mu_0 J^\\beta@}\n"
 msgstr ""
+"@@math@{\\partial_\\alpha \\partial^\\alpha A^\\beta = \\mu_0 J^\\beta@}\n"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:9509
@@ -25010,6 +25015,10 @@ msgid ""
 "this example.  The @code{@@math} command has no special effect on the Info "
 "output, merely outputting the contents verbatim."
 msgstr ""
+"@code{@@math} é formatado em linha quando usado dentro de um parágrafo, "
+"como @math{\\partial_\\alpha \\partial^\\alpha A^\\beta = \\mu_0 J^\\beta} "
+"nesse exemplo.  O comando @code{@@math} não tem efeito especial na saída "
+"do Info, meramente gerando o conteúdo literal."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:9514
@@ -25018,12 +25027,16 @@ msgid ""
 "that context, @samp{\\} must be used instead of @samp{@@} for plain @TeX{} "
 "math control sequences for symbols, functions, and so on."
 msgstr ""
+"Para saída impressa, @code{@@math} comuta para o ``modo matemático'' do "
+"@TeX{}.  Nesse contexto, @samp{\\} precisa ser usada em vez de @samp{@@} "
+"para sequências de controle matemático simples do @TeX{} para símbolos, "
+"funções e assim por diante."
 
 #. type: cindex
 #: texinfo/texinfo.texi:9515
 #, no-wrap
 msgid "Math output for HTML"
-msgstr ""
+msgstr "Saída gerada matemática para HTML"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:9530
@@ -25041,24 +25054,39 @@ msgid ""
 "@ref{MathJax Customization Variables}, @ref{@command{latex2html} "
 "Customization Variables} and @ref{@command{tex4ht} Customization Variables}."
 msgstr ""
+"Por padrão, a saída HTML é apenas enfatizada.  @command{texi2any} oferece "
+"três opções para exibir matemática formatada corretamente para HTML.  "
+"Você consegue selecioná-las com a variável @code{HTML_MATH} "
+"(@pxref{Variáveis ​​de Personalização do HTML}).  Com "
+"@code{HTML_MATH} configurada para @samp{l2h}, @command{texi2any} tenta usar "
+"o programa @command{latex2html} para produzir arquivos de imagem para "
+"material matemático.  Com a configuração @samp{t4h}, @command{texi2any} "
+"tenta usar o programa @command{tex4ht}.  Com a configuração "
+"@samp{mathjax}, @command{texi2any} insere referências nos arquivos de "
+"saída para conjuntos de comandos sequenciais MathJax para formatar o "
+"material.  A opção MathJax exige que JavaScript esteja habilitado no "
+"navegador para funcionar.  Veja-se também @ref{Variáveis ​​de "
+"Personalização da MathJax}, @ref{Variáveis ​​de Personalização do "
+"@command{latex2html}} e @ref{Variáveis ​​de Personalização do "
+"@command{tex4ht}}."
 
 #. type: cindex
 #: texinfo/texinfo.texi:9531
 #, no-wrap
 msgid "Displayed equations"
-msgstr ""
+msgstr "Equações exibidas"
 
 #. type: cindex
 #: texinfo/texinfo.texi:9532
 #, no-wrap
 msgid "Equations, displayed"
-msgstr ""
+msgstr "Equações, exibidas"
 
 #. type: findex
 #: texinfo/texinfo.texi:9533
 #, no-wrap
 msgid "displaymath"
-msgstr ""
+msgstr "displaymath"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:9536
@@ -25066,6 +25094,8 @@ msgid ""
 "For displayed equations, you can use the @code{@@displaymath} command.  "
 "Example:"
 msgstr ""
+"Para equações exibidas, você pode o comando @code{@@displaymath}.  "
+"Exemplo:"
 
 #. type: example
 #: texinfo/texinfo.texi:9542
@@ -25076,6 +25106,10 @@ msgid ""
 "e^@{-@{1\\over2@}\\left(@{x-\\mu\\over\\sigma@}\\right)^2@}\n"
 "@@end displaymath\n"
 msgstr ""
+"@@displaymath\n"
+"f(x) = @{1\\over\\sigma\\sqrt@{2\\pi@}@}\n"
+"e^@{-@{1\\over2@}\\left(@{x-\\mu\\over\\sigma@}\\right)^2@}\n"
+"@@end displaymath\n"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:9550
@@ -25083,6 +25117,8 @@ msgid ""
 "@displaymath f(x) = {1\\over\\sigma\\sqrt{2\\pi}} "
 "e^{-{1\\over2}\\left({x-\\mu\\over\\sigma}\\right)^2}"
 msgstr ""
+"@displaymath f(x) = {1\\over\\sigma\\sqrt{2\\pi}} "
+"e^{-{1\\over2}\\left({x-\\mu\\over\\sigma}\\right)^2}"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:9557
@@ -25093,6 +25129,11 @@ msgid ""
 "than @samp{\\} (e.g. @samp{@@var} rather than @samp{\\var}), but we do not "
 "guarantee which Texinfo commands will work."
 msgstr ""
+"Em geral, o conteúdo de @code{@@math} ou @code{@@displaymath} deveria ser "
+"apenas @TeX{} simples, sem comandos Texinfo intercalados.  Se usar algum "
+"comando Texinfo, então você deveria marcá-lo com @samp{@@}, como de "
+"costume, em vez de @samp{\\} (por exemplo, @samp{@@var} em vez de "
+"@samp{\\var}), mas nós não garantimos quais comandos Texinfo funcionarão."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:9562
@@ -25101,6 +25142,10 @@ msgid ""
 "contexts, it is better to use @TeX{}'s @samp{_} and @samp{^} characters to "
 "denote subscripts and superscripts within mathematical expressions."
 msgstr ""
+"Embora @code{@@sub} e @code{@@sup} possam funcionar dentro do modo "
+"matemático em alguns contextos, é melhor usar os caracteres @samp{_} e "
+"@samp{^} do @TeX{} para denotar subscritos e sobrescritos dentro de "
+"expressões matemáticas."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:9567
@@ -25110,18 +25155,22 @@ msgid ""
 "@code{T4H_MATH_CONVERSION} to be set to @samp{latex}; "
 "@pxref{@command{tex4ht} Customization Variables})."
 msgstr ""
+"O código específico do @LaTeX{} só funcionará quando o formato de saída "
+"for @LaTeX{} e com as opções da @code{HTML_MATH} (embora @command{tex4ht} "
+"precise que @code{T4H_MATH_CONVERSION} seja configurada para @samp{latex}; "
+"@pxref{Variáveis ​​de Personalização do @command{tex4ht}})."
 
 #. type: findex
 #: texinfo/texinfo.texi:9569
 #, no-wrap
 msgid "@sortas{\\} \\ @r{(literal \\ in @code{@@math})}"
-msgstr ""
+msgstr "@sortas{\\} \\ @r{(\\ literal em @code{@@math})}"
 
 #. type: findex
 #: texinfo/texinfo.texi:9579
 #, no-wrap
 msgid "\\mathopsup"
-msgstr ""
+msgstr "\\mathopsup"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:9585
@@ -25132,41 +25181,46 @@ msgid ""
 "@TeX{}, not when outputting @LaTeX{} nor with any of the @code{HTML_MATH} "
 "options)."
 msgstr ""
+"Devido ao conflito com o comando @code{@@sup} do Texinfo, você pode acessar "
+"o comando @code{\\sup} do @TeX{} simples como @code{\\mathopsup}, na "
+"improvável ocorrência de querer fazer isso (mas somente ao processar com "
+"@TeX{}, não ao gerar @LaTeX{} nem com qualquer das opções da "
+"@code{HTML_MATH})."
 
 #. type: section
 #: texinfo/texinfo.texi:9587 texinfo/texinfo.texi:9589
 #, no-wrap
 msgid "Glyphs for Text"
-msgstr ""
+msgstr "Glifos para Texto"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:9589
 msgid "@nodedescription Inserting dots, bullets, currencies, etc."
-msgstr ""
+msgstr "@nodedescription Inserindo pontos, marcadores, moedas, etc."
 
-#.  old name
+#.  nome antigo
 #.  another old node, now split into two
 #. type: anchor{#1}
 #: texinfo/texinfo.texi:9593
 msgid "Glyphs"
-msgstr ""
+msgstr "Glifos"
 
 #. type: anchor{#1}
 #: texinfo/texinfo.texi:9593
 msgid "TeX and copyright"
-msgstr ""
+msgstr "TeX e direitos autorais"
 
 #. type: cindex
 #: texinfo/texinfo.texi:9593
 #, no-wrap
 msgid "Glyphs for text"
-msgstr ""
+msgstr "Glifos para texto"
 
 #. type: cindex
 #: texinfo/texinfo.texi:9594
 #, no-wrap
 msgid "Textual glyphs"
-msgstr ""
+msgstr "Glifos textuais"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:9600
@@ -25176,53 +25230,57 @@ msgid ""
 "thousands more.  It is possible to use Unicode characters as-is as far as "
 "@code{texi2any} is concerned, but @TeX{} is not so lucky."
 msgstr ""
+"Texinfo tem suporte para alguns glifos adicionais que são comumente usados "
+"em texto impresso, mas não disponíveis em ASCII@.  Claro, existem muitos "
+"milhares mais.  É possível usar caracteres Unicode como estão no que diz "
+"respeito ao @code{texi2any}, mas o @TeX{} não é tão sortudo."
 
 #. type: node
 #: texinfo/texinfo.texi:9602
 #, no-wrap
 msgid "@code{@@TeX @@LaTeX}"
-msgstr ""
+msgstr "@code{@@LaTeX do @@TeX}"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:9604
 msgid "@nodedescription The @TeX{} logos."
-msgstr ""
+msgstr "@nodedescription As logomarcas do @TeX{}."
 
 #. type: subsection
 #: texinfo/texinfo.texi:9604
 #, no-wrap
 msgid "@code{@@TeX}@{@} (@TeX{}) and @code{@@LaTeX}@{@} (@LaTeX{})"
-msgstr ""
+msgstr "@code{@@TeX}@{@} (@TeX{}) e @code{@@LaTeX}@{@} (@LaTeX{})"
 
 #. type: findex
 #: texinfo/texinfo.texi:9607 texinfo/texinfo.texi:12280
 #, no-wrap
 msgid "tex"
-msgstr ""
+msgstr "tex"
 
 #. type: findex
 #: texinfo/texinfo.texi:9607
 #, no-wrap
 msgid "TeX"
-msgstr ""
+msgstr "TeX"
 
 #. type: cindex
 #: texinfo/texinfo.texi:9609
 #, no-wrap
 msgid "Logos, @TeX{}"
-msgstr ""
+msgstr "Logomarcas, @TeX{}"
 
 #. type: cindex
 #: texinfo/texinfo.texi:9610
 #, no-wrap
 msgid "@TeX{} logo"
-msgstr ""
+msgstr "Logo do @TeX{}"
 
 #. type: cindex
 #: texinfo/texinfo.texi:9611
 #, no-wrap
 msgid "@LaTeX{} logo"
-msgstr ""
+msgstr "Logo do @LaTeX{}"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:9616
@@ -25231,6 +25289,9 @@ msgid ""
 "this is a special logo that is different from three ordinary letters.  In "
 "other output formats, it just looks like @samp{TeX}."
 msgstr ""
+"Use o comando @code{@@TeX@{@}} para gerar `@TeX{}'.  Em um manual impresso, "
+"esse é um logotipo especial que é diferente das três letras comuns.  Em "
+"outros formatos de saída, apenas se parece com @samp{TeX}."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:9621
@@ -25240,6 +25301,10 @@ msgid ""
 "@code{La@@TeX@{@}}.  In other output formats, the result is just "
 "@samp{LaTeX}."
 msgstr ""
+"Similarmente, use o comando @code{@@LaTeX@{@}} para gerar `@LaTeX{}', que é "
+"ainda mais especial em manuais impressos (e diferente do incorreto "
+"@code{La@@TeX@{@}}.  Em outros formatos de saída, o resultado é apenas "
+"@samp{LaTeX}."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:9624
@@ -25247,6 +25312,8 @@ msgid ""
 "The spelling of these commands is unusual for Texinfo, in that they use both "
 "uppercase and lowercase letters."
 msgstr ""
+"A grafia desses comandos é incomum no Texinfo, pois eles usam ambas, letras "
+"maiúsculas e minúsculas."
 
 #. type: node
 #: texinfo/texinfo.texi:9626
