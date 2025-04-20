@@ -17,7 +17,7 @@ msgstr ""
 "Project-Id-Version: Texinfo 7.1\n"
 "Report-Msgid-Bugs-To: jafesp@gmail.com\n"
 "POT-Creation-Date: 2025-04-13 00:11-0300\n"
-"PO-Revision-Date: 2025-04-16 04:45-0300\n"
+"PO-Revision-Date: 2025-04-20 00:52-0300\n"
 "Last-Translator: Jamenson Ferreira Espindula de Almeida Melo "
 "<jafesp@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -25319,36 +25319,36 @@ msgstr ""
 #: texinfo/texinfo.texi:9626
 #, no-wrap
 msgid "@code{@@copyright}"
-msgstr ""
+msgstr "@code{@@copyright}"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:9628
 msgid "@nodedescription The copyright symbol (c in a circle)."
-msgstr ""
+msgstr "@nodedescription O símbolo de copirraite (c em um círculo)."
 
 #. type: subsection
 #: texinfo/texinfo.texi:9628
 #, no-wrap
 msgid "@code{@@copyright@{@}} (@copyright{})"
-msgstr ""
+msgstr "@code{@@copyright@{@}} (@copyright{})"
 
-#.  old name
+#.  nome antigo
 #. type: anchor{#1}
 #: texinfo/texinfo.texi:9631
 msgid "copyright symbol"
-msgstr ""
+msgstr "símbolo de copirraite"
 
 #. type: findex
 #: texinfo/texinfo.texi:9631
 #, no-wrap
 msgid "copyright"
-msgstr ""
+msgstr "copyright"
 
 #. type: cindex
 #: texinfo/texinfo.texi:9632
 #, no-wrap
 msgid "Copyright symbol"
-msgstr ""
+msgstr "Símbolo de copirraite"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:9637
@@ -25357,6 +25357,9 @@ msgid ""
 "`@copyright{}'.  Where possible, this is a @samp{c} inside a circle; "
 "otherwise this is @samp{(C)}."
 msgstr ""
+"Use o comando @code{@@copyright@{@}} para gerar o símbolo de copirraite, "
+"`@copyright{}'.  Onde possível, esse é um @samp{c} dentro de um círculo; "
+"do contrário, isso é @samp{(C)}."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:9640
@@ -25364,41 +25367,43 @@ msgid ""
 "Legally, it's not necessary to use the copyright symbol; the English word "
 "`Copyright' suffices, according to international treaty."
 msgstr ""
+"Juridicamente, não é necessário usar o símbolo de copirraite; a palavra "
+"em inglês `Copyright' é suficiente, de acordo com tratado internacional."
 
 #. type: node
 #: texinfo/texinfo.texi:9642
 #, no-wrap
 msgid "@code{@@registeredsymbol}"
-msgstr ""
+msgstr "@code{@@registeredsymbol}"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:9644
 msgid "@nodedescription The registered symbol (R in a circle)."
-msgstr ""
+msgstr "@nodedescription O símbolo de registrado(a) (R em um círculo)."
 
 #. type: subsection
 #: texinfo/texinfo.texi:9644
 #, no-wrap
 msgid "@code{@@registeredsymbol@{@}} (@registeredsymbol{})"
-msgstr ""
+msgstr "@code{@@registeredsymbol@{@}} (@registeredsymbol{})"
 
-#.  old name
+#.  nome antigo
 #. type: anchor{#1}
 #: texinfo/texinfo.texi:9647
 msgid "registered symbol"
-msgstr ""
+msgstr "símbolo de registrado(a)"
 
 #. type: findex
 #: texinfo/texinfo.texi:9647
 #, no-wrap
 msgid "registeredsymbol"
-msgstr ""
+msgstr "registeredsymbol"
 
 #. type: cindex
 #: texinfo/texinfo.texi:9648
 #, no-wrap
 msgid "Registered symbol"
-msgstr ""
+msgstr "Símbolo de registrado(a)"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:9653
@@ -25407,65 +25412,68 @@ msgid ""
 "symbol, `@registeredsymbol{}'.  Where possible, this is an @samp{R} inside a "
 "circle; otherwise this is @samp{(R)}."
 msgstr ""
+"Use o comando @code{@@registeredsymbol@{@}} para gerar o símbolo de "
+"registrado(a), `@registeredsymbol{}'.  Onde possível, esse é um @samp{R} "
+"dentro de um círculo; do contrário, isso é @samp{(R)}."
 
 #. type: node
 #: texinfo/texinfo.texi:9655
 #, no-wrap
 msgid "@code{@@dots}"
-msgstr ""
+msgstr "@code{@@dots}"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:9657
 msgid "@nodedescription How to insert ellipses: @dots{} and @enddots{}"
-msgstr ""
+msgstr "@nodedescription Como inserir reticências: @dots{} e @enddots{}"
 
 #. type: subsection
 #: texinfo/texinfo.texi:9657
 #, no-wrap
 msgid "@code{@@dots} (@dots{}) and @code{@@enddots} (@enddots{})"
-msgstr ""
+msgstr "@code{@@dots} (@dots{}) e @code{@@enddots} (@enddots{})"
 
 #. type: findex
 #: texinfo/texinfo.texi:9660
 #, no-wrap
 msgid "dots"
-msgstr ""
+msgstr "dots"
 
 #. type: findex
 #: texinfo/texinfo.texi:9661
 #, no-wrap
 msgid "enddots"
-msgstr ""
+msgstr "enddots"
 
 #. type: cindex
 #: texinfo/texinfo.texi:9662
 #, no-wrap
 msgid "Inserting dots"
-msgstr ""
+msgstr "Inserindo pontos"
 
 #. type: cindex
 #: texinfo/texinfo.texi:9663
 #, no-wrap
 msgid "Inserting ellipsis"
-msgstr ""
+msgstr "Inserindo reticências"
 
 #. type: cindex
 #: texinfo/texinfo.texi:9664
 #, no-wrap
 msgid "Dots, inserting"
-msgstr ""
+msgstr "Pontos, inserindo"
 
 #. type: cindex
 #: texinfo/texinfo.texi:9665
 #, no-wrap
 msgid "Ellipsis, inserting"
-msgstr ""
+msgstr "Reticências, inserindo"
 
-#.  old name
+#.  nome antigo
 #. type: anchor{#1}
 #: texinfo/texinfo.texi:9668
 msgid "Dots Bullets"
-msgstr ""
+msgstr "Pontos Marcadores"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:9676
@@ -25478,6 +25486,14 @@ msgid ""
 "formats, but would produce the wrong amount of space between the periods in "
 "printed manuals."
 msgstr ""
+"Uma @dfn{reticência} (uma sequência de pontos) seria espaçada "
+"incorretamente quando tipografada como uma sequência de pontos, de forma "
+"que um comando especial é usado no Texinfo: use o comando @code{@@dots@{@}} "
+"para gerar uma reticência normal, que são três pontos em uma linha, "
+"apropriadamente espaçados @dots{} assim.  Para enfatizar: não escreva "
+"simplesmente três pontos no arquivo de entrada; isso poderia funcionar em "
+"alguns formatos de saída, mas produziria a quantidade errada de espaço "
+"entre os pontos em manuais impressos."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:9680
@@ -25486,11 +25502,16 @@ msgid ""
 "which also has three dots, but with different spacing afterwards, @enddots{} "
 "Look closely to see the difference."
 msgstr ""
+"O comando @code{@@enddots@{@}} gera reticências de final da frase, que "
+"também tem três pontos, mas com espaçamento diferente depois, @enddots{}  "
+"Observe atentamente para ver a diferença."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:9683
 msgid "Here is an ellipsis: @dots{} Here are three periods in a row: ..."
 msgstr ""
+"Aqui está uma reticência: @dots{}  Aqui estão três pontos em uma linha: "
+"..."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:9686
@@ -25498,29 +25519,31 @@ msgid ""
 "In printed (and usually HTML) output, the three periods in a row are much "
 "closer together than the dots in the ellipsis."
 msgstr ""
+"Na saída gerada impressa (e geralmente em HTML), os três pontos em uma "
+"linha estão muito mais próximos um do outro que os pontos nas reticências."
 
 #. type: node
 #: texinfo/texinfo.texi:9688
 #, no-wrap
 msgid "@code{@@bullet}"
-msgstr ""
+msgstr "@code{@@bullet}"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:9690
 msgid "@nodedescription How to insert a bullet: @bullet{}"
-msgstr ""
+msgstr "@nodedescription Como inserir um marcador: @bullet{}"
 
 #. type: subsection
 #: texinfo/texinfo.texi:9690
 #, no-wrap
 msgid "@code{@@bullet} (@bullet{})"
-msgstr ""
+msgstr "@code{@@bullet} (@bullet{})"
 
 #. type: findex
 #: texinfo/texinfo.texi:9693
 #, no-wrap
 msgid "bullet"
-msgstr ""
+msgstr "bullet"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:9698
@@ -25529,6 +25552,9 @@ msgid ""
 "closest possible thing to one.  An asterisk can also be used.  Here is a "
 "bullet: @bullet{}"
 msgstr ""
+"Use o comando @code{@@bullet@{@}} para gerar um ponto redondo grande, ou a "
+"coisa mais próxima possível de um.  Um asterisco também pode ser usado.  "
+"Aqui está um marcador: @bullet{}"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:9702
@@ -25537,35 +25563,37 @@ msgid ""
 "the braces, because @code{@@itemize} supplies them.  "
 "(@pxref{@code{@@itemize}})."
 msgstr ""
+"Ao usar @code{@@bullet} em @code{@@itemize}, você não precisa digitar as "
+"chaves, porque @code{@@itemize} as fornece.  (@pxref{@code{@@itemize}})."
 
 #. type: node
 #: texinfo/texinfo.texi:9704
 #, no-wrap
 msgid "@code{@@euro}"
-msgstr ""
+msgstr "@code{@@euro}"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:9706
 msgid "@nodedescription How to insert the euro currency symbol."
-msgstr ""
+msgstr "@nodedescription Como inserir o símbolo da moeda Euro."
 
 #. type: subsection
 #: texinfo/texinfo.texi:9706
 #, no-wrap
 msgid "@code{@@euro} (@euro{}): Euro Currency Symbol"
-msgstr ""
+msgstr "@code{@@euro} (@euro{}): Símbolo da Moeda Euro"
 
 #. type: findex
 #: texinfo/texinfo.texi:9709
 #, no-wrap
 msgid "euro"
-msgstr ""
+msgstr "euro"
 
 #. type: cindex
 #: texinfo/texinfo.texi:9710
 #, no-wrap
 msgid "Euro symbol, producing"
-msgstr ""
+msgstr "Símbolo do Euro, produzindo"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:9715
@@ -25574,18 +25602,21 @@ msgid ""
 "this is the symbol for the Euro currency.  Otherwise, the word @samp{Euro} "
 "is used."
 msgstr ""
+"Use o comando @code{@@euro@{@}} para gerar `@euro{}'.  Onde possível, esse "
+"é o símbolo para a moeda Euro.  Caso contrário, a palavra @samp{Euro} é "
+"usada."
 
 #. type: pindex
 #: texinfo/texinfo.texi:9716
 #, no-wrap
 msgid "feymr10"
-msgstr ""
+msgstr "feymr10"
 
 #. type: cindex
 #: texinfo/texinfo.texi:9717
 #, no-wrap
 msgid "Euro font"
-msgstr ""
+msgstr "fonte Euro"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:9724
@@ -25597,35 +25628,41 @@ msgid ""
 "@url{http://ctan.org/pkg/eurosym}, among other places.  The distribution "
 "includes installation instructions."
 msgstr ""
+"O símbolo do Euro não existe nas fontes padrão do @TeX{} (que foram "
+"projetadas antes da existência jurídica do Euro).  Portanto, o @TeX{} usa "
+"uma fonte adicional, chamada @code{feymr10} (junto com outras variáveis).  "
+"Ela está disponível livremente, é claro; você consegue baixá-la a "
+"partir de @url{http://ctan.org/pkg/eurosym}, entre outros lugares.  A "
+"distribuição inclui instruções de instalação."
 
 #. type: node
 #: texinfo/texinfo.texi:9726
 #, no-wrap
 msgid "@code{@@pounds}"
-msgstr ""
+msgstr "@code{@@pounds}"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:9728
 msgid "@nodedescription How to insert the pounds currency symbol."
-msgstr ""
+msgstr "@nodedescription Como inserir o símbolo da moeda Libras."
 
 #. type: subsection
 #: texinfo/texinfo.texi:9728
 #, no-wrap
 msgid "@code{@@pounds} (@pounds{}): Pounds Sterling"
-msgstr ""
+msgstr "@code{@@pounds} (@pounds{}): Libras Esterlinas"
 
 #. type: findex
 #: texinfo/texinfo.texi:9731
 #, no-wrap
 msgid "pounds"
-msgstr ""
+msgstr "pounds"
 
 #. type: cindex
 #: texinfo/texinfo.texi:9732
 #, no-wrap
 msgid "Pounds symbol"
-msgstr ""
+msgstr "Libras, símbolo"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:9737
@@ -25634,35 +25671,38 @@ msgid ""
 "possible, this is the symbol for the pounds sterling British currency.  "
 "Otherwise, it is @samp{#}."
 msgstr ""
+"Use o comando @code{@@pounds@{@}} para gerar `@pounds{}'.  Onde possível, "
+"esse é o símbolo para a moeda britânica Libra Esterlina.  Caso "
+"contrário, é @samp{#}."
 
 #. type: node
 #: texinfo/texinfo.texi:9739
 #, no-wrap
 msgid "@code{@@textdegree}"
-msgstr ""
+msgstr "@code{@@textdegree}"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:9741
 msgid "@nodedescription How to insert the degrees symbol."
-msgstr ""
+msgstr "@nodedescription Como inserir o símbolo de Graus."
 
 #. type: subsection
 #: texinfo/texinfo.texi:9741
 #, no-wrap
 msgid "@code{@@textdegree} (@textdegree{}): Degrees Symbol"
-msgstr ""
+msgstr "@code{@@textdegree} (@textdegree{}): Símbolo de Graus"
 
 #. type: findex
 #: texinfo/texinfo.texi:9744
 #, no-wrap
 msgid "textdegree"
-msgstr ""
+msgstr "textdegree"
 
 #. type: cindex
 #: texinfo/texinfo.texi:9745
 #, no-wrap
 msgid "Degree symbol"
-msgstr ""
+msgstr "Símbolo de Graus"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:9750
@@ -25671,6 +25711,9 @@ msgid ""
 "possible, this is the normal symbol for degrees.  Otherwise, it is an "
 "@samp{o}."
 msgstr ""
+"Use o comando @code{@@textdegree@{@}} para gerar `@textdegree{}'.  Onde "
+"possível, esse é o símbolo normal para Graus.  Caso contrário, é um "
+"@samp{o}."
 
 #. type: node
 #: texinfo/texinfo.texi:9752
