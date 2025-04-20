@@ -17,7 +17,7 @@ msgstr ""
 "Project-Id-Version: Texinfo 7.1\n"
 "Report-Msgid-Bugs-To: jafesp@gmail.com\n"
 "POT-Creation-Date: 2025-04-13 00:11-0300\n"
-"PO-Revision-Date: 2025-04-20 00:52-0300\n"
+"PO-Revision-Date: 2025-04-20 07:35-0300\n"
 "Last-Translator: Jamenson Ferreira Espindula de Almeida Melo "
 "<jafesp@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -25719,42 +25719,42 @@ msgstr ""
 #: texinfo/texinfo.texi:9752
 #, no-wrap
 msgid "@code{@@minus}"
-msgstr ""
+msgstr "@code{@@minus}"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:9754
 msgid "@nodedescription How to insert a minus sign."
-msgstr ""
+msgstr "@nodedescription Como inserir um sinal de menos."
 
 #. type: subsection
 #: texinfo/texinfo.texi:9754
 #, no-wrap
 msgid "@code{@@minus} (@minus{}): Inserting a Minus Sign"
-msgstr ""
+msgstr "@code{@@minus} (@minus{}): Inserindo um Sinal de Menos"
 
 #. type: findex
 #: texinfo/texinfo.texi:9757
 #, no-wrap
 msgid "minus"
-msgstr ""
+msgstr "minus"
 
 #. type: cindex
 #: texinfo/texinfo.texi:9758
 #, no-wrap
 msgid "Minus sign"
-msgstr ""
+msgstr "Sinal de menos"
 
 #. type: cindex
 #: texinfo/texinfo.texi:9760
 #, no-wrap
 msgid "Em dash, compared to minus sign"
-msgstr ""
+msgstr "Travessão, comparado ao sinal de menos"
 
 #. type: cindex
 #: texinfo/texinfo.texi:9761
 #, no-wrap
 msgid "Hyphen, compared to minus"
-msgstr ""
+msgstr "Hífen, comparado ao sinal menos"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:9766
@@ -25764,6 +25764,10 @@ msgid ""
 "customary length for a minus sign---a little longer than a hyphen, shorter "
 "than an em-dash:"
 msgstr ""
+"Use o comando @code{@@minus@{@}} para gerar um sinal de menos.  Onde a "
+"codificação de caractere e a fonte usada na saída gerada permitirem, o "
+"símbolo tem o comprimento habitual para um sinal de menos---um pouco mais "
+"longo que um hífen, mais curto que um travessão:"
 
 #. type: display
 #: texinfo/texinfo.texi:9769
@@ -25772,6 +25776,8 @@ msgid ""
 "@samp{@minus{}} is a minus sign generated with @samp{@@minus@{@}},\n"
 "\n"
 msgstr ""
+"@samp{@minus{}} é um sinal de menos gerado com @samp{@@minus@{@}},\n"
+"\n"
 
 #. type: display
 #: texinfo/texinfo.texi:9771
@@ -25780,12 +25786,14 @@ msgid ""
 "`-' is a hyphen generated with the character @samp{-},\n"
 "\n"
 msgstr ""
+"`-' é um hífen gerado com o caractere @samp{-},\n"
+"\n"
 
 #. type: display
 #: texinfo/texinfo.texi:9773
 #, no-wrap
 msgid "`---' is an em-dash for text.\n"
-msgstr ""
+msgstr "`---' é um travessão para texto.\n"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:9778
@@ -25794,41 +25802,44 @@ msgid ""
 "better to use @code{@@math}, as in @code{@@math@{a-b@}} (@pxref{Inserting "
 "Math})."
 msgstr ""
+"Se você realmente quiser tipografar alguma matemática que faça uma "
+"subtração, é melhor usar @code{@@math}, como em @code{@@math@{a-b@}} "
+"(@pxref{Inserindo Fórmulas Matemáticas})."
 
 #. type: node
 #: texinfo/texinfo.texi:9780
 #, no-wrap
 msgid "@code{@@geq @@leq}"
-msgstr ""
+msgstr "@code{@@geq @@leq}"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:9782
 msgid "@nodedescription How to insert greater/less-than-or-equal signs."
-msgstr ""
+msgstr "@nodedescription Como inserir sinais de maior/menor que ou igual a."
 
 #. type: subsection
 #: texinfo/texinfo.texi:9782
 #, no-wrap
 msgid "@code{@@geq} (@geq{}) and @code{@@leq} (@leq{}): Inserting Relations"
-msgstr ""
+msgstr "@code{@@geq} (@geq{}) e @code{@@leq} (@leq{}): Inserindo Relações"
 
-#.  old name
+#.  nome antigo
 #. type: anchor{#1}
 #: texinfo/texinfo.texi:9785
 msgid "geq leq"
-msgstr ""
+msgstr "geq leq"
 
 #. type: findex
 #: texinfo/texinfo.texi:9785
 #, no-wrap
 msgid "geq"
-msgstr ""
+msgstr "geq"
 
 #. type: findex
 #: texinfo/texinfo.texi:9786
 #, no-wrap
 msgid "leq"
-msgstr ""
+msgstr "leq"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:9792
@@ -25838,12 +25849,16 @@ msgid ""
 "When those symbols are not available, the ASCII sequences @samp{>=} and "
 "@samp{<=} are output."
 msgstr ""
+"Use os comandos @code{@@geq@{@}} e @code{@@leq@{@}} para gerar sinais de "
+"maior que ou igual a e menor que ou igual a, `@geq{}' e `@leq{}'.  Quando "
+"esses símbolos não estiverem disponíveis, as sequências ASCII @samp{>=} "
+"e @samp{<=} são geradas."
 
 #. type: section
 #: texinfo/texinfo.texi:9794 texinfo/texinfo.texi:9796
 #, no-wrap
 msgid "Glyphs for Programming"
-msgstr ""
+msgstr "Glifos para Programação"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:9796
@@ -25851,24 +25866,26 @@ msgid ""
 "@nodedescription Indicating results of evaluation, expansion of macros, "
 "errors, etc."
 msgstr ""
+"@nodedescription Indicando resultados de avaliação, expansão de macros, "
+"erros, etc."
 
 #. type: cindex
 #: texinfo/texinfo.texi:9798
 #, no-wrap
 msgid "Glyphs for programming"
-msgstr ""
+msgstr "Glifos para programação"
 
 #. type: cindex
 #: texinfo/texinfo.texi:9799
 #, no-wrap
 msgid "Examples, glyphs for"
-msgstr ""
+msgstr "Exemplos, glifos para"
 
 #. type: cindex
 #: texinfo/texinfo.texi:9800
 #, no-wrap
 msgid "Programming, glyphs for"
-msgstr ""
+msgstr "Programação, glifos para"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:9809
@@ -25880,6 +25897,13 @@ msgid ""
 "indicate printed output, error messages, equivalence of expressions, the "
 "location of point in an editor, and GUI operation sequences."
 msgstr ""
+"No Texinfo, o código frequentemente é ilustrado em exemplos que são "
+"delimitados por @code{@@example} e @code{@@end example}.  Em tais exemplos, "
+"você pode indicar os resultados da avaliação ou de uma expansão usando "
+"@samp{@result{}} ou @samp{@expansion{}}.  Da mesma forma, existem comandos "
+"para inserir glifos para indicar saída gerada impressa, mensagens de erro, "
+"equivalência de expressões, o local do ponto em um editor e sequências de "
+"operação da GUI."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:9813
@@ -25888,94 +25912,98 @@ msgid ""
 "most often they are.  All glyph-insertion commands are followed by empty "
 "braces."
 msgstr ""
+"Os comandos de inserção de glifos não precisam ser usados dentro de um "
+"exemplo, mas na maioria das vezes são.  Todos os comandos de inserção de "
+"glifos são seguidos por chaves vazias."
 
 #. type: subsection
 #: texinfo/texinfo.texi:9815 texinfo/texinfo.texi:9817
 #, no-wrap
 msgid "Glyphs Summary"
-msgstr ""
+msgstr "Sumário de Glifos"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:9817
 msgid "@nodedescription List of the glyph commands."
-msgstr ""
+msgstr "@nodedescription Lista dos comandos de glifo."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:9820
 msgid "Here is a summary of the glyph commands:"
-msgstr ""
+msgstr "Aqui está um resumo dos comandos de glifo:"
 
 #. type: item
 #: texinfo/texinfo.texi:9822
 #, no-wrap
 msgid "@result{}"
-msgstr ""
+msgstr "@result{}"
 
 #. type: table
 #: texinfo/texinfo.texi:9824
 msgid "@code{@@result@{@}} indicates the result of an expression."
-msgstr ""
+msgstr "@code{@@result@{@}} indica o resultado de uma expressão."
 
 #. type: item
 #: texinfo/texinfo.texi:9825
 #, no-wrap
 msgid "@expansion{}"
-msgstr ""
+msgstr "@expansion{}"
 
 #. type: table
 #: texinfo/texinfo.texi:9827
 msgid "@code{@@expansion@{@}} indicates the results of a macro expansion."
-msgstr ""
+msgstr "@code{@@expansion@{@}} indica os resultados de uma expansão de macro."
 
 #. type: item
 #: texinfo/texinfo.texi:9828
 #, no-wrap
 msgid "@print{}"
-msgstr ""
+msgstr "@print{}"
 
 #. type: table
 #: texinfo/texinfo.texi:9830
 msgid "@code{@@print@{@}} indicates printed output."
-msgstr ""
+msgstr "@code{@@print@{@}} indica saída impressa."
 
 #. type: item
 #: texinfo/texinfo.texi:9831
 #, no-wrap
 msgid "@error{}"
-msgstr ""
+msgstr "@error{}"
 
 #. type: table
 #: texinfo/texinfo.texi:9833
 msgid "@code{@@error@{@}} indicates the following text is an error message."
 msgstr ""
+"@code{@@error@{@}} indica que o texto seguinte é uma mensagem de erro."
 
 #. type: item
 #: texinfo/texinfo.texi:9834
 #, no-wrap
 msgid "@equiv{}"
-msgstr ""
+msgstr "@equiv{}"
 
 #. type: table
 #: texinfo/texinfo.texi:9836
 msgid "@code{@@equiv@{@}} indicates the exact equivalence of two forms."
-msgstr ""
+msgstr "@code{@@equiv@{@}} indica a equivalência exata de duas formas."
 
 #. type: item
 #: texinfo/texinfo.texi:9837
 #, no-wrap
 msgid "@point{}"
-msgstr ""
+msgstr "@point{}"
 
 #. type: table
 #: texinfo/texinfo.texi:9839
 msgid "@code{@@point@{@}} shows the location of point."
-msgstr ""
+msgstr "@code{@@point@{@}} mostra o local do ponto."
 
 #. type: item
 #: texinfo/texinfo.texi:9840
 #, no-wrap
 msgid "@clicksequence{A @click{} B}"
-msgstr ""
+msgstr "@clicksequence{A @click{} B}"
 
 #. type: table
 #: texinfo/texinfo.texi:9844
@@ -25984,53 +26012,56 @@ msgid ""
 "sequence: first A, then clicking B, or choosing B from a menu, or otherwise "
 "selecting it."
 msgstr ""
+"@code{@@clicksequence@{A @@click@{@} B} indica uma sequência de operação "
+"da GUI: primeiro A, depois clicar em B, ou escolher B a partir de um menu, "
+"ou então selecioná-lo."
 
 #. type: node
 #: texinfo/texinfo.texi:9847
 #, no-wrap
 msgid "@code{@@result}"
-msgstr ""
+msgstr "@code{@@result}"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:9849
 msgid "@nodedescription How to show the result of expression."
-msgstr ""
+msgstr "@nodedescription Como mostrar o resultado da expressão."
 
 #. type: subsection
 #: texinfo/texinfo.texi:9849
 #, no-wrap
 msgid "@code{@@result@{@}} (@result{}): Result of an Expression"
-msgstr ""
+msgstr "@code{@@result@{@}} (@result{}): Resultado de uma Expressão"
 
 #. type: findex
 #: texinfo/texinfo.texi:9852
 #, no-wrap
 msgid "result"
-msgstr ""
+msgstr "result"
 
 #. type: cindex
 #: texinfo/texinfo.texi:9853
 #, no-wrap
 msgid "Result of an expression"
-msgstr ""
+msgstr "Resultado de uma expressão"
 
 #. type: cindex
 #: texinfo/texinfo.texi:9854
 #, no-wrap
 msgid "Indicating evaluation"
-msgstr ""
+msgstr "Indicando avaliação"
 
 #. type: cindex
 #: texinfo/texinfo.texi:9855
 #, no-wrap
 msgid "Evaluation glyph"
-msgstr ""
+msgstr "Glifo de avaliação"
 
 #. type: cindex
 #: texinfo/texinfo.texi:9856
 #, no-wrap
 msgid "Value of an expression, indicating"
-msgstr ""
+msgstr "Valor de uma expressão, indicando"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:9860
@@ -26038,6 +26069,8 @@ msgid ""
 "Use the @code{@@result@{@}} command to indicate the result of evaluating an "
 "expression."
 msgstr ""
+"Use o comando @code{@@result@{@}} para indicar o resultado da avaliação de "
+"uma expressão."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:9864
@@ -26046,11 +26079,14 @@ msgid ""
 "double stemmed arrow or (when that is not available) the ASCII sequence "
 "@samp{=>}."
 msgstr ""
+"O comando @code{@@result@{@}} é exibido como @samp{@result{}}, ou uma seta "
+"com haste dupla ou (quando essa não estiver disponível) como a sequência "
+"ASCII @samp{=>}."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:9866
 msgid "Thus, the following,"
-msgstr ""
+msgstr "Assim, o seguinte,"
 
 #. type: example
 #: texinfo/texinfo.texi:9870
@@ -26059,11 +26095,13 @@ msgid ""
 "(cdr '(1 2 3))\n"
 "    @result{} (2 3)\n"
 msgstr ""
+"(cdr '(1 2 3))\n"
+"    @result{} (2 3)\n"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:9874
 msgid "may be read as ``@code{(cdr '(1 2 3))} evaluates to @code{(2 3)}''."
-msgstr ""
+msgstr "pode ser lido como ``@code{(cdr '(1 2 3))} avalia para @code{(2 3)}''."
 
 #. type: node
 #: texinfo/texinfo.texi:9876
