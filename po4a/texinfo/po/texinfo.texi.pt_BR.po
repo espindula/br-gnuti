@@ -26927,48 +26927,48 @@ msgstr ""
 #: texinfo/texinfo.texi:10215
 #, no-wrap
 msgid "Breaks"
-msgstr ""
+msgstr "Quebras"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:10217
 msgid "@nodedescription Forcing or preventing line and page breaks."
-msgstr ""
+msgstr "@nodedescription Forçando ou impedindo quebras de linha e de página."
 
 #. type: chapter
 #: texinfo/texinfo.texi:10217
 #, no-wrap
 msgid "Forcing and Preventing Breaks"
-msgstr ""
+msgstr "Forçando e Impedindo Quebras"
 
 #. type: cindex
 #: texinfo/texinfo.texi:10219
 #, no-wrap
 msgid "Forcing line and page breaks"
-msgstr ""
+msgstr "Forçando quebras de linha e de página"
 
 #. type: cindex
 #: texinfo/texinfo.texi:10220
 #, no-wrap
 msgid "Making line and page breaks"
-msgstr ""
+msgstr "Fazendo quebras de linha e de página"
 
 #. type: cindex
 #: texinfo/texinfo.texi:10221
 #, no-wrap
 msgid "Preventing line and page breaks"
-msgstr ""
+msgstr "Impedindo quebras de linha e de página"
 
 #. type: cindex
 #: texinfo/texinfo.texi:10222
 #, no-wrap
 msgid "Line breaks @subentry awkward"
-msgstr ""
+msgstr "Quebras de linha @subentry estranhas"
 
 #. type: cindex
 #: texinfo/texinfo.texi:10223
 #, no-wrap
 msgid "Page breaks, awkward"
-msgstr ""
+msgstr "Quebras de página, estranhas"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:10228
@@ -26977,6 +26977,9 @@ msgid ""
 "another form of output.  It's up to you to ensure that text looks right in "
 "all the output formats."
 msgstr ""
+"Quebras de linha e de página às vezes podem ocorrer no lugar `errado' em "
+"uma ou outra forma de saída.  Cabe inteiramente a você garantir que o "
+"texto aparente corretamente em todos os formatos de saída."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:10234
@@ -26987,6 +26990,11 @@ msgid ""
 "Conversely, you may want to force a page break where none would normally "
 "occur."
 msgstr ""
+"Por exemplo, em um manual impresso, quebras de página podem ocorrer "
+"estranhamente no meio de um exemplo; para impedir isso, você pode manter o "
+"texto unido usando um comando de agrupamento que impeça que o texto seja "
+"dividido entre duas páginas.  Por outro lado, você pode querer forçar uma "
+"quebra de página onde nenhuma ocorreria normalmente."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:10237
@@ -26994,95 +27002,100 @@ msgid ""
 "You can use the break, break prevention, or pagination commands to fix "
 "problematic line and page breaks."
 msgstr ""
+"Você pode usar os comandos de quebra, impedimento de quebra ou de "
+"paginação para corrigir quebras problemáticas de linha e de página."
 
 #. type: section
 #: texinfo/texinfo.texi:10239 texinfo/texinfo.texi:10241
 #, no-wrap
 msgid "Break Commands"
-msgstr ""
+msgstr "Comandos de Quebra"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:10241
 msgid "@nodedescription Summary of break-related commands."
-msgstr ""
+msgstr "@nodedescription Resumo dos comandos relacionados a quebra."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:10244
 msgid "The break commands create or allow line and paragraph breaks:"
 msgstr ""
+"Os comandos de quebra criam ou permitem quebras de linha e de parágrafo:"
 
 #. type: item
 #: texinfo/texinfo.texi:10246 texinfo/texinfo.texi:18598
 #, no-wrap
 msgid "@@*"
-msgstr ""
+msgstr "@@*"
 
 #. type: table
 #: texinfo/texinfo.texi:10248
 msgid "Force a line break."
-msgstr ""
+msgstr "Força uma quebra de linha."
 
 #. type: item
 #: texinfo/texinfo.texi:10249 texinfo/texinfo.texi:19661
 #, no-wrap
 msgid "@@sp @var{n}"
-msgstr ""
+msgstr "@@sp @var{n}"
 
 #. type: table
 #: texinfo/texinfo.texi:10251
 msgid "Skip @var{n} blank lines."
-msgstr ""
+msgstr "Salta @var{n} linhas em branco."
 
 #. type: item
 #: texinfo/texinfo.texi:10252 texinfo/texinfo.texi:10348
 #: texinfo/texinfo.texi:18605
 #, no-wrap
 msgid "@@-"
-msgstr ""
+msgstr "@@-"
 
 #. type: table
 #: texinfo/texinfo.texi:10254
 msgid "Insert a discretionary hyphen."
-msgstr ""
+msgstr "Insere um hífen discricionário."
 
 #. type: item
 #: texinfo/texinfo.texi:10255 texinfo/texinfo.texi:10356
 #: texinfo/texinfo.texi:19214
 #, no-wrap
 msgid "@@hyphenation@{@var{hy-phen-a-ted words}@}"
-msgstr ""
+msgstr "@@hyphenation@{@var{palavras hi-fe-na-das}@}"
 
 #. type: table
 #: texinfo/texinfo.texi:10257
 msgid "Define hyphen points in @var{hy-phen-a-ted words}."
-msgstr ""
+msgstr "Define pontos de hífen em @var{palavras hi-fe-na-das}."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:10260
 msgid "These commands hold text together on a single line:"
-msgstr ""
+msgstr "Esses comandos mantém o texto unido em uma linha:"
 
 #. type: item
 #: texinfo/texinfo.texi:10262 texinfo/texinfo.texi:19883
 #, no-wrap
 msgid "@@w@{@var{text}@}"
-msgstr ""
+msgstr "@@w@{@var{texto}@}"
 
 #. type: table
 #: texinfo/texinfo.texi:10264
 msgid "Prevent @var{text} from being split and hyphenated across two lines."
-msgstr ""
+msgstr "Impede que @var{texto} seja dividido e hifenizado entre duas linhas."
 
 #. type: item
 #: texinfo/texinfo.texi:10265 texinfo/texinfo.texi:19765
 #, no-wrap
 msgid "@@tie@{@}"
-msgstr ""
+msgstr "@@tie@{@}"
 
 #. type: table
 #: texinfo/texinfo.texi:10267
 msgid "Insert a normal interword space at which a line break may not occur."
 msgstr ""
+"Insere um espaço normal entre palavras no qual uma quebra de linha não "
+"possa ocorrer."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:10271
@@ -27090,110 +27103,112 @@ msgid ""
 "The pagination commands apply only to printed output, since other output "
 "formats do not have pages."
 msgstr ""
+"Os comandos de paginação aplicam-se somente para a saída impressa, pois "
+"outros formatos de saída não tem páginas."
 
 #. type: item
 #: texinfo/texinfo.texi:10273 texinfo/texinfo.texi:19474
 #, no-wrap
 msgid "@@page"
-msgstr ""
+msgstr "@@page"
 
 #. type: table
 #: texinfo/texinfo.texi:10275
 msgid "Start a new page."
-msgstr ""
+msgstr "Inicia uma nova página."
 
 #. type: item
 #: texinfo/texinfo.texi:10276 texinfo/texinfo.texi:19171
 #, no-wrap
 msgid "@@group"
-msgstr ""
+msgstr "@@group"
 
 #. type: table
 #: texinfo/texinfo.texi:10278
 msgid "Hold text together that must appear on one page."
-msgstr ""
+msgstr "Mantém unido o texto que precisa aparecer em uma página."
 
 #. type: item
 #: texinfo/texinfo.texi:10279
 #, no-wrap
 msgid "@@need @var{mils}"
-msgstr ""
+msgstr "@@need @var{milímetros}"
 
 #. type: table
 #: texinfo/texinfo.texi:10281
 msgid "Start a new page if not enough space on this one."
-msgstr ""
+msgstr "Inicia uma nova página se não existir espaço suficiente nesta."
 
 #. type: node
 #: texinfo/texinfo.texi:10284
 #, no-wrap
 msgid "Line Breaks"
-msgstr ""
+msgstr "Quebras de Linha"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:10286
 msgid "@nodedescription Forcing line breaks."
-msgstr ""
+msgstr "@nodedescription Forçando quebras de linha."
 
 #. type: section
 #: texinfo/texinfo.texi:10286
 #, no-wrap
 msgid "@code{@@*} and @code{@@/}: Generate and Allow Line Breaks"
-msgstr ""
+msgstr "@code{@@*} e @code{@@/}: Gerar e Permitir Quebras de Linha"
 
 #. type: findex
 #: texinfo/texinfo.texi:10288
 #, no-wrap
 msgid "* @r{(force line break)}"
-msgstr ""
+msgstr "* @r{(força quebra de linha)}"
 
 #. type: findex
 #: texinfo/texinfo.texi:10289
 #, no-wrap
 msgid "/ @r{(allow line break)}"
-msgstr ""
+msgstr "/ @r{(permite quebra de linha)}"
 
 #. type: findex
 #: texinfo/texinfo.texi:10291
 #, no-wrap
 msgid "*"
-msgstr ""
+msgstr "*"
 
 #. type: findex
 #: texinfo/texinfo.texi:10292
 #, no-wrap
 msgid "/"
-msgstr ""
+msgstr "/"
 
 #. type: cindex
 #: texinfo/texinfo.texi:10295
 #, no-wrap
 msgid "Line breaks @subentry controlling"
-msgstr ""
+msgstr "Quebras de linha @subentry controlando"
 
 #. type: cindex
 #: texinfo/texinfo.texi:10296
 #, no-wrap
 msgid "Controlling line breaks"
-msgstr ""
+msgstr "Controlando quebras de linha"
 
 #. type: cindex
 #: texinfo/texinfo.texi:10297
 #, no-wrap
 msgid "Breaks in a line"
-msgstr ""
+msgstr "Quebras em uma linha"
 
 #. type: cindex
 #: texinfo/texinfo.texi:10298
 #, no-wrap
 msgid "Force line break"
-msgstr ""
+msgstr "Forçar quebra de linha"
 
 #. type: cindex
 #: texinfo/texinfo.texi:10299
 #, no-wrap
 msgid "Allow line break"
-msgstr ""
+msgstr "Permitir quebra de linha"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:10303
@@ -27201,17 +27216,20 @@ msgid ""
 "The @code{@@*} command forces a line break in all output formats.  The "
 "@code{@@/} command allows a line break (printed manual only)."
 msgstr ""
+"O comando @code{@@*} força uma quebra de linha em todos os formatos de "
+"saída.  O comando @code{@@/} permite uma quebra de linha (somente manual "
+"impresso)."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:10305
 msgid "Here is an example with @code{@@*}:"
-msgstr ""
+msgstr "Aqui está um exemplo com @code{@@*}:"
 
 #. type: example
 #: texinfo/texinfo.texi:10308
 #, no-wrap
 msgid "This sentence is broken @@*into two lines.\n"
-msgstr ""
+msgstr "Esta frase está quebrada @@*em duas linhas.\n"
 
 #. type: group
 #: texinfo/texinfo.texi:10317
@@ -27220,6 +27238,8 @@ msgid ""
 "This sentence is broken\n"
 "into two lines.\n"
 msgstr ""
+"Esta frase está quebrada\n"
+"em duas linhas.\n"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:10325
@@ -27230,6 +27250,11 @@ msgid ""
 "@code{@@/} if you need it.  @code{@@/} has no effect on the other output "
 "formats."
 msgstr ""
+"O comando @code{@@/} pode ser útil em URLs longas ou outros identificadores "
+"onde o @TeX{} não consiga encontrar um bom lugar para quebrar.  O @TeX{} "
+"automaticamente quebrará as URLs nos lugares naturais (@pxref{Quebra de "
+"Linha de URL}), de forma que use @code{@@/} somente se você precisar.  "
+"@code{@@/} não tem efeito em outros formatos de saída."
 
 #. type: node
 #: texinfo/texinfo.texi:10327
