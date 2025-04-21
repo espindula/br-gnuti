@@ -17,7 +17,7 @@ msgstr ""
 "Project-Id-Version: Texinfo 7.1\n"
 "Report-Msgid-Bugs-To: jafesp@gmail.com\n"
 "POT-Creation-Date: 2025-04-13 00:11-0300\n"
-"PO-Revision-Date: 2025-04-21 03:48-0300\n"
+"PO-Revision-Date: 2025-04-21 05:30-0300\n"
 "Last-Translator: Jamenson Ferreira Espindula de Almeida Melo "
 "<jafesp@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -26504,36 +26504,36 @@ msgstr ""
 #: texinfo/texinfo.texi:10054
 #, no-wrap
 msgid "@code{@@point}"
-msgstr ""
+msgstr "@code{@@point}"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:10056
 msgid "@nodedescription How to indicate the location of point."
-msgstr ""
+msgstr "@nodedescription Como indicar o local do ponto."
 
 #. type: subsection
 #: texinfo/texinfo.texi:10056
 #, no-wrap
 msgid "@code{@@point@{@}} (@point{}): Indicating Point in a Buffer"
-msgstr ""
+msgstr "@code{@@point@{@}} (@point{}): Indicando Ponto em um Buffer"
 
-#.  old name
+#.  nome antigo
 #. type: anchor{#1}
 #: texinfo/texinfo.texi:10059
 msgid "Point Glyph"
-msgstr ""
+msgstr "Glifo de Ponto"
 
 #. type: cindex
 #: texinfo/texinfo.texi:10059
 #, no-wrap
 msgid "Point, indicating in a buffer"
-msgstr ""
+msgstr "Ponto, indicando em um buffer"
 
 #. type: findex
 #: texinfo/texinfo.texi:10060
 #, no-wrap
 msgid "point"
-msgstr ""
+msgstr "point"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:10066
@@ -26542,6 +26542,9 @@ msgid ""
 "examples, the convention is to include the entire contents of the buffer in "
 "question between two lines of dashes containing the buffer name."
 msgstr ""
+"Às vezes, você precisa mostrar um exemplo de texto em um buffer do Emacs.  "
+"Em tais exemplos, a convenção é a de incluir o conteúdo inteiro do "
+"buffer em questão entre duas linhas de traços contendo o nome do buffer."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:10071
@@ -26551,6 +26554,10 @@ msgid ""
 "the text in the buffer; it indicates the place @emph{between} two characters "
 "where point is located.)"
 msgstr ""
+"Você pode usar o comando @samp{@@point@{@}} para mostrar o local do ponto "
+"no texto no buffer.  (O símbolo para ponto, é claro, não é parte do "
+"texto no buffer; ele indica o lugar @emph{entre} dois caracteres onde o "
+"ponto está localizado.)"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:10075
@@ -26558,6 +26565,9 @@ msgid ""
 "The @code{@@point@{@}} command is displayed as @samp{@point{}}, either a "
 "pointed star or (when that is not available) the ASCII sequence @samp{-!-}."
 msgstr ""
+"O comando @code{@@point@{@}} é exibido como @samp{@point{}}, ou uma estrela "
+"pontiaguda ou (quando essa não estiver disponível) a sequência ASCII "
+"@samp{-!-}."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:10078
@@ -26565,6 +26575,8 @@ msgid ""
 "The following example shows the contents of buffer @file{foo} before and "
 "after evaluating a Lisp command to insert the word @code{changed}."
 msgstr ""
+"O exemplo seguinte mostra o conteúdo do buffer @file{foo} antes e depois de "
+"avaliar um comando Lisp para inserir a palavra @code{changed}."
 
 #. type: group
 #: texinfo/texinfo.texi:10084
@@ -26575,6 +26587,9 @@ msgid ""
 "---------- Buffer: foo ----------\n"
 "\n"
 msgstr ""
+"---------- Buffer: foo ----------\n"
+"Este é o @point{}conteúdo de foo.\n"
+"---------- Buffer: foo ----------\n"
 
 #. type: group
 #: texinfo/texinfo.texi:10095
@@ -26587,11 +26602,17 @@ msgid ""
 "---------- Buffer: foo ----------\n"
 "\n"
 msgstr ""
+"(inserção \"changed \")\n"
+"    @result{} nil\n"
+"---------- Buffer: foo ----------\n"
+"Este é o @point{}conteúdo mudado de foo.\n"
+"---------- Buffer: foo ----------\n"
+"\n"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:10100
 msgid "In a Texinfo source file, the example is written like this:"
-msgstr ""
+msgstr "Em um arquivo fonte do Texinfo, o exemplo é escrito assim:"
 
 #. type: example
 #: texinfo/texinfo.texi:10106
@@ -26603,6 +26624,11 @@ msgid ""
 "---------- Buffer: foo ----------\n"
 "\n"
 msgstr ""
+"@@example\n"
+"---------- Buffer: foo ----------\n"
+"Este é o @@point@{@}conteúdo de foo.\n"
+"---------- Buffer: foo ----------\n"
+"\n"
 
 #. type: example
 #: texinfo/texinfo.texi:10113
@@ -26615,41 +26641,47 @@ msgid ""
 "---------- Buffer: foo ----------\n"
 "@@end example\n"
 msgstr ""
+"(inserção \"changed \")\n"
+"    @@result@{@} nil\n"
+"---------- Buffer: foo ----------\n"
+"Este é o @@point@{@}conteúdo mudado de foo.\n"
+"---------- Buffer: foo ----------\n"
+"@@end example\n"
 
 #. type: subsection
 #: texinfo/texinfo.texi:10116 texinfo/texinfo.texi:10118
 #, no-wrap
 msgid "Click Sequences"
-msgstr ""
+msgstr "Sequências de Cliques"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:10118
 msgid "@nodedescription Inserting GUI usage sequences."
-msgstr ""
+msgstr "@nodedescription Inserindo sequências de uso da GUI."
 
 #. type: cindex
 #: texinfo/texinfo.texi:10120
 #, no-wrap
 msgid "Click sequences"
-msgstr ""
+msgstr "Sequências de cliques"
 
 #. type: cindex
 #: texinfo/texinfo.texi:10121
 #, no-wrap
 msgid "Sequence of clicks"
-msgstr ""
+msgstr "Sequência dos cliques"
 
 #. type: cindex
 #: texinfo/texinfo.texi:10122
 #, no-wrap
 msgid "GUI click sequence"
-msgstr ""
+msgstr "Sequência de cliques da GUI"
 
 #. type: findex
 #: texinfo/texinfo.texi:10124
 #, no-wrap
 msgid "clicksequence"
-msgstr ""
+msgstr "clicksequence"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:10129
@@ -26659,30 +26691,34 @@ msgid ""
 "Texinfo offers commands @code{@@clicksequence} and @code{click} to represent "
 "this, typically used like this:"
 msgstr ""
+"Ao documentar interfaces gráficas, é necessário descrever sequências "
+"como `Clique em @samp{Arquivo}, depois escolha @samp{Abrir}, depois "
+"@dots{}'.  O Texinfo oferece os comandos @code{@@clicksequence} e "
+"@code{click} para representar isso, normalmente usados assim:"
 
 #. type: example
 #: texinfo/texinfo.texi:10132
 #, no-wrap
 msgid "@dots{} @@clicksequence@{File @@click@{@} Open@} @dots{}\n"
-msgstr ""
+msgstr "@dots{} @@clicksequence@{Arquivo @@click@{@} Abrir@} @dots{}\n"
 
 #. type: display
 #: texinfo/texinfo.texi:10139
 #, no-wrap
 msgid "@dots{} @clicksequence{File @click{} Open} @dots{}\n"
-msgstr ""
+msgstr "@dots{} @clicksequence{Arquivo @click{} Abrir} @dots{}\n"
 
 #. type: findex
 #: texinfo/texinfo.texi:10141
 #, no-wrap
 msgid "click"
-msgstr ""
+msgstr "click"
 
 #. type: findex
 #: texinfo/texinfo.texi:10142
 #, no-wrap
 msgid "arrow"
-msgstr ""
+msgstr "arrow"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:10146
@@ -26690,12 +26726,15 @@ msgid ""
 "The @code{@@click} command produces a right arrow by default; this glyph is "
 "also available independently via the command @code{@@arrow@{@}}."
 msgstr ""
+"O comando @code{@@click} produz uma seta para a direita por padrão; esse "
+"glifo também está disponível independentemente por meio do comando "
+"@code{@@arrow@{@}}."
 
 #. type: findex
 #: texinfo/texinfo.texi:10147
 #, no-wrap
 msgid "clickstyle"
-msgstr ""
+msgstr "clickstyle"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:10153
@@ -26706,6 +26745,11 @@ msgid ""
 "(@pxref{@code{@@itemize}}).  The command should produce a glyph, and the "
 "usual empty braces @samp{@{@}} are omitted.  Here's an example:"
 msgstr ""
+"Você pode mudar o glifo produzido por @code{@@click} com o comando "
+"@code{@@clickstyle}, que recebe um nome de comando como o único argumento "
+"dele no resto da linha, muito parecido com @code{@@itemize} e amigos(as) "
+"(@pxref{@code{@@itemize}}).  O comando deveria produzir um glifo, e as "
+"chaves vazias usuais @samp{@{@}} são omitidas.  Aqui está um exemplo:"
 
 #. type: example
 #: texinfo/texinfo.texi:10157
@@ -26714,11 +26758,13 @@ msgid ""
 "@@clickstyle @@result\n"
 "@dots{} @@clicksequence@{File @@click@{@} Open@} @dots{}\n"
 msgstr ""
+"@@clickstyle @@result\n"
+"@dots{} @@clicksequence@{Arquivo @@click@{@} Abrir@} @dots{}\n"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:10161
 msgid "now produces:"
-msgstr ""
+msgstr "agora produz:"
 
 #. type: display
 #: texinfo/texinfo.texi:10165
@@ -26727,41 +26773,43 @@ msgid ""
 "@clickstyle @result\n"
 "@dots{} @clicksequence{File @click{} Open} @dots{}\n"
 msgstr ""
+"@clickstyle @result\n"
+"@dots{} @clicksequence{Arquivo @click{} Abrir} @dots{}\n"
 
 #. type: node
 #: texinfo/texinfo.texi:10168
 #, no-wrap
 msgid "Inserting Unicode"
-msgstr ""
+msgstr "Inserindo Unicode"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:10170
 msgid "@nodedescription Inserting a Unicode character by code point."
-msgstr ""
+msgstr "@nodedescription Inserindo um caractere Unicode por ponto de código."
 
 #. type: section
 #: texinfo/texinfo.texi:10170
 #, no-wrap
 msgid "Inserting Unicode: @code{@@U}"
-msgstr ""
+msgstr "Inserindo Unicode: @code{@@U}"
 
 #. type: cindex
 #: texinfo/texinfo.texi:10172
 #, no-wrap
 msgid "Unicode character, inserting"
-msgstr ""
+msgstr "Caractere Unicode, inserindo"
 
 #. type: cindex
 #: texinfo/texinfo.texi:10173
 #, no-wrap
 msgid "Code point of Unicode character, inserting by"
-msgstr ""
+msgstr "Ponto de código do caractere Unicode, inserindo por"
 
 #. type: findex
 #: texinfo/texinfo.texi:10174
 #, no-wrap
 msgid "U"
-msgstr ""
+msgstr "U"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:10179
@@ -26770,6 +26818,9 @@ msgid ""
 "character U+@var{hex}.  For example, @code{@@U@{0132@}} inserts the Dutch "
 "`IJ' ligature (`@U{0132}')."
 msgstr ""
+"O comando @code{@@U@{@var{hexadecimal}@}} insere uma representação do "
+"caractere Unicode U+@var{hexadecimal}.  Por exemplo, @code{@@U@{0132@}} "
+"insere a ligadura holandesa `IJ' (`@U{0132}')."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:10184
@@ -26779,12 +26830,17 @@ msgid ""
 "character; e.g., U+10FFFF (the very last code point) is invalid by "
 "definition, and thus cannot be inserted this way."
 msgstr ""
+"O valor @var{hexadecimal} deveria ter pelo menos quatro dígitos "
+"hexadecimais; zeros à esquerda @emph{não} são adicionados.  Em geral, "
+"@var{hexadecimal} precisa especificar um caractere Unicode normal válido; "
+"por exemplo, U+10FFFF (o último ponto de código) é inválido por "
+"definição e, portanto, não pode ser inserido dessa forma."
 
 #. type: cindex
 #: texinfo/texinfo.texi:10185
 #, no-wrap
 msgid "ASCII, source document portability using"
-msgstr ""
+msgstr "ASCII, portabilidade de documentos fonte, usando"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:10189
@@ -26793,12 +26849,15 @@ msgid ""
 "no dedicated command, while allowing the Texinfo source to remain purely "
 "7-bit ASCII for maximum portability."
 msgstr ""
+"@code{@@U} é útil para inserir glifos ocasionais para os quais Texinfo "
+"não tenha comando dedicado, ao mesmo tempo em que permite que o fonte do "
+"Texinfo permaneça puramente ASCII de 7 bits para máxima portabilidade."
 
 #. type: cindex
 #: texinfo/texinfo.texi:10190
 #, no-wrap
 msgid "Unicode and @TeX{}"
-msgstr ""
+msgstr "Unicode e @TeX{}"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:10201
@@ -26814,18 +26873,29 @@ msgid ""
 "to load fonts and declare how UTF-8 characters are output.  "
 "(@xref{@code{@@documentencoding}}.)"
 msgstr ""
+"Esse comando tem muitas limitações---as mesmas limitações de inserir "
+"caracteres Unicode em UTF-8 ou outra forma binária.  Primeiro e mais "
+"importante, @TeX{} não sabe nada acerca da maioria do Unicode.  Suportar "
+"glifos adicionais específicos mediante solicitação é possível, mas não "
+"é viável para @file{texinfo.tex} suportar conjuntos adicionais e inteiros "
+"de comandos sequênciais (japonês, urdu, @dots{}).  O comando @code{@@U} "
+"não faz nada para mudar isso.  Se o caractere especificado não for "
+"suportado no @TeX{}, um erro será fornecido.  A saída do @LaTeX{} tem mais "
+"possibilidades em relação ao UTF-8, mas poderia exigir código extra para "
+"carregar fontes e para declarar como os caracteres UTF-8 são gerados.  "
+"(@xref{@code{@@documentencoding}}.)"
 
 #. type: cindex
 #: texinfo/texinfo.texi:10202
 #, no-wrap
 msgid "Entity reference in HTML et al."
-msgstr ""
+msgstr "Referência de entidade em HTML et al."
 
 #. type: cindex
 #: texinfo/texinfo.texi:10203
 #, no-wrap
 msgid "@samp{&#x@var{hex};}, output from @code{@@U}"
-msgstr ""
+msgstr "@samp{&#x@var{hexadecimal};}, saída oriunda de @code{@@U}"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:10209
@@ -26836,6 +26906,11 @@ msgid ""
 "encoding (say, Latin@tie{}1) and the given character is not supported in "
 "that encoding."
 msgstr ""
+"Em HTML e DocBook, a saída proveniente de @code{@@U} é sempre uma "
+"referência de entidade do formato @samp{&#x@var{hexadecimal};}, como em "
+"@samp{&#x0132;} para o exemplo acima.  Isso deveria funcionar mesmo quando "
+"um documento HTML usar alguma outra codificação (digamos, Latin@tie{}1) e "
+"o caractere fornecido não for suportado nessa codificação."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:10213
@@ -26844,6 +26919,9 @@ msgid ""
 "the ASCII sequence @samp{U+@var{hex}}, as in the six ASCII characters "
 "@samp{U+0132} for the example above."
 msgstr ""
+"No Info e em texto simples, se a codificação da saída não for UTF-8, a "
+"saída será a sequência ASCII @samp{U+@var{hexadecimal}}, como nos seis "
+"caracteres ASCII @samp{U+0132} para o exemplo acima."
 
 #. type: node
 #: texinfo/texinfo.texi:10215
