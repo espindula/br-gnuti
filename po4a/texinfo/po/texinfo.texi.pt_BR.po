@@ -17,7 +17,7 @@ msgstr ""
 "Project-Id-Version: Texinfo 7.1\n"
 "Report-Msgid-Bugs-To: jafesp@gmail.com\n"
 "POT-Creation-Date: 2025-04-13 00:11-0300\n"
-"PO-Revision-Date: 2025-04-20 07:35-0300\n"
+"PO-Revision-Date: 2025-04-21 03:48-0300\n"
 "Last-Translator: Jamenson Ferreira Espindula de Almeida Melo "
 "<jafesp@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -26107,36 +26107,36 @@ msgstr "pode ser lido como ``@code{(cdr '(1 2 3))} avalia para @code{(2 3)}''."
 #: texinfo/texinfo.texi:9876
 #, no-wrap
 msgid "@code{@@expansion}"
-msgstr ""
+msgstr "@code{@@expansion}"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:9878
 msgid "@nodedescription How to indicate an expansion."
-msgstr ""
+msgstr "@nodedescription Como indicar uma expansão."
 
 #. type: subsection
 #: texinfo/texinfo.texi:9878
 #, no-wrap
 msgid "@code{@@expansion@{@}} (@expansion{}): Indicating an Expansion"
-msgstr ""
+msgstr "@code{@@expansion@{@}} (@expansion{}): Indicando uma Expansão"
 
 #. type: findex
 #: texinfo/texinfo.texi:9881 texinfo/texinfo.texi:9883
 #, no-wrap
 msgid "expansion"
-msgstr ""
+msgstr "expansion"
 
 #. type: cindex
 #: texinfo/texinfo.texi:9881
 #, no-wrap
 msgid "Expansion, indicating"
-msgstr ""
+msgstr "Expansão, Indicando"
 
 #. type: cindex
 #: texinfo/texinfo.texi:9882
 #, no-wrap
 msgid "Macro expansion, indicating"
-msgstr ""
+msgstr "Expansão de macro, indicando"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:9888
@@ -26145,6 +26145,9 @@ msgid ""
 "can indicate the result of the expansion with the @code{@@expansion@{@}} "
 "command."
 msgstr ""
+"Quando uma expressão for uma chamada de macro, ela se expande para uma nova "
+"expressão.  Você pode indicar o resultado da expansão com o comando "
+"@code{@@expansion@{@}}."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:9892
@@ -26153,11 +26156,14 @@ msgid ""
 "either a long arrow with a flat base or (when that is not available) the "
 "ASCII sequence @samp{==>}."
 msgstr ""
+"O comando @code{@@expansion@{@}} é exibido como @samp{@expansion{}}, ou uma "
+"seta longa com uma base plana ou (quando essa não estiver disponível) como "
+"a sequência ASCII @samp{==>}."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:9895
 msgid "For example, the following"
-msgstr ""
+msgstr "Por exemplo, o seguinte"
 
 #. type: group
 #: texinfo/texinfo.texi:9903
@@ -26169,6 +26175,11 @@ msgid ""
 "    @@result@{@} c\n"
 "@@end example\n"
 msgstr ""
+"@@example lisp\n"
+"(third '(a b c))\n"
+"    @@expansion@{@} (car (cdr (cdr '(a b c))))\n"
+"    @@result@{@} c\n"
+"@@end example\n"
 
 #. type: group
 #: texinfo/texinfo.texi:9914
@@ -26178,11 +26189,14 @@ msgid ""
 "    @expansion{} (car (cdr (cdr '(a b c))))\n"
 "    @result{} c\n"
 msgstr ""
+"(third '(a b c))\n"
+"    @expansion{} (car (cdr (cdr '(a b c))))\n"
+"    @result{} c\n"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:9919
 msgid "which may be read as:"
-msgstr ""
+msgstr "que pode ser lido como:"
 
 #. type: quotation
 #: texinfo/texinfo.texi:9923
@@ -26190,6 +26204,8 @@ msgid ""
 "@code{(third '(a b c))} expands to @code{(car (cdr (cdr '(a b c))))}; the "
 "result of evaluating the expression is @code{c}."
 msgstr ""
+"@code{(third '(a b c))} expande para @code{(car (cdr (cdr '(a b c))))}; o "
+"resultado da avaliação da expressão é @code{c}."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:9928
@@ -26197,41 +26213,43 @@ msgid ""
 "Often, as in this case, an example looks better if the "
 "@code{@@expansion@{@}} and @code{@@result@{@}} commands are indented."
 msgstr ""
+"Frequentemente, como nesse caso, um exemplo aparenta melhor se os comandos "
+"@code{@@expansion@{@}} e @code{@@result@{@}} forem recuados."
 
 #. type: node
 #: texinfo/texinfo.texi:9930
 #, no-wrap
 msgid "@code{@@print}"
-msgstr ""
+msgstr "@code{@@print}"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:9932
 msgid "@nodedescription How to indicate generated output."
-msgstr ""
+msgstr "@nodedescription Como indicar saída gerada."
 
 #. type: subsection
 #: texinfo/texinfo.texi:9932
 #, no-wrap
 msgid "@code{@@print@{@}} (@print{}): Indicating Generated Output"
-msgstr ""
+msgstr "@code{@@print@{@}} (@print{}): Indicando Saída Gerada"
 
-#.  old name
+#.  nome antigo
 #. type: anchor{#1}
 #: texinfo/texinfo.texi:9935
 msgid "Print Glyph"
-msgstr ""
+msgstr "Glifo de Imprimir"
 
 #. type: findex
 #: texinfo/texinfo.texi:9935
 #, no-wrap
 msgid "print"
-msgstr ""
+msgstr "print"
 
 #. type: cindex
 #: texinfo/texinfo.texi:9936
 #, no-wrap
 msgid "Printed output, indicating"
-msgstr ""
+msgstr "Saída impressa, indicando"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:9941
@@ -26239,6 +26257,8 @@ msgid ""
 "Sometimes an expression will generate output during its execution.  You can "
 "indicate such displayed output with the @code{@@print@{@}} command."
 msgstr ""
+"Às vezes, uma expressão gerará saída durante a execução dela.  Você "
+"pode indicar tal saída exibida com o comando @code{@@print@{@}}."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:9945
@@ -26247,6 +26267,9 @@ msgid ""
 "horizontal dash butting against a vertical bar or (when that is not "
 "available) the ASCII sequence @samp{-|}."
 msgstr ""
+"O comando @code{@@print@{@}} é exibido como @samp{@print{}}, ou um traço "
+"horizontal encostando em uma barra vertical ou (quando isso não estiver "
+"disponível) a sequência ASCII @samp{-|}."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:9949
@@ -26254,6 +26277,8 @@ msgid ""
 "In the following example, the printed text is indicated with "
 "@samp{@print{}}, and the value of the expression follows on the last line."
 msgstr ""
+"No exemplo seguinte, o texto impresso é indicado com @samp{@print{}}, e o "
+"valor da expressão segue na última linha."
 
 #. type: group
 #: texinfo/texinfo.texi:9956
@@ -26264,11 +26289,15 @@ msgid ""
 "    @print{} bar\n"
 "    @result{} bar\n"
 msgstr ""
+"(progn (print 'foo) (print 'bar))\n"
+"    @print{} foo\n"
+"    @print{} bar\n"
+"    @result{} bar\n"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:9961
 msgid "In a Texinfo source file, this example is written as follows:"
-msgstr ""
+msgstr "Em um arquivo fonte do Texinfo, esse exemplo é escrito como segue:"
 
 #. type: group
 #: texinfo/texinfo.texi:9970
@@ -26281,41 +26310,47 @@ msgid ""
 "    @@result@{@} bar\n"
 "@@end example\n"
 msgstr ""
+"@@example lisp\n"
+"(progn (print 'foo) (print 'bar))\n"
+"    @@print@{@} foo\n"
+"    @@print@{@} bar\n"
+"    @@result@{@} bar\n"
+"@@end example\n"
 
 #. type: node
 #: texinfo/texinfo.texi:9974
 #, no-wrap
 msgid "@code{@@error}"
-msgstr ""
+msgstr "@code{@@error}"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:9976
 msgid "@nodedescription How to indicate an error message."
-msgstr ""
+msgstr "@nodedescription Como indicar uma mensagem de erro."
 
 #. type: subsection
 #: texinfo/texinfo.texi:9976
 #, no-wrap
 msgid "@code{@@error@{@}} (@error{}): Indicating an Error Message"
-msgstr ""
+msgstr "@code{@@error@{@}} (@error{}): Indicando uma Mensagem de Erro"
 
-#.  old name
+#.  nome antigo
 #. type: anchor{#1}
 #: texinfo/texinfo.texi:9979
 msgid "Error Glyph"
-msgstr ""
+msgstr "Glifo de Erro"
 
 #. type: cindex
 #: texinfo/texinfo.texi:9979
 #, no-wrap
 msgid "Error message, indicating"
-msgstr ""
+msgstr "Mensagem de erro, indicando"
 
 #. type: findex
 #: texinfo/texinfo.texi:9980
 #, no-wrap
 msgid "error"
-msgstr ""
+msgstr "error"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:9984
@@ -26323,6 +26358,8 @@ msgid ""
 "A piece of code may cause an error when you evaluate it.  You can designate "
 "the error message with the @code{@@error@{@}} command."
 msgstr ""
+"Um pedaço de código possivelmente cause um erro quando você o avaliar.  "
+"Você consegue designar a mensagem de erro com o comando @code{@@error@{@}}."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:9989
@@ -26331,11 +26368,15 @@ msgid ""
 "word `error' in a box in the printed output, the word error followed by an "
 "arrow in other formats or (when no arrow is available)  @samp{error-->}."
 msgstr ""
+"O comando @code{@@error@{@}} é exibido como @samp{@error{}}, ou a palavra "
+"`erro' em uma caixa na saída impressa, ou a palavra erro seguida por uma "
+"seta em outros formatos ou (quando nenhuma seta estiver disponível) "
+"@samp{error-->}."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:9992 texinfo/texinfo.texi:10035
 msgid "Thus,"
-msgstr ""
+msgstr "Assim,"
 
 #. type: example
 #: texinfo/texinfo.texi:9998
@@ -26346,6 +26387,10 @@ msgid ""
 "@@error@{@} Wrong type argument: integer-or-marker-p, x\n"
 "@@end example\n"
 msgstr ""
+"@@example lisp\n"
+"(+ 23 'x)\n"
+"@@error@{@} Argumento de tipo errado: integer-or-marker-p, x\n"
+"@@end example lisp\n"
 
 #. type: example
 #: texinfo/texinfo.texi:10006
@@ -26354,6 +26399,8 @@ msgid ""
 "(+ 23 'x)\n"
 "@error{} Wrong type argument: integer-or-marker-p, x\n"
 msgstr ""
+"(+ 23 'x)\n"
+"@error{} Argumento de tipo errado: integer-or-marker-p, x\n"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:10011
@@ -26361,52 +26408,54 @@ msgid ""
 "This indicates that the following error message is printed when you evaluate "
 "the expression:"
 msgstr ""
+"Isso indica que a seguinte mensagem de erro é impressa quando você avaliar "
+"a expressão:"
 
 #. type: example
 #: texinfo/texinfo.texi:10014
 #, no-wrap
 msgid "Wrong type argument: integer-or-marker-p, x\n"
-msgstr ""
+msgstr "Argumento de tipo errado: integer-or-marker-p, x\n"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:10017
 msgid "The word @samp{@error{}} itself is not part of the error message."
-msgstr ""
+msgstr "A própria palavra @samp{@error{}} não é parte da mensagem de erro."
 
 #. type: node
 #: texinfo/texinfo.texi:10019
 #, no-wrap
 msgid "@code{@@equiv}"
-msgstr ""
+msgstr "@code{@@equiv}"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:10021
 msgid "@nodedescription How to indicate equivalence."
-msgstr ""
+msgstr "@nodedescription Como indicar equivalência."
 
 #. type: subsection
 #: texinfo/texinfo.texi:10021
 #, no-wrap
 msgid "@code{@@equiv@{@}} (@equiv{}): Indicating Equivalence"
-msgstr ""
+msgstr "@code{@@equiv@{@}} (@equiv{}): Indicando Equivalência"
 
-#.  oldname
+#.  nome antigo
 #. type: anchor{#1}
 #: texinfo/texinfo.texi:10024
 msgid "Equivalence"
-msgstr ""
+msgstr "Equivalência"
 
 #. type: cindex
 #: texinfo/texinfo.texi:10024
 #, no-wrap
 msgid "Equivalence, indicating"
-msgstr ""
+msgstr "Equivalência, indicando"
 
 #. type: findex
 #: texinfo/texinfo.texi:10025
 #, no-wrap
 msgid "equiv"
-msgstr ""
+msgstr "equiv"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:10033
@@ -26417,6 +26466,12 @@ msgid ""
 "standard mathematical equivalence sign (three parallel horizontal lines) or "
 "(when that is not available) as the ASCII sequence @samp{==}."
 msgstr ""
+"Às vezes, duas expressões produzem resultados idênticos.  Você consegue "
+"indicar a equivalência exata de duas formas com o comando "
+"@code{@@equiv@{@}}.  O comando @code{@@equiv@{@}} é exibido como "
+"@samp{@equiv{}}, ou um sinal padrão de equivalência matemática (três "
+"linhas horizontais paralelas) ou (quando isso não estiver disponível) como "
+"a sequência ASCII @samp{==}."
 
 #. type: example
 #: texinfo/texinfo.texi:10040
@@ -26426,12 +26481,15 @@ msgid ""
 "(make-sparse-keymap) @@equiv@{@} (list 'keymap)\n"
 "@@end example\n"
 msgstr ""
+"@@example lisp\n"
+"(make-sparse-keymap) @@equiv@{@} (list 'keymap)\n"
+"@@end example\n"
 
 #. type: example
 #: texinfo/texinfo.texi:10047
 #, no-wrap
 msgid "(make-sparse-keymap) @equiv{} (list 'keymap)\n"
-msgstr ""
+msgstr "(make-sparse-keymap) @equiv{} (list 'keymap)\n"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:10052
@@ -26439,6 +26497,8 @@ msgid ""
 "This indicates that evaluating @code{(make-sparse-keymap)} produces "
 "identical results to evaluating @code{(list 'keymap)}."
 msgstr ""
+"Isso indica que avaliar @code{(make-sparse-keymap)} produz resultados "
+"idênticos à avaliação de @code{(list 'keymap)}."
 
 #. type: node
 #: texinfo/texinfo.texi:10054
