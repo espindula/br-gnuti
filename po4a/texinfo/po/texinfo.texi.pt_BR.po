@@ -17,7 +17,7 @@ msgstr ""
 "Project-Id-Version: Texinfo 7.1\n"
 "Report-Msgid-Bugs-To: jafesp@gmail.com\n"
 "POT-Creation-Date: 2025-04-13 00:11-0300\n"
-"PO-Revision-Date: 2025-04-21 05:30-0300\n"
+"PO-Revision-Date: 2025-04-22 07:38-0300\n"
 "Last-Translator: Jamenson Ferreira Espindula de Almeida Melo "
 "<jafesp@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -27260,54 +27260,54 @@ msgstr ""
 #: texinfo/texinfo.texi:10327
 #, no-wrap
 msgid "@code{@@- @@hyphenation}"
-msgstr ""
+msgstr "@code{@@- @@hyphenation}"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:10329
 msgid "@nodedescription Helping @TeX{} with hyphenation points."
-msgstr ""
+msgstr "@nodedescription Ajudando @TeX{} com pontos de hifenação."
 
 #. type: section
 #: texinfo/texinfo.texi:10329
 #, no-wrap
 msgid "@code{@@-} and @code{@@hyphenation}: Hyphenation in Printed Output"
-msgstr ""
+msgstr "@code{@@-} e @code{@@hyphenation}: Hifenização em Saída Impressa"
 
-#.  old name
+#.  nome antigo
 #. type: anchor{#1}
 #: texinfo/texinfo.texi:10332
 msgid "- and hyphenation"
-msgstr ""
+msgstr "- e hifenação"
 
 #. type: findex
 #: texinfo/texinfo.texi:10332
 #, no-wrap
 msgid "@sortas{-} - @r{(discretionary hyphen)}"
-msgstr ""
+msgstr "@sortas{-} - @r{(hífen discricionário)}"
 
 #. type: findex
 #: texinfo/texinfo.texi:10334
 #, no-wrap
 msgid "@sortas{-} -"
-msgstr ""
+msgstr "@sortas{-} -"
 
 #. type: findex
 #: texinfo/texinfo.texi:10336
 #, no-wrap
 msgid "hyphenation"
-msgstr ""
+msgstr "hyphenation"
 
 #. type: cindex
 #: texinfo/texinfo.texi:10337
 #, no-wrap
 msgid "Hyphenation, helping @TeX{} do"
-msgstr ""
+msgstr "Hifenização, ajudando @TeX{} a fazer"
 
 #. type: cindex
 #: texinfo/texinfo.texi:10338
 #, no-wrap
 msgid "Fine-tuning, and hyphenation"
-msgstr ""
+msgstr "Ajuste fino, e hifenização"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:10346
@@ -27319,6 +27319,12 @@ msgid ""
 "specify hyphenation points explicitly.  Texinfo supports two commands for "
 "this:"
 msgstr ""
+"Embora o algoritmo de hifenização do @TeX{} geralmente seja muito bom, ele "
+"perde pontos de hifenização úteis de vez em quando.  (Ou, muito mais "
+"raramente, insere uma hifenização incorreta).  Então, para documentos com "
+"um vocabulário incomum ou ao fazer ajustes finos para uma edição "
+"impressa, você possivelmente deseje especificar pontos de hifenização "
+"explicitamente.  Texinfo suporta dois comandos para isso:"
 
 #. type: table
 #: texinfo/texinfo.texi:10355
@@ -27329,17 +27335,22 @@ msgid ""
 "hboxes}).  @TeX{} will not insert any hyphenation points itself into a word "
 "containing @code{@@-}."
 msgstr ""
+"Insere um hífen discricionário, ou seja, um lugar onde uma palavra possa "
+"ser quebrada entre linhas com um hífen.  Isso é especialmente útil quando "
+"você perceber que um hbox cheio demais é devido ao @TeX{} carecer de uma "
+"hifenização (@pxref{hboxes lotados}).  @TeX{} não inserirá ele próprio "
+"quaisquer pontos de hifenização em uma palavra contendo @code{@@-}."
 
 #. type: table
 #: texinfo/texinfo.texi:10358
 msgid "Give hyphenation points for certain words.  For example:"
-msgstr ""
+msgstr "Forneçe pontos de hifenização para certas palavras.  Por exemplo:"
 
 #. type: example
 #: texinfo/texinfo.texi:10360
 #, no-wrap
 msgid "@@hyphenation@{man-u-script man-u-scripts@}\n"
-msgstr ""
+msgstr "@@hyphenation@{man-u-scrito man-u-scritos@}\n"
 
 #. type: table
 #: texinfo/texinfo.texi:10366
@@ -27348,6 +27359,10 @@ msgid ""
 "the specified hyphenation points when the words match exactly, so give all "
 "necessary variants, such as plurals."
 msgstr ""
+"Como mostrado, você coloca um @samp{-} em cada ponto de hifenização.  "
+"@TeX{} só usa os pontos de hifenização especificados quando as palavras "
+"corresponderem exatamente, portanto forneça todas as variantes "
+"necessárias, tais como plurais."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:10370
@@ -27355,65 +27370,68 @@ msgid ""
 "Non-printed output is not hyphenated, so none of these commands have any "
 "effect in other output formats."
 msgstr ""
+"Saídas não impressas não são hifenizadas, de forma que nenhum desses "
+"comandos tem qualquer efeito em outros formatos de saída."
 
 #. type: node
 #: texinfo/texinfo.texi:10372
 #, no-wrap
 msgid "@code{@@allowcodebreaks}"
-msgstr ""
+msgstr "@code{@@allowcodebreaks}"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:10374
 msgid "@nodedescription Controlling line breaks within @@code text."
 msgstr ""
+"@nodedescription Controlando quebras de linhas dentro de texto do @@code."
 
 #. type: section
 #: texinfo/texinfo.texi:10374
 #, no-wrap
 msgid "@code{@@allowcodebreaks}: Control Line Breaks in @code{@@code}"
-msgstr ""
+msgstr "@code{@@allowcodebreaks}: Controle Quebras de Linha no @code{@@code}"
 
 #. type: findex
 #: texinfo/texinfo.texi:10377
 #, no-wrap
 msgid "allowcodebreaks"
-msgstr ""
+msgstr "allowcodebreaks"
 
 #. type: cindex
 #: texinfo/texinfo.texi:10378
 #, no-wrap
 msgid "Breaks, within @code{@@code}"
-msgstr ""
+msgstr "Quebras, dentro do @code{@@code}"
 
 #. type: cindex
 #: texinfo/texinfo.texi:10379
 #, no-wrap
 msgid "@sortas{-} -, breakpoint within @code{@@code}"
-msgstr ""
+msgstr "@sortas{-} -, ponto de interrupção dentro do @code{@@code}"
 
 #. type: cindex
 #: texinfo/texinfo.texi:10380
 #, no-wrap
 msgid "Hyphen, breakpoint within @code{@@code}"
-msgstr ""
+msgstr "Hífen, ponto de interrupção dentro do @code{@@code}"
 
 #. type: cindex
 #: texinfo/texinfo.texi:10381
 #, no-wrap
 msgid "Dash, breakpoint within @code{@@code}"
-msgstr ""
+msgstr "Traço, ponto de interrupção dentro do @code{@@code}"
 
 #. type: cindex
 #: texinfo/texinfo.texi:10382
 #, no-wrap
 msgid "_, breakpoint within @code{@@code}"
-msgstr ""
+msgstr "_, ponto de interrupção dentro do @code{@@code}"
 
 #. type: cindex
 #: texinfo/texinfo.texi:10383
 #, no-wrap
 msgid "Underscore, breakpoint within @code{@@code}"
-msgstr ""
+msgstr "Sublinhado, ponto de interrupção dentro do @code{@@code}"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:10389
@@ -27423,6 +27441,10 @@ msgid ""
 "(@pxref{@code{@@code}}), more or less as if they were ``empty'' hyphenation "
 "points."
 msgstr ""
+"Normalmente, @TeX{} considera a quebra de linhas nos caracteres @samp{-} e "
+"@samp{_} dentro do @code{@@code} e comandos relacionados "
+"(@pxref{@code{@@code}}), mais ou menos como se fossem pontos de "
+"hifenização ``vazios''."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:10395
@@ -27433,17 +27455,23 @@ msgid ""
 "underscore in, for example, @code{SIZE_MAX}, or even worse, after any of the "
 "four underscores in @code{__typeof__}."
 msgstr ""
+"Isso é necessário, pois muitos manuais, especialmente para linguagens da "
+"família Lisp, precisam documentar identificadores muito longos.  Por outro "
+"lado, alguns manuais não tem esse problema, e você pode não desejar "
+"permitir uma quebra de linha no sublinhado em, por exemplo, @code{SIZE_MAX}, "
+"ou pior ainda, depois de qualquer um dos quatro sublinhados em "
+"@code{__typeof__}."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:10397
 msgid "So Texinfo provides this command:"
-msgstr ""
+msgstr "Assim, Texinfo fornece este comando:"
 
 #. type: example
 #: texinfo/texinfo.texi:10400
 #, no-wrap
 msgid "@@allowcodebreaks false\n"
-msgstr ""
+msgstr "@@allowcodebreaks false\n"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:10407
@@ -27452,6 +27480,9 @@ msgid ""
 "can go back to allowing such breaks with @code{@@allowcodebreaks true}.  "
 "Write these commands on lines by themselves."
 msgstr ""
+"para impedir quebras em @samp{-} ou @samp{_} dentro do @code{@@code}.  Você "
+"pode voltar a permitir tais quebras com @code{@@allowcodebreaks true}.  "
+"Escreva esses comandos em linhas dedicadas."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:10411
@@ -27460,40 +27491,43 @@ msgid ""
 "have just one problematic paragraph where you need to turn off the breaks, "
 "but want them in general, or vice versa."
 msgstr ""
+"Esses comandos podem ser fornecidos em qualquer lugar no documento.  Por "
+"exemplo, você pode ter apenas um parágrafo problemático onde precisa "
+"desligar as quebras, mas querê-las em geral, ou vice-versa."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:10413
 msgid "This command has no effect except in @TeX{} output."
-msgstr ""
+msgstr "Esse comando não tem efeito, exceto na saída do @TeX{}."
 
 #. type: node
 #: texinfo/texinfo.texi:10415
 #, no-wrap
 msgid "@code{@@w}"
-msgstr ""
+msgstr "@code{@@w}"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:10417
 msgid "@nodedescription Preventing unwanted line breaks in text."
-msgstr ""
+msgstr "@nodedescription Impedindo quebras de linha indesejadas no texto."
 
 #. type: section
 #: texinfo/texinfo.texi:10417
 #, no-wrap
 msgid "@code{@@w}@{@var{text}@}: Prevent Line Breaks"
-msgstr ""
+msgstr "@code{@@w}@{@var{texto}@}: Impedir Quebras de Linha"
 
 #. type: findex
 #: texinfo/texinfo.texi:10420
 #, no-wrap
 msgid "w"
-msgstr ""
+msgstr "w"
 
 #. type: cindex
 #: texinfo/texinfo.texi:10421
 #, no-wrap
 msgid "Line breaks, preventing"
-msgstr ""
+msgstr "Quebras de linha, impedindo"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:10425
@@ -27501,18 +27535,20 @@ msgid ""
 "@code{@@w@{@var{text}@}} outputs @var{text}, while prohibiting line breaks "
 "within @var{text}."
 msgstr ""
+"@code{@@w@{@var{texto}@}} gera @var{texto}, ao mesmo tempo que proíbe "
+"quebras de linha dentro do @var{texto}."
 
 #. type: cindex
 #: texinfo/texinfo.texi:10426
 #, no-wrap
 msgid "Non-breakable space, fixed"
-msgstr ""
+msgstr "Espaço não quebrável, fixado"
 
 #. type: cindex
 #: texinfo/texinfo.texi:10427
 #, no-wrap
 msgid "Unbreakable space, fixed"
-msgstr ""
+msgstr "Espaço inquebrável, fixado"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:10430
@@ -27520,18 +27556,20 @@ msgid ""
 "Thus, you can use @code{@@w} to produce a non-breakable space, fixed at the "
 "width of a normal interword space:"
 msgstr ""
+"Assim, você pode usar @code{@@w} para produzir um espaço não quebrável, "
+"fixado na largura de um espaço normal interpalavras:"
 
 #. type: example
 #: texinfo/texinfo.texi:10433
 #, no-wrap
 msgid "@@w@{ @} @@w@{ @} @@w@{ @} indentation.\n"
-msgstr ""
+msgstr "@@w@{ @} @@w@{ @} @@w@{ @} recuo.\n"
 
 #. type: display
 #: texinfo/texinfo.texi:10440
 #, no-wrap
 msgid "@w{ } @w{ } @w{ } indentation.\n"
-msgstr ""
+msgstr "@w{ } @w{ } @w{ } recuo.\n"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:10447
@@ -27542,12 +27580,17 @@ msgid ""
 "interword space that does stretch and shrink (in the printed output); for "
 "that, see the @code{@@tie} command in the next section."
 msgstr ""
+"O espaço oriundo de @code{@@w@{@w{ }@}}, além de ser não quebrável, "
+"também não esticará nem encolherá.  Às vezes isso é o que você quer, "
+"por exemplo, se estiver fazendo recuo manual.  No entanto, normalmente você "
+"quer um espaço normal interpalavra que estique e encolha (na saída "
+"impressa); para isso, veja-se o comando @code{@@tie} na próxima seção."
 
 #. type: cindex
 #: texinfo/texinfo.texi:10448
 #, no-wrap
 msgid "Hyphenation, preventing"
-msgstr ""
+msgstr "Hifenização, impedindo"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:10452
@@ -27556,24 +27599,27 @@ msgid ""
 "name or phrase being automatically hyphenated, for example if it happens to "
 "fall near the end of a line."
 msgstr ""
+"Na saída impressa, você também pode usar o comando @code{@@w} para "
+"impedir que um nome longo ou uma frase seja automaticamente hifenizada, por "
+"exemplo se aconteçer perto do fim de uma linha."
 
 #. type: cindex
 #: texinfo/texinfo.texi:10453
 #, no-wrap
 msgid "Keyword expansion, preventing"
-msgstr ""
+msgstr "Expansão de palavras-chave, impedindo"
 
 #. type: cindex
 #: texinfo/texinfo.texi:10454
 #, no-wrap
 msgid "Version control keywords, preventing expansion of"
-msgstr ""
+msgstr "Palavras-chave de controle de versão, impedindo expansão de"
 
 #. type: cindex
 #: texinfo/texinfo.texi:10455
 #, no-wrap
 msgid "$Id expansion, preventing"
-msgstr ""
+msgstr "Expansão de $Id, impedindo"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:10460
@@ -27583,6 +27629,11 @@ msgid ""
 "document, use @code{@@w@{$@}Id$}.  This trick isn't effective for output "
 "files in some output formats, though."
 msgstr ""
+"Você também pode usar @code{@@w} para evitar expansão indesejada de "
+"palavra-chave em sistemas de controle de fonte.  Por exemplo, para escrever "
+"literalmente @t{@w{$}Id$} em teu documento, use @code{@@w@{$@}Id$}.  "
+"Entretanto, esse truque não é eficaz para arquivos de saída em alguns "
+"formatos de saída."
 
 #. type: node
 #: texinfo/texinfo.texi:10462
