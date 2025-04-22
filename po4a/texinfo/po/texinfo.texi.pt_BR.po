@@ -17,7 +17,7 @@ msgstr ""
 "Project-Id-Version: Texinfo 7.1\n"
 "Report-Msgid-Bugs-To: jafesp@gmail.com\n"
 "POT-Creation-Date: 2025-04-13 00:11-0300\n"
-"PO-Revision-Date: 2025-04-22 07:38-0300\n"
+"PO-Revision-Date: 2025-04-22 11:00-0300\n"
 "Last-Translator: Jamenson Ferreira Espindula de Almeida Melo "
 "<jafesp@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -27639,42 +27639,42 @@ msgstr ""
 #: texinfo/texinfo.texi:10462
 #, no-wrap
 msgid "@code{@@tie}"
-msgstr ""
+msgstr "@code{@@tie}"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:10464
 msgid "@nodedescription Inserting an unbreakable but varying space."
-msgstr ""
+msgstr "@nodedescription Inserindo um inquebrável, porém variante espaço."
 
 #. type: section
 #: texinfo/texinfo.texi:10464
 #, no-wrap
 msgid "@code{@@tie@{@}}: Inserting an Unbreakable Space"
-msgstr ""
+msgstr "@code{@@tie@{@}}: Inserindo um Espaço Inquebrável"
 
 #. type: findex
 #: texinfo/texinfo.texi:10467
 #, no-wrap
 msgid "tie"
-msgstr ""
+msgstr "tie"
 
 #. type: cindex
 #: texinfo/texinfo.texi:10468
 #, no-wrap
 msgid "Tied space"
-msgstr ""
+msgstr "Espaço amarrado"
 
 #. type: cindex
 #: texinfo/texinfo.texi:10469
 #, no-wrap
 msgid "Non-breakable space, variable"
-msgstr ""
+msgstr "Espaço não quebrável, variável"
 
 #. type: cindex
 #: texinfo/texinfo.texi:10470
 #, no-wrap
 msgid "Unbreakable space, variable"
-msgstr ""
+msgstr "Inquebrável, espaço variável"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:10476
@@ -27683,18 +27683,22 @@ msgid ""
 "line break may not occur.  Always write it with following (empty)  braces, "
 "as usual for commands used within a paragraph.  Here's an example:"
 msgstr ""
+"O comando @code{@@tie@{@}} produz um espaço normal interpalavra no qual uma "
+"quebra de linha possivelmente não ocorra.  Sempre escreva-o com as "
+"seguintes chaves (vazias), como de costume para comandos usados dentro de um "
+"parágrafo.  Aqui está um exemplo:"
 
 #. type: example
 #: texinfo/texinfo.texi:10479
 #, no-wrap
 msgid "@@TeX@{@} was written by Donald E.@@tie@{@}Knuth.\n"
-msgstr ""
+msgstr "@@TeX@{@} foi escrito por Donald E.@@tie@{@}Knuth.\n"
 
 #. type: display
 #: texinfo/texinfo.texi:10486
 #, no-wrap
 msgid "@TeX{} was written by Donald E.@tie{}Knuth.\n"
-msgstr ""
+msgstr "@TeX{} foi escrito por Donald E.@tie{}Knuth.\n"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:10490
@@ -27702,6 +27706,8 @@ msgid ""
 "There are two important differences between @code{@@tie@{@}} and "
 "@code{@@w@{@w{ }@}}:"
 msgstr ""
+"Existem duas diferenças importantes entre @code{@@tie@{@}} e @code{@@w@{@w{ "
+"}@}}:"
 
 #. type: itemize
 #: texinfo/texinfo.texi:10496
@@ -27710,6 +27716,9 @@ msgid ""
 "along with the normal interword spaces in the paragraph; the space produced "
 "by @code{@@w@{@w{ }@}} will not vary."
 msgstr ""
+"O espaço produzido por @code{@@tie@{@}} esticará e encolherá ligeiramente "
+"junto com os espaços normais entre palavras no parágrafo; o espaço "
+"produzido por @code{@@w@{@w{ }@}} não variará."
 
 #. type: itemize
 #: texinfo/texinfo.texi:10501
@@ -27718,41 +27727,44 @@ msgid ""
 "@code{@@w@{@w{ }@}} inhibits hyphenation of those words (for @TeX{}nical "
 "reasons, namely that it produces an @samp{\\hbox})."
 msgstr ""
+"@code{@@tie@{@}} permite hifenização das palavras ao redor, enquanto "
+"@code{@@w@{@w{ }@}} inibe a hifenização dessas palavras (por motivos "
+"@TeX{}nológicas, ou seja, porque produz um @samp{\\hbox})."
 
 #. type: node
 #: texinfo/texinfo.texi:10505
 #, no-wrap
 msgid "@code{@@sp}"
-msgstr ""
+msgstr "@code{@@sp}"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:10507
 msgid "@nodedescription Inserting blank lines."
-msgstr ""
+msgstr "@nodedescription Inserindo linhas em branco."
 
 #. type: section
 #: texinfo/texinfo.texi:10507
 #, no-wrap
 msgid "@code{@@sp} @var{n}: Insert Blank Lines"
-msgstr ""
+msgstr "@code{@@sp} @var{n}: Inserir Linhas em Branco"
 
 #. type: cindex
 #: texinfo/texinfo.texi:10511
 #, no-wrap
 msgid "Space, inserting vertical"
-msgstr ""
+msgstr "Espaço, inserindo vertical"
 
 #. type: cindex
 #: texinfo/texinfo.texi:10512
 #, no-wrap
 msgid "Blank lines"
-msgstr ""
+msgstr "Linhas em branco"
 
 #. type: cindex
 #: texinfo/texinfo.texi:10513
 #, no-wrap
 msgid "Line spacing"
-msgstr ""
+msgstr "Espaçamento entre linhas"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:10518
@@ -27761,45 +27773,49 @@ msgid ""
 "@var{n} blank lines of space.  @code{@@sp} also forces a paragraph break.  "
 "For example,"
 msgstr ""
+"Uma linha que começa com e contém somente @code{@@sp @var{n}} gera @var{n} "
+"linhas de espaço em branco.  @code{@@sp} também força uma quebra de "
+"parágrafo.  Por exemplo,"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:10525
 msgid "generates two blank lines."
-msgstr ""
+msgstr "gera duas linhas em branco."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:10527
 msgid "The @code{@@sp} command is most often used in the title page."
 msgstr ""
+"O comando @code{@@sp} é usado mais frequentemente na página de título."
 
 #. type: node
 #: texinfo/texinfo.texi:10529
 #, no-wrap
 msgid "@code{@@page}"
-msgstr ""
+msgstr "@code{@@page}"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:10531
 msgid "@nodedescription Forcing the start of a new page."
-msgstr ""
+msgstr "@nodedescription Forçando o início de uma página nova."
 
 #. type: section
 #: texinfo/texinfo.texi:10531
 #, no-wrap
 msgid "@code{@@page}: Start a New Page"
-msgstr ""
+msgstr "@code{@@page}: Comece uma Nova Página"
 
 #. type: findex
 #: texinfo/texinfo.texi:10534
 #, no-wrap
 msgid "page"
-msgstr ""
+msgstr "page"
 
 #. type: cindex
 #: texinfo/texinfo.texi:10535
 #, no-wrap
 msgid "Page breaks, forcing"
-msgstr ""
+msgstr "Quebras de página, forçando"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:10542
@@ -27809,47 +27825,52 @@ msgid ""
 "A @code{@@page} command is often used in the @code{@@titlepage} section of a "
 "Texinfo file to start the copyright page."
 msgstr ""
+"Uma linha contendo somente @code{@@page} inicia uma nova página em um "
+"manual impresso.  Em outros formatos, sem o conceito de páginas, ele inicia "
+"um novo parágrafo.  Um comando @code{@@page} frequentemente é usado na "
+"seção @code{@@titlepage} de um arquivo do Texinfo para iniciar a página "
+"de direitos autorais."
 
 #. type: node
 #: texinfo/texinfo.texi:10544
 #, no-wrap
 msgid "@code{@@group}"
-msgstr ""
+msgstr "@code{@@group}"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:10546
 msgid "@nodedescription Preventing unwanted page breaks."
-msgstr ""
+msgstr "@nodedescription Impedindo quebras de página indesejadas."
 
 #. type: section
 #: texinfo/texinfo.texi:10546
 #, no-wrap
 msgid "@code{@@group}: Prevent Page Breaks"
-msgstr ""
+msgstr "@code{@@group}: Impedir Quebras de Página"
 
 #. type: findex
 #: texinfo/texinfo.texi:10549
 #, no-wrap
 msgid "group"
-msgstr ""
+msgstr "group"
 
 #. type: cindex
 #: texinfo/texinfo.texi:10550
 #, no-wrap
 msgid "Group (hold text together vertically)"
-msgstr ""
+msgstr "Agrupar (manter texto unido verticalmente)"
 
 #. type: cindex
 #: texinfo/texinfo.texi:10551
 #, no-wrap
 msgid "Holding text together vertically"
-msgstr ""
+msgstr "Mantendo texto unido verticalmente"
 
 #. type: cindex
 #: texinfo/texinfo.texi:10552
 #, no-wrap
 msgid "Vertically holding text together"
-msgstr ""
+msgstr "Verticalmente mantendo texto unido"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:10560
@@ -27860,6 +27881,11 @@ msgid ""
 "printed output.  Terminate the group by a line containing only @code{@@end "
 "group}.  This command has an effect in @TeX{} output only."
 msgstr ""
+"O comando @code{@@group} é usado para manter um exemplo unido em uma "
+"página.  Use-o dentro de um @code{@@example} ou construção similar para "
+"começar um grupo vertical indivisível, que aparecerá inteiramente em uma "
+"página na saída impressa.  Termine o grupo por uma linha contendo somente "
+"@code{@@end group}.  Esse comando tem efeito somente na saída do @TeX{}."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:10564
@@ -27867,6 +27893,8 @@ msgid ""
 "The @code{@@group} and @code{@@end group} commands need to be inside the "
 "@code{@@example} and @code{@@end example} commands, thus:"
 msgstr ""
+"Os comandos @code{@@group} e @code{@@end group} precisam estar dentro dos "
+"comandos @code{@@example} e @code{@@end example}, assim:"
 
 #. type: group
 #: texinfo/texinfo.texi:10572
@@ -27878,6 +27906,11 @@ msgid ""
 "@@end group\n"
 "@@end example\n"
 msgstr ""
+"@@example\n"
+"@@group\n"
+"@dots{}\n"
+"@@end group\n"
+"@@end example\n"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:10581
@@ -27889,41 +27922,48 @@ msgid ""
 "commands have in common is that each line of input produces a line of "
 "output.)"
 msgstr ""
+"Embora @code{@@group} fizesse sentido conceitualmente em uma ampla variedade "
+"de contextos, a implementação atual dele funciona somente dentro de "
+"@code{@@example} e variantes, e dentro de @code{@@display}, @code{@@format}, "
+"@code{@@flushleft} e @code{@@flushright}.  @xref{Citações e Exemplos}.  (O "
+"que todos esses comandos tem em comum é que cada linha da entrada produz "
+"uma linha de saída.)"
 
 #. type: node
 #: texinfo/texinfo.texi:10597
 #, no-wrap
 msgid "@code{@@need}"
-msgstr ""
+msgstr "@code{@@need}"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:10599
 msgid "@nodedescription Another way to prevent unwanted page breaks."
 msgstr ""
+"@nodedescription Outra maneira de impedir quebras de página indesejadas."
 
 #. type: section
 #: texinfo/texinfo.texi:10599
 #, no-wrap
 msgid "@code{@@need @var{mils}}: Prevent Page Breaks"
-msgstr ""
+msgstr "@code{@@need @var{mils}}: Impedir Quebras de Página"
 
 #. type: findex
 #: texinfo/texinfo.texi:10602
 #, no-wrap
 msgid "need"
-msgstr ""
+msgstr "need"
 
 #. type: cindex
 #: texinfo/texinfo.texi:10603
 #, no-wrap
 msgid "Need space at page bottom"
-msgstr ""
+msgstr "Precisa de espaço no final da página"
 
 #. type: cindex
 #: texinfo/texinfo.texi:10604
 #, no-wrap
 msgid "Mils, argument to @code{@@need}"
-msgstr ""
+msgstr "Mils, argumento para @code{@@need}"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:10611
@@ -27934,6 +27974,11 @@ msgid ""
 "@code{@@need} command has no effect on other output formats since they are "
 "not paginated."
 msgstr ""
+"Uma linha contendo somente @code{@@need @var{n}} inicia uma nova página em "
+"um manual impresso se menos que @var{n} mils (milésimos de polegada) "
+"permanecerem na página atual.  Não use chaves ao redor do argumento "
+"@var{n}.  O comando @code{@@need} não tem efeito em outros formatos de "
+"saída, pois eles não são paginados."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:10616
@@ -27942,6 +27987,9 @@ msgid ""
 "in printed output if fewer than 800 mils (eight-tenths inch)  remain on the "
 "page.  It looks like this:"
 msgstr ""
+"Este parágrafo é precedido por um comando @code{@@need} que inicia uma "
+"nova página na saída impressa se restarem menos que 800 mils (oito "
+"décimos de polegada) na página.  Parece algo assim:"
 
 #. type: group
 #: texinfo/texinfo.texi:10621
@@ -27950,12 +27998,14 @@ msgid ""
 "@@need 800\n"
 "This paragraph is preceded by @dots{}\n"
 msgstr ""
+"@@need 800\n"
+"Este parágrafo é precedido por @dots{}\n"
 
 #. type: cindex
 #: texinfo/texinfo.texi:10624
 #, no-wrap
 msgid "Orphans, preventing"
-msgstr ""
+msgstr "Órfãs, linhas, impedindo"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:10627
@@ -27963,6 +28013,8 @@ msgid ""
 "The @code{@@need} command is useful for preventing orphans: single lines at "
 "the bottoms of printed pages."
 msgstr ""
+"O comando @code{@@need} é útil para evitar órfãs: linhas únicas na "
+"parte inferior das páginas impressas."
 
 #. type: subsubheading
 #: texinfo/texinfo.texi:10629 texinfo/texinfo.texi:10631
