@@ -17,7 +17,7 @@ msgstr ""
 "Project-Id-Version: Texinfo 7.1\n"
 "Report-Msgid-Bugs-To: jafesp@gmail.com\n"
 "POT-Creation-Date: 2025-04-13 00:11-0300\n"
-"PO-Revision-Date: 2025-04-22 11:00-0300\n"
+"PO-Revision-Date: 2025-04-22 12:10-0300\n"
 "Last-Translator: Jamenson Ferreira Espindula de Almeida Melo "
 "<jafesp@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -28021,18 +28021,18 @@ msgstr ""
 #: texinfo/texinfo.texi:20150
 #, no-wrap
 msgid "Definition Commands"
-msgstr ""
+msgstr "Comandos de Definição"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:10631
 msgid "@nodedescription Describing functions and the like uniformly."
-msgstr ""
+msgstr "@nodedescription Descrevendo funções e similares uniformemente."
 
 #. type: cindex
 #: texinfo/texinfo.texi:10632
 #, no-wrap
 msgid "Definition commands"
-msgstr ""
+msgstr "Comandos de definição"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:10637
@@ -28041,6 +28041,10 @@ msgid ""
 "you to describe functions, variables, macros, commands, user options, "
 "special forms and other entities in a uniform format."
 msgstr ""
+"O comando @code{@@deffn} e os outros @dfn{comandos de definição} te "
+"habilitam a descrever funções, variáveis, macros, comandos, opções de "
+"usuário(a), formulários especiais e outras entidades em um formato "
+"uniforme."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:10642
@@ -28050,6 +28054,10 @@ msgid ""
 "Underneath, the body of the definition is indented.  The name of the entity "
 "is also entered into the appropriate index."
 msgstr ""
+"Na saída, o nome da entidade é mostrado com quaisquer argumentos, "
+"juntamente com a categoria da entidade ---`Função', `Variável' ou "
+"qualquer outra.  Abaixo, o corpo da definição é recuado.  O nome da "
+"entidade também é inserido no índice apropriado."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:10646
@@ -28057,35 +28065,39 @@ msgid ""
 "All the definition commands follow a similar format.  This chapter starts by "
 "describing @code{@@deffn} before detailing all the other definition commands."
 msgstr ""
+"Todos os comandos de definição seguem um formato semelhante.  Este "
+"capítulo começa descrevendo @code{@@deffn} antes de detalhar todos os "
+"outros comandos de definição."
 
 #. type: node
 #: texinfo/texinfo.texi:10648
 #, no-wrap
 msgid "Def Cmd Template"
-msgstr ""
+msgstr "Modelo de Comando de Definição"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:10650
 msgid "@nodedescription Writing descriptions using definition commands."
 msgstr ""
+"@nodedescription Escrevendo descrições usando comandos de definição."
 
 #. type: section
 #: texinfo/texinfo.texi:10650
 #, no-wrap
 msgid "The Template for a Definition"
-msgstr ""
+msgstr "O Modelo Para Uma Definição"
 
 #. type: cindex
 #: texinfo/texinfo.texi:10651
 #, no-wrap
 msgid "Definition template"
-msgstr ""
+msgstr "Modelo de definição"
 
 #. type: cindex
 #: texinfo/texinfo.texi:10652
 #, no-wrap
 msgid "Template for a definition"
-msgstr ""
+msgstr "Modelo para uma definição"
 
 #. type: group
 #: texinfo/texinfo.texi:10659
@@ -28095,6 +28107,9 @@ msgid ""
 "@var{body-of-definition}\n"
 "@@end deffn\n"
 msgstr ""
+"@@deffn @var{categoria} @var{nome} @var{argumentos}@dots{}\n"
+"@var{corpo-da-definição}\n"
+"@@end deffn\n"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:10671
@@ -28107,6 +28122,13 @@ msgid ""
 "end the definition with an @code{@@end deffn} command written on a line of "
 "its own."
 msgstr ""
+"O comando @code{@@deffn} é usado para definições de entidades que se "
+"assemelham a funções---entidades que possivelmente recebam argumentos.  "
+"Escreva o comando @code{@@deffn} no início de uma linha e siga-o na mesma "
+"linha pela categoria da entidade, o nome da entidade em si e os argumentos "
+"dela (se existirem).  Em seguida, escreva o corpo da definição nas linhas "
+"seguintes.  Finalmente, termine a definição com um comando @code{@@end "
+"deffn} escrito em uma linha própria."
 
 #. type: group
 #: texinfo/texinfo.texi:10683
@@ -28117,12 +28139,16 @@ msgid ""
 "(or backward if @@var@{count@} is negative). @dots{}\n"
 "@@end deffn\n"
 msgstr ""
+"@@deffn Command forward-word count\n"
+"Esse comando move o ponto para frente @@var@{count@} palavras\n"
+"(ou para trás, se @@var@{count@} for negativo). @dots{}\n"
+"@@end deffn\n"
 
 #. type: deffn
 #: texinfo/texinfo.texi:10690
 #, no-wrap
 msgid "Command forward-word count"
-msgstr ""
+msgstr "Command forward-word count"
 
 #. type: deffn
 #: texinfo/texinfo.texi:10693
@@ -28130,6 +28156,8 @@ msgid ""
 "This command moves point forward @var{count} words (or backward if "
 "@var{count} is negative). @dots{}"
 msgstr ""
+"Esse comando move o ponto para frente @var{count} palavras (ou para trás, "
+"se @var{count} for negativo). @dots{}"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:10699
@@ -28138,6 +28166,9 @@ msgid ""
 "contains spaces, as in the phrase `Interactive Command', enclose it in "
 "braces.  For example:"
 msgstr ""
+"Maiusculize o nome de categoria como um título.  Se o nome da categoria "
+"contiver espaços, como na frase `Comando Interativo', circunde-o em "
+"chaves.  Por exemplo:"
 
 #. type: group
 #: texinfo/texinfo.texi:10705
@@ -28147,6 +28178,9 @@ msgid ""
 "@dots{}\n"
 "@@end deffn\n"
 msgstr ""
+"@@deffn @{Comando Interativo@} isearch-forward\n"
+"@dots{}\n"
+"@@end deffn\n"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:10715
@@ -28157,6 +28191,12 @@ msgid ""
 "This may also be necessary if the text contains commands, for example, "
 "@samp{@{declaraci@@'on@}} if you are writing in Spanish."
 msgstr ""
+"Caso contrário, a segunda palavra será confundida com o nome da entidade.  "
+"Como regra geral, quando quaisquer dos argumentos na linha de título, "
+"@emph{exceto} o último, forem mais que uma palavra, você precisa "
+"circundá-los em chaves.  Isso também possivelmente seja necessário se o "
+"texto contiver comandos, por exemplo, @samp{@{declaraci@@'on@}} se você "
+"estiver escrevendo em espanhol."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:10720
@@ -28166,11 +28206,15 @@ msgid ""
 "beginning of the first line of the definition.  With @TeX{} output, the "
 "category is printed next to the right margin."
 msgstr ""
+"A categoria é gerada em um local diferente para diferentes formatos de "
+"saída.  Por exemplo, no arquivo Info, a categoria aparece no início da "
+"primeira linha da definição.  Com a saída do @TeX{}, a categoria é "
+"impressa próxima da margem direita."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:10722
 msgid "@code{@@deffn} enters names into the index of functions."
-msgstr ""
+msgstr "@code{@@deffn} insere nomes no índice das funções."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:10730
@@ -28182,6 +28226,13 @@ msgid ""
 "@code{@@defvr} command is accompanied by several specialized variations for "
 "describing particular kinds of variables."
 msgstr ""
+"Três variações predefinidas e especializadas de @code{@@deffn} "
+"(@code{@@defun}, @code{@@defmac} e @code{@@defspec}) especificam a categoria "
+"para você: ``Função'', ``Macro'' e ``Forma Especial'' respectivamente.  "
+"(Em Lisp, uma forma especial é uma entidade muito parecida com uma "
+"função).  Similarmente, o comando geral @code{@@defvr} é acompanhado por "
+"diversas variações especializadas para descrever tipos particulares de "
+"variáveis."
 
 #. type: node
 #: texinfo/texinfo.texi:10732
