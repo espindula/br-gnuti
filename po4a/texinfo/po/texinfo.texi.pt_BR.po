@@ -17,7 +17,7 @@ msgstr ""
 "Project-Id-Version: Texinfo 7.1\n"
 "Report-Msgid-Bugs-To: jafesp@gmail.com\n"
 "POT-Creation-Date: 2025-04-13 00:11-0300\n"
-"PO-Revision-Date: 2025-04-22 12:10-0300\n"
+"PO-Revision-Date: 2025-04-25 04:00-0300\n"
 "Last-Translator: Jamenson Ferreira Espindula de Almeida Melo "
 "<jafesp@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -28238,36 +28238,36 @@ msgstr ""
 #: texinfo/texinfo.texi:10732
 #, no-wrap
 msgid "Def Cmd Continuation Lines"
-msgstr ""
+msgstr "Linhas de Continuação de Comando de Definição"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:10734
 msgid "@nodedescription Continuing the heading over source lines."
-msgstr ""
+msgstr "@nodedescription Continuando o cabeçalho por sobre linhas de fonte."
 
 #. type: section
 #: texinfo/texinfo.texi:10734
 #, no-wrap
 msgid "Definition Command Continuation Lines"
-msgstr ""
+msgstr "Linhas de Continuação de Comando de Definição"
 
 #. type: cindex
 #: texinfo/texinfo.texi:10735
 #, no-wrap
 msgid "Continuation lines in definition commands"
-msgstr ""
+msgstr "Linhas de continuação em comandos de definição"
 
 #. type: cindex
 #: texinfo/texinfo.texi:10736
 #, no-wrap
 msgid "Definition command headings, continuing"
-msgstr ""
+msgstr "Cabeçalhos de comando de definição, continuando"
 
 #. type: cindex
 #: texinfo/texinfo.texi:10737
 #, no-wrap
 msgid "@sortas{@@} @samp{@@} as continuation in definition commands"
-msgstr ""
+msgstr "@sortas{@@} @samp{@@} como continuação em comandos de definição"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:10743
@@ -28277,6 +28277,10 @@ msgid ""
 "lines of the source file: a lone @samp{@@} at the end of each line to be "
 "continued.  Here's an example:"
 msgstr ""
+"A linha de cabeçalho de um comando de definição pode se tornar muito "
+"longa.  Portanto, o Texinfo tem uma sintaxe especial que permite que elas "
+"sejam continuadas em várias linhas do arquivo fonte: um único @samp{@@} no "
+"final de cada linha a ser continuada.  Aqui está um exemplo:"
 
 #. type: example
 #: texinfo/texinfo.texi:10749
@@ -28287,17 +28291,21 @@ msgid ""
 "This is the basic continued defun.\n"
 "@@end defun\n"
 msgstr ""
+"@@defun fn-name @@\n"
+"  arg1 arg2 arg3\n"
+"Essa é a defun básica continuada.\n"
+"@@end defun\n"
 
 #. type: defun
 #: texinfo/texinfo.texi:10754
 #, no-wrap
 msgid "fn-name   arg1 arg2 arg3"
-msgstr ""
+msgstr "fn-name   arg1 arg2 arg3"
 
 #. type: defun
 #: texinfo/texinfo.texi:10756
 msgid "This is the basic continued defun."
-msgstr ""
+msgstr "Essa é a defun básica continuada."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:10761
@@ -28305,6 +28313,8 @@ msgid ""
 "As you can see, the continued lines are combined, as if they had been typed "
 "on one source line."
 msgstr ""
+"Como você pode ver, as linhas continuadas estão combinadas, como se "
+"tivessem sido digitadas em uma linha do fonte."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:10765
@@ -28313,18 +28323,21 @@ msgid ""
 "extend over any number of lines, in the same way; put an @code{@@} at the "
 "end of each line to be continued."
 msgstr ""
+"Embora esse exemplo mostre somente uma continuação de uma linha, as "
+"continuações podem se estender por quaisquer número de linhas, da mesma "
+"maneira; coloque um @code{@@} no final de cada linha a ser continuada."
 
 #. type: cindex
 #: texinfo/texinfo.texi:10766
 #, no-wrap
 msgid "Whitespace, collapsed around continuations"
-msgstr ""
+msgstr "Espaço em branco, continuações recolhidas em torno"
 
 #. type: cindex
 #: texinfo/texinfo.texi:10767
 #, no-wrap
 msgid "Collapsing whitespace around continuations"
-msgstr ""
+msgstr "Recolhendo espaços em branco em torno de continuações"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:10772
@@ -28334,6 +28347,10 @@ msgid ""
 "Texinfo processors will not fully collapse whitespace around a continuation "
 "inside braces.  For example:"
 msgstr ""
+"Em geral, qualquer número de espaços ou tabulações antes do caractere de "
+"continuação @code{@@} é recolhido em um espaço.  Existe uma exceção: "
+"os processadores Texinfo não recolherão totalmente espaços em branco em "
+"torno de uma continuação dentro de chaves.  Por exemplo:"
 
 #. type: example
 #: texinfo/texinfo.texi:10776
@@ -28342,6 +28359,8 @@ msgid ""
 "@@deffn @{Category @@\n"
 "  Name@} @dots{}\n"
 msgstr ""
+"@@deffn @{Nome @@\n"
+"  Categoria@} @dots{}\n"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:10782
@@ -28350,6 +28369,9 @@ msgid ""
 "avoid this, elide the unwanted whitespace in your input, or put the "
 "continuation @code{@@} outside braces."
 msgstr ""
+"A saída gerada (não mostrada) tem espaço excessivo entre `Nome' e "
+"`Categoria'.  Para evitar isso, elimine os espaços em branco indesejados na "
+"tua entrada ou coloque a continuação @code{@@} fora das chaves."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:10787
@@ -28358,53 +28380,57 @@ msgid ""
 "context.  Ordinarily, @samp{@@} followed by a whitespace character (space, "
 "tab, newline) produces a normal interword space (@pxref{Multiple Spaces})."
 msgstr ""
+"@code{@@} não funciona como um caractere de continuação em @emph{nenhum} "
+"outro contexto.  Normalmente, @samp{@@} seguido por um caractere de espaço "
+"em branco (espaço, tabulação, nova linha) produz um espaço normal "
+"interpalavra (@pxref{Espaços Múltiplos})."
 
 #. type: node
 #: texinfo/texinfo.texi:10789
 #, no-wrap
 msgid "Optional Arguments"
-msgstr ""
+msgstr "Argumentos Opcionais"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:10791
 msgid "@nodedescription Handling optional and repeated arguments."
-msgstr ""
+msgstr "@nodedescription Manuseando argumentos opcionais e repetidos."
 
 #. type: section
 #: texinfo/texinfo.texi:10791
 #, no-wrap
 msgid "Optional and Repeated Arguments"
-msgstr ""
+msgstr "Argumentos Opcionais e Repetidos"
 
 #. type: cindex
 #: texinfo/texinfo.texi:10792
 #, no-wrap
 msgid "Optional and repeated arguments"
-msgstr ""
+msgstr "Argumentos opcionais e repetidos"
 
 #. type: cindex
 #: texinfo/texinfo.texi:10793
 #, no-wrap
 msgid "Repeated and optional arguments"
-msgstr ""
+msgstr "Argumentos repetidos e opcionais"
 
 #. type: cindex
 #: texinfo/texinfo.texi:10794
 #, no-wrap
 msgid "Arguments, repeated and optional"
-msgstr ""
+msgstr "Argumentos, repetidos e opcionais"
 
 #. type: cindex
 #: texinfo/texinfo.texi:10795
 #, no-wrap
 msgid "Syntax, optional & repeated arguments"
-msgstr ""
+msgstr "Sintaxe, argumentos opcionais e repetidos"
 
 #. type: cindex
 #: texinfo/texinfo.texi:10796
 #, no-wrap
 msgid "Meta-syntactic chars for arguments"
-msgstr ""
+msgstr "Caracteres metassintáticos para argumentos"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:10803
@@ -28414,6 +28440,10 @@ msgid ""
 "within square brackets is optional, and an argument followed by an ellipsis "
 "is optional and may be repeated more than once."
 msgstr ""
+"Algumas entidades recebem argumentos opcionais ou repetidos.  Uma "
+"convenção para indicá-los usa colchetes e reticências: um argumento "
+"circundado por colchetes é opcional, e um argumento seguido por "
+"reticências é opcional e pode ser repetido mais que uma vez."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:10808
@@ -28423,6 +28453,10 @@ msgid ""
 "Parentheses are used when several arguments are grouped into additional "
 "levels of list structure in Lisp."
 msgstr ""
+"Assim, [@var{argumento-opcional}] significa que @var{argumento-opcional} é "
+"opcional e @var{argumentos-repetidos}@code{@dots{}} representa zero ou mais "
+"argumentos.  Parênteses são usados quando vários argumentos são "
+"agrupados em níveis adicionais da estrutura de lista na Lisp."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:10811
@@ -28430,12 +28464,14 @@ msgid ""
 "Here is the definition line of an example of an imaginary (complicated) "
 "special form:"
 msgstr ""
+"Aqui está a linha de definição de um exemplo de uma forma especial "
+"(complicada) imaginária:"
 
 #. type: defspec
 #: texinfo/texinfo.texi:10813
 #, no-wrap
 msgid "foobar (var [from to [inc]]) body@dots{}"
-msgstr ""
+msgstr "foobar (var [de para [inc]]) corpo@dots{}"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:10824
@@ -28446,41 +28482,47 @@ msgid ""
 "argument @var{var} into a list, to distinguish them from @var{body}, which "
 "includes all remaining elements of the form."
 msgstr ""
+"Nesse exemplo, os argumentos @var{de} e @var{para} são opcionais, mas ambos "
+"precisam estar presentes ou ambos ausentes.  Se estiverem presentes, "
+"@var{inc} opcionalmente pode ser especificado também.  Esses argumentos "
+"são agrupados com o argumento @var{var} em uma lista, para distingui-los de "
+"@var{corpo}, que inclui todos os elementos restantes da forma."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:10827
 msgid ""
 "In a Texinfo source file, this @code{@@defspec} line is written like this:"
 msgstr ""
+"Em um arquivo fonte do Texinfo, essa linha @code{@@defspec} é escrita assim:"
 
 #. type: example
 #: texinfo/texinfo.texi:10830
 #, no-wrap
 msgid "@@defspec foobar (var [from to [inc]]) body@@dots@{@}\n"
-msgstr ""
+msgstr "@@defspec foobar (var [de para [inc]]) corpo@@dots@{@}\n"
 
 #. type: node
 #: texinfo/texinfo.texi:10833
 #, no-wrap
 msgid "No Space After Definition Name"
-msgstr ""
+msgstr "Sem Espaço Depois do Nome da Definição"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:10835
 msgid "@nodedescription How to omit space after name."
-msgstr ""
+msgstr "@nodedescription Como omitir espaço depois do nome."
 
 #. type: section
 #: texinfo/texinfo.texi:10835
 #, no-wrap
 msgid "Omitting the Space After a Definition Name"
-msgstr ""
+msgstr "Omitindo o Espaço Depois de um Nome de Definição"
 
 #. type: vindex
 #: texinfo/texinfo.texi:10837
 #, no-wrap
 msgid "txidefnamenospace"
-msgstr ""
+msgstr "txidefnamenospace"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:10842
@@ -28490,6 +28532,11 @@ msgid ""
 "before an opening bracket.  To do this, set the @samp{txidefnamenospace} "
 "flag (@pxref{@code{@@set @@value}}).  For example, this input"
 msgstr ""
+"Por uma questão de estilo ou conforme demandado pela sintaxe de uma "
+"linguagem de programação, você possivelmente deseje omitir algum espaço "
+"depois de um nome em uma definição, ocorrente antes de um colchete de "
+"abertura.  Para fazer isso, configure o sinalizador @samp{txidefnamenospace} "
+"(@pxref{@code{@@set @@value}}).  Por exemplo, esta entrada"
 
 #. type: example
 #: texinfo/texinfo.texi:10848
@@ -28500,12 +28547,16 @@ msgid ""
 "@@dots@{@}\n"
 "@@end deffn\n"
 msgstr ""
+"@@set txidefnamenospace\n"
+"@@deffn Índice de builtins (string, substring)\n"
+"@@dots@{@}\n"
+"@@end deffn\n"
 
 #. type: deffn
 #: texinfo/texinfo.texi:10854
 #, no-wrap
 msgid "Builtin index (string, substring)"
-msgstr ""
+msgstr "Índice de builtins (string, substring)"
 
 #. type: deftypeivar
 #: texinfo/texinfo.texi:10856 texinfo/texinfo.texi:11045
@@ -28513,48 +28564,48 @@ msgstr ""
 #: texinfo/texinfo.texi:11411 texinfo/texinfo.texi:11435
 #: texinfo/texinfo.texi:11459
 msgid "@dots{}"
-msgstr ""
+msgstr "@dots{}"
 
 #. type: node
 #: texinfo/texinfo.texi:10860
 #, no-wrap
 msgid "@code{@@deffnx}"
-msgstr ""
+msgstr "@code{@@deffnx}"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:10862
 msgid "@nodedescription Group two or more `first' lines."
-msgstr ""
+msgstr "@nodedescription Agrupe duas ou mais `primeiras' linhas."
 
 #. type: section
 #: texinfo/texinfo.texi:10862
 #, no-wrap
 msgid "@code{@@deffnx}, et al.: Two or More `First' Lines"
-msgstr ""
+msgstr "@code{@@deffnx}, et al.: Duas ou Mais `Primeiras' Linhas"
 
 #. type: findex
 #: texinfo/texinfo.texi:10865
 #, no-wrap
 msgid "deffnx"
-msgstr ""
+msgstr "deffnx"
 
 #. type: cindex
 #: texinfo/texinfo.texi:10866
 #, no-wrap
 msgid "Two `First' Lines for @code{@@deffn}"
-msgstr ""
+msgstr "Duas `Primeiras' Linhas para @code{@@deffn}"
 
 #. type: cindex
 #: texinfo/texinfo.texi:10867
 #, no-wrap
 msgid "Grouping two definitions together"
-msgstr ""
+msgstr "Agrupando duas definições juntas"
 
 #. type: cindex
 #: texinfo/texinfo.texi:10868
 #, no-wrap
 msgid "Definitions grouped together"
-msgstr ""
+msgstr "Definições agrupadas"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:10873
@@ -28562,6 +28613,9 @@ msgid ""
 "To create two or more `first' or header lines for a definition, follow the "
 "first @code{@@deffn} line by a line beginning with @code{@@deffnx}."
 msgstr ""
+"Para criar duas ou mais linhas `primeiras' ou de cabeçalho para uma "
+"definição, siga a primeira linha @code{@@deffn} por uma linha começando "
+"com @code{@@deffnx}."
 
 #. type: group
 #: texinfo/texinfo.texi:10883
@@ -28572,137 +28626,141 @@ msgid ""
 "These two search commands are similar except @dots{}\n"
 "@@end deffn\n"
 msgstr ""
+"@@deffn @{Comando Interativo@} isearch-forward\n"
+"@@deffnx @{Comando Interativo@} isearch-backward\n"
+"Esses dois comandos de pesquisa são semelhantes, exceto @dots{}\n"
+"@@end deffn\n"
 
 #. type: deffn
 #: texinfo/texinfo.texi:10889
 #, no-wrap
 msgid "{Interactive Command} isearch-forward"
-msgstr ""
+msgstr "{Comando Interativo} isearch-forward"
 
 #. type: deffnx
 #: texinfo/texinfo.texi:10890
 #, no-wrap
 msgid "{Interactive Command} isearch-backward"
-msgstr ""
+msgstr "{Comando Interativo} isearch-backward"
 
 #. type: deffn
 #: texinfo/texinfo.texi:10892
 msgid "These two search commands are similar except @dots{}"
-msgstr ""
+msgstr "Esses dois comandos de pesquisa são semelhantes, exceto @dots{}"
 
 #. type: findex
 #: texinfo/texinfo.texi:10894
 #, no-wrap
 msgid "defcvx"
-msgstr ""
+msgstr "defcvx"
 
 #. type: findex
 #: texinfo/texinfo.texi:10895
 #, no-wrap
 msgid "defivarx"
-msgstr ""
+msgstr "defivarx"
 
 #. type: findex
 #: texinfo/texinfo.texi:10896
 #, no-wrap
 msgid "defmacx"
-msgstr ""
+msgstr "defmacx"
 
 #. type: findex
 #: texinfo/texinfo.texi:10897
 #, no-wrap
 msgid "defmethodx"
-msgstr ""
+msgstr "defmethodx"
 
 #. type: findex
 #: texinfo/texinfo.texi:10898
 #, no-wrap
 msgid "defoptx"
-msgstr ""
+msgstr "defoptx"
 
 #. type: findex
 #: texinfo/texinfo.texi:10899
 #, no-wrap
 msgid "defopx"
-msgstr ""
+msgstr "defopx"
 
 #. type: findex
 #: texinfo/texinfo.texi:10900
 #, no-wrap
 msgid "defspecx"
-msgstr ""
+msgstr "defspecx"
 
 #. type: findex
 #: texinfo/texinfo.texi:10901
 #, no-wrap
 msgid "deftpx"
-msgstr ""
+msgstr "deftpx"
 
 #. type: findex
 #: texinfo/texinfo.texi:10902
 #, no-wrap
 msgid "deftypecvx"
-msgstr ""
+msgstr "deftypecvx"
 
 #. type: findex
 #: texinfo/texinfo.texi:10903
 #, no-wrap
 msgid "deftypefnx"
-msgstr ""
+msgstr "deftypefnx"
 
 #. type: findex
 #: texinfo/texinfo.texi:10904
 #, no-wrap
 msgid "deftypefunx"
-msgstr ""
+msgstr "deftypefunx"
 
 #. type: findex
 #: texinfo/texinfo.texi:10905
 #, no-wrap
 msgid "deftypeivarx"
-msgstr ""
+msgstr "deftypeivarx"
 
 #. type: findex
 #: texinfo/texinfo.texi:10906
 #, no-wrap
 msgid "deftypemethodx"
-msgstr ""
+msgstr "deftypemethodx"
 
 #. type: findex
 #: texinfo/texinfo.texi:10907
 #, no-wrap
 msgid "deftypeopx"
-msgstr ""
+msgstr "deftypeopx"
 
 #. type: findex
 #: texinfo/texinfo.texi:10908
 #, no-wrap
 msgid "deftypevarx"
-msgstr ""
+msgstr "deftypevarx"
 
 #. type: findex
 #: texinfo/texinfo.texi:10909
 #, no-wrap
 msgid "deftypevrx"
-msgstr ""
+msgstr "deftypevrx"
 
 #. type: findex
 #: texinfo/texinfo.texi:10910
 #, no-wrap
 msgid "defunx"
-msgstr ""
+msgstr "defunx"
 
 #. type: findex
 #: texinfo/texinfo.texi:10911
 #, no-wrap
 msgid "defvarx"
-msgstr ""
+msgstr "defvarx"
 
 #. type: findex
 #: texinfo/texinfo.texi:10912
 #, no-wrap
 msgid "defvrx"
-msgstr ""
+msgstr "defvrx"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:10915
@@ -28710,12 +28768,16 @@ msgid ""
 "Each definition command has an `x' form: @code{@@defunx}, @code{@@defvrx}, "
 "@code{@@deftypefunx}, etc."
 msgstr ""
+"Cada comando de definição tem uma forma `x': @code{@@defunx}, "
+"@code{@@defvrx}, @code{@@deftypefunx}, etc."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:10918
 msgid ""
 "The `x' forms work similarly to @code{@@itemx} (@pxref{@code{@@itemx}})."
 msgstr ""
+"As formas `x' funcionam similarmente a @code{@@itemx} "
+"(@pxref{@code{@@itemx}})."
 
 #. type: node
 #: texinfo/texinfo.texi:10920
