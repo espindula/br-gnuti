@@ -17,7 +17,7 @@ msgstr ""
 "Project-Id-Version: Texinfo 7.1\n"
 "Report-Msgid-Bugs-To: jafesp@gmail.com\n"
 "POT-Creation-Date: 2025-04-13 00:11-0300\n"
-"PO-Revision-Date: 2025-04-25 04:00-0300\n"
+"PO-Revision-Date: 2025-04-25 05:05-0300\n"
 "Last-Translator: Jamenson Ferreira Espindula de Almeida Melo "
 "<jafesp@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -28783,58 +28783,58 @@ msgstr ""
 #: texinfo/texinfo.texi:10920
 #, no-wrap
 msgid "Def Cmds in Detail"
-msgstr ""
+msgstr "Comandos de Definição em Detalhe"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:10922
 msgid "@nodedescription Reference for all the definition commands."
-msgstr ""
+msgstr "@nodedescription Referência para todos os comandos de definição."
 
 #. type: section
 #: texinfo/texinfo.texi:10922
 #, no-wrap
 msgid "The Definition Commands"
-msgstr ""
+msgstr "Os Comandos de Definição"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:10925
 msgid "This section describes all the definition commands of Texinfo."
-msgstr ""
+msgstr "Esta seção descreve todos os comandos de definição do Texinfo."
 
 #. type: node
 #: texinfo/texinfo.texi:10927
 #, no-wrap
 msgid "Functions Commands"
-msgstr ""
+msgstr "Comandos de Funções"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:10929
 msgid "@nodedescription Commands for functions and similar entities."
-msgstr ""
+msgstr "@nodedescription Comandos para funções e entidades similares."
 
 #. type: subsection
 #: texinfo/texinfo.texi:10929
 #, no-wrap
 msgid "Functions and Similar Entities"
-msgstr ""
+msgstr "Funções e Entidades Similares"
 
 #. type: cindex
 #: texinfo/texinfo.texi:10931
 #, no-wrap
 msgid "Function definitions"
-msgstr ""
+msgstr "Definições de função"
 
 #. type: cindex
 #: texinfo/texinfo.texi:10932
 #, no-wrap
 msgid "Command definitions"
-msgstr ""
+msgstr "Definições de comando"
 
 #. type: cindex
 #: texinfo/texinfo.texi:10933
 #, no-wrap
 msgid "Macro definitions, programming-language"
-msgstr ""
+msgstr "Definições de macro, linguagem de programação"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:10937
@@ -28842,18 +28842,20 @@ msgid ""
 "This section describes the commands for describing functions and similar "
 "entities with simple arguments:"
 msgstr ""
+"Esta seção descreve os comandos para descrever funções e entidades "
+"similares com argumentos simples:"
 
 #. type: findex
 #: texinfo/texinfo.texi:10939
 #, no-wrap
 msgid "deffn"
-msgstr ""
+msgstr "deffn"
 
 #. type: item
 #: texinfo/texinfo.texi:10940 texinfo/texinfo.texi:18846
 #, no-wrap
 msgid "@@deffn @var{category} @var{name} @var{arguments}@dots{}"
-msgstr ""
+msgstr "@@deffn @var{categoria} @var{nome} @var{argumentos}@dots{}"
 
 #. type: table
 #: texinfo/texinfo.texi:10950
@@ -28867,11 +28869,20 @@ msgid ""
 "particular entity, and its arguments, if any.  Terminate the definition with "
 "@code{@@end deffn} on a line of its own."
 msgstr ""
+"O comando @code{@@deffn} é o comando geral de definição para funções, "
+"comandos interativos e entidades similares que podem receber argumentos "
+"simples.  Você precisa escolher um termo para descrever a categoria da "
+"entidade sendo definida; por exemplo, ``Função'' poderia ser usado se a "
+"entidade for uma função.  O comando @code{@@deffn} é escrito no início "
+"de uma linha e é seguido na mesma linha pela categoria da entidade sendo "
+"descrita, o nome dessa entidade específica e os argumentos dela, se "
+"existirem.  Termine a definição com @code{@@end deffn} em uma linha "
+"própria."
 
 #. type: table
 #: texinfo/texinfo.texi:10953
 msgid "For example, here is a definition:"
-msgstr ""
+msgstr "Por exemplo, aqui está uma definição:"
 
 #. type: group
 #: texinfo/texinfo.texi:10959
@@ -28881,6 +28892,9 @@ msgid ""
 "Move point forward @@var@{nchars@} characters.\n"
 "@@end deffn\n"
 msgstr ""
+"@@deffn Comando forward-char nchars\n"
+"Move ponto para frente @@var@{nchars@} caracteres.\n"
+"@@end deffn\n"
 
 #. type: table
 #: texinfo/texinfo.texi:10965
@@ -28888,6 +28902,8 @@ msgid ""
 "This shows a rather terse definition for a ``command'' named "
 "@code{forward-char} with one argument, @var{nchars}."
 msgstr ""
+"Isso mostra uma definição bastante concisa para um ``comando'' chamado "
+"@code{forward-char} com um argumento, @var{nchars}."
 
 #. type: table
 #: texinfo/texinfo.texi:10969
@@ -28896,6 +28912,9 @@ msgid ""
 "@var{name}, and a slanted font for the rest of the @var{arguments}, as would "
 "be produced by @code{@@var}."
 msgstr ""
+"Onde o formato de saída permitir, @code{@@deffn} usa uma fonte de máquina "
+"de escrever para @var{nome} e uma fonte inclinada para o restante dos "
+"@var{argumentos}, como seria produzido por @code{@@var}."
 
 #. type: table
 #: texinfo/texinfo.texi:10973
@@ -28904,6 +28923,9 @@ msgid ""
 "@code{@@var} to refer to the value of the argument.  In the example above, "
 "we used @samp{@@var@{nchars@}} in this way."
 msgstr ""
+"No texto da descrição, no entanto, escreva um nome de argumento "
+"explicitamente com @code{@@var} para se referir ao valor do argumento.  No "
+"exemplo acima, nós usamos @samp{@@var@{nchars@}} dessa maneira."
 
 #. type: table
 #: texinfo/texinfo.texi:10980
@@ -28913,18 +28935,23 @@ msgid ""
 "use @code{@@code} around the special characters.  This avoids the conversion "
 "to typographic en-dashes and em-dashes."
 msgstr ""
+"No caso extremamente incomum quando um nome de argumento contiver @samp{--}, "
+"ou outra sequência de caracteres que seja tratada especialmente "
+"(@pxref{Convenções}), use @code{@@code} ao redor dos caracteres "
+"especiais.  Isso evita a conversão para traços de ligação e travessões "
+"tipográficos."
 
 #. type: findex
 #: texinfo/texinfo.texi:10981
 #, no-wrap
 msgid "defun"
-msgstr ""
+msgstr "defun"
 
 #. type: item
 #: texinfo/texinfo.texi:10982
 #, no-wrap
 msgid "@@defun @var{name} @var{arguments}@dots{}"
-msgstr ""
+msgstr "@@deffn @var{nome} @var{argumentos}@dots{}"
 
 #. type: table
 #: texinfo/texinfo.texi:10987
@@ -28934,18 +28961,22 @@ msgid ""
 "@dots{}}.  Terminate the definition with @code{@@end defun} on a line of its "
 "own."
 msgstr ""
+"O comando @code{@@defun} é o comando de definição para funções com "
+"argumentos simples.  @code{@@defun} é equivalente a @samp{@@deffn Função "
+"@dots{}}.  Termine a definição com @code{@@end defun} em uma linha "
+"própria."
 
 #. type: findex
 #: texinfo/texinfo.texi:10988
 #, no-wrap
 msgid "defmac"
-msgstr ""
+msgstr "defmac"
 
 #. type: item
 #: texinfo/texinfo.texi:10989
 #, no-wrap
 msgid "@@defmac @var{name} @var{arguments}@dots{}"
-msgstr ""
+msgstr "@@defmac @var{nome} @var{argumentos}@dots{}"
 
 #. type: table
 #: texinfo/texinfo.texi:10993
@@ -28954,6 +28985,9 @@ msgid ""
 "@code{@@defmac} is equivalent to @samp{@@deffn Macro @dots{}} and works like "
 "@code{@@defun}."
 msgstr ""
+"O comando @code{@@defmac} é o comando de definição para macros.  "
+"@code{@@defmac} é equivalente a @samp{@@deffn Macro @dots{}} e funciona "
+"como @code{@@defun}."
 
 #. type: findex
 #: texinfo/texinfo.texi:10994
