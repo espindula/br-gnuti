@@ -17,7 +17,7 @@ msgstr ""
 "Project-Id-Version: Texinfo 7.1\n"
 "Report-Msgid-Bugs-To: jafesp@gmail.com\n"
 "POT-Creation-Date: 2025-04-13 00:11-0300\n"
-"PO-Revision-Date: 2025-04-25 05:05-0300\n"
+"PO-Revision-Date: 2025-04-25 07:20-0300\n"
 "Last-Translator: Jamenson Ferreira Espindula de Almeida Melo "
 "<jafesp@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -28993,13 +28993,13 @@ msgstr ""
 #: texinfo/texinfo.texi:10994
 #, no-wrap
 msgid "defspec"
-msgstr ""
+msgstr "defspec"
 
 #. type: item
 #: texinfo/texinfo.texi:10995
 #, no-wrap
 msgid "@@defspec @var{name} @var{arguments}@dots{}"
-msgstr ""
+msgstr "@@defspec @var{nome} @var{argumentos}@dots{}"
 
 #. type: table
 #: texinfo/texinfo.texi:11001
@@ -29010,40 +29010,45 @@ msgid ""
 "equivalent to @samp{@@deffn @{Special Form@} @dots{}} and works like "
 "@code{@@defun}."
 msgstr ""
+"O comando @code{@@defspec} é o comando de definição para formas "
+"especiais.  (Na Lisp, uma forma especial é uma entidade muito parecida com "
+"uma função; @pxref{Special Forms,,, elisp, GNU Emacs Lisp Reference "
+"Manual}).  @code{@@defspec} é equivalente a @samp{@@deffn @{Forma "
+"Especial@} @dots{}} e funciona como @code{@@defun}."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:11004
 msgid "All these commands create entries in the index of functions."
-msgstr ""
+msgstr "Todos esses comandos criam entradas no índice de funções."
 
 #. type: node
 #: texinfo/texinfo.texi:11006
 #, no-wrap
 msgid "Typed Functions"
-msgstr ""
+msgstr "Funções Tipadas"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:11008
 msgid "@nodedescription Commands for functions in typed languages."
-msgstr ""
+msgstr "@nodedescription Comandos para funções em linguagens tipadas."
 
 #. type: subsection
 #: texinfo/texinfo.texi:11008
 #, no-wrap
 msgid "Functions in Typed Languages"
-msgstr ""
+msgstr "Funções em Linguagens Tipadas"
 
 #. type: cindex
 #: texinfo/texinfo.texi:11010
 #, no-wrap
 msgid "Typed functions"
-msgstr ""
+msgstr "Funções tipadas"
 
 #. type: cindex
 #: texinfo/texinfo.texi:11011
 #, no-wrap
 msgid "Functions, in typed languages"
-msgstr ""
+msgstr "Funções, em linguagens tipadas"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:11016
@@ -29052,12 +29057,16 @@ msgid ""
 "describing functions.  They are particularly suitable for languages in which "
 "you must declare types of variables and functions, such as C and C++."
 msgstr ""
+"O comando @code{@@deftypefn} e as variantes dele são comandos genéricos "
+"para descrever funções.  Eles são particularmente adequados para "
+"linguagens nas quais você precisa declarar tipos de variáveis ​​e "
+"funções, como C e C++."
 
 #. type: findex
 #: texinfo/texinfo.texi:11018
 #, no-wrap
 msgid "deftypefn"
-msgstr ""
+msgstr "deftypefn"
 
 #. type: item
 #: texinfo/texinfo.texi:11019 texinfo/texinfo.texi:18915
@@ -29065,6 +29074,8 @@ msgstr ""
 msgid ""
 "@@deftypefn @var{category} @var{data-type} @var{name} @var{arguments}@dots{}"
 msgstr ""
+"@@deftypefn @var{categoria} @var{tipo-dados} @var{nome} "
+"@var{argumentos}@dots{}"
 
 #. type: table
 #: texinfo/texinfo.texi:11026
@@ -29076,6 +29087,12 @@ msgid ""
 "information on the returned value, the name of this particular entity, and "
 "its arguments, if any."
 msgstr ""
+"O comando @code{@@deftypefn} é o comando geral de definição para "
+"funções e entidades similares que podem receber argumentos e que poderiam "
+"ser tipadas.  O comando @code{@@deftypefn} é escrito no início de uma "
+"linha e é seguido na mesma linha pela categoria da entidade sendo descrita, "
+"informações acerca do valor retornado, o nome dessa entidade específica e "
+"os argumentos dela, se existirem."
 
 #. type: group
 #: texinfo/texinfo.texi:11037
@@ -29086,12 +29103,16 @@ msgid ""
 "@dots{}\n"
 "@@end deftypefn\n"
 msgstr ""
+"@@deftypefn @{Função de Biblioteca@} int foobar @@\n"
+"  (int @@var@{foo@}, float @@var@{bar@})\n"
+"@dots{}\n"
+"@@end deftypefn\n"
 
 #. type: deftypefn
 #: texinfo/texinfo.texi:11043
 #, no-wrap
 msgid "{Library Function} int foobar  (int @var{foo}, float @var{bar})"
-msgstr ""
+msgstr "{Função de Biblioteca} int foobar  (int @var{foo}, float @var{bar})"
 
 #. type: table
 #: texinfo/texinfo.texi:11052
@@ -29101,6 +29122,10 @@ msgid ""
 "@code{float}).  @samp{Library Function} has to be enclosed in braces to make "
 "it a single argument."
 msgstr ""
+"Isso significa que @code{foobar} é uma ``função de biblioteca'' que "
+"retorna um @code{int}, e os argumentos dela são @var{foo} (um @code{int}) e "
+"@var{bar} (um @code{float}).  @samp{Função de Biblioteca} tem de ser "
+"circundado epor chaves para torná-lo um argumento unitário."
 
 #. type: table
 #: texinfo/texinfo.texi:11060
@@ -29112,6 +29137,12 @@ msgid ""
 "is in a typewriter font by default.  @code{@@var} uses an appropriate font "
 "where it occurs."
 msgstr ""
+"Ao usar o comando @code{@@deftypefn} e variações, você deveria marcar os "
+"nomes dos parâmetros com @code{@@var} para distingui-los dos nomes de tipos "
+"de dados, palavras-chave e outras partes da sintaxe literal da linguagem de "
+"programação.  Onde o formato de saída permitir, toda a saída na linha de "
+"definição estará em uma fonte de máquina de escrever por padrão.  "
+"@code{@@var} usa uma fonte apropriada onde ocorrer."
 
 #. type: table
 #: texinfo/texinfo.texi:11064
@@ -29119,6 +29150,9 @@ msgid ""
 "If you are describing a procedure in a language that has packages, such as "
 "Ada, you might consider using @code{@@deftypefn} in the following manner:"
 msgstr ""
+"Se você estiver descrevendo um procedimento em uma linguagem que tenha "
+"pacotes, como Ada, você pode considerar usar @code{@@deftypefn} da seguinte "
+"maneira:"
 
 #. type: group
 #: texinfo/texinfo.texi:11072
@@ -29130,6 +29164,11 @@ msgid ""
 "@dots{}\n"
 "@@end deftypefn\n"
 msgstr ""
+"@@deftypefn pilhas privado push @@\n"
+"       (@@var@{s@}:in out stack; @@\n"
+"       @@var@{n@}:in integer)\n"
+"@dots{}\n"
+"@@end deftypefn\n"
 
 #. type: table
 #: texinfo/texinfo.texi:11079
@@ -29138,6 +29177,9 @@ msgid ""
 "continuations (@pxref{Def Cmd Continuation Lines}), but could be on a single "
 "line.)"
 msgstr ""
+"(Nesses exemplos os argumentos de @code{@@deftypefn} são mostrados "
+"usando-se continuações (@pxref{Linhas de Continuação de Comando de "
+"Definição}), mas poderiam estar em uma linha)."
 
 #. type: table
 #: texinfo/texinfo.texi:11084
@@ -29147,17 +29189,21 @@ msgid ""
 "described as @code{private}.  (The name of the procedure is @code{push}, and "
 "its arguments are @var{s} and @var{n}.)  Output:"
 msgstr ""
+"Nesse caso, o procedimento é classificado como pertencente ao pacote "
+"@code{pilhas} em vez de classificado como um `procedimento' e o tipo de "
+"dados dele está descrito como @code{privado}.  (O nome do procedimento é "
+"@code{push}, e os argumentos dele são @var{s} e @var{n}).  Saída gerada:"
 
 #. type: deftypefn
 #: texinfo/texinfo.texi:11085
 #, no-wrap
 msgid "stacks private push @"
-msgstr ""
+msgstr "pilhas privado push @"
 
 #. type: deftypefn
 #: texinfo/texinfo.texi:11089
 msgid "(@var{s}:in out stack; @ @var{n}:in integer)  @dots{}"
-msgstr ""
+msgstr "(@var{s}:in out stack; @ @var{n}:in integer)  @dots{}"
 
 #. type: table
 #: texinfo/texinfo.texi:11096
@@ -29167,6 +29213,11 @@ msgid ""
 "names with @code{@@var}.  It is not necessary for any type names to appear, "
 "and you can give an empty return type as @samp{@{@}}."
 msgstr ""
+"@code{@@deftypefn} e variantes poderiam ser usados quando for conveniente "
+"interpretar a lista de argumentos como código literal de computador, "
+"marcando os nomes dos argumentos com @code{@@var}.  Não é necessário para "
+"quaisquer nomes de tipo apareçer, e você pode fornecer um tipo de retorno "
+"vazio como @samp{@{@}}."
 
 #. type: example
 #: texinfo/texinfo.texi:11110
@@ -29180,12 +29231,19 @@ msgid ""
 "@dots{}\n"
 "@@end deftypefn\n"
 msgstr ""
+"@@deftypefn stats @{@} t.test (@@var@{x@}, @@var@{y@} = NULL,@@\n"
+"  @@w@{@@var@{alternative@} = c(\"two.sided\", \"less\", \"greater\")@},@@\n"
+"  @@w@{@@var@{mu@} = 0@}, @@w@{@@var@{paired@} = FALSE@},@@\n"
+"  @@w@{@@var@{var.equal@} = FALSE@},@@\n"
+"  @@w@{@@var@{conf.level@} = 0.95@}, @@dots@{@})\n"
+"@dots{}\n"
+"@@end deftypefn\n"
 
 #. type: deftypefn
 #: texinfo/texinfo.texi:11115
 #, no-wrap
 msgid "stats {} t.test (@var{x}, @var{y} = NULL,@"
-msgstr ""
+msgstr "stats {} t.test (@var{x}, @var{y} = NULL,@"
 
 #. type: deftypefn
 #: texinfo/texinfo.texi:11121
@@ -29197,6 +29255,11 @@ msgid ""
 "  @w{@var{conf.level} = 0.95}, @dots{})\n"
 "@dots{}\n"
 msgstr ""
+"  @w{@var{alternative} = c(\"two.sided\", \"less\", \"greater\")},@\n"
+"  @w{@var{mu} = 0}, @w{@var{paired} = FALSE},@\n"
+"  @w{@var{var.equal} = FALSE},@\n"
+"  @w{@var{conf.level} = 0.95}, @dots{})\n"
+"@dots{}\n"
 
 #. type: table
 #: texinfo/texinfo.texi:11131
@@ -29205,6 +29268,10 @@ msgid ""
 "For example, in Perl, returned scalars may be given the @var{$result} and "
 "@var{$status} name in the following manner:"
 msgstr ""
+"As informações acerca dos valores de retorno podem ser usadas para nomear "
+"as variáveis ​​de retorno.  Por exemplo, na Perl, os escalares "
+"retornados podem receber os nomes @var{$result} e @var{$status} da seguinte "
+"maneira:"
 
 #. type: example
 #: texinfo/texinfo.texi:11137
@@ -29215,40 +29282,45 @@ msgid ""
 "@dots{} Set @@var@{$status@} to 0 in case of failure @dots{}\n"
 "@@end deftypefn\n"
 msgstr ""
+"@@deftypefn @{Sub@} @{(@@var@{$result@}, @@var@{$status@} =)@} @@\n"
+"                     process (@@var@{$input@})\n"
+"@dots{} Set @@var@{$status@} to 0 in case of failure @dots{}\n"
+"@@end deftypefn\n"
 
 #. type: table
 #: texinfo/texinfo.texi:11140
 msgid "to get output like"
-msgstr ""
+msgstr "para obter saída como"
 
 #. type: deftypefn
 #: texinfo/texinfo.texi:11141
 #, no-wrap
 msgid "{Sub} {(@var{$result}, @var{$status}) =} process (@var{$input})"
-msgstr ""
+msgstr "{Sub} {(@var{$result}, @var{$status}) =} process (@var{$input})"
 
 #. type: deftypefn
 #: texinfo/texinfo.texi:11143
 msgid "@dots{} Set @var{$status} to 0 in case of failure @dots{}"
-msgstr ""
+msgstr "@dots{} Set @var{$status} to 0 in case of failure @dots{}"
 
 #. type: table
 #: texinfo/texinfo.texi:11147
 msgid ""
 "@code{@@deftypefn} creates an entry in the index of functions for @var{name}."
 msgstr ""
+"@code{@@deftypefn} cria uma entrada no índice de funções para @var{nome}."
 
 #. type: findex
 #: texinfo/texinfo.texi:11148
 #, no-wrap
 msgid "deftypefun"
-msgstr ""
+msgstr "deftypefun"
 
 #. type: item
 #: texinfo/texinfo.texi:11149
 #, no-wrap
 msgid "@@deftypefun @var{data-type} @var{name} @var{arguments}@dots{}"
-msgstr ""
+msgstr "@@deftypefun @var{tipo-dados} @var{nome} @var{argumentos}@dots{}"
 
 #. type: table
 #: texinfo/texinfo.texi:11153
@@ -29256,6 +29328,8 @@ msgid ""
 "The @code{@@deftypefun} command is the specialized definition command for "
 "functions.  The command is equivalent to @samp{@@deftypefn Function @dots{}}."
 msgstr ""
+"O comando @code{@@deftypefun} é o comando especializado de definição para "
+"funções.  O comando é equivalente a @samp{@@deftypefn Função @dots{}}."
 
 #. type: table
 #: texinfo/texinfo.texi:11156
@@ -29263,18 +29337,19 @@ msgid ""
 "@code{@@deftypefun} creates an entry in the index of functions for "
 "@var{name}."
 msgstr ""
+"@code{@@deftypefun} cria uma entrada no índice de funções para @var{nome}."
 
 #. type: cindex
 #: texinfo/texinfo.texi:11159
 #, no-wrap
 msgid "Return type, own line for"
-msgstr ""
+msgstr "Tipo de retorno, linha própria para"
 
 #. type: findex
 #: texinfo/texinfo.texi:11160
 #, no-wrap
 msgid "deftypefnnewline"
-msgstr ""
+msgstr "deftypefnnewline"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:11165
@@ -29284,6 +29359,11 @@ msgid ""
 "functions is to put the return type on a line by itself.  So Texinfo "
 "provides an option to do that: @code{@@deftypefnnewline on}."
 msgstr ""
+"Normalmente, o tipo de retorno é impresso na mesma linha que o nome da "
+"função e os argumentos, como mostrado acima.  No código-fonte, o estilo "
+"GNU para funções tipadas é o de colocar o tipo de retorno em uma linha "
+"dedicada.  Portanto, Texinfo fornece uma opção para fazer isso: "
+"@code{@@deftypefnnewline on}."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:11172
@@ -29294,45 +29374,51 @@ msgid ""
 "object-oriented languages, namely @code{@@deftypeop} and "
 "@code{@@deftypemethod} (@pxref{Object-Oriented Methods})."
 msgstr ""
+"Isso afeta somente funções genéricas---não funções não tipadas com "
+"argumentos simples, como @code{@@deffn}, variáveis não tipadas, e outras "
+"coisas.  Especificamente, afeta os comandos nesta seção e os comandos "
+"análogos para linguagens orientadas a objetos, ou seja, @code{@@deftypeop} "
+"e @code{@@deftypemethod} (@pxref{Métodos Orientados a Objetos})."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:11174
 msgid "Specifying @code{@@deftypefnnewline off} reverts to the default."
-msgstr ""
+msgstr "Especificar-se @code{@@deftypefnnewline off} reverte para o padrão."
 
 #. type: node
 #: texinfo/texinfo.texi:11176
 #, no-wrap
 msgid "Variables Commands"
-msgstr ""
+msgstr "Comandos de Variáveis"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:11178
 msgid "@nodedescription Commands for variables and similar entities."
-msgstr ""
+msgstr "@nodedescription Comandos para variáveis e entidades similares."
 
 #. type: subsection
 #: texinfo/texinfo.texi:11178
 #, no-wrap
 msgid "Variables and Similar Entities"
-msgstr ""
+msgstr "Variáveis e Entidades Similares"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:11182
 msgid "Here are the commands for defining variables and similar entities:"
 msgstr ""
+"Aqui estão os comandos para se definir variáveis e entidades similares:"
 
 #. type: findex
 #: texinfo/texinfo.texi:11184
 #, no-wrap
 msgid "defvr"
-msgstr ""
+msgstr "defvr"
 
 #. type: item
 #: texinfo/texinfo.texi:11185 texinfo/texinfo.texi:18976
 #, no-wrap
 msgid "@@defvr @var{category} @var{name}"
-msgstr ""
+msgstr "@@defvr @var{categoria} @var{nome}"
 
 #. type: table
 #: texinfo/texinfo.texi:11193
@@ -29344,6 +29430,12 @@ msgid ""
 "at the beginning of a line and follow it on the same line by the category of "
 "the entity and the name of the entity."
 msgstr ""
+"O comando @code{@@defvr} é um comando geral de definição para algo como "
+"uma variável---uma entidade que registra um valor.  Você precisa escolher "
+"um termo para descrever a categoria da entidade sendo definida; por exemplo, "
+"``Variável'' poderia ser usado se a entidade fosse uma variável.  Escreva "
+"o comando @code{@@defvr} no início de uma linha e siga-o na mesma linha "
+"pela categoria da entidade e o nome da entidade."
 
 #. type: table
 #: texinfo/texinfo.texi:11198
@@ -29353,6 +29445,10 @@ msgid ""
 "braces.  Otherwise, the second word will be mistaken for the name of the "
 "entity.  For example,"
 msgstr ""
+"Nós recomendamos maiusculizar o nome da categoria, como um título.  Se o "
+"nome da categoria contiver espaços, como no nome ``Opção de "
+"Usuário(a)'', circunde-o com chaves.  Caso contrário, a segunda palavra "
+"será confundida com o nome da entidade.  Por exemplo,"
 
 #. type: group
 #: texinfo/texinfo.texi:11206
@@ -29364,29 +29460,35 @@ msgid ""
 "@dots{}\n"
 "@@end defvr\n"
 msgstr ""
+"@@defvr @{Opção de Usuário(a)@} fill-column\n"
+"Essa variável local e de buffer especifica\n"
+"a largura máxima das linhas preenchidas.\n"
+"@dots{}\n"
+"@@end defvr\n"
 
 #. type: table
 #: texinfo/texinfo.texi:11211
 msgid "Terminate the definition with @code{@@end defvr} on a line of its own."
-msgstr ""
+msgstr "Termine a definição com @code{@@end defvr} em uma linha própria."
 
 #. type: table
 #: texinfo/texinfo.texi:11213
 msgid ""
 "@code{@@defvr} creates an entry in the index of variables for @var{name}."
 msgstr ""
+"@code{@@defvr} cria uma entrada no índice de variáveis para @var{nome}."
 
 #. type: findex
 #: texinfo/texinfo.texi:11214
 #, no-wrap
 msgid "defvar"
-msgstr ""
+msgstr "defvar"
 
 #. type: item
 #: texinfo/texinfo.texi:11215
 #, no-wrap
 msgid "@@defvar @var{name}"
-msgstr ""
+msgstr "@@defvar @var{nome}"
 
 #. type: table
 #: texinfo/texinfo.texi:11219
@@ -29394,6 +29496,8 @@ msgid ""
 "The @code{@@defvar} command is the definition command for variables.  "
 "@code{@@defvar} is equivalent to @samp{@@defvr Variable @dots{}}."
 msgstr ""
+"O comando @code{@@defvar} é o comando de definição para variáveis.  "
+"@code{@@defvar} é equivalente a @samp{@@defvr Variável @dots{}}."
 
 #. type: group
 #: texinfo/texinfo.texi:11228
@@ -29403,30 +29507,34 @@ msgid ""
 "@dots{}\n"
 "@@end defvar\n"
 msgstr ""
+"@@defvar kill-ring\n"
+"@dots{}\n"
+"@@end defvar\n"
 
 #. type: table
 #: texinfo/texinfo.texi:11233
 msgid ""
 "@code{@@defvar} creates an entry in the index of variables for @var{name}."
 msgstr ""
+"@code{@@defvar} cria uma entrada no índice de variáveis para @var{nome}."
 
 #. type: findex
 #: texinfo/texinfo.texi:11234
 #, no-wrap
 msgid "defopt"
-msgstr ""
+msgstr "defopt"
 
 #. type: cindex
 #: texinfo/texinfo.texi:11235
 #, no-wrap
 msgid "User options, marking"
-msgstr ""
+msgstr "Opções de usuário(a), marcando"
 
 #. type: item
 #: texinfo/texinfo.texi:11236
 #, no-wrap
 msgid "@@defopt @var{name}"
-msgstr ""
+msgstr "@@defopt @var{nome}"
 
 #. type: table
 #: texinfo/texinfo.texi:11242
@@ -29436,6 +29544,11 @@ msgid ""
 "Emacs has many such (@pxref{Variables,,, emacs, The GNU Emacs Manual}).  "
 "@code{@@defopt} is equivalent to @samp{@@defvr @{User Option@} @dots{}}."
 msgstr ""
+"O comando @code{@@defopt} é o comando de definição para @dfn{opções de "
+"usuário(a)}, ou seja, variáveis destinadas para usuários(as) mudarem de "
+"acordo com o gosto; Emacs tem muitas dessas (@pxref{Variables,,, emacs, O "
+"Manual do GNU Emacs}).  @code{@@defopt} é equivalente a @samp{@@defvr "
+"@{Opção de Usuário(a)@} @dots{}}."
 
 #. type: node
 #: texinfo/texinfo.texi:11245
