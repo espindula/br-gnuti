@@ -17,7 +17,7 @@ msgstr ""
 "Project-Id-Version: Texinfo 7.1\n"
 "Report-Msgid-Bugs-To: jafesp@gmail.com\n"
 "POT-Creation-Date: 2025-04-13 00:11-0300\n"
-"PO-Revision-Date: 2025-04-25 07:20-0300\n"
+"PO-Revision-Date: 2025-04-26 11:03-0300\n"
 "Last-Translator: Jamenson Ferreira Espindula de Almeida Melo "
 "<jafesp@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -29554,30 +29554,30 @@ msgstr ""
 #: texinfo/texinfo.texi:11245
 #, no-wrap
 msgid "Typed Variables"
-msgstr ""
+msgstr "Variáveis Tipadas"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:11247
 msgid "@nodedescription Commands for variables in typed languages."
-msgstr ""
+msgstr "@nodedescription Comandos para variáveis em linguagens tipadas."
 
 #. type: subsection
 #: texinfo/texinfo.texi:11247
 #, no-wrap
 msgid "Variables in Typed Languages"
-msgstr ""
+msgstr "Variáveis em Linguagens Tipadas"
 
 #. type: cindex
 #: texinfo/texinfo.texi:11249
 #, no-wrap
 msgid "Typed variables"
-msgstr ""
+msgstr "Variáveis tipadas"
 
 #. type: cindex
 #: texinfo/texinfo.texi:11250
 #, no-wrap
 msgid "Variables, in typed languages"
-msgstr ""
+msgstr "Variáveis, em linguagens tipadas"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:11257
@@ -29587,18 +29587,23 @@ msgid ""
 "@code{@@deftypevr} corresponds to @code{@@deftypefn} and the specialized "
 "definition command @code{@@deftypevar} corresponds to @code{@@deftypefun}."
 msgstr ""
+"Variáveis em linguagens tipadas são manuseadas de maneira similar a "
+"funções em linguagens tipadas.  @xref{Funções Tipadas}.  O comando geral "
+"de definição @code{@@deftypevr} corresponde a @code{@@deftypefn} e o "
+"comando especializado de definição @code{@@deftypevar} corresponde a "
+"@code{@@deftypefun}."
 
 #. type: findex
 #: texinfo/texinfo.texi:11259
 #, no-wrap
 msgid "deftypevr"
-msgstr ""
+msgstr "deftypevr"
 
 #. type: item
 #: texinfo/texinfo.texi:11260 texinfo/texinfo.texi:18959
 #, no-wrap
 msgid "@@deftypevr @var{category} @var{data-type} @var{name}"
-msgstr ""
+msgstr "@@deftypevr @var{categoria} @var{tipo-dados} @var{nome}"
 
 #. type: table
 #: texinfo/texinfo.texi:11266
@@ -29608,6 +29613,11 @@ msgid ""
 "value.  You must choose a term to describe the category of the entity being "
 "defined; for example, ``Variable'' could be used if the entity is a variable."
 msgstr ""
+"O comando @code{@@deftypevr} é o comando geral de definição para alguma "
+"coisa como uma variável em uma linguagem tipada---uma entidade que registra "
+"um valor.  Você precisa escolher um termo para descrever a categoria da "
+"entidade sendo definida; por exemplo, ``Variável'' poderia ser usado se a "
+"entidade fosse uma variável."
 
 #. type: table
 #: texinfo/texinfo.texi:11271
@@ -29616,6 +29626,9 @@ msgid ""
 "followed on the same line by the category of the entity being described, the "
 "data type, and the name of this particular entity."
 msgstr ""
+"O comando @code{@@deftypevr} é escrito no início de uma linha e é seguido "
+"na mesma linha pela categoria da entidade sendo descrita, o tipo de dados e "
+"o nome dessa entidade específica."
 
 #. type: group
 #: texinfo/texinfo.texi:11281
@@ -29625,24 +29638,27 @@ msgid ""
 "@dots{}\n"
 "@@end deftypevr\n"
 msgstr ""
+"@@deftypevr @{Sinalizador Global@} int enable\n"
+"@dots{}\n"
+"@@end deftypevr\n"
 
 #. type: deftypevr
 #: texinfo/texinfo.texi:11288
 #, no-wrap
 msgid "{Global Flag} int enable"
-msgstr ""
+msgstr "{Sinalizador Global} int enable"
 
 #. type: findex
 #: texinfo/texinfo.texi:11293
 #, no-wrap
 msgid "deftypevar"
-msgstr ""
+msgstr "deftypevar"
 
 #. type: item
 #: texinfo/texinfo.texi:11294
 #, no-wrap
 msgid "@@deftypevar @var{data-type} @var{name}"
-msgstr ""
+msgstr "@@deftypevar @var{tipo-dados} @var{nome}"
 
 #. type: table
 #: texinfo/texinfo.texi:11298
@@ -29651,39 +29667,42 @@ msgid ""
 "variables in typed languages.  @code{@@deftypevar} is equivalent to "
 "@samp{@@deftypevr Variable @dots{}}."
 msgstr ""
+"O comando @code{@@deftypevar} é o comando especializado de definição para "
+"variáveis em linguagens tipadas.  @code{@@deftypevar} é equivalente a "
+"@samp{@@deftypevr Variável @dots{}}."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:11301
 msgid "These commands create entries in the index of variables."
-msgstr ""
+msgstr "Esses comandos criam entradas no índice de variáveis."
 
 #. type: subsection
 #: texinfo/texinfo.texi:11303 texinfo/texinfo.texi:11305
 #, no-wrap
 msgid "Data Types"
-msgstr ""
+msgstr "Tipos de Dados"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:11305
 msgid "@nodedescription The definition command for data types."
-msgstr ""
+msgstr "@nodedescription O comando de definição para tipos de dados."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:11308
 msgid "Here is the command for data types:"
-msgstr ""
+msgstr "Aqui está o comando para tipos de dados:"
 
 #. type: findex
 #: texinfo/texinfo.texi:11310
 #, no-wrap
 msgid "deftp"
-msgstr ""
+msgstr "deftp"
 
 #. type: item
 #: texinfo/texinfo.texi:11311
 #, no-wrap
 msgid "@@deftp @var{category} @var{name} @var{attributes}@dots{}"
-msgstr ""
+msgstr "@@deftp @var{categoria} @var{nome} @var{atributos}@dots{}"
 
 #. type: table
 #: texinfo/texinfo.texi:11321
@@ -29697,6 +29716,14 @@ msgid ""
 "(A data type is a category of certain objects for purposes of deciding which "
 "operations can be performed on them.)"
 msgstr ""
+"O comando @code{@@deftp} é o comando genérico de definição para tipos de "
+"dados.  O comando é escrito no início de uma linha e é seguido na mesma "
+"linha pela categoria, pelo nome do tipo (que é uma palavra como @code{int} "
+"ou @code{float}) e, em seguida, pelos nomes de atributos de objetos desse "
+"tipo.  Portanto, você poderia usar esse comando para descrever @code{int} "
+"ou @code{float}, em cujo caso você poderia usar @code{tipo de dados} como a "
+"categoria.  (Um tipo de dados é uma categoria de certos objetos para fins "
+"de decidir quais operações podem ser realizadas sobre neles.)"
 
 #. type: table
 #: texinfo/texinfo.texi:11326
@@ -29705,6 +29732,9 @@ msgid ""
 "of that type has two slots called the @sc{car} and the @sc{cdr}.  Here is "
 "how you would write the first line of a definition of @code{pair}."
 msgstr ""
+"Na Lisp, por exemplo, @dfn{pair} nomeia um tipo particular de dado, e um "
+"objeto desse tipo tem dois slots chamados @sc{car} e @sc{cdr}.  Aqui está "
+"como você escreveria a primeira linha de uma definição de @code{pair}."
 
 #. type: group
 #: texinfo/texinfo.texi:11332
@@ -29714,34 +29744,37 @@ msgid ""
 "@dots{}\n"
 "@@end deftp\n"
 msgstr ""
+"@@deftp @{Tipo de dados@} pair car cdr\n"
+"@dots{}\n"
+"@@end deftp\n"
 
 #. type: table
 #: texinfo/texinfo.texi:11336
 msgid "@code{@@deftp} creates an entry in the index of data types."
-msgstr ""
+msgstr "@code{@@deftp} cria uma entrada no índice de tipos de dados."
 
 #. type: node
 #: texinfo/texinfo.texi:11339
 #, no-wrap
 msgid "Abstract Objects"
-msgstr ""
+msgstr "Objetos Abstratos"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:11341
 msgid "@nodedescription Commands for object-oriented programming."
-msgstr ""
+msgstr "@nodedescription Comandos para programação orientada a objetos."
 
 #. type: subsection
 #: texinfo/texinfo.texi:11341
 #, no-wrap
 msgid "Object-Oriented Programming"
-msgstr ""
+msgstr "Programação Orientada a Objetos"
 
 #. type: cindex
 #: texinfo/texinfo.texi:11343
 #, no-wrap
 msgid "Object-oriented programming"
-msgstr ""
+msgstr "Programação orientada a objetos"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:11351
@@ -29752,28 +29785,34 @@ msgid ""
 "the type of the class.  An instance variable is a variable that belongs to "
 "the class but for which each instance has its own value."
 msgstr ""
+"Aqui estão os comandos para formatar descrições acerca de objetos "
+"abstratos, tais como são usados em programação orientada a objetos.  Uma "
+"classe é um tipo definido de objeto abstrato.  Uma instância de uma classe "
+"é um objeto particular que tenha o tipo da classe.  Uma variável de "
+"instância é uma variável que pertence à classe, mas para a qual cada "
+"instância tenha o próprio valor dela."
 
 #. type: menuentry
 #: texinfo/texinfo.texi:11355
 msgid "Variables: Object-Oriented Variables."
-msgstr ""
+msgstr "Variáveis: Variáveis Orientadas a Objetos"
 
 #. type: menuentry
 #: texinfo/texinfo.texi:11355
 msgid "Methods: Object-Oriented Methods"
-msgstr ""
+msgstr "Métodos: Métodos Orientados a Objetos"
 
 #. type: subsubsection
 #: texinfo/texinfo.texi:11358 texinfo/texinfo.texi:11359
 #, no-wrap
 msgid "Object-Oriented Variables"
-msgstr ""
+msgstr "Variáveis Orientadas a Objetos"
 
 #. type: cindex
 #: texinfo/texinfo.texi:11361
 #, no-wrap
 msgid "Variables, object-oriented"
-msgstr ""
+msgstr "Variáveis, orientadas a objetos"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:11365
@@ -29781,18 +29820,20 @@ msgid ""
 "These commands allow you to define different sorts of variables in "
 "object-oriented programming languages."
 msgstr ""
+"Estes comandos permitem que você defina diferentes tipos de variáveis em "
+"linguagens de programação orientadas a objetos."
 
 #. type: findex
 #: texinfo/texinfo.texi:11367
 #, no-wrap
 msgid "defcv"
-msgstr ""
+msgstr "defcv"
 
 #. type: item
 #: texinfo/texinfo.texi:11368 texinfo/texinfo.texi:18839
 #, no-wrap
 msgid "@@defcv @var{category} @var{class} @var{name}"
-msgstr ""
+msgstr "@@defcv @var{categoria} @var{classe} @var{nome}"
 
 #. type: table
 #: texinfo/texinfo.texi:11374
@@ -29802,6 +29843,10 @@ msgid ""
 "command is followed by three arguments: the category of thing being defined, "
 "the class to which it belongs, and its name.  For instance:"
 msgstr ""
+"O comando @code{@@defcv} é o comando geral de definição para variáveis "
+"associadas a classes em programação orientada a objetos.  O comando "
+"@code{@@defcv} é seguido por três argumentos: a categoria da coisa sendo "
+"definida, a classe à qual ela pertence e o nome dela.  Por exemplo:"
 
 #. type: group
 #: texinfo/texinfo.texi:11380
@@ -29811,29 +29856,32 @@ msgid ""
 "@dots{}\n"
 "@@end defcv\n"
 msgstr ""
+"@@defcv @{Opção da Classe@} Janela padrão-borda\n"
+"@dots{}\n"
+"@@end defcv\n"
 
 #. type: defcv
 #: texinfo/texinfo.texi:11385
 #, no-wrap
 msgid "{Class Option} Window border-pattern"
-msgstr ""
+msgstr "{Opção da Classe} Janela padrão-borda"
 
 #. type: table
 #: texinfo/texinfo.texi:11390
 msgid "@code{@@defcv} creates an entry in the index of variables."
-msgstr ""
+msgstr "@code{@@defcv} cria uma entrada no índice de variáveis."
 
 #. type: findex
 #: texinfo/texinfo.texi:11391
 #, no-wrap
 msgid "deftypecv"
-msgstr ""
+msgstr "deftypecv"
 
 #. type: item
 #: texinfo/texinfo.texi:11392 texinfo/texinfo.texi:18910
 #, no-wrap
 msgid "@@deftypecv @var{category} @var{class} @var{data-type} @var{name}"
-msgstr ""
+msgstr "@@deftypecv @var{categoria} @var{classe} @var{tipo-dados} @var{nome}"
 
 #. type: table
 #: texinfo/texinfo.texi:11397
@@ -29843,6 +29891,10 @@ msgid ""
 "with the addition of the @var{data-type} parameter to specify the type of "
 "the instance variable."
 msgstr ""
+"O comando @code{@@deftypecv} é o comando de definição para variáveis "
+"tipadas de classe em programação orientada a objetos.  Ele é análogo ao "
+"@code{@@defcv} com a adição do parâmetro @var{tipo-dados} para "
+"especificar o tipo da variável de instância."
 
 #. type: group
 #: texinfo/texinfo.texi:11403
@@ -29852,29 +29904,32 @@ msgid ""
 "@dots{}\n"
 "@@end deftypecv\n"
 msgstr ""
+"@@deftypecv @{Opção da Classe@} Janela int padrão-borda\n"
+"@dots{}\n"
+"@@end deftypecv\n"
 
 #. type: deftypecv
 #: texinfo/texinfo.texi:11409
 #, no-wrap
 msgid "{Class Option} Window int border-pattern"
-msgstr ""
+msgstr "{Opção da Classe} Janela int padrão-borda"
 
 #. type: table
 #: texinfo/texinfo.texi:11414
 msgid "@code{@@deftypecv} creates an entry in the index of variables."
-msgstr ""
+msgstr "@code{@@deftypecv} cria uma entrada no índice de variáveis."
 
 #. type: findex
 #: texinfo/texinfo.texi:11415
 #, no-wrap
 msgid "defivar"
-msgstr ""
+msgstr "defivar"
 
 #. type: item
 #: texinfo/texinfo.texi:11416
 #, no-wrap
 msgid "@@defivar @var{class} @var{name}"
-msgstr ""
+msgstr "@@defivar @var{classe} @var{nome}"
 
 #. type: table
 #: texinfo/texinfo.texi:11421
@@ -29883,6 +29938,10 @@ msgid ""
 "variables in object-oriented programming.  @code{@@defivar} is equivalent to "
 "@samp{@@defcv @{Instance Variable@} @dots{}}.  For instance:"
 msgstr ""
+"O comando @code{@@defivar} é o comando de definição para variáveis de "
+"instância em programação orientada a objetos.  @code{@@defivar} é "
+"equivalente a @samp{@@defcv @{Variável da Instância@} @dots{}}.  Por "
+"exemplo:"
 
 #. type: group
 #: texinfo/texinfo.texi:11427
@@ -29892,29 +29951,32 @@ msgid ""
 "@dots{}\n"
 "@@end defivar\n"
 msgstr ""
+"@@defivar Janela padrão-borda\n"
+"@dots{}\n"
+"@@end defivar\n"
 
 #. type: defivar
 #: texinfo/texinfo.texi:11433
 #, no-wrap
 msgid "Window border-pattern"
-msgstr ""
+msgstr "Janela padrão-borda"
 
 #. type: table
 #: texinfo/texinfo.texi:11438
 msgid "@code{@@defivar} creates an entry in the index of variables."
-msgstr ""
+msgstr "@code{@@defivar} cria uma entrada no índice de variáveis."
 
 #. type: findex
 #: texinfo/texinfo.texi:11439
 #, no-wrap
 msgid "deftypeivar"
-msgstr ""
+msgstr "deftypeivar"
 
 #. type: item
 #: texinfo/texinfo.texi:11440
 #, no-wrap
 msgid "@@deftypeivar @var{class} @var{data-type} @var{name}"
-msgstr ""
+msgstr "@@deftypeivar @var{classe} @var{tipo-dados} @var{nome}"
 
 #. type: table
 #: texinfo/texinfo.texi:11445
@@ -29924,6 +29986,10 @@ msgid ""
 "@code{@@defivar} with the addition of the @var{data-type} parameter to "
 "specify the type of the instance variable."
 msgstr ""
+"O comando @code{@@deftypeivar} é o comando de definição para variáveis "
+"tipadas de instância em programação orientada a objetos.  Ele é análogo "
+"ao @code{@@defivar} com a adição do parâmetro @var{tipo-dados} para "
+"especificar o tipo da variável de instância."
 
 #. type: group
 #: texinfo/texinfo.texi:11451
@@ -29933,29 +29999,32 @@ msgid ""
 "@dots{}\n"
 "@@end deftypeivar\n"
 msgstr ""
+"@@deftypeivar Janela int padrão-borda\n"
+"@dots{}\n"
+"@@end deftypeivar\n"
 
 #. type: deftypeivar
 #: texinfo/texinfo.texi:11457
 #, no-wrap
 msgid "Window @code{int} border-pattern"
-msgstr ""
+msgstr "Janela @code{int} padrão-borda"
 
 #. type: table
 #: texinfo/texinfo.texi:11462
 msgid "@code{@@deftypeivar} creates an entry in the index of variables."
-msgstr ""
+msgstr "@code{@@deftypeivar} cria uma entrada no índice de variáveis."
 
 #. type: subsubsection
 #: texinfo/texinfo.texi:11466 texinfo/texinfo.texi:11467
 #, no-wrap
 msgid "Object-Oriented Methods"
-msgstr ""
+msgstr "Métodos Orientados a Objetos"
 
 #. type: cindex
 #: texinfo/texinfo.texi:11469
 #, no-wrap
 msgid "Methods, object-oriented"
-msgstr ""
+msgstr "Métodos, orientados a objetos"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:11475
@@ -29965,18 +30034,23 @@ msgid ""
 "take arguments, as functions do, but are associated with particular classes "
 "of objects."
 msgstr ""
+"Esses comandos permitem que você defina diferentes tipos de entidades "
+"semelhantes a funções que lembram métodos em linguagens de programação "
+"orientadas a objetos.  Essas entidades recebem argumentos, como as "
+"funções, mas são associadas a classes específicas de objetos."
 
 #. type: findex
 #: texinfo/texinfo.texi:11478
 #, no-wrap
 msgid "defop"
-msgstr ""
+msgstr "defop"
 
 #. type: item
 #: texinfo/texinfo.texi:11479 texinfo/texinfo.texi:18885
 #, no-wrap
 msgid "@@defop @var{category} @var{class} @var{name} @var{arguments}@dots{}"
 msgstr ""
+"@@defop @var{categoria} @var{classe} @var{nome} @var{argumentos}@dots{}"
 
 #. type: table
 #: texinfo/texinfo.texi:11482
@@ -29984,6 +30058,8 @@ msgid ""
 "The @code{@@defop} command is the definition command for these method-like "
 "entities with simple arguments."
 msgstr ""
+"O comando @code{@@defop} é o comando de definição para essas entidades "
+"semelhantes a métodos. com argumentos simples"
 
 #. type: table
 #: texinfo/texinfo.texi:11487
@@ -29993,6 +30069,10 @@ msgid ""
 "like functions.  You could use @code{@@defop Wrapper} to describe one of "
 "these."
 msgstr ""
+"Por exemplo, alguns sistemas tem construções chamadas @dfn{involucradores} "
+"que são associadas a classes, como métodos, mas que agem mais como macros "
+"que como funções.  Você poderia usar @code{@@defop Involucrador} para "
+"descrever uma delas."
 
 #. type: table
 #: texinfo/texinfo.texi:11497
@@ -30006,6 +30086,15 @@ msgid ""
 "operation must accept the same arguments, since applications that use the "
 "operation do so without knowing which method will implement it."
 msgstr ""
+"Ocasionalmente, é útil distinguir métodos e @dfn{operações}.  Você "
+"pode pensar em uma operação como a especificação para um método.  "
+"Assim, um sistema de janelas pode especificar que todas as classes de "
+"janelas tem um método chamado @code{expor}; nós diríamos que esse sistema "
+"de janelas define uma operação @code{expor} sobre janelas em geral.  "
+"Normalmente, a operação tem um nome e também especifica o padrão de "
+"argumentos; todos os métodos que implementem a operação precisam aceitar "
+"os mesmos argumentos, já que aplicações que usem a operação o fazem sem "
+"saber qual método a implementará."
 
 #. type: table
 #: texinfo/texinfo.texi:11503
@@ -30016,12 +30105,17 @@ msgid ""
 "has its own method to implement this operation.  To describe this operation, "
 "you would write:"
 msgstr ""
+"Frequentemente faz mais sentido documentar operações que métodos.  Por "
+"exemplo, desenvolvedores(as) de aplicações de janela precisam saber acerca "
+"da operação @code{expor}, mas não precisam se preocupar se uma "
+"determinada classe de janelas tem o próprio método dela para implementar "
+"essa operação.  Para descrever essa operação, você escreveria:"
 
 #. type: example
 #: texinfo/texinfo.texi:11506
 #, no-wrap
 msgid "@@defop Operation windows expose\n"
-msgstr ""
+msgstr "@@defop Operação janelas expor\n"
 
 #. type: table
 #: texinfo/texinfo.texi:11512
@@ -30031,6 +30125,9 @@ msgid ""
 "the name of the class of the operation, the name of the operation, and its "
 "arguments, if any."
 msgstr ""
+"O comando @code{@@defop} é escrito no início de uma linha e é seguido na "
+"mesma linha pelo nome geral da categoria da operação, pelo nome da classe "
+"da operação, pelo nome da operação e pelos argumentos dela, se existirem."
 
 #. type: table
 #: texinfo/texinfo.texi:11515
@@ -30038,12 +30135,14 @@ msgid ""
 "@code{@@defop} creates an entry, such as `@code{expose} on @code{windows}', "
 "in the index of functions."
 msgstr ""
+"@code{@@defop} cria uma entrada, como `@code{expor} sobre @code{janelas}', "
+"no índice de funções."
 
 #. type: findex
 #: texinfo/texinfo.texi:11516
 #, no-wrap
 msgid "deftypeop"
-msgstr ""
+msgstr "deftypeop"
 
 #. type: item
 #: texinfo/texinfo.texi:11517 texinfo/texinfo.texi:18948
@@ -30052,6 +30151,8 @@ msgid ""
 "@@deftypeop @var{category} @var{class} @var{data-type} @var{name} "
 "@var{arguments}@dots{}"
 msgstr ""
+"@@deftypeop @var{categoria} @var{classe} @var{tipo-dados} @var{nome} "
+"@var{argumentos}@dots{}"
 
 #. type: table
 #: texinfo/texinfo.texi:11524
@@ -30062,18 +30163,24 @@ msgid ""
 "addition of the @var{data-type} parameter to specify information on the "
 "return value of the method, for example the return type."
 msgstr ""
+"O comando @code{@@deftypeop} é o comando genérico de definição para "
+"operações em programação orientada a objetos.  Ele é especificamente "
+"adequado para linguagens tipadas orientadas a objetos.  Ele é semelhante ao "
+"@code{@@defop} com a adição do parâmetro @var{tipo-dados} para "
+"especificar informações acerca do valor de retorno do método, por exemplo "
+"o tipo de retorno."
 
 #. type: findex
 #: texinfo/texinfo.texi:11525
 #, no-wrap
 msgid "defmethod"
-msgstr ""
+msgstr "defmethod"
 
 #. type: item
 #: texinfo/texinfo.texi:11526
 #, no-wrap
 msgid "@@defmethod @var{class} @var{name} @var{arguments}@dots{}"
-msgstr ""
+msgstr "@@defmethod @var{classe} @var{nome} @var{argumentos}@dots{}"
 
 #. type: table
 #: texinfo/texinfo.texi:11531
@@ -30082,6 +30189,10 @@ msgid ""
 "object-oriented programming.  A method is a kind of function that implements "
 "an operation for a particular class of objects and its subclasses."
 msgstr ""
+"O comando @code{@@defmethod} é o comando de definição para métodos em "
+"programação orientada a objetos.  Um método é um tipo de função que "
+"implementa uma operação para uma classe particular de objetos e as "
+"subclasses dela."
 
 #. type: table
 #: texinfo/texinfo.texi:11542
@@ -30090,6 +30201,9 @@ msgid ""
 "command is written at the beginning of a line and is followed by the name of "
 "the class of the method, the name of the method, and its arguments, if any."
 msgstr ""
+"@code{@@defmethod} é equivalente a @samp{@@defop Método @dots{}}.  O "
+"comando é escrito no início de uma linha e é seguido pelo nome da classe "
+"do método, pelo nome do método e pelos argumentos dele, se existirem."
 
 #. type: group
 #: texinfo/texinfo.texi:11550
@@ -30099,6 +30213,9 @@ msgid ""
 "@dots{}\n"
 "@@end defmethod\n"
 msgstr ""
+"@@defmethod @code{classe-barra} método-barra argumento\n"
+"@dots{}\n"
+"@@end defmethod\n"
 
 #. type: table
 #: texinfo/texinfo.texi:11556
@@ -30106,17 +30223,19 @@ msgid ""
 "illustrates the definition for a method called @code{bar-method} of the "
 "class @code{bar-class}.  The method takes an argument."
 msgstr ""
+"ilustra a definição para um método chamado @code{método-barra} da classe "
+"@code{classe-barra}.  O método recebe um argumento."
 
 #. type: table
 #: texinfo/texinfo.texi:11558
 msgid "@code{@@defmethod} creates an entry in the index of functions."
-msgstr ""
+msgstr "@code{@@defmethod} cria uma entrada no índice de funções."
 
 #. type: findex
 #: texinfo/texinfo.texi:11559
 #, no-wrap
 msgid "deftypemethod"
-msgstr ""
+msgstr "deftypemethod"
 
 #. type: item
 #: texinfo/texinfo.texi:11560
@@ -30124,6 +30243,8 @@ msgstr ""
 msgid ""
 "@@deftypemethod @var{class} @var{data-type} @var{name} @var{arguments}@dots{}"
 msgstr ""
+"@@deftypemethod @var{classe} @var{tipo-dados} @var{nome} "
+"@var{argumentos}@dots{}"
 
 #. type: table
 #: texinfo/texinfo.texi:11566
@@ -30134,6 +30255,11 @@ msgid ""
 "the @var{data-type} parameter to specify information on the return value of "
 "the method, for example the return type."
 msgstr ""
+"O comando @code{@@deftypemethod} é o comando de definição para métodos "
+"em linguagens orientadas a objetos, em particular para linguagens tipadas "
+"como C++ e Java.  Ele é semelhante ao comando @code{@@defmethod} com a "
+"adição do parâmetro @var{tipo-dados} para especificar informações "
+"acerca do valor de retorno do método, por exemplo o tipo de retorno."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:11572
