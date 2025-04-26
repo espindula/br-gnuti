@@ -17,7 +17,7 @@ msgstr ""
 "Project-Id-Version: Texinfo 7.1\n"
 "Report-Msgid-Bugs-To: jafesp@gmail.com\n"
 "POT-Creation-Date: 2025-04-13 00:11-0300\n"
-"PO-Revision-Date: 2025-04-26 11:03-0300\n"
+"PO-Revision-Date: 2025-04-26 12:54-0300\n"
 "Last-Translator: Jamenson Ferreira Espindula de Almeida Melo "
 "<jafesp@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -30268,17 +30268,20 @@ msgid ""
 "@code{@@deftypefnnewline} option (@pxref{Typed Functions,, Functions in "
 "Typed Languages})."
 msgstr ""
+"Os comandos com informação acerca de valores de retorno são afetados pela "
+"opção @code{@@deftypefnnewline} (@pxref{Funções Tipadas,, Funções em "
+"Linguagens Tipadas})."
 
 #. type: section
 #: texinfo/texinfo.texi:11574 texinfo/texinfo.texi:11576
 #, no-wrap
 msgid "Generic Definition Commands"
-msgstr ""
+msgstr "Comandos Genéricos de Definição"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:11576
 msgid "@nodedescription Without automatic index entries."
-msgstr ""
+msgstr "@nodedescription Sem entradas automáticas de índice."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:11580
@@ -30286,24 +30289,26 @@ msgid ""
 "Texinfo provides commands for definitions that do not produce automatic "
 "index entries."
 msgstr ""
+"O Texinfo fornece comandos para definições que não produzem entradas "
+"automáticas de índice."
 
 #. type: findex
 #: texinfo/texinfo.texi:11581
 #, no-wrap
 msgid "defblock"
-msgstr ""
+msgstr "defblock"
 
 #. type: findex
 #: texinfo/texinfo.texi:11582
 #, no-wrap
 msgid "defline"
-msgstr ""
+msgstr "defline"
 
 #. type: findex
 #: texinfo/texinfo.texi:11583
 #, no-wrap
 msgid "deftypeline"
-msgstr ""
+msgstr "deftypeline"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:11588
@@ -30312,6 +30317,10 @@ msgid ""
 "with @samp{@@end defblock}.  Within this environment, use a @code{@@defline} "
 "or @code{@@deftypeline} line for each symbol you document.  For example:"
 msgstr ""
+"Você cria um ambiente genérico de definição com @samp{@@defblock} "
+"emparelhado com @samp{@@end defblock}.  Nesse ambiente, use uma linha "
+"@code{@@defline} ou @code{@@deftypeline} para cada símbolo que você "
+"documentar.  Por exemplo:"
 
 #. type: example
 #: texinfo/texinfo.texi:11596
@@ -30324,6 +30333,12 @@ msgid ""
 "Description of foo.\n"
 "@@end defblock\n"
 msgstr ""
+"@@defblock\n"
+"@@defline Macro mac (arg1, arg2)\n"
+"Descrição de mac.\n"
+"@@deftypeline Builtin int foo (int @@var@{bar@})\n"
+"Descrição de foo.\n"
+"@@end defblock\n"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:11600 texinfo/texinfo.texi:11630
@@ -30338,6 +30353,8 @@ msgid ""
 "@defblock @defline Macro mac (arg1, arg2)  Description of mac.  @deftypeline "
 "Builtin int foo (int @var{bar})  Description of foo."
 msgstr ""
+"@defblock @defline Macro mac (arg1, arg2)  Descrição de mac.  @deftypeline "
+"Builtin int foo (int @var{bar})  Descrição de foo."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:11612
@@ -30347,6 +30364,10 @@ msgid ""
 "symbol name, followed by any parameters.  You should surround any arguments "
 "containing spaces with braces."
 msgstr ""
+"A sintaxe de @code{@@defline} é semelhante àquela de @code{@@deffn}.  O "
+"primeiro argumento fornece uma categoria para a definição.  Siga isso com "
+"o nome do símbolo, seguido por quaisquer parâmetros.  Você deveria "
+"envolver com chaves quaisquer argumentos contendo espaços."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:11616
@@ -30355,6 +30376,9 @@ msgid ""
 "following the category with a data type, and marking any parameters with "
 "@code{@@var}. (@xref{Typed Functions}).)"
 msgstr ""
+"Você usa @code{@@deftypeline} de maneira semelhante a @code{@@deftypefn}, "
+"seguindo a categoria com um tipo de dado e marcando quaisquer parâmetros "
+"com @code{@@var}. (@xref{Funções Tipadas}).)"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:11619
@@ -30362,6 +30386,8 @@ msgid ""
 "To share the same description for multiple symbols, you can put several "
 "@code{@@defline} lines together.  For example:"
 msgstr ""
+"Para compartilhar a mesma descrição para vários símbolos, você pode "
+"juntar várias linhas @code{@@defline}.  Por exemplo:"
 
 #. type: example
 #: texinfo/texinfo.texi:11626
@@ -30373,6 +30399,11 @@ msgid ""
 "Description of set-var and var.\n"
 "@@end defblock\n"
 msgstr ""
+"@@defblock\n"
+"@@defline Função set-var (valor)\n"
+"@@defline @{Variável Configurável@} var\n"
+"Descrição de set-var e var.\n"
+"@@end defblock\n"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:11635
@@ -30380,6 +30411,8 @@ msgid ""
 "@defblock @defline Function set-var (value)  @defline {Settable Variable} "
 "var Description of set-var and var."
 msgstr ""
+"@defblock @defline Função set-var (valor)  @defline {Variável "
+"Configurável} var Descrição de set-var e var."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:11639
@@ -30387,35 +30420,37 @@ msgid ""
 "It may be useful to define line macros (@pxref{Line Macros}) in combination "
 "with these commands."
 msgstr ""
+"Possivelmente seja útil definir macros de linha (@pxref{Macros de Linha}) "
+"em combinação com esses comandos."
 
 #. type: node
 #: texinfo/texinfo.texi:11642
 #, no-wrap
 msgid "Def Cmd Conventions"
-msgstr ""
+msgstr "Convenções de Comando de Definição"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:11644
 msgid "@nodedescription Conventions for writing definitions."
-msgstr ""
+msgstr "@nodedescription Convenções para escrita de definições."
 
 #. type: section
 #: texinfo/texinfo.texi:11644
 #, no-wrap
 msgid "Conventions for Writing Definitions"
-msgstr ""
+msgstr "Convenções para Escrita de Definições"
 
 #. type: cindex
 #: texinfo/texinfo.texi:11645
 #, no-wrap
 msgid "Definition conventions"
-msgstr ""
+msgstr "Convenções de definição"
 
 #. type: cindex
 #: texinfo/texinfo.texi:11646
 #, no-wrap
 msgid "Conventions for writing definitions"
-msgstr ""
+msgstr "Convenções para escrita de definições"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:11651
@@ -30424,6 +30459,9 @@ msgid ""
 "given name.  An appendix containing a summary should use @code{@@table} "
 "rather than the definition commands."
 msgstr ""
+"Um manual não precisa e não deveria conter mais que uma definição para "
+"um determinado nome.  Um apêndice contendo um resumo deveria usar "
+"@code{@@table} em vez dos comandos de definição."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:11658
@@ -30435,6 +30473,12 @@ msgid ""
 "name of a type, such as @var{integer}, take care that the argument actually "
 "is of that type."
 msgstr ""
+"Quando você escrever uma definição usando @code{@@deffn}, @code{@@defun} "
+"ou um dos outros comandos de definição, por favor, tome cuidado para usar "
+"argumentos que indiquem o significado, como com o argumento @var{count} para "
+"a função @code{forward-word}.  Além disso, se o nome de um argumento "
+"contiver o nome de um tipo, como @var{integer}, tome cuidado para que o "
+"argumento seja realmente desse tipo."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:11665
@@ -30444,6 +30488,11 @@ msgid ""
 "(@pxref{Fonts}).  However, you may be need to work around problems for "
 "particular output formats and/or constructs.  Here are some possibilities:"
 msgstr ""
+"@emph{Fontes}. Como Texinfo é uma linguagem semântica, você quase nunca "
+"precisará especificar estilos de fonte com comandos explícitos de fonte em "
+"definições (@pxref{Fontes}).  No entanto, você possivelmente precise "
+"contornar problemas com formatos de saída e (ou) construções "
+"específicos.  Aqui estão algumas possibilidades:"
 
 #. type: itemize
 #: texinfo/texinfo.texi:11670
@@ -30451,6 +30500,8 @@ msgid ""
 "Explicitly marking a Lisp keyword like @samp{&@var{keyword}} with "
 "@code{@@r@{&keyword@}}, producing @r{&keyword}."
 msgstr ""
+"Marcando explicitamente uma palavra-chave da Lisp, como "
+"@samp{&@var{keyword}}, com @code{@@r@{&keyword@}}, produzindo @r{&keyword}."
 
 #. type: itemize
 #: texinfo/texinfo.texi:11674
@@ -30458,6 +30509,9 @@ msgid ""
 "Note such keywords in definition arguments are (at present)  rendered in "
 "roman in @TeX{}, but this formatting is not done in any other output format."
 msgstr ""
+"Observe que tais palavras-chave em argumentos de definição são "
+"(atualmente) renderizadas em romano no @TeX{}, mas essa formatação não é "
+"feita em nenhum outro formato de saída."
 
 #. type: itemize
 #: texinfo/texinfo.texi:11679
@@ -30466,6 +30520,9 @@ msgid ""
 "similar to @code{@@var} but avoiding upper-casing its argument in Info "
 "output."
 msgstr ""
+"@samp{@@r@{@@slanted@{argumento@}@}}, produzindo @r{@slanted{argumento}}, "
+"semelhante a @code{@@var}, mas evitando maiusculizar o argumento dele na "
+"saída do Info."
 
 #. type: itemize
 #: texinfo/texinfo.texi:11683
@@ -30474,6 +30531,9 @@ msgid ""
 "used in the definition line context (slanted or typewriter) to a roman, "
 "upright style."
 msgstr ""
+"Neste e no ponto anterior, @code{@@r} reconfigura a fonte daquela sendo "
+"usada no contexto da linha de definição (inclinada ou de máquina de "
+"escrever) para um estilo romano vertical."
 
 #. type: itemize
 #: texinfo/texinfo.texi:11691
@@ -30483,6 +30543,11 @@ msgid ""
 "would otherwise be output in the slanted roman style.  @code{@@code} would "
 "be inappropriate here as it adds quotation marks in Info output."
 msgstr ""
+"Você poderia usar @code{@@t} (ou até mesmo @samp{@@r@{@@t@{@dots{}}, "
+"usando @code{@@r} para reconfigurar estilos de fonte) para marcar sintaxe "
+"literal em uma linha de definição onde, de outra maneira, o texto seria "
+"gerado no estilo romano inclinado.  @code{@@code} seria inapropriado aqui, "
+"pois ele adiciona aspas na saída do Info."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:11696
@@ -30491,6 +30556,10 @@ msgid ""
 "ever, how nested font commands combine depends on the output format, so "
 "should be avoided where possible."
 msgstr ""
+"Algum grau de tentativa e erro possivelmente seja necessário para obter o "
+"resultado que você quer.  Como sempre, como comandos aninhados de fonte se "
+"combinam depende do formato de saída, de forma que deveria ser evitada onde "
+"possível."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:11700
@@ -30499,6 +30568,9 @@ msgid ""
 "these in @code{@@macro} (@pxref{Defining New Texinfo Commands}), allowing "
 "these usages to be easily changed in the future."
 msgstr ""
+"Esperançosamente, tais usos sejam mantidos ao mínimo.  Uma possibilidade "
+"é a de envolucrá-los em @code{@@macro} (@pxref{Definindo Novos Comandos do "
+"Texinfo}), permitindo que esses usos sejam facilmente mudados no futuro."
 
 #. type: group
 #: texinfo/texinfo.texi:11711
@@ -30509,6 +30581,10 @@ msgid ""
 "@@end macro\n"
 "\n"
 msgstr ""
+"@@macro metasymbol @{argumento@}\n"
+"@@r@{@@t@{@@slanted@{\\argumento\\@}@}@}\n"
+"@@end macro\n"
+"\n"
 
 #. type: group
 #: texinfo/texinfo.texi:11715
@@ -30519,6 +30595,10 @@ msgid ""
 "@@end macro\n"
 "\n"
 msgstr ""
+"@@macro strongkeyword @{argumento@}\n"
+"@@r@{@@strong@{\\argumento\\@}@}\n"
+"@@end macro\n"
+"\n"
 
 #. type: group
 #: texinfo/texinfo.texi:11719
@@ -30528,30 +30608,33 @@ msgid ""
 "@dots{}\n"
 "@@end defun\n"
 msgstr ""
+"@@defun fset arg @@metasymbol@{[ +@} @@strongkeyword@{*keyword@}\n"
+"@dots{}\n"
+"@@end defun\n"
 
 #. type: macro
 #: texinfo/texinfo.texi:11727
 #, no-wrap
 msgid "@r{@t{@slanted{\\argument\\}}}\n"
-msgstr ""
+msgstr "@r{@t{@slanted{\\argumento\\}}}\n"
 
 #. type: macro
 #: texinfo/texinfo.texi:11731
 #, no-wrap
 msgid "@r{@strong{\\argument\\}}\n"
-msgstr ""
+msgstr "@r{@strong{\\argumento\\}}\n"
 
 #. type: defun
 #: texinfo/texinfo.texi:11733
 #, no-wrap
 msgid "fset arg @metasymbol{[ +} @strongkeyword{*keyword}"
-msgstr ""
+msgstr "fset arg @metasymbol{[ +} @strongkeyword{*keyword}"
 
 #. type: defun
 #: texinfo/texinfo.texi:11735
 #, no-wrap
 msgid "@dots{}\n"
-msgstr ""
+msgstr "@dots{}\n"
 
 #. type: node
 #: texinfo/texinfo.texi:11739
