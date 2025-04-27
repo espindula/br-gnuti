@@ -17,7 +17,7 @@ msgstr ""
 "Project-Id-Version: Texinfo 7.1\n"
 "Report-Msgid-Bugs-To: jafesp@gmail.com\n"
 "POT-Creation-Date: 2025-04-13 00:11-0300\n"
-"PO-Revision-Date: 2025-04-26 12:54-0300\n"
+"PO-Revision-Date: 2025-04-27 16:30-0300\n"
 "Last-Translator: Jamenson Ferreira Espindula de Almeida Melo "
 "<jafesp@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -30640,24 +30640,24 @@ msgstr "@dots{}\n"
 #: texinfo/texinfo.texi:11739
 #, no-wrap
 msgid "Sample Function Definition"
-msgstr ""
+msgstr "Definição de Amostra de Função"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:11741
 msgid "@nodedescription An example."
-msgstr ""
+msgstr "@nodedescription Um exemplo."
 
 #. type: section
 #: texinfo/texinfo.texi:11741
 #, no-wrap
 msgid "A Sample Function Definition"
-msgstr ""
+msgstr "Uma Definição de Amostra de Função"
 
 #. type: cindex
 #: texinfo/texinfo.texi:11742
 #, no-wrap
 msgid "Sample function definition"
-msgstr ""
+msgstr "Definição de amostra de função"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:11748
@@ -30667,12 +30667,16 @@ msgid ""
 "function, @code{apply}, follows immediately after the @code{@@defun} command "
 "and it is followed, on the same line, by the parameter list."
 msgstr ""
+"Aqui está uma definição oriunda do @ref{Calling Functions,,, elisp, "
+"Manual de Referência da Lisp do GNU Emacs}.  O nome da função, "
+"@code{apply}, segue imediatamente depois do comando @code{@@defun} e é "
+"seguido, na mesma linha, pela lista de parâmetros."
 
 #. type: defun
 #: texinfo/texinfo.texi:11750
 #, no-wrap
 msgid "apply function @r{&rest} arguments"
-msgstr ""
+msgstr "apply função @r{&rest} argumentos"
 
 #. type: defun
 #: texinfo/texinfo.texi:11756
@@ -30682,6 +30686,11 @@ msgid ""
 "list of arguments to give to @var{function}, rather than a single argument.  "
 "We also say that this list is @dfn{appended} to the other arguments."
 msgstr ""
+"@code{apply} chama @var{função} com @var{argumentos}, assim como "
+"@code{funcall}, mas com uma diferença: o último dos @var{argumentos} é "
+"uma lista de argumentos para fornecer para @var{função}, em vez de um "
+"argumento unitário.  Nós também dizemos que essa lista é @dfn{posposta} "
+"aos outros argumentos."
 
 #. type: defun
 #: texinfo/texinfo.texi:11761
@@ -30690,6 +30699,10 @@ msgid ""
 "@code{funcall}, @var{function} must either be a Lisp function or a primitive "
 "function; special forms and macros do not make sense in @code{apply}."
 msgstr ""
+"@code{apply} retorna o resultado da chamada de @var{função}.  Assim como "
+"com @code{funcall}, @var{função} precisa ser ou uma função da Lisp ou "
+"uma função primitiva; formas especiais e macros não fazem sentido em "
+"@code{apply}."
 
 #. type: example
 #: texinfo/texinfo.texi:11771
@@ -30705,6 +30718,15 @@ msgid ""
 "    @result{} 10\n"
 "\n"
 msgstr ""
+"(setq f 'list)\n"
+"    @result{} lista\n"
+"(apply f 'x 'y 'z)\n"
+"@error{} Argumento de tipo errado: listp, z\n"
+"(apply '+ 1 2 '(3 4))\n"
+"    @result{} 10\n"
+"(apply '+ '(1 2 3 4))\n"
+"    @result{} 10\n"
+"\n"
 
 #. type: example
 #: texinfo/texinfo.texi:11774
@@ -30713,6 +30735,8 @@ msgid ""
 "(apply 'append '((a b c) nil (x y z) nil))\n"
 "    @result{} (a b c x y z)\n"
 msgstr ""
+"(apply 'append '((a b c) nil (x y z) nil))\n"
+"    @result{} (a b c x y z)\n"
 
 #. type: defun
 #: texinfo/texinfo.texi:11778
@@ -30720,11 +30744,14 @@ msgid ""
 "An interesting example of using @code{apply} is found in the description of "
 "@code{mapcar}."
 msgstr ""
+"Um exemplo interessante do uso de @code{apply} é encontrado na descrição "
+"de @code{mapcar}."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:11782
 msgid "In the Texinfo source file, this example should look like this:"
 msgstr ""
+"No arquivo fonte do Texinfo, esse exemplo deveria se pareçer com isto:"
 
 #. type: group
 #: texinfo/texinfo.texi:11792
@@ -30738,6 +30765,13 @@ msgid ""
 "argument.  We also say that this list is @@dfn@{appended@}\n"
 "to the other arguments.\n"
 msgstr ""
+"@@defun apply função &rest argumentos\n"
+"@@code@{apply@} chama @@var@{função@} com @@var@{argumentos@},\n"
+"assim como @@code@{funcall@}, mas com uma diferença:\n"
+"o último dos @@var@{argumentos@} é uma lista de argumentos para\n"
+"fornecer para @@var@{função@}, em vez de um argumento unitário.  Nós\n"
+"também dizemos que essa lista é @@dfn@{posposta@} aos\n"
+"outros argumentos.\n"
 
 #. type: group
 #: texinfo/texinfo.texi:11800
@@ -30749,6 +30783,11 @@ msgid ""
 "primitive function; special forms and macros do not make\n"
 "sense in @@code@{apply@}.\n"
 msgstr ""
+"@@code@{apply@} retorna o resultado da chamada de\n"
+"@@var@{função@}.  Assim como com @@code@{funcall@},\n"
+"@@var@{função@} precisa ser ou uma função da Lisp ou\n"
+"uma função primitiva; formas especiais e macros não fazem\n"
+"sentido em @@code@{apply@}.\n"
 
 #. type: group
 #: texinfo/texinfo.texi:11812
@@ -30765,6 +30804,16 @@ msgid ""
 "    @@result@{@} 10\n"
 "\n"
 msgstr ""
+"@@example\n"
+"(setq f 'list)\n"
+"    @@result@{@} lista\n"
+"(apply f 'x 'y 'z)\n"
+"@@error@{@} Argumento de tipo errado: listp, z\n"
+"(apply '+ 1 2 '(3 4))\n"
+"    @@result@{@} 10\n"
+"(apply '+ '(1 2 3 4))\n"
+"    @@result@{@} 10\n"
+"\n"
 
 #. type: group
 #: texinfo/texinfo.texi:11816
@@ -30774,6 +30823,9 @@ msgid ""
 "    @@result@{@} (a b c x y z)\n"
 "@@end example\n"
 msgstr ""
+"(apply 'append '((a b c) nil (x y z) nil))\n"
+"    @@result@{@} (a b c x y z)\n"
+"@@end example\n"
 
 #. type: group
 #: texinfo/texinfo.texi:11822
@@ -30783,6 +30835,9 @@ msgid ""
 "in the description of @@code@{mapcar@}.\n"
 "@@end defun\n"
 msgstr ""
+"Um exemplo interessante do uso de @@code@{apply@} é encontrado\n"
+"na descrição de @@code@{mapcar@}.\n"
+"@@end defun\n"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:11828
@@ -30790,18 +30845,20 @@ msgid ""
 "In this manual, this function is listed in the Command and Variable Index "
 "under @code{apply}."
 msgstr ""
+"Neste manual, essa função está listada no Índice de Comandos e "
+"Variáveis sob @code{apply}."
 
 #. type: cindex
 #: texinfo/texinfo.texi:11830 texinfo/texinfo.texi:11832
 #: texinfo/texinfo.texi:11834
 #, no-wrap
 msgid "Internationalization"
-msgstr ""
+msgstr "Internacionalização"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:11832
 msgid "@nodedescription Supporting languages other than English."
-msgstr ""
+msgstr "@nodedescription Suportando idiomas diferentes do Inglês."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:11839
@@ -30811,6 +30868,11 @@ msgid ""
 "helping to translate the fixed strings written to documents, "
 "@pxref{Internationalization of Document Strings}.)"
 msgstr ""
+"Texinfo tem algum suporte para escrita em outros idiomas além do Inglês, "
+"embora essa área ainda precise de trabalho considerável.  (Se você for "
+"um(a) dos(as) que ajudam a traduzir as sequências fixas de caracteres "
+"escritas em documentos, @pxref{Internacionalização de Sequências de "
+"Caracteres de Documentos})."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:11842
@@ -30818,17 +30880,19 @@ msgid ""
 "For a list of the various accented and special characters Texinfo supports, "
 "see @ref{Inserting Accents}."
 msgstr ""
+"Para uma lista dos vários caracteres acentuados e especiais que Texinfo "
+"suporta, veja-se @ref{Inserindo Acentos}."
 
 #. type: node
 #: texinfo/texinfo.texi:11844
 #, no-wrap
 msgid "@code{@@documentlanguage}"
-msgstr ""
+msgstr "@code{@@documentlanguage}"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:11846
 msgid "@nodedescription Declaring the current language."
-msgstr ""
+msgstr "@nodedescription Declarando o idioma atual."
 
 #. type: section
 #: texinfo/texinfo.texi:11846
@@ -30836,30 +30900,32 @@ msgstr ""
 msgid ""
 "@code{@@documentlanguage @var{ll}[_@var{cc}]}: Set the Document Language"
 msgstr ""
+"@code{@@documentlanguage @var{ll}[_@var{cc}]}: Configurar o Idioma do "
+"Documento"
 
 #. type: findex
 #: texinfo/texinfo.texi:11848 texinfo/texinfo.texi:11849
 #, no-wrap
 msgid "documentlanguage"
-msgstr ""
+msgstr "documentlanguage"
 
 #. type: cindex
 #: texinfo/texinfo.texi:11850
 #, no-wrap
 msgid "Language, declaring"
-msgstr ""
+msgstr "Idioma, declarando"
 
 #. type: cindex
 #: texinfo/texinfo.texi:11851
 #, no-wrap
 msgid "Locale, declaring"
-msgstr ""
+msgstr "Localidade, declarando"
 
 #. type: cindex
 #: texinfo/texinfo.texi:11852
 #, no-wrap
 msgid "Document language, declaring"
-msgstr ""
+msgstr "Idioma do documento, declarando"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:11856
@@ -30867,12 +30933,14 @@ msgid ""
 "The @code{@@documentlanguage} command declares the current document locale.  "
 "Write it on a line by itself, near the beginning of the file."
 msgstr ""
+"O comando @code{@@documentlanguage} declara a localidade atual do "
+"documento.  Escreva-o em uma linha dedicada, perto do começo do arquivo."
 
 #. type: example
 #: texinfo/texinfo.texi:11859
 #, no-wrap
 msgid "@@documentlanguage @var{ll}[_@var{cc}]\n"
-msgstr ""
+msgstr "@@documentlanguage @var{ll}[_@var{cc}]\n"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:11867
@@ -30884,6 +30952,13 @@ msgid ""
 "times, to declare each language change.  If the command is not used at all, "
 "the default is @code{en_US} for US English."
 msgstr ""
+"Inclua um código de idioma ISO@tie{}639-2 de duas letras (@var{ll}) "
+"seguindo o nome do comando, opcionalmente seguido por um sublinhado e um "
+"código de país ISO@tie{}3166 de duas letras (@var{cc}).  Se você tiver um "
+"documento multi idioma, a intenção é a de poder usar esse comando várias "
+"vezes para declarar cada mudança de idioma.  Se o comando não for usado em "
+"absoluto, o padrão é @code{en_US} para inglês dos Estados Unidos da "
+"América do Norte."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:11872
@@ -30892,12 +30967,16 @@ msgid ""
 "is omitted, the main dialect is assumed where possible.  For example, "
 "@code{de} is equivalent to @code{de_DE} (German as spoken in Germany)."
 msgstr ""
+"Assim como com GNU Gettext (@pxref{Top,,, gettext, Gettext}), se o código "
+"do país for omitido, o dialeto principal é assumido onde possível.  Por "
+"exemplo, @code{de} é equivalente a @code{de_DE} (alemão como falado na "
+"Alemanha)."
 
 #. type: cindex
 #: texinfo/texinfo.texi:11873
 #, no-wrap
 msgid "Document strings, translation of"
-msgstr ""
+msgstr "Sequências de caracteres de documentos, tradução de"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:11882
@@ -30910,6 +30989,15 @@ msgid ""
 "they are translated in other output formats.  In DocBook output "
 "@code{@@documentlanguage} sets the language for following sections."
 msgstr ""
+"Para Info e outras saídas online, esse comando muda a tradução de várias "
+"@dfn{sequências de caracteres de documento}, tais como ``veja-se'' em "
+"referências cruzadas (@pxref{Referências Cruzadas}), ``Função'' em "
+"defuns (@pxref{Comandos de Definição}), e assim por diante.  Algumas "
+"sequências de caracteres, como ``Node:'', ``Next:'', ``Menu:'', entre "
+"outras, são palavras-chave na saída Info, de forma que não são "
+"traduzidas lá; elas são traduzidas em outros formatos de saída. Na saída "
+"DocBook, @code{@@documentlanguage} configura o idioma para seções "
+"seguintes."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:11885
@@ -30917,12 +31005,15 @@ msgid ""
 "For @LaTeX{}, this command causes code to load the @samp{babel} package to "
 "be output in the preamble, and @code{\\selectlanguage} to be output."
 msgstr ""
+"Para @LaTeX{}, esse comando faz com que o código carregue o pacote "
+"@samp{babel} para ser gerado no preâmbulo e @code{\\selectlanguage} para "
+"ser gerado."
 
 #. type: file{#1}
 #: texinfo/texinfo.texi:11886
 #, no-wrap
 msgid "txi-@var{cc}.tex"
-msgstr ""
+msgstr "txi-@var{cc}.tex"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:11892
@@ -30933,6 +31024,12 @@ msgid ""
 "@code{@@documentlanguage de_DE}, @TeX{} first looks for "
 "@file{txi-de_DE.tex}, then @file{txi-de.tex}."
 msgstr ""
+"Para @TeX{}, esse comando faz com que um arquivo "
+"@file{txi-@var{localidade}.tex} seja lido (se ele existir).  Se o argumento "
+"@code{@@documentlanguage} contiver o sufixo opcional @samp{_@var{cc}}, esse "
+"será tentado primeiro.  Por exemplo, com @code{@@documentlanguage de_DE}, "
+"@TeX{} primeiro procura por @file{txi-de_DE.tex}, depois por "
+"@file{txi-de.tex}."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:11899
@@ -30943,12 +31040,18 @@ msgid ""
 "and that a very different strategy would be required for ideographic (among "
 "other) scripts.  Help in improving Texinfo's language support is welcome."
 msgstr ""
+"Esse arquivo @file{txi-*} é destinado a redefinir as várias palavras em "
+"inglês usadas na saída do @TeX{}, como `Chapter', `See' e assim por "
+"diante.  Nós estamos cientes de que palavras individuais como essas nem "
+"sempre podem ser traduzidas isoladamente, e que uma estratégia muito "
+"diferente seria exigida para sequências de caracteres ideográficos (entre "
+"outros).  Ajuda para melhorar o suporte a idiomas do Texinfo é bem-vinda."
 
 #. type: cindex
 #: texinfo/texinfo.texi:11900
 #, no-wrap
 msgid "Hyphenation patterns, language-dependent"
-msgstr ""
+msgstr "Padrões de hifenização, dependentes do idioma"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:11909
@@ -30961,30 +31064,37 @@ msgid ""
 "@command{texi2dvi} will use the extended @TeX{}s if they are available "
 "(@pxref{Format with @command{texi2dvi}})."
 msgstr ""
+"@code{@@documentlanguage} também muda os padrões atuais de hifenização "
+"do @TeX{}, se o programa @TeX{} sendo executado tiver o suporte necessário "
+"incluído.  Isso geralmente não será o caso para @command{tex} em si, mas "
+"geralmente será o caso para distribuições atualizadas dos programas "
+"@TeX{} estendidos @command{etex} (saída DVI) e @command{pdftex} (saída "
+"PDF).  @command{texi2dvi} usará os @TeX{}s estendidos se estiverem "
+"disponíveis (@pxref{Formatar com @command{texi2dvi}})."
 
 #. type: cindex
 #: texinfo/texinfo.texi:11910
 #, no-wrap
 msgid "ISO 639-2 language codes"
-msgstr ""
+msgstr "Códigos de idioma ISO 639-2"
 
 #. type: cindex
 #: texinfo/texinfo.texi:11911
 #, no-wrap
 msgid "ISO 3166 country codes"
-msgstr ""
+msgstr "Códigos de país ISO 3166"
 
 #. type: cindex
 #: texinfo/texinfo.texi:11912
 #, no-wrap
 msgid "Language codes"
-msgstr ""
+msgstr "Códigos de idioma"
 
 #. type: cindex
 #: texinfo/texinfo.texi:11913
 #, no-wrap
 msgid "Country codes"
-msgstr ""
+msgstr "Códigos de país"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:11920
