@@ -17,7 +17,7 @@ msgstr ""
 "Project-Id-Version: Texinfo 7.1\n"
 "Report-Msgid-Bugs-To: jafesp@gmail.com\n"
 "POT-Creation-Date: 2025-04-13 00:11-0300\n"
-"PO-Revision-Date: 2025-04-27 16:30-0300\n"
+"PO-Revision-Date: 2025-04-27 19:30-0300\n"
 "Last-Translator: Jamenson Ferreira Espindula de Almeida Melo "
 "<jafesp@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -31106,53 +31106,61 @@ msgid ""
 "official web site for ISO@tie{}3166 can be found via "
 "@url{https://en.wikipedia.org/wiki/ISO_3166}."
 msgstr ""
+"Como as listas de códigos de idioma e códigos de país são atualizadas "
+"com relativa frequência, nós não tentamos listá-los aqui.  Os códigos "
+"válidos de idioma estão na página inicial oficial do ISO@tie{}639, "
+"@url{http://www.loc.gov/standards/iso639-2/}.  Os códigos de país e o "
+"sítio oficial do ISO@tie{}3166 podem ser encontrados via "
+"@url{http://en.wikipedia.org/wiki/ISO_3166}."
 
 #. type: node
 #: texinfo/texinfo.texi:11922
 #, no-wrap
 msgid "@code{@@documentencoding}"
-msgstr ""
+msgstr "@code{@@documentencoding}"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:11924
 msgid "@nodedescription Declaring the input encoding."
-msgstr ""
+msgstr "@nodedescription Declarando a codificação de entrada."
 
 #. type: section
 #: texinfo/texinfo.texi:11924
 #, no-wrap
 msgid "@code{@@documentencoding @var{enc}}: Set Input Encoding"
 msgstr ""
+"@code{@@documentencoding @var{codificação}}: Configurar Codificação de "
+"Entrada"
 
 #. type: findex
 #: texinfo/texinfo.texi:11927
 #, no-wrap
 msgid "documentencoding"
-msgstr ""
+msgstr "documentencoding"
 
 #. type: cindex
 #: texinfo/texinfo.texi:11928
 #, no-wrap
 msgid "Encoding, declaring"
-msgstr ""
+msgstr "Codificação, declarando"
 
 #. type: cindex
 #: texinfo/texinfo.texi:11929
 #, no-wrap
 msgid "Input encoding, declaring"
-msgstr ""
+msgstr "Codificação de entrada, declarando"
 
 #. type: cindex
 #: texinfo/texinfo.texi:11930
 #, no-wrap
 msgid "Character set, declaring"
-msgstr ""
+msgstr "Conjunto de caracteres, declarando"
 
 #. type: cindex
 #: texinfo/texinfo.texi:11931
 #, no-wrap
 msgid "Document input encoding"
-msgstr ""
+msgstr "Codificação de entrada do documento"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:11937
@@ -31162,6 +31170,10 @@ msgid ""
 "UTF-8 is compatible with 7-bit ASCII.  It is recommended to use UTF-8 "
 "encoding for Texinfo manuals."
 msgstr ""
+"No caso padrão, a codificação dos documentos de entrada e saída é "
+"assumida como UTF-8, a vasta codificação global de caracteres, expressa em "
+"bytes de 8 bits.  UTF-8 é compatível com ASCII de 7 bits.  É recomendado "
+"usar codificação UTF-8 para os manuais do Texinfo."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:11942
@@ -31171,12 +31183,17 @@ msgid ""
 "with a valid encoding specification following, near the beginning of the "
 "file if your document encoding is not the default encoding."
 msgstr ""
+"O comando @code{@@documentencoding} declara a codificação de entrada do "
+"documento e também afeta a codificação da saída.  Escreva-o em uma linha "
+"dedicada, com uma especificação válida de codificação seguindo, perto "
+"do início do arquivo se tua codificação de documento não for a "
+"codificação padrão."
 
 #. type: example
 #: texinfo/texinfo.texi:11945
 #, no-wrap
 msgid "@@documentencoding @var{enc}\n"
-msgstr ""
+msgstr "@@documentencoding @var{codificação}\n"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:11954
@@ -31189,41 +31206,49 @@ msgid ""
 "support in output formats may be lacking, however, especially for @LaTeX{} "
 "output.}:"
 msgstr ""
+"UTF-8 deveria ser sempre a melhor escolha para a codificação.  O Texinfo "
+"ainda suporta codificações adicionais, principalmente para compatibilidade "
+"com manuais mais antigos@footnote{@command{texi2any} suporta mais "
+"codificações para manuais do Texinfo, potencialmente todas as "
+"codificações suportadas por Perl e iconv (@pxref{Generic Charset "
+"Conversion,,, libc, A Biblioteca C GNU}).  No entanto, o suporte em formatos "
+"de saída possivelmente seja insuficiente, especialmente para a saída "
+"@LaTeX{}.}:"
 
 #. type: item
 #: texinfo/texinfo.texi:11956
 #, no-wrap
 msgid "US-ASCII"
-msgstr ""
+msgstr "US-ASCII"
 
 #. type: table
 #: texinfo/texinfo.texi:11958
 msgid "Character encoding based on the English alphabet."
-msgstr ""
+msgstr "Codificação de caracteres baseada no alfabeto inglês."
 
 #. type: cindex
 #: texinfo/texinfo.texi:11959
 #, no-wrap
 msgid "Euro symbol, and encodings"
-msgstr ""
+msgstr "Símbolo do euro e codificações"
 
 #. type: item
 #: texinfo/texinfo.texi:11960
 #, no-wrap
 msgid "ISO-8859-1"
-msgstr ""
+msgstr "ISO-8859-1"
 
 #. type: itemx
 #: texinfo/texinfo.texi:11961
 #, no-wrap
 msgid "ISO-8859-15"
-msgstr ""
+msgstr "ISO-8859-15"
 
 #. type: itemx
 #: texinfo/texinfo.texi:11962
 #, no-wrap
 msgid "ISO-8859-2"
-msgstr ""
+msgstr "ISO-8859-2"
 
 #. type: table
 #: texinfo/texinfo.texi:11968
@@ -31233,6 +31258,11 @@ msgid ""
 "8859-15 replaces some little-used characters from 8859-1 (e.g., precomposed "
 "fractions) with more commonly needed ones, such as the Euro symbol (@euro{})."
 msgstr ""
+"Essas especificam as codificações padrão pré UTF-8 para idiomas da "
+"Europa Ocidental (os dois primeiros) e da Europa Oriental (o terceiro), "
+"respectivamente.  A ISO 8859-15 substitui alguns caracteres pouco usados "
+"provenientes da 8859-1 (por exemplo, frações pré-compostas) por outros "
+"mais comumente necessários, como o símbolo do Euro (@euro{})."
 
 #. type: table
 #: texinfo/texinfo.texi:11971
@@ -31240,42 +31270,48 @@ msgid ""
 "A full description of the encodings is beyond our scope here; one useful "
 "reference is @uref{http://czyborra.com/charsets/iso8859.html}."
 msgstr ""
+"Uma descrição completa das codificações está além do nosso escopo "
+"aqui; uma referência útil é "
+"@uref{http://czyborra.com/charsets/iso8859.html}."
 
 #. type: item
 #: texinfo/texinfo.texi:11972
 #, no-wrap
 msgid "koi8-r"
-msgstr ""
+msgstr "koi8-r"
 
 #. type: table
 #: texinfo/texinfo.texi:11974
 msgid ""
 "This was a commonly used encoding for the Russian language before UTF-8."
 msgstr ""
+"Essa foi a codificação comumente usada para o idioma russo antes da UTF-8."
 
 #. type: item
 #: texinfo/texinfo.texi:11975
 #, no-wrap
 msgid "koi8-u"
-msgstr ""
+msgstr "koi8-u"
 
 #. type: table
 #: texinfo/texinfo.texi:11977
 msgid ""
 "This was a commonly used encoding for the Ukrainian language before UTF-8."
 msgstr ""
+"Essa foi a codificação comumente usada para o idioma ucraniano antes da "
+"UTF-8."
 
 #. type: cindex
 #: texinfo/texinfo.texi:11980
 #, no-wrap
 msgid "Local Variables section, for encoding"
-msgstr ""
+msgstr "Seção Variáveis Locais, para codificação"
 
 #. type: cindex
 #: texinfo/texinfo.texi:11981
 #, no-wrap
 msgid "Info output, and encoding"
-msgstr ""
+msgstr "Saída do Info, e codificação"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:11986
@@ -31285,6 +31321,10 @@ msgid ""
 "encoding.  This allows Info readers to set the encoding appropriately.  It "
 "looks like this:"
 msgstr ""
+"Na saída do Info, uma seção assim chamada `Local Variables' (@pxref{File "
+"Variables,,, emacs, O Manual do GNU Emacs}) é gerada incluindo a "
+"codificação da saída gerada.  Isso permite que leitores Info configurem a "
+"codificação apropriadamente.  Parece com algo assim:"
 
 #. type: example
 #: texinfo/texinfo.texi:11991
@@ -31294,6 +31334,9 @@ msgid ""
 "coding: UTF-8\n"
 "End:\n"
 msgstr ""
+"Local Variables:\n"
+"coding: UTF-8\n"
+"End:\n"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:11999
@@ -31305,24 +31348,31 @@ msgid ""
 "@option{--disable-encoding} is given, an ASCII transliteration is used "
 "instead."
 msgstr ""
+"Por padrão, para saídas Info e de texto simples, @command{texi2any} gera "
+"construções de acentos e caracteres especiais (como @code{@@'e}) como a "
+"sequência UTF-8 real ou caractere de 8 bits na codificação de saída, "
+"quando possível.  Se isso não for possível, ou se a opção "
+"@option{--disable-encoding} for fornecida, uma transliteração ASCII será "
+"usada."
 
 #. type: cindex
 #: texinfo/texinfo.texi:12000
 #, no-wrap
 msgid "HTML output, and encodings"
-msgstr ""
+msgstr "Saída HTML e codificações"
 
 #. type: cindex
 #: texinfo/texinfo.texi:12001
 #, no-wrap
 msgid "@code{http-equiv}, and charset specification"
-msgstr ""
+msgstr "@code{http-equiv}, e especificação de conjunto de caracteres"
 
 #. type: cindex
 #: texinfo/texinfo.texi:12002
 #, no-wrap
 msgid "@code{<meta>} HTML tag, and charset specification"
 msgstr ""
+"Etiqueta @code{<meta>} do HTML, e especificação de conjunto de caracteres"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:12008
@@ -31332,6 +31382,11 @@ msgid ""
 "cooperate to use this information so the correct encoding is used to display "
 "the page, if supported by the system.  That looks like this:"
 msgstr ""
+"Na saída HTML, uma etiqueta @samp{<meta>} é gerada, na seção "
+"@samp{<head>} do HTML, que especifica a codificação da saída gerada.  "
+"Servidores web e navegadores cooperam para usar essas informações, de modo "
+"que a codificação correta seja usada para exibir a página, se suportada "
+"pelo sistema.  Isso se parece com isto:"
 
 #. type: example
 #: texinfo/texinfo.texi:12012
@@ -31340,6 +31395,8 @@ msgid ""
 "<meta http-equiv=\"Content-Type\" content=\"text/html;\n"
 "     charset=utf-8\">\n"
 msgstr ""
+"<meta http-equiv=\"Content-Type\" content=\"text/html;\n"
+"     charset=utf-8\">\n"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:12020
@@ -31351,6 +31408,12 @@ msgid ""
 "Otherwise, HTML entities are used for those characters in HTML, and @LaTeX{} "
 "macros are used in @LaTeX{}."
 msgstr ""
+"Na saída HTML e @LaTeX{}, se @code{OUTPUT_CHARACTERS} estiver configurada "
+"(@pxref{Outras Variáveis ​​de Personalização}), construções de "
+"acentos e caracteres especiais, como @code{@@'e} ou @code{``}, serão "
+"gerados como a sequência UTF-8 real ou caractere de 8 bits na codificação "
+"de saída, onde possível.  Caso contrário, entidades HTML serão usadas "
+"para esses caracteres em HTML, e macros @LaTeX{} serão usadas em @LaTeX{}."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:12027
@@ -31362,6 +31425,13 @@ msgid ""
 "UTF-8 character in the output encoding where possible.  Otherwise XML "
 "entities are used for those constructs."
 msgstr ""
+"Na saída do DocBook, se a codificação for diferente de UTF-8, um atributo "
+"@code{encoding} será adicionado à declaração XML.  Se "
+"@code{OUTPUT_CHARACTERS} estiver configurada (@pxref{Outras Variáveis "
+"​​de Personalização}), construções de acentuação, como "
+"@code{@@'e}, serão geradas como o caractere de 8 bits ou UTF-8 real na "
+"codificação de saída, onde possível.  Caso contrário, entidades XML "
+"serão usadas para essas construções."
 
 #. type: cindex
 #: texinfo/texinfo.texi:12028
