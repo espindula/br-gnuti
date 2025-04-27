@@ -17,7 +17,7 @@ msgstr ""
 "Project-Id-Version: Texinfo 7.1\n"
 "Report-Msgid-Bugs-To: jafesp@gmail.com\n"
 "POT-Creation-Date: 2025-04-13 00:11-0300\n"
-"PO-Revision-Date: 2025-04-27 19:30-0300\n"
+"PO-Revision-Date: 2025-04-27 20:32-0300\n"
 "Last-Translator: Jamenson Ferreira Espindula de Almeida Melo "
 "<jafesp@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -31437,7 +31437,7 @@ msgstr ""
 #: texinfo/texinfo.texi:12028
 #, no-wrap
 msgid "Computer Modern fonts"
-msgstr ""
+msgstr "Fontes Computer Modern"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:12034
@@ -31448,6 +31448,11 @@ msgid ""
 "character generates a warning message, as does specifying an unimplemented "
 "encoding."
 msgstr ""
+"Na saída @TeX{}, os caracteres que sejam suportados nas fontes Computer "
+"Modern padrão são produzidos adequadamente.  Por exemplo, isso significa "
+"usar acentos construídos em vez de glifos pré-compostos.  Usar um "
+"caractere ausente gera uma mensagem de aviso, assim como especificar uma "
+"codificação não implementada."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:12039
@@ -31456,6 +31461,9 @@ msgid ""
 "world, this wide-ranging support is not available in @file{texinfo.tex}, and "
 "it's not feasible to duplicate or incorporate all that effort."
 msgstr ""
+"Embora os sistemas modernos @TeX{} suportem quase todos os scripts em uso no "
+"mundo, esse suporte abrangente não está disponível no @file{texinfo.tex}, "
+"e não é viável duplicar ou incorporar todo esse esforço."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:12047
@@ -31468,6 +31476,14 @@ msgid ""
 "preamble and use @code{\\DeclareUnicodeCharacter} with a UTF-8 encoding.  "
 "For example:"
 msgstr ""
+"Na saída do @LaTeX, o código que carrega o pacote @samp{inputenc} é "
+"gerado baseado na codificação.  Isso, por si só, não garante que todos "
+"os caracteres provenientes do documento de entrada possam ser gerados "
+"posteriormente.  As fontes usadas no caso padrão deveriam abranger os "
+"glifos específicos do Texinfo, mas nem todos os possíveis caracteres "
+"codificados.  Você possivelmente precise carregar fontes diferentes no "
+"preâmbulo e usar @code{\\DeclareUnicodeCharacter} com uma codificação "
+"UTF-8.  Por exemplo:"
 
 #. type: example
 #: texinfo/texinfo.texi:12051
@@ -31477,6 +31493,9 @@ msgid ""
 "\\DeclareUnicodeCharacter@{017B@}@{\\.Z@}\n"
 "@@end latex\n"
 msgstr ""
+"@@latex\n"
+"\\DeclareUnicodeCharacter@{017B@}@{\\.Z@}\n"
+"@@end latex\n"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:12057
@@ -31486,47 +31505,52 @@ msgid ""
 "only as the encoding for manuals with non-ASCII characters in the "
 "destinations of cross-references."
 msgstr ""
+"Referências cruzadas entre arquivos Info em diferentes codificações de "
+"caracteres com caracteres não ASCII em nomes dos nós falham.  Nós "
+"recomendamos fortemente usar somente UTF-8 como a codificação para manuais "
+"com caracteres não ASCII nos destinos das referências cruzadas."
 
 #. type: node
 #: texinfo/texinfo.texi:12059
 #, no-wrap
 msgid "Conditionals"
-msgstr ""
+msgstr "Condicionais"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:12061
 msgid "@nodedescription Specifying text for only some output cases."
 msgstr ""
+"@nodedescription Especificando texte para somente alguns casos de saída."
 
 #. type: chapter
 #: texinfo/texinfo.texi:12061
 #, no-wrap
 msgid "Conditionally Visible Text"
-msgstr ""
+msgstr "Texto Condicionalmente Visível"
 
 #. type: cindex
 #: texinfo/texinfo.texi:12062
 #, no-wrap
 msgid "Conditionally visible text"
-msgstr ""
+msgstr "Texto condicionalmente visível"
 
 #. type: cindex
 #: texinfo/texinfo.texi:12063
 #, no-wrap
 msgid "Text, conditionally visible"
-msgstr ""
+msgstr "Texto, visível condicionalmente"
 
 #. type: cindex
 #: texinfo/texinfo.texi:12064
 #, no-wrap
 msgid "Visibility of conditional text"
-msgstr ""
+msgstr "Visibilidade de texto condicional"
 
 #. type: cindex
 #: texinfo/texinfo.texi:12065
 #, no-wrap
 msgid "If text conditionally visible"
-msgstr ""
+msgstr "Se texto visível condicionalmente"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:12071
@@ -31536,16 +31560,22 @@ msgid ""
 "can use them to specify different text for the printed manual and the Info "
 "output."
 msgstr ""
+"Os @dfn{comandos condicionais} permitem que você use texto diferente para "
+"formatos de saída diferentes, ou para condições gerais que você define.  "
+"Por exemplo, você consegue usá-los para especificar texto diferente para o "
+"manual impresso e para a saída Info."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:12073
 msgid "The conditional commands comprise the following categories."
-msgstr ""
+msgstr "Os comandos condicionais compreendem as seguintes categorias."
 
 #. type: itemize
 #: texinfo/texinfo.texi:12077
 msgid "Commands specific to an output format (Info, @TeX{}, HTML, @dots{})."
 msgstr ""
+"Comandos específicos para um formato de saída (Info, @TeX{}, HTML, "
+"@dots{})."
 
 #. type: itemize
 #: texinfo/texinfo.texi:12081
@@ -31553,6 +31583,8 @@ msgid ""
 "Commands specific to any output format @emph{excluding} a given one (e.g., "
 "not Info, not @TeX{}, @dots{})."
 msgstr ""
+"Comandos específicos para qualquer formato de saída @emph{excluindo} um "
+"fornecido (por exemplo, não Info, não @TeX{}, @dots{})."
 
 #. type: itemize
 #: texinfo/texinfo.texi:12085
@@ -31560,6 +31592,8 @@ msgid ""
 "`Raw' formatter text for any output format, passed straight through with "
 "minimal (but not zero) interpretation of @@-commands."
 msgstr ""
+"Texto do formatador `bruto' para qualquer formato de saída, passado "
+"diretamente com interpretação mínima (mas não nula) dos comandos @@."
 
 #. type: itemize
 #: texinfo/texinfo.texi:12089
@@ -31567,17 +31601,19 @@ msgid ""
 "Format-independent variable substitutions, and testing if a variable is set "
 "or clear."
 msgstr ""
+"Substituições de variáveis independentes de formato e testagem se uma "
+"variável estiver configurada ou limpa."
 
 #. type: section
 #: texinfo/texinfo.texi:12093 texinfo/texinfo.texi:12095
 #, no-wrap
 msgid "Conditional Commands"
-msgstr ""
+msgstr "Comandos Condicionais"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:12095
 msgid "@nodedescription Text for a given format."
-msgstr ""
+msgstr "@nodedescription Texto para um formato fornecido."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:12100
@@ -31585,12 +31621,15 @@ msgid ""
 "Texinfo has an @code{@@if@var{format}} environment for each output format, "
 "to allow conditional inclusion of text for a particular output format."
 msgstr ""
+"O Texinfo tem um ambiente @code{@@if@var{formato}} para cada formato de "
+"saída, para permitir inclusão condicional de texto para um formato de "
+"saída específico."
 
 #. type: findex
 #: texinfo/texinfo.texi:12101
 #, no-wrap
 msgid "ifinfo"
-msgstr ""
+msgstr "ifinfo"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:12106
@@ -31600,113 +31639,117 @@ msgid ""
 "appears only in the Info file and, for historical compatibility, the plain "
 "text output."
 msgstr ""
+"@code{@@ifinfo} inicia segmentos de texto que deveriam ser ignorados quando "
+"não produzir saída Info, em particular em saída impressa.  O segmento de "
+"texto aparece somente no arquivo Info e, para compatibilidade histórica, na "
+"saída de texto simples."
 
 #. type: findex
 #: texinfo/texinfo.texi:12107
 #, no-wrap
 msgid "ifdocbook"
-msgstr ""
+msgstr "ifdocbook"
 
 #. type: findex
 #: texinfo/texinfo.texi:12108
 #, no-wrap
 msgid "ifhtml"
-msgstr ""
+msgstr "ifhtml"
 
 #. type: findex
 #: texinfo/texinfo.texi:12109
 #, no-wrap
 msgid "iflatex"
-msgstr ""
+msgstr "iflatex"
 
 #. type: findex
 #: texinfo/texinfo.texi:12110
 #, no-wrap
 msgid "ifplaintext"
-msgstr ""
+msgstr "ifplaintext"
 
 #. type: findex
 #: texinfo/texinfo.texi:12111
 #, no-wrap
 msgid "iftex"
-msgstr ""
+msgstr "iftex"
 
 #. type: findex
 #: texinfo/texinfo.texi:12112
 #, no-wrap
 msgid "ifxml"
-msgstr ""
+msgstr "ifxml"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:12114
 msgid "The environments for the other formats are analogous:"
-msgstr ""
+msgstr "Os ambientes para os outros formatos são análogos:"
 
 #. type: item
 #: texinfo/texinfo.texi:12116
 #, no-wrap
 msgid "@@ifdocbook @dots{} @@end ifdocbook"
-msgstr ""
+msgstr "@@ifdocbook @dots{} @@end ifdocbook"
 
 #. type: table
 #: texinfo/texinfo.texi:12118
 msgid "Text to appear only in the DocBook output."
-msgstr ""
+msgstr "Texto para aparecer somente na saída DocBook."
 
 #. type: item
 #: texinfo/texinfo.texi:12119
 #, no-wrap
 msgid "@@ifhtml @dots{} @@end ifhtml"
-msgstr ""
+msgstr "@@ifhtml @dots{} @@end ifhtml"
 
 #. type: table
 #: texinfo/texinfo.texi:12121
 msgid "Text to appear only in the HTML output."
-msgstr ""
+msgstr "Texto para aparecer somente na saída HTML."
 
 #. type: item
 #: texinfo/texinfo.texi:12122
 #, no-wrap
 msgid "@@iflatex @dots{} @@end iflatex"
-msgstr ""
+msgstr "@@iflatex @dots{} @@end iflatex"
 
 #. type: table
 #: texinfo/texinfo.texi:12124
 msgid "Text to appear only in the @LaTeX{} output."
-msgstr ""
+msgstr "Texto para aparecer somente na saída @LaTeX{}."
 
 #. type: item
 #: texinfo/texinfo.texi:12125
 #, no-wrap
 msgid "@@ifplaintext @dots{} @@end ifplaintext"
-msgstr ""
+msgstr "@@ifplaintext @dots{} @@end ifplaintext"
 
 #. type: table
 #: texinfo/texinfo.texi:12127
 msgid "Text to appear only in the plain text output."
-msgstr ""
+msgstr "Texto para aparecer somente na saída de texto simples."
 
 #. type: item
 #: texinfo/texinfo.texi:12128
 #, no-wrap
 msgid "@@iftex @dots{} @@end iftex"
-msgstr ""
+msgstr "@@iftex @dots{} @@end iftex"
 
 #. type: table
 #: texinfo/texinfo.texi:12130
 msgid "Text to appear only in the printed manual."
-msgstr ""
+msgstr "Texto para aparecer somente no manual impresso."
 
 #. type: item
 #: texinfo/texinfo.texi:12131
 #, no-wrap
 msgid "@@ifxml @dots{} @@end ifxml"
-msgstr ""
+msgstr "@@ifxml @dots{} @@end ifxml"
 
 #. type: table
 #: texinfo/texinfo.texi:12133
 msgid "Text to appear only in the XML output."
-msgstr ""
+msgstr "Texto para aparecer somente na saída XML."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:12139
@@ -31716,6 +31759,10 @@ msgid ""
 "commands are (more or less) treated as whitespace, so that the conditional "
 "text is flowed normally into a surrounding paragraph."
 msgstr ""
+"Os comandos @code{@@if@dots{}} e @code{@@end if@dots{}} precisam aparecer em "
+"linhas dedicadas no teu arquivo fonte.  As quebras de linha que seguem os "
+"comandos são (mais ou menos) tratadas como espaços em branco, de forma que "
+"o texto condicional seja fluído normalmente para um parágrafo circundante."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:12143
@@ -31724,11 +31771,14 @@ msgid ""
 "Texinfo source; @pxref{Raw Formatter Commands}, for using underlying format "
 "commands directly."
 msgstr ""
+"As construções @code{@@if@dots{}} são destinadas para condicionar fonte "
+"normal Texinfo; @pxref{Comandos Brutos do Formatador}, para usar comandos "
+"subjacentes de formatação diretamente."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:12145
 msgid "Here is an example showing all these conditionals:"
-msgstr ""
+msgstr "Aqui está um exemplo mostrando todos esses Condicionais:"
 
 #. type: example
 #: texinfo/texinfo.texi:12168
@@ -31756,6 +31806,27 @@ msgid ""
 "Nevertheless, this will only appear in DocBook.\n"
 "@@end ifdocbook\n"
 msgstr ""
+"@@iftex\n"
+"Este texto aparecerá somente no manual impresso.\n"
+"@@end iftex\n"
+"@@ifinfo\n"
+"No entanto, este texto aparecerá somente em Info e em texto simples.\n"
+"@@end ifinfo\n"
+"@@ifhtml\n"
+"E este texto aparecerá somente em HTML.\n"
+"@@end ifhtml\n"
+"@@iflatex\n"
+"Além disso, este texto aparecerá somente em @@LaTeX@{@}.\n"
+"@@end iflatex\n"
+"@@ifplaintext\n"
+"Enquanto este texto aparecerá somente em texto simples.\n"
+"@@end ifplaintext\n"
+"@@ifxml\n"
+"Não obstante, isto aparecerá somente em XML@.\n"
+"@@end ifxml\n"
+"@@ifdocbook\n"
+"No entanto, isto aparecerá somente em DocBook.\n"
+"@@end ifdocbook\n"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:12172
