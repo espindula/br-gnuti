@@ -16,8 +16,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Texinfo 7.1\n"
 "Report-Msgid-Bugs-To: jafesp@gmail.com\n"
-"POT-Creation-Date: 2025-04-13 00:11-0300\n"
-"PO-Revision-Date: 2025-04-27 20:32-0300\n"
+"POT-Creation-Date: 2025-05-03 18:07-0300\n"
+"PO-Revision-Date: 2025-04-03 19:05-0300\n"
 "Last-Translator: Jamenson Ferreira Espindula de Almeida Melo "
 "<jafesp@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -9520,12 +9520,12 @@ msgstr ""
 
 #. type: Plain text
 #: texinfo/texinfo.texi:3644
-#, fuzzy
-#| msgid "sections in the main file would also be lowered.)"
 msgid ""
 "(Without the @code{@@raisesections}, all the subsequent sections in the main "
 "file would also be lowered.)"
-msgstr "seções no arquivo principal também poderiam ser rebaixadas.)"
+msgstr ""
+"(Sem o @code{@@raisesections}, todas as seções subsequentes no arquivo "
+"principal também poderiam ser rebaixadas.)"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:3648
@@ -9980,10 +9980,9 @@ msgstr "Veja-se Furacões, página @var{ppp} --- para os detalhes"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:3828
-#, fuzzy
-#| msgid "See Hurricanes, page @var{ppp} --- for the details"
 msgid "instead of @w{`See Hurricanes, page @var{ppp}, --- for the details'}."
-msgstr "Veja-se Furacões, página @var{ppp} --- para os detalhes"
+msgstr ""
+"em vez de @w{`Veja-se Furacões, página @var{ppp}, --- para os detalhes'}."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:3832
@@ -11521,10 +11520,8 @@ msgstr ""
 
 #. type: Plain text
 #: texinfo/texinfo.texi:4570
-#, fuzzy
-#| msgid "A template for this method looks like this:"
 msgid "In other formats, the output is like this:"
-msgstr "Um modelo para esse método se parece com isto:"
+msgstr "Em outros formatos, a saída gerada é semelhante a isto:"
 
 #. type: example
 #: texinfo/texinfo.texi:4573
@@ -18791,10 +18788,8 @@ msgstr ""
 
 #. type: Plain text
 #: texinfo/texinfo.texi:7481
-#, fuzzy
-#| msgid "LaTeX output, overview"
 msgid "The output is:"
-msgstr "Saída LaTeX, visão geral"
+msgstr "A saída gerada é:"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:7485
@@ -22509,10 +22504,8 @@ msgstr ""
 
 #. type: Plain text
 #: texinfo/texinfo.texi:8801
-#, fuzzy
-#| msgid "This is the first chapter."
 msgid "This gives the output"
-msgstr "Este é o primeiro capítulo"
+msgstr "Isso forneçe a saída gerada"
 
 #. type: deftypefn
 #: texinfo/texinfo.texi:8802
@@ -25198,7 +25191,7 @@ msgstr "Glifos para Texto"
 msgid "@nodedescription Inserting dots, bullets, currencies, etc."
 msgstr "@nodedescription Inserindo pontos, marcadores, moedas, etc."
 
-#.  nome antigo
+#.  old name
 #.  another old node, now split into two
 #. type: anchor{#1}
 #: texinfo/texinfo.texi:9593
@@ -25332,7 +25325,7 @@ msgstr "@nodedescription O símbolo de copirraite (c em um círculo)."
 msgid "@code{@@copyright@{@}} (@copyright{})"
 msgstr "@code{@@copyright@{@}} (@copyright{})"
 
-#.  nome antigo
+#.  old name
 #. type: anchor{#1}
 #: texinfo/texinfo.texi:9631
 msgid "copyright symbol"
@@ -25387,7 +25380,7 @@ msgstr "@nodedescription O símbolo de registrado(a) (R em um círculo)."
 msgid "@code{@@registeredsymbol@{@}} (@registeredsymbol{})"
 msgstr "@code{@@registeredsymbol@{@}} (@registeredsymbol{})"
 
-#.  nome antigo
+#.  old name
 #. type: anchor{#1}
 #: texinfo/texinfo.texi:9647
 msgid "registered symbol"
@@ -25469,7 +25462,7 @@ msgstr "Pontos, inserindo"
 msgid "Ellipsis, inserting"
 msgstr "Reticências, inserindo"
 
-#.  nome antigo
+#.  old name
 #. type: anchor{#1}
 #: texinfo/texinfo.texi:9668
 msgid "Dots Bullets"
@@ -25823,7 +25816,7 @@ msgstr "@nodedescription Como inserir sinais de maior/menor que ou igual a."
 msgid "@code{@@geq} (@geq{}) and @code{@@leq} (@leq{}): Inserting Relations"
 msgstr "@code{@@geq} (@geq{}) e @code{@@leq} (@leq{}): Inserindo Relações"
 
-#.  nome antigo
+#.  old name
 #. type: anchor{#1}
 #: texinfo/texinfo.texi:9785
 msgid "geq leq"
@@ -26233,7 +26226,7 @@ msgstr "@nodedescription Como indicar saída gerada."
 msgid "@code{@@print@{@}} (@print{}): Indicating Generated Output"
 msgstr "@code{@@print@{@}} (@print{}): Indicando Saída Gerada"
 
-#.  nome antigo
+#.  old name
 #. type: anchor{#1}
 #: texinfo/texinfo.texi:9935
 msgid "Print Glyph"
@@ -26334,7 +26327,7 @@ msgstr "@nodedescription Como indicar uma mensagem de erro."
 msgid "@code{@@error@{@}} (@error{}): Indicating an Error Message"
 msgstr "@code{@@error@{@}} (@error{}): Indicando uma Mensagem de Erro"
 
-#.  nome antigo
+#.  old name
 #. type: anchor{#1}
 #: texinfo/texinfo.texi:9979
 msgid "Error Glyph"
@@ -26439,7 +26432,7 @@ msgstr "@nodedescription Como indicar equivalência."
 msgid "@code{@@equiv@{@}} (@equiv{}): Indicating Equivalence"
 msgstr "@code{@@equiv@{@}} (@equiv{}): Indicando Equivalência"
 
-#.  nome antigo
+#.  oldname
 #. type: anchor{#1}
 #: texinfo/texinfo.texi:10024
 msgid "Equivalence"
@@ -26517,7 +26510,7 @@ msgstr "@nodedescription Como indicar o local do ponto."
 msgid "@code{@@point@{@}} (@point{}): Indicating Point in a Buffer"
 msgstr "@code{@@point@{@}} (@point{}): Indicando Ponto em um Buffer"
 
-#.  nome antigo
+#.  old name
 #. type: anchor{#1}
 #: texinfo/texinfo.texi:10059
 msgid "Point Glyph"
@@ -27273,7 +27266,7 @@ msgstr "@nodedescription Ajudando @TeX{} com pontos de hifenação."
 msgid "@code{@@-} and @code{@@hyphenation}: Hyphenation in Printed Output"
 msgstr "@code{@@-} e @code{@@hyphenation}: Hifenização em Saída Impressa"
 
-#.  nome antigo
+#.  old name
 #. type: anchor{#1}
 #: texinfo/texinfo.texi:10332
 msgid "- and hyphenation"
@@ -30342,10 +30335,8 @@ msgstr ""
 
 #. type: Plain text
 #: texinfo/texinfo.texi:11600 texinfo/texinfo.texi:11630
-#, fuzzy
-#| msgid "This produces:"
 msgid "This produces the output:"
-msgstr "Isso produz:"
+msgstr "Isso produz a saída:"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:11606
@@ -31831,42 +31822,42 @@ msgstr ""
 #. type: Plain text
 #: texinfo/texinfo.texi:12172
 msgid "The preceding example produces the following line:"
-msgstr ""
+msgstr "O exemplo precedente produz a seguinte linha:"
 
 #. type: iftex
 #: texinfo/texinfo.texi:12175
 msgid "This text will appear only in the printed manual."
-msgstr ""
+msgstr "Este texto aparecerá somente no manual impresso."
 
 #. type: ifinfo
 #: texinfo/texinfo.texi:12178
 msgid "However, this text will appear only in Info and plain text."
-msgstr ""
+msgstr "No entanto, este texto aparecerá somente em Info e em texto simples."
 
 #. type: ifhtml
 #: texinfo/texinfo.texi:12181
-msgid "And this text will only appear in HTML."
-msgstr ""
+msgid "And this text will only appear in HTML@."
+msgstr "E este texto aparecerá somente em HTML@."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:12184
 msgid "@iflatex Moreover, this text will only appear in @LaTeX{}."
-msgstr ""
+msgstr "@iflatex Além disso, este texto só aparecerá em @LaTeX{}."
 
 #. type: ifplaintext
 #: texinfo/texinfo.texi:12187
 msgid "Whereas this text will only appear in plain text."
-msgstr ""
+msgstr "Enquanto este texto aparecerá somente em texto simples."
 
 #. type: ifxml
 #: texinfo/texinfo.texi:12190
 msgid "Notwithstanding that this will only appear in XML@."
-msgstr ""
+msgstr "Não obstante, isto aparecerá somente em XML@."
 
 #. type: ifdocbook
 #: texinfo/texinfo.texi:12193
 msgid "Nevertheless, this will only appear in DocBook."
-msgstr ""
+msgstr "No entanto, isto aparecerá somente em DocBook."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:12198
@@ -31874,12 +31865,14 @@ msgid ""
 "Notice that you only see one of the input lines, depending on which version "
 "of the manual you are reading."
 msgstr ""
+"Observe que você vê somente uma das linhas de entrada, dependendo de qual "
+"versão do manual estiver lendo."
 
 #. type: findex
 #: texinfo/texinfo.texi:12199
 #, no-wrap
 msgid "errormsg"
-msgstr ""
+msgstr "errormsg"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:12204
@@ -31889,6 +31882,10 @@ msgid ""
 "@code{@@errormsg@{@var{text}@}} command will do this; it takes one argument, "
 "the text of the error message."
 msgstr ""
+"Em documentos complexos, você pode querer que o Texinfo emita uma mensagem "
+"de erro em alguns condicionais que nunca deveriam ser processados.  O "
+"comando @code{@@errormsg@{@var{texto}@}} fará isso; ele recebe um "
+"argumento, o texto da mensagem de erro."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:12210
@@ -31899,59 +31896,65 @@ msgid ""
 "Processors}, for a caveat regarding the line numbers which @code{@@errormsg} "
 "emits in @TeX{}."
 msgstr ""
+"Nós mencionamos @code{@@errormsg@{@}} aqui, embora ele não esteja "
+"estritamente relacionado a condicionais, já que, na prática, é mais "
+"provável que ele seja útil nesse contexto.  Tecnicamente, ele pode ser "
+"usado em qualquer lugar.  @xref{Processadores Externos de Macro}, para uma "
+"ressalva relativa aos números de linha que @code{@@errormsg} emite no "
+"@TeX{}."
 
 #. type: section
 #: texinfo/texinfo.texi:12212 texinfo/texinfo.texi:12214
 #, no-wrap
 msgid "Conditional Not Commands"
-msgstr ""
+msgstr "Comandos Condicionais Não"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:12214
 msgid "@nodedescription Text for any format other than a given one."
-msgstr ""
+msgstr "@nodedescription Texto para algum formato diferente de um fornecido."
 
 #. type: findex
 #: texinfo/texinfo.texi:12215
 #, no-wrap
 msgid "ifnotdocbook"
-msgstr ""
+msgstr "ifnotdocbook"
 
 #. type: findex
 #: texinfo/texinfo.texi:12216
 #, no-wrap
 msgid "ifnothtml"
-msgstr ""
+msgstr "ifnothtml"
 
 #. type: findex
 #: texinfo/texinfo.texi:12217
 #, no-wrap
 msgid "ifnotinfo"
-msgstr ""
+msgstr "ifnotinfo"
 
 #. type: findex
 #: texinfo/texinfo.texi:12218
 #, no-wrap
 msgid "ifnotlatex"
-msgstr ""
+msgstr "ifnotlatex"
 
 #. type: findex
 #: texinfo/texinfo.texi:12219
 #, no-wrap
 msgid "ifnotplaintext"
-msgstr ""
+msgstr "ifnotplaintext"
 
 #. type: findex
 #: texinfo/texinfo.texi:12220
 #, no-wrap
 msgid "ifnottex"
-msgstr ""
+msgstr "ifnottex"
 
 #. type: findex
 #: texinfo/texinfo.texi:12221
 #, no-wrap
 msgid "ifnotxml"
-msgstr ""
+msgstr "ifnotxml"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:12225
@@ -31959,6 +31962,8 @@ msgid ""
 "You can specify text to be included in any output format @emph{other} than a "
 "given one with the @code{@@ifnot@dots{}} environments:"
 msgstr ""
+"Você pode especificar o texto a ser incluído em algum formato de saída "
+"@emph{diferente} de um fornecido, com os ambientes @code{@@ifnot@dots{}}:"
 
 #. type: example
 #: texinfo/texinfo.texi:12234
@@ -31972,6 +31977,13 @@ msgid ""
 "@@ifnottex @dots{} @@end ifnottex\n"
 "@@ifnotxml @dots{} @@end ifnotxml\n"
 msgstr ""
+"@@ifnotdocbook @dots{} @@end ifnotdocbook\n"
+"@@ifnothtml @dots{} @@end ifnothtml\n"
+"@@ifnotinfo @dots{} @@end ifnotinfo\n"
+"@@ifnotlatex @dots{} @@end ifnotlatex\n"
+"@@ifnotplaintext @dots{} @@end ifnotplaintext\n"
+"@@ifnottex @dots{} @@end ifnottex\n"
+"@@ifnotxml @dots{} @@end ifnotxml\n"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:12239
@@ -31979,6 +31991,8 @@ msgid ""
 "The @code{@@ifnot@dots{}} command and the @code{@@end} command must appear "
 "on lines by themselves in your actual source file."
 msgstr ""
+"O comando @code{@@ifnot@dots{}} e o comando @code{@@end} precisam aparecer "
+"em linhas dedicadas no teu arquivo fonte real."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:12242
@@ -31986,6 +32000,8 @@ msgid ""
 "If the output file is being made in the given format, the region is "
 "@emph{ignored}.  Otherwise, it is included."
 msgstr ""
+"Se o arquivo de saída estiver sendo feito no formato fornecido, a região "
+"será @emph{ignorada}.  Caso contrário, ela será incluída."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:12247
@@ -31995,6 +32011,10 @@ msgid ""
 "specify text which appears only in Info and not in plain text, use "
 "@code{@@ifnotplaintext}, like this:"
 msgstr ""
+"Existe uma exceção (para compatibilidade histórica): texto "
+"@code{@@ifnotinfo} será omitido para ambas saídas, Info e de texto "
+"simples, não apenas Info.  Para especificar texto que apareça somente em "
+"Info e não em texto simples, use @code{@@ifnotplaintext}, assim:"
 
 #. type: example
 #: texinfo/texinfo.texi:12254
@@ -32006,6 +32026,11 @@ msgid ""
 "@@end ifnotplaintext\n"
 "@@end ifinfo\n"
 msgstr ""
+"@@ifinfo\n"
+"@@ifnotplaintext\n"
+"Isto estará no Info, mas não em texto simples.\n"
+"@@end ifnotplaintext\n"
+"@@end ifinfo\n"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:12259
@@ -32014,6 +32039,9 @@ msgid ""
 "@code{@@iftex}, not raw formatter source as with @code{@@tex} (@pxref{Raw "
 "Formatter Commands})."
 msgstr ""
+"As regiões delimitadas por esses comandos são fontes Texinfo comuns, como "
+"em @code{@@iftex}, e não fontes de formatador bruto, como em @code{@@tex} "
+"(@pxref{Comandos do Formatador Bruto})."
 
 #. type: section
 #: texinfo/texinfo.texi:12261 texinfo/texinfo.texi:12263
@@ -33995,10 +34023,8 @@ msgstr ""
 
 #. type: Plain text
 #: texinfo/texinfo.texi:13196
-#, fuzzy
-#| msgid "This produces:"
 msgid "produces simply:"
-msgstr "Isso produz:"
+msgstr "produz simplesmente:"
 
 #. type: display
 #: texinfo/texinfo.texi:13199
