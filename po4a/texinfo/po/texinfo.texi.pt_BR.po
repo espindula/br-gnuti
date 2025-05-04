@@ -17,7 +17,7 @@ msgstr ""
 "Project-Id-Version: Texinfo 7.1\n"
 "Report-Msgid-Bugs-To: jafesp@gmail.com\n"
 "POT-Creation-Date: 2025-05-03 18:07-0300\n"
-"PO-Revision-Date: 2025-04-03 19:05-0300\n"
+"PO-Revision-Date: 2025-05-04 19:07-0300\n"
 "Last-Translator: Jamenson Ferreira Espindula de Almeida Melo "
 "<jafesp@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -32047,42 +32047,42 @@ msgstr ""
 #: texinfo/texinfo.texi:12261 texinfo/texinfo.texi:12263
 #, no-wrap
 msgid "Raw Formatter Commands"
-msgstr ""
+msgstr "Comandos Brutos de Formatador"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:12263
 msgid "@nodedescription Using raw formatter commands."
-msgstr ""
+msgstr "@nodedescription Usando comandos brutos de formatador."
 
 #. type: cindex
 #: texinfo/texinfo.texi:12264
 #, no-wrap
 msgid "Raw formatter commands"
-msgstr ""
+msgstr "Comandos brutos de formatador"
 
 #. type: cindex
 #: texinfo/texinfo.texi:12266
 #, no-wrap
 msgid "@TeX{} commands, using ordinary"
-msgstr ""
+msgstr "Comandos do @TeX{}, uso comum"
 
 #. type: cindex
 #: texinfo/texinfo.texi:12267
 #, no-wrap
 msgid "Ordinary @TeX{} commands, using"
-msgstr ""
+msgstr "Comandos comuns do @TeX{}, usando"
 
 #. type: cindex
 #: texinfo/texinfo.texi:12268
 #, no-wrap
 msgid "Commands using raw @TeX{}"
-msgstr ""
+msgstr "Comandos, usando @TeX{} bruto"
 
 #. type: cindex
 #: texinfo/texinfo.texi:12269
 #, no-wrap
 msgid "Plain @TeX{}"
-msgstr ""
+msgstr "@TeX{} simples"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:12279
@@ -32095,12 +32095,20 @@ msgid ""
 "formatter commands}.  They should only be used when truly required (most "
 "documents do not need them)."
 msgstr ""
+"Os condicionais @code{@@if@dots{}} recém descritos precisam ser usados "
+"somente com fonte normal do Texinfo.  Por exemplo, a maioria dos recursos do "
+"@TeX{} simples não funcionará dentro do @code{@@iftex}.  O propósito do "
+"@code{@@if@dots{}} é o de fornecer processamento condicional para fonte do "
+"Texinfo, não fornecer acesso para recursos de formatação subjacentes.  "
+"Para isso, Texinfo fornece os assim chamados @dfn{comandos brutos de "
+"formatador}.  Eles deveriam ser usados somente quando verdadeiramente "
+"exigidos (a maioria dos documentos não precisa deles)."
 
 #. type: cindex
 #: texinfo/texinfo.texi:12281
 #, no-wrap
 msgid "Category codes, of plain @TeX{}"
-msgstr ""
+msgstr "Códigos de categoria, do @TeX{} simples"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:12290
@@ -32114,18 +32122,27 @@ msgid ""
 "will not output material in such a region unless @TeX{} output is being "
 "produced."
 msgstr ""
+"O primeiro comando bruto de formatador é o @code{@@tex}.  Você consegue "
+"entrar completamente no @TeX{} simples e usar @samp{\\} nos comandos do "
+"@TeX{}, delineando uma região com os comandos @code{@@tex} e @code{@@end "
+"tex}.  Todos os comandos e códigos de categoria do @TeX{} simples são "
+"restaurados dentro de uma região do @code{@@tex}.  A única exceção é a "
+"de que o caractere @code{@@} ainda introduz um comando, de forma que "
+"@code{@@end tex} possa ser reconhecido.  Os processadores do Texinfo não "
+"gerarão material em tal região, a menos que a saída @TeX{} esteja sendo "
+"produzida."
 
 #. type: findex
 #: texinfo/texinfo.texi:12291
 #, no-wrap
 msgid "\\gdef @r{within @code{@@tex}}"
-msgstr ""
+msgstr "\\gdef @r{dentro de @code{@@tex}}"
 
 #. type: findex
 #: texinfo/texinfo.texi:12292
 #, no-wrap
 msgid "\\globaldefs @r{within @code{@@tex}}"
-msgstr ""
+msgstr "\\globaldefs @r{dentro de @code{@@tex}}"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:12300
@@ -32137,23 +32154,31 @@ msgid ""
 "value will be restored to zero as usual when the group ends at @code{@@end "
 "tex}, so it won't cause problems with the rest of the document)."
 msgstr ""
+"Em casos complexos, você pode desejar definir novas macros do @TeX{} dentro "
+"do @code{@@tex}.  Você precisa usar @code{\\gdef} para fazer isso, não "
+"@code{\\def}, porque as regiões do @code{@@tex} são processadas em um "
+"grupo do @TeX{}.  Se você precisar fazer várias definições, você pode "
+"desejar configurar @code{\\globaldefs=1} (o valor dele será restaurado para "
+"zero como de costume quando o grupo terminar em @code{@@end tex}, de forma "
+"que não causará problemas com o resto do documento)."
 
 #. type: cindex
 #: texinfo/texinfo.texi:12301
 #, no-wrap
 msgid "Equation, displayed, in plain @TeX{}"
-msgstr ""
+msgstr "Equação, exibida, em @TeX{} simples"
 
 #. type: cindex
 #: texinfo/texinfo.texi:12302
 #, no-wrap
 msgid "Displayed equation, in plain @TeX{}"
-msgstr ""
+msgstr "Equação exibida, em @TeX{} simples"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:12304
 msgid "As an example, here is a displayed equation written in plain @TeX{}:"
 msgstr ""
+"Como um exemplo, aqui está uma equação exibida escrita em @TeX{} simples:"
 
 #. type: example
 #: texinfo/texinfo.texi:12311
@@ -32165,6 +32190,11 @@ msgid ""
 "         \\over \\sigma_i\\right)^2 $$\n"
 "@@end tex\n"
 msgstr ""
+"@@tex\n"
+"$$ \\chi^2 = \\sum_@{i=1@}^N\n"
+"         \\left (y_i - (a + b x_i)\n"
+"         \\over \\sigma_i\\right)^2 $$\n"
+"@@end tex\n"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:12317
@@ -32173,6 +32203,9 @@ msgid ""
 "reading this in a format not generated by @TeX{}, you will not see the "
 "equation that appears in the printed manual."
 msgstr ""
+"A saída desse exemplo aparecerá somente em um manual impresso.  Se estiver "
+"lendo isso em um formato não gerado pelo @TeX{}, você não verá a "
+"equação que aparece no manual impresso."
 
 #. type: tex
 #: texinfo/texinfo.texi:12322
@@ -32182,54 +32215,57 @@ msgid ""
 "         \\left(y_i - (a + b x_i)\n"
 "         \\over \\sigma_i\\right)^2 $$\n"
 msgstr ""
+"$$ \\chi^2 = \\sum_{i=1}^N\n"
+"         \\left(y_i - (a + b x_i)\n"
+"         \\over \\sigma_i\\right)^2 $$\n"
 
 #. type: cindex
 #: texinfo/texinfo.texi:12324
 #, no-wrap
 msgid "HTML, including raw"
-msgstr ""
+msgstr "HTML, incluindo bruto"
 
 #. type: itemx
 #: texinfo/texinfo.texi:12325 texinfo/texinfo.texi:15557
 #, no-wrap
 msgid "html"
-msgstr ""
+msgstr "html"
 
 #. type: cindex
 #: texinfo/texinfo.texi:12326
 #, no-wrap
 msgid "DocBook, including raw"
-msgstr ""
+msgstr "DocBook, incluindo bruto"
 
 #. type: item
 #: texinfo/texinfo.texi:12327 texinfo/texinfo.texi:15553
 #, no-wrap
 msgid "docbook"
-msgstr ""
+msgstr "docbook"
 
 #. type: cindex
 #: texinfo/texinfo.texi:12328
 #, no-wrap
 msgid "@LaTeX{}, including raw"
-msgstr ""
+msgstr "@LaTeX{}, incluindo bruto"
 
 #. type: findex
 #: texinfo/texinfo.texi:12329
 #, no-wrap
 msgid "latex"
-msgstr ""
+msgstr "latex"
 
 #. type: cindex
 #: texinfo/texinfo.texi:12330
 #, no-wrap
 msgid "XML, including raw"
-msgstr ""
+msgstr "XML, incluindo bruto"
 
 #. type: itemx
 #: texinfo/texinfo.texi:12331 texinfo/texinfo.texi:15562
 #, no-wrap
 msgid "xml"
-msgstr ""
+msgstr "xml"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:12337
@@ -32239,11 +32275,16 @@ msgid ""
 "DocBook, @code{@@latex @dots{} @@end latex} for a region of raw @LaTeX{}, "
 "and @code{@@xml @dots{} @@end xml} for a region of raw XML@."
 msgstr ""
+"Analogamente, você pode usar @code{@@html @dots{} @@end html} para uma "
+"região de HTML bruto, @code{@@docbook @dots{} @@end docbook} para uma "
+"região de DocBook bruto, @code{@@latex @dots{} @@end latex} para uma "
+"região de @LaTeX{} bruto e @code{@@xml @dots{} @@end xml} para uma região "
+"de XML bruto."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:12339
 msgid "The behavior of newlines in raw regions is unspecified."
-msgstr ""
+msgstr "O comportamento de novas linhas em regiões brutas é inespecificado."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:12348
@@ -32257,6 +32298,14 @@ msgid ""
 "@code{@@kbdinputstyle} command inside a raw region is undefined.  The remedy "
 "is simple: don't do that."
 msgstr ""
+"Em todos os casos, no processamento bruto, @code{@@} retém o mesmo "
+"significado que no restante do documento.  Assim, os processadores do "
+"Texinfo precisam reconhecer e até mesmo executar, até certo ponto, o "
+"conteúdo das regiões brutas, independentemente do formato final da "
+"saída.  Portanto, especificar mudanças que afetem globalmente o documento "
+"dentro de uma região bruta conduz comportamento imprevisível e geralmente "
+"indesejável.  Por exemplo, usar o comando @code{@@kbdinputstyle} dentro de "
+"uma região bruta é indefinido.  O remédio é simples: não faça isso."
 
 #. type: node
 #: texinfo/texinfo.texi:12350
