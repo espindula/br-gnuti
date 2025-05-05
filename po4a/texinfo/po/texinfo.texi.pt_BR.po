@@ -17,7 +17,7 @@ msgstr ""
 "Project-Id-Version: Texinfo 7.1\n"
 "Report-Msgid-Bugs-To: jafesp@gmail.com\n"
 "POT-Creation-Date: 2025-05-03 18:07-0300\n"
-"PO-Revision-Date: 2025-05-04 19:07-0300\n"
+"PO-Revision-Date: 2025-05-05 15:10-0300\n"
 "Last-Translator: Jamenson Ferreira Espindula de Almeida Melo "
 "<jafesp@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -32311,12 +32311,12 @@ msgstr ""
 #: texinfo/texinfo.texi:12350
 #, no-wrap
 msgid "Inline Conditionals"
-msgstr ""
+msgstr "Condicionais Inline"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:12352
 msgid "@nodedescription Brace-delimited conditional text."
-msgstr ""
+msgstr "@nodedescription Texto condicional e delimitado por chaves."
 
 #. type: section
 #: texinfo/texinfo.texi:12352
@@ -32325,54 +32325,56 @@ msgid ""
 "Inline Conditionals: @code{@@inline}, @code{@@inlineifelse}, "
 "@code{@@inlineraw}"
 msgstr ""
+"Condicionais Inline: @code{@@inline}, @code{@@inlineifelse}, "
+"@code{@@inlineraw}"
 
 #. type: findex
 #: texinfo/texinfo.texi:12353
 #, no-wrap
 msgid "inlinefmt"
-msgstr ""
+msgstr "inlinefmt"
 
 #. type: findex
 #: texinfo/texinfo.texi:12354
 #, no-wrap
 msgid "inlinefmtifelse"
-msgstr ""
+msgstr "inlinefmtifelse"
 
 #. type: findex
 #: texinfo/texinfo.texi:12355
 #, no-wrap
 msgid "inlineraw"
-msgstr ""
+msgstr "inlineraw"
 
 #. type: cindex
 #: texinfo/texinfo.texi:12356
 #, no-wrap
 msgid "Inline conditionals"
-msgstr ""
+msgstr "Condicionais inline"
 
 #. type: cindex
 #: texinfo/texinfo.texi:12357
 #, no-wrap
 msgid "Conditional commands, inline"
-msgstr ""
+msgstr "Comandos condicionais, inline"
 
 #. type: cindex
 #: texinfo/texinfo.texi:12358
 #, no-wrap
 msgid "Brace-delimited conditional text"
-msgstr ""
+msgstr "Texto condicional e delimitado por chaves"
 
 #. type: cindex
 #: texinfo/texinfo.texi:12359
 #, no-wrap
 msgid "Newlines, avoiding in conditionals"
-msgstr ""
+msgstr "Novas linhas, evitando em condicionais"
 
 #. type: cindex
 #: texinfo/texinfo.texi:12360
 #, no-wrap
 msgid "Whitespace, controlling in conditionals"
-msgstr ""
+msgstr "Espaço em branco, controlando em condicionais"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:12364
@@ -32380,24 +32382,30 @@ msgid ""
 "Texinfo provides a set of conditional commands with arguments given within "
 "braces:"
 msgstr ""
+"Texinfo fornece um conjunto de comandos condicionais com argumentos "
+"fornecidos entre chaves:"
 
 #. type: item
 #: texinfo/texinfo.texi:12366
 #, no-wrap
 msgid "@@inlinefmt@{@var{format}, @var{text}@}"
-msgstr ""
+msgstr "@@inlinefmt@{@var{formato}, @var{texto}@}"
 
 #. type: table
 #: texinfo/texinfo.texi:12369
 msgid ""
 "Process the Texinfo @var{text} if @var{format} output is being generated."
 msgstr ""
+"Processa o @var{texto} do Texinfo se a saída @var{formato} estiver sendo "
+"gerada."
 
 #. type: item
 #: texinfo/texinfo.texi:12370
 #, no-wrap
 msgid "@@inlinefmtifelse@{@var{format}, @var{then-text}, @var{else-text}@}"
 msgstr ""
+"@@inlinefmtifelse@{@var{formato}, @var{texto-então}, "
+"@var{texto-docontrário}@}"
 
 #. type: table
 #: texinfo/texinfo.texi:12373
@@ -32405,39 +32413,43 @@ msgid ""
 "Process the Texinfo @var{then-text} if @var{format} output is being "
 "generated; otherwise, process @var{else-text}."
 msgstr ""
+"Processa o @var{texto-então} do Texinfo se a saída @var{formato} estiver "
+"sendo gerada; caso contrário, processa @var{texto-docontrário}."
 
 #. type: item
 #: texinfo/texinfo.texi:12374
 #, no-wrap
 msgid "@@inlineraw@{@var{format}, @var{text}@}"
-msgstr ""
+msgstr "@@inlineraw@{@var{formato}, @var{texto}@}"
 
 #. type: table
 #: texinfo/texinfo.texi:12376
 msgid "Similar, but for raw @var{text} (@pxref{Raw Formatter Commands})."
 msgstr ""
+"Similar, porém para @var{texto} bruto (@pxref{Comandos Brutos de "
+"Formatador})."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:12379
 msgid "The supported @var{format} names are:"
-msgstr ""
+msgstr "Os nomes de @var{formato} suportados são:"
 
 #. type: example
 #: texinfo/texinfo.texi:12382
 #, no-wrap
 msgid "docbook  html  info  latex  plaintext  tex  xml\n"
-msgstr ""
+msgstr "docbook  html  info  latex  plaintext  tex  xml\n"
 
 #. type: example
 #: texinfo/texinfo.texi:12388
 #, no-wrap
 msgid "@@inlinefmt@{html, @@emph@{HTML-only text@}@}\n"
-msgstr ""
+msgstr "@@inlinefmt@{html, @@emph@{texto somente HTML@}@}\n"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:12392
 msgid "is nearly equivalent to"
-msgstr ""
+msgstr "é quase equivalente a"
 
 #. type: example
 #: texinfo/texinfo.texi:12397
@@ -32447,6 +32459,9 @@ msgid ""
 "@@emph@{HTML-only text@}\n"
 "@@end ifhtml\n"
 msgstr ""
+"@@ifhtml\n"
+"@@emph@{texto somente HTML@}\n"
+"@@end ifhtml\n"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:12402
@@ -32454,6 +32469,8 @@ msgid ""
 "except that no whitespace is added, as happens in the latter (environment) "
 "case."
 msgstr ""
+"exceto que nenhum espaço em branco é adicionado, como acontece no último "
+"caso (ambiente)."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:12406
@@ -32461,6 +32478,9 @@ msgid ""
 "In these commands, whitespace is ignored after the comma separating the "
 "arguments, as usual, but is @emph{not} ignored at the end of @var{text}."
 msgstr ""
+"Nesses comandos, o espaço em branco é ignorado depois da vírgula que "
+"separa os argumentos, como de costume, mas @emph{não} é ignorado no final "
+"de @var{texto}."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:12412
@@ -32471,6 +32491,11 @@ msgid ""
 "@code{@@rbracechar@{@}} (@pxref{Inserting Braces}), or the parsing will "
 "become confused."
 msgstr ""
+"Para inserir um sinal de arroba literal, uma chave esquerda ou uma chave "
+"direita em um dos argumentos, você precisa usar os comandos alfabéticos "
+"@code{@@atchar@{@}} (@pxref{Inserindo um Símbolo Arroba}) e "
+"@code{@@lbracechar@{@}} ou @code{@@rbracechar@{@}} (@pxref{Inserindo "
+"Chaves}), ou a análise se tornará confusa."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:12418
@@ -32481,6 +32506,11 @@ msgid ""
 "@code{@@comma@{@}} is not required (though it's fine to use it), since these "
 "commands always have exactly two arguments."
 msgstr ""
+"Com @code{@@inlinefmtifelse}, também é necessário usar @code{@@comma@{@}} "
+"para evitar confundir uma @samp{,} no texto com o delimitador.  Com "
+"@code{@@inlinefmt} e @code{@@inlineraw}, @code{@@comma@{@}} não é exigido "
+"(embora seja aceitável usá-lo), pois esses comandos sempre tem exatamente "
+"dois argumentos."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:12421
@@ -32488,6 +32518,9 @@ msgid ""
 "For @TeX{}, the processed @var{text} cannot contain newline-delimited "
 "commands.  Text to be ignored (i.e., for non-@TeX{}) can, though."
 msgstr ""
+"Para @TeX{}, o @var{texto} processado não pode conter comandos delimitados "
+"por nova linha.  O texto a ser ignorado (por exemplo, para não-@TeX{}) "
+"pode, no entanto."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:12424
@@ -32495,6 +32528,8 @@ msgid ""
 "Two other @code{@@inline...} conditionals complement the @code{@@ifset} and "
 "@code{@@ifclear} commands; see the next section."
 msgstr ""
+"Dois outros condicionais @code{@@inline...} complementam os comandos "
+"@code{@@ifset} e @code{@@ifclear}; veja-se a próxima seção."
 
 #. type: node
 #: texinfo/texinfo.texi:12426
