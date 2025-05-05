@@ -17,7 +17,7 @@ msgstr ""
 "Project-Id-Version: Texinfo 7.1\n"
 "Report-Msgid-Bugs-To: jafesp@gmail.com\n"
 "POT-Creation-Date: 2025-05-03 18:07-0300\n"
-"PO-Revision-Date: 2025-05-05 16:03-0300\n"
+"PO-Revision-Date: 2025-05-05 18:04-0300\n"
 "Last-Translator: Jamenson Ferreira Espindula de Almeida Melo "
 "<jafesp@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -33081,42 +33081,43 @@ msgstr "@@ifclear @var{sinalizador}\n"
 #: texinfo/texinfo.texi:12641
 #, no-wrap
 msgid "@code{@@inlineifset @@inlineifclear}"
-msgstr ""
+msgstr "@code{@@inlineifset @@inlineifclear}"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:12643
 msgid "@nodedescription Brace-delimited flag conditionals."
 msgstr ""
+"@nodedescription Condicionais de sinalização e delimitados por chaves."
 
 #. type: subsection
 #: texinfo/texinfo.texi:12643
 #, no-wrap
 msgid "@code{@@inlineifset} and @code{@@inlineifclear}"
-msgstr ""
+msgstr "@code{@@inlineifset} e @code{@@inlineifclear}"
 
 #. type: findex
 #: texinfo/texinfo.texi:12645
 #, no-wrap
 msgid "inlineifset"
-msgstr ""
+msgstr "inlineifset"
 
 #. type: findex
 #: texinfo/texinfo.texi:12646
 #, no-wrap
 msgid "inlineifclear"
-msgstr ""
+msgstr "inlineifclear"
 
 #. type: cindex
 #: texinfo/texinfo.texi:12647
 #, no-wrap
 msgid "Flag conditionals, brace-delimited"
-msgstr ""
+msgstr "Condicionais de sinalização, delimitados por chaves"
 
 #. type: cindex
 #: texinfo/texinfo.texi:12648
 #, no-wrap
 msgid "Brace-delimited flag conditionals"
-msgstr ""
+msgstr "Condicionais de sinalizadores e delimitados por chaves"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:12655
@@ -33126,28 +33127,37 @@ msgid ""
 "the other @code{@@inline...} Commands (@pxref{Inline Conditionals}).  The "
 "same caveats about argument parsing given there apply here too."
 msgstr ""
+"@code{@@inlineifset} e @code{@@inlineifclear} fornecem alternativas "
+"delimitadas por chaves para as formas @code{@@ifset} e @code{@@ifclear}, "
+"similares aos outros comandos @code{@@inline...} (@pxref{Condicionais "
+"Inline}).  As mesmas ressalvas acerca de análise de argumentos fornecidas "
+"ali se aplicam aqui também."
 
 #. type: itemx
 #: texinfo/texinfo.texi:12657 texinfo/texinfo.texi:19303
 #, no-wrap
 msgid "@@inlineifset@{@var{var}, @var{text}@}"
-msgstr ""
+msgstr "@@inlineifset@{@var{variável}, @var{texto}@}"
 
 #. type: table
 #: texinfo/texinfo.texi:12659
 msgid "Process the Texinfo @var{text} if the flag @var{var} is defined."
 msgstr ""
+"Processa o @var{texto} do Texinfo se o sinalizador @var{variável} estiver "
+"definido."
 
 #. type: item
 #: texinfo/texinfo.texi:12660 texinfo/texinfo.texi:19302
 #, no-wrap
 msgid "@@inlineifclear@{@var{var}, @var{text}@}"
-msgstr ""
+msgstr "@@inlineifclear@{@var{variável}, @var{texto}@}"
 
 #. type: table
 #: texinfo/texinfo.texi:12662
 msgid "Process the Texinfo @var{text} if the flag @var{var} is not defined."
 msgstr ""
+"Processa o @var{texto} do Texinfo se o sinalizador @var{variável} não "
+"estiver definido."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:12667
@@ -33155,23 +33165,26 @@ msgid ""
 "Except for the syntax, their general behavior and purposes is the same as "
 "with @code{@@ifset} and @code{@@ifclear}, described in the previous section."
 msgstr ""
+"Exceto para a sintaxe, o comportamento geral e propósitos deles são os "
+"mesmos de @code{@@ifset} e @code{@@ifclear}, descritos na seção anterior."
 
 #. type: subsection
 #: texinfo/texinfo.texi:12669 texinfo/texinfo.texi:12671
 #, no-wrap
 msgid "@code{@@value} Example"
-msgstr ""
+msgstr "Exemplo de @code{@@value}"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:12671
 msgid "@nodedescription An easy way to update edition information."
 msgstr ""
+"@nodedescription Uma maneira fácil para atualizar informações de edição."
 
-#.  old name
+#.  nome antigo
 #. type: anchor{#1}
 #: texinfo/texinfo.texi:12674
 msgid "value Example"
-msgstr ""
+msgstr "Exemplo do value"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:12679
@@ -33181,16 +33194,21 @@ msgid ""
 "Texts}, for the full text of an example of using this to work with Automake "
 "distributions."
 msgstr ""
+"Você pode usar o comando @code{@@value} para minimizar o número de lugares "
+"que precisa mudar ao registrar uma atualização para um manual.  "
+"@xref{Textos GNU de Amostra}, para o texto completo de um exemplo de uso "
+"disso para trabalhar com distribuições Automake."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:12681
 msgid "This example is adapted from @ref{Top,,, make, The GNU Make Manual}."
 msgstr ""
+"Este exemplo foi adaptado a partir do @ref{Top,,, make, Manual do GNU Make}."
 
 #. type: enumerate
 #: texinfo/texinfo.texi:12685
 msgid "Set the flags:"
-msgstr ""
+msgstr "Configura os sinalizadores:"
 
 #. type: group
 #: texinfo/texinfo.texi:12692
@@ -33201,11 +33219,16 @@ msgid ""
 "@@set UPDATED 14 August 1992\n"
 "@@set UPDATE-MONTH August 1992\n"
 msgstr ""
+"@@set EDITION 0.35 Beta\n"
+"@@set VERSION 3.63 Beta\n"
+"@@set UPDATED 14 de agosto de 1992\n"
+"@@set UPDATE-MONTH Agosto de 1992\n"
 
 #. type: enumerate
 #: texinfo/texinfo.texi:12697
 msgid "Write text for the @code{@@copying} section (@pxref{@code{@@copying}}):"
 msgstr ""
+"Escreva texto para a seção @code{@@copying} (@pxref{@code{@@copying}}):"
 
 #. type: group
 #: texinfo/texinfo.texi:12705
@@ -33218,6 +33241,12 @@ msgid ""
 "for @@code@{make@}, version @@value@{VERSION@}.\n"
 "\n"
 msgstr ""
+"@@copying\n"
+"Esta é a Edição @@value@{EDITION@},\n"
+"atualizada mais recentemente em @@value@{UPDATED@},\n"
+"do @@cite@{Manual do GNU Make@},\n"
+"para @@code@{make@}, versão @@value@{VERSION@}.\n"
+"\n"
 
 #. type: group
 #: texinfo/texinfo.texi:12707
@@ -33226,6 +33255,8 @@ msgid ""
 "Copyright @dots{}\n"
 "\n"
 msgstr ""
+"Copyright @dots{}\n"
+"\n"
 
 #. type: group
 #: texinfo/texinfo.texi:12710
@@ -33234,11 +33265,15 @@ msgid ""
 "Permission is granted @dots{}\n"
 "@@end copying\n"
 msgstr ""
+"Permissão é concedida @dots{}\n"
+"@@end copying\n"
 
 #. type: enumerate
 #: texinfo/texinfo.texi:12715
 msgid "Write text for the title page, for people reading the printed manual:"
 msgstr ""
+"Escreva texto para a página de título, para pessoas leitoras do manual "
+"impresso:"
 
 #. type: group
 #: texinfo/texinfo.texi:12727
@@ -33254,6 +33289,15 @@ msgid ""
 "@dots{}\n"
 "@@end titlepage\n"
 msgstr ""
+"@@titlepage\n"
+"@@title GNU Make\n"
+"@@subtitle Um Programa para Direcionar Recompilação\n"
+"@@subtitle Edição @@value@{EDITION@}, @dots{}\n"
+"@@subtitle @@value@{UPDATE-MONTH@}\n"
+"@@page\n"
+"@@insertcopying\n"
+"@dots{}\n"
+"@@end titlepage\n"
 
 #. type: enumerate
 #: texinfo/texinfo.texi:12733
@@ -33261,11 +33305,14 @@ msgid ""
 "(On a printed cover, a date listing the month and the year looks less fussy "
 "than a date listing the day as well as the month and year.)"
 msgstr ""
+"(Em uma capa impressa, uma data listando o mês e o ano parece menos "
+"complicada que uma data listando o dia, bem como o mês e o ano.)"
 
 #. type: enumerate
 #: texinfo/texinfo.texi:12736
 msgid "Write text for the Top node, for people reading the Info file:"
 msgstr ""
+"Escreva texto para o nó Top, para as pessoas leitoras do arquivo Info:"
 
 #. type: group
 #: texinfo/texinfo.texi:12742
@@ -33276,6 +33323,10 @@ msgid ""
 "@@top Make\n"
 "\n"
 msgstr ""
+"@@ifnottex\n"
+"@@node Top\n"
+"@@top Make\n"
+"\n"
 
 #. type: group
 #: texinfo/texinfo.texi:12748
@@ -33287,6 +33338,11 @@ msgid ""
 "for @@code@{make@}, version @@value@{VERSION@}.\n"
 "@@end ifnottex\n"
 msgstr ""
+"Esta é a Edição @@value@{EDITION@},\n"
+"atualizada mais recentemente em @@value@{UPDATED@},\n"
+"do @@cite@{Manual do GNU Make@},\n"
+"para @@code@{make@}, versão @@value@{VERSION@}.\n"
+"@@end ifnottex\n"
 
 #. type: enumerate
 #: texinfo/texinfo.texi:12753
@@ -33294,6 +33350,8 @@ msgid ""
 "After you format the manual, the @code{@@value} constructs have been "
 "expanded, so the output contains text like this:"
 msgstr ""
+"Depois de você formatar o manual, as construções @code{@@value} foram "
+"expandidas, de forma que a saída contém texto como este:"
 
 #. type: group
 #: texinfo/texinfo.texi:12758
@@ -33302,6 +33360,9 @@ msgid ""
 "This is Edition 0.35 Beta, last updated 14 August 1992,\n"
 "of `The GNU Make Manual', for `make', Version 3.63 Beta.\n"
 msgstr ""
+"Esta é a Edição 0.35 Beta, atualizada mais recentemente em 14 de agosto "
+"de 1992,\n"
+"do `Manual do GNU Make', para `make', versão 3.63 Beta.\n"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:12764
@@ -33309,17 +33370,19 @@ msgid ""
 "When you update the manual, you change only the values of the flags; you do "
 "not need to edit the three sections."
 msgstr ""
+"Quando atualizar o manual, você muda somente os valores dos sinalizadores; "
+"você não precisa editar as três seções."
 
 #. type: node
 #: texinfo/texinfo.texi:12766
 #, no-wrap
 msgid "Testing for Texinfo Commands"
-msgstr ""
+msgstr "Testes para Comandos do Texinfo"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:12768
 msgid "@nodedescription Testing if a Texinfo command is available."
-msgstr ""
+msgstr "@nodedescription Testando se um comando do Texinfo está disponível."
 
 #. type: section
 #: texinfo/texinfo.texi:12768
@@ -33328,54 +33391,56 @@ msgid ""
 "Testing for Texinfo Commands: @code{@@ifcommanddefined}, "
 "@code{@@ifcommandnotdefined}"
 msgstr ""
+"Testagem para Comandos do Texinfo: @code{@@ifcommanddefined}, "
+"@code{@@ifcommandnotdefined}"
 
 #. type: cindex
 #: texinfo/texinfo.texi:12770
 #, no-wrap
 msgid "Testing for Texinfo commands"
-msgstr ""
+msgstr "Testagem para comandos do Texinfo"
 
 #. type: cindex
 #: texinfo/texinfo.texi:12771
 #, no-wrap
 msgid "Checking for Texinfo commands"
-msgstr ""
+msgstr "Checagem para comandos do Texinfo"
 
 #. type: cindex
 #: texinfo/texinfo.texi:12772
 #, no-wrap
 msgid "Texinfo commands, testing for"
-msgstr ""
+msgstr "Comandos do Texinfo, testando para"
 
 #. type: cindex
 #: texinfo/texinfo.texi:12773
 #, no-wrap
 msgid "Commands, testing for Texinfo"
-msgstr ""
+msgstr "Comandos, testagem para Texinfo"
 
 #. type: cindex
 #: texinfo/texinfo.texi:12774
 #, no-wrap
 msgid "Versions of Texinfo, adapting to"
-msgstr ""
+msgstr "Versões do Texinfo, adaptando-se a"
 
 #. type: cindex
 #: texinfo/texinfo.texi:12775
 #, no-wrap
 msgid "Features of Texinfo, adapting to"
-msgstr ""
+msgstr "Recursos do Texinfo, adaptando-se a"
 
 #. type: findex
 #: texinfo/texinfo.texi:12776
 #, no-wrap
 msgid "ifcommanddefined"
-msgstr ""
+msgstr "ifcommanddefined"
 
 #. type: findex
 #: texinfo/texinfo.texi:12777
 #, no-wrap
 msgid "ifcommandnotdefined"
-msgstr ""
+msgstr "ifcommandnotdefined"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:12784
@@ -33385,6 +33450,11 @@ msgid ""
 "formatting if not.  There are conditionals @code{@@ifcommanddefined} and "
 "@code{@@ifcommandnotdefined} to do this.  For example:"
 msgstr ""
+"Ocasionalmente, você possivelmente queira providenciar para que teu manual "
+"teste se um dado comando do Texinfo está disponível e (presumivelmente) "
+"fazer algum tipo de formatação residual se não estiver.  Existem "
+"condicionais @code{@@ifcommanddefined} e @code{@@ifcommandnotdefined} para "
+"fazer isso.  Por exemplo:"
 
 #. type: example
 #: texinfo/texinfo.texi:12789
@@ -33394,11 +33464,14 @@ msgid ""
 "Good, @@samp@{@@@@node@} is defined.\n"
 "@@end ifcommanddefined\n"
 msgstr ""
+"@@ifcommanddefined node\n"
+"Bom, @@samp@{@@@@node@} está definido.\n"
+"@@end ifcommanddefined\n"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:12793
 msgid "will output the expected `Good, @samp{@@node} is defined.'."
-msgstr ""
+msgstr "produzirá o esperado `Bom, @samp{@@node} está definido.'."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:12801
