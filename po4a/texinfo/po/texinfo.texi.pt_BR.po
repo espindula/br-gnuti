@@ -17,7 +17,7 @@ msgstr ""
 "Project-Id-Version: Texinfo 7.1\n"
 "Report-Msgid-Bugs-To: jafesp@gmail.com\n"
 "POT-Creation-Date: 2025-05-03 18:07-0300\n"
-"PO-Revision-Date: 2025-05-05 15:10-0300\n"
+"PO-Revision-Date: 2025-05-05 16:03-0300\n"
 "Last-Translator: Jamenson Ferreira Espindula de Almeida Melo "
 "<jafesp@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -32535,24 +32535,25 @@ msgstr ""
 #: texinfo/texinfo.texi:12426
 #, no-wrap
 msgid "@code{@@set @@clear @@value}"
-msgstr ""
+msgstr "@code{@@set @@clear @@value}"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:12428
 msgid "@nodedescription Variable tests and substitutions."
-msgstr ""
+msgstr "@nodedescription Testes e substituições de variáveis."
 
 #. type: section
 #: texinfo/texinfo.texi:12428
 #, no-wrap
 msgid "Flags: @code{@@set}, @code{@@clear}, conditionals, and @code{@@value}"
 msgstr ""
+"Sinalizadores: @code{@@set}, @code{@@clear}, condicionais e @code{@@value}"
 
-#.  old name
+#.  nome antigo
 #. type: anchor{#1}
 #: texinfo/texinfo.texi:12434
 msgid "set clear value"
-msgstr ""
+msgstr "set clear value"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:12434
@@ -32561,35 +32562,43 @@ msgid ""
 "a Texinfo file with the @code{@@set}, @code{@@clear}, @code{@@ifset}, and "
 "@code{@@ifclear} commands.  Here is a summary:"
 msgstr ""
+"Você pode direcionar os comandos de formatação do Texinfo para formatar "
+"ou para ignorar partes de um arquivo do Texinfo com os comandos "
+"@code{@@set}, @code{@@clear}, @code{@@ifset} e @code{@@ifclear}.  Aqui está "
+"um resumo:"
 
 #. type: item
 #: texinfo/texinfo.texi:12436
 #, no-wrap
 msgid "@@set @var{flag} [@var{value}]"
-msgstr ""
+msgstr "@@set @var{sinalizador} [@var{valor}]"
 
 #. type: table
 #: texinfo/texinfo.texi:12438
 msgid "Set the variable @var{flag}, to the optional @var{value} if specified."
 msgstr ""
+"Configura a variável @var{sinalizador} para o @var{valor} opcional, se "
+"especificado."
 
 #. type: item
 #: texinfo/texinfo.texi:12439 texinfo/texinfo.texi:18778
 #, no-wrap
 msgid "@@clear @var{flag}"
-msgstr ""
+msgstr "@@clear @var{sinalizador}"
 
 #. type: table
 #: texinfo/texinfo.texi:12441
 msgid ""
 "Undefine the variable @var{flag}, whether or not it was previously defined."
 msgstr ""
+"Desdefine a variável @var{sinalizador}, se ou não ela foi definida "
+"anteriormente."
 
 #. type: item
 #: texinfo/texinfo.texi:12442
 #, no-wrap
 msgid "@@ifset @var{flag}"
-msgstr ""
+msgstr "@@ifset @var{sinalizador}"
 
 #. type: table
 #: texinfo/texinfo.texi:12446
@@ -32598,23 +32607,26 @@ msgid ""
 "formatted.  If @var{flag} is clear, text through the following @code{@@end "
 "ifset} command is ignored."
 msgstr ""
+"Se @var{sinalizador} estiver configurado, o texto até o próximo comando "
+"@code{@@end ifset} será formatado.  Se @var{sinalizador} estiver limpo, o "
+"texto até o comando @code{@@end ifset} seguinte será ignorado."
 
 #. type: item
 #: texinfo/texinfo.texi:12447
 #, no-wrap
 msgid "@@inlineifset@{@var{flag}, @var{text}@}"
-msgstr ""
+msgstr "@@inlineifset@{@var{sinalizador}, @var{texto}@}"
 
 #. type: table
 #: texinfo/texinfo.texi:12449
 msgid "Brace-delimited version of @code{@@ifset}."
-msgstr ""
+msgstr "Versão delimitada por chaves de @code{@@ifset}."
 
 #. type: item
 #: texinfo/texinfo.texi:12450
 #, no-wrap
 msgid "@@ifclear @var{flag}"
-msgstr ""
+msgstr "@@ifclear @var{sinalizador}"
 
 #. type: table
 #: texinfo/texinfo.texi:12454
@@ -32623,58 +32635,63 @@ msgid ""
 "ignored.  If @var{flag} is clear, text through the following @code{@@end "
 "ifclear} command is formatted."
 msgstr ""
+"Se @var{sinalizador} estiver configurado, o texto até o próximo comando "
+"@code{@@end ifclear} será ignorado.  Se @var{sinalizador} estiver limpo, o "
+"texto até o comando @code{@@end ifclear} seguinte será formatado."
 
 #. type: item
 #: texinfo/texinfo.texi:12455
 #, no-wrap
 msgid "@@inlineifclear@{@var{flag}, @var{text}@}"
-msgstr ""
+msgstr "@@inlineifclear@{@var{sinalizador}, @var{texto}@}"
 
 #. type: table
 #: texinfo/texinfo.texi:12457
 msgid "Brace-delimited version of @code{@@ifclear}."
-msgstr ""
+msgstr "Versão delimitada por chaves de @code{@@ifclear}."
 
 #. type: node
 #: texinfo/texinfo.texi:12461
 #, no-wrap
 msgid "@code{@@set @@value}"
-msgstr ""
+msgstr "@code{@@set @@value}"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:12463
 msgid "@nodedescription Expand a flag variable to a string."
 msgstr ""
+"@nodedescription Expanda uma variável de sinalização para uma sequência "
+"de caracteres."
 
 #. type: subsection
 #: texinfo/texinfo.texi:12463
 #, no-wrap
 msgid "@code{@@set} and @code{@@value}"
-msgstr ""
+msgstr "@code{@@set} e @code{@@value}"
 
-#.  old name
+#.  nome antigo
 #. type: anchor{#1}
 #: texinfo/texinfo.texi:12466
 msgid "set value"
-msgstr ""
+msgstr "set value"
 
 #. type: findex
 #: texinfo/texinfo.texi:12466
 #, no-wrap
 msgid "set"
-msgstr ""
+msgstr "set"
 
 #. type: findex
 #: texinfo/texinfo.texi:12467
 #, no-wrap
 msgid "value"
-msgstr ""
+msgstr "value"
 
 #. type: findex
 #: texinfo/texinfo.texi:12468
 #, no-wrap
 msgid "clear"
-msgstr ""
+msgstr "clear"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:12472
@@ -32682,6 +32699,8 @@ msgid ""
 "You use the @code{@@set} command to specify a value for a flag, which is "
 "later expanded by the @code{@@value} command."
 msgstr ""
+"Você usa o comando @code{@@set} para especificar um valor para um "
+"sinalizador, que posteriormente será expandido pelo comando @code{@@value}."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:12480
@@ -32694,27 +32713,38 @@ msgid ""
 "others---they will work in some contexts, but not all, due to limitations in "
 "@TeX{}."
 msgstr ""
+"Um nome de @dfn{sinalizador} (também conhecido como @dfn{variável}) é um "
+"identificador que começa com um alfanumérico, um @samp{-} ou um @samp{_}.  "
+"Os caracteres subsequentes, se existirem, não podem ser espaços em branco, "
+"@samp{@@}, chaves, colchetes angulares ou quaisquer de @samp{~`^+|}; outros "
+"caracteres, como @samp{%}, possivelmente funcionem.  No entanto, é melhor "
+"usar somente letras e numerais em um nome de sinalizador, não @samp{-} ou "
+"@samp{_} ou outros---eles funcionarão em alguns contextos, mas não em "
+"todos, devido às limitações no @TeX{}."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:12482
 msgid "The value is the remainder of the input line, and can contain anything."
 msgstr ""
+"O valor é o restante da linha de entrada e pode conter qualquer coisa."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:12489
 msgid "Write the @code{@@set} command like this:"
-msgstr ""
+msgstr "Escreva o comando @code{@@set} assim:"
 
 #. type: example
 #: texinfo/texinfo.texi:12492
 #, no-wrap
 msgid "@@set foo This is a string.\n"
-msgstr ""
+msgstr "@@set foo Esta é uma sequência de caracteres.\n"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:12496
 msgid "This sets the value of the flag @code{foo} to ``This is a string.''."
 msgstr ""
+"Isso configura o valor do sinalizador @code{foo} para ``Esta é uma "
+"sequência de caracteres.''."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:12500
@@ -32723,24 +32753,28 @@ msgid ""
 "with the string to which @var{flag} is set.  Thus, when @code{foo} is set as "
 "shown above, the Texinfo processors convert this:"
 msgstr ""
+"Os processadores do Texinfo então substituem um comando "
+"@code{@@value@{@var{sinalizador}@}} pela sequência de caracteres para a "
+"qual @var{sinalizador} estiver configurado.  Assim, quando @code{foo} for "
+"configurado como mostrado acima, os processadores do Texinfo convertem assim:"
 
 #. type: group
 #: texinfo/texinfo.texi:12504
 #, no-wrap
 msgid "@@value@{foo@}\n"
-msgstr ""
+msgstr "@@value@{foo@}\n"
 
 #. type: exdent
 #: texinfo/texinfo.texi:12504
 #, no-wrap
 msgid "@r{to this:}"
-msgstr ""
+msgstr "@r{para isto:}"
 
 #. type: group
 #: texinfo/texinfo.texi:12506
 #, no-wrap
 msgid "This is a string.\n"
-msgstr ""
+msgstr "Esta é uma sequência de caracteres.\n"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:12511
@@ -32748,23 +32782,27 @@ msgid ""
 "You can write a @code{@@value} command within a paragraph; but you must "
 "write a @code{@@set} command on a line of its own."
 msgstr ""
+"Você pode escrever um comando @code{@@value} dentro de um parágrafo; mas "
+"precisa escrever um comando @code{@@set} em uma linha própria."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:12513
 msgid "If you write the @code{@@set} command like this:"
-msgstr ""
+msgstr "Se você escrever o comando @code{@@set} assim:"
 
 #. type: example
 #: texinfo/texinfo.texi:12516
 #, no-wrap
 msgid "@@set foo\n"
-msgstr ""
+msgstr "@@set foo\n"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:12520
 msgid ""
 "without specifying a string, the value of @code{foo} is the empty string."
 msgstr ""
+"sem especificar uma sequência de caracteres, o valor de @code{foo} será a "
+"sequência vazia de caracteres."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:12523
@@ -32772,57 +32810,60 @@ msgid ""
 "If you clear a previously set flag with @code{@@clear @var{flag}}, a "
 "subsequent @code{@@value@{flag@}} command will report an error."
 msgstr ""
+"Se você limpar um sinalizador configurado anteriormente com @code{@@clear "
+"@var{sinalizador}}, um comando @code{@@value@{sinalizador@}} subsequente "
+"informará um erro."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:12525
 msgid "For example, if you set @code{foo} as follows:"
-msgstr ""
+msgstr "Por exemplo, se você configurar @code{foo} conforme segue:"
 
 #. type: example
 #: texinfo/texinfo.texi:12528
 #, no-wrap
 msgid "@@set howmuch very, very, very\n"
-msgstr ""
+msgstr "@@set quanto muito, muito, muito\n"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:12532 texinfo/texinfo.texi:12549
 msgid "then the processors transform"
-msgstr ""
+msgstr "então os processadores transformam"
 
 #. type: group
 #: texinfo/texinfo.texi:12536 texinfo/texinfo.texi:12553
 #, no-wrap
 msgid "It is a @@value@{howmuch@} wet day.\n"
-msgstr ""
+msgstr "É um dia @@value@{quanto@} chuvoso.\n"
 
 #. type: exdent
 #: texinfo/texinfo.texi:12536 texinfo/texinfo.texi:12553
 #, no-wrap
 msgid "@r{into}"
-msgstr ""
+msgstr "@r{into}"
 
 #. type: group
 #: texinfo/texinfo.texi:12538
 #, no-wrap
 msgid "It is a very, very, very wet day.\n"
-msgstr ""
+msgstr "É um dia muito, muito, muito chuvoso.\n"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:12542
 msgid "If you write"
-msgstr ""
+msgstr "Se você escrever"
 
 #. type: example
 #: texinfo/texinfo.texi:12545
 #, no-wrap
 msgid "@@clear howmuch\n"
-msgstr ""
+msgstr "@@clear quanto\n"
 
 #. type: group
 #: texinfo/texinfo.texi:12555
 #, no-wrap
 msgid "It is a @{No value for \"howmuch\"@} wet day.\n"
-msgstr ""
+msgstr "É um dia @{Nenhum valor para \"quanto\"@} chuvoso.\n"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:12560
@@ -32830,6 +32871,8 @@ msgid ""
 "@code{@@value} cannot be reliably used as the argument to an accent command "
 "(@pxref{Inserting Accents}).  For example, this fails:"
 msgstr ""
+"@code{@@value} não pode ser usado confiavelmente como o argumento para um "
+"comando de acento (@pxref{Inserindo Acentos}).  Por exemplo, isto falha:"
 
 #. type: example
 #: texinfo/texinfo.texi:12565
@@ -32838,35 +32881,38 @@ msgid ""
 "@@set myletter a\n"
 "@@'@@value@{myletter@}    @c fails!\n"
 msgstr ""
+"@@set minhacarta a\n"
+"@@'@@value@{minhacarta@}    @c falha!\n"
 
 #. type: node
 #: texinfo/texinfo.texi:12568
 #, no-wrap
 msgid "@code{@@ifset @@ifclear}"
-msgstr ""
+msgstr "@code{@@ifset @@ifclear}"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:12570
 msgid "@nodedescription Format a region if a flag is set."
 msgstr ""
+"@nodedescription Formate uma região se um sinalizador estiver configurado."
 
 #. type: subsection
 #: texinfo/texinfo.texi:12570
 #, no-wrap
 msgid "@code{@@ifset} and @code{@@ifclear}"
-msgstr ""
+msgstr "@code{@@ifset} e @code{@@ifclear}"
 
-#.  old name
+#.  nome antigo
 #. type: anchor{#1}
 #: texinfo/texinfo.texi:12573
 msgid "ifset ifclear"
-msgstr ""
+msgstr "ifset ifclear"
 
 #. type: findex
 #: texinfo/texinfo.texi:12573
 #, no-wrap
 msgid "ifset"
-msgstr ""
+msgstr "ifset"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:12580
@@ -32876,6 +32922,11 @@ msgid ""
 "commands.  When the @var{flag} is cleared, the Texinfo formatting commands "
 "do @emph{not} format the text.  @code{@@ifclear} operates analogously."
 msgstr ""
+"Quando um @var{sinalizador} for configurado, os comandos de formatação do "
+"Texinfo formatam o texto entre pares subsequentes de comandos @code{@@ifset "
+"@var{sinalizador}} e @code{@@end ifset}.  Quando o @var{sinalizador} for "
+"limpo, os comandos de formatação do Texinfo @emph{não} formatam o texto.  "
+"@code{@@ifclear} opera analogamente."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:12583
@@ -32883,6 +32934,8 @@ msgid ""
 "Write the conditionally formatted text between @code{@@ifset @var{flag}} and "
 "@code{@@end ifset} commands, like this:"
 msgstr ""
+"Escreva o texto formatado condicionalmente entre comandos @code{@@ifset "
+"@var{sinalizador}} e @code{@@end ifset}, assim:"
 
 #. type: group
 #: texinfo/texinfo.texi:12589
@@ -32892,6 +32945,9 @@ msgid ""
 "@var{conditional-text}\n"
 "@@end ifset\n"
 msgstr ""
+"@@ifset @var{sinalizador}\n"
+"@var{texto-condicional}\n"
+"@@end ifset\n"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:12594
@@ -32899,12 +32955,14 @@ msgid ""
 "For example, you can create one document that has two variants, such as a "
 "manual for a `large' and `small' model:"
 msgstr ""
+"Por exemplo, você pode criar um documento que tenha duas variantes, como um "
+"manual para um modelo `grande' e `pequeno':"
 
 #. type: cindex
 #: texinfo/texinfo.texi:12595
 #, no-wrap
 msgid "Shrubbery"
-msgstr ""
+msgstr "Arbusto"
 
 #. type: example
 #: texinfo/texinfo.texi:12599
@@ -32914,6 +32972,9 @@ msgid ""
 "without hurting them.\n"
 "\n"
 msgstr ""
+"Você pode usar esta máquina para desenterrar arbustos\n"
+"sem machucá-los.\n"
+"\n"
 
 #. type: example
 #: texinfo/texinfo.texi:12601
@@ -32922,6 +32983,8 @@ msgid ""
 "@@set large\n"
 "\n"
 msgstr ""
+"@@set grande\n"
+"\n"
 
 #. type: example
 #: texinfo/texinfo.texi:12605
@@ -32932,12 +32995,16 @@ msgid ""
 "@@end ifset\n"
 "\n"
 msgstr ""
+"@@ifset grande\n"
+"Ela também pode desenterrar árvores adultas.\n"
+"@@end ifset\n"
+"\n"
 
 #. type: example
 #: texinfo/texinfo.texi:12607
 #, no-wrap
 msgid "Remember to replant promptly @dots{}\n"
-msgstr ""
+msgstr "Lembre-se de replantar imediatamente @dots{}\n"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:12613
@@ -32946,6 +33013,9 @@ msgid ""
 "@code{@@ifset large} and @code{@@end ifset} because the @code{large} flag is "
 "set."
 msgstr ""
+"No exemplo, os comandos de formatação formatarão o texto entre "
+"@code{@@ifset grande} e @code{@@end ifset} porque o sinalizador "
+"@code{grande} está configurado."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:12617
@@ -32954,6 +33024,9 @@ msgid ""
 "format the text between @code{@@ifset @var{flag}} and @code{@@end ifset}; "
 "that text is ignored and does not appear in the output."
 msgstr ""
+"Quando @var{sinalizador} for limpo, os comandos de formatação do Texinfo "
+"@emph{não} formatam o texto entre @code{@@ifset @var{sinalizador}} e "
+"@code{@@end ifset}; esse texto é ignorado e não aparece na saída gerada."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:12626
@@ -32966,12 +33039,19 @@ msgid ""
 "that say, ``You can use this machine to dig up shrubs without hurting them.  "
 "Remember to replant promptly @dots{}''."
 msgstr ""
+"Por exemplo, se você limpar o sinalizador do exemplo precedente escrevendo "
+"um comando @code{@@clear grande} depois do comando @code{@@set grande} (mas "
+"antes do texto condicional), então os comandos de formatação do Texinfo "
+"ignorarão o texto entre os comandos @code{@@ifset grande} e @code{@@end "
+"ifset}.  Na saída formatada, esse texto não aparece; você vê somente as "
+"linhas que dizem, ``Você pode usar esta máquina para desenterrar arbustos "
+"sem machucá-los. Lembre-se de replantar imediatamente @dots{}''."
 
 #. type: findex
 #: texinfo/texinfo.texi:12627
 #, no-wrap
 msgid "ifclear"
-msgstr ""
+msgstr "ifclear"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:12635
@@ -32983,12 +33063,19 @@ msgid ""
 "an @code{@@ifclear} and an @code{@@end ifclear} command; rather, they ignore "
 "that text.  An @code{@@ifclear} command looks like this:"
 msgstr ""
+"Se um sinalizador for limpo com um comando @code{@@clear @var{sinalizador}}, "
+"então os comandos de formatação formatam o texto entre pares subsequentes "
+"de comandos @code{@@ifclear} e @code{@@end ifclear}.  Mas se o sinalizador "
+"for configurado com @code{@@set @var{sinalizador}}, então os comandos de "
+"formatação @emph{não} formatam o texto entre um comando @code{@@ifclear} "
+"e um @code{@@end ifclear}; em vez disso, eles ignoram esse texto.  Um "
+"comando @code{@@ifclear} se parece com isto:"
 
 #. type: example
 #: texinfo/texinfo.texi:12638
 #, no-wrap
 msgid "@@ifclear @var{flag}\n"
-msgstr ""
+msgstr "@@ifclear @var{sinalizador}\n"
 
 #. type: node
 #: texinfo/texinfo.texi:12641
