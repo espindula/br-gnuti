@@ -17,7 +17,7 @@ msgstr ""
 "Project-Id-Version: Texinfo 7.1\n"
 "Report-Msgid-Bugs-To: jafesp@gmail.com\n"
 "POT-Creation-Date: 2025-05-03 18:07-0300\n"
-"PO-Revision-Date: 2025-05-05 18:04-0300\n"
+"PO-Revision-Date: 2025-05-06 01:01-0300\n"
 "Last-Translator: Jamenson Ferreira Espindula de Almeida Melo "
 "<jafesp@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -33483,12 +33483,19 @@ msgid ""
 "commands, in addition to all the Texinfo commands, as being ``defined''; the "
 "@code{texi2any} implementation is reliable in this regard, however."
 msgstr ""
+"Esse condicional também considerará verdadeiros quaisquer novos comandos "
+"definidos pelo documento via @code{@@macro}, @code{@@alias}, "
+"@code{@@definfoenclose} e @code{@@def@r{(}code@r{)}index} (@pxref{Definindo "
+"Novos Comandos do Texinfo}).  Ressalva: a implementação do @TeX{} informa "
+"comandos internos do @TeX{}, além de todos os comandos do Texinfo, como "
+"sendo ``definidos''; a implementação do @code{texi2any} é confiável a "
+"esse respeito, no entanto."
 
 #. type: pindex
 #: texinfo/texinfo.texi:12802
 #, no-wrap
 msgid "@file{NEWS} file for Texinfo"
-msgstr ""
+msgstr "arquivo @file{NEWS} para Texinfo"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:12807
@@ -33498,12 +33505,16 @@ msgid ""
 "(@url{http://www.gnu.org/software/texinfo}) to see when a particular command "
 "was added."
 msgstr ""
+"Você pode verificar o arquivo @file{NEWS} na distribuição do fonte do "
+"Texinfo e lincado a partir da página inicial do Texinfo "
+"(@url{http://www.gnu.org/software/texinfo}) para ver quando um comando "
+"específico foi adicionado."
 
 #. type: vindex
 #: texinfo/texinfo.texi:12808
 #, no-wrap
 msgid "txicommandconditionals"
-msgstr ""
+msgstr "txicommandconditionals"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:12814
@@ -33513,6 +33524,11 @@ msgid ""
 "order to test if they themselves are available, the predefined flag "
 "@code{txicommandconditionals} can be tested, like this:"
 msgstr ""
+"Esses condicionais de verificação de comando foram adicionados eles "
+"próprios no Texinfo@tie{}5.0, lançado em 2013---décadas depois do início "
+"do Texinfo.  Para a finalidade de testar se eles próprios estão "
+"disponíveis, o sinalizador predefinido @code{txicommandconditionals} pode "
+"ser testado, assim:"
 
 #. type: example
 #: texinfo/texinfo.texi:12821
@@ -33524,6 +33540,11 @@ msgid ""
 "@@end ifcommandnotdefined\n"
 "@@end ifset\n"
 msgstr ""
+"@@ifset txicommandconditionals\n"
+"@@ifcommandnotdefined foobarnode\n"
+"(Bom, @@samp@{@@@@foobarnode@} não está definido.)\n"
+"@@end ifcommandnotdefined\n"
+"@@end ifset\n"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:12826
@@ -33531,6 +33552,9 @@ msgid ""
 "Since flags (see the previous section) were added early in the existence of "
 "Texinfo, there is no problem with assuming they are available."
 msgstr ""
+"Como os sinalizadores (veja-se a seção anterior) foram adicionados no "
+"início da existência do Texinfo, não existe problema em supor que eles "
+"estejam disponíveis."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:12833
@@ -33542,6 +33566,13 @@ msgid ""
 "and install the Texinfo source; it does not have any problematic "
 "dependencies.)"
 msgstr ""
+"Nós recomendamos evitar esses testes sempre que possível---o que "
+"geralmente é o caso.  Para muitos pacotes de software, é razoável que "
+"todos os(as) desenvolvedores(as) tenham uma determinada versão do Texinfo "
+"(ou mais recente) instalada, e, portanto, não existe razão para se "
+"preocupar com versões mais antigas.  (É simples para qualquer um(a) baixar "
+"e instalar o fonte do Texinfo; ele não tem quaisquer dependências "
+"problemáticas.)"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:12840
@@ -33553,29 +33584,36 @@ msgid ""
 "dependencies between packages (@pxref{Releases,,, standards, GNU Coding "
 "Standards})."
 msgstr ""
+"O problema das versões do Texinfo geralmente não surge para usuários(as) "
+"finais.  Com pacotes distribuídos corretamente, os(as) usuários(as) não "
+"precisam processar o manual do Texinfo simplesmente para construir e "
+"instalar o pacote; eles(as) conseguem usar arquivos pré-formatados de "
+"saída do Info (ou outros).  Isso é desejável em geral, para evitar "
+"dependências desnecessárias entre pacotes (@pxref{Releases,,, standards, "
+"Padrões GNU de Codificação})."
 
 #. type: section
 #: texinfo/texinfo.texi:12842 texinfo/texinfo.texi:12844
 #, no-wrap
 msgid "Conditional Nesting"
-msgstr ""
+msgstr "Aninhamento de Condicional"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:12844
 msgid "@nodedescription Using conditionals inside conditionals."
-msgstr ""
+msgstr "@nodedescription Usando condicionais dentro de condicionais."
 
 #. type: cindex
 #: texinfo/texinfo.texi:12845
 #, no-wrap
 msgid "Conditionals, nested"
-msgstr ""
+msgstr "Condicionais, aninhados"
 
 #. type: cindex
 #: texinfo/texinfo.texi:12846
 #, no-wrap
 msgid "Nesting conditionals"
-msgstr ""
+msgstr "Aninhando Condicionais"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:12851
@@ -33583,6 +33621,9 @@ msgid ""
 "Texinfo requires that for a failing conditional, the ignored text must be "
 "properly nested with respect to that failing conditional.  Here's an example:"
 msgstr ""
+"O Texinfo exige que, para um condicional com falha, o texto ignorado seja "
+"aninhado corretamente em relação a esse condicional com falha.  Aqui está "
+"um exemplo:"
 
 #. type: example
 #: texinfo/texinfo.texi:12861
@@ -33597,11 +33638,21 @@ msgid ""
 "@@end ifclear\n"
 "@@end ifset\n"
 msgstr ""
+"@@ifset algumavarariável\n"
+"@@ifset outravarariável\n"
+"Ambas, algumavarariável e outravarariável estão configuradas.\n"
+"@@end ifset\n"
+"@@ifclear outravarariável\n"
+"algumavarariável está configurada, outravarariável não está.\n"
+"@@end ifclear\n"
+"@@end ifset\n"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:12864
 msgid "If @samp{somevar} is not set, the whole block is skipped."
 msgstr ""
+"Se @samp{algumavariável} não estiver configurada, o bloco inteiro é "
+"ignorado."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:12868
@@ -33610,6 +33661,9 @@ msgid ""
 "nesting purposes, all conditional commands must be on lines by themselves, "
 "with no text (even spaces) before or after."
 msgstr ""
+"Para permitir que os processadores determinem com segurança quais comandos "
+"considerar para fins de aninhamento, todos os comandos condicionais precisam "
+"estar em linhas separadas, sem texto (nem mesmo espaços) antes ou depois."
 
 #. type: example
 #: texinfo/texinfo.texi:12885
@@ -33622,47 +33676,53 @@ msgid ""
 "@@end ifset\n"
 "@@c WRONG - missing @@end ifset.\n"
 msgstr ""
+"@@ifset a\n"
+"@@ifset b\n"
+"@@ifclear ok  - ok, ignorado\n"
+"@@end junky   - ok, ignorado\n"
+"@@end ifset\n"
+"@@c ERRADO - ausente @@end ifset.\n"
 
 #. type: chapter
 #: texinfo/texinfo.texi:12891 texinfo/texinfo.texi:12893
 #, no-wrap
 msgid "Defining New Texinfo Commands"
-msgstr ""
+msgstr "Definindo Novos Comandos do Texinfo"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:12893
 msgid "@nodedescription User-defined macros and aliases."
-msgstr ""
+msgstr "@nodedescription Macros e apelidos definidas por usuário(a)."
 
 #. type: cindex
 #: texinfo/texinfo.texi:12895
 #, no-wrap
 msgid "Macros"
-msgstr ""
+msgstr "Macros"
 
 #. type: cindex
 #: texinfo/texinfo.texi:12896
 #, no-wrap
 msgid "Defining new Texinfo commands"
-msgstr ""
+msgstr "Definindo novos comandos do Texinfo"
 
 #. type: cindex
 #: texinfo/texinfo.texi:12897
 #, no-wrap
 msgid "New Texinfo commands, defining"
-msgstr ""
+msgstr "Novos comandos do Texinfo, definindo"
 
 #. type: cindex
 #: texinfo/texinfo.texi:12898
 #, no-wrap
 msgid "Texinfo commands, defining new"
-msgstr ""
+msgstr "Comandos do Texinfo, definindo novos"
 
 #. type: cindex
 #: texinfo/texinfo.texi:12899
 #, no-wrap
 msgid "User-defined Texinfo commands"
-msgstr ""
+msgstr "Comandos do Texinfo definidos por usuário(a)"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:12903
@@ -33670,6 +33730,8 @@ msgid ""
 "Texinfo provides several ways to define new commands (in all cases, it's not "
 "recommended to try redefining existing commands):"
 msgstr ""
+"Texinfo fornece várias maneiras para definir novos comandos (em todos os "
+"casos, não é recomendado tentar redefinir comandos existentes):"
 
 #. type: itemize
 #: texinfo/texinfo.texi:12910
@@ -33679,6 +33741,10 @@ msgid ""
 "macro can have any number of @dfn{parameters}---text you supply each time "
 "you use the macro."
 msgstr ""
+"Uma @dfn{macro} do Texinfo permite que você defina um novo comando do "
+"Texinfo como qualquer sequência de texto e (ou) comandos existentes "
+"(incluindo outras macros).  A macro pode ter qualquer número de "
+"@dfn{parâmetros}---texto que você fornece cada vez que usar a macro."
 
 #. type: itemize
 #: texinfo/texinfo.texi:12914
@@ -33687,6 +33753,9 @@ msgid ""
 "command, which is for documenting macros in the subject area of the manual "
 "(@pxref{Def Cmd Template})."
 msgstr ""
+"Aliás, essas macros não tem nada a ver com o comando @code{@@defmac}, que "
+"serve para documentar macros na área de assunto do manual (@pxref{Modelos "
+"de Comando de Definição})."
 
 #. type: itemize
 #: texinfo/texinfo.texi:12918
@@ -33694,11 +33763,13 @@ msgid ""
 "@samp{@@linemacro} allows you to define a macro whose arguments extend to "
 "the end of the line and are separated by spaces."
 msgstr ""
+"@samp{@@linemacro} permite que você defina uma macro cujos argumentos se "
+"estendem até o final da linha e sejam separados por espaços."
 
 #. type: itemize
 #: texinfo/texinfo.texi:12921
 msgid "@samp{@@alias} defines a new name for an existing command."
-msgstr ""
+msgstr "@samp{@@alias} define um novo nome para um comando existente."
 
 #. type: itemize
 #: texinfo/texinfo.texi:12926
@@ -33706,6 +33777,8 @@ msgid ""
 "@samp{@@definfoenclose} allows you to define new commands with customized "
 "output for some non-printed output formats.  This command is deprecated."
 msgstr ""
+"@samp{@@definfoenclose} permite que você defina novos comandos com saída "
+"personalizada para alguns formatos de saída não impressos."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:12932
@@ -33714,6 +33787,9 @@ msgid ""
 "to invoke any external macro processor and have Texinfo recognize so-called "
 "@code{#line} directives for error reporting."
 msgstr ""
+"De modo geral (não apenas para definir novos comandos), é possível "
+"invocar qualquer processador externo de macro e fazer com que o Texinfo "
+"reconheça as assim chamadas diretivas @code{#line} para informes de erros."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:12936
@@ -33721,6 +33797,9 @@ msgid ""
 "If you want to do simple text substitution, @code{@@set} and @code{@@value} "
 "is the simplest approach (@pxref{@code{@@set @@clear @@value}})."
 msgstr ""
+"Se você quiser fazer substituição simples de texto, @code{@@set} e "
+"@code{@@value} são a abordagem mais simples (@pxref{@code{@@set @@clear "
+"@@value}})."
 
 #. type: section
 #: texinfo/texinfo.texi:12938 texinfo/texinfo.texi:12940
