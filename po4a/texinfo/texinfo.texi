@@ -13089,8 +13089,9 @@ It's not always necessary to worry about commas.  To facilitate use of
 macros, two rules for @dfn{automatic quoting} are implemented:
 
 @enumerate 1
-@item If a macro takes only one argument, all commas in its invocation
-are quoted by default.  For example:
+@item
+If a macro takes only one argument, all commas in its invocation are
+quoted by default.  For example:
 
 @example
 @group
@@ -13113,9 +13114,10 @@ And indeed, it can.  Namely, there is no control on the
 number of arguments passed to one-argument macros, so be careful when
 you invoke them.
 
-@item If a macro invocation includes another command (including a
-recursive invocation of itself), any commas in the nested command
-invocation(s) are quoted by default.  For example, in
+@item
+If a macro invocation includes another command (including a recursive
+invocation of itself), any commas in the nested command invocation(s)
+are quoted by default.  For example, in
 
 @example
 @@say@{@@strong@{Yes, I do@}, person one@}
@@ -13137,8 +13139,9 @@ example, with a recursive macro:
 @noindent
 will produce the string @samp{foobarbaz}.
 
-@item Otherwise, a comma should be explicitly quoted, as above, for it
-to be treated as a part of an argument.
+@item
+Otherwise, a comma should be explicitly quoted, as above, for it to be
+treated as a part of an argument.
 @end enumerate
 
 @cindex Backslash, in macro arguments
