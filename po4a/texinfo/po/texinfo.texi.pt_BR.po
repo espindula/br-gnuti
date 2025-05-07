@@ -17,7 +17,7 @@ msgstr ""
 "Project-Id-Version: Texinfo 7.1\n"
 "Report-Msgid-Bugs-To: jafesp@gmail.com\n"
 "POT-Creation-Date: 2025-05-06 19:48-0300\n"
-"PO-Revision-Date: 2025-05-06 21:00-0300\n"
+"PO-Revision-Date: 2025-05-06 22:30-0300\n"
 "Last-Translator: Jamenson Ferreira Espindula de Almeida Melo "
 "<jafesp@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -35019,36 +35019,36 @@ msgstr "@@center aaa bbb\n"
 #: texinfo/texinfo.texi:13465
 #, no-wrap
 msgid "@code{@@alias}"
-msgstr ""
+msgstr "@code{@@alias}"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:13467
 msgid "@nodedescription Command aliases."
-msgstr ""
+msgstr "@nodedescription Apelidos de comandos."
 
 #. type: item
 #: texinfo/texinfo.texi:13467 texinfo/texinfo.texi:18685
 #, no-wrap
 msgid "@@alias @var{new}=@var{existing}"
-msgstr ""
+msgstr "@@alias @var{novo}=@var{existente}"
 
 #. type: findex
 #: texinfo/texinfo.texi:13470 texinfo/texinfo.texi:13472
 #, no-wrap
 msgid "alias"
-msgstr ""
+msgstr "alias"
 
 #. type: cindex
 #: texinfo/texinfo.texi:13470
 #, no-wrap
 msgid "Aliases, command"
-msgstr ""
+msgstr "Apelidos, comando"
 
 #. type: cindex
 #: texinfo/texinfo.texi:13471
 #, no-wrap
 msgid "Command aliases"
-msgstr ""
+msgstr "Apelidos de comando"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:13478
@@ -35058,6 +35058,10 @@ msgid ""
 "additional semantic information in the input even though the output result "
 "may be the same."
 msgstr ""
+"O comando @samp{@@alias} define um novo comando para ser exatamente como um "
+"existente.  Isso é útil para definir nomes adicionais de marcação, "
+"preservando assim informações semânticas adicionais na entrada, mesmo que "
+"o resultado da saída possa ser o mesmo."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:13483
@@ -35066,12 +35070,16 @@ msgid ""
 "command name, an equals sign, and the existing command name.  Whitespace "
 "around the equals sign is optional and ignored if present.  Thus:"
 msgstr ""
+"Escreva o comando @samp{@@alias} em uma linha própria, seguido pelo novo "
+"nome do comando, um sinal de igual e o nome do comando existente.  O espaço "
+"em branco ao redor do sinal de igual é opcional e ignorado se presente.  "
+"Assim:"
 
 #. type: example
 #: texinfo/texinfo.texi:13486
 #, no-wrap
 msgid "@@alias @var{new} = @var{existing}\n"
-msgstr ""
+msgstr "@@alias @var{novo} = @var{existente}\n"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:13493
@@ -35082,12 +35090,17 @@ msgid ""
 "@code{@@cite@{@}} but conveys the extra semantic information as well.  You'd "
 "do this as follows:"
 msgstr ""
+"Por exemplo, se teu documento contiver citações para livros e para alguma "
+"outra mídia (filmes, por exemplo), você pode querer definir uma macro "
+"@code{@@moviecite@{@}} que faz a mesma coisa que um @code{@@cite@{@}} comum, "
+"mas transmite as informações semânticas extras também.  Você faria isso "
+"conforme segue:"
 
 #. type: example
 #: texinfo/texinfo.texi:13496
 #, no-wrap
 msgid "@@alias moviecite = cite\n"
-msgstr ""
+msgstr "@@alias moviecite = cite\n"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:13501
@@ -35096,6 +35109,9 @@ msgid ""
 "argument parsing.  Also, aliases are much simpler to define than macros.  So "
 "the command is not redundant."
 msgstr ""
+"Macros nem sempre tem o mesmo efeito que apelidos, devido a caprichos da "
+"análise de argumentos.  Além disso, apelidos são muito mais simples de "
+"definir que macros.  Então o comando não é redundante."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:13504
@@ -35103,11 +35119,13 @@ msgid ""
 "Unfortunately, it's not possible to alias Texinfo environments; for example, "
 "@code{@@alias lang=example} is an error."
 msgstr ""
+"Infelizmente, não é possível apelidar ambientes do Texinfo; por exemplo, "
+"@code{@@alias lang=exemplo} é um erro."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:13506
 msgid "Aliases must not be recursive, directly or indirectly."
-msgstr ""
+msgstr "Apelidos precisam não serem recursivos, direta ou indiretamente."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:13511
@@ -35116,6 +35134,10 @@ msgid ""
 "Texinfo command name as an alias.  Unfortunately this is a very large set of "
 "names, and the possible resulting errors from @TeX{} are unpredictable."
 msgstr ""
+"Não é aconselhável redefinir nenhum nome de comando do @TeX{} primitivo, "
+"do @TeX{} simples ou do Texinfo como um apelido.  Infelizmente, esse é um "
+"conjunto muito grande de nomes, e os possíveis erros resultantes oriundos "
+"do @TeX{} são imprevisíveis."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:13516
@@ -35124,35 +35146,39 @@ msgid ""
 "alphanumerics and (except as the first character) @samp{-}.  However, with "
 "@TeX{}, letters only should be used.  So, we recommend using only letters."
 msgstr ""
+"Identificadores de apelidos deveriam ser os mesmos que para nomes de macro, "
+"isto é, alfanuméricos e (exceto como o primeiro caractere) @samp{-}.  "
+"Entretanto, com o @TeX{}, somente letras deveriam ser usadas.  Assim, nós "
+"recomendamos usar somente letras."
 
 #. type: section
 #: texinfo/texinfo.texi:13518 texinfo/texinfo.texi:13520
 #, no-wrap
 msgid "Line Macros"
-msgstr ""
+msgstr "Macros de Linha"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:13520
 msgid "@nodedescription Macros using whole line for arguments."
-msgstr ""
+msgstr "@nodedescription Macros usando linha inteira para argumentos."
 
 #. type: findex
 #: texinfo/texinfo.texi:13522
 #, no-wrap
 msgid "linemacro"
-msgstr ""
+msgstr "linemacro"
 
 #. type: cindex
 #: texinfo/texinfo.texi:13523
 #, no-wrap
 msgid "Line macros"
-msgstr ""
+msgstr "Macros de linha"
 
 #. type: cindex
 #: texinfo/texinfo.texi:13524
 #, no-wrap
 msgid "Macros taking whole line as an argument"
-msgstr ""
+msgstr "Macros recebendo linha inteira como um argumento"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:13528
@@ -35160,6 +35186,9 @@ msgid ""
 "You can also define a macro using the @samp{@@linemacro} command.  The "
 "syntax for line macro definitions is similar to that for @code{@@macro}."
 msgstr ""
+"Você também pode definir uma macro usando o comando @samp{@@linemacro}.  A "
+"sintaxe para definições de macros de linha é semelhante àquela para "
+"@code{@@macro}."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:13534
@@ -35170,6 +35199,12 @@ msgid ""
 "that operate similarly to the builtin commands for providing definitions "
 "(@pxref{Definition Commands})."
 msgstr ""
+"No entanto, a sintaxe para usar uma macro definida dessa maneira é "
+"diferente.  A chamada de macro usa o restante da linha, com argumentos "
+"separados por espaços.  O recurso de macro de linha é destinado "
+"principalmente para permitir que você defina comandos que operem "
+"semelhantemente aos comandos internos para fornecer definições "
+"(@pxref{Comandos de Definição})."
 
 #. type: example
 #: texinfo/texinfo.texi:13541
@@ -35180,11 +35215,15 @@ msgid ""
 "ame\\ \\args\\\n"
 "@@end linemacro\n"
 msgstr ""
+"@@linemacro defbuiltin @{nome, argumentos@}\n"
+"@@defline @{Builtin@} \\n"
+"ome\\ \\argumentos\\\n"
+"@@end linemacro\n"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:13544
 msgid "The above macro may be used as"
-msgstr ""
+msgstr "A macro acima pode ser usada como"
 
 #. type: example
 #: texinfo/texinfo.texi:13550
@@ -35195,11 +35234,15 @@ msgid ""
 "Explanation\n"
 "@@end defblock\n"
 msgstr ""
+"@@defblock\n"
+"@@defbuiltin foo (bar)\n"
+"Explicação\n"
+"@@end defblock\n"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:13553
 msgid "This produces the following result:"
-msgstr ""
+msgstr "Isso produz o seguinte resultado:"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:13556
@@ -35207,11 +35250,13 @@ msgid ""
 "@linemacro defbuiltin {name, args} @defline {Builtin} \\n"
 "ame\\ \\args\\"
 msgstr ""
+"@linemacro defbuiltin {nome, argumentos} @defline {Builtin} \\n"
+"ome\\ \\argumentos\\"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:13561
 msgid "@defblock @defbuiltin foo (bar)  Explanation"
-msgstr ""
+msgstr "@defblock @defbuiltin foo (bar)  Explicação"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:13566
@@ -35220,6 +35265,9 @@ msgid ""
 "ame\\} appears in the macro body.  Likewise, @samp{(bar)} is substituted for "
 "@samp{\\args\\}."
 msgstr ""
+"Aqui, o primeiro argumento é @samp{foo} e é substituído onde @samp{\\n"
+"ome\\} aparecer no corpo da macro.  Da mesma forma, @samp{(bar)} é "
+"substituído por @samp{\\argumentos\\}."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:13573
@@ -35231,6 +35279,12 @@ msgid ""
 "argument in the argument list without surrounding braces (as in the example "
 "below)."
 msgstr ""
+"Você consegue incluir espaços em um argumento de macro envolvendo o "
+"argumento entre chaves.  Qualquer par de chaves circundando um argumento é "
+"removido antes da substituição.  Quaisquer argumentos vazios (incluindo o "
+"último) precisam ser fornecidos como @samp{@{@}}.  Além disso, espaços "
+"não iniciais podem aparecer no argumento final na lista de argumentos sem "
+"chaves envolventes (como no exemplo abaixo)."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:13580
@@ -35242,11 +35296,18 @@ msgid ""
 "@samp{@@@var{<newline>}} sequence must be in a valid context, such as a "
 "definition line (@pxref{Def Cmd Continuation Lines})."
 msgstr ""
+"Se uma linha de argumento para uma macro de linha terminar com um caractere "
+"@samp{@@}, então esse caractere, juntamente com a nova linha subsequente, "
+"será incluído em um argumento de macro, e a linha seguinte no arquivo de "
+"entrada também será usada para obter os argumentos para a macro.  Observe "
+"que qualquer substituição da sequência @samp{@@@var{<nova linha>}} "
+"precisa estar em um contexto válido, como uma linha de definição "
+"(@pxref{Linhas de Continuação de Comando de Definição})."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:13582
 msgid "Another example:"
-msgstr ""
+msgstr "Outro exemplo:"
 
 #. type: example
 #: texinfo/texinfo.texi:13588
@@ -35260,6 +35321,13 @@ msgid ""
 "@@end linemacro\n"
 "\n"
 msgstr ""
+"@@linemacro deffunc @{tipo, nome, argumentos@}\n"
+"@@findex \\n"
+"ome\\\n"
+"@@deftypeline @{Func@} @{\\tipo\\@} \\n"
+"ome\\ \\argumentos\\\n"
+"@@end linemacro\n"
+"\n"
 
 #. type: example
 #: texinfo/texinfo.texi:13594
@@ -35271,6 +35339,11 @@ msgid ""
 "Explanation\n"
 "@@end defblock\n"
 msgstr ""
+"@@defblock\n"
+"@@deffunc @{long int@} F (int @@var@{um@}, int @@var@{dois@}, @@\n"
+"int @@var@{três@}, int @@var@{quatro@}, int @@var@{cinco@})\n"
+"Explicação\n"
+"@@end defblock\n"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:13600
@@ -35279,6 +35352,9 @@ msgid ""
 "the @code{type} argument contains a space.  This example produces the output "
 "below and enters an index entry for @code{F}."
 msgstr ""
+"Observe como as chaves são necessárias em torno de @samp{\\tipo\\} no "
+"corpo da macro caso o argumento @code{tipo} contenha um espaço.  Esse "
+"exemplo produz a saída abaixo e insere uma entrada de índice para @code{F}."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:13604
@@ -35286,6 +35362,9 @@ msgid ""
 "@linemacro deffunc {type, name, args} @deftypeline {Func} {\\type\\} \\n"
 "ame\\ \\args\\"
 msgstr ""
+"@linemacro deffunc {tipo, nome, argumentos} @deftypeline {Func} {\\tipo\\} "
+"\\n"
+"ome\\ \\argumentos\\"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:13610
@@ -35293,6 +35372,8 @@ msgid ""
 "@defblock @deffunc {long int} F (int @var{one}, int @var{two}, @ int "
 "@var{three}, int @var{four}, int @var{five})  Explanation"
 msgstr ""
+"@defblock @deffunc {long int} F (int @var{um}, int @var{dois}, @ int "
+"@var{três}, int @var{quatro}, int @var{cinco})  Explicação"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:13616
@@ -35302,35 +35383,39 @@ msgid ""
 "(@command{texi2any} and @TeX{} with @file{texinfo.tex}) for macros defined "
 "with @code{@@linemacro} than for those defined with @code{@@macro}."
 msgstr ""
+"Macros de linha produzem um número inteiro de linhas de saída na expansão "
+"delas.  Pode existir melhor compatibilidade entre os processadores Texinfo "
+"(@command{texi2any} e @TeX{} com @file{texinfo.tex}) para macros definidas "
+"com @code{@@linemacro} que para aquelas definidas com @code{@@macro}."
 
 #. type: node
 #: texinfo/texinfo.texi:13618
 #, no-wrap
 msgid "@code{@@definfoenclose}"
-msgstr ""
+msgstr "@code{@@definfoenclose}"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:13620
 msgid "@nodedescription Customized highlighting."
-msgstr ""
+msgstr "@nodedescription Realçamento personalizado."
 
 #. type: section
 #: texinfo/texinfo.texi:13620
 #, no-wrap
 msgid "@code{@@definfoenclose}: Customized Highlighting"
-msgstr ""
+msgstr "@code{@@definfoenclose}: Realçamento Personalizado"
 
 #. type: findex
 #: texinfo/texinfo.texi:13623 texinfo/texinfo.texi:13624
 #, no-wrap
 msgid "definfoenclose"
-msgstr ""
+msgstr "definfoenclose"
 
 #. type: cindex
 #: texinfo/texinfo.texi:13623
 #, no-wrap
 msgid "Highlighting, customized"
-msgstr ""
+msgstr "Realçamento, personalizado"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:13630
@@ -35340,6 +35425,10 @@ msgid ""
 "@code{@@definfoenclose} marks text by enclosing it in strings that precede "
 "and follow the text."
 msgstr ""
+"Um comando @code{@@definfoenclose} pode ser usado para definir um comando de "
+"realçamento para formatos de saída em linha.  Um comando definido usando "
+"@code{@@definfoenclose} marca o texto circundando-o em sequências de "
+"caracteres que precedem e seguem o texto."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:13634
@@ -35348,6 +35437,9 @@ msgid ""
 "you use it.  Support for @code{@@definfoenclose} may be removed in future "
 "releases of Texinfo."
 msgstr ""
+"Na prática, existe pouco uso para esse comando e nós não recomendamos o "
+"uso dele.  O suporte para @code{@@definfoenclose} possivelmente seja "
+"removido em lançamentos futuros do Texinfo."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:13641
@@ -35359,6 +35451,12 @@ msgid ""
 "end delimiter string.  The latter two arguments enclose the highlighted text "
 "in the output."
 msgstr ""
+"Escreva um comando @code{@@definfoenclose} no início de uma linha seguido "
+"por três argumentos separados por vírgula.  O primeiro argumento para "
+"@code{@@definfoenclose} é o nome do comando @@ (sem o @code{@@}); o segundo "
+"argumento é a sequência de caracteres delimitadora inicial; e o terceiro "
+"argumento é a sequência de caracteres delimitadora final.  Os dois "
+"últimos argumentos circundam o texto realçado na saída."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:13647
@@ -35369,6 +35467,12 @@ msgid ""
 "otherwise, the end delimiter string you intended will naturally be "
 "(mis)interpreted as the start delimiter string."
 msgstr ""
+"Uma sequência de caracteres delimitadora pode conter espaços.  Nem o "
+"delimitador inicial nem o final são exigidos.  Se você não quiser um "
+"delimitador inicial, mas quiser um delimitador final, você precisa seguir o "
+"nome do comando com duas vírgulas em uma linha; do contrário, a sequência "
+"de caracteres delimitadora final que você pretendia será naturalmente "
+"(mal)interpretada como a sequência de caracteres delimitadora inicial."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:13650
@@ -35376,23 +35480,26 @@ msgid ""
 "An enclosure command defined this way takes one argument in braces, since it "
 "is intended for new markup commands (@pxref{Marking Text})."
 msgstr ""
+"Um comando de circundação definido dessa maneira recebe um argumento entre "
+"chaves, pois é destinado para novos comandos de marcação (@pxref{Marcando "
+"Texto})."
 
 #. type: findex
 #: texinfo/texinfo.texi:13651
 #, no-wrap
 msgid "phoo"
-msgstr ""
+msgstr "phoo"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:13653
 msgid "For example, you can write:"
-msgstr ""
+msgstr "Por exemplo, você pode escrever:"
 
 #. type: example
 #: texinfo/texinfo.texi:13656
 #, no-wrap
 msgid "@@definfoenclose phoo,//,\\\\\n"
-msgstr ""
+msgstr "@@definfoenclose phoo,//,\\\\\n"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:13663
@@ -35402,11 +35509,15 @@ msgid ""
 "argument to @code{@@phoo}.  You can then write @code{@@phoo@{bar@}} wherever "
 "you want `//bar\\\\' highlighted in Info and HTML."
 msgstr ""
+"perto do início de um arquivo do Texinfo para definir @code{@@phoo} como um "
+"comando de formatação do Info e HTML que insira `//' antes e `\\\\' depois "
+"do argumento para para @code{@@phoo}.  Você pode então escrever "
+"@code{@@phoo@{bar@}} onde quiser `//bar\\\\' realçado no Info e HTML."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:13665
 msgid "For @TeX{} formatting, you could write"
-msgstr ""
+msgstr "Para formatação do @TeX{}, você poderia escrever"
 
 #. type: example
 #: texinfo/texinfo.texi:13670
@@ -35416,6 +35527,9 @@ msgid ""
 "@@alias phoo = i\n"
 "@@end iftex\n"
 msgstr ""
+"@@iftex\n"
+"@@alias phoo = i\n"
+"@@end iftex\n"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:13675
@@ -35423,6 +35537,8 @@ msgid ""
 "to define @code{@@phoo} as a command that causes @TeX{} to typeset the "
 "argument to @code{@@phoo} in italics."
 msgstr ""
+"para definir @code{@@phoo} como um comando que faz com que o @TeX{} "
+"tipografe o argumento para @code{@@phoo} em itálico."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:13684
@@ -35435,6 +35551,14 @@ msgid ""
 "@LaTeX{} output, their argument is output as-is.  An @code{@@alias} could "
 "also be used for these formats."
 msgstr ""
+"Cada definição se aplica ao próprio formatador dela: uma para @TeX{}, o "
+"outra para formatos em linha.  As definições do @TeX{} precisam estar em "
+"@samp{@@iftex}.  O comando @code{@@definfoenclose} não precisa estar em "
+"@samp{@@ifinfo}, a menos que você queira usar definições diferentes para "
+"diferentes formatos de saída em linha.  Comandos definidos do "
+"@code{@@definfoenclose} não tem efeito na saída DocBook e @LaTeX{}; os "
+"argumentos deles são gerados como são.  Um @code{@@alias} também poderia "
+"ser usado para esses formatos."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:13687
