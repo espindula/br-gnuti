@@ -16,8 +16,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Texinfo 7.1\n"
 "Report-Msgid-Bugs-To: jafesp@gmail.com\n"
-"POT-Creation-Date: 2025-05-06 02:07-0300\n"
-"PO-Revision-Date: 2025-05-06 01:01-0300\n"
+"POT-Creation-Date: 2025-05-06 19:48-0300\n"
+"PO-Revision-Date: 2025-05-06 21:00-0300\n"
 "Last-Translator: Jamenson Ferreira Espindula de Almeida Melo "
 "<jafesp@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -34464,88 +34464,87 @@ msgstr "Ambos: a.\n"
 #: texinfo/texinfo.texi:13205
 #, no-wrap
 msgid "Macro Details"
-msgstr ""
+msgstr "Detalhes de Macro"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:13207
 msgid "@nodedescription Limitations of Texinfo macros."
-msgstr ""
+msgstr "@nodedescription Limitações das macros do Texinfo."
 
 #. type: section
 #: texinfo/texinfo.texi:13207
 #, no-wrap
 msgid "Macro Details and Caveats"
-msgstr ""
+msgstr "Detalhes e Ressalvas de Macro"
 
 #. type: cindex
 #: texinfo/texinfo.texi:13208
 #, no-wrap
 msgid "Macro details"
-msgstr ""
+msgstr "Detalhes de macro"
 
 #. type: cindex
 #: texinfo/texinfo.texi:13209
 #, no-wrap
 msgid "Details of macro usage"
-msgstr ""
+msgstr "Detalhes do uso de macro"
 
 #. type: cindex
 #: texinfo/texinfo.texi:13210
 #, no-wrap
 msgid "Caveats for macro usage"
-msgstr ""
+msgstr "Ressalvas para uso de macro"
 
 #. type: cindex
 #: texinfo/texinfo.texi:13212
 #, no-wrap
 msgid "Macro expansion, contexts for"
-msgstr ""
+msgstr "Expansão de macro, contextos para"
 
 #. type: cindex
 #: texinfo/texinfo.texi:13213
 #, no-wrap
 msgid "Expansion of macros, contexts for"
-msgstr ""
+msgstr "Expansão das macros, contextos para"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:13215
 msgid "By design, macro expansion should not happen in the following contexts:"
 msgstr ""
+"Por projeto, expansão de macro não deveria acontecer nos seguintes "
+"contextos:"
 
 #. type: item
 #: texinfo/texinfo.texi:13217
 #, no-wrap
 msgid "@code{@@macro} and @code{@@unmacro} lines;"
-msgstr ""
+msgstr "linhas @code{@@macro} e @code{@@unmacro};"
 
 #. type: item
 #: texinfo/texinfo.texi:13219
 #, no-wrap
 msgid "@code{@@if...} lines, including @code{@@ifset} and similar;"
-msgstr ""
+msgstr "linhas @code{@@if...}, incluindo @code{@@ifset} e similares;"
 
 #. type: item
 #: texinfo/texinfo.texi:13221
 #, no-wrap
 msgid "@code{@@set}, @code{@@clear}, @code{@@value};"
-msgstr ""
+msgstr "@code{@@set}, @code{@@clear}, @code{@@value};"
 
 #. type: item
 #: texinfo/texinfo.texi:13223
 #, no-wrap
 msgid "@code{@@clickstyle} lines;"
-msgstr ""
-
-#. type: item
-#: texinfo/texinfo.texi:13225
-#, no-wrap
-msgid "@code{@@end} lines when there is no macro expansion in the block"
-msgstr ""
+msgstr "linhas @code{@@clickstyle};"
 
 #. type: itemize
 #: texinfo/texinfo.texi:13227
-msgid "command."
+msgid ""
+"@code{@@end} lines when there is no macro expansion in the block command."
 msgstr ""
+"linhas @code{@@end} quando não existir expansão de macro no comando de "
+"bloco."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:13232
@@ -34553,6 +34552,8 @@ msgid ""
 "Unfortunately, @TeX{} may do some expansion in these situations, possibly "
 "yielding errors."
 msgstr ""
+"Infelizmente, o @TeX{} pode fazer alguma expansão nessas situações, "
+"possivelmente gerando erros."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:13241
@@ -34565,11 +34566,21 @@ msgid ""
 "reliably, eschew Texinfo macros altogether and use a language designed for "
 "macro processing, such as M4 (@pxref{External Macro Processors})."
 msgstr ""
+"Também, algumas construções relacionadas a macro causam problemas com "
+"@TeX{}; algumas das ressalvas estão listadas abaixo.  Portanto, se você "
+"obtiver erros relacionados a macro ao produzir a versão impressa de um "
+"manual, você pode tentar expandir as macros com @command{texi2any} "
+"invocando @command{texi2dvi} com a opção @samp{-E} (@pxref{Formatar com "
+"@command{texi2dvi}}).  Ou, mais confiavelmente, evite completamente as "
+"macros do Texinfo e use uma linguagem projetada para processamento de "
+"macros, como M4 (@pxref{Processadores Externos de Macro})."
 
 #. type: itemize
 #: texinfo/texinfo.texi:13245
 msgid "As mentioned earlier, macro names must consist entirely of letters."
 msgstr ""
+"Como mencionado anteriormente, os nomes de macro precisam consistir "
+"inteiramente de letras."
 
 #. type: itemize
 #: texinfo/texinfo.texi:13251
@@ -34578,11 +34589,16 @@ msgid ""
 "command name as a macro. Unfortunately, this is a large and open-ended set "
 "of names, and the possible resulting errors are unpredictable."
 msgstr ""
+"Não é aconselhável redefinir nenhum nome de comando primitivo do @TeX{}, "
+"simples ou Texinfo, como uma macro.  Infelizmente, esse é um conjunto de "
+"nomes grande e aberto, e os possíveis erros resultantes são imprevisíveis."
 
 #. type: itemize
 #: texinfo/texinfo.texi:13254
 msgid "Arguments to macros taking more than one argument cannot cross lines."
 msgstr ""
+"Argumentos para macros recebendo mais que um argumento não podem cruzar "
+"linhas."
 
 #. type: itemize
 #: texinfo/texinfo.texi:13260
@@ -34592,6 +34608,10 @@ msgid ""
 "containing line-oriented commands or text, such as @code{@@example} "
 "environments, may behave unpredictably in @TeX{}."
 msgstr ""
+"Macros contendo um comando que precise estar em uma linha própria, como um "
+"condicional, não podem ser invocadas no meio de uma linha.  Similarmente, "
+"macros contendo comandos orientados a linha ou texto, como ambientes "
+"@code{@@example}, possivelmente se comportem imprevisivelmente no @TeX{}."
 
 #. type: itemize
 #: texinfo/texinfo.texi:13265
@@ -34600,11 +34620,15 @@ msgid ""
 "may end up being typeset as literal text (including an ``@@'' sign), instead "
 "of being interpreted with their intended meaning."
 msgstr ""
+"Comandos do Texinfo na expansão de uma macro no texto de uma entrada de "
+"índice podem acabar sendo tipografados como texto literal (incluindo um "
+"sinal ``@@''), em vez de serem interpretados com o significado pretendido "
+"deles."
 
 #. type: itemize
 #: texinfo/texinfo.texi:13268
 msgid "White space is ignored at the beginnings of lines."
-msgstr ""
+msgstr "Espaços em branco são ignorados no início das linhas."
 
 #. type: itemize
 #: texinfo/texinfo.texi:13272
@@ -34612,6 +34636,8 @@ msgid ""
 "Macros can't be reliably used in the argument to accent commands "
 "(@pxref{Inserting Accents})."
 msgstr ""
+"Macros não podem ser usadas confiavelmente no argumento para comandos de "
+"acento (@pxref{Inserindo Acentos})."
 
 #. type: itemize
 #: texinfo/texinfo.texi:13276
@@ -34619,6 +34645,8 @@ msgid ""
 "The backslash escape for commas in macro arguments does not work; "
 "@code{@@comma@{@}} must be used."
 msgstr ""
+"O escape de barra invertida para vírgulas em argumentos de macro não "
+"funciona; @code{@@comma@{@}} precisa ser usado."
 
 #. type: itemize
 #: texinfo/texinfo.texi:13284
@@ -34630,6 +34658,13 @@ msgid ""
 "necessary any more, as the final newline before @samp{@@end macro} is not "
 "included in the macro body anyway."
 msgstr ""
+"Terminar um corpo de macro com @samp{@@c} pode fazer com que o texto "
+"seguinte a invocação da macro seja ignorado como um comentário no "
+"@command{texi2any}.  Esse não é o caso ao processar com @TeX{}.  Isso "
+"frequentemente era feito para ``comentar'' uma quebra de linha indesejada no "
+"final de um corpo de macro, mas isso não mais é necessário, pois, de "
+"qualquer maneira, a quebra de linha final antes de @samp{@@end macro} não "
+"é incluída no corpo da macro."
 
 #. type: itemize
 #: texinfo/texinfo.texi:13291
@@ -34639,6 +34674,11 @@ msgid ""
 "is not M4 (or even plain @TeX{}).  It might work with some commands, it "
 "fails with others.  Best not to do it at all.  For instance, this fails:"
 msgstr ""
+"Em geral, você não pode substituir arbitrariamente uma chamada de macro "
+"(ou @code{@@value}) por argumentos de comando do Texinfo, mesmo quando o "
+"texto for o mesmo.  Texinfo não é M4 (nem mesmo @TeX{} simples).  Pode "
+"funcionar com alguns comandos, mas falha com outros.  É melhor não fazer "
+"isso em absoluto.  Por exemplo, isto falha:"
 
 #. type: example
 #: texinfo/texinfo.texi:13297
@@ -34649,6 +34689,10 @@ msgid ""
 "@@end macro\n"
 "@@headings @@offmacro\n"
 msgstr ""
+"@@macro offmacro\n"
+"off\n"
+"@@end macro\n"
+"@@headings @@offmacro\n"
 
 #. type: itemize
 #: texinfo/texinfo.texi:13303
@@ -34657,6 +34701,9 @@ msgid ""
 "it fails with a mysterious error message (namely, @samp{Paragraph ended "
 "before @@headings was complete})."
 msgstr ""
+"Isso parece equivalente a @code{@@headings off}, mas por motivos "
+"@TeX{}nológicos, falha com uma misteriosa mensagem de erro (ou seja, "
+"@samp{Parágrafo terminou antes que @@headings estivesse completo})."
 
 #. type: itemize
 #: texinfo/texinfo.texi:13307
@@ -34664,6 +34711,8 @@ msgid ""
 "Expanding macros in a math context may lead to poor spacing in @TeX{} "
 "output.  For example:"
 msgstr ""
+"Expandir macros em um contexto matemático pode conduzir a um espaçamento "
+"inadequado na saída do @TeX{}.  Por exemplo:"
 
 #. type: example
 #: texinfo/texinfo.texi:13314
@@ -34676,12 +34725,18 @@ msgid ""
 "@@end iftex\n"
 "\n"
 msgstr ""
+"@@iftex\n"
+"@@macro atan\n"
+"\\\\mathop@{\\\\rm atan@}\n"
+"@@end macro\n"
+"@@end iftex\n"
+"\n"
 
 #. type: example
 #: texinfo/texinfo.texi:13316
 #, no-wrap
 msgid "@@math@{@@atan@{@}(x)@}\n"
-msgstr ""
+msgstr "@@math@{@@atan@{@}(x)@}\n"
 
 #. type: itemize
 #: texinfo/texinfo.texi:13321
@@ -34690,6 +34745,9 @@ msgid ""
 "leading to extra space before the opening parenthesis.  You can work around "
 "this by defining a raw @TeX{} macro instead:"
 msgstr ""
+"As chaves seguintes a @samp{@@atan} são tratadas pelo @TeX{} como uma "
+"subfórmula, conduzindo a espaço extra antes do parêntese de abertura.  "
+"Você consegue contornar isso definindo uma macro bruta do @TeX{}:"
 
 #. type: example
 #: texinfo/texinfo.texi:13326
@@ -34699,6 +34757,9 @@ msgid ""
 "\\gdef\\atan#1@{\\mathop@{\\rm atan@}@}\n"
 "@@end tex\n"
 msgstr ""
+"@@tex\n"
+"\\gdef\\atan#1@{\\mathop@{\\rm atan@}@}\n"
+"@@end tex\n"
 
 #. type: itemize
 #: texinfo/texinfo.texi:13330
@@ -34706,6 +34767,8 @@ msgid ""
 "The @samp{#1} in this definition absorbs the braces, so that the spacing is "
 "as expected for the @code{\\mathop} object."
 msgstr ""
+"O @samp{#1} nessa definição absorve as chaves, de forma que o espaçamento "
+"seja o esperado para o objeto @code{\\mathop}."
 
 #. type: itemize
 #: texinfo/texinfo.texi:13335
@@ -34714,6 +34777,9 @@ msgid ""
 "use separate macro definitions inside conditional blocks.  For example, "
 "instead of"
 msgstr ""
+"Se você tiver problemas usando condicionais dentro de uma macro, uma "
+"alternativa é a de usar definições separadas de macro dentro de blocos "
+"condicionais.  Por exemplo, em vez de"
 
 #. type: group
 #: texinfo/texinfo.texi:13346
@@ -34728,11 +34794,19 @@ msgid ""
 "@@end ifnottex\n"
 "@@end macro\n"
 msgstr ""
+"@@macro Mac\n"
+"@@iftex\n"
+"texto para saída do TeX\n"
+"@@end iftex\n"
+"@@ifnottex\n"
+"texto para saída não do TeX\n"
+"@@end ifnottex\n"
+"@@end macro\n"
 
 #. type: itemize
 #: texinfo/texinfo.texi:13351
 msgid "you can do the following instead:"
-msgstr ""
+msgstr "você consegue fazer o seguinte:"
 
 #. type: group
 #: texinfo/texinfo.texi:13359
@@ -34745,6 +34819,12 @@ msgid ""
 "@@end iftex\n"
 "\n"
 msgstr ""
+"@@iftex\n"
+"@@macro Mac\n"
+"texto para saída do TeX\n"
+"@@end macro\n"
+"@@end iftex\n"
+"\n"
 
 #. type: group
 #: texinfo/texinfo.texi:13365
@@ -34756,6 +34836,11 @@ msgid ""
 "@@end macro\n"
 "@@end ifnottex\n"
 msgstr ""
+"@@ifnottex\n"
+"@@macro Mac\n"
+"texto para saída não do TeX\n"
+"@@end macro\n"
+"@@end ifnottex\n"
 
 #. type: itemize
 #: texinfo/texinfo.texi:13373
@@ -34763,6 +34848,8 @@ msgid ""
 "Macros cannot define macros in the natural way.  To do this, you must use "
 "conditionals and raw @TeX{}.  For example:"
 msgstr ""
+"Macros não conseguem definir macros na maneira natural.  Para fazer isso, "
+"você precisa usar condicionais e @TeX{} bruto.  Por exemplo:"
 
 #. type: example
 #: texinfo/texinfo.texi:13386
@@ -34781,11 +34868,23 @@ msgid ""
 "\\gdef\\ctorx#1,#2,@{\\def#1@{something involving #2 somehow@}@}\n"
 "@@end tex\n"
 msgstr ""
+"@@ifnottex\n"
+"@@macro ctor @{nome, arg@}\n"
+"@@macro \\n"
+"ome\\\n"
+"algo envolvendo \\arg\\ de alguma forma\n"
+"@@end macro\n"
+"@@end macro\n"
+"@@end ifnottex\n"
+"@@tex\n"
+"\\gdef\\ctor#1@{\\ctorx#1,@}\n"
+"\\gdef\\ctorx#1,#2,@{\\def#1@{algo envolvendo #2 de alguma forma@}@}\n"
+"@@end tex\n"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:13390
 msgid "The following limitations are by design:"
-msgstr ""
+msgstr "As seguintes limitações são por projeto:"
 
 #. type: itemize
 #: texinfo/texinfo.texi:13399
@@ -34797,6 +34896,13 @@ msgid ""
 "by a backslash.  With @TeX{} another workaround need to be used, therefore "
 "we recommend using such a workaround."
 msgstr ""
+"Se você quiser passar um argumento com o comando @code{@@,} do Texinfo "
+"(para produzir uma cedilha, veja-se @ref{Inserindo Acentos}), você tem de "
+"usar @code{@@value} ou outra solução alternativa.  Caso contrário, a "
+"vírgula pode ser usada como separadora dos argumentos.  Com "
+"@command{texi2any}, a vírgula pode ser escapada por uma barra invertida.  "
+"Com @TeX{}, outra solução alternativa precisa ser usada; portanto, nós "
+"recomendamos usar essa solução alternativa."
 
 #. type: example
 #: texinfo/texinfo.texi:13408
@@ -34808,12 +34914,17 @@ msgid ""
 "@@set fc Fran@@,cois\n"
 "@@mactwo@{@@value@{fc@},@}\n"
 msgstr ""
+"@@macro mactwo@{argprimeiro, argsegundo@}\n"
+"\\argprimeiro\\+\\argsegundo\\.\n"
+"@@end macro\n"
+"@@set fc Fran@@,cois\n"
+"@@mactwo@{@@value@{fc@},@}\n"
 
 #. type: display
 #: texinfo/texinfo.texi:13415
 #, no-wrap
 msgid "Fran@,cois+.\n"
-msgstr ""
+msgstr "Fran@,cois+.\n"
 
 #. type: itemize
 #: texinfo/texinfo.texi:13426
@@ -34823,6 +34934,10 @@ msgid ""
 "(@pxref{@code{@@verbatim}}).  Starting any environment inside a macro and "
 "ending it outside may or may not work, for that matter."
 msgstr ""
+"@code{@@verbatim} e macros não se misturam; por exemplo, você não pode "
+"iniciar um bloco verbatim dentro de uma macro e terminá-lo fora "
+"(@pxref{@code{@@verbatim}}).  Iniciar qualquer ambiente dentro de uma macro "
+"e terminá-lo fora pode ou não funcionar, para esse desiderato."
 
 #. type: itemize
 #: texinfo/texinfo.texi:13433
@@ -34833,6 +34948,12 @@ msgid ""
 "For example, you cannot start a macro definition within a macro, and then "
 "end that nested definition outside the macro."
 msgstr ""
+"Macros que definam macros completamente são corretas, mas não é possível "
+"ter definições de macro aninhadas incompletamente.  Ou seja, "
+"@code{@@macro} e @code{@@end macro} (da mesma forma para @code{@@rmacro}) "
+"precisam ser pareados corretamente.  Por exemplo, você não pode iniciar "
+"uma definição de macro dentro de uma macro e, em seguida, terminar essa "
+"definição aninhada fora da macro."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:13440
@@ -34842,6 +34963,11 @@ msgid ""
 "line-delimited argument (@code{@@chapter}, @code{@@center}, etc.).  This is "
 "no longer the case.  For example:"
 msgstr ""
+"Na implementação do @code{makeinfo} antes do Texinfo 5.0, os fins de "
+"linhas originários da expansão de uma definição do @code{@@macro} não "
+"terminavam um argumento delimitado por linha do comando @@ "
+"(@code{@@chapter}, @code{@@center}, entre outros).  Esse não mais é o "
+"caso.  Por exemplo:"
 
 #. type: example
 #: texinfo/texinfo.texi:13447
@@ -34853,11 +34979,16 @@ msgid ""
 "@@end macro\n"
 "@@center @@twolines@{@}\n"
 msgstr ""
+"@@macro duaslinhas@{@}\n"
+"aaa\n"
+"bbb\n"
+"@@end macro\n"
+"@@center @@duaslinhas@{@}\n"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:13450
 msgid "In the current @code{texi2any}, this is equivalent to:"
-msgstr ""
+msgstr "No @code{texi2any} atual, isso é equivalente a:"
 
 #. type: example
 #: texinfo/texinfo.texi:13454
@@ -34866,6 +34997,8 @@ msgid ""
 "@@center aaa\n"
 "bbb\n"
 msgstr ""
+"@@center aaa\n"
+"bbb\n"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:13459
@@ -34873,12 +35006,14 @@ msgid ""
 "with just @samp{aaa} as the argument to @code{@@center}.  In the earlier "
 "implementation, it would have been parsed as this:"
 msgstr ""
+"com apenas @samp{aaa} como o argumento para @code{@@center}.  Na "
+"implementação anterior, ele teria sido analisado assim:"
 
 #. type: example
 #: texinfo/texinfo.texi:13462
 #, no-wrap
 msgid "@@center aaa bbb\n"
-msgstr ""
+msgstr "@@center aaa bbb\n"
 
 #. type: node
 #: texinfo/texinfo.texi:13465
