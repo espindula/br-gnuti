@@ -17,7 +17,7 @@ msgstr ""
 "Project-Id-Version: Texinfo 7.1\n"
 "Report-Msgid-Bugs-To: jafesp@gmail.com\n"
 "POT-Creation-Date: 2025-05-06 19:48-0300\n"
-"PO-Revision-Date: 2025-05-06 22:30-0300\n"
+"PO-Revision-Date: 2025-05-11 06:36-0300\n"
 "Last-Translator: Jamenson Ferreira Espindula de Almeida Melo "
 "<jafesp@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -35566,35 +35566,37 @@ msgid ""
 "@code{@@definfoenclose} definitions must not be recursive, directly or "
 "indirectly."
 msgstr ""
+"Definições de @samp{@@definfoenclose} precisam não serem recursivas, "
+"direta ou indiretamente."
 
 #. type: node
 #: texinfo/texinfo.texi:13689
 #, no-wrap
 msgid "External Macro Processors"
-msgstr ""
+msgstr "Processadores Externos de Macro"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:13691
 msgid "@nodedescription @code{#line} directives."
-msgstr ""
+msgstr "@nodedescription Diretivas @code{#line}."
 
 #. type: section
 #: texinfo/texinfo.texi:13691
 #, no-wrap
 msgid "External Macro Processors: Line Directives"
-msgstr ""
+msgstr "Processadores Externos de Macro: Diretivas de Linha"
 
 #. type: cindex
 #: texinfo/texinfo.texi:13692
 #, no-wrap
 msgid "External macro processors"
-msgstr ""
+msgstr "Processadores externos de macro"
 
 #. type: cindex
 #: texinfo/texinfo.texi:13693
 #, no-wrap
 msgid "Macro processors, external"
-msgstr ""
+msgstr "Processadores de macro, externos"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:13701
@@ -35605,6 +35607,12 @@ msgid ""
 "you may want to use a different macro processor altogether, such as M4 "
 "(@pxref{Top,,, m4, M4}) or CPP (@pxref{Top,,, cpp, The C Preprocessor})."
 msgstr ""
+"Macros do Texinfo (e os outros recursos dele de substituição de texto) "
+"funcionam bem em casos simples.  Se teu documento precisar de processamento "
+"incomumente complexo, no entanto, a fragilidade e limitações delas podem "
+"ser um problema.  Nesse caso, você possivelmente queira usar um processador "
+"de macro completamente diferente, como M4 (@pxref{Top,,, m4, M4}) ou CPP "
+"(@pxref{Top,,, cpp, O Preprocessador C})."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:13709
@@ -35616,18 +35624,25 @@ msgid ""
 "built-in support for any particular preprocessor, since no one program "
 "seemed likely to suffice for the requirements of all documents."
 msgstr ""
+"Com uma exceção, o Texinfo não precisa saber se a entrada dele é fonte "
+"``original'' ou preprocessada a partir de algum outro arquivo fonte.  "
+"Portanto, você consegue organizar teu sistema de construção para invocar "
+"quaisquer programas que goste para lidar com expansão de macro ou outras "
+"necessidades de pré-processamento.  O Texinfo não oferece suporte interno "
+"para nenhum preprocessador específico, já que nenhum programa parecia ser "
+"suficiente para as exigências de todos os documentos."
 
 #. type: cindex
 #: texinfo/texinfo.texi:13710
 #, no-wrap
 msgid "Line numbers, in error messages"
-msgstr ""
+msgstr "Números de linha, em mensagens de erro"
 
 #. type: cindex
 #: texinfo/texinfo.texi:13711
 #, no-wrap
 msgid "Error messages, line numbers in"
-msgstr ""
+msgstr "Mensagens de erro, números de linha em"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:13716
@@ -35637,29 +35652,33 @@ msgid ""
 "There's a well-known mechanism for this: the so-called @samp{#line} "
 "directive.  Texinfo supports this."
 msgstr ""
+"A única exceção são os números de linha em mensagens de erro.  Nesse "
+"caso, o número de linha deveria se referir ao arquivo fonte original, seja "
+"ele qual for.  Existe um mecanismo bem conhecido para isso: a assim chamada "
+"diretiva @samp{#line}.  O Texinfo suporta isso."
 
 #. type: subsection
 #: texinfo/texinfo.texi:13718 texinfo/texinfo.texi:13719
 #, no-wrap
 msgid "@samp{#line} Directive"
-msgstr ""
+msgstr "Diretiva @samp{#line}"
 
 #. type: cindex
 #: texinfo/texinfo.texi:13721
 #, no-wrap
 msgid "@samp{#line} directive"
-msgstr ""
+msgstr "Diretiva @samp{#line}"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:13724
 msgid "An input line such as this:"
-msgstr ""
+msgstr "Uma linha de entrada como esta:"
 
 #. type: example
 #: texinfo/texinfo.texi:13727
 #, no-wrap
 msgid "@hashchar{}line 100 \"foo.ptexi\"\n"
-msgstr ""
+msgstr "@hashchar{}line 100 \"foo.ptexi\"\n"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:13736
@@ -35670,6 +35689,11 @@ msgid ""
 "Control,,, cpp, The C Preprocessor}, and @ref{Preprocessor Output,,, cpp, "
 "The C Preprocessor}) can generate such lines."
 msgstr ""
+"indica que a próxima linha era a linha 100 do arquivo @file{foo.ptexi}, e, "
+"portanto, isso é ao que uma mensagem de erro deveria se referir.  Tanto M4 "
+"(@pxref{Preprocessor features,,, m4, GNU M4}) quanto CPP (@pxref{Line "
+"Control,,, cpp, O Preprocessador C} e @ref{Preprocessor Output,,, cpp, O "
+"Preprocessador C}) conseguem gerar tais linhas."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:13742
@@ -35680,6 +35704,11 @@ msgid ""
 "(@pxref{Other Customization Variables}), though there is normally no reason "
 "to do so."
 msgstr ""
+"O programa @command{texi2any} reconhece essas linhas por padrão, exceto "
+"dentro dos blocos @code{@@verbatim} (@pxref{@code{@@verbatim}}).  O "
+"reconhecimento delas pode ser desativado completamente com "
+"@code{CPP_LINE_DIRECTIVES} (@pxref{Outras Variáveis de Personalização}), "
+"embora normalmente não exista razão para fazer isso."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:13748
@@ -35690,12 +35719,17 @@ msgid ""
 "(@pxref{Inserting a Hashsign}).  The example line above looks like this in "
 "the source for this manual:"
 msgstr ""
+"Para aqueles poucos programas (M4, CPP, Texinfo) que precisem documentar "
+"diretivas @samp{#line} e, portanto, tem exemplos que, de outra forma, "
+"corresponderiam ao padrão, o comando @code{@@hashchar@{@}} pode ser usado "
+"(@pxref{Inserindo um Símbolo Cerquilha}).  A linha de exemplo acima se "
+"parece com isto no fonte para este manual:"
 
 #. type: example
 #: texinfo/texinfo.texi:13751
 #, no-wrap
 msgid "@@hashchar@{@}line 100 \"foo.ptexi\"\n"
-msgstr ""
+msgstr "@@hashchar@{@}line 100 \"foo.ptexi\"\n"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:13756
@@ -35704,6 +35738,9 @@ msgid ""
 "want to rely on it, you can also use @code{@@set} and @code{@@value} to "
 "insert the literal @samp{#}:"
 msgstr ""
+"O comando @code{@@hashchar} foi adicionado ao Texinfo em 2013.  Se você "
+"não quiser depender dele, você também pode usar @code{@@set} e "
+"@code{@@value} para inserir o literal @samp{#}:"
 
 #. type: example
 #: texinfo/texinfo.texi:13760
@@ -35712,6 +35749,8 @@ msgid ""
 "@@set hash #\n"
 "@@value@{hash@}line 1 \"example.c\"\n"
 msgstr ""
+"@@set hash #\n"
+"@@value@{hash@}line 1 \"exemplo.c\"\n"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:13765
@@ -35720,24 +35759,27 @@ msgid ""
 "@code{@@example}.  As mentioned above, @code{#line}-recognition is disabled "
 "inside verbatim blocks."
 msgstr ""
+"Ou, se adequado, um ambiente @code{@@verbatim} pode ser usado em vez de "
+"@code{@@example}.  Como mencionado acima, o reconhecimento de @code{#line} "
+"é desabilitado dentro de blocos verbatim."
 
 #. type: subsection
 #: texinfo/texinfo.texi:13767 texinfo/texinfo.texi:13768
 #, no-wrap
 msgid "@samp{#line} and @TeX{}"
-msgstr ""
+msgstr "@samp{#line} e @TeX{}"
 
 #. type: cindex
 #: texinfo/texinfo.texi:13770
 #, no-wrap
 msgid "@TeX{} and @samp{#line} directives"
-msgstr ""
+msgstr "@TeX{} e diretivas @samp{#line}"
 
 #. type: cindex
 #: texinfo/texinfo.texi:13771
 #, no-wrap
 msgid "@samp{#line} directive @subentry not processing with @TeX{}"
-msgstr ""
+msgstr "Diretivas @samp{#line} @subentry não processando com @TeX{}"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:13779
@@ -35748,6 +35790,12 @@ msgid ""
 "@TeX{} sees it.  The solution is to use @command{texi2any}'s macro expansion "
 "options before running @TeX{}.  There are three approaches:"
 msgstr ""
+"Conforme mencionado, @command{texi2any} reconhece as diretivas @samp{#line} "
+"descritas na seção anterior.  No entanto, @file{texinfo.tex} não "
+"reconhece e não consegue reconhecer.  Portanto, tal linha será "
+"incorretamente tipografada literal se @TeX{} a vir.  A solução é a de "
+"usar as opções de expansão de macro do @command{texi2any} antes de se "
+"executar o @TeX{}.  Existem três abordagens:"
 
 #. type: itemize
 #: texinfo/texinfo.texi:13786
@@ -35756,6 +35804,10 @@ msgid ""
 "@command{texi2dvi}}), you can pass @option{-E} and @command{texi2dvi} will "
 "run @command{texi2any} first to expand macros and eliminate @samp{#line}."
 msgstr ""
+"Se você executar @command{texi2dvi} ou as variantes dele (@pxref{Formatar "
+"com @command{texi2dvi}}), poderá passar @option{-E} e @command{texi2dvi} "
+"executará @command{texi2any} primeiro para expandir macros e eliminar "
+"@samp{#line}."
 
 #. type: itemize
 #: texinfo/texinfo.texi:13791
@@ -35764,6 +35816,9 @@ msgid ""
 "-E somefile.out}, and then give @file{somefile.out} to @command{texi2dvi} in "
 "a separate command."
 msgstr ""
+"Se você executar @command{texi2any}, poderá especificar "
+"@option{--no-ifinfo --iftex -E algumarquivo.out} e, em seguida, fornecer "
+"@file{algumarquivo.out} para @code{texi2dvi} em um comando separado."
 
 #. type: itemize
 #: texinfo/texinfo.texi:13796
@@ -35772,12 +35827,15 @@ msgid ""
 "instead of @option{--dvi}.)  @command{texi2any} will then call "
 "@command{texi2dvi -E}."
 msgstr ""
+"Ou você pode executar @option{texi2any --dvi --Xopt -E}.  (Ou "
+"@option{--pdf} em vez de @option{--dvi}.)  @command{texi2any} então "
+"chamará @command{texi2dvi -E}."
 
 #. type: findex
 #: texinfo/texinfo.texi:13798
 #, no-wrap
 msgid "errormsg@r{, and line numbers in @TeX{}}"
-msgstr ""
+msgstr "errormsg@r{, e números de linha no @TeX{}}"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:13805
@@ -35788,6 +35846,12 @@ msgid ""
 "(incorrect) line numbers from the derived file which @TeX{} is reading, "
 "rather than the preprocessor-specified line numbers."
 msgstr ""
+"Uma última ressalva relativa ao uso com @TeX{}: como as diretivas "
+"@code{#line} não são reconhecidas, os números de linha emitidos pelo "
+"comando @code{@@errormsg@{@}} (@pxref{Comandos Condicionais}), ou pelo "
+"próprio @TeX{}, são os números de linha (incorretos) provenientes do "
+"arquivo derivado que o @TeX{} estiver lendo, em vez dos números de linha "
+"especificados pelo preprocessador."
 
 #. type: subsection
 #: texinfo/texinfo.texi:13807 texinfo/texinfo.texi:13808
