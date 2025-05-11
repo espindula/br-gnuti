@@ -17,7 +17,7 @@ msgstr ""
 "Project-Id-Version: Texinfo 7.1\n"
 "Report-Msgid-Bugs-To: jafesp@gmail.com\n"
 "POT-Creation-Date: 2025-05-06 19:48-0300\n"
-"PO-Revision-Date: 2025-05-11 06:36-0300\n"
+"PO-Revision-Date: 2025-05-11 07:09-0300\n"
 "Last-Translator: Jamenson Ferreira Espindula de Almeida Melo "
 "<jafesp@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -35857,25 +35857,25 @@ msgstr ""
 #: texinfo/texinfo.texi:13807 texinfo/texinfo.texi:13808
 #, no-wrap
 msgid "@samp{#line} Syntax Details"
-msgstr ""
+msgstr "Detalhes da Sintaxe da @samp{#line}"
 
 #. type: cindex
 #: texinfo/texinfo.texi:13810
 #, no-wrap
 msgid "@samp{#line} directive @subentry syntax details"
-msgstr ""
+msgstr "Diretiva @samp{#line} @subentry detalhes da sintaxe"
 
 #. type: cindex
 #: texinfo/texinfo.texi:13811
 #, no-wrap
 msgid "Syntax details, @samp{#line}"
-msgstr ""
+msgstr "Detalhes da sintaxe, @samp{#line}"
 
 #. type: cindex
 #: texinfo/texinfo.texi:13812
 #, no-wrap
 msgid "Regular expression, for @samp{#line}"
-msgstr ""
+msgstr "Expressão regular, para @samp{#line}"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:13820
@@ -35887,12 +35887,19 @@ msgid ""
 "like to know the gory details, the actual (Perl) regular expression which is "
 "matched is this:"
 msgstr ""
+"Detalhes de sintaxe para a diretiva @samp{#line}: o caractere @samp{#} pode "
+"ser precedido ou seguido por espaço em branco, a palavra @samp{line} é "
+"opcional, e o nome do arquivo pode ser seguido por uma lista de inteiros "
+"separados por espaços em branco (esses são os assim chamados "
+"``sinalizadores'' gerados  pelo CPP em alguns casos).  Para aqueles(as) que "
+"gostam de saber os detalhes sangrentos, a expressão regular (Perl) real que "
+"é correspondida é esta:"
 
 #. type: example
 #: texinfo/texinfo.texi:13823
 #, no-wrap
 msgid "/^\\s*#\\s*(line)? (\\d+)(( \"([^\"]+)\")(\\s+\\d+)*)?\\s*$/\n"
-msgstr ""
+msgstr "/^\\s*#\\s*(line)? (\\d+)(( \"([^\"]+)\")(\\s+\\d+)*)?\\s*$/\n"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:13828
@@ -35900,6 +35907,9 @@ msgid ""
 "As far as we've been able to tell, the trailing integer flags only occur in "
 "conjunction with a file name, so that is reflected in the regular expression."
 msgstr ""
+"Até onde nós podemos dizer, os sinalizadores de inteiros finais somente "
+"ocorrem em conjunto com um nome de arquivo, de forma que isso é refletido "
+"na expressão regular."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:13831
@@ -35907,12 +35917,14 @@ msgid ""
 "As an example, the following is a syntactically valid @samp{#line} "
 "directive, meaning line 1 of @file{/usr/include/stdio.h}:"
 msgstr ""
+"Como exemplo, a seguir está uma diretiva @samp{#line} sintaticamente "
+"válida, ou seja, a linha 1 de @file{/usr/include/stdio.h}:"
 
 #. type: example
 #: texinfo/texinfo.texi:13834
 #, no-wrap
 msgid "@hashchar{} 1 \"/usr/include/stdio.h\" 2 3 4\n"
-msgstr ""
+msgstr "@hashchar{} 1 \"/usr/include/stdio.h\" 2 3 4\n"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:13840
@@ -35922,35 +35934,42 @@ msgid ""
 "single file.  Since the @samp{line} is also optional, the result is that "
 "lines might match which you wouldn't expect, e.g.,"
 msgstr ""
+"Infelizmente, o nome de arquivo aspeado (@samp{\"...\"}) tem que ser "
+"opcional, porque o M4 (especialmente) frequentemente pode gerar diretivas "
+"@samp{#line} dentro de um arquivo.  Como o @samp{line} também é opcional, "
+"o resultado é que as linhas podem corresponder ao que você não esperaria, "
+"por exemplo,"
 
 #. type: example
 #: texinfo/texinfo.texi:13843
 #, no-wrap
 msgid "@hashchar{} 1\n"
-msgstr ""
+msgstr "@hashchar{} 1\n"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:13846
 msgid ""
 "The possible solutions are described above (@pxref{@samp{#line} Directive})."
 msgstr ""
+"As soluções possíveis estão descritas acima (@pxref{Diretiva "
+"@samp{#line}})."
 
 #. type: chapter
 #: texinfo/texinfo.texi:13848 texinfo/texinfo.texi:13850
 #, no-wrap
 msgid "Include Files"
-msgstr ""
+msgstr "Arquivos de Inclusão"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:13850
 msgid "@nodedescription How to incorporate other Texinfo files."
-msgstr ""
+msgstr "@nodedescription Como incorporar outros arquivos do Texinfo."
 
 #. type: cindex
 #: texinfo/texinfo.texi:13852
 #, no-wrap
 msgid "Include files"
-msgstr ""
+msgstr "Inclusão de Arquivos"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:13859
@@ -35961,29 +35980,34 @@ msgid ""
 "let you keep a single large document as a collection of conveniently small "
 "parts."
 msgstr ""
+"Quando um processador do Texinfo vê um comando @code{@@include} em um "
+"arquivo do Texinfo, ele processa o conteúdo do arquivo nomeado pelo "
+"@code{@@include} e o incorpora aos arquivos de saída sendo criados.  "
+"Arquivos de inclusão permitem que você mantenha um documento grande como "
+"uma coleção de partes convenientemente pequenas."
 
 #. type: node
 #: texinfo/texinfo.texi:13861
 #, no-wrap
 msgid "Using Include Files"
-msgstr ""
+msgstr "Usando Arquivos de Inclusão"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:13863
 msgid "@nodedescription How to use the @code{@@include} command."
-msgstr ""
+msgstr "@nodedescription Como usar o comando @code{@@include}."
 
 #. type: section
 #: texinfo/texinfo.texi:13863
 #, no-wrap
 msgid "How to Use Include Files"
-msgstr ""
+msgstr "Como Usar Arquivos de Inclusão"
 
 #. type: findex
 #: texinfo/texinfo.texi:13865
 #, no-wrap
 msgid "include"
-msgstr ""
+msgstr "include"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:13870
@@ -35992,12 +36016,15 @@ msgid ""
 "command at the beginning of a line and follow it on the same line by the "
 "name of a file to be included.  For example:"
 msgstr ""
+"Para incluir outro arquivo em um arquivo do Texinfo, escreva o comando "
+"@code{@@include} no começo de uma linha e siga-o na mesma linha pelo nome "
+"de um arquivo a ser incluído.  Por exemplo:"
 
 #. type: example
 #: texinfo/texinfo.texi:13873
 #, no-wrap
 msgid "@@include buffers.texi\n"
-msgstr ""
+msgstr "@@include buffers.texi\n"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:13879
@@ -36007,6 +36034,10 @@ msgid ""
 "@code{@@@{}, @code{@@@}} and associated @@-commands such as "
 "@code{@@atchar@{@}}."
 msgstr ""
+"As referências a @code{@@value@{@var{var}@}} são expandidas na linha "
+"@code{@@include}.  Além disso, os únicos comandos @@ permitidos são "
+"@code{@@@@}, @code{@@@{}, @code{@@@}} e comandos @@ associados, como "
+"@code{@@atchar@{@}}."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:13888
@@ -36019,6 +36050,14 @@ msgid ""
 "file literally.  Likewise, you should not end an included file with a "
 "@code{@@bye} command; nothing after @code{@@bye} is formatted."
 msgstr ""
+"Um arquivo incluído deveria ser simplesmente um segmento de texto que você "
+"espera que seja incluído como está no arquivo geral do Texinfo ou no "
+"@dfn{exterior}; ele não deveria conter as partes padrão de início e fim "
+"de um arquivo do Texinfo.  Em particular, você não deveria iniciar um "
+"arquivo incluído com uma linha dizendo @samp{\\input texinfo}; se fizer "
+"isso, esse texto será inserido no arquivo de saída literalmente.  Da mesma "
+"forma, você não deveria terminar um arquivo incluído com um comando "
+"@code{@@bye}; nada depois de @code{@@bye} é formatado."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:13893
@@ -36028,6 +36067,10 @@ msgid ""
 "matter whether you write such a line.  If an @code{@@setfilename} line "
 "exists in an included file, it is ignored."
 msgstr ""
+"No passado distante, você era obrigado(a) a escrever uma linha "
+"@code{@@setfilename} no início de um arquivo incluído, mas não mais.  "
+"Agora, não importa se você escrever tal linha.  Se uma linha "
+"@code{@@setfilename} existir em um arquivo incluído, ela será ignorada."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:13897
@@ -36036,6 +36079,9 @@ msgid ""
 "update node pointers and master menu with multiple include files.  "
 "@xref{Update Multiple Files}."
 msgstr ""
+"O modo Texinfo do GNU Emacs fornece @code{texinfo-multiple-files-update} "
+"para atualizar ponteiros de nós e menu mestre com vários arquivos de "
+"inclusão.  @xref{Atualizar Vários Arquivos}."
 
 #. type: node
 #: texinfo/texinfo.texi:13899
