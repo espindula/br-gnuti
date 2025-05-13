@@ -17,7 +17,7 @@ msgstr ""
 "Project-Id-Version: Texinfo 7.1\n"
 "Report-Msgid-Bugs-To: jafesp@gmail.com\n"
 "POT-Creation-Date: 2025-05-12 22:35-0300\n"
-"PO-Revision-Date: 2025-05-12 23:00-0300\n"
+"PO-Revision-Date: 2025-05-13 01:05-0300\n"
 "Last-Translator: Jamenson Ferreira Espindula de Almeida Melo "
 "<jafesp@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -37063,30 +37063,30 @@ msgstr ""
 #: texinfo/texinfo.texi:14288 texinfo/texinfo.texi:14290
 #, no-wrap
 msgid "Format with @command{tex}/@command{texindex}"
-msgstr ""
+msgstr "Formatar com @command{tex}/@command{texindex}"
 
 #. type: itemize
 #: texinfo/texinfo.texi:14290
 msgid "@nodedescription Formatting with explicit shell commands."
-msgstr ""
+msgstr "@nodedescription Formatando com comandos explícitos de shell."
 
 #. type: cindex
 #: texinfo/texinfo.texi:14292
 #, no-wrap
 msgid "Shell formatting with @command{tex} and @command{texindex}"
-msgstr ""
+msgstr "Formatação de shell com @command{tex} e @command{texindex}"
 
 #. type: cindex
 #: texinfo/texinfo.texi:14293
 #, no-wrap
 msgid "Formatting with @command{tex} and @command{texindex}"
-msgstr ""
+msgstr "Formatando com @command{tex} e @command{texindex}"
 
 #. type: cindex
 #: texinfo/texinfo.texi:14294
 #, no-wrap
 msgid "DVI file"
-msgstr ""
+msgstr "Arquivo DVI"
 
 #. type: itemize
 #: texinfo/texinfo.texi:14299
@@ -37094,12 +37094,15 @@ msgid ""
 "You can do the basic formatting of a Texinfo file with the shell command "
 "@command{tex} followed by the name of the Texinfo file.  For example:"
 msgstr ""
+"Você pode fazer a formatação básica de um arquivo do Texinfo com o "
+"comando de shell @command{tex} seguido pelo nome do arquivo do Texinfo.  Por "
+"exemplo:"
 
 #. type: example
 #: texinfo/texinfo.texi:14302
 #, no-wrap
 msgid "tex foo.texi\n"
-msgstr ""
+msgstr "tex foo.texi\n"
 
 #. type: itemize
 #: texinfo/texinfo.texi:14309
@@ -37109,12 +37112,17 @@ msgid ""
 "(for @dfn{DeVice Independent} file) can be printed on virtually any device, "
 "perhaps after a further conversion (see the previous section)."
 msgstr ""
+"@TeX{} produzirá um @dfn{arquivo DVI}, bem como vários arquivos auxiliares "
+"contendo informações para índices, referências cruzadas, entre outros.  "
+"O arquivo DVI (para arquivo @dfn{DeVice Independent}) pode ser impresso em "
+"praticamente qualquer dispositivo, talvez depois de uma conversão adicional "
+"(veja-se a seção anterior)."
 
 #. type: pindex
 #: texinfo/texinfo.texi:14310
 #, no-wrap
 msgid "texindex"
-msgstr ""
+msgstr "texindex"
 
 #. type: itemize
 #: texinfo/texinfo.texi:14317
@@ -37126,18 +37134,24 @@ msgid ""
 "(@command{texi2dvi}, described in the previous section, runs @command{tex} "
 "and @command{texindex} as necessary.)"
 msgstr ""
+"O comando de formatação @command{tex} em si não ordena os índices; ele "
+"escreve um arquivo de saída dos dados desordenados de índices.  Para gerar "
+"um índice impresso depois de executar o comando @command{tex}, você "
+"primeiro precisa de um índice ordenado para trabalhar.  O comando "
+"@command{texindex} ordena índices. (@command{texi2dvi}, descrito na seção "
+"anterior, executa @command{tex} e @command{texindex} conforme necessário.)"
 
 #. type: cindex
 #: texinfo/texinfo.texi:14319
 #, no-wrap
 msgid "Names of index files"
-msgstr ""
+msgstr "Nomes dos arquivos de índice"
 
 #. type: cindex
 #: texinfo/texinfo.texi:14320
 #, no-wrap
 msgid "Index file names"
-msgstr ""
+msgstr "Nomes de arquivos de índice"
 
 #. type: itemize
 #: texinfo/texinfo.texi:14328
@@ -37150,18 +37164,25 @@ msgid ""
 "@file{foo.pg} and @file{foo.ky}.  Those are exactly the arguments to give to "
 "@command{texindex}."
 msgstr ""
+"@command{tex} gera arquivos desordenados de índices sob nomes seguindo uma "
+"convenção padrão: o nome do teu principal arquivo de entrada com alguma "
+"extensão @samp{.texi} ou similar substituída pelo nome de duas letras do "
+"índice.  Por exemplo, os arquivos brutos de saída de índices para o "
+"arquivo de entrada @file{foo.texi} seriam, por padrão, @file{foo.cp}, "
+"@file{foo.vr}, @file{foo.fn}, @file{foo.tp}, @file{foo.pg} e @file{foo.ky}.  "
+"Esses são exatamente os argumentos a se fornecer para @command{texindex}."
 
 #. type: cindex
 #: texinfo/texinfo.texi:14330
 #, no-wrap
 msgid "Wildcards"
-msgstr ""
+msgstr "Curingas"
 
 #. type: cindex
 #: texinfo/texinfo.texi:14331
 #, no-wrap
 msgid "Globbing"
-msgstr ""
+msgstr "Englobamento"
 
 #. type: itemize
 #: texinfo/texinfo.texi:14335
@@ -37170,12 +37191,15 @@ msgid ""
 "typical to use @samp{??} as shell wildcards and give the command in this "
 "form:"
 msgstr ""
+"Em vez de especificar-se explicitamente todos os nomes de arquivos "
+"desordenados de índices, é comum se usar @samp{??} como curingas de shell "
+"e fornecer o comando nesta forma:"
 
 #. type: example
 #: texinfo/texinfo.texi:14338
 #, no-wrap
 msgid "texindex foo.??\n"
-msgstr ""
+msgstr "texindex foo.??\n"
 
 #. type: itemize
 #: texinfo/texinfo.texi:14347
@@ -37187,6 +37211,13 @@ msgid ""
 "that are not index files, such as @samp{foo.el}.  The @command{texindex} "
 "command reports but otherwise ignores such files."
 msgstr ""
+"Esse comando executará @command{texindex} sobre todos os arquivos "
+"desordenados de índices, incluindo quaisquer índices de duas letras que "
+"você mesmo(a) tiver definido usando @code{@@defindex} ou "
+"@code{@@defcodeindex}.  Você pode seguramente executar @samp{texindex "
+"foo.??}, mesmo se existirem arquivos com extensões de duas letras que não "
+"sejam arquivos de índice, como @samp{foo.el}.  O comando @command{texindex} "
+"informa, mas, inobstante, ignora esses arquivos."
 
 #. type: itemize
 #: texinfo/texinfo.texi:14354
@@ -37198,6 +37229,12 @@ msgid ""
 "@TeX{} does not read the raw index output file, and @command{texindex} does "
 "not alter it."
 msgstr ""
+"Para cada arquivo especificado, @command{texindex} gera um arquivo ordenado "
+"de índice cujo nome é feito anexando @samp{s} ao nome de arquivo de "
+"entrada; por exemplo, @file{foo.cps} é feito a partir de @file{foo.cp}.  O "
+"comando @code{@@printindex} procura por um arquivo com esse nome "
+"(@pxref{Imprimindo Índices e Menus}).  @TeX{} não lê o arquivo bruto de "
+"saída de índice e @command{texindex} não o altera."
 
 #. type: itemize
 #: texinfo/texinfo.texi:14358
@@ -37206,6 +37243,9 @@ msgid ""
 "Texinfo file.  This regenerates the output file, this time with up-to-date "
 "index entries."
 msgstr ""
+"Depois que tiver ordenado os índices, você precisa reexecutar "
+"@command{tex} sobre o arquivo do Texinfo.  Isso regenera o arquivo de "
+"saída, dessa vez com entradas de índices atualizadas."
 
 #. type: itemize
 #: texinfo/texinfo.texi:14361
@@ -37213,6 +37253,8 @@ msgid ""
 "Finally, you may need to run @command{tex} one more time, to get the page "
 "numbers in the cross-references correct."
 msgstr ""
+"Por fim, você possivelmente precise executar @command{tex} mais uma vez "
+"para corrigir os números de página nas referências cruzadas."
 
 #. type: itemize
 #: texinfo/texinfo.texi:14364
@@ -37220,6 +37262,9 @@ msgid ""
 "To summarize, this is a five-step process.  (Alternatively, it's a one-step "
 "process: run @command{texi2dvi}; see the previous section.)"
 msgstr ""
+"Para resumir, este é um processo de cinco etapas.  (Alternativamente, é um "
+"processo de uma etapa: execute @command{texi2dvi}; veja-se a seção "
+"anterior.)"
 
 #. type: enumerate
 #: texinfo/texinfo.texi:14370
@@ -37228,6 +37273,9 @@ msgid ""
 "undefined cross-references and no indices), and the raw index files (with "
 "two letter extensions)."
 msgstr ""
+"Execute @command{tex} sobre teu arquivo do Texinfo.  Isso gera um arquivo "
+"DVI (com referências cruzadas indefinidas e sem índices) e os arquivos "
+"brutos de índices (com extensões de duas letras)."
 
 #. type: enumerate
 #: texinfo/texinfo.texi:14374
@@ -37235,6 +37283,9 @@ msgid ""
 "Run @command{texindex} on the raw index files.  This creates the "
 "corresponding sorted index files (with three letter extensions)."
 msgstr ""
+"Execute @command{texindex} sobre os arquivos brutos de índices.  Isso cria "
+"os correspondentes arquivos ordenados de índices (com extensões de três "
+"letras)."
 
 #. type: enumerate
 #: texinfo/texinfo.texi:14380
@@ -37243,11 +37294,15 @@ msgid ""
 "file, this time with indices and defined cross-references, but with page "
 "numbers for the cross-references from the previous run, generally incorrect."
 msgstr ""
+"Execute @command{tex} novamente sobre teu arquivo do Texinfo.  Isso regenera "
+"o arquivo DVI, dessa vez com índices e referências cruzadas definidas, mas "
+"com números de página para as referências cruzadas oriundos da execução "
+"anterior, geralmente incorretos."
 
 #. type: enumerate
 #: texinfo/texinfo.texi:14383
 msgid "Sort the indices again, with @command{texindex}."
-msgstr ""
+msgstr "Ordene os índices novamente, com @command{texindex}."
 
 #. type: enumerate
 #: texinfo/texinfo.texi:14387
@@ -37255,12 +37310,14 @@ msgid ""
 "Run @command{tex} one last time.  This time the correct page numbers are "
 "written for the cross-references."
 msgstr ""
+"Execute @command{tex} uma última vez.  Desta vez, os números de página "
+"corretos serão escritos para as referências cruzadas."
 
 #. type: pindex
 #: texinfo/texinfo.texi:14389
 #, no-wrap
 msgid "pdftex"
-msgstr ""
+msgstr "pdftex"
 
 #. type: itemize
 #: texinfo/texinfo.texi:14393
@@ -37269,48 +37326,51 @@ msgid ""
 "@command{tex}.  That is, run @command{pdftex foo.texi} instead of @samp{tex "
 "foo.texi} in the examples above."
 msgstr ""
+"Para gerar PDF, você pode executar o programa @command{pdftex} em vez do "
+"@command{tex} simples.  Ou seja, execute @command{pdftex foo.texi} em vez de "
+"@samp{tex foo.texi} nos exemplos acima."
 
 #. type: subsection
 #: texinfo/texinfo.texi:14395 texinfo/texinfo.texi:14396
 #, no-wrap
 msgid "Formatting Partial Documents"
-msgstr ""
+msgstr "Formatando Documentos Parciais"
 
 #. type: cindex
 #: texinfo/texinfo.texi:14398
 #, no-wrap
 msgid "Formatting partial documents"
-msgstr ""
+msgstr "Formatando documentos parciais"
 
 #. type: cindex
 #: texinfo/texinfo.texi:14399
 #, no-wrap
 msgid "Partial documents, formatting"
-msgstr ""
+msgstr "Documentos parciais, formatando"
 
 #. type: cindex
 #: texinfo/texinfo.texi:14400
 #, no-wrap
 msgid "Chapters, formatting one at a time"
-msgstr ""
+msgstr "Capítulos, formatando um de cada vez"
 
 #. type: cindex
 #: texinfo/texinfo.texi:14401
 #, no-wrap
 msgid "Auxiliary files, omitting"
-msgstr ""
+msgstr "Arquivos auxiliares, omitindo"
 
 #. type: cindex
 #: texinfo/texinfo.texi:14402
 #, no-wrap
 msgid "Pointer validation @subentry suppressing"
-msgstr ""
+msgstr "Validação de ponteiro @subentry suprimindo"
 
 #. type: vindex
 #: texinfo/texinfo.texi:14403 texinfo/texinfo.texi:15528
 #, no-wrap
 msgid "novalidate"
-msgstr ""
+msgstr "novalidate"
 
 #. type: itemize
 #: texinfo/texinfo.texi:14411
@@ -37322,11 +37382,18 @@ msgid ""
 "@code{@@novalidate} command, which you must give @emph{before} any "
 "sectioning or cross-reference commands."
 msgstr ""
+"Ocasionalmente, você possivelmente deseje imprimir um documento quando sabe "
+"que ele está incompleto, ou imprimir apenas um capítulo de um documento.  "
+"Nesse caso, os arquivos auxiliares usuais que o @TeX{} cria e os avisos que "
+"o @TeX{} fornece acerca de referências cruzadas indefinidas são apenas "
+"incômodos.  Você consegue evitá-los com o comando @code{@@novalidate}, "
+"que você precisa fornecer @emph{antes} de quaisquer comandos de "
+"seccionamento ou de referência cruzada."
 
 #. type: itemize
 #: texinfo/texinfo.texi:14413
 msgid "Thus, the beginning of your file would look approximately like this:"
-msgstr ""
+msgstr "Assim, o início do teu arquivo aparentaria aproximadamente assim:"
 
 #. type: example
 #: texinfo/texinfo.texi:14418
@@ -37335,6 +37402,8 @@ msgid ""
 "@@novalidate\n"
 "@dots{}\n"
 msgstr ""
+"@@novalidate\n"
+"@dots{}\n"
 
 #. type: itemize
 #: texinfo/texinfo.texi:14424
@@ -37342,6 +37411,9 @@ msgid ""
 "@code{@@novalidate} also turns off validation in @command{texi2any}, just "
 "like its @code{--no-validate} option (@pxref{Invoking @command{texi2any}})."
 msgstr ""
+"@code{@@novalidate} também desativa a validação no @command{texi2any}, "
+"assim como a opção @code{--no-validate} dele (@pxref{Invocando "
+"@command{texi2any}})."
 
 #. type: itemize
 #: texinfo/texinfo.texi:14430
@@ -37352,18 +37424,24 @@ msgid ""
 "@command{texindex}.  If those are out of date, that is usually ok while you "
 "are creating or debugging a document."
 msgstr ""
+"Além disso, você não precisa executar @command{texindex} toda vez depois "
+"que executar @command{tex}.  O comando de formatação @command{tex} "
+"simplesmente usa quaisquer arquivos ordenados de índices que existam "
+"provenientes de um uso anterior do @command{texindex}.  Se eles estiverem "
+"desatualizados, isso geralmente é aceitável enquanto você estiver criando "
+"ou depurando um documento."
 
 #. type: subsection
 #: texinfo/texinfo.texi:14432 texinfo/texinfo.texi:14433
 #, no-wrap
 msgid "Details of @command{texindex}"
-msgstr ""
+msgstr "Detalhes do @command{texindex}"
 
 #. type: cindex
 #: texinfo/texinfo.texi:14435
 #, no-wrap
 msgid "Braces, in index entries"
-msgstr ""
+msgstr "Chaves, em entradas de índice"
 
 #. type: itemize
 #: texinfo/texinfo.texi:14442
@@ -37374,6 +37452,12 @@ msgid ""
 "@samp{@}}) can work properly.  For example, these simple index entries are "
 "processed correctly, including the ``index initial'' shown in the index:"
 msgstr ""
+"Na versão 6 do Texinfo, lançada em 2015, o programa @command{texindex} foi "
+"completamente reimplementado.  A principal diferença funcional é a de que "
+"entradas de índice iniciando com uma chave esquerda ou chave direita "
+"(respectivamente @samp{@{} e @samp{@}}) conseguem funcionar corretamente.  "
+"Por exemplo, estas simples entradas de índice são processadas "
+"corretamente, incluindo o ``index initial'' mostrado no índice:"
 
 #. type: example
 #: texinfo/texinfo.texi:14448
@@ -37384,6 +37468,10 @@ msgid ""
 "...\n"
 "@@printindex cp\n"
 msgstr ""
+"@@cindex @@@{\n"
+"@@cindex @@@}\n"
+"...\n"
+"@@printindex cp\n"
 
 #. type: cindex
 #: texinfo/texinfo.texi:14450
