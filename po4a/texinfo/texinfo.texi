@@ -14215,20 +14215,28 @@ can also be set using the environment variable
  are left.  Output files are copied back to the original file.
 
  Using the @samp{tidy} mode brings several advantages:
+
  @itemize -
+
  @item the current directory is not cluttered with plethora of temporary files.
+
  @item clutter can be even further reduced using @option{--build-dir=dir}: all
    the @code{*.t2d} directories are stored there.
+
  @item clutter can be reduced to zero using, e.g.,
    @option{--build-dir=/tmp/\$USER.t2d} or @option{--build-dir=\$HOME/.t2d}.
+
  @item the output file is updated after every successful @TeX{} run, for
    sake of concurrent visualization of the output.  In a @samp{local} build
    the viewer stops during the whole @TeX{} run.
+
  @item if the compilation fails, the previous state of the output file
    is preserved.
+
  @item @acronym{PDF} and @acronym{DVI} compilation are kept in separate
    subdirectories
    preventing any possibility of auxiliary file incompatibility.
+
  @end itemize
 
  On the other hand, because @samp{tidy} compilation takes place in another
