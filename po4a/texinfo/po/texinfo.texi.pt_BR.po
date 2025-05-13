@@ -17,7 +17,7 @@ msgstr ""
 "Project-Id-Version: Texinfo 7.1\n"
 "Report-Msgid-Bugs-To: jafesp@gmail.com\n"
 "POT-Creation-Date: 2025-05-06 19:48-0300\n"
-"PO-Revision-Date: 2025-05-11 07:09-0300\n"
+"PO-Revision-Date: 2025-05-12 21:10-0300\n"
 "Last-Translator: Jamenson Ferreira Espindula de Almeida Melo "
 "<jafesp@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -36087,7 +36087,7 @@ msgstr ""
 #: texinfo/texinfo.texi:13899
 #, no-wrap
 msgid "Sample Include File"
-msgstr ""
+msgstr "Arquivo de Inclusão de Amostra"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:13901
@@ -36095,30 +36095,32 @@ msgid ""
 "@nodedescription A sample outer file with included files within it; and a "
 "sample included file."
 msgstr ""
+"@nodedescription Um arquivo externo de amostra com arquivos incluídos "
+"dentro dele; e um arquivo incluído de amostra."
 
 #. type: section
 #: texinfo/texinfo.texi:13901
 #, no-wrap
 msgid "Sample File with @code{@@include}"
-msgstr ""
+msgstr "Arquivo de Amostra com @code{@@include}"
 
 #. type: cindex
 #: texinfo/texinfo.texi:13902
 #, no-wrap
 msgid "Sample @code{@@include} file"
-msgstr ""
+msgstr "Arquivo @code{@@include} de amostra"
 
 #. type: cindex
 #: texinfo/texinfo.texi:13903
 #, no-wrap
 msgid "Include file sample"
-msgstr ""
+msgstr "Amostra de arquivo de inclusão"
 
 #. type: cindex
 #: texinfo/texinfo.texi:13904
 #, no-wrap
 msgid "@code{@@include} file sample"
-msgstr ""
+msgstr "Amostra de arquivo @code{@@include}"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:13908
@@ -36126,6 +36128,8 @@ msgid ""
 "Here is an example of an outer Texinfo file with @code{@@include} files "
 "within it:"
 msgstr ""
+"Aqui está um exemplo de um arquivo externo do Texinfo com arquivos "
+"@code{@@include} dentro dele:"
 
 #. type: group
 #: texinfo/texinfo.texi:13914
@@ -36134,6 +36138,8 @@ msgid ""
 "@@settitle Include Example\n"
 "\n"
 msgstr ""
+"@@settitle Exemplo de Inclusão\n"
+"\n"
 
 #. type: group
 #: texinfo/texinfo.texi:13920
@@ -36142,6 +36148,8 @@ msgid ""
 "@@node Top\n"
 "@@top Include Example\n"
 msgstr ""
+"@@node Top\n"
+"@@top Exemplo de Inclusão\n"
 
 #. type: group
 #: texinfo/texinfo.texi:13927
@@ -36152,11 +36160,15 @@ msgid ""
 "@@include concept-index.texi\n"
 "@@bye\n"
 msgstr ""
+"@@include foo.texi\n"
+"@@include bar.texi\n"
+"@@include indice-conceitos.texi\n"
+"@@bye\n"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:13931
 msgid "An included file, such as @file{foo.texi}, might look like this:"
-msgstr ""
+msgstr "Um arquivo incluído, como @file{foo.texi}, pode se parecer com isto:"
 
 #. type: group
 #: texinfo/texinfo.texi:13936
@@ -36166,18 +36178,23 @@ msgid ""
 "@@chapter First Chapter\n"
 "\n"
 msgstr ""
+"@@node Primeiro\n"
+"@@chapter Primeiro Capítulo\n"
+"\n"
 
 #. type: group
 #: texinfo/texinfo.texi:13938
 #, no-wrap
 msgid "Contents of first chapter @dots{}\n"
-msgstr ""
+msgstr "Conteúdo do primeiro capítulo @dots{}\n"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:13942
 msgid ""
 "The full contents of @file{concept-index.texi} might be as simple as this:"
 msgstr ""
+"O conteúdo completo de @file{indice-conceitos.texi} pode ser tão simples "
+"quanto isto:"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:13957
@@ -36186,41 +36203,44 @@ msgid ""
 "is named @file{elisp.texi}.  This outer file has already contained a master "
 "menu with 417 entries and a list of 41 @code{@@include} files."
 msgstr ""
+"O arquivo fonte externo do Texinfo para @cite{The GNU Emacs Lisp Reference "
+"Manual} é chamado @file{elisp.texi}.  Esse arquivo externo já conteve um "
+"menu mestre com 417 entradas e uma lista de 41 arquivos @code{@@include}."
 
 #. type: node
 #: texinfo/texinfo.texi:13959
 #, no-wrap
 msgid "@code{@@verbatiminclude}"
-msgstr ""
+msgstr "@code{@@verbatiminclude}"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:13961
 msgid "@nodedescription Including a file verbatim."
-msgstr ""
+msgstr "@nodedescription Incluindo um literal de arquivo."
 
 #. type: section
 #: texinfo/texinfo.texi:13961
 #, no-wrap
 msgid "@code{@@verbatiminclude} @var{file}: Include a File Verbatim"
-msgstr ""
+msgstr "@var{arquivo} @code{@@verbatiminclude}: Incluir um Literal de Arquivo"
 
 #. type: findex
 #: texinfo/texinfo.texi:13964
 #, no-wrap
 msgid "verbatiminclude"
-msgstr ""
+msgstr "verbatiminclude"
 
 #. type: cindex
 #: texinfo/texinfo.texi:13965
 #, no-wrap
 msgid "Verbatim, include file"
-msgstr ""
+msgstr "Literal, arquivo de inclusão"
 
 #. type: cindex
 #: texinfo/texinfo.texi:13966
 #, no-wrap
 msgid "Including a file verbatim"
-msgstr ""
+msgstr "Incluindo um literal de arquivo"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:13970
@@ -36228,12 +36248,14 @@ msgid ""
 "You can include the exact contents of a file in the document with the "
 "@code{@@verbatiminclude} command:"
 msgstr ""
+"Você pode incluir o conteúdo exato de um arquivo no documento com o "
+"comando @code{@@verbatiminclude}:"
 
 #. type: example
 #: texinfo/texinfo.texi:13973
 #, no-wrap
 msgid "@@verbatiminclude @var{filename}\n"
-msgstr ""
+msgstr "@@verbatiminclude @var{nomearquivo}\n"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:13981
@@ -36244,6 +36266,11 @@ msgid ""
 "added; if you want indentation, enclose the @code{@@verbatiminclude} within "
 "@code{@@example} (@pxref{@code{@@example}})."
 msgstr ""
+"O conteúdo de @var{nomearquivo} é impresso em um ambiente literal "
+"(@pxref{@code{@@verbatim}}).  Geralmente, o arquivo é impresso exatamente "
+"como está, com todos os caracteres especiais e espaços em branco retidos.  "
+"Nenhum recuo é adicionado; se você quiser recuo, circunde o "
+"@code{@@verbatiminclude} com @code{@@example} (@pxref{@code{@@example}})."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:13986
@@ -36252,17 +36279,20 @@ msgid ""
 "@code{@@verbatiminclude} line.  This makes it possible to include files in "
 "other directories within a distribution, for instance:"
 msgstr ""
+"referências @code{@@value@{@var{variável}@}} são expandidas na linha "
+"@code{@@verbatiminclude}.  Isso torna possível incluir arquivos em outros "
+"diretórios dentro de uma distribuição, por exemplo:"
 
 #. type: example
 #: texinfo/texinfo.texi:13989
 #, no-wrap
 msgid "@@verbatiminclude @@value@{top_srcdir@}/NEWS\n"
-msgstr ""
+msgstr "@@verbatiminclude @@value@{top_srcdir@}/NEWS\n"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:13993
 msgid "(You still have to get @code{top_srcdir} defined in the first place.)"
-msgstr ""
+msgstr "(Você ainda tem de ter @code{top_srcdir} definido em primeiro lugar.)"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:13997
@@ -36270,6 +36300,8 @@ msgid ""
 "Other than that, the only @@-commands allowed are @code{@@@@}, @code{@@@{}, "
 "@code{@@@}} and associated @@-commands such as @code{@@atchar@{@}}."
 msgstr ""
+"Fora isso, os únicos comandos @@ permitidos são @code{@@@@}, @code{@@@{}, "
+"@code{@@@}} e comandos @@ associados, como @code{@@atchar@{@}}."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:14000
@@ -36277,6 +36309,8 @@ msgid ""
 "For a method on printing the file contents in a smaller font size, see the "
 "end of the section on @code{@@verbatim}."
 msgstr ""
+"Para um método relativo a impressão do conteúdo do arquivo em um tamanho "
+"menor de fonte, veja-se o final da seção acerca do @code{@@verbatim}."
 
 #. type: node
 #: texinfo/texinfo.texi:14004
