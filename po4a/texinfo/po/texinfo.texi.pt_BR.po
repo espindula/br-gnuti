@@ -17,7 +17,7 @@ msgstr ""
 "Project-Id-Version: Texinfo 7.1\n"
 "Report-Msgid-Bugs-To: jafesp@gmail.com\n"
 "POT-Creation-Date: 2025-05-12 22:35-0300\n"
-"PO-Revision-Date: 2025-05-13 01:05-0300\n"
+"PO-Revision-Date: 2025-05-13 01:28-0300\n"
 "Last-Translator: Jamenson Ferreira Espindula de Almeida Melo "
 "<jafesp@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -37477,31 +37477,31 @@ msgstr ""
 #: texinfo/texinfo.texi:14450
 #, no-wrap
 msgid "Literate programming, with Texinfo and @command{awk}"
-msgstr ""
+msgstr "Programação letrada, com Texinfo e @command{awk}"
 
 #. type: cindex
 #: texinfo/texinfo.texi:14451
 #, no-wrap
 msgid "Texinfo, and literate programming"
-msgstr ""
+msgstr "Texinfo, e programação letrada"
 
 #. type: cindex
 #: texinfo/texinfo.texi:14452
 #, no-wrap
 msgid "Robbins, Arnold"
-msgstr ""
+msgstr "Robbins, Arnold"
 
 #. type: pindex
 #: texinfo/texinfo.texi:14453
 #, no-wrap
 msgid "texiwebjr"
-msgstr ""
+msgstr "texiwebjr"
 
 #. type: pindex
 #: texinfo/texinfo.texi:14454
 #, no-wrap
 msgid "ti.twjr"
-msgstr ""
+msgstr "ti.twjr"
 
 #. type: itemize
 #: texinfo/texinfo.texi:14461
@@ -37513,6 +37513,13 @@ msgid ""
 "@file{texindex/ti.twjr} in this case, produces the runnable program, a "
 "printable document, and an online document."
 msgstr ""
+"Embora não uma questão de funcionalidade, os(as) leitores(as) "
+"possivelmente estejam interessados(as) em saber que o novo "
+"@command{texindex} é um programa letrado "
+"(@url{https://en.wikipedia.org/wiki/Literate_programming}) usando Texinfo "
+"para documentação e @command{awk} (portável) para código.  Um arquivo "
+"fonte, @file{texindex/ti.twjr} nesse caso, produz o programa executável, um "
+"documento imprimível e um documento online."
 
 #. type: itemize
 #: texinfo/texinfo.texi:14467
@@ -37523,29 +37530,34 @@ msgid ""
 "Awk User's Guide}).  The file @file{texindex/Makefile.am} shows example "
 "usage of the system."
 msgstr ""
+"O sistema é chamado TexiWeb Jr.@: e foi criado por Arnold Robbins, que "
+"também escreveu o novo @command{texindex}.  Não coincidentemente, ele "
+"também é o mantenedor de longa data do @command{gawk} (GNU Awk, "
+"@pxref{Top,,, gawk, O Guia do(a) Usuário(a) GNU Awk}).  O arquivo "
+"@file{texindex/Makefile.am} mostra um exemplo de uso do sistema."
 
 #. type: node
 #: texinfo/texinfo.texi:14469
 #, no-wrap
 msgid "Print with @command{lpr}"
-msgstr ""
+msgstr "Imprimir com @command{lpr}"
 
 #. type: itemize
 #: texinfo/texinfo.texi:14471
 msgid "@nodedescription How to print."
-msgstr ""
+msgstr "@nodedescription Como imprimir."
 
 #. type: section
 #: texinfo/texinfo.texi:14471
 #, no-wrap
 msgid "Print with @command{lpr} from Shell"
-msgstr ""
+msgstr "Imprimir com @command{lpr} a partir do Shell"
 
 #. type: pindex
 #: texinfo/texinfo.texi:14473
 #, no-wrap
 msgid "lpr @r{(DVI print command)}"
-msgstr ""
+msgstr "lpr @r{(Comando de impressão de DVI)}"
 
 #. type: itemize
 #: texinfo/texinfo.texi:14479
@@ -37554,6 +37566,10 @@ msgid ""
 "ones are @samp{dvips foo.dvi -o} to make a PostScript file first and then "
 "print that, and @samp{lpr -d foo.dvi} to print a DVI file directly."
 msgstr ""
+"A maneira de imprimir um arquivo DVI depende da tua instalação de "
+"sistema.  Duas comuns são @samp{dvips foo.dvi -o} para criar um arquivo do "
+"PostScript primeiro e depois imprimi-lo; e @samp{lpr -d foo.dvi} para "
+"imprimir um arquivo DVI diretamente."
 
 #. type: itemize
 #: texinfo/texinfo.texi:14483
@@ -37562,6 +37578,10 @@ msgid ""
 "indices, format, and print this manual using the @command{texi2dvi} shell "
 "script (@pxref{Format with @command{texi2dvi}})."
 msgstr ""
+"Por exemplo, os comandos seguintes (provavelmente) serão suficientes para "
+"ordenar os índices, formatar e imprimir este manual usando o conjunto de "
+"comandos sequênciais de shell @command{texi2dvi} (@pxref{Formatar com "
+"@command{texi2dvi}})."
 
 #. type: group
 #: texinfo/texinfo.texi:14489
@@ -37571,6 +37591,9 @@ msgid ""
 "dvips texinfo.dvi -o\n"
 "lpr texinfo.ps\n"
 msgstr ""
+"texi2dvi texinfo.texi\n"
+"dvips texinfo.dvi -o\n"
+"lpr texinfo.ps\n"
 
 #. type: itemize
 #: texinfo/texinfo.texi:14494
@@ -37578,12 +37601,14 @@ msgid ""
 "Depending on the @command{lpr} setup on your machine, you might be able to "
 "combine the last two steps into @code{lpr -d texinfo.dvi}."
 msgstr ""
+"Dependendo da configuração do @command{lpr} na tua máquina, você pode "
+"ser capaz de combinar as duas últimas etapas em @code{lpr -d texinfo.dvi}."
 
 #. type: cindex
 #: texinfo/texinfo.texi:14495
 #, no-wrap
 msgid "PCL file, for printing"
-msgstr ""
+msgstr "Arquivo PCL, para impressão"
 
 #. type: itemize
 #: texinfo/texinfo.texi:14500
@@ -37593,24 +37618,28 @@ msgid ""
 "a PCL file by using @command{dvilj} instead of @command{dvips}, if you have "
 "a printer that prefers that format."
 msgstr ""
+"Você também pode gerar um arquivo PDF executando @command{texi2pdf} em vez "
+"de @command{texi2dvi}; um PDF frequentemente é imprimível diretamente.  Ou "
+"você pode gerar um arquivo PCL usando @command{dvilj} em vez de "
+"@command{dvips}, se você tiver uma impressora que prefira esse formato."
 
 #. type: cindex
 #: texinfo/texinfo.texi:14501
 #, no-wrap
 msgid "Shell printing, on MS-DOS/MS-Windows"
-msgstr ""
+msgstr "Impressão de shell, no MS-DOS/MS-Windows"
 
 #. type: cindex
 #: texinfo/texinfo.texi:14502
 #, no-wrap
 msgid "Printing DVI files, on MS-DOS/MS-Windows"
-msgstr ""
+msgstr "Imprimindo arquivos DVI, no MS-DOS/MS-Windows"
 
 #. type: pindex
 #: texinfo/texinfo.texi:14503
 #, no-wrap
 msgid "lpr@r{-d, replacements on MS-DOS/MS-Windows}"
-msgstr ""
+msgstr "lpr@r{-d, substituições no MS-DOS/MS-Windows}"
 
 #. type: itemize
 #: texinfo/texinfo.texi:14509
@@ -37620,6 +37649,11 @@ msgid ""
 "file, whatever is most convenient, and print that in the usual way for your "
 "machine (e.g., by sending to the appropriate port, usually @samp{PRN})."
 msgstr ""
+"@command{lpr} é um programa padrão em sistemas Unix, mas geralmente está "
+"ausente no MS-DOS/MS-Windows.  Se for, basta criar um arquivo PostScript ou "
+"PDF ou PCL, o que for mais conveniente, e imprimi-lo da maneira usual para "
+"tua máquina (por exemplo, enviando para a porta apropriada, geralmente "
+"@samp{PRN})."
 
 #. type: cindex
 #: texinfo/texinfo.texi:14511 texinfo/texinfo.texi:14513
