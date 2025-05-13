@@ -17,7 +17,7 @@ msgstr ""
 "Project-Id-Version: Texinfo 7.1\n"
 "Report-Msgid-Bugs-To: jafesp@gmail.com\n"
 "POT-Creation-Date: 2025-05-06 19:48-0300\n"
-"PO-Revision-Date: 2025-05-12 21:10-0300\n"
+"PO-Revision-Date: 2025-05-12 22:05-0300\n"
 "Last-Translator: Jamenson Ferreira Espindula de Almeida Melo "
 "<jafesp@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -36316,83 +36316,83 @@ msgstr ""
 #: texinfo/texinfo.texi:14004
 #, no-wrap
 msgid "Include Files Evolution"
-msgstr ""
+msgstr "Evolução de Arquivos de Inclusão"
 
 #. type: section
 #: texinfo/texinfo.texi:14005
 #, no-wrap
 msgid "Evolution of Include Files"
-msgstr ""
+msgstr "Evolução dos Arquivos de Inclusão"
 
 #. type: node
 #: texinfo/texinfo.texi:14046
 #, no-wrap
 msgid "Hardcopy with @TeX{}"
-msgstr ""
+msgstr "Cópia impressa com @TeX{}"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:14048
 msgid "@nodedescription Output for paper, with @TeX{}."
-msgstr ""
+msgstr "@nodedescription Saída gerada para papel, com @TeX{}."
 
 #. type: chapter
 #: texinfo/texinfo.texi:14048
 #, no-wrap
 msgid "Formatting and Printing with @TeX{}"
-msgstr ""
+msgstr "Formatando e Imprimindo com @TeX{}"
 
-#.  old name
+#.  nome antigo
 #. type: anchor{#1}
 #: texinfo/texinfo.texi:14051
 msgid "Hardcopy"
-msgstr ""
+msgstr "Hardcopy"
 
 #. type: anchor{#1}
 #: texinfo/texinfo.texi:14051
 msgid "Printing"
-msgstr ""
+msgstr "Printing"
 
 #. type: cindex
 #: texinfo/texinfo.texi:14051
 #, no-wrap
 msgid "Format and print hardcopy"
-msgstr ""
+msgstr "Formatar e imprimir versão impressa"
 
 #. type: cindex
 #: texinfo/texinfo.texi:14052
 #, no-wrap
 msgid "Printing hardcopy"
-msgstr ""
+msgstr "Imprimindo versão impressa"
 
 #. type: cindex
 #: texinfo/texinfo.texi:14053
 #, no-wrap
 msgid "Hardcopy, printing it"
-msgstr ""
+msgstr "Versão impressa, imprimindo"
 
 #. type: cindex
 #: texinfo/texinfo.texi:14054
 #, no-wrap
 msgid "Making a printed manual"
-msgstr ""
+msgstr "Fazendo um manual impresso"
 
 #. type: cindex
 #: texinfo/texinfo.texi:14055
 #, no-wrap
 msgid "Sorting indices"
-msgstr ""
+msgstr "Índices de ordenação"
 
 #. type: cindex
 #: texinfo/texinfo.texi:14056
 #, no-wrap
 msgid "Indices, sorting"
-msgstr ""
+msgstr "Índices, ordenação"
 
 #. type: cindex
 #: texinfo/texinfo.texi:14057
 #, no-wrap
 msgid "@TeX{} index sorting"
-msgstr ""
+msgstr "Ordenação de índices do @TeX{}"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:14062
@@ -36401,6 +36401,9 @@ msgid ""
 "way to create printable output.  These commands are installed as part of the "
 "Texinfo package."
 msgstr ""
+"Executar o comando @command{texi2dvi} ou @command{texi2pdf} é a maneira "
+"mais simples de criar uma saída imprimível.  Esses comandos são "
+"instalados como parte do pacote do Texinfo."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:14070
@@ -36413,48 +36416,56 @@ msgid ""
 "of all of this, running @TeX{} and @command{texindex} as needed "
 "(@pxref{Format with @command{texi2dvi}})."
 msgstr ""
+"Em mais detalhes, tipografar e imprimir um arquivo do Texinfo é um processo "
+"de várias etapas no qual você usa o programa @TeX{} para criar um arquivo "
+"para impressão (chamado de arquivo DVI ou PDF) e então imprime o arquivo.  "
+"Opcionalmente, você também pode criar índices usando o comando "
+"@command{texindex} depois da primeira execução do @TeX{}; e então você "
+"precisa executar o @TeX{} novamente.  @command{texi2dvi} se encarrega de "
+"tudo isso, executando @TeX{} e @command{texindex} conforme necessário "
+"(@pxref{Formatar com @command{texi2dvi}})."
 
-#.  old node name
-#.  old node name
+#.  nome antigo de nó
+#.  nome antigo de nó
 #. type: anchor{#1}
 #: texinfo/texinfo.texi:14073
 msgid "Within Emacs"
-msgstr ""
+msgstr "Dentro do Emacs"
 
 #. type: anchor{#1}
 #: texinfo/texinfo.texi:14073
 msgid "Emacs Shell Printing"
-msgstr ""
+msgstr "Impressão de Shell do Emacs"
 
 #. type: cindex
 #: texinfo/texinfo.texi:14073
 #, no-wrap
 msgid "Print, format from Emacs shell"
-msgstr ""
+msgstr "Imprimir, formatar a partir do shell do Emacs"
 
 #. type: cindex
 #: texinfo/texinfo.texi:14074
 #, no-wrap
 msgid "Format, print from Emacs shell"
-msgstr ""
+msgstr "Formatar, imprimir a partir do shell do Emacs"
 
 #. type: cindex
 #: texinfo/texinfo.texi:14075
 #, no-wrap
 msgid "Shell, format, print from"
-msgstr ""
+msgstr "Shell, formatar, imprimir a partir de"
 
 #. type: cindex
 #: texinfo/texinfo.texi:14076
 #, no-wrap
 msgid "Emacs shell, format, print from"
-msgstr ""
+msgstr "Shell do Emacs, formatar, imprimir a partir de"
 
 #. type: cindex
 #: texinfo/texinfo.texi:14077
 #, no-wrap
 msgid "GNU Emacs shell, format, print from"
-msgstr ""
+msgstr "Shell do GNU Emacs, formatar, imprimir a partir de"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:14086
@@ -36468,6 +36479,14 @@ msgid ""
 "provided by Texinfo mode instead of shell commands.  @xref{Printing with "
 "Emacs}."
 msgstr ""
+"Ao usar os comandos do shell, você pode trabalhar diretamente no shell do "
+"sistema operacional ou dentro de um shell dentro do GNU Emacs (ou algum "
+"outro ambiente computacional).  Você pode fornecer comandos de formatação "
+"e impressão a partir de um shell dentro do GNU Emacs, assim como qualquer "
+"outro comando de shell.  Para criar um shell dentro do Emacs, digite "
+"@kbd{M-x shell} (@pxref{Shell,,, emacs, O Manual do GNU Emacs}).  Se estiver "
+"usando o GNU Emacs, você também pode usar comandos fornecidos pelo modo "
+"Texinfo em vez de comandos de shell.  @xref{Imprimindo com o Emacs}."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:14089
@@ -36475,17 +36494,19 @@ msgid ""
 "For specifing details of the printed output such as paper size, see "
 "@ref{Global Document Commands}."
 msgstr ""
+"Para especificar detalhes da saída impressa, como tamanho do papel, veja-se "
+"@ref{Comandos Globais de Documento}."
 
 #. type: section
 #: texinfo/texinfo.texi:14091 texinfo/texinfo.texi:14093
 #, no-wrap
 msgid "Use @TeX{}"
-msgstr ""
+msgstr "Use @TeX{}"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:14093
 msgid "@nodedescription Use @TeX{} to format for hardcopy."
-msgstr ""
+msgstr "@nodedescription Use @TeX{} para formatar para cópia impressa."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:14100
@@ -36495,18 +36516,23 @@ msgid ""
 "when used correctly, does an exceptionally good job.  It is not included in "
 "the Texinfo package, being a vast suite of software in itself."
 msgstr ""
+"O programa de tipografar chamado @TeX{} é usado para formatar um documento "
+"do Texinfo para saída imprimível.  @TeX{} é um programa de tipografia "
+"muito poderoso e, quando usado corretamente, faz um trabalho "
+"excepcionalmente bom.  Ele não está incluso no pacote do Texinfo, sendo "
+"uma vasta suíte de software em si."
 
 #. type: cindex
 #: texinfo/texinfo.texi:14102
 #, no-wrap
 msgid "Obtaining @TeX{}"
-msgstr ""
+msgstr "Obtendo @TeX{}"
 
 #. type: cindex
 #: texinfo/texinfo.texi:14103
 #, no-wrap
 msgid "@TeX{}, how to obtain"
-msgstr ""
+msgstr "@TeX{}, como obter"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:14109
@@ -36517,57 +36543,62 @@ msgid ""
 "get it over the Internet or on physical media.  See "
 "@url{http://tug.org/texlive}."
 msgstr ""
+"@TeX{} é um formatador de documento que é usado pela FSF para a "
+"documentação dela.  É a maneira mais fácil de obter saída impressa (por "
+"exemplo, PDF e PostScript) para manuais do Texinfo.  O TeX é "
+"redistribuível livremente e você pode obtê-lo pela Internet ou em mídia "
+"física.  Veja-se @url{http://tug.org/texlive}."
 
 #. type: section
 #: texinfo/texinfo.texi:14113 texinfo/texinfo.texi:14115
 #, no-wrap
 msgid "Format with @command{texi2dvi} or @command{texi2pdf}"
-msgstr ""
+msgstr "Formatar com @command{texi2dvi} ou @command{texi2pdf}"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:14115
 msgid "@nodedescription The simplest way to format."
-msgstr ""
+msgstr "@nodedescription A maneira mais simples para formatar."
 
 #. type: anchor{#1}
 #: texinfo/texinfo.texi:14123
 msgid "PDF Output"
-msgstr ""
+msgstr "Saída PDF"
 
 #. type: anchor{#1}
 #: texinfo/texinfo.texi:14123
 msgid "Format with @command{texi2dvi}"
-msgstr ""
+msgstr "Formatar com @command{texi2dvi}"
 
 #. type: pindex
 #: texinfo/texinfo.texi:14124
 #, no-wrap
 msgid "texi2dvi @r{(shell script)}"
-msgstr ""
+msgstr "texi2dvi @r{(script de shell)}"
 
 #. type: pindex
 #: texinfo/texinfo.texi:14125
 #, no-wrap
 msgid "texi2pdf @r{(shell script)}"
-msgstr ""
+msgstr "texi2pdf @r{(script de shell)}"
 
 #. type: cindex
 #: texinfo/texinfo.texi:14126
 #, no-wrap
 msgid "DVI, output in"
-msgstr ""
+msgstr "DVI, saída em"
 
 #. type: cindex
 #: texinfo/texinfo.texi:14127
 #, no-wrap
 msgid "PDF output"
-msgstr ""
+msgstr "Saída PDF"
 
 #. type: cindex
 #: texinfo/texinfo.texi:14128
 #, no-wrap
 msgid "Output, in PDF"
-msgstr ""
+msgstr "Saída, em  PDF"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:14134
@@ -36578,6 +36609,11 @@ msgid ""
 "Format'.  It was invented by Adobe Systems for document interchange, based "
 "on their PostScript language.}."
 msgstr ""
+"O programa @code{texi2dvi} se encarrega de todas as etapas para produzir um "
+"arquivo DVI do @TeX{} a partir de um documento do Texinfo.  Similarmente, "
+"@code{texi2pdf} produz um arquivo PDF@footnote{@dfn{PDF} significa `Portable "
+"Document Format'.  Foi inventado pela Adobe Systems para intercâmbio de "
+"documentos, baseado na linguagem PostScript deles(as).}."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:14137
@@ -36585,6 +36621,8 @@ msgid ""
 "To run @command{texi2dvi} or @command{texi2pdf} on an input file "
 "@file{foo.texi}, do this (where @samp{prompt$ } is your shell prompt):"
 msgstr ""
+"Para executar @code{texi2dvi} ou @code{texi2pdf} sobre um arquivo de entrada "
+"@file{foo.texi}, faça isto (onde @samp{prompt$ } é o prompt do teu shell):"
 
 #. type: example
 #: texinfo/texinfo.texi:14141
@@ -36593,6 +36631,8 @@ msgid ""
 "prompt$ @kbd{texi2dvi foo.texi}\n"
 "prompt$ @kbd{texi2pdf foo.texi}\n"
 msgstr ""
+"prompt$ @kbd{texi2dvi foo.texi}\n"
+"prompt$ @kbd{texi2pdf foo.texi}\n"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:14145
@@ -36600,6 +36640,9 @@ msgid ""
 "As shown in this example, the file names given to @command{texi2dvi} and "
 "@command{texi2pdf} must include any extension, such as @samp{.texi}."
 msgstr ""
+"Conforme mostrado nesse exemplo, os nomes dos arquivos fornecidos para "
+"@command{texi2dvi} e @command{texi2pdf} precisam incluir alguma extensão, "
+"como @samp{.texi}."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:14148
@@ -36607,6 +36650,8 @@ msgid ""
 "For a list of all the options, run @samp{texi2dvi --help}.  Some of the "
 "options are discussed below."
 msgstr ""
+"Para uma lista de todas as opções, execute @samp{texi2dvi --help}.  "
+"Algumas das opções são discutidas abaixo."
 
 #. type: opindex
 #: texinfo/texinfo.texi:14149
