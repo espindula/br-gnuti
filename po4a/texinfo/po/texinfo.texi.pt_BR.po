@@ -37660,36 +37660,36 @@ msgstr ""
 #: texinfo/texinfo.texi:14514
 #, no-wrap
 msgid "Preparing for @TeX{}"
-msgstr ""
+msgstr "Preparando para @TeX{}"
 
 #. type: itemize
 #: texinfo/texinfo.texi:14513
 msgid "@nodedescription What to do before you use @TeX{}."
-msgstr ""
+msgstr "@nodedescription O que fazer antes de você usar @TeX{}."
 
 #. type: cindex
 #: texinfo/texinfo.texi:14515
 #, no-wrap
 msgid "@TeX{} input initialization"
-msgstr ""
+msgstr "Inicialização da entrada do @TeX{}"
 
 #. type: cindex
 #: texinfo/texinfo.texi:14516
 #, no-wrap
 msgid "@sortas{profile init} @file{.profile} initialization file"
-msgstr ""
+msgstr "@sortas{profile init} arquivo de inicialização @file{.profile}"
 
 #. type: cindex
 #: texinfo/texinfo.texi:14517
 #, no-wrap
 msgid "@sortas{cshrc init} @file{.cshrc} initialization file"
-msgstr ""
+msgstr "@sortas{cshrc init} arquivo de inicialização @file{.cshrc}"
 
 #. type: cindex
 #: texinfo/texinfo.texi:14518
 #, no-wrap
 msgid "Initialization file for @TeX{} input"
-msgstr ""
+msgstr "Arquivo de inicialização para entrada do @TeX{}"
 
 #. type: itemize
 #: texinfo/texinfo.texi:14526
@@ -37700,6 +37700,11 @@ msgid ""
 "distributions.  The latest version released for general use is available "
 "from the usual GNU servers and mirrors:"
 msgstr ""
+"@Tex{} precisa encontrar o arquivo @file{texinfo.tex} que o comando "
+"@samp{\\input texinfo} na primeira linha lê.  O arquivo @file{texinfo.tex} "
+"informa ao @TeX{} como lidar com comandos @@; Está incluído em todas as "
+"distribuições padrão do GNU.  A versão mais recente lançada para uso "
+"geral está disponível a partir dos servidores GNU usuais e espelhos:"
 
 #. type: display
 #: texinfo/texinfo.texi:14530
@@ -37708,6 +37713,8 @@ msgid ""
 "@uref{http://ftp.gnu.org/gnu/texinfo/texinfo.tex}\n"
 "@uref{http://ftpmirror.gnu.org/texinfo/texinfo.tex}\n"
 msgstr ""
+"@uref{http://ftp.gnu.org/gnu/texinfo/texinfo.tex}\n"
+"@uref{http://ftpmirror.gnu.org/texinfo/texinfo.tex}\n"
 
 #. type: itemize
 #: texinfo/texinfo.texi:14534
@@ -37715,6 +37722,8 @@ msgid ""
 "The latest development version is available from the Texinfo source "
 "repository:"
 msgstr ""
+"A versão mais recente de desenvolvimento está disponível a partir do "
+"repositório de fonte do Texinfo:"
 
 #. type: display
 #: texinfo/texinfo.texi:14537
@@ -37722,12 +37731,13 @@ msgstr ""
 msgid ""
 "@uref{http://git.savannah.gnu.org/cgit/texinfo.git/plain/doc/texinfo.tex}\n"
 msgstr ""
+"@uref{http://git.savannah.gnu.org/cgit/texinfo.git/plain/doc/texinfo.tex}\n"
 
 #. type: pindex
 #: texinfo/texinfo.texi:14539
 #, no-wrap
 msgid "texinfo.tex@r{, installing}"
-msgstr ""
+msgstr "texinfo.tex@r{, instalando}"
 
 #. type: itemize
 #: texinfo/texinfo.texi:14546
