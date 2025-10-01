@@ -37748,12 +37748,18 @@ msgid ""
 "replace any existing @file{texinfo.tex} with a newer version (of course "
 "saving the original in case of disaster)."
 msgstr ""
+"@file{texinfo.tex} essencialmente é um arquivo independente; portanto, se "
+"você precisar ou quiser tentar uma versão mais recente do que a que veio "
+"com o teu sistema, quase sempre basta baixá-la e colocá-la em algum lugar "
+"onde o @TeX{} a encontre. Você consegue substituir qualquer "
+"@file{texinfo.tex} existente por uma versão mais recente (certamente "
+"salvando a original em caso de desastre)."
 
 #. type: pindex
 #: texinfo/texinfo.texi:14547
 #, no-wrap
 msgid "epsf.tex@r{, installing}"
-msgstr ""
+msgstr "epsf.tex@r{, instalando}"
 
 #. type: itemize
 #: texinfo/texinfo.texi:14551
@@ -37762,24 +37768,27 @@ msgid ""
 "from another distribution.  More details are at the end of the description "
 "of the @code{@@image} command (@pxref{Images})."
 msgstr ""
+"Além disso, você deveria instalar o @file{epsf.tex}, se ele já não "
+"estiver instalado, originário em outra distribuição. Mais detalhes estão "
+"no final da descrição do comando @code{@@image} (@pxref{Imagens})."
 
 #. type: cindex
 #: texinfo/texinfo.texi:14552
 #, no-wrap
 msgid "European Computer Modern fonts @subentry installing"
-msgstr ""
+msgstr "Fontes European Computer Modern @subentry instalando"
 
 #. type: cindex
 #: texinfo/texinfo.texi:14553
 #, no-wrap
 msgid "EC fonts, installing"
-msgstr ""
+msgstr "Fontes EC, instalando"
 
 #. type: cindex
 #: texinfo/texinfo.texi:14554
 #, no-wrap
 msgid "CM-Super fonts @subentry installing"
-msgstr ""
+msgstr "Fontes CM-Super @subentry instalando"
 
 #. type: itemize
 #: texinfo/texinfo.texi:14558
@@ -37788,18 +37797,21 @@ msgid ""
 "the European Computer Modern fonts (e.g., @file{ecrm1000}) and (for PDF "
 "output) CM-Super fonts (@pxref{Inserting Quotation Marks})."
 msgstr ""
+"Para usar aspas diferentes daquelas usadas em inglês, você precisará ter "
+"as fontes European Computer Modern (por exemplo, @file{ecrm1000}) e (para "
+"saída em PDF) as fontes CM-Super (@pxref{Inserindo Aspas})."
 
 #. type: cindex
 #: texinfo/texinfo.texi:14559
 #, no-wrap
 msgid "@code{feymr10} @subentry installing"
-msgstr ""
+msgstr "@code{feymr10} @subentry instalando"
 
 #. type: cindex
 #: texinfo/texinfo.texi:14560
 #, no-wrap
 msgid "Euro font, installing"
-msgstr ""
+msgstr "Fonte do Euro, instalando"
 
 #. type: itemize
 #: texinfo/texinfo.texi:14563
@@ -37807,6 +37819,8 @@ msgid ""
 "To use the @code{@@euro} command, you'll need the @samp{feym*} fonts (e.g., "
 "@file{feymr10}).  @xref{@code{@@euro}}."
 msgstr ""
+"Para usar o comando @code{@@euro}, você precisará das fontes @samp{feym*} "
+"(por exemplo, @file{feymr10}). @xref{@code{@@euro}}."
 
 #. type: itemize
 #: texinfo/texinfo.texi:14566
