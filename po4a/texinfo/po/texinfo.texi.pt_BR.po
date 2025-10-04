@@ -37828,24 +37828,26 @@ msgid ""
 "All of the above files should be installed by default in a reasonable @TeX{} "
 "installation."
 msgstr ""
+"Todos os arquivos acima deveriam estar instalados por padrão em uma "
+"instalação razoável do @TeX{}."
 
 #. type: pindex
 #: texinfo/texinfo.texi:14567
 #, no-wrap
 msgid "texinfo.cnf @r{installation}"
-msgstr ""
+msgstr "texinfo.cnf @r{instalação}"
 
 #. type: cindex
 #: texinfo/texinfo.texi:14568
 #, no-wrap
 msgid "Customizing of @TeX{} for Texinfo"
-msgstr ""
+msgstr "Personalização do @TeX{} para Texinfo"
 
 #. type: cindex
 #: texinfo/texinfo.texi:14569
 #, no-wrap
 msgid "Site-wide Texinfo configuration file"
-msgstr ""
+msgstr "Arquivo de configuração do Texinfo abrangente ao sítio"
 
 #. type: itemize
 #: texinfo/texinfo.texi:14579
@@ -37859,18 +37861,27 @@ msgid ""
 "page size in effect.  If you have nothing to put in @file{texinfo.cnf}, you "
 "do not need to create it."
 msgstr ""
+"Opcionalmente, você pode criar um arquivo @file{texinfo.cnf} para "
+"configuração do sítio. Ao processar um arquivo do Texinfo, @TeX{} procura "
+"esse arquivo no caminho dele de pesquisa, que inclui o diretório atual e os "
+"diretórios padrão de instalação. Você pode usar esse arquivo para "
+"convenções locais. Por exemplo, se @file{texinfo.cnf} contiver a linha "
+"@samp{@@afourpaper} (@pxref{Papel A4}), então todos os documentos do "
+"Texinfo serão processados com esse tamanho de página em vigor. Se você "
+"não tiver nada para colocar no @file{texinfo.cnf}, não precisará criá "
+"-lo."
 
 #. type: cindex
 #: texinfo/texinfo.texi:14580
 #, no-wrap
 msgid "Environment variable @code{TEXINPUTS}"
-msgstr ""
+msgstr "Variável de ambiente @code{TEXINPUTS}"
 
 #. type: vindex
 #: texinfo/texinfo.texi:14581
 #, no-wrap
 msgid "TEXINPUTS"
-msgstr ""
+msgstr "TEXINPUTS"
 
 #. type: itemize
 #: texinfo/texinfo.texi:14588
@@ -37881,6 +37892,12 @@ msgid ""
 "shell-compatible shell (@code{sh}, @code{bash}, @code{ksh}, @dots{}), your "
 "@file{.profile} file could contain the lines:"
 msgstr ""
+"Você pode configurar a variável de ambiente @code{TEXINPUTS} para permitir "
+"que o @TeX{} encontre @file{texinfo.cnf}. (Isso também funciona para "
+"@file{texinfo.tex} e qualquer outro arquivo que o @TeX{} possa ler). Por "
+"exemplo, se você estiver usando um shell compatível com shell Bourne "
+"(@code{sh}, @code{bash}, @code{ksh}, @dots{}), teu arquivo @file{.profile} "
+"poderia conter as linhas:"
 
 #. type: example
 #: texinfo/texinfo.texi:14592
@@ -37889,6 +37906,8 @@ msgid ""
 "TEXINPUTS=.:/home/me/mylib:\n"
 "export TEXINPUTS\n"
 msgstr ""
+"TEXINPUTS=.:/home/eu/minhabiblioteca:\n"
+"export TEXINPUTS\n"
 
 #. type: itemize
 #: texinfo/texinfo.texi:14600
