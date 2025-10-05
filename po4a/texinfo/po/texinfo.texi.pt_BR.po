@@ -37958,7 +37958,7 @@ msgstr "@samp{hbox}, lotado"
 #: texinfo/texinfo.texi:14607
 #, no-wrap
 msgid "Final output"
-msgstr ""
+msgstr "Saída gerada final"
 
 #. type: itemize
 #: texinfo/texinfo.texi:14614
@@ -37969,18 +37969,24 @@ msgid ""
 "a very long identifier.  When this happens, @TeX{} prints an error message "
 "like this:"
 msgstr ""
+"@TeX{} às vezes é incapaz de tipografar uma linha dentro das margens "
+"normais. Isso ocorre com mais frequência quando o @TeX{} aparece no que "
+"interpreta como uma palavra longa que não consegue hifenizar, como um "
+"endereço de rede de intercomunicação de correio eletrônico ou um "
+"identificador muito longo. Quando isso acontece, @TeX{} imprime uma mensagem "
+"de erro como esta:"
 
 #. type: example
 #: texinfo/texinfo.texi:14617
 #, no-wrap
 msgid "Overfull @@hbox (20.76302pt too wide)\n"
-msgstr ""
+msgstr "Overfull @@hbox (20.76302pt too wide)\n"
 
 #. type: findex
 #: texinfo/texinfo.texi:14619
 #, no-wrap
 msgid "hbox"
-msgstr ""
+msgstr "hbox"
 
 #. type: itemize
 #: texinfo/texinfo.texi:14623
@@ -37988,6 +37994,9 @@ msgid ""
 "(In @TeX{}, lines are in ``horizontal boxes'', hence the term, ``hbox''.  "
 "@samp{@@hbox} is a @TeX{} primitive not used in the Texinfo language.)"
 msgstr ""
+"(No @TeX{}, as linhas estão em ``caixas horizontais'', daí o termo, "
+"``hbox''. @samp{@@hbox} é um primitivo do @TeX{} não usado na linguagem do "
+"Texinfo)."
 
 #. type: itemize
 #: texinfo/texinfo.texi:14628
@@ -37997,6 +38006,10 @@ msgid ""
 "considered hyphenation.  @xref{Debugging with @TeX{}}, for more information "
 "about typesetting errors."
 msgstr ""
+"O @TeX{} também fornece o número da linha no arquivo fonte do Texinfo e no "
+"texto da linha ofensiva, que é marcada em todos os locais que o @TeX{} "
+"considerou a hifenação. @xref{Depurando com @TeX{}}, para mais "
+"informações acerca de erros de tipografia."
 
 #. type: itemize
 #: texinfo/texinfo.texi:14633
@@ -38006,6 +38019,10 @@ msgid ""
 "excursion into the right margin often does not matter and may not even be "
 "noticeable."
 msgstr ""
+"Se o arquivo do Texinfo tiver um hbox lotado, você poderá reescrever a "
+"frase para que o hbox lotado não ocorra, ou poderá decidir deixá-lo. Uma "
+"pequena excursão na margem direita geralmente não importa e pode nem mesmo "
+"ser perceptível."
 
 #. type: itemize
 #: texinfo/texinfo.texi:14638
@@ -38014,12 +38031,16 @@ msgid ""
 "coerce @TeX{} into greatly increasing the allowable interword spacing, thus "
 "(if you're lucky) avoiding many of the bad line breaks, like this:"
 msgstr ""
+"Se você tiver muitas caixas lotadas e (ou) uma antipatia por reescrever, "
+"poderá coagir o @TeX{} a aumentar bastante o espaçamento permitido "
+"inter-palavras, assim (se você tiver sorte) evitando muitas das quebras "
+"ruins de linha, assim:"
 
 #. type: findex
 #: texinfo/texinfo.texi:14639
 #, no-wrap
 msgid "\\emergencystretch"
-msgstr ""
+msgstr "\\emergencystretch"
 
 #. type: example
 #: texinfo/texinfo.texi:14644
@@ -38029,6 +38050,9 @@ msgid ""
 "\\global\\emergencystretch = .9\\hsize\n"
 "@@end tex\n"
 msgstr ""
+"@@tex\n"
+"\\global\\emergencystretch = .9\\hsize\n"
+"@@end tex\n"
 
 #. type: itemize
 #: texinfo/texinfo.texi:14652
