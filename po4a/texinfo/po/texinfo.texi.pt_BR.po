@@ -38063,30 +38063,35 @@ msgid ""
 "@samp{.15\\hsize}.  @code{\\hsize} is the @TeX{} dimension containing the "
 "current line width."
 msgstr ""
+"(Você deveria ajustar a fração conforme necessário). Esse enorme valor "
+"para @code{\\emergencystretch} não pode ser o padrão, pois então a saída "
+"do tipador geralmente seria de qualidade visivelmente menor; o valor padrão "
+"dele é @samp{.15\\hsize}. @code{\\hsize} é a dimensão do @TeX{} contendo "
+"a largura atual da linha."
 
 #. type: cindex
 #: texinfo/texinfo.texi:14653
 #, no-wrap
 msgid "Black rectangle in hardcopy"
-msgstr ""
+msgstr "Retângulo preto em cópia impressa"
 
 #. type: cindex
 #: texinfo/texinfo.texi:14654
 #, no-wrap
 msgid "Rectangle, black in hardcopy"
-msgstr ""
+msgstr "Retângulo, preto em cópia impressa"
 
 #. type: cindex
 #: texinfo/texinfo.texi:14655
 #, no-wrap
 msgid "Box, ugly black in hardcopy"
-msgstr ""
+msgstr "Caixa, preto horrível em cópia impressa"
 
 #. type: cindex
 #: texinfo/texinfo.texi:14656
 #, no-wrap
 msgid "Ugly black rectangles in hardcopy"
-msgstr ""
+msgstr "Retângulos pretos horríveis em cópia impressa"
 
 #. type: itemize
 #: texinfo/texinfo.texi:14661
@@ -38096,12 +38101,16 @@ msgid ""
 "otherwise.  This is so you will notice the location of the problem if you "
 "are correcting a draft."
 msgstr ""
+"Para qualquer caixa lotada que você tenha, @TeX{} imprimirá um retângulo "
+"grande, feio e preto, ao lado da linha que contém o hbox lotado, a menos "
+"que seja informado de outra forma. É assim que você notará o local do "
+"problema se estiver corrigindo um rascunho."
 
 #. type: findex
 #: texinfo/texinfo.texi:14662
 #, no-wrap
 msgid "finalout"
-msgstr ""
+msgstr "finalout"
 
 #. type: itemize
 #: texinfo/texinfo.texi:14666
@@ -38110,29 +38119,33 @@ msgid ""
 "following in the beginning of the Texinfo file on a line of its own, before "
 "the @code{@@titlepage} command:"
 msgstr ""
+"Para impedir que essa monstruosidade estrague tua impressão final, escreva "
+"o seguinte no início do arquivo do Texinfo em uma linha própria, antes do "
+"comando @code{@@titlepage}:"
 
 #. type: example
 #: texinfo/texinfo.texi:14669
 #, no-wrap
 msgid "@@finalout\n"
-msgstr ""
+msgstr "@@finalout\n"
 
 #. type: node
 #: texinfo/texinfo.texi:14672
 #, no-wrap
 msgid "Generic Translator @command{texi2any}"
-msgstr ""
+msgstr "Tradutor Genérico @command{texi2any}"
 
 #. type: itemize
 #: texinfo/texinfo.texi:14674
 msgid "@nodedescription @command{texi2any}, an all-purpose converter."
 msgstr ""
+"@nodedescription @command{texi2any}, um conversor para todas as finalidades."
 
 #. type: chapter
 #: texinfo/texinfo.texi:14674
 #, no-wrap
 msgid "@command{texi2any}: The Translator for Texinfo"
-msgstr ""
+msgstr "@command{texi2any}: O Tradutor para Texinfo"
 
 #. type: itemize
 #: texinfo/texinfo.texi:14679
@@ -38141,6 +38154,9 @@ msgid ""
 "different output formats and is highly customizable.  It supports these "
 "formats:"
 msgstr ""
+"@command{texi2any} é o tradutor genérico para o Texinfo que consegue "
+"produzir formatos de saída diferentes e é altamente personalizável. Ele "
+"suporta estes formatos:"
 
 #. type: display
 #: texinfo/texinfo.texi:14688
@@ -38154,6 +38170,13 @@ msgid ""
 "DocBook (with @option{--docbook}),\n"
 "Texinfo XML (with @option{--xml}).\n"
 msgstr ""
+"Info (por padrão, ou com @option{--info}),\n"
+"HTML (com @option{--html}),\n"
+"EPUB 3 (com @option{--epub3}),\n"
+"texto simples(com @option{--plaintext}),\n"
+"@LaTeX{} (com @option{--latex}),\n"
+"DocBook (com @option{--docbook}),\n"
+"Texinfo XML (com @option{--xml}).\n"
 
 #. type: itemize
 #: texinfo/texinfo.texi:14693
