@@ -38185,6 +38185,9 @@ msgid ""
 "@command{texi2any} and @command{makeinfo} generate Info output; indeed, "
 "there are no differences in behavior based on the name."
 msgstr ""
+"@command{makeinfo} é um apelido para @command{texi2any}. Por padrão, "
+"@command{texi2any} e @command{makeinfo} geram saída Info; de fato, não "
+"existem diferenças de comportamento baseadas no nome."
 
 #. type: itemize
 #: texinfo/texinfo.texi:14701
@@ -38196,40 +38199,48 @@ msgid ""
 "Perl, like the main program, and anything which can be specified on the "
 "command line can also be specified within a initialization file."
 msgstr ""
+"Além desses formatos padrão, as opções de linha de comando para "
+"@command{texi2any} podem mudar muitos aspectos da saída gerada. Além "
+"disso, os arquivos de inicialização fornecem ainda mais controle sobre a "
+"saída final---quase tudo o que não esteja especificado no arquivo de "
+"entrada do Texinfo. Os arquivos de inicialização são escritos em Perl, "
+"como o programa principal, e qualquer coisa que possa ser especificada na "
+"linha de comando também pode ser especificada em um arquivo de "
+"inicialização."
 
 #. type: node
 #: texinfo/texinfo.texi:14703
 #, no-wrap
 msgid "Invoking @command{texi2any}"
-msgstr ""
+msgstr "Invocando @command{texi2any}"
 
 #. type: itemize
 #: texinfo/texinfo.texi:14705
 msgid "@nodedescription Running the translator from a shell."
-msgstr ""
+msgstr "@nodedescription Executando o tradutor a partir de um shell."
 
 #. type: section
 #: texinfo/texinfo.texi:14705
 #, no-wrap
 msgid "Invoking @command{texi2any} from a Shell"
-msgstr ""
+msgstr "Invocando @command{texi2any} a partir de um Shell"
 
 #. type: anchor{#1}
 #: texinfo/texinfo.texi:14708
 msgid "Invoking makeinfo"
-msgstr ""
+msgstr "Invocando makeinfo"
 
 #. type: pindex
 #: texinfo/texinfo.texi:14708
 #, no-wrap
 msgid "makeinfo"
-msgstr ""
+msgstr "makeinfo"
 
 #. type: pindex
 #: texinfo/texinfo.texi:14709
 #, no-wrap
 msgid "texi2any"
-msgstr ""
+msgstr "texi2any"
 
 #. type: itemize
 #: texinfo/texinfo.texi:14715
@@ -38239,12 +38250,16 @@ msgid ""
 "appropriate command line option (default is Info).  Thus, to create the Info "
 "file for Bison, type the following to the shell:"
 msgstr ""
+"Para processar um arquivo do Texinfo, invoque @command{texi2any} seguido "
+"pelo nome do arquivo do Texinfo. Selecione também o formato que você quer "
+"produzir com a opção de linha de comando apropriada (o padrão é Info). "
+"Assim, para criar o arquivo Info para Bison, digite o seguinte para o shell:"
 
 #. type: example
 #: texinfo/texinfo.texi:14718
 #, no-wrap
 msgid "texi2any --info bison.texi\n"
-msgstr ""
+msgstr "texi2any --info bison.texi\n"
 
 #. type: itemize
 #: texinfo/texinfo.texi:14722
@@ -38252,40 +38267,43 @@ msgid ""
 "You can specify more than one input file name; each is processed in turn.  "
 "If an input file name is @samp{-}, standard input is read."
 msgstr ""
+"Você consegue especificar mais que um nome de arquivo de entrada; cada um "
+"é processado em sequência. Se um nome de arquivo de entrada for @samp{-}, "
+"a entrada padrão será lida."
 
 #. type: anchor{#1}
 #: texinfo/texinfo.texi:14725
 msgid "@command{makeinfo} Options"
-msgstr ""
+msgstr "Opções do @command{makeinfo}"
 
 #. type: cindex
 #: texinfo/texinfo.texi:14725
 #, no-wrap
 msgid "@command{makeinfo} options"
-msgstr ""
+msgstr "opções do @command{makeinfo}"
 
 #. type: cindex
 #: texinfo/texinfo.texi:14726
 #, no-wrap
 msgid "Options for @command{makeinfo}"
-msgstr ""
+msgstr "Opções para @command{makeinfo}"
 
 #. type: anchor{#1}
 #: texinfo/texinfo.texi:14728
 msgid "@command{texi2any} Options"
-msgstr ""
+msgstr "Opções do @command{texi2any}"
 
 #. type: cindex
 #: texinfo/texinfo.texi:14728
 #, no-wrap
 msgid "@command{texi2any} options"
-msgstr ""
+msgstr "opções do @command{texi2any}"
 
 #. type: cindex
 #: texinfo/texinfo.texi:14729
 #, no-wrap
 msgid "Options for @command{texi2any}"
-msgstr ""
+msgstr "Opções para o @command{texi2any}"
 
 #. type: itemize
 #: texinfo/texinfo.texi:14734
@@ -38294,6 +38312,9 @@ msgid ""
 "are those that change the output format.  By default, @command{texi2any} "
 "outputs Info."
 msgstr ""
+"O programa @command{texi2any} aceita muitas opções. Talvez as mais "
+"básicos sejam aquelas que mudam o formato da saída gerada. Por padrão, "
+"@command{texi2any} produz Info."
 
 #. type: itemize
 #: texinfo/texinfo.texi:14738
@@ -38302,6 +38323,9 @@ msgid ""
 "single letter preceded by @samp{-}.  You can use abbreviations for the long "
 "option names as long as they are unique."
 msgstr ""
+"Cada opção de linha de comando ou é um nome longo precedido por @samp{--} "
+"ou é uma única letra precedida por @samp{-}. Você pode usar abreviações "
+"para os nomes longos de opções, desde que elas sejam únicas."
 
 #. type: itemize
 #: texinfo/texinfo.texi:14742
@@ -38309,23 +38333,26 @@ msgid ""
 "For example, you could use the following shell command to create an Info "
 "file for @file{bison.texi} in which lines are filled to only 68 columns:"
 msgstr ""
+"Por exemplo, você poderia usar o seguinte comando de shell para criar um "
+"arquivo Info para @file{bison.texi} no qual as linhas fossem preenchidas em "
+"somente 68 colunas:"
 
 #. type: example
 #: texinfo/texinfo.texi:14745
 #, no-wrap
 msgid "texi2any --fill-column=68 bison.texi\n"
-msgstr ""
+msgstr "texi2any --fill-column=68 bison.texi\n"
 
 #. type: itemize
 #: texinfo/texinfo.texi:14748
 msgid "You can write two or more options in sequence, like this:"
-msgstr ""
+msgstr "Você pode escrever duas ou mais opções em sequência, assim:"
 
 #. type: example
 #: texinfo/texinfo.texi:14751
 #, no-wrap
 msgid "texi2any --no-split --fill-column=70 @dots{}\n"
-msgstr ""
+msgstr "texi2any --no-split --fill-column=70 @dots{}\n"
 
 #. type: itemize
 #: texinfo/texinfo.texi:14756
