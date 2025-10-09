@@ -38360,17 +38360,19 @@ msgid ""
 "(This would keep the Info file together as one possibly very long file and "
 "would also set the fill column to 70.)"
 msgstr ""
+"(Isso manteria o arquivo Info unido como um arquivo possivelmente muito "
+"longo e também configuraria a coluna de preenchimento como 70)."
 
 #. type: itemize
 #: texinfo/texinfo.texi:14758
 msgid "The options are (approximately in alphabetical order):"
-msgstr ""
+msgstr "As opções são (aproximadamente em ordem alfabética):"
 
 #. type: opindex
 #: texinfo/texinfo.texi:14760 texinfo/texinfo.texi:14761
 #, no-wrap
 msgid "--commands-in-node-names"
-msgstr ""
+msgstr "--commands-in-node-names"
 
 #. type: table
 #: texinfo/texinfo.texi:14765
@@ -38379,12 +38381,16 @@ msgid ""
 "ensure that @@-commands in node names were expanded throughout the document, "
 "especially @code{@@value}.  This is now done by default.)"
 msgstr ""
+"Essa opção agora não faz nada, mas permanece para compatibilidade. (Ela "
+"costumava garantir que os comandos @@ nos nomes dos nós fossem expandidos "
+"por todo o documento, especialmente @code{@@value}. Isso agora é feito por "
+"padrão)."
 
 #. type: opindex
 #: texinfo/texinfo.texi:14766 texinfo/texinfo.texi:14767
 #, no-wrap
 msgid "--conf-dir=@var{dir}"
-msgstr ""
+msgstr "--conf-dir=@var{dir}"
 
 #.  @xref{Loading
 #. type: table
@@ -38396,18 +38402,24 @@ msgid ""
 "separated by the usual path separator character (@samp{:} on Unix-like "
 "systems, @samp{;} on Windows)."
 msgstr ""
+"Posponha @var{dir} à lista de pesquisa de diretórios para encontrar "
+"arquivos de personalização que podem ser carregados com "
+"@option{--init-file} (veja-se abaixo). O valor de @var{dir} pode ser um "
+"único diretório ou uma lista de vários diretórios separados pelo "
+"caractere usual de separador de caminho (@samp{:} em sistemas do tipo Unix, "
+"@samp{;} no Windows)."
 
 #. type: item
 #: texinfo/texinfo.texi:14775
 #, no-wrap
 msgid "--css-include=@var{file}"
-msgstr ""
+msgstr "--css-include=@var{arquivo}"
 
 #. type: opindex
 #: texinfo/texinfo.texi:14776
 #, no-wrap
 msgid "--css-include"
-msgstr ""
+msgstr "--css-include"
 
 #. type: table
 #: texinfo/texinfo.texi:14781
@@ -38417,18 +38429,22 @@ msgid ""
 "block of the HTML output.  If @var{file} is @samp{-}, read standard input.  "
 "@xref{HTML CSS}."
 msgstr ""
+"Ao produzir HTML, inclui literalmente o conteúdo de @var{arquivo}, que "
+"deveria conter especificações de folhas de estilos em cascata, no bloco "
+"@samp{<style>} da saída gerada HTML. Se @var{arquivo} for @samp{-}, lê a "
+"entrada padrão. @xref{CSS do HTML}."
 
 #. type: item
 #: texinfo/texinfo.texi:14782
 #, no-wrap
 msgid "--css-ref=@var{url}"
-msgstr ""
+msgstr "--css-ref=@var{url}"
 
 #. type: opindex
 #: texinfo/texinfo.texi:14783
 #, no-wrap
 msgid "--css-ref"
-msgstr ""
+msgstr "--css-ref"
 
 #. type: table
 #: texinfo/texinfo.texi:14787
@@ -38437,18 +38453,21 @@ msgid ""
 "a cascading style sheet at @var{url}.  This allows using standalone style "
 "sheets."
 msgstr ""
+"Ao produzir HTML, adiciona uma etiqueta @samp{<link>} à saída que "
+"referencia uma folha de estilo em cascata em @var{url}. Isso permite usar "
+"folhas de estilo independentes."
 
 #. type: opindex
 #: texinfo/texinfo.texi:14788 texinfo/texinfo.texi:14790
 #, no-wrap
 msgid "-D @var{var}"
-msgstr ""
+msgstr "-D @var{var}"
 
 #. type: itemx
 #: texinfo/texinfo.texi:14789
 #, no-wrap
 msgid "-D '@var{var} @var{value}'"
-msgstr ""
+msgstr "-D '@var{var} @var{valor}'"
 
 #. type: table
 #: texinfo/texinfo.texi:14794
@@ -38457,6 +38476,9 @@ msgid ""
 "@code{@@set @var{var}} in the Texinfo file (@pxref{@code{@@set @@clear "
 "@@value}})."
 msgstr ""
+"Faz com que a variável @var{var} do Texinfo seja definida. Isso é "
+"equivalente a @code{@@set @var{var}} no arquivo do Texinfo "
+"(@pxref{@code{@@set @@clear @@value}})."
 
 #. type: table
 #: texinfo/texinfo.texi:14799
@@ -38466,6 +38488,10 @@ msgid ""
 "remainder as the value.  For example, @code{-D 'myvar someval'} is "
 "equivalent to @code{@@set myvar someval}."
 msgstr ""
+"O argumento para a opção é sempre uma palavra para o shell; se ela "
+"contiver espaços em branco internos, a primeira palavra será considerada "
+"como o nome da variável e o restante como o valor. Por exemplo, @code{-D "
+"'minhavar algumvalor'} é equivalente a @code{@@set minhavar algumvalor}."
 
 #. type: opindex
 #: texinfo/texinfo.texi:14800 texinfo/texinfo.texi:14801
