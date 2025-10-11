@@ -38497,24 +38497,24 @@ msgstr ""
 #: texinfo/texinfo.texi:14800 texinfo/texinfo.texi:14801
 #, no-wrap
 msgid "--docbook"
-msgstr ""
+msgstr "--docbook"
 
 #. type: table
 #: texinfo/texinfo.texi:14803
 msgid "Generate DocBook output (rather than Info)."
-msgstr ""
+msgstr "Gera saída DocBook (em vez de Info)."
 
 #. type: item
 #: texinfo/texinfo.texi:14804
 #, no-wrap
 msgid "--document-language=@var{lang}"
-msgstr ""
+msgstr "--document-language=@var{idioma}"
 
 #. type: option{#1}
 #: texinfo/texinfo.texi:14805 texinfo/texinfo.texi:15511
 #, no-wrap
 msgid "--document-language"
-msgstr ""
+msgstr "--document-language"
 
 #. type: table
 #: texinfo/texinfo.texi:14810
@@ -38524,12 +38524,16 @@ msgid ""
 "@code{@@documentlanguage} command if there is one, otherwise English "
 "(@pxref{@code{@@documentlanguage}})."
 msgstr ""
+"Use @var{idioma} para traduzir palavras-chave Texinfo que acabam no "
+"documento de saída. O padrão é a localidade especificada pelo comando "
+"@code{@@documentlanguage}, se houver, caso contrário, inglês "
+"(@pxref{@code{@@documentlanguage}})."
 
 #. type: opindex
 #: texinfo/texinfo.texi:14811 texinfo/texinfo.texi:14812
 #, no-wrap
 msgid "--dvi"
-msgstr ""
+msgstr "--dvi"
 
 #. type: table
 #: texinfo/texinfo.texi:14815
@@ -38537,12 +38541,14 @@ msgid ""
 "Generate a TeX DVI file using @command{texi2dvi}, rather than Info "
 "(@pxref{@command{texi2any} Printed Output})."
 msgstr ""
+"Gere um arquivo DVI do TeX usando @command{texi2dvi}, em vez de Info (Saída "
+"Impressa do @pxref{@command{texi2any}})."
 
 #. type: opindex
 #: texinfo/texinfo.texi:14816 texinfo/texinfo.texi:14817
 #, no-wrap
 msgid "--dvipdf"
-msgstr ""
+msgstr "--dvipdf"
 
 #. type: table
 #: texinfo/texinfo.texi:14820
@@ -38550,25 +38556,27 @@ msgid ""
 "Generate a PDF file using @command{texi2dvi --dvipdf}, rather than Info "
 "(@pxref{@command{texi2any} Printed Output})."
 msgstr ""
+"Gere um arquivo PDF usando @command{texi2dvi --dvipdf}, em vez de Info "
+"(Saída Impressa do @pxref{@command{texi2any}})."
 
 #. type: option{#1}
 #: texinfo/texinfo.texi:14821 texinfo/texinfo.texi:14823
 #: texinfo/texinfo.texi:15509
 #, no-wrap
 msgid "--enable-encoding"
-msgstr ""
+msgstr "--enable-encoding"
 
 #. type: opindex
 #: texinfo/texinfo.texi:14822 texinfo/texinfo.texi:14824
 #, no-wrap
 msgid "--disable-encoding"
-msgstr ""
+msgstr "--disable-encoding"
 
 #. type: vindex
 #: texinfo/texinfo.texi:14825
 #, no-wrap
 msgid "ENABLE_ENCODING"
-msgstr ""
+msgstr "ENABLE_ENCODING"
 
 #. type: table
 #: texinfo/texinfo.texi:14831
@@ -38579,35 +38587,41 @@ msgid ""
 "Also obeyed in other output formats for index keys sorting and for some "
 "plain text output."
 msgstr ""
+"Por padrão, ou com @option{--enable-encoding}, produza caracteres "
+"acentuados e especiais em saída Info e de texto simples com base na "
+"codificação do documento. Com @option{--disable-encoding}, "
+"transliterações ASCII de 7 bits são geradas. Também obedecido em outros "
+"formatos de saída para ordenação de chaves de índice e para alguma "
+"saída de texto simples."
 
 #. type: opindex
 #: texinfo/texinfo.texi:14832 texinfo/texinfo.texi:14833
 #, no-wrap
 msgid "--epub3"
-msgstr ""
+msgstr "--epub3"
 
 #. type: table
 #: texinfo/texinfo.texi:14835
 msgid "Generate EPUB 3 output."
-msgstr ""
+msgstr "Gerar saída EPUB 3"
 
 #. type: opindex
 #: texinfo/texinfo.texi:14836 texinfo/texinfo.texi:14838
 #, no-wrap
 msgid "--error-limit=@var{limit}"
-msgstr ""
+msgstr "--error-limit=@var{limite}"
 
 #. type: opindex
 #: texinfo/texinfo.texi:14837 texinfo/texinfo.texi:14839
 #, no-wrap
 msgid "-e @var{limit}"
-msgstr ""
+msgstr "-e @var{limite}"
 
 #. type: vindex
 #: texinfo/texinfo.texi:14840
 #, no-wrap
 msgid "ERROR_LIMIT"
-msgstr ""
+msgstr "ERROR_LIMIT"
 
 #. type: table
 #: texinfo/texinfo.texi:14843
@@ -38615,24 +38629,26 @@ msgid ""
 "Report @var{limit} errors before aborting (on the assumption that continuing "
 "would be useless); default 100."
 msgstr ""
+"Informar @var{limite} de erros antes de abortar (supondo que continuar seria "
+"inútil); padrão 100."
 
 #. type: opindex
 #: texinfo/texinfo.texi:14844 texinfo/texinfo.texi:14846
 #, no-wrap
 msgid "--fill-column=@var{width}"
-msgstr ""
+msgstr "--fill-column=@var{largura}"
 
 #. type: opindex
 #: texinfo/texinfo.texi:14845 texinfo/texinfo.texi:14847
 #, no-wrap
 msgid "-f @var{width}"
-msgstr ""
+msgstr "-f @var{largura}"
 
 #. type: vindex
 #: texinfo/texinfo.texi:14848
 #, no-wrap
 msgid "FILLCOLUMN"
-msgstr ""
+msgstr "FILLCOLUMN"
 
 #. type: table
 #: texinfo/texinfo.texi:14855
@@ -38643,6 +38659,12 @@ msgid ""
 "are the same length as or shorter than the number specified as the fill "
 "column.  Lines are broken between words.) The default value is 72."
 msgstr ""
+"Especificar o número máximo de colunas em uma linha; isso é a borda "
+"direita de uma linha. Os parágrafos que sejam preenchidos serão "
+"preenchidos com essa largura. (Preencher é o processo de quebrar e de "
+"conectar linhas para que as linhas sejam do mesmo comprimento, ou menores, "
+"que o número especificado como a coluna de preenchimento. As linhas são "
+"quebradas entre as palavras). O valor padrão é 72."
 
 #. type: opindex
 #: texinfo/texinfo.texi:14856 texinfo/texinfo.texi:14858
