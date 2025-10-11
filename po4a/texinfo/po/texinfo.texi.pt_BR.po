@@ -38670,13 +38670,13 @@ msgstr ""
 #: texinfo/texinfo.texi:14856 texinfo/texinfo.texi:14858
 #, no-wrap
 msgid "--footnote-style=@var{style}"
-msgstr ""
+msgstr "--footnote-style=@var{estilo}"
 
 #. type: opindex
 #: texinfo/texinfo.texi:14857 texinfo/texinfo.texi:14859
 #, no-wrap
 msgid "-s @var{style}"
-msgstr ""
+msgstr "-s @var{estilo}"
 
 #. type: table
 #: texinfo/texinfo.texi:14866
@@ -38686,6 +38686,11 @@ msgid ""
 "value set by this option overrides the value set in a Texinfo file by a "
 "@code{@@footnotestyle} command (@pxref{Footnote Styles})."
 msgstr ""
+"Configurar o estilo da nota de rodapé como @var{estilo}: @samp{end} para o "
+"estilo do nó final (o padrão) ou @samp{separate} para o estilo do nó "
+"separado. O valor configurado por essa opção substitui o valor configurado "
+"em um arquivo do Texinfo por um comando @code{@@footnotestyle} "
+"(@pxref{Estilos de Notas de Rodapé})."
 
 #. type: table
 #: texinfo/texinfo.texi:14871
@@ -38695,6 +38700,11 @@ msgid ""
 "the footnote style is @samp{end}, @command{texi2any} places the footnote "
 "references at the end of the current node."
 msgstr ""
+"No Info, quando o estilo da nota de rodapé for @samp{separate}, "
+"@command{texi2any} cria um novo nó contendo as notas de rodapé encontradas "
+"no nó atual. Quando o estilo da nota de rodapé for @samp{end}, "
+"@command{texi2any} coloca as referências da nota de rodapé no final do nó "
+"atual."
 
 #. type: table
 #: texinfo/texinfo.texi:14876
@@ -38703,25 +38713,29 @@ msgid ""
 "split, footnotes are put at the end of the output.  If set to "
 "@samp{separate}, and the output is split, they are placed in a separate file."
 msgstr ""
+"No HTML, quando o estilo da nota de rodapé for @samp{end}, ou se a saída "
+"gerada não for dividida, as notas de rodapé são colocadas no final da "
+"saída gerada. Se configurada como @samp{separate} e a saída gerada for "
+"dividida, elas serão colocadas em um arquivo separado."
 
 #. type: option{#1}
 #: texinfo/texinfo.texi:14877 texinfo/texinfo.texi:14879
 #: texinfo/texinfo.texi:15519
 #, no-wrap
 msgid "--force"
-msgstr ""
+msgstr "--force"
 
 #. type: opindex
 #: texinfo/texinfo.texi:14878 texinfo/texinfo.texi:14880
 #, no-wrap
 msgid "-F"
-msgstr ""
+msgstr "-F"
 
 #. type: vindex
 #: texinfo/texinfo.texi:14881
 #, no-wrap
 msgid "FORCE"
-msgstr ""
+msgstr "FORCE"
 
 #. type: table
 #: texinfo/texinfo.texi:14884
@@ -38729,24 +38743,26 @@ msgid ""
 "Ordinarily, if the input file has errors, the output files are not created.  "
 "With this option, they are preserved."
 msgstr ""
+"Normalmente, se o arquivo de entrada contiver erros, os arquivos de saída "
+"não serão criados. Com essa opção, eles são preservados."
 
 #. type: item
 #: texinfo/texinfo.texi:14885 texinfo/texinfo.texi:17269
 #, no-wrap
 msgid "--help"
-msgstr ""
+msgstr "--help"
 
 #. type: opindex
 #: texinfo/texinfo.texi:14886 texinfo/texinfo.texi:14888
 #, no-wrap
 msgid "-h"
-msgstr ""
+msgstr "-h"
 
 #. type: opindex
 #: texinfo/texinfo.texi:14887
 #, no-wrap
 msgid "--help@r{, for @command{texi2any}}"
-msgstr ""
+msgstr "--help@r{, para @command{texi2any}}"
 
 #. type: table
 #: texinfo/texinfo.texi:14891
@@ -38754,12 +38770,14 @@ msgid ""
 "Print a message with available options and basic usage, then exit "
 "successfully."
 msgstr ""
+"Imprimir uma mensagem com as opções disponíveis e uso básico, então "
+"sair com sucesso."
 
 #. type: opindex
 #: texinfo/texinfo.texi:14892 texinfo/texinfo.texi:14893
 #, no-wrap
 msgid "--html"
-msgstr ""
+msgstr "--html"
 
 #. type: table
 #: texinfo/texinfo.texi:14898
@@ -38768,12 +38786,16 @@ msgid ""
 "split into one output file per node, and the split output is written into a "
 "subdirectory based on the name of the input file.  @xref{Generating HTML}."
 msgstr ""
+"Gerar saída HTML (em vez de Info). Por padrão, a saída gerada HTML é "
+"dividida em um arquivo de saída por nó e a saída gerada dividida é "
+"escrita em um subdiretório baseado no nome do arquivo de entrada. "
+"@xref{Gerando HTML}."
 
 #. type: opindex
 #: texinfo/texinfo.texi:14899 texinfo/texinfo.texi:14900
 #, no-wrap
 msgid "-I @var{dir}"
-msgstr ""
+msgstr "-I @var{diretório}"
 
 #. type: table
 #: texinfo/texinfo.texi:14908
@@ -38785,48 +38807,55 @@ msgid ""
 "list of several directories separated by the usual path separator character "
 "(@samp{:} on Unix-like systems, @samp{;} on Windows)."
 msgstr ""
+"Preponha @var{diretório} à lista de pesquisa de diretórios para encontrar "
+"arquivos que sejam incluídos usando o comando @code{@@include}. Por "
+"padrão, @command{texi2any} pesquisa somente o diretório atual. Se "
+"@var{diretório} não for fornecido, o diretório atual será preposto. O "
+"valor de @var{diretório} pode ser um diretório ou uma lista de vários "
+"diretórios separados pelo caractere usual separador de caminhos (@samp{:} "
+"em sistemas do tipo Unix, @samp{;} no Windows)."
 
 #. type: opindex
 #: texinfo/texinfo.texi:14909 texinfo/texinfo.texi:14910
 #, no-wrap
 msgid "--ifdocbook"
-msgstr ""
+msgstr "--ifdocbook"
 
 #. type: opindex
 #: texinfo/texinfo.texi:14911 texinfo/texinfo.texi:14912
 #, no-wrap
 msgid "--ifhtml"
-msgstr ""
+msgstr "--ifhtml"
 
 #. type: opindex
 #: texinfo/texinfo.texi:14913 texinfo/texinfo.texi:14914
 #, no-wrap
 msgid "--ifinfo"
-msgstr ""
+msgstr "--ifinfo"
 
 #. type: opindex
 #: texinfo/texinfo.texi:14915 texinfo/texinfo.texi:14916
 #, no-wrap
 msgid "--iflatex"
-msgstr ""
+msgstr "--iflatex"
 
 #. type: opindex
 #: texinfo/texinfo.texi:14917 texinfo/texinfo.texi:14918
 #, no-wrap
 msgid "--ifplaintext"
-msgstr ""
+msgstr "--ifplaintext"
 
 #. type: opindex
 #: texinfo/texinfo.texi:14919 texinfo/texinfo.texi:14920
 #, no-wrap
 msgid "--iftex"
-msgstr ""
+msgstr "--iftex"
 
 #. type: opindex
 #: texinfo/texinfo.texi:14921 texinfo/texinfo.texi:14922
 #, no-wrap
 msgid "--ifxml"
-msgstr ""
+msgstr "--ifxml"
 
 #. type: table
 #: texinfo/texinfo.texi:14929
@@ -38837,6 +38866,11 @@ msgid ""
 "instance, if @option{--iftex} is given, then @samp{@@iftex} and @samp{@@tex} "
 "blocks will be read, and @samp{@@ifnottex} blocks will be ignored."
 msgstr ""
+"Para o formato fornecido, processar os comandos @samp{@@if@var{formato}} e "
+"@samp{@@@var{formato}} e não processar @samp{@@ifnot@var{formato}}, "
+"independentemente do formato sendo gerado. Por exemplo, se @option{--iftex} "
+"for fornecido, então os blocos @samp{@@iftex} e @samp{@@tex} serão lidos e "
+"os blocos @samp{@@ifnottex} serão ignorados."
 
 #. type: opindex
 #: texinfo/texinfo.texi:14930 texinfo/texinfo.texi:14931
