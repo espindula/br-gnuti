@@ -38876,43 +38876,43 @@ msgstr ""
 #: texinfo/texinfo.texi:14930 texinfo/texinfo.texi:14931
 #, no-wrap
 msgid "--no-ifdocbook"
-msgstr ""
+msgstr "--no-ifdocbook"
 
 #. type: opindex
 #: texinfo/texinfo.texi:14932 texinfo/texinfo.texi:14933
 #, no-wrap
 msgid "--no-ifhtml"
-msgstr ""
+msgstr "--no-ifhtml"
 
 #. type: opindex
 #: texinfo/texinfo.texi:14934 texinfo/texinfo.texi:14935
 #, no-wrap
 msgid "--no-ifinfo"
-msgstr ""
+msgstr "--no-ifinfo"
 
 #. type: opindex
 #: texinfo/texinfo.texi:14936 texinfo/texinfo.texi:14937
 #, no-wrap
 msgid "--no-iflatex"
-msgstr ""
+msgstr "--no-iflatex"
 
 #. type: opindex
 #: texinfo/texinfo.texi:14938 texinfo/texinfo.texi:14939
 #, no-wrap
 msgid "--no-ifplaintext"
-msgstr ""
+msgstr "--no-ifplaintext"
 
 #. type: opindex
 #: texinfo/texinfo.texi:14940 texinfo/texinfo.texi:14941
 #, no-wrap
 msgid "--no-iftex"
-msgstr ""
+msgstr "--no-iftex"
 
 #. type: opindex
 #: texinfo/texinfo.texi:14942 texinfo/texinfo.texi:14943
 #, no-wrap
 msgid "--no-ifxml"
-msgstr ""
+msgstr "--no-ifxml"
 
 #. type: table
 #: texinfo/texinfo.texi:14950
@@ -38923,12 +38923,18 @@ msgid ""
 "@option{--no-ifhtml} is given, then @samp{@@ifhtml} and @samp{@@html} blocks "
 "will not be read, and @samp{@@ifnothtml} blocks will be."
 msgstr ""
+"Para o formato fornecido, não processar os comandos "
+"@samp{@@if@var{formato}} e @samp{@@@var{formato}} e processar "
+"@samp{@@ifnot@var{formato}}, independentemente do formato sendo gerado. Por "
+"exemplo, se @option{--no-ifhtml} for fornecido, então blocos "
+"@samp{@@ifhtml} e @samp{@@html} não serão lidos, e blocos "
+"@samp{@@ifnothtml} serão."
 
 #. type: opindex
 #: texinfo/texinfo.texi:14952 texinfo/texinfo.texi:14953
 #, no-wrap
 msgid "--info"
-msgstr ""
+msgstr "--info"
 
 #. type: table
 #: texinfo/texinfo.texi:14959
@@ -38939,6 +38945,12 @@ msgid ""
 "name, or by @code{@@setfilename}, if present (@pxref{Setting the Output File "
 "Name}).  @xref{Tag and Split Files}."
 msgstr ""
+"Gerar saída Info. Por padrão, se o arquivo da saída gerada contiver mais "
+"que cerca de 300.000 bytes, ele será dividido em subarquivos mais curtos de "
+"aproximadamente esse tamanho. O nome do arquivo da saída gerada e de "
+"quaisquer subarquivos é determinado pelo nome do arquivo de entrada ou por "
+"@code{@@setfilename}, se presente (@pxref{Configurando o Nome do Arquivo de "
+"Saída}). @xref{Arquivos de Etiqueta e Divididos}."
 
 #. type: opindex
 #: texinfo/texinfo.texi:14960 texinfo/texinfo.texi:14961
