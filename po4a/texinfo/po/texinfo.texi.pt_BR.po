@@ -38956,7 +38956,7 @@ msgstr ""
 #: texinfo/texinfo.texi:14960 texinfo/texinfo.texi:14961
 #, no-wrap
 msgid "--init-file=@var{file}"
-msgstr ""
+msgstr "--init-file=@var{arquivo}"
 
 #. type: table
 #: texinfo/texinfo.texi:14969
@@ -38968,24 +38968,30 @@ msgid ""
 "can be used to add to the list of directories in which these customization "
 "files are searched for."
 msgstr ""
+"Carregar @var{arquivo} como código para modificar o comportamento e a "
+"saída do manual gerado. É comum usar as extensões @code{.pm} ou "
+"@code{.init} para esses arquivos de personalização, mas isso não é "
+"obrigatório; o nome de @var{arquivo} pode ser qualquer coisa. A opção "
+"@option{--conf-dir} (veja-se acima) pode ser usada para adicionar à lista "
+"de diretórios nos quais esses arquivos de personalização são pesquisados."
 
 #. type: opindex
 #: texinfo/texinfo.texi:14970 texinfo/texinfo.texi:14971
 #, no-wrap
 msgid "--internal-links=@var{file}"
-msgstr ""
+msgstr "--internal-links=@var{arquivo}"
 
 #. type: cindex
 #: texinfo/texinfo.texi:14972
 #, no-wrap
 msgid "Internal links, of HTML"
-msgstr ""
+msgstr "Linques internos, do HTML"
 
 #. type: vindex
 #: texinfo/texinfo.texi:14973
 #, no-wrap
 msgid "INTERNAL_LINKS"
-msgstr ""
+msgstr "INTERNAL_LINKS"
 
 #. type: table
 #: texinfo/texinfo.texi:14980
@@ -38996,35 +39002,40 @@ msgid ""
 "was indexed or entered.  The items are in the natural sorting order for the "
 "given element.  This dump can be useful for post-processors."
 msgstr ""
+"No modo HTML, produzir um arquivo separado por tabulações contendo três "
+"colunas: o linque interno para um item indexado ou item no sumário, o nome "
+"do índice (ou sumário) no qual ele ocorre e o termo que foi indexado ou "
+"inserido. Os itens estão na ordem natural de classificação para o "
+"elemento fornecido. Esse despejo pode ser útil para pós-processadores."
 
 #. type: opindex
 #: texinfo/texinfo.texi:14981 texinfo/texinfo.texi:14982
 #, no-wrap
 msgid "--latex"
-msgstr ""
+msgstr "--latex"
 
 #. type: table
 #: texinfo/texinfo.texi:14984
 msgid "Generate @LaTeX{} output."
-msgstr ""
+msgstr "Gerar saída @LaTeX{}"
 
 #. type: opindex
 #: texinfo/texinfo.texi:14985 texinfo/texinfo.texi:14987
 #, no-wrap
 msgid "--macro-expand=@var{file}"
-msgstr ""
+msgstr "--macro-expand=@var{arquivo}"
 
 #. type: opindex
 #: texinfo/texinfo.texi:14986 texinfo/texinfo.texi:14988
 #, no-wrap
 msgid "-E @var{file}"
-msgstr ""
+msgstr "-E @var{arquivo}"
 
 #. type: vindex
 #: texinfo/texinfo.texi:14989
 #, no-wrap
 msgid "MACRO_EXPAND"
-msgstr ""
+msgstr "MACRO_EXPAND"
 
 #. type: table
 #: texinfo/texinfo.texi:14993
@@ -39033,6 +39044,9 @@ msgid ""
 "Normally, the result of macro expansion is used internally by "
 "@command{texi2any} and then discarded."
 msgstr ""
+"Gerar o fonte do Texinfo, com todas as macros do Texinfo expandidas, para "
+"@var{arquivo}. Normalmente, o resultado da expansão de macro é usado "
+"internamente por @command{texi2any} e então descartado."
 
 #. type: opindex
 #: texinfo/texinfo.texi:14994 texinfo/texinfo.texi:14995
