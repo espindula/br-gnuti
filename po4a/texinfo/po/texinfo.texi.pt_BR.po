@@ -39169,24 +39169,24 @@ msgstr ""
 #: texinfo/texinfo.texi:15530
 #, no-wrap
 msgid "--no-validate"
-msgstr ""
+msgstr "--no-validate"
 
 #. type: opindex
 #: texinfo/texinfo.texi:15032 texinfo/texinfo.texi:15034
 #, no-wrap
 msgid "--no-pointer-validate"
-msgstr ""
+msgstr "--no-pointer-validate"
 
 #. type: cindex
 #: texinfo/texinfo.texi:15035
 #, no-wrap
 msgid "Pointer validation"
-msgstr ""
+msgstr "Validação de ponteiro"
 
 #. type: anchor{#1}
 #: texinfo/texinfo.texi:15040
 msgid "Pointer Validation"
-msgstr ""
+msgstr "Validação de Ponteiro"
 
 #. type: table
 #: texinfo/texinfo.texi:15040
@@ -39195,6 +39195,9 @@ msgid ""
 "thing to do.  This can also be done with the @code{@@novalidate} command "
 "(@pxref{Formatting Partial Documents})."
 msgstr ""
+"Suprimir a fase de validação de ponteiro do @command{texi2any}---uma coisa "
+"perigosa de se fazer. Isso também pode ser feito com o comando "
+"@code{@@novalidate} (@pxref{Formatando Documentos Parciais})."
 
 #. type: table
 #: texinfo/texinfo.texi:15044
@@ -39203,6 +39206,10 @@ msgid ""
 "validity of cross-references and menu entries in the Texinfo file, as well "
 "as node pointers if they are given explicitly."
 msgstr ""
+"Se você não suprimir a validação de ponteiro, @command{texi2any} "
+"verificará a validade das referências cruzadas e entradas de menu no "
+"arquivo Texinfo, bem como dos ponteiros de nó, se eles(as) forem "
+"fornecidos(as) explicitamente."
 
 #. type: enumerate
 #: texinfo/texinfo.texi:15061
@@ -39213,6 +39220,11 @@ msgid ""
 "@file{(dir)}, then the referenced node must exist.\n"
 "\n"
 msgstr ""
+"Se uma referência de nó `Próximo', `Anterior' ou `Acima' for uma "
+"referência\n"
+"para um nó no arquivo atual e não for uma referência externa, como para\n"
+"@file{(diretório)}, então o nó referenciado precisará existir.\n"
+"\n"
 
 #. type: enumerate
 #: texinfo/texinfo.texi:15064
@@ -39221,6 +39233,8 @@ msgid ""
 "Every node except the `Top' node must have an `Up' pointer.\n"
 "\n"
 msgstr ""
+"Cada nó, exceto o nó `Top', precisa ter um ponteiro `Acima'.\n"
+"\n"
 
 #. type: enumerate
 #: texinfo/texinfo.texi:15069
@@ -39230,6 +39244,9 @@ msgid ""
 "current node through a menu item, unless the node referenced by `Up'\n"
 "has the form @samp{(@var{file})}.\n"
 msgstr ""
+"O nó referenciado por um ponteiro `Acima' precisa ele próprio referenciar\n"
+"o nó atual por meio de um item de menu, a menos que o nó referenciado por\n"
+"`Acima' tenha a forma @samp{(@var{arquivo})}.\n"
 
 #. type: option{#1}
 #: texinfo/texinfo.texi:15072 texinfo/texinfo.texi:15073
