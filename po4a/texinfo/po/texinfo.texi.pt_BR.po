@@ -39052,36 +39052,36 @@ msgstr ""
 #: texinfo/texinfo.texi:14994 texinfo/texinfo.texi:14995
 #, no-wrap
 msgid "--no-headers"
-msgstr ""
+msgstr "--no-headers"
 
 #. type: cindex
 #: texinfo/texinfo.texi:14996
 #, no-wrap
 msgid "Node separators, omitting with @option{--no-headers}"
-msgstr ""
+msgstr "Separadores de nós, omitindo com @option{--no-headers}"
 
 #. type: cindex
 #: texinfo/texinfo.texi:14997
 #, no-wrap
 msgid "Generating plain text files with @option{--no-headers}"
-msgstr ""
+msgstr "Gerando arquivos de texto simples com @option{--no-headers}"
 
 #. type: cindex
 #: texinfo/texinfo.texi:14998
 #, no-wrap
 msgid "Menus, omitting with @option{--no-headers}"
-msgstr ""
+msgstr "Menus, omitindo com @option{--no-headers}"
 
 #. type: vindex
 #: texinfo/texinfo.texi:14999
 #, no-wrap
 msgid "HEADERS"
-msgstr ""
+msgstr "HEADERS"
 
 #. type: table
 #: texinfo/texinfo.texi:15001
 msgid "Do not include menus or node separator lines in the output."
-msgstr ""
+msgstr "Não incluir menus ou linhas separadoras de nós na saída gerada."
 
 #. type: table
 #: texinfo/texinfo.texi:15006
@@ -39091,12 +39091,16 @@ msgid ""
 "output unless overridden with @option{-o}.  (This behavior is for backward "
 "compatibility.)"
 msgstr ""
+"Ao gerar Info, isso é o mesmo que usar @option{--plaintext}, resultando em "
+"um arquivo de texto simples. Além disso, a saída gerada é a saída "
+"padrão, a menos que substituída por @option{-o}. (Esse comportamento é "
+"para retro compatibilidade)."
 
 #. type: cindex
 #: texinfo/texinfo.texi:15007
 #, no-wrap
 msgid "Navigation links, omitting"
-msgstr ""
+msgstr "Linques de navegação, omitindo"
 
 #. type: table
 #: texinfo/texinfo.texi:15012
@@ -39105,25 +39109,29 @@ msgid ""
 "at the beginning of each file.  If output is not split, do not include "
 "navigation links at the top of each node at all.  @xref{Generating HTML}."
 msgstr ""
+"Ao gerar HTML e a saída gerada for dividida, gerar também linques de "
+"navegação somente no início de cada arquivo. Se a saída gerada não for "
+"dividida, não incluir linques de navegação no topo de cada nó em "
+"absoluto. @xref{Gerando HTML}."
 
 #. type: option{#1}
 #: texinfo/texinfo.texi:15013 texinfo/texinfo.texi:15015
 #: texinfo/texinfo.texi:15536
 #, no-wrap
 msgid "--node-files"
-msgstr ""
+msgstr "--node-files"
 
 #. type: opindex
 #: texinfo/texinfo.texi:15014 texinfo/texinfo.texi:15016
 #, no-wrap
 msgid "--no-node-files"
-msgstr ""
+msgstr "--no-node-files"
 
 #. type: vindex
 #: texinfo/texinfo.texi:15017
 #, no-wrap
 msgid "NODE_FILES"
-msgstr ""
+msgstr "NODE_FILES"
 
 #. type: table
 #: texinfo/texinfo.texi:15023
@@ -39134,6 +39142,11 @@ msgid ""
 "This makes it possible for section- and chapter-level cross-manual "
 "references to succeed (@pxref{HTML Xref Configuration})."
 msgstr ""
+"Com @option{--node-files}, ao gerar HTML, criar arquivos de redirecionamento "
+"para âncoras e quaisquer nós ainda não gerados com o nome do arquivo "
+"correspondente ao nome do nó (@pxref{Expansão Xref de Nome de Nó do "
+"HTML}). Isso torna possível o êxito de referências entre manuais em "
+"nível de seção e de capítulo (@pxref{Configuração Xref do HTML})."
 
 #. type: table
 #: texinfo/texinfo.texi:15030
@@ -39144,6 +39157,12 @@ msgid ""
 "suppresses the creation of redirection files in any case.  This option has "
 "no effect with any output format other than HTML@.  @xref{Generating HTML}."
 msgstr ""
+"Se a saída gerada for dividida, isso estará habilitado por padrão. Se a "
+"saída gerada não for dividida, @option{--node-files} habilita a criação "
+"dos arquivos de redirecionamento, além do arquivo de saída principal "
+"monolítico. @option{--no-node-files} suprime a criação de arquivos de "
+"redirecionamento em qualquer caso. Essa opção não tem efeito com nenhum "
+"formato de saída diferente do HTML@. @xref{Gerando HTML}."
 
 #. type: option{#1}
 #: texinfo/texinfo.texi:15031 texinfo/texinfo.texi:15033
