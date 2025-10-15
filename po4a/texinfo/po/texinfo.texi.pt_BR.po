@@ -39253,36 +39253,36 @@ msgstr ""
 #: texinfo/texinfo.texi:15527
 #, no-wrap
 msgid "--no-warn"
-msgstr ""
+msgstr "--no-warn"
 
 #. type: vindex
 #: texinfo/texinfo.texi:15074
 #, no-wrap
 msgid "NO_WARN"
-msgstr ""
+msgstr "NO_WARN"
 
 #. type: table
 #: texinfo/texinfo.texi:15076
 msgid "Suppress warning messages (but not error messages)."
-msgstr ""
+msgstr "Suprimir mensagens de aviso (porém não mensagens de erro)."
 
 #. type: option{#1}
 #: texinfo/texinfo.texi:15077 texinfo/texinfo.texi:15532
 #, no-wrap
 msgid "--number-footnotes"
-msgstr ""
+msgstr "--number-footnotes"
 
 #. type: opindex
 #: texinfo/texinfo.texi:15078 texinfo/texinfo.texi:15079
 #, no-wrap
 msgid "--no-number-footnotes"
-msgstr ""
+msgstr "--no-number-footnotes"
 
 #. type: vindex
 #: texinfo/texinfo.texi:15080
 #, no-wrap
 msgid "NUMBER_FOOTNOTES"
-msgstr ""
+msgstr "NUMBER_FOOTNOTES"
 
 #. type: table
 #: texinfo/texinfo.texi:15084
@@ -39291,25 +39291,29 @@ msgid ""
 "By default, footnotes are numbered sequentially within a node, i.e., the "
 "current footnote number is reset to 1 at the start of each node."
 msgstr ""
+"Com @option{--no-number-footnotes}, suprimir a numeração automática de "
+"notas de rodapé. Por padrão, notas de rodapé são numeradas "
+"sequencialmente dentro de um nó, ou seja, o número da nota de rodapé "
+"atual é reconfigurado para 1 no início de cada nó."
 
 #. type: option{#1}
 #: texinfo/texinfo.texi:15085 texinfo/texinfo.texi:15087
 #: texinfo/texinfo.texi:15534
 #, no-wrap
 msgid "--number-sections"
-msgstr ""
+msgstr "--number-sections"
 
 #. type: opindex
 #: texinfo/texinfo.texi:15086 texinfo/texinfo.texi:15088
 #, no-wrap
 msgid "--no-number-sections"
-msgstr ""
+msgstr "--no-number-sections"
 
 #. type: vindex
 #: texinfo/texinfo.texi:15089
 #, no-wrap
 msgid "NUMBER_SECTIONS"
-msgstr ""
+msgstr "NUMBER_SECTIONS"
 
 #. type: table
 #: texinfo/texinfo.texi:15094
@@ -39319,30 +39323,34 @@ msgid ""
 "structured manuals.  You should specify @code{--no-number-sections} if your "
 "manual is not normally structured."
 msgstr ""
+"Com @option{--number-sections} (o padrão), produzir números de capítulo, "
+"seção e apêndice como em manuais impressos. Isso funciona somente com "
+"manuais estruturados hierarquicamente. Você deveria especificar "
+"@code{--no-number-sections} se teu manual não for normalmente estruturado."
 
 #. type: opindex
 #: texinfo/texinfo.texi:15096 texinfo/texinfo.texi:15098
 #, no-wrap
 msgid "--output=@var{file}"
-msgstr ""
+msgstr "--output=@var{file}"
 
 #. type: opindex
 #: texinfo/texinfo.texi:15097 texinfo/texinfo.texi:15099
 #, no-wrap
 msgid "-o @var{file}"
-msgstr ""
+msgstr "-o @var{arquivo}"
 
 #. type: vindex
 #: texinfo/texinfo.texi:15100
 #, no-wrap
 msgid "OUTFILE"
-msgstr ""
+msgstr "OUTFILE"
 
 #. type: vindex
 #: texinfo/texinfo.texi:15101
 #, no-wrap
 msgid "SUBDIR"
-msgstr ""
+msgstr "SUBDIR"
 
 #. type: table
 #: texinfo/texinfo.texi:15107
@@ -39353,6 +39361,12 @@ msgid ""
 "specified, the input file name is used to determine the output name.  "
 "@xref{Setting the Output File Name}."
 msgstr ""
+"Especificar que a saída gerada deveria ser direcionada para @var{arquivo}. "
+"Isso substitui qualquer nome de arquivo especificado em um comando "
+"@code{@@setfilename} encontrado no fonte do Texinfo. Se nem "
+"@code{@@setfilename} nem essa opção forem especificados, o nome do arquivo "
+"de entrada será usado para determinar o nome da saída gerada. "
+"@xref{Configurando o Nome do Arquivo de Saída}."
 
 #. type: table
 #: texinfo/texinfo.texi:15110
@@ -39360,6 +39374,8 @@ msgid ""
 "If @var{file} is @samp{-}, output goes to standard output and "
 "@samp{--no-split} is implied."
 msgstr ""
+"Se @var{arquivo} for @samp{-}, a saída gerada vai para a saída padrão e "
+"@samp{--no-split} estará implícita."
 
 #. type: table
 #: texinfo/texinfo.texi:15117
@@ -39371,6 +39387,12 @@ msgid ""
 "@option{--no-split}, will write @file{bar/foo.info}, and possibly other "
 "files, under @file{bar/}."
 msgstr ""
+"Se @var{arquivo} for um diretório ou terminar com uma @samp{/}, as regras "
+"usuais serão usadas para determinar o nome do arquivo de saída (ou seja, "
+"usar @code{@@setfilename} ou o nome do arquivo de entrada), mas os arquivos "
+"serão escritos no diretório @var{arquivo}. Por exemplo, @samp{texi2any -o "
+"bar/ foo.texi}, com ou sem @option{--no-split}, escreverá "
+"@file{bar/foo.info}, e possivelmente outros arquivos, sob @file{bar/}."
 
 #. type: table
 #: texinfo/texinfo.texi:15122
@@ -39379,6 +39401,10 @@ msgid ""
 "the directory into which all files are written.  For example, @samp{texi2any "
 "-o bar --html foo.texi} will write @file{bar/index.html}, among other files."
 msgstr ""
+"Ao gerar HTML e a saída gerada for dividida, @var{arquivo} será usado como "
+"o nome para o diretório no qual todos os arquivos serão escritos. Por "
+"exemplo, @samp{texi2any -o bar --html foo.texi} escreverá "
+"@file{bar/index.html}, entre outros arquivos."
 
 #. type: table
 #: texinfo/texinfo.texi:15128
@@ -39389,6 +39415,13 @@ msgid ""
 "within @var{file}.  The EPUB output file is never put in this directory.  If "
 "@var{file} corresponds to a file, it is used for the EPUB output file name."
 msgstr ""
+"Ao gerar EPUB, um diretório contêiner para os arquivos e diretórios "
+"necessários para o formato EPUB será criado, bem como o arquivo de saída "
+"gerada EPUB. Se @var{arquivo} corresponder a um diretório, o diretório "
+"contêiner será colocado dentro de @var{arquivo}. O arquivo de saída "
+"gerada EPUB nunca é colocado nesse diretório. Se @var{arquivo} "
+"corresponder a um arquivo, ele será usado para o nome do arquivo de saída "
+"gerada EPUB."
 
 #. type: item
 #: texinfo/texinfo.texi:15129
