@@ -39427,13 +39427,13 @@ msgstr ""
 #: texinfo/texinfo.texi:15129
 #, no-wrap
 msgid "--output-indent=@var{val}"
-msgstr ""
+msgstr "--output-indent=@var{valor}"
 
 #. type: opindex
 #: texinfo/texinfo.texi:15130
 #, no-wrap
 msgid "--outputindent"
-msgstr ""
+msgstr "--outputindent"
 
 #. type: table
 #: texinfo/texinfo.texi:15133
@@ -39441,12 +39441,14 @@ msgid ""
 "This option now does nothing, but remains for compatibility.  (It used to "
 "alter indentation in XML/DocBook output.)"
 msgstr ""
+"Essa opção agora não faz nada, mas permanece para compatibilidade. (É "
+"usada para alterar o recuo na saída gerada XML/DocBook)."
 
 #. type: opindex
 #: texinfo/texinfo.texi:15134 texinfo/texinfo.texi:15135
 #, no-wrap
 msgid "-P @var{path}"
-msgstr ""
+msgstr "-P @var{caminho}"
 
 #. type: table
 #: texinfo/texinfo.texi:15139
@@ -39455,18 +39457,21 @@ msgid ""
 "@var{path} is not given, the current directory is prepended.  See @samp{-I} "
 "above."
 msgstr ""
+"Posponha @var{caminho} à lista de pesquisa de diretórios para "
+"@code{@@include}. Se @var{caminho} não for fornecido, o diretório atual "
+"será posposto. Veja-se @samp{-I} acima."
 
 #. type: opindex
 #: texinfo/texinfo.texi:15140 texinfo/texinfo.texi:15142
 #, no-wrap
 msgid "--paragraph-indent=@var{indent}"
-msgstr ""
+msgstr "--paragraph-indent=@var{recuo}"
 
 #. type: opindex
 #: texinfo/texinfo.texi:15141 texinfo/texinfo.texi:15143
 #, no-wrap
 msgid "-p @var{indent}"
-msgstr ""
+msgstr "-p @var{recuo}"
 
 #. type: table
 #: texinfo/texinfo.texi:15148
@@ -39476,6 +39481,11 @@ msgid ""
 "@code{@@paragraphindent} command (@pxref{@code{@@paragraphindent}}).  The "
 "value of @var{indent} is interpreted as follows:"
 msgstr ""
+"Configurar o estilo de recuo do parágrafo para @var{recuo}. O valor "
+"configurado por essa opção substitui o valor configurado em um arquivo do "
+"Texinfo por um comando @code{@@paragraphindent} "
+"(@pxref{@code{@@paragraphindent}}). O valor de @var{recuo} é interpretado "
+"conforme segue:"
 
 #. type: table
 #: texinfo/texinfo.texi:15153
@@ -39483,28 +39493,30 @@ msgid ""
 "Preserve any existing indentation (or lack thereof) at the beginnings of "
 "paragraphs."
 msgstr ""
+"Preservar qualquer recuo existente (ou falta dele) no início dos "
+"parágrafos."
 
 #. type: item
 #: texinfo/texinfo.texi:15154
 #, no-wrap
 msgid "@samp{0} or @samp{none}"
-msgstr ""
+msgstr "@samp{0} ou @samp{none}"
 
 #. type: table
 #: texinfo/texinfo.texi:15156
 msgid "Delete any existing indentation."
-msgstr ""
+msgstr "Deletar qualquer recuo existente."
 
 #. type: var{#1}
 #: texinfo/texinfo.texi:15157
 #, no-wrap
 msgid "num"
-msgstr ""
+msgstr "num"
 
 #. type: table
 #: texinfo/texinfo.texi:15159
 msgid "Indent each paragraph by @var{num} spaces."
-msgstr ""
+msgstr "Recuar cada parágrafo com @var{num} espaços."
 
 #. type: table
 #: texinfo/texinfo.texi:15163
@@ -39512,12 +39524,14 @@ msgid ""
 "The default is to indent by two spaces, except for paragraphs following a "
 "section heading, which are not indented."
 msgstr ""
+"O padrão é o de recuar dois espaços, exceto para parágrafos após o "
+"título de uma seção, os quais não são recuados."
 
 #. type: opindex
 #: texinfo/texinfo.texi:15164 texinfo/texinfo.texi:15165
 #, no-wrap
 msgid "--pdf"
-msgstr ""
+msgstr "--pdf"
 
 #. type: table
 #: texinfo/texinfo.texi:15168
@@ -39525,48 +39539,50 @@ msgid ""
 "Generate a PDF file using @command{texi2dvi --pdf}, rather than Info "
 "(@pxref{@command{texi2any} Printed Output})."
 msgstr ""
+"Gerar um arquivo PDF usando @command{texi2dvi --pdf}, em vez de Info (Saída "
+"Impressa do @pxref{@command{texi2any}})."
 
 #. type: opindex
 #: texinfo/texinfo.texi:15169 texinfo/texinfo.texi:15170
 #, no-wrap
 msgid "--plaintext"
-msgstr ""
+msgstr "--plaintext"
 
 #. type: cindex
 #: texinfo/texinfo.texi:15171
 #, no-wrap
 msgid "Plain text output with @option{--plaintext}"
-msgstr ""
+msgstr "Saída de texto simples com @option{--plaintext}"
 
 #. type: cindex
 #: texinfo/texinfo.texi:15172
 #, no-wrap
 msgid "ASCII text output with @option{--plaintext}"
-msgstr ""
+msgstr "Saída de texto ASCII com @option{--plaintext}"
 
 #. type: cindex
 #: texinfo/texinfo.texi:15173
 #, no-wrap
 msgid "Generating plain text files with @option{--plaintext}"
-msgstr ""
+msgstr "Gerando arquivos de texto simples com @option{--plaintext}"
 
 #. type: cindex
 #: texinfo/texinfo.texi:15174
 #, no-wrap
 msgid "Node separators, omitting with @option{--plaintext}"
-msgstr ""
+msgstr "Separadores de nós, omitindo com @option{--plaintext}"
 
 #. type: cindex
 #: texinfo/texinfo.texi:15175
 #, no-wrap
 msgid "Menus, omitting with @option{--plaintext}"
-msgstr ""
+msgstr "Menus, omitindo com @option{--plaintext}"
 
 #. type: cindex
 #: texinfo/texinfo.texi:15176
 #, no-wrap
 msgid "@file{INSTALL} file, generating"
-msgstr ""
+msgstr "Arquivo @file{INSTALL}, gerando"
 
 #. type: table
 #: texinfo/texinfo.texi:15182
