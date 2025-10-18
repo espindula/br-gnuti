@@ -39592,6 +39592,11 @@ msgid ""
 "file that you can (for example) send in email without complications, or "
 "include in a distribution (for example, an @file{INSTALL} file)."
 msgstr ""
+"Produzir um arquivo de texto simples (em vez de Info): não incluir menus ou "
+"linhas separadoras de nós na saída gerada. Isso resulta em um arquivo de "
+"texto simples que você consegue (por exemplo) enviar por correio "
+"eletrônico sem complicações ou incluir em uma distribuição (por "
+"exemplo, um arquivo @file{INSTALL})."
 
 #. type: table
 #: texinfo/texinfo.texi:15186
@@ -39600,12 +39605,15 @@ msgid ""
 "to a file with a name based on the input file name or @code{@@setfilename}; "
 "this can be overridden with @option{-o}."
 msgstr ""
+"Com essa opção, a saída gerada vai para a saída padrão por padrão, em "
+"vez de para um arquivo com um nome baseado no nome do arquivo de entrada ou "
+"@code{@@setfilename}; isso pode ser substituído por @option{-o}."
 
 #. type: opindex
 #: texinfo/texinfo.texi:15187 texinfo/texinfo.texi:15188
 #, no-wrap
 msgid "--ps"
-msgstr ""
+msgstr "--ps"
 
 #. type: table
 #: texinfo/texinfo.texi:15191
@@ -39613,18 +39621,20 @@ msgid ""
 "Generate a PostScript file using @command{texi2dvi --ps}, rather than Info "
 "(@pxref{@command{texi2any} Printed Output})."
 msgstr ""
+"Gerar um arquivo PostScript usando @command{texi2dvi --ps}, em vez de Info "
+"(Saída Impressa do @pxref{@command{texi2any}})."
 
 #. type: opindex
 #: texinfo/texinfo.texi:15192 texinfo/texinfo.texi:15194
 #, no-wrap
 msgid "--set-customization-variable @var{var}=@var{value}"
-msgstr ""
+msgstr "--set-customization-variable @var{variável}=@var{valor}"
 
 #. type: opindex
 #: texinfo/texinfo.texi:15193 texinfo/texinfo.texi:15195
 #, no-wrap
 msgid "-c @var{var}=@var{value}"
-msgstr ""
+msgstr "-c @var{variável}=@var{valor}"
 
 #. type: table
 #: texinfo/texinfo.texi:15203
@@ -39636,35 +39646,42 @@ msgid ""
 "variables, beyond what can be set in the document by @@-commands and with "
 "other command line switches.  @xref{Customization Variables}."
 msgstr ""
+"Configurar a variável de personalização @var{variável} como @var{valor}. "
+"O @code{=} é opcional, mas tanto @var{variável} quanto @var{valor} "
+"precisam estar aspeados para o shell conforme necessário para que o "
+"resultado seja uma palavra. Muitos aspectos do comportamento e saída do "
+"@command{texi2any} podem ser controlados por variáveis de personalização, "
+"além do que pode ser configurados no documento pelos comandos @@ e com "
+"outras chaves de linha de comando. @xref{Variáveis de Personalização}."
 
 #. type: opindex
 #: texinfo/texinfo.texi:15204 texinfo/texinfo.texi:15206
 #, no-wrap
 msgid "--split=@var{how}"
-msgstr ""
+msgstr "--split=@var{como}"
 
 #. type: opindex
 #: texinfo/texinfo.texi:15205 texinfo/texinfo.texi:15207
 #, no-wrap
 msgid "--no-split"
-msgstr ""
+msgstr "--no-split"
 
 #. type: cindex
 #: texinfo/texinfo.texi:15208
 #, no-wrap
 msgid "Splitting of output files"
-msgstr ""
+msgstr "Divisão dos arquivos de saída"
 
 #. type: cindex
 #: texinfo/texinfo.texi:15209
 #, no-wrap
 msgid "Output file splitting"
-msgstr ""
+msgstr "Divisão de arquivo de saída"
 
 #. type: anchor{#1}
 #: texinfo/texinfo.texi:15216
 msgid "Splitting Output"
-msgstr ""
+msgstr "Dividindo Saída Gerada"
 
 #. type: table
 #: texinfo/texinfo.texi:15216
@@ -39674,12 +39691,16 @@ msgid ""
 "each output file contains one node (@pxref{Generating HTML}).  "
 "@option{--no-split} suppresses this splitting of the output."
 msgstr ""
+"Ao gerar Info, por padrão, grandes arquivos de saída são divididos em "
+"subarquivos menores, de aproximadamente 300k bytes. Ao gerar HTML, por "
+"padrão, cada arquivo de saída contém um nó (@pxref{Gerando HTML}). "
+"@option{--no-split} suprime essa divisão da saída."
 
 #. type: vindex
 #: texinfo/texinfo.texi:15217
 #, no-wrap
 msgid "SPLIT"
-msgstr ""
+msgstr "SPLIT"
 
 #. type: table
 #: texinfo/texinfo.texi:15221
@@ -39688,6 +39709,9 @@ msgid ""
 "level the HTML output should be split.  The possible values for @var{how} "
 "are:"
 msgstr ""
+"Alternativamente, @option{--split=@var{como}} pode ser usada para "
+"especificar em qual nível a saída HTML deveria ser dividida. Os valores "
+"possíveis para @var{como} são:"
 
 #. type: table
 #: texinfo/texinfo.texi:15226
@@ -39695,16 +39719,18 @@ msgid ""
 "The output is split at @code{@@chapter} and other sectioning @@-commands at "
 "this level (@code{@@appendix}, etc.)."
 msgstr ""
+"A saída gerada é dividida em @code{@@chapter} e outros comandos @@ de "
+"seccionamento nesse nível (@code{@@appendix}, etc.)."
 
 #. type: table
 #: texinfo/texinfo.texi:15229
 msgid "The output is split at @code{@@section} and similar."
-msgstr ""
+msgstr "A saída gerada é dividida em @code{@@section} e semelhante."
 
 #. type: table
 #: texinfo/texinfo.texi:15232
 msgid "The output is split at every node.  This is the default."
-msgstr ""
+msgstr "A saída gerada é dividida em cada nó. Esse é o padrão."
 
 #. type: table
 #: texinfo/texinfo.texi:15237
@@ -39713,6 +39739,9 @@ msgid ""
 "extracting sections from a Texinfo document and making them available as "
 "separate files."
 msgstr ""
+"A saída gerada de texto simples pode ser dividida semelhante ao HTML@. Isso "
+"possivelmente seja útil para extrair seções a partir de um documento do "
+"Texinfo e disponibilizá-las como arquivos separados."
 
 #. type: opindex
 #: texinfo/texinfo.texi:15238 texinfo/texinfo.texi:15239
