@@ -39747,13 +39747,13 @@ msgstr ""
 #: texinfo/texinfo.texi:15238 texinfo/texinfo.texi:15239
 #, no-wrap
 msgid "--split-size=@var{num}"
-msgstr ""
+msgstr "--split-size=@var{número}"
 
 #. type: vindex
 #: texinfo/texinfo.texi:15240
 #, no-wrap
 msgid "SPLIT_SIZE"
-msgstr ""
+msgstr "SPLIT_SIZE"
 
 #. type: table
 #: texinfo/texinfo.texi:15244
@@ -39761,19 +39761,22 @@ msgid ""
 "Keep Info files to at most @var{num} characters if possible; default is "
 "300,000.  (However, a single node will never be split across Info files.)"
 msgstr ""
+"Manter arquivos Info com no máximo @var{número} caracteres, se possível; "
+"o padrão é 300.000. (No entanto, um nó nunca será dividido entre "
+"arquivos Info)."
 
 #. type: option{#1}
 #: texinfo/texinfo.texi:15245 texinfo/texinfo.texi:15246
 #: texinfo/texinfo.texi:15549
 #, no-wrap
 msgid "--transliterate-file-names"
-msgstr ""
+msgstr "--transliterate-file-names"
 
 #. type: vindex
 #: texinfo/texinfo.texi:15247
 #, no-wrap
 msgid "TRANSLITERATE_FILE_NAMES"
-msgstr ""
+msgstr "TRANSLITERATE_FILE_NAMES"
 
 #. type: table
 #: texinfo/texinfo.texi:15250
@@ -39781,12 +39784,15 @@ msgid ""
 "Enable transliteration of non-ASCII characters in node names for the purpose "
 "of file name creation.  @xref{HTML Xref 8-bit Character Expansion}."
 msgstr ""
+"Habilitar transliteração de caracteres não ASCII em nomes de nós para "
+"fins de criação de nomes de arquivos. @xref{Expansão Xref de Caracteres "
+"de 8 bits do HTML}."
 
 #. type: item
 #: texinfo/texinfo.texi:15251
 #, no-wrap
 msgid "-U @var{var}"
-msgstr ""
+msgstr "-U @var{variável}"
 
 #. type: table
 #: texinfo/texinfo.texi:15254
@@ -39794,19 +39800,22 @@ msgid ""
 "Cause @var{var} to be undefined.  This is equivalent to @code{@@clear "
 "@var{var}} in the Texinfo file (@pxref{@code{@@set @@clear @@value}})."
 msgstr ""
+"Faz com que @var{variável} seja indefinida. Isso é equivalente a "
+"@code{@@clear @var{variável}} no arquivo do Texinfo (@pxref{@code{@@set "
+"@@clear @@value}})."
 
 #. type: option{#1}
 #: texinfo/texinfo.texi:15255 texinfo/texinfo.texi:15256
 #: texinfo/texinfo.texi:15551
 #, no-wrap
 msgid "--verbose"
-msgstr ""
+msgstr "--verbose"
 
 #. type: vindex
 #: texinfo/texinfo.texi:15257
 #, no-wrap
 msgid "VERBOSE"
-msgstr ""
+msgstr "VERBOSE"
 
 #. type: table
 #: texinfo/texinfo.texi:15261
@@ -39815,35 +39824,38 @@ msgid ""
 "Normally, @command{texi2any} only outputs messages if there are errors or "
 "warnings."
 msgstr ""
+"Faz com que @command{texi2any} exiba mensagens dizendo o que está fazendo. "
+"Normalmente, @command{texi2any} só gera mensagens se existirem erros ou "
+"avisos."
 
 #. type: item
 #: texinfo/texinfo.texi:15262 texinfo/texinfo.texi:17387
 #, no-wrap
 msgid "--version"
-msgstr ""
+msgstr "--version"
 
 #. type: opindex
 #: texinfo/texinfo.texi:15263 texinfo/texinfo.texi:15265
 #, no-wrap
 msgid "-V"
-msgstr ""
+msgstr "-V"
 
 #. type: opindex
 #: texinfo/texinfo.texi:15264
 #, no-wrap
 msgid "--version@r{, for @command{texi2any}}"
-msgstr ""
+msgstr "--version@r{, para @command{texi2any}}"
 
 #. type: table
 #: texinfo/texinfo.texi:15267
 msgid "Print the version number, then exit successfully."
-msgstr ""
+msgstr "Imprimir o número da versão, então sair com sucesso."
 
 #. type: opindex
 #: texinfo/texinfo.texi:15268 texinfo/texinfo.texi:15269
 #, no-wrap
 msgid "--Xopt @var{str}"
-msgstr ""
+msgstr "--Xopt @var{sequência}"
 
 #. type: table
 #: texinfo/texinfo.texi:15272
@@ -39851,6 +39863,8 @@ msgid ""
 "Pass @var{str} (a single shell word) to @command{texi2dvi}; may be repeated "
 "(@pxref{@command{texi2any} Printed Output})."
 msgstr ""
+"Passar @var{sequência} (uma palavra de shell) para @command{texi2dvi}; pode "
+"ser repetido (@pxref{Saída Impressa do @command{texi2any}})."
 
 #. type: opindex
 #: texinfo/texinfo.texi:15273 texinfo/texinfo.texi:15274
