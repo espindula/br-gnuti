@@ -39870,35 +39870,35 @@ msgstr ""
 #: texinfo/texinfo.texi:15273 texinfo/texinfo.texi:15274
 #, no-wrap
 msgid "--xml"
-msgstr ""
+msgstr "--xml"
 
 #. type: table
 #: texinfo/texinfo.texi:15276
 msgid "Generate Texinfo XML output (rather than Info)."
-msgstr ""
+msgstr "Gerar saída XML do Texinfo (em vez do Info)."
 
 #. type: node
 #: texinfo/texinfo.texi:15280
 #, no-wrap
 msgid "@command{texi2any} Environment Variables"
-msgstr ""
+msgstr "Variáveis de Ambiente do @command{texi2any}"
 
 #. type: itemize
 #: texinfo/texinfo.texi:15282
 msgid "@nodedescription Control over output format and XS use."
-msgstr ""
+msgstr "@nodedescription Controle sobre formato de saída e uso do XS."
 
 #. type: section
 #: texinfo/texinfo.texi:15282
 #, no-wrap
 msgid "Environment Variables Recognized by @command{texi2any}"
-msgstr ""
+msgstr "Variáveis de Ambiente Reconhecidas pelo @command{texi2any}"
 
 #. type: cindex
 #: texinfo/texinfo.texi:15284
 #, no-wrap
 msgid "Environment variable @code{TEXINFO_OUTPUT_FORMAT}"
-msgstr ""
+msgstr "Variável de ambiente @code{TEXINFO_OUTPUT_FORMAT}"
 
 #. type: itemize
 #: texinfo/texinfo.texi:15288
@@ -39907,6 +39907,10 @@ msgid ""
 "@env{TEXINFO_OUTPUT_FORMAT} to determine the output format, if not "
 "overridden by a command line option.  The value should be one of:"
 msgstr ""
+"@command{texi2any} também lê a variável de ambiente "
+"@env{TEXINFO_OUTPUT_FORMAT} para determinar o formato da saída gerada, se "
+"não substituída por uma opção de linha de comando. O valor deveria ser "
+"um de:"
 
 #. type: example
 #: texinfo/texinfo.texi:15291
@@ -39914,11 +39918,13 @@ msgstr ""
 msgid ""
 "docbook  dvi  dvipdf  epub3  html  info  latex  pdf  plaintext  ps  xml\n"
 msgstr ""
+"docbook  dvi  dvipdf  epub3  html  info  latex  pdf  plaintext  ps  xml\n"
 
 #. type: itemize
 #: texinfo/texinfo.texi:15294
 msgid "If not set or otherwise specified, Info output is the default."
 msgstr ""
+"Se não configurada ou especificada de outro modo, saída Info é o padrão."
 
 #. type: itemize
 #: texinfo/texinfo.texi:15298
@@ -39927,6 +39933,9 @@ msgid ""
 "not correspond to any command-line settable output format "
 "(@pxref{Customization Variables and Options})."
 msgstr ""
+"@code{TEXINFO_OUTPUT_FORMAT} pode assumir alguns outros valores especiais, "
+"os quais não correspondem a nenhum formato de saída configurável de linha "
+"de comando (@pxref{Variáveis e Opções de Personalização})."
 
 #. type: itemize
 #: texinfo/texinfo.texi:15302
@@ -39935,18 +39944,22 @@ msgid ""
 "overrides an environment variable setting, but not a command-line option.  "
 "@xref{Customization Variables and Options}."
 msgstr ""
+"A variável de personalização de mesmo nome também é lida; se "
+"configurada, essa substitui uma configuração de variável de ambiente, mas "
+"não uma opção de linha de comando. @xref{Variáveis e Opções de "
+"Personalização}."
 
 #. type: vindex
 #: texinfo/texinfo.texi:15303
 #, no-wrap
 msgid "TEXINFO_XS"
-msgstr ""
+msgstr "TEXINFO_XS"
 
 #. type: cindex
 #: texinfo/texinfo.texi:15304
 #, no-wrap
 msgid "Perl extension modules (XS)"
-msgstr ""
+msgstr "Módulos de extensão da Perl (XS)"
 
 #. type: itemize
 #: texinfo/texinfo.texi:15314
@@ -39960,6 +39973,16 @@ msgid ""
 "for example, if you have problems with the output of @command{texi2any} "
 "varying depending on whether the extension modules are in use."
 msgstr ""
+"Você consegue controlar o uso de módulos de extensão da Perl pelo "
+"@command{texi2any} configurando a variável de ambiente @env{TEXINFO_XS}. "
+"Esses módulos são código nativo compilado que o código interpretado da "
+"Perl consegue usar. Idealmente, esses módulos de extensão deveriam "
+"simplesmente funcionar, e a única diferença notável que eles deveriam "
+"fazer é que @command{texi2any} terminasse de executar mais cedo. No "
+"entanto, você consegue usar essa variável de ambiente para fins de "
+"solução de problemas: por exemplo, se tiver problemas com a saída gerada "
+"do @command{texi2any} variando, dependendo se os módulos de extensão "
+"estiverem em uso."
 
 #. type: itemize
 #: texinfo/texinfo.texi:15317
@@ -39967,12 +39990,14 @@ msgid ""
 "The following values of @env{TEXINFO_XS} are recognized by "
 "@command{texi2any}:"
 msgstr ""
+"Os seguintes valores da @env{TEXINFO_XS} são reconhecidos pelo "
+"@command{texi2any}:"
 
 #. type: item
 #: texinfo/texinfo.texi:15319
 #, no-wrap
 msgid "default"
-msgstr ""
+msgstr "default"
 
 #. type: table
 #: texinfo/texinfo.texi:15322
@@ -39980,12 +40005,15 @@ msgid ""
 "The default behavior.  Try to load extension modules, and silently fall back "
 "to the interpreted Perl implementations if this fails."
 msgstr ""
+"O comportamento padrão. Tentar carregar módulos de extensão e voltar "
+"silenciosamente para as implementações interpretadas da Perl se isso "
+"falhar."
 
 #. type: item
 #: texinfo/texinfo.texi:15323
 #, no-wrap
 msgid "warn"
-msgstr ""
+msgstr "warn"
 
 #. type: table
 #: texinfo/texinfo.texi:15326
@@ -39993,28 +40021,33 @@ msgid ""
 "Try to load extension modules, and if this fails, give a warning message "
 "before falling back to the interpreted Perl implementations."
 msgstr ""
+"Tentar carregar módulos de extensão e, se isso falhar, fornecer uma "
+"mensagem de aviso antes de voltar para as implementações interpretadas da "
+"Perl."
 
 #. type: item
 #: texinfo/texinfo.texi:15327
 #, no-wrap
 msgid "debug"
-msgstr ""
+msgstr "debug"
 
 #. type: table
 #: texinfo/texinfo.texi:15329
 msgid "Try to load extension modules, printing many messages while doing so."
 msgstr ""
+"Tentar carregar módulos de extensão, imprimindo muitas mensagens ao fazer "
+"isso."
 
 #. type: item
 #: texinfo/texinfo.texi:15330
 #, no-wrap
 msgid "omit"
-msgstr ""
+msgstr "omit"
 
 #. type: table
 #: texinfo/texinfo.texi:15332
 msgid "Do not use extension modules."
-msgstr ""
+msgstr "Não usar módulos de extensão."
 
 #. type: vindex
 #: texinfo/texinfo.texi:15335
