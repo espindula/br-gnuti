@@ -40053,7 +40053,7 @@ msgstr "Não usar módulos de extensão."
 #: texinfo/texinfo.texi:15335
 #, no-wrap
 msgid "TEXINFO_XS_PARSER"
-msgstr ""
+msgstr "TEXINFO_XS_PARSER"
 
 #. type: itemize
 #: texinfo/texinfo.texi:15342
@@ -40065,29 +40065,36 @@ msgid ""
 "working around bugs or incompatibilities between the native code "
 "implementation and the implementation in pure Perl code."
 msgstr ""
+"Configurar @env{TEXINFO_XS_PARSER} como @samp{0} para desabilitar o uso da "
+"implementação de código nativo do módulo analisador. Essa é a parte do "
+"@command{texi2any} que converte entrada do Texinfo em um formato interno de "
+"árvore usado para processamento posterior em formatos de saída. Isso pode "
+"ser útil para contornar defeitos ou incompatibilidades entre a "
+"implementação do código nativo e a implementação em código puro da "
+"Perl."
 
 #. type: section
 #: texinfo/texinfo.texi:15344 texinfo/texinfo.texi:15346
 #, no-wrap
 msgid "@command{texi2any} Printed Output"
-msgstr ""
+msgstr "Saída Impressa do @command{texi2any}"
 
 #. type: itemize
 #: texinfo/texinfo.texi:15346
 msgid "@nodedescription Calling @command{texi2dvi}."
-msgstr ""
+msgstr "@nodedescription Chamando @command{texi2dvi}."
 
 #. type: cindex
 #: texinfo/texinfo.texi:15348
 #, no-wrap
 msgid "Printed output, through @command{texi2any}"
-msgstr ""
+msgstr "Saída impressa, por meio do @command{texi2any}"
 
 #. type: cindex
 #: texinfo/texinfo.texi:15349
 #, no-wrap
 msgid "Output, printed through @command{texi2any}"
-msgstr ""
+msgstr "Saída, impressa por meio do @command{texi2any}"
 
 #. type: itemize
 #: texinfo/texinfo.texi:15360
@@ -40101,6 +40108,15 @@ msgid ""
 "perhaps because your manual plays advanced @TeX{} tricks together with "
 "@file{texinfo.tex}, just invoke @command{texi2dvi} directly."
 msgstr ""
+"Para justificar o nome Texinfo-to-@emph{any}, @command{texi2any} tem suporte "
+"básico para a criação de saída impressa nos vários formatos: @TeX{} "
+"DVI, PDF e PostScript. Isso é feito por meio do método simples de "
+"execução do programa @command{texi2dvi} quando esses formatos de saída "
+"forem solicitados, depois de verificar a validade da entrada para dar para "
+"os(as) usuários(as) o benefício da verificação de erros do "
+"@command{texi2any}. Se você não quiser essa verificação de erros, talvez "
+"porque teu manual execute truques avançados do @TeX{} junto com "
+"@file{texinfo.tex}, basta invocar @command{texi2dvi} diretamente."
 
 #. type: itemize
 #: texinfo/texinfo.texi:15368
@@ -40113,6 +40129,13 @@ msgid ""
 "are likewise passed on with their arguments, and @option{--debug} without "
 "its argument."
 msgstr ""
+"As opções de formato de saída para isso são @option{--dvi}, "
+"@option{--dvipdf}, @option{--pdf} e @option{--ps}. @xref{Formatar com "
+"@command{texi2dvi}}, para mais detalhes acerca dessas opções e operação "
+"geral do @command{texi2dvi}. Além disso, as opções @option{--verbose}, "
+"@option{--silent} e @option{--quiet} são passadas se especificadas; as "
+"opções @option{-I} e @option{-o} são igualmente passadas com os "
+"argumentos delas, e @option{--debug} sem o argumento dela."
 
 #. type: itemize
 #: texinfo/texinfo.texi:15374
@@ -40123,28 +40146,33 @@ msgid ""
 "construct an arbitrary command line for @command{texi2dvi}.  For example, "
 "running"
 msgstr ""
+"A única opção restante que está relacionada com a invocação do "
+"@command{texi2dvi} é @option{--Xopt}. Aqui, somente o argumento é passado "
+"e múltiplas opções @option{--Xopt} se acumulam. Isso fornece uma maneira "
+"para construir uma linha arbitrária de comando para @command{texi2dvi}. Por "
+"exemplo, executando"
 
 #. type: example
 #: texinfo/texinfo.texi:15377
 #, no-wrap
 msgid "texi2any --Xopt -t --Xopt @@a4paper --pdf foo.texi\n"
-msgstr ""
+msgstr "texi2any --Xopt -t --Xopt @@a4paper --pdf foo.texi\n"
 
 #. type: itemize
 #: texinfo/texinfo.texi:15381
 msgid "is equivalent to running"
-msgstr ""
+msgstr "é equivalente a executar"
 
 #. type: example
 #: texinfo/texinfo.texi:15384
 #, no-wrap
 msgid "texi2dvi -t @@a4paper --pdf foo.texi\n"
-msgstr ""
+msgstr "texi2dvi -t @@a4paper --pdf foo.texi\n"
 
 #. type: itemize
 #: texinfo/texinfo.texi:15388
 msgid "except for the validity check."
-msgstr ""
+msgstr "exceto para a verificação de validade."
 
 #. type: itemize
 #: texinfo/texinfo.texi:15394
