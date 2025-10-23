@@ -40183,6 +40183,11 @@ msgid ""
 "numbered sections.  (Perhaps this could be improved in the future, if "
 "requests are received.)"
 msgstr ""
+"Embora se possa desejar que outras opções para @command{texi2any} tenham "
+"efeito, elas não tem. Por exemplo, executar @samp{texi2any "
+"--no-number-sections --dvi foo.texi} ainda resulta em um arquivo DVI com "
+"seções numeradas. (Talvez isso pudesse ser melhorado no futuro, se "
+"solicitações forem recebidas)."
 
 #. type: itemize
 #: texinfo/texinfo.texi:15398
@@ -40191,6 +40196,9 @@ msgid ""
 "@code{TEXI2DVI} customization variable (@pxref{Other Customization "
 "Variables}).  As you might guess, the default is @samp{texi2dvi}."
 msgstr ""
+"O nome real do comando que é invocado é especificado pela variável de "
+"personalização @code{TEXI2DVI} (@pxref{Outras Variáveis de "
+"Personalização}). Como você pode imaginar, o padrão é @samp{texi2dvi}."
 
 #. type: itemize
 #: texinfo/texinfo.texi:15401
@@ -40198,23 +40206,25 @@ msgid ""
 "@command{texi2any} itself does not generate any normal output when it "
 "invokes @command{texi2dvi}, only diagnostic messages."
 msgstr ""
+"O próprio @command{texi2any} não gera nenhuma saída normal quando invoca "
+"@command{texi2dvi}, somente mensagens de diagnóstico."
 
 #. type: section
 #: texinfo/texinfo.texi:15403 texinfo/texinfo.texi:15405
 #, no-wrap
 msgid "Customization Variables"
-msgstr ""
+msgstr "Variáveis de Personalização"
 
 #. type: itemize
 #: texinfo/texinfo.texi:15405
 msgid "@nodedescription Configuring @command{texi2any}."
-msgstr ""
+msgstr "@nodedescription Configurando @command{texi2any}."
 
 #. type: quotation
 #: texinfo/texinfo.texi:15407
 #, no-wrap
 msgid "Warning"
-msgstr ""
+msgstr "Aviso"
 
 #. type: quotation
 #: texinfo/texinfo.texi:15411
@@ -40223,6 +40233,10 @@ msgid ""
 "release.  We always try to avoid incompatible changes, but we cannot "
 "absolutely promise, since needs change over time."
 msgstr ""
+"Esses nomes e significados de variáveis de personalização podem mudar em "
+"qualquer lançamento do Texinfo. Nós sempre tentamos evitar mudanças "
+"incompatíveis, mas não podemos absolutamente prometer, pois as "
+"necessidades mudam com o tempo."
 
 #. type: itemize
 #: texinfo/texinfo.texi:15416
@@ -40231,12 +40245,16 @@ msgid ""
 "modified by modifying so-called @dfn{customization variables}.  These fall "
 "into a few general categories:"
 msgstr ""
+"Muitos aspectos do comportamento e da saída do @command{texi2any} podem ser "
+"modificados modificando-se as assim chamadas @dfn{variáveis de "
+"personalização}. Eles se enquadram em algumas categorias gerais:"
 
 #. type: itemize
 #: texinfo/texinfo.texi:15421
 msgid ""
 "Those associated with @@-commands; for example, @code{@@documentlanguage}."
 msgstr ""
+"Aqueles associados com comandos @@; por exemplo, @code{@@documentlanguage}."
 
 #. type: itemize
 #: texinfo/texinfo.texi:15427
@@ -40245,16 +40263,20 @@ msgid ""
 "variable @code{SPLIT} is associated with the @option{--split} command-line "
 "option, and @code{TEXINFO_OUTPUT_FORMAT} allows specifying the output format."
 msgstr ""
+"Aqueles associados com opções de linha de comando; por exemplo, a "
+"variável de personalização @code{SPLIT} está associada com a opção de "
+"linha de comando @option{--split} e @code{TEXINFO_OUTPUT_FORMAT} permite "
+"especificar o formato da saída gerada."
 
 #. type: itemize
 #: texinfo/texinfo.texi:15430
 msgid "Those associated with customizing the HTML output."
-msgstr ""
+msgstr "Aqueles associados com personalização da saída gerada HTML."
 
 #. type: itemize
 #: texinfo/texinfo.texi:15433
 msgid "Other ad hoc variables."
-msgstr ""
+msgstr "Outras variáveis ad hoc."
 
 #. type: itemize
 #: texinfo/texinfo.texi:15441
@@ -40266,69 +40288,75 @@ msgid ""
 "@samp{undef}, which sets the variable to this special ``undefined'' Perl "
 "value."
 msgstr ""
+"Variáveis de personalização podem configurar na linha de comando usando "
+"@code{--set-customization-variable '@var{variável} @var{valor}'} (aspeando "
+"o par variável/valor para o shell) ou @code{--set-customization-variable "
+"@var{variável}=@var{valor}} (usando @code{=}). Um @var{valor} especial é "
+"@samp{undef}, o qual configura a variável para esse valor especial "
+"``indefinido'' da Perl."
 
 #. type: itemize
 #: texinfo/texinfo.texi:15443
 msgid "The sections below give the details for each of these."
-msgstr ""
+msgstr "As seções abaixo fornecem os detalhes de cada um deles."
 
 #. type: menuentry
 #: texinfo/texinfo.texi:15453
 msgid "Commands: Customization Variables for @@-Commands."
-msgstr ""
+msgstr "Comandos: Variáveis de Personalização para Comandos @@."
 
 #. type: menuentry
 #: texinfo/texinfo.texi:15453
 msgid "Options: Customization Variables and Options."
-msgstr ""
+msgstr "Opções: Variáveis e Opções de Personalização."
 
 #. type: menuentry
 #: texinfo/texinfo.texi:15453
 msgid "HTML: HTML Customization Variables."
-msgstr ""
+msgstr "HTML: Variáveis de Personalização de HTML."
 
 #. type: menuentry
 #: texinfo/texinfo.texi:15453
 msgid "MathJax: MathJax Customization Variables."
-msgstr ""
+msgstr "MathJax: Variáveis de Personalização de MathJax."
 
 #. type: menuentry
 #: texinfo/texinfo.texi:15453
 msgid "latex2html: @command{latex2html} Customization Variables."
-msgstr ""
+msgstr "latex2html: Variáveis de Personalização do @command{latex2html}."
 
 #. type: menuentry
 #: texinfo/texinfo.texi:15453
 msgid "tex4ht: @command{tex4ht} Customization Variables."
-msgstr ""
+msgstr "tex4ht: Variáveis de Personalização do @command{tex4ht}."
 
 #. type: menuentry
 #: texinfo/texinfo.texi:15453
 msgid "LaTeX: @LaTeX{} Customization Variables."
-msgstr ""
+msgstr "LaTeX: Variáveis de Personalização do @LaTeX{}."
 
 #. type: menuentry
 #: texinfo/texinfo.texi:15453
 msgid "Other: Other Customization Variables"
-msgstr ""
+msgstr "Outras: Outras Variáveis de Personalização."
 
 #. type: subsection
 #: texinfo/texinfo.texi:15456 texinfo/texinfo.texi:15457
 #, no-wrap
 msgid "Customization Variables for @@-Commands"
-msgstr ""
+msgstr "Variáveis de Personalização para Comandos @@"
 
 #. type: cindex
 #: texinfo/texinfo.texi:15459
 #, no-wrap
 msgid "Customization variables for @@-commands"
-msgstr ""
+msgstr "Variáveis de personalização para comandos @@"
 
 #. type: cindex
 #: texinfo/texinfo.texi:15460
 #, no-wrap
 msgid "@sortas{at} @@-commands @subentry customization variables for"
-msgstr ""
+msgstr "@sortas{at} comandos @@ @subentry variáveis de personalização para"
 
 #. type: itemize
 #: texinfo/texinfo.texi:15464
