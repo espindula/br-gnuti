@@ -40364,6 +40364,8 @@ msgid ""
 "Each of the following @@-commands has an associated customization variable "
 "with the same name (minus the leading @code{@@}):"
 msgstr ""
+"Cada um dos comandos @@ a seguir tem uma variável de personalização "
+"associada com o mesmo nome (sem o @código{@@} inicial):"
 
 #. type: example
 #: texinfo/texinfo.texi:15481
@@ -40385,6 +40387,21 @@ msgid ""
 "@@shortcontents         @@smallbook         @@summarycontents\n"
 "@@urefbreakstyle        @@xrefautomaticsectiontitle\n"
 msgstr ""
+"@@afivepaper            @@afourpaper        @@afourlatex\n"
+"@@afourwide             @@allowcodebreaks   @@bsixpaper\n"
+"@@contents              @@clickstyle        @@codequotebacktick\n"
+"@@codequoteundirected   @@deftypefnnewline  @@documentdescription\n"
+"@@documentencoding      @@documentlanguage  @@evenfooting\n"
+"@@evenfootingmarks      @@evenheading       @@evenheadingmarks\n"
+"@@everyfooting          @@everyfootingmarks @@everyheading\n"
+"@@everyheadingmarks     @@exampleindent     @@firstparagraphindent\n"
+"@@fonttextsize          @@footnotestyle     @@frenchspacing\n"
+"@@headings              @@kbdinputstyle     @@microtype\n"
+"@@novalidate            @@oddfooting        @@oddfootingmarks\n"
+"@@oddheading            @@oddheadingmarks   @@pagesizes\n"
+"@@paragraphindent       @@setfilename       @@setchapternewpage\n"
+"@@shortcontents         @@smallbook         @@summarycontents\n"
+"@@urefbreakstyle        @@xrefautomaticsectiontitle\n"
 
 #. type: itemize
 #: texinfo/texinfo.texi:15489
@@ -40396,6 +40413,13 @@ msgid ""
 "an argument that is already formatted.  This is the case, for example, for "
 "HTML for @code{documentdescription}."
 msgstr ""
+"Configurar essa variável de personalização com um valor @samp{foo} é "
+"semelhante a executar @code{@@@var{cmd} foo}. Porém, não é exatamente a "
+"mesma coisa, já que quaisquer efeitos colaterais da análise do fonte do "
+"Texinfo não são refeitos. Além disso, algumas variáveis não levam "
+"código Texinfo ao gerar formatos específicos, mas sim um argumento que já "
+"está formatado. Esse é o caso, por exemplo, do HTML para "
+"@code{documentdescription}."
 
 #. type: itemize
 #: texinfo/texinfo.texi:15493
@@ -40404,24 +40428,27 @@ msgid ""
 "(e.g., with the @option{--pdf} option), then these customization variables "
 "may not be passed on to @TeX{}."
 msgstr ""
+"Observe que se @command{texi2any} for invocado para processar o arquivo com "
+"@TeX{} (por exemplo, com a opção @option{--pdf}), então essas variáveis "
+"de personalização possivelmente não sejam passadas para @TeX{}."
 
 #. type: subsection
 #: texinfo/texinfo.texi:15495 texinfo/texinfo.texi:15496
 #, no-wrap
 msgid "Customization Variables and Options"
-msgstr ""
+msgstr "Variáveis e Opções de Personalização"
 
 #. type: cindex
 #: texinfo/texinfo.texi:15498
 #, no-wrap
 msgid "Customization variables for options"
-msgstr ""
+msgstr "Variáveis de personalização para opções"
 
 #. type: cindex
 #: texinfo/texinfo.texi:15499
 #, no-wrap
 msgid "Options, customization variables for"
-msgstr ""
+msgstr "Opções, variáveis de personalização para"
 
 #. type: itemize
 #: texinfo/texinfo.texi:15504
@@ -40430,183 +40457,186 @@ msgid ""
 "command line options.  @xref{Invoking @command{texi2any}}, for the meaning "
 "of the options."
 msgstr ""
+"A tabela a seguir fornece as variáveis de personalização associadas com "
+"algumas opções de linha de comando. @xref{Invocando @command{texi2any}}, "
+"para o significado das opções."
 
 #. type: multitable
 #: texinfo/texinfo.texi:15507
 msgid "@headitem Option"
-msgstr ""
+msgstr "@headitem Option"
 
 #. type: multitable
 #: texinfo/texinfo.texi:15507
 msgid "Variable"
-msgstr ""
+msgstr "Variável"
 
 #. type: multitable
 #: texinfo/texinfo.texi:15509
 msgid "@code{ENABLE_ENCODING}"
-msgstr ""
+msgstr "@code{ENABLE_ENCODING}"
 
 #. type: multitable
 #: texinfo/texinfo.texi:15511
 msgid "@code{documentlanguage}"
-msgstr ""
+msgstr "@code{documentlanguage}"
 
 #. type: option{#1}
 #: texinfo/texinfo.texi:15513
 msgid "--error-limit"
-msgstr ""
+msgstr "--error-limit"
 
 #. type: multitable
 #: texinfo/texinfo.texi:15513
 msgid "@code{ERROR_LIMIT}"
-msgstr ""
+msgstr "@code{ERROR_LIMIT}"
 
 #. type: option{#1}
 #: texinfo/texinfo.texi:15515
 msgid "--fill-column"
-msgstr ""
+msgstr "--fill-column"
 
 #. type: multitable
 #: texinfo/texinfo.texi:15515
 msgid "@code{FILLCOLUMN}"
-msgstr ""
+msgstr "@code{FILLCOLUMN}"
 
 #. type: option{#1}
 #: texinfo/texinfo.texi:15517
 msgid "--footnote-style"
-msgstr ""
+msgstr "--footnote-style"
 
 #. type: multitable
 #: texinfo/texinfo.texi:15517
 msgid "@code{footnotestyle}"
-msgstr ""
+msgstr "@code{footnotestyle}"
 
 #. type: multitable
 #: texinfo/texinfo.texi:15519
 msgid "@code{FORCE}"
-msgstr ""
+msgstr "@code{FORCE}"
 
 #. type: option{#1}
 #: texinfo/texinfo.texi:15521
 msgid "--internal-links"
-msgstr ""
+msgstr "--internal-links"
 
 #. type: multitable
 #: texinfo/texinfo.texi:15521
 msgid "@code{INTERNAL_LINKS}"
-msgstr ""
+msgstr "@code{INTERNAL_LINKS}"
 
 #. type: option{#1}
 #: texinfo/texinfo.texi:15523
 msgid "--macro-expand"
-msgstr ""
+msgstr "--macro-expand"
 
 #. type: multitable
 #: texinfo/texinfo.texi:15523
 msgid "@code{MACRO_EXPAND}"
-msgstr ""
+msgstr "@code{MACRO_EXPAND}"
 
 #. type: option{#1}
 #: texinfo/texinfo.texi:15525
 msgid "--headers"
-msgstr ""
+msgstr "--headers"
 
 #. type: multitable
 #: texinfo/texinfo.texi:15525
 msgid "@code{HEADERS}, @code{FORMAT_MENU}"
-msgstr ""
+msgstr "@code{HEADERS}, @code{FORMAT_MENU}"
 
 #. type: multitable
 #: texinfo/texinfo.texi:15527
 msgid "@code{NO_WARN}"
-msgstr ""
+msgstr "@code{NO_WARN}"
 
 #. type: multitable
 #: texinfo/texinfo.texi:15530
 msgid "@code{novalidate}"
-msgstr ""
+msgstr "@code{novalidate}"
 
 #. type: multitable
 #: texinfo/texinfo.texi:15532
 msgid "@code{NUMBER_FOOTNOTES}"
-msgstr ""
+msgstr "@code{NUMBER_FOOTNOTES}"
 
 #. type: multitable
 #: texinfo/texinfo.texi:15534
 msgid "@code{NUMBER_SECTIONS}"
-msgstr ""
+msgstr "@code{NUMBER_SECTIONS}"
 
 #. type: multitable
 #: texinfo/texinfo.texi:15536
 msgid "@code{NODE_FILES}"
-msgstr ""
+msgstr "@code{NODE_FILES}"
 
 #. type: option{#1}
 #: texinfo/texinfo.texi:15538
 msgid "--output"
-msgstr ""
+msgstr "--output"
 
 #. type: multitable
 #: texinfo/texinfo.texi:15538
 msgid "@code{OUTFILE}, @code{SUBDIR}"
-msgstr ""
+msgstr "@code{OUTFILE}, @code{SUBDIR}"
 
 #. type: findex
 #: texinfo/texinfo.texi:15539 texinfo/texinfo.texi:23045
 #, no-wrap
 msgid "paragraphindent"
-msgstr ""
+msgstr "paragraphindent"
 
 #. type: option{#1}
 #: texinfo/texinfo.texi:15541
 msgid "--paragraph-indent"
-msgstr ""
+msgstr "--paragraph-indent"
 
 #. type: multitable
 #: texinfo/texinfo.texi:15541
 msgid "@code{paragraphindent}"
-msgstr ""
+msgstr "@code{paragraphindent}"
 
 #. type: itemx
 #: texinfo/texinfo.texi:15543 texinfo/texinfo.texi:17328
 #, no-wrap
 msgid "--silent"
-msgstr ""
+msgstr "--silent"
 
 #. type: multitable
 #: texinfo/texinfo.texi:15543
 msgid "@code{SILENT}"
-msgstr ""
+msgstr "@code{SILENT}"
 
 #. type: option{#1}
 #: texinfo/texinfo.texi:15545
 msgid "--split"
-msgstr ""
+msgstr "--split"
 
 #. type: multitable
 #: texinfo/texinfo.texi:15545
 msgid "@code{SPLIT}"
-msgstr ""
+msgstr "@code{SPLIT}"
 
 #. type: option{#1}
 #: texinfo/texinfo.texi:15547
 msgid "--split-size"
-msgstr ""
+msgstr "--split-size"
 
 #. type: multitable
 #: texinfo/texinfo.texi:15547
 msgid "@code{SPLIT_SIZE}"
-msgstr ""
+msgstr "@code{SPLIT_SIZE}"
 
 #. type: multitable
 #: texinfo/texinfo.texi:15549
 msgid "@code{TRANSLITERATE_FILE_NAMES}"
-msgstr ""
+msgstr "@code{TRANSLITERATE_FILE_NAMES}"
 
 #. type: multitable
 #: texinfo/texinfo.texi:15551
 msgid "@code{VERBOSE}"
-msgstr ""
+msgstr "@code{VERBOSE}"
 
 #. type: itemize
 #: texinfo/texinfo.texi:15556
