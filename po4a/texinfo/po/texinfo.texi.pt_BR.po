@@ -40645,12 +40645,15 @@ msgid ""
 "the same as specifying the @code{--@var{opt}=foo} if the option takes an "
 "argument, or @code{--@var{opt}} if not."
 msgstr ""
+"Configurar tal variável de personalização para um valor @samp{foo} é "
+"essencialmente o mesmo que especificar @code{--@var{opt}=foo} se a opção "
+"receber um argumento, ou @code{--@var{opt}} se não."
 
 #. type: vindex
 #: texinfo/texinfo.texi:15557
 #, no-wrap
 msgid "TEXINFO_OUTPUT_FORMAT"
-msgstr ""
+msgstr "TEXINFO_OUTPUT_FORMAT"
 
 #. type: itemize
 #: texinfo/texinfo.texi:15562
@@ -40659,48 +40662,52 @@ msgid ""
 "specifying what @command{texi2any} outputs, either one of the usual output "
 "formats that can be specified with options, or various other forms:"
 msgstr ""
+"Além disso, a variável de personalização @code{TEXINFO_OUTPUT_FORMAT} "
+"permite especificar quais saídas do @command{texi2any}, seja um dos "
+"formatos usuais de saída que possam ser especificados com opções, ou "
+"vários outros formatos:"
 
 #. type: itemx
 #: texinfo/texinfo.texi:15565
 #, no-wrap
 msgid "dvi"
-msgstr ""
+msgstr "dvi"
 
 #. type: itemx
 #: texinfo/texinfo.texi:15566
 #, no-wrap
 msgid "dvipdf"
-msgstr ""
+msgstr "u"
 
 #. type: itemx
 #: texinfo/texinfo.texi:15567
 #, no-wrap
 msgid "epub3"
-msgstr ""
+msgstr "epub3"
 
 #. type: itemx
 #: texinfo/texinfo.texi:15569
 #, no-wrap
 msgid "info"
-msgstr ""
+msgstr "info"
 
 #. type: itemx
 #: texinfo/texinfo.texi:15570
 #, no-wrap
 msgid "pdf"
-msgstr ""
+msgstr "pdf"
 
 #. type: itemx
 #: texinfo/texinfo.texi:15571
 #, no-wrap
 msgid "plaintext"
-msgstr ""
+msgstr "plaintext"
 
 #. type: itemx
 #: texinfo/texinfo.texi:15572
 #, no-wrap
 msgid "ps"
-msgstr ""
+msgstr "ps"
 
 #. type: table
 #: texinfo/texinfo.texi:15577
@@ -40709,24 +40716,27 @@ msgid ""
 "@code{TEXINFO_OUTPUT_FORMAT} environment variable values) of the same name.  "
 "@xref{Invoking @command{texi2any}}."
 msgstr ""
+"Eles correspondem às opções de linha de comando (e aos valores da "
+"variável de ambiente @code{TEXINFO_OUTPUT_FORMAT}) de mesmo nome. "
+"@xref{Invocando @command{texi2any}}."
 
 #. type: cindex
 #: texinfo/texinfo.texi:15578
 #, no-wrap
 msgid "tree representation, for debugging"
-msgstr ""
+msgstr "representação de árvore, para depuração"
 
 #. type: cindex
 #: texinfo/texinfo.texi:15579
 #, no-wrap
 msgid "debugging document, with tree representation"
-msgstr ""
+msgstr "depurando documento, com representação de árvore"
 
 #. type: item
 #: texinfo/texinfo.texi:15580
 #, no-wrap
 msgid "debugtree"
-msgstr ""
+msgstr "debugtree"
 
 #. type: table
 #: texinfo/texinfo.texi:15583
@@ -40734,23 +40744,25 @@ msgid ""
 "Instead of generating a regular output format, output a text representation "
 "of the tree obtained by parsing the input texinfo document."
 msgstr ""
+"Em vez de gerar um formato regular de saída, produzir uma representação "
+"de texto da árvore obtida pela análise do documento Texinfo de entrada."
 
 #. type: item
 #: texinfo/texinfo.texi:15584
 #, no-wrap
 msgid "parse"
-msgstr ""
+msgstr "parse"
 
 #. type: table
 #: texinfo/texinfo.texi:15586
 msgid "Do only Texinfo source parsing; there is no output."
-msgstr ""
+msgstr "Fazer somente análise do fonte do Texinfo; não existe saída gerada."
 
 #. type: item
 #: texinfo/texinfo.texi:15587
 #, no-wrap
 msgid "plaintexinfo"
-msgstr ""
+msgstr "plaintexinfo"
 
 #. type: table
 #: texinfo/texinfo.texi:15592
@@ -40760,18 +40772,22 @@ msgid ""
 "@option{--macro-expand}, but instead of being output in addition to the "
 "normal conversion, output of Texinfo is the main output."
 msgstr ""
+"Produzir o fonte do Texinfo com todas as macros, @code{@@include} e "
+"@code{@@value@{@}}, expandidas. Isso é semelhante à configuração de "
+"@option{--macro-expand}, mas em vez de ser uma saída além da conversão "
+"normal, a saída do Texinfo é a saída principal."
 
 #. type: cindex
 #: texinfo/texinfo.texi:15593
 #, no-wrap
 msgid "raw text output"
-msgstr ""
+msgstr "saída de texto cru"
 
 #. type: item
 #: texinfo/texinfo.texi:15594
 #, no-wrap
 msgid "rawtext"
-msgstr ""
+msgstr "rawtext"
 
 #. type: table
 #: texinfo/texinfo.texi:15598
@@ -40780,12 +40796,16 @@ msgid ""
 "ignored and there is no paragraph filling.  This is used by the parser for "
 "file names and copyright text in HTML comments, for example."
 msgstr ""
+"Produzir texto bruto, com formatação mínima. Por exemplo, notas de "
+"rodapé são ignoradas e não existe preenchimento de parágrafo. Isso é "
+"usado pelo analisador para nomes de arquivos e textos de direitos autorais "
+"em comentários do HTML, por exemplo."
 
 #. type: item
 #: texinfo/texinfo.texi:15599
 #, no-wrap
 msgid "structure"
-msgstr ""
+msgstr "structure"
 
 #. type: table
 #: texinfo/texinfo.texi:15602
@@ -40793,24 +40813,26 @@ msgid ""
 "Do only Texinfo source parsing and determination of the document structure; "
 "there is no output."
 msgstr ""
+"Fazer somente análise do fonte do Texinfo e determinação da estrutura do "
+"documento; não existe saída gerada."
 
 #. type: cindex
 #: texinfo/texinfo.texi:15603
 #, no-wrap
 msgid "SXML output"
-msgstr ""
+msgstr "Saída SXML"
 
 #. type: cindex
 #: texinfo/texinfo.texi:15604
 #, no-wrap
 msgid "S-expressions, output format"
-msgstr ""
+msgstr "Expressões S, formato de saída"
 
 #. type: item
 #: texinfo/texinfo.texi:15605
 #, no-wrap
 msgid "texinfosxml"
-msgstr ""
+msgstr "texinfosxml"
 
 #. type: table
 #: texinfo/texinfo.texi:15608
@@ -40818,6 +40840,8 @@ msgid ""
 "Output the document in TexinfoSXML representation, a syntax for writing XML "
 "data using Lisp S-expressions."
 msgstr ""
+"Produzir o documento na representação TexinfoSXML, uma sintaxe para "
+"escrever dados XML usando expressões S da Lisp."
 
 #. type: cindex
 #: texinfo/texinfo.texi:15609
