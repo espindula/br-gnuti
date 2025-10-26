@@ -40847,31 +40847,31 @@ msgstr ""
 #: texinfo/texinfo.texi:15609
 #, no-wrap
 msgid "spell checking"
-msgstr ""
+msgstr "verificação ortográfica"
 
 #. type: cindex
 #: texinfo/texinfo.texi:15610
 #, no-wrap
 msgid "word counting"
-msgstr ""
+msgstr "contagem de palavras"
 
 #. type: pindex
 #: texinfo/texinfo.texi:15611
 #, no-wrap
 msgid "detexinfo"
-msgstr ""
+msgstr "detexinfo"
 
 #. type: cindex
 #: texinfo/texinfo.texi:15612
 #, no-wrap
 msgid "stripping Texinfo commands"
-msgstr ""
+msgstr "eliminando comandos do Texinfo"
 
 #. type: item
 #: texinfo/texinfo.texi:15613
 #, no-wrap
 msgid "textcontent"
-msgstr ""
+msgstr "textcontent"
 
 #. type: table
 #: texinfo/texinfo.texi:15618
@@ -40881,18 +40881,23 @@ msgid ""
 "setting this is in the @file{util} directory of the Texinfo source as an "
 "example.  It's one line:"
 msgstr ""
+"Produzir somente o conteúdo do texto, removidos os comandos; isso é útil "
+"para verificação ortográfica ou contagem de palavras, por exemplo. A "
+"configuração trivial do conjunto de comandos sequenciais @code{detexinfo} "
+"está no diretório @file{util} do fonte do Texinfo como um exemplo. Ela é "
+"uma linha:"
 
 #. type: example
 #: texinfo/texinfo.texi:15621
 #, no-wrap
 msgid "exec texi2any -c TEXINPUT_OUTPUT_FORMAT=textcontent \"$@@\"\n"
-msgstr ""
+msgstr "exec texi2any -c TEXINPUT_OUTPUT_FORMAT=textcontent \"$@@\"\n"
 
 #. type: subsection
 #: texinfo/texinfo.texi:15625 texinfo/texinfo.texi:15626
 #, no-wrap
 msgid "HTML Customization Variables"
-msgstr ""
+msgstr "Variáveis de Personalização do HTML"
 
 #. type: itemize
 #: texinfo/texinfo.texi:15631
@@ -40901,19 +40906,23 @@ msgid ""
 "only.  A few other customization variables apply to both HTML and other "
 "output formats; see @ref{Other Customization Variables}."
 msgstr ""
+"Esta tabela fornece as variáveis de personalização que se aplicam somente "
+"à saída HTML. Algumas outras variáveis de personalização se aplicam ao "
+"HTML e a outros formatos de saída; vejam-se @ref{Outras Variáveis de "
+"Personalização}."
 
 #. type: itemize
 #: texinfo/texinfo.texi:15633 texinfo/texinfo.texi:16035
 #: texinfo/texinfo.texi:16071 texinfo/texinfo.texi:16113
 #: texinfo/texinfo.texi:16144 texinfo/texinfo.texi:16196
 msgid "@vtable @code"
-msgstr ""
+msgstr "@vtable @code"
 
 #. type: item
 #: texinfo/texinfo.texi:15633
 #, no-wrap
 msgid "AVOID_MENU_REDUNDANCY"
-msgstr ""
+msgstr "AVOID_MENU_REDUNDANCY"
 
 #. type: itemize
 #: texinfo/texinfo.texi:15636
@@ -40921,12 +40930,14 @@ msgid ""
 "If set, and the menu entry and menu description are the same, then do not "
 "print the menu description; default false."
 msgstr ""
+"Se configurada, e a entrada e a descrição do menu forem as mesmas, então "
+"não imprimir a descrição do menu; padrão falso."
 
 #. type: item
 #: texinfo/texinfo.texi:15637
 #, no-wrap
 msgid "AFTER_BODY_OPEN"
-msgstr ""
+msgstr "AFTER_BODY_OPEN"
 
 #. type: itemize
 #: texinfo/texinfo.texi:15640
@@ -40934,18 +40945,20 @@ msgid ""
 "If set, the corresponding text will appear at the beginning of each HTML "
 "file; default unset."
 msgstr ""
+"Se configurada, o texto correspondente aparecerá no início de cada arquivo "
+"HTML; padrão desconfigurada."
 
 #. type: item
 #: texinfo/texinfo.texi:15641
 #, no-wrap
 msgid "AFTER_SHORT_TOC_LINES"
-msgstr ""
+msgstr "AFTER_SHORT_TOC_LINES"
 
 #. type: itemx
 #: texinfo/texinfo.texi:15642
 #, no-wrap
 msgid "AFTER_TOC_LINES"
-msgstr ""
+msgstr "AFTER_TOC_LINES"
 
 #. type: itemize
 #: texinfo/texinfo.texi:15647
@@ -40955,6 +40968,11 @@ msgid ""
 "@code{AFTER_TOC_LINES}; otherwise, a default string is used.  At the time of "
 "writing, a @code{</div>} element is closed."
 msgstr ""
+"Se configurada, o texto correspondente será exibido depois do índice "
+"resumido para @code{AFTER_SHORT_TOC_LINES} e depois do índice analítico "
+"para @code{AFTER_TOC_LINES}; caso contrário, uma string padrão será "
+"usada. Ao tempo da escrita deste texto, um elemento @code{</div>} estava "
+"fechado."
 
 #. type: itemize
 #: texinfo/texinfo.texi:15651
@@ -40963,6 +40981,9 @@ msgid ""
 "@code{AFTER_SHORT_TOC_LINES} is set, and you should set "
 "@code{BEFORE_TOC_LINES} if @code{AFTER_TOC_LINES} is set."
 msgstr ""
+"Em geral, você deveria configurar @code{BEFORE_SHORT_TOC_LINES} se "
+"@code{AFTER_SHORT_TOC_LINES} estiver configurada, e você deveria configurar "
+"@code{BEFORE_TOC_LINES} se @code{AFTER_TOC_LINES} estiver configurada."
 
 #. type: item
 #: texinfo/texinfo.texi:15652
