@@ -40989,7 +40989,7 @@ msgstr ""
 #: texinfo/texinfo.texi:15652
 #, no-wrap
 msgid "BASEFILENAME_LENGTH"
-msgstr ""
+msgstr "BASEFILENAME_LENGTH"
 
 #. type: itemize
 #: texinfo/texinfo.texi:15656
@@ -40998,18 +40998,21 @@ msgid ""
 "make cross-manual references to such long node names invalid (@pxref{HTML "
 "Xref Link Basics})."
 msgstr ""
+"O comprimento máximo de um nome base de arquivo; padrão 245. Mudar isso "
+"tornaria inválidas as referências entre manuais para nomes de nós tão "
+"longos (@pxref{Básicos do Linque Xref do HTML})."
 
 #. type: item
 #: texinfo/texinfo.texi:15657
 #, no-wrap
 msgid "BEFORE_SHORT_TOC_LINES"
-msgstr ""
+msgstr "BEFORE_SHORT_TOC_LINES"
 
 #. type: itemx
 #: texinfo/texinfo.texi:15658
 #, no-wrap
 msgid "BEFORE_TOC_LINES"
-msgstr ""
+msgstr "BEFORE_TOC_LINES"
 
 #. type: itemize
 #: texinfo/texinfo.texi:15663
@@ -41019,6 +41022,11 @@ msgid ""
 "@code{BEFORE_TOC_LINES}, otherwise a default string is used.  At the time of "
 "writing, a @code{<div ...>} element is opened."
 msgstr ""
+"Se configurada, o texto correspondente será produzido antes do índice "
+"resumido para @code{BEFORE_SHORT_TOC_LINES} e antes do índice analítico "
+"para @code{BEFORE_TOC_LINES}, caso contrário, uma sequência padrão de "
+"caracteres será usada. Ao tempo da escrita deste texto, um elemento "
+"@code{<div ...>} é aberto."
 
 #. type: itemize
 #: texinfo/texinfo.texi:15667
@@ -41027,12 +41035,16 @@ msgid ""
 "@code{BEFORE_SHORT_TOC_LINES} is set, and you should set "
 "@code{AFTER_TOC_LINES} if @code{BEFORE_TOC_LINES} is set."
 msgstr ""
+"Em geral, você deveria configurar @code{AFTER_SHORT_TOC_LINES} se "
+"@code{BEFORE_SHORT_TOC_LINES} estiver configurada, e você deveria "
+"configurar @code{AFTER_TOC_LINES} se @code{BEFORE_TOC_LINES} estiver "
+"configurada."
 
 #. type: item
 #: texinfo/texinfo.texi:15669
 #, no-wrap
 msgid "BIG_RULE"
-msgstr ""
+msgstr "BIG_RULE"
 
 #. type: itemize
 #: texinfo/texinfo.texi:15673
@@ -41040,24 +41052,26 @@ msgid ""
 "Rule used after and before the top element and before special elements, but "
 "not for footers and headers; default @code{<hr>}."
 msgstr ""
+"Regra usada antes e depois do elemento superior e antes dos elementos "
+"especiais, mas não para rodapés e cabeçalhos; padrão @código{<hr>}."
 
 #. type: cindex
 #: texinfo/texinfo.texi:15674
 #, no-wrap
 msgid "@code{<body>} text, customizing"
-msgstr ""
+msgstr "texto do @code{<body>}, personalizando"
 
 #. type: opindex
 #: texinfo/texinfo.texi:15675
 #, no-wrap
 msgid "lang@r{, HTML attribute}"
-msgstr ""
+msgstr "lang@r{, atributo do HTML}"
 
 #. type: item
 #: texinfo/texinfo.texi:15676
 #, no-wrap
 msgid "BODYTEXT"
-msgstr ""
+msgstr "BODYTEXT"
 
 #. type: itemize
 #: texinfo/texinfo.texi:15680
@@ -41065,12 +41079,15 @@ msgid ""
 "The text appearing in @code{<body>}.  By default, sets the HTML @code{lang} "
 "attribute to the document language (@pxref{@code{@@documentlanguage}})."
 msgstr ""
+"O texto que aparece em @code{<body>}. Por padrão, configura o atributo "
+"@code{lang} do HTML para o idioma do documento "
+"(@pxref{@code{@@documentlanguage}})."
 
 #. type: item
 #: texinfo/texinfo.texi:15681
 #, no-wrap
 msgid "CASE_INSENSITIVE_FILENAMES"
-msgstr ""
+msgstr "CASE_INSENSITIVE_FILENAMES"
 
 #. type: itemize
 #: texinfo/texinfo.texi:15684
@@ -41078,12 +41095,15 @@ msgid ""
 "Construct output file names as if the filesystem were case insensitive "
 "(@pxref{HTML Splitting}); default false."
 msgstr ""
+"Construa nomes de arquivos de saída como se o sistema de arquivos não "
+"diferenciasse maiúsculas de minúsculas (@pxref{Dividindo HTML}); padrão "
+"falso."
 
 #. type: item
 #: texinfo/texinfo.texi:15685
 #, no-wrap
 msgid "CHAPTER_HEADER_LEVEL"
-msgstr ""
+msgstr "CHAPTER_HEADER_LEVEL"
 
 #. type: itemize
 #: texinfo/texinfo.texi:15688
@@ -41091,6 +41111,8 @@ msgid ""
 "Header formatting level used for chapter level sectioning commands; default "
 "@samp{2}."
 msgstr ""
+"Nível de formatação de cabeçalho usado para comandos de seccionamento em "
+"nível de capítulo; padrão @samp{2}."
 
 #. type: item
 #: texinfo/texinfo.texi:15689
