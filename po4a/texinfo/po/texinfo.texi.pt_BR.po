@@ -41118,7 +41118,7 @@ msgstr ""
 #: texinfo/texinfo.texi:15689
 #, no-wrap
 msgid "CHECK_HTMLXREF"
-msgstr ""
+msgstr "CHECK_HTMLXREF"
 
 #. type: itemize
 #: texinfo/texinfo.texi:15693
@@ -41127,23 +41127,27 @@ msgid ""
 "(@pxref{Four and Five Arguments}) are present in @file{htmlxref.cnf} "
 "(@pxref{HTML Xref Configuration}); default false."
 msgstr ""
+"Verificar se os manuais que são o alvo de referências cruzadas externas "
+"(@pxref{Quatro e Cinco Argumentos}) estão presentes em @file{htmlxref.cnf} "
+"(@pxref{Configuração Xref do HTML}); padrão falso."
 
 #. type: item
 #: texinfo/texinfo.texi:15694
 #, no-wrap
 msgid "COMPLEX_FORMAT_IN_TABLE"
-msgstr ""
+msgstr "COMPLEX_FORMAT_IN_TABLE"
 
 #. type: itemize
 #: texinfo/texinfo.texi:15697
 msgid "If set, use tables for indentation of complex formats; default false."
 msgstr ""
+"Se configurada, usar tabelas para recuo de formatos complexos; padrão falso."
 
 #. type: item
 #: texinfo/texinfo.texi:15698
 #, no-wrap
 msgid "CONTENTS_OUTPUT_LOCATION"
-msgstr ""
+msgstr "CONTENTS_OUTPUT_LOCATION"
 
 #. type: itemize
 #: texinfo/texinfo.texi:15706
@@ -41156,12 +41160,19 @@ msgid ""
 "@samp{after_title} the tables of contents are output after the title; "
 "default @samp{after_top}."
 msgstr ""
+"Se configurada como @samp{after_top}, produzir o conteúdo no final da "
+"seção @code{@@top}. Se configurada como @samp{inline}, produzir o "
+"conteúdo onde o @code{@@contents} e comandos @@ semelhantes estão "
+"localizados. Se configurada como @samp{separate_element} produzir o "
+"conteúdo em elementos separados, ou no final do documento, se não "
+"dividido, ou em um arquivo separado. Se configurada como @samp{after_title} "
+"os índices serão produzidos depois do título; padrão @samp{after_top}."
 
 #. type: item
 #: texinfo/texinfo.texi:15707
 #, no-wrap
 msgid "CONVERT_TO_LATEX_IN_MATH"
-msgstr ""
+msgstr "CONVERT_TO_LATEX_IN_MATH"
 
 #. type: itemize
 #: texinfo/texinfo.texi:15712
@@ -41171,12 +41182,16 @@ msgid ""
 "@code{@@displaymath} to HTML.  Default @code{undef}.  If undefined, set if "
 "@code{HTML_MATH} is set."
 msgstr ""
+"Se configurada, tentar converter quaisquer comandos @@ do Texinfo dentro de "
+"@code{@@math} e de @code{@@displaymath} para @LaTeX{}, antes de converter o "
+"@code{@@math} ou o @code{@@displaymath} para HTML. Padrão @code{undef}. Se "
+"indefinida, configurar se @code{HTML_MATH} estiver configurada."
 
 #. type: item
 #: texinfo/texinfo.texi:15713
 #, no-wrap
 msgid "COPIABLE_LINKS"
-msgstr ""
+msgstr "COPIABLE_LINKS"
 
 #. type: itemize
 #: texinfo/texinfo.texi:15719
@@ -41186,23 +41201,30 @@ msgid ""
 "entry is defined.  A link appears as a `@U{00B6}' sign that appears when you "
 "hover the mouse pointer over the heading text."
 msgstr ""
+"Se configurada, produzir linques copiáveis para os comandos de definição "
+"(@pxref{Comandos de Definição}) e comandos de tabela (@pxref{Tabelas de "
+"Duas Colunas}) onde uma entrada de índice estiver definida. Um linque "
+"aparece como um sinal `@U{00B6}' que aparece quando você passa o ponteiro "
+"do mouse sobre o texto do título."
 
 #. type: item
 #: texinfo/texinfo.texi:15720
 #, no-wrap
 msgid "DATE_IN_HEADER"
-msgstr ""
+msgstr "DATE_IN_HEADER"
 
 #. type: itemize
 #: texinfo/texinfo.texi:15722
 msgid "Put the document generation date in the header; off by default."
 msgstr ""
+"Colocar a data de geração do documento no cabeçalho; desligado por "
+"padrão."
 
 #. type: item
 #: texinfo/texinfo.texi:15723
 #, no-wrap
 msgid "DEF_TABLE"
-msgstr ""
+msgstr "DEF_TABLE"
 
 #. type: itemize
 #: texinfo/texinfo.texi:15727
@@ -41211,12 +41233,15 @@ msgid ""
 "@@-commands is used (looking more like the @TeX{} output), instead of "
 "definition lists; default false."
 msgstr ""
+"Se configurada, uma construção @code{<table>} para @code{@@deffn} e "
+"comandos @@ semelhantes será usada (parecendo mais com a saída gerada do "
+"@TeX{}), em vez de listas de definição; padrão falso."
 
 #. type: item
 #: texinfo/texinfo.texi:15728
 #, no-wrap
 msgid "DEFAULT_RULE"
-msgstr ""
+msgstr "DEFAULT_RULE"
 
 #. type: itemize
 #: texinfo/texinfo.texi:15732
@@ -41224,12 +41249,15 @@ msgid ""
 "Rule used between element, except before and after the top element, and "
 "before special elements, and for footers and headers; default @code{<hr>}."
 msgstr ""
+"Regra usada entre elementos, exceto antes e depois do elemento superior, e "
+"antes de elementos especiais, e para rodapés e cabeçalhos; padrão "
+"@code{<hr>}."
 
 #. type: item
 #: texinfo/texinfo.texi:15733
 #, no-wrap
 msgid "DO_ABOUT"
-msgstr ""
+msgstr "DO_ABOUT"
 
 #. type: itemize
 #: texinfo/texinfo.texi:15738
@@ -41237,6 +41265,8 @@ msgid ""
 "If set to 0 never do an About special element; if set to 1 always do an "
 "About special element; default 0."
 msgstr ""
+"Se configurada como 0, nunca fazer um elemento especial Sobre; se "
+"configurada como 1, sempre fazer um elemento especial Sobre; padrão 0."
 
 #. type: item
 #: texinfo/texinfo.texi:15739
