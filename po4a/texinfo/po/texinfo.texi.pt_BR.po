@@ -41272,7 +41272,7 @@ msgstr ""
 #: texinfo/texinfo.texi:15739
 #, no-wrap
 msgid "EXTERNAL_CROSSREF_SPLIT"
-msgstr ""
+msgstr "EXTERNAL_CROSSREF_SPLIT"
 
 #. type: itemize
 #: texinfo/texinfo.texi:15744
@@ -41282,12 +41282,16 @@ msgid ""
 "value of @code{SPLIT}.  @xref{HTML Xref}, and @pxref{HTML Xref "
 "Configuration}."
 msgstr ""
+"Para referências cruzadas para outros manuais, isso determina se o outro "
+"manual é considerado dividido ou monolítico. Por padrão, ela é "
+"configurada baseada no valor de @code{SPLIT}. @xref{Xref do HTML} e "
+"@pxref{Configuração Xref do HTML}."
 
 #. type: item
 #: texinfo/texinfo.texi:15745
 #, no-wrap
 msgid "EXTERNAL_DIR"
-msgstr ""
+msgstr "EXTERNAL_DIR"
 
 #. type: itemize
 #: texinfo/texinfo.texi:15749
@@ -41296,12 +41300,15 @@ msgid ""
 "general external cross-reference mechanism (@pxref{HTML Xref Configuration}) "
 "than this variable."
 msgstr ""
+"Diretório base para manuais externos; padrão nenhum. É melhor usar o "
+"mecanismo geral de referência cruzada externa (@pxref{Configuração Xref "
+"do HTML}) do que essa variável."
 
 #. type: item
 #: texinfo/texinfo.texi:15750
 #, no-wrap
 msgid "EXTERNAL_CROSSREF_EXTENSION"
-msgstr ""
+msgstr "EXTERNAL_CROSSREF_EXTENSION"
 
 #. type: itemize
 #: texinfo/texinfo.texi:15753
@@ -41309,23 +41316,25 @@ msgid ""
 "File extension for cross-references to other manuals.  If unset, based on "
 "@code{EXTENSION}."
 msgstr ""
+"Extensão de arquivo para referências cruzadas para outros manuais. Se "
+"desconfigurada, baseada em @code{EXTENSION}."
 
 #. type: item
 #: texinfo/texinfo.texi:15754
 #, no-wrap
 msgid "EXTRA_HEAD"
-msgstr ""
+msgstr "EXTRA_HEAD"
 
 #. type: itemize
 #: texinfo/texinfo.texi:15756
 msgid "Additional text appearing within @code{<head>}; default unset."
-msgstr ""
+msgstr "Texto adicional aparecendo em @code{<head>}; padrão desconfigurada."
 
 #. type: item
 #: texinfo/texinfo.texi:15757
 #, no-wrap
 msgid "FOOTNOTE_END_HEADER_LEVEL"
-msgstr ""
+msgstr "FOOTNOTE_END_HEADER_LEVEL"
 
 #. type: itemize
 #: texinfo/texinfo.texi:15760
@@ -41333,12 +41342,15 @@ msgid ""
 "Header formatting level used for the footnotes header with the `end' "
 "footnotestyle; default @samp{4}.  @xref{Footnote Styles}."
 msgstr ""
+"Nível de formatação de cabeçalho usado para o cabeçalho das notas de "
+"rodapé com o estilo de nota de rodapé `end'; padrão @samp{4}. "
+"@xref{Estilos de Notas de Rodapé}."
 
 #. type: item
 #: texinfo/texinfo.texi:15761
 #, no-wrap
 msgid "FOOTNOTE_SEPARATE_HEADER_LEVEL"
-msgstr ""
+msgstr "FOOTNOTE_SEPARATE_HEADER_LEVEL"
 
 #. type: itemize
 #: texinfo/texinfo.texi:15765
@@ -41346,12 +41358,15 @@ msgid ""
 "Header formatting level used for the footnotes header with the `separate' "
 "footnotestyle; default @samp{4}.  @xref{Footnote Styles}."
 msgstr ""
+"Nível de formatação de cabeçalho usado para o cabeçalho das notas de "
+"rodapé com o estilo de nota de rodapé `separate'; padrão @samp{4}. "
+"@xref{Estilos de Notas de Rodapé}."
 
 #. type: item
 #: texinfo/texinfo.texi:15766
 #, no-wrap
 msgid "FRAMES"
-msgstr ""
+msgstr "FRAMES"
 
 #. type: itemize
 #: texinfo/texinfo.texi:15769
@@ -41359,23 +41374,25 @@ msgid ""
 "If set, a file describing the frame layout is generated, together with a "
 "file with the short table of contents; default false."
 msgstr ""
+"Se configurada, é gerado um arquivo descrevendo o esquema do quadro, "
+"juntamente com um arquivo com o índice resumido; padrão falso."
 
 #. type: item
 #: texinfo/texinfo.texi:15770
 #, no-wrap
 msgid "FRAMESET_DOCTYPE"
-msgstr ""
+msgstr "FRAMESET_DOCTYPE"
 
 #. type: itemize
 #: texinfo/texinfo.texi:15773
 msgid "Same as DOCTYPE, but for the file containing the frame description."
-msgstr ""
+msgstr "Igual ao DOCTYPE, mas para o arquivo contendo a descrição do quadro."
 
 #. type: item
 #: texinfo/texinfo.texi:15774
 #, no-wrap
 msgid "HEADER_IN_TABLE"
-msgstr ""
+msgstr "HEADER_IN_TABLE"
 
 #. type: itemize
 #: texinfo/texinfo.texi:15777
@@ -41383,12 +41400,14 @@ msgid ""
 "Use tables for header formatting rather than a simple @code{<div>} element; "
 "default false."
 msgstr ""
+"Usar tabelas para formatação de cabeçalho em vez de um simples elemento "
+"@code{<div>}; padrão falso."
 
 #. type: item
 #: texinfo/texinfo.texi:15778
 #, no-wrap
 msgid "HTML_MATH"
-msgstr ""
+msgstr "HTML_MATH"
 
 #. type: itemize
 #: texinfo/texinfo.texi:15786
@@ -41400,6 +41419,14 @@ msgid ""
 "(@pxref{@command{tex4ht} Customization Variables}).  In the default case, "
 "setting @code{HTML_MATH} also sets @code{CONVERT_TO_LATEX_IN_MATH}."
 msgstr ""
+"Método a usar-se para renderizar @code{@@math}. Isso pode ser "
+"desconfigurada, configurada como @samp{mathjax} (@pxref{Variáveis de "
+"Personalização MathJax}), configurada como @samp{l2h}, que usa "
+"@command{latex2html} (@pxref{Variáveis de Personalização do "
+"@command{latex2html}}), ou configurada como @samp{t4h}, que usa "
+"@command{tex4ht} (@pxref{Variáveis de Personalização do "
+"@command{tex4ht}}). No caso padrão, configurar-se @code{HTML_MATH} também "
+"configura @code{CONVERT_TO_LATEX_IN_MATH}."
 
 #. type: item
 #: texinfo/texinfo.texi:15787
