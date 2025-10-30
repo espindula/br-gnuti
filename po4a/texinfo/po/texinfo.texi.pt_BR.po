@@ -41432,7 +41432,7 @@ msgstr ""
 #: texinfo/texinfo.texi:15787
 #, no-wrap
 msgid "HTML_ROOT_ELEMENT_ATTRIBUTES"
-msgstr ""
+msgstr "HTML_ROOT_ELEMENT_ATTRIBUTES"
 
 #. type: itemize
 #: texinfo/texinfo.texi:15790
@@ -41440,12 +41440,14 @@ msgid ""
 "Use that string for the @code{<html>} HTML document root element.  Default "
 "undefined."
 msgstr ""
+"Usar essa string para o elemento raiz @code{<html>} do documento HTML. "
+"Padrão indefinido."
 
 #. type: item
 #: texinfo/texinfo.texi:15791
 #, no-wrap
 msgid "HTMLXREF_FILE"
-msgstr ""
+msgstr "HTMLXREF_FILE"
 
 #. type: itemize
 #: texinfo/texinfo.texi:15797
@@ -41456,6 +41458,12 @@ msgid ""
 "set to the default and @code{HTMLXREF_FILE} is not defined, information on "
 "cross-references to other manuals is not used."
 msgstr ""
+"Configurar o nome do arquivo usado para referências cruzadas para outros "
+"manuais. Se não definida, @file{htmlxref.cnf} será usado "
+"(@pxref{Configuração Xref do HTML}). Não definida no caso padrão. Se "
+"@code{TEST} estiver configurada, @code{HTMLXREF_MODE} estiver configurada "
+"para o padrão e @code{HTMLXREF_FILE} não estiver definida, informações "
+"acerca de referências cruzadas para outros manuais não serão usadas."
 
 #. type: itemize
 #: texinfo/texinfo.texi:15802
@@ -41465,12 +41473,16 @@ msgid ""
 "directories, and all the files found are used (@pxref{HTML Xref "
 "Configuration})."
 msgstr ""
+"Se @code{HTMLXREF_MODE} estiver configurada como @samp{file}, o nome do "
+"arquivo será usado diretamente como a fonte de informação; caso "
+"contrário, o nome do arquivo será pesquisado em diretórios e todos os "
+"arquivos encontrados serão usados (@pxref{Configuração Xref do HTML})."
 
 #. type: item
 #: texinfo/texinfo.texi:15803
 #, no-wrap
 msgid "HTMLXREF_MODE"
-msgstr ""
+msgstr "HTMLXREF_MODE"
 
 #. type: itemize
 #: texinfo/texinfo.texi:15810
@@ -41482,23 +41494,30 @@ msgid ""
 "any other value, search in directories and use all the files (@pxref{HTML "
 "Xref Configuration})."
 msgstr ""
+"Como informações de referências cruzadas para outros manuais são "
+"determinadas. Se configurada como @samp{none}, nenhuma informação será "
+"usada. Se configurada como @samp{file}, as informações serão determinadas "
+"a partir de um caminho de arquivo, @file{htmlxref.cnf} no caso padrão, ou o "
+"valor de @code{HTMLXREF_FILE}. Se não definida (o padrão) ou configurada "
+"para qualquer outro valor, pesquisar nos diretórios e usar todos os "
+"arquivos (@pxref{Configuração Xref do HTML})."
 
 #. type: item
 #: texinfo/texinfo.texi:15811
 #, no-wrap
 msgid "ICONS"
-msgstr ""
+msgstr "ICONS"
 
 #. type: itemize
 #: texinfo/texinfo.texi:15813
 msgid "Use icons for the navigation panel; default false."
-msgstr ""
+msgstr "Usar ícones para o painel de navegação; padrão falso."
 
 #. type: item
 #: texinfo/texinfo.texi:15814
 #, no-wrap
 msgid "IMAGE_LINK_PREFIX"
-msgstr ""
+msgstr "IMAGE_LINK_PREFIX"
 
 #. type: itemize
 #: texinfo/texinfo.texi:15817
@@ -41506,12 +41525,14 @@ msgid ""
 "If set, the associated value is prepended to the image file links; default "
 "unset."
 msgstr ""
+"Se configurada, o valor associado será preposto aos linques do arquivo de "
+"imagem; padrão desconfigurada."
 
 #. type: item
 #: texinfo/texinfo.texi:15818
 #, no-wrap
 msgid "INDEX_ENTRY_COLON"
-msgstr ""
+msgstr "INDEX_ENTRY_COLON"
 
 #. type: itemize
 #: texinfo/texinfo.texi:15821
@@ -41519,12 +41540,14 @@ msgid ""
 "Symbol used between the index entry and the associated node or section; "
 "default @samp{:}."
 msgstr ""
+"Símbolo usado entre a entrada de índice e o nó ou seção associado; "
+"padrão @samp{:}."
 
 #. type: item
 #: texinfo/texinfo.texi:15822
 #, no-wrap
 msgid "INFO_JS_DIR"
-msgstr ""
+msgstr "INFO_JS_DIR"
 
 #. type: itemize
 #: texinfo/texinfo.texi:15830
@@ -41537,6 +41560,14 @@ msgid ""
 "browsers in a web browser, such as keyboard navigation and index lookup.  "
 "This only works with non-split HTML output."
 msgstr ""
+"(Experimental). Adicionar uma interface de navegação JavaScript ao manual. "
+"O valor da variável é o diretório para colocar o código para essa "
+"interface, de forma que você executaria o programa como por exemplo@: "
+"@samp{texi2any --html -c INFO_JS_DIR=js @var{manual}.texi} para colocar "
+"arquivos em um diretório @samp{js} sob a saída gerada. Isso fornece "
+"algumas das funcionalidades dos navegadores Info em um navegador da Web, "
+"como navegação por teclado e pesquisa de índice. Isso funciona somente "
+"com saída HTML não dividida."
 
 #. type: itemize
 #: texinfo/texinfo.texi:15835
@@ -41546,6 +41577,11 @@ msgid ""
 "cautious when using this option, in case you do make your documentation "
 "harder to access for some of your users."
 msgstr ""
+"A interface deveria fornecer uma funcionalidade alternativa aceitável se "
+"JavaScript ou recursos do navegador da Web não estiverem disponíveis. No "
+"entanto, por favor, seja cuidadoso(a) ao usar essa opção, caso você torne "
+"tua documentação mais difícil de acessar para alguns dos teus "
+"usuários(as)."
 
 #. type: item
 #: texinfo/texinfo.texi:15836
