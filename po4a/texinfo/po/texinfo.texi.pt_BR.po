@@ -41587,18 +41587,19 @@ msgstr ""
 #: texinfo/texinfo.texi:15836
 #, no-wrap
 msgid "IGNORE_REF_TO_TOP_NODE_UP"
-msgstr ""
+msgstr "IGNORE_REF_TO_TOP_NODE_UP"
 
 #. type: itemize
 #: texinfo/texinfo.texi:15838
 msgid "Ignore references to @code{TOP_NODE_UP}, the up node for the Top node."
 msgstr ""
+"Ignorar referências para @code{TOP_NODE_UP}, o nó acima para o nó Top."
 
 #. type: item
 #: texinfo/texinfo.texi:15839
 #, no-wrap
 msgid "INLINE_CSS_STYLE"
-msgstr ""
+msgstr "INLINE_CSS_STYLE"
 
 #. type: itemize
 #: texinfo/texinfo.texi:15842
@@ -41606,18 +41607,20 @@ msgid ""
 "Put CSS directly in HTML elements rather than at the beginning of the "
 "output; default false."
 msgstr ""
+"Colocar CSS diretamente nos elementos HTML, em vez de no início da saída "
+"gerada; padrão falso."
 
 #. type: item
 #: texinfo/texinfo.texi:15843
 #, no-wrap
 msgid "JS_WEBLABELS"
-msgstr ""
+msgstr "JS_WEBLABELS"
 
 #. type: itemx
 #: texinfo/texinfo.texi:15844
 #, no-wrap
 msgid "JS_WEBLABELS_FILE"
-msgstr ""
+msgstr "JS_WEBLABELS_FILE"
 
 #. type: itemize
 #: texinfo/texinfo.texi:15849
@@ -41627,6 +41630,10 @@ msgid ""
 "files for the manual.  (See "
 "@uref{https://www.gnu.org/licenses/javascript-labels.html})."
 msgstr ""
+"Especificar como usar uma página @dfn{rótulos da web de licença "
+"JavaScript} para fornecer informações de licenciamento e código-fonte "
+"para qualquer JavaScript usado nos arquivos HTML para o manual. (Veja-se "
+"@uref{https://www.gnu.org/licenses/javascript-labels.html})."
 
 #. type: itemize
 #: texinfo/texinfo.texi:15856
@@ -41638,6 +41645,13 @@ msgid ""
 "when @code{INFO_JS_DIR} is set).  With this setting, "
 "@code{JS_WEBLABELS_FILE} must be a relative file name."
 msgstr ""
+"Com o valor @samp{generate} (o padrão), gerar uma página de rótulos em "
+"@code{JS_WEBLABELS_FILE} e lincar a ela nos arquivos de saída HTML. Fazer "
+"isso somente se realmente referenciar arquivos JavaScript (ou com "
+"@code{HTML_MATH} configurada como @samp{mathjax} ou ao usar a interface "
+"experimental de navegação JS quando @code{INFO_JS_DIR} estiver "
+"configurada). Com essa configuração, @code{JS_WEBLABELS_FILE} precisa ser "
+"um nome relativo de arquivo."
 
 #. type: itemize
 #: texinfo/texinfo.texi:15862
@@ -41647,17 +41661,21 @@ msgid ""
 "This setting is useful if you separately maintain a single labels file for a "
 "larger website that includes your manual."
 msgstr ""
+"Com o valor @samp{reference}, lincar para o arquivo de rótulos fornecido "
+"por @code{JS_WEBLABELS_FILE} na saída gerada e não gerar um arquivo de "
+"rótulos. Essa configuração é útil se você mantiver separadamente um "
+"arquivo de rótulos para um sítio maior que inclua teu manual."
 
 #. type: itemize
 #: texinfo/texinfo.texi:15864
 msgid "With @samp{omit}, neither generate nor link to a labels file."
-msgstr ""
+msgstr "Com @samp{omit}, nem gerar nem lincar para um arquivo de rótulos."
 
 #. type: item
 #: texinfo/texinfo.texi:15865
 #, no-wrap
 msgid "MAX_HEADER_LEVEL"
-msgstr ""
+msgstr "MAX_HEADER_LEVEL"
 
 #. type: itemize
 #: texinfo/texinfo.texi:15869
@@ -41665,24 +41683,28 @@ msgid ""
 "Maximum header formatting level used (higher header formatting level numbers "
 "correspond to lower sectioning levels); default @samp{4}."
 msgstr ""
+"Nível máximo de formatação de cabeçalho usado (números mais altos de "
+"níveis de formatação de cabeçalho correspondem a níveis mais baixos de "
+"seccionamento); padrão @samp{4}."
 
 #. type: item
 #: texinfo/texinfo.texi:15870
 #, no-wrap
 msgid "MENU_ENTRY_COLON"
-msgstr ""
+msgstr "MENU_ENTRY_COLON"
 
 #. type: itemize
 #: texinfo/texinfo.texi:15873
 msgid ""
 "Symbol used between the menu entry and the description; default @samp{:}."
 msgstr ""
+"Símbolo usado entre a entrada do menu e a descrição; padrão @samp{:}."
 
 #. type: item
 #: texinfo/texinfo.texi:15874
 #, no-wrap
 msgid "MENU_SYMBOL"
-msgstr ""
+msgstr "MENU_SYMBOL"
 
 #. type: itemize
 #: texinfo/texinfo.texi:15879
@@ -41691,6 +41713,10 @@ msgid ""
 "entries formatting; default is undefined and set to @code{&bull;} if "
 "@code{USE_NUMERIC_ENTITY} is not set, and to @code{&#8217;} if set."
 msgstr ""
+"Símbolo usado em frente das entradas de menu quando nomes de nós forem "
+"usados para formatação de entradas de menu; o padrão é indefinido e "
+"configurada como @code{&bull;} se @code{USE_NUMERIC_ENTITY} não estiver "
+"configurada, e como @code{&#8217;} se configurada."
 
 #. type: item
 #: texinfo/texinfo.texi:15880
