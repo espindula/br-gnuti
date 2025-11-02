@@ -41914,18 +41914,20 @@ msgstr ""
 #: texinfo/texinfo.texi:15934
 #, no-wrap
 msgid "TOC_LINKS"
-msgstr ""
+msgstr "TOC_LINKS"
 
 #. type: itemize
 #: texinfo/texinfo.texi:15937
 msgid "If set, links from headings to toc entries are created; default false."
 msgstr ""
+"Se configurada, linques de títulos para entradas de índice serão criados; "
+"padrão falso."
 
 #. type: item
 #: texinfo/texinfo.texi:15938
 #, no-wrap
 msgid "TOP_FILE"
-msgstr ""
+msgstr "TOP_FILE"
 
 #. type: itemize
 #: texinfo/texinfo.texi:15943
@@ -41934,12 +41936,16 @@ msgid ""
 "appropriately, if necessary.  This is used to override the default, and is, "
 "in general, only taken into account when output is split, and for HTML@."
 msgstr ""
+"Esse nome de arquivo pode ser usado para o arquivo de nível superior. A "
+"extensão é configurada apropriadamente, se necessário. Isso é usado para "
+"substituir o padrão e, em geral, só é levado em consideração quando a "
+"saída gerada for dividida e para HTML@."
 
 #. type: item
 #: texinfo/texinfo.texi:15944
 #, no-wrap
 msgid "TOP_NODE_FILE_TARGET"
-msgstr ""
+msgstr "TOP_NODE_FILE_TARGET"
 
 #. type: itemize
 #: texinfo/texinfo.texi:15947
@@ -41947,12 +41953,14 @@ msgid ""
 "File name used for the Top node in cross-references; default is "
 "@code{index.html}."
 msgstr ""
+"Nome do arquivo usado para o nó Top em referências cruzadas; o padrão é "
+"@code{index.html}."
 
 #. type: item
 #: texinfo/texinfo.texi:15948
 #, no-wrap
 msgid "TOP_NODE_UP_URL"
-msgstr ""
+msgstr "TOP_NODE_UP_URL"
 
 #. type: itemize
 #: texinfo/texinfo.texi:15955
@@ -41963,29 +41971,35 @@ msgid ""
 "@code{TOP_NODE_UP_URL} is set and for other formats, see @code{TOP_NODE_UP} "
 "in @ref{Other Customization Variables}."
 msgstr ""
+"Uma URL usada para referências acima de nó Top; o padrão é @code{undef}; "
+"nesse caso, nenhuma referência Acima de nó Top é gerada. Para mais acerca "
+"dos ponteiros de nó Top, @pxref{Primeiro Nó}. Para substituir o nome do "
+"ponteiro Acima caso @code{TOP_NODE_UP_URL} esteja configurada e para outros "
+"formatos, veja-se @code{TOP_NODE_UP} em @ref{Outras Variáveis de "
+"Personalização}."
 
 #. type: cindex
 #: texinfo/texinfo.texi:15956
 #, no-wrap
 msgid "@code{accesskey} @subentry customization variable for"
-msgstr ""
+msgstr "@code{accesskey} @subentry variável de personalização para"
 
 #. type: item
 #: texinfo/texinfo.texi:15957
 #, no-wrap
 msgid "USE_ACCESSKEY"
-msgstr ""
+msgstr "USE_ACCESSKEY"
 
 #. type: itemize
 #: texinfo/texinfo.texi:15959
 msgid "Use @code{accesskey} in cross-references; default true."
-msgstr ""
+msgstr "Usar @code{accesskey} em referências cruzadas; padrão falso."
 
 #. type: item
 #: texinfo/texinfo.texi:15960
 #, no-wrap
 msgid "USE_ISO"
-msgstr ""
+msgstr "USE_ISO"
 
 #. type: itemize
 #: texinfo/texinfo.texi:15964
@@ -41993,6 +42007,8 @@ msgid ""
 "Use entities for doubled single-quote characters (@pxref{Inserting Quotation "
 "Marks}), and @samp{---} and @samp{--} (@pxref{Conventions}); default true."
 msgstr ""
+"Usar entidades para caracteres de aspas simples duplicadas (@pxref{Inserindo "
+"Aspas}) e @samp{---} e @samp{--} (@pxref{Convenções}); padrão verdadeiro."
 
 #. type: cindex
 #: texinfo/texinfo.texi:15965
