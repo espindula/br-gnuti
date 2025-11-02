@@ -42014,19 +42014,19 @@ msgstr ""
 #: texinfo/texinfo.texi:15965
 #, no-wrap
 msgid "@code{<link>} HTML tag, in @code{<head>}"
-msgstr ""
+msgstr "Etiqueta @code{<link>} do HTML, no @code{<head>}"
 
 #. type: cindex
 #: texinfo/texinfo.texi:15966
 #, no-wrap
 msgid "@code{<head>} HTML tag, and @code{<link>}"
-msgstr ""
+msgstr "Etiqueta @code{<head>} do HTML, e @code{<link>}"
 
 #. type: item
 #: texinfo/texinfo.texi:15967
 #, no-wrap
 msgid "USE_LINKS"
-msgstr ""
+msgstr "USE_LINKS"
 
 #. type: itemize
 #: texinfo/texinfo.texi:15970
@@ -42034,12 +42034,14 @@ msgid ""
 "Generate @code{<link>} elements in the HTML @code{<head>} output; default "
 "true."
 msgstr ""
+"Gerar elementos @code{<link>} na saída @code{<head>} do HTML; padrão "
+"verdadeiro."
 
 #. type: item
 #: texinfo/texinfo.texi:15971
 #, no-wrap
 msgid "USE_NEXT_HEADING_FOR_LONE_NODE"
-msgstr ""
+msgstr "USE_NEXT_HEADING_FOR_LONE_NODE"
 
 #. type: itemize
 #: texinfo/texinfo.texi:15977
@@ -42050,12 +42052,17 @@ msgid ""
 "under the assumption that the command found provides the heading.  Default "
 "true."
 msgstr ""
+"Se configurada, um nó não associado a um comando de seccionamento, mas "
+"seguido por um comando de título, normalmente não associado a um nó, como "
+"@code{@@heading}, antes de outro conteúdo formatado, não terá o nome dele "
+"gerado como um título, sob a suposição de que o comando encontrado "
+"fornece o título. Padrão verdadeiro."
 
 #. type: item
 #: texinfo/texinfo.texi:15978
 #, no-wrap
 msgid "USE_NODE_DIRECTIONS"
-msgstr ""
+msgstr "USE_NODE_DIRECTIONS"
 
 #. type: itemize
 #: texinfo/texinfo.texi:15986
@@ -42068,23 +42075,31 @@ msgid ""
 "sections are systematically associated, this customization has no practical "
 "effect."
 msgstr ""
+"Se verdadeiro, usar nós para determinar para onde lincar próximo, acima e "
+"anterior nos cabeçalhos dos nós. Se falso, usar seções. Se indefinida, "
+"usar valor de @code{USE_NODES}. O padrão é indefinida. Observe que essa "
+"configuração não determina somente a sequência de caracteres do linque "
+"para onde os linques apontam; veja-se @ref{Três Argumentos, , "
+"xrefautomaticsectiontitle} para a personalização da sequência de "
+"caracteres do linque. Se nós e seções estiverem sistematicamente "
+"associados, essa personalização não terá efeito prático."
 
 #. type: item
 #: texinfo/texinfo.texi:15987
 #, no-wrap
 msgid "USE_REL_REV"
-msgstr ""
+msgstr "USE_REL_REV"
 
 #. type: itemize
 #: texinfo/texinfo.texi:15989
 msgid "Use @code{rel} in cross-references; default true."
-msgstr ""
+msgstr "Usar @code{rel} em referências cruzadas; padrão verdadeiro."
 
 #. type: item
 #: texinfo/texinfo.texi:15990
 #, no-wrap
 msgid "USE_TITLEPAGE_FOR_TITLE"
-msgstr ""
+msgstr "USE_TITLEPAGE_FOR_TITLE"
 
 #. type: itemize
 #: texinfo/texinfo.texi:15993
@@ -42092,6 +42107,9 @@ msgid ""
 "Use the full @code{@@titlepage} as the title, not a simple title string; "
 "default true.  Only relevant if @code{SHOW_TITLE} is set."
 msgstr ""
+"Usar o @code{@@titlepage} completo como título, não uma simples sequência "
+"de caracteres de título; padrão verdadeiro. Relevante somente se "
+"@code{SHOW_TITLE} estiver configurada."
 
 #. type: item
 #: texinfo/texinfo.texi:15994
