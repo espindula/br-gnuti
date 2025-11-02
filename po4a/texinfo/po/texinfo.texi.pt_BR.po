@@ -41722,7 +41722,7 @@ msgstr ""
 #: texinfo/texinfo.texi:15880
 #, no-wrap
 msgid "MONOLITHIC"
-msgstr ""
+msgstr "MONOLITHIC"
 
 #. type: itemize
 #: texinfo/texinfo.texi:15883
@@ -41730,34 +41730,37 @@ msgid ""
 "Output only one file including the table of contents.  Set by default, but "
 "only relevant when the output is not split."
 msgstr ""
+"Produzir somente um arquivo incluindo o índice analítico. Configurada por "
+"padrão, mas relevante somente quando a saída gerada não for dividida."
 
 #. type: item
 #: texinfo/texinfo.texi:15884
 #, no-wrap
 msgid "NO_CSS"
-msgstr ""
+msgstr "NO_CSS"
 
 #. type: itemize
 #: texinfo/texinfo.texi:15886
 msgid "Do not use CSS; default false.  @xref{HTML CSS}."
-msgstr ""
+msgstr "Não usar CSS; padrão falso. @xref{CSS do HTML}."
 
 #. type: item
 #: texinfo/texinfo.texi:15887
 #, no-wrap
 msgid "NO_CUSTOM_HTML_ATTRIBUTE"
-msgstr ""
+msgstr "NO_CUSTOM_HTML_ATTRIBUTE"
 
 #. type: itemize
 #: texinfo/texinfo.texi:15889
 msgid "Do not output HTML with custom attributes in elements; default false."
 msgstr ""
+"Não produzir HTML com atributos personalizados em elementos; padrão falso."
 
 #. type: item
 #: texinfo/texinfo.texi:15890
 #, no-wrap
 msgid "NO_NUMBER_FOOTNOTE_SYMBOL"
-msgstr ""
+msgstr "NO_NUMBER_FOOTNOTE_SYMBOL"
 
 #. type: itemize
 #: texinfo/texinfo.texi:15893
@@ -41765,12 +41768,14 @@ msgid ""
 "Symbol used for footnotes if @code{NUMBER_FOOTNOTES} is false.  Default is "
 "@code{*}."
 msgstr ""
+"Símbolo usado para notas de rodapé se @code{NUMBER_FOOTNOTES} for falso. O "
+"padrão é @code{*}."
 
 #. type: item
 #: texinfo/texinfo.texi:15894
 #, no-wrap
 msgid "NODE_NAME_IN_INDEX"
-msgstr ""
+msgstr "NODE_NAME_IN_INDEX"
 
 #. type: itemize
 #: texinfo/texinfo.texi:15897
@@ -41778,12 +41783,15 @@ msgid ""
 "If true, use node names in index entries, otherwise prefer section names.  "
 "If undefined, use @code{USE_NODES} value in HTML.  Default is undefined."
 msgstr ""
+"Se verdadeiro, usar nomes de nós nas entradas de índice; caso contrário, "
+"preferir nomes de seções. Se indefinida, usar valor de @code{USE_NODES} no "
+"HTML. O padrão é indefinida."
 
 #. type: item
 #: texinfo/texinfo.texi:15898
 #, no-wrap
 msgid "PRE_BODY_CLOSE"
-msgstr ""
+msgstr "PRE_BODY_CLOSE"
 
 #. type: itemize
 #: texinfo/texinfo.texi:15901
@@ -41791,12 +41799,14 @@ msgid ""
 "If set, the given text will appear at the footer of each HTML file; default "
 "unset."
 msgstr ""
+"Se configurada, o texto fornecido aparecerá no rodapé de cada arquivo "
+"HTML; padrão desconfigurada."
 
 #. type: item
 #: texinfo/texinfo.texi:15902
 #, no-wrap
 msgid "PROGRAM_NAME_IN_ABOUT"
-msgstr ""
+msgstr "PROGRAM_NAME_IN_ABOUT"
 
 #. type: itemize
 #: texinfo/texinfo.texi:15906
@@ -41804,12 +41814,15 @@ msgid ""
 "Used when an About element is output.  If set, output the program name and "
 "miscellaneous related information in About special element; default false."
 msgstr ""
+"Usada quando um elemento Sobre for gerado. Se configurada, produzir o nome "
+"do programa e diversas informações relacionadas no elemento especial "
+"Sobre; padrão falso."
 
 #. type: item
 #: texinfo/texinfo.texi:15907
 #, no-wrap
 msgid "PROGRAM_NAME_IN_FOOTER"
-msgstr ""
+msgstr "PROGRAM_NAME_IN_FOOTER"
 
 #. type: itemize
 #: texinfo/texinfo.texi:15910
@@ -41817,12 +41830,14 @@ msgid ""
 "If set, output the program name and miscellaneous related information in the "
 "page footers; default false."
 msgstr ""
+"Se configurada, gerar o nome do programa e diversas informações "
+"relacionadas nos rodapés das páginas; padrão falso."
 
 #. type: item
 #: texinfo/texinfo.texi:15911
 #, no-wrap
 msgid "SECTION_NAME_IN_TITLE"
-msgstr ""
+msgstr "SECTION_NAME_IN_TITLE"
 
 #. type: itemize
 #: texinfo/texinfo.texi:15915
@@ -41831,12 +41846,15 @@ msgid ""
 "command (e.g., @code{@@chapter} or @code{@@section})  in the @code{<title>} "
 "instead of the argument to @code{@@node}."
 msgstr ""
+"Se configurada, quando a saída gerada for dividida, usar o argumento do "
+"comando de estruturação do capítulo (por exemplo, @code{@@chapter} ou "
+"@code{@@section}) no @code{<title>} em vez do argumento para @code{@@node}."
 
 #. type: item
 #: texinfo/texinfo.texi:15916
 #, no-wrap
 msgid "SHORT_TOC_LINK_TO_TOC"
-msgstr ""
+msgstr "SHORT_TOC_LINK_TO_TOC"
 
 #. type: itemize
 #: texinfo/texinfo.texi:15920
@@ -41845,23 +41863,26 @@ msgid ""
 "corresponding Table of Contents entries, if a Table of Contents is output; "
 "default true."
 msgstr ""
+"Se configurada, as referências cruzadas no Índice resumido se lincam às "
+"entradas correspondentes do Índice, se um Índice for gerado; padrão "
+"verdadeiro."
 
 #. type: item
 #: texinfo/texinfo.texi:15921
 #, no-wrap
 msgid "SHOW_BUILTIN_CSS_RULES"
-msgstr ""
+msgstr "SHOW_BUILTIN_CSS_RULES"
 
 #. type: itemize
 #: texinfo/texinfo.texi:15923
 msgid "Output the built-in default CSS rules on the standard output and exit."
-msgstr ""
+msgstr "Produzir as regras CSS padrão integradas na saída padrão e sair."
 
 #. type: item
 #: texinfo/texinfo.texi:15924
 #, no-wrap
 msgid "SHOW_TITLE"
-msgstr ""
+msgstr "SHOW_TITLE"
 
 #. type: itemize
 #: texinfo/texinfo.texi:15928
@@ -41870,12 +41891,15 @@ msgid ""
 "@samp{undef}.  If set to @samp{undef}, setting @code{NO_TOP_NODE_OUTPUT} "
 "also sets @code{SHOW_TITLE} for HTML."
 msgstr ""
+"Se configurada, gerar o título no início do documento; padrão "
+"@samp{undef}. Se configurada como @samp{undef}, configurar-se "
+"@code{NO_TOP_NODE_OUTPUT} também configura @code{SHOW_TITLE} para HTML."
 
 #. type: item
 #: texinfo/texinfo.texi:15929
 #, no-wrap
 msgid "SIMPLE_MENU"
-msgstr ""
+msgstr "SIMPLE_MENU"
 
 #. type: itemize
 #: texinfo/texinfo.texi:15933
@@ -41883,6 +41907,8 @@ msgid ""
 "If set, use a simple preformatted style for the menu, instead of breaking "
 "down the different parts of the menu; default false.  @xref{Menu Parts}."
 msgstr ""
+"Se configurada, usar um estilo pré-formatado simples para o menu, em vez de "
+"dividir as diferentes partes do menu; padrão falso. @xref{Partes do Menu}."
 
 #. type: item
 #: texinfo/texinfo.texi:15934
