@@ -42115,41 +42115,42 @@ msgstr ""
 #: texinfo/texinfo.texi:15994
 #, no-wrap
 msgid "USE_XML_SYNTAX"
-msgstr ""
+msgstr "USE_XML_SYNTAX"
 
 #. type: itemize
 #: texinfo/texinfo.texi:15996
 msgid "Use XML/XHTML compatible syntax."
-msgstr ""
+msgstr "Usar sintaxe compatível com XML/XHTML"
 
 #. type: item
 #: texinfo/texinfo.texi:15997
 #, no-wrap
 msgid "VERTICAL_HEAD_NAVIGATION"
-msgstr ""
+msgstr "VERTICAL_HEAD_NAVIGATION"
 
 #. type: itemize
 #: texinfo/texinfo.texi:15999
 msgid "If set, a vertical navigation panel is used; default false."
 msgstr ""
+"Se configurada, um painel vertical de navegação é usado; padrão falso."
 
 #. type: cindex
 #: texinfo/texinfo.texi:16000
 #, no-wrap
 msgid "Navigation panel, bottom of page"
-msgstr ""
+msgstr "Painel de navegação, final da página"
 
 #. type: cindex
 #: texinfo/texinfo.texi:16001
 #, no-wrap
 msgid "Navigation footer"
-msgstr ""
+msgstr "Rodapé de navegação"
 
 #. type: item
 #: texinfo/texinfo.texi:16002
 #, no-wrap
 msgid "WORDS_IN_PAGE"
-msgstr ""
+msgstr "WORDS_IN_PAGE"
 
 #. type: itemize
 #: texinfo/texinfo.texi:16008
@@ -42159,12 +42160,17 @@ msgid ""
 "ever having the navigation buttons at the bottom of a page, set this to a "
 "sufficiently large number.  The default is 300."
 msgstr ""
+"Quando a saída é dividida por nós, especifica o comprimento mínimo "
+"aproximado da página em que um painel de navegação é colocado na parte "
+"inferior de uma página. Para evitar que os botões de navegação fiquem na "
+"parte inferior de uma página, configure isso para um número "
+"suficientemente grande. O padrão é 300."
 
 #. type: item
 #: texinfo/texinfo.texi:16009
 #, no-wrap
 msgid "XREF_USE_FLOAT_LABEL"
-msgstr ""
+msgstr "XREF_USE_FLOAT_LABEL"
 
 #. type: itemize
 #: texinfo/texinfo.texi:16013
@@ -42173,6 +42179,9 @@ msgid ""
 "of the type followed by the float number (@pxref{@code{@@float}}).  The "
 "default is off."
 msgstr ""
+"Se configurada, para o nome flutuante em referências cruzadas, usar o "
+"rótulo flutuante em vez do tipo seguido pelo número flutuante "
+"(@pxref{@code{@@float}}). O padrão é desligado."
 
 #. type: item
 #: texinfo/texinfo.texi:16014
