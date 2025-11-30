@@ -42187,7 +42187,7 @@ msgstr ""
 #: texinfo/texinfo.texi:16014
 #, no-wrap
 msgid "XREF_USE_NODE_NAME_ARG"
-msgstr ""
+msgstr "XREF_USE_NODE_NAME_ARG"
 
 #. type: itemize
 #: texinfo/texinfo.texi:16023
@@ -42200,12 +42200,20 @@ msgid ""
 "preformatted environments, otherwise use the node name or section name "
 "depending on @code{USE_NODES}.  The default is @samp{undef}."
 msgstr ""
+"Relevante somente para comandos de referência cruzada sem nome de "
+"referência cruzada (segundo argumento). Se configurada como@tie{}1, usar o "
+"argumento (primeiro) do nome do nó em comandos @@ de referência cruzada "
+"para o texto exibido como o hiperlinque. Se configurada como@tie{}0, usar o "
+"nome do nó se @code{USE_NODES} estiver configurada; caso contrário, o nome "
+"da seção. Se configurada como @samp{undef}, usar o primeiro argumento em "
+"ambientes pré-formatados; caso contrário, usar o nome do nó ou o nome da "
+"seção, dependendo de @code{USE_NODES}. O padrão é @samp{undef}."
 
 #. type: subsection
 #: texinfo/texinfo.texi:16027 texinfo/texinfo.texi:16028
 #, no-wrap
 msgid "MathJax Customization Variables"
-msgstr ""
+msgstr "Variáveis de Personalização do MathJax"
 
 #. type: itemize
 #: texinfo/texinfo.texi:16033
@@ -42214,12 +42222,15 @@ msgid ""
 "is being used, which will be the case when @code{HTML_MATH} is set to "
 "@samp{mathjax}."
 msgstr ""
+"Esta tabela lista as variáveis de personalização que podem ser usadas "
+"quando MathJax estiver sendo usado, o que será o caso quando "
+"@code{HTML_MATH} estiver configurada como @samp{mathjax}."
 
 #. type: item
 #: texinfo/texinfo.texi:16035
 #, no-wrap
 msgid "MATHJAX_SCRIPT"
-msgstr ""
+msgstr "MATHJAX_SCRIPT"
 
 #. type: itemize
 #: texinfo/texinfo.texi:16040
@@ -42229,12 +42240,17 @@ msgid ""
 "encouraged to host this file yourself on your website so that you are not "
 "dependent on others' hosting."
 msgstr ""
+"URL do arquivo do componente MathJax (por exemplo@: @file{tex-svg.js}) que "
+"você estiver usando. @command{texi2any} fornece um valor padrão para essa "
+"variável, mas você é incentivado(a) a hospedar você mesmo(a) esse "
+"arquivo em teu sítio da web, de forma que não dependa da hospedagem de "
+"terceiros(as)."
 
 #. type: item
 #: texinfo/texinfo.texi:16041
 #, no-wrap
 msgid "MATHJAX_SOURCE"
-msgstr ""
+msgstr "MATHJAX_SOURCE"
 
 #. type: itemize
 #: texinfo/texinfo.texi:16048
@@ -42245,6 +42261,12 @@ msgid ""
 "should not be in a `minified' form.  Used in the license labels page "
 "(@pxref{HTML Customization Variables}, under @code{JS_WEBLABELS})."
 msgstr ""
+"Uma URL do código-fonte completo na forma dela preferida para "
+"modificação, ou instruções para obter tal código-fonte, para o arquivo "
+"do componente nomeado por @code{MATHJAX_SCRIPT}. `Forma preferida para "
+"modificação' significa que essa não deveria estar em uma forma "
+"`minificada'. Usada na página de rótulos de licença (@pxref{Variáveis de "
+"Personalização de HTML}, sob @code{JS_WEBLABELS})."
 
 #. type: itemize
 #: texinfo/texinfo.texi:16054
@@ -42254,12 +42276,17 @@ msgid ""
 "yourself.  This is in order to make the source code available reliably, and "
 "to reduce you and your users' dependence on others' distribution systems."
 msgstr ""
+"Novamente, @command{texi2any} fornece um valor padrão para essa variável, "
+"mas você é incentivado(a) a hospedar você mesmo(a) o código-fonte para "
+"MathJax e as dependências dele. Isso é para a finalidade de tornar o "
+"código-fonte disponível confiavelmente e para reduzir tua dependência e a "
+"de teus usuários(as) dos sistemas de distribuição de terceiros(as)."
 
 #. type: subsection
 #: texinfo/texinfo.texi:16057 texinfo/texinfo.texi:16058
 #, no-wrap
 msgid "@command{latex2html} Customization Variables"
-msgstr ""
+msgstr "Variáveis de Personalização do @command{latex2html}"
 
 #. type: itemize
 #: texinfo/texinfo.texi:16065
@@ -42270,6 +42297,11 @@ msgid ""
 "These customization variables are relevant only if @code{HTML_MATH} is set "
 "to @samp{l2h}."
 msgstr ""
+"Esta tabela lista as variáveis de personalização que podem ser usadas "
+"quando @command{latex2html} estiver sendo usado para converter seções "
+"@code{@@math}, @code{@@displaymath}, @code{@@latex} e @code{@@tex} para "
+"HTML@. Estas variáveis de personalização serão relevantes somente se "
+"@code{HTML_MATH} estiver configurada como @samp{l2h}."
 
 #. type: itemize
 #: texinfo/texinfo.texi:16069 texinfo/texinfo.texi:16111
@@ -42278,12 +42310,15 @@ msgid ""
 "and to actually convert @code{@@latex} sections, @option{--iflatex} should "
 "be used."
 msgstr ""
+"Para realmente converter seções @code{@@tex}, @option{--iftex} deveria ser "
+"usada; e para realmente converter seções @code{@@latex}, "
+"@option{--iflatex} deveria ser usada."
 
 #. type: item
 #: texinfo/texinfo.texi:16071
 #, no-wrap
 msgid "L2H_CLEAN"
-msgstr ""
+msgstr "L2H_CLEAN"
 
 #. type: itemize
 #: texinfo/texinfo.texi:16074
@@ -42291,12 +42326,14 @@ msgid ""
 "If set, the intermediate files generated in relation with "
 "@command{latex2html} are removed; default true."
 msgstr ""
+"Se configurada, os arquivos intermediários gerados em relação ao "
+"@command{latex2html} serão removidos; padrão verdadeiro."
 
 #. type: item
 #: texinfo/texinfo.texi:16075
 #, no-wrap
 msgid "L2H_FILE"
-msgstr ""
+msgstr "L2H_FILE"
 
 #. type: itemize
 #: texinfo/texinfo.texi:16078
@@ -42304,6 +42341,8 @@ msgid ""
 "If set, the given file is used as @command{latex2html}'s init file; default "
 "unset."
 msgstr ""
+"Se configurada, o arquivo fornecido será usado como arquivo de iniciação "
+"do @command{latex2html}; padrão desconfigurada."
 
 #. type: item
 #: texinfo/texinfo.texi:16079
