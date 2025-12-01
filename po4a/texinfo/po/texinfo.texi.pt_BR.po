@@ -42416,7 +42416,7 @@ msgstr ""
 #: texinfo/texinfo.texi:16100 texinfo/texinfo.texi:16101
 #, no-wrap
 msgid "@command{tex4ht} Customization Variables"
-msgstr ""
+msgstr "Variáveis de Personalização do @command{tex4ht}"
 
 #. type: itemize
 #: texinfo/texinfo.texi:16107
@@ -42427,12 +42427,17 @@ msgid ""
 "These customization variables are relevant only if @code{HTML_MATH} is set "
 "to @samp{t4h}."
 msgstr ""
+"Esta tabela lista as variáveis de personalização que podem ser usadas "
+"quando @command{tex4ht} estiver sendo usado para converter seções "
+"@code{@@math}, @code{@@displaymath}, @code{@@tex} e @code{@@latex} para "
+"HTML@. Estas variáveis de personalização serão relevantes somente se "
+"@code{HTML_MATH} estiver configurada como @samp{t4h}."
 
 #. type: item
 #: texinfo/texinfo.texi:16113
 #, no-wrap
 msgid "T4H_LATEX_CONVERSION"
-msgstr ""
+msgstr "T4H_LATEX_CONVERSION"
 
 #. type: itemize
 #: texinfo/texinfo.texi:16117
@@ -42441,12 +42446,15 @@ msgid ""
 "are @samp{latex}, @samp{tex} and @samp{texi}.  Set to @samp{latex} if not "
 "defined."
 msgstr ""
+"Se configurada, o tipo de conversão usado para seções @code{@@latex}. As "
+"possibilidades são @samp{latex}, @samp{tex} e @samp{texi}. Configurada como "
+"@samp{latex} se não definida."
 
 #. type: item
 #: texinfo/texinfo.texi:16118
 #, no-wrap
 msgid "T4H_MATH_CONVERSION"
-msgstr ""
+msgstr "T4H_MATH_CONVERSION"
 
 #. type: itemize
 #: texinfo/texinfo.texi:16122
@@ -42455,12 +42463,15 @@ msgid ""
 "Possibilities are @samp{latex}, @samp{tex} and @samp{texi}.  Set to "
 "@samp{tex} if not defined."
 msgstr ""
+"Se configurada, o tipo de conversão usado para @code{@@math} e "
+"@code{@@displymath}. As possibilidades são @samp{latex}, @samp{tex} e "
+"@samp{texi}. Configurada como @samp{tex} se não definida."
 
 #. type: item
 #: texinfo/texinfo.texi:16123
 #, no-wrap
 msgid "T4H_TEX_CONVERSION"
-msgstr ""
+msgstr "T4H_TEX_CONVERSION"
 
 #. type: itemize
 #: texinfo/texinfo.texi:16127
@@ -42469,18 +42480,21 @@ msgid ""
 "are @samp{latex}, @samp{tex} and @samp{texi}.  Set to @samp{tex} if not "
 "defined."
 msgstr ""
+"Se configurada, o tipo de conversão usado para seções @code{@@tex}. As "
+"possibilidades são @samp{latex}, @samp{tex} e @samp{texi}. Configurada como "
+"@samp{tex} se não definida."
 
 #. type: subsection
 #: texinfo/texinfo.texi:16130 texinfo/texinfo.texi:16131
 #, no-wrap
 msgid "@LaTeX{} Customization Variables"
-msgstr ""
+msgstr "Variáveis de Personalização do @LaTeX{}"
 
 #. type: quotation
 #: texinfo/texinfo.texi:16134 texinfo/texinfo.texi:17955
 #, no-wrap
 msgid "warning"
-msgstr ""
+msgstr "aviso"
 
 #. type: quotation
 #: texinfo/texinfo.texi:16137
@@ -42488,6 +42502,8 @@ msgid ""
 "@LaTeX{} output customization is experimental.  Nothing is decided, "
 "everything can change, and we would welcome any feedback."
 msgstr ""
+"A personalização da saída gerada do @LaTeX{} é experimental. Nada está "
+"decidido; tudo pode mudar e nós apreciaríamos qualquer retro alimentação."
 
 #. type: itemize
 #: texinfo/texinfo.texi:16142
@@ -42495,12 +42511,14 @@ msgid ""
 "This table gives the customization variables which apply to @LaTeX{} output "
 "only."
 msgstr ""
+"Esta tabela fornece as variáveis de personalização que se aplicam somente "
+"para saída gerada do @LaTeX{}."
 
 #. type: item
 #: texinfo/texinfo.texi:16144
 #, no-wrap
 msgid "CLASS_BEGIN_USEPACKAGE"
-msgstr ""
+msgstr "CLASS_BEGIN_USEPACKAGE"
 
 #. type: itemize
 #: texinfo/texinfo.texi:16149
@@ -42511,11 +42529,16 @@ msgid ""
 "on the document encoding setting the input and font encoding "
 "(@code{inputenc} and @code{fontenc})."
 msgstr ""
+"Se configurada, o texto correspondente substituirá o @code{\\documentclass} "
+"do @LaTeX{}; as importações de pacotes que sempre são geradas e são "
+"emitidas logo depois de @code{\\documentclass} e as importações de pacotes "
+"que dependam da codificação do documento, configurando a entrada e a "
+"codificação da fonte (@code{inputenc} e @code{fontenc})."
 
 #. type: itemize
 #: texinfo/texinfo.texi:16151
 msgid "The text replaced is along:"
-msgstr ""
+msgstr "O texto substituído está junto:"
 
 #. type: example
 #: texinfo/texinfo.texi:16162
@@ -42532,12 +42555,22 @@ msgid ""
 "\\usepackage[utf8]@{inputenc@}\n"
 "\\usepackage[T1]@{fontenc@}\n"
 msgstr ""
+"\\documentclass@{book@}\n"
+"\\usepackage@{amsfonts@}\n"
+"\\usepackage@{amsmath@}\n"
+"\\usepackage[gen]@{eurosym@}\n"
+"\\usepackage@{textcomp@}\n"
+"\\usepackage@{graphicx@}\n"
+"\\usepackage@{etoolbox@}\n"
+"\\usepackage@{titleps@}\n"
+"\\usepackage[utf8]@{inputenc@}\n"
+"\\usepackage[T1]@{fontenc@}\n"
 
 #. type: item
 #: texinfo/texinfo.texi:16164
 #, no-wrap
 msgid "END_USEPACKAGE"
-msgstr ""
+msgstr "END_USEPACKAGE"
 
 #. type: itemize
 #: texinfo/texinfo.texi:16169
@@ -42547,6 +42580,11 @@ msgid ""
 "output and output after all the other packages imports.  The last package "
 "imports corresponds to @samp{\\usepackage[hidelinks]@{hyperref@}}."
 msgstr ""
+"Se configurada, o texto correspondente substituirá as importações de "
+"pacote que dependam dos comandos Texinfo usados, e as últimas importações "
+"de pacotes que são sempre geradas e saídas geradas depois de todas as "
+"outras importações de pacotes. As últimas importações de pacote "
+"correspondem a @samp{\\usepackage[hidelinks]@{hyperref@}}."
 
 #. type: itemize
 #: texinfo/texinfo.texi:16173
@@ -42555,6 +42593,9 @@ msgid ""
 "@code{@@need}, @code{@@multitable}, definition commands, @code{@@cartouche}, "
 "lists, and @code{@@float}:"
 msgstr ""
+"Aqui está um exemplo do texto correspondente para um documento com "
+"índices, @code{@@need}, @code{@@multitable}, comandos de definição, "
+"@code{@@cartouche}, listas e @code{@@float}:"
 
 #. type: example
 #: texinfo/texinfo.texi:16184
@@ -42571,6 +42612,16 @@ msgid ""
 "\\usepackage@{float@}\n"
 "\\usepackage[hidelinks]@{hyperref@}\n"
 msgstr ""
+"\\usepackage@{imakeidx@}\n"
+"\\usepackage@{needspace@}\n"
+"\\usepackage@{array@}\n"
+"\\usepackage@{embrac@}\n"
+"\\usepackage@{expl3@}\n"
+"\\usepackage@{tabularx@}\n"
+"\\usepackage[framemethod=tikz]@{mdframed@}\n"
+"\\usepackage@{enumitem@}\n"
+"\\usepackage@{float@}\n"
+"\\usepackage[hidelinks]@{hyperref@}\n"
 
 #. type: subsection
 #: texinfo/texinfo.texi:16188 texinfo/texinfo.texi:16189
