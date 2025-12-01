@@ -42348,30 +42348,33 @@ msgstr ""
 #: texinfo/texinfo.texi:16079
 #, no-wrap
 msgid "L2H_HTML_VERSION"
-msgstr ""
+msgstr "L2H_HTML_VERSION"
 
 #. type: itemize
 #: texinfo/texinfo.texi:16081
 msgid "The HTML version used in the @command{latex2html} call; default unset."
 msgstr ""
+"A versão do HTML usada na chamada @command{latex2html}; padrão "
+"desconfigurada."
 
 #. type: item
 #: texinfo/texinfo.texi:16082
 #, no-wrap
 msgid "L2H_L2H"
-msgstr ""
+msgstr "L2H_L2H"
 
 #. type: itemize
 #: texinfo/texinfo.texi:16084
 msgid ""
 "The program invoked as @command{latex2html}; default is @code{latex2html}."
 msgstr ""
+"O programa invocado como @command{latex2html}; padrão é @code{latex2html}."
 
 #. type: item
 #: texinfo/texinfo.texi:16085
 #, no-wrap
 msgid "L2H_SKIP"
-msgstr ""
+msgstr "L2H_SKIP"
 
 #. type: itemize
 #: texinfo/texinfo.texi:16091
@@ -42382,12 +42385,18 @@ msgid ""
 "@TeX{} fragments as possible and for any remaining the command is run.  The "
 "default is @samp{undef}."
 msgstr ""
+"Se configurada com um valor verdadeiro, a chamada real para "
+"@command{latex2html} será ignorada; o conteúdo gerado anteriormente será "
+"reusado. Se configurada como 0, o cache não será usado em absoluto. Se "
+"configurada como @samp{undef}, o cache será usado para tantos fragmentos "
+"@TeX{} quanto possível e para qualquer restante o comando será executado. "
+"O padrão é @samp{undef}."
 
 #. type: item
 #: texinfo/texinfo.texi:16092
 #, no-wrap
 msgid "L2H_TMP"
-msgstr ""
+msgstr "L2H_TMP"
 
 #. type: itemize
 #: texinfo/texinfo.texi:16097
@@ -42397,6 +42406,11 @@ msgid ""
 "@command{latex2html} will fail (because of @command{dvips}).  The default is "
 "the empty string, which means the current directory."
 msgstr ""
+"Configurar o diretório usado para arquivos temporários. Nenhum dos "
+"componentes do nome de arquivo nesse nome de diretório pode começar com "
+"@samp{.}; caso contrário, @command{latex2html} falhará (por causa do "
+"@command{dvips}). O padrão é a sequência vazia de caracteres, a qual "
+"significa o diretório atual."
 
 #. type: subsection
 #: texinfo/texinfo.texi:16100 texinfo/texinfo.texi:16101
