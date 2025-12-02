@@ -42627,7 +42627,7 @@ msgstr ""
 #: texinfo/texinfo.texi:16188 texinfo/texinfo.texi:16189
 #, no-wrap
 msgid "Other Customization Variables"
-msgstr ""
+msgstr "Outras Variáveis de Personalização"
 
 #. type: itemize
 #: texinfo/texinfo.texi:16194
@@ -42636,12 +42636,15 @@ msgid ""
 "multiple formats, or affect global behavior, or otherwise don't fit into the "
 "categories of the previous sections."
 msgstr ""
+"Esta tabela fornece as variáveis de personalização restantes, as quais se "
+"aplicam a múltiplos formatos, ou afetam o comportamento global, ou de outra "
+"forma não se encaixam nas categorias das seções anteriores."
 
 #. type: item
 #: texinfo/texinfo.texi:16196
 #, no-wrap
 msgid "ASCII_DASHES_AND_QUOTES"
-msgstr ""
+msgstr "ASCII_DASHES_AND_QUOTES"
 
 #. type: itemize
 #: texinfo/texinfo.texi:16202
@@ -42652,12 +42655,17 @@ msgid ""
 "@samp{''}, rather than UTF-8 directional quotation marks, en dashes, vel "
 "sim.  On by default."
 msgstr ""
+"Para saída gerada do Info, quando configurada, usar caracteres ASCII "
+"simples para representar aspas, hífens e travessões quando esses forem "
+"fornecidos no fonte do Texinfo como @samp{-}, @samp{--}, @samp{---}, "
+"@samp{`}, @samp{``}, @samp{'} e @samp{''}, em vez de aspas direcionais "
+"UTF-8, travessões, e assim por diante. Ligada por padrão."
 
 #. type: item
 #: texinfo/texinfo.texi:16203
 #, no-wrap
 msgid "ASCII_GLYPH"
-msgstr ""
+msgstr "ASCII_GLYPH"
 
 #. type: itemize
 #: texinfo/texinfo.texi:16208
@@ -42667,12 +42675,16 @@ msgid ""
 "(@command{@@bullet@{@}}, becoming @samp{*}), rather than other Unicode "
 "sequences.  Off by default."
 msgstr ""
+"Para saída gerada do Info, usar saída gerada ASCII para comandos de glifo, "
+"tais como o sinal de direito autoral (@command{@@copyright@{@}}, tornando-se "
+"@samp{(C)}) e o símbolo de marcador (@command{@@bullet@{@}}, tornando-se "
+"@samp{*}), em vez de outras sequências Unicode. Desligada por padrão."
 
 #. type: item
 #: texinfo/texinfo.texi:16209
 #, no-wrap
 msgid "ASCII_PUNCTUATION"
-msgstr ""
+msgstr "ASCII_PUNCTUATION"
 
 #. type: itemize
 #: texinfo/texinfo.texi:16214
@@ -42682,12 +42694,16 @@ msgid ""
 "and additionally affects the output of commands such as @code{@@samp} which "
 "output quotation marks."
 msgstr ""
+"Evite quaisquer sequências UTF-8 e não-ASCII desnecessárias ou gratuitas "
+"na saída gerada. Implica @code{ASCII_DASHES_AND_QUOTES} e "
+"@code{ASCII_GLYPH} e, adicionalmente, afeta a saída gerada de comandos como "
+"@code{@@samp} que geram aspas."
 
 #. type: item
 #: texinfo/texinfo.texi:16215
 #, no-wrap
 msgid "AUTO_MENU_DESCRIPTION_ALIGN_COLUMN"
-msgstr ""
+msgstr "AUTO_MENU_DESCRIPTION_ALIGN_COLUMN"
 
 #. type: itemize
 #: texinfo/texinfo.texi:16220
@@ -42697,12 +42713,17 @@ msgid ""
 "default, in which case 45% of the fill column value is used (@pxref{Invoking "
 "@command{texi2any}})."
 msgstr ""
+"Para saída gerada do Info, coluna na qual iniciar uma descrição de "
+"entrada de menu fornecida por @code{@@nodedescription} ou "
+"@code{@@nodedescriptionblock}. Indefinida por padrão, caso em que 45% do "
+"valor da coluna de preenchimento é usado (@pxref{Invocando "
+"@command{texi2any}})."
 
 #. type: item
 #: texinfo/texinfo.texi:16221
 #, no-wrap
 msgid "AUTO_MENU_MAX_WIDTH"
-msgstr ""
+msgstr "AUTO_MENU_MAX_WIDTH"
 
 #. type: itemize
 #: texinfo/texinfo.texi:16226
@@ -42712,12 +42733,17 @@ msgid ""
 "Undefined by default, in which case 10% more than the fill column value is "
 "used (@pxref{Invoking @command{texi2any}})."
 msgstr ""
+"Número máximo de colunas em uma linha de entrada de menu no Info ao se "
+"adicionar uma descrição origiária de @code{@@nodedescription} ou "
+"@code{@@nodedescriptionblock}. Indefinida por padrão, caso em que 10% a "
+"mais que o valor da coluna de preenchimento é usado (@pxref{Invocando "
+"@command{texi2any}})."
 
 #. type: item
 #: texinfo/texinfo.texi:16227
 #, no-wrap
 msgid "CHECK_MISSING_MENU_ENTRY"
-msgstr ""
+msgstr "CHECK_MISSING_MENU_ENTRY"
 
 #. type: itemize
 #: texinfo/texinfo.texi:16231
@@ -42726,12 +42752,15 @@ msgid ""
 "for all subordinate nodes in the document sectioning structure.  On by "
 "default."
 msgstr ""
+"Quando um bloco @code{@@menu} ocorrer em um nó, verificar se existe uma "
+"entrada de menu para todos os nós subordinados na estrutura de "
+"seccionamento do documento. Ligada por padrão."
 
 #. type: item
 #: texinfo/texinfo.texi:16232
 #, no-wrap
 msgid "CHECK_NORMAL_MENU_STRUCTURE"
-msgstr ""
+msgstr "CHECK_NORMAL_MENU_STRUCTURE"
 
 #. type: itemize
 #: texinfo/texinfo.texi:16237
@@ -42741,6 +42770,10 @@ msgid ""
 "structure check than that provided by @code{CHECK_MISSING_MENU_ENTRY}.  Off "
 "by default."
 msgstr ""
+"Avisa se os ponteiros do nó (configurados ou explícita ou automaticamente) "
+"não estão consistentes com a ordem das entradas do menu do nó. Essa é "
+"uma verificação de estrutura mais completa que aquela fornecida por "
+"@code{CHECK_MISSING_MENU_ENTRY}. Desligada por padrão."
 
 #. type: item
 #: texinfo/texinfo.texi:16238
