@@ -42779,7 +42779,7 @@ msgstr ""
 #: texinfo/texinfo.texi:16238
 #, no-wrap
 msgid "CLOSE_QUOTE_SYMBOL"
-msgstr ""
+msgstr "CLOSE_QUOTE_SYMBOL"
 
 #. type: itemize
 #: texinfo/texinfo.texi:16245
@@ -42791,6 +42791,13 @@ msgid ""
 "@code{OUTPUT_CHARACTERS} is set and the output encoding includes that "
 "character."
 msgstr ""
+"Quando uma aspa de fechamento for necessária, por exemplo, para saída "
+"gerada do @code{@@samp}, usar esse caractere; padrão @code{&#8217;} no "
+"DocBook. Indefinida no caso padrão em HTML e configurada como "
+"@code{&rsquo;} se @code{USE_NUMERIC_ENTITY} não estiver configurada, como "
+"@code{&#8217;} se configurada e como um caractere de aspa se "
+"@code{OUTPUT_CHARACTERS} estiver configurada e a codificação da saída "
+"gerada incluir esse caractere."
 
 #. type: itemize
 #: texinfo/texinfo.texi:16248
@@ -42798,12 +42805,15 @@ msgid ""
 "The default for Info is set the same as for @code{OPEN_QUOTE_SYMBOL}, except "
 "that the Unicode code is a closing quote (see below)."
 msgstr ""
+"O padrão para Info é configurada da mesma forma que para "
+"@code{OPEN_QUOTE_SYMBOL}, exceto que o código Unicode é uma aspa de "
+"fechamento (veja-se abaixo)."
 
 #. type: item
 #: texinfo/texinfo.texi:16249
 #, no-wrap
 msgid "CLOSE_DOUBLE_QUOTE_SYMBOL"
-msgstr ""
+msgstr "CLOSE_DOUBLE_QUOTE_SYMBOL"
 
 #. type: itemize
 #: texinfo/texinfo.texi:16254
@@ -42813,12 +42823,16 @@ msgid ""
 "@code{OPEN_DOUBLE_QUOTE_SYMBOL}, except that the Unicode code is a closing "
 "double quote (see below)."
 msgstr ""
+"Quando uma aspa dupla de fechamento for necessária, para @samp{@@dfn} no "
+"Info, usar esse caractere. O padrão para Info é configurada da mesma forma "
+"que para @code{OPEN_DOUBLE_QUOTE_SYMBOL}, exceto que o código Unicode é "
+"uma aspa dupla de fechamento (veja-se abaixo)."
 
 #. type: item
 #: texinfo/texinfo.texi:16255
 #, no-wrap
 msgid "COMMAND_LINE_ENCODING"
-msgstr ""
+msgstr "COMMAND_LINE_ENCODING"
 
 #. type: itemize
 #: texinfo/texinfo.texi:16259
@@ -42827,6 +42841,10 @@ msgid ""
 "locale encoding.  This may affect file names inserted into output files or "
 "error messages printed by the program."
 msgstr ""
+"Codificação usada para decodificar argumentos de linha de comando. O "
+"padrão é baseado na codificação de localidade. Isso possivelmente afete "
+"os nomes dos arquivos inseridos nos arquivos da saída gerada ou as "
+"mensagens de erro impressas pelo programa."
 
 #. type: itemize
 #: texinfo/texinfo.texi:16262
