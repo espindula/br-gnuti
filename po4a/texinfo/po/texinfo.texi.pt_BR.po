@@ -42852,12 +42852,15 @@ msgid ""
 "Note that some file and directory names from the command line may not be "
 "decoded immediately, and may not be decoded at all."
 msgstr ""
+"Observe que alguns nomes de arquivos e de diretórios provenientes da linha "
+"de comando possivelmente não sejam decodificados imediatamente e "
+"possivelmente nem mesmo sejam decodificados."
 
 #. type: item
 #: texinfo/texinfo.texi:16263
 #, no-wrap
 msgid "CPP_LINE_DIRECTIVES"
-msgstr ""
+msgstr "CPP_LINE_DIRECTIVES"
 
 #. type: itemize
 #: texinfo/texinfo.texi:16266
@@ -42865,23 +42868,27 @@ msgid ""
 "Recognize @code{#line} directives in a ``preprocessing'' pass "
 "(@pxref{External Macro Processors}); on by default."
 msgstr ""
+"Reconhecer diretivas @code{#line} em uma passagem de ``pré processamento'' "
+"(@pxref{Processadores Externos de Macro}); ligada por padrão."
 
 #. type: item
 #: texinfo/texinfo.texi:16267
 #, no-wrap
 msgid "DEBUG"
-msgstr ""
+msgstr "DEBUG"
 
 #. type: itemize
 #: texinfo/texinfo.texi:16272
 msgid "If set, debugging output is generated; default is off (zero)."
 msgstr ""
+"Se configurada, saída de depuração será gerada; padrão é desligada "
+"(zero)."
 
 #. type: item
 #: texinfo/texinfo.texi:16273
 #, no-wrap
 msgid "DOC_ENCODING_FOR_INPUT_FILE_NAME"
-msgstr ""
+msgstr "DOC_ENCODING_FOR_INPUT_FILE_NAME"
 
 #. type: itemize
 #: texinfo/texinfo.texi:16279
@@ -42892,6 +42899,12 @@ msgid ""
 "instead.  Default is set, except on MS-Windows where the locale encoding is "
 "used by default."
 msgstr ""
+"Se configurada, usar as informações de codificação do documento Texinfo "
+"de entrada para a codificação de nomes de arquivos de entrada, tais como "
+"nomes de arquivos especificados como argumentos @code{@@include} ou "
+"@code{@@verbatiminclude}. Se desconfigurada, usar a codificação de "
+"localidade. O padrão é configurada, exceto no MS-Windows onde a "
+"codificação de localidade é usada por padrão."
 
 #. type: itemize
 #: texinfo/texinfo.texi:16283
@@ -42900,17 +42913,20 @@ msgid ""
 "@code{@@documentencoding} is always used for the encoding of file content "
 "(@pxref{@code{@@documentencoding}})."
 msgstr ""
+"Observe que isso é somente para nomes de arquivos; a codificação padrão "
+"ou @code{@@documentencoding} é sempre usada para a codificação do "
+"conteúdo do arquivo (@pxref{@code{@@documentencoding}})."
 
 #. type: itemize
 #: texinfo/texinfo.texi:16285
 msgid "The @code{INPUT_FILE_NAME_ENCODING} variable overrides this variable."
-msgstr ""
+msgstr "A variável @code{INPUT_FILE_NAME_ENCODING} substitui essa variável."
 
 #. type: item
 #: texinfo/texinfo.texi:16286
 #, no-wrap
 msgid "DOC_ENCODING_FOR_OUTPUT_FILE_NAME"
-msgstr ""
+msgstr "DOC_ENCODING_FOR_OUTPUT_FILE_NAME"
 
 #. type: itemize
 #: texinfo/texinfo.texi:16291
@@ -42920,6 +42936,11 @@ msgid ""
 "unset, use the locale encoding instead.  Default is unset, so files names "
 "are encoded using the current locale."
 msgstr ""
+"Se configurada, usar as informações de codificação do documento Texinfo "
+"de entrada para a codificação de nomes de arquivos de saída, tais como "
+"arquivos especificados com @option{--output}. Se desconfigurada, usar a "
+"codificação de localidade. O padrão é desconfigurada, de forma que os "
+"nomes dos arquivos serão codificados usando a localidade atual."
 
 #. type: itemize
 #: texinfo/texinfo.texi:16294
@@ -42927,11 +42948,14 @@ msgid ""
 "Note that this is for file names only; @code{OUTPUT_ENCODING_NAME} is used "
 "for the encoding of file content."
 msgstr ""
+"Observe que isso é somente para nomes de arquivos; "
+"@code{OUTPUT_ENCODING_NAME} será usada para a codificação do conteúdo do "
+"arquivo."
 
 #. type: itemize
 #: texinfo/texinfo.texi:16296
 msgid "The @code{OUTPUT_FILE_NAME_ENCODING} variable overrides this variable."
-msgstr ""
+msgstr "A variável @code{OUTPUT_FILE_NAME_ENCODING} substitui essa variável."
 
 #. type: vindex
 #: texinfo/texinfo.texi:16297
