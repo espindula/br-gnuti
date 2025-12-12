@@ -42961,13 +42961,13 @@ msgstr "A variável @code{OUTPUT_FILE_NAME_ENCODING} substitui essa variável."
 #: texinfo/texinfo.texi:16297
 #, no-wrap
 msgid "SystemLiteral"
-msgstr ""
+msgstr "SystemLiteral"
 
 #. type: item
 #: texinfo/texinfo.texi:16298
 #, no-wrap
 msgid "DOCTYPE"
-msgstr ""
+msgstr "DOCTYPE"
 
 #. type: itemize
 #: texinfo/texinfo.texi:16304
@@ -42977,12 +42977,16 @@ msgid ""
 "and identifies the canonical DTD for the document.  The default value is "
 "different for each of HTML, DocBook and XML."
 msgstr ""
+"Para DocBook, HTML, XML@. Especifica o @code{SystemLiteral}, o identificador "
+"de sistema da entidade. Esse é um URI que pode ser usado para recuperar a "
+"entidade e identifica o DTD canônico para o documento. O valor padrão é "
+"diferente para HTML, DocBook e XML."
 
 #. type: item
 #: texinfo/texinfo.texi:16305
 #, no-wrap
 msgid "DUMP_TEXI"
-msgstr ""
+msgstr "DUMP_TEXI"
 
 #. type: itemize
 #: texinfo/texinfo.texi:16309
@@ -42991,12 +42995,16 @@ msgid ""
 "expansion.  If the option @option{--macro-expand} is set, the Texinfo source "
 "is also expanded to the corresponding file.  Default false."
 msgstr ""
+"Para depuração. Se configurada, nenhuma conversão será feita, somente "
+"análise e expansão de macro. Se a opção @option{--macro-expand} estiver "
+"configurada, o fonte do Texinfo também será expandido para o arquivo "
+"correspondente. Padrão falso."
 
 #. type: item
 #: texinfo/texinfo.texi:16310
 #, no-wrap
 msgid "DUMP_TREE"
-msgstr ""
+msgstr "DUMP_TREE"
 
 #. type: itemize
 #: texinfo/texinfo.texi:16313
@@ -43004,24 +43012,28 @@ msgid ""
 "For debugging.  If set, the tree constructed upon parsing a Texinfo document "
 "is output to standard error; default false."
 msgstr ""
+"Para depuração. Se configurada, a árvore construída ao analisar um "
+"documento Texinfo será gerada para erro padrão; padrão falso."
 
 #. type: item
 #: texinfo/texinfo.texi:16314
 #, no-wrap
 msgid "EPUB_CREATE_CONTAINER_FILE"
-msgstr ""
+msgstr "EPUB_CREATE_CONTAINER_FILE"
 
 #. type: itemize
 #: texinfo/texinfo.texi:16317
 msgid ""
 "If set to 0, do not generate the EPUB output file.  Default is set to 1."
 msgstr ""
+"Se configurada como 0, não gera o arquivo de saída EPUB. O padrão é "
+"configurada como 1."
 
 #. type: item
 #: texinfo/texinfo.texi:16318
 #, no-wrap
 msgid "EPUB_KEEP_CONTAINER_FOLDER"
-msgstr ""
+msgstr "EPUB_KEEP_CONTAINER_FOLDER"
 
 #. type: itemize
 #: texinfo/texinfo.texi:16323
@@ -43031,12 +43043,17 @@ msgid ""
 "not defined.  Set if not defined and @code{TEST} or @code{DEBUG} is set. "
 "@xref{EPUB Output File and Directory}."
 msgstr ""
+"Se configurada, mantém o diretório contendo os diretórios e arquivos "
+"necessários para EPUB. O arquivo de saída EPUB é um arquivamento ZIP "
+"desse diretório. O padrão é não definida. Configurada se não definida e "
+"@code{TEST} ou @code{DEBUG} estiver configurada. @xref{Arquivo e Diretório "
+"de Saída EPUB}."
 
 #. type: item
 #: texinfo/texinfo.texi:16324
 #, no-wrap
 msgid "EXTENSION"
-msgstr ""
+msgstr "EXTENSION"
 
 #. type: itemize
 #: texinfo/texinfo.texi:16327
@@ -43044,12 +43061,14 @@ msgid ""
 "The extension added to the output file name.  The default is different for "
 "each output format."
 msgstr ""
+"A extensão adicionada ao nome do arquivo da saída gerada. O padrão é "
+"diferente para cada formato da saída gerada."
 
 #. type: item
 #: texinfo/texinfo.texi:16328
 #, no-wrap
 msgid "FORMAT_MENU"
-msgstr ""
+msgstr "FORMAT_MENU"
 
 #. type: itemize
 #: texinfo/texinfo.texi:16334
@@ -43060,6 +43079,11 @@ msgid ""
 "sections is output in each node.  If set to @samp{nomenu}, do not output "
 "menus."
 msgstr ""
+"Se configurada como @samp{menu}, gera menus do Texinfo. Esse é o padrão "
+"para Info. @samp{sectiontoc} é a configuração padrão para HTML, onde em "
+"vez de o conteúdo dos blocos @code{@@menu} ser gerado, uma lista de "
+"seções subordinadas é gerada em cada nó. Se configurada como "
+"@samp{nomenu}, não gera menus."
 
 #. type: itemize
 #: texinfo/texinfo.texi:16337
@@ -43067,6 +43091,8 @@ msgid ""
 "This variable is set to @samp{nomenu} when generating DocBook, or when "
 "@option{--no-headers} is specified."
 msgstr ""
+"Essa variável é configurada como @samp{nomenu} ao gerar DocBook ou quando "
+"@option{--no-headers} for especificada."
 
 #. type: item
 #: texinfo/texinfo.texi:16340
