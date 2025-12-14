@@ -43098,13 +43098,13 @@ msgstr ""
 #: texinfo/texinfo.texi:16340
 #, no-wrap
 msgid "HANDLER_FATAL_ERROR_LEVEL"
-msgstr ""
+msgstr "HANDLER_FATAL_ERROR_LEVEL"
 
 #. type: item
 #: texinfo/texinfo.texi:16347
 #, no-wrap
 msgid "HIGHLIGHT_SYNTAX"
-msgstr ""
+msgstr "HIGHLIGHT_SYNTAX"
 
 #. type: itemize
 #: texinfo/texinfo.texi:16355
@@ -43117,12 +43117,20 @@ msgid ""
 "program.  The possibilities are @code{highlight}, @code{pygments}, any other "
 "value standing for @code{source-highlight} (@pxref{Syntax Highlighting})."
 msgstr ""
+"Se configurada, blocos @code{@@example} com informações de idioma como "
+"primeiro argumento serão realçados na saída gerada HTML. Também é "
+"possível especificar um padrão para o idioma com "
+"@code{HIGHLIGHT_SYNTAX_DEFAULT_LANGUAGE}. O realce de sintaxe exige um "
+"programa externo para gerar o HTML realçado. O valor de "
+"@code{HIGHLIGHT_SYNTAX} permite selecionar um programa específico. As "
+"possibilidades são @code{highlight}, @code{pygments}, qualquer outro valor "
+"que represente @code{source-highlight} (@pxref{Realçamento de Sintaxe})."
 
 #. type: item
 #: texinfo/texinfo.texi:16356
 #, no-wrap
 msgid "HIGHLIGHT_SYNTAX_DEFAULT_LANGUAGE"
-msgstr ""
+msgstr "HIGHLIGHT_SYNTAX_DEFAULT_LANGUAGE"
 
 #. type: itemize
 #: texinfo/texinfo.texi:16359
@@ -43130,12 +43138,14 @@ msgid ""
 "The default language used for syntax highlighting when there is no language "
 "information."
 msgstr ""
+"O idioma padrão usado para realce de sintaxe quando não existir "
+"informações de idioma."
 
 #. type: item
 #: texinfo/texinfo.texi:16360
 #, no-wrap
 msgid "IGNORE_SPACE_AFTER_BRACED_COMMAND_NAME"
-msgstr ""
+msgstr "IGNORE_SPACE_AFTER_BRACED_COMMAND_NAME"
 
 #. type: itemize
 #: texinfo/texinfo.texi:16363
@@ -43143,6 +43153,8 @@ msgid ""
 "If set, spaces are ignored after an @@-command that takes braces.  Default "
 "true, matching the @TeX{} behavior."
 msgstr ""
+"Se configurada, espaços serão ignorados depois de um comando @@ que use "
+"colchetes. Padrão verdadeiro, correspondendo ao comportamento do @TeX{}."
 
 #. type: item
 #: texinfo/texinfo.texi:16364
