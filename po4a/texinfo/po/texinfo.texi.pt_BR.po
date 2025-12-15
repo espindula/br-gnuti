@@ -43160,7 +43160,7 @@ msgstr ""
 #: texinfo/texinfo.texi:16364
 #, no-wrap
 msgid "INDEX_SPECIAL_CHARS_WARNING"
-msgstr ""
+msgstr "INDEX_SPECIAL_CHARS_WARNING"
 
 #. type: itemize
 #: texinfo/texinfo.texi:16369
@@ -43170,6 +43170,11 @@ msgid ""
 "parsing problems there don't prevent navigation; readers can still "
 "relatively easily find their way to the node in question."
 msgstr ""
+"Se configurada, avisar acerca de @samp{:} na entrada do índice, pois nem "
+"todos os leitores Info podem processá-los. Somente para Info e texto "
+"simples. Padrão falso, porque os problemas de análise não impedem a "
+"navegação; os leitores ainda podem encontrar com relativa facilidade o "
+"caminho para o nó em questão."
 
 #. type: item
 #: texinfo/texinfo.texi:16370
