@@ -43180,7 +43180,7 @@ msgstr ""
 #: texinfo/texinfo.texi:16370
 #, no-wrap
 msgid "INFO_SPECIAL_CHARS_QUOTE"
-msgstr ""
+msgstr "INFO_SPECIAL_CHARS_QUOTE"
 
 #. type: itemize
 #: texinfo/texinfo.texi:16376
@@ -43191,12 +43191,17 @@ msgid ""
 "Specification}.  Default is set for Info and unset for plaintext.  "
 "@xref{Node Line Requirements}."
 msgstr ""
+"Se configurada, sempre que existirem caracteres problemáticos para saída "
+"Info em locais como nomes de nós ou itens de menu, envolver a parte da "
+"construção onde eles aparecerem com caracteres de aspas, conforme descrito "
+"em @ref{Especificação de Formato Info}. O padrão é configurada para Info "
+"e desconfigurada para texto simples. @xref{Requisitos de Linha de Nó}."
 
 #. type: item
 #: texinfo/texinfo.texi:16377
 #, no-wrap
 msgid "INFO_SPECIAL_CHARS_WARNING"
-msgstr ""
+msgstr "INFO_SPECIAL_CHARS_WARNING"
 
 #. type: itemize
 #: texinfo/texinfo.texi:16383
@@ -43207,18 +43212,24 @@ msgid ""
 "for Info and not defined for plaintext. Similar warnings in index entries "
 "are covered by @code{INDEX_SPECIAL_CHARS_WARNING}."
 msgstr ""
+"Se configurada, avisar acerca de construções problemáticas para saída "
+"Info (tais como a sequência de caracteres @samp{::}) em nomes de nós, "
+"itens de menu e referências cruzadas. Se não configurada, configurar, a "
+"menos que @code{INFO_SPECIAL_CHARS_QUOTE} esteja configurada. O padrão é "
+"configurada para Info e não definida para texto simples. Avisos semelhantes "
+"em entradas de índice são abordados por @code{INDEX_SPECIAL_CHARS_WARNING}."
 
 #. type: cindex
 #: texinfo/texinfo.texi:16384
 #, no-wrap
 msgid "Encoding @subentry input file names"
-msgstr ""
+msgstr "Codificando @subentry nomes de arquivo de entrada"
 
 #. type: item
 #: texinfo/texinfo.texi:16385
 #, no-wrap
 msgid "INPUT_FILE_NAME_ENCODING"
-msgstr ""
+msgstr "INPUT_FILE_NAME_ENCODING"
 
 #. type: itemize
 #: texinfo/texinfo.texi:16392
@@ -43230,12 +43241,20 @@ msgid ""
 "@code{DOC_ENCODING_FOR_INPUT_FILE_NAME} to @samp{0} to use the locale "
 "encoding.  See also @code{OUTPUT_FILE_NAME_ENCODING}."
 msgstr ""
+"Codificação usada para nomes de arquivos de entrada. Essa variável "
+"substitui qualquer codificação proveniente do documento ou da localidade "
+"atual. Normalmente, você não precisa configurar essa variável, mas ela "
+"pode ser usada se os nomes dos arquivos estiverem em uma determinada "
+"codificação de caracteres em um sistema de arquivos. Uma alternativa é a "
+"de configurar @code{DOC_ENCODING_FOR_INPUT_FILE_NAME} como @samp{0} para "
+"usar a codificação de localidade. Veja-se também "
+"@code{OUTPUT_FILE_NAME_ENCODING}."
 
 #. type: item
 #: texinfo/texinfo.texi:16393
 #, no-wrap
 msgid "LOCALE_ENCODING"
-msgstr ""
+msgstr "LOCALE_ENCODING"
 
 #. type: itemize
 #: texinfo/texinfo.texi:16396
@@ -43243,12 +43262,14 @@ msgid ""
 "Locale encoding obtained from the system.  You should not need to explicitly "
 "set this variable."
 msgstr ""
+"Codificação de localidade obtida a partir do sistema. Você não deveria "
+"precisar configurar explicitamente essa variável."
 
 #. type: item
 #: texinfo/texinfo.texi:16397
 #, no-wrap
 msgid "MAX_MACRO_CALL_NESTING"
-msgstr ""
+msgstr "MAX_MACRO_CALL_NESTING"
 
 #. type: itemize
 #: texinfo/texinfo.texi:16401
@@ -43257,12 +43278,15 @@ msgid ""
 "@code{@@rmacro}; default 100000.  The purpose of this variable is to avoid "
 "infinite recursions."
 msgstr ""
+"O número máximo de chamadas recursivas de comandos @@ definidos por meio "
+"de @code{@@rmacro}; o padrão é 100000. O propósito dessa variável é o "
+"de evitar recursões infinitas."
 
 #. type: item
 #: texinfo/texinfo.texi:16402
 #, no-wrap
 msgid "MESSAGE_ENCODING"
-msgstr ""
+msgstr "MESSAGE_ENCODING"
 
 #. type: itemize
 #: texinfo/texinfo.texi:16405
@@ -43270,6 +43294,8 @@ msgid ""
 "Encoding used to encode messages output by @command{texi2any}.  Default is "
 "based on the locale encoding."
 msgstr ""
+"Codificação usada para codificar mensagens emitidas pelo "
+"@command{texi2any}. O padrão é baseado na codificação de localidade."
 
 #. type: itemize
 #: texinfo/texinfo.texi:16409
@@ -43278,6 +43304,10 @@ msgid ""
 "@command{texi2any}.  For example, @command{latex2html} will be called from "
 "@command{texi2any} if @code{HTML_MATH} is set to @samp{l2h}."
 msgstr ""
+"Também é usado para argumentos de linha de comando passados para comandos "
+"chamados a partir de @command{texi2any}. Por exemplo, @command{latex2html} "
+"será chamado a partir do @command{texi2any} se @code{HTML_MATH} estiver "
+"configurada como @samp{l2h}."
 
 #. type: code{#1}
 #: texinfo/texinfo.texi:16410 texinfo/texinfo.texi:16417
