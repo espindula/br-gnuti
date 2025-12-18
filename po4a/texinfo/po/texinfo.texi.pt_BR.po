@@ -43313,7 +43313,7 @@ msgstr ""
 #: texinfo/texinfo.texi:16410 texinfo/texinfo.texi:16417
 #, no-wrap
 msgid "NO_TOP_NODE_OUTPUT"
-msgstr ""
+msgstr "NO_TOP_NODE_OUTPUT"
 
 #. type: itemize
 #: texinfo/texinfo.texi:16417
@@ -43323,6 +43323,11 @@ msgid ""
 "in the default case for EPUB@.  If @code{SHOW_TITLE} is @samp{undef}, "
 "setting @code{NO_TOP_NODE_OUTPUT} also sets @code{SHOW_TITLE} for HTML."
 msgstr ""
+"Se configurada, não produzir o conteúdo do nó Top. O nó Top ainda será "
+"analisado, mas o conteúdo será descartado. Não configurada no caso "
+"padrão para HTML@. Configurada no caso padrão para EPUB@. Se "
+"@code{SHOW_TITLE} for @samp{undef}, configurar-se @code{NO_TOP_NODE_OUTPUT} "
+"também configurará @code{SHOW_TITLE} para HTML."
 
 #. type: itemize
 #: texinfo/texinfo.texi:16423
@@ -43333,6 +43338,12 @@ msgid ""
 "@samp{undef}, and false, corresponds more to a document setup for browsing, "
 "with a direct access to the information at the Top node."
 msgstr ""
+"Configurar-se @code{NO_TOP_NODE_OUTPUT}, que remove o nó Top e adiciona uma "
+"página de título, corresponde mais à formatação de um livro. "
+"Configurar-se @code{NO_TOP_NODE_OUTPUT} como false, com @code{SHOW_TITLE} "
+"permanecendo @samp{undef}, e false, corresponde mais a uma configuração de "
+"documento para navegação, com um acesso direto para as informações no "
+"nó Top."
 
 #. type: itemize
 #: texinfo/texinfo.texi:16430
@@ -43344,12 +43355,18 @@ msgid ""
 "DocBook for compatibility, as before 2022 the Top node was output in "
 "DocBook.  It could be removed in the future."
 msgstr ""
+"Para DocBook, @code{NO_TOP_NODE_OUTPUT} é configurada como verdadeira. "
+"Configurar-se @code{NO_TOP_NODE_OUTPUT} como falsa faz com que o conteúdo "
+"do nó Top seja gerado. Não é recomendado gerar o nó Top no DocBook, pois "
+"o título e as informações de cópia são sempre gerados. Essa opção é "
+"mantida para DocBook para compatibilidade, pois antes de 2022 o nó Top era "
+"gerado no DocBook. Ela poderá ser removida no futuro."
 
 #. type: item
 #: texinfo/texinfo.texi:16431
 #, no-wrap
 msgid "NO_USE_SETFILENAME"
-msgstr ""
+msgstr "NO_USE_SETFILENAME"
 
 #. type: itemize
 #: texinfo/texinfo.texi:16435
@@ -43358,12 +43375,15 @@ msgid ""
 "base the output document name only on the input file name.  The default is "
 "false."
 msgstr ""
+"Se configurada, não usar @code{@@setfilename} para configurar o nome do "
+"documento; em vez disso, baseie o nome do documento de saída somente no "
+"nome do arquivo de entrada. O padrão é falso."
 
 #. type: item
 #: texinfo/texinfo.texi:16436
 #, no-wrap
 msgid "NODE_NAME_IN_MENU"
-msgstr ""
+msgstr "NODE_NAME_IN_MENU"
 
 #. type: itemize
 #: texinfo/texinfo.texi:16439
@@ -43371,12 +43391,14 @@ msgid ""
 "If set, use node names in menu entries, otherwise prefer section names; "
 "default true."
 msgstr ""
+"Se configurada, usar nomes de nós nas entradas de menu; caso contrário, "
+"preferir nomes de seção; padrão verdadeiro."
 
 #. type: item
 #: texinfo/texinfo.texi:16440
 #, no-wrap
 msgid "OPEN_QUOTE_SYMBOL"
-msgstr ""
+msgstr "OPEN_QUOTE_SYMBOL"
 
 #. type: itemize
 #: texinfo/texinfo.texi:16447
@@ -43388,6 +43410,13 @@ msgid ""
 "@code{OUTPUT_CHARACTERS} is set and the output encoding includes that "
 "character."
 msgstr ""
+"Quando uma aspa de abertura for necessária, por exemplo, para saída gerada "
+"do @samp{@@samp}, usar o caractere especificado; padrão @code{&#8216;} para "
+"DocBook. Indefinida no caso padrão em HTML e configurada como "
+"@code{&lsquo;} se @code{USE_NUMERIC_ENTITY} não estiver configurada; como "
+"@code{&#8217;} se configurada; e como um caractere de aspas se "
+"@code{OUTPUT_CHARACTERS} estiver configurada e a codificação da saída "
+"gerada incluir esse caractere."
 
 #. type: itemize
 #: texinfo/texinfo.texi:16453
@@ -43398,6 +43427,11 @@ msgid ""
 "quote on modern systems.  Otherwise, the Info output uses a Unicode left "
 "quote."
 msgstr ""
+"Para Info, o padrão depende da codificação habilitada de documento. Se "
+"@option{--disable-encoding} estiver configurada ou a codificação do "
+"documento não for UTF-8, @samp{'} será usado. Esse caractere geralmente "
+"aparece como uma aspa simples indirecionada em sistemas modernos. Caso "
+"contrário, a saída gerada Info usará uma aspa esquerda Unicode."
 
 #. type: item
 #: texinfo/texinfo.texi:16454
