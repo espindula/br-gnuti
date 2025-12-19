@@ -43437,7 +43437,7 @@ msgstr ""
 #: texinfo/texinfo.texi:16454
 #, no-wrap
 msgid "OPEN_DOUBLE_QUOTE_SYMBOL"
-msgstr ""
+msgstr "OPEN_DOUBLE_QUOTE_SYMBOL"
 
 #. type: itemize
 #: texinfo/texinfo.texi:16459
@@ -43447,12 +43447,17 @@ msgid ""
 "document encoding is not UTF-8, @samp{\"} is used.  Otherwise, the Info "
 "output uses a Unicode left double quote."
 msgstr ""
+"Quando uma aspa dupla de abertura for necessária, para saída gerada do "
+"@samp{@@dfn} no Info, usar o caractere especificado. Se "
+"@option{--disable-encoding} estiver configurada ou a codificação do "
+"documento não for UTF-8, @samp{\"} será usado. Caso contrário, a saída "
+"gerada do Info usará aspas duplas esquerdas do Unicode."
 
 #. type: item
 #: texinfo/texinfo.texi:16460
 #, no-wrap
 msgid "OUTPUT_CHARACTERS"
-msgstr ""
+msgstr "OUTPUT_CHARACTERS"
 
 #. type: itemize
 #: texinfo/texinfo.texi:16466
@@ -43463,12 +43468,18 @@ msgid ""
 "special characters in HTML and @LaTeX{} output based on the document "
 "encoding.  @xref{@code{@@documentencoding}}, and @ref{Inserting Accents}."
 msgstr ""
+"Se não configurada, o padrão gerará caracteres acentuados e especiais em "
+"HTML, XML e DocBook usando entidades XML e em @LaTeX{} usando macros. Se "
+"configurada, gerar caracteres acentuados na saída gerada de HTML, XML, "
+"DocBook e @LaTeX{} e caracteres especiais na saída HTML e @LaTeX{} baseada "
+"na codificação do documento. @xref{@code{@@documentencoding}} e "
+"@ref{Inserindo Acentos}."
 
 #. type: item
 #: texinfo/texinfo.texi:16467
 #, no-wrap
 msgid "OUTPUT_ENCODING_NAME"
-msgstr ""
+msgstr "OUTPUT_ENCODING_NAME"
 
 #. type: itemize
 #: texinfo/texinfo.texi:16474
@@ -43480,18 +43491,26 @@ msgid ""
 "encoding name, otherwise the output encoding is based on the default "
 "encoding.  @xref{@code{@@documentencoding}}."
 msgstr ""
+"Nome normalizado de codificação usado para arquivos de saída gerada. "
+"Deveria ser um nome de conjunto de caracteres usável em HTML, tipicamente "
+"um dos nomes de codificação preferidos da IANA. Por padrão, se uma "
+"codificação de entrada for configurada (tipicamente por meio de "
+"@code{@@documentencoding}), essas informações serão usadas para "
+"configurar o nome da codificação da saída gerada, caso contrário, a "
+"codificação da saída gerada será baseada na codificação padrão. "
+"@xref{@code{@@documentencoding}}."
 
 #. type: cindex
 #: texinfo/texinfo.texi:16475
 #, no-wrap
 msgid "Encoding @subentry output file names"
-msgstr ""
+msgstr "Codificação @subentry nomes de arquivos da saída gerada"
 
 #. type: item
 #: texinfo/texinfo.texi:16476
 #, no-wrap
 msgid "OUTPUT_FILE_NAME_ENCODING"
-msgstr ""
+msgstr "OUTPUT_FILE_NAME_ENCODING"
 
 #. type: itemize
 #: texinfo/texinfo.texi:16479
@@ -43499,6 +43518,9 @@ msgid ""
 "Encoding used for output file names.  This variable overrides any encoding "
 "from the document or current locale."
 msgstr ""
+"Codificação usada para nomes de arquivos da saída gerada. Essa variável "
+"substitui qualquer codificação originária do documento ou da localidade "
+"atual."
 
 #. type: itemize
 #: texinfo/texinfo.texi:16483
@@ -43507,36 +43529,40 @@ msgid ""
 "names should be created in a certain character encoding on a filesystem.  "
 "See also @code{INPUT_FILE_NAME_ENCODING}."
 msgstr ""
+"Normalmente, você não precisa configurar essa variável, mas ela pode ser "
+"usada se nomes de arquivos devessem ser criados em uma determinada "
+"codificação de caracteres em um sistema de arquivos. Veja-se também "
+"@code{INPUT_FILE_NAME_ENCODING}."
 
 #. type: item
 #: texinfo/texinfo.texi:16484
 #, no-wrap
 msgid "PACKAGE"
-msgstr ""
+msgstr "PACKAGE"
 
 #. type: itemx
 #: texinfo/texinfo.texi:16485
 #, no-wrap
 msgid "PACKAGE_VERSION"
-msgstr ""
+msgstr "PACKAGE_VERSION"
 
 #. type: itemx
 #: texinfo/texinfo.texi:16486
 #, no-wrap
 msgid "PACKAGE_AND_VERSION"
-msgstr ""
+msgstr "PACKAGE_AND_VERSION"
 
 #. type: itemx
 #: texinfo/texinfo.texi:16487
 #, no-wrap
 msgid "PACKAGE_URL"
-msgstr ""
+msgstr "PACKAGE_URL"
 
 #. type: itemx
 #: texinfo/texinfo.texi:16488
 #, no-wrap
 msgid "PACKAGE_NAME"
-msgstr ""
+msgstr "PACKAGE_NAME"
 
 #. type: itemize
 #: texinfo/texinfo.texi:16493
@@ -43546,12 +43572,16 @@ msgid ""
 "By default, these variables are all set through Autoconf, Automake, and "
 "@code{configure}."
 msgstr ""
+"O nome abreviado do pacote da implementação, a versão do pacote, o nome "
+"do pacote e a versão concatenada, URL@ do pacote e o nome completo do "
+"pacote, respectivamente. Por padrão, essas variáveis são todas "
+"configuradas por meio do Autoconf, Automake e @code{configure}."
 
 #. type: item
 #: texinfo/texinfo.texi:16494
 #, no-wrap
 msgid "PREFIX"
-msgstr ""
+msgstr "PREFIX"
 
 #. type: itemize
 #: texinfo/texinfo.texi:16500
@@ -43562,6 +43592,13 @@ msgid ""
 "the value of other customization variables or command line options, such as "
 "whether the output is split.  The default is unset."
 msgstr ""
+"O prefixo do arquivo da saída gerada, que é preposto a alguns nomes de "
+"arquivos de saída gerada. Por padrão, ele é configurado pelo "
+"@code{@@setfilename} ou a partir arquivo de entrada (@pxref{Configurando o "
+"Nome do Arquivo da Saída Gerada}). Como esse valor é usado depende do "
+"valor de outras variáveis de personalização ou de opções de linha de "
+"comando, como quando a saída gerada for dividida. O padrão é "
+"desconfigurada."
 
 #. type: item
 #: texinfo/texinfo.texi:16501
