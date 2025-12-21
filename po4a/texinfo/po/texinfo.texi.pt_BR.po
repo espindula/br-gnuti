@@ -43604,7 +43604,7 @@ msgstr ""
 #: texinfo/texinfo.texi:16501
 #, no-wrap
 msgid "PROGRAM"
-msgstr ""
+msgstr "PROGRAM"
 
 #. type: itemize
 #: texinfo/texinfo.texi:16504
@@ -43612,30 +43612,32 @@ msgid ""
 "Name of the program used.  By default, it is set to the name of the program "
 "launched, with a trailing @samp{.pl} removed."
 msgstr ""
+"Nome do programa usado. Por padrão, ela está configurada com o nome do "
+"programa iniciado, com @samp{.pl} à direita removido."
 
 #. type: anchor{#1}
 #: texinfo/texinfo.texi:16505 texinfo/texinfo.texi:20356
 #, no-wrap
 msgid "texi-elements-by-size"
-msgstr ""
+msgstr "texi-elements-by-size"
 
 #. type: cindex
 #: texinfo/texinfo.texi:16506
 #, no-wrap
 msgid "Longest nodes, finding"
-msgstr ""
+msgstr "Nós mais longos, achando"
 
 #. type: cindex
 #: texinfo/texinfo.texi:16507
 #, no-wrap
 msgid "Sorting nodes by size"
-msgstr ""
+msgstr "Ordenando nós por tamanho"
 
 #. type: item
 #: texinfo/texinfo.texi:16508
 #, no-wrap
 msgid "SORT_ELEMENT_COUNT"
-msgstr ""
+msgstr "SORT_ELEMENT_COUNT"
 
 #. type: itemize
 #: texinfo/texinfo.texi:16515
@@ -43646,12 +43648,18 @@ msgid ""
 "the program @code{texi-elements-by-size} in the @file{util/} directory of "
 "the Texinfo source distribution (@pxref{texi-elements-by-size})."
 msgstr ""
+"Se configurada, o nome de um arquivo para o qual uma lista de elementos "
+"(nós ou seções, dependendo do formato da saída gerada) será despejada, "
+"ordenada pelo número de linhas que eles contiverem depois da remoção dos "
+"comandos @@; padrão desconfigurada. Isso é usado pelo programa "
+"@code{texi-elements-by-size} no diretório @file{util/} da distribuição do "
+"fonte do Texinfo (@pxref{texi-elements-by-size})."
 
 #. type: item
 #: texinfo/texinfo.texi:16516
 #, no-wrap
 msgid "SORT_ELEMENT_COUNT_WORDS"
-msgstr ""
+msgstr "SORT_ELEMENT_COUNT_WORDS"
 
 #. type: itemize
 #: texinfo/texinfo.texi:16519
@@ -43659,12 +43667,14 @@ msgid ""
 "When dumping the elements-by-size file (see preceding item), use word counts "
 "instead of line counts; default false."
 msgstr ""
+"Ao despejar o arquivo de elementos por tamanho (veja-se o item anterior), "
+"usar contagens de palavras em vez de contagens de linhas; padrão falso."
 
 #. type: item
 #: texinfo/texinfo.texi:16520
 #, no-wrap
 msgid "TEST"
-msgstr ""
+msgstr "TEST"
 
 #. type: itemize
 #: texinfo/texinfo.texi:16525
@@ -43674,12 +43684,17 @@ msgid ""
 "values.  This is useful to compare the output to a reference file, as is "
 "done for the tests.  The default is false."
 msgstr ""
+"Se configurada como verdadeira, algumas variáveis que normalmente são "
+"geradas dinamicamente novamente para cada execução (data, nome do "
+"programa, versão) serão configuradas como valores fixos e fornecidos. Isso "
+"é útil para comparar a saída gerada com um arquivo de referência, como "
+"é feito para os testes. O padrão é falso."
 
 #. type: item
 #: texinfo/texinfo.texi:16526
 #, no-wrap
 msgid "TEXI2DVI"
-msgstr ""
+msgstr "TEXI2DVI"
 
 #. type: itemize
 #: texinfo/texinfo.texi:16529
@@ -43687,18 +43702,20 @@ msgid ""
 "Name of the command used to produce PostScript, PDF, and DVI; default "
 "@samp{texi2dvi}.  @xref{@command{texi2any} Printed Output}."
 msgstr ""
+"Nome do comando usado para produzir PostScript, PDF e DVI; padrão "
+"@samp{texi2dvi}. @xref{Saída Impressa do @command{texi2any}}."
 
 #. type: cindex
 #: texinfo/texinfo.texi:16530
 #, no-wrap
 msgid "compatibility, with @command{texi2html}"
-msgstr ""
+msgstr "compatibilidade, com @command{texi2html}"
 
 #. type: item
 #: texinfo/texinfo.texi:16531
 #, no-wrap
 msgid "TEXI2HTML"
-msgstr ""
+msgstr "TEXI2HTML"
 
 #. type: itemize
 #: texinfo/texinfo.texi:16534
@@ -43706,12 +43723,14 @@ msgid ""
 "Generate HTML and try to be as compatible as possible with "
 "@command{texi2html}; default false."
 msgstr ""
+"Gerar HTML e tentar ser o mais compatível possível com "
+"@command{texi2html}; padrão falso."
 
 #. type: item
 #: texinfo/texinfo.texi:16535
 #, no-wrap
 msgid "TEXINFO_DTD_VERSION"
-msgstr ""
+msgstr "TEXINFO_DTD_VERSION"
 
 #. type: itemize
 #: texinfo/texinfo.texi:16538
@@ -43719,12 +43738,14 @@ msgid ""
 "For XML@.  Version of the DTD used in the XML output preamble.  The default "
 "is set based on a variable in @file{configure.ac}."
 msgstr ""
+"Para XML@. Versão do DTD usado no preâmbulo da saída gerada XML. O "
+"padrão é configurada baseada em uma variável no @file{configure.ac}."
 
 #. type: item
 #: texinfo/texinfo.texi:16539
 #, no-wrap
 msgid "TEXTCONTENT_COMMENT"
-msgstr ""
+msgstr "TEXTCONTENT_COMMENT"
 
 #. type: itemize
 #: texinfo/texinfo.texi:16543
@@ -43732,12 +43753,15 @@ msgid ""
 "For stripped text content output (i.e., when @code{TEXINFO_OUTPUT_FORMAT} is "
 "set to @code{textcontent}).  If set, also output comments.  Default false."
 msgstr ""
+"Para saída de conteúdo de texto despojado (ou seja, quando "
+"@code{TEXINFO_OUTPUT_FORMAT} estiver configurada como @code{textcontent}). "
+"Se configurada, também gera comentários. Padrão falso."
 
 #. type: item
 #: texinfo/texinfo.texi:16544
 #, no-wrap
 msgid "TOP_NODE_UP"
-msgstr ""
+msgstr "TOP_NODE_UP"
 
 #. type: itemize
 #: texinfo/texinfo.texi:16550
@@ -43748,12 +43772,18 @@ msgid ""
 "@code{TOP_NODE_UP_URL} is set to override the URL@:, see "
 "@code{TOP_NODE_UP_URL} in @ref{HTML Customization Variables}."
 msgstr ""
+"Nó Acima para o nó Top; padrão @samp{(dir)}. É presumido que esse nome "
+"de nó já esteja formatado para o formato da saída gerada. Em HTML pode "
+"ser usado em atributo, portanto não deveria conter nenhum elemento. Usado "
+"para saída HTML somente se @code{TOP_NODE_UP_URL} estiver configurada para "
+"substituir o URL@:; veja-se @code{TOP_NODE_UP_URL} em @ref{Variáveis de "
+"Personalização HTML}."
 
 #. type: item
 #: texinfo/texinfo.texi:16551
 #, no-wrap
 msgid "TREE_TRANSFORMATIONS"
-msgstr ""
+msgstr "TREE_TRANSFORMATIONS"
 
 #. type: itemize
 #: texinfo/texinfo.texi:16556
@@ -43763,6 +43793,10 @@ msgid ""
 "one is specified, the ordering is irrelevant; each is always applied at the "
 "necessary point during processing."
 msgstr ""
+"O valor associado é uma lista separada por vírgulas de transformações "
+"que podem ser aplicadas à árvore do Texinfo antes se gerar o resultado. Se "
+"mais que um for especificado, o ordenamento será irrelevante; cada um será "
+"sempre aplicado no ponto necessário durante o processamento."
 
 #. type: itemize
 #: texinfo/texinfo.texi:16561
@@ -43771,6 +43805,11 @@ msgid ""
 "and @samp{relate_index_entries_to_table_entries} are executed for HTML and "
 "DocBook output.  Here's an example of updating the master menu in a document:"
 msgstr ""
+"Por padrão, as transformações de árvore "
+"@samp{move_index_entries_after_items} e "
+"@samp{relate_index_entries_to_table_entries} são executadas para saída "
+"HTML e DocBook. Aqui está um exemplo de atualização do menu mestre em um "
+"documento:"
 
 #. type: example
 #: texinfo/texinfo.texi:16568
@@ -43782,6 +43821,11 @@ msgid ""
 "  mydoc.texi \\\n"
 "  -o /tmp/out\n"
 msgstr ""
+"texi2any \\\n"
+"  -c TREE_TRANSFORMATIONS=regenerate_master_menu \\\n"
+"  -c TEXINFO_OUTPUT_FORMAT=plaintexinfo \\\n"
+"  meudoc.texi \\\n"
+"  -o /tmp/saida\n"
 
 #. type: itemize
 #: texinfo/texinfo.texi:16575
@@ -43791,6 +43835,10 @@ msgid ""
 "installing the updates in the original document.  This may be remedied in a "
 "future release.)"
 msgstr ""
+"(Advertência: como a saída @samp{plaintexinfo} expande macros e "
+"condicionais do Texinfo, é necessário remover quaisquer dessas diferenças "
+"antes de se instalar as atualizações no documento original. Isso "
+"possivelmente seja remediado em um lançamento futuro)."
 
 #. type: itemize
 #: texinfo/texinfo.texi:16579
@@ -43799,17 +43847,20 @@ msgid ""
 "@code{pod2texi} utility distributed with Texinfo; @pxref{Invoking "
 "@command{pod2texi}}):"
 msgstr ""
+"As seguintes transformações são atualmente suportadas (muitas são usadas "
+"no utilitário @code{pod2texi} distribuído com Texinfo; @pxref{Invocando "
+"@command{pod2texi}}):"
 
 #. type: itemize
 #: texinfo/texinfo.texi:16581
 msgid "@ftable @samp"
-msgstr ""
+msgstr "@ftable @samp"
 
 #. type: item
 #: texinfo/texinfo.texi:16581
 #, no-wrap
 msgid "complete_tree_nodes_menus"
-msgstr ""
+msgstr "complete_tree_nodes_menus"
 
 #. type: itemize
 #: texinfo/texinfo.texi:16584
@@ -43817,12 +43868,14 @@ msgid ""
 "Add menu entries or whole menus for nodes associated with sections of any "
 "level, based on the sectioning tree."
 msgstr ""
+"Adicionar entradas de menu ou menus inteiros para nós associados com "
+"seções de qualquer nível, com base na árvore de seccionamento."
 
 #. type: item
 #: texinfo/texinfo.texi:16585
 #, no-wrap
 msgid "complete_tree_nodes_missing_menu"
-msgstr ""
+msgstr "complete_tree_nodes_missing_menu"
 
 #. type: itemize
 #: texinfo/texinfo.texi:16588
@@ -43830,12 +43883,14 @@ msgid ""
 "Add whole menus for nodes associated with sections without menu.  The menus "
 "are based on the sectioning tree."
 msgstr ""
+"Adicionar menus inteiros para nós associados com seções sem menu. Os "
+"menus são baseados na árvore de seccionamento."
 
 #. type: item
 #: texinfo/texinfo.texi:16589
 #, no-wrap
 msgid "fill_gaps_in_sectioning"
-msgstr ""
+msgstr "fill_gaps_in_sectioning"
 
 #. type: itemize
 #: texinfo/texinfo.texi:16593
@@ -43844,23 +43899,28 @@ msgid ""
 "sectioning.  For example, an @code{@@unnumberedsec} will be inserted if a "
 "@code{@@chapter} is followed by a @code{@@subsection}."
 msgstr ""
+"Adiciona seções @code{@@unnumbered...} vazias em uma árvore para "
+"preencher lacunas no seccionamento. Por exemplo, um @code{@@unnumberedsec} "
+"será inserido se um @code{@@chapter} for seguido por um @code{@@subsection}."
 
 #. type: item
 #: texinfo/texinfo.texi:16594
 #, no-wrap
 msgid "insert_nodes_for_sectioning_commands"
-msgstr ""
+msgstr "insert_nodes_for_sectioning_commands"
 
 #. type: itemize
 #: texinfo/texinfo.texi:16596
 msgid "Insert nodes for sectioning commands lacking a corresponding node."
 msgstr ""
+"Inserir nós para comandos de seccionamento carecentes de um nó "
+"correspondente."
 
 #. type: item
 #: texinfo/texinfo.texi:16597
 #, no-wrap
 msgid "move_index_entries_after_items"
-msgstr ""
+msgstr "move_index_entries_after_items"
 
 #. type: itemize
 #: texinfo/texinfo.texi:16602
@@ -43870,12 +43930,16 @@ msgid ""
 "between index entries are moved too.  As mentioned, this is always done for "
 "HTML and DocBook output."
 msgstr ""
+"Em @code{@@enumerate} e @code{@@itemize}, mover entradas de índice que "
+"aparecem logo antes de @code{@@item} para logo depois de @code{@@item}. "
+"Linhas de comentários entre entradas de índice também serão movidas. "
+"Conforme mencionado, isso sempre é feito para saída HTML e DocBook."
 
 #. type: item
 #: texinfo/texinfo.texi:16603
 #, no-wrap
 msgid "regenerate_master_menu"
-msgstr ""
+msgstr "regenerate_master_menu"
 
 #. type: itemize
 #: texinfo/texinfo.texi:16607
@@ -43884,6 +43948,9 @@ msgid ""
 "@code{@@detailmenu} in the Top node menu, or creating it at the end of the "
 "Top node menu."
 msgstr ""
+"Atualizar o menu mestre do nó Top, ou substituindo o (primeiro) "
+"@code{@@detailmenu} no menu do nó Top ou criando-o no final do menu do nó "
+"Top."
 
 #. type: item
 #: texinfo/texinfo.texi:16608
