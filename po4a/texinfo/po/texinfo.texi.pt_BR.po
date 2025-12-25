@@ -43956,7 +43956,7 @@ msgstr ""
 #: texinfo/texinfo.texi:16608
 #, no-wrap
 msgid "relate_index_entries_to_table_entries"
-msgstr ""
+msgstr "relate_index_entries_to_table_entries"
 
 #. type: itemize
 #: texinfo/texinfo.texi:16613
@@ -43966,12 +43966,16 @@ msgid ""
 "@code{@@item} line with the first element of the @code{@@item}.  Remove the "
 "index @@-command from the tree."
 msgstr ""
+"Em @code{@@table}, @code{@@vtable} e @code{@@ftable}, reassociar as "
+"informações de entrada do índice originárias de um comando @@ de índice "
+"que aparece logo depois uma linha @code{@@item} com o primeiro elemento do "
+"@code{@@item}. Remover o comando @@ de índice da árvore."
 
 #. type: item
 #: texinfo/texinfo.texi:16614
 #, no-wrap
 msgid "simple_menu"
-msgstr ""
+msgstr "simple_menu"
 
 #. type: itemize
 #: texinfo/texinfo.texi:16618
@@ -43980,12 +43984,15 @@ msgid ""
 "the menu.  It differs from setting @code{SIMPLE_MENU} in that "
 "@code{SIMPLE_MENU} only has an effect in HTML output."
 msgstr ""
+"Praticamente o mesmo que @code{SIMPLE_MENU}: usar um estilo simples "
+"pré-formatado para o menu. Difere de configurar-se @code{SIMPLE_MENU} "
+"porque @code{SIMPLE_MENU} só tem efeito na saída gerada HTML."
 
 #. type: item
 #: texinfo/texinfo.texi:16621
 #, no-wrap
 msgid "USE_NODES"
-msgstr ""
+msgstr "USE_NODES"
 
 #. type: itemize
 #: texinfo/texinfo.texi:16625
@@ -43994,12 +44001,15 @@ msgid ""
 "false, preferentially use sectioning to decide where elements are "
 "separated.  The default is true."
 msgstr ""
+"Usar preferencialmente nós para decidir onde os elementos serão separados. "
+"Se configurada como falso, usar preferencialmente o seccionamento para "
+"decidir onde os elementos serão separados. O padrão é verdadeiro."
 
 #. type: item
 #: texinfo/texinfo.texi:16626
 #, no-wrap
 msgid "USE_NUMERIC_ENTITY"
-msgstr ""
+msgstr "USE_NUMERIC_ENTITY"
 
 #. type: itemize
 #: texinfo/texinfo.texi:16629
@@ -44007,12 +44017,15 @@ msgid ""
 "For HTML, XML and DocBook@.  If set, use numeric entities instead of named "
 "entities.  By default, set to true for DocBook output."
 msgstr ""
+"Para HTML, XML e DocBook@. Se configurada, usar entidades numéricas em vez "
+"de entidades nomeadas. Por padrão, configurada como verdadeiro para saída "
+"gerada DocBook."
 
 #. type: item
 #: texinfo/texinfo.texi:16630
 #, no-wrap
 msgid "USE_UP_NODE_FOR_ELEMENT_UP"
-msgstr ""
+msgstr "USE_UP_NODE_FOR_ELEMENT_UP"
 
 #. type: itemize
 #: texinfo/texinfo.texi:16634
@@ -44021,12 +44034,16 @@ msgid ""
 "sectioning up direction.  In practice this can only happen when there is no "
 "@@top section.  Not set by default."
 msgstr ""
+"Preencher a direção do seccionamento acima com a direção do nó quando "
+"não existir direção acima de seccionamento. Na prática, isso pode "
+"acontecer somente quando não existir seção @@top. Não configurada por "
+"padrão."
 
 #. type: item
 #: texinfo/texinfo.texi:16635
 #, no-wrap
 msgid "USE_SETFILENAME_EXTENSION"
-msgstr ""
+msgstr "USE_SETFILENAME_EXTENSION"
 
 #. type: itemize
 #: texinfo/texinfo.texi:16639
@@ -44035,18 +44052,22 @@ msgid ""
 "@code{@@setfilename} gives for the output file name, including the "
 "extension.  You should not need to explicitly set this variable."
 msgstr ""
+"O padrão é ativado para Info e desativado para outras saídas. Se "
+"configurada, usar exatamente o que @code{@@setfilename} fornecer para o nome "
+"do arquivo da saída gerada, incluindo a extensão. Você não deveria "
+"precisar configurar explicitamente essa variável."
 
 #. type: pindex
 #: texinfo/texinfo.texi:16640
 #, no-wrap
 msgid "Text::Unidecode"
-msgstr ""
+msgstr "Text::Unidecode"
 
 #. type: item
 #: texinfo/texinfo.texi:16641
 #, no-wrap
 msgid "USE_UNIDECODE"
-msgstr ""
+msgstr "USE_UNIDECODE"
 
 #. type: itemize
 #: texinfo/texinfo.texi:16644
@@ -44054,6 +44075,8 @@ msgid ""
 "If set to false, do not use the @code{Text::Unidecode} Perl module to "
 "transliterate more characters; default true."
 msgstr ""
+"Se configurada como falso, não usar o módulo Perl @code{Text::Unidecode} "
+"para transliterar mais caracteres; padrão verdadeiro."
 
 #. type: section
 #: texinfo/texinfo.texi:16648 texinfo/texinfo.texi:16650
