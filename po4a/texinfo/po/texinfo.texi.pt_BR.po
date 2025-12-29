@@ -44082,48 +44082,48 @@ msgstr ""
 #: texinfo/texinfo.texi:16648 texinfo/texinfo.texi:16650
 #, no-wrap
 msgid "Internationalization of Document Strings"
-msgstr ""
+msgstr "Internacionalização de Sequências de Caracteres do Documento"
 
 #. type: itemize
 #: texinfo/texinfo.texi:16650
 msgid "@nodedescription Translating program-inserted text."
-msgstr ""
+msgstr "@nodedescription Traduzindo texto inserido pelo programa."
 
 #. type: cindex
 #: texinfo/texinfo.texi:16652
 #, no-wrap
 msgid "I18n, of document strings"
-msgstr ""
+msgstr "I18n, de strings do documento"
 
 #. type: cindex
 #: texinfo/texinfo.texi:16653
 #, no-wrap
 msgid "Internationalization of document strings"
-msgstr ""
+msgstr "Internacionalização de strings do documento"
 
 #. type: cindex
 #: texinfo/texinfo.texi:16654
 #, no-wrap
 msgid "Document strings, internationalization of"
-msgstr ""
+msgstr "Strings do documento, internacionalização de"
 
 #. type: cindex
 #: texinfo/texinfo.texi:16655
 #, no-wrap
 msgid "Output document strings, internationalization of"
-msgstr ""
+msgstr "Strings do documento de saída, internacionalização de"
 
 #. type: cindex
 #: texinfo/texinfo.texi:16656
 #, no-wrap
 msgid "Translating strings in output documents"
-msgstr ""
+msgstr "Traduzindo strings nos documentos de saída"
 
 #. type: vindex
 #: texinfo/texinfo.texi:16658
 #, no-wrap
 msgid "documentlanguage @r{customization variable}"
-msgstr ""
+msgstr "documentlanguage @r{variável de personalização}"
 
 #. type: itemize
 #: texinfo/texinfo.texi:16665
@@ -44134,12 +44134,18 @@ msgid ""
 "@code{documentlanguage} at the time of the string being output "
 "(@pxref{@code{@@documentlanguage}}, for the Texinfo command interface)."
 msgstr ""
+"@command{texi2any} escreve sequências fixas de caracteres no documento de "
+"saída em vários locais: referências cruzadas, rodapés de páginas, a "
+"página de ajuda, texto alternativo para imagens e assim por diante. A "
+"sequência de caracteres escolhida depende do valor de "
+"@code{documentlanguage} ao tempo da sequência de caracteres sendo gerada "
+"(@pxref{@code{@@documentlanguage}}, para a interface de comando do Texinfo)."
 
 #. type: pindex
 #: texinfo/texinfo.texi:16666
 #, no-wrap
 msgid "libintl-perl @r{Gettext implementation}"
-msgstr ""
+msgstr "libintl-perl @r{Implementação Gettext}"
 
 #. type: itemize
 #: texinfo/texinfo.texi:16676
@@ -44153,18 +44159,28 @@ msgid ""
 "it is available if needed.  It is also possible to use the system "
 "@code{gettext} (the choice can be made at build-time)."
 msgstr ""
+"A estrutura Gettext é usada para essas sequências de caracteres "
+"(@pxref{Top,,, gettext, Gettext}). O pacote @code{libintl-perl} é usado "
+"como a implementação @code{gettext}; mais especificamente, a "
+"implementação Perl pura é usada, de forma que o Texinfo consiga suportar "
+"um comportamento consistente em todas as plataformas e instalações, o que, "
+"de outra forma, não seria possível. @code{libintl-perl} está incluído na "
+"distribuição do Texinfo e é sempre instalado, para garantir que ele "
+"esteja disponível se necessário. Também é possível usar-se o "
+"@code{gettext} do sistema (a escolha pode ser feita em tempo de "
+"construção)."
 
 #. type: vindex
 #: texinfo/texinfo.texi:16677
 #, no-wrap
 msgid "texinfo_document @r{Gettext domain}"
-msgstr ""
+msgstr "texinfo_document @r{Domínio do Gettext}"
 
 #. type: cindex
 #: texinfo/texinfo.texi:16678
 #, no-wrap
 msgid "Perl format strings for translation"
-msgstr ""
+msgstr "Strings do formato Perl para tradução"
 
 #. type: itemize
 #: texinfo/texinfo.texi:16687
@@ -44178,12 +44194,21 @@ msgid ""
 "example, in the following, @samp{@{section@}} will be replaced by the "
 "section name:"
 msgstr ""
+"O domínio @samp{texinfo_document} do Gettext é usado para as sequências "
+"de caracteres.  Sequências de caracteres traduzidas são escritas como "
+"Texinfo e podem incluir comandos @@. Em sequências de caracteres "
+"traduzidas, as partes variáveis da sequência de caracteres geralmente não "
+"são denotadas por @code{%s} e similares, mas por @samp{@{arg_name@}}. (Essa "
+"convenção é comum para o @code{gettext} em Perl e é totalmente suportada "
+"no GNU Gettext; @pxref{perl-format,, Perl Format Strings, gettext, GNU "
+"Gettext}). Por exemplo, a seguir, @samp{@{section@}} será substituído pelo "
+"nome da seção:"
 
 #. type: example
 #: texinfo/texinfo.texi:16690
 #, no-wrap
 msgid "see @{section@}\n"
-msgstr ""
+msgstr "veja-se @{section@}\n"
 
 #. type: itemize
 #: texinfo/texinfo.texi:16697
@@ -44194,28 +44219,35 @@ msgid ""
 "unpredictable, since @@-command expansion may lead to different orders "
 "depending on the output format."
 msgstr ""
+"Essas sequências de caracteres de formato de colchetes no estilo Perl são "
+"usadas por dois motivos: primeiro, a mudança da ordem dos argumentos do "
+"@code{printf} só está disponível desde o Perl@tie{}5.8.0; segundo, e mais "
+"importante, a ordem dos argumentos é imprevisível, uma vez que a expansão "
+"do comando @@ possivelmente leve para ordens diferentes dependendo do "
+"formato da saída gerada."
 
 #. type: itemize
 #: texinfo/texinfo.texi:16699
 msgid "The expansion of a translation string is done like this:"
 msgstr ""
+"A expansão de uma sequência de caracteres de tradução é feita assim:"
 
 #. type: item
 #: texinfo/texinfo.texi:16701
 #, no-wrap
 msgid "First, the string is translated.  The locale"
-msgstr ""
+msgstr "Primeiro, a sequência de caracteres é traduzida. A localidade"
 
 #. type: enumerate
 #: texinfo/texinfo.texi:16703
 msgid "is @var{documentlanguage}@code{.}@var{documentencoding}."
-msgstr ""
+msgstr "é @var{idiomadocumento}@code{.}@var{codificaçãodocumento}."
 
 #. type: cindex
 #: texinfo/texinfo.texi:16704
 #, no-wrap
 msgid "@code{us-ascii} encoding, and translations"
-msgstr ""
+msgstr "codificação @code{us-ascii}, e traduções"
 
 #. type: enumerate
 #: texinfo/texinfo.texi:16707
@@ -44223,6 +44255,8 @@ msgid ""
 "If the @var{documentlanguage} has the form @samp{ll_CC}, that is tried "
 "first, and then just @samp{ll}."
 msgstr ""
+"Se a @var{idiomadocumento} tiver a forma @samp{ll_CC}, isso será tentado "
+"primeiro e depois apenas @samp{ll}."
 
 #. type: enumerate
 #: texinfo/texinfo.texi:16712
@@ -44232,6 +44266,10 @@ msgid ""
 "locale in the current encoding does not exist, and the encoding is not "
 "@code{us-ascii}, then @code{us-ascii} is tried."
 msgstr ""
+"Para lidar com a possibilidade de ter-se múltiplas codificações, um uso "
+"especial da codificação de localidade @code{us-ascii} também é "
+"possível. Se a localidade @samp{ll} na codificação atual não existir e a "
+"codificação não for @code{us-ascii}, então @code{us-ascii} será tentado."
 
 #. type: enumerate
 #: texinfo/texinfo.texi:16720
@@ -44243,6 +44281,13 @@ msgid ""
 "other hand, Japanese has only a translation @code{ja.utf-8}, since there are "
 "no @@-commands for Japanese characters."
 msgstr ""
+"A ideia é que se existir uma codificação @code{us-ascii}, isso significa "
+"que todos os caracteres no conjunto de caracteres podem ser expressos como "
+"comandos @@. Por exemplo, existe uma localidade @code{fr.us-ascii} que pode "
+"acomodar qualquer codificação, já que todos os caracteres Latin@tie{}1 "
+"têm comandos @@ associados. Por outro lado, o japonês tem somente uma "
+"tradução @code{ja.utf-8}, já que não existem comandos @@ para caracteres "
+"japoneses."
 
 #. type: enumerate
 #: texinfo/texinfo.texi:16725
@@ -44252,12 +44297,18 @@ msgid ""
 "as @@-commands in the @code{us-ascii} locales, which may be inconvenient for "
 "translators."
 msgstr ""
+"As localidades @code{us-ascii} não são muito necessárias agora que o "
+"UTF-8 é usado para a maioria dos documentos. Observe que é obrigatório "
+"que caracteres acentuados sejam expressos como comandos @@ nas localidades "
+"@code{us-ascii}, o que possivelmente seja inconveniente para tradutores(as)."
 
 #. type: item
 #: texinfo/texinfo.texi:16726
 #, no-wrap
 msgid "Next, the string is expanded as Texinfo, and converted."
 msgstr ""
+"A seguir, a sequência de caracteres será expandida como Texinfo e "
+"convertida."
 
 #. type: enumerate
 #: texinfo/texinfo.texi:16729
@@ -44265,6 +44316,8 @@ msgid ""
 "The arguments are substituted; for example, @samp{@{arg_name@}} is replaced "
 "by the corresponding actual argument."
 msgstr ""
+"Os argumentos são substituídos; por exemplo, @samp{@{arg_name@}} é "
+"substituído pelo argumento real correspondente."
 
 #. type: itemize
 #: texinfo/texinfo.texi:16737
@@ -44275,6 +44328,11 @@ msgid ""
 "@samp{@{program_homepage@}} and @samp{@{program@}} are substituted after the "
 "expansion:"
 msgstr ""
+"No exemplo a seguir, @samp{@{date@}}, @samp{@{program_homepage@}} e "
+"@samp{@{program@}} são os argumentos da sequência de caracteres. Como são "
+"usados no @code{@@uref}, a ordem deles não é previsível. @samp{@{date@}}, "
+"@samp{@{program_homepage@}} e @samp{@{program@}} são substituídos depois "
+"da expansão:"
 
 #. type: example
 #: texinfo/texinfo.texi:16741
@@ -44283,6 +44341,8 @@ msgid ""
 "Generated on @@emph@{@{date@}@} using\n"
 "@@uref@{@{program_homepage@}, @@emph@{@{program@}@}@}.\n"
 msgstr ""
+"Gerado em @@emph@{@{date@}@} usando\n"
+"@@uref@{@{program_homepage@}, @@emph@{@{program@}@}@}.\n"
 
 #. type: itemize
 #: texinfo/texinfo.texi:16749
@@ -44294,12 +44354,20 @@ msgid ""
 "language-dependent.  For example, the @samp{@@pxref} translation string can "
 "be like this:"
 msgstr ""
+"Essa abordagem é reconhecidamente um pouco complicada. A utilidade dela é "
+"que ela suporta ter-se traduções disponíveis em diferentes codificações "
+"para codificações que consigam ser cobertas por comandos @@, e também "
+"especificar-se como a formatação para alguns comandos é feita, "
+"independentemente do formato da saída gerada---ainda assim ser dependente "
+"do idioma. Por exemplo, a sequência de caracteres de tradução do "
+"@samp{@@pxref} pode ser assim:"
 
 #. type: example
 #: texinfo/texinfo.texi:16752
 #, no-wrap
 msgid "see @{node_file_href@} section `@{section@}' in @@cite@{@{book@}@}\n"
 msgstr ""
+"veja-se seção @{node_file_href@} `@{section@}' em @@cite@{@{book@}@}\n"
 
 #. type: itemize
 #: texinfo/texinfo.texi:16758
@@ -44308,6 +44376,9 @@ msgid ""
 "while nevertheless with rich formatting it may be translated appropriately "
 "in many languages."
 msgstr ""
+"que permite especificar-se uma sequência de caracteres independentemente do "
+"formato da saída gerada, embora com formatação avançada ela consiga ser "
+"traduzida adequadamente em vários idiomas."
 
 #. type: cindex
 #: texinfo/texinfo.texi:16760 texinfo/texinfo.texi:16765
