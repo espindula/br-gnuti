@@ -44384,36 +44384,36 @@ msgstr ""
 #: texinfo/texinfo.texi:16760 texinfo/texinfo.texi:16765
 #, no-wrap
 msgid "Invoking @command{pod2texi}"
-msgstr ""
+msgstr "Invocando @command{pod2texi}"
 
 #. type: itemize
 #: texinfo/texinfo.texi:16762
 msgid "@nodedescription Translating Perl Pod to Texinfo."
-msgstr ""
+msgstr "@nodedescription Traduzindo Pod da Perl para Texinfo."
 
 #. type: section
 #: texinfo/texinfo.texi:16762
 #, no-wrap
 msgid "Invoking @command{pod2texi}: Convert Pod to Texinfo"
-msgstr ""
+msgstr "Invocando @command{pod2texi}: Converter Pod para Texinfo"
 
 #. type: pindex
 #: texinfo/texinfo.texi:16764
 #, no-wrap
 msgid "pod2texi"
-msgstr ""
+msgstr "pod2texi"
 
 #. type: cindex
 #: texinfo/texinfo.texi:16766
 #, no-wrap
 msgid "Pod, converting to Texinfo"
-msgstr ""
+msgstr "Pod, convertendo para Texinfo"
 
 #. type: cindex
 #: texinfo/texinfo.texi:16767
 #, no-wrap
 msgid "Perl Pod, converting to Texinfo"
-msgstr ""
+msgstr "Pod da Perl, convertendo para Texinfo"
 
 #. type: itemize
 #: texinfo/texinfo.texi:16774
@@ -44423,6 +44423,11 @@ msgid ""
 "manual from each input Pod, or (if @code{--base-level=1} or higher is given) "
 "generating Texinfo subfiles suitable for use with @code{@@include}."
 msgstr ""
+"O programa @command{pod2texi} traduz arquivo(s) de documentação Pod da "
+"Perl para Texinfo. Existem dois modos básicos de operação: gerar um "
+"manual independente a partir de cada Pod de entrada ou (se "
+"@code{--base-level=1} ou superior for fornecido) gerar subarquivos Texinfo "
+"adequados para uso com @code{@@include}."
 
 #. type: itemize
 #: texinfo/texinfo.texi:16789
@@ -44435,46 +44440,56 @@ msgid ""
 "included below.  The version included in the manual is also an example of "
 "@command{pod2texi} use, as it is converted from Pod using @command{pod2texi}."
 msgstr ""
+"O programa @command{pod2texi} pode ser útil fora do resto do Texinfo; "
+"assim, a invocação do @command{pod2texi} é documentada na linguagem Pod "
+"usando o formato de página de manual para seguir a convenção usada em "
+"programas autônomos da Perl, com uma versão na web "
+"@url{http://www.gnu.org/software/texinfo/manual/pod2texi.html} e uma versão "
+"incluída abaixo. A versão incluída no manual também é um exemplo de uso "
+"do @command{pod2texi}, pois é convertida a partir do Pod usando "
+"@command{pod2texi}."
 
 #. type: node
 #: texinfo/texinfo.texi:16798
 #, no-wrap
 msgid "pod2texi manual page"
-msgstr ""
+msgstr "Página de manual do pod2texi"
 
 #. type: itemize
 #: texinfo/texinfo.texi:16800
 msgid "@nodedescription @command{pod2texi} invocation in a manual page format."
 msgstr ""
+"@nodedescription Invocação do @command{pod2texi} em um formato de página "
+"de manual."
 
 #. type: include
 #: texinfo/texinfo.texi:16800
 #, no-wrap
 msgid "pod2texi.texi"
-msgstr ""
+msgstr "pod2texi.texi"
 
 #. type: node
 #: texinfo/texinfo.texi:16803
 #, no-wrap
 msgid "@command{texi2html}"
-msgstr ""
+msgstr "@command{texi2html}"
 
 #. type: itemize
 #: texinfo/texinfo.texi:16805
 msgid "@nodedescription An ancestor of @command{texi2any}."
-msgstr ""
+msgstr "@nodedescription Um ancestral do @command{texi2any}."
 
 #. type: section
 #: texinfo/texinfo.texi:16805
 #, no-wrap
 msgid "@command{texi2html}: Ancestor of @command{texi2any}"
-msgstr ""
+msgstr "@command{texi2html}: Ancestral do @command{texi2any}"
 
 #. type: pindex
 #: texinfo/texinfo.texi:16807
 #, no-wrap
 msgid "texi2html"
-msgstr ""
+msgstr "texi2html"
 
 #. type: itemize
 #: texinfo/texinfo.texi:16815
@@ -44485,6 +44500,11 @@ msgid ""
 "@command{makeinfo} could not generate HTML@.  Many other people contributed "
 "to @command{texi2html} over the years."
 msgstr ""
+"Conceitualmente, o programa @command{texi2html} é o ancestral do programa "
+"@command{texi2any} atual. @command{texi2html} foi desenvolvido "
+"independentemente, originalmente por Lionel Cons em 1998; na época, "
+"@command{makeinfo} não conseguia gerar HTML@. Muitas outras pessoas "
+"contribuíram para o @command{texi2html} ao longo dos anos."
 
 #. type: itemize
 #: texinfo/texinfo.texi:16820
@@ -44494,6 +44514,10 @@ msgid ""
 "implementation (namely, parsing the Texinfo document into a tree), but "
 "still, there is a family resemblance."
 msgstr ""
+"O presente @command{texi2any} usa pouco do código real do "
+"@command{texi2html} e tem uma abordagem básica bastante diferente para a "
+"implementação (ou seja, analisar o documento Texinfo em uma árvore), mas "
+"ainda assim existe uma semelhança familiar."
 
 #. type: itemize
 #: texinfo/texinfo.texi:16826
@@ -44504,12 +44528,17 @@ msgid ""
 "the Texinfo package.  An approximation can be run with an invocation like "
 "this:"
 msgstr ""
+"Pelo projeto, o @command{texi2any} suporta quase todos os recursos do "
+"@command{texi2html} de alguma maneira. No entanto, nós não tentamos manter "
+"compatibilidade estrita, de forma que nenhum executável @command{texi2html} "
+"é instalado pelo pacote Texinfo. Uma aproximação pode ser executada com "
+"uma invocação como esta:"
 
 #. type: example
 #: texinfo/texinfo.texi:16829
 #, no-wrap
 msgid "texi2any --set-customization-variable TEXI2HTML=1 ...\n"
-msgstr ""
+msgstr "texi2any --set-customization-variable TEXI2HTML=1 ...\n"
 
 #. type: itemize
 #: texinfo/texinfo.texi:16834
