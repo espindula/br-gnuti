@@ -44546,12 +44546,15 @@ msgid ""
 "but, to emphasize, this is @emph{not} a drop-in replacement for the previous "
 "@command{texi2html}.  Here are the biggest differences:"
 msgstr ""
+"mas, para enfatizar, esse @emph{não} é um substituto imediato para o "
+"@command{texi2html} anterior. Aqui estão as maiores diferenças:"
 
 #. type: item
 #: texinfo/texinfo.texi:16836
 #, no-wrap
 msgid "Most blatantly, the command line options of @command{texi2html}"
 msgstr ""
+"Mais descaradamente, as opções de linha de comando do @command{texi2html}"
 
 #. type: itemize
 #: texinfo/texinfo.texi:16839
@@ -44559,23 +44562,25 @@ msgid ""
 "are now customization variables, for the most part.  A table of approximate "
 "equivalents is given below."
 msgstr ""
+"agora são variáveis de personalização, em sua maior parte. Uma tabela de "
+"equivalentes aproximados é fornecida abaixo."
 
 #. type: item
 #: texinfo/texinfo.texi:16840
 #, no-wrap
 msgid "The program-level customization API is very different in"
-msgstr ""
+msgstr "A API de personalização em nível de programa é muito diferente em"
 
 #. type: itemize
 #: texinfo/texinfo.texi:16842
 msgid "@command{texi2any}."
-msgstr ""
+msgstr "@command{texi2any}."
 
 #. type: item
 #: texinfo/texinfo.texi:16843
 #, no-wrap
 msgid "Indices cannot be split."
-msgstr ""
+msgstr "Índices não podem ser divididos."
 
 #. type: itemize
 #: texinfo/texinfo.texi:16853
@@ -44586,18 +44591,24 @@ msgid ""
 "maintainers (one of whom is the principal author of @command{texi2any}) do "
 "not intend to make further releases."
 msgstr ""
+"Nós não pretendemos reimplementar essas diferenças. Portanto, o caminho a "
+"seguir para autores(as) é o de alterar manuais e construir processos, "
+"conforme necessário, para usar os novos recursos e métodos do "
+"@command{texi2any}. Os(As) mantenedores(as) do @command{texi2html} (um dos "
+"quais é o autor principal do @command{texi2any}) não pretendem fazer novos "
+"lançamentos."
 
 #. type: cindex
 #: texinfo/texinfo.texi:16854
 #, no-wrap
 msgid "Options of @command{texi2html}"
-msgstr ""
+msgstr "Opções do @command{texi2html}"
 
 #. type: cindex
 #: texinfo/texinfo.texi:16855
 #, no-wrap
 msgid "Command-line options of @command{texi2html}"
-msgstr ""
+msgstr "Opções de linha de comando do @command{texi2html}"
 
 #. type: itemize
 #: texinfo/texinfo.texi:16860
@@ -44605,132 +44616,138 @@ msgid ""
 "Here is the table showing @command{texi2html} options and corresponding "
 "@command{texi2any} customization variables."
 msgstr ""
+"Aqui está a tabela que mostra as opções do @command{texi2html} e as "
+"variáveis de personalização correspondentes do @command{texi2any}."
 
 #. type: item
 #: texinfo/texinfo.texi:16863
 #, no-wrap
 msgid "@option{--toc-links}            @tab @code{TOC_LINKS}"
-msgstr ""
+msgstr "@option{--toc-links}            @tab @code{TOC_LINKS}"
 
 #. type: item
 #: texinfo/texinfo.texi:16864
 #, no-wrap
 msgid "@option{--short-ext}            @tab @code{EXTENSION} set to @samp{htm}"
 msgstr ""
+"@option{--short-ext}            @tab @code{EXTENSION} configurada para "
+"@samp{htm}"
 
 #. type: item
 #: texinfo/texinfo.texi:16865
 #, no-wrap
 msgid "@option{--prefix}               @tab @code{PREFIX}"
-msgstr ""
+msgstr "@option{--prefix}               @tab @code{PREFIX}"
 
 #. type: item
 #: texinfo/texinfo.texi:16866
 #, no-wrap
 msgid "@option{--def-table}            @tab @code{DEF_TABLE}"
-msgstr ""
+msgstr "@option{--def-table}            @tab @code{DEF_TABLE}"
 
 #. type: item
 #: texinfo/texinfo.texi:16867
 #, no-wrap
 msgid "@option{--html-xref-prefix}     @tab @code{EXTERNAL_DIR}"
-msgstr ""
+msgstr "@option{--html-xref-prefix}     @tab @code{EXTERNAL_DIR}"
 
 #. type: item
 #: texinfo/texinfo.texi:16868
 #, no-wrap
 msgid "@option{--l2h}                  @tab @code{HTML_MATH} set to @samp{l2h}"
 msgstr ""
+"@option{--l2h}                  @tab @code{HTML_MATH} configurada para "
+"@samp{l2h}"
 
 #. type: item
 #: texinfo/texinfo.texi:16869
 #, no-wrap
 msgid "@option{--l2h-l2h}              @tab @code{L2H_L2H}"
-msgstr ""
+msgstr "@option{--l2h-l2h}              @tab @code{L2H_L2H}"
 
 #. type: item
 #: texinfo/texinfo.texi:16870
 #, no-wrap
 msgid "@option{--l2h-skip}             @tab @code{L2H_SKIP}"
-msgstr ""
+msgstr "@option{--l2h-skip}             @tab @code{L2H_SKIP}"
 
 #. type: item
 #: texinfo/texinfo.texi:16871
 #, no-wrap
 msgid "@option{--l2h-tmp}              @tab @code{L2H_TMP}"
-msgstr ""
+msgstr "@option{--l2h-tmp}              @tab @code{L2H_TMP}"
 
 #. type: item
 #: texinfo/texinfo.texi:16872
 #, no-wrap
 msgid "@option{--l2h-file}             @tab @code{L2H_FILE}"
-msgstr ""
+msgstr "@option{--l2h-file}             @tab @code{L2H_FILE}"
 
 #. type: item
 #: texinfo/texinfo.texi:16873
 #, no-wrap
 msgid "@option{--l2h-clean}            @tab @code{L2H_CLEAN}"
-msgstr ""
+msgstr "@option{--l2h-clean}            @tab @code{L2H_CLEAN}"
 
 #. type: item
 #: texinfo/texinfo.texi:16874
 #, no-wrap
 msgid "@option{--use-nodes}            @tab @code{USE_NODES}"
-msgstr ""
+msgstr "@option{--use-nodes}            @tab @code{USE_NODES}"
 
 #. type: item
 #: texinfo/texinfo.texi:16875
 #, no-wrap
 msgid "@option{--monolithic}           @tab @code{MONOLITHIC}"
-msgstr ""
+msgstr "@option{--monolithic}           @tab @code{MONOLITHIC}"
 
 #. type: item
 #: texinfo/texinfo.texi:16876
 #, no-wrap
 msgid "@option{--top-file}             @tab @code{TOP_FILE}"
-msgstr ""
+msgstr "@option{--top-file}             @tab @code{TOP_FILE}"
 
 #. type: item
 #: texinfo/texinfo.texi:16877
 #, no-wrap
 msgid "@option{--frames}               @tab @code{FRAMES}"
-msgstr ""
+msgstr "@option{--frames}               @tab @code{FRAMES}"
 
 #. type: item
 #: texinfo/texinfo.texi:16878
 #, no-wrap
 msgid "@option{--menu}                 @tab @code{FORMAT_MENU}"
-msgstr ""
+msgstr "@option{--menu}                 @tab @code{FORMAT_MENU}"
 
 #. type: item
 #: texinfo/texinfo.texi:16879
 #, no-wrap
 msgid "@option{--debug}                @tab @code{DEBUG}"
-msgstr ""
+msgstr "@option{--debug}                @tab @code{DEBUG}"
 
 #. type: item
 #: texinfo/texinfo.texi:16880
 #, no-wrap
 msgid "@option{--doctype}              @tab @code{DOCTYPE}"
-msgstr ""
+msgstr "@option{--doctype}              @tab @code{DOCTYPE}"
 
 #. type: item
 #: texinfo/texinfo.texi:16881
 #, no-wrap
 msgid "@option{--frameset-doctype}     @tab @code{FRAMESET_DOCTYPE}"
-msgstr ""
+msgstr "@option{--frameset-doctype}     @tab @code{FRAMESET_DOCTYPE}"
 
 #. type: item
 #: texinfo/texinfo.texi:16882
 #, no-wrap
 msgid "@option{--test}                 @tab @code{TEST}"
-msgstr ""
+msgstr "@option{--test}                 @tab @code{TEST}"
 
 #. type: cindex
 #: texinfo/texinfo.texi:16885
 #, no-wrap
 msgid "@file{texi2oldapi.texi}, for @command{texi2html}"
-msgstr ""
+msgstr "@file{texi2oldapi.texi}, para @command{texi2html}"
 
 #. type: itemize
 #: texinfo/texinfo.texi:16889
@@ -44739,6 +44756,9 @@ msgid ""
 "check the first part of the archived file @file{doc/texi2oldapi.texi} in the "
 "Texinfo source repository."
 msgstr ""
+"Finalmente, quaisquer usuários(as) do @command{texi2html} que busquem "
+"informações mais detalhadas consegue verificar a primeira parte do arquivo "
+"@file{doc/texi2oldapi.texi} no repositório do fonte do Texinfo."
 
 #. type: chapter
 #: texinfo/texinfo.texi:16891 texinfo/texinfo.texi:16893
