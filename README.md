@@ -14,8 +14,8 @@ Chave pix para doações: jafesp@gmail.com
 
 Direitos autorais (Copyright) da versão mudada traduzida para o idioma 
 português escrito e falado no Brasil: (c) 2016, 2017, 2018, 2019, 2020, 
-2021, 2022, 2023, 2024, 2025 Jamenson Ferreira Espindula de Almeida Melo 
-(<jafesp@gmail.com>).
+2021, 2022, 2023, 2024, 2025, 2026 Jamenson Ferreira Espindula de 
+Almeida Melo (<jafesp@gmail.com>).
 
   Este trabalho de tradução da documentação do GNU Texinfo é classificado pela
   Free Software Foundation como sendo uma "versão modificada" da mencionada
