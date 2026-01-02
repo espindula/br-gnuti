@@ -44764,18 +44764,18 @@ msgstr ""
 #: texinfo/texinfo.texi:16891 texinfo/texinfo.texi:16893
 #, no-wrap
 msgid "Creating and Installing Info Files"
-msgstr ""
+msgstr "Criando e Instalando Arquivos Info"
 
 #. type: itemize
 #: texinfo/texinfo.texi:16893
 msgid "@nodedescription Details on Info output."
-msgstr ""
+msgstr "@nodedescription Detalhes acerca da saída gerada Info."
 
 #.  removed, merged to this node and Emacs Info mode
 #. type: anchor{#1}
 #: texinfo/texinfo.texi:16896
 msgid "Creating an Info File"
-msgstr ""
+msgstr "Criando um Arquivo Info"
 
 #. type: itemize
 #: texinfo/texinfo.texi:16903
@@ -44787,30 +44787,36 @@ msgid ""
 "format.  @xref{Info Format Specification}, for a detailed technical "
 "specification of the Info format."
 msgstr ""
+"Este capítulo fornece algumas informações acerca da saída Info e "
+"descreve como instalar arquivos Info. Para a criação de arquivos Info com "
+"o @command{texi2any}, veja-se @ref{Tradutor Genérico @command{texi2any}}, e "
+"com o Emacs, @ref{Formatação Info}. @xref{Arquivos Info}, para "
+"informações gerais acerca do formato do arquivo. @xref{Especificação do "
+"Formato Info}, para uma especificação técnica detalhada do formato Info."
 
 #. type: section
 #: texinfo/texinfo.texi:16905 texinfo/texinfo.texi:16906
 #, no-wrap
 msgid "Installing an Info File"
-msgstr ""
+msgstr "Instalando um Arquivo Info"
 
 #. type: cindex
 #: texinfo/texinfo.texi:16907
 #, no-wrap
 msgid "Installing an Info file"
-msgstr ""
+msgstr "Instalando um arquivo Info"
 
 #. type: cindex
 #: texinfo/texinfo.texi:16908
 #, no-wrap
 msgid "Info files @subentry installation"
-msgstr ""
+msgstr "Arquivos Info @subentry instalação"
 
 #. type: cindex
 #: texinfo/texinfo.texi:16909
 #, no-wrap
 msgid "@file{dir} directory for Info installation"
-msgstr ""
+msgstr "Diretório @file{dir} para instalação do Info"
 
 #. type: itemize
 #: texinfo/texinfo.texi:16915
@@ -44819,23 +44825,28 @@ msgid ""
 "files using the standalone Info program or the Info reader built into "
 "Emacs.  (@xref{Top,,, info, Info}, for an introduction to Info.)"
 msgstr ""
+"Os arquivos Info geralmente são mantidos no diretório @file{info}. Você "
+"pode ler arquivos Info usando o programa autônomo Info ou o leitor Info "
+"integrado ao Emacs. (@xref{Top,,, info, Info}, para uma introdução ao "
+"Info)."
 
 #. type: node
 #: texinfo/texinfo.texi:16917
 #, no-wrap
 msgid "Directory File"
-msgstr ""
+msgstr "Arquivo de Diretório"
 
 #. type: itemize
 #: texinfo/texinfo.texi:16919
 msgid "@nodedescription The top-level menu for all Info files."
 msgstr ""
+"@nodedescription O menu de nível superior para todos os arquivos Info."
 
 #. type: subsection
 #: texinfo/texinfo.texi:16919
 #, no-wrap
 msgid "The Directory File @file{dir}"
-msgstr ""
+msgstr "O Arquivo de Diretório @file{dir}"
 
 #. type: itemize
 #: texinfo/texinfo.texi:16926
@@ -44846,6 +44857,11 @@ msgid ""
 "typing @kbd{C-h i} to enter Info and then typing @kbd{C-x C-f} to see the "
 "location of the @file{info} directory.)"
 msgstr ""
+"Para que o Info funcione, o diretório @file{info} precisa conter um arquivo "
+"que sirva como diretório de nível superior para o sistema Info. Por "
+"convenção, esse arquivo é chamado de @file{dir}. (Você pode encontrar o "
+"local desse arquivo no Emacs digitando @kbd{C-h i} para inserir Info e "
+"depois digitando @kbd{C-x C-f} para ver o local do diretório @file{info})."
 
 #. type: itemize
 #: texinfo/texinfo.texi:16930
@@ -44853,6 +44869,8 @@ msgid ""
 "The @file{dir} file is itself an Info file.  It contains the top-level menu "
 "for all the Info files in the system.  The menu looks like this:"
 msgstr ""
+"O arquivo @file{dir} é em si um arquivo Info. Ele contém o menu de nível "
+"superior para todos os arquivos Info no sistema. O menu se parece com isto:"
 
 #. type: group
 #: texinfo/texinfo.texi:16941
@@ -44867,6 +44885,13 @@ msgid ""
 "                      @@TeX@{@} or an Info file.\n"
 "@dots{}\n"
 msgstr ""
+"* Menu:\n"
+"* Info:    (info).     Sistema de navegação de documentação.\n"
+"* Emacs:   (emacs).    O editor de texto extensível e\n"
+"                      autodocumentado.\n"
+"* Texinfo: (texinfo).  Com um arquivo fonte, faça ou um manual impresso\n"
+"                      usando o @@TeX@{@} ou um arquivo Info.\n"
+"@dots{}\n"
 
 #. type: itemize
 #: texinfo/texinfo.texi:16949
@@ -44876,6 +44901,11 @@ msgid ""
 "node, since Info goes to the `Top' node if no node name is mentioned.  "
 "@xref{Other Info Files, , Nodes in Other Info Files}.)"
 msgstr ""
+"Cada uma dessas entradas de menu aponta para o nó `Top' do arquivo Info que "
+"esteja nomeado entre parênteses. (A entrada do menu não precisa "
+"especificar o nó `Top', uma vez que o Info vai para o nó `Top' se nenhum "
+"nome de nó for mencionado. @xref{Other Info Files, , Nodes in Other Info "
+"Files})."
 
 #. type: itemize
 #: texinfo/texinfo.texi:16953
@@ -44883,6 +44913,8 @@ msgid ""
 "Thus, the @samp{Info} entry points to the `Top' node of the @file{info} file "
 "and the @samp{Emacs} entry points to the `Top' node of the @file{emacs} file."
 msgstr ""
+"Assim, a entrada @samp{Info} aponta para o nó `Top' do arquivo @file{info} "
+"e a entrada @samp{Emacs} aponta para o nó `Top' do arquivo @file{emacs}."
 
 #. type: itemize
 #: texinfo/texinfo.texi:16957
@@ -44891,12 +44923,15 @@ msgid ""
 "the @code{dir} file.  For example, the line for the `Top' node of the Emacs "
 "manual looks like this in Info:"
 msgstr ""
+"Em cada um dos arquivos Info, o ponteiro `Up' do nó `Top' referencia de "
+"volta para o arquivo @code{dir}. Por exemplo, a linha para o nó `Top' do "
+"manual do Emacs se parece com isto no Info:"
 
 #. type: example
 #: texinfo/texinfo.texi:16960
 #, no-wrap
 msgid "File: emacs  Node: Top, Up: (DIR), Next: Distrib\n"
-msgstr ""
+msgstr "File: emacs  Node: Top, Up: (DIR), Next: Distribuição\n"
 
 #. type: itemize
 #: texinfo/texinfo.texi:16966
@@ -44905,6 +44940,9 @@ msgid ""
 "can be written in either upper- or lowercase.  This is not true in general, "
 "it is a special case for @file{dir}."
 msgstr ""
+"Nesse caso, o nome do arquivo @file{dir} é escrito em letras "
+"maiúsculas---ele pode ser escrito ou em letras maiúsculas ou minúsculas. "
+"Isso não é verdade em geral; é um caso especial para @file{dir}."
 
 #. type: itemize
 #: texinfo/texinfo.texi:16969
@@ -44912,6 +44950,8 @@ msgid ""
 "See the @file{util/dir-example} file in the Texinfo distribution for a large "
 "sample @code{dir} file."
 msgstr ""
+"Veja-se o arquivo @file{util/dir-example} na distribuição Texinfo para uma "
+"amostra grande do arquivo @code{dir}."
 
 #. type: node
 #: texinfo/texinfo.texi:16971
