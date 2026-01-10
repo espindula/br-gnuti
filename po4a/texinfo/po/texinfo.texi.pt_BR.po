@@ -44957,48 +44957,48 @@ msgstr ""
 #: texinfo/texinfo.texi:16971
 #, no-wrap
 msgid "New Info File"
-msgstr ""
+msgstr "Novo Arquivo Info"
 
 #. type: itemize
 #: texinfo/texinfo.texi:16973
 msgid "@nodedescription Listing a new Info file."
-msgstr ""
+msgstr "@nodedescription Listando um novo arquivo Info."
 
 #. type: subsection
 #: texinfo/texinfo.texi:16973
 #, no-wrap
 msgid "Listing a New Info File"
-msgstr ""
+msgstr "Listando um Novo Arquivo Info"
 
 #. type: cindex
 #: texinfo/texinfo.texi:16974
 #, no-wrap
 msgid "Adding a new Info file"
-msgstr ""
+msgstr "Adicionando um novo arquivo Info"
 
 #. type: cindex
 #: texinfo/texinfo.texi:16975
 #, no-wrap
 msgid "Listing a new Info file"
-msgstr ""
+msgstr "Listando um novo arquivo Info"
 
 #. type: cindex
 #: texinfo/texinfo.texi:16976
 #, no-wrap
 msgid "New Info file, listing it in @file{dir} file"
-msgstr ""
+msgstr "Novo arquivo Info, listando-o no arquivo @file{dir}"
 
 #. type: cindex
 #: texinfo/texinfo.texi:16977
 #, no-wrap
 msgid "Info files @subentry listing a new"
-msgstr ""
+msgstr "Arquivos Info @subentry listando um novo"
 
 #. type: cindex
 #: texinfo/texinfo.texi:16978
 #, no-wrap
 msgid "@file{dir} file listing"
-msgstr ""
+msgstr "Listagem do arquivo @file{dir}"
 
 #. type: itemize
 #: texinfo/texinfo.texi:16984
@@ -45008,12 +45008,16 @@ msgid ""
 "if you were adding documentation for GDB, you would write the following new "
 "entry:"
 msgstr ""
+"Para adicionar um novo arquivo Info ao teu sistema, você precisa escrever "
+"uma entrada de menu para adicionar ao menu no arquivo @file{dir} no "
+"diretório @file{info}. Por exemplo, se estivesse adicionando documentação "
+"para o GDB, você escreveria a seguinte nova entrada:"
 
 #. type: example
 #: texinfo/texinfo.texi:16987
 #, no-wrap
 msgid "* GDB: (gdb).           The source-level C debugger.\n"
-msgstr ""
+msgstr "* GDB: (gdb).           O depurador C de nível de fonte.\n"
 
 #. type: itemize
 #: texinfo/texinfo.texi:16993
@@ -45022,6 +45026,9 @@ msgid ""
 "colon.  The second part is the name of the Info file, in parentheses, "
 "followed by a period.  The third part is the description."
 msgstr ""
+"A primeira parte da entrada do menu é o nome da entrada do menu, seguido "
+"por dois pontos. A segunda parte é o nome do arquivo Info, entre "
+"parênteses, seguido de um ponto final. A terceira parte é a descrição."
 
 #. type: itemize
 #: texinfo/texinfo.texi:17002
@@ -45034,6 +45041,14 @@ msgid ""
 "write @samp{.info} explicitly in the menu entry.  For example, the GDB menu "
 "entry should use just @samp{gdb} for the file name, not @samp{gdb.info}."
 msgstr ""
+"O nome de um arquivo Info frequentemente tem uma extensão @file{.info}. "
+"Assim, o arquivo Info para GDB pode ser chamado ou de @file{gdb} ou de "
+"@file{gdb.info}. Os programas leitores do Info tentam automaticamente o nome "
+"do arquivo com e sem @file{.info}@footnote{Em sistemas MS-DOS/MS-Windows, o "
+"Info também tentará a extensão @file{.inf}.}; então é melhor evitar "
+"confusão e não escrever @samp{.info} explicitamente na entrada do menu. "
+"Por exemplo, a entrada do menu GDB deveria usar somente @samp{gdb} para o "
+"nome do arquivo, não @samp{gdb.info}."
 
 #. type: node
 #: texinfo/texinfo.texi:17004
