@@ -45054,7 +45054,7 @@ msgstr ""
 #: texinfo/texinfo.texi:17004
 #, no-wrap
 msgid "Other Info Directories"
-msgstr ""
+msgstr "Outros Diretórios Info"
 
 #. type: itemize
 #: texinfo/texinfo.texi:17006
@@ -45062,36 +45062,38 @@ msgid ""
 "@nodedescription How to specify Info files that are located in other "
 "directories."
 msgstr ""
+"@nodedescription Como especificar arquivos Info que estejam localizados em "
+"outros diretórios."
 
 #. type: subsection
 #: texinfo/texinfo.texi:17006
 #, no-wrap
 msgid "Info Files in Other Directories"
-msgstr ""
+msgstr "Arquivos Info em Outros Diretórios"
 
 #. type: cindex
 #: texinfo/texinfo.texi:17007
 #, no-wrap
 msgid "Installing Info in another directory"
-msgstr ""
+msgstr "Instalando Info em outro diretório"
 
 #. type: cindex
 #: texinfo/texinfo.texi:17008
 #, no-wrap
 msgid "Info installed in another directory"
-msgstr ""
+msgstr "Info instalado em outro diretório"
 
 #. type: cindex
 #: texinfo/texinfo.texi:17009
 #, no-wrap
 msgid "Another Info directory"
-msgstr ""
+msgstr "Outro diretório Info"
 
 #. type: cindex
 #: texinfo/texinfo.texi:17010
 #, no-wrap
 msgid "@file{dir} files and Info directories"
-msgstr ""
+msgstr "Arquivos @file{dir} e diretórios Info"
 
 #. type: itemize
 #: texinfo/texinfo.texi:17014
@@ -45099,12 +45101,15 @@ msgid ""
 "If an Info file is not in the @file{info} directory, there are three ways to "
 "specify its location:"
 msgstr ""
+"Se um arquivo Info não estiver no diretório @file{info}, existem três "
+"maneiras de especificar o local dele:"
 
 #. type: enumerate
 #: texinfo/texinfo.texi:17018
 msgid ""
 "Write the file name in the @file{dir} file as the second part of the menu."
 msgstr ""
+"Escreva o nome do arquivo no arquivo @file{dir} como a segunda parte do menu."
 
 #. type: enumerate
 #: texinfo/texinfo.texi:17024
@@ -45114,6 +45119,11 @@ msgid ""
 "others who set this environment variable will be able to find Info files "
 "whose location is specified this way.)"
 msgstr ""
+"Especifique o nome do diretório Info na variável de ambiente "
+"@code{INFOPATH} em teu arquivo de inicialização @file{.profile} ou "
+"@file{.cshrc}. (Somente você e outras pessoas que configurarem essa "
+"variável de ambiente estará apto(a) para encontrar arquivos Info cujo "
+"local esteja especificado dessa maneira)."
 
 #. type: enumerate
 #: texinfo/texinfo.texi:17030
@@ -45123,6 +45133,10 @@ msgid ""
 "@code{Info-directory-list} variable in your personal or site initialization "
 "file."
 msgstr ""
+"Se você estiver usando Emacs, liste o nome do arquivo em um segundo arquivo "
+"@file{dir}, no diretório dele; e, em seguida, adicione o nome desse "
+"diretório à variável @code{Info-directory-list} em teu arquivo de "
+"inicialização pessoal ou no do sítio."
 
 #. type: enumerate
 #: texinfo/texinfo.texi:17036
@@ -45132,6 +45146,11 @@ msgid ""
 "the listed directories.  (In Emacs version 18, you can set the "
 "@code{Info-directory} variable to the name of only one directory.)"
 msgstr ""
+"Essa variável informa ao Emacs onde procurar por arquivos @file{dir} (os "
+"arquivos precisam ser nomeados @file{dir}). O Emacs mescla os arquivos "
+"nomeados de @file{dir} a partir de cada um dos diretórios listados. (No "
+"Emacs versão 18, você consegue configurar a variável "
+"@code{Info-directory} como o nome de somente um diretório)."
 
 #. type: itemize
 #: texinfo/texinfo.texi:17041
@@ -45139,12 +45158,16 @@ msgid ""
 "For example, to reach a test file in the @file{/home/bob/info} directory, "
 "you could add an entry like this to the menu in the standard @file{dir} file:"
 msgstr ""
+"Por exemplo, para acessar um arquivo de teste no diretório "
+"@file{/home/bob/info}, você poderia adicionar uma entrada como esta ao menu "
+"no arquivo @file{dir} padrão:"
 
 #. type: example
 #: texinfo/texinfo.texi:17044
 #, no-wrap
 msgid "* Test: (/home/bob/info/info-test).  Bob's own test file.\n"
 msgstr ""
+"* Teste: (/home/bob/info/info-teste). Arquivo próprio de teste do Bob.\n"
 
 #. type: itemize
 #: texinfo/texinfo.texi:17049
@@ -45152,6 +45175,8 @@ msgid ""
 "In this case, the absolute file name of the @file{info-test} file is written "
 "as the second part of the menu entry."
 msgstr ""
+"Nesse caso, o nome absoluto de arquivo do arquivo @file{info-teste} é "
+"escrito como a segunda parte da entrada do menu."
 
 #. type: vindex
 #: texinfo/texinfo.texi:17050
