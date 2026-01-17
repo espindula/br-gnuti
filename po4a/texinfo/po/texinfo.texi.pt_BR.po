@@ -45182,13 +45182,13 @@ msgstr ""
 #: texinfo/texinfo.texi:17050
 #, no-wrap
 msgid "INFOPATH"
-msgstr ""
+msgstr "INFOPATH"
 
 #. type: cindex
 #: texinfo/texinfo.texi:17051
 #, no-wrap
 msgid "Environment variable @code{INFOPATH}"
-msgstr ""
+msgstr "Variável de ambiente @code{INFOPATH}"
 
 #. type: itemize
 #: texinfo/texinfo.texi:17056
@@ -45198,6 +45198,10 @@ msgid ""
 "shell startup file.  This works with both the Emacs and standalone Info "
 "readers."
 msgstr ""
+"Se não quiser editar o arquivo @file{dir} do sistema, você pode informar "
+"ao Info onde procurar configurando a variável de ambiente @code{INFOPATH} "
+"em teu arquivo de iniciação do shell. Isso funciona tanto com o Emacs "
+"quanto com leitores Info independentes."
 
 #. type: itemize
 #: texinfo/texinfo.texi:17062
@@ -45208,12 +45212,17 @@ msgid ""
 "@env{INFOPATH} variable into a single menu presented to you in the node "
 "called @samp{(dir)Top}."
 msgstr ""
+"O Emacs usa a variável de ambiente @code{INFOPATH} para inicializar o valor "
+"da variável @code{Info-directory-list} do próprio Emacs. O leitor Info "
+"independente mescla todos os arquivos chamados @file{dir} em qualquer "
+"diretório listado na variável @env{INFOPATH} em um menu apresentado a "
+"você no nó chamado @samp{(dir)Top}."
 
 #. type: cindex
 #: texinfo/texinfo.texi:17063
 #, no-wrap
 msgid "Colon, last in @env{INFOPATH}"
-msgstr ""
+msgstr "Dois pontos, último na @env{INFOPATH}"
 
 #. type: itemize
 #: texinfo/texinfo.texi:17069
@@ -45224,6 +45233,12 @@ msgid ""
 "path with new directories without having to list all the standard places.  "
 "For example (using @code{sh} syntax):"
 msgstr ""
+"Independentemente de como você configurar @env{INFOPATH}, se o último "
+"caractere dela for dois pontos (em sistemas MS-DOS/MS-Windows, use um ponto "
+"e vírgula), ele será substituído pelo caminho padrão (compilado "
+"internamente). Isso oferece a você uma maneira de aumentar o caminho "
+"padrão com novos diretórios sem precisar listar todos os locais padrão. "
+"Por exemplo (usando a sintaxe do @code{sh}):"
 
 #. type: example
 #: texinfo/texinfo.texi:17073
@@ -45232,6 +45247,8 @@ msgid ""
 "INFOPATH=/home/bob/info:\n"
 "export INFOPATH\n"
 msgstr ""
+"INFOPATH=/home/bob/info:\n"
+"export INFOPATH\n"
 
 #. type: itemize
 #: texinfo/texinfo.texi:17078
@@ -45239,12 +45256,14 @@ msgid ""
 "will search @file{/home/bob/info} first, then the standard directories.  "
 "Leading or doubled colons are not treated specially."
 msgstr ""
+"pesquisará primeiro @file{/home/bob/info} e depois os diretórios padrão. "
+"Os dois pontos iniciais ou duplos não são tratados especialmente."
 
 #. type: cindex
 #: texinfo/texinfo.texi:17079
 #, no-wrap
 msgid "@file{dir} file, creating your own"
-msgstr ""
+msgstr "Arquivo @file{dir}, criando teu próprio"
 
 #. type: itemize
 #: texinfo/texinfo.texi:17085
@@ -45255,6 +45274,11 @@ msgid ""
 "@samp{* Menu:} with your desired entries.  That way, the punctuation and "
 "special @kbd{CTRL-_} characters that Info needs will be present."
 msgstr ""
+"Quando você cria teu próprio arquivo @file{dir} para usar com "
+"@code{Info-directory-list} ou com @env{INFOPATH}, é mais fácil começar "
+"copiando um arquivo @file{dir} existente e substituir todo o texto depois de "
+"@samp{* Menu:} pelas tuas entradas desejadas. Dessa maneira, a pontuação e "
+"os caracteres especiais @kbd{CTRL-_} que o Info precisa estarão presentes."
 
 #. type: itemize
 #: texinfo/texinfo.texi:17088
@@ -45262,6 +45286,8 @@ msgid ""
 "As one final alternative, which works only with Emacs Info, you can change "
 "the @code{Info-directory-list} variable.  For example:"
 msgstr ""
+"Como uma alternativa final, que funciona somente com o Info do Emacs, você "
+"consegue mudar a variável @code{Info-directory-list}. Por exemplo:"
 
 #. type: example
 #: texinfo/texinfo.texi:17093
@@ -45271,24 +45297,29 @@ msgid ""
 "\t     (add-to-list 'Info-directory-list\n"
 "\t\t\t  (expand-file-name \"~/info\"))))\n"
 msgstr ""
+"(add-hook 'Info-mode-hook '(lambda ()\n"
+"\t     (add-to-list 'Info-directory-list\n"
+"\t\t\t  (expand-file-name \"~/info\"))))\n"
 
 #. type: node
 #: texinfo/texinfo.texi:17096
 #, no-wrap
 msgid "Installing Dir Entries"
-msgstr ""
+msgstr "Instalando Entradas Dir"
 
 #. type: itemize
 #: texinfo/texinfo.texi:17098
 msgid ""
 "@nodedescription How to specify what menu entry to add to the Info directory."
 msgstr ""
+"@nodedescription Como especificar qual entrada de menu adicionar ao "
+"diretório Info."
 
 #. type: subsection
 #: texinfo/texinfo.texi:17098
 #, no-wrap
 msgid "Installing Info Directory Files"
-msgstr ""
+msgstr "Instalando Arquivos de Diretório Info"
 
 #. type: itemize
 #: texinfo/texinfo.texi:17104
@@ -45298,12 +45329,16 @@ msgid ""
 "the makefile for the package runs @code{install-info}, just after copying "
 "the Info file into its proper installed location."
 msgstr ""
+"Ao instalar um arquivo Info em teu sistema, você pode usar o programa "
+"@code{install-info} para atualizar o arquivo do diretório Info @file{dir}. "
+"Normalmente o makefile do pacote executa @code{install-info}, logo depois de "
+"copiar o arquivo Info para o local de instalação apropriado dele."
 
 #. type: findex
 #: texinfo/texinfo.texi:17106
 #, no-wrap
 msgid "direntry"
-msgstr ""
+msgstr "direntry"
 
 #. type: itemize
 #: texinfo/texinfo.texi:17114
@@ -45315,11 +45350,18 @@ msgid ""
 "specify a category for the manual, which determines which part of the Info "
 "directory to put it in.  @xref{Directory Category}."
 msgstr ""
+"Para a finalidade de que o arquivo Info funcione com @code{install-info}, "
+"você inclui os comandos @code{@@dircategory} e "
+"@code{@@direntry}@dots{}@code{@@end direntry} no arquivo fonte do Texinfo. "
+"Use @code{@@direntry} para especificar as entradas de menu a adicionar ao "
+"arquivo do diretório Info. Use @code{@@dircategory} para especificar uma "
+"categoria para o manual, que determine em qual parte do diretório Info "
+"colocá-lo. @xref{Categoria do Diretório}."
 
 #. type: itemize
 #: texinfo/texinfo.texi:17116
 msgid "Here is how these commands are used in this manual:"
-msgstr ""
+msgstr "Aqui está como esses comandos são usados neste manual:"
 
 #. type: example
 #: texinfo/texinfo.texi:17124
@@ -45332,11 +45374,17 @@ msgid ""
 "@dots{}\n"
 "@@end direntry\n"
 msgstr ""
+"@@dircategory Sistema de documentação do Texinfo\n"
+"@@direntry\n"
+"* Texinfo: (texinfo).           O formato da documentação GNU.\n"
+"* install-info: (texinfo)Invocando install-info. @dots{}\n"
+"@dots{}\n"
+"@@end direntry\n"
 
 #. type: itemize
 #: texinfo/texinfo.texi:17127
 msgid "Here's what this produces in the Info file:"
-msgstr ""
+msgstr "Aqui está o que isso produz no arquivo Info:"
 
 #. type: example
 #: texinfo/texinfo.texi:17135
@@ -45349,6 +45397,12 @@ msgid ""
 "@dots{}\n"
 "END-INFO-DIR-ENTRY\n"
 msgstr ""
+"INFO-DIR-SECTION Sistema de documentação do Texinfo\n"
+"START-INFO-DIR-ENTRY\n"
+"* Texinfo: (texinfo).           O formato da documentação GNU.\n"
+"* install-info: (texinfo)Invocando install-info. @dots{}\n"
+"@dots{}\n"
+"END-INFO-DIR-ENTRY\n"
 
 #. type: itemize
 #: texinfo/texinfo.texi:17140
@@ -45356,6 +45410,8 @@ msgid ""
 "The @code{install-info} program sees these lines in the Info file, and that "
 "is how it knows what to do."
 msgstr ""
+"O programa @code{install-info} vê essas linhas no arquivo Info e é assim "
+"que ele sabe o que fazer."
 
 #. type: itemize
 #: texinfo/texinfo.texi:17145
@@ -45364,6 +45420,10 @@ msgid ""
 "beginning of the Texinfo input, before the first @code{@@node} command.  If "
 "you use them later on in the input, @code{install-info} will not notice them."
 msgstr ""
+"Sempre use os comandos @code{@@direntry} e @code{@@dircategory} próximos ao "
+"início da entrada do Texinfo, antes do primeiro comando @code{@@node}. Se "
+"você usá-los posteriormente na entrada, @code{install-info} não os "
+"notará."
 
 #. type: itemize
 #: texinfo/texinfo.texi:17155
@@ -45377,6 +45437,16 @@ msgid ""
 "about formatting see the @samp{--calign}, @samp{--align}, and "
 "@samp{--max-width} options in @ref{Invoking @command{install-info}}."
 msgstr ""
+"@code{install-info} automaticamente reformatará a descrição das entradas "
+"de menu que estiver adicionando. Por uma questão de convenção, a "
+"descrição da entrada principal (acima, @samp{O formato da documentação "
+"GNU}) deveria começar na coluna 32, começando em zero (como em "
+"@code{what-cursor-position} no Emacs). Isso fará com que ele se alinhe com "
+"a maioria dos outros. É melhor que a descrição para utilitários "
+"individuais comece na coluna 48, sempre que possível. Para mais "
+"informações acerca de formatação, vejam-se as opções @samp{--calign}, "
+"@samp{--align} e @samp{--max-width} em @ref{Invocando "
+"@command{install-info}}."
 
 #. type: itemize
 #: texinfo/texinfo.texi:17159
@@ -45385,12 +45455,15 @@ msgid ""
 "usage specifies the `current' category; any subsequent @code{@@direntry} "
 "commands will add to that category."
 msgstr ""
+"Se você usar @code{@@dircategory} mais de uma vez no fonte do Texinfo, cada "
+"uso especificará a categoria `atual'; quaisquer comandos @code{@@direntry} "
+"subsequentes adicionarão a essa categoria."
 
 #. type: cindex
 #: texinfo/texinfo.texi:17160
 #, no-wrap
 msgid "Invoking nodes, including in dir file"
-msgstr ""
+msgstr "Invocando nós, incluindo no arquivo dir"
 
 #. type: itemize
 #: texinfo/texinfo.texi:17165
@@ -45400,23 +45473,27 @@ msgid ""
 "different programs they can run, as with the traditional @command{man} "
 "system."
 msgstr ""
+"Cada nó `Invocando' para cada programa instalado deveria ter um "
+"@code{@@direntry} correspondente. Isso permite que usuários(as) encontrem "
+"facilmente a documentação para os diferentes programas que podem executar, "
+"como acontece com o tradicional sistema @command{man}."
 
 #. type: subsection
 #: texinfo/texinfo.texi:17167 texinfo/texinfo.texi:17169
 #, no-wrap
 msgid "Invoking @command{install-info}"
-msgstr ""
+msgstr "Invocando @command{install-info}"
 
 #. type: itemize
 #: texinfo/texinfo.texi:17169
 msgid "@nodedescription @code{install-info} options."
-msgstr ""
+msgstr "@nodedescription Opções do @code{install-info}."
 
 #. type: pindex
 #: texinfo/texinfo.texi:17171
 #, no-wrap
 msgid "install-info"
-msgstr ""
+msgstr "install-info"
 
 #. type: itemize
 #: texinfo/texinfo.texi:17179
