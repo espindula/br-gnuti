@@ -45505,12 +45505,21 @@ msgid ""
 "of software installation, or when constructing a @file{dir} file for all "
 "manuals on a system.  Synopsis:"
 msgstr ""
+"@code{install-info} insere entradas de menu originárias de um arquivo Info "
+"no arquivo @file{dir} de nível superior no sistema Info (vejam-se as "
+"seções anteriores para uma explicação de como o arquivo @file{dir} "
+"funciona). @code{install-info} também remove entradas de menu do arquivo "
+"@file{dir}. Geralmente é executado como parte da instalação do software "
+"ou ao construir um arquivo @file{dir} para todos os manuais em um sistema. "
+"Sinopse:"
 
 #. type: example
 #: texinfo/texinfo.texi:17182
 #, no-wrap
 msgid "install-info [@var{option}@dots{}] [@var{info-file} [@var{dir-file}]]\n"
 msgstr ""
+"install-info [@var{opção}@dots{}] [@var{arquivo-info} "
+"[@var{arquivo-dir}]]\n"
 
 #. type: itemize
 #: texinfo/texinfo.texi:17188
@@ -45520,12 +45529,17 @@ msgid ""
 "defaults, and standard input is never used.  @code{install-info} can read "
 "only one Info file and write only one @file{dir} file per invocation."
 msgstr ""
+"Se @var{arquivo-info} ou @var{arquivo-dir} não forem especificados, as "
+"opções (descritas abaixo) que os definem precisarão ser. Não existem "
+"padrões de tempo de compilação e a entrada padrão nunca é usada. "
+"@code{install-info} consegue ler somente um arquivo Info e escrever somente "
+"um arquivo @file{dir} por invocação."
 
 #. type: cindex
 #: texinfo/texinfo.texi:17189
 #, no-wrap
 msgid "@file{dir}, created by @code{install-info}"
-msgstr ""
+msgstr "@file{dir}, criado por @code{install-info}"
 
 #. type: itemize
 #: texinfo/texinfo.texi:17192
@@ -45533,42 +45547,44 @@ msgid ""
 "If @var{dir-file} (however specified) does not exist, @code{install-info} "
 "creates it if possible (with no entries)."
 msgstr ""
+"Se @var{arquivo-dir} (independentemente de como especificado) não existir, "
+"@code{install-info} o criará, se possível (sem entradas)."
 
 #. type: cindex
 #: texinfo/texinfo.texi:17193
 #, no-wrap
 msgid "Compressed dir files, reading"
-msgstr ""
+msgstr "Arquivos dir comprimidos, lendo"
 
 #. type: cindex
 #: texinfo/texinfo.texi:17194
 #, no-wrap
 msgid "XZ-compressed dir files, reading"
-msgstr ""
+msgstr "Arquivos dir comprimidos por XZ, lendo"
 
 #. type: cindex
 #: texinfo/texinfo.texi:17195
 #, no-wrap
 msgid "Bzipped dir files, reading"
-msgstr ""
+msgstr "Arquivos dir bzipados, lendo"
 
 #. type: cindex
 #: texinfo/texinfo.texi:17196
 #, no-wrap
 msgid "Lzip-compressed dir files, reading"
-msgstr ""
+msgstr "Arquivos dir comprimidos por lzip, lendo"
 
 #. type: cindex
 #: texinfo/texinfo.texi:17197
 #, no-wrap
 msgid "LZMA-compressed dir files, reading"
-msgstr ""
+msgstr "Arquivos dir comprimidos por LZMA, lendo"
 
 #. type: cindex
 #: texinfo/texinfo.texi:17198
 #, no-wrap
 msgid "Dir files, compressed"
-msgstr ""
+msgstr "Arquivos dir, comprimidos"
 
 #. type: itemize
 #: texinfo/texinfo.texi:17207
@@ -45581,41 +45597,50 @@ msgid ""
 "@file{@var{dir-file}.xz}, @file{@var{dir-file}.bz2}, "
 "@file{@var{dir-file}.lz}, and @file{@var{dir-file}.lzma}, in that order."
 msgstr ""
+"Se algum arquivo de entrada for comprimido com @code{gzip} (@pxref{Top,,, "
+"gzip, Gzip}), @code{install-info} o descomprimirá automaticamente para "
+"leitura. E se @var{arquivo-dir} estiver comprimido, @code{install-info} "
+"também o deixará comprimido automaticamente depois de escrever quaisquer "
+"mudanças. Se o próprio @var{arquivo-dir} não existir, @code{install-info} "
+"tenta abrir @file{@var{arquivo-dir}.gz}, @file{@var{arquivo-dir}.xz}, "
+"@file{@var{arquivo-dir}.bz2}, @file{@var{arquivo-dir}.lz} e "
+"@file{@var{arquivo-dir}.lzma}, nessa ordem."
 
 #. type: itemize
 #: texinfo/texinfo.texi:17209
 msgid "Options:"
-msgstr ""
+msgstr "Opções:"
 
 #. type: item
 #: texinfo/texinfo.texi:17211
 #, no-wrap
 msgid "--add-once"
-msgstr ""
+msgstr "--add-once"
 
 #. type: opindex
 #: texinfo/texinfo.texi:17212
 #, no-wrap
 msgid "--add-once@r{, for @command{install-info}}"
-msgstr ""
+msgstr "--add-once@r{, para @command{install-info}}"
 
 #. type: table
 #: texinfo/texinfo.texi:17214
 msgid ""
 "Specifies that the entry or entries will only be put into a single section."
 msgstr ""
+"Especifica que a entrada ou entradas serão colocadas somente em uma seção."
 
 #. type: item
 #: texinfo/texinfo.texi:17215
 #, no-wrap
 msgid "--align=@var{column}"
-msgstr ""
+msgstr "--align=@var{coluna}"
 
 #. type: opindex
 #: texinfo/texinfo.texi:17216
 #, no-wrap
 msgid "--align=@var{column}@r{, for @command{install-info}}"
-msgstr ""
+msgstr "--align=@var{coluna}@r{, para @command{install-info}}"
 
 #. type: table
 #: texinfo/texinfo.texi:17221
@@ -45625,36 +45650,42 @@ msgid ""
 "@samp{35}.  It is used in conjunction with the @samp{--max-width} option.  "
 "@var{column} starts counting at 1."
 msgstr ""
+"Especifica a coluna na qual a segunda linha e as subsequentes da descrição "
+"da entrada de menu serão formatadas para começar. O padrão para essa "
+"opção é @samp{35}. É usada em conjunto com a opção @samp{--max-width}. "
+"@var{coluna} começa a contar em 1."
 
 #. type: item
 #: texinfo/texinfo.texi:17222
 #, no-wrap
 msgid "--append-new-sections"
-msgstr ""
+msgstr "--append-new-sections"
 
 #. type: opindex
 #: texinfo/texinfo.texi:17223
 #, no-wrap
 msgid "--append-new-sections@r{, for @command{install-info}}"
-msgstr ""
+msgstr "--append-new-sections@r{, para @command{install-info}}"
 
 #. type: table
 #: texinfo/texinfo.texi:17225
 msgid ""
 "Instead of alphabetizing new sections, place them at the end of the DIR file."
 msgstr ""
+"Em vez de colocar as novas seções em ordem alfabética, coloque-as no "
+"final do arquivo DIR."
 
 #. type: item
 #: texinfo/texinfo.texi:17226
 #, no-wrap
 msgid "--calign=@var{column}"
-msgstr ""
+msgstr "--calign=@var{coluna}"
 
 #. type: opindex
 #: texinfo/texinfo.texi:17227
 #, no-wrap
 msgid "--calign=@var{column}@r{, for @command{install-info}}"
-msgstr ""
+msgstr "--calign=@var{coluna}@r{, para @command{install-info}}"
 
 #. type: table
 #: texinfo/texinfo.texi:17234
@@ -45665,35 +45696,40 @@ msgid ""
 "the menu entry exceeds this column, entry's description will start on the "
 "following line.  @var{column} starts counting at 1."
 msgstr ""
+"Especifica a coluna na qual a primeira linha da descrição da entrada do "
+"menu será formatada para começar. O padrão para essa opção é "
+"@samp{33}. É usada em conjunto com a opção @samp{--max-width}. Quando o "
+"nome da entrada do menu exceder essa coluna, a descrição da entrada "
+"começará na linha seguinte. @var{coluna} começa a contar em 1."
 
 #. type: item
 #: texinfo/texinfo.texi:17235
 #, no-wrap
 msgid "--debug"
-msgstr ""
+msgstr "--debug"
 
 #. type: opindex
 #: texinfo/texinfo.texi:17236
 #, no-wrap
 msgid "--debug@r{, for @command{install-info}}"
-msgstr ""
+msgstr "--debug@r{, para @command{install-info}}"
 
 #. type: table
 #: texinfo/texinfo.texi:17238
 msgid "Report what is being done."
-msgstr ""
+msgstr "Informa o que está sendo feito."
 
 #. type: item
 #: texinfo/texinfo.texi:17239
 #, no-wrap
 msgid "--delete"
-msgstr ""
+msgstr "--delete"
 
 #. type: opindex
 #: texinfo/texinfo.texi:17240
 #, no-wrap
 msgid "--delete@r{, for @command{install-info}}"
-msgstr ""
+msgstr "--delete@r{, para @command{install-info}}"
 
 #. type: table
 #: texinfo/texinfo.texi:17245
@@ -45703,18 +45739,23 @@ msgid ""
 "@samp{.info} in either one).  Don't insert any new entries.  Any empty "
 "sections that result from the removal are also removed."
 msgstr ""
+"Deletar as entradas em @var{arquivo-info} originárias de @var{arquivo-dir}. "
+"O nome do arquivo na entrada em @var{arquivo-dir} precisa ser "
+"@var{arquivo-info} (exceto por um @samp{.info} opcional em qualquer um "
+"deles). Não insira quaisquer novas entradas. Quaisquer seções vazias que "
+"resultem da remoção também serão removidas."
 
 #. type: item
 #: texinfo/texinfo.texi:17246
 #, no-wrap
 msgid "--description=@var{text}"
-msgstr ""
+msgstr "--description=@var{texto}"
 
 #. type: opindex
 #: texinfo/texinfo.texi:17247
 #, no-wrap
 msgid "--description=@var{text}@r{, for @command{install-info}}"
-msgstr ""
+msgstr "--description=@var{texto}@r{, para @command{install-info}}"
 
 #. type: table
 #: texinfo/texinfo.texi:17251
@@ -45723,18 +45764,21 @@ msgid ""
 "description (either via @samp{--entry}, @samp{--item} or this option), the "
 "description is taken from the Info file itself."
 msgstr ""
+"Especificar a parte explicativa da entrada do menu. Se você não "
+"especificar uma descrição (ou por meio de @samp{--entry}, @samp{--item} ou "
+"dessa opção), a descrição será obtida a partir do próprio arquivo Info."
 
 #. type: item
 #: texinfo/texinfo.texi:17252
 #, no-wrap
 msgid "--dir-file=@var{name}"
-msgstr ""
+msgstr "--dir-file=@var{nome}"
 
 #. type: opindex
 #: texinfo/texinfo.texi:17253
 #, no-wrap
 msgid "--dir-file=@var{name}@r{, for @command{install-info}}"
-msgstr ""
+msgstr "--dir-file=@var{nome}@r{, para @command{install-info}}"
 
 #. type: table
 #: texinfo/texinfo.texi:17256
@@ -45742,35 +45786,37 @@ msgid ""
 "Specify file name of the Info directory file.  This is equivalent to using "
 "the @var{dir-file} argument."
 msgstr ""
+"Especificar o nome do arquivo do arquivo do diretório Info. Isso é "
+"equivalente a se usar o argumento @var{arquivo-dir}."
 
 #. type: item
 #: texinfo/texinfo.texi:17257
 #, no-wrap
 msgid "--dry-run"
-msgstr ""
+msgstr "--dry-run"
 
 #. type: opindex
 #: texinfo/texinfo.texi:17258
 #, no-wrap
 msgid "--dry-run@r{, for @command{install-info}}"
-msgstr ""
+msgstr "--dry-run@r{, para @command{install-info}}"
 
 #. type: table
 #: texinfo/texinfo.texi:17260
 msgid "Same as @samp{--test}."
-msgstr ""
+msgstr "Mesmo que @samp{--test}."
 
 #. type: item
 #: texinfo/texinfo.texi:17261
 #, no-wrap
 msgid "--entry=@var{text}"
-msgstr ""
+msgstr "--entry=@var{texto}"
 
 #. type: opindex
 #: texinfo/texinfo.texi:17262
 #, no-wrap
 msgid "--entry=@var{text}@r{, for @command{install-info}}"
-msgstr ""
+msgstr "--entry=@var{texto}@r{, para @command{install-info}}"
 
 #. type: table
 #: texinfo/texinfo.texi:17268
@@ -45781,12 +45827,18 @@ msgid ""
 "don't specify any entries, they are determined from information in the Info "
 "file itself."
 msgstr ""
+"Inserir @var{texto} como uma entrada do diretório Info; @var{texto} deveria "
+"ter a forma de uma linha de item do menu do Info mais zero ou mais linhas "
+"extras começando com espaço em branco. Se você especificar mais que uma "
+"entrada, todas elas serão adicionadas. Se você não especificar quaisquer "
+"entradas, elas serão determinadas a partir das informações no próprio "
+"arquivo Info."
 
 #. type: opindex
 #: texinfo/texinfo.texi:17270
 #, no-wrap
 msgid "--help@r{, for @command{texindex}}"
-msgstr ""
+msgstr "--help@r{, para @command{texindex}}"
 
 #. type: table
 #: texinfo/texinfo.texi:17273
@@ -45794,18 +45846,20 @@ msgid ""
 "Display a usage message with basic usage and all available options, then "
 "exit successfully."
 msgstr ""
+"Exibir uma mensagem de uso com o uso básico e todas as opções "
+"disponíveis e sair com sucesso."
 
 #. type: item
 #: texinfo/texinfo.texi:17274
 #, no-wrap
 msgid "--info-file=@var{file}"
-msgstr ""
+msgstr "--info-file=@var{arquivo}"
 
 #. type: opindex
 #: texinfo/texinfo.texi:17275
 #, no-wrap
 msgid "--info-file=@var{file}@r{, for @command{install-info}}"
-msgstr ""
+msgstr "--info-file=@var{arquivo}@r{, para @command{install-info}}"
 
 #. type: table
 #: texinfo/texinfo.texi:17278
@@ -45813,6 +45867,8 @@ msgid ""
 "Specify Info file to install in the directory.  This is equivalent to using "
 "the @var{info-file} argument."
 msgstr ""
+"Especificar o arquivo Info para instalar no diretório. Isso é equivalente "
+"a se usar o argumento @var{arquivo-info}."
 
 #. type: item
 #: texinfo/texinfo.texi:17279
