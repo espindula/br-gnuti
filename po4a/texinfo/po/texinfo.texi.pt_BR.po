@@ -45874,13 +45874,13 @@ msgstr ""
 #: texinfo/texinfo.texi:17279
 #, no-wrap
 msgid "--info-dir=@var{dir}"
-msgstr ""
+msgstr "--info-dir=@var{dir}"
 
 #. type: opindex
 #: texinfo/texinfo.texi:17280
 #, no-wrap
 msgid "--info-dir=@var{dir}@r{, for @command{install-info}}"
-msgstr ""
+msgstr "--info-dir=@var{diretório}@r{, para @command{install-info}}"
 
 #. type: table
 #: texinfo/texinfo.texi:17283
@@ -45888,35 +45888,37 @@ msgid ""
 "Specify the directory where the directory file @file{dir} resides.  "
 "Equivalent to @samp{--dir-file=@var{dir}/dir}."
 msgstr ""
+"Especificar o diretório onde reside o arquivo de diretório @file{dir}. "
+"Equivalente a @samp{--dir-file=@var{diretório}/dir}."
 
 #. type: item
 #: texinfo/texinfo.texi:17284
 #, no-wrap
 msgid "--infodir=@var{dir}"
-msgstr ""
+msgstr "--infodir=@var{diretório}"
 
 #. type: opindex
 #: texinfo/texinfo.texi:17285
 #, no-wrap
 msgid "--infodir=@var{dir}@r{, for @command{install-info}}"
-msgstr ""
+msgstr "--infodir=@var{diretório}@r{, para @command{install-info}}"
 
 #. type: table
 #: texinfo/texinfo.texi:17287
 msgid "Same as @samp{--info-dir}."
-msgstr ""
+msgstr "Mesmo que @samp{--info-dir}."
 
 #. type: item
 #: texinfo/texinfo.texi:17288
 #, no-wrap
 msgid "--item=@var{text}"
-msgstr ""
+msgstr "--item=@var{texto}"
 
 #. type: opindex
 #: texinfo/texinfo.texi:17289
 #, no-wrap
 msgid "--item=@var{text}@r{, for @command{install-info}}"
-msgstr ""
+msgstr "--item=@var{texto}@r{, para @command{install-info}}"
 
 #. type: table
 #: texinfo/texinfo.texi:17292
@@ -45924,18 +45926,20 @@ msgid ""
 "Same as @samp{--entry=@var{text}}.  An Info directory entry is actually a "
 "menu item."
 msgstr ""
+"Mesmo que @samp{--entry=@var{texto}}. Uma entrada de diretório é na "
+"verdade um item de menu."
 
 #. type: item
 #: texinfo/texinfo.texi:17293
 #, no-wrap
 msgid "--keep-old"
-msgstr ""
+msgstr "--keep-old"
 
 #. type: opindex
 #: texinfo/texinfo.texi:17294
 #, no-wrap
 msgid "--keep-old@r{, for @command{install-info}}"
-msgstr ""
+msgstr "--keep-old@r{, para @command{install-info}}"
 
 #. type: table
 #: texinfo/texinfo.texi:17297
@@ -45943,18 +45947,21 @@ msgid ""
 "Do not replace pre-existing menu entries.  When @samp{--remove} is "
 "specified, this option means that empty sections are not removed."
 msgstr ""
+"Não substituir entradas pré-existentes de menu. Quando @samp{--remove} for "
+"especificada, essa opção significa que seções vazias não serão "
+"removidas."
 
 #. type: item
 #: texinfo/texinfo.texi:17298
 #, no-wrap
 msgid "--max-width=@var{column}"
-msgstr ""
+msgstr "--max-width=@var{coluna}"
 
 #. type: opindex
 #: texinfo/texinfo.texi:17299
 #, no-wrap
 msgid "--max-width=@var{column}@r{, for @command{install-info}}"
-msgstr ""
+msgstr "--max-width=@var{coluna}@r{, para @command{install-info}}"
 
 #. type: table
 #: texinfo/texinfo.texi:17302
@@ -45962,52 +45969,54 @@ msgid ""
 "Specifies the column that the menu entry's description will be word-wrapped "
 "at.  @var{column} starts counting at 1."
 msgstr ""
+"Especifica a coluna na qual a descrição da entrada do menu será quebrada. "
+"@var{coluna} começa a contar em 1."
 
 #. type: item
 #: texinfo/texinfo.texi:17303
 #, no-wrap
 msgid "--maxwidth=@var{column}"
-msgstr ""
+msgstr "--maxwidth=@var{coluna}"
 
 #. type: opindex
 #: texinfo/texinfo.texi:17304
 #, no-wrap
 msgid "--maxwidth=@var{column}@r{, for @command{install-info}}"
-msgstr ""
+msgstr "--maxwidth=@var{coluna}@r{, para @command{install-info}}"
 
 #. type: table
 #: texinfo/texinfo.texi:17306
 msgid "Same as @samp{--max-width}."
-msgstr ""
+msgstr "Mesmo que @samp{--max-width}."
 
 #. type: item
 #: texinfo/texinfo.texi:17307
 #, no-wrap
 msgid "--menuentry=@var{text}"
-msgstr ""
+msgstr "--menuentry=@var{texto}"
 
 #. type: opindex
 #: texinfo/texinfo.texi:17308
 #, no-wrap
 msgid "--menuentry=@var{text}@r{, for @command{install-info}}"
-msgstr ""
+msgstr "--menuentry=@var{texto}@r{, para @command{install-info}}"
 
 #. type: table
 #: texinfo/texinfo.texi:17310
 msgid "Same as @samp{--name}."
-msgstr ""
+msgstr "Mesmo que @samp{--name}."
 
 #. type: item
 #: texinfo/texinfo.texi:17311
 #, no-wrap
 msgid "--name=@var{text}"
-msgstr ""
+msgstr "--name=@var{texto}"
 
 #. type: opindex
 #: texinfo/texinfo.texi:17312
 #, no-wrap
 msgid "--name=@var{text}@r{, for @command{install-info}}"
-msgstr ""
+msgstr "--name=@var{texto}@r{, para @command{install-info}}"
 
 #. type: table
 #: texinfo/texinfo.texi:17322
@@ -46021,75 +46030,84 @@ msgid ""
 "it is taken from the Info file itself.  If the Info does not contain the "
 "name, the basename of the Info file is used."
 msgstr ""
+"Especificar a parte do nome da entrada do menu. Se o @var{texto} não "
+"começar com um asterisco @samp{*}, será presumido ser o texto depois do "
+"@samp{*} e antes dos parênteses que especifica o arquivo Info. Caso "
+"contrário, @var{texto} será tomado literalmente e será tomado como "
+"definindo o texto até e incluindo o primeiro ponto (um espaço será "
+"posposto se necessário). Se você não especificar o nome (seja por meio de "
+"@samp{--entry}, de @samp{--item} ou dessa opção), ele será obtido a "
+"partir do próprio arquivo Info. Se o Info não contiver o nome, o nome base "
+"do arquivo Info será usado."
 
 #. type: item
 #: texinfo/texinfo.texi:17323
 #, no-wrap
 msgid "--no-indent"
-msgstr ""
+msgstr "--no-indent"
 
 #. type: opindex
 #: texinfo/texinfo.texi:17324
 #, no-wrap
 msgid "--no-indent@r{, for @command{install-info}}"
-msgstr ""
+msgstr "--no-indent@r{, para @command{install-info}}"
 
 #. type: table
 #: texinfo/texinfo.texi:17326
 msgid "Suppress formatting of new entries into the @file{dir} file."
-msgstr ""
+msgstr "Suprimir formatação de novas entradas no arquivo @file{dir}."
 
 #. type: item
 #: texinfo/texinfo.texi:17327
 #, no-wrap
 msgid "--quiet"
-msgstr ""
+msgstr "--quiet"
 
 #. type: opindex
 #: texinfo/texinfo.texi:17329
 #, no-wrap
 msgid "--quiet@r{, for @command{install-info}}"
-msgstr ""
+msgstr "--quiet@r{, para @command{install-info}}"
 
 #. type: opindex
 #: texinfo/texinfo.texi:17330
 #, no-wrap
 msgid "--silent@r{, for @command{install-info}}"
-msgstr ""
+msgstr "--silent@r{, para @command{install-info}}"
 
 #. type: table
 #: texinfo/texinfo.texi:17332
 msgid "Suppress warnings, etc., for silent operation."
-msgstr ""
+msgstr "Suprimir avisos, entre outras, para operação silente."
 
 #. type: item
 #: texinfo/texinfo.texi:17333
 #, no-wrap
 msgid "--remove"
-msgstr ""
+msgstr "--remove"
 
 #. type: opindex
 #: texinfo/texinfo.texi:17334
 #, no-wrap
 msgid "--remove@r{, for @command{install-info}}"
-msgstr ""
+msgstr "--remove@r{, para @command{install-info}}"
 
 #. type: table
 #: texinfo/texinfo.texi:17336
 msgid "Same as @samp{--delete}."
-msgstr ""
+msgstr "Mesmo que @samp{--delete}."
 
 #. type: item
 #: texinfo/texinfo.texi:17337
 #, no-wrap
 msgid "--remove-exactly"
-msgstr ""
+msgstr "--remove-exactly"
 
 #. type: opindex
 #: texinfo/texinfo.texi:17338
 #, no-wrap
 msgid "--remove-exactly@r{, for @command{install-info}}"
-msgstr ""
+msgstr "--remove-exactly@r{, para @command{install-info}}"
 
 #. type: table
 #: texinfo/texinfo.texi:17342
@@ -46097,18 +46115,21 @@ msgid ""
 "Also like @samp{--delete}, but only entries if the Info file name matches "
 "exactly; @code{.info} and/or @code{.gz} suffixes are @emph{not} ignored."
 msgstr ""
+"Também como @samp{--delete}, mas somente entradas se o nome do arquivo Info "
+"corresponder exatamente; sufixos @code{.info} e(ou) @code{.gz} @emph{não} "
+"são ignorados."
 
 #. type: item
 #: texinfo/texinfo.texi:17343
 #, no-wrap
 msgid "--section=@var{sec}"
-msgstr ""
+msgstr "--section=@var{seção}"
 
 #. type: opindex
 #: texinfo/texinfo.texi:17344
 #, no-wrap
 msgid "--section=@var{sec}@r{, for @command{install-info}}"
-msgstr ""
+msgstr "--section=@var{seção}@r{, para @command{install-info}}"
 
 #. type: table
 #: texinfo/texinfo.texi:17350
@@ -46119,23 +46140,33 @@ msgid ""
 "information in the Info file itself.  If the Info file doesn't specify a "
 "section, the menu entries are put into the Miscellaneous section."
 msgstr ""
+"Colocar as entradas desse arquivo na seção @var{seção} do diretório. Se "
+"você especificar mais que uma seção, todas as entradas serão adicionadas "
+"em cada uma das seções. Se você não especificar nenhuma seção, elas "
+"serão determinadas a partir das informações no próprio arquivo Info. Se "
+"o arquivo Info não especificar uma seção, as entradas do menu serão "
+"colocadas na seção Diversos."
 
 #. type: item
 #: texinfo/texinfo.texi:17351
 #, no-wrap
 msgid "--section @var{regex} @var{sec}"
-msgstr ""
+msgstr "--section @var{expressãoregular} @var{seção}"
 
 #. type: opindex
 #: texinfo/texinfo.texi:17352
 #, no-wrap
 msgid "--section @var{regex} @var{sec}@r{, for @command{install-info}}"
 msgstr ""
+"--section @var{expressãoregular} @var{seção}@r{, para "
+"@command{install-info}}"
 
 #. type: table
 #: texinfo/texinfo.texi:17354
 msgid "Same as @samp{--regex=@var{regex} --section=@var{sec} --add-once}."
 msgstr ""
+"Mesmo que @samp{--regex=@var{expressãoregular} --section=@var{seção} "
+"--add-once}."
 
 #. type: table
 #: texinfo/texinfo.texi:17358
@@ -46144,6 +46175,9 @@ msgid ""
 "does not always guess correctly.  Here is the heuristic that "
 "@code{install-info} uses:"
 msgstr ""
+"@code{install-info} tenta detectar quando essa sintaxe alternativa for "
+"usada, mas nem sempre adivinha corretamente. Aqui está a heurística que "
+"@code{install-info} usa:"
 
 #. type: enumerate
 #: texinfo/texinfo.texi:17362
@@ -46151,6 +46185,8 @@ msgid ""
 "If the second argument to @code{--section} starts with a hyphen, the "
 "original syntax is presumed."
 msgstr ""
+"Se o segundo argumento para @code{--section} começar com um hífen, a "
+"sintaxe original será presumida."
 
 #. type: enumerate
 #: texinfo/texinfo.texi:17366
@@ -46158,11 +46194,13 @@ msgid ""
 "If the second argument to @code{--section} is a file that can be opened, the "
 "original syntax is presumed."
 msgstr ""
+"Se o segundo argumento para @code{--section} for um arquivo que possa ser "
+"aberto, a sintaxe original será presumida."
 
 #. type: enumerate
 #: texinfo/texinfo.texi:17369
 msgid "Otherwise the alternate syntax is used."
-msgstr ""
+msgstr "Caso contrário, a sintaxe alternativa será usada."
 
 #. type: table
 #: texinfo/texinfo.texi:17375
@@ -46171,18 +46209,22 @@ msgid ""
 "it happens to be a file that can be opened, the syntax should be changed to "
 "@samp{--regex=@var{regex} --section=@var{sec} --add-once}."
 msgstr ""
+"Quando a heurística falhar porque teu título de seção começa com um "
+"hífen ou acontecer de ser um arquivo que possa ser aberto, a sintaxe "
+"deveria ser mudada para @samp{--regex=@var{expressãoregular} "
+"--section=@var{seção} --add-once}."
 
 #. type: item
 #: texinfo/texinfo.texi:17376
 #, no-wrap
 msgid "--regex=@var{regex}"
-msgstr ""
+msgstr "--regex=@var{expressãoregular}"
 
 #. type: opindex
 #: texinfo/texinfo.texi:17377
 #, no-wrap
 msgid "--regex=@var{regex}@r{, for @command{install-info}}"
-msgstr ""
+msgstr "--regex=@var{expressãoregular}@r{, para @command{install-info}}"
 
 #. type: table
 #: texinfo/texinfo.texi:17382
@@ -46192,6 +46234,11 @@ msgid ""
 "sections.  Specify @var{regex} using basic regular expression syntax, more "
 "or less as used with @command{grep}, for example."
 msgstr ""
+"Colocar entradas desse arquivo em alguma seção que corresponda a "
+"@var{expressãoregular}. Se mais que uma seção corresponder, todas as "
+"entradas serão adicionadas em cada uma das seções. Especifique "
+"@var{expressãoregular} usando sintaxe básica de expressão regular, mais "
+"ou menos como usada com @command{grep}, por exemplo."
 
 #. type: item
 #: texinfo/texinfo.texi:17383
