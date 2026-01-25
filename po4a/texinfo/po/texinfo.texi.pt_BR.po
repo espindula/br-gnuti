@@ -46244,65 +46244,65 @@ msgstr ""
 #: texinfo/texinfo.texi:17383
 #, no-wrap
 msgid "--test"
-msgstr ""
+msgstr "--test"
 
 #. type: opindex
 #: texinfo/texinfo.texi:17384
 #, no-wrap
 msgid "--test@r{, for @command{install-info}}"
-msgstr ""
+msgstr "--test@r{, para @command{install-info}}"
 
 #. type: table
 #: texinfo/texinfo.texi:17386
 msgid "Suppress updating of the directory file."
-msgstr ""
+msgstr "Suprimir atualização do arquivo de diretório."
 
 #. type: opindex
 #: texinfo/texinfo.texi:17388
 #, no-wrap
 msgid "--version@r{, for @command{install-info}}"
-msgstr ""
+msgstr "--version@r{, para @command{install-info}}"
 
 #. type: cindex
 #: texinfo/texinfo.texi:17389
 #, no-wrap
 msgid "Version number, for install-info"
-msgstr ""
+msgstr "Número de versão, para install-info"
 
 #. type: table
 #: texinfo/texinfo.texi:17391
 msgid "Display version information and exit successfully."
-msgstr ""
+msgstr "Exibir informações de versão e sair exitosamente."
 
 #. type: node
 #: texinfo/texinfo.texi:17395
 #, no-wrap
 msgid "Tag and Split Files"
-msgstr ""
+msgstr "Arquivos de Etiqueta e de Divisão"
 
 #. type: section
 #: texinfo/texinfo.texi:17396
 #, no-wrap
 msgid "Tag Files and Split Files"
-msgstr ""
+msgstr "Arquivos de Etiqueta e Arquivos de Divisão"
 
 #. type: cindex
 #: texinfo/texinfo.texi:17398
 #, no-wrap
 msgid "Tag table"
-msgstr ""
+msgstr "Tabela de etiquetas"
 
 #. type: cindex
 #: texinfo/texinfo.texi:17399
 #, no-wrap
 msgid "nonsplit Info file"
-msgstr ""
+msgstr "Arquivo Info não dividido"
 
 #. type: cindex
 #: texinfo/texinfo.texi:17400
 #, no-wrap
 msgid "split Info file"
-msgstr ""
+msgstr "Arquivo Info dividido"
 
 #. type: itemize
 #: texinfo/texinfo.texi:17404
@@ -46311,12 +46311,15 @@ msgid ""
 "quickly.  Info files can be @dfn{nonsplit} (also called @dfn{unsplit}) or "
 "@dfn{split}."
 msgstr ""
+"Arquivos Info sempre contêm uma @dfn{tabela de etiquetas}, para poder "
+"saltar rapidamente para nós. Arquivos Info podem ser @dfn{não divididos} "
+"(também chamados @dfn{indivisíveis}) ou @dfn{divididos}."
 
 #. type: cindex
 #: texinfo/texinfo.texi:17405
 #, no-wrap
 msgid "Indirect subfiles"
-msgstr ""
+msgstr "Subarquivos indiretos"
 
 #. type: itemize
 #: texinfo/texinfo.texi:17415
@@ -46330,6 +46333,14 @@ msgid ""
 "300,000 characters may be modified with @option{--split-size} "
 "(@pxref{Invoking @command{texi2any}})."
 msgstr ""
+"Se o arquivo Info contiver menos que 300.000 caracteres, o arquivo deveria "
+"ser não dividido. Nesse caso, a tabela de etiquetas deveria aparecer no "
+"final do arquivo Info. Se o arquivo Texinfo contiver mais que 300.000 "
+"caracteres, os processadores Texinfo dividirão o grande arquivo Info em "
+"subarquivos @dfn{indiretos} menores de cerca de 300.000 caracteres cada. Com "
+"@command{texi2any}, a divisão pode ser evitada por @option{--no-split}, e o "
+"tamanho padrão de 300.000 caracteres pode ser modificado com "
+"@option{--split-size} (@pxref{Invocando @command{texi2any}})."
 
 #. type: itemize
 #: texinfo/texinfo.texi:17420
@@ -46338,6 +46349,10 @@ msgid ""
 "original file that contains just the tag table and references to the files "
 "that were split off.  The split-off files are called @dfn{indirect} files."
 msgstr ""
+"Quando um arquivo for dividido, o próprio Info faz uso uma versão "
+"abreviada do arquivo original que contém apenas a tabela de etiquetas e "
+"referências para os arquivos que foram divididos. Os arquivos divididos "
+"são chamados de arquivos @dfn{indiretos}."
 
 #. type: itemize
 #: texinfo/texinfo.texi:17426
@@ -46348,6 +46363,11 @@ msgid ""
 "version of the original file continues to have the name specified by "
 "@code{@@setfilename} or the input file name."
 msgstr ""
+"Os arquivos divididos têm nomes que são criados pospondo @w{@samp{-1}}, "
+"@w{@samp{-2}}, @w{@samp{-3}} e assim por diante ao nome do arquivo de "
+"saída, especificado pelo comando @code{@@setfilename} ou pelo nome do "
+"arquivo de entrada. A versão abreviada do arquivo original continua tendo o "
+"nome especificado por @code{@@setfilename} ou o nome do arquivo de entrada."
 
 #. type: itemize
 #: texinfo/texinfo.texi:17429
@@ -46355,6 +46375,8 @@ msgid ""
 "At one stage in writing this document, for example, the Info file was saved "
 "as the file @file{test-texinfo} and that file looked like this:"
 msgstr ""
+"Em um estágio da redação deste documento, por exemplo, o arquivo Info foi "
+"salvo como o arquivo @file{test-texinfo} e esse arquivo se parecia com isto:"
 
 #. type: group
 #: texinfo/texinfo.texi:17435
@@ -46365,6 +46387,10 @@ msgid ""
 "from file: new-texinfo-manual.texinfo\n"
 "\n"
 msgstr ""
+"Arquivo Info: test-texinfo,    -*-Text-*-\n"
+"produzido pelo texinfo-format-buffer\n"
+"a partir do arquivo: new-texinfo-manual.texinfo\n"
+"\n"
 
 #. type: group
 #: texinfo/texinfo.texi:17440
@@ -46375,6 +46401,10 @@ msgid ""
 "test-texinfo-1: 102\n"
 "test-texinfo-2: 50422\n"
 msgstr ""
+"^_\n"
+"Indireto:\n"
+"test-texinfo-1: 102\n"
+"test-texinfo-2: 50422\n"
 
 #. type: group
 #: texinfo/texinfo.texi:17448
@@ -46387,6 +46417,12 @@ msgid ""
 "Node: overview^?104\n"
 "Node: info file^?1271\n"
 msgstr ""
+"test-texinfo-3: 101300\n"
+"^_^L\n"
+"Tabela de etiquetas:\n"
+"(Indireto)\n"
+"Nó: visão geral^?104\n"
+"Nó: arquivo info^?1271\n"
 
 #. type: group
 #: texinfo/texinfo.texi:17453
@@ -46396,6 +46432,9 @@ msgid ""
 "Node: conventions^?6855\n"
 "@dots{}\n"
 msgstr ""
+"Nó: manual impresso^?4853\n"
+"Nó: convenções^?6855\n"
+"@dots{}\n"
 
 #. type: itemize
 #: texinfo/texinfo.texi:17462
@@ -46406,6 +46445,11 @@ msgid ""
 "@samp{Indirect:}.  The tag table is listed after the line that says "
 "@samp{Tag table:}."
 msgstr ""
+"(Mas @file{test-texinfo} tinha muito mais nós que os mostrados aqui). Cada "
+"um dos arquivos indiretos, divididos, @file{test-texinfo-1}, "
+"@file{test-texinfo-2} e @file{test-texinfo-3}, está listado nesse arquivo "
+"depois da linha que diz @samp{Indireto:}. A tabela de etiquetas está "
+"listada depois da linha que diz @samp{Tabela de etiquetas:}."
 
 #. type: itemize
 #: texinfo/texinfo.texi:17469
@@ -46417,6 +46461,12 @@ msgid ""
 "location of the beginning of the node, in bytes from the beginning of the "
 "(unsplit) output."
 msgstr ""
+"Na lista de arquivos indiretos, o número seguinte ao nome do arquivo "
+"registra o número cumulativo de baites nos arquivos indiretos precedentes, "
+"sem contar a própria lista de arquivos, a tabela de etiquetas ou qualquer "
+"texto de permissão no primeiro arquivo. Na tabela de etiquetas, o número "
+"seguinte ao nome do nó registra o local do início do nó, em baites a "
+"partir do início da saída gerada (indivisível)."
 
 #. type: itemize
 #: texinfo/texinfo.texi:17478
@@ -46429,6 +46479,14 @@ msgid ""
 "files from being split with @code{texinfo-format-buffer} and how to validate "
 "the structure of the nodes, see @ref{Using @code{Info-validate}}."
 msgstr ""
+"Se você estiver usando @code{texinfo-format-buffer} para criar arquivos "
+"Info, você pode querer executar o comando @code{Info-validate}. (O comando "
+"@command{texi2any} faz um trabalho tão bom por si só que você não "
+"precisa de @code{Info-validate}). No entanto, você não consegue executar o "
+"comando de verificação de nó @kbd{M-x Info-validate} sobre arquivos "
+"indiretos. Para informações acerca de como evitar que arquivos sejam "
+"divididos com @code{texinfo-format-buffer} e como validar a estrutura dos "
+"nós, veja-se @ref{Usando @code{Info-validate}}."
 
 #. type: section
 #: texinfo/texinfo.texi:17480 texinfo/texinfo.texi:17481
