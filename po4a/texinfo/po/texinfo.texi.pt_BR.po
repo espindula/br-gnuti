@@ -46492,7 +46492,7 @@ msgstr ""
 #: texinfo/texinfo.texi:17480 texinfo/texinfo.texi:17481
 #, no-wrap
 msgid "Info Format FAQ"
-msgstr ""
+msgstr "Perguntas Frequentes do Formato Info"
 
 #. type: itemize
 #: texinfo/texinfo.texi:17485
@@ -46500,6 +46500,8 @@ msgid ""
 "Here are some questions that have been frequently asked on the project "
 "mailing lists and elsewhere."
 msgstr ""
+"Aqui estão algumas perguntas que tem sido feitas frequentemente nas listas "
+"de discussão e em outros lugares."
 
 #. type: item
 #: texinfo/texinfo.texi:17487
@@ -46508,6 +46510,8 @@ msgid ""
 "Why when I run @samp{info @var{foo}} do I get the same output as @samp{man "
 "@var{foo}}?"
 msgstr ""
+"Por que quando executo @samp{info @var{foo}} eu obtenho a mesma saída que "
+"@samp{man @var{foo}}?"
 
 #. type: table
 #: texinfo/texinfo.texi:17493
@@ -46516,12 +46520,16 @@ msgid ""
 "install all the Info manuals by default.  This is regrettable, as often the "
 "Info manual provides more information than the provided man page."
 msgstr ""
+"Verifique se os manuais do Info estão instalados. Nem todas as "
+"distribuições GNU/Linux instalam todos os manuais do Info por padrão. "
+"Isso é lamentável, pois frequentemente o manual do Info fornece mais "
+"informações que a página de manual fornecida."
 
 #. type: item
 #: texinfo/texinfo.texi:17494
 #, no-wrap
 msgid "Why not use HTML instead of Info?"
-msgstr ""
+msgstr "Por que não usar HTML em vez do Info?"
 
 #. type: table
 #: texinfo/texinfo.texi:17503
@@ -46534,6 +46542,13 @@ msgid ""
 "GNU/Linux distributions provide packages for the installation of HTML "
 "manuals."
 msgstr ""
+"Manuais raramente são escritos no próprio formato Info, mas são gerados a "
+"partir do fonte Texinfo pelo programa @command{texi2any}. @command{texi2any} "
+"consegue gerar HTML e também Info a partir do fonte Texinfo. Você também "
+"consegue acessar e baixar manuais em HTML a partir do sítio web do GNU "
+"(@uref{https://www.gnu.org/manual/manual.html}). Além disso, algumas "
+"distribuições GNU/Linux fornecem pacotes para a instalação de manuais "
+"HTML."
 
 #. type: table
 #: texinfo/texinfo.texi:17512
@@ -46547,6 +46562,14 @@ msgid ""
 "browsing locally installed Texinfo documentation in some form of HTML can be "
 "improved in the future."
 msgstr ""
+"Info ainda tem algumas vantagens sobre HTML para documentação instalada "
+"localmente. Os navegadores do Info suportam pesquisa de índice e suportam "
+"linques entre manuais instalados localmente em vários locais. É importante "
+"ter-se documentação instalada localmente em tua máquina em vez de "
+"depender da Internet; isso torna o acesso à documentação mais confiável "
+"e garante que ela corresponda às versões instaladas dos pacotes. Espera-se "
+"que o suporte para navegar na documentação do Texinfo instalada localmente "
+"em alguma forma de HTML possa ser melhorado no futuro."
 
 #. type: item
 #: texinfo/texinfo.texi:17514
@@ -46555,6 +46578,8 @@ msgid ""
 "Why provide the command-line @command{info} program when the Emacs Info "
 "reader is better?"
 msgstr ""
+"Por que fornecer o programa de linha de comando @command{info} quando o "
+"leitor Info do Emacs é melhor?"
 
 #. type: table
 #: texinfo/texinfo.texi:17525
@@ -46568,6 +46593,15 @@ msgid ""
 "another program called @command{pinfo}, but this lacks in important features "
 "like index lookup.)"
 msgstr ""
+"O leitor Info do Emacs consegue exibir imagens e suporta completamente usar "
+"um mouse. Não existem muitas diferenças entre os leitores Info além "
+"disso. @command{info} de linha de comando pode ser configurado para mudar as "
+"combinações padrão de teclas, bem como mudar a cor de referências "
+"cruzadas e de resultados de pesquisa, e para habilitar suporte à rolagem do "
+"mouse. Você não deveria precisar ter experiência com o editor Emacs para "
+"usar @command{info}. (Alguns(mas) recomendam outro programa chamado "
+"@command{pinfo}, mas esse carece de recursos importantes como pesquisa de "
+"índice)."
 
 #. type: table
 #: texinfo/texinfo.texi:17533
@@ -46580,6 +46614,13 @@ msgid ""
 "manual all at once in the @command{less} pager with @samp{info @var{foo} | "
 "less}.)"
 msgstr ""
+"Alguns(mas) preferem poder percorrer o manual inteiro de uma vez (como "
+"acontece com páginas de manual), em vez de ficarem limitados(as) a um `nó' "
+"de conteúdo por vez. É claro que não existe consideração pelo gosto, "
+"mas um bloco de texto não estruturado torna-se mais estranho à medida que "
+"um manual se torna mais longo e mais complicado. (No entanto, se realmente "
+"quiser, você consegue visualizar um manual Info de uma só vez no paginador "
+"@command{less} com @samp{info @var{foo} | less})."
 
 #. type: item
 #: texinfo/texinfo.texi:17534
