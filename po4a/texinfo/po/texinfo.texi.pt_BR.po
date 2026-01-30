@@ -46627,6 +46627,7 @@ msgstr ""
 #, no-wrap
 msgid "Why do I have `see' appearing in front of all of my links?"
 msgstr ""
+"Por que eu tenho `veja-se' aparecendo em frente de todos os meus linques?"
 
 #. type: table
 #: texinfo/texinfo.texi:17542
@@ -46638,12 +46639,19 @@ msgid ""
 "@code{@@pxref} and @code{@@ref} commands in Texinfo output this marker in "
 "the Info output, and the `see' text is only appropriate for @code{@@pxref}."
 msgstr ""
+"Por padrão, o modo Info do Emacs ou muda o marcador @samp{*note} para "
+"referências cruzadas para `veja-se' ou o oculta completamente. "
+"@command{info} de linha de comando faz o mesmo se "
+"@code{hide-note-references} estiver configurado. Infelizmente, não existe "
+"maneira de fazer isso confiavelmente, já que ambos os comandos "
+"@code{@@pxref} e @code{@@ref} no Texinfo geram esse marcador na saída Info, "
+"e o texto `veja-se' é apropriado somente para @code{@@pxref}."
 
 #. type: item
 #: texinfo/texinfo.texi:17543
 #, no-wrap
 msgid "Yes, but how do I get a plain link, with no extra markup?"
-msgstr ""
+msgstr "Sim, mas como eu obtenho um linque simples, sem marcações extras?"
 
 #. type: table
 #: texinfo/texinfo.texi:17548
@@ -46652,6 +46660,9 @@ msgid ""
 "the viewers, and without the @samp{*note} text there would be nothing to "
 "mark text as a link."
 msgstr ""
+"Você não pode. Info é um formato de texto simples que é exibido "
+"principalmente como está nos visualizadores e sem o texto @samp{*note} não "
+"existiria nada para marcar o texto como um linque."
 
 #. type: table
 #: texinfo/texinfo.texi:17553
@@ -46661,12 +46672,16 @@ msgid ""
 "working cross-reference in Info output or in a printed copy of the manual, "
 "though."
 msgstr ""
+"Para formatos de saída como HTML, você pode usar o comando @code{@@link} "
+"para produzir um linque simples. @xref{@code{@@link}}. No entanto, isso não "
+"produz uma referência cruzada funcional na saída Info ou em uma cópia "
+"impressa do manual."
 
 #. type: item
 #: texinfo/texinfo.texi:17555
 #, no-wrap
 msgid "Why do lines containing links appear mysteriously short?"
-msgstr ""
+msgstr "Por que linhas contendo linques parecem misteriosamente curtas?"
 
 #. type: table
 #: texinfo/texinfo.texi:17559
@@ -46674,6 +46689,9 @@ msgid ""
 "This due to Emacs (or @command{info} with @code{hide-note-references} set to "
 "@samp{On}) hiding @samp{*note} strings, as mentioned above."
 msgstr ""
+"Isso se deve ao Emacs (ou @command{info} com @code{hide-note-references} "
+"configurado como @samp{On}) ocultando sequências de caracteres "
+"@samp{*note}, conforme mencionado acima."
 
 #. type: item
 #: texinfo/texinfo.texi:17560
@@ -46681,6 +46699,8 @@ msgstr ""
 msgid ""
 "Can the Info format be extended to support fonts, colors or reflowable text?"
 msgstr ""
+"Pode o formato Info ser estendido para suportar fontes, cores ou texto "
+"refluível?"
 
 #. type: table
 #: texinfo/texinfo.texi:17565
@@ -46689,6 +46709,9 @@ msgid ""
 "Extra markup added to Info files would be displayed to the user, making "
 "files ugly and unreadable."
 msgstr ""
+"Qualquer extensão seria incompatível com programas de visualização do "
+"Info existentes. Marcações extras adicionadas aos arquivos Info seriam "
+"exibidas para o(a) usuário(a), tornando os arquivos feios e ilegíveis."
 
 #. type: table
 #: texinfo/texinfo.texi:17571
@@ -46699,6 +46722,12 @@ msgid ""
 "of prose), or whether line breaks should be kept (e.g.@: a code sample, or "
 "poem)."
 msgstr ""
+"Quando arquivos Texinfo são processados em arquivos Info, as informações "
+"acerca de quais comandos do Texinfo foram usados para marcar o texto são "
+"perdidas. Além disso, não é possível detectar com segurança se o texto "
+"consegue ser refluido (por exemplo@: um parágrafo de prosa) ou se as "
+"quebras de linha deveriam ser mantidas (por exemplo@: uma amostra de código "
+"ou um poema)."
 
 #. type: table
 #: texinfo/texinfo.texi:17575
@@ -46707,24 +46736,27 @@ msgid ""
 "want more, you are recommended to use the HTML output from "
 "@command{texi2any} instead."
 msgstr ""
+"O propósito central do Info é o de exibir documentação em terminais de "
+"texto. Se você quiser mais, é recomendável usar a saída HTML proveniente "
+"do @command{texi2any}."
 
 #. type: cindex
 #: texinfo/texinfo.texi:17579 texinfo/texinfo.texi:17581
 #: texinfo/texinfo.texi:17583
 #, no-wrap
 msgid "Generating HTML"
-msgstr ""
+msgstr "Gerando HTML"
 
 #. type: itemize
 #: texinfo/texinfo.texi:17581
 msgid "@nodedescription Details on HTML output."
-msgstr ""
+msgstr "@nodedescription Detalhes acerca da saída HTML."
 
 #. type: cindex
 #: texinfo/texinfo.texi:17584
 #, no-wrap
 msgid "Outputting HTML"
-msgstr ""
+msgstr "Gerando HTML"
 
 #. type: itemize
 #: texinfo/texinfo.texi:17589
@@ -46733,6 +46765,9 @@ msgid ""
 "@option{--html} option, it will generate HTML, for web browsers and other "
 "programs.  This chapter gives some details on such HTML output."
 msgstr ""
+"@command{texi2any} gera saída Info por padrão, mas dada a opção "
+"@option{--html}, ele gerará HTML, para navegadores da web e outros "
+"programas. Este capítulo fornece alguns detalhes acerca dessa saída HTML."
 
 #. type: itemize
 #: texinfo/texinfo.texi:17597
@@ -46745,6 +46780,15 @@ msgid ""
 "every aspect of HTML output formatting.  Initialization files contain code "
 "and are loaded by @option{--init-file} (@pxref{Invoking @command{texi2any}})."
 msgstr ""
+"@command{texi2any} tem muitas variáveis de personalização definidas "
+"pelo(a) usuário(a) com as quais você consegue influenciar a saída HTML@. "
+"@xref{Variáveis de Personalização}. Em particular, existe suporte para "
+"realce de sintaxe em @code{@@example} (@pxref{Realce de Sintaxe}). Você "
+"também pode escrever os assim chamados @dfn{arquivos de inicialização}, "
+"ou @dfn{arquivos init} para abreviar, para modificar quase todos os aspectos "
+"da formatação da saída HTML@. Os arquivos de inicialização contêm "
+"código e são carregados por @option{--init-file} (@pxref{Invocando "
+"@command{texi2any}})."
 
 #. type: itemize
 #: texinfo/texinfo.texi:17602
@@ -46754,6 +46798,10 @@ msgid ""
 "compressed HTML Help format files that can be subsequently converted to the "
 "CHM format."
 msgstr ""
+"Alguns arquivos de inicialização são mantidos com o Texinfo e instalados "
+"no caso padrão. Por exemplo, @file{chm.pm} produz os arquivos comprimidos "
+"intermediários no formato Help do HTML que podem ser posteriormente "
+"convertidos para o formato CHM."
 
 #. type: itemize
 #: texinfo/texinfo.texi:17606
@@ -46762,6 +46810,10 @@ msgid ""
 "customization files is in a separate manual.  @xref{,,, texi2any_api, GNU "
 "Texinfo @command{texi2any} Output Customization}."
 msgstr ""
+"A documentação da adaptação da saída HTML do @command{texi2any} usando "
+"arquivos de personalização está em um manual separado. @xref{,,, "
+"texi2any_api, Personalização da Saída do @command{texi2any} do GNU "
+"Texinfo}."
 
 #. type: section
 #: texinfo/texinfo.texi:17608 texinfo/texinfo.texi:17610
