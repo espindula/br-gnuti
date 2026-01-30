@@ -46819,18 +46819,18 @@ msgstr ""
 #: texinfo/texinfo.texi:17608 texinfo/texinfo.texi:17610
 #, no-wrap
 msgid "HTML Translation"
-msgstr ""
+msgstr "Tradução do HTML"
 
 #. type: itemize
 #: texinfo/texinfo.texi:17610
 msgid "@nodedescription Details of the HTML output."
-msgstr ""
+msgstr "@nodedescription Detalhes da saída HTML."
 
 #. type: cindex
 #: texinfo/texinfo.texi:17612
 #, no-wrap
 msgid "HTML translation"
-msgstr ""
+msgstr "Tradução do HTML"
 
 #. type: itemize
 #: texinfo/texinfo.texi:17617
@@ -46839,6 +46839,9 @@ msgid ""
 "The output is intentionally quite plain for maximum portability and "
 "accessibility."
 msgstr ""
+"O HTML gerado pelo @command{texi2any} gera saída HTML padrão. A saída "
+"gerada é intencionalmente bastante simples para máxima portabilidade e "
+"acessibilidade."
 
 #. type: itemize
 #: texinfo/texinfo.texi:17621
@@ -46847,12 +46850,16 @@ msgid ""
 "(@pxref{Customization Variables}).  If you cannot accomplish a reasonable "
 "customization, feel free to report that."
 msgstr ""
+"Você consegue personalizar a saída gerada via CSS (@pxref{CSS do HTML}) ou "
+"outros meios (@pxref{Variáveis de Personalização}). Se você não "
+"conseguir realizar uma personalização razoável, sinta-se à vontade para "
+"informar isso."
 
 #. type: cindex
 #: texinfo/texinfo.texi:17622
 #, no-wrap
 msgid "Navigation bar, in HTML output"
-msgstr ""
+msgstr "Barra de navegação, na saída gerada HTML"
 
 #. type: itemize
 #: texinfo/texinfo.texi:17629
@@ -46863,18 +46870,24 @@ msgid ""
 "split files.  Header @code{<link>} elements in split output support "
 "Info-like navigation with browsers which implement this feature."
 msgstr ""
+"@strong{Barra de navegação:} Por padrão, uma barra de navegação é "
+"inserida no início de cada nó, análogo à saída gerada Info. Se a "
+"opção @samp{--no-headers} for usada, a barra de navegação só será "
+"inserida no início dos arquivos divididos. Elementos de cabeçalho "
+"@code{<link>} na saída dividida suportam navegação semelhante à Info com "
+"navegadores que implementem esse recurso."
 
 #. type: cindex
 #: texinfo/texinfo.texi:17630
 #, no-wrap
 msgid "Escaping to HTML"
-msgstr ""
+msgstr "Escapagem para HTML"
 
 #. type: cindex
 #: texinfo/texinfo.texi:17631
 #, no-wrap
 msgid "Raw HTML"
-msgstr ""
+msgstr "HTML bruto"
 
 #. type: itemize
 #: texinfo/texinfo.texi:17639
@@ -46887,12 +46900,19 @@ msgid ""
 "@samp{&} characters which have special significance in HTML)@.  "
 "@xref{Conditional Commands}."
 msgstr ""
+"@strong{HTML bruto}: @command{texi2any} incluirá segmentos do fonte do "
+"Texinfo entre @code{@@ifhtml} e @code{@@end ifhtml} na saída gerada HTML "
+"(mas não qualquer dos outros condicionais, por padrão). Fonte entre "
+"@code{@@html} e @code{@@end html} é passado sem mudança para a saída "
+"gerada (ou seja, suprimindo a escapagem normal dos caracteres de entrada "
+"@samp{<}, @samp{>} e @samp{&} os quais têm significância especial no "
+"HTML)@. @xref{Comandos Condicionais}."
 
 #. type: cindex
 #: texinfo/texinfo.texi:17640
 #, no-wrap
 msgid "HTML output, browser compatibility of"
-msgstr ""
+msgstr "Saída gerada HTML, compatibilidade de navegador da"
 
 #. type: itemize
 #: texinfo/texinfo.texi:17647
@@ -46903,6 +46923,12 @@ msgid ""
 "pedantic enforcement of some standard or another.  Our overriding goal is to "
 "help users, not blindly comply with standards."
 msgstr ""
+"@strong{Padrões}: Não é nosso objetivo intencionalmente, e nem mesmo "
+"sempre possível, passar por cada teste de validação concebível sem "
+"quaisquer diagnósticos. Diferentes testes de validação têm objetivos "
+"diferentes, frequentemente acerca da imposição pedante de algum padrão ou "
+"de outro. Nosso objetivo primordial é o de ajudar usuários(as), não o de "
+"cumprir cegamente os padrões."
 
 #. type: itemize
 #: texinfo/texinfo.texi:17651
@@ -46911,6 +46937,10 @@ msgid ""
 "@emph{practical} browser or EPUB reader portability problems as a bug "
 "(@pxref{Reporting Bugs})."
 msgstr ""
+"Por favor, informe a saída gerada proveniente de uma execução sem erros "
+"do @command{texi2any} que tenha problemas @emph{práticos} de portabilidade "
+"do navegador ou do leitor de EPUB como um defeito (@pxref{Informando "
+"Defeitos})."
 
 #. type: itemize
 #: texinfo/texinfo.texi:17658
@@ -46922,29 +46952,35 @@ msgid ""
 "(and for standards to reincorporate useful features that were "
 "dropped@dots{})."
 msgstr ""
+"Na prática, o HTML produzido pelo @command{texi2any} é lentamente ajustado "
+"ao longo do tempo para o padrão HTML mais recente, enquanto também tenta "
+"manter compatibilidade com HTML produzido anteriormente. Nós usamos "
+"marcação de transição e tentamos ser lentos o suficiente para dar tempo "
+"para os diversos leitores de HTML se ajustarem (e para os padrões "
+"reincorporarem recursos úteis que foram eliminados@dots{})."
 
 #. type: section
 #: texinfo/texinfo.texi:17660 texinfo/texinfo.texi:17662
 #, no-wrap
 msgid "HTML Splitting"
-msgstr ""
+msgstr "Dividindo HTML"
 
 #. type: itemize
 #: texinfo/texinfo.texi:17662
 msgid "@nodedescription How HTML output is split."
-msgstr ""
+msgstr "@nodedescription Como saída HTML é dividida."
 
 #. type: cindex
 #: texinfo/texinfo.texi:17663
 #, no-wrap
 msgid "Split HTML output"
-msgstr ""
+msgstr "Dividir saída HTML"
 
 #. type: cindex
 #: texinfo/texinfo.texi:17664
 #, no-wrap
 msgid "HTML output, split"
-msgstr ""
+msgstr "Saída HTML, dividir"
 
 #. type: itemize
 #: texinfo/texinfo.texi:17669
@@ -46953,6 +46989,9 @@ msgid ""
 "writes HTML output into (basically) one output file per Texinfo source "
 "@code{@@node}."
 msgstr ""
+"Ao dividir a saída gerada em nós (que é o padrão), @command{texi2any} "
+"escreve a saída gerada HTML em (basicamente) um arquivo de saída por "
+"@code{@@node} do fonte do Texinfo."
 
 #. type: itemize
 #: texinfo/texinfo.texi:17677
@@ -46964,6 +47003,13 @@ msgid ""
 "after this treatment, they are written consecutively to the same file, with "
 "HTML anchors so each can be referred to independently."
 msgstr ""
+"Cada nome de arquivo da saída gerada é o nome do nó com espaços "
+"substituídos por @samp{-} e caracteres especiais mudados para @samp{_} "
+"seguidos pelo ponto de código deles em hexadecimal (@pxref{Xref do HTML}). "
+"Isso é para torná-lo portável e fácil de usar como um nome de arquivo. "
+"No caso incomum de dois nós terem o mesmo nome depois desse tratamento, "
+"eles serão escritos consecutivamente no mesmo arquivo, com âncoras HTML, "
+"de modo que cada um possa ser referido independentemente."
 
 #. type: itemize
 #: texinfo/texinfo.texi:17684
@@ -46974,6 +47020,13 @@ msgid ""
 "You can also pretend to be on a case insensitive filesystem by setting the "
 "customization variable @code{CASE_INSENSITIVE_FILENAMES}."
 msgstr ""
+"Se @command{texi2any} for executado em um sistema que não distinga "
+"maiúsculas e minúsculas em nomes de arquivos, nós que sejam iguais, "
+"exceto pelas maiúsculas e minúsculas (por exemplo, @samp{index} e "
+"@samp{Index}), também serão inseridos no mesmo arquivo de saída com "
+"âncoras. Você também consegue fingir que está em um sistema de arquivos "
+"que não diferencia maiúsculas de minúsculas, configurando a variável de "
+"personalização @code{CASE_INSENSITIVE_FILENAMES}."
 
 #. type: itemize
 #: texinfo/texinfo.texi:17692
@@ -46985,6 +47038,13 @@ msgid ""
 "redirection file is output for every node in order to more reliably support "
 "cross-references to that manual (@pxref{HTML Xref})."
 msgstr ""
+"Também é possível dividir nos capítulos ou nas seções com "
+"@option{--split} (@pxref{Invocando @command{texi2any}}). Nesse caso, os "
+"nomes dos arquivos serão construídos depois do nome do nó associado com o "
+"comando de seccionamento relevante. Além disso, a menos que "
+"@option{--no-node-files} seja especificado, um arquivo de redireção será "
+"gerado para cada nó, para a finalidade de suportar mais confiavelmente as "
+"referências cruzadas para esse manual (@pxref{Xref do HTML})."
 
 #. type: itemize
 #: texinfo/texinfo.texi:17699
