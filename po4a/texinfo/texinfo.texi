@@ -14218,24 +14218,28 @@ can also be set using the environment variable
 
  @itemize -
 
- @item the current directory is not cluttered with plethora of temporary files.
+ @item
+the current directory is not cluttered with plethora of temporary files.
 
- @item clutter can be even further reduced using @option{--build-dir=dir}: all
-   the @code{*.t2d} directories are stored there.
+ @item
+clutter can be even further reduced using @option{--build-dir=dir}: all the
+@code{*.t2d} directories are stored there.
 
- @item clutter can be reduced to zero using, e.g.,
-   @option{--build-dir=/tmp/\$USER.t2d} or @option{--build-dir=\$HOME/.t2d}.
+ @item
+clutter can be reduced to zero using, e.g.,
+@option{--build-dir=/tmp/\$USER.t2d} or @option{--build-dir=\$HOME/.t2d}.
 
- @item the output file is updated after every successful @TeX{} run, for
-   sake of concurrent visualization of the output.  In a @samp{local} build
-   the viewer stops during the whole @TeX{} run.
+ @item
+the output file is updated after every successful @TeX{} run, for sake of
+concurrent visualization of the output.  In a @samp{local} build the viewer
+stops during the whole @TeX{} run.
 
- @item if the compilation fails, the previous state of the output file
-   is preserved.
+ @item
+if the compilation fails, the previous state of the output file is preserved.
 
- @item @acronym{PDF} and @acronym{DVI} compilation are kept in separate
-   subdirectories
-   preventing any possibility of auxiliary file incompatibility.
+ @item
+@acronym{PDF} and @acronym{DVI} compilation are kept in separate subdirectories
+preventing any possibility of auxiliary file incompatibility.
 
  @end itemize
 
@@ -17774,26 +17778,30 @@ file, any such @samp{@@}-directive is simply copied into the
 output, as follows:
 
 @itemize
-@item If @var{file} contains only normal CSS declarations, it is
-included after the default CSS, thus overriding it.
+@item
+If @var{file} contains only normal CSS declarations, it is included after the
+default CSS, thus overriding it.
 
-@item If @var{file} begins with @samp{@@import} specifications (see
-below), then the @samp{import}'s are included first (they have to come
-first, according to the standard), and then the default CSS is
-included.  If you need to override the default CSS from an
-@samp{@@import}, you can do so with the @samp{!@: important} CSS
-construct, as in:
+@item
+If @var{file} begins with @samp{@@import} specifications (see below), then the
+@samp{import}'s are included first (they have to come first, according to the
+standard), and then the default CSS is included.  If you need to override the
+default CSS from an @samp{@@import}, you can do so with the @samp{!@:
+important} CSSconstruct, as in:
+
 @example
 pre.example @{ font-size: inherit ! important @}
 @end example
 
-@item If @var{file} contains both @samp{@@import} and inline CSS
-specifications, the @samp{@@import}'s are included first, then
-default CSS, and lastly the inline CSS from @var{file}.
+@item
+If @var{file} contains both @samp{@@import} and inline CSS specifications, the
+@samp{@@import}'s are included first, then default CSS, and lastly the inline
+CSS from @var{file}.
 
-@item Any @@-directive other than @samp{@@import} and @samp{@@charset}
-is treated as a CSS declaration, meaning the default CSS is included
-and then the rest of the file is prepended.
+@item
+Any @@-directive other than @samp{@@import} and @samp{@@charset} is treated as
+a CSS declaration, meaning the default CSS is included and then the rest of the
+file is prepended.
 @end itemize
 
 If the CSS file is malformed or erroneous, the output
