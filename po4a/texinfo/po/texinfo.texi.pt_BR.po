@@ -20,7 +20,7 @@ msgstr ""
 "PO-Revision-Date: 2025-05-13 01:28-0300\n"
 "Last-Translator: Jamenson Ferreira Espindula de Almeida Melo "
 "<jafesp@gmail.com>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language-Team: none\n"
 "Language: Brazilian Portuguese\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -30393,18 +30393,18 @@ msgstr ""
 #: texinfo/texinfo.texi:11632
 #, no-wrap
 msgid "Function set-var (value)"
-msgstr ""
+msgstr "Function set-var (value)"
 
 #. type: defline
 #: texinfo/texinfo.texi:11633
 #, no-wrap
 msgid "{Settable Variable} var"
-msgstr ""
+msgstr "{Settable Variable} var"
 
 #. type: defblock
 #: texinfo/texinfo.texi:11635
 msgid "Description of set-var and var."
-msgstr ""
+msgstr "Descrição de set-var e de var."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:11639
@@ -35252,6 +35252,8 @@ msgid ""
 "{Builtin} \\n"
 "ame\\ \\args\\"
 msgstr ""
+"{Builtin} \\n"
+"ame\\ \\args\\"
 
 #. type: defblock
 #: texinfo/texinfo.texi:13561
@@ -35363,6 +35365,8 @@ msgid ""
 "{Func} {\\type\\} \\n"
 "ame\\ \\args\\"
 msgstr ""
+"{Func} {\\type\\} \\n"
+"ame\\ \\args\\"
 
 #. type: defblock
 #: texinfo/texinfo.texi:13610
@@ -47301,6 +47305,9 @@ msgid ""
 "as a CSS declaration, meaning the default CSS is included and then the rest "
 "of the file is prepended."
 msgstr ""
+"Qualquer diretiva @@ diferente de @samp{@@import} e de @samp{@@charset} "
+"será tratada como uma declaração CSS, significando que o CSS padrão "
+"será incluído e a seguir o restante do arquivo será preposto."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:17812
@@ -47310,6 +47317,11 @@ msgid ""
 "and @samp{;} characters are looked for the text is blindly copied into the "
 "output.  Comments in the CSS file may or may not be included in the output."
 msgstr ""
+"Se o arquivo CSS estiver malformado ou incorreto, a saída gerada será "
+"inespecificada. O significado do arquivo CSS não será interpretado de "
+"maneira alguma; os caracteres especiais @samp{@@} e @samp{;} serão "
+"procurados para que o texto seja copiado cegamente na saída gerada. "
+"Comentários no arquivo CSS podem ou não serem incluídos na saída gerada."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:17816
@@ -47318,59 +47330,63 @@ msgid ""
 "user-definable customization variables with which you can influence the HTML "
 "output.  @xref{Customization Variables}."
 msgstr ""
+"Além das possibilidades oferecidas pelo CSS, @command{texi2any} tem muitas "
+"variáveis de personalização definíveis pelo(a) usuário(a) com as quais "
+"você consegue influenciar a saída HTML@. @xref{Variáveis de "
+"Personalização}."
 
 #. type: node
 #: texinfo/texinfo.texi:17818
 #, no-wrap
 msgid "@code{@@documentdescription}"
-msgstr ""
+msgstr "@code{@@documentdescription}"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:17820
 msgid "@nodedescription Document summary for the HTML output."
-msgstr ""
+msgstr "@nodedescription Sumário do documento para a saída HTML."
 
 #. type: section
 #: texinfo/texinfo.texi:17820
 #, no-wrap
 msgid "@code{@@documentdescription}: Summary Text"
-msgstr ""
+msgstr "@code{@@documentdescription}: Texto do Sumário"
 
 #. type: findex
 #: texinfo/texinfo.texi:17822 texinfo/texinfo.texi:17828
 #, no-wrap
 msgid "documentdescription"
-msgstr ""
+msgstr "documentdescription"
 
 #. type: cindex
 #: texinfo/texinfo.texi:17823
 #, no-wrap
 msgid "Document description"
-msgstr ""
+msgstr "Descrição de documento"
 
 #. type: cindex
 #: texinfo/texinfo.texi:17824
 #, no-wrap
 msgid "Description of document"
-msgstr ""
+msgstr "Descrição do documento"
 
 #. type: cindex
 #: texinfo/texinfo.texi:17825
 #, no-wrap
 msgid "Summary of document"
-msgstr ""
+msgstr "Sumário do documento"
 
 #. type: cindex
 #: texinfo/texinfo.texi:17826
 #, no-wrap
 msgid "Abstract of document"
-msgstr ""
+msgstr "Resumo do documento"
 
 #. type: cindex
 #: texinfo/texinfo.texi:17827
 #, no-wrap
 msgid "@code{<meta>} HTML tag, and document description"
-msgstr ""
+msgstr "Etiqueta @code{<meta>} do HTML, e descrição de documento"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:17836
@@ -47381,6 +47397,11 @@ msgid ""
 "taken from the @code{@@settitle} command (@pxref{@code{@@settitle}}).  To "
 "change this, use the @code{@@documentdescription} environment, as in:"
 msgstr ""
+"Ao produzir saída HTML para um documento, um elemento @samp{<meta>} é "
+"escrito no @samp{<head>} para dar alguma ideia do conteúdo do documento. "
+"Por padrão, essa @dfn{descrição} será o título do documento, tomado a "
+"partir do comando @code{@@settitle} (@pxref{@code{@@settitle}}). Para mudar "
+"isso, use o ambiente @code{@@documentdescription}, como em:"
 
 #. type: example
 #: texinfo/texinfo.texi:17841
@@ -47390,42 +47411,45 @@ msgid ""
 "descriptive text.\n"
 "@@end documentdescription\n"
 msgstr ""
+"@@documentdescription\n"
+"texto descritivo.\n"
+"@@end documentdescription\n"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:17845
 msgid ""
 "This will produce the following output in the @samp{<head>} of the HTML:"
-msgstr ""
+msgstr "Isso produzirá a seguinte saída no @samp{<head>} do HTML:"
 
 #. type: example
 #: texinfo/texinfo.texi:17848
 #, no-wrap
 msgid "<meta name=description content=\"descriptive text.\">\n"
-msgstr ""
+msgstr "<meta name=description content=\"texto descritivo.\">\n"
 
 #. type: cindex
 #: texinfo/texinfo.texi:17851 texinfo/texinfo.texi:17853
 #: texinfo/texinfo.texi:17856
 #, no-wrap
 msgid "Generating EPUB"
-msgstr ""
+msgstr "Gerando EPUB"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:17853
 msgid "@nodedescription Details on the EPUB output."
-msgstr ""
+msgstr "@nodedescription Detalhes acerca da saída gerada EPUB."
 
 #. type: cindex
 #: texinfo/texinfo.texi:17855
 #, no-wrap
 msgid "EPUB, generating"
-msgstr ""
+msgstr "EPUB, gerando"
 
 #. type: cindex
 #: texinfo/texinfo.texi:17857
 #, no-wrap
 msgid "Outputting EPUB"
-msgstr ""
+msgstr "Gerando EPUB"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:17863
@@ -47435,12 +47459,16 @@ msgid ""
 "archive container, holding informative files as well as the manual rendered "
 "in HTML."
 msgstr ""
+"EPUB é um formato projetado para leitura de livros eletrônicos em "
+"dispositivos portáteis. @command{texi2any} gerava EPUB 3.2 em 2022. Um "
+"arquivo EPUB é um contêiner de arquivamento ZIP, contendo arquivos "
+"informativos, bem como o manual renderizado em HTML."
 
 #. type: cindex
 #: texinfo/texinfo.texi:17864
 #, no-wrap
 msgid "@code{Archive::Zip}, for EPUB file output"
-msgstr ""
+msgstr "@code{Archive::Zip}, para saída do arquivo EPUB"
 
 #. type: vindex
 #: texinfo/texinfo.texi:17865
@@ -47449,6 +47477,8 @@ msgid ""
 "EPUB_CREATE_CONTAINER_FILE @subentry @r{avoiding} @code{Archive::Zip} "
 "@r{dependency}"
 msgstr ""
+"EPUB_CREATE_CONTAINER_FILE @subentry @r{evitando} @code{Archive::Zip} "
+"@r{dependência}"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:17872
@@ -47460,6 +47490,12 @@ msgid ""
 "customization variable @code{EPUB_CREATE_CONTAINER_FILE} set to 0, it is not "
 "an error if @code{Archive::Zip} is not installed."
 msgstr ""
+"A geração do arquivo EPUB depende do módulo Perl @code{Archive::Zip} "
+"estando instalado. Essa dependência é verificada em tempo de execução. "
+"No caso padrão, tentar gerar EPUB sem essa dependência gera um erro. "
+"Porém, se o arquivo de saída EPUB não for gerado, com a variável de "
+"personalização @code{EPUB_CREATE_CONTAINER_FILE} configurada como 0, não "
+"será um erro se @code{Archive::Zip} não estiver instalado."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:17878
@@ -47470,35 +47506,40 @@ msgid ""
 "files and directories needed for the EPUB file by setting the "
 "@code{EPUB_KEEP_CONTAINER_FOLDER} customization variable to 1."
 msgstr ""
+"Os testes do @command{texi2any} relacionados à geração de EPUB não "
+"exigem a instalação do @code{Archive::Zip}, pois eles configuram "
+"@code{EPUB_CREATE_CONTAINER_FILE} como 0 e mantêm o diretório contendo os "
+"arquivos e diretórios necessários para o arquivo EPUB configurando a "
+"variável de personalização @code{EPUB_KEEP_CONTAINER_FOLDER} como 1."
 
 #. type: node
 #: texinfo/texinfo.texi:17880
 #, no-wrap
 msgid "EPUB Output File and Directory"
-msgstr ""
+msgstr "Arquivo e Diretório da Saída Gerada EPUB"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:17882
 msgid "@nodedescription Use syntax highlighting in code excerpts."
-msgstr ""
+msgstr "@nodedescription Use o realce de sintaxe em trechos de código."
 
 #. type: subsection
 #: texinfo/texinfo.texi:17882
 #, no-wrap
 msgid "Container Directory and Output Files"
-msgstr ""
+msgstr "Diretório do Contêiner e Arquivos da Saída Gerada"
 
 #. type: cindex
 #: texinfo/texinfo.texi:17884
 #, no-wrap
 msgid "Container directory for EPUB"
-msgstr ""
+msgstr "Diretório de contêiner para EPUB"
 
 #. type: cindex
 #: texinfo/texinfo.texi:17885
 #, no-wrap
 msgid "EPUB Container directory"
-msgstr ""
+msgstr "Diretório de contêiner de EPUB"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:17897
@@ -47513,6 +47554,16 @@ msgid ""
 "directory and all its contents are removed.  The container directory is also "
 "removed after the final EPUB file has been generated in the default case."
 msgstr ""
+"Um diretório contendo os arquivos e diretórios necessários para o formato "
+"EPUB é criado durante a saída do EPUB. O nome desse diretório de "
+"contêiner é derivado do nome base do arquivo de entrada (ou seja, qualquer "
+"extensão é removida), com @code{_epub_package} posposto. Se um diretório "
+"de saída for especificado, com @option{--output} ou com a variável de "
+"personalização @code{SUBDIR}, o diretório de contêiner será criado "
+"nesse diretório em vez do diretório atual. No início de uma nova "
+"execução, o diretório de contêiner, e todo o conteúdo dele, é "
+"removido. O diretório de contêiner também é removido depois do arquivo "
+"EPUB final ter sido gerado no caso padrão."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:17901
@@ -47521,12 +47572,16 @@ msgid ""
 "of the container directory.  Image files referred to from the Texinfo "
 "manual, if found, are copied to subdirectories of the container directory."
 msgstr ""
+"Os arquivos HTML produzidos a partir do manual do Texinfo serão gerados em "
+"subdiretórios do diretório de contêiner. Arquivos de imagem referenciados "
+"a partir do manual do Texinfo, se encontrados, serão copiados para "
+"subdiretórios do diretório de contêiner."
 
 #. type: cindex
 #: texinfo/texinfo.texi:17902
 #, no-wrap
 msgid "EPUB output file"
-msgstr ""
+msgstr "Arquivo de saída EPUB"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:17910
@@ -47539,6 +47594,13 @@ msgid ""
 "@option{--output} or @code{SUBDIR}; only the container directory is placed "
 "there, as explained just above."
 msgstr ""
+"O arquivo de saída EPUB é um arquivamento ZIP do diretório de contêiner. "
+"O nome do arquivo será derivado do nome base, com a extensão @code{.epub} "
+"posposta. Se um arquivo de saída for especificado, com @option{--output} ou "
+"com a função de personalização @code{OUTFILE}, esse nome de arquivo "
+"será usado. O arquivo EPUB de saída nunca será colocado no diretório "
+"especificado por @option{--output} ou por @code{SUBDIR}; somente o "
+"diretório de contêiner será colocado lá, conforme recém explicado acima."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:17915
@@ -47548,22 +47610,26 @@ msgid ""
 "left after the final EPUB file has been generated if "
 "@code{EPUB_KEEP_CONTAINER_FOLDER} is set."
 msgstr ""
+"O arquivo de saída EPUB não será gerado se a variável de "
+"personalização @code{EPUB_CREATE_CONTAINER_FILE} estiver configurada como "
+"0. O diretório de contêiner será deixado depois do arquivo EPUB final ter "
+"sido gerado se @code{EPUB_KEEP_CONTAINER_FOLDER} estiver configurada."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:17917
 msgid "@xref{Invoking @command{texi2any}}."
-msgstr ""
+msgstr "@xref{Invocando @command{texi2any}}."
 
 #. type: subsection
 #: texinfo/texinfo.texi:17919 texinfo/texinfo.texi:17921
 #, no-wrap
 msgid "EPUB Cross-References"
-msgstr ""
+msgstr "Referências Cruzadas do EPUB"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:17921
 msgid "@nodedescription Cross-references in HTML output."
-msgstr ""
+msgstr "@nodedescription Referências cruzadas na saída gerada HTML."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:17932
@@ -47577,18 +47643,27 @@ msgid ""
 "missing cross-references information.  If these warnings are unwanted, set "
 "@code{CHECK_HTMLXREF} to 0."
 msgstr ""
+"O formato EPUB não suporta referências a partir de um arquivo EPUB para "
+"outro arquivo EPUB. Portanto quaisquer referências para manuais "
+"``externos'' do Texinfo deveriam ser resolvidas para uma URL externa. "
+"@command{texi2any} produz esses linques com configuração de referência "
+"cruzada do HTML (@pxref{Configuração Xref do HTML}). Como os linques no "
+"EPUB resultante estarão incorretos se nenhuma informação for encontrada "
+"para as referências cruzadas, @command{texi2any} emitirá um aviso por "
+"padrão para ausência de informações de referências cruzadas. Se esses "
+"avisos forem indesejados, configure @code{CHECK_HTMLXREF} como 0."
 
 #. type: node
 #: texinfo/texinfo.texi:17934
 #, no-wrap
 msgid "EPUB HTML"
-msgstr ""
+msgstr "HTML do EPUB"
 
 #. type: subsection
 #: texinfo/texinfo.texi:17935
 #, no-wrap
 msgid "HTML Generated for EPUB"
-msgstr ""
+msgstr "HTML Gerado para EPUB"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:17944
@@ -47601,6 +47676,13 @@ msgid ""
 "appear in the EPUB output, while a title page is generated.  This is "
 "obtained by setting @code{NO_TOP_NODE_OUTPUT}."
 msgstr ""
+"O HTML gerado para EPUB é conforme com XHTML, codificado em UTF-8 e "
+"formatado sem os habituais cabeçalhos e rodapés de navegação do HTML@. A "
+"maioria desses recursos é habilitada com variáveis de personalização, "
+"tais como @code{USE_XML_SYNTAX} ou @code{OUTPUT_FILE_NAME_ENCODING}. Alguns "
+"recursos da saída gerada impressa são usados no EPUB. Em particular, o nó "
+"Top não aparece na saída gerada do EPUB, enquanto uma página de título "
+"é gerada. Isso é obtido configurando-se @code{NO_TOP_NODE_OUTPUT}."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:17954
@@ -47614,34 +47696,45 @@ msgid ""
 "however, the variables reset are used internally for the conversion, and "
 "should not interact with any customization set by the user."
 msgstr ""
+"Os valores das variáveis de personalização @code{OUTFILE} e @code{SUBDIR} "
+"correspondem inicialmente ao contêiner do diretório EPUB e(ou) ao arquivo "
+"da saída EPUB (@pxref{Arquivo e Diretório da Saída Gerada EPUB}). Esses "
+"valores de variáveis de personalização são desdefinidos ou "
+"reconfigurados para os locais no diretório de contêiner onde os arquivos "
+"XHTML forem gerados para a geração de HTML@. Isso está mencionado aqui "
+"porque reconfigurar-se variáveis de personalização é incomum; "
+"entretanto, as variáveis reconfiguradas são usadas internamente para a "
+"conversão, deveriam não interagir com nenhuma personalização configurada "
+"pelo(a) usuário(a)."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:17956
 msgid "@xref{HTML Customization Variables}."
-msgstr ""
+msgstr "@xref{Variáveis de Personalização do HTML}."
 
 #. type: node
 #: texinfo/texinfo.texi:17958
 #, no-wrap
 msgid "Syntax Highlighting"
-msgstr ""
+msgstr "Realce de Sintaxe"
 
 #. type: section
 #: texinfo/texinfo.texi:17959
 #, no-wrap
 msgid "Code Examples Syntax Highlighting in HTML"
-msgstr ""
+msgstr "Realçamento de Sintaxe de Exemplos de Códigos no HTML"
 
 #. type: command{#1}
 #: texinfo/texinfo.texi:17960
 #, no-wrap
 msgid "source-highlight"
-msgstr ""
+msgstr "source-highlight"
 
 #. type: quotation
 #: texinfo/texinfo.texi:17965
 msgid "Source highlighting is experimental, feedback is welcomed."
 msgstr ""
+"Realçamento de fonte é experimental; retroalimentação será bemvinda."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:17975
@@ -47654,6 +47747,14 @@ msgid ""
 "(@pxref{@code{@@example}}), or @code{HIGHLIGHT_SYNTAX_DEFAULT_LANGUAGE} if "
 "set and there is no first argument."
 msgstr ""
+"O suporte para realçamento de sintaxe de código-fonte está disponível no "
+"@command{texi2any} para a saída gerada HTML, com a ajuda de software "
+"externo. Esse recurso ficará ativado configurando-se "
+"@code{HIGHLIGHT_SYNTAX}. O realçamento de código-fonte é configurado para "
+"blocos @code{@@example}. A linguagem especificada para realçamento de "
+"sintaxe será o primeiro argumento na linha @code{@@example} "
+"(@pxref{@code{@@example}}) ou @code{HIGHLIGHT_SYNTAX_DEFAULT_LANGUAGE}, se "
+"configurada, e não existir primeiro argumento."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:17977
