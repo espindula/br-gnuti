@@ -47762,12 +47762,14 @@ msgid ""
 "The @code{HIGHLIGHT_SYNTAX} value determines the command used for "
 "highlighting:"
 msgstr ""
+"O valor de @code{HIGHLIGHT_SYNTAX} determina o comando usado para "
+"realçamento:"
 
 #. type: item
 #: texinfo/texinfo.texi:17978
 #, no-wrap
 msgid "highlight"
-msgstr ""
+msgstr "realçe"
 
 #. type: table
 #: texinfo/texinfo.texi:17981
@@ -47775,23 +47777,25 @@ msgid ""
 "Use @command{highlight} from "
 "@url{http://www.andre-simon.de/doku/highlight/en/highlight.php};"
 msgstr ""
+"Usar @command{highlight} proveniente de "
+"@url{http://www.andre-simon.de/doku/highlight/en/highlight.php};"
 
 #. type: item
 #: texinfo/texinfo.texi:17981
 #, no-wrap
 msgid "pygments"
-msgstr ""
+msgstr "pygments"
 
 #. type: table
 #: texinfo/texinfo.texi:17983
 msgid "Use @command{pygmentize} from @url{https://pygments.org/};"
-msgstr ""
+msgstr "Usar @command{pygmentize} proveniente de @url{https://pygments.org/};"
 
 #. type: item
 #: texinfo/texinfo.texi:17983
 #, no-wrap
 msgid "anything else"
-msgstr ""
+msgstr "tudo o mais"
 
 #. type: table
 #: texinfo/texinfo.texi:17985
@@ -47799,35 +47803,37 @@ msgid ""
 "Use @command{source-highlight} (@pxref{,,,source-highlight, GNU "
 "Source-highlight})."
 msgstr ""
+"Usar @command{source-highlight} (@pxref{,,,source-highlight, GNU "
+"Source-highlight})."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:17988
 msgid "@xref{Other Customization Variables}."
-msgstr ""
+msgstr "@xref{Outras Variáveis de Personalização}."
 
 #. type: node
 #: texinfo/texinfo.texi:17990
 #, no-wrap
 msgid "HTML Xref"
-msgstr ""
+msgstr "Xref do HTML"
 
 #. type: section
 #: texinfo/texinfo.texi:17991
 #, no-wrap
 msgid "HTML Cross-references"
-msgstr ""
+msgstr "Referências Cruzadas do HTML"
 
 #. type: cindex
 #: texinfo/texinfo.texi:17992
 #, no-wrap
 msgid "HTML cross-references"
-msgstr ""
+msgstr "Referências cruzadas do HTML"
 
 #. type: cindex
 #: texinfo/texinfo.texi:17993
 #, no-wrap
 msgid "Cross-references, in HTML output"
-msgstr ""
+msgstr "Referências cruzadas, na saída gerada HTML"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:17999
@@ -47837,6 +47843,10 @@ msgid ""
 "Texinfo can cooperate with other programs, such as @command{texi2html}, by "
 "writing mutually compatible HTML files."
 msgstr ""
+"Referências cruzadas entre manuais do Texinfo em formato HTML tornam-se "
+"linques @code{<a>} padrão do HTML. Esta seção descreve o algoritmo usado, "
+"de modo que o Texinfo consiga cooperar com outros programas, como "
+"@command{texi2html}, escrevendo arquivos HTML mutuamente compatíveis."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:18003
@@ -47845,6 +47855,9 @@ msgid ""
 "for a Texinfo file.  Since no issues of compatibility arise in such cases, "
 "we do not need to specify this."
 msgstr ""
+"Este algoritmo pode ou não ser usado para linques @emph{dentro} de saída "
+"HTML para um arquivo do Texinfo. Como não surgem problemas de "
+"compatibilidade em tais casos, nós não precisamos especificar isso."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:18008
@@ -47854,59 +47867,64 @@ msgid ""
 "one file, and a @dfn{split} manual has a file for each node.  (@xref{HTML "
 "Splitting}.)"
 msgstr ""
+"Nós tentamos suportar referências para tais manuais ``externos'' em ambas "
+"as formas, monolítica e dividida. Um manual @dfn{monolítico} (mono) está "
+"inteiramente contido em um arquivo, e um manual @dfn{dividido} tem um "
+"arquivo para cada nó. (@xref{Dividindo HTML})."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:18011
 msgid "The algorithm was primarily devised by Patrice Dumas in 2003--04."
 msgstr ""
+"O algoritmo foi desenvolvido principalmente por Patrice Dumas em 2003--04."
 
 #. type: menuentry
 #: texinfo/texinfo.texi:18019
 msgid "Link Basics: HTML Xref Link Basics."
-msgstr ""
+msgstr "Básicos do Linque: Básicos do Linque Xref do HTML."
 
 #. type: menuentry
 #: texinfo/texinfo.texi:18019
 msgid "Node Expansion: HTML Xref Node Name Expansion."
-msgstr ""
+msgstr "Expansão de Nó: Expansão do Xref do HTML de Nome de Nó"
 
 #. type: menuentry
 #: texinfo/texinfo.texi:18019
 msgid "Command Expansion: HTML Xref Command Expansion."
-msgstr ""
+msgstr "Expansão de Comando: Expansão de Comando do Xref do HTML."
 
 #. type: menuentry
 #: texinfo/texinfo.texi:18019
 msgid "8-bit Expansion: HTML Xref 8-bit Character Expansion."
-msgstr ""
+msgstr "Expansão de 8 bits: Expansão de Caracteres de 8 bits do Xref."
 
 #. type: menuentry
 #: texinfo/texinfo.texi:18019
 msgid "Mismatch: HTML Xref Mismatch."
-msgstr ""
+msgstr "Descorrespondência: Descorrespondência do Xref do HTML."
 
 #. type: menuentry
 #: texinfo/texinfo.texi:18019
 msgid "Configuration: HTML Xref Configuration"
-msgstr ""
+msgstr "Configuração: Configuração do Xref do HTML"
 
 #. type: node
 #: texinfo/texinfo.texi:18022
 #, no-wrap
 msgid "HTML Xref Link Basics"
-msgstr ""
+msgstr "Básicos do Linque do Xref do HTML"
 
 #. type: subsection
 #: texinfo/texinfo.texi:18023
 #, no-wrap
 msgid "HTML Cross-reference Link Basics"
-msgstr ""
+msgstr "Básicos do Linque de Referência Cruzada do HTML"
 
 #. type: cindex
 #: texinfo/texinfo.texi:18024
 #, no-wrap
 msgid "HTML cross-references @subentry link basics"
-msgstr ""
+msgstr "Referências cruzadas do HTML @subentry básicos do linque"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:18029
@@ -47915,12 +47933,16 @@ msgid ""
 "directory part, a file part, and a target part.  We always assume the "
 "@code{http} protocol.  For example:"
 msgstr ""
+"Para nossos propósitos, um linque de HTML consiste de quatro componentes: "
+"um nome de dispositivo, uma parte de diretório, uma parte de arquivo e uma "
+"parte de alvo. Nós sempre assumimos o protocolo @code{http}. Por exemplo:"
 
 #. type: example
 #: texinfo/texinfo.texi:18032
 #, no-wrap
 msgid "http://@var{host}/@var{dir}/@var{file}.html#@var{target}\n"
 msgstr ""
+"http://@var{dispositivo}/@var{diretório}/@var{arquivo}.html#@var{alvo}\n"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:18038
@@ -47930,11 +47952,15 @@ msgid ""
 "References}), and from @dfn{external information} (@pxref{HTML Xref "
 "Configuration})."
 msgstr ""
+"As informações para construir um linque vêm do nome do nó e do nome do "
+"manual no comando de referência cruzada no fonte do Texinfo "
+"(@pxref{Referências Cruzadas}) e de @dfn{informações externas} "
+"(@pxref{Configuração do Xref do HTML})."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:18040
 msgid "We now consider each part in turn."
-msgstr ""
+msgstr "Nós agora consideramos cada parte na sequência."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:18044
@@ -47943,6 +47969,10 @@ msgid ""
 "literal string @samp{localhost}, or, according to the rules for HTML links, "
 "the @samp{http://localhost/} could be omitted entirely."
 msgstr ""
+"O @var{dispositivo} está rigidamente ligado para ser o dispositivo local. "
+"Isso poderia ser ou a sequência de caracteres literal @samp{localhost} ou, "
+"de acordo com as regras para linques HTML, o @samp{http://localhost/} "
+"poderia ser inteiramente omitido."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:18052
@@ -47954,6 +47984,13 @@ msgid ""
 "either available as a monolithic file @file{@var{manual}.html}, or a split "
 "subdirectory @file{@var{manual}_html/*.html}.  Here are the cases:"
 msgstr ""
+"As partes @var{diretório} e @var{arquivo} são mais complicadas e dependem "
+"da natureza relativa de dividido/mono de ambos, o manual sendo processado e "
+"do manual ao qual a referência cruzada se refere. A ideia subjacente é a "
+"de que existe um diretório para manuais do Texinfo em HTML, e um "
+"determinado @var{manual} está ou disponível como um arquivo monolítico "
+"@file{@var{manual}.html} ou como um subdiretório dividido "
+"@file{@var{manual}_html/*.html}. Aqui estão os casos:"
 
 #. type: itemize
 #: texinfo/texinfo.texi:18058
@@ -47962,6 +47999,9 @@ msgid ""
 "directory is @samp{../@var{referent}_html/} and the file is the expanded "
 "node name (described later)."
 msgstr ""
+"Se o manual atual for dividido e o manual referente também for dividido, o "
+"diretório será @samp{../@var{referente}_html/} e o arquivo será o nome "
+"expandido do nó (descrito posteriormente)."
 
 #. type: itemize
 #: texinfo/texinfo.texi:18062
@@ -47969,6 +48009,8 @@ msgid ""
 "If the present manual is split, and the referent manual is mono, the "
 "directory is @samp{../} and the file is @file{@var{referent}.html}."
 msgstr ""
+"Se o manual atual for dividido e o manual referente for mono, o diretório "
+"será @samp{../} e o arquivo será @file{@var{referente}.html}."
 
 #. type: itemize
 #: texinfo/texinfo.texi:18067
@@ -47977,6 +48019,8 @@ msgid ""
 "directory is @file{@var{referent}_html/} and the file is the expanded node "
 "name."
 msgstr ""
+"Se o manual atual for mono e o manual referente for dividido, o diretório "
+"será @file{@var{referente}_html/} e o arquivo será o nome expandido do nó."
 
 #. type: itemize
 #: texinfo/texinfo.texi:18072
@@ -47985,6 +48029,9 @@ msgid ""
 "directory is @file{./} (or just the empty string), and the file is "
 "@file{@var{referent}.html}."
 msgstr ""
+"Se o manual atual for mono, e o manual referente também for mono, o "
+"diretório será @file{./} (ou apenas a sequência vazia de caracteres) e o "
+"arquivo será @file{@var{referente}.html}."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:18082
@@ -47997,6 +48044,13 @@ msgid ""
 "Customization Variables}), doing so would make cross-manual references to "
 "such nodes invalid."
 msgstr ""
+"Outra regra, que vale somente para nomes de arquivos, é que nomes de base "
+"de arquivos sejam truncados para 245 caracteres, para permitir que uma "
+"extensão seja posposta e ainda cumpra o limite de 255 caracteres, o qual é "
+"comum para muitos sistemas de arquivos. Embora tecnicamente isso possa ser "
+"mudado com a variável de personalização @code{BASEFILENAME_LENGTH} "
+"(@pxref{Outras Variáveis de Personalização}), fazer isso tornaria "
+"inválidas as referências entre manuais para tais nós."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:18089
@@ -48007,11 +48061,17 @@ msgid ""
 "because any such attempted hardwiring of the directory is very unlikely to "
 "be useful for all the output formats that use the manual name."
 msgstr ""
+"Qualquer parte do diretório no argumento do nome do arquivo do comando de "
+"referência cruzada de origem é ignorada. Assim, @code{@@xref@{,,,../foo@}} "
+"e @code{@@xref@{,,,foo@}} usam ambos @samp{foo} como o nome do manual. Isso "
+"ocorre porque tal ligação rígida tentada do diretório seja muito "
+"improvável ser útil para todos os formatos de saída que usem o nome do "
+"manual."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:18091
 msgid "Finally, the @var{target} part is always the expanded node name."
-msgstr ""
+msgstr "Finalmente, a parte do @var{alvo} é sempre o nome expandido do nó."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:18095
@@ -48020,6 +48080,9 @@ msgid ""
 "@command{texi2any} defaults to split, with the @option{--no-split} option "
 "overriding this."
 msgstr ""
+"Quer o manual atual seja dividido ou quer seja mono é determinado pela "
+"opção de usuário(a); O padrão do @command{texi2any} é dividido, com a "
+"opção @option{--no-split} substituindo isso."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:18100
@@ -48029,6 +48092,9 @@ msgid ""
 "@command{texi2any} uses the same form of the referent manual as the present "
 "manual."
 msgstr ""
+"Quer o manual referente seja dividido quer seja mono, entretanto, é outra "
+"informação externa (@pxref{Configuração do Xref do HTML}). Por padrão, "
+"@command{texi2any} usa a mesma forma do manual referente como o manual atual."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:18104
@@ -48037,36 +48103,39 @@ msgid ""
 "the generating software assumes, and the format it's actually present in.  "
 "@xref{HTML Xref Mismatch}."
 msgstr ""
+"Assim, pode existir uma descorrespondência entre o formato do manual "
+"referente que o software gerador assume e o formato em que ele está "
+"realmente presente. @xref{Descorrespondência do Xref do HTML}."
 
 #. type: node
 #: texinfo/texinfo.texi:18106
 #, no-wrap
 msgid "HTML Xref Node Name Expansion"
-msgstr ""
+msgstr "Expansão de Nome de Nó do Xref do HTML"
 
 #. type: subsection
 #: texinfo/texinfo.texi:18107
 #, no-wrap
 msgid "HTML Cross-reference Node Name Expansion"
-msgstr ""
+msgstr "Expansão de Nome de Nó de Referência Cruzada do HTML"
 
 #. type: cindex
 #: texinfo/texinfo.texi:18108
 #, no-wrap
 msgid "HTML cross-references @subentry node name expansion"
-msgstr ""
+msgstr "Referências cruzadas do HTML @subentry expansão de nome de nó"
 
 #. type: cindex
 #: texinfo/texinfo.texi:18109
 #, no-wrap
 msgid "node name expansion, in HTML cross-references"
-msgstr ""
+msgstr "Expansão de nome de nó, em referências cruzadas do HTML"
 
 #. type: cindex
 #: texinfo/texinfo.texi:18110
 #, no-wrap
 msgid "expansion, of node names in HTML cross-references"
-msgstr ""
+msgstr "Expansão, de nomes de nó nas referências cruzadas do HTML"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:18119
@@ -48078,6 +48147,13 @@ msgid ""
 "@samp{-} and @samp{_} characters are all that can be used.  (Although HTML "
 "anchors can contain most characters, XHTML is more restrictive.)"
 msgstr ""
+"Conforme mencionado na seção anterior, a parte chave do algoritmo de "
+"referência cruzada do HTML é a conversão de nomes de nós no fonte do "
+"Texinfo em sequências de caracteres adequadas para identificadores do XHTML "
+"e nomes de arquivos. As restrições são semelhantes para cada um: letras "
+"ASCII simples, números e os caracteres @samp{-} e @samp{_} são tudo o que "
+"pode ser usado. (Embora âncoras do HTML possam conter a maioria dos "
+"caracteres, XHTML é mais restritivo)."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:18125
@@ -48087,6 +48163,11 @@ msgid ""
 "However, anchors and float labels are treated identically to nodes in this "
 "context, so we'll continue to say ``node'' names for simplicity."
 msgstr ""
+"Referências cruzadas no Texinfo podem referir-se ou a nós, ou a âncoras "
+"(@pxref{@code{@@anchor}}) ou rótulos flutuantes (@pxref{@code{@@float}}). "
+"Entretanto, âncoras e rótulos flutuantes são tratados identicamente aos "
+"nós nesse contexto, de modo que nós continuaremos a dizer nomes de "
+"``nós'' para simplicidade."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:18129
