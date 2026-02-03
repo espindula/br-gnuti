@@ -48176,6 +48176,9 @@ msgid ""
 "the file @file{index.html}, to match web server software.  However, the HTML "
 "@emph{target} is @samp{Top}.  Thus (in the split case):"
 msgstr ""
+"Uma exceção especial: o nó Top (@pxref{O Nó Top}) é sempre mapeado para "
+"o arquivo @file{index.html}, para corresponder ao software do servidor web. "
+"No entanto, o @emph{alvo} do HTML é @samp{Top}. Assim (no caso dividido):"
 
 #. type: example
 #: texinfo/texinfo.texi:18133
@@ -48184,6 +48187,8 @@ msgid ""
 "@@xref@{Top,,, emacs, The GNU Emacs Manual@}.\n"
 "@result{} <a href=\"../emacs_html/index.html#Top\">\n"
 msgstr ""
+"@@xref@{Top,,, emacs, O Manual do GNU Emacs@}.\n"
+"@result{} <a href=\"../emacs_html/index.html#Top\">\n"
 
 #. type: enumerate
 #: texinfo/texinfo.texi:18139
@@ -48191,6 +48196,8 @@ msgid ""
 "The standard ASCII letters (a-z and A-Z) are not modified.  All other "
 "characters may be changed as specified below."
 msgstr ""
+"As letras ASCII padrão (a-z e A-Z) não são modificadas. Todos os outros "
+"caracteres podem ser mudados conforme especificado abaixo."
 
 #. type: enumerate
 #: texinfo/texinfo.texi:18143
@@ -48198,6 +48205,8 @@ msgid ""
 "The standard ASCII numbers (0-9) are not modified except when a number is "
 "the first character of the node name.  In that case, see below."
 msgstr ""
+"Os números ASCII padrão (0-9) não são modificados, exceto quando um "
+"número for o primeiro caractere do nome do nó. Nesse caso, veja-se abaixo."
 
 #. type: enumerate
 #: texinfo/texinfo.texi:18147
@@ -48205,11 +48214,13 @@ msgid ""
 "Multiple consecutive space, tab and newline characters are transformed into "
 "just one space."
 msgstr ""
+"Vários caracteres consecutivos de espaço, tabulação e nova linha serão "
+"transformados em apenas um espaço."
 
 #. type: enumerate
 #: texinfo/texinfo.texi:18150
 msgid "Leading and trailing spaces are removed."
-msgstr ""
+msgstr "Espaços iniciais e finais serão removidos."
 
 #. type: enumerate
 #: texinfo/texinfo.texi:18154
@@ -48217,6 +48228,8 @@ msgid ""
 "After the above has been applied, each remaining space character is "
 "converted into a @samp{-} character."
 msgstr ""
+"Depois que o acima tiver sido aplicado, cada caractere de espaço restante "
+"será convertido em um caractere @samp{-}."
 
 #. type: enumerate
 #: texinfo/texinfo.texi:18159
@@ -48225,6 +48238,10 @@ msgid ""
 "@var{xx} is the ASCII character code in (lowercase) hexadecimal.  This "
 "includes @samp{_}, which is mapped to @samp{_005f}."
 msgstr ""
+"Outros caracteres ASCII de 7 bits serão transformados em "
+"@samp{_00@var{xx}}, onde @var{xx} é o código do caractere ASCII em "
+"hexadecimal (minúsculas). Isso inclui @samp{_}, o qual é mapeado para "
+"@samp{_005f}."
 
 #. type: enumerate
 #: texinfo/texinfo.texi:18166
@@ -48235,6 +48252,11 @@ msgid ""
 "This is necessary because XHTML requires that identifiers begin with a "
 "letter."
 msgstr ""
+"Se o nome do nó não começar com uma letra, a sequência de caracteres "
+"literal @samp{g_t} será prefixada ao resultado. (Devido às regras acima, "
+"essa sequência de caracteres nunca pode ocorrer de outra forma; é uma "
+"escolha arbitrária, significando ``GNU Texinfo''). Isso é necessário "
+"porque o XHTML exige que identificadores comecem com uma letra."
 
 #. type: example
 #: texinfo/texinfo.texi:18174
@@ -48243,29 +48265,31 @@ msgid ""
 "@@node A  node --- with _'%\n"
 "@result{} A-node-_002d_002d_002d-with-_005f_0027_0025\n"
 msgstr ""
+"@@node Um  nó --- com _'%\n"
+"@result{} Um-no-_002d_002d_002d-com-_005f_0027_0025\n"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:18177
 msgid "Example translations of common characters:"
-msgstr ""
+msgstr "Traduções exemplo de caracteres comuns:"
 
 #. type: item
 #: texinfo/texinfo.texi:18179
 #, no-wrap
 msgid "@samp{_} @result{} @samp{_005f}"
-msgstr ""
+msgstr "@samp{_} @result{} @samp{_005f}"
 
 #. type: item
 #: texinfo/texinfo.texi:18180
 #, no-wrap
 msgid "@samp{-} @result{} @samp{_002d}"
-msgstr ""
+msgstr "@samp{-} @result{} @samp{_002d}"
 
 #. type: item
 #: texinfo/texinfo.texi:18181
 #, no-wrap
 msgid "@samp{A  node} @result{} @samp{A-node}"
-msgstr ""
+msgstr "@samp{Um nó} @result{} @samp{Um-nó}"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:18191
@@ -48277,24 +48301,33 @@ msgid ""
 "the targets serve to distinguish these cases, since HTML target names are "
 "always case-sensitive, independent of operating system."
 msgstr ""
+"Em sistemas computacionais normalizantes de maiúsculas e minúsculas, nós "
+"que diferem somente por maiúsculas e minúsculas serão mapeados para o "
+"mesmo arquivo. Em particular, como mencionado acima, Top sempre mapeia para "
+"o arquivo @file{index.html}. Assim, em um sistema normalizante de "
+"maiúsculas e minúsculas, Top e um nó chamado `Index' serão ambos "
+"escritos para @file{index.html}. Felizmente, os alvos servem para distinguir "
+"essas maiúsculas e minúsculas, uma vez que nomes de alvos do HTML são "
+"sempre sensíveis a maiúsculas e minúsculas, independentemente do sistema "
+"operacional."
 
 #. type: node
 #: texinfo/texinfo.texi:18193
 #, no-wrap
 msgid "HTML Xref Command Expansion"
-msgstr ""
+msgstr "Expansão do Comando Xref do HTML"
 
 #. type: subsection
 #: texinfo/texinfo.texi:18194
 #, no-wrap
 msgid "HTML Cross-reference Command Expansion"
-msgstr ""
+msgstr "Expansão do Comando de Referência Cruzada do HTML"
 
 #. type: cindex
 #: texinfo/texinfo.texi:18195
 #, no-wrap
 msgid "HTML cross-references @subentry command expansion"
-msgstr ""
+msgstr "Referências cruzadas do HTML @subentry expansão de comando"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:18199
@@ -48302,11 +48335,13 @@ msgid ""
 "Node names may contain @@-commands (@pxref{Node Line Requirements}).  This "
 "section describes how they are handled."
 msgstr ""
+"Os nomes dos nós podem conter comandos @@ (@pxref{Requisitos da Linha do "
+"Nó}). Esta seção descreve como eles são manuseados."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:18201
 msgid "First, comments are removed."
-msgstr ""
+msgstr "Primeiro, comentários são removidos."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:18204
@@ -48314,6 +48349,9 @@ msgid ""
 "Next, any @code{@@value} commands (@pxref{@code{@@set @@value}}) and macro "
 "invocations (@pxref{Invoking Macros}) are fully expanded."
 msgstr ""
+"Em seguida, quaisquer comandos @code{@@value} (@pxref{@code{@@set @@value}}) "
+"e invocações de macro (@pxref{Invocando Macros}) são totalmente "
+"expandidos."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:18207
@@ -48321,6 +48359,8 @@ msgid ""
 "Then, for the following commands, the command name and braces are removed, "
 "and the text of the argument is recursively transformed:"
 msgstr ""
+"Então, para os comandos a seguir, o nome do comando e as chaves são "
+"removidos e o texto do argumento é transformado recursivamente:"
 
 #. type: example
 #: texinfo/texinfo.texi:18213
@@ -48331,6 +48371,10 @@ msgid ""
 "@@samp @@sansserif @@sc @@slanted @@strong @@sub @@sup\n"
 "@@t @@U @@var @@verb @@w\n"
 msgstr ""
+"@@asis @@b @@cite @@code @@command @@dfn @@dmn @@dotless\n"
+"@@emph @@env @@file @@i @@indicateurl @@kbd @@key\n"
+"@@samp @@sansserif @@sc @@slanted @@strong @@sub @@sup\n"
+"@@t @@U @@var @@verb @@w\n"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:18221
@@ -48342,6 +48386,13 @@ msgid ""
 "string.  The notation `U+@var{hhhh}' means Unicode code point @var{hhhh} (in "
 "hex, as usual)."
 msgstr ""
+"Além disso, os comandos a seguir são substituídos por texto constante, "
+"conforme mostrado abaixo. Se algum desses comandos tiver argumentos não "
+"vazios, como em @code{@@TeX@{bad@}}, é um erro e o resultado será "
+"inespecificado. Nesta tabela, `(espaço)' significa um caractere de espaço "
+"e `(nada)' significa a sequência vazia de caracteres. A notação "
+"`U+@var{hhhh}' significa ponto de código Unicode @var{hhhh} (em "
+"hexadecimal, como sempre)."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:18225
