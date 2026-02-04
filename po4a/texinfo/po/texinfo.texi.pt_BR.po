@@ -4411,10 +4411,8 @@ msgstr "@code{@@title @@subtitle @@author}"
 
 #. type: nodedescriptionblock
 #: texinfo/texinfo.texi:1639
-#, fuzzy
-#| msgid "@code{@@title}, @code{@@subtitle}, and @code{@@author}"
 msgid "The @code{@@title}, @code{@@subtitle}, and @code{@@author} commands."
-msgstr "@code{@@title}, @code{@@subtitle} e @code{@@author}"
+msgstr "Os comandos @code{@@title}, @code{@@subtitle} e @code{@@author}."
 
 #. type: subsection
 #: texinfo/texinfo.texi:1640
@@ -4604,10 +4602,8 @@ msgstr "@code{@@titlefont @@center @@sp}"
 
 #. type: nodedescriptionblock
 #: texinfo/texinfo.texi:1722
-#, fuzzy
-#| msgid "@code{@@titlefont}, @code{@@center}, and @code{@@sp}"
 msgid "The @code{@@titlefont}, @code{@@center}, and @code{@@sp} commands."
-msgstr "@code{@@titlefont}, @code{@@center} e @code{@@sp}"
+msgstr "Os comandos @code{@@titlefont}, @code{@@center} e @code{@@sp}."
 
 #. type: subsection
 #: texinfo/texinfo.texi:1723
@@ -49062,6 +49058,10 @@ msgid ""
 "it is installed in the last of the above directories, i.e., "
 "@file{@var{datadir}/texinfo/htmlxref.cnf}."
 msgstr ""
+"Todos os arquivos encontrados são usados, com as entradas anteriores "
+"substituindo as posteriores. A distribuição do Texinfo inclui um arquivo "
+"padrão que lida com muitos manuais GNU; ele é instalado no último dos "
+"diretórios acima, ou seja, @file{@var{datadir}/texinfo/htmlxref.cnf}."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:18425
@@ -49071,6 +49071,11 @@ msgid ""
 "information is used.  @code{HTMLXREF_FILE} sets the file name to something "
 "else than @file{htmlxref.cnf}.  @pxref{HTML Customization Variables}."
 msgstr ""
+"A variável de personalização @code{HTMLXREF_MODE} pode ser configurada "
+"para modificar como os arquivos são encontrados. Por exemplo, se "
+"configurada como @samp{none}, nenhuma informação externa será usada. "
+"@code{HTMLXREF_FILE} configura o nome do arquivo para algo diferente de "
+"@file{htmlxref.cnf}. @pxref{Variáveis de Personalização do HTML}."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:18431
@@ -49080,6 +49085,11 @@ msgid ""
 "optionally preceded by whitespace.  Since @samp{#} can occur in URLs (like "
 "almost any character), it does not otherwise start a comment."
 msgstr ""
+"O arquivo é orientado por linha. Linhas que consistem somente de espaços "
+"em branco são ignoradas. Comentários são indicados com um @samp{#} no "
+"início de uma linha, opcionalmente precedido por espaço em branco. Como "
+"@samp{#} pode ocorrer em URLs (como quase qualquer caractere), ele não "
+"inicia, de outro modo, um comentário."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:18434
@@ -49087,17 +49097,19 @@ msgid ""
 "Each non-blank non-comment line must be either a @dfn{variable assignment} "
 "or @dfn{manual information}."
 msgstr ""
+"Cada linha não vazia que não seja de comentário precisa ser ou uma "
+"@dfn{atribuição de variável} ou uma @dfn{informação de manual}."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:18436
 msgid "A variable assignment line looks like this:"
-msgstr ""
+msgstr "Uma linha de atribuição de variável se parece com isto:"
 
 #. type: example
 #: texinfo/texinfo.texi:18439
 #, no-wrap
 msgid "@var{varname} = @var{varvalue}\n"
-msgstr ""
+msgstr "@var{nomevariável} = @var{valorvariável}\n"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:18446
@@ -49108,17 +49120,23 @@ msgid ""
 "referenced with @samp{$@{@var{varname}@}}; variable references can occur in "
 "the @var{varvalue}."
 msgstr ""
+"Espaço em branco ao redor de @samp{=} é opcional e ignorado. A "
+"@var{nomevariável} deveria consistir de letras; diferenciação de "
+"maiúsculas e minúsculas é significativa. A @var{valorvariável} é uma "
+"sequência arbitrária de caracteres, continuando até o final da linha. As "
+"variáveis são então referenciadas com @samp{$@{@var{nomevariável}@}}; "
+"referências de variáveis podem ocorrer na @var{valorvariável}."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:18448
 msgid "A manual information line looks like this:"
-msgstr ""
+msgstr "Uma linha de informação de manual se parece com isto:"
 
 #. type: example
 #: texinfo/texinfo.texi:18451
 #, no-wrap
 msgid "@var{manual} @var{keyword} @var{urlprefix}\n"
-msgstr ""
+msgstr "@var{manual} @var{palavrachave} @var{prefixourl}\n"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:18459
@@ -49128,6 +49146,11 @@ msgid ""
 "@var{urlprefix} described below.  Variable references can occur only in the "
 "@var{urlprefix}.  For example (used in the canonical @file{htmlxref.cnf}):"
 msgstr ""
+"com @var{manual} o identificador curto para um manual, @var{palavrachave} "
+"sendo um dos: @code{mono}, @code{node}, @code{section}, @code{chapter} e "
+"@var{prefixourl} descritos abaixo. Referências de variáveis podem ocorrer "
+"somente na @var{prefixourl}. Por exemplo (usado no canônico "
+"@file{htmlxref.cnf}):"
 
 #. type: example
 #: texinfo/texinfo.texi:18467
@@ -49140,12 +49163,18 @@ msgid ""
 "hello section $@{GS@}/hello/manual/html_section/\n"
 "hello node    $@{GS@}/hello/manual/html_node/\n"
 msgstr ""
+"G = http://www.gnu.org\n"
+"GS = $@{G@}/software\n"
+"hello mono    $@{GS@}/hello/manual/hello.html\n"
+"hello chapter $@{GS@}/hello/manual/html_chapter/\n"
+"hello section $@{GS@}/hello/manual/html_section/\n"
+"hello node    $@{GS@}/hello/manual/html_node/\n"
 
 #. type: cindex
 #: texinfo/texinfo.texi:18469
 #, no-wrap
 msgid "monolithic manuals, for HTML cross-references"
-msgstr ""
+msgstr "Manuais monolíticos, para referências cruzadas do HTML"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:18472
@@ -49153,12 +49182,15 @@ msgid ""
 "If the keyword is @code{mono}, @var{urlprefix} gives the host, directory, "
 "and file name for @var{manual} as one monolithic file."
 msgstr ""
+"Se a palavra-chave for @code{mono}, @var{prefixourl} fornecerá o "
+"dispositivo, o diretório e o nome do arquivo para @var{manual} como um "
+"arquivo monolítico."
 
 #. type: cindex
 #: texinfo/texinfo.texi:18473
 #, no-wrap
 msgid "split manuals, for HTML cross-references"
-msgstr ""
+msgstr "Manuais divididos, para referências cruzadas do HTML"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:18477
@@ -49167,6 +49199,9 @@ msgid ""
 "@var{urlprefix} gives the host and directory for @var{manual} split into "
 "nodes, sections, or chapters, respectively."
 msgstr ""
+"Se a palavra-chave for @code{node}, @code{section} ou @code{chapter}, "
+"@var{prefixourl} fornecerá o dispositivo e o diretório para @var{manual} "
+"divididos em nós, seções ou capítulos, respectivamente."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:18485
@@ -49178,6 +49213,11 @@ msgid ""
 "etc.  However, if a manual is not available in that form, anything that is "
 "available can be used.  Here is the search order for each style:"
 msgstr ""
+"Quando disponível, @command{texi2any} usará o valor ``correspondente'' "
+"para referências cruzadas entre manuais. Ou seja, ao gerar a saída "
+"monolítica (@option{--no-split}), a URL de @code{mono} será usada; ao "
+"gerar a saída que seja dividida por nó, a URL de @code{node} será usada, "
+"entre outras. Aqui está a ordem de pesquisa para cada estilo:"
 
 #. type: example
 #: texinfo/texinfo.texi:18491
@@ -49188,12 +49228,16 @@ msgid ""
 "chapter @result{} chapter, section, node,    mono\n"
 "mono    @result{} mono,    chapter, section, node\n"
 msgstr ""
+"node    @result{} nó,       seção,    capítulo, mono\n"
+"section @result{} seção,    capítulo, nó,       mono\n"
+"chapter @result{} capítulo, seção,    nó,       mono\n"
+"mono    @result{} mono,     capítulo, seção,    nó\n"
 
 #. type: opindex
 #: texinfo/texinfo.texi:18493
 #, no-wrap
 msgid "--node-files@r{, and HTML cross-references}"
-msgstr ""
+msgstr "--node-files@r{, e referências cruzadas do HTML}"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:18497
@@ -49202,6 +49246,9 @@ msgid ""
 "when the target manual was created using @option{--node-files}; this is the "
 "default for split output."
 msgstr ""
+"Essas referências entre manuais em nível de seção e de capítulo podem "
+"ser bem-sucedidas somente quando o manual alvo foi criado usando-se "
+"@option{--node-files}; esse é o padrão para saída dividida."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:18502
@@ -49211,17 +49258,22 @@ msgid ""
 "get the latest version from "
 "@url{http://ftpmirror.gnu.org/@/texinfo/@/htmlxref.cnf}."
 msgstr ""
+"Se você tiver acréscimos ou correções para o @file{htmlxref.cnf} "
+"distribuído com Texinfo, por favor envie mensagem eletrônica para "
+"@email{bug-texinfo@@gnu.org} como de costume. Você consegue obter a versão "
+"mais recente a partir de "
+"@url{http://ftpmirror.gnu.org/@/texinfo/@/htmlxref.cnf}."
 
 #. type: appendix
 #: texinfo/texinfo.texi:18504 texinfo/texinfo.texi:18506
 #, no-wrap
 msgid "@@-Command Details"
-msgstr ""
+msgstr "Detalhes do Comando @@"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:18506
 msgid "@nodedescription Details of the Texinfo @@-commands."
-msgstr ""
+msgstr "@nodedescription Detalhes dos comandos @@ do Texinfo."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:18510
@@ -49229,47 +49281,50 @@ msgid ""
 "Here are the details of @@-commands: information about their syntax, a list "
 "of commands, and information about where commands can appear."
 msgstr ""
+"Aqui estão os detalhes dos comandos @@: informações acerca da sintaxe "
+"deles, uma lista dos comandos e informações acerca de onde os comandos "
+"podem aparecer."
 
 #. type: node
 #: texinfo/texinfo.texi:18512
 #, no-wrap
 msgid "Command Syntax"
-msgstr ""
+msgstr "Sintaxe de Comando"
 
 #. type: section
 #: texinfo/texinfo.texi:18513
 #, no-wrap
 msgid "@@-Command Syntax"
-msgstr ""
+msgstr "Sintaxe de Comando @@"
 
 #. type: cindex
 #: texinfo/texinfo.texi:18514
 #, no-wrap
 msgid "@sortas{at} @@-commands @subentry syntax"
-msgstr ""
+msgstr "@sortas{at} Comandos @@ @subentry sintaxe"
 
 #. type: cindex
 #: texinfo/texinfo.texi:18515
 #, no-wrap
 msgid "Syntax, of @@-commands"
-msgstr ""
+msgstr "Sintaxe, dos comandos @@"
 
 #. type: cindex
 #: texinfo/texinfo.texi:18516
 #, no-wrap
 msgid "Command syntax"
-msgstr ""
+msgstr "Sintaxe de comando"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:18519
 msgid "Texinfo has the following types of @@-command:"
-msgstr ""
+msgstr "Texinfo tem os seguintes tipos de comando @@:"
 
 #. type: item
 #: texinfo/texinfo.texi:18521
 #, no-wrap
 msgid "1. Brace commands"
-msgstr ""
+msgstr "1. Comandos de chave"
 
 #. type: table
 #: texinfo/texinfo.texi:18526
@@ -49279,12 +49334,16 @@ msgid ""
 "introductory or defining use of a term; it is used as follows: @samp{In "
 "Texinfo, @@@@-commands are @@dfn@{mark-up@} commands.}"
 msgstr ""
+"Esses comandos começam com @@ seguido por uma letra ou uma palavra, seguida "
+"por um argumento entre chaves. Por exemplo, o comando @code{@@dfn} indica o "
+"uso introdutório ou definidor de um termo; ele é usado conforme segue: "
+"@samp{No Texinfo, comandos @@@@ são comandos de @@dfn@{marcação@}}."
 
 #. type: item
 #: texinfo/texinfo.texi:18527
 #, no-wrap
 msgid "2. Line commands"
-msgstr ""
+msgstr "2 . Comandos de linha"
 
 #. type: table
 #: texinfo/texinfo.texi:18533
@@ -49295,12 +49354,17 @@ msgid ""
 "of the line.  If there is an argument, it is separated from the command name "
 "by a space.  Braces are not used."
 msgstr ""
+"Esses comandos ocupam uma linha inteira. A linha começa com @@, seguido "
+"pelo nome do comando (uma palavra); por exemplo, @code{@@center} ou "
+"@code{@@cindex}. Se nenhum argumento for necessário, a palavra será "
+"seguida pelo fim de linha. Se existir um argumento, ele será separado do "
+"nome do comando por um espaço. Chaves não são usadas."
 
 #. type: item
 #: texinfo/texinfo.texi:18535
 #, no-wrap
 msgid "3. Block commands"
-msgstr ""
+msgstr "3 . Comandos de bloco"
 
 #. type: table
 #: texinfo/texinfo.texi:18543
@@ -49312,12 +49376,19 @@ msgid ""
 "line commands do; for example, @code{@@enumerate A} opening an environment "
 "terminated by @code{@@end enumerate}.  Here @samp{A} is the argument."
 msgstr ""
+"Esses comandos são escritos no início de uma linha, com texto geral nas "
+"linhas seguintes, finalizados por um comando @code{@@end} correspondente em "
+"uma linha própria. Por exemplo, @code{@@example}, depois as linhas de um "
+"exemplo de codificação e, em seguida, @code{@@end example}. Alguns desses "
+"comandos de bloco recebem argumentos, como os comandos de linha recebem; por "
+"exemplo, @code{@@enumerate A} abrindo um ambiente finalizado por @code{@@end "
+"enumerate}. Aqui @samp{A} é o argumento."
 
 #. type: item
 #: texinfo/texinfo.texi:18544
 #, no-wrap
 msgid "4. Symbol insertion commands with no arguments"
-msgstr ""
+msgstr "4. Comandos de inserção de símbolos sem argumentos"
 
 #. type: table
 #: texinfo/texinfo.texi:18551
@@ -49329,12 +49400,18 @@ msgid ""
 "@code{@@TeX@{@}} @result{} `@TeX{}', and @code{@@bullet@{@}} @result{} "
 "@samp{@bullet{}}."
 msgstr ""
+"Esses comandos começam com @@ seguido por uma palavra seguida por chaves "
+"esquerda e direita. Esses comandos inserem símbolos especiais no documento; "
+"eles não recebem argumentos. Alguns exemplos: @code{@@dots@{@}} @result{} "
+"@samp{@dots{}}, @code{@@equiv@{@}} @result{} @samp{@equiv{}}, "
+"@code{@@TeX@{@}} @result{} `@TeX{}' e @code{@@bullet@{@}} @result{} "
+"@samp{@bullet{}}."
 
 #. type: item
 #: texinfo/texinfo.texi:18552
 #, no-wrap
 msgid "5. Non-alphabetic commands"
-msgstr ""
+msgstr "5. Comandos não alfabéticos"
 
 #. type: table
 #: texinfo/texinfo.texi:18561
@@ -49347,12 +49424,20 @@ msgid ""
 "@code{@@@@}, @code{@@@{}, @code{@@@}}, @code{@@.}, @code{@@@kbd{SPACE}}, and "
 "most of the accent commands."
 msgstr ""
+"Os nomes dos comandos em todas as categorias acima consistem de caracteres "
+"alfabéticos, quase inteiramente em letras minúsculas. Ao contrário "
+"desses, os comandos não alfabéticos consistem de um @@ seguido por um "
+"sinal de pontuação ou outro caractere que não é parte do alfabeto "
+"latino. Comandos não alfabéticos quase sempre são parte do texto dentro "
+"de um parágrafo. Os comandos não alfabéticos incluem @code{@@@@}, "
+"@code{@@@{}, @code{@@@}}, @code{@@.}, @code{@@@kbd{SPACE}} e a maioria dos "
+"comandos de acento."
 
 #. type: item
 #: texinfo/texinfo.texi:18562
 #, no-wrap
 msgid "6. Miscellaneous commands"
-msgstr ""
+msgstr "6. Comandos variados"
 
 #. type: table
 #: texinfo/texinfo.texi:18570
@@ -49364,12 +49449,18 @@ msgid ""
 "not require braces.  Likewise, @code{@@tab} used in a @code{@@multitable} "
 "block does not take arguments, and is not followed by braces."
 msgstr ""
+"Existem vários comandos que não se enquadram em nenhuma das categorias "
+"acima; por exemplo, o comando obsoleto @code{@@refill}, que é sempre usado "
+"no final de um parágrafo imediatamente seguinte ao ponto final ou a outro "
+"caractere de pontuação. @code{@@refill} não recebe argumentos e não "
+"exige chaves. Da mesma forma, @code{@@tab} usado em um bloco "
+"@code{@@multitable} não recebe argumentos e não é seguido por chaves."
 
 #. type: cindex
 #: texinfo/texinfo.texi:18572
 #, no-wrap
 msgid "Braces and argument syntax"
-msgstr ""
+msgstr "Chaves e sintaxe de argumento"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:18582
@@ -49383,6 +49474,14 @@ msgid ""
 "braces.  The non-alphabetic commands, such as @code{@@:}, are exceptions to "
 "the rule; they do not need braces."
 msgstr ""
+"Assim, os comandos alfabéticos se enquadram em classes que tem diferentes "
+"sintaxes de argumento. Você não consegue dizer a qual classe um comando "
+"pertence pela aparência do nome dele, mas pode saber pelo significado do "
+"comando: se o comando representar um glifo, ele estará na classe 4 e não "
+"exigirá um argumento; se fizer sentido usar o comando entre outros textos "
+"como parte de um parágrafo, o comando estará na classe 1 e precisará ser "
+"seguido por um argumento entre chaves. Os comandos não alfabéticos, como "
+"@code{@@:}, são exceções à regra; eles não precisam de chaves."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:18586
@@ -49391,42 +49490,45 @@ msgid ""
 "easier to read, and also to help the GNU Emacs paragraph and filling "
 "commands work properly."
 msgstr ""
+"O objetivo de se ter sintaxe diferente para comandos é o de tornar os "
+"arquivos do Texinfo mais fáceis para ler e também o de ajudar os comandos "
+"de parágrafo e de preenchimento do GNU Emacs a funcionarem adequamente."
 
 #. type: node
 #: texinfo/texinfo.texi:18588
 #, no-wrap
 msgid "Command List"
-msgstr ""
+msgstr "Lista de Comandos"
 
 #. type: section
 #: texinfo/texinfo.texi:18589
 #, no-wrap
 msgid "@@-Command List"
-msgstr ""
+msgstr "Lista de Comandos @@"
 
 #. type: cindex
 #: texinfo/texinfo.texi:18590
 #, no-wrap
 msgid "Alphabetical @@-command list"
-msgstr ""
+msgstr "Lista alfabética de comandos @@"
 
 #. type: cindex
 #: texinfo/texinfo.texi:18591
 #, no-wrap
 msgid "List of @@-commands"
-msgstr ""
+msgstr "Lista dos comandos @@"
 
 #. type: cindex
 #: texinfo/texinfo.texi:18592
 #, no-wrap
 msgid "@sortas{at} @@-commands @subentry list of"
-msgstr ""
+msgstr "@sortas{at} Comandos @@ @subentry lista dos"
 
 #. type: cindex
 #: texinfo/texinfo.texi:18593
 #, no-wrap
 msgid "Reference to @@-commands"
-msgstr ""
+msgstr "Referência para comandos @@"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:18598
@@ -49435,12 +49537,15 @@ msgid ""
 "brackets, @t{[}@w{ }@t{]}, indicate optional arguments; an ellipsis, "
 "@samp{@dots{}}, indicates repeated text."
 msgstr ""
+"Aqui está uma lista alfabética dos comandos @@ no Texinfo. Colchetes, "
+"@t{[}@w{ }@t{]}, indicam argumentos opcionais; uma reticência, "
+"@samp{@dots{}}, indica texto repetido."
 
 #. type: item
 #: texinfo/texinfo.texi:18600
 #, no-wrap
 msgid "@@@var{whitespace}"
-msgstr ""
+msgstr "@@@var{espaçoembranco}"
 
 #. type: table
 #: texinfo/texinfo.texi:18603
@@ -49448,12 +49553,14 @@ msgid ""
 "An @code{@@} followed by a space, tab, or newline produces a normal, "
 "stretchable, interword space.  @xref{Multiple Spaces}."
 msgstr ""
+"Um @code{@@} seguido por um espaço, tabulação ou nova linha produz um "
+"espaço entre palavras normal e extensível. @xref{Vários Espaços}."
 
 #. type: item
 #: texinfo/texinfo.texi:18604
 #, no-wrap
 msgid "@@!"
-msgstr ""
+msgstr "@@!"
 
 #. type: table
 #: texinfo/texinfo.texi:18607
@@ -49461,18 +49568,20 @@ msgid ""
 "Produce an exclamation point that ends a sentence (usually after an "
 "end-of-sentence capital letter).  @xref{Ending a Sentence}."
 msgstr ""
+"Produzir um ponto de exclamação que termine uma frase (geralmente depois "
+"de uma letra maiúscula no final da frase). @xref{Terminando uma Frase}."
 
 #. type: item
 #: texinfo/texinfo.texi:18608
 #, no-wrap
 msgid "@@\""
-msgstr ""
+msgstr "@@\""
 
 #. type: itemx
 #: texinfo/texinfo.texi:18609
 #, no-wrap
 msgid "@@'"
-msgstr ""
+msgstr "@@'"
 
 #. type: table
 #: texinfo/texinfo.texi:18612
@@ -49480,34 +49589,36 @@ msgid ""
 "Generate an umlaut or acute accent, respectively, over the next character, "
 "as in @\"o and @'o.  @xref{Inserting Accents}."
 msgstr ""
+"Gerar um trema ou um acento agudo, respectivamente, sobre o próximo "
+"caractere, como em @\"o e em @'o. @xref{Inserindo Acentos}."
 
 #. type: item
 #: texinfo/texinfo.texi:18613
 #, no-wrap
 msgid "@@&"
-msgstr ""
+msgstr "@@&"
 
 #. type: itemx
 #: texinfo/texinfo.texi:18614
 #, no-wrap
 msgid "@@ampchar@{@}"
-msgstr ""
+msgstr "@@ampchar@{@}"
 
 #. type: table
 #: texinfo/texinfo.texi:18616
 msgid "Generate an ampersand.  @xref{Inserting an Ampersand}."
-msgstr ""
+msgstr "Gerar um E comercial. @xref{Inserindo um E Comercial}."
 
 #. type: table
 #: texinfo/texinfo.texi:18619
 msgid "Force a line break.  @xref{Line Breaks}."
-msgstr ""
+msgstr "Forçar uma quebra de linha. @xref{Quebras de Linha}."
 
 #. type: item
 #: texinfo/texinfo.texi:18620
 #, no-wrap
 msgid "@@,@{@var{c}@}"
-msgstr ""
+msgstr "@@,@{@var{c}@}"
 
 #. type: table
 #: texinfo/texinfo.texi:18623
@@ -49515,18 +49626,22 @@ msgid ""
 "Generate a cedilla accent under @var{c}, as in @,{c}.  @xref{Inserting "
 "Accents}."
 msgstr ""
+"Gerar um acento de cedilha sob @var{c}, como em @,{c}. @xref{Inserindo "
+"Acentos}."
 
 #. type: table
 #: texinfo/texinfo.texi:18626
 msgid ""
 "Insert a discretionary hyphenation point.  @xref{@code{@@- @@hyphenation}}."
 msgstr ""
+"Inserir um ponto discricionário de hifenização. @xref{@code{@@- "
+"@@hyphenation}}."
 
 #. type: item
 #: texinfo/texinfo.texi:18627
 #, no-wrap
 msgid "@@."
-msgstr ""
+msgstr "@@."
 
 #. type: table
 #: texinfo/texinfo.texi:18630
@@ -49534,23 +49649,27 @@ msgid ""
 "Produce a period that ends a sentence (usually after an end-of-sentence "
 "capital letter).  @xref{Ending a Sentence}."
 msgstr ""
+"Produzir um ponto final que termine uma frase (geralmente depois de uma "
+"letra maiúscula no final da frase). @xref{Terminando uma Frase}."
 
 #. type: item
 #: texinfo/texinfo.texi:18631
 #, no-wrap
 msgid "@@/"
-msgstr ""
+msgstr "@@/"
 
 #. type: table
 #: texinfo/texinfo.texi:18633
 msgid "Produces no output, but allows a line break.  @xref{Line Breaks}."
 msgstr ""
+"Não produz saída, porém permite uma quebra de linha. @xref{Quebras de "
+"Linha}."
 
 #. type: item
 #: texinfo/texinfo.texi:18634
 #, no-wrap
 msgid "@@:"
-msgstr ""
+msgstr "@@:"
 
 #. type: table
 #: texinfo/texinfo.texi:18638
@@ -49559,6 +49678,10 @@ msgid ""
 "after an immediately preceding period, question mark, exclamation mark, or "
 "colon.  @xref{Not Ending a Sentence}."
 msgstr ""
+"Dizer aos processadores de saída impressa para evitarem inserir espaços em "
+"branco extras depois de um ponto final, ponto de interrogação, ponto de "
+"exclamação ou dois pontos imediatamente anteriores. @xref{Não Terminando "
+"uma Frase}."
 
 #. type: item
 #: texinfo/texinfo.texi:18639
@@ -56357,12 +56480,12 @@ msgstr ""
 
 #. type: nodedescriptionblock
 #: texinfo/texinfo.texi:21450
-#, fuzzy
-#| msgid "@nodedescription Inserting left and right quotes, in code."
 msgid ""
 "How to indent descriptions, insert missing nodes lines, and update nodes in "
 "sequence."
-msgstr "@nodedescription Inserindo aspas esquerdas e direitas, no código."
+msgstr ""
+"Como recuar descrições, inserir linhas ausentes de nós e atualizar nós "
+"em sequência."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:21455
