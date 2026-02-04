@@ -49687,7 +49687,7 @@ msgstr ""
 #: texinfo/texinfo.texi:18639
 #, no-wrap
 msgid "@@="
-msgstr ""
+msgstr "@@="
 
 #. type: table
 #: texinfo/texinfo.texi:18642
@@ -49695,12 +49695,14 @@ msgid ""
 "Generate a macron (bar) accent over the next character, as in @=o.  "
 "@xref{Inserting Accents}."
 msgstr ""
+"Gerar um acento macron (barra) sobre o próximo caractere, como em @=o. "
+"@xref{Inserindo Acentos}."
 
 #. type: item
 #: texinfo/texinfo.texi:18643
 #, no-wrap
 msgid "@@?"
-msgstr ""
+msgstr "@@?"
 
 #. type: table
 #: texinfo/texinfo.texi:18646
@@ -49708,35 +49710,37 @@ msgid ""
 "Produce a question mark that ends a sentence (usually after an "
 "end-of-sentence capital letter).  @xref{Ending a Sentence}."
 msgstr ""
+"Produzir um ponto de interrogação que termine uma frase (geralmente depois "
+"de uma letra maiúscula no final da frase). @xref{Terminando uma Frase}."
 
 #. type: item
 #: texinfo/texinfo.texi:18647
 #, no-wrap
 msgid "@@@@"
-msgstr ""
+msgstr "@@@@"
 
 #. type: itemx
 #: texinfo/texinfo.texi:18648
 #, no-wrap
 msgid "@@atchar@{@}"
-msgstr ""
+msgstr "@@atchar@{@}"
 
 #. type: table
 #: texinfo/texinfo.texi:18650
 msgid "Insert an at sign, @samp{@@}.  @xref{Inserting an Atsign}."
-msgstr ""
+msgstr "Inserir um sinal de arroba, @samp{@@}. @xref{Inserindo um Arroba}."
 
 #. type: item
 #: texinfo/texinfo.texi:18651
 #, no-wrap
 msgid "@@\\"
-msgstr ""
+msgstr "@@\\"
 
 #. type: itemx
 #: texinfo/texinfo.texi:18652
 #, no-wrap
 msgid "@@backslashchar@{@}"
-msgstr ""
+msgstr "@@backslashchar@{@}"
 
 #. type: table
 #: texinfo/texinfo.texi:18656
@@ -49745,18 +49749,22 @@ msgid ""
 "while @code{@@\\} works only inside @code{@@math}.  @xref{Inserting a "
 "Backslash}, and @ref{Inserting Math}."
 msgstr ""
+"Inserir uma barra invertida, @samp{\\}; @code{@@backslashchar@{@}} funciona "
+"em qualquer lugar, enquanto @code{@@\\} funciona somente dentro de "
+"@code{@@math}. @xref{Inserindo uma Barra Invertida} e @ref{Inserindo "
+"Matemáticos}."
 
 #. type: item
 #: texinfo/texinfo.texi:18657
 #, no-wrap
 msgid "@@^"
-msgstr ""
+msgstr "@@^"
 
 #. type: itemx
 #: texinfo/texinfo.texi:18658
 #, no-wrap
 msgid "@@`"
-msgstr ""
+msgstr "@@`"
 
 #. type: table
 #: texinfo/texinfo.texi:18662
@@ -49764,46 +49772,48 @@ msgid ""
 "Generate a circumflex (hat) or grave accent, respectively, over the next "
 "character, as in @^o and @`e.  @xref{Inserting Accents}."
 msgstr ""
+"Gerar um acento circunflexo (chapéu) ou grave, respectivamente, sobre o "
+"próximo caractere, como em @^o e @`e. @xref{Inserindo Acentos}."
 
 #. type: item
 #: texinfo/texinfo.texi:18663
 #, no-wrap
 msgid "@@@{"
-msgstr ""
+msgstr "@@@{"
 
 #. type: itemx
 #: texinfo/texinfo.texi:18664
 #, no-wrap
 msgid "@@lbracechar@{@}"
-msgstr ""
+msgstr "@@lbracechar@{@}"
 
 #. type: table
 #: texinfo/texinfo.texi:18666
 msgid "Insert a left brace, @samp{@{}.  @xref{Inserting Braces}."
-msgstr ""
+msgstr "Inserir uma chave esquerda @samp{@{}. @xref{Inserindo Chaves}."
 
 #. type: item
 #: texinfo/texinfo.texi:18667
 #, no-wrap
 msgid "@@@}"
-msgstr ""
+msgstr "@@@}"
 
 #. type: itemx
 #: texinfo/texinfo.texi:18668
 #, no-wrap
 msgid "@@rbracechar@{@}"
-msgstr ""
+msgstr "@@rbracechar@{@}"
 
 #. type: table
 #: texinfo/texinfo.texi:18670
 msgid "Insert a right brace, @samp{@}}.  @xref{Inserting Braces}."
-msgstr ""
+msgstr "Inserir uma chave direita @samp{@}}. @xref{Inserindo Chaves}."
 
 #. type: item
 #: texinfo/texinfo.texi:18671
 #, no-wrap
 msgid "@@~"
-msgstr ""
+msgstr "@@~"
 
 #. type: table
 #: texinfo/texinfo.texi:18674
@@ -49811,18 +49821,20 @@ msgid ""
 "Generate a tilde accent over the next character, as in @~N.  @xref{Inserting "
 "Accents}."
 msgstr ""
+"Gerar um acento til sobre o próximo caractere, como em @~N. @xref{Inserindo "
+"Acentos}."
 
 #. type: item
 #: texinfo/texinfo.texi:18675
 #, no-wrap
 msgid "@@AA@{@}"
-msgstr ""
+msgstr "@@AA@{@}"
 
 #. type: itemx
 #: texinfo/texinfo.texi:18676
 #, no-wrap
 msgid "@@aa@{@}"
-msgstr ""
+msgstr "@@aa@{@}"
 
 #. type: table
 #: texinfo/texinfo.texi:18679
@@ -49830,12 +49842,15 @@ msgid ""
 "Generate the uppercase and lowercase Scandinavian A-ring letters, "
 "respectively: @AA{}, @aa{}.  @xref{Inserting Accents}."
 msgstr ""
+"Gerar as letras maiúsculas e minúsculas do anel A escandinavo, "
+"respectivamente: @AA{}, @aa{}. @xref{Inserindo Acentos}."
 
 #. type: table
 #: texinfo/texinfo.texi:18683
 msgid ""
 "Indicate a general abbreviation, such as `Comput.'.  @xref{@code{@@abbr}}."
 msgstr ""
+"Indicar uma abreviação geral, como em `Comput.'. @xref{@code{@@abbr}}."
 
 #. type: table
 #: texinfo/texinfo.texi:18687
@@ -49843,18 +49858,20 @@ msgid ""
 "Indicate an acronym in all capital letters, such as `NASA'.  "
 "@xref{@code{@@acronym}}."
 msgstr ""
+"Indicar uma sigla em letras todas maiúsculas, como em `NASA'. "
+"@xref{@code{@@acronym}}."
 
 #. type: item
 #: texinfo/texinfo.texi:18688
 #, no-wrap
 msgid "@@AE@{@}"
-msgstr ""
+msgstr "@@AE@{@}"
 
 #. type: itemx
 #: texinfo/texinfo.texi:18689
 #, no-wrap
 msgid "@@ae@{@}"
-msgstr ""
+msgstr "@@ae@{@}"
 
 #. type: table
 #: texinfo/texinfo.texi:18692
@@ -49862,40 +49879,44 @@ msgid ""
 "Generate the uppercase and lowercase AE ligatures, respectively: @AE{}, "
 "@ae{}.  @xref{Inserting Accents}."
 msgstr ""
+"Gerar as ligaduras AE maiúsculas e minúsculas, respectivamente: @AE{}, "
+"@ae{}. @xref{Inserindo Acentos}."
 
 #. type: item
 #: texinfo/texinfo.texi:18693
 #, no-wrap
 msgid "@@afivepaper"
-msgstr ""
+msgstr "@@afivepaper"
 
 #. type: table
 #: texinfo/texinfo.texi:18695
 msgid "Change page dimensions for the A5 paper size.  @xref{A4 Paper}."
 msgstr ""
+"Mudar dimensões de página para o tamanho de papel A5. @xref{Papel A4}."
 
 #. type: item
 #: texinfo/texinfo.texi:18696
 #, no-wrap
 msgid "@@afourlatex"
-msgstr ""
+msgstr "@@afourlatex"
 
 #. type: itemx
 #: texinfo/texinfo.texi:18697
 #, no-wrap
 msgid "@@afourpaper"
-msgstr ""
+msgstr "@@afourpaper"
 
 #. type: itemx
 #: texinfo/texinfo.texi:18698
 #, no-wrap
 msgid "@@afourwide"
-msgstr ""
+msgstr "@@afourwide"
 
 #. type: table
 #: texinfo/texinfo.texi:18700
 msgid "Change page dimensions for the A4 paper size.  @xref{A4 Paper}."
 msgstr ""
+"Mudar dimensões de página para o tamanho de papel A4. @xref{Papel A4}."
 
 #. type: table
 #: texinfo/texinfo.texi:18704
@@ -49903,12 +49924,14 @@ msgid ""
 "Make the command @samp{@@@var{new}} a synonym for the existing command "
 "@samp{@@@var{existing}}.  @xref{@code{@@alias}}."
 msgstr ""
+"Tornar o comando @samp{@@@var{novo}} um sinônimo para o comando existente "
+"@samp{@@@var{existente}}. @xref{@code{@@alias}}."
 
 #. type: item
 #: texinfo/texinfo.texi:18705
 #, no-wrap
 msgid "@@allowcodebreaks @var{true-false}"
-msgstr ""
+msgstr "@@allowcodebreaks @var{verdadeiro-falso}"
 
 #. type: table
 #: texinfo/texinfo.texi:18708
@@ -49916,12 +49939,14 @@ msgid ""
 "Control breaking at @samp{-} and @samp{_} in printed output.  "
 "@xref{@code{@@allowcodebreaks}}."
 msgstr ""
+"Controlar quebra em @samp{-} e @samp{_} na saída impressa. "
+"@xref{@code{@@allowcodebreaks}}."
 
 #. type: item
 #: texinfo/texinfo.texi:18709
 #, no-wrap
 msgid "@@anchor@{@var{name}@}"
-msgstr ""
+msgstr "@@anchor@{@var{nome}@}"
 
 #. type: table
 #: texinfo/texinfo.texi:18712
@@ -49929,12 +49954,14 @@ msgid ""
 "Define @var{name} as the current location for use as a cross-reference "
 "target.  @xref{@code{@@anchor}}."
 msgstr ""
+"Definir @var{nome} como o local atual para uso como um alvo de referência "
+"cruzada. @xref{@code{@@anchor}}."
 
 #. type: item
 #: texinfo/texinfo.texi:18713
 #, no-wrap
 msgid "@@appendix @var{title}"
-msgstr ""
+msgstr "@@appendix @var{título}"
 
 #. type: table
 #: texinfo/texinfo.texi:18716
@@ -49942,18 +49969,20 @@ msgid ""
 "Begin an appendix.  The title appears in the table of contents.  "
 "@xref{@code{@@unnumbered @@appendix}}."
 msgstr ""
+"Começar um apêndice. O título aparece no índice. "
+"@xref{@code{@@unnumbered @@appendix}}."
 
 #. type: item
 #: texinfo/texinfo.texi:18717
 #, no-wrap
 msgid "@@appendixsec @var{title}"
-msgstr ""
+msgstr "@@appendixsec @var{título}"
 
 #. type: itemx
 #: texinfo/texinfo.texi:18718
 #, no-wrap
 msgid "@@appendixsection @var{title}"
-msgstr ""
+msgstr "@@appendixsection @var{título}"
 
 #. type: table
 #: texinfo/texinfo.texi:18723
@@ -49963,6 +49992,10 @@ msgid ""
 "@code{@@appendixsec} command.  @xref{@code{@@unnumberedsec @@appendixsec "
 "@@heading}}."
 msgstr ""
+"Começar uma seção de apêndice dentro de um apêndice. O título da "
+"seção aparece no índice. @code{@@appendixsection} é uma ortografia mais "
+"longa do comando @code{@@appendixsec}. @xref{@code{@@unnumberedsec "
+"@@appendixsec @@heading}}."
 
 #. type: item
 #: texinfo/texinfo.texi:18724
