@@ -5156,8 +5156,8 @@ msgid ""
 msgstr ""
 "Gera um índice curto ou sumário que lista somente os capítulos, "
 "apêndices e capítulos não numerados. Seções, subseções e "
-"subsubseções são omitidas. Somente um manual longo precisa de um índice "
-"curto em adição ao índice completo."
+"subsubseções são omitidas. Somente um manual longo precisa de um sumário "
+"curto em adição ao sumário completo."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:1943
@@ -5197,9 +5197,9 @@ msgid ""
 "the document. The links in the full table of contents point to the main text "
 "of the document."
 msgstr ""
-"Na saída HTML, os links na índice curto apontam para as entradas "
-"correspondentes no índice, em vez do texto do documento. Os links no "
-"índice completo apontam para o texto principal do documento."
+"Na saída HTML, os linques no sumário curto apontam para as entradas "
+"correspondentes no sumário completo, em vez do texto do documento. Os "
+"linques no sumário completo apontam para o texto principal do documento."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:1955
@@ -5574,7 +5574,7 @@ msgid ""
 msgstr ""
 "Na saída Info, o nó @samp{Primeiro Capítulo} conterá um menu listando as "
 "duas seções no capítulo. Da mesma forma, quando esse nó for gerado no "
-"próprio arquivo HTML, ele conterá um índice para o capítulo."
+"próprio arquivo HTML, ele conterá um sumário para o capítulo."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:2120
@@ -40952,11 +40952,11 @@ msgid ""
 "@code{AFTER_TOC_LINES}; otherwise, a default string is used.  At the time of "
 "writing, a @code{</div>} element is closed."
 msgstr ""
-"Se configurada, o texto correspondente será exibido depois do índice "
-"resumido para @code{AFTER_SHORT_TOC_LINES} e depois do índice analítico "
-"para @code{AFTER_TOC_LINES}; caso contrário, uma string padrão será "
-"usada. Ao tempo da escrita deste texto, um elemento @code{</div>} estava "
-"fechado."
+"Se configurada, o texto correspondente será exibido depois do sumário "
+"curto para @code{AFTER_SHORT_TOC_LINES} e depois do sumário para "
+"@code{AFTER_TOC_LINES}; caso contrário, uma sequência de caracteres "
+"padrão será usada. Ao tempo da escrita deste texto, um elemento "
+"@code{</div>} estava fechado."
 
 #. type: vtable
 #: texinfo/texinfo.texi:15655
@@ -41006,9 +41006,9 @@ msgid ""
 "@code{BEFORE_TOC_LINES}, otherwise a default string is used.  At the time of "
 "writing, a @code{<div ...>} element is opened."
 msgstr ""
-"Se configurada, o texto correspondente será produzido antes do índice "
-"resumido para @code{BEFORE_SHORT_TOC_LINES} e antes do índice analítico "
-"para @code{BEFORE_TOC_LINES}, caso contrário, uma sequência padrão de "
+"Se configurada, o texto correspondente será produzido antes do sumário "
+"curto para @code{BEFORE_SHORT_TOC_LINES} e antes do sumário para "
+"@code{BEFORE_TOC_LINES}, caso contrário, uma sequência padrão de "
 "caracteres será usada. Ao tempo da escrita deste texto, um elemento "
 "@code{<div ...>} é aberto."
 
@@ -41359,7 +41359,7 @@ msgid ""
 "file with the short table of contents; default false."
 msgstr ""
 "Se configurada, é gerado um arquivo descrevendo o esquema do quadro, "
-"juntamente com um arquivo com o índice resumido; padrão falso."
+"juntamente com um arquivo com o sumário curto; padrão falso."
 
 #. type: item
 #: texinfo/texinfo.texi:15774
@@ -41714,8 +41714,8 @@ msgid ""
 "Output only one file including the table of contents.  Set by default, but "
 "only relevant when the output is not split."
 msgstr ""
-"Produzir somente um arquivo incluindo o índice analítico. Configurada por "
-"padrão, mas relevante somente quando a saída gerada não for dividida."
+"Produzir somente um arquivo incluindo o sumário. Configurada por padrão, "
+"mas relevante somente quando a saída gerada não for dividida."
 
 #. type: item
 #: texinfo/texinfo.texi:15888
@@ -41847,8 +41847,8 @@ msgid ""
 "corresponding Table of Contents entries, if a Table of Contents is output; "
 "default true."
 msgstr ""
-"Se configurada, as referências cruzadas no Índice resumido se lincam às "
-"entradas correspondentes do Índice, se um Índice for gerado; padrão "
+"Se configurada, as referências cruzadas no sumário curto se lincam às "
+"entradas correspondentes do Sumário, se um Sumário for gerado; padrão "
 "verdadeiro."
 
 #. type: item
@@ -49969,7 +49969,7 @@ msgid ""
 "Begin an appendix.  The title appears in the table of contents.  "
 "@xref{@code{@@unnumbered @@appendix}}."
 msgstr ""
-"Começar um apêndice. O título aparece no índice. "
+"Começar um apêndice. O título aparece no sumário. "
 "@xref{@code{@@unnumbered @@appendix}}."
 
 #. type: item
@@ -49993,7 +49993,7 @@ msgid ""
 "@@heading}}."
 msgstr ""
 "Começar uma seção de apêndice dentro de um apêndice. O título da "
-"seção aparece no índice. @code{@@appendixsection} é uma ortografia mais "
+"seção aparece no sumário. @code{@@appendixsection} é uma ortografia mais "
 "longa do comando @code{@@appendixsec}. @xref{@code{@@unnumberedsec "
 "@@appendixsec @@heading}}."
 
@@ -50001,7 +50001,7 @@ msgstr ""
 #: texinfo/texinfo.texi:18724
 #, no-wrap
 msgid "@@appendixsubsec @var{title}"
-msgstr ""
+msgstr "@@appendixsubsec @var{título}"
 
 #. type: table
 #: texinfo/texinfo.texi:18727
@@ -50009,12 +50009,14 @@ msgid ""
 "Begin an appendix subsection.  The title appears in the table of contents.  "
 "@xref{@code{@@unnumberedsubsec @@appendixsubsec @@subheading}}."
 msgstr ""
+"Começar uma subseção do apêndice. O título aparece no sumário. "
+"@xref{@code{@@unnumberedsubsec @@appendixsubsec @@subheading}}."
 
 #. type: item
 #: texinfo/texinfo.texi:18728
 #, no-wrap
 msgid "@@appendixsubsubsec @var{title}"
-msgstr ""
+msgstr "@@appendixsubsubsec @var{título}"
 
 #. type: table
 #: texinfo/texinfo.texi:18731
@@ -50022,12 +50024,14 @@ msgid ""
 "Begin an appendix subsubsection.  The title appears in the table of "
 "contents.  @xref{@code{@@subsubsection}}."
 msgstr ""
+"Começar uma subsubseção do apêndice. O título aparece no índice. "
+"@xref{@code{@@subsubsection}}."
 
 #. type: item
 #: texinfo/texinfo.texi:18732
 #, no-wrap
 msgid "@@arrow@{@}"
-msgstr ""
+msgstr "@@arrow@{@}"
 
 #. type: table
 #: texinfo/texinfo.texi:18735
@@ -50035,6 +50039,8 @@ msgid ""
 "Generate a right arrow glyph: @samp{@arrow{}}.  Used by default for "
 "@code{@@click}.  @xref{Click Sequences}."
 msgstr ""
+"Gerar um glifo de seta para a direita: @samp{@arrow{}}. Usado por padrão "
+"para @code{@@click}. @xref{Sequências de Cliques}."
 
 #. type: table
 #: texinfo/texinfo.texi:18741
@@ -50043,12 +50049,15 @@ msgid ""
 "and @code{@@vtable} to print the table's first column without highlighting "
 "(``as is'').  @xref{@code{@@asis}}."
 msgstr ""
+"Manter o argumento como está. Usado seguinte a @code{@@table}, "
+"@code{@@ftable} e @code{@@vtable} para imprimir a primeira coluna da tabela "
+"sem realçar (``como está''). @xref{@code{@@asis}}."
 
 #. type: item
 #: texinfo/texinfo.texi:18742
 #, no-wrap
 msgid "@@author @var{author}"
-msgstr ""
+msgstr "@@author @var{autor(a)}"
 
 #. type: table
 #: texinfo/texinfo.texi:18745
@@ -50057,23 +50066,27 @@ msgid ""
 "@@author}}.  Set a quotation author in @code{@@quotation}.  "
 "@xref{@code{@@quotation}}."
 msgstr ""
+"Configurar um(a) autor(a) do manual na página de título. "
+"@xref{@code{@@title @@subtitle @@author}}. Configurar um(a) autor(a) de "
+"citação em @code{@@quotation}. @xref{@code{@@quotation}}."
 
 #. type: item
 #: texinfo/texinfo.texi:18746
 #, no-wrap
 msgid "@@b@{@var{text}@}"
-msgstr ""
+msgstr "@@b@{@var{texto}@}"
 
 #. type: table
 #: texinfo/texinfo.texi:18748
 msgid "Set @var{text} in a @b{bold} font, if possible.  @xref{Fonts}."
 msgstr ""
+"Configurar @var{texto} em uma fonte @b{negrito}, se possível. @xref{Fontes}."
 
 #. type: item
 #: texinfo/texinfo.texi:18749
 #, no-wrap
 msgid "@@bullet@{@}"
-msgstr ""
+msgstr "@@bullet@{@}"
 
 #. type: table
 #: texinfo/texinfo.texi:18752
@@ -50081,23 +50094,26 @@ msgid ""
 "Generate a large round dot, @bullet{}, or the closest possible thing to "
 "one.  Often used with @code{@@table}.  @xref{@code{@@bullet}}."
 msgstr ""
+"Gerar um ponto redondo grande, @bullet{}, ou a coisa mais próxima possível "
+"de um. Frequentemente usado com @code{@@table}. @xref{@code{@@bullet}}."
 
 #. type: item
 #: texinfo/texinfo.texi:18753
 #, no-wrap
 msgid "@@bsixpaper"
-msgstr ""
+msgstr "@@bsixpaper"
 
 #. type: table
 #: texinfo/texinfo.texi:18755
 msgid "Change page dimensions for the B6 paper size.  @xref{A4 Paper}."
 msgstr ""
+"Mudar domensões de página para o tamanho de papel B6. @xref{Papel A4}."
 
 #. type: item
 #: texinfo/texinfo.texi:18756
 #, no-wrap
 msgid "@@bye"
-msgstr ""
+msgstr "@@bye"
 
 #. type: table
 #: texinfo/texinfo.texi:18759
@@ -50105,12 +50121,14 @@ msgid ""
 "Stop processing a file.  The processors do not see anything in the input "
 "file following @code{@@bye}.  @xref{Ending a File}."
 msgstr ""
+"Parar processamento de um arquivo. Os processadores não veem nada no "
+"arquivo de entrada seguinte a @code{@@bye}. @xref{Finalizando um Arquivo}."
 
 #. type: item
 #: texinfo/texinfo.texi:18760
 #, no-wrap
 msgid "@@c @var{comment}"
-msgstr ""
+msgstr "@@c @var{comentário}"
 
 #. type: table
 #: texinfo/texinfo.texi:18764
@@ -50119,12 +50137,15 @@ msgid ""
 "output.  A synonym for @code{@@comment}.  @kbd{DEL} also starts a comment.  "
 "@xref{Comments}."
 msgstr ""
+"Começar um comentário no Texinfo. O resto da linha não aparece em nenhuma "
+"saída gerada. Um sinônimo para @code{@@comment}. @kbd{DEL} também inicia "
+"um comentário. @xref{Comentários}."
 
 #. type: item
 #: texinfo/texinfo.texi:18765
 #, no-wrap
 msgid "@@caption"
-msgstr ""
+msgstr "@@caption"
 
 #. type: table
 #: texinfo/texinfo.texi:18768
@@ -50132,6 +50153,8 @@ msgid ""
 "Define the full caption for a @code{@@float}.  @xref{@code{@@caption "
 "@@shortcaption}}."
 msgstr ""
+"Definir a legenda completa para um @code{@@float}. @xref{@code{@@caption "
+"@@shortcaption}}."
 
 #. type: table
 #: texinfo/texinfo.texi:18773
@@ -50140,12 +50163,15 @@ msgid ""
 "around it, if possible.  Pair with @code{@@end cartouche}.  "
 "@xref{@code{@@cartouche}}."
 msgstr ""
+"Destacar um exemplo ou citação desenhando-se uma caixa com cantos "
+"arredondados ao redor dela, se possível. Emparelhar com @code{@@end "
+"cartouche}. @xref{@code{@@cartouche}}."
 
 #. type: item
 #: texinfo/texinfo.texi:18774
 #, no-wrap
 msgid "@@center @var{line-of-text}"
-msgstr ""
+msgstr "@@center @var{linha-de-texto}"
 
 #. type: table
 #: texinfo/texinfo.texi:18777
@@ -50153,12 +50179,14 @@ msgid ""
 "Center the line of text following the command.  @xref{@code{@@titlefont "
 "@@center @@sp}}."
 msgstr ""
+"Centralizar a linha de texto seguinte ao comando. @xref{@code{@@titlefont "
+"@@center @@sp}}."
 
 #. type: item
 #: texinfo/texinfo.texi:18778
 #, no-wrap
 msgid "@@centerchap @var{line-of-text}"
-msgstr ""
+msgstr "@@centerchap @var{linha-de-texto}"
 
 #. type: table
 #: texinfo/texinfo.texi:18780
@@ -50166,12 +50194,14 @@ msgid ""
 "Like @code{@@chapter}, but centers the chapter title.  "
 "@xref{@code{@@chapter}}."
 msgstr ""
+"Como @code{@@chapter}, porém centraliza o título do capítulo. "
+"@xref{@code{@@chapter}}."
 
 #. type: item
 #: texinfo/texinfo.texi:18781
 #, no-wrap
 msgid "@@chapheading @var{title}"
-msgstr ""
+msgstr "@@chapheading @var{título}"
 
 #. type: table
 #: texinfo/texinfo.texi:18784
@@ -50179,12 +50209,14 @@ msgid ""
 "Print an unnumbered chapter-like heading, but omit from the table of "
 "contents.  @xref{@code{@@majorheading @@chapheading}}."
 msgstr ""
+"Imprimir um título semelhante a um capítulo sem numeração, porém "
+"omita-o do sumário. @xref{@code{@@majorheading @@chapheading}}."
 
 #. type: item
 #: texinfo/texinfo.texi:18785
 #, no-wrap
 msgid "@@chapter @var{title}"
-msgstr ""
+msgstr "@@chapter @var{título}"
 
 #. type: table
 #: texinfo/texinfo.texi:18788
@@ -50192,12 +50224,14 @@ msgid ""
 "Begin a numbered chapter.  The chapter title appears in the table of "
 "contents.  @xref{@code{@@chapter}}."
 msgstr ""
+"Começar um capítulo numerado. O título do capítulo aparece no sumário. "
+"@xref{@code{@@chapter}}."
 
 #. type: item
 #: texinfo/texinfo.texi:18789
 #, no-wrap
 msgid "@@cindex @var{entry}"
-msgstr ""
+msgstr "@@cindex @var{entrada}"
 
 #. type: table
 #: texinfo/texinfo.texi:18792
@@ -50205,6 +50239,8 @@ msgid ""
 "Add @var{entry} to the index of concepts.  @xref{Index Entries, , Defining "
 "the Entries of an Index}."
 msgstr ""
+"Adicionar @var{entrada} ao índice de conceitos. @xref{Entradas de Índice, "
+", Definindo as Entradas de um Índice}."
 
 #. type: table
 #: texinfo/texinfo.texi:18796
@@ -50212,6 +50248,8 @@ msgid ""
 "Highlight the name of a book or other reference that has no companion Info "
 "file.  @xref{@code{@@cite}}."
 msgstr ""
+"Realçar o nome de um livro ou outra referência que não tenha arquivo Info "
+"complementar. @xref{@code{@@cite}}."
 
 #. type: table
 #: texinfo/texinfo.texi:18803
@@ -50222,12 +50260,17 @@ msgid ""
 "to the value to which @var{flag} is set.  @xref{@code{@@set @@clear "
 "@@value}}."
 msgstr ""
+"Desconfigurar @var{sinalizador}, evitando que os comandos de formatação do "
+"Texinfo formatem texto entre pares subsequentes de comandos @code{@@ifset "
+"@var{sinalizador}} e @code{@@end ifset} e evitando que "
+"@code{@@value@{@var{sinalizador}@}} se expanda para o valor para o qual "
+"@var{sinalizador} estiver configurado. @xref{@code{@@set @@clear @@value}}."
 
 #. type: item
 #: texinfo/texinfo.texi:18804
 #, no-wrap
 msgid "@@click@{@}"
-msgstr ""
+msgstr "@@click@{@}"
 
 #. type: table
 #: texinfo/texinfo.texi:18807
@@ -50235,23 +50278,27 @@ msgid ""
 "Represent a single ``click'' in a GUI@.  Used within "
 "@code{@@clicksequence}.  @xref{Click Sequences}."
 msgstr ""
+"Representar um ``clique'' em uma GUI@. Usado dentro de "
+"@code{@@clicksequence}. @xref{Sequências de Cliques}."
 
 #. type: item
 #: texinfo/texinfo.texi:18808
 #, no-wrap
 msgid "@@clicksequence@{@var{action} @@click@{@} @var{action}@}"
-msgstr ""
+msgstr "@@clicksequence@{@var{ação} @@click@{@} @var{ação}@}"
 
 #. type: table
 #: texinfo/texinfo.texi:18810
 msgid "Represent a sequence of clicks in a GUI@.  @xref{Click Sequences}."
 msgstr ""
+"Representa uma sequência de cliques em uma GUI@. @xref{Sequências de "
+"Cliques}."
 
 #. type: item
 #: texinfo/texinfo.texi:18811
 #, no-wrap
 msgid "@@clickstyle @@@var{cmd}"
-msgstr ""
+msgstr "@@clickstyle @@@var{comando}"
 
 #. type: table
 #: texinfo/texinfo.texi:18815
@@ -50260,6 +50307,9 @@ msgid ""
 "The usual following empty braces on @@@var{cmd} are omitted.  @xref{Click "
 "Sequences}."
 msgstr ""
+"Executar @@@var{comando} para cada @code{@@click}; o padrão é "
+"@code{@@arrow}. As chaves vazias usuais seguintes a @@@var{comando} são "
+"omitidas. @xref{Sequências de Cliques}."
 
 #. type: table
 #: texinfo/texinfo.texi:18819
@@ -50267,6 +50317,8 @@ msgid ""
 "Indicate an expression, a syntactically complete token of a program, or a "
 "program name.  @xref{@code{@@code}}."
 msgstr ""
+"Indicar uma expressão, um token sintaticamente completo de um programa ou "
+"um nome de programa. @xref{@code{@@code}}."
 
 #. type: table
 #: texinfo/texinfo.texi:18824
@@ -50274,12 +50326,14 @@ msgid ""
 "Control output of @code{`} and @code{'} in code examples.  @xref{Inserting "
 "Quote Characters}."
 msgstr ""
+"Controlar saída gerada de @code{`} e @code{'} em exemplos de código. "
+"@xref{Inserindo Caracteres de Aspas}."
 
 #. type: item
 #: texinfo/texinfo.texi:18825
 #, no-wrap
 msgid "@@comma@{@}"
-msgstr ""
+msgstr "@@comma@{@}"
 
 #. type: table
 #: texinfo/texinfo.texi:18828
@@ -50287,18 +50341,22 @@ msgid ""
 "Insert a comma `,' character; only needed when a literal comma would be "
 "taken as an argument separator.  @xref{Inserting a Comma}."
 msgstr ""
+"Inserir um caractere de vírgula `,'; necessário somente quando uma "
+"vírgula literal fosse considerada como um separador de argumentos. "
+"@xref{Inserindo uma Vírgula}."
 
 #. type: table
 #: texinfo/texinfo.texi:18831
 msgid ""
 "Indicate a command name, such as @command{ls}.  @xref{@code{@@command}}."
 msgstr ""
+"Indicar um nome de comando, como em @command{ls}. @xref{@code{@@command}}."
 
 #. type: item
 #: texinfo/texinfo.texi:18832
 #, no-wrap
 msgid "@@comment @var{comment}"
-msgstr ""
+msgstr "@@comment @var{comentário}"
 
 #. type: table
 #: texinfo/texinfo.texi:18836
@@ -50306,6 +50364,8 @@ msgid ""
 "Begin a comment in Texinfo.  The rest of the line does not appear in any "
 "output.  A synonym for @code{@@c}.  @xref{Comments}."
 msgstr ""
+"Começar um comentário no Texinfo. O resto da linha não aparece em nenhuma "
+"saída gerada. Um sinônimo para @code{@@c}. @xref{Comentários}."
 
 #. type: table
 #: texinfo/texinfo.texi:18841
@@ -50314,12 +50374,15 @@ msgid ""
 "be output, for formats that may output a table of contents.  @xref{Contents, "
 ", Generating a Table of Contents}."
 msgstr ""
+"Imprimit um sumário completo ou especificar que um sumário deveria ser "
+"gerado, para formatos que podem gerar um sumário. @xref{Conteúdo, , "
+"Gerando um Sumário}."
 
 #. type: item
 #: texinfo/texinfo.texi:18842
 #, no-wrap
 msgid "@@copying"
-msgstr ""
+msgstr "@@copying"
 
 #. type: table
 #: texinfo/texinfo.texi:18845
@@ -50327,23 +50390,26 @@ msgid ""
 "Specify copyright holders and copying conditions for the document.  Pair "
 "with @code{@@end copying}.  @xref{@code{@@copying}}."
 msgstr ""
+"Especificar titulares dos direitos autorais e condições de cópia para o "
+"documento. Emparelhar com @code{@@end copying}. @xref{@code{@@copying}}."
 
 #. type: item
 #: texinfo/texinfo.texi:18846
 #, no-wrap
 msgid "@@copyright@{@}"
-msgstr ""
+msgstr "@@copyright@{@}"
 
 #. type: table
 #: texinfo/texinfo.texi:18849
 msgid "Generate the copyright symbol @copyright{}.  @xref{@code{@@copyright}}."
 msgstr ""
+"Gerar o símbolo de copirraite @copyright{}. @xref{@code{@@copyright}}."
 
 #. type: item
 #: texinfo/texinfo.texi:18850
 #, no-wrap
 msgid "@@defblock"
-msgstr ""
+msgstr "@@defblock"
 
 #. type: table
 #: texinfo/texinfo.texi:18853
@@ -50351,12 +50417,14 @@ msgid ""
 "Start a block containing definitions.  Pair with @samp{@@end defblock}.  "
 "@xref{Generic Definition Commands}."
 msgstr ""
+"Iniciar um bloco contendo definições. Emparelhar com @samp{@@end "
+"defblock}. @xref{Comandos de Definição Genérica}."
 
 #. type: item
 #: texinfo/texinfo.texi:18854
 #, no-wrap
 msgid "@@defcodeindex @var{index-name}"
-msgstr ""
+msgstr "@@defcodeindex @var{nome-índice}"
 
 #. type: table
 #: texinfo/texinfo.texi:18857
@@ -50364,12 +50432,15 @@ msgid ""
 "Define a new index and its indexing command.  Print entries in an "
 "@code{@@code} font.  @xref{New Indices, , Defining New Indices}."
 msgstr ""
+"Definir um novo índice e o comando de indexação dele. Imprimir entradas "
+"em uma fonte @code{@@code}. @xref{Novos Índices, , Definindo Novos "
+"Índices}."
 
 #. type: itemx
 #: texinfo/texinfo.texi:18859
 #, no-wrap
 msgid "@@defcvx @var{category} @var{class} @var{name}"
-msgstr ""
+msgstr "@@defcvx @var{categoria} @var{classe} @var{nome}"
 
 #. type: table
 #: texinfo/texinfo.texi:18864
@@ -50379,12 +50450,16 @@ msgid ""
 "being defined, the class to which it belongs, and its name.  "
 "@xref{Definition Commands}."
 msgstr ""
+"Formatar uma descrição para uma variável associada com uma classe na "
+"programação orientada a objetos. Recebe três argumentos: a categoria da "
+"coisa sendo definida, a classe à qual ela pertence e o nome dela. "
+"@xref{Comandos de Definição}."
 
 #. type: itemx
 #: texinfo/texinfo.texi:18866
 #, no-wrap
 msgid "@@deffnx @var{category} @var{name} @var{arguments}@dots{}"
-msgstr ""
+msgstr "@@deffnx @var{categoria} @var{nome} @var{argumentos}@dots{}"
 
 #. type: table
 #: texinfo/texinfo.texi:18871
@@ -50394,12 +50469,17 @@ msgid ""
 "entity being described, the name of this particular entity, and its "
 "arguments, if any.  @xref{Definition Commands}."
 msgstr ""
+"Formatar uma descrição para uma função, comando interativo ou entidade "
+"semelhante que possa receber argumentos. @code{@@deffn} recebe como "
+"argumentos a categoria da entidade sendo descrita, o nome dessa entidade "
+"específica e os argumentos dela, se existirem. @xref{Comandos de "
+"Definição}."
 
 #. type: item
 #: texinfo/texinfo.texi:18872
 #, no-wrap
 msgid "@@defindex @var{index-name}"
-msgstr ""
+msgstr "@@defindex @var{nome-índice}"
 
 #. type: table
 #: texinfo/texinfo.texi:18875
@@ -50407,12 +50487,14 @@ msgid ""
 "Define a new index and its indexing command.  Print entries in a roman "
 "font.  @xref{New Indices, , Defining New Indices}."
 msgstr ""
+"Definir um novo índice e o comando de indexação dele. Imprimir entradas "
+"em uma fonte romana. @xref{Novos Índices, , Definindo Novos Índices}."
 
 #. type: item
 #: texinfo/texinfo.texi:18876
 #, no-wrap
 msgid "@@definfoenclose @var{newcmd}, @var{before}, @var{after}"
-msgstr ""
+msgstr "@@definfoenclose @var{novocomando}, @var{antes}, @var{depois}"
 
 #. type: table
 #: texinfo/texinfo.texi:18881
@@ -50421,18 +50503,21 @@ msgid ""
 "text by enclosing it in strings that precede and follow the text.  "
 "@xref{@code{@@definfoenclose}}."
 msgstr ""
+"Criar um novo comando @code{@@@var{novocomando}} para formatos online que "
+"marca texto colocando-o em sequências de caracteres que precedem e seguem o "
+"texto. @xref{@code{@@definfoenclose}}."
 
 #. type: item
 #: texinfo/texinfo.texi:18882
 #, no-wrap
 msgid "@@defivar @var{class} @var{instance-variable-name}"
-msgstr ""
+msgstr "@@defivar @var{classe} @var{instância-variável-nome}"
 
 #. type: itemx
 #: texinfo/texinfo.texi:18883
 #, no-wrap
 msgid "@@defivarx @var{class} @var{instance-variable-name}"
-msgstr ""
+msgstr "@@defivarx @var{classe} @var{nome-variável-instância}"
 
 #. type: table
 #: texinfo/texinfo.texi:18887
@@ -50441,12 +50526,15 @@ msgid ""
 "programming.  The command is equivalent to @samp{@@defcv @{Instance "
 "Variable@} @dots{}}.  @xref{Definition Commands}."
 msgstr ""
+"Formatar uma descrição para uma variável de instância na programação "
+"orientada a objetos. O comando é equivalente a @samp{@@defcv @{Instância "
+"Variável@} @dots{}}. @xref{Comandos de Definição}."
 
 #. type: item
 #: texinfo/texinfo.texi:18888
 #, no-wrap
 msgid "@@defline @var{category} @var{name} @var{arguments}@dots{}"
-msgstr ""
+msgstr "@@defline @var{categoria} @var{nome} @var{argumentos}@dots{}"
 
 #. type: table
 #: texinfo/texinfo.texi:18892
@@ -50455,18 +50543,21 @@ msgid ""
 "line for a symbol being defined.  This command does not create any index "
 "entries.  @xref{Generic Definition Commands}."
 msgstr ""
+"Usar em um ambiente @code{@@defblock} para fornecer a linha de protótipo de "
+"título para um símbolo sendo definido. Esse comando não cria nenhuma "
+"entrada de índice. @xref{Comandos de Definição Genérica}."
 
 #. type: item
 #: texinfo/texinfo.texi:18893
 #, no-wrap
 msgid "@@defmac @var{macroname} @var{arguments}@dots{}"
-msgstr ""
+msgstr "@@defmac @var{nomemacro} @var{argumentos}@dots{}"
 
 #. type: itemx
 #: texinfo/texinfo.texi:18894
 #, no-wrap
 msgid "@@defmacx @var{macroname} @var{arguments}@dots{}"
-msgstr ""
+msgstr "@@defmacx @var{nomemacro} @var{argumentos}@dots{}"
 
 #. type: table
 #: texinfo/texinfo.texi:18897
@@ -50474,6 +50565,8 @@ msgid ""
 "Format a description for a macro; equivalent to @samp{@@deffn Macro "
 "@dots{}}.  @xref{Definition Commands}."
 msgstr ""
+"Formatar uma descrição para uma macro; equivalente a @samp{@@deffn Macro "
+"@dots{}}. @xref{Comandos de Definição}."
 
 #. type: item
 #: texinfo/texinfo.texi:18898
