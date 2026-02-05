@@ -50572,13 +50572,13 @@ msgstr ""
 #: texinfo/texinfo.texi:18898
 #, no-wrap
 msgid "@@defmethod @var{class} @var{method-name} @var{arguments}@dots{}"
-msgstr ""
+msgstr "@@defmethod @var{classe} @var{nome-método} @var{argumentos}@dots{}"
 
 #. type: itemx
 #: texinfo/texinfo.texi:18899
 #, no-wrap
 msgid "@@defmethodx @var{class} @var{method-name} @var{arguments}@dots{}"
-msgstr ""
+msgstr "@@defmethodx @var{classe} @var{nome-método} @var{argumentos}@dots{}"
 
 #. type: table
 #: texinfo/texinfo.texi:18903
@@ -50586,12 +50586,16 @@ msgid ""
 "Format a description for a method in object-oriented programming; equivalent "
 "to @samp{@@defop Method @dots{}}.  @xref{Definition Commands}."
 msgstr ""
+"Formatar uma descrição para um método na programação orientada a "
+"objetos; equivalente para @samp{@@defop Método @dots{}}. @xref{Comandos de "
+"Definição}."
 
 #. type: itemx
 #: texinfo/texinfo.texi:18905
 #, no-wrap
 msgid "@@defopx @var{category} @var{class} @var{name} @var{arguments}@dots{}"
 msgstr ""
+"@@defopx @var{categoria} @var{classe} @var{nome} @var{argumentos}@dots{}"
 
 #. type: table
 #: texinfo/texinfo.texi:18911
@@ -50601,18 +50605,23 @@ msgid ""
 "name of the operation's class, the name of the operation, and its arguments, "
 "if any.  @xref{Definition Commands}, and @ref{Abstract Objects}."
 msgstr ""
+"Formatar uma descrição para uma operação na programação orientada a "
+"objetos. @code{@@defop} recebe como argumentos o nome da categoria de "
+"operação, o nome da classe da operação, o nome da operação e os "
+"argumentos dela, se existirem. @xref{Comandos de Definição} e @ref{Objetos "
+"Abstratos}."
 
 #. type: item
 #: texinfo/texinfo.texi:18912
 #, no-wrap
 msgid "@@defopt @var{option-name}"
-msgstr ""
+msgstr "@@defopt @var{nome-opção}"
 
 #. type: itemx
 #: texinfo/texinfo.texi:18913
 #, no-wrap
 msgid "@@defoptx @var{option-name}"
-msgstr ""
+msgstr "@@defoptx @var{nome-opção}"
 
 #. type: table
 #: texinfo/texinfo.texi:18916
@@ -50620,18 +50629,21 @@ msgid ""
 "Format a description for a user option; equivalent to @samp{@@defvr @{User "
 "Option@} @dots{}}.  @xref{Definition Commands}."
 msgstr ""
+"Formatar uma descrição para uma opção de usuário(a); equivalente para "
+"@samp{@@defvr @{Opção de Usuário(a)@} @dots{}}. @xref{Comandos de "
+"Definição}."
 
 #. type: item
 #: texinfo/texinfo.texi:18917
 #, no-wrap
 msgid "@@defspec @var{special-form-name} @var{arguments}@dots{}"
-msgstr ""
+msgstr "@@defspec @var{nome-forma-especial} @var{argumentos}@dots{}"
 
 #. type: itemx
 #: texinfo/texinfo.texi:18918
 #, no-wrap
 msgid "@@defspecx @var{special-form-name} @var{arguments}@dots{}"
-msgstr ""
+msgstr "@@defspecx @var{nome-forma-especial} @var{argumentos}@dots{}"
 
 #. type: table
 #: texinfo/texinfo.texi:18921
@@ -50639,18 +50651,20 @@ msgid ""
 "Format a description for a special form; equivalent to @samp{@@deffn "
 "@{Special Form@} @dots{}}.  @xref{Definition Commands}."
 msgstr ""
+"Formatar uma descrição para uma forma especial; equivalente para "
+"@samp{@@deffn @{Forma Especial@} @dots{}}. @xref{Comandos de Definição}."
 
 #. type: item
 #: texinfo/texinfo.texi:18922
 #, no-wrap
 msgid "@@deftp @var{category} @var{name-of-type} @var{attributes}@dots{}"
-msgstr ""
+msgstr "@@deftp @var{categoria} @var{nome-do-tipo} @var{atributos}@dots{}"
 
 #. type: itemx
 #: texinfo/texinfo.texi:18923
 #, no-wrap
 msgid "@@deftpx @var{category} @var{name-of-type} @var{attributes}@dots{}"
-msgstr ""
+msgstr "@@deftpx @var{categoria} @var{nome-do-tipo} @var{atributos}@dots{}"
 
 #. type: table
 #: texinfo/texinfo.texi:18928
@@ -50659,12 +50673,16 @@ msgid ""
 "name of the type (e.g., @samp{int}) , and then the names of attributes of "
 "objects of that type.  @xref{Definition Commands}, and @ref{Data Types}."
 msgstr ""
+"Formatar uma descrição para um tipo de dados; os argumentos dela são a "
+"categoria, o nome do tipo (por exemplo, @samp{int}) e, em seguida, os nomes "
+"dos atributos dos objetos desse tipo. @xref{Comandos de Definição} e "
+"@ref{Tipos de Dados}."
 
 #. type: itemx
 #: texinfo/texinfo.texi:18930
 #, no-wrap
 msgid "@@deftypecvx @var{category} @var{class} @var{data-type} @var{name}"
-msgstr ""
+msgstr "@@deftypecvx @var{categoria} @var{classe} @var{tipo-dados} @var{nome}"
 
 #. type: table
 #: texinfo/texinfo.texi:18933
@@ -50672,6 +50690,9 @@ msgid ""
 "Format a description for a typed class variable in object-oriented "
 "programming.  @xref{Definition Commands}, and @ref{Abstract Objects}."
 msgstr ""
+"Formatar uma descrição para uma variável de classe tipada na "
+"programação orientada a objetos. @xref{Comandos de Definição} e "
+"@ref{Objetos Abstratos}."
 
 #. type: itemx
 #: texinfo/texinfo.texi:18935
@@ -50679,6 +50700,8 @@ msgstr ""
 msgid ""
 "@@deftypefnx @var{category} @var{data-type} @var{name} @var{arguments}@dots{}"
 msgstr ""
+"@@deftypefnx @var{categoria} @var{tipo-dados} @var{nome} "
+"@var{argumentos}@dots{}"
 
 #. type: table
 #: texinfo/texinfo.texi:18940
@@ -50688,12 +50711,16 @@ msgid ""
 "category of entity being described, the type, the name of the entity, and "
 "its arguments, if any.  @xref{Definition Commands}."
 msgstr ""
+"Formatar uma descrição para uma função ou entidade semelhante que possa "
+"receber argumentos e que seja tipada. @code{@@deftypefn} recebe como "
+"argumentos a categoria da entidade sendo descrita, o tipo, o nome da "
+"entidade e os argumentos dela, se existirem. @xref{Comandos de Definição}."
 
 #. type: item
 #: texinfo/texinfo.texi:18941
 #, no-wrap
 msgid "@@deftypefnnewline @var{on-off}"
-msgstr ""
+msgstr "@@deftypefnnewline @var{ligada-desligada}"
 
 #. type: table
 #: texinfo/texinfo.texi:18945
@@ -50702,12 +50729,16 @@ msgid ""
 "printed on lines by themselves; default is off.  @xref{Typed Functions,, "
 "Functions in Typed Languages}."
 msgstr ""
+"Especifica se os tipos de retorno para @code{@@deftypefn} e similares são "
+"impressos sozinhos nas linhas; o padrão é desligado. @xref{Funções "
+"Tipadas,, Funções em Linguagens Tipadas}."
 
 #. type: item
 #: texinfo/texinfo.texi:18946
 #, no-wrap
 msgid "@@deftypefun @var{data-type} @var{function-name} @var{arguments}@dots{}"
 msgstr ""
+"@@deftypefun @var{tipo-dados} @var{nome-função} @var{argumentos}@dots{}"
 
 #. type: itemx
 #: texinfo/texinfo.texi:18947
@@ -50715,6 +50746,7 @@ msgstr ""
 msgid ""
 "@@deftypefunx @var{data-type} @var{function-name} @var{arguments}@dots{}"
 msgstr ""
+"@@deftypefunx @var{tipo-dados} @var{nome-função} @var{argumentos}@dots{}"
 
 #. type: table
 #: texinfo/texinfo.texi:18951
@@ -50723,18 +50755,21 @@ msgid ""
 "equivalent to @samp{@@deftypefn Function @dots{}}.  @xref{Definition "
 "Commands}."
 msgstr ""
+"Formatar uma descrição para uma função em uma linguagem tipada. O "
+"comando é equivalente para @samp{@@deftypefn Função @dots{}}. "
+"@xref{Comandos de Definição}."
 
 #. type: item
 #: texinfo/texinfo.texi:18952
 #, no-wrap
 msgid "@@deftypeivar @var{class} @var{data-type} @var{variable-name}"
-msgstr ""
+msgstr "@@deftypeivar @var{classe} @var{tipo-dados} @var{nome-variável}"
 
 #. type: itemx
 #: texinfo/texinfo.texi:18953
 #, no-wrap
 msgid "@@deftypeivarx @var{class} @var{data-type} @var{variable-name}"
-msgstr ""
+msgstr "@@deftypeivarx @var{classe} @var{tipo-dados} @var{nome-variável}"
 
 #. type: table
 #: texinfo/texinfo.texi:18956
@@ -50742,6 +50777,9 @@ msgid ""
 "Format a description for a typed instance variable in object-oriented "
 "programming. @xref{Definition Commands}, and @ref{Abstract Objects}."
 msgstr ""
+"Formatar uma descrição para uma variável tipada de instância na "
+"programação orientada a objetos. @xref{Comandos de Definição} e "
+"@ref{Objetos Abstratos}."
 
 #. type: item
 #: texinfo/texinfo.texi:18957
@@ -50750,6 +50788,8 @@ msgid ""
 "@@deftypeline @var{category} @var{data-type} @var{name} "
 "@var{arguments}@dots{}"
 msgstr ""
+"@@deftypeline @var{categoria} @var{tipo-dados} @var{nome} "
+"@var{argumentos}@dots{}"
 
 #. type: table
 #: texinfo/texinfo.texi:18961
@@ -50758,6 +50798,10 @@ msgid ""
 "line for a symbol being defined, with data types.  This command does not "
 "create any index entries.  @xref{Generic Definition Commands}."
 msgstr ""
+"Usar dentro de um ambiente @code{@@defblock} para fornecer a linha de "
+"protótipo de título para um símbolo sendo definido, com tipos de dados. "
+"Esse comando não cria quaisquer entradas de índice. @xref{Comandos de "
+"Definição Genérica}."
 
 #. type: item
 #: texinfo/texinfo.texi:18962
@@ -50766,6 +50810,8 @@ msgid ""
 "@@deftypemethod @var{class} @var{data-type} @var{method-name} "
 "@var{arguments}@dots{}"
 msgstr ""
+"@@deftypemethod @var{classe} @var{tipo-dados} @var{nome-método} "
+"@var{argumentos}@dots{}"
 
 #. type: itemx
 #: texinfo/texinfo.texi:18963
@@ -50774,6 +50820,8 @@ msgid ""
 "@@deftypemethodx @var{class} @var{data-type} @var{method-name} "
 "@var{arguments}@dots{}"
 msgstr ""
+"@@deftypemethodx @var{classe} @var{tipo-dados} @var{nome-método} "
+"@var{argumentos}@dots{}"
 
 #. type: table
 #: texinfo/texinfo.texi:18966
@@ -50781,6 +50829,8 @@ msgid ""
 "Format a description for a typed method in object-oriented programming.  "
 "@xref{Definition Commands}."
 msgstr ""
+"Formatar uma descrição para um método tipado na programação orientada a "
+"objetos. @xref{Comandos de Definição}."
 
 #. type: itemx
 #: texinfo/texinfo.texi:18968
@@ -50789,6 +50839,8 @@ msgid ""
 "@@deftypeopx @var{category} @var{class} @var{data-type} @var{name} "
 "@var{arguments}@dots{}"
 msgstr ""
+"@@deftypeopx @var{categoria} @var{classe} @var{tipo-dados} @var{nome} "
+"@var{argumentos}@dots{}"
 
 #. type: table
 #: texinfo/texinfo.texi:18971
@@ -50796,18 +50848,21 @@ msgid ""
 "Format a description for a typed operation in object-oriented programming.  "
 "@xref{Definition Commands}, and @ref{Abstract Objects}."
 msgstr ""
+"Formatar uma descrição para uma operação tipada na programação "
+"orientada a objetos. @xref{Comandos de Definição} e @ref{Objetos "
+"Abstratos}."
 
 #. type: item
 #: texinfo/texinfo.texi:18972
 #, no-wrap
 msgid "@@deftypevar @var{data-type} @var{variable-name}"
-msgstr ""
+msgstr "@@deftypevar @var{tipo-dados} @var{nome-variável}"
 
 #. type: itemx
 #: texinfo/texinfo.texi:18973
 #, no-wrap
 msgid "@@deftypevarx @var{data-type} @var{variable-name}"
-msgstr ""
+msgstr "@@deftypevarx @var{tipo-dados} @var{nome-variável}"
 
 #. type: table
 #: texinfo/texinfo.texi:18977
@@ -50816,12 +50871,15 @@ msgid ""
 "equivalent to @samp{@@deftypevr Variable @dots{}}.  @xref{Definition "
 "Commands}."
 msgstr ""
+"Formatar uma descrição para uma variável em uma linguagem tipada. O "
+"comando é equivalente para @samp{@@deftypevr Variável @dots{}}. "
+"@xref{Comandos de Definição}."
 
 #. type: itemx
 #: texinfo/texinfo.texi:18979
 #, no-wrap
 msgid "@@deftypevrx @var{category} @var{data-type} @var{name}"
-msgstr ""
+msgstr "@@deftypevrx @var{categoria} @var{tipo-dados} @var{nome}"
 
 #. type: table
 #: texinfo/texinfo.texi:18984
@@ -50831,18 +50889,22 @@ msgid ""
 "being described, the type, and the name of the entity.  @xref{Definition "
 "Commands}."
 msgstr ""
+"Formatar uma descrição para algo como uma variável em uma linguagem "
+"tipada–--uma entidade que registra um valor. Recebe como argumentos a "
+"categoria da entidade sendo descrita, o tipo e o nome da entidade. "
+"@xref{Comandos de Definição}."
 
 #. type: item
 #: texinfo/texinfo.texi:18985
 #, no-wrap
 msgid "@@defun @var{function-name} @var{arguments}@dots{}"
-msgstr ""
+msgstr "@@defun @var{nome-função} @var{argumentos}@dots{}"
 
 #. type: itemx
 #: texinfo/texinfo.texi:18986
 #, no-wrap
 msgid "@@defunx @var{function-name} @var{arguments}@dots{}"
-msgstr ""
+msgstr "@@defunx @var{nome-função} @var{argumentos}@dots{}"
 
 #. type: table
 #: texinfo/texinfo.texi:18989
@@ -50850,18 +50912,20 @@ msgid ""
 "Format a description for a function; equivalent to @samp{@@deffn Function "
 "@dots{}}.  @xref{Definition Commands}."
 msgstr ""
+"Formatar uma descrição para uma função; equivalente para @samp{@@deffn "
+"Função @dots{}}. @xref{Comandos de Definição}."
 
 #. type: item
 #: texinfo/texinfo.texi:18990
 #, no-wrap
 msgid "@@defvar @var{variable-name}"
-msgstr ""
+msgstr "@@defvar @var{nome-variável}"
 
 #. type: itemx
 #: texinfo/texinfo.texi:18991
 #, no-wrap
 msgid "@@defvarx @var{variable-name}"
-msgstr ""
+msgstr "@@defvarx @var{nome-variável}"
 
 #. type: table
 #: texinfo/texinfo.texi:18994
@@ -50869,12 +50933,14 @@ msgid ""
 "Format a description for a variable; equivalent to @samp{@@defvr Variable "
 "@dots{}}.  @xref{Definition Commands}."
 msgstr ""
+"Formatar uma descrição para uma variável; equivalente para @samp{@@defvr "
+"Variável @dots{}}. @xref{Comandos de Definição}."
 
 #. type: itemx
 #: texinfo/texinfo.texi:18996
 #, no-wrap
 msgid "@@defvrx @var{category} @var{name}"
-msgstr ""
+msgstr "@@defvrx @var{categoria} @var{nome}"
 
 #. type: table
 #: texinfo/texinfo.texi:19000
@@ -50883,12 +50949,15 @@ msgid ""
 "arguments the category of the entity and the name of the entity.  "
 "@xref{Definition Commands}."
 msgstr ""
+"Formatar uma descrição para qualquer tipo de variável. @code{@@defvr} "
+"recebe como argumentos a categoria da entidade e o nome da entidade. "
+"@xref{Comandos de Definição}."
 
 #. type: item
 #: texinfo/texinfo.texi:19001
 #, no-wrap
 msgid "@@detailmenu"
-msgstr ""
+msgstr "@@detailmenu"
 
 #. type: table
 #: texinfo/texinfo.texi:19004
@@ -50896,18 +50965,20 @@ msgid ""
 "Mark the (optional) detailed node listing in a master menu.  @xref{Master "
 "Menu Parts}."
 msgstr ""
+"Marcar a listagem detalhada de nós (opcional) em um menu mestre. "
+"@xref{Partes do Menu Mestre}."
 
 #. type: item
 #: texinfo/texinfo.texi:19008
 #, no-wrap
 msgid "@@DH@{@}"
-msgstr ""
+msgstr "@@DH@{@}"
 
 #. type: itemx
 #: texinfo/texinfo.texi:19009
 #, no-wrap
 msgid "@@dh@{@}"
-msgstr ""
+msgstr "@@dh@{@}"
 
 #. type: table
 #: texinfo/texinfo.texi:19012
@@ -50915,23 +50986,26 @@ msgid ""
 "Generate the uppercase and lowercase Icelandic letter eth, respectively: "
 "@DH{}, @dh{}.  @xref{Inserting Accents}."
 msgstr ""
+"Gerar a letra islandesa maiúscula e minúscula eth, respectivamente: @DH{}, "
+"@dh{}. @xref{Inserindo Acentos}."
 
 #. type: item
 #: texinfo/texinfo.texi:19013
 #, no-wrap
 msgid "@@dircategory @var{dirpart}"
-msgstr ""
+msgstr "@@dircategory @var{partediretório}"
 
 #. type: table
 #: texinfo/texinfo.texi:19015
 msgid "Specify a category for the manual.  @xref{Directory Category}."
 msgstr ""
+"Especificar uma categoria para o manual. @xref{Categoria de Diretório}."
 
 #. type: item
 #: texinfo/texinfo.texi:19016
 #, no-wrap
 msgid "@@direntry"
-msgstr ""
+msgstr "@@direntry"
 
 #. type: table
 #: texinfo/texinfo.texi:19019
@@ -50939,6 +51013,8 @@ msgid ""
 "Begin the Info directory menu entry for this file.  Pair with @code{@@end "
 "direntry}.  @xref{Installing Dir Entries}."
 msgstr ""
+"Iniciar a entrada do menu do diretório Info para esse arquivo. Emparelhar "
+"com @code{@@end direntry}. @xref{Instalando Entradas de Diretório}."
 
 #. type: table
 #: texinfo/texinfo.texi:19024
@@ -50947,34 +51023,40 @@ msgid ""
 "but do not select a new font.  Pair with @code{@@end display}.  "
 "@xref{@code{@@display}}."
 msgstr ""
+"Iniciar uma espécie de exemplo. Como @code{@@example} (recuar o texto, não "
+"preencher), mas não selecionar uma nova fonte. Emparelhar com @code{@@end "
+"display}. @xref{@code{@@display}}."
 
 #. type: item
 #: texinfo/texinfo.texi:19025
 #, no-wrap
 msgid "@@displaymath"
-msgstr ""
+msgstr "@@displaymath"
 
 #. type: table
 #: texinfo/texinfo.texi:19027
 msgid "Format a block of math in ``display'' format.  @xref{Inserting Math}."
 msgstr ""
+"Formatar um bloco de matemática no formato ``display''. @xref{Inserindo "
+"Matemática}."
 
 #. type: item
 #: texinfo/texinfo.texi:19028
 #, no-wrap
 msgid "@@dmn@{@var{dimension}@}"
-msgstr ""
+msgstr "@@dmn@{@var{dimensão}@}"
 
 #. type: table
 #: texinfo/texinfo.texi:19030
 msgid "Format a unit of measure, as in 12@dmn{pt}.  @xref{@code{@@dmn}}."
 msgstr ""
+"Formatar uma unidade de medida, como em 12@dmn{pt}. @xref{@code{@@dmn}}."
 
 #. type: item
 #: texinfo/texinfo.texi:19031
 #, no-wrap
 msgid "@@docbook"
-msgstr ""
+msgstr "@@docbook"
 
 #. type: table
 #: texinfo/texinfo.texi:19034
@@ -50982,12 +51064,14 @@ msgid ""
 "Enter DocBook completely.  Pair with @code{@@end docbook}.  @xref{Raw "
 "Formatter Commands}."
 msgstr ""
+"Entrar no DocBook completamente. Emparelhar com @code{@@end docbook}. "
+"@xref{Comandos Brutos do Formatador}."
 
 #. type: item
 #: texinfo/texinfo.texi:19035
 #, no-wrap
 msgid "@@documentdescription"
-msgstr ""
+msgstr "@@documentdescription"
 
 #. type: table
 #: texinfo/texinfo.texi:19038
@@ -50995,12 +51079,15 @@ msgid ""
 "Set the document description text, included in the HTML output.  Pair with "
 "@code{@@end documentdescription}.  @xref{@code{@@documentdescription}}."
 msgstr ""
+"Configurar o texto de descrição do documento, incluído na saída gerada "
+"HTML@. Emparelhar com @code{@@end documentdescription}. "
+"@xref{@code{@@documentdescription}}."
 
 #. type: item
 #: texinfo/texinfo.texi:19039
 #, no-wrap
 msgid "@@documentencoding @var{enc}"
-msgstr ""
+msgstr "@@documentencoding @var{codificação}"
 
 #. type: table
 #: texinfo/texinfo.texi:19042
@@ -51008,12 +51095,14 @@ msgid ""
 "Declare the input encoding to be @var{enc}.  "
 "@xref{@code{@@documentencoding}}."
 msgstr ""
+"Declarar a codificação de entrada como @var{codificação}. "
+"@xref{@code{@@documentencoding}}."
 
 #. type: item
 #: texinfo/texinfo.texi:19043
 #, no-wrap
 msgid "@@documentlanguage @var{CC}"
-msgstr ""
+msgstr "@@documentlanguage @var{CC}"
 
 #. type: table
 #: texinfo/texinfo.texi:19046
@@ -51021,12 +51110,14 @@ msgid ""
 "Declare the document language as the two-character ISO-639 abbreviation "
 "@var{CC}.  @xref{@code{@@documentlanguage}}."
 msgstr ""
+"Declarar o idioma do documento como a abreviatura ISO-639 de dois caracteres "
+"@var{CC}. @xref{@code{@@documentlanguage}}."
 
 #. type: item
 #: texinfo/texinfo.texi:19047
 #, no-wrap
 msgid "@@dotaccent@{@var{c}@}"
-msgstr ""
+msgstr "@@dotaccent@{@var{c}@}"
 
 #. type: table
 #: texinfo/texinfo.texi:19050
@@ -51034,12 +51125,14 @@ msgid ""
 "Generate a dot accent over the character @var{c}, as in @dotaccent{o}.  "
 "@xref{Inserting Accents}."
 msgstr ""
+"Gerar um acento de ponto sobre o caractere @var{c}, como em @dotaccent{o}. "
+"@xref{Inserindo Acentos}."
 
 #. type: item
 #: texinfo/texinfo.texi:19051
 #, no-wrap
 msgid "@@dotless@{@var{i-or-j}@}"
-msgstr ""
+msgstr "@@dotless@{@var{i-ou-j}@}"
 
 #. type: table
 #: texinfo/texinfo.texi:19054
@@ -51047,40 +51140,42 @@ msgid ""
 "Generate dotless i (`@dotless{i}') and dotless j (`@dotless{j}').  "
 "@xref{Inserting Accents}."
 msgstr ""
+"Gerar i sem ponto (`@dotless{i}') e j sem ponto (`@dotless{j}'). "
+"@xref{Inserindo Acentos}."
 
 #. type: item
 #: texinfo/texinfo.texi:19055
 #, no-wrap
 msgid "@@dots@{@}"
-msgstr ""
+msgstr "@@dots@{@}"
 
 #. type: table
 #: texinfo/texinfo.texi:19058
 msgid "Generate an ellipsis, @samp{@dots{}}.  @xref{@code{@@dots}}."
-msgstr ""
+msgstr "Gerar reticências, @samp{@dots{}}. @xref{@code{@@dots}}."
 
 #. type: item
 #: texinfo/texinfo.texi:19059
 #, no-wrap
 msgid "@@email@{@var{address}[, @var{displayed-text}]@}"
-msgstr ""
+msgstr "@@email@{@var{endereço}[, @var{texto-exibido}]@}"
 
 #. type: item
 #: texinfo/texinfo.texi:19062
 #, no-wrap
 msgid "@@emph@{@var{text}@}"
-msgstr ""
+msgstr "@@emph@{@var{texto}@}"
 
 #. type: table
 #: texinfo/texinfo.texi:19064
 msgid "Emphasize @var{text}.  @xref{Emphasis, , Emphasizing Text}."
-msgstr ""
+msgstr "Enfatizar @var{texto}. @xref{Ênfase, , Enfatizando Texto}."
 
 #. type: item
 #: texinfo/texinfo.texi:19065
 #, no-wrap
 msgid "@@end @var{environment}"
-msgstr ""
+msgstr "@@end @var{ambiente}"
 
 #. type: table
 #: texinfo/texinfo.texi:19068
@@ -51088,12 +51183,14 @@ msgid ""
 "Ends @var{environment}, as in @samp{@@end example}.  @xref{Formatting "
 "Commands,,@@-commands}."
 msgstr ""
+"Termina @var{ambiente}, como em @samp{@@end example}. @xref{Comandos de "
+"Formatação,,comandos @@}."
 
 #. type: item
 #: texinfo/texinfo.texi:19069
 #, no-wrap
 msgid "@@enddots@{@}"
-msgstr ""
+msgstr "@@enddots@{@}"
 
 #. type: table
 #: texinfo/texinfo.texi:19072
@@ -51101,12 +51198,14 @@ msgid ""
 "Generate an end-of-sentence ellipsis, like this: @enddots{} "
 "@xref{@code{@@dots}}."
 msgstr ""
+"Gerar reticências no final da frase, como esta: @enddots{} "
+"@xref{@code{@@dots}}."
 
 #. type: item
 #: texinfo/texinfo.texi:19073
 #, no-wrap
 msgid "@@enumerate [@var{number-or-letter}]"
-msgstr ""
+msgstr "@@enumerate [@var{número-ou-letra}]"
 
 #. type: table
 #: texinfo/texinfo.texi:19077
@@ -51115,6 +51214,9 @@ msgid ""
 "start list with @var{number-or-letter}.  Pair with @code{@@end enumerate}.  "
 "@xref{@code{@@enumerate}}."
 msgstr ""
+"Começar uma lista numerada, usando @code{@@item} para cada entrada. "
+"Opcionalmente, iniciar lista com @var{número-ou-letra}. Emparelhar com "
+"@code{@@end enumerate}. @xref{@code{@@enumerate}}."
 
 #. type: table
 #: texinfo/texinfo.texi:19081
@@ -51122,12 +51224,14 @@ msgid ""
 "Indicate an environment variable name, such as @env{PATH}.  "
 "@xref{@code{@@env}}."
 msgstr ""
+"Indicar um nome de variável de ambiente, como @env{PATH}. "
+"@xref{@code{@@env}}."
 
 #. type: item
 #: texinfo/texinfo.texi:19082
 #, no-wrap
 msgid "@@equiv@{@}"
-msgstr ""
+msgstr "@@equiv@{@}"
 
 #. type: table
 #: texinfo/texinfo.texi:19085
@@ -51135,12 +51239,14 @@ msgid ""
 "Indicate to the reader the exact equivalence of two forms with a glyph: "
 "@samp{@equiv{}}.  @xref{@code{@@equiv}}."
 msgstr ""
+"Indicar para o(a) leitor(a) a equivalência exata de duas formas com um "
+"glifo: @samp{@equiv{}}. @xref{@code{@@equiv}}."
 
 #. type: item
 #: texinfo/texinfo.texi:19086
 #, no-wrap
 msgid "@@error@{@}"
-msgstr ""
+msgstr "@@error@{@}"
 
 #. type: table
 #: texinfo/texinfo.texi:19089
@@ -51148,12 +51254,14 @@ msgid ""
 "Indicate to the reader with a glyph that the following text is an error "
 "message: @samp{@error{}}.  @xref{@code{@@error}}."
 msgstr ""
+"Indicar para o(a) leitor(a) com um glifo que o texto seguinte é uma "
+"mensagem de erro: @samp{@error{}}. @xref{@code{@@error}}."
 
 #. type: item
 #: texinfo/texinfo.texi:19090
 #, no-wrap
 msgid "@@errormsg@{@var{msg}@}"
-msgstr ""
+msgstr "@@errormsg@{@var{mensagem}@}"
 
 #. type: table
 #: texinfo/texinfo.texi:19094
@@ -51162,29 +51270,32 @@ msgid ""
 "Texinfo commands within @var{msg} are expanded to plain text.  "
 "@xref{Conditionals}, and @ref{External Macro Processors}."
 msgstr ""
+"Informar @var{mensagem} como um erro para erro padrão e saia sem sucesso. "
+"Os comandos do Texinfo dentro de @var{mensagem} são expandidos para texto "
+"simples. @xref{Condicionais} e @ref{Processadores Externos de Macro}."
 
 #. type: item
 #: texinfo/texinfo.texi:19095
 #, no-wrap
 msgid "@@euro@{@}"
-msgstr ""
+msgstr "@@euro@{@}"
 
 #. type: table
 #: texinfo/texinfo.texi:19097
 msgid "Generate the Euro currency sign.  @xref{@code{@@euro}}."
-msgstr ""
+msgstr "Gerar o símbolo da moeda Euro. @xref{@code{@@euro}}."
 
 #. type: item
 #: texinfo/texinfo.texi:19098
 #, no-wrap
 msgid "@@evenfooting [@var{left}] @@| [@var{center}] @@| [@var{right}]"
-msgstr ""
+msgstr "@@evenfooting [@var{esquerda}] @@| [@var{centro}] @@| [@var{direita}]"
 
 #. type: itemx
 #: texinfo/texinfo.texi:19099
 #, no-wrap
 msgid "@@evenheading [@var{left}] @@| [@var{center}] @@| [@var{right}]"
-msgstr ""
+msgstr "@@evenheading [@var{esquerda}] @@| [@var{centro}] @@| [@var{direita}]"
 
 #. type: table
 #: texinfo/texinfo.texi:19103
@@ -51192,18 +51303,21 @@ msgid ""
 "Specify page footings resp.@: headings for even-numbered (left-hand)  "
 "pages.  @xref{Custom Headings, , How to Make Your Own Headings}."
 msgstr ""
+"Especificar os rodapés das páginas resp.@: títulos para páginas pares "
+"(à esquerda). @xref{Títulos Personalizados, , Como Fazer Teus Próprios "
+"Títulos}."
 
 #. type: item
 #: texinfo/texinfo.texi:19104
 #, no-wrap
 msgid "@@everyfooting [@var{left}] @@| [@var{center}] @@| [@var{right}]"
-msgstr ""
+msgstr "@@everyfooting [@var{esquerda}] @@| [@var{centro}] @@| [@var{direita}]"
 
 #. type: itemx
 #: texinfo/texinfo.texi:19105
 #, no-wrap
 msgid "@@everyheading [@var{left}] @@| [@var{center}] @@| [@var{right}]"
-msgstr ""
+msgstr "@@everyheading [@var{esquerda}] @@| [@var{centro}] @@| [@var{direita}]"
 
 #. type: table
 #: texinfo/texinfo.texi:19108
@@ -51211,6 +51325,9 @@ msgid ""
 "Specify page footings resp.@: headings for every page.  Not relevant to "
 "Info.  @xref{Custom Headings, , How to Make Your Own Headings}."
 msgstr ""
+"Especificar os rodapés das páginas resp.@: títulos para cada página. "
+"Não relevante Info. @xref{Títulos Personalizados, , Como Fazer Teus "
+"Próprios Títulos}."
 
 #. type: table
 #: texinfo/texinfo.texi:19114
@@ -51220,12 +51337,17 @@ msgid ""
 "arguments, separated by commas.  It is recommended to set the first argument "
 "to the language of the example code.  @xref{@code{@@example}}."
 msgstr ""
+"Começar um exemplo. Recuar o texto, não preencher e selecionar uma fonte "
+"de largura fixa. Emparelhar com @code{@@end example}. @code{@@example} "
+"aceita argumentos opcionais, separados por vírgulas. É recomendado "
+"configurar o primeiro argumento para o idioma do código de exemplo. "
+"@xref{@code{@@example}}."
 
 #. type: item
 #: texinfo/texinfo.texi:19115
 #, no-wrap
 msgid "@@exampleindent @var{indent}"
-msgstr ""
+msgstr "@@exampleindent @var{recuo}"
 
 #. type: table
 #: texinfo/texinfo.texi:19118
@@ -51233,34 +51355,37 @@ msgid ""
 "Indent example-like environments by @var{indent} number of spaces (perhaps "
 "0).  @xref{@code{@@exampleindent}}."
 msgstr ""
+"Recuar ambientes semelhantes a exemplos por @var{recuo} número de espaços "
+"(talvez 0). @xref{@code{@@exampleindent}}."
 
 #. type: item
 #: texinfo/texinfo.texi:19119
 #, no-wrap
 msgid "@@exclamdown@{@}"
-msgstr ""
+msgstr "@@exclamdown@{@}"
 
 #. type: table
 #: texinfo/texinfo.texi:19121
 msgid "Generate an upside-down exclamation point.  @xref{Inserting Accents}."
-msgstr ""
+msgstr "Gerar um ponto de exclamação invertido. @xref{Inserindo Acentos}."
 
 #. type: item
 #: texinfo/texinfo.texi:19122
 #, no-wrap
 msgid "@@exdent @var{line-of-text}"
-msgstr ""
+msgstr "@@exdent @var{linha-do-texto}"
 
 #. type: table
 #: texinfo/texinfo.texi:19124
 msgid "Remove any indentation a line might have.  @xref{@code{@@exdent}}."
 msgstr ""
+"Remover qualquer recuo que uma linha possa ter. @xref{@code{@@exdent}}."
 
 #. type: item
 #: texinfo/texinfo.texi:19125
 #, no-wrap
 msgid "@@expansion@{@}"
-msgstr ""
+msgstr "@@expansion@{@}"
 
 #. type: table
 #: texinfo/texinfo.texi:19128
@@ -51268,12 +51393,14 @@ msgid ""
 "Indicate the result of a macro expansion to the reader with a special glyph: "
 "@samp{@expansion{}}.  @xref{@code{@@expansion}}."
 msgstr ""
+"Indicar o resultado de uma expansão de macro para o(a) leitor(a) com um "
+"glifo especial: @samp{@expansion{}}. @xref{@code{@@expansion}}."
 
 #. type: item
 #: texinfo/texinfo.texi:19129
 #, no-wrap
 msgid "@@file@{@var{filename}@}"
-msgstr ""
+msgstr "@@file@{@var{nomearquivo}@}"
 
 #. type: table
 #: texinfo/texinfo.texi:19132
@@ -51281,12 +51408,14 @@ msgid ""
 "Highlight the name of a file, buffer, node, directory, etc.  "
 "@xref{@code{@@file}}."
 msgstr ""
+"Realçar o nome de um arquivo, buffer, nó, diretório, entre outros. "
+"@xref{@code{@@file}}."
 
 #. type: item
 #: texinfo/texinfo.texi:19133
 #, no-wrap
 msgid "@@finalout"
-msgstr ""
+msgstr "@@finalout"
 
 #. type: table
 #: texinfo/texinfo.texi:19136
@@ -51294,12 +51423,14 @@ msgid ""
 "Prevent @TeX{} from printing large black warning rectangles beside over-wide "
 "lines.  @xref{Overfull hboxes}."
 msgstr ""
+"Evitar que o @TeX{} imprima grandes retângulos pretos de aviso ao lado de "
+"linhas muito largas. @xref{hboxes muito cheios}."
 
 #. type: item
 #: texinfo/texinfo.texi:19137
 #, no-wrap
 msgid "@@findex @var{entry}"
-msgstr ""
+msgstr "@@findex @var{entrada}"
 
 #. type: table
 #: texinfo/texinfo.texi:19140
@@ -51307,12 +51438,14 @@ msgid ""
 "Add @var{entry} to the index of functions.  @xref{Index Entries, , Defining "
 "the Entries of an Index}."
 msgstr ""
+"Adicionar @var{entrada} ao índice de funções. @xref{Entradas de Índice, "
+", Definindo as Entradas de um Índice}."
 
 #. type: item
 #: texinfo/texinfo.texi:19141
 #, no-wrap
 msgid "@@firstparagraphindent @var{word}"
-msgstr ""
+msgstr "@@firstparagraphindent @var{palavra}"
 
 #. type: table
 #: texinfo/texinfo.texi:19145
@@ -51321,12 +51454,15 @@ msgid ""
 "to @var{word}, one of `none' or `insert'.  "
 "@xref{@code{@@firstparagraphindent}}."
 msgstr ""
+"Controlar o recuo do primeiro parágrafo depois dos cabeçalhos das seções "
+"de acordo com @var{palavra}, entre `none' ou `insert'. "
+"@xref{@code{@@firstparagraphindent}}."
 
 #. type: item
 #: texinfo/texinfo.texi:19146
 #, no-wrap
 msgid "@@float"
-msgstr ""
+msgstr "@@float"
 
 #. type: table
 #: texinfo/texinfo.texi:19149
@@ -51334,6 +51470,8 @@ msgid ""
 "Environment to define floating material.  Pair with @code{@@end float}.  "
 "@xref{Floats}."
 msgstr ""
+"Ambiente para definir material flutuante. Emparelhar com @code{@@end float}. "
+"@xref{Flutuadores}."
 
 #. type: table
 #: texinfo/texinfo.texi:19156
@@ -51342,24 +51480,30 @@ msgid ""
 "(left) end ragged.  Leave font as is.  Pair with @code{@@end flushleft} "
 "(@code{@@end flushright}).  @xref{@code{@@flushleft @@flushright}}."
 msgstr ""
+"Não preencher texto; deixar (direita) justificar cada linha, deixando a "
+"extremidade direita (esquerda) irregular. Deixar a fonte como está. "
+"Emparelhar com @code{@@end flushleft} (@code{@@end flushright}). "
+"@xref{@code{@@flushleft @@flushright}}."
 
 #. type: item
 #: texinfo/texinfo.texi:19157
 #, no-wrap
 msgid "@@fonttextsize @var{10-11}"
-msgstr ""
+msgstr "@@fonttextsize @var{10-11}"
 
 #. type: table
 #: texinfo/texinfo.texi:19160
 msgid ""
 "Change the size of the main body font in the printed output.  @xref{Fonts}."
 msgstr ""
+"Mudar o tamanho da fonte do corpo principal na saída impressa. "
+"@xref{Fontes}."
 
 #. type: item
 #: texinfo/texinfo.texi:19161
 #, no-wrap
 msgid "@@footnote@{@var{text-of-footnote}@}"
-msgstr ""
+msgstr "@@footnote@{@var{texto-da-notarodapé}@}"
 
 #. type: table
 #: texinfo/texinfo.texi:19167
@@ -51370,12 +51514,17 @@ msgid ""
 "a separate node, or simply be marked as being footnote text.  "
 "@xref{Footnotes}."
 msgstr ""
+"Inserir uma nota de rodapé, para uma referência que documente ou elucide o "
+"texto principal. O texto da nota de rodapé é impresso na parte inferior da "
+"página na saída impressa. Em outros formatos, o texto da nota de rodapé "
+"pode ser gerado no mesmo nó, em um nó separado ou simplesmente ser marcado "
+"como sendo texto de nota de rodapé. @xref{Notas de Rodapé}."
 
 #. type: item
 #: texinfo/texinfo.texi:19168
 #, no-wrap
 msgid "@@footnotestyle @var{style}"
-msgstr ""
+msgstr "@@footnotestyle @var{estilo}"
 
 #. type: table
 #: texinfo/texinfo.texi:19173
@@ -51384,6 +51533,10 @@ msgid ""
 "@samp{separate} for the separate style.  In the separate style, footnotes "
 "are put in a separate node or file.  @xref{Footnote Styles}."
 msgstr ""
+"Especificar um estilo de nota de rodapé, @samp{end} para o estilo do nó "
+"final ou @samp{separate} para o estilo separado. No estilo separado, as "
+"notas de rodapé são colocadas em um nó ou arquivo separado. @xref{Estilos "
+"de Notas de Rodapé}."
 
 #. type: table
 #: texinfo/texinfo.texi:19177
@@ -51391,23 +51544,26 @@ msgid ""
 "Begin a kind of example.  Like @code{@@display}, but do not indent.  Pair "
 "with @code{@@end format}.  @xref{@code{@@example}}."
 msgstr ""
+"Começar uma espécie de exemplo. Como @code{@@display}, mas não recuar. "
+"Emparelhar com @code{@@end format}. @xref{@code{@@example}}."
 
 #. type: item
 #: texinfo/texinfo.texi:19178
 #, no-wrap
 msgid "@@frenchspacing @var{on-off}"
-msgstr ""
+msgstr "@@frenchspacing @var{ligado-desligado}"
 
 #. type: table
 #: texinfo/texinfo.texi:19180
 msgid "Control spacing after punctuation.  @xref{@code{@@frenchspacing}}."
 msgstr ""
+"Controlar espaçamento depois de pontuação. @xref{@code{@@frenchspacing}}."
 
 #. type: item
 #: texinfo/texinfo.texi:19181
 #, no-wrap
 msgid "@@ftable @var{formatting-command}"
-msgstr ""
+msgstr "@@ftable @var{comando-formatação}"
 
 #. type: table
 #: texinfo/texinfo.texi:19186
@@ -51417,18 +51573,23 @@ msgid ""
 "Pair with @code{@@end ftable}.  The same as @code{@@table}, except for "
 "indexing.  @xref{@code{@@ftable @@vtable}}."
 msgstr ""
+"Começar uma tabela de duas colunas, usando @code{@@item} para cada entrada. "
+"Inserir automaticamente cada um dos itens da primeira coluna no índice de "
+"funções. Emparelhar com @code{@@end ftable}. O mesmo que @code{@@table}, "
+"exceto pela indexação. @xref{@code{@@ftable @@vtable}}."
 
 #. type: item
 #: texinfo/texinfo.texi:19187
 #, no-wrap
 msgid "@@geq@{@}"
-msgstr ""
+msgstr "@@geq@{@}"
 
 #. type: table
 #: texinfo/texinfo.texi:19189
 msgid ""
 "Generate a greater-than-or-equal sign, `@geq{}'.  @xref{@code{@@geq @@leq}}."
 msgstr ""
+"Gerar um sinal de maior que ou igual a, `@geq{}'. @xref{@code{@@geq @@leq}}."
 
 #. type: table
 #: texinfo/texinfo.texi:19193
@@ -51436,6 +51597,8 @@ msgid ""
 "Disallow page breaks within following text.  Pair with @code{@@end group}.  "
 "Ignored in Info.  @xref{@code{@@group}}."
 msgstr ""
+"Proibir quebras de página dentro do texto seguinte. Emparelhar com "
+"@code{@@end group}. Ignorado no Info. @xref{@code{@@group}}."
 
 #. type: item
 #: texinfo/texinfo.texi:19194
