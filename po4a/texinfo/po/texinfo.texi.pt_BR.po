@@ -51604,37 +51604,37 @@ msgstr ""
 #: texinfo/texinfo.texi:19194
 #, no-wrap
 msgid "@@guillemetleft@{@}"
-msgstr ""
+msgstr "@@guillemetleft@{@}"
 
 #. type: itemx
 #: texinfo/texinfo.texi:19195
 #, no-wrap
 msgid "@@guillemetright@{@}"
-msgstr ""
+msgstr "@@guillemetright@{@}"
 
 #. type: item
 #: texinfo/texinfo.texi:19196
 #, no-wrap
 msgid "@@guillemotleft@{@}"
-msgstr ""
+msgstr "@@guillemotleft@{@}"
 
 #. type: itemx
 #: texinfo/texinfo.texi:19197
 #, no-wrap
 msgid "@@guillemotright@{@}"
-msgstr ""
+msgstr "@@guillemotright@{@}"
 
 #. type: itemx
 #: texinfo/texinfo.texi:19198
 #, no-wrap
 msgid "@@guilsinglleft@{@}"
-msgstr ""
+msgstr "@@guilsinglleft@{@}"
 
 #. type: itemx
 #: texinfo/texinfo.texi:19199
 #, no-wrap
 msgid "@@guilsinglright@{@}"
-msgstr ""
+msgstr "@@guilsinglright@{@}"
 
 #. type: table
 #: texinfo/texinfo.texi:19205
@@ -51644,23 +51644,27 @@ msgid ""
 "@code{@@guillemotright} are synonyms for @code{@@guillemetleft} and "
 "@code{@@guillemetright}.  @xref{Inserting Quotation Marks}."
 msgstr ""
+"Aspas duplas e simples: @guillemetleft{} @guillemetright{} @guilsinglleft{} "
+"@guilsinglright{}. @code{@@guillemotleft} e @code{@@guillemotright} são "
+"sinônimos para @code{@@guillemetleft} e @code{@@guillemetright}. "
+"@xref{Inserindo Aspas}."
 
 #. type: item
 #: texinfo/texinfo.texi:19206
 #, no-wrap
 msgid "@@H@{@var{c}@}"
-msgstr ""
+msgstr "@@H@{@var{c}@}"
 
 #. type: table
 #: texinfo/texinfo.texi:19208
 msgid "Generate the long Hungarian umlaut accent over @var{c}, as in @H{o}."
-msgstr ""
+msgstr "Gerar o longo acento húngaro sobre @var{c}, como em @H{o}."
 
 #. type: item
 #: texinfo/texinfo.texi:19209
 #, no-wrap
 msgid "@@hashchar@{@}"
-msgstr ""
+msgstr "@@hashchar@{@}"
 
 #. type: table
 #: texinfo/texinfo.texi:19213
@@ -51669,12 +51673,15 @@ msgid ""
 "@code{#line} directive.  @xref{Inserting a Hashsign}, and @ref{External "
 "Macro Processors}."
 msgstr ""
+"Inserir um caractere cerquilha `#'; necessário somente quando uma cerquilha "
+"literal introduzisse a diretiva @code{#line}. @xref{Inserindo um Sinal de "
+"Cerquilha} e @ref{Processadores Externos de Macro}."
 
 #. type: item
 #: texinfo/texinfo.texi:19214
 #, no-wrap
 msgid "@@heading @var{title}"
-msgstr ""
+msgstr "@@heading @var{título}"
 
 #. type: table
 #: texinfo/texinfo.texi:19217
@@ -51682,12 +51689,14 @@ msgid ""
 "Print an unnumbered section-like heading, but omit from the table of "
 "contents.  @xref{@code{@@unnumberedsec @@appendixsec @@heading}}."
 msgstr ""
+"Imprimir um título semelhante a uma seção não numerada, mas omitir do "
+"sumário. @xref{@code{@@unnumberedsec @@appendixsec @@heading}}."
 
 #. type: item
 #: texinfo/texinfo.texi:19218
 #, no-wrap
 msgid "@@headings @var{on-off-single-double}"
-msgstr ""
+msgstr "@@headings @var{ligado-desligado-simples-duplo}"
 
 #. type: table
 #: texinfo/texinfo.texi:19221
@@ -51695,23 +51704,28 @@ msgid ""
 "Turn page headings on or off, and/or specify single-sided or double-sided "
 "page headings for printing.  @xref{@code{@@headings}}."
 msgstr ""
+"Ligar ou desligar cabeçalhos de página, e(ou) especificar cabeçalhos de "
+"página de um lado ou de dois lados para impressão. "
+"@xref{@code{@@headings}}."
 
 #. type: item
 #: texinfo/texinfo.texi:19222
 #, no-wrap
 msgid "@@headitem"
-msgstr ""
+msgstr "@@headitem"
 
 #. type: table
 #: texinfo/texinfo.texi:19224
 msgid "Begin a heading row in a multitable.  @xref{Multitable Rows}."
 msgstr ""
+"Começar uma linha de cabeçalho em uma tabela múltipla. @xref{Linhas de "
+"Multitabelas}."
 
 #. type: item
 #: texinfo/texinfo.texi:19225
 #, no-wrap
 msgid "@@headitemfont@{@var{text}@}"
-msgstr ""
+msgstr "@@headitemfont@{@var{texto}@}"
 
 #. type: table
 #: texinfo/texinfo.texi:19228
@@ -51719,12 +51733,15 @@ msgid ""
 "Set @var{text} in the font used for multitable heading rows; mostly useful "
 "in multitable templates.  @xref{Multitable Rows}."
 msgstr ""
+"Configurar @var{texto} na fonte usada para linhas de cabeçalho de "
+"múltiplas tabelas; principalmente útil em modelos de multitabelas. "
+"@xref{Linhas Multitabelas}."
 
 #. type: item
 #: texinfo/texinfo.texi:19229
 #, no-wrap
 msgid "@@html"
-msgstr ""
+msgstr "@@html"
 
 #. type: table
 #: texinfo/texinfo.texi:19232
@@ -51732,28 +51749,34 @@ msgid ""
 "Enter HTML completely.  Pair with @code{@@end html}.  @xref{Raw Formatter "
 "Commands}."
 msgstr ""
+"Inserir HTML completamente. Emparelhar com @code{@@end html}. @xref{Comandos "
+"Brutos do Formatador}."
 
 #. type: table
 #: texinfo/texinfo.texi:19235
 msgid "Explicitly define hyphenation points.  @xref{@code{@@- @@hyphenation}}."
 msgstr ""
+"Definir explicitamente pontos de hifenização. @xref{@code{@@- "
+"@@hifenização}}."
 
 #. type: item
 #: texinfo/texinfo.texi:19236
 #, no-wrap
 msgid "@@i@{@var{text}@}"
-msgstr ""
+msgstr "@@i@{@var{texto}@}"
 
 #. type: table
 #: texinfo/texinfo.texi:19238
 msgid "Set @var{text} in an @i{italic} font, when possible.  @xref{Fonts}."
 msgstr ""
+"Configurar @var{texto} em uma fonte @i{itálica}, quando possível. "
+"@xref{Fontes}."
 
 #. type: item
 #: texinfo/texinfo.texi:19239
 #, no-wrap
 msgid "@@ifclear @var{txivar}"
-msgstr ""
+msgstr "@@ifclear @var{variáveltexi}"
 
 #. type: table
 #: texinfo/texinfo.texi:19243
@@ -51761,18 +51784,21 @@ msgid ""
 "If the Texinfo variable @var{txivar} is not set, format the following text.  "
 "Pair with @code{@@end ifclear}.  @xref{@code{@@set @@clear @@value}}."
 msgstr ""
+"Se a variável Texinfo @var{variáveltexi} não estiver configurada, "
+"formatar o texto a seguir. Emparelhar com @code{@@end ifclear}. "
+"@xref{@code{@@set @@clear @@value}}."
 
 #. type: item
 #: texinfo/texinfo.texi:19244
 #, no-wrap
 msgid "@@ifcommanddefined @var{txicmd}"
-msgstr ""
+msgstr "@@ifcommanddefined @var{comandotexi}"
 
 #. type: itemx
 #: texinfo/texinfo.texi:19245
 #, no-wrap
 msgid "@@ifcommandnotdefined @var{txicmd}"
-msgstr ""
+msgstr "@@ifcommandnotdefined @var{comandotexi}"
 
 #. type: table
 #: texinfo/texinfo.texi:19249
@@ -51781,42 +51807,45 @@ msgid ""
 "follow text.  Pair with the corresponding @code{@@end ifcommand...}.  "
 "@xref{Testing for Texinfo Commands}."
 msgstr ""
+"Se o código Texinfo @samp{@@@var{comandotexi}} (não) estiver definido, "
+"formatar o texto a seguir. Emparelhar com o @code{@@end secomando...} "
+"correspondente. @xref{Testagem para Comandos Texinfo}."
 
 #. type: item
 #: texinfo/texinfo.texi:19250
 #, no-wrap
 msgid "@@ifdocbook"
-msgstr ""
+msgstr "@@ifdocbook"
 
 #. type: itemx
 #: texinfo/texinfo.texi:19251
 #, no-wrap
 msgid "@@ifhtml"
-msgstr ""
+msgstr "@@ifhtml"
 
 #. type: itemx
 #: texinfo/texinfo.texi:19252
 #, no-wrap
 msgid "@@ifinfo"
-msgstr ""
+msgstr "@@ifinfo"
 
 #. type: itemx
 #: texinfo/texinfo.texi:19253
 #, no-wrap
 msgid "@@iflatex"
-msgstr ""
+msgstr "@@iflatex"
 
 #. type: itemx
 #: texinfo/texinfo.texi:19254
 #, no-wrap
 msgid "@@ifplaintext"
-msgstr ""
+msgstr "@@ifplaintext"
 
 #. type: itemx
 #: texinfo/texinfo.texi:19255
 #, no-wrap
 msgid "@@ifxml"
-msgstr ""
+msgstr "@@ifxml"
 
 #. type: table
 #: texinfo/texinfo.texi:19261
@@ -51826,42 +51855,46 @@ msgid ""
 "compatibility) plain text output.  Pair with @code{@@end ifdocbook} resp.@: "
 "@code{@@end ifhtml}@enddots{} @xref{Conditionals}."
 msgstr ""
+"Iniciar texto que aparecerá somente no formato de saída fornecido. A "
+"saída @code{@@ifinfo} aparece em ambas as saídas geradas, Info e (para "
+"compatibilidade histórica) texto simples. Emparelhar com @code{@@end "
+"ifdocbook} resp.@: @code{@@end ifhtml}@enddots{} @xref{Condicionais}."
 
 #. type: item
 #: texinfo/texinfo.texi:19262
 #, no-wrap
 msgid "@@ifnotdocbook"
-msgstr ""
+msgstr "@@ifnotdocbook"
 
 #. type: itemx
 #: texinfo/texinfo.texi:19263
 #, no-wrap
 msgid "@@ifnothtml"
-msgstr ""
+msgstr "@@ifnothtml"
 
 #. type: itemx
 #: texinfo/texinfo.texi:19264
 #, no-wrap
 msgid "@@ifnotlatex"
-msgstr ""
+msgstr "@@ifnotlatex"
 
 #. type: itemx
 #: texinfo/texinfo.texi:19265
 #, no-wrap
 msgid "@@ifnotplaintext"
-msgstr ""
+msgstr "@@ifnotplaintext"
 
 #. type: itemx
 #: texinfo/texinfo.texi:19266
 #, no-wrap
 msgid "@@ifnottex"
-msgstr ""
+msgstr "@@ifnottex"
 
 #. type: itemx
 #: texinfo/texinfo.texi:19267
 #, no-wrap
 msgid "@@ifnotxml"
-msgstr ""
+msgstr "@@ifnotxml"
 
 #. type: table
 #: texinfo/texinfo.texi:19272
@@ -51870,12 +51903,16 @@ msgid ""
 "@code{@@ifnothtml} text is omitted from HTML output, etc.  Pair with the "
 "corresponding @code{@@end ifnot@var{format}}.  @xref{Conditionals}."
 msgstr ""
+"Começar texto para ser ignorado em um formato de saída, mas não nos "
+"outros. O texto @code{@@ifnothtml} é omitido da saída HTML, entre outras. "
+"Emparelhar com o @code{@@end ifnot@var{formato}} correspondente. "
+"@xref{Condicionais}."
 
 #. type: item
 #: texinfo/texinfo.texi:19273
 #, no-wrap
 msgid "@@ifnotinfo"
-msgstr ""
+msgstr "@@ifnotinfo"
 
 #. type: table
 #: texinfo/texinfo.texi:19277
@@ -51884,12 +51921,15 @@ msgid ""
 "compatibility) plain text.  Pair with @code{@@end ifnotinfo}.  "
 "@xref{Conditionals}."
 msgstr ""
+"Começar texto para aparecer na saída diferente da Info e (para "
+"compatibilidade histórica) texto simples. Emparelhar com @code{@@end "
+"ifnotinfo}. @xref{Condicionais}."
 
 #. type: item
 #: texinfo/texinfo.texi:19278
 #, no-wrap
 msgid "@@ifset @var{txivar}"
-msgstr ""
+msgstr "@@ifset @var{variáveltexi}"
 
 #. type: table
 #: texinfo/texinfo.texi:19282
@@ -51897,12 +51937,15 @@ msgid ""
 "If the Texinfo variable @var{txivar} is set, format the following text.  "
 "Pair with @code{@@end ifset}.  @xref{@code{@@set @@clear @@value}}."
 msgstr ""
+"Se a variável Texinfo @var{variáveltexi} estiver configurada, formatar o "
+"texto a seguir. Emparelhar com @code{@@end ifset}. @xref{@code{@@set @@clear "
+"@@value}}."
 
 #. type: item
 #: texinfo/texinfo.texi:19283
 #, no-wrap
 msgid "@@iftex"
-msgstr ""
+msgstr "@@iftex"
 
 #. type: table
 #: texinfo/texinfo.texi:19286
@@ -51910,12 +51953,14 @@ msgid ""
 "Begin text to appear only in the @TeX{} output.  Pair with @code{@@end "
 "iftex}.  @xref{Conditionals}."
 msgstr ""
+"Começar texto para aparecer somente na saída do @TeX{}. Emparelhar com "
+"@code{@@end iftex}. @xref{Condicionais}."
 
 #. type: item
 #: texinfo/texinfo.texi:19287
 #, no-wrap
 msgid "@@ignore"
-msgstr ""
+msgstr "@@ignore"
 
 #. type: table
 #: texinfo/texinfo.texi:19290
@@ -51923,6 +51968,8 @@ msgid ""
 "Begin text that will not appear in any output.  Pair with @code{@@end "
 "ignore}.  @xref{Comments, , Comments and Ignored Text}."
 msgstr ""
+"Iniciar texto que não aparecerá em nenhuma saída gerada. Emparelhar com "
+"@code{@@end ignore}. @xref{Comentários, , Comentários e Texto Ignorado}."
 
 #. type: item
 #: texinfo/texinfo.texi:19291
@@ -51931,6 +51978,8 @@ msgid ""
 "@@image@{@var{filename}, [@var{width}], [@var{height}], [@var{alt}], "
 "[@var{ext}]@}"
 msgstr ""
+"@@image@{@var{nomearquivo}, [@var{largura}], [@var{altura}], [@var{alt}], "
+"[@var{ext}]@}"
 
 #. type: table
 #: texinfo/texinfo.texi:19295
@@ -51939,12 +51988,15 @@ msgid ""
 "@var{width} and/or @var{height}, using @var{alt} text and looking for "
 "@samp{@var{filename}.@var{ext}} in HTML@.  @xref{Images}."
 msgstr ""
+"Incluir imagem gráfica em @var{nomearquivo} externo dimensionado para "
+"@var{largura} e(ou) @var{altura} fornecidos, usando texto @var{alt} e "
+"procurando por @samp{@var{nomearquivo}.@var{ext}} no HTML@. @xref{Imagens}."
 
 #. type: item
 #: texinfo/texinfo.texi:19296
 #, no-wrap
 msgid "@@include @var{filename}"
-msgstr ""
+msgstr "@@include @var{nomearquivo}"
 
 #. type: table
 #: texinfo/texinfo.texi:19298
@@ -51952,17 +52004,19 @@ msgid ""
 "Read the contents of Texinfo source file @var{filename}.  @xref{Include "
 "Files}."
 msgstr ""
+"Ler o conteúdo do arquivo fonte do Texinfo @var{nomearquivo}. "
+"@xref{Arquivos de Inclusão}."
 
 #. type: item
 #: texinfo/texinfo.texi:19299
 #, no-wrap
 msgid "@@indent"
-msgstr ""
+msgstr "@@indent"
 
 #. type: table
 #: texinfo/texinfo.texi:19301
 msgid "Insert paragraph indentation.  @xref{@code{@@indent}}."
-msgstr ""
+msgstr "Inserir recuo de parágrafo. @xref{@code{@@indent}}."
 
 #. type: table
 #: texinfo/texinfo.texi:19305
@@ -51970,12 +52024,14 @@ msgid ""
 "Indent a block of arbitrary text on the left.  Pair with @code{@@end "
 "indentedblock}.  @xref{@code{@@indentedblock}}."
 msgstr ""
+"Recuar um bloco de texto arbitrário à esquerda. Emparelhar com @code{@@end "
+"indentedblock}. @xref{@code{@@indentedblock}}."
 
 #. type: item
 #: texinfo/texinfo.texi:19306
 #, no-wrap
 msgid "@@indicateurl@{@var{indicateurl}@}"
-msgstr ""
+msgstr "@@indicateurl@{@var{indicarurl}@}"
 
 #. type: table
 #: texinfo/texinfo.texi:19309
@@ -51983,12 +52039,15 @@ msgid ""
 "Indicate text that is a uniform resource locator for the World Wide Web.  "
 "@xref{@code{@@indicateurl}}."
 msgstr ""
+"Indicar texto que é um localizador uniforme de recursos para a World Wide "
+"Web. @xref{@code{@@indicateurl}}."
 
 #. type: item
 #: texinfo/texinfo.texi:19310
 #, no-wrap
 msgid "@@inforef@{@var{node-name}, [@var{entry-name}], @var{info-file-name}@}"
 msgstr ""
+"@@inforef@{@var{nome-nó}, [@var{nome-entrada}], @var{nome-arquivo-info}@}"
 
 #. type: table
 #: texinfo/texinfo.texi:19313
@@ -51996,12 +52055,14 @@ msgid ""
 "Make a cross-reference to an Info file for which there is no printed "
 "manual.  @xref{@code{@@inforef}}."
 msgstr ""
+"Fazer uma referência cruzada para um arquivo Info para o qual não existe "
+"manual impresso. @xref{@code{@@inforef}}."
 
 #. type: item
 #: texinfo/texinfo.texi:19314
 #, no-wrap
 msgid "@@inlinefmt@{@var{fmt}, @var{text}@}"
-msgstr ""
+msgstr "@@inlinefmt@{@var{formato}, @var{texto}@}"
 
 #. type: table
 #: texinfo/texinfo.texi:19317
@@ -52009,29 +52070,35 @@ msgid ""
 "Insert @var{text} only if the output format is @var{fmt}.  @xref{Inline "
 "Conditionals}."
 msgstr ""
+"Inserir @var{texto} somente se o formato da saída gerada for @var{formato}. "
+"@xref{Condicionais Inline}."
 
 #. type: item
 #: texinfo/texinfo.texi:19318
 #, no-wrap
 msgid "@@inlinefmtifelse@{@var{fmt}, @var{text}, @var{else-text}@}"
-msgstr ""
+msgstr "@@inlinefmtifelse@{@var{formato}, @var{texto}, @var{texto-senão}@}"
 
 #. type: table
 #: texinfo/texinfo.texi:19320
 msgid ""
 "Insert @var{text} if the output format is @var{fmt}, else @var{else-text}."
 msgstr ""
+"Inserir @var{texto} se o formato da saída gerada for @var{formato}, caso "
+"contrário, @var{texto-senão}."
 
 #. type: table
 #: texinfo/texinfo.texi:19324
 msgid "Insert @var{text} only if the Texinfo variable @var{var} is (not) set."
 msgstr ""
+"Inserir @var{texto} somente se a variável Texinfo @var{variável} (não) "
+"estiver configurada."
 
 #. type: item
 #: texinfo/texinfo.texi:19325
 #, no-wrap
 msgid "@@inlineraw@{@var{fmt}, @var{raw-text}@}"
-msgstr ""
+msgstr "@@inlineraw@{@var{formato}, @var{texto-bruto}@}"
 
 #. type: table
 #: texinfo/texinfo.texi:19328
@@ -52039,12 +52106,14 @@ msgid ""
 "Insert @var{text} as in a raw conditional, only if the output format is "
 "@var{fmt}."
 msgstr ""
+"Inserir @var{texto} como em uma condicional bruta, somente se o formato da "
+"saída gerada for @var{formato}."
 
 #. type: item
 #: texinfo/texinfo.texi:19329
 #, no-wrap
 msgid "\\input @var{macro-definitions-file}"
-msgstr ""
+msgstr "\\input @var{arquivo-definições-macro}"
 
 #. type: table
 #: texinfo/texinfo.texi:19336
@@ -52055,12 +52124,18 @@ msgid ""
 "used instead of an @code{@@} because @TeX{} does not recognize @code{@@} "
 "until after it has read the definitions file.  @xref{Texinfo File Header}."
 msgstr ""
+"Usar o arquivo de definições de macro especificado. Esse comando é usado "
+"somente na primeira linha de um arquivo Texinfo para fazer com que @TeX{} "
+"faça uso do arquivo de definições de macro @file{texinfo}. A @code{\\} em "
+"@code{\\input} é usada em vez de um @code{@@} porque @TeX{} não reconhece "
+"@code{@@} até depois que tiver lido o arquivo de definições. "
+"@xref{Cabeçalho do Arquivo Texinfo}."
 
 #. type: item
 #: texinfo/texinfo.texi:19337
 #, no-wrap
 msgid "@@insertcopying"
-msgstr ""
+msgstr "@@insertcopying"
 
 #. type: table
 #: texinfo/texinfo.texi:19340
@@ -52068,12 +52143,14 @@ msgid ""
 "Insert the text previously defined with the @code{@@copying} environment.  "
 "@xref{@code{@@insertcopying}}."
 msgstr ""
+"Inserir o texto previamente definido com o ambiente @code{@@copying}. "
+"@xref{@code{@@insertcopying}}."
 
 #. type: item
 #: texinfo/texinfo.texi:19341
 #, no-wrap
 msgid "@@item"
-msgstr ""
+msgstr "@@item"
 
 #. type: table
 #: texinfo/texinfo.texi:19346
@@ -52083,12 +52160,16 @@ msgid ""
 "entry for @code{@@table}, @code{@@ftable}, and @code{@@vtable}.  @xref{Lists "
 "and Tables}."
 msgstr ""
+"Indicar o início de um parágrafo marcado para @code{@@itemize} e "
+"@code{@@enumerate}; indicar o início do texto de uma entrada da primeira "
+"coluna para @code{@@table}, @code{@@ftable} e @code{@@vtable}. @xref{Listas "
+"e Tabelas}."
 
 #. type: item
 #: texinfo/texinfo.texi:19347
 #, no-wrap
 msgid "@@itemize @var{mark-generating-character-or-command}"
-msgstr ""
+msgstr "@@itemize @var{marca-gerando-caractere-ou-comando}"
 
 #. type: table
 #: texinfo/texinfo.texi:19351
@@ -52097,12 +52178,15 @@ msgid ""
 "@code{@@bullet}, inside the left margin at the beginning of each item.  Pair "
 "with @code{@@end itemize}.  @xref{@code{@@itemize}}."
 msgstr ""
+"Começar uma lista desordenada: parágrafos recuados com uma marca, tal como "
+"@code{@@bullet}, dentro da margem esquerda no início de cada item. "
+"Emparelhar com @code{@@end itemize}. @xref{@code{@@itemize}}."
 
 #. type: item
 #: texinfo/texinfo.texi:19352
 #, no-wrap
 msgid "@@itemx"
-msgstr ""
+msgstr "@@itemx"
 
 #. type: table
 #: texinfo/texinfo.texi:19358
@@ -52112,18 +52196,24 @@ msgid ""
 "several items have the same description, use @code{@@item} for the first and "
 "@code{@@itemx} for the others.  @xref{@code{@@itemx}}."
 msgstr ""
+"Como @code{@@item} em @code{@@table}, @code{@@ftable} e @code{@@vtable}, "
+"porém não gerar espaço vertical extra acima do texto do item. Assim, "
+"quando vários itens tiverem a mesma descrição, usar @code{@@item} para o "
+"primeiro e @code{@@itemx} para os demais. @xref{@code{@@itemx}}."
 
 #. type: table
 #: texinfo/texinfo.texi:19361
 msgid ""
 "Indicate characters of input to be typed by users.  @xref{@code{@@kbd}}."
 msgstr ""
+"Indicar caracteres de entrada a serem digitados por usuários(as). "
+"@xref{@code{@@kbd}}."
 
 #. type: item
 #: texinfo/texinfo.texi:19362
 #, no-wrap
 msgid "@@kbdinputstyle @var{style}"
-msgstr ""
+msgstr "@@kbdinputstyle @var{estilo}"
 
 #. type: table
 #: texinfo/texinfo.texi:19366
@@ -52132,17 +52222,20 @@ msgid ""
 "according to @var{style}: @code{code}, @code{distinct}, @code{example}.  "
 "@xref{@code{@@kbd}}."
 msgstr ""
+"Especificar quando @code{@@kbd} deveria usar uma fonte distinta da de "
+"@code{@@code} de acordo com @var{estilo}: @code{code}, @code{distinct}, "
+"@code{example}. @xref{@code{@@kbd}}."
 
 #. type: table
 #: texinfo/texinfo.texi:19369
 msgid "Indicate the name of a key on a keyboard.  @xref{@code{@@key}}."
-msgstr ""
+msgstr "Indicar o nome de uma tecla em um teclado. @xref{@code{@@key}}."
 
 #. type: item
 #: texinfo/texinfo.texi:19370
 #, no-wrap
 msgid "@@kindex @var{entry}"
-msgstr ""
+msgstr "@@kindex @var{entrada}"
 
 #. type: table
 #: texinfo/texinfo.texi:19373
@@ -52150,18 +52243,20 @@ msgid ""
 "Add @var{entry} to the index of keys.  @xref{Index Entries, , Defining the "
 "Entries of an Index}."
 msgstr ""
+"Adicionar @var{entrada} ao índice de chaves. @xref{Entradas de Índice, , "
+"Definindo as Entradas de um Índice}."
 
 #. type: item
 #: texinfo/texinfo.texi:19374
 #, no-wrap
 msgid "@@L@{@}"
-msgstr ""
+msgstr "@@L@{@}"
 
 #. type: itemx
 #: texinfo/texinfo.texi:19375
 #, no-wrap
 msgid "@@l@{@}"
-msgstr ""
+msgstr "@@l@{@}"
 
 #. type: table
 #: texinfo/texinfo.texi:19378
@@ -52169,23 +52264,25 @@ msgid ""
 "Generate the uppercase and lowercase Polish suppressed-L letters, "
 "respectively: @L{}, @l{}."
 msgstr ""
+"Gerar as letras L suprimidas em polonês maiúsculo e minúsculo, "
+"respectivamente: @L{}, @l{}."
 
 #. type: item
 #: texinfo/texinfo.texi:19379
 #, no-wrap
 msgid "@@LaTeX@{@}"
-msgstr ""
+msgstr "@@LaTeX@{@}"
 
 #. type: table
 #: texinfo/texinfo.texi:19381
 msgid "Generate the @LaTeX{} logo.  @xref{@code{@@TeX @@LaTeX}}."
-msgstr ""
+msgstr "Gerar a logomarca do @LaTeX{}. @xref{@code{@@TeX @@LaTeX}}."
 
 #. type: item
 #: texinfo/texinfo.texi:19382
 #, no-wrap
 msgid "@@latex"
-msgstr ""
+msgstr "@@latex"
 
 #. type: table
 #: texinfo/texinfo.texi:19385
@@ -52193,24 +52290,27 @@ msgid ""
 "Enter @LaTeX{} completely.  Pair with @code{@@end latex}.  @xref{Raw "
 "Formatter Commands}."
 msgstr ""
+"Entrar no @LaTeX{} completamente. Emparelhar com @code{@@end latex}. "
+"@xref{Comandos Brutos do Formatador}."
 
 #. type: item
 #: texinfo/texinfo.texi:19386
 #, no-wrap
 msgid "@@leq@{@}"
-msgstr ""
+msgstr "@@leq@{@}"
 
 #. type: table
 #: texinfo/texinfo.texi:19388
 msgid ""
 "Generate a less-than-or-equal sign, `@leq{}'.  @xref{@code{@@geq @@leq}}."
 msgstr ""
+"Gerar um sinal de menor que ou igual a, `@leq{}'. @xref{@code{@@geq @@leq}}."
 
 #. type: item
 #: texinfo/texinfo.texi:19389
 #, no-wrap
 msgid "@@linemacro @var{macroname} @{@var{params}@}"
-msgstr ""
+msgstr "@@linemacro @var{nomemacro} @{@var{parâmetros}@}"
 
 #. type: table
 #: texinfo/texinfo.texi:19392
@@ -52218,12 +52318,14 @@ msgid ""
 "Define a new macro which takes rest of the line as an argument, and expands "
 "to a whole number of complete lines.  @xref{Line Macros}."
 msgstr ""
+"Definir uma nova macro que receba o restante da linha como argumento e se "
+"expanda para um número inteiro de linhas completas. @xref{Macros de Linha}."
 
 #. type: item
 #: texinfo/texinfo.texi:19393
 #, no-wrap
 msgid "@@link@{@var{nodename}, @var{label}, @var{manual-name}@}"
-msgstr ""
+msgstr "@@link@{@var{nomenó}, @var{rótulo}, @var{nome-manual}@}"
 
 #. type: table
 #: texinfo/texinfo.texi:19396
@@ -52231,6 +52333,8 @@ msgid ""
 "Create a plain link with no visible markup or page reference.  "
 "@xref{@code{@@link}}."
 msgstr ""
+"Criar um linque simples sem marcação visível ou referência de página. "
+"@xref{@code{@@link}}."
 
 #. type: table
 #: texinfo/texinfo.texi:19400
@@ -52238,12 +52342,15 @@ msgid ""
 "Begin an example of Lisp code.  Indent text, do not fill, and select "
 "fixed-width font.  Pair with @code{@@end lisp}.  @xref{@code{@@lisp}}."
 msgstr ""
+"Começar um exemplo de código Lisp. Recuar texto, não preencher, e "
+"selecionar fonte de largura fixa. Emparelhar com @code{@@end lisp}. "
+"@xref{@code{@@lisp}}."
 
 #. type: item
 #: texinfo/texinfo.texi:19401
 #, no-wrap
 msgid "@@listoffloats"
-msgstr ""
+msgstr "@@listoffloats"
 
 #. type: table
 #: texinfo/texinfo.texi:19404
@@ -52251,6 +52358,8 @@ msgid ""
 "Produce a table-of-contents-like listing of @code{@@float}s.  "
 "@xref{@code{@@listoffloats}}."
 msgstr ""
+"Produzir uma listagem de @code{@@float}s, semelhante a um sumário. "
+"@xref{@code{@@listoffloats}}."
 
 #. type: item
 #: texinfo/texinfo.texi:19405
