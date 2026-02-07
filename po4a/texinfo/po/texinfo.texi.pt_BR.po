@@ -52365,7 +52365,7 @@ msgstr ""
 #: texinfo/texinfo.texi:19405
 #, no-wrap
 msgid "@@lowersections"
-msgstr ""
+msgstr "@@lowersections"
 
 #. type: table
 #: texinfo/texinfo.texi:19409
@@ -52374,12 +52374,15 @@ msgid ""
 "@xref{Raise/lower sections, , @code{@@raisesections} and "
 "@code{@@lowersections}}."
 msgstr ""
+"Mudar capítulos subsequentes para seções, seções para subseções e "
+"assim por diante. @xref{Elevar/Rebaixar Seções, , @code{@@raisesections} e "
+"@code{@@lowersections}}."
 
 #. type: item
 #: texinfo/texinfo.texi:19410
 #, no-wrap
 msgid "@@macro @var{macroname} @{@var{params}@}"
-msgstr ""
+msgstr "@@macro @var{nomemacro} @{@var{parâmetros}@}"
 
 #. type: table
 #: texinfo/texinfo.texi:19413
@@ -52387,12 +52390,15 @@ msgid ""
 "Define a new Texinfo command @code{@@@var{macroname}@{@var{params}@}}.  Pair "
 "with @code{@@end macro}.  @xref{Defining Macros}."
 msgstr ""
+"Definir um novo comando Texinfo "
+"@code{@@@var{nomemacro}@{@var{parâmetros}@}}. Emparelhar com @code{@@end "
+"macro}. @xref{Definindo Macros}."
 
 #. type: item
 #: texinfo/texinfo.texi:19414
 #, no-wrap
 msgid "@@majorheading @var{title}"
-msgstr ""
+msgstr "@@majorheading @var{título}"
 
 #. type: table
 #: texinfo/texinfo.texi:19419
@@ -52402,23 +52408,26 @@ msgid ""
 "the @code{@@chapheading} command.  @xref{@code{@@majorheading "
 "@@chapheading}}."
 msgstr ""
+"Imprimir um título semelhante a um capítulo sem numeração, mas omitir do "
+"sumário. Isso gera mais espaços em branco verticais antes do título que o "
+"comando @code{@@chapheading}. @xref{@code{@@majorheading @@chapheading}}."
 
 #. type: item
 #: texinfo/texinfo.texi:19420
 #, no-wrap
 msgid "@@math@{@var{mathematical-expression}@}"
-msgstr ""
+msgstr "@@math@{@var{expressão-matemática}@}"
 
 #. type: table
 #: texinfo/texinfo.texi:19422
 msgid "Format a mathematical expression.  @xref{Inserting Math}."
-msgstr ""
+msgstr "Formatar uma expressão matemática. @xref{Inserindo Matemática}. "
 
 #. type: item
 #: texinfo/texinfo.texi:19423
 #, no-wrap
 msgid "@@menu"
-msgstr ""
+msgstr "@@menu"
 
 #. type: table
 #: texinfo/texinfo.texi:19426
@@ -52426,34 +52435,36 @@ msgid ""
 "Mark the beginning of a menu of nodes.  No effect in a printed manual.  Pair "
 "with @code{@@end menu}.  @xref{Menus}."
 msgstr ""
+"Marcar o início de um menu de nós. Nenhum efeito em um manual impresso. "
+"Emparelhar com @code{@@end menu}. @xref{Menus}."
 
 #. type: item
 #: texinfo/texinfo.texi:19427
 #, no-wrap
 msgid "@@microtype @var{on-off}"
-msgstr ""
+msgstr "@@microtype @var{ligada-desligada}"
 
 #. type: table
 #: texinfo/texinfo.texi:19429
 msgid "Turn microtype on or off.  @xref{Microtypography}."
-msgstr ""
+msgstr "Ative ou desative microtipo. @xref{Microtipografia}."
 
 #. type: item
 #: texinfo/texinfo.texi:19430
 #, no-wrap
 msgid "@@minus@{@}"
-msgstr ""
+msgstr "@@minus@{@}"
 
 #. type: table
 #: texinfo/texinfo.texi:19432
 msgid "Generate a minus sign, `@minus{}'.  @xref{@code{@@minus}}."
-msgstr ""
+msgstr "Gerar um sinal de menos, `@minus{}'. @xref{@code{@@minus}}."
 
 #. type: item
 #: texinfo/texinfo.texi:19433
 #, no-wrap
 msgid "@@multitable @var{column-width-spec}"
-msgstr ""
+msgstr "@@multitable @var{especificação-largura-coluna}"
 
 #. type: table
 #: texinfo/texinfo.texi:19437
@@ -52462,12 +52473,16 @@ msgid ""
 "@code{@@headitem}, and separate columns with @code{@@tab}.  Pair with "
 "@code{@@end multitable}.  @xref{Multitable Column Widths}."
 msgstr ""
+"Começar uma tabela com várias colunas. Começar cada linha com "
+"@code{@@item} ou @code{@@headitem} e separar colunas com @code{@@tab}. "
+"Emparelhar com @code{@@end multitable}. @xref{Larguras de Colunas de "
+"Multitabelas}."
 
 #. type: item
 #: texinfo/texinfo.texi:19438
 #, no-wrap
 msgid "@@need @var{n}"
-msgstr ""
+msgstr "@@need @var{n}"
 
 #. type: table
 #: texinfo/texinfo.texi:19442
@@ -52475,12 +52490,14 @@ msgid ""
 "Start a new page in a printed manual if fewer than @var{n} mils (thousandths "
 "of an inch) remain on the current page.  @xref{@code{@@need}}."
 msgstr ""
+"Iniciar uma nova página em um manual impresso se menos que @var{n} mils "
+"(milésimos de polegada) restarem na página atual. @xref{@code{@@need}}."
 
 #. type: item
 #: texinfo/texinfo.texi:19443
 #, no-wrap
 msgid "@@node @var{name}, [@var{next}], [@var{previous}], [@var{up}]"
-msgstr ""
+msgstr "@@node @var{nome}, [@var{próximo}], [@var{anterior}], [@var{acima}]"
 
 #. type: table
 #: texinfo/texinfo.texi:19446
@@ -52488,12 +52505,14 @@ msgid ""
 "Begin a new node.  Only the first argument is mandatory.  @xref{Writing a "
 "Node}."
 msgstr ""
+"Começar um novo nó. Somente o primeiro argumento é obrigatório. "
+"@xref{Escrevendo um Nó}."
 
 #. type: item
 #: texinfo/texinfo.texi:19447
 #, no-wrap
 msgid "@@nodedescription @var{node-description}"
-msgstr ""
+msgstr "@@nodedescription @var{descrição-nó}"
 
 #. type: table
 #: texinfo/texinfo.texi:19450
@@ -52501,12 +52520,14 @@ msgid ""
 "Provide a short elaboration of the purpose of a node.  @xref{Node "
 "Descriptions}."
 msgstr ""
+"Forneçer uma breve elaboração da finalidade de um nó. @xref{Descrições "
+"dos Nós}."
 
 #. type: item
 #: texinfo/texinfo.texi:19451
 #, no-wrap
 msgid "@@nodedescriptionblock"
-msgstr ""
+msgstr "@@nodedescriptionblock"
 
 #. type: table
 #: texinfo/texinfo.texi:19454
@@ -52514,12 +52535,14 @@ msgid ""
 "Used to start a longer node description.  Pair with @samp{@@end "
 "nodedescriptionblock}.  @xref{Node Descriptions}."
 msgstr ""
+"Usado para iniciar uma descrição mais longa de nó. Emparelhar com "
+"@samp{@@end nodedescriptionblock}. @xref{Descrições dos Nós}."
 
 #. type: item
 #: texinfo/texinfo.texi:19455
 #, no-wrap
 msgid "@@noindent"
-msgstr ""
+msgstr "@@noindent"
 
 #. type: table
 #: texinfo/texinfo.texi:19458
@@ -52527,12 +52550,14 @@ msgid ""
 "Prevent text from being indented as if it were a new paragraph.  "
 "@xref{@code{@@noindent}}."
 msgstr ""
+"Evitar que o texto seja recuado como se fosse um novo parágrafo. "
+"@xref{@code{@@noindent}}."
 
 #. type: item
 #: texinfo/texinfo.texi:19459
 #, no-wrap
 msgid "@@novalidate"
-msgstr ""
+msgstr "@@novalidate"
 
 #. type: table
 #: texinfo/texinfo.texi:19463
@@ -52541,18 +52566,21 @@ msgid ""
 "with @TeX{}.  Use before any sectioning or cross-reference commands.  "
 "@xref{Pointer Validation}."
 msgstr ""
+"Suprimir validação de referências de nós e omitir criação de arquivos "
+"auxiliares com @TeX{}. Usar antes de quaisquer comandos de seccionamento ou "
+"de referência cruzada. @xref{Validação de Ponteiro}."
 
 #. type: item
 #: texinfo/texinfo.texi:19464
 #, no-wrap
 msgid "@@O@{@}"
-msgstr ""
+msgstr "@@O@{@}"
 
 #. type: itemx
 #: texinfo/texinfo.texi:19465
 #, no-wrap
 msgid "@@o@{@}"
-msgstr ""
+msgstr "@@o@{@}"
 
 #. type: table
 #: texinfo/texinfo.texi:19468
@@ -52560,18 +52588,20 @@ msgid ""
 "Generate the uppercase and lowercase O-with-slash letters, respectively: "
 "@O{}, @o{}."
 msgstr ""
+"Gerar as letras maiúsculas e minúsculas O com barra, respectivamente: "
+"@O{}, @o{}."
 
 #. type: item
 #: texinfo/texinfo.texi:19469
 #, no-wrap
 msgid "@@oddfooting [@var{left}] @@| [@var{center}] @@| [@var{right}]"
-msgstr ""
+msgstr "@@oddfooting [@var{esquerda}] @@| [@var{centro}] @@| [@var{direita}]"
 
 #. type: itemx
 #: texinfo/texinfo.texi:19470
 #, no-wrap
 msgid "@@oddheading [@var{left}] @@| [@var{center}] @@| [@var{right}]"
-msgstr ""
+msgstr "@@oddheading [@var{esquerda}] @@| [@var{centro}] @@| [@var{direita}]"
 
 #. type: table
 #: texinfo/texinfo.texi:19474
@@ -52579,18 +52609,21 @@ msgid ""
 "Specify page footings resp.@: headings for odd-numbered (right-hand)  "
 "pages.  @xref{Custom Headings, , How to Make Your Own Headings}."
 msgstr ""
+"Especificar rodapés de páginas resp.@: títulos para páginas ímpares (à "
+"direita). @xref{Títulos Personalizados, , Como Fazer Teus Próprios "
+"Títulos}."
 
 #. type: item
 #: texinfo/texinfo.texi:19475
 #, no-wrap
 msgid "@@OE@{@}"
-msgstr ""
+msgstr "@@OE@{@}"
 
 #. type: itemx
 #: texinfo/texinfo.texi:19476
 #, no-wrap
 msgid "@@oe@{@}"
-msgstr ""
+msgstr "@@oe@{@}"
 
 #. type: table
 #: texinfo/texinfo.texi:19479
@@ -52598,12 +52631,14 @@ msgid ""
 "Generate the uppercase and lowercase OE ligatures, respectively: @OE{}, "
 "@oe{}.  @xref{Inserting Accents}."
 msgstr ""
+"Gerar as ligaduras OE maiúsculas e minúsculas, respectivamente: @OE{}, "
+"@oe{}. @xref{Inserindo Acentos}."
 
 #. type: item
 #: texinfo/texinfo.texi:19480
 #, no-wrap
 msgid "@@ogonek@{@var{c}@}"
-msgstr ""
+msgstr "@@ogonek@{@var{c}@}"
 
 #. type: table
 #: texinfo/texinfo.texi:19483
@@ -52611,12 +52646,14 @@ msgid ""
 "Generate an ogonek diacritic under the next character, as in @ogonek{a}.  "
 "@xref{Inserting Accents}."
 msgstr ""
+"Gerar um diacrítico ogonek sob o próximo caractere, como em @ogonek{a}. "
+"@xref{Inserindo Acentos}."
 
 #. type: item
 #: texinfo/texinfo.texi:19484
 #, no-wrap
 msgid "@@option@{@var{option-name}@}"
-msgstr ""
+msgstr "@@option@{@var{nome-opção}@}"
 
 #. type: table
 #: texinfo/texinfo.texi:19487
@@ -52624,18 +52661,20 @@ msgid ""
 "Indicate a command-line option, such as @option{-l} or @option{--help}.  "
 "@xref{@code{@@option}}."
 msgstr ""
+"Indicar uma opção de linha de comando, como @option{-l} ou em "
+"@option{--help}. @xref{@code{@@option}}."
 
 #. type: item
 #: texinfo/texinfo.texi:19488
 #, no-wrap
 msgid "@@ordf@{@}"
-msgstr ""
+msgstr "@@ordf@{@}"
 
 #. type: itemx
 #: texinfo/texinfo.texi:19489
 #, no-wrap
 msgid "@@ordm@{@}"
-msgstr ""
+msgstr "@@ordm@{@}"
 
 #. type: table
 #: texinfo/texinfo.texi:19492
@@ -52643,28 +52682,30 @@ msgid ""
 "Generate the feminine and masculine Spanish ordinals, respectively: @ordf{}, "
 "@ordm{}.  @xref{Inserting Accents}."
 msgstr ""
+"Gerar os ordinais espanhóis femininos e masculinos, respectivamente: "
+"@ordf{}, @ordm{}. @xref{Inserindo Acentos}."
 
 #. type: table
 #: texinfo/texinfo.texi:19495
 msgid "Start a new page in a printed manual.  @xref{@code{@@page}}."
-msgstr ""
+msgstr "Começar uma nova página em um manual impresso. @xref{@code{@@page}}."
 
 #. type: item
 #: texinfo/texinfo.texi:19496
 #, no-wrap
 msgid "@@pagesizes [@var{width}][, @var{height}]"
-msgstr ""
+msgstr "@@pagesizes [@var{largura}][, @var{altura}]"
 
 #. type: table
 #: texinfo/texinfo.texi:19498
 msgid "Change page dimensions.  @xref{pagesizes}."
-msgstr ""
+msgstr "Mudar dimensões de página. @xref{Tamanhos de Página}."
 
 #. type: item
 #: texinfo/texinfo.texi:19499
 #, no-wrap
 msgid "@@paragraphindent @var{indent}"
-msgstr ""
+msgstr "@@paragraphindent @var{recuo}"
 
 #. type: table
 #: texinfo/texinfo.texi:19503
@@ -52673,12 +52714,15 @@ msgid ""
 "source file indentation if @var{indent} is @code{asis}.  "
 "@xref{@code{@@paragraphindent}}."
 msgstr ""
+"Recuar parágrafos por @var{recuo} número de espaços (talvez 0); preservar "
+"recuo do arquivo de origem se @var{recuo} for @code{asis}. "
+"@xref{@code{@@paragraphindent}}."
 
 #. type: item
 #: texinfo/texinfo.texi:19504
 #, no-wrap
 msgid "@@part @var{title}"
-msgstr ""
+msgstr "@@part @var{título}"
 
 #. type: table
 #: texinfo/texinfo.texi:19508
@@ -52686,12 +52730,14 @@ msgid ""
 "Begin a group of chapters or appendixes; included in the tables of "
 "contents.  @xref{@code{@@part}}."
 msgstr ""
+"Começar um grupo de capítulos ou de apêndices; incluído no sumário. "
+"@xref{@code{@@part}}."
 
 #. type: item
 #: texinfo/texinfo.texi:19509
 #, no-wrap
 msgid "@@pindex @var{entry}"
-msgstr ""
+msgstr "@@pindex @var{entrada}"
 
 #. type: table
 #: texinfo/texinfo.texi:19512
@@ -52699,12 +52745,14 @@ msgid ""
 "Add @var{entry} to the index of programs.  @xref{Index Entries, , Defining "
 "the Entries of an Index}."
 msgstr ""
+"Adicionar @var{entrada} ao índice de programas. @xref{Entradas de Índice, "
+", Definindo as Entradas de um Índice}."
 
 #. type: item
 #: texinfo/texinfo.texi:19513
 #, no-wrap
 msgid "@@point@{@}"
-msgstr ""
+msgstr "@@point@{@}"
 
 #. type: table
 #: texinfo/texinfo.texi:19516
@@ -52712,12 +52760,14 @@ msgid ""
 "Indicate the position of point in a buffer to the reader with a glyph: "
 "@samp{@point{}}.  @xref{@code{@@point}}."
 msgstr ""
+"Indicar a posição do ponto em um buffer para o(a) leitor(a) com um glifo: "
+"@samp{@point{}}. @xref{@code{@@point}}."
 
 #. type: item
 #: texinfo/texinfo.texi:19517
 #, no-wrap
 msgid "@@pounds@{@}"
-msgstr ""
+msgstr "@@pounds@{@}"
 
 #. type: table
 #: texinfo/texinfo.texi:19520
@@ -52725,12 +52775,14 @@ msgid ""
 "Generate the pounds sterling currency sign, @samp{@pounds{}}.  "
 "@xref{@code{@@pounds}}."
 msgstr ""
+"Gerar o símbolo da libra esterlina, @samp{@pounds{}}. "
+"@xref{@code{@@pounds}}."
 
 #. type: item
 #: texinfo/texinfo.texi:19521
 #, no-wrap
 msgid "@@print@{@}"
-msgstr ""
+msgstr "@@print@{@}"
 
 #. type: table
 #: texinfo/texinfo.texi:19524
@@ -52738,18 +52790,21 @@ msgid ""
 "Indicate printed output to the reader with a glyph: @samp{@print{}}.  "
 "@xref{@code{@@print}}."
 msgstr ""
+"Indicar saída impressa para o(a) leitor(a) com um glifo: @samp{@print{}}. "
+"@xref{@code{@@print}}."
 
 #. type: item
 #: texinfo/texinfo.texi:19525
 #, no-wrap
 msgid "@@printindex @var{index-name}"
-msgstr ""
+msgstr "@@printindex @var{nome-índice}"
 
 #. type: table
 #: texinfo/texinfo.texi:19527
 msgid ""
 "Generate the index for @var{index-name}.  @xref{Printing Indices & Menus}."
 msgstr ""
+"Gerar o índice para @var{nome-índice}. @xref{Imprimindo Índices e Menus}."
 
 #. type: item
 #: texinfo/texinfo.texi:19528
@@ -52758,6 +52813,8 @@ msgid ""
 "@@pxref@{@var{node}, [@var{entry}], [@var{node-title}], [@var{info-file}], "
 "[@var{printed-manual}]@}"
 msgstr ""
+"@@pxref@{@var{nó}, [@var{entrada}], [@var{título-nó}], "
+"[@var{arquivo-info}], [@var{manual-impresso}]@}"
 
 #. type: table
 #: texinfo/texinfo.texi:19534
@@ -52768,17 +52825,23 @@ msgid ""
 "@var{printed-manual} and/or the @var{info-file} are the only required "
 "arguments.  @xref{@code{@@pxref}}."
 msgstr ""
+"Fazer uma referência para ser usada entre parênteses. Começa com um "
+"`veja-se' minúsculo em um manual impresso. O primeiro argumento é "
+"obrigatório, exceto para referências para manuais inteiros. Para se "
+"referir a outro manual como um todo, o @var{manual-impresso} e(ou) o "
+"@var{arquivo-info} são os únicos argumentos exigidos. "
+"@xref{@code{@@pxref}}."
 
 #. type: item
 #: texinfo/texinfo.texi:19535
 #, no-wrap
 msgid "@@questiondown@{@}"
-msgstr ""
+msgstr "@@questiondown@{@}"
 
 #. type: table
 #: texinfo/texinfo.texi:19537
 msgid "Generate an upside-down question mark.  @xref{Inserting Accents}."
-msgstr ""
+msgstr "Gerar um ponto de interrogação invertido. @xref{Inserindo Acentos}."
 
 #. type: table
 #: texinfo/texinfo.texi:19542
@@ -52787,42 +52850,45 @@ msgid ""
 "optional argument specifying prefix text.  Pair with @code{@@end "
 "quotation}.  @xref{@code{@@quotation}}."
 msgstr ""
+"Estreitar as margens para indicar texto que seja citado a partir de outra "
+"obra. Recebe argumento opcional especificando texto do prefixo. Emparelhar "
+"com @code{@@end quotation}. @xref{@code{@@quotation}}."
 
 #. type: item
 #: texinfo/texinfo.texi:19543
 #, no-wrap
 msgid "@@quotedblleft@{@}"
-msgstr ""
+msgstr "@@quotedblleft@{@}"
 
 #. type: itemx
 #: texinfo/texinfo.texi:19544
 #, no-wrap
 msgid "@@quotedblright@{@}"
-msgstr ""
+msgstr "@@quotedblright@{@}"
 
 #. type: itemx
 #: texinfo/texinfo.texi:19545
 #, no-wrap
 msgid "@@quoteleft@{@}"
-msgstr ""
+msgstr "@@quoteleft@{@}"
 
 #. type: itemx
 #: texinfo/texinfo.texi:19546
 #, no-wrap
 msgid "@@quoteright@{@}"
-msgstr ""
+msgstr "@@quoteright@{@}"
 
 #. type: itemx
 #: texinfo/texinfo.texi:19547
 #, no-wrap
 msgid "@@quotedblbase@{@}"
-msgstr ""
+msgstr "@@quotedblbase@{@}"
 
 #. type: itemx
 #: texinfo/texinfo.texi:19548
 #, no-wrap
 msgid "@@quotesinglbase@{@}"
-msgstr ""
+msgstr "@@quotesinglbase@{@}"
 
 #. type: table
 #: texinfo/texinfo.texi:19552
@@ -52831,18 +52897,22 @@ msgid ""
 "@quoteleft{} @quoteright{} @quotedblbase{} @quotesinglbase{}.  "
 "@xref{Inserting Quotation Marks}."
 msgstr ""
+"Produzir várias aspas: @quotedblleft{} @quotedblright{} @quoteleft{} "
+"@quoteright{} @quotedblbase{} @quotesinglbase{}. @xref{Inserindo Aspas}."
 
 #. type: item
 #: texinfo/texinfo.texi:19553
 #, no-wrap
 msgid "@@r@{@var{text}@}"
-msgstr ""
+msgstr "@@r@{@var{texto}@}"
 
 #. type: table
 #: texinfo/texinfo.texi:19556
 msgid ""
 "Set @var{text} in the regular @r{roman} font, if possible.  @xref{Fonts}."
 msgstr ""
+"Configurar @var{texto} na fonte @r{romana} normal, se possível. "
+"@xref{Fontes}."
 
 #. type: table
 #: texinfo/texinfo.texi:19561
@@ -52851,12 +52921,15 @@ msgid ""
 "Leave font as is.  Pair with @code{@@end raggedright}.  "
 "@xref{@code{@@raggedright}}."
 msgstr ""
+"Preencher texto; justifique cada linha à esquerda, deixando a extremidade "
+"direita irregular. Deixar fonte como está. Emparelhar com @code{@@end "
+"raggedright}. @xref{@code{@@raggedright}}."
 
 #. type: item
 #: texinfo/texinfo.texi:19562
 #, no-wrap
 msgid "@@raisesections"
-msgstr ""
+msgstr "@@raisesections"
 
 #. type: table
 #: texinfo/texinfo.texi:19565
@@ -52864,6 +52937,8 @@ msgid ""
 "Change subsequent sections to chapters, subsections to sections, and so on.  "
 "@xref{Raise/lower sections}."
 msgstr ""
+"Mudar seções subsequentes para capítulos, subseções para seções e "
+"assim por diante. @xref{Elevar/Rebaixar Seções}."
 
 #. type: item
 #: texinfo/texinfo.texi:19566
@@ -52872,6 +52947,8 @@ msgid ""
 "@@ref@{@var{node}, [@var{entry}], [@var{node-title}], [@var{info-file}], "
 "[@var{printed-manual}]@}"
 msgstr ""
+"@@ref@{@var{nó}, [@var{entrada}], [@var{título-nó}], "
+"[@var{arquivo-info}], [@var{manual-impresso}]@}"
 
 #. type: table
 #: texinfo/texinfo.texi:19572
@@ -52882,12 +52959,17 @@ msgid ""
 "@var{printed-manual} and/or the @var{info-file} are the only required "
 "arguments.  @xref{@code{@@ref}}."
 msgstr ""
+"Fazer uma referência simples que não comece com nenhum texto especial. "
+"Seguir comando com um sinal de pontuação. O primeiro argumento é "
+"obrigatório, exceto para referências para manuais inteiros. Para "
+"referenciar outro manual como um todo, o @var{manual-impresso} e(ou) o "
+"@var{arquivo-info} são os únicos argumentos exigidos. @xref{@code{@@ref}}."
 
 #. type: item
 #: texinfo/texinfo.texi:19573
 #, no-wrap
 msgid "@@registeredsymbol@{@}"
-msgstr ""
+msgstr "@@registeredsymbol@{@}"
 
 #. type: table
 #: texinfo/texinfo.texi:19576
@@ -52895,12 +52977,14 @@ msgid ""
 "Generate the legal symbol @registeredsymbol{}.  "
 "@xref{@code{@@registeredsymbol}}."
 msgstr ""
+"Gerar o símbolo jurídico @registeredsymbol{}. "
+"@xref{@code{@@registeredsymbol}}."
 
 #. type: item
 #: texinfo/texinfo.texi:19577
 #, no-wrap
 msgid "@@result@{@}"
-msgstr ""
+msgstr "@@result@{@}"
 
 #. type: table
 #: texinfo/texinfo.texi:19580
@@ -52908,12 +52992,14 @@ msgid ""
 "Indicate the result of an expression to the reader with a special glyph: "
 "@samp{@result{}}.  @xref{@code{@@result}}."
 msgstr ""
+"Indicar o resultado de uma expressão para o(a) leitor(a) com um glifo "
+"especial: @samp{@result{}}. @xref{@code{@@result}}."
 
 #. type: item
 #: texinfo/texinfo.texi:19581
 #, no-wrap
 msgid "@@ringaccent@{@var{c}@}"
-msgstr ""
+msgstr "@@ringaccent@{@var{c}@}"
 
 #. type: table
 #: texinfo/texinfo.texi:19584
@@ -52921,6 +53007,8 @@ msgid ""
 "Generate a ring accent over the next character, as in @ringaccent{o}.  "
 "@xref{Inserting Accents}."
 msgstr ""
+"Gerar um acento circular sobre o próximo caractere, como em @ringaccent{o}. "
+"@xref{Inserindo Acentos}."
 
 #. type: table
 #: texinfo/texinfo.texi:19588
@@ -52928,24 +53016,28 @@ msgid ""
 "Indicate a literal example of a sequence of characters, in general.  "
 "@xref{@code{@@samp}}."
 msgstr ""
+"Indicar um exemplo literal de uma sequência de caracteres, em geral. "
+"@xref{@code{@@samp}}."
 
 #. type: item
 #: texinfo/texinfo.texi:19589
 #, no-wrap
 msgid "@@sansserif@{@var{text}@}"
-msgstr ""
+msgstr "@@sansserif@{@var{texto}@}"
 
 #. type: table
 #: texinfo/texinfo.texi:19592
 msgid ""
 "Set @var{text} in a @sansserif{sans serif} font if possible.  @xref{Fonts}."
 msgstr ""
+"Configurar @var{texto} em uma fonte @sansserif{sans serif}, se possível. "
+"@xref{Fontes}."
 
 #. type: item
 #: texinfo/texinfo.texi:19593
 #, no-wrap
 msgid "@@sc@{@var{text}@}"
-msgstr ""
+msgstr "@@sc@{@var{texto}@}"
 
 #. type: table
 #: texinfo/texinfo.texi:19596
@@ -52953,12 +53045,14 @@ msgid ""
 "Set @var{text} in a small caps font if possible, and uppercase in Info.  "
 "@xref{Smallcaps}."
 msgstr ""
+"Configurar @var{texto} em uma fonte minúscula, se possível, e maiúscula "
+"no Info. @xref{Letras Minúsculas}."
 
 #. type: item
 #: texinfo/texinfo.texi:19597
 #, no-wrap
 msgid "@@section @var{title}"
-msgstr ""
+msgstr "@@section @var{título}"
 
 #. type: table
 #: texinfo/texinfo.texi:19602
@@ -52968,6 +53062,10 @@ msgid ""
 "is numbered; within @code{@@unnumbered}, the section is unnumbered.  "
 "@xref{@code{@@section}}."
 msgstr ""
+"Começar uma seção dentro de um capítulo. O título da seção aparece no "
+"sumário. Dentro de @code{@@chapter} e de @code{@@appendix}, o título da "
+"seção é numerado; dentro de @code{@@unnumbered}, a seção é inumerada. "
+"@xref{@code{@@section}}."
 
 #. type: item
 #: texinfo/texinfo.texi:19603
