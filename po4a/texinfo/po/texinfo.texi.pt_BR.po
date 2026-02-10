@@ -1,16 +1,16 @@
 # Brazilian Portuguese translations for GNU Texinfo documentation
-# Copyright (C) 2025 Jamenson Ferreira Espindula de Almeida Melo
+# Copyright (C) 2025, 2026 Jamenson Ferreira Espindula de Almeida Melo
 # This file is distributed under the GNU Free Documentation License, 
 # Version 1.3 or any later version published by the Free Software 
 # Foundation.
 #
 # Projeto de tradução da documentação do sistema de documentação GNU 
 # Texinfo
-# Copyright (C) 2025 Jamenson Ferreira Espindula de Almeida Melo
+# Copyright (C) 2025, 2026 Jamenson Ferreira Espindula de Almeida Melo
 # Este arquivo é distribuído sob os termos da Licença GNU de 
 # Documentação Livre, Versão 1.3 ou qualquer versão posterior publicada 
 # pela Free Software Foundation.
-# Jamenson Ferreira Espindula de Almeida Melo <jafesp@gmail.com>, 2025.
+# Jamenson Ferreira Espindula de Almeida Melo <jafesp@gmail.com>, 2025, 2026.
 #
 msgid ""
 msgstr ""
@@ -53071,7 +53071,7 @@ msgstr ""
 #: texinfo/texinfo.texi:19603
 #, no-wrap
 msgid "@@seealso@{@var{index-text}@}"
-msgstr ""
+msgstr "@@seealso@{@var{texto-índice}@}"
 
 #. type: table
 #: texinfo/texinfo.texi:19606
@@ -53079,12 +53079,14 @@ msgid ""
 "Use in an index entry to refer the reader to another relevant index entry.  "
 "@xref{Advanced Indexing}."
 msgstr ""
+"Usar em uma entrada de índice para referenciar o(a) leitor(a) para outra "
+"entrada de índice relevante. @xref{Indexação Avançada}."
 
 #. type: item
 #: texinfo/texinfo.texi:19607
 #, no-wrap
 msgid "@@seeentry@{@var{index-text}@}"
-msgstr ""
+msgstr "@@seeentry@{@var{texto-índice}@}"
 
 #. type: table
 #: texinfo/texinfo.texi:19610
@@ -53092,12 +53094,14 @@ msgid ""
 "Use in an index entry to redirect the reader to another index entry.  "
 "@xref{Advanced Indexing}."
 msgstr ""
+"Usar em uma entrada de índice para redirecionar o(a) leitor(a) para outra "
+"entrada de índice. @xref{Indexação Avançada}."
 
 #. type: item
 #: texinfo/texinfo.texi:19611
 #, no-wrap
 msgid "@@set @var{txivar} [@var{string}]"
-msgstr ""
+msgstr "@@set @var{variáveltexinfo} [@var{sequênciacaracteres}]"
 
 #. type: table
 #: texinfo/texinfo.texi:19614
@@ -53105,12 +53109,14 @@ msgid ""
 "Define the Texinfo variable @var{txivar}, optionally to the value "
 "@var{string}.  @xref{@code{@@set @@clear @@value}}."
 msgstr ""
+"Definir a variável Texinfo @var{variáveltexinfo}, opcionalmente com o "
+"valor @var{sequenciacaracteres}. @xref{@code{@@set @@clear @@value}}."
 
 #. type: item
 #: texinfo/texinfo.texi:19615
 #, no-wrap
 msgid "@@setchapternewpage @var{on-off-odd}"
-msgstr ""
+msgstr "@@setchapternewpage @var{impar-ligado-desligado}"
 
 #. type: table
 #: texinfo/texinfo.texi:19618
@@ -53118,12 +53124,15 @@ msgid ""
 "Specify whether chapters start on new pages, and if so, whether on "
 "odd-numbered (right-hand) new pages.  @xref{@code{@@setchapternewpage}}."
 msgstr ""
+"Especificar se capítulos iniciam em novas páginas e, em caso afirmativo, "
+"se em novas páginas ímpares (à direita). "
+"@xref{@code{@@setchapternewpage}}."
 
 #. type: item
 #: texinfo/texinfo.texi:19619
 #, no-wrap
 msgid "@@setfilename @var{info-file-name}"
-msgstr ""
+msgstr "@@setfilename @var{nome-arquivo-info}"
 
 #. type: table
 #: texinfo/texinfo.texi:19622
@@ -53131,12 +53140,14 @@ msgid ""
 "Provide a name to be used for the output files.  This command is ignored for "
 "@TeX{} formatting.  @xref{@code{@@setfilename}}."
 msgstr ""
+"Fornecer um nome para ser usado para os arquivos de saída. Esse comando é "
+"ignorado para formatação do @TeX{}. @xref{@code{@@setfilename}}."
 
 #. type: item
 #: texinfo/texinfo.texi:19623
 #, no-wrap
 msgid "@@settitle @var{title}"
-msgstr ""
+msgstr "@@settitle @var{título}"
 
 #. type: table
 #: texinfo/texinfo.texi:19627
@@ -53144,12 +53155,14 @@ msgid ""
 "Specify the title for page headers in a printed manual, and the default "
 "document title for HTML.  @xref{@code{@@settitle}}."
 msgstr ""
+"Especificar o título para cabeçalhos de páginas em um manual impresso e o "
+"título padrão do documento para HTML@. @xref{@code{@@settitle}}."
 
 #. type: item
 #: texinfo/texinfo.texi:19628
 #, no-wrap
 msgid "@@shortcaption"
-msgstr ""
+msgstr "@@shortcaption"
 
 #. type: table
 #: texinfo/texinfo.texi:19631
@@ -53157,6 +53170,8 @@ msgid ""
 "Define the short caption for a @code{@@float}.  @xref{@code{@@caption "
 "@@shortcaption}}."
 msgstr ""
+"Definir a legenda curta para um @code{@@float}. @xref{@code{@@caption "
+"@@shortcaption}}."
 
 #. type: table
 #: texinfo/texinfo.texi:19637
@@ -53166,34 +53181,39 @@ msgid ""
 "output a short table of contents.  @xref{Contents, , Generating a Table of "
 "Contents}."
 msgstr ""
+"Imprimir um sumário curto, somente com entradas em nível de capítulo, ou "
+"especificar que um sumário curto deveria ser gerado. Para formatos que "
+"podem gerar um sumário curto. @xref{Conteúdo, , Gerando um Sumário}."
 
 #. type: item
 #: texinfo/texinfo.texi:19638
 #, no-wrap
 msgid "@@shorttitlepage @var{title}"
-msgstr ""
+msgstr "@@shorttitlepage @var{título}"
 
 #. type: table
 #: texinfo/texinfo.texi:19640
 msgid "Generate a minimal title page.  @xref{@code{@@titlepage}}."
-msgstr ""
+msgstr "Gerar página mínima de título. @xref{@code{@@titlepage}}."
 
 #. type: item
 #: texinfo/texinfo.texi:19641
 #, no-wrap
 msgid "@@slanted@{@var{text}@}"
-msgstr ""
+msgstr "@@slanted@{@var{texto}@}"
 
 #. type: table
 #: texinfo/texinfo.texi:19643
 msgid "Set @var{text} in a @slanted{slanted} font if possible.  @xref{Fonts}."
 msgstr ""
+"Configurar @var{texto} em uma fonte @slanted{inclinada}, se possível. "
+"@xref{Fontes}."
 
 #. type: item
 #: texinfo/texinfo.texi:19644
 #, no-wrap
 msgid "@@smallbook"
-msgstr ""
+msgstr "@@smallbook"
 
 #. type: table
 #: texinfo/texinfo.texi:19647
@@ -53201,6 +53221,8 @@ msgid ""
 "In printed output, use a 7 by 9.25 inch format rather than the regular 8.5 "
 "by 11 inch format.  @xref{@code{@@smallbook}}."
 msgstr ""
+"Na saída impressa, usar um formato de 7 por 9,25 polegadas em vez do "
+"formato normal de 8,5 por 11 polegadas. @xref{@code{@@smallbook}}."
 
 #. type: table
 #: texinfo/texinfo.texi:19652
@@ -53208,6 +53230,9 @@ msgid ""
 "Begin a kind of example.  Like @code{@@display}, but use a smaller font size "
 "where possible.  Pair with @code{@@end smalldisplay}.  @xref{small}."
 msgstr ""
+"Começar uma espécie de exemplo. Como @code{@@display}, mas usar um tamanho "
+"de fonte menor onde possível. Emparelhar com @code{@@end smalldisplay}. "
+"@xref{small}."
 
 #. type: table
 #: texinfo/texinfo.texi:19657
@@ -53215,6 +53240,8 @@ msgid ""
 "Begin an example.  Like @code{@@example}, but use a smaller font size where "
 "possible.  Pair with @code{@@end smallexample}.  @xref{small}."
 msgstr ""
+"Começar um exemplo. Como @code{@@example}, mas usar um tamanho de fonte "
+"menor onde possível. Emparelhar com @code{@@end smallexample}. @xref{small}."
 
 #. type: table
 #: texinfo/texinfo.texi:19662
@@ -53222,6 +53249,9 @@ msgid ""
 "Begin a kind of example.  Like @code{@@format}, but use a smaller font size "
 "where possible.  Pair with @code{@@end smallformat}.  @xref{small}."
 msgstr ""
+"Começar uma espécie de exemplo. Como @code{@@format}, mas usar um tamanho "
+"de fonte menor onde possível. Emparelhar com @code{@@end smallformat}. "
+"@xref{small}."
 
 #. type: table
 #: texinfo/texinfo.texi:19667
@@ -53229,6 +53259,8 @@ msgid ""
 "Like @code{@@indentedblock}, but use a smaller font size where possible.  "
 "Pair with @code{@@end smallindentedblock}.  @xref{small}."
 msgstr ""
+"Como @code{@@indentedblock}, mas usar um tamanho de fonte menor onde "
+"possível. Emparelhar com @code{@@end smallindentedblock}. @xref{small}."
 
 #. type: table
 #: texinfo/texinfo.texi:19671
@@ -53236,6 +53268,8 @@ msgid ""
 "Begin an example of Lisp code.  Same as @code{@@smallexample}.  Pair with "
 "@code{@@end smalllisp}.  @xref{small}."
 msgstr ""
+"Começar um exemplo de código Lisp. O mesmo que @code{@@smallexample}. "
+"Emparelhar com @code{@@end smalllisp}. @xref{small}."
 
 #. type: table
 #: texinfo/texinfo.texi:19675
@@ -53243,12 +53277,14 @@ msgid ""
 "Like @code{@@quotation}, but use a smaller font size where possible.  Pair "
 "with @code{@@end smallquotation}.  @xref{small}."
 msgstr ""
+"Como @code{@@quotation}, mas usar um tamanho de fonte menor onde possível. "
+"Emparelhar com @code{@@end smallquotation}. @xref{pequeno}."
 
 #. type: item
 #: texinfo/texinfo.texi:19676
 #, no-wrap
 msgid "@@sortas @{@var{key}@}"
-msgstr ""
+msgstr "@@sortas @{@var{chave}@}"
 
 #. type: table
 #: texinfo/texinfo.texi:19679
@@ -53256,29 +53292,33 @@ msgid ""
 "Used in the arguments to index commands to give a string by which the index "
 "entry should be sorted.  @xref{Indexing Commands}."
 msgstr ""
+"Usado nos argumentos para indexar comandos para fornecer uma sequência de "
+"caracteres pela qual a entrada do índice deveria ser ordenada. "
+"@xref{Comandos de indexação}."
 
 #. type: table
 #: texinfo/texinfo.texi:19682
 msgid "Skip @var{n} blank lines.  @xref{@code{@@sp}}."
-msgstr ""
+msgstr "Ignorar @var{n} linhas em branco. @xref{@code{@@sp}}."
 
 #. type: item
 #: texinfo/texinfo.texi:19683
 #, no-wrap
 msgid "@@ss@{@}"
-msgstr ""
+msgstr "@@ss@{@}"
 
 #. type: table
 #: texinfo/texinfo.texi:19685
 msgid ""
 "Generate the German sharp-S es-zet letter, @ss{}.  @xref{Inserting Accents}."
 msgstr ""
+"Gerar a letra alemã S sustenido es-zet, @ss{}. @xref{Inserindo Acentos}."
 
 #. type: item
 #: texinfo/texinfo.texi:19686
 #, no-wrap
 msgid "@@strong @{@var{text}@}"
-msgstr ""
+msgstr "@@strong @{@var{texto}@}"
 
 #. type: table
 #: texinfo/texinfo.texi:19689
@@ -53286,24 +53326,28 @@ msgid ""
 "Emphasize @var{text} more strongly than @code{@@emph}.  @xref{emph & strong, "
 ", Emphasizing Text}."
 msgstr ""
+"Enfatizar @var{texto} com mais força que @code{@@emph}. @xref{emph & "
+"strong, , Enfatizando Texto}."
 
 #. type: item
 #: texinfo/texinfo.texi:19690
 #, no-wrap
 msgid "@@sub @{@var{text}@}"
-msgstr ""
+msgstr "@@sub @{@var{texto}@}"
 
 #. type: table
 #: texinfo/texinfo.texi:19692
 msgid ""
 "Set @var{text} as a subscript.  @xref{Inserting Subscripts and Superscripts}."
 msgstr ""
+"Configurar @var{texto} como um subscrito. @xref{Inserindo Subscritos e "
+"Sobrescritos}."
 
 #. type: item
 #: texinfo/texinfo.texi:19693
 #, no-wrap
 msgid "@@subentry"
-msgstr ""
+msgstr "@@subentry"
 
 #. type: table
 #: texinfo/texinfo.texi:19696
@@ -53311,6 +53355,8 @@ msgid ""
 "Use in an index entry to separate parts of a multi-level entry.  "
 "@xref{Advanced Indexing}."
 msgstr ""
+"Usar em uma entrada de índice para separar partes de uma entrada "
+"multinível. @xref{Indexação Avançada}."
 
 #. type: item
 #: texinfo/texinfo.texi:19697
