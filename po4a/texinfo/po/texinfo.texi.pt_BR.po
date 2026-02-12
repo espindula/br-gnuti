@@ -53362,7 +53362,7 @@ msgstr ""
 #: texinfo/texinfo.texi:19697
 #, no-wrap
 msgid "@@subheading @var{title}"
-msgstr ""
+msgstr "@@subheading @var{título}"
 
 #. type: table
 #: texinfo/texinfo.texi:19701
@@ -53371,12 +53371,15 @@ msgid ""
 "contents of a printed manual.  @xref{@code{@@unnumberedsubsec "
 "@@appendixsubsec @@subheading}}."
 msgstr ""
+"Imprimir um título semelhante a uma subseção não numerado, porém omitir "
+"do sumário de um manual impresso. @xref{@code{@@unnumberedsubsec "
+"@@appendixsubsec @@subheading}}."
 
 #. type: item
 #: texinfo/texinfo.texi:19702
 #, no-wrap
 msgid "@@subsection @var{title}"
-msgstr ""
+msgstr "@@subsection @var{título}"
 
 #. type: table
 #: texinfo/texinfo.texi:19707
@@ -53385,12 +53388,15 @@ msgid ""
 "table of contents.  Same context-dependent numbering as @code{@@section}.  "
 "@xref{@code{@@subsection}}."
 msgstr ""
+"Começar uma subseção dentro de uma seção. O título da subseção "
+"aparece no sumário. Mesma numeração dependente do contexto que "
+"@code{@@section}. @xref{@code{@@subsection}}."
 
 #. type: item
 #: texinfo/texinfo.texi:19708
 #, no-wrap
 msgid "@@subsubheading @var{title}"
-msgstr ""
+msgstr "@@subsubheading @var{título}"
 
 #. type: table
 #: texinfo/texinfo.texi:19711
@@ -53398,12 +53404,14 @@ msgid ""
 "Print an unnumbered subsubsection-like heading, but omit from the table of "
 "contents of a printed manual.  @xref{@code{@@subsubsection}}."
 msgstr ""
+"Imprimir um título semelhante a uma subsubseção não numerado, porém "
+"omitir do sumário de um manual impresso. @xref{@code{@@subsubsection}}."
 
 #. type: item
 #: texinfo/texinfo.texi:19712
 #, no-wrap
 msgid "@@subsubsection @var{title}"
-msgstr ""
+msgstr "@@subsubsection @var{título}"
 
 #. type: table
 #: texinfo/texinfo.texi:19716
@@ -53412,12 +53420,15 @@ msgid ""
 "in the table of contents.  Same context-dependent numbering as "
 "@code{@@section}.  @xref{@code{@@subsubsection}}."
 msgstr ""
+"Começar uma subsubseção dentro de uma subseção. O título da "
+"subsubseção aparece no sumário. Mesma numeração dependente do contexto "
+"que @code{@@section}. @xref{@code{@@subsubsection}}."
 
 #. type: item
 #: texinfo/texinfo.texi:19717
 #, no-wrap
 msgid "@@subtitle @var{title}"
-msgstr ""
+msgstr "@@subtitle @var{título}"
 
 #. type: table
 #: texinfo/texinfo.texi:19719
@@ -53425,6 +53436,8 @@ msgid ""
 "Set a subtitle for the title page.  @xref{@code{@@title @@subtitle "
 "@@author}}."
 msgstr ""
+"Configurar um subtítulo para a página de título. @xref{@code{@@title "
+"@@subtitle @@author}}."
 
 #. type: table
 #: texinfo/texinfo.texi:19723
@@ -53432,12 +53445,14 @@ msgid ""
 "Print or specify a short table of contents.  Synonym for "
 "@code{@@shortcontents}.  @xref{Contents, , Generating a Table of Contents}."
 msgstr ""
+"Imprimir ou especificar um sumário curto. Sinônimo para "
+"@code{@@shortcontents}. @xref{Conteúdo, , Gerando um Sumário}."
 
 #. type: item
 #: texinfo/texinfo.texi:19724
 #, no-wrap
 msgid "@@sup @{@var{text}@}"
-msgstr ""
+msgstr "@@sup @{@var{texto}@}"
 
 #. type: table
 #: texinfo/texinfo.texi:19726
@@ -53445,12 +53460,14 @@ msgid ""
 "Set @var{text} as a superscript.  @xref{Inserting Subscripts and "
 "Superscripts}."
 msgstr ""
+"Configurar @var{texto} como sobrescrito. @xref{Inserindo Subscritos e "
+"Sobrescritos}."
 
 #. type: item
 #: texinfo/texinfo.texi:19727
 #, no-wrap
 msgid "@@syncodeindex @var{from-index} @var{to-index}"
-msgstr ""
+msgstr "@@syncodeindex @var{índice-origem} @var{índice-destino}"
 
 #. type: table
 #: texinfo/texinfo.texi:19731
@@ -53459,12 +53476,15 @@ msgid ""
 "second argument, formatting the entries from the first index with "
 "@code{@@code}.  @xref{Combining Indices}."
 msgstr ""
+"Mesclar o índice nominado no primeiro argumento no índice nominado no "
+"segundo argumento, formatando as entradas a partir do primeiro índice com "
+"@code{@@code}. @xref{Combinando Índices}."
 
 #. type: item
 #: texinfo/texinfo.texi:19732
 #, no-wrap
 msgid "@@synindex @var{from-index} @var{to-index}"
-msgstr ""
+msgstr "@@synindex @var{índice-origem} @var{índice-destino}"
 
 #. type: table
 #: texinfo/texinfo.texi:19736
@@ -53473,12 +53493,15 @@ msgid ""
 "second argument.  Do not change the font of @var{from-index} entries.  "
 "@xref{Combining Indices}."
 msgstr ""
+"Mesclar o índice nominado no primeiro argumento com o índice nominado no "
+"segundo argumento. Não mudar a fonte das entradas @var{índice-origem}. "
+"@xref{Combinando Índices}."
 
 #. type: item
 #: texinfo/texinfo.texi:19737
 #, no-wrap
 msgid "@@t@{@var{text}@}"
-msgstr ""
+msgstr "@@t@{@var{texto}@}"
 
 #. type: table
 #: texinfo/texinfo.texi:19740
@@ -53486,23 +53509,27 @@ msgid ""
 "Set @var{text} in a @t{fixed-width}, typewriter-like font, if possible.  "
 "@xref{Fonts}."
 msgstr ""
+"Configurar @var{texto} em uma fonte de @t{largura fixa}, semelhante a "
+"máquina de escrever. @xref{Fontes}."
 
 #. type: item
 #: texinfo/texinfo.texi:19741
 #, no-wrap
 msgid "@@tab"
-msgstr ""
+msgstr "@@tab"
 
 #. type: table
 #: texinfo/texinfo.texi:19743
 msgid "Separate columns in a row of a multitable.  @xref{Multitable Rows}."
 msgstr ""
+"Separar colunas em uma linha de uma multitabela. @xref{Linhas de "
+"Multitabelas}."
 
 #. type: item
 #: texinfo/texinfo.texi:19744
 #, no-wrap
 msgid "@@table @var{formatting-command}"
-msgstr ""
+msgstr "@@table @var{comando-formatação}"
 
 #. type: table
 #: texinfo/texinfo.texi:19751
@@ -53514,23 +53541,30 @@ msgid ""
 "Tables, , Making a Two-column Table}.  Also see @ref{@code{@@ftable "
 "@@vtable}}, and @ref{@code{@@itemx}}."
 msgstr ""
+"Começar uma tabela de duas colunas (lista de descrição), usando "
+"@code{@@item} para cada entrada. Escrever cada entrada da primeira coluna na "
+"mesma linha que @code{@@item}. Entradas da primeira coluna são impressas na "
+"fonte resultante de @var{comando-formatação}. Emparelhar com @code{@@end "
+"table}. @xref{Tabelas de Duas Colunas, , Criando uma Tabela de Duas "
+"Colunas}. Veja-se também @ref{@code{@@ftable @@vtable}} e "
+"@ref{@code{@@itemx}}."
 
 #. type: item
 #: texinfo/texinfo.texi:19752
 #, no-wrap
 msgid "@@TeX@{@}"
-msgstr ""
+msgstr "@@TeX@{@}"
 
 #. type: table
 #: texinfo/texinfo.texi:19754
 msgid "Generate the @TeX{} logo.  @xref{@code{@@TeX @@LaTeX}}."
-msgstr ""
+msgstr "Gerar a logomarca do @TeX{}. @xref{@code{@@TeX @@LaTeX}}."
 
 #. type: item
 #: texinfo/texinfo.texi:19755
 #, no-wrap
 msgid "@@tex"
-msgstr ""
+msgstr "@@tex"
 
 #. type: table
 #: texinfo/texinfo.texi:19758
@@ -53538,71 +53572,73 @@ msgid ""
 "Enter @TeX{} completely.  Pair with @code{@@end tex}.  @xref{Raw Formatter "
 "Commands}."
 msgstr ""
+"Entrar no @TeX{} completamente. Emparelhar com @code{@@end tex}. "
+"@xref{Comandos do Formatador Bruto}."
 
 #. type: item
 #: texinfo/texinfo.texi:19759
 #, no-wrap
 msgid "@@textdegree@{@}"
-msgstr ""
+msgstr "@@textdegree@{@}"
 
 #. type: table
 #: texinfo/texinfo.texi:19761
 msgid "Generate the degree symbol.  @xref{@code{@@textdegree}}."
-msgstr ""
+msgstr "Gerar o símbolo grau. @xref{@code{@@textdegree}}."
 
 #. type: item
 #: texinfo/texinfo.texi:19762 texinfo/texinfo.texi:22971
 #, no-wrap
 msgid "@@thischapter"
-msgstr ""
+msgstr "@@thischapter"
 
 #. type: item
 #: texinfo/texinfo.texi:19763 texinfo/texinfo.texi:22962
 #, no-wrap
 msgid "@@thischaptername"
-msgstr ""
+msgstr "@@thischaptername"
 
 #. type: item
 #: texinfo/texinfo.texi:19764 texinfo/texinfo.texi:22966
 #, no-wrap
 msgid "@@thischapternum"
-msgstr ""
+msgstr "@@thischapternum"
 
 #. type: item
 #: texinfo/texinfo.texi:19765 texinfo/texinfo.texi:22957
 #, no-wrap
 msgid "@@thissection"
-msgstr ""
+msgstr "@@thissection"
 
 #. type: item
 #: texinfo/texinfo.texi:19766 texinfo/texinfo.texi:22949
 #, no-wrap
 msgid "@@thissectionname"
-msgstr ""
+msgstr "@@thissectionname"
 
 #. type: item
 #: texinfo/texinfo.texi:19767 texinfo/texinfo.texi:22953
 #, no-wrap
 msgid "@@thissectionnum"
-msgstr ""
+msgstr "@@thissectionnum"
 
 #. type: item
 #: texinfo/texinfo.texi:19768 texinfo/texinfo.texi:22981
 #, no-wrap
 msgid "@@thisfile"
-msgstr ""
+msgstr "@@thisfile"
 
 #. type: item
 #: texinfo/texinfo.texi:19769 texinfo/texinfo.texi:22945
 #, no-wrap
 msgid "@@thispage"
-msgstr ""
+msgstr "@@thispage"
 
 #. type: item
 #: texinfo/texinfo.texi:19770 texinfo/texinfo.texi:22976
 #, no-wrap
 msgid "@@thistitle"
-msgstr ""
+msgstr "@@thistitle"
 
 #. type: table
 #: texinfo/texinfo.texi:19778
