@@ -53650,18 +53650,25 @@ msgid ""
 "section number only, the file name, the current page number, and the title "
 "of the document.  @xref{Custom Headings,, How to Make Your Own Headings}."
 msgstr ""
+"Permitido somente em um cabeçalho ou rodapé. Representa, respectivamente, "
+"o número e o nome do capítulo atual (no formato `Capítulo 1: Título'), "
+"somente o nome do capítulo atual, somente o número do capítulo atual, o "
+"número e o nome da seção atual, somente o nome da seção atual, somente "
+"o número da seção atual, o nome do arquivo, o número da página atual e "
+"o título do documento. @xref{Títulos Personalizados,, Como Criar Teus "
+"Próprios Títulos}."
 
 #. type: item
 #: texinfo/texinfo.texi:19779
 #, no-wrap
 msgid "@@TH@{@}"
-msgstr ""
+msgstr "@@TH@{@}"
 
 #. type: itemx
 #: texinfo/texinfo.texi:19780
 #, no-wrap
 msgid "@@th@{@}"
-msgstr ""
+msgstr "@@th@{@}"
 
 #. type: table
 #: texinfo/texinfo.texi:19783
@@ -53669,6 +53676,8 @@ msgid ""
 "Generate the uppercase and lowercase Icelandic letter thorn, respectively: "
 "@TH{}, @th{}.  @xref{Inserting Accents}."
 msgstr ""
+"Gerar a letra maiúscula e minúscula islandesa thorn, respectivamente: "
+"@TH{}, @th{}. @xref{Inserindo Acentos}."
 
 #. type: table
 #: texinfo/texinfo.texi:19787
@@ -53676,12 +53685,14 @@ msgid ""
 "Generate a normal interword space at which a line break is not allowed.  "
 "@xref{@code{@@tie}}."
 msgstr ""
+"Gerar um espaço normal entre palavras no qual uma quebra de linha não é "
+"permitida. @xref{@code{@@tie}}."
 
 #. type: item
 #: texinfo/texinfo.texi:19788
 #, no-wrap
 msgid "@@tieaccent@{@var{cc}@}"
-msgstr ""
+msgstr "@@tieaccent@{@var{cc}@}"
 
 #. type: table
 #: texinfo/texinfo.texi:19791
@@ -53689,12 +53700,14 @@ msgid ""
 "Generate a tie-after accent over the next two characters @var{cc}, as in "
 "`@tieaccent{oo}'.  @xref{Inserting Accents}."
 msgstr ""
+"Gerar um acento de ligação sobre os próximos dois caracteres @var{cc}, "
+"como em `@tieaccent{oo}'. @xref{Inserindo Acentos}."
 
 #. type: item
 #: texinfo/texinfo.texi:19792
 #, no-wrap
 msgid "@@tindex @var{entry}"
-msgstr ""
+msgstr "@@tindex @var{entrada}"
 
 #. type: table
 #: texinfo/texinfo.texi:19795
@@ -53702,24 +53715,28 @@ msgid ""
 "Add @var{entry} to the index of data types.  @xref{Index Entries, , Defining "
 "the Entries of an Index}."
 msgstr ""
+"Adicionar @var{entrada} ao índice de tipos de dados. @xref{Entradas de "
+"Índice, , Definindo as Entradas de um Índice}."
 
 #. type: item
 #: texinfo/texinfo.texi:19796
 #, no-wrap
 msgid "@@title @var{title}"
-msgstr ""
+msgstr "@@title @var{título}"
 
 #. type: table
 #: texinfo/texinfo.texi:19798
 msgid ""
 "Set the title for the title page.  @xref{@code{@@title @@subtitle @@author}}."
 msgstr ""
+"Configurar o título para a página de título. @xref{@code{@@title "
+"@@subtitle @@author}}."
 
 #. type: item
 #: texinfo/texinfo.texi:19799
 #, no-wrap
 msgid "@@titlefont@{@var{text}@}"
-msgstr ""
+msgstr "@@titlefont@{@var{texto}@}"
 
 #. type: table
 #: texinfo/texinfo.texi:19802
@@ -53727,6 +53744,8 @@ msgid ""
 "Print @var{text} in a larger than normal font, if possible.  "
 "@xref{@code{@@titlefont @@center @@sp}}."
 msgstr ""
+"Imprimir @var{texto} em uma fonte maior que a normal, se possível. "
+"@xref{@code{@@titlefont @@center @@sp}}."
 
 #. type: table
 #: texinfo/texinfo.texi:19807
@@ -53735,12 +53754,15 @@ msgid ""
 "@code{@@end titlepage}.  The title page is not output, in the default case, "
 "in online formats.  @xref{@code{@@titlepage}}."
 msgstr ""
+"Iniciar a página de título. Escrever o comando em uma linha própria, "
+"emparelhado com @code{@@end titlepage}. A página de título não será "
+"gerada, no caso padrão, em formatos online. @xref{@code{@@titlepage}}."
 
 #. type: item
 #: texinfo/texinfo.texi:19808
 #, no-wrap
 msgid "@@today@{@}"
-msgstr ""
+msgstr "@@today@{@}"
 
 #. type: table
 #: texinfo/texinfo.texi:19811
@@ -53748,12 +53770,14 @@ msgid ""
 "Insert the current date, in `1 Jan 1900' style.  @xref{Custom Headings, , "
 "How to Make Your Own Headings}."
 msgstr ""
+"Inserir a data atual, no estilo `1 de janeiro de 1900'. @xref{Cabeçalhos "
+"Personalizados, , Como Fazer Teus Próprios Cabeçalhos}."
 
 #. type: item
 #: texinfo/texinfo.texi:19812
 #, no-wrap
 msgid "@@top @var{title}"
-msgstr ""
+msgstr "@@top @var{título}"
 
 #. type: table
 #: texinfo/texinfo.texi:19817
@@ -53763,12 +53787,16 @@ msgid ""
 "as a chapter-level heading.  In @TeX{} the @code{@@top} command is merely a "
 "synonym for @code{@@unnumbered}."
 msgstr ""
+"Marcar o @code{@@node} mais alto no arquivo, que precisa ser definido na "
+"linha imediatamente precedente ao comando @code{@@top}. O título é "
+"formatado como um cabeçalho de nível de capítulo. No @TeX{}, o comando "
+"@code{@@top} é meramente um sinônimo para @code{@@unnumbered}."
 
 #. type: item
 #: texinfo/texinfo.texi:19818
 #, no-wrap
 msgid "@@U@{@var{hex}@}"
-msgstr ""
+msgstr "@@U@{@var{hexadecimal}@}"
 
 #. type: table
 #: texinfo/texinfo.texi:19821
@@ -53776,24 +53804,26 @@ msgid ""
 "Output a representation of Unicode character U+@var{hex}.  @xref{Inserting "
 "Unicode}."
 msgstr ""
+"Produz uma representação do caractere Unicode U+@var{hexadecimal}. "
+"@xref{Inserindo Unicode}."
 
 #. type: item
 #: texinfo/texinfo.texi:19822
 #, no-wrap
 msgid "@@u@{@var{c}@}"
-msgstr ""
+msgstr "@@u@{@var{c}@}"
 
 #. type: itemx
 #: texinfo/texinfo.texi:19823
 #, no-wrap
 msgid "@@ubaraccent@{@var{c}@}"
-msgstr ""
+msgstr "@@ubaraccent@{@var{c}@}"
 
 #. type: itemx
 #: texinfo/texinfo.texi:19824
 #, no-wrap
 msgid "@@udotaccent@{@var{c}@}"
-msgstr ""
+msgstr "@@udotaccent@{@var{c}@}"
 
 #. type: table
 #: texinfo/texinfo.texi:19828
@@ -53802,12 +53832,15 @@ msgid ""
 "the character @var{c}, as in @u{o}, @ubaraccent{o}, @udotaccent{o}.  "
 "@xref{Inserting Accents}."
 msgstr ""
+"Gerar um acento breve, um sublinhado ou um ponto, respectivamente, sobre ou "
+"sob o caractere @var{c}, como em @u{o}, @ubaraccent{o}, @udotaccent{o}. "
+"@xref{Inserindo Acentos}."
 
 #. type: item
 #: texinfo/texinfo.texi:19829
 #, no-wrap
 msgid "@@unmacro @var{macroname}"
-msgstr ""
+msgstr "@@unmacro @var{nomemacro}"
 
 #. type: table
 #: texinfo/texinfo.texi:19832
@@ -53815,12 +53848,14 @@ msgid ""
 "Undefine the macro @code{@@@var{macroname}} if it has been defined.  "
 "@xref{Defining Macros}."
 msgstr ""
+"Indefine a macro @code{@@@var{nomemacro}} se ela tiver sido definida. "
+"@xref{Definindo Macros}."
 
 #. type: item
 #: texinfo/texinfo.texi:19833
 #, no-wrap
 msgid "@@unnumbered @var{title}"
-msgstr ""
+msgstr "@@unnumbered @var{título}"
 
 #. type: table
 #: texinfo/texinfo.texi:19836
@@ -53828,12 +53863,14 @@ msgid ""
 "Begin a chapter that appears without chapter numbers of any kind.  The title "
 "appears in the table of contents.  @xref{@code{@@unnumbered @@appendix}}."
 msgstr ""
+"Iniciar um capítulo que aparece sem números de capítulo de qualquer tipo. "
+"O título aparece no sumário. @xref{@code{@@unnumbered @@appendix}}."
 
 #. type: item
 #: texinfo/texinfo.texi:19837
 #, no-wrap
 msgid "@@unnumberedsec @var{title}"
-msgstr ""
+msgstr "@@unnumberedsec @var{título}"
 
 #. type: table
 #: texinfo/texinfo.texi:19841
@@ -53842,12 +53879,15 @@ msgid ""
 "appears in the table of contents.  @xref{@code{@@unnumberedsec @@appendixsec "
 "@@heading}}."
 msgstr ""
+"Iniciar uma seção que aparece sem números de seção de qualquer tipo. O "
+"título aparece no sumário. @xref{@code{@@unnumberedsec @@appendixsec "
+"@@heading}}."
 
 #. type: item
 #: texinfo/texinfo.texi:19842
 #, no-wrap
 msgid "@@unnumberedsubsec @var{title}"
-msgstr ""
+msgstr "@@unnumberedsubsec @var{título}"
 
 #. type: table
 #: texinfo/texinfo.texi:19845
@@ -53855,12 +53895,14 @@ msgid ""
 "Begin an unnumbered subsection.  The title appears in the table of "
 "contents.  @xref{@code{@@unnumberedsubsec @@appendixsubsec @@subheading}}."
 msgstr ""
+"Iniciar uma subseção não numerada. O título aparece no sumário. "
+"@xref{@code{@@unnumberedsubsec @@appendixsubsec @@subheading}}."
 
 #. type: item
 #: texinfo/texinfo.texi:19846
 #, no-wrap
 msgid "@@unnumberedsubsubsec @var{title}"
-msgstr ""
+msgstr "@@unnumberedsubsubsec @var{título}"
 
 #. type: table
 #: texinfo/texinfo.texi:19849
@@ -53868,18 +53910,20 @@ msgid ""
 "Begin an unnumbered subsubsection.  The title appears in the table of "
 "contents.  @xref{@code{@@subsubsection}}."
 msgstr ""
+"Iniciar uma subsubseção não numerada. O título aparece no sumário. "
+"@xref{@code{@@subsubsection}}."
 
 #. type: item
 #: texinfo/texinfo.texi:19850
 #, no-wrap
 msgid "@@uref@{@var{url}[, @var{displayed-text}][, @var{replacement}@}"
-msgstr ""
+msgstr "@@uref@{@var{url}[, @var{texto-exibido}][, @var{substituição}@}"
 
 #. type: itemx
 #: texinfo/texinfo.texi:19851
 #, no-wrap
 msgid "@@url@{@var{url}[, @var{displayed-text}][, @var{replacement}@}"
-msgstr ""
+msgstr "@@url@{@var{url}[, @var{texto-exibido}][, @var{substituição}@}"
 
 #. type: table
 #: texinfo/texinfo.texi:19854
@@ -53887,12 +53931,14 @@ msgid ""
 "Define a cross-reference to an external uniform resource locator, e.g., for "
 "the World Wide Web.  @xref{@code{@@url}}."
 msgstr ""
+"Define uma referência cruzada para um localizador externo uniforme de "
+"recursos, por exemplo, para a World Wide Web. @xref{@code{@@url}}."
 
 #. type: item
 #: texinfo/texinfo.texi:19855
 #, no-wrap
 msgid "@@urefbreakstyle @var{style}"
-msgstr ""
+msgstr "@@urefbreakstyle @var{estilo}"
 
 #. type: table
 #: texinfo/texinfo.texi:19859
@@ -53900,12 +53946,14 @@ msgid ""
 "Specify how @code{@@uref}/@code{@@url} should break at special characters: "
 "@code{after}, @code{before}, @code{none}.  @xref{@code{@@url}}."
 msgstr ""
+"Especificar como @code{@@uref}/@code{@@url} deveria quebrar em caracteres "
+"especiais: @code{after}, @code{before}, @code{none}. @xref{@code{@@url}}."
 
 #. type: item
 #: texinfo/texinfo.texi:19860
 #, no-wrap
 msgid "@@v@{@var{c}@}"
-msgstr ""
+msgstr "@@v@{@var{c}@}"
 
 #. type: table
 #: texinfo/texinfo.texi:19863
@@ -53913,12 +53961,14 @@ msgid ""
 "Generate check accent over the character @var{c}, as in @v{o}.  "
 "@xref{Inserting Accents}."
 msgstr ""
+"Gerar acento caron sobre o caractere @var{c}, como em @v{o}. @xref{Inserindo "
+"Acentos}."
 
 #. type: item
 #: texinfo/texinfo.texi:19864
 #, no-wrap
 msgid "@@value@{@var{txivar}@}"
-msgstr ""
+msgstr "@@value@{@var{variáveltexinfo}@}"
 
 #. type: table
 #: texinfo/texinfo.texi:19868
@@ -53926,6 +53976,8 @@ msgid ""
 "Insert the value, if any, of the Texinfo variable @var{txivar}, previously "
 "defined by @code{@@set}.  @xref{@code{@@set @@clear @@value}}."
 msgstr ""
+"Inserir o valor, se existir, da variável do Texinfo @var{variáveltexinfo}, "
+"previamente definida por @code{@@set}. @xref{@code{@@set @@clear @@value}}."
 
 #. type: table
 #: texinfo/texinfo.texi:19872
@@ -53933,12 +53985,14 @@ msgid ""
 "Highlight a metasyntactic variable, which is something that stands for "
 "another piece of text.  @xref{@code{@@var}}."
 msgstr ""
+"Realçar uma variável metassintática, que é algo que representa outro "
+"pedaço de texto. @xref{@code{@@var}}."
 
 #. type: item
 #: texinfo/texinfo.texi:19873
 #, no-wrap
 msgid "@@verb@{@var{delim} @var{literal} @var{delim}@}"
-msgstr ""
+msgstr "@@verb@{@var{delimitador} @var{literal} @var{delimitador}@}"
 
 #. type: table
 #: texinfo/texinfo.texi:19877
@@ -53947,6 +54001,9 @@ msgid ""
 "as is (in the fixed-width font), including any whitespace or Texinfo special "
 "characters.  @xref{@code{@@verb}}."
 msgstr ""
+"Emitir @var{literal}, delimitada pelo caractere único @var{delimitador}, "
+"exatamente como está (na fonte de largura fixa), incluindo quaisquer "
+"espaços em branco ou caracteres especiais do Texinfo. @xref{@code{@@verb}}."
 
 #. type: table
 #: texinfo/texinfo.texi:19881
@@ -53954,12 +54011,14 @@ msgid ""
 "Output the text of the environment exactly as is (in the fixed-width font).  "
 "Pair with @code{@@end verbatim}.  @xref{@code{@@verbatim}}."
 msgstr ""
+"Emitir o texto do ambiente exatamente como está (na fonte de largura fixa). "
+"Emparelhar com @code{@@end verbatim}. @xref{@code{@@verbatim}}."
 
 #. type: item
 #: texinfo/texinfo.texi:19882
 #, no-wrap
 msgid "@@verbatiminclude @var{filename}"
-msgstr ""
+msgstr "@@verbatiminclude @var{nomearquivo}"
 
 #. type: table
 #: texinfo/texinfo.texi:19885
@@ -53967,12 +54026,14 @@ msgid ""
 "Output the contents of @var{filename} exactly as is (in the fixed-width "
 "font).  @xref{@code{@@verbatiminclude}}."
 msgstr ""
+"Emitir o conteúdo de @var{nomearquivo} exatamente como está (na fonte de "
+"largura fixa). @xref{@code{@@verbatiminclude}}."
 
 #. type: item
 #: texinfo/texinfo.texi:19886
 #, no-wrap
 msgid "@@vindex @var{entry}"
-msgstr ""
+msgstr "@@vindex @var{entrada}"
 
 #. type: table
 #: texinfo/texinfo.texi:19889
@@ -53980,12 +54041,14 @@ msgid ""
 "Add @var{entry} to the index of variables.  @xref{Index Entries, , Defining "
 "the Entries of an Index}."
 msgstr ""
+"Adicionar @var{entrada} ao índice de variáveis. @xref{Entradas de Índice, "
+", Definindo as Entradas de um Índice}."
 
 #. type: item
 #: texinfo/texinfo.texi:19890
 #, no-wrap
 msgid "@@vskip @var{amount}"
-msgstr ""
+msgstr "@@vskip @var{quantidade}"
 
 #. type: table
 #: texinfo/texinfo.texi:19895
@@ -53995,12 +54058,16 @@ msgid ""
 "copyright page with the argument @samp{0pt plus 1filll}.  (Note spelling of "
 "@samp{filll}.)  @xref{Copyright}."
 msgstr ""
+"Em um manual impresso, inserir espaços em branco de forma a empurrar o "
+"texto no restante da página em direção ao final da página. Usado na "
+"formatação da página de copirraite com o argumento @samp{0pt plus "
+"1filll}. (Observe a grafia de @samp{filll}). @xref{Direitos Autorais}."
 
 #. type: item
 #: texinfo/texinfo.texi:19896
 #, no-wrap
 msgid "@@vtable @var{formatting-command}"
-msgstr ""
+msgstr "@@vtable @var{comando-formatação}"
 
 #. type: table
 #: texinfo/texinfo.texi:19901
@@ -54010,17 +54077,21 @@ msgid ""
 "Pair with @code{@@end vtable}.  The same as @code{@@table}, except for "
 "indexing.  @xref{@code{@@ftable @@vtable}}."
 msgstr ""
+"Iniciar uma tabela de duas colunas, usando @code{@@item} para cada entrada. "
+"Inserir automaticamente cada um dos itens da primeira coluna no índice de "
+"variáveis. Emparelhar com @code{@@end vtable}. O mesmo que @code{@@table}, "
+"exceto pela indexação. @xref{@code{@@ftable @@vtable}}."
 
 #. type: table
 #: texinfo/texinfo.texi:19904
 msgid "Disallow line breaks within @var{text}.  @xref{@code{@@w}}."
-msgstr ""
+msgstr "Proíbe quebras de linha em @var{texto}. @xref{@code{@@w}}."
 
 #. type: item
 #: texinfo/texinfo.texi:19905
 #, no-wrap
 msgid "@@xml"
-msgstr ""
+msgstr "@@xml"
 
 #. type: table
 #: texinfo/texinfo.texi:19908
@@ -54028,6 +54099,8 @@ msgid ""
 "Enter XML completely.  Pair with @code{@@end xml}.  @xref{Raw Formatter "
 "Commands}."
 msgstr ""
+"Entrar no XML completamente. Emparelhar com @code{@@end xml}. @xref{Comandos "
+"do Formatador Bruto}."
 
 #. type: item
 #: texinfo/texinfo.texi:19909
@@ -54036,6 +54109,8 @@ msgid ""
 "@@xref@{@var{node}, [@var{entry}], [@var{node-title}], [@var{info-file}], "
 "[@var{printed-manual}]@}"
 msgstr ""
+"@@xref@{@var{nó}, [@var{entrada}], [@var{título-nó}], "
+"[@var{arquivo-info}], [@var{manual-impresso}]@}"
 
 #. type: table
 #: texinfo/texinfo.texi:19915
@@ -54046,12 +54121,17 @@ msgid ""
 "@var{printed-manual} and/or the @var{info-file} are the only required "
 "arguments.  @xref{@code{@@xref}}."
 msgstr ""
+"Fazer uma referência que comece com `Veja' em um manual impresso. Seguir o "
+"comando com um sinal de pontuação. O primeiro argumento é obrigatório, "
+"exceto para referências para manuais inteiros. Para se referir a outro "
+"manual como um todo, o @var{manual-impresso} e(ou) o @var{arquivo-info} são "
+"os únicos argumentos exigidos. @xref{@code{@@xref}}."
 
 #. type: item
 #: texinfo/texinfo.texi:19916
 #, no-wrap
 msgid "@@xrefautomaticsectiontitle @var{on-off}"
-msgstr ""
+msgstr "@@xrefautomaticsectiontitle @var{on-off}"
 
 #. type: table
 #: texinfo/texinfo.texi:19919
@@ -54059,6 +54139,9 @@ msgid ""
 "By default, use the section title instead of the node name in cross "
 "references, including in node headers in HTML.  @xref{Three Arguments}."
 msgstr ""
+"Por padrão, usar o título da seção em vez do nome do nó em referências "
+"cruzadas, inclusive nos cabeçalhos dos nós em HTML. @xref{Três "
+"Argumentos}."
 
 #. type: node
 #: texinfo/texinfo.texi:19923
