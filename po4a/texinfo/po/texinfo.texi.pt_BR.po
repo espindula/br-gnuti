@@ -54147,19 +54147,19 @@ msgstr ""
 #: texinfo/texinfo.texi:19923
 #, no-wrap
 msgid "Command Contexts"
-msgstr ""
+msgstr "Contextos de Comando"
 
 #. type: section
 #: texinfo/texinfo.texi:19924
 #, no-wrap
 msgid "@@-Command Contexts"
-msgstr ""
+msgstr "Contextos do Comando @@"
 
 #. type: cindex
 #: texinfo/texinfo.texi:19926
 #, no-wrap
 msgid "Contexts, of @@-commands"
-msgstr ""
+msgstr "Contextos, de comandos @@"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:19933
@@ -54170,6 +54170,11 @@ msgid ""
 "implementations are most likely to be resolved in favor of the "
 "implementations."
 msgstr ""
+"Aqui nós descrevemos aproximadamente quais comandos @@ podem ser usados em "
+"quais contextos. Não é exaustivo nem pretende ser uma referência "
+"completa. As discrepâncias entre as informações aqui e as "
+"implementações dos processadores Texinfo provavelmente serão resolvidas "
+"em favor das implementações."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:19937
@@ -54178,6 +54183,9 @@ msgid ""
 "such outer-level document commands, such as @code{@@section}, @code{@@node}, "
 "and @code{@@setfilename}."
 msgstr ""
+"Por @dfn{texto geral} abaixo, nós queremos dizer qualquer coisa, exceto "
+"seccionamento e outros comandos de documento de nível externo, como "
+"@code{@@section}, @code{@@node} e @code{@@setfilename}."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:19943
@@ -54188,6 +54196,11 @@ msgid ""
 "in @code{@@float} but may contain general text.  @code{@@footnote} content "
 "likewise."
 msgstr ""
+"Comandos condicionais @code{@@c}, @code{@@comment} e @code{@@if ... @@end "
+"if} podem aparecer em qualquer lugar (exceto que os condicionais ainda "
+"precisam estar sozinhos nas linhas). @code{@@caption} e "
+"@code{@@shortcaption} podem aparecer somente em @code{@@float}, porém podem "
+"conter texto geral. Conteúdo do @code{@@footnote} da mesma forma."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:19949
@@ -54197,6 +54210,11 @@ msgid ""
 "no other block commands (other commands terminated by @code{@@end}) and may "
 "not be split across paragraphs, but may otherwise contain general text."
 msgstr ""
+"Comandos @@ com colchetes marcando texto (como @code{@@strong}, @code{@@sc}, "
+"@code{@@asis}) podem conter comandos do formatador bruto, como "
+"@code{@@html}, mas nenhum outro comando de bloco (outros comandos terminados "
+"por @code{@@end}) e não podem ser divididos em parágrafos, mas podem "
+"conter texto geral."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:19954
@@ -54205,6 +54223,9 @@ msgid ""
 "@code{@@exdent} and @code{@@item} in @code{@@table} lines, @@-commands that "
 "makes only sense in a paragraph are not accepted, such as @code{@@indent}."
 msgstr ""
+"Além da restrição de comando de bloco, em @code{@@center}, "
+"@code{@@exdent} e @code{@@item} em linhas do @code{@@table}, comandos @@ que "
+"só fazem sentido em um parágrafo não são aceitos, como @code{@@indent}."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:19957
@@ -54212,6 +54233,8 @@ msgid ""
 "In addition to the above, sectioning commands cannot contain "
 "@code{@@anchor}, @code{@@footnote} or @code{@@verb}."
 msgstr ""
+"Além do acima, comandos de seccionamento não podem conter @code{@@anchor}, "
+"@code{@@footnote} ou @code{@@verb}."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:19963
@@ -54222,6 +54245,11 @@ msgid ""
 "cross-reference commands (@code{@@ref}, @code{@@xref}, @code{@@pxref} and "
 "@code{@@inforef})."
 msgstr ""
+"Além do acima, os comandos restantes (@code{@@node}, @code{@@anchor}, "
+"@code{@@printindex}, @code{@@ref}, @code{@@math}, @code{@@cindex}, "
+"@code{@@url}, @code{@@image} e assim por diante) não podem conter comandos "
+"de referência cruzada (@code{@@ref}, @code{@@xref}, @code{@@pxref} e "
+"@code{@@inforef})."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:19966
@@ -54229,12 +54257,14 @@ msgid ""
 "For precise and complete information, we suggest looking into the test suite "
 "in the sources, which exhaustively tries combinations."
 msgstr ""
+"Para informações precisas e completas, nós sugerimos uma olhada na suíte "
+"de teste nos fontes, que exaustivamente testa combinações."
 
 #. type: section
 #: texinfo/texinfo.texi:19968 texinfo/texinfo.texi:19969
 #, no-wrap
 msgid "Obsolete @@-Commands"
-msgstr ""
+msgstr "Comandos @@ Obsoletos"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:19973
@@ -54242,12 +54272,14 @@ msgid ""
 "Here are Texinfo @@-commands which are obsolete or have been removed "
 "completely.  This section is for historical purposes."
 msgstr ""
+"Aqui estão comandos @@ do Texinfo que estão obsoletos ou foram "
+"completamente removidos. Esta seção é para fins históricos."
 
 #. type: item
 #: texinfo/texinfo.texi:19975
 #, no-wrap
 msgid "@@refill"
-msgstr ""
+msgstr "@@refill"
 
 #. type: ftable
 #: texinfo/texinfo.texi:19980
@@ -54257,24 +54289,29 @@ msgid ""
 "automatically refill as needed, but you may still see it in the source to "
 "some manuals, as it does no harm."
 msgstr ""
+"Esse comando costumava recarregar e recuar o parágrafo depois de todos os "
+"outros processamentos terem sido feitos. Ele não mais é necessário, pois "
+"todos os formatadores agora recarregam automaticamente conforme necessário, "
+"mas você ainda pode vê-lo no fonte para alguns manuais, pois ele não "
+"causa danos."
 
 #. type: cindex
 #: texinfo/texinfo.texi:19981
 #, no-wrap
 msgid "Contents, after title page"
-msgstr ""
+msgstr "Conteúdo, depois da página de título"
 
 #. type: cindex
 #: texinfo/texinfo.texi:19982
 #, no-wrap
 msgid "Table of contents, after title page"
-msgstr ""
+msgstr "Sumário, depois da página de título"
 
 #. type: item
 #: texinfo/texinfo.texi:19983
 #, no-wrap
 msgid "@@setcontentsaftertitlepage"
-msgstr ""
+msgstr "@@setcontentsaftertitlepage"
 
 #. type: ftable
 #: texinfo/texinfo.texi:19991
@@ -54286,12 +54323,18 @@ msgid ""
 "titlepage} line)  even if the @code{@@contents} command was at the end of "
 "the manual."
 msgstr ""
+"No passado, os comandos de conteúdo às vezes eram colocados no final do "
+"arquivo, depois de quaisquer índices e logo antes do @code{@@bye}, mas nós "
+"não mais recomendamos isso. Esse comando poderia ser usado por um(a) "
+"usuário(a) imprimindo um manual, para forçar a impressão do conteúdo "
+"depois da página de título (após a linha @samp{@@end titlepage}) mesmo se "
+"o comando @code{@@contents} estivesse no final do manual."
 
 #. type: item
 #: texinfo/texinfo.texi:19992
 #, no-wrap
 msgid "@@setshortcontentsaftertitlepage"
-msgstr ""
+msgstr "@@setshortcontentsaftertitlepage"
 
 #. type: ftable
 #: texinfo/texinfo.texi:19995
@@ -54299,45 +54342,47 @@ msgid ""
 "This placed the short table of contents after the @samp{@@end titlepage} "
 "command even if the @code{@@shortcontents} command was at the end."
 msgstr ""
+"Isso colocava o sumário curto depois do comando @samp{@@end titlepage}, "
+"mesmo se o comando @code{@@shortcontents} estivesse no final."
 
 #. type: cindex
 #: texinfo/texinfo.texi:19998 texinfo/texinfo.texi:20004
 #, no-wrap
 msgid "Tips"
-msgstr ""
+msgstr "Dicas"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:20000
 msgid "@nodedescription Hints on how to write a Texinfo document."
-msgstr ""
+msgstr "@nodedescription Dicas acerca de como escrever um documento Texinfo."
 
 #. type: appendix
 #: texinfo/texinfo.texi:20000
 #, no-wrap
 msgid "Tips and Hints"
-msgstr ""
+msgstr "Dicas e Sugestões"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:20003
 msgid "Here are some tips for writing Texinfo documentation:"
-msgstr ""
+msgstr "Aqui estão algumas dicas para escrita de documentação Texinfo:"
 
 #. type: cindex
 #: texinfo/texinfo.texi:20005
 #, no-wrap
 msgid "Usage tips"
-msgstr ""
+msgstr "Dicas de uso"
 
 #. type: cindex
 #: texinfo/texinfo.texi:20006
 #, no-wrap
 msgid "Hints"
-msgstr ""
+msgstr "Dicas"
 
 #. type: itemize
 #: texinfo/texinfo.texi:20010
 msgid "Write in the present tense, not in the past or the future."
-msgstr ""
+msgstr "Escrever no presente, não no passado ou no futuro."
 
 #. type: itemize
 #: texinfo/texinfo.texi:20014
@@ -54345,16 +54390,20 @@ msgid ""
 "Write actively! For example, write ``We recommend that @dots{}'' rather than "
 "``It is recommended that @dots{}''."
 msgstr ""
+"Escrever ativamente! Por exemplo, escrever ``Nós recomendamos que @dots{}'' "
+"em vez de ``É recomendado que @dots{}''."
 
 #. type: itemize
 #: texinfo/texinfo.texi:20017
 msgid "Use 70 or 72 as your fill column.  Longer lines are hard to read."
 msgstr ""
+"Usar 70 ou 72 como tua coluna de preenchimento. Linhas mais longas são "
+"difíceis para ler."
 
 #. type: itemize
 #: texinfo/texinfo.texi:20020
 msgid "Include a copyright notice and copying permissions."
-msgstr ""
+msgstr "Incluir um aviso de copirraite e permissões de cópia."
 
 #. type: itemize
 #: texinfo/texinfo.texi:20025
@@ -54363,12 +54412,15 @@ msgid ""
 "People tire of flipping back and forth to find information that should be "
 "presented to them as they need it."
 msgstr ""
+"Projetar teu manual de modo que possa ser lido sequencialmente, na medida do "
+"possível. As pessoas se cansam de ficar indo e voltando para encontrar "
+"informações que deveriam ser apresentadas a elas conforme necessário."
 
 #. type: subsubheading
 #: texinfo/texinfo.texi:20029
 #, no-wrap
 msgid "Index, Index, Index!"
-msgstr ""
+msgstr "Índice, Índice, Índice!"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:20033
@@ -54376,6 +54428,8 @@ msgid ""
 "Write many index entries, in different ways.  Readers like indices; they are "
 "helpful and convenient."
 msgstr ""
+"Escrever muitas entradas de índice, de maneiras diferentes. Leitores(as) "
+"gostam de índices; eles são úteis e convenientes."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:20039
@@ -54385,11 +54439,18 @@ msgid ""
 "an entry before the paragraph to which it applies.  This way, an index entry "
 "points to the first page of a paragraph that is split across pages."
 msgstr ""
+"Embora seja mais fácil escrever entradas de índice enquanto você escrever "
+"o corpo do texto, algumas pessoas preferem escrever entradas depois. Em "
+"ambos os casos, escreva uma entrada antes do parágrafo ao qual se aplica. "
+"Dessa maneira, uma entrada de índice apontará para a primeira página de "
+"um parágrafo que esteja dividido em páginas."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:20041
 msgid "Here are more index-related hints we have found valuable:"
 msgstr ""
+"Aqui estão mais dicas relacionadas ao índice que nós consideramos "
+"valiosas:"
 
 #. type: itemize
 #: texinfo/texinfo.texi:20046
@@ -54397,6 +54458,8 @@ msgid ""
 "Write each index entry differently, so each entry refers to a different "
 "place in the document."
 msgstr ""
+"Escrever cada entrada do índice diferentemente, de modo que cada entrada se "
+"refira a um local diferente no documento."
 
 #. type: itemize
 #: texinfo/texinfo.texi:20052
@@ -54406,6 +54469,11 @@ msgid ""
 "reporting bugs.  Someone who wants to know about debugging information will "
 "certainly not find it in that chapter."
 msgstr ""
+"Escrever entradas de índice somente onde um tópico for discutido "
+"significativamente. Por exemplo, não é útil indexar ``informações de "
+"depuração'' em um capítulo acerca de informe de defeitos. Alguém que "
+"queira saber acerca de informações de depuração certamente não as "
+"encontrará nesse capítulo."
 
 #. type: itemize
 #: texinfo/texinfo.texi:20059
@@ -54415,6 +54483,12 @@ msgid ""
 "entries for capitalization.  Whichever case convention you use, please use "
 "one or the other consistently! Mixing the two styles looks bad."
 msgstr ""
+"Consistentemente maiusculize a primeira palavra de cada entrada do índice "
+"de conceitos ou consistentemente use letras minúsculas. Entradas concisas "
+"frequentemente exigem letras minúsculas; entradas mais longas para "
+"capitalização. Qualquer que seja a convenção de caso que você usar, por "
+"favor, use uma ou outra consistentemente! Misturar os dois estilos parece "
+"ruim."
 
 #. type: itemize
 #: texinfo/texinfo.texi:20065
@@ -54423,6 +54497,10 @@ msgid ""
 "this is proper, such as names of countries or acronyms.  Always use the "
 "appropriate case for case-sensitive names, such as those in C or Lisp."
 msgstr ""
+"Sempre capitalize ou use letras maiúsculas para as palavras em um índice "
+"para o qual isso seja adequado, como nomes de países ou siglas. Sempre use "
+"maiúsculas e minúsculas apropriadas para nomes que diferenciam maiúsculas "
+"de minúsculas, como aqueles em C ou Lisp."
 
 #. type: itemize
 #: texinfo/texinfo.texi:20070
@@ -54431,6 +54509,9 @@ msgid ""
 "the section command, and write the indexing commands that refer to a "
 "paragraph before that paragraph."
 msgstr ""
+"Escrever os comandos de indexação que se refiram a uma seção inteira "
+"imediatamente após o comando de seção e escrever os comandos de "
+"indexação que se refiram a um parágrafo antes desse parágrafo."
 
 #. type: itemize
 #: texinfo/texinfo.texi:20073
@@ -54438,6 +54519,8 @@ msgid ""
 "In the example that follows, a blank line comes after the index entry for "
 "``Leaping'':"
 msgstr ""
+"No exemplo a seguir, uma linha em branco vem após a entrada do índice para "
+"``Pulando'':"
 
 #. type: group
 #: texinfo/texinfo.texi:20079
@@ -54448,6 +54531,10 @@ msgid ""
 "@@cindex Leaping\n"
 "\n"
 msgstr ""
+"@@section O Cachorro e a Raposa\n"
+"@@cindex Saltando, em geral\n"
+"@@cindex Pulando\n"
+"\n"
 
 #. type: group
 #: texinfo/texinfo.texi:20085
@@ -54459,6 +54546,11 @@ msgid ""
 "@@cindex Quick fox jumps over dog\n"
 "The quick brown fox jumps over the lazy dog.\n"
 msgstr ""
+"@@cindex Cachorro, preguiçoso, saltou sobre\n"
+"@@cindex Cachorro preguiçoso saltou sobre\n"
+"@@cindex Raposa, salta sobre cachorro\n"
+"@@cindex Raposa rápida salta sobre cachorro\n"
+"A rápida raposa marrom salta sobre o cachorro preguiçoso.\n"
 
 #. type: itemize
 #: texinfo/texinfo.texi:20092
@@ -54467,12 +54559,16 @@ msgid ""
 "in different ways---@samp{Lazy dog}, and @samp{Dog, lazy}---so readers can "
 "look up the concept in different ways.)"
 msgstr ""
+"(Observe que o exemplo mostra entradas para o mesmo conceito que são "
+"escritas de maneiras diferentes---@samp{cachorro preguiçoso} e "
+"@samp{cachorro, preguiçoso}---portanto, leitores(as) conseguem pesquisar o "
+"conceito de maneiras diferentes)."
 
 #. type: subsubheading
 #: texinfo/texinfo.texi:20095
 #, no-wrap
 msgid "Blank Lines"
-msgstr ""
+msgstr "Linhas em Branco"
 
 #. type: itemize
 #: texinfo/texinfo.texi:20103
