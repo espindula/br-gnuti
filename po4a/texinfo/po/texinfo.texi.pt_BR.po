@@ -54578,6 +54578,11 @@ msgid ""
 "sectioning command and the first following sentence or paragraph, as shown "
 "in the tip on indexing.  It makes the source easier to read."
 msgstr ""
+"Inserir uma linha em branco entre um comando de seccionamento e a primeira "
+"frase ou parágrafo seguinte, ou entre os comandos de indexação associados "
+"ao comando de seccionamento e a primeira frase ou parágrafo seguinte, "
+"conforme mostrado na dica acerca de indexação. Isso torna o fonte mais "
+"fácil de ler."
 
 #. type: itemize
 #: texinfo/texinfo.texi:20108
@@ -54586,6 +54591,9 @@ msgid ""
 "@code{@@end table} command; but never insert a blank line after an "
 "@code{@@table} command."
 msgstr ""
+"Sempre inserir uma linha em branco antes de um comando @code{@@table} e "
+"depois de um comando @code{@@end table}; mas nunca inserir uma linha em "
+"branco após um comando @code{@@table}."
 
 #. type: group
 #: texinfo/texinfo.texi:20115
@@ -54594,6 +54602,8 @@ msgid ""
 "Types of fox:\n"
 "\n"
 msgstr ""
+"Tipos de raposa:\n"
+"\n"
 
 #. type: group
 #: texinfo/texinfo.texi:20119
@@ -54603,6 +54613,9 @@ msgid ""
 "@@item Quick\n"
 "Jump over lazy dogs.\n"
 msgstr ""
+"@@table @@samp\n"
+"@@item Rápida\n"
+"Pular sobre cachorros preguiçosos.\n"
 
 #. type: group
 #: texinfo/texinfo.texi:20125
@@ -54613,6 +54626,10 @@ msgid ""
 "@@end table\n"
 "\n"
 msgstr ""
+"@@item Marrom\n"
+"Também pula sobre cachorros preguiçosos.\n"
+"@@end table\n"
+"\n"
 
 #. type: group
 #: texinfo/texinfo.texi:20130
@@ -54621,6 +54638,8 @@ msgid ""
 "@@noindent\n"
 "On the other hand, @dots{}\n"
 msgstr ""
+"@@noindent\n"
+"Por outro lado, @dots{}\n"
 
 #. type: itemize
 #: texinfo/texinfo.texi:20136
@@ -54629,17 +54648,20 @@ msgid ""
 "itemize} and @code{@@enumerate} @dots{} @code{@@end enumerate} in the same "
 "way."
 msgstr ""
+"Inserir linhas em branco antes e depois de @code{@@itemize} @dots{} "
+"@code{@@end itemize} e de @code{@@enumerate} @dots{} @code{@@end enumerate} "
+"da mesma maneira."
 
 #. type: subsubheading
 #: texinfo/texinfo.texi:20139
 #, no-wrap
 msgid "Complete Phrases"
-msgstr ""
+msgstr "Frases Completas"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:20142
 msgid "Complete phrases are easier to read than @dots{}"
-msgstr ""
+msgstr "Frases completas são mais fáceis de ler que @dots{}"
 
 #. type: itemize
 #: texinfo/texinfo.texi:20148
@@ -54647,6 +54669,9 @@ msgid ""
 "Write entries in an itemized list as complete sentences; or at least, as "
 "complete phrases.  Incomplete expressions @dots{} awkward @dots{} like this."
 msgstr ""
+"Escreva entradas em uma lista detalhada como frases completas; ou, pelo "
+"menos, como frases completas. Expressões incompletas @dots{} estranhas "
+"@dots{} como esta."
 
 #. type: itemize
 #: texinfo/texinfo.texi:20153
@@ -54655,12 +54680,16 @@ msgid ""
 "complete expression.  Do not write ``You can set:''; instead, write ``You "
 "can set these variables:''.  The former expression sounds cut off."
 msgstr ""
+"Escrever a frase ou frase introdutória para uma lista ou tabela com vários "
+"itens como uma expressão completa. Não escreva ``Você consegue "
+"configurar:''; em vez disso, escrever ``Você consegue configurar essas "
+"variáveis:''. A expressão anterior parece cortada."
 
 #. type: subsubheading
 #: texinfo/texinfo.texi:20156
 #, no-wrap
 msgid "Editions, Dates and Versions"
-msgstr ""
+msgstr "Edições, Datas e Versões"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:20163
@@ -54671,6 +54700,11 @@ msgid ""
 "@code{@@titlepage} section for people reading the printed output "
 "(@pxref{Short Sample})."
 msgstr ""
+"Incluir números de edição, números de versão e datas no texto de "
+"@code{@@copying} (para pessoas que leem o arquivo Texinfo e para copirraite "
+"jurídico nos arquivos de saída). Em seguida, usar @code{@@insertcopying} "
+"na seção @code{@@titlepage} para pessoas que leem a saída impressa "
+"(@pxref{Amostra Curta})."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:20167
@@ -54678,6 +54712,9 @@ msgid ""
 "It is easiest to handle such version information using @code{@@set} and "
 "@code{@@value}.  @xref{@code{@@value} Example}, and @ref{GNU Sample Texts}."
 msgstr ""
+"É mais fácil lidar com essas informações de versão usando-se "
+"@code{@@set} e @code{@@value}. @xref{Exemplode @code{@@value}} e @ref{Textos "
+"GNU de Amostra}."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:20174
@@ -54685,6 +54722,8 @@ msgid ""
 "Definition commands are @code{@@deffn}, @code{@@defun}, @code{@@defmac}, and "
 "the like, and enable you to write descriptions in a uniform format."
 msgstr ""
+"Comandos de definição são @code{@@deffn}, @code{@@defun}, @code{@@defmac} "
+"e similares, e te habilitam escrever descrições em um formato uniforme."
 
 #. type: itemize
 #: texinfo/texinfo.texi:20180
@@ -54693,6 +54732,9 @@ msgid ""
 "definition command.  The automatic indexing feature creates an index entry "
 "that leads the reader to the definition."
 msgstr ""
+"Escrever somente um comando de definição para cada entidade definida com "
+"um comando de definição. O recurso de indexação automática cria uma "
+"entrada de índice que leva o(a) leitor(a) para a definição."
 
 #. type: itemize
 #: texinfo/texinfo.texi:20185
@@ -54700,12 +54742,15 @@ msgid ""
 "Use @code{@@table} @dots{} @code{@@end table} in an appendix that contains a "
 "summary of functions, not @code{@@deffn} or other definition commands."
 msgstr ""
+"Usar @code{@@table} @dots{} @code{@@end table} em um apêndice que contenha "
+"um resumo de funções, não @code{@@deffn} ou outros comandos de "
+"definição."
 
 #. type: subsubheading
 #: texinfo/texinfo.texi:20188
 #, no-wrap
 msgid "Capitalization"
-msgstr ""
+msgstr "Capitalização"
 
 #. type: itemize
 #: texinfo/texinfo.texi:20194
@@ -54713,11 +54758,13 @@ msgid ""
 "Capitalize ``Texinfo''; it is a name.  Do not write the @samp{x} or @samp{i} "
 "in uppercase."
 msgstr ""
+"Coloque ``Texinfo'' em maiúscula; é um nome. Não escrever o @samp{x} ou o "
+"@samp{i} em maiúsculas."
 
 #. type: itemize
 #: texinfo/texinfo.texi:20197
 msgid "Capitalize ``Info''; it is a name."
-msgstr ""
+msgstr "Coloque ``Info'' em maiúscula; é um nome."
 
 #. type: itemize
 #: texinfo/texinfo.texi:20203
@@ -54727,12 +54774,16 @@ msgid ""
 "name according to the wishes of Donald Knuth, who wrote @TeX{}.  (Likewise "
 "@code{@@LaTeX@{@}} for @LaTeX{}.)"
 msgstr ""
+"Escrever @TeX{} usando o comando @code{@@TeX@{@}}. Observe as letras "
+"maiúsculas @samp{T} e @samp{X}. Esse comando faz com que os formatadores "
+"tipografem o nome de acordo com os desejos de Donald Knuth, que escreveu o "
+"@TeX{}. (Da mesma forma @code{@@LaTeX@{@}} para @LaTeX{})."
 
 #. type: subsubheading
 #: texinfo/texinfo.texi:20206
 #, no-wrap
 msgid "Spaces"
-msgstr ""
+msgstr "Espaços"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:20211
@@ -54741,11 +54792,14 @@ msgid ""
 "@code{@@example} @dots{} @code{@@end example} and other literal environments "
 "and commands."
 msgstr ""
+"Não usar espaços para formatar um arquivo do Texinfo, exceto dentro de "
+"@code{@@example} @dots{} @code{@@end example} e outros ambientes e comandos "
+"literais."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:20214
 msgid "For example, @TeX{} fills the following:"
-msgstr ""
+msgstr "Por exemplo, @TeX{} preenche o seguinte:"
 
 #. type: group
 #: texinfo/texinfo.texi:20222
@@ -54757,11 +54811,16 @@ msgid ""
 "      on the version-controlled file\n"
 "      corresponding to the current buffer.\n"
 msgstr ""
+"   @@kbd@{C-x v@}\n"
+"   @@kbd@{M-x vc-next-action@}\n"
+"      Realizar a próxima operação lógica\n"
+"      sobre o arquivo controlado por versão\n"
+"      correspondente ao buffer atual.\n"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:20228
 msgid "so it looks like this:"
-msgstr ""
+msgstr "de modo que se pareçe com isto:"
 
 #. type: quotation
 #: texinfo/texinfo.texi:20235
@@ -54769,6 +54828,8 @@ msgid ""
 "@kbd{C-x v} @kbd{M-x vc-next-action} Perform the next logical operation on "
 "the version-controlled file corresponding to the current buffer."
 msgstr ""
+"@kbd{C-x v} @kbd{M-x vc-next-action} Realizar a próxima operação lógica "
+"sobre o arquivo controlado por versão correspondente ao buffer atual."
 
 #. type: quotation
 #: texinfo/texinfo.texi:20241
@@ -54776,6 +54837,8 @@ msgid ""
 "`C-x v' `M-x vc-next-action' Perform the next logical operation on the "
 "version-controlled file corresponding to the current buffer."
 msgstr ""
+"`C-x v' `M-x vc-next-action' Realizar a próxima operação lógica sobre o "
+"arquivo controlado por versão correspondente ao buffer atual."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:20247
@@ -54783,24 +54846,28 @@ msgid ""
 "In this case, the text should be formatted with @code{@@table}, "
 "@code{@@item}, and @code{@@itemx}, to create a table."
 msgstr ""
+"Nesse caso, o texto deveria ser formatado com @code{@@table}, @code{@@item} "
+"e @code{@@itemx}, para criar uma tabela."
 
 #. type: subsubheading
 #: texinfo/texinfo.texi:20249
 #, no-wrap
 msgid "@@code, @@samp, @@var, and @samp{---}"
-msgstr ""
+msgstr "@@code, @@samp, @@var e @samp{---}"
 
 #. type: itemize
 #: texinfo/texinfo.texi:20255
 msgid ""
 "Use @code{@@code} around Lisp symbols, including command names.  For example,"
 msgstr ""
+"Usar @code{@@code} em torno de símbolos da Lisp, incluindo nomes de "
+"comando. Por exemplo,"
 
 #. type: example
 #: texinfo/texinfo.texi:20258
 #, no-wrap
 msgid "The main function is @@code@{vc-next-action@}, @dots{}\n"
-msgstr ""
+msgstr "A função principal é @@code@{vc-next-action@}, @dots{}\n"
 
 #. type: itemize
 #: texinfo/texinfo.texi:20263
@@ -54808,6 +54875,8 @@ msgid ""
 "Avoid putting letters such as @samp{s} immediately after an @samp{@@code}.  "
 "Such letters look bad."
 msgstr ""
+"Evitar colocar letras como @samp{s} imediatamente após um @samp{@@code}. "
+"Essas letras aparentam ruins."
 
 #. type: itemize
 #: texinfo/texinfo.texi:20267
@@ -54815,6 +54884,8 @@ msgid ""
 "Use @code{@@var} around meta-variables.  Do not write angle brackets around "
 "them."
 msgstr ""
+"Usar @code{@@var} em torno de metavariáveis. Não escrever colchetes "
+"angulares ao redor delas."
 
 #. type: itemize
 #: texinfo/texinfo.texi:20272
@@ -54823,12 +54894,15 @@ msgid ""
 "formatter reduces three hyphens to two; a long dash is typeset in other "
 "output formats."
 msgstr ""
+"Usar três hífens em uma linha, @samp{---}, para indicar um travessão "
+"longo. O formatador do Info reduz três hífens para dois; um travessão "
+"longo é tipografado em outros formatos de saída."
 
 #. type: subsubheading
 #: texinfo/texinfo.texi:20275
 #, no-wrap
 msgid "Periods Outside of Quotes"
-msgstr ""
+msgstr "Pontos Finais Fora das Aspas"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:20282
@@ -54838,6 +54912,11 @@ msgid ""
 "some publishing conventions in the United States, but enables the reader to "
 "distinguish between the contents of the quotation and the whole passage."
 msgstr ""
+"Colocar pontos finais e outros sinais de pontuação @emph{fora} das "
+"citações, a menos que a pontuação seja parte da citação. Essa prática "
+"vai contra algumas convenções editoriais nos Estados Unidos da América do "
+"Norte, mas habilita o(a) leitor(a) a distinguir entre o conteúdo da "
+"citação e a passagem inteira."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:20285
@@ -54845,12 +54924,14 @@ msgid ""
 "For example, you should write the following sentence with the period outside "
 "the end quotation marks:"
 msgstr ""
+"Por exemplo, você deveria escrever a seguinte frase com o ponto final fora "
+"das aspas finais:"
 
 #. type: example
 #: texinfo/texinfo.texi:20288
 #, no-wrap
 msgid "Evidently, @samp{au} is an abbreviation for ``author''.\n"
-msgstr ""
+msgstr "Evidentemente, @samp{au} é uma abreviação para ``autor(a)''.\n"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:20293
@@ -54858,12 +54939,14 @@ msgid ""
 "since @samp{au} does @emph{not} serve as an abbreviation for @samp{author.} "
 "(with a period following the word)."
 msgstr ""
+"já que @samp{au} @emph{não} serve como uma abreviação para "
+"@samp{autor(a).} (com um ponto final depois da palavra)."
 
 #. type: subsubheading
 #: texinfo/texinfo.texi:20295
 #, no-wrap
 msgid "Introducing New Terms"
-msgstr ""
+msgstr "Apresentando Novos Termos"
 
 #. type: itemize
 #: texinfo/texinfo.texi:20301
@@ -54871,6 +54954,9 @@ msgid ""
 "Introduce new terms so that a reader who does not know them can understand "
 "them from context; or write a definition for the term."
 msgstr ""
+"Introduzir novos termos para que um(a) leitor(a) que não os conheça "
+"consiga compreendê-los a partir do contexto; ou escrever uma definição "
+"para o termo."
 
 #. type: itemize
 #: texinfo/texinfo.texi:20305
@@ -54879,6 +54965,9 @@ msgid ""
 "``delta'' are all appearing for the first time; the example sentence should "
 "be rewritten so they are understandable."
 msgstr ""
+"Por exemplo, a seguir, os termos ``check in'', ``register'' e ``delta'' "
+"estão todos aparecendo pela primeira vez; a frase de exemplo deveria ser "
+"reescrita de modo que eles sejam compreensíveis."
 
 #. type: quotation
 #: texinfo/texinfo.texi:20310
@@ -54886,6 +54975,9 @@ msgid ""
 "The major function assists you in checking in a file to your version control "
 "system and registering successive sets of changes to it as deltas."
 msgstr ""
+"A função principal te auxilia no submeter/registrar de um arquivo em teu "
+"sistema de controle de versão e no registro de sucessivos conjuntos de "
+"mudanças nele como deltas."
 
 #. type: itemize
 #: texinfo/texinfo.texi:20316
@@ -54894,12 +54986,15 @@ msgid ""
 "that the reader should not expect to know the meaning already, and should "
 "expect to learn the meaning from this passage."
 msgstr ""
+"Usar o comando @code{@@dfn} em torno de uma palavra sendo apresentada, para "
+"indicar que o(a) leitor(a) deveria não esperar já saber o significado e "
+"deveria esperar aprender o significado a partir dessa passagem."
 
 #. type: subsubheading
 #: texinfo/texinfo.texi:20319
 #, no-wrap
 msgid "Program Invocation Nodes"
-msgstr ""
+msgstr "Nós de Invocação de Programa"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:20325
@@ -54909,6 +55004,11 @@ msgid ""
 "this.  Unfortunately, if the node names and titles for these sections are "
 "all different, they are difficult for users to find."
 msgstr ""
+"Você pode invocar programas como Emacs, GCC e @code{gawk} a partir de um "
+"shell. A documentação para cada programa deveria conter uma seção que "
+"descreva isso. Infelizmente, se os nomes e títulos dos nós para essas "
+"seções forem todos diferentes, será difícil para usuários(as) "
+"encontrá-los."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:20329
@@ -54917,12 +55017,15 @@ msgid ""
 "the word `Invoking', as in `Invoking Emacs'; this way, users can find the "
 "section easily."
 msgstr ""
+"Portanto, existe uma convenção para nominar tais seções com uma frase "
+"começando com a palavra `Invocando', como em `Invocando Emacs'; dessa "
+"maneira, usuários(as) conseguem encontrar a seção facilmente."
 
 #. type: subsubheading
 #: texinfo/texinfo.texi:20331
 #, no-wrap
 msgid "ANSI C Syntax"
-msgstr ""
+msgstr "Sintaxe ANSI C"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:20335
@@ -54930,12 +55033,14 @@ msgid ""
 "When you use @code{@@example} to describe a C function's calling "
 "conventions, use the ANSI C syntax, like this:"
 msgstr ""
+"Quando você usar @code{@@example} para descrever as convenções de chamada "
+"de uma função da C, usar a sintaxe ANSI C, assim:"
 
 #. type: example
 #: texinfo/texinfo.texi:20338
 #, no-wrap
 msgid "void dld_init (char *@@var@{path@});\n"
-msgstr ""
+msgstr "void dld_init (char *@@var@{caminho@});\n"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:20344
@@ -54943,11 +55048,14 @@ msgid ""
 "And in the subsequent discussion, refer to the argument values by writing "
 "the same argument names, again highlighted with @code{@@var}."
 msgstr ""
+"E na discussão subsequente, referenciar os valores dos argumentos "
+"escrevendo os mesmos nomes dos argumentos, novamente realçados com "
+"@code{@@var}."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:20347
 msgid "Avoid the obsolete style that looks like this:"
-msgstr ""
+msgstr "Evitar o estilo obsoleto que se pareça com isto:"
 
 #. type: example
 #: texinfo/texinfo.texi:20350
@@ -54956,6 +55064,8 @@ msgid ""
 "#include <dld.h>\n"
 "\n"
 msgstr ""
+"#include <dld.h>\n"
+"\n"
 
 #. type: example
 #: texinfo/texinfo.texi:20353
@@ -54964,6 +55074,8 @@ msgid ""
 "dld_init (path)\n"
 "  char *path;\n"
 msgstr ""
+"dld_init (path)\n"
+"  char *path;\n"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:20362
@@ -54975,6 +55087,13 @@ msgid ""
 "holds the declaration or, better yet, name the header file used for a group "
 "of functions at the beginning of the section that describes the functions."
 msgstr ""
+"Além disso, é melhor evitar escrever @code{#include} acima da declaração "
+"apenas para indicar que a função está declarada em um arquivo de "
+"cabeçalho. A prática pode dar a impressão errada de que @code{#include} "
+"pertence próximo à declaração da função. Ou indique explicitamente "
+"qual arquivo de cabeçalho contém a declaração ou, melhor ainda, nomeie o "
+"arquivo de cabeçalho usado para um grupo de funções no início da seção "
+"que descreva as funções."
 
 #. type: subsubheading
 #: texinfo/texinfo.texi:20364
@@ -54992,6 +55111,12 @@ msgid ""
 "manual, using search, indexing, or just plain guessing, rather than reading "
 "the whole thing from beginning to end."
 msgstr ""
+"Manter nós (seções) para um comprimento razoável, qualquer que seja o "
+"razoável no contexto determinado. Não hesitar em dividir nós longos em "
+"subnós e ter uma extensa estrutura de árvore; é para isso que eles "
+"existem. Muitas vezes, leitores(as) provavelmente tentarão encontrar um "
+"ponto específico no manual, usando pesquisa, indexação ou simplesmente "
+"adivinhação, em vez de ler tudo do começo ao fim."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:20377
@@ -55001,17 +55126,21 @@ msgid ""
 "to find candidates for splitting.  It's in the @file{util/} subdirectory of "
 "the Texinfo sources."
 msgstr ""
+"Você consegue usar o utilitário @command{texi-elements-by-size} para ver "
+"uma lista de todos os nós (ou seções) no documento, ordenados por tamanho "
+"(ou linhas ou palavras), para encontrar candidatos para divisão. Ele está "
+"no subdiretório @file{util/} dos fontes do Texinfo."
 
 #. type: subsubheading
 #: texinfo/texinfo.texi:20379
 #, no-wrap
 msgid "Bad Examples"
-msgstr ""
+msgstr "Exemplos Ruins"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:20382
 msgid "Here are several examples of bad writing to avoid:"
-msgstr ""
+msgstr "Aqui estão vários exemplos de escrita ruim para se evitar:"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:20385
@@ -55019,6 +55148,8 @@ msgid ""
 "In this example, say, `` @dots{} you must @code{@@dfn}@{check in@} the new "
 "version.'' That flows better."
 msgstr ""
+"Neste exemplo, digamos, `` @dots{} você precisa @code{@@dfn}@{registrar@} a "
+"nova versão.'' Isso flui melhor."
 
 #. type: quotation
 #: texinfo/texinfo.texi:20389
@@ -55026,6 +55157,8 @@ msgid ""
 "When you are done editing the file, you must perform a @code{@@dfn}@{check "
 "in@}."
 msgstr ""
+"Ao terminar de editar o arquivo, você precisa realizar um "
+"@code{@@dfn}@{registro@}."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:20393
