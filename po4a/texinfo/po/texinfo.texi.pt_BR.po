@@ -55369,6 +55369,10 @@ msgid ""
 "constructing the Info directory.  @xref{Directory Category}, which includes "
 "a variety of recommended category names.  @xref{Installing Dir Entries}."
 msgstr ""
+"O @code{@@dircategory} especifica uma categoria para o manual. Ele é usado "
+"para construir o diretório Info. @xref{Categoria de Diretório}, que inclui "
+"uma variedade de nomes recomendados de categorias. @xref{Instalando Entradas "
+"de Diretório}."
 
 #. type: itemize
 #: texinfo/texinfo.texi:20482
@@ -55377,18 +55381,22 @@ msgid ""
 "information about command-line usage of a given program.  @xref{Manual "
 "Structure Details,,, standards, GNU Coding Standards}."
 msgstr ""
+"O nó `Invocando' é um padrão GNU para ajudar usuários(as) a encontrar "
+"informações básicas acerca do uso da linha de comando de um determinado "
+"programa. @xref{Detalhes da Estrutura do Manual,,, padrões, Padrões GNU de "
+"Codificação}."
 
 #. type: cindex
 #: texinfo/texinfo.texi:20484
 #, no-wrap
 msgid "GNU Free Documentation License, including entire"
-msgstr ""
+msgstr "Licença GNU de Documentação Livre, incluindo inteira"
 
 #. type: cindex
 #: texinfo/texinfo.texi:20485
 #, no-wrap
 msgid "Free Documentation License, including entire"
-msgstr ""
+msgstr "Licença de Documentação Livre, incluindo inteira"
 
 #. type: itemize
 #: texinfo/texinfo.texi:20492
@@ -55399,11 +55407,19 @@ msgid ""
 "website (at @uref{https://www.gnu.org/licenses/fdl-1.3.html}) along with "
 "guidance for using it."
 msgstr ""
+"Esta amostra mostra como incluir a Licença de Documentação Livre em um "
+"manual usando-se o comando @command{@@include}. O arquivo @file{fdl.texi} "
+"está disponível no Texinfo e em outras distribuições do fonte GNU. Ele "
+"também está disponível no sítio web do GNU (em "
+"@uref{https://www.gnu.org/licenses/fdl-1.3.html}) junto com orientações "
+"para usá-lo."
 
 #. type: itemize
 #: texinfo/texinfo.texi:20495
 msgid "If the FSF is not the copyright holder, then use the appropriate name."
 msgstr ""
+"Se a Fundação do Software Livre não for a titular do copirraite, então "
+"usar o nome apropriado."
 
 #. type: itemize
 #: texinfo/texinfo.texi:20501
@@ -55412,17 +55428,21 @@ msgid ""
 "is more appropriate to use a license permitting only verbatim copying, "
 "rather than the FDL@.  @xref{Verbatim Copying License}."
 msgstr ""
+"Para documentos que expressem tuas opiniões, sentimentos ou experiências "
+"pessoais, é mais apropriado usar uma licença que permita somente cópia "
+"literal, em vez da Licença de Documentação Livre. @xref{Licença de "
+"Cópia Literal}."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:20505
 msgid "Here is the sample document:"
-msgstr ""
+msgstr "Aqui está um documento de amostra:"
 
 #. type: settitle
 #: texinfo/texinfo.texi:20510
 #, no-wrap
 msgid "GNU Sample @value{VERSION}"
-msgstr ""
+msgstr "Amostra GNU @value{VERSION}"
 
 #. type: copying
 #: texinfo/texinfo.texi:20516
@@ -55432,6 +55452,9 @@ msgid ""
 "which is an example in the Texinfo documentation.\n"
 "\n"
 msgstr ""
+"Este manual é para Amostra GNU (versão @value{VERSION}, @value{UPDATED}),\n"
+"o qual é um exemplo na documentação do Texinfo.\n"
+"\n"
 
 #. type: copying
 #: texinfo/texinfo.texi:20518 texinfo/texinfo.texi:20603
@@ -55440,6 +55463,8 @@ msgid ""
 "Copyright @copyright{} 2016 Free Software Foundation, Inc.\n"
 "\n"
 msgstr ""
+"Copirraite @copyright{} 2016 Fundação do Software Livre, Inc.\n"
+"\n"
 
 #. type: quotation
 #: texinfo/texinfo.texi:20526
@@ -55452,30 +55477,36 @@ msgid ""
 "Texts.  A copy of the license is included in the section entitled\n"
 "``GNU Free Documentation License''.\n"
 msgstr ""
+"É concedida permissão para copiar, distribuir e(ou) modificar este "
+"documento sob os termos da Licença GNU de Documentação Livre, Versão 1.3 "
+"ou qualquer versão posterior publicada pela Fundação do Software Livre; "
+"sem Seções Invariantes, sem Textos de Capa Frontal e sem Textos de "
+"Contracapa. Uma cópia da licença está incluída na seção intitulada "
+"``Licença GNU de Documentação Livre''."
 
 #. type: menuentry
 #: texinfo/texinfo.texi:20532
 #, no-wrap
 msgid "sample: (sample)Invoking sample"
-msgstr ""
+msgstr "amostra: (amostra)Invocando amostra"
 
 #. type: top
 #: texinfo/texinfo.texi:20535 texinfo/texinfo.texi:20546
 #, no-wrap
 msgid "GNU Sample"
-msgstr ""
+msgstr "Amostra GNU"
 
 #. type: subtitle
 #: texinfo/texinfo.texi:20536
 #, no-wrap
 msgid "for version @value{VERSION}, @value{UPDATED}"
-msgstr ""
+msgstr "para versão @value{VERSION}, @value{UPDATED}"
 
 #. type: author
 #: texinfo/texinfo.texi:20537
 #, no-wrap
 msgid "A.U. Thor (@email{bug-sample@@gnu.org})"
-msgstr ""
+msgstr "A.U. Thor (@email{bug-sample@@gnu.org})"
 
 #. type: verbatim
 #: texinfo/texinfo.texi:20549
@@ -55484,13 +55515,15 @@ msgid ""
 "This manual is for GNU Sample (version @value{VERSION}, @value{UPDATED}).\n"
 "\n"
 msgstr ""
+"Este manual é para Amostra GNU (versão @value{VERSION}, @value{UPDATED}).\n"
+"\n"
 
 #. type: chapter
 #: texinfo/texinfo.texi:20554 texinfo/texinfo.texi:20556
 #: texinfo/texinfo.texi:20557
 #, no-wrap
 msgid "Invoking sample"
-msgstr ""
+msgstr "Invocando amostra"
 
 #. type: appendix
 #: texinfo/texinfo.texi:20554 texinfo/texinfo.texi:20566
@@ -55498,26 +55531,26 @@ msgstr ""
 #: texinfo/texinfo.texi:23857
 #, no-wrap
 msgid "GNU Free Documentation License"
-msgstr ""
+msgstr "Licença GNU de Documentação Livre"
 
 #. type: unnumbered
 #: texinfo/texinfo.texi:20554 texinfo/texinfo.texi:20571
 #: texinfo/texinfo.texi:20572
 #, no-wrap
 msgid "Index"
-msgstr ""
+msgstr "Índice"
 
 #. type: pindex
 #: texinfo/texinfo.texi:20559
 #, no-wrap
 msgid "sample"
-msgstr ""
+msgstr "amostra"
 
 #. type: cindex
 #: texinfo/texinfo.texi:20560
 #, no-wrap
 msgid "invoking @command{sample}"
-msgstr ""
+msgstr "invocando @command{amostra}"
 
 #. type: verbatim
 #: texinfo/texinfo.texi:20565
@@ -55528,30 +55561,34 @@ msgid ""
 "and command line options here.\n"
 "\n"
 msgstr ""
+"Este é um manual de amostra. Não existe nenhum programa de\n"
+"amostra para invocar, mas se existisse, você poderia ver o\n"
+"uso básico e opções de linha de comando dele aqui.\n"
+"\n"
 
 #. type: include
 #: texinfo/texinfo.texi:20569 texinfo/texinfo.texi:23859
 #, no-wrap
 msgid "fdl.texi"
-msgstr ""
+msgstr "fdl.texi"
 
 #. type: section
 #: texinfo/texinfo.texi:20580 texinfo/texinfo.texi:20581
 #, no-wrap
 msgid "Verbatim Copying License"
-msgstr ""
+msgstr "Licença de Cópia Literal"
 
 #. type: cindex
 #: texinfo/texinfo.texi:20583
 #, no-wrap
 msgid "Verbatim copying license"
-msgstr ""
+msgstr "Licença de cópia literal"
 
 #. type: cindex
 #: texinfo/texinfo.texi:20584
 #, no-wrap
 msgid "License for verbatim copying"
-msgstr ""
+msgstr "Licença para cópia literal"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:20589
@@ -55560,6 +55597,10 @@ msgid ""
 "license permitting free redistribution and updating, so that when a free "
 "program is changed, the documentation can be updated as well."
 msgstr ""
+"Para manuais de software e outras documentações, é fundamental usar uma "
+"licença que permita redistribuição e atualização livres, de modo que "
+"quando um programa livre for mudado, a documentação também possa ser "
+"atualizada."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:20593
@@ -55568,6 +55609,9 @@ msgid ""
 "or experiences, it is more appropriate to use a license permitting only "
 "verbatim copying."
 msgstr ""
+"Por outro lado, para documentos que expressem tuas opiniões, sentimentos ou "
+"experiências pessoais, é mais apropriado usar uma licença que permita "
+"somente cópia literal."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:20597
@@ -55576,6 +55620,9 @@ msgid ""
 "This is just the license text itself.  For a complete sample document, see "
 "the previous sections."
 msgstr ""
+"Aqui está um texto de amostra para tal licença, permitindo somente cópia "
+"literal. Este é apenas o próprio texto da licença. Para um documento "
+"completo de amostra, vejam-se as seções anteriores."
 
 #. type: copying
 #: texinfo/texinfo.texi:20601
@@ -55584,6 +55631,8 @@ msgid ""
 "This document is a sample for allowing verbatim copying only.\n"
 "\n"
 msgstr ""
+"Este documento é uma amostra para permissão somente de cópia literal.\n"
+"\n"
 
 #. type: quotation
 #: texinfo/texinfo.texi:20608
@@ -55593,24 +55642,27 @@ msgid ""
 "of this entire document without royalty provided the\n"
 "copyright notice and this permission notice are preserved.\n"
 msgstr ""
+"É concedida permissão para fazer e distribuir cópias literais\n"
+"de todo este documento sem royalties, desde que o aviso de\n"
+"copirraite e este aviso de permissão sejam preservados.\n"
 
 #. type: section
 #: texinfo/texinfo.texi:20613 texinfo/texinfo.texi:20614
 #, no-wrap
 msgid "All-permissive Copying License"
-msgstr ""
+msgstr "Licença de Cópia Toda Permissiva"
 
 #. type: cindex
 #: texinfo/texinfo.texi:20616
 #, no-wrap
 msgid "All-permissive copying license"
-msgstr ""
+msgstr "Licença de cópia toda permissiva"
 
 #. type: cindex
 #: texinfo/texinfo.texi:20617
 #, no-wrap
 msgid "License for all-permissive copying"
-msgstr ""
+msgstr "Licença para cópia toda permissiva"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:20622
@@ -55619,6 +55671,10 @@ msgid ""
 "license permitting free redistribution and updating, so that when a free "
 "program is changed, the documentation can be updated as well."
 msgstr ""
+"Para manuais de software e outras documentações, é importante usar uma "
+"licença que permita redistribuição e atualização livres, de modo que "
+"quando um programa livre for mudado, a documentação também possa ser "
+"atualizada."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:20627
@@ -55627,6 +55683,10 @@ msgid ""
 "lines long) and rough documentation (README files, INSTALL files, etc.), the "
 "full FDL would be overkill.  They can use a simple all-permissive license."
 msgstr ""
+"Por outro lado, para pequenos arquivos de suporte, manuais curtos (menos de "
+"300 linhas) e documentação aproximada (arquivos README, arquivos INSTALL, "
+"entre outros), a Licença  de Documentação Livre completa seria um "
+"exagero. Eles podem usar uma licença simples e totalmente permissiva."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:20631
@@ -55635,6 +55695,9 @@ msgid ""
 "license text itself.  For a complete sample document, see the previous "
 "sections."
 msgstr ""
+"Aqui está um texto de amostra para uma tal licença totalmente permissiva. "
+"Este é apenas o próprio texto da licença. Para um documento completo de "
+"amostra, vejam-se as seções anteriores."
 
 #. type: example
 #: texinfo/texinfo.texi:20634
@@ -55643,6 +55706,8 @@ msgid ""
 "Copyright @@copyright@{@} 2016 Free Software Foundation, Inc.\n"
 "\n"
 msgstr ""
+"Copirraite @@copyright@{@} 2016 Fundação do Software Livre, Inc.\n"
+"\n"
 
 #. type: example
 #: texinfo/texinfo.texi:20638
@@ -55652,47 +55717,50 @@ msgid ""
 "are permitted in any medium without royalty provided the copyright\n"
 "notice and this notice are preserved.\n"
 msgstr ""
+"A cópia e distribuição deste arquivo, com ou sem modificação, são "
+"permitidas em qualquer meio sem royalties, desde que o aviso de copirraite e "
+"este aviso sejam preservados."
 
 #. type: node
 #: texinfo/texinfo.texi:20641
 #, no-wrap
 msgid "Texinfo Mode"
-msgstr ""
+msgstr "Modo Texinfo"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:20643
 msgid "@nodedescription Using the GNU Emacs Texinfo mode."
-msgstr ""
+msgstr "@nodedescription Usando o modo Texinfo do GNU Emacs."
 
 #. type: appendix
 #: texinfo/texinfo.texi:20643
 #, no-wrap
 msgid "Using Texinfo Mode"
-msgstr ""
+msgstr "Usando Modo Texinfo"
 
 #. type: cindex
 #: texinfo/texinfo.texi:20644
 #, no-wrap
 msgid "Texinfo mode"
-msgstr ""
+msgstr "Modo Texinfo"
 
 #. type: cindex
 #: texinfo/texinfo.texi:20645
 #, no-wrap
 msgid "Mode, using Texinfo"
-msgstr ""
+msgstr "Modo, usando Texinfo"
 
 #. type: cindex
 #: texinfo/texinfo.texi:20646
 #, no-wrap
 msgid "GNU Emacs"
-msgstr ""
+msgstr "GNU Emacs"
 
 #. type: cindex
 #: texinfo/texinfo.texi:20647
 #, no-wrap
 msgid "Emacs"
-msgstr ""
+msgstr "Emacs"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:20653
@@ -55702,17 +55770,22 @@ msgid ""
 "special mode, called Texinfo mode, that provides Emacs commands and tools to "
 "help ease your work."
 msgstr ""
+"Você pode editar um arquivo do Texinfo com qualquer editor de texto que "
+"escolher. Um arquivo do Texinfo não é diferente de qualquer outro arquivo "
+"ASCII. No entanto, o GNU Emacs vem com um modo especial, chamado modo "
+"Texinfo, que fornece comandos e ferramentas do Emacs para ajudar a facilitar "
+"teu trabalho."
 
 #. type: section
 #: texinfo/texinfo.texi:20655 texinfo/texinfo.texi:20657
 #, no-wrap
 msgid "Texinfo Mode Overview"
-msgstr ""
+msgstr "Visão Geral do Modo Texinfo"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:20657
 msgid "@nodedescription How Texinfo mode can help you."
-msgstr ""
+msgstr "@nodedescription Como o modo Texinfo consegue te ajudar."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:20661
@@ -55720,21 +55793,23 @@ msgid ""
 "Texinfo mode provides special features for working with Texinfo files.  You "
 "can:"
 msgstr ""
+"O modo Texinfo oferece recursos especiais para trabalhar com arquivos do "
+"Texinfo. Você consegue:"
 
 #. type: itemize
 #: texinfo/texinfo.texi:20665
 msgid "Insert frequently used @@-commands."
-msgstr ""
+msgstr "Inserir comandos @@ frequentemente usados."
 
 #. type: itemize
 #: texinfo/texinfo.texi:20668
 msgid "Automatically create @code{@@node} lines."
-msgstr ""
+msgstr "Criar automaticamente linha de @code{@@node}"
 
 #. type: itemize
 #: texinfo/texinfo.texi:20671
 msgid "Show the structure of a Texinfo source file."
-msgstr ""
+msgstr "Mostrar a estrutura de um arquivo fonte do Texinfo."
 
 #. type: itemize
 #: texinfo/texinfo.texi:20675
@@ -55742,26 +55817,28 @@ msgid ""
 "Automatically create or update the `Next', `Previous', and `Up' pointers of "
 "a node."
 msgstr ""
+"Automaticamente criar ou atualizar os ponteiros `Próximo', `Anterior' e "
+"`Acima' de um nó."
 
 #. type: itemize
 #: texinfo/texinfo.texi:20678
 msgid "Automatically create or update menus."
-msgstr ""
+msgstr "Automaticamente criar ou atualizar menus."
 
 #. type: itemize
 #: texinfo/texinfo.texi:20681
 msgid "Automatically create a master menu."
-msgstr ""
+msgstr "Automaticamente criar um menu mestre."
 
 #. type: itemize
 #: texinfo/texinfo.texi:20684
 msgid "Format a part or all of a file for Info."
-msgstr ""
+msgstr "Formatar uma parte, ou todo, de um arquivo para Info."
 
 #. type: itemize
 #: texinfo/texinfo.texi:20687
 msgid "Typeset and print part or all of a file."
-msgstr ""
+msgstr "Tipografar e imprimir parte, ou todo, de um arquivo."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:20691
@@ -55769,6 +55846,8 @@ msgid ""
 "Perhaps the two most helpful features are those for inserting frequently "
 "used @@-commands and for creating node pointers and menus."
 msgstr ""
+"Talvez os dois recursos mais úteis sejam aqueles para inserir comandos @@ "
+"frequentemente usados e para criar ponteiros de nós e menus."
 
 #. type: node
 #: texinfo/texinfo.texi:20693
