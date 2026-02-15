@@ -55099,7 +55099,7 @@ msgstr ""
 #: texinfo/texinfo.texi:20364
 #, no-wrap
 msgid "Node Length"
-msgstr ""
+msgstr "Comprimento do Nó"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:20372
@@ -55166,6 +55166,8 @@ msgid ""
 "In the following example, say, ``@dots{} makes a unified interface such as "
 "VC mode possible.''"
 msgstr ""
+"No exemplo a seguir, digamos, ``@dots{} torna possível uma interface "
+"unificada, tal como o modo VC.''"
 
 #. type: quotation
 #: texinfo/texinfo.texi:20398
@@ -55174,11 +55176,14 @@ msgid ""
 "broadly similar ways (it is this resemblance which makes a unified control "
 "mode like this possible)."
 msgstr ""
+"SCCS, RCS e outros sistemas de controle de versão realizam funções "
+"semelhantes de maneiras amplamente semelhantes (é essa semelhança que "
+"torna possível um modo de controle unificado como esse)."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:20401
 msgid "And in this example, you should specify what `it' refers to:"
-msgstr ""
+msgstr "E neste exemplo, você deveria especificar a que `it' se refere:"
 
 #. type: quotation
 #: texinfo/texinfo.texi:20405
@@ -55186,12 +55191,15 @@ msgid ""
 "If you are working with other people, it assists in coordinating everyone's "
 "changes so they do not step on each other."
 msgstr ""
+"Se você estiver trabalhando com outras pessoas, isso ajudará a coordenar "
+"as mudanças de todos(as), de modo que não atrapalhem uns(mas) aos(às) "
+"outros(as)."
 
 #. type: subsubheading
 #: texinfo/texinfo.texi:20408
 #, no-wrap
 msgid "And Finally @dots{}"
-msgstr ""
+msgstr "E Finalmente @dots{}"
 
 #. type: itemize
 #: texinfo/texinfo.texi:20415
@@ -55199,6 +55207,8 @@ msgid ""
 "Pronounce @TeX{} as if the @samp{X} were a Greek `chi', as the last sound in "
 "the name `Bach'.  But pronounce Texinfo as in `speck': ``teckinfo''."
 msgstr ""
+"Pronunciar @TeX{} como se @samp{X} fosse um `chi' grego, como o último som "
+"no nome `Bach'. Mas pronunciar Texinfo como em `speck': ``teckinfo''."
 
 #. type: itemize
 #: texinfo/texinfo.texi:20421
@@ -55207,52 +55217,56 @@ msgid ""
 "@code{@@bye}.  None of the processors process text after the @code{@@bye}; "
 "it is as if the text were within @code{@@ignore} @dots{} @code{@@end ignore}."
 msgstr ""
+"Escrever observações para você mesmo(a) no finalzinho de um arquivo "
+"Texinfo depois do @code{@@bye}. Nenhum dos processadores processa texto "
+"após o @code{@@bye}; é como se o texto estivesse dentro de @code{@@ignore} "
+"@dots{} @code{@@end ignore}."
 
 #. type: appendix
 #: texinfo/texinfo.texi:20424 texinfo/texinfo.texi:20426
 #, no-wrap
 msgid "Sample Texinfo Files"
-msgstr ""
+msgstr "Arquivos de Amostra do Texinfo"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:20426
 msgid "@nodedescription Complete examples, including full texts."
-msgstr ""
+msgstr "@nodedescription Exemplos completos, incluindo textos completos."
 
 #. type: cindex
 #: texinfo/texinfo.texi:20427
 #, no-wrap
 msgid "Sample Texinfo files"
-msgstr ""
+msgstr "Arquivos de amostra do Texinfo"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:20430
 msgid "This appendix includes texts to be used in GNU manuals."
-msgstr ""
+msgstr "Este apêndice inclui textos para serem usados nos manuais GNU."
 
 #. type: section
 #: texinfo/texinfo.texi:20432 texinfo/texinfo.texi:20433
 #, no-wrap
 msgid "GNU Sample Texts"
-msgstr ""
+msgstr "Textos GNU de Amostra"
 
 #. type: cindex
 #: texinfo/texinfo.texi:20435
 #, no-wrap
 msgid "GNU sample texts"
-msgstr ""
+msgstr "Textos GNU de amostra"
 
 #. type: cindex
 #: texinfo/texinfo.texi:20436
 #, no-wrap
 msgid "Sample texts, GNU"
-msgstr ""
+msgstr "Textos de amostra, GNU"
 
 #. type: cindex
 #: texinfo/texinfo.texi:20437
 #, no-wrap
 msgid "Full texts, GNU"
-msgstr ""
+msgstr "Textos completos, GNU"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:20441
@@ -55260,6 +55274,8 @@ msgid ""
 "Following is a sample Texinfo document with the full texts that should be "
 "used (adapted as necessary) in GNU manuals."
 msgstr ""
+"A seguir está uma amostra de documento do Texinfo com os textos completos "
+"que deveriam ser usados (adaptados conforme necessário) nos manuais GNU."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:20448
@@ -55270,46 +55286,53 @@ msgid ""
 "perfectly good manual can be written without them.  They're included here "
 "nonetheless because many manuals do (or could)  benefit from them."
 msgstr ""
+"Além dos textos jurídicos, também serve como exemplo prático de quantos "
+"elementos em um sistema GNU podem afetar o manual. Se você não estiver "
+"familiarizado(a) com todos esses diferentes elementos, não se preocupe. "
+"Eles não são obrigatórios e um manual perfeitamente bom pode ser escrito "
+"sem eles. No entanto, eles estão incluídos aqui porque muitos manuais se "
+"beneficiam (ou poderiam) deles."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:20450
 msgid "@xref{Short Sample}, for a minimal example of a Texinfo file."
 msgstr ""
+"@xref{Amostra Curta}, para um exemplo mínimo de um arquivo do Texinfo."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:20452
 msgid "Here are some notes on the example:"
-msgstr ""
+msgstr "Aqui estão algumas observações acerca do exemplo:"
 
 #. type: pindex
 #: texinfo/texinfo.texi:20455
 #, no-wrap
 msgid "automake@r{, and version info}"
-msgstr ""
+msgstr "automake@r{, e informações de versão}"
 
 #. type: vindex
 #: texinfo/texinfo.texi:20456
 #, no-wrap
 msgid "UPDATED @r{Automake variable}"
-msgstr ""
+msgstr "UPDATED @r{Variável do automake}"
 
 #. type: vindex
 #: texinfo/texinfo.texi:20457
 #, no-wrap
 msgid "UPDATED-MONTH @r{Automake variable}"
-msgstr ""
+msgstr "UPDATED-MONTH @r{Variável do automake}"
 
 #. type: vindex
 #: texinfo/texinfo.texi:20458
 #, no-wrap
 msgid "VERSION @r{Automake variable}"
-msgstr ""
+msgstr "VERSION @r{Variável do automake}"
 
 #. type: pindex
 #: texinfo/texinfo.texi:20459
 #, no-wrap
 msgid "time-stamp.el"
-msgstr ""
+msgstr "time-stamp.el"
 
 #. type: itemize
 #: texinfo/texinfo.texi:20466
@@ -55321,6 +55344,12 @@ msgid ""
 "you may find the @code{time-stamp.el} package helpful (@pxref{Time Stamps,,, "
 "emacs, The GNU Emacs Manual})."
 msgstr ""
+"O @file{version.texi} no comando @code{@@include} é mantido automaticamente "
+"pelo Automake (@pxref{Texinfo,,, automake, GNU Automake}). Ele configura os "
+"valores de @samp{VERSION}, @samp{UPDATED} e @samp{UPDATED-MONTH} usados em "
+"outro lugar. Se tua distribuição não usar Automake, mas você usar Emacs, "
+"você pode achar o pacote @code{time-stamp.el} útil (@pxref{Marcas "
+"Temporais,,, emacs, O Manual do GNU Emacs})."
 
 #. type: itemize
 #: texinfo/texinfo.texi:20471
@@ -55329,6 +55358,9 @@ msgid ""
 "one index where possible, to make it easier for readers to look up index "
 "entries."
 msgstr ""
+"O comando @code{@@syncodeindex} reflete a recomendação de usar apenas um "
+"índice sempre que possível, para facilitar para os(as) leitores(as) "
+"consultar as entradas do índice."
 
 #. type: itemize
 #: texinfo/texinfo.texi:20477
