@@ -55853,7 +55853,7 @@ msgstr ""
 #: texinfo/texinfo.texi:20693
 #, no-wrap
 msgid "Emacs Editing"
-msgstr ""
+msgstr "Edição do Emacs"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:20695
@@ -55861,12 +55861,14 @@ msgid ""
 "@nodedescription Texinfo mode adds to GNU Emacs' general purpose editing "
 "features."
 msgstr ""
+"@nodedescription O modo Texinfo adiciona recursos de edição de uso geral "
+"do GNU Emacs."
 
 #. type: section
 #: texinfo/texinfo.texi:20695
 #, no-wrap
 msgid "The Usual GNU Emacs Editing Commands"
-msgstr ""
+msgstr "Os Comandos Usuais de Edição do GNU Emacs"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:20706
@@ -55880,6 +55882,16 @@ msgid ""
 "(@code{fill-paragraph})  command will refill a paragraph but not mix an "
 "indexing command on a line adjacent to it into the paragraph."
 msgstr ""
+"Na maioria dos casos, os comandos usuais do modo Texto funcionam da mesma "
+"forma no modo Texinfo e no modo Texto. O modo Texinfo adiciona novos "
+"comandos e ferramentas de edição aos recursos de edição de uso geral do "
+"GNU Emacs. A principal diferença diz respeito ao preenchimento. No modo "
+"Texinfo, a variável de separação de parágrafo e a tabela de sintaxe são "
+"redefinidas, de modo que os comandos do Texinfo que deveriam estar em linhas "
+"próprias não sejam incluídos inadvertidamente nos parágrafos. Assim, o "
+"comando @kbd{M-q} (@code{fill-paragraph}) preencherá um parágrafo, mas "
+"não misturará um comando de indexação em uma linha adjacente a ele no "
+"parágrafo."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:20716
@@ -55893,6 +55905,15 @@ msgid ""
 "the @kbd{C-x n p} (@code{narrow-to-page}) command.  (@xref{Pages, , ,emacs, "
 "The GNU Emacs Manual}, for details about the page commands.)"
 msgstr ""
+"Além disso, o modo Texinfo configura a variável @code{page-delimiter} com "
+"o valor de @code{texinfo-chapter-level-regexp}; por padrão, essa é uma "
+"expressão regular que corresponde aos comandos para capítulos e os "
+"equivalentes deles, como apêndices. Com esse valor para o delimitador de "
+"página, você pode pular de título de capítulo para título de capítulo "
+"com os comandos @kbd{C-x ]} (@code{forward-page}) e @kbd{C-x [} "
+"(@code{backward-page}) e restringir a um capítulo com o comando @kbd{C-x n "
+"p} (@code{narrow-to-page}). (@xref{Páginas, , ,emacs, O Manual do GNU "
+"Emacs}, para detalhes acerca dos comandos de página)."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:20724
@@ -55903,6 +55924,12 @@ msgid ""
 "in its first line.  If ever you are in another mode and wish to switch to "
 "Texinfo mode, type @code{M-x texinfo-mode}."
 msgstr ""
+"GNU Emacs entra automaticamente no modo Texinfo quando você visitar um "
+"arquivo com uma extensão @file{.texinfo}, @file{.texi} ou @file{.txi}. "
+"Além disso, o Emacs comuta para o modo Texinfo quando você visitar um "
+"arquivo que tenha @samp{-*-texinfo-*-} na primeira linha dele. Se alguma vez "
+"você estiver em outro modo e desejar comutar para o modo Texinfo, digite "
+"@code{M-x texinfo-mode}."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:20729
@@ -55911,41 +55938,45 @@ msgid ""
 "you wish.  In particular, the keybindings are very easy to change.  The "
 "keybindings described here are the default or standard ones."
 msgstr ""
+"Como todos os outros recursos do Emacs, você pode personalizar ou aprimorar "
+"o modo Texinfo conforme desejar. Em particular, os atalhos de teclado são "
+"muito fáceis de mudar. As combinações de teclas descritas aqui são as "
+"pré configuradas ou padrão."
 
 #. type: node
 #: texinfo/texinfo.texi:20731
 #, no-wrap
 msgid "Inserting"
-msgstr ""
+msgstr "Inserindo"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:20733
 msgid "@nodedescription How to insert frequently used @@-commands."
-msgstr ""
+msgstr "@nodedescription Como inserir comandos @@ frequentemente usados."
 
 #. type: section
 #: texinfo/texinfo.texi:20733
 #, no-wrap
 msgid "Inserting Frequently Used Commands"
-msgstr ""
+msgstr "Inserindo Comandos Frequentemente Usados"
 
 #. type: cindex
 #: texinfo/texinfo.texi:20734
 #, no-wrap
 msgid "Inserting frequently used commands"
-msgstr ""
+msgstr "Inserindo comandos frequentemente usados"
 
 #. type: cindex
 #: texinfo/texinfo.texi:20735
 #, no-wrap
 msgid "Frequently used commands, inserting"
-msgstr ""
+msgstr "Comandos frequentemente usados, inserindo"
 
 #. type: cindex
 #: texinfo/texinfo.texi:20736
 #, no-wrap
 msgid "Commands, inserting them"
-msgstr ""
+msgstr "Comandos, inserindo-os"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:20741
@@ -55953,6 +55984,9 @@ msgid ""
 "Texinfo mode provides commands to insert various frequently used @@-commands "
 "into the buffer.  You can use these commands to save keystrokes."
 msgstr ""
+"O modo Texinfo fornece comandos para inserir vários comandos @@ "
+"frequentemente usados no buffer. Você consegue usar esses comandos para "
+"salvar as teclas digitadas."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:20744
@@ -55960,70 +55994,72 @@ msgid ""
 "The insert commands are invoked by typing @kbd{C-c} twice and then the first "
 "letter of the @@-command:"
 msgstr ""
+"Os comandos de inserção são invocados digitando-se @kbd{C-c} duas vezes e "
+"depois a primeira letra do comando @@:"
 
 #. type: findex
 #: texinfo/texinfo.texi:20746
 #, no-wrap
 msgid "texinfo-insert-@@code"
-msgstr ""
+msgstr "texinfo-insert-@@code"
 
 #. type: item
 #: texinfo/texinfo.texi:20747
 #, no-wrap
 msgid "C-c C-c c"
-msgstr ""
+msgstr "C-c C-c c"
 
 #. type: itemx
 #: texinfo/texinfo.texi:20748
 #, no-wrap
 msgid "M-x texinfo-insert-@@code"
-msgstr ""
+msgstr "M-x texinfo-insert-@@code"
 
 #. type: table
 #: texinfo/texinfo.texi:20751
 msgid "Insert @code{@@code@{@}} and put the cursor between the braces."
-msgstr ""
+msgstr "Inserir @code{@@code@{@}} e colocar o cursor entre as chaves."
 
 #. type: findex
 #: texinfo/texinfo.texi:20752
 #, no-wrap
 msgid "texinfo-insert-@@dfn"
-msgstr ""
+msgstr "texinfo-insert-@@dfn"
 
 #. type: item
 #: texinfo/texinfo.texi:20753
 #, no-wrap
 msgid "C-c C-c d"
-msgstr ""
+msgstr "C-c C-c d"
 
 #. type: itemx
 #: texinfo/texinfo.texi:20754
 #, no-wrap
 msgid "M-x texinfo-insert-@@dfn"
-msgstr ""
+msgstr "M-x texinfo-insert-@@dfn"
 
 #. type: table
 #: texinfo/texinfo.texi:20757
 msgid "Insert @code{@@dfn@{@}} and put the cursor between the braces."
-msgstr ""
+msgstr "Inserir @code{@@dfn@{@}} e colocar o cursor entre as chaves."
 
 #. type: findex
 #: texinfo/texinfo.texi:20758
 #, no-wrap
 msgid "texinfo-insert-@@end"
-msgstr ""
+msgstr "texinfo-insert-@@end"
 
 #. type: item
 #: texinfo/texinfo.texi:20759
 #, no-wrap
 msgid "C-c C-c e"
-msgstr ""
+msgstr "C-c C-c e"
 
 #. type: itemx
 #: texinfo/texinfo.texi:20760
 #, no-wrap
 msgid "M-x texinfo-insert-@@end"
-msgstr ""
+msgstr "M-x texinfo-insert-@@end"
 
 #. type: table
 #: texinfo/texinfo.texi:20765
@@ -56033,71 +56069,75 @@ msgid ""
 "lists correctly, but inserts the word appropriate to the immediately "
 "preceding list.)"
 msgstr ""
+"Inserir @code{@@end} e tentar inserir a palavra correta a seguir, como "
+"@samp{exemplo} ou @samp{tabela}. (Esse comando não trata listas aninhadas "
+"corretamente, mas insere a palavra apropriada na lista imediatamente "
+"anterior)."
 
 #. type: findex
 #: texinfo/texinfo.texi:20766
 #, no-wrap
 msgid "texinfo-insert-@@item"
-msgstr ""
+msgstr "texinfo-insert-@@item"
 
 #. type: item
 #: texinfo/texinfo.texi:20767
 #, no-wrap
 msgid "C-c C-c i"
-msgstr ""
+msgstr "C-c C-c i"
 
 #. type: itemx
 #: texinfo/texinfo.texi:20768
 #, no-wrap
 msgid "M-x texinfo-insert-@@item"
-msgstr ""
+msgstr "M-x texinfo-insert-@@item"
 
 #. type: table
 #: texinfo/texinfo.texi:20771
 msgid ""
 "Insert @code{@@item} and put the cursor at the beginning of the next line."
-msgstr ""
+msgstr "Inserir @code{@@item} e colocar o cursor no início da próxima linha."
 
 #. type: findex
 #: texinfo/texinfo.texi:20772
 #, no-wrap
 msgid "texinfo-insert-@@kbd"
-msgstr ""
+msgstr "texinfo-insert-@@kbd"
 
 #. type: item
 #: texinfo/texinfo.texi:20773
 #, no-wrap
 msgid "C-c C-c k"
-msgstr ""
+msgstr "C-c C-c k"
 
 #. type: itemx
 #: texinfo/texinfo.texi:20774
 #, no-wrap
 msgid "M-x texinfo-insert-@@kbd"
-msgstr ""
+msgstr "M-x texinfo-insert-@@kbd"
 
 #. type: table
 #: texinfo/texinfo.texi:20777
 msgid "Insert @code{@@kbd@{@}} and put the cursor between the braces."
-msgstr ""
+msgstr "Inserir @code{@@kbd@{@}} e colocar o cursor entre as chaves."
 
 #. type: findex
 #: texinfo/texinfo.texi:20778
 #, no-wrap
 msgid "texinfo-insert-@@node"
-msgstr ""
+msgstr "texinfo-insert-@@node"
 
 #. type: item
 #: texinfo/texinfo.texi:20779
 #, no-wrap
 msgid "C-c C-c n"
-msgstr ""
+msgstr "C-c C-c n"
 
 #. type: itemx
 #: texinfo/texinfo.texi:20780
 #, no-wrap
 msgid "M-x texinfo-insert-@@node"
-msgstr ""
+msgstr "M-x texinfo-insert-@@node"
 
 #. type: table
 #: texinfo/texinfo.texi:20785
@@ -56105,24 +56145,27 @@ msgid ""
 "Insert @code{@@node} and a comment line listing the sequence for the `Next', "
 "`Previous', and `Up' nodes.  Leave point after the @code{@@node}."
 msgstr ""
+"Inserir @code{@@node} e uma linha de comentário listando a sequência para "
+"os nós `Próximo', `Anterior' e `Acima'. Deixar um ponto depois do "
+"@code{@@node}."
 
 #. type: findex
 #: texinfo/texinfo.texi:20786
 #, no-wrap
 msgid "texinfo-insert-@@noindent"
-msgstr ""
+msgstr "texinfo-insert-@@noindent"
 
 #. type: item
 #: texinfo/texinfo.texi:20787
 #, no-wrap
 msgid "C-c C-c o"
-msgstr ""
+msgstr "C-c C-c o"
 
 #. type: itemx
 #: texinfo/texinfo.texi:20788
 #, no-wrap
 msgid "M-x texinfo-insert-@@noindent"
-msgstr ""
+msgstr "M-x texinfo-insert-@@noindent"
 
 #. type: table
 #: texinfo/texinfo.texi:20791
@@ -56130,24 +56173,25 @@ msgid ""
 "Insert @code{@@noindent} and put the cursor at the beginning of the next "
 "line."
 msgstr ""
+"Inserir @code{@@noindent} e colocar o cursor no início da próxima linha."
 
 #. type: findex
 #: texinfo/texinfo.texi:20792
 #, no-wrap
 msgid "texinfo-insert-dwim-@@ref"
-msgstr ""
+msgstr "texinfo-insert-dwim-@@ref"
 
 #. type: item
 #: texinfo/texinfo.texi:20793
 #, no-wrap
 msgid "C-c C-c r"
-msgstr ""
+msgstr "C-c C-c r"
 
 #. type: itemx
 #: texinfo/texinfo.texi:20794
 #, no-wrap
 msgid "M-x texinfo-insert-dwim-@@ref"
-msgstr ""
+msgstr "M-x texinfo-insert-dwim-@@ref"
 
 #. type: table
 #: texinfo/texinfo.texi:20803
@@ -56161,47 +56205,55 @@ msgid ""
 "how many words the braces should surround.  Puts the cursor between the "
 "braces."
 msgstr ""
+"Essa função e ligação foram adicionadas no Emacs 27.1. Insere um de "
+"@code{@@pxref@{@}}, @code{@@xref@{@}} ou @code{@@ref@{@}} baseado no texto "
+"ao redor do ponto; chamá-la perto de um parêntese aberto anterior não "
+"fechado resulta em @code{@@pxref@{@}}, no início de uma frase ou em "
+"@code{(point-min)} produz @code{@@xref@{@}}, qualquer outro local (inclusive "
+"dentro de uma palavra), resultará em @code{@@ref@{@}}. Um argumento "
+"numérico diz quantas palavras as chaves deveriam envolver. Coloca o cursor "
+"entre as chaves."
 
 #. type: findex
 #: texinfo/texinfo.texi:20804
 #, no-wrap
 msgid "texinfo-insert-@@samp"
-msgstr ""
+msgstr "texinfo-insert-@@samp"
 
 #. type: item
 #: texinfo/texinfo.texi:20805
 #, no-wrap
 msgid "C-c C-c s"
-msgstr ""
+msgstr "C-c C-c s"
 
 #. type: itemx
 #: texinfo/texinfo.texi:20806
 #, no-wrap
 msgid "M-x texinfo-insert-@@samp"
-msgstr ""
+msgstr "M-x texinfo-insert-@@samp"
 
 #. type: table
 #: texinfo/texinfo.texi:20809
 msgid "Insert @code{@@samp@{@}} and put the cursor between the braces."
-msgstr ""
+msgstr "Inserir @code{@@samp@{@}} e colocar o cursor entre as chaves."
 
 #. type: findex
 #: texinfo/texinfo.texi:20810
 #, no-wrap
 msgid "texinfo-insert-@@table"
-msgstr ""
+msgstr "texinfo-insert-@@table"
 
 #. type: item
 #: texinfo/texinfo.texi:20811
 #, no-wrap
 msgid "C-c C-c t"
-msgstr ""
+msgstr "C-c C-c t"
 
 #. type: itemx
 #: texinfo/texinfo.texi:20812
 #, no-wrap
 msgid "M-x texinfo-insert-@@table"
-msgstr ""
+msgstr "M-x texinfo-insert-@@table"
 
 #. type: table
 #: texinfo/texinfo.texi:20815
@@ -56209,100 +56261,103 @@ msgid ""
 "Insert @code{@@table} followed by a @key{SPC} and leave the cursor after the "
 "@key{SPC}."
 msgstr ""
+"Inserir @code{@@table} seguido por um @key{SPC} e deixar o cursor depois de "
+"@key{SPC}."
 
 #. type: findex
 #: texinfo/texinfo.texi:20816
 #, no-wrap
 msgid "texinfo-insert-@@var"
-msgstr ""
+msgstr "texinfo-insert-@@var"
 
 #. type: item
 #: texinfo/texinfo.texi:20817
 #, no-wrap
 msgid "C-c C-c v"
-msgstr ""
+msgstr "C-c C-c v"
 
 #. type: itemx
 #: texinfo/texinfo.texi:20818
 #, no-wrap
 msgid "M-x texinfo-insert-@@var"
-msgstr ""
+msgstr "M-x texinfo-insert-@@var"
 
 #. type: table
 #: texinfo/texinfo.texi:20821
 msgid "Insert @code{@@var@{@}} and put the cursor between the braces."
-msgstr ""
+msgstr "Inserir @code{@@var@{@}} e colocar o cursor entre as chaves."
 
 #. type: findex
 #: texinfo/texinfo.texi:20822
 #, no-wrap
 msgid "texinfo-insert-@@example"
-msgstr ""
+msgstr "texinfo-insert-@@example"
 
 #. type: item
 #: texinfo/texinfo.texi:20823
 #, no-wrap
 msgid "C-c C-c x"
-msgstr ""
+msgstr "C-c C-c x"
 
 #. type: itemx
 #: texinfo/texinfo.texi:20824
 #, no-wrap
 msgid "M-x texinfo-insert-@@example"
-msgstr ""
+msgstr "M-x texinfo-insert-@@example"
 
 #. type: table
 #: texinfo/texinfo.texi:20827
 msgid ""
 "Insert @code{@@example} and put the cursor at the beginning of the next line."
 msgstr ""
+"Inserir @code{@@example} e colocar o cursor no início da próxima linha."
 
 #. type: findex
 #: texinfo/texinfo.texi:20830
 #, no-wrap
 msgid "texinfo-insert-braces"
-msgstr ""
+msgstr "texinfo-insert-braces"
 
 #. type: item
 #: texinfo/texinfo.texi:20831
 #, no-wrap
 msgid "C-c C-c @{"
-msgstr ""
+msgstr "C-c C-c @{"
 
 #. type: itemx
 #: texinfo/texinfo.texi:20832
 #, no-wrap
 msgid "M-x texinfo-insert-braces"
-msgstr ""
+msgstr "M-x texinfo-insert-braces"
 
 #. type: table
 #: texinfo/texinfo.texi:20834
 msgid "Insert @code{@{@}} and put the cursor between the braces."
-msgstr ""
+msgstr "Inserir @code{@{@}} e colocar o cursor entre as chaves."
 
 #. type: findex
 #: texinfo/texinfo.texi:20835
 #, no-wrap
 msgid "up-list"
-msgstr ""
+msgstr "up-list"
 
 #. type: item
 #: texinfo/texinfo.texi:20836
 #, no-wrap
 msgid "C-c @}"
-msgstr ""
+msgstr "C-c @}"
 
 #. type: itemx
 #: texinfo/texinfo.texi:20837
 #, no-wrap
 msgid "C-c  ]"
-msgstr ""
+msgstr "C-c  ]"
 
 #. type: itemx
 #: texinfo/texinfo.texi:20838
 #, no-wrap
 msgid "M-x up-list"
-msgstr ""
+msgstr "M-x up-list"
 
 #. type: table
 #: texinfo/texinfo.texi:20843
@@ -56312,6 +56367,10 @@ msgid ""
 "mnemonic; hence the two keybindings.  (Also, you can move out from between "
 "braces by typing @kbd{C-f}.)"
 msgstr ""
+"Mover-se de entre um par de chaves em direção a depois da chave de "
+"fechamento. Digitar-se @kbd{C-c ]} é mais fácil que digitar @kbd{C-c @}}, "
+"que é, no entanto, mais mnemônico; daí as duas combinações de teclas. "
+"(Além disso, você consegue sair de entre chaves digitando @kbd{C-f})."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:20855
@@ -56327,6 +56386,17 @@ msgid ""
 "those @@-commands that operate on a word or words within one line, such as "
 "@code{@@kbd} and @code{@@var}."
 msgstr ""
+"Para colocar um comando como @w{@code{@@code@{@dots{}@}}} em torno de uma "
+"palavra @emph{existente}, posicionar o cursor em frente da palavra e digitar "
+"@kbd{C-u 1 C-c C-c c}. Isso facilita a edição de texto simples existente. "
+"O valor do argumento prefixo informa ao Emacs quantas palavras após o ponto "
+"incluir entre chaves---@samp{1} para uma palavra, @samp{2} para duas "
+"palavras e assim por diante. Usar um argumento negativo para incluir a "
+"palavra, ou palavras, anterior. Se você não especificar um argumento de "
+"prefixo, o Emacs insere a sequência de caracteres do comando @@ e posiciona "
+"o cursor entre as chaves. Esse recurso funciona somente para aqueles "
+"comandos @@ que operam sobre uma palavra ou palavras dentro de uma linha, "
+"tais como @code{@@kbd} e @code{@@var}."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:20861
@@ -56337,24 +56407,29 @@ msgid ""
 "bind a keyboard macro to a key, use abbreviations, or extend the code in "
 "@file{texinfo.el}."
 msgstr ""
+"Este conjunto de comandos de inserção foi criado depois de se analisar a "
+"frequência com que diferentes comandos @@ são usados no @cite{Manual do "
+"GNU Emacs} e no @cite{Manual do GDB}. Se desejar adicionar teus próprios "
+"comandos de inserção, você pode vincular uma macro de teclado a uma "
+"tecla, usar abreviações ou estender o código em @file{texinfo.el}."
 
 #. type: findex
 #: texinfo/texinfo.texi:20862
 #, no-wrap
 msgid "texinfo-start-menu-description"
-msgstr ""
+msgstr "texinfo-start-menu-description"
 
 #. type: cindex
 #: texinfo/texinfo.texi:20863
 #, no-wrap
 msgid "Menu description, start"
-msgstr ""
+msgstr "Descrição de menu, iniciar"
 
 #. type: cindex
 #: texinfo/texinfo.texi:20864
 #, no-wrap
 msgid "Description for menu, start"
-msgstr ""
+msgstr "Descrição para menu, iniciar"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:20872
@@ -56367,6 +56442,13 @@ msgid ""
 "helps explain what the node is about.  @xref{Menu Parts, , The Parts of a "
 "Menu}.)"
 msgstr ""
+"@kbd{C-c C-c C-d} (@code{texinfo-start-menu-description}) é um comando de "
+"inserção que funciona diferentemente dos outros comandos de inserção. "
+"Ele insere uma seção de um nó ou título de capítulo no espaço para a "
+"descrição em uma linha de entrada de menu. (Uma entrada de menu tem três "
+"partes: o nome da entrada, o nome do nó e a descrição. Somente o nome do "
+"nó é exigido, mas uma descrição ajuda a explicar do que se trata o nó. "
+"@xref{Partes do Menu, , As Partes de um Menu})."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:20879
@@ -56378,6 +56460,12 @@ msgid ""
 "The function does not insert the title if the menu entry line already "
 "contains a description."
 msgstr ""
+"Para usar @code{texinfo-start-menu-description}, posicionar o ponto em uma "
+"linha de entrada de menu e digitar @kbd{C-c C-c C-d}. O comando procura e "
+"copia o título que acompanha o nome do nó e insere o título como uma "
+"descrição; ele posiciona o ponto no início do texto inserido, de modo que "
+"você consiga editá-lo. A função não insere o título se a linha de "
+"entrada do menu já contiver uma descrição."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:20884
@@ -56386,65 +56474,69 @@ msgid ""
 "whole job.  You must edit the inserted text since a title tends to use the "
 "same words as a node name but a useful description uses different words."
 msgstr ""
+"Esse comando é apenas uma ajuda para se escrever descrições; ele não faz "
+"todo o trabalho. Você precisa editar o texto inserido, pois um título "
+"tende a usar as mesmas palavras que um nome de nó, mas uma descrição "
+"útil usa palavras diferentes."
 
 #. type: node
 #: texinfo/texinfo.texi:20886
 #, no-wrap
 msgid "Showing the Structure"
-msgstr ""
+msgstr "Mostrando a Estrutura"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:20888
 msgid "@nodedescription How to show the structure of a file."
-msgstr ""
+msgstr "@nodedescription Como mostrar a estrutura de um arquivo."
 
 #. type: section
 #: texinfo/texinfo.texi:20888
 #, no-wrap
 msgid "Showing the Sectioning Structure of a File"
-msgstr ""
+msgstr "Mostrando a Estrutura de Seccionamento de um Arquivo"
 
 #. type: cindex
 #: texinfo/texinfo.texi:20889
 #, no-wrap
 msgid "Showing the sectioning structure of a file"
-msgstr ""
+msgstr "Mostrando a estrutura de seccionamento de um arquivo"
 
 #. type: cindex
 #: texinfo/texinfo.texi:20890
 #, no-wrap
 msgid "Sectioning structure of a file, showing"
-msgstr ""
+msgstr "Estrutura de seccionamento de um arquivo, mostrando"
 
 #. type: cindex
 #: texinfo/texinfo.texi:20891
 #, no-wrap
 msgid "Structure of a file, showing"
-msgstr ""
+msgstr "Estrutura de um arquivo, mostrando"
 
 #. type: cindex
 #: texinfo/texinfo.texi:20892
 #, no-wrap
 msgid "Outline of file structure, showing"
-msgstr ""
+msgstr "Esboço da estrutura do arquivo, mostrando"
 
 #. type: cindex
 #: texinfo/texinfo.texi:20893
 #, no-wrap
 msgid "Contents-like outline of file structure"
-msgstr ""
+msgstr "Esboço semelhante ao conteúdo da estrutura do arquivo"
 
 #. type: cindex
 #: texinfo/texinfo.texi:20894
 #, no-wrap
 msgid "File sectioning structure, showing"
-msgstr ""
+msgstr "Estrutura de seccionamento de arquivo, mostrando"
 
 #. type: cindex
 #: texinfo/texinfo.texi:20895
 #, no-wrap
 msgid "Texinfo file sectioning structure, showing"
-msgstr ""
+msgstr "Estrutura de seccionamento de arquivo do Texinfo, mostrando"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:20906
@@ -56459,24 +56551,32 @@ msgid ""
 "(@code{occur-mode-goto-occurrence}), to jump to the corresponding spot in "
 "the Texinfo file."
 msgstr ""
+"Você consegue mostrar a estrutura de seccionamento de um arquivo do Texinfo "
+"usando o comando @kbd{C-c C-s} (@code{texinfo-show-structure}). Esse comando "
+"lista as linhas que começam com os comandos @@ para @code{@@chapter}, "
+"@code{@@section} e similares. Ele constrói o que equivale a um sumário. "
+"Essas linhas são exibidas em outro buffer chamado o buffer @samp{*Occur*}. "
+"Nesse buffer, você consegue posicionar o cursor sobre uma das linhas e usar "
+"o comando @kbd{C-c C-c} (@code{occur-mode-goto-occurrence}), para pular para "
+"o local correspondente no arquivo do Texinfo."
 
 #. type: findex
 #: texinfo/texinfo.texi:20908
 #, no-wrap
 msgid "texinfo-show-structure"
-msgstr ""
+msgstr "texinfo-show-structure"
 
 #. type: item
 #: texinfo/texinfo.texi:20909
 #, no-wrap
 msgid "C-c C-s"
-msgstr ""
+msgstr "C-c C-s"
 
 #. type: itemx
 #: texinfo/texinfo.texi:20910
 #, no-wrap
 msgid "M-x texinfo-show-structure"
-msgstr ""
+msgstr "M-x texinfo-show-structure"
 
 #. type: table
 #: texinfo/texinfo.texi:20913
@@ -56484,24 +56584,26 @@ msgid ""
 "Show the @code{@@chapter}, @code{@@section}, and such lines of a Texinfo "
 "file."
 msgstr ""
+"Mostrar o @code{@@chapter}, @code{@@section} e outras linhas de um arquivo "
+"do Texinfo."
 
 #. type: findex
 #: texinfo/texinfo.texi:20914
 #, no-wrap
 msgid "occur-mode-goto-occurrence"
-msgstr ""
+msgstr "occur-mode-goto-occurrence"
 
 #. type: item
 #: texinfo/texinfo.texi:20915
 #, no-wrap
 msgid "C-c C-c"
-msgstr ""
+msgstr "C-c C-c"
 
 #. type: itemx
 #: texinfo/texinfo.texi:20916
 #, no-wrap
 msgid "M-x occur-mode-goto-occurrence"
-msgstr ""
+msgstr "M-x occur-mode-goto-occurrence"
 
 #. type: table
 #: texinfo/texinfo.texi:20919
@@ -56509,6 +56611,8 @@ msgid ""
 "Go to the line in the Texinfo file corresponding to the line under the "
 "cursor in the @file{*Occur*} buffer."
 msgstr ""
+"Ir para a linha no arquivo do Texinfo correspondente à linha sob o cursor "
+"no buffer @file{*Occur*}."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:20927
@@ -56520,6 +56624,13 @@ msgid ""
 "prefix argument to check whether the `Next', `Previous', and `Up' pointers "
 "of an @code{@@node} line are correct."
 msgstr ""
+"Se você chamar @code{texinfo-show-structure} com um argumento de prefixo "
+"digitando @w{@kbd{C-u C-c C-s}}, ele listará não apenas essas linhas com "
+"os comandos @@ para @code{@@chapter}, @code{@@section} e similares, mas "
+"também as linhas @code{@@node}. Você consegue usar "
+"@code{texinfo-show-structure} com um argumento de prefixo para verificar se "
+"os ponteiros `Próximo', `Anterior' e `Acima' de uma linha @code{@@node} "
+"estão corretos."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:20936
