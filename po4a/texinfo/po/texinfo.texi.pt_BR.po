@@ -56643,18 +56643,26 @@ msgid ""
 "w}} (@code{widen}).  (@xref{Narrowing, , , emacs, The GNU Emacs Manual}, for "
 "more information about the narrowing commands.)"
 msgstr ""
+"Frequentemente, quando estiver trabalhando em um manual, você estará "
+"interessado(a) somente na estrutura do capítulo atual. Nesse caso, você "
+"consegue marcar a região do buffer em que está interessado(a) usando o "
+"comando @kbd{C-x n n} (@code{narrow-to-region}) e "
+"@code{texinfo-show-structure} funcionará apenas sobre essa região. Para "
+"ver o buffer inteiro novamente, use @w{@kbd{Cx n w}} (@code{widen}). "
+"(@xref{Estreitando, , , emacs, O Manual do GNU Emacs}, para mais "
+"informações acerca dos comandos de estreitamento)."
 
 #. type: vindex
 #: texinfo/texinfo.texi:20937
 #, no-wrap
 msgid "page-delimiter"
-msgstr ""
+msgstr "page-delimiter"
 
 #. type: cindex
 #: texinfo/texinfo.texi:20938
 #, no-wrap
 msgid "Page delimiter in Texinfo mode"
-msgstr ""
+msgstr "Delimitador de página no modo Texinfo"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:20947
@@ -56667,23 +56675,31 @@ msgid ""
 "(@code{narrow-to-page}) command to narrow to a chapter.  @xref{Pages, , , "
 "emacs, The GNU Emacs Manual}, for more information about the page commands."
 msgstr ""
+"Além de fornecer o comando @code{texinfo-show-structure}, o modo Texinfo "
+"configura o valor da variável delimitadora de página para corresponder aos "
+"comandos @@ de nível de capítulo. Isso te habilita a usar os comandos "
+"@kbd{C-x ]} (@code{forward-page}) e @kbd{C-x [} (@code{backward-page}) para "
+"avançar e retroceder por capítulo, e a usar o comando @kbd{C-x n p} "
+"(@code{narrow-to-page}) para restringir a um capítulo. @xref{Páginas, , , "
+"emacs, O Manual do GNU Emacs}, para mais informações acerca dos comandos "
+"de página."
 
 #. type: subsection
 #: texinfo/texinfo.texi:20949 texinfo/texinfo.texi:20951
 #, no-wrap
 msgid "Using @code{texinfo-show-structure}"
-msgstr ""
+msgstr "Usando @code{texinfo-show-structure}"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:20951
 msgid "@nodedescription How to use @code{texinfo-show-structure}."
-msgstr ""
+msgstr "@nodedescription Como usar @code{texinfo-show-structure}."
 
 #. type: cindex
 #: texinfo/texinfo.texi:20953
 #, no-wrap
 msgid "Showing the structure of a file"
-msgstr ""
+msgstr "Mostrando a estrutura de um arquivo"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:20958
@@ -56692,6 +56708,10 @@ msgid ""
 "subsections of a Texinfo file.  This is especially true if you are revising "
 "or adding to a Texinfo file that someone else has written."
 msgstr ""
+"Nem sempre é fácil manter-se a par dos nós, capítulos, seções e "
+"subseções de um arquivo do Texinfo. Isso é especialmente verdadeiro se "
+"você estiver revisando, ou adicionando a, um arquivo do Texinfo que outra "
+"pessoa tenha escrito."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:20967
@@ -56704,6 +56724,13 @@ msgid ""
 "@code{texinfo-show-structure} command is bound to @kbd{C-c C-s} in Texinfo "
 "mode, by default."
 msgstr ""
+"No GNU Emacs, no modo Texinfo, o comando @code{texinfo-show-structure} lista "
+"todas as linhas que começem com os comandos @@ que especifiquem a "
+"estrutura: @code{@@chapter}, @code{@@section}, @code{@@appendix} e assim por "
+"diante. Com um argumento (@w{@kbd{C-u}} como argumento de prefixo, se "
+"interativo), o comando também mostra as linhas @code{@@node}. O comando "
+"@code{texinfo-show-structure} está vinculado a @kbd{C-c C-s} no modo "
+"Texinfo, por padrão."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:20971
@@ -56712,6 +56739,9 @@ msgid ""
 "indented by hierarchical level.  For example, here is a part of what was "
 "produced by running @code{texinfo-show-structure} on this manual:"
 msgstr ""
+"As linhas são exibidas em um buffer chamado o buffer @samp{*Occur*}, "
+"recuado por nível hierárquico. Por exemplo, aqui está uma parte do que "
+"foi produzido executando-se @code{texinfo-show-structure} neste manual:"
 
 #. type: group
 #: texinfo/texinfo.texi:20986
@@ -56730,6 +56760,18 @@ msgid ""
 "4469:        @@subsection @@code@{@@@@node@} Line Tips\n"
 "@dots{}\n"
 msgstr ""
+"Lines matching \"^@@\\\\(chapter \\\\|sect\\\\|subs\\\\|subh\\\\|\n"
+"unnum\\\\|major\\\\|chapheading \\\\|heading \\\\|appendix\\\\)\"\n"
+"in buffer texinfo.texi.\n"
+"@dots{}\n"
+"4177:@@chapter Nodes\n"
+"4198:    @@heading Dois Caminhos\n"
+"4231:    @@section Ilustração de Nó e de Menu\n"
+"4337:    @@section O Comando @@code@{@@@@node@}\n"
+"4393:        @@subheading Escolhendo Nomes de Nó e de Ponteiro\n"
+"4417:        @@subsection Como Escrever uma Linha @@code@{@@@@node@}\n"
+"4469:        @@subsection Dicas de Linha @@code@{@@@@node@}\n"
+"@dots{}\n"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:20997
@@ -56743,6 +56785,14 @@ msgid ""
 "emacs, The GNU Emacs Manual}, for more information about "
 "@code{occur-mode-goto-occurrence}."
 msgstr ""
+"Isso diz que as linhas 4337, 4393 e 4417 de @file{texinfo.texi} começam com "
+"os comandos @code{@@section}, @code{@@subheading} e @code{@@subsection} "
+"respectivamente. Se você mover o cursor para a janela @samp{*Occur*}, "
+"poderá posicionar o cursor sobre uma das linhas e usar o comando @kbd{C-c "
+"C-c} (@code{occur-mode-goto-occurrence}), para pular para o local "
+"correspondente no arquivo Texinfo. @xref{Outra Pesquisa Repetitiva, , Usando "
+"Occur, emacs, O Manual do GNU Emacs}, para mais informações acerca do "
+"@code{occur-mode-goto-occurrence}."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:21003
@@ -56753,6 +56803,11 @@ msgid ""
 "@xref{Regexps, , Using Regular Expressions, emacs, The GNU Emacs Manual}, "
 "for more information."
 msgstr ""
+"A primeira linha na janela @samp{*Occur*} descreve a @dfn{expressão "
+"regular} especificada por @var{texinfo-cabeçalho-padrão}. Essa expressão "
+"regular é o padrão que @code{texinfo-show-structure} procura. "
+"@xref{Expressões Regulares, , Usando Expressões Regulares, emacs, O Manual "
+"do GNU Emacs}, para mais informações."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:21011
@@ -56765,6 +56820,13 @@ msgid ""
 "example used above was generated.  (To see the whole buffer again, use "
 "@kbd{C-x n w} (@code{widen}).)"
 msgstr ""
+"Quando você invocar o comando @code{texinfo-show-structure}, o Emacs "
+"exibirá a estrutura do buffer inteiro. Se quiser ver a estrutura de apenas "
+"uma parte do buffer, de um capítulo, por exemplo, use o comando @kbd{C-x n "
+"n} (@code{narrow-to-region}) para marcar a região. (@xref{Estreitando, , , "
+"emacs, O Manual do GNU Emacs}). Foi assim que o exemplo usado acima foi "
+"gerado. (Para ver o buffer inteiro novamente, use @kbd{C-x n w} "
+"(@code{widen}))."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:21016
@@ -56774,6 +56836,10 @@ msgid ""
 "well as the lines beginning with the @@-sign commands for @code{@@chapter}, "
 "@code{@@section}, and the like."
 msgstr ""
+"Se você chamar @code{texinfo-show-structure} com um argumento de prefixo "
+"digitando @w{@kbd{C-u C-c C-s}}, ele listará as linhas que começem com "
+"@code{@@node}, bem como as linhas que começem com os comandos de sinal @@ "
+"para @code{@@chapter}, @code{@@section} e similares."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:21020
@@ -56782,29 +56848,32 @@ msgid ""
 "list in the @samp{*Occur*} window; and if you have mis-named a node or left "
 "out a section, you can correct the mistake."
 msgstr ""
+"Você consegue se lembrar da estrutura de um arquivo do Texinfo olhando a "
+"lista na janela @samp{*Occur*}; e se você nomeou incorretamente um nó ou "
+"deixou de fora uma seção, poderá corrigir o erro."
 
 #. type: subsection
 #: texinfo/texinfo.texi:21022 texinfo/texinfo.texi:21024
 #, no-wrap
 msgid "Using @code{occur}"
-msgstr ""
+msgstr "Usando @code{occur}"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:21024
 msgid "@nodedescription How to list all lines containing a pattern."
-msgstr ""
+msgstr "@nodedescription Como listar todas as linhas contendo um padrão."
 
 #. type: cindex
 #: texinfo/texinfo.texi:21026
 #, no-wrap
 msgid "Occurrences, listing with @code{@@occur}"
-msgstr ""
+msgstr "Ocorrências, listando com @code{@@occur}"
 
 #. type: findex
 #: texinfo/texinfo.texi:21027
 #, no-wrap
 msgid "occur"
-msgstr ""
+msgstr "occur"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:21034
@@ -56815,12 +56884,17 @@ msgid ""
 "@code{texinfo-show-structure}.  In this case, you can use the @code{occur} "
 "command directly.  To do this, type:"
 msgstr ""
+"Às vezes, o comando @code{texinfo-show-structure} produz muitas "
+"informações. Talvez você queira se lembrar da estrutura geral de um "
+"arquivo do Texinfo e fique impressionado(a) pela lista detalhada produzida "
+"por @code{texinfo-show-structure}. Nesse caso, você consegue usar o comando "
+"@code{occur} diretamente. Para fazer isso, digite:"
 
 #. type: example
 #: texinfo/texinfo.texi:21037
 #, no-wrap
 msgid "@kbd{M-x occur}\n"
-msgstr ""
+msgstr "@kbd{M-x occur}\n"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:21046
@@ -56832,6 +56906,12 @@ msgid ""
 "to run @code{occur} on the whole buffer, place the cursor at the beginning "
 "of the buffer."
 msgstr ""
+"e então, quando solicitado(a), digite uma @dfn{regexp}, uma expressão "
+"regular para o padrão que você quiser corresponder. (@xref{Regexps, , "
+"Expressões Regulares, emacs, O Manual do GNU Emacs}). O comando "
+"@code{occur} funciona desde o local atual do cursor no buffer até o final "
+"do buffer. Se você quiser executar @code{occur} sobre o buffer inteiro, "
+"coloque o cursor no início do buffer."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:21051
@@ -56841,6 +56921,10 @@ msgid ""
 "chapters.  It will also list all the sentences with @samp{@@chapter} in the "
 "middle of the line."
 msgstr ""
+"Por exemplo, para ver todas as linhas que contêm a palavra "
+"@samp{@@chapter}, basta digitar @samp{@@chapter}. Isso produzirá uma lista "
+"dos capítulos. Também listará todas as frases com @samp{@@chapter} no "
+"meio da linha."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:21059
@@ -56852,6 +56936,13 @@ msgid ""
 "helpful when you want to see all the nodes that are part of the same chapter "
 "or section and therefore have the same `Up' pointer."
 msgstr ""
+"Se você quiser ver somente as linhas que começem com a palavra "
+"@samp{@@chapter}, digite @samp{^@@chapter} quando solicitado(a) por "
+"@code{occur}. Se você quiser ver todas as linhas que terminem com uma "
+"palavra ou frase, termine a última palavra com um @samp{$}; por exemplo, "
+"@samp{capturando erros$}. Isso pode ser útil quando você quiser ver todos "
+"os nós que sejam parte do mesmo capítulo ou seção e, portanto, têm o "
+"mesmo ponteiro `Acima'."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:21062
@@ -56859,41 +56950,43 @@ msgid ""
 "@xref{Other Repeating Search, , Using Occur, emacs , The GNU Emacs Manual}, "
 "for more information."
 msgstr ""
+"@xref{Outra Pesquisa Repetitiva, , Usando Occur, emacs , O Manual do GNU "
+"Emacs}, para mais informações."
 
 #. type: section
 #: texinfo/texinfo.texi:21064 texinfo/texinfo.texi:21066
 #, no-wrap
 msgid "Updating Nodes and Menus"
-msgstr ""
+msgstr "Atualizando Nós e Menus"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:21066
 msgid "@nodedescription How to update or create new nodes and menus."
-msgstr ""
+msgstr "@nodedescription Como atualizar ou criar novos nós e menus."
 
 #. type: cindex
 #: texinfo/texinfo.texi:21068
 #, no-wrap
 msgid "Updating nodes and menus"
-msgstr ""
+msgstr "Atualizando nós e menus"
 
 #. type: cindex
 #: texinfo/texinfo.texi:21069
 #, no-wrap
 msgid "Create nodes, menus automatically"
-msgstr ""
+msgstr "Criando nós, menus automaticamente"
 
 #. type: cindex
 #: texinfo/texinfo.texi:21070
 #, no-wrap
 msgid "Insert nodes, menus automatically"
-msgstr ""
+msgstr "Inserir nós, menus automaticamente"
 
 #. type: cindex
 #: texinfo/texinfo.texi:21071
 #, no-wrap
 msgid "Automatically insert nodes, menus"
-msgstr ""
+msgstr "Automaticamente inserir nós, menus"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:21079
@@ -56905,6 +56998,13 @@ msgid ""
 "automatically for nodes without an explicit menu.  (@xref{Generic Translator "
 "@command{texi2any}}, for more information about @command{texi2any}.)"
 msgstr ""
+"O comando @command{texi2any} criará um arquivo do Info para um arquivo do "
+"Texinfo organizado hierarquicamente que careça dos ponteiros `Próximo', "
+"`Anterior' e `Acima' (@pxref{Escrevendo um Nó}). Assim, em geral, não "
+"existe necessidade para ponteiros explícitos `Próximo', `Anterior' e "
+"`Acima'. Nessa configuração, os menus serão adicionados automaticamente "
+"para nós sem um menu explícito. (@xref{Tradutor Genérico "
+"@command{texi2any}}, para mais informações acerca do @command{texi2any})."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:21086
@@ -56916,6 +57016,13 @@ msgid ""
 "insert the `Next', `Previous', and `Up' pointers into an @code{@@node} line "
 "that has none and to create menus in a file that has none."
 msgstr ""
+"Se você ainda quiser ponteiros explícitos, o modo Texinfo fornece comandos "
+"para criar ou atualizar automaticamente menus e ponteiros de nós. Os "
+"comandos são chamados de comandos de ``atualização'' porque o uso mais "
+"frequente deles é para atualizar um arquivo do Texinfo depois de você ter "
+"trabalhado nele; mas você consegue usá-los para inserir os ponteiros "
+"`Próximo', `Anterior' e `Acima' em uma linha @code{@@node} que não tenha "
+"nenhum e para criar menus em um arquivo que não tenha nenhum."
 
 #. type: node
 #: texinfo/texinfo.texi:21088
