@@ -57669,18 +57669,18 @@ msgstr ""
 #. type: Plain text
 #: texinfo/texinfo.texi:21350
 msgid "In more details:"
-msgstr ""
+msgstr "Em mais detalhes:"
 
 #. type: item
 #: texinfo/texinfo.texi:21352
 #, no-wrap
 msgid "M-x texinfo-multiple-files-update"
-msgstr ""
+msgstr "M-x texinfo-multiple-files-update"
 
 #. type: table
 #: texinfo/texinfo.texi:21354
 msgid "Called without any arguments:"
-msgstr ""
+msgstr "Chamado sem quaisquer argumentos:"
 
 #. type: itemize
 #: texinfo/texinfo.texi:21360
@@ -57688,28 +57688,33 @@ msgid ""
 "Create or update the `Next', `Previous', and `Up' pointers of the first "
 "@code{@@node} line in each file included in an outer or overall Texinfo file."
 msgstr ""
+"Criar ou atualizar os ponteiros `Próximo', `Anterior' e `Acima' da primeira "
+"linha @code{@@node} em cada arquivo incluído em um arquivo do Texinfo "
+"externo ou geral."
 
 #. type: itemize
 #: texinfo/texinfo.texi:21364 texinfo/texinfo.texi:21400
 msgid ""
 "Create or update the `Top' level node pointers of the outer or overall file."
 msgstr ""
+"Criar ou atualizar os ponteiros de nó do nível `Top' do arquivo externo ou "
+"geral."
 
 #. type: itemize
 #: texinfo/texinfo.texi:21367
 msgid "Create or update a main menu in the outer file."
-msgstr ""
+msgstr "Criar ou atualizar um menu principal no arquivo externo."
 
 #. type: item
 #: texinfo/texinfo.texi:21369
 #, no-wrap
 msgid "C-u M-x texinfo-multiple-files-update"
-msgstr ""
+msgstr "C-u M-x texinfo-multiple-files-update"
 
 #. type: table
 #: texinfo/texinfo.texi:21371
 msgid "Called with @kbd{C-u} as a prefix argument:"
-msgstr ""
+msgstr "Chamado com @kbd{C-u} como um argumento de prefixo:"
 
 #. type: itemize
 #: texinfo/texinfo.texi:21376
@@ -57717,11 +57722,14 @@ msgid ""
 "Create or update pointers in the first @code{@@node} line in each included "
 "file."
 msgstr ""
+"Criar ou atualizar ponteiros na primeira linha @code{@@node} em cada arquivo "
+"incluído."
 
 #. type: itemize
 #: texinfo/texinfo.texi:21379
 msgid "Create or update the `Top' level node pointers of the outer file."
 msgstr ""
+"Criar ou atualizar os ponteiros de nó do nível `Top' do arquivo externo."
 
 #. type: itemize
 #: texinfo/texinfo.texi:21383
@@ -57729,17 +57737,19 @@ msgid ""
 "Create and insert a master menu in the outer file.  The master menu is made "
 "from all the menus in all the included files."
 msgstr ""
+"Criar e inserir um menu mestre no arquivo externo. O menu mestre é feito a "
+"partir de todos os menus em todos os arquivos incluídos."
 
 #. type: item
 #: texinfo/texinfo.texi:21385
 #, no-wrap
 msgid "C-u 8 M-x texinfo-multiple-files-update"
-msgstr ""
+msgstr "C-u 8 M-x texinfo-multiple-files-update"
 
 #. type: table
 #: texinfo/texinfo.texi:21387
 msgid "Called with a numeric prefix argument, such as @kbd{C-u 8}:"
-msgstr ""
+msgstr "Chamado com um argumento de prefixo e numérico, tal como @kbd{C-u 8}:"
 
 #. type: itemize
 #: texinfo/texinfo.texi:21392
@@ -57747,11 +57757,14 @@ msgid ""
 "Create or update @emph{all} the `Next', `Previous', and `Up' pointers of all "
 "the included files."
 msgstr ""
+"Criar ou atualizar @emph{todos} os ponteiros `Próximo', `Anterior' e "
+"`Acima' de todos os arquivos incluídos."
 
 #. type: itemize
 #: texinfo/texinfo.texi:21396
 msgid "Create or update @emph{all} the menus of all the included files."
 msgstr ""
+"Criar ou atualizar @emph{todos} os menus de todos os arquivos incluídos."
 
 #. type: itemize
 #: texinfo/texinfo.texi:21405
@@ -57760,6 +57773,9 @@ msgid ""
 "invoking @code{texinfo-master-menu} with an argument when you are working "
 "with just one file."
 msgstr ""
+"E então criar um menu mestre no arquivo externo. Isso é semelhante a "
+"invocar-se @code{texinfo-master-menu} com um argumento quando você estiver "
+"trabalhando com apenas um arquivo."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:21414
@@ -57771,29 +57787,36 @@ msgid ""
 "@emph{every} pointer and menu in @emph{all} the files and then inserts a "
 "master menu."
 msgstr ""
+"Observe o uso do argumento de prefixo no uso interativo: com um argumento de "
+"prefixo regular, apenas @w{@kbd{C-u}}, o comando "
+"@code{texinfo-multiple-files-update} insere um menu mestre; com um argumento "
+"de prefixo e numérico, como @kbd{C-u 8}, o comando atualiza @emph{cada} "
+"ponteiro e menu em @emph{todos} os arquivos e então insere um menu mestre."
 
 #. type: subsection
 #: texinfo/texinfo.texi:21416 texinfo/texinfo.texi:21420
 #, no-wrap
 msgid "Include Files Requirements"
-msgstr ""
+msgstr "Exigências de Arquivos de Inclusão"
 
 #. type: nodedescriptionblock
 #: texinfo/texinfo.texi:21419
 msgid "How to structure outer file and include files for the updating command."
 msgstr ""
+"Como estruturar arquivo externo e incluir arquivos para o comando de "
+"atualização."
 
 #. type: cindex
 #: texinfo/texinfo.texi:21421
 #, no-wrap
 msgid "Include files requirements"
-msgstr ""
+msgstr "Exigências de arquivos de inclusão"
 
 #. type: cindex
 #: texinfo/texinfo.texi:21422
 #, no-wrap
 msgid "Requirements for include files"
-msgstr ""
+msgstr "Exigências para arquivos de inclusão"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:21430
@@ -57804,6 +57827,12 @@ msgid ""
 "@code{@@include} commands listing the included files.  It should not even "
 "include indices, which should be listed in an included file of their own."
 msgstr ""
+"Se você planeja usar o comando @code{texinfo-multiple-files-update}, o "
+"arquivo externo do Texinfo que lista os arquivos incluídos nele não "
+"deveria conter nada além das partes inicial e final de um arquivo do "
+"Texinfo e vários comandos @code{@@include} listando os arquivos incluídos. "
+"Ele não deveria nem incluir índices, os quais deveriam ser listados em um "
+"arquivo incluído próprio."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:21439
@@ -57816,6 +57845,14 @@ msgid ""
 "@code{@@appendix}, or an @code{@@unnumbered} node.  Thus, normally, each "
 "included file contains one, and only one, chapter or equivalent-level node."
 msgstr ""
+"Além disso, cada um dos arquivos incluídos precisa conter exatamente um "
+"nó de nível mais alto (convencionalmente, @code{@@chapter} ou "
+"equivalente), e esse nó precisa ser o primeiro nó no arquivo incluído. "
+"Além disso, cada um desses nós de nível mais alto em cada arquivo "
+"incluído precisa estar no mesmo nível hierárquico na estrutura do "
+"arquivo. Normalmente, cada um é um nó @code{@@chapter}, @code{@@appendix} "
+"ou @code{@@unnumbered}. Assim, normalmente, cada arquivo incluído contém "
+"um, e apenas um, capítulo ou nó de nível equivalente."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:21444
@@ -57824,13 +57861,16 @@ msgid ""
 "should @emph{not} contain any nodes besides the single `Top' node.  The "
 "@code{texinfo-multiple-files-update} command will not process them."
 msgstr ""
+"O arquivo externo deveria conter apenas @emph{um} nó, o nó `Top'. Ele "
+"deveria @emph{não} conter quaisquer nós além do único nó `Top'. O "
+"comando @code{texinfo-multiple-files-update} não os processará."
 
 #. type: subheading
 #: texinfo/texinfo.texi:21446 texinfo/texinfo.texi:21451
 #: texinfo/texinfo.texi:22014
 #, no-wrap
 msgid "Other Updating Commands"
-msgstr ""
+msgstr "Outros Comandos de Atualização"
 
 #. type: nodedescriptionblock
 #: texinfo/texinfo.texi:21450
@@ -57847,18 +57887,20 @@ msgid ""
 "In addition to the major updating commands, Texinfo mode possesses several "
 "less frequently used updating commands:"
 msgstr ""
+"Além dos principais comandos de atualização, o modo Texinfo possui "
+"vários comandos de atualização usados menos frequentemente:"
 
 #. type: findex
 #: texinfo/texinfo.texi:21457
 #, no-wrap
 msgid "texinfo-insert-node-lines"
-msgstr ""
+msgstr "texinfo-insert-node-lines"
 
 #. type: item
 #: texinfo/texinfo.texi:21458
 #, no-wrap
 msgid "M-x texinfo-insert-node-lines"
-msgstr ""
+msgstr "M-x texinfo-insert-node-lines"
 
 #. type: table
 #: texinfo/texinfo.texi:21462
@@ -57867,6 +57909,9 @@ msgid ""
 "and other sectioning commands wherever they are missing throughout a region "
 "in a Texinfo file."
 msgstr ""
+"Inserir linhas @code{@@node} antes de @code{@@chapter}, @code{@@section} e "
+"outros comandos de seccionamento sempre que eles estiverem ausentes em uma "
+"região em um arquivo do Texinfo."
 
 #. type: table
 #: texinfo/texinfo.texi:21470
@@ -57879,6 +57924,14 @@ msgid ""
 "concise than section or chapter titles, you must manually edit node names so "
 "inserted."
 msgstr ""
+"Com um argumento (@kbd{C-u} como argumento de prefixo, se interativo), o "
+"comando @code{texinfo-insert-node-lines} não apenas insere linhas "
+"@code{@@node}, mas também insere os títulos dos capítulos ou das seções "
+"como os nomes dos nós correspondentes. Além disso, ele insere os títulos "
+"como nomes de nós em linhas @code{@@node} pré-existentes que careçam de "
+"nomes. Como nomes de nós deveriam ser mais concisos que títulos de "
+"seções ou de capítulos, você precisa editar manualmente nomes de nós "
+"inseridos desse modo."
 
 #. type: table
 #: texinfo/texinfo.texi:21473
@@ -57886,12 +57939,14 @@ msgid ""
 "For example, the following marks a whole buffer as a region and inserts "
 "@code{@@node} lines and titles throughout:"
 msgstr ""
+"Por exemplo, o seguinte marca um buffer inteiro como uma região e insere "
+"linhas @code{@@node} e títulos por toda parte:"
 
 #. type: example
 #: texinfo/texinfo.texi:21476
 #, no-wrap
 msgid "C-x h C-u M-x texinfo-insert-node-lines\n"
-msgstr ""
+msgstr "C-x h C-u M-x texinfo-insert-node-lines\n"
 
 #. type: table
 #: texinfo/texinfo.texi:21483
@@ -57902,18 +57957,23 @@ msgid ""
 "different action.  However, in both cases, you need to edit the inserted "
 "text."
 msgstr ""
+"Esse comando insere títulos como nomes de nós nas linhas @code{@@node}; o "
+"comando @code{texinfo-start-menu-description} (@pxref{Inserindo, Inserindo "
+"Comandos Usados Frequentemente}) insere títulos como descrições nas "
+"entradas do menu, uma ação diferente. Porém, em ambos os casos, você "
+"precisa editar o texto inserido."
 
 #. type: findex
 #: texinfo/texinfo.texi:21484
 #, no-wrap
 msgid "texinfo-indent-menu-description"
-msgstr ""
+msgstr "texinfo-indent-menu-description"
 
 #. type: item
 #: texinfo/texinfo.texi:21485
 #, no-wrap
 msgid "M-x texinfo-indent-menu-description"
-msgstr ""
+msgstr "M-x texinfo-indent-menu-description"
 
 #. type: table
 #: texinfo/texinfo.texi:21493
@@ -57925,18 +57985,24 @@ msgid ""
 "every description in every menu in the region.  However, this command does "
 "not indent the second and subsequent lines of a multi-line description."
 msgstr ""
+"Recuar cada descrição no menu seguinte ao ponto para a coluna "
+"especificada. Você pode usar esse comando para ter mais espaço para "
+"descrições. Com um argumento (@kbd{C-u} como argumento de prefixo, se "
+"interativo), o comando @code{texinfo-indent-menu-description} recua cada "
+"descrição em cada menu na região. No entanto, esse comando não recua a "
+"segunda e as linhas subsequentes de uma descrição multilinha."
 
 #. type: findex
 #: texinfo/texinfo.texi:21494
 #, no-wrap
 msgid "texinfo-sequential-node-update"
-msgstr ""
+msgstr "texinfo-sequential-node-update"
 
 #. type: item
 #: texinfo/texinfo.texi:21495
 #, no-wrap
 msgid "M-x texinfo-sequential-node-update"
-msgstr ""
+msgstr "M-x texinfo-sequential-node-update"
 
 #. type: table
 #: texinfo/texinfo.texi:21506
@@ -57951,35 +58017,46 @@ msgid ""
 "(prefix argument, if interactive), the @code{texinfo-sequential-node-update} "
 "command sequentially updates all the nodes in the region."
 msgstr ""
+"Inserir os nomes dos nós imediatamente seguintes e anteriores ao nó atual "
+"como os ponteiros `Próximo' ou `Anterior', independentemente do nível "
+"hierárquico desses nós. Isso significa que o nó `Próximo' de uma "
+"subseção pode muito bem ser o próximo capítulo. Nós ordenados "
+"sequencialmente são úteis para romances e outros documentos que você lê "
+"sequencialmente. (No entanto, no Info, o comando @kbd{g *} permite que você "
+"examine o arquivo sequencialmente, de modo que nós ordenados "
+"sequencialmente não são estritamente necessários). Com um argumento "
+"(argumento de prefixo, se interativo), o comando "
+"@code{texinfo-sequential-node-update} atualiza sequencialmente todos os nós "
+"na região."
 
 #. type: node
 #: texinfo/texinfo.texi:21509
 #, no-wrap
 msgid "Info Formatting"
-msgstr ""
+msgstr "Formatação do Info"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:21511
 msgid "@nodedescription How to format for Info."
-msgstr ""
+msgstr "@nodedescription Como formatar para Info."
 
 #. type: cindex
 #: texinfo/texinfo.texi:21511 texinfo/texinfo.texi:21512
 #, no-wrap
 msgid "Formatting for Info"
-msgstr ""
+msgstr "Formatação para Info"
 
 #. type: cindex
 #: texinfo/texinfo.texi:21513
 #, no-wrap
 msgid "Running an Info formatter"
-msgstr ""
+msgstr "Executando um formatador Info"
 
 #. type: cindex
 #: texinfo/texinfo.texi:21514
 #, no-wrap
 msgid "Info formatting"
-msgstr ""
+msgstr "Formatação Info"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:21518
@@ -57987,6 +58064,8 @@ msgid ""
 "Texinfo mode provides several commands for formatting part or all of a "
 "Texinfo file for Info."
 msgstr ""
+"O modo Texinfo fornece vários comandos para formatar parte ou tudo de um "
+"arquivo do Texinfo para Info."
 
 #. type: node
 #: texinfo/texinfo.texi:21520
