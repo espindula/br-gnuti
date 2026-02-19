@@ -58071,66 +58071,66 @@ msgstr ""
 #: texinfo/texinfo.texi:21520
 #, no-wrap
 msgid "@command{texi2any} in Emacs"
-msgstr ""
+msgstr "@command{texi2any} no Emacs"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:21522
 msgid "@nodedescription How to run @command{texi2any} from Emacs."
-msgstr ""
+msgstr "@nodedescription Como executar @command{texi2any} a partir do Emacs."
 
 #. type: subsection
 #: texinfo/texinfo.texi:21522
 #, no-wrap
 msgid "Running @command{texi2any}/@command{makeinfo} Within Emacs"
-msgstr ""
+msgstr "Executando @command{texi2any}/@command{makeinfo} no Emacs"
 
 #.  prev name
 #.  node merged in this one
 #. type: anchor{#1}
 #: texinfo/texinfo.texi:21527
 msgid "@code{makeinfo} in Emacs"
-msgstr ""
+msgstr "@code{makeinfo} no Emacs"
 
 #. type: anchor{#1}
 #: texinfo/texinfo.texi:21527
 msgid "@command{makeinfo} Advantages"
-msgstr ""
+msgstr "Vantagens do @command{makeinfo}"
 
 #. type: cindex
 #: texinfo/texinfo.texi:21527
 #, no-wrap
 msgid "Running @command{makeinfo} in Emacs"
-msgstr ""
+msgstr "Executando @command{makeinfo} no Emacs"
 
 #. type: cindex
 #: texinfo/texinfo.texi:21528
 #, no-wrap
 msgid "Running @command{texi2any} in Emacs"
-msgstr ""
+msgstr "Executando @command{texi2any} no Emacs"
 
 #. type: cindex
 #: texinfo/texinfo.texi:21529
 #, no-wrap
 msgid "@command{makeinfo} inside Emacs"
-msgstr ""
+msgstr "@command{makeinfo} dentro do Emacs"
 
 #. type: cindex
 #: texinfo/texinfo.texi:21530
 #, no-wrap
 msgid "@command{texi2any} inside Emacs"
-msgstr ""
+msgstr "@command{texi2any} dentro do Emacs"
 
 #. type: cindex
 #: texinfo/texinfo.texi:21531
 #, no-wrap
 msgid "Shell, running @command{makeinfo} in"
-msgstr ""
+msgstr "Shell, executando @command{makeinfo} em"
 
 #. type: cindex
 #: texinfo/texinfo.texi:21532
 #, no-wrap
 msgid "Shell, running @command{texi2any} in"
-msgstr ""
+msgstr "Shell, executando @command{texi2any} em"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:21537
@@ -58139,6 +58139,9 @@ msgid ""
 "the Emacs formatting commands.  We recommend it.  The @command{texi2any} "
 "program is independent of Emacs."
 msgstr ""
+"O programa @command{texi2any} fornece mensagens de erro melhores que "
+"qualquer um dos comandos de formatação do Emacs. Nós o recomendamos. O "
+"programa @command{texi2any} é independente do Emacs."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:21542
@@ -58148,52 +58151,56 @@ msgid ""
 "@code{makeinfo-buffer} commands.  In Texinfo mode, the commands are bound to "
 "@kbd{C-c C-m C-r} and @kbd{C-c C-m C-b} by default."
 msgstr ""
+"Você pode executar @command{texi2any} (ou @command{makeinfo}) no modo "
+"Texinfo do GNU Emacs usando ou o comando @code{makeinfo-region} ou o "
+"@code{makeinfo-buffer}. No modo Texinfo, os comandos estão vinculados a "
+"@kbd{C-c C-m C-r} e @kbd{C-c C-m C-b} por padrão."
 
 #. type: item
 #: texinfo/texinfo.texi:21544
 #, no-wrap
 msgid "C-c C-m C-r"
-msgstr ""
+msgstr "C-c C-m C-r"
 
 #. type: itemx
 #: texinfo/texinfo.texi:21545
 #, no-wrap
 msgid "M-x makeinfo-region"
-msgstr ""
+msgstr "M-x makeinfo-region"
 
 #. type: table
 #: texinfo/texinfo.texi:21547 texinfo/texinfo.texi:21656
 msgid "Format the current region for Info."
-msgstr ""
+msgstr "Formatar a região atual para Info."
 
 #. type: findex
 #: texinfo/texinfo.texi:21547
 #, no-wrap
 msgid "makeinfo-region"
-msgstr ""
+msgstr "makeinfo-region"
 
 #. type: item
 #: texinfo/texinfo.texi:21549
 #, no-wrap
 msgid "C-c C-m C-b"
-msgstr ""
+msgstr "C-c C-m C-b"
 
 #. type: itemx
 #: texinfo/texinfo.texi:21550
 #, no-wrap
 msgid "M-x makeinfo-buffer"
-msgstr ""
+msgstr "M-x makeinfo-buffer"
 
 #. type: table
 #: texinfo/texinfo.texi:21552 texinfo/texinfo.texi:21661
 msgid "Format the current buffer for Info."
-msgstr ""
+msgstr "Formatar o buffer atual para Info."
 
 #. type: findex
 #: texinfo/texinfo.texi:21552
 #, no-wrap
 msgid "makeinfo-buffer"
-msgstr ""
+msgstr "makeinfo-buffer"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:21559
@@ -58202,6 +58209,10 @@ msgid ""
 "buffer.  When you invoke @code{makeinfo-buffer} output goes to the file set "
 "with @code{@@setfilename} (@pxref{@code{@@setfilename}})."
 msgstr ""
+"Quando você invoca @code{makeinfo-region} a saída gerada vai para um "
+"buffer temporário. Quando você invoca @code{makeinfo-buffer}, a saída "
+"gerada vai para o arquivo configurado com @code{@@setfilename} "
+"(@pxref{@code{@@setfilename}})."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:21564
@@ -58211,24 +58222,28 @@ msgid ""
 "@command{texi2any} finds any errors, Emacs displays the error messages in "
 "the temporary buffer."
 msgstr ""
+"Os comandos @code{makeinfo-region} e @code{makeinfo-buffer} do Emacs "
+"executam o programa @command{texi2any} em um buffer temporário de shell. Se "
+"@command{texi2any} encontrar quaisquer erros, o Emacs exibe as mensagens de "
+"erro no buffer temporário."
 
 #. type: cindex
 #: texinfo/texinfo.texi:21565
 #, no-wrap
 msgid "Errors, parsing"
-msgstr ""
+msgstr "Erros, analisando"
 
 #. type: cindex
 #: texinfo/texinfo.texi:21566
 #, no-wrap
 msgid "Parsing errors"
-msgstr ""
+msgstr "Analisando erros"
 
 #. type: findex
 #: texinfo/texinfo.texi:21567
 #, no-wrap
 msgid "next-error"
-msgstr ""
+msgstr "next-error"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:21574
@@ -58240,6 +58255,12 @@ msgid ""
 "GNU Emacs Manual}, for more information about using the @code{next-error} "
 "command."
 msgstr ""
+"Você pode analisar as mensagens de erro digitando @kbd{C-x `} "
+"(@code{next-error}). Isso faz com que o Emacs vá e posicione o cursor na "
+"linha no fonte do Texinfo que @command{texi2any} acha que causou o erro. "
+"@xref{Compilação, , Executando @code{make} ou Compiladores Geralmente, "
+"emacs, O Manual do GNU Emacs}, para mais informações acerca de se usar o "
+"comando @code{next-error}."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:21578
@@ -58247,24 +58268,27 @@ msgid ""
 "In addition, you can kill the shell in which the @command{texi2any} command "
 "is running or make the shell buffer display its most recent output."
 msgstr ""
+"Além disso, você consegue encerrar o shell no qual o comando "
+"@command{texi2any} estiver executando ou fazer o buffer do shell exibir a "
+"saída gerada mais recente dele."
 
 #. type: findex
 #: texinfo/texinfo.texi:21580
 #, no-wrap
 msgid "makeinfo-kill-job"
-msgstr ""
+msgstr "makeinfo-kill-job"
 
 #. type: item
 #: texinfo/texinfo.texi:21581
 #, no-wrap
 msgid "C-c C-m C-k"
-msgstr ""
+msgstr "C-c C-m C-k"
 
 #. type: itemx
 #: texinfo/texinfo.texi:21582
 #, no-wrap
 msgid "M-x makeinfo-kill-job"
-msgstr ""
+msgstr "M-x makeinfo-kill-job"
 
 #. type: table
 #: texinfo/texinfo.texi:21585
@@ -58272,24 +58296,26 @@ msgid ""
 "Kill the current running @command{texi2any} (or @command{makeinfo}) job "
 "(from @code{makeinfo-region} or @code{makeinfo-buffer})."
 msgstr ""
+"Terminar a atual tarefa @command{texi2any} (ou @command{makeinfo}) "
+"executando (a partir de @code{makeinfo-region} ou @code{makeinfo-buffer})."
 
 #. type: findex
 #: texinfo/texinfo.texi:21586
 #, no-wrap
 msgid "makeinfo-recenter-output-buffer"
-msgstr ""
+msgstr "makeinfo-recenter-output-buffer"
 
 #. type: item
 #: texinfo/texinfo.texi:21587
 #, no-wrap
 msgid "C-c C-m C-l"
-msgstr ""
+msgstr "C-c C-m C-l"
 
 #. type: itemx
 #: texinfo/texinfo.texi:21588
 #, no-wrap
 msgid "M-x makeinfo-recenter-output-buffer"
-msgstr ""
+msgstr "M-x makeinfo-recenter-output-buffer"
 
 #. type: table
 #: texinfo/texinfo.texi:21591
@@ -58297,6 +58323,8 @@ msgid ""
 "Redisplay the @command{texi2any} shell buffer to display its most recent "
 "output."
 msgstr ""
+"Reexibir o buffer do shell do @command{texi2any} para exibir a saída gerada "
+"mais recente dele."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:21597
@@ -58304,6 +58332,9 @@ msgid ""
 "(Note that the parallel commands for killing and recentering a @TeX{} job "
 "are @kbd{C-c C-t C-k} and @kbd{C-c C-t C-l}.  @xref{Texinfo Mode Printing}.)"
 msgstr ""
+"(Observe que os comandos paralelos para terminar e recentralizar uma tarefa "
+"do @TeX{} são @kbd{C-c C-t C-k} e @kbd{C-c C-t C-l}. @xref{Impressão Modo "
+"Texinfo})."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:21602
@@ -58313,11 +58344,16 @@ msgid ""
 "@kbd{M-x set-variable} command, or by setting the variable in your "
 "@file{.emacs} initialization file."
 msgstr ""
+"Você pode especificar opções para @command{texi2any} configurando a "
+"variável @code{makeinfo-options} ou com o comando @kbd{M-x customize} ou "
+"com o @kbd{M-x set-variable}, ou configurando a variável em teu arquivo de "
+"inicialização @file{.emacs}."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:21604
 msgid "For example, you could write the following in your @file{.emacs} file:"
 msgstr ""
+"Por exemplo, você poderia escrever o seguinte em teu arquivo @file{.emacs}:"
 
 #. type: group
 #: texinfo/texinfo.texi:21610
@@ -58327,6 +58363,9 @@ msgid ""
 "     \"--paragraph-indent=0 --no-split\n"
 "      --fill-column=70 --verbose\")\n"
 msgstr ""
+"(setq makeinfo-options\n"
+"     \"--paragraph-indent=0 --no-split\n"
+"      --fill-column=70 --verbose\")\n"
 
 #. type: iftex
 #: texinfo/texinfo.texi:21620
@@ -58335,6 +58374,9 @@ msgid ""
 "``Easy Customization Interface,'' ``Examining and Setting Variables,'' and "
 "``Init File'' in @cite{The GNU Emacs Manual}."
 msgstr ""
+"Para mais informações, veja-se @ref{Opções do @command{texi2any}}, bem "
+"como ``Interface de Fácil Personalização'', ``Examinando e Configurando "
+"Variáveis'' e ``Arquivo de Iniciação'' em @cite{O Manual do GNU Emacs}."
 
 #. type: ifnottex
 #: texinfo/texinfo.texi:21627
@@ -58344,6 +58386,11 @@ msgid ""
 "Setting Variables, emacs, The GNU Emacs Manual},@* @ref{Init File, , , "
 "emacs, The GNU Emacs Manual}, and@* @ref{@command{texi2any} Options}."
 msgstr ""
+"Para mais informações, veja-se@* @ref{Personalização Fácil, , Interface "
+"de Fácil Personalização, emacs, O Manual do GNU Emacs},@* "
+"@ref{Examinando, , Examinando e Configurando Variáveis, emacs, O Manual do "
+"GNU Emacs},@* @ref{Arquivo de Iniciação, , , emacs, O Manual do GNU Emacs} "
+"e@* @ref{Opções do @command{texi2any}}."
 
 #. type: node
 #: texinfo/texinfo.texi:21630
