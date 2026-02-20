@@ -58396,7 +58396,7 @@ msgstr ""
 #: texinfo/texinfo.texi:21630
 #, no-wrap
 msgid "@code{texinfo-format} commands"
-msgstr ""
+msgstr "Comandos @code{texinfo-format}"
 
 #. type: nodedescriptionblock
 #: texinfo/texinfo.texi:21634
@@ -58404,12 +58404,14 @@ msgid ""
 "Two Info formatting commands written in Emacs Lisp are an alternative to "
 "@command{texi2any}."
 msgstr ""
+"Dois comandos de formatação do Info escritos em Lisp do Emacs são uma "
+"alternativa ao @command{texi2any}."
 
 #. type: subsection
 #: texinfo/texinfo.texi:21635
 #, no-wrap
 msgid "The @code{texinfo-format@dots{}} Commands"
-msgstr ""
+msgstr "Os comandos @code{texinfo-format@dots{}}"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:21643
@@ -58419,6 +58421,10 @@ msgid ""
 "region and displays the formatted text in a temporary buffer called "
 "@samp{*Info Region*}."
 msgstr ""
+"No GNU Emacs, no modo Texinfo, você consegue formatar parte, ou todo, de um "
+"arquivo do Texinfo com o comando @code{texinfo-format-region}. Isso formata "
+"a região atual e exibe o texto formatado em um buffer temporário chamado "
+"@samp{*Info Region*}."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:21650
@@ -58429,30 +58435,35 @@ msgid ""
 "by the @code{@@setfilename} line which must be near the beginning of the "
 "Texinfo file."
 msgstr ""
+"Similarmente, você consegue formatar um buffer com o comando "
+"@code{texinfo-format-buffer}. Esse comando cria um novo buffer e gera o "
+"arquivo do Info nele. Digitar @kbd{C-x C-s} salvará o arquivo do Info sob o "
+"nome especificado pela linha @code{@@setfilename}, que precisa estar "
+"próxima ao início do arquivo do Texinfo."
 
 #. type: code{#1}
 #: texinfo/texinfo.texi:21652 texinfo/texinfo.texi:21654
 #, no-wrap
 msgid "texinfo-format-region"
-msgstr ""
+msgstr "texinfo-format-region"
 
 #. type: item
 #: texinfo/texinfo.texi:21653
 #, no-wrap
 msgid "C-c C-e C-r"
-msgstr ""
+msgstr "C-c C-e C-r"
 
 #. type: code{#1}
 #: texinfo/texinfo.texi:21657 texinfo/texinfo.texi:21659
 #, no-wrap
 msgid "texinfo-format-buffer"
-msgstr ""
+msgstr "texinfo-format-buffer"
 
 #. type: item
 #: texinfo/texinfo.texi:21658
 #, no-wrap
 msgid "C-c C-e C-b"
-msgstr ""
+msgstr "C-c C-e C-b"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:21669
@@ -58464,6 +58475,12 @@ msgid ""
 "@command{texi2any} program provides better error checking "
 "(@pxref{@command{texi2any} in Emacs})."
 msgstr ""
+"Os comandos @code{texinfo-format-region} e @code{texinfo-format-buffer} "
+"fornecem alguma verificação de erros, e outras funções podem fornecer "
+"ajuda adicional para encontrar erros de formatação. Esses procedimentos "
+"estão descritos em um apêndice; veja-se @ref{Capturando Erros}. No "
+"entanto, o programa @command{texi2any} fornece melhor verificação de erros "
+"(@pxref{@command{texi2any} no Emacs})."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:21673
@@ -58472,23 +58489,26 @@ msgid ""
 "@code{texinfo-format-region} commands is that they do not indent (nor fill) "
 "paragraphs that contain @code{@@w} or @code{@@*} commands."
 msgstr ""
+"Uma peculiaridade dos comandos @code{texinfo-format-buffer} e "
+"@code{texinfo-format-region} é que eles não recuam (nem preenchem) "
+"parágrafos que contenham comandos @code{@@w} ou @code{@@*}."
 
 #. type: node
 #: texinfo/texinfo.texi:21675
 #, no-wrap
 msgid "Printing with Emacs"
-msgstr ""
+msgstr "Imprimindo com Emacs"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:21677
 msgid "@nodedescription How to format with @TeX{} and print with Emacs."
-msgstr ""
+msgstr "@nodedescription Como formatar com @TeX{} e imprimir com Emacs."
 
 #. type: section
 #: texinfo/texinfo.texi:21677
 #, no-wrap
 msgid "Formatting and Printing with Emacs"
-msgstr ""
+msgstr "Formatando e Imprimindo com Emacs"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:21682
@@ -58497,41 +58517,45 @@ msgid ""
 "Shell.  Texinfo mode also provides predefined key commands for formatting "
 "and printing."
 msgstr ""
+"GNU Emacs pode ser usado para formatação e impressão com @TeX{}, a partir "
+"de um Shell do Emacs. O modo Texinfo também fornece comandos de teclas "
+"predefinidos para formatação e impressão."
 
 #. type: node
 #: texinfo/texinfo.texi:21684
 #, no-wrap
 msgid "Texinfo Mode Printing"
-msgstr ""
+msgstr "Impressão em Modo Texinfo"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:21686
 msgid "@nodedescription How to format and print part or all of a file."
 msgstr ""
+"@nodedescription Como formatar e imprimir parte, ou todo, de um arquivo."
 
 #. type: subsection
 #: texinfo/texinfo.texi:21686
 #, no-wrap
 msgid "Formatting and Printing in Texinfo Mode"
-msgstr ""
+msgstr "Formatação e Impressão no Modo Texinfo"
 
 #. type: cindex
 #: texinfo/texinfo.texi:21687
 #, no-wrap
 msgid "Region printing in Texinfo mode"
-msgstr ""
+msgstr "Impressão de região no modo Texinfo"
 
 #. type: cindex
 #: texinfo/texinfo.texi:21688
 #, no-wrap
 msgid "Format and print in Texinfo mode"
-msgstr ""
+msgstr "Formatar e imprimir no modo Texinfo"
 
 #. type: cindex
 #: texinfo/texinfo.texi:21689
 #, no-wrap
 msgid "Print and format in Texinfo mode"
-msgstr ""
+msgstr "Imprimir e formatar no modo Texinfo"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:21696
@@ -58541,30 +58565,34 @@ msgid ""
 "printer queue, killing the formatting job, and recentering the display of "
 "the buffer in which the operations occur."
 msgstr ""
+"O modo Texinfo fornece vários comandos de teclas predefinidos para "
+"formatação e impressão do @TeX{}. Esses incluem comandos para ordenar "
+"índices, examinar a fila da impressora, encerrar o trabalho de formatação "
+"e recentralizar a exibição do buffer no qual as operações ocorrem."
 
 #. type: cindex
 #: texinfo/texinfo.texi:21697
 #, no-wrap
 msgid "Printing a region or buffer"
-msgstr ""
+msgstr "Imprimindo uma região ou buffer"
 
 #. type: cindex
 #: texinfo/texinfo.texi:21698
 #, no-wrap
 msgid "Region formatting and printing"
-msgstr ""
+msgstr "Formatação e impressão de região"
 
 #. type: cindex
 #: texinfo/texinfo.texi:21699
 #, no-wrap
 msgid "Buffer formatting and printing"
-msgstr ""
+msgstr "Formatação e impressão de buffer"
 
 #. type: cindex
 #: texinfo/texinfo.texi:21700
 #, no-wrap
 msgid "Part of file formatting and printing"
-msgstr ""
+msgstr "Parte da formatação e impressão de arquivos"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:21706
@@ -58574,6 +58602,11 @@ msgid ""
 "@code{texinfo-tex-region} and related commands for this purpose.  Use the "
 "@code{texinfo-tex-buffer} command to format all of a buffer."
 msgstr ""
+"Freqüentemente, quando estiver escrevendo um documento, você desejará "
+"tipografar e imprimir somente parte de um arquivo para ver como ele ficará. "
+"Você consegue usar o @code{texinfo-tex-region} e comandos relacionados para "
+"essa finalidade. Use o comando @code{texinfo-tex-buffer} para formatar todo "
+"um buffer."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:21713
@@ -58584,24 +58617,30 @@ msgid ""
 "itself.  (When you use @code{texinfo-tex-region}, you must surround the "
 "@code{@@settitle} line with start-of-header and end-of-header lines.)"
 msgstr ""
+"Para que @code{texinfo-tex-region} ou @code{texinfo-tex-buffer} funcionem, o "
+"arquivo @emph{precisa} começar com uma linha @samp{\\input texinfo} e "
+"precisa incluir uma linha @code{@@settitle}. O arquivo precisa terminar com "
+"@code{@@bye} sozinho em uma linha. (Ao usar @code{texinfo-tex-region}, você "
+"precisa envolver a linha @code{@@settitle} com linhas de início de "
+"cabeçalho e de fim de cabeçalho)."
 
 #. type: findex
 #: texinfo/texinfo.texi:21715
 #, no-wrap
 msgid "texinfo-tex-buffer"
-msgstr ""
+msgstr "texinfo-tex-buffer"
 
 #. type: item
 #: texinfo/texinfo.texi:21716
 #, no-wrap
 msgid "C-c C-t C-b"
-msgstr ""
+msgstr "C-c C-t C-b"
 
 #. type: itemx
 #: texinfo/texinfo.texi:21717
 #, no-wrap
 msgid "M-x texinfo-tex-buffer"
-msgstr ""
+msgstr "M-x texinfo-tex-buffer"
 
 #. type: table
 #: texinfo/texinfo.texi:21721
@@ -58609,23 +58648,25 @@ msgid ""
 "Run @command{texi2dvi} on the buffer.  In addition to running @TeX{} on the "
 "buffer, this command automatically creates or updates indices as needed."
 msgstr ""
+"Executar @command{texi2dvi} no buffer. Além de executar @TeX{} no buffer, "
+"esse comando automaticamente cria ou atualiza índices conforme necessário."
 
 #. type: item
 #: texinfo/texinfo.texi:21722
 #, no-wrap
 msgid "C-c C-t C-r"
-msgstr ""
+msgstr "C-c C-t C-r"
 
 #. type: itemx
 #: texinfo/texinfo.texi:21723
 #, no-wrap
 msgid "M-x texinfo-tex-region"
-msgstr ""
+msgstr "M-x texinfo-tex-region"
 
 #. type: table
 #: texinfo/texinfo.texi:21725
 msgid "Run @TeX{} on the current region."
-msgstr ""
+msgstr "Executar @TeX{} na região atual."
 
 #. type: table
 #: texinfo/texinfo.texi:21732
@@ -58636,18 +58677,24 @@ msgid ""
 "between the start-of-header and end-of-header lines, "
 "@code{texinfo-tex-region}, will format the region in ``small'' book size."
 msgstr ""
+"Se comandos @@ relacionados à saída impressa estiverem entre as linhas de "
+"início de cabeçalho e de fim de cabeçalho, então "
+"@code{texinfo-tex-region} formatará a região de acordo. Por exemplo, se "
+"você escrever o comando @code{@@smallbook} entre as linhas de início de "
+"cabeçalho e de fim de cabeçalho, @code{texinfo-tex-region} formatará a "
+"região no tamanho do livro ``small''."
 
 #. type: item
 #: texinfo/texinfo.texi:21733
 #, no-wrap
 msgid "C-c C-t C-i"
-msgstr ""
+msgstr "C-c C-t C-i"
 
 #. type: itemx
 #: texinfo/texinfo.texi:21734
 #, no-wrap
 msgid "M-x texinfo-texindex"
-msgstr ""
+msgstr "M-x texinfo-texindex"
 
 #. type: table
 #: texinfo/texinfo.texi:21743
@@ -58661,18 +58708,27 @@ msgid ""
 "only when you format a buffer.  Now that the @command{texi2dvi} command "
 "exists, there is little or no need for this command.)"
 msgstr ""
+"Executar @command{texindex} para ordenar os índices de um arquivo do "
+"Texinfo formatado com @code{texinfo-tex-region}. O comando "
+"@code{texinfo-tex-region} não executa @command{texindex} automaticamente; "
+"ele somente executa o comando de tipografia @command{tex}. Você precisa "
+"executar o comando @code{texinfo-tex-region} uma segunda vez depois de "
+"ordenar os arquivos brutos de índice com o comando @command{texindex}. "
+"(Normalmente, você não formata um índice ao formatar uma região, somente "
+"quando formata um buffer. Agora que o comando @command{texi2dvi} existe, "
+"existe pouca ou nenhuma necessidade para esse comando)."
 
 #. type: item
 #: texinfo/texinfo.texi:21744
 #, no-wrap
 msgid "C-c C-t C-p"
-msgstr ""
+msgstr "C-c C-t C-p"
 
 #. type: itemx
 #: texinfo/texinfo.texi:21745
 #, no-wrap
 msgid "M-x texinfo-tex-print"
-msgstr ""
+msgstr "M-x texinfo-tex-print"
 
 #. type: table
 #: texinfo/texinfo.texi:21748
@@ -58680,35 +58736,37 @@ msgid ""
 "Print a DVI file that was made with @code{texinfo-tex-region} or "
 "@code{texinfo-tex-buffer}."
 msgstr ""
+"Imprimir um arquivo DVI que foi criado com @code{texinfo-tex-region} ou "
+"@code{texinfo-tex-buffer}."
 
 #. type: item
 #: texinfo/texinfo.texi:21749
 #, no-wrap
 msgid "C-c C-t C-q"
-msgstr ""
+msgstr "C-c C-t C-q"
 
 #. type: itemx
 #: texinfo/texinfo.texi:21750
 #, no-wrap
 msgid "M-x tex-show-print-queue"
-msgstr ""
+msgstr "M-x tex-show-print-queue"
 
 #. type: table
 #: texinfo/texinfo.texi:21752
 msgid "Show the print queue."
-msgstr ""
+msgstr "Mostrar a fila de impressão."
 
 #. type: item
 #: texinfo/texinfo.texi:21753
 #, no-wrap
 msgid "C-c C-t C-d"
-msgstr ""
+msgstr "C-c C-t C-d"
 
 #. type: itemx
 #: texinfo/texinfo.texi:21754
 #, no-wrap
 msgid "M-x texinfo-delete-from-print-queue"
-msgstr ""
+msgstr "M-x texinfo-delete-from-print-queue"
 
 #. type: table
 #: texinfo/texinfo.texi:21758
@@ -58717,18 +58775,21 @@ msgid ""
 "shown by a preceding @kbd{C-c C-t C-q} command "
 "(@code{texinfo-show-tex-print-queue})."
 msgstr ""
+"Excluir um trabalho da fila de impressão; você será solicitado(a) a "
+"fornecer o número do trabalho mostrado por um comando @kbd{C-c C-t C-q} "
+"anterior (@code{texinfo-show-tex-print-queue})."
 
 #. type: item
 #: texinfo/texinfo.texi:21759
 #, no-wrap
 msgid "C-c C-t C-k"
-msgstr ""
+msgstr "C-c C-t C-k"
 
 #. type: itemx
 #: texinfo/texinfo.texi:21760
 #, no-wrap
 msgid "M-x tex-kill-job"
-msgstr ""
+msgstr "M-x tex-kill-job"
 
 #. type: table
 #: texinfo/texinfo.texi:21764
@@ -58737,18 +58798,21 @@ msgid ""
 "@code{texinfo-tex-region} or @code{texinfo-tex-buffer}, or any other process "
 "running in the Texinfo shell buffer."
 msgstr ""
+"Eliminar o trabalho @TeX{} atualmente executando iniciado ou por "
+"@code{texinfo-tex-region} ou por @code{texinfo-tex-buffer} ou qualquer outro "
+"processo executando no buffer do shell do Texinfo."
 
 #. type: item
 #: texinfo/texinfo.texi:21765
 #, no-wrap
 msgid "C-c C-t C-x"
-msgstr ""
+msgstr "C-c C-t C-x"
 
 #. type: itemx
 #: texinfo/texinfo.texi:21766
 #, no-wrap
 msgid "M-x texinfo-quit-job"
-msgstr ""
+msgstr "M-x texinfo-quit-job"
 
 #. type: table
 #: texinfo/texinfo.texi:21770
@@ -58757,6 +58821,9 @@ msgid ""
 "an @key{x} to it.  When you do this, @TeX{} preserves a record of what it "
 "did in a @file{.log} file."
 msgstr ""
+"Encerre um trabalho de formatação do @TeX{} que foi interrompido devido a "
+"um erro enviando um @key{x} para ele. Quando você faz isso, o @TeX{} "
+"preserva um registro do que fez em um arquivo @file{.log}."
 
 #. type: item
 #: texinfo/texinfo.texi:21771
