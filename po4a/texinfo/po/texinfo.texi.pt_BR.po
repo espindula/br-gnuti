@@ -59268,12 +59268,15 @@ msgid ""
 "               @r{first create or update all nodes and}\n"
 "               @r{then create or update all menus.}\n"
 msgstr ""
+"C-u C-c C-u C-a @r{Com @kbd{C-u} como um argumento de prefixo,}\n"
+"               @r{primeiro criar ou atualizat todos os nós e, então,}\n"
+"               @r{criar os atualizar todos os menus.}\n"
 
 #. type: subheading
 #: texinfo/texinfo.texi:21962
 #, no-wrap
 msgid "Format for Info"
-msgstr ""
+msgstr "Formatar para Info"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:21967
@@ -59282,6 +59285,9 @@ msgid ""
 "typing @kbd{C-c C-e} and then either @kbd{C-r} for a region or @kbd{C-b} for "
 "the whole buffer."
 msgstr ""
+"Os comandos de formatação do Info que sejam escritos em Emacs Lisp são "
+"invocados digitando-se @kbd{C-c C-e} e, então, ou @kbd{C-r} para uma "
+"região ou @kbd{C-b} para o buffer inteiro."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:21972
@@ -59291,11 +59297,15 @@ msgid ""
 "C-m} and then either @kbd{C-r} for a region or @kbd{C-b} for the whole "
 "buffer."
 msgstr ""
+"Os comandos de formatação do Info que sejam baseados no programa "
+"@command{texi2any}/@command{makeinfo} são invocados digitando-se @kbd{C-c "
+"C-m} e, então, ou @kbd{C-r} para uma região ou @kbd{C-b} para o buffer "
+"inteiro."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:21976
 msgid "Use the @code{texinfo-format@dots{}} commands:"
-msgstr ""
+msgstr "Usar os comandos @code{texinfo-format@dots{}}:"
 
 #. type: group
 #: texinfo/texinfo.texi:21981
@@ -59304,11 +59314,13 @@ msgid ""
 "C-c C-e C-r     @r{Format the region.}\n"
 "C-c C-e C-b     @r{Format the buffer.}\n"
 msgstr ""
+"C-c C-e C-r     @r{Formatar a região.}\n"
+"C-c C-e C-b     @r{Formatar o buffer.}\n"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:21987
 msgid "Use @command{texi2any}/@command{makeinfo}:"
-msgstr ""
+msgstr "Usar @command{texi2any}/@command{makeinfo}:"
 
 #. type: example
 #: texinfo/texinfo.texi:21993
@@ -59319,12 +59331,17 @@ msgid ""
 "C-c C-m C-l     @r{Recenter the @command{texi2any} output buffer.}\n"
 "C-c C-m C-k     @r{Kill the @command{texi2any} formatting job.}\n"
 msgstr ""
+"C-c C-m C-r     @r{Formatar a região.}\n"
+"C-c C-m C-b     @r{Formatar o buffer.}\n"
+"C-c C-m C-l     @r{Recentralizar o buffer da saída do @command{texi2any}.}\n"
+"C-c C-m C-k     @r{Encerra o trabalho de formatação do "
+"@command{texi2any}.}\n"
 
 #. type: subheading
 #: texinfo/texinfo.texi:21995
 #, no-wrap
 msgid "Typeset and Print"
-msgstr ""
+msgstr "Tipografia e Impressão"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:22001
@@ -59334,6 +59351,10 @@ msgid ""
 "@code{texinfo-tex-region}, @kbd{C-b} for @code{texinfo-tex-buffer}, and so "
 "on."
 msgstr ""
+"Os comandos de tipografia e de impressão do @TeX{} são invocados "
+"digitando-se @kbd{C-c C-t} e, em seguida, outro comando de controle: "
+"@kbd{C-r} para @code{texinfo-tex-region}, @kbd{C-b} para "
+"@code{texinfo-tex-buffer} e assim por diante."
 
 #. type: example
 #: texinfo/texinfo.texi:22012
@@ -59349,6 +59370,16 @@ msgid ""
 "C-c C-t C-x     @r{Quit a currently stopped @TeX{} formatting job.}\n"
 "C-c C-t C-l     @r{Recenter the output buffer.}\n"
 msgstr ""
+"C-c C-t C-r     @r{Executar @TeX{} sobre a região.}\n"
+"C-c C-t C-b     @r{Executar} @command{texi2dvi} @r{sobre o buffer.}\n"
+"C-c C-t C-i     @r{Executar} @command{texindex}.\n"
+"C-c C-t C-p     @r{Imprimir o arquivo DVI.}\n"
+"C-c C-t C-q     @r{Mostrar a fila de impressão.}\n"
+"C-c C-t C-d     @r{Deletar um trabalho da fila de impressão.}\n"
+"C-c C-t C-k     @r{Elimina o trabalho atual de formatação do @TeX{}.}\n"
+"C-c C-t C-x     @r{Fecha um trabalho de formatação do @TeX{} atualmente "
+"interrompido.}\n"
+"C-c C-t C-l     @r{Recentralizar a saída gerada de buffer.}\n"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:22018
@@ -59356,6 +59387,8 @@ msgid ""
 "The remaining updating commands do not have standard keybindings because "
 "they are rarely used."
 msgstr ""
+"Os comandos de atualização restantes não têm atalhos padrão de teclado "
+"porque raramente eles são usados."
 
 #. type: group
 #: texinfo/texinfo.texi:22025
@@ -59366,6 +59399,10 @@ msgid ""
 "               @r{With @kbd{C-u} as a prefix argument,}\n"
 "               @r{use section titles as node names.}\n"
 msgstr ""
+"M-x texinfo-insert-node-lines\n"
+"               @r{Inserir linhas @code{@@node} ausentes na região.}\n"
+"               @r{Com @kbd{C-u} como argumento de prefixo,}\n"
+"               @r{usar títulos de seção como nomes de nós.}\n"
 
 #. type: group
 #: texinfo/texinfo.texi:22033
@@ -59377,6 +59414,11 @@ msgid ""
 "               @r{create or update all nodes and menus}\n"
 "               @r{in all included files first.}\n"
 msgstr ""
+"M-x texinfo-multiple-files-update\n"
+"               @r{Atualizar um documento com vários arquivos.}\n"
+"               @r{Com @kbd{C-u 2} como um argumento de prefixo,}\n"
+"               @r{criar ou atualizar todos os nós e menus}\n"
+"               @r{em todos os arquivos incluídos primeiro.}\n"
 
 #. type: group
 #: texinfo/texinfo.texi:22038
@@ -59385,6 +59427,8 @@ msgid ""
 "M-x texinfo-indent-menu-description\n"
 "               @r{Indent descriptions.}\n"
 msgstr ""
+"M-x texinfo-indent-menu-description\n"
+"               @r{Recuar descrições.}\n"
 
 #. type: group
 #: texinfo/texinfo.texi:22043
@@ -59393,29 +59437,31 @@ msgid ""
 "M-x texinfo-sequential-node-update\n"
 "               @r{Insert node pointers in strict sequence.}\n"
 msgstr ""
+"M-x texinfo-sequential-node-update\n"
+"               @r{Inserir ponteiros de nó em sequência estrita.}\n"
 
 #. type: node
 #: texinfo/texinfo.texi:22047
 #, no-wrap
 msgid "Formatting Info files"
-msgstr ""
+msgstr "Formatando arquivos do Info"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:22049
 msgid "@nodedescription Processing directly Info files."
-msgstr ""
+msgstr "@nodedescription Processando diretamente arquivos do Info."
 
 #. type: section
 #: texinfo/texinfo.texi:22049
 #, no-wrap
 msgid "Direct Formatting of Info files"
-msgstr ""
+msgstr "Formatação Direta de arquivos do Info"
 
 #. type: cindex
 #: texinfo/texinfo.texi:22051
 #, no-wrap
 msgid "Direct formatting of Info files"
-msgstr ""
+msgstr "Formatação direta de arquivos do Info"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:22059
@@ -59428,6 +59474,15 @@ msgid ""
 "file.  The Texinfo source is therefore more suitable to analyse a manual, be "
 "it for error reporting, for statistics, or to set up translations."
 msgstr ""
+"Em geral, não existe necessidade de editar ou de processar arquivos do "
+"Info. A maior parte do conteúdo do arquivo do Info é texto simples, mas as "
+"tabelas de etiquetas exigem computar-se deslocamentos para nós e para "
+"arquivos indiretos (@pxref{Arquivos de Etiqueta e Divididos}), o que é "
+"impraticável. Os processadores do Texinfo produzem Info bem formatados a "
+"partir da entrada Texinfo. Além disso, muitas informações originárias do "
+"fonte do Texinfo são perdidas no arquivo do Info. O fonte do Texinfo é "
+"portanto mais adequado para analisar um manual, seja para informe de erros, "
+"para estatísticas, ou para configurar traduções."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:22067
@@ -59440,6 +59495,15 @@ msgid ""
 "Info file validation (@pxref{Running @code{Info-validate}}).  It is also "
 "possible to split a nonsplit Info file with @code{Info-split}."
 msgstr ""
+"Ainda assim, especialmente com arquivos do Info escritos manualmente, "
+"existem algumas situações em que pode ser interessante processar arquivos "
+"do Info diretamente, em particular para computar deslocamentos de nós dos "
+"arquivos do Info e para computar deslocamentos de arquivo dos arquivos "
+"divididos do Info. Dois comandos do Emacs fazem isso. @code{Info-tagify} "
+"adiciona uma tabela de etiquetas para um arquivo não dividido carecendo de "
+"uma. Essa função também é útil para validação de arquivo do Info "
+"(@pxref{Executando @code{Info-validate}}). Também é possível dividir um "
+"arquivo não dividido do Info com @code{Info-split}."
 
 #. type: node
 #: texinfo/texinfo.texi:22069
