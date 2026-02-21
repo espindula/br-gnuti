@@ -58829,13 +58829,13 @@ msgstr ""
 #: texinfo/texinfo.texi:21771
 #, no-wrap
 msgid "C-c C-t C-l"
-msgstr ""
+msgstr "C-c C-t C-l"
 
 #. type: itemx
 #: texinfo/texinfo.texi:21772
 #, no-wrap
 msgid "M-x tex-recenter-output-buffer"
-msgstr ""
+msgstr "M-x tex-recenter-output-buffer"
 
 #. type: table
 #: texinfo/texinfo.texi:21775
@@ -58843,6 +58843,9 @@ msgid ""
 "Redisplay the shell buffer in which the @TeX{} printing and formatting "
 "commands are run to show its most recent output."
 msgstr ""
+"Reexibir o buffer do shell no qual os comandos de impressão e de "
+"formatação do @TeX{} são executados para mostrar a saída gerada mais "
+"recente dele."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:21780
@@ -58850,6 +58853,8 @@ msgid ""
 "Thus, the usual sequence of commands for formatting a buffer is as follows "
 "(with comments to the right):"
 msgstr ""
+"Assim, a sequência usual de comandos para formatar um buffer é a seguinte "
+"(com comentários à direita):"
 
 #. type: group
 #: texinfo/texinfo.texi:21786
@@ -58859,6 +58864,9 @@ msgid ""
 "C-c C-t C-p             @r{Print the DVI file.}\n"
 "C-c C-t C-q             @r{Display the printer queue.}\n"
 msgstr ""
+"C-c C-t C-b @r{Executar @command{texi2dvi} no buffer.}\n"
+"C-c C-t C-p @r{Imprimir o arquivo DVI.}\n"
+"C-c C-t C-q @r{Exibir a fila da impressora.}\n"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:21793
@@ -58868,6 +58876,10 @@ msgid ""
 "@code{texinfo-texindex-command}, and @code{tex-dvi-print-command} commands "
 "are all run in this shell."
 msgstr ""
+"Os comandos de formatação do @TeX{} do modo Texinfo iniciam um subshell no "
+"Emacs chamado o @file{*tex-shell*}. Os comandos @code{texinfo-tex-command}, "
+"@code{texinfo-texindex-command} e @code{tex-dvi-print-command} são todos "
+"executados nesse shell."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:21797
@@ -58876,6 +58888,9 @@ msgid ""
 "can switch to and from and use the @samp{*tex-shell*} buffer as you would "
 "any other shell buffer."
 msgstr ""
+"Você consegue observar os comandos operarem no buffer @samp{*tex-shell*} e "
+"consegue comutar, para e de, e usar o buffer @samp{*tex-shell*} como faria "
+"com qualquer outro buffer de shell."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:21801
@@ -58883,6 +58898,8 @@ msgid ""
 "The formatting and print commands depend on the values of several "
 "variables.  The default values are:"
 msgstr ""
+"Os comandos de formatação e de impressão dependem dos valores de várias "
+"variáveis. Os valores padrão são:"
 
 #. type: group
 #: texinfo/texinfo.texi:21805
@@ -58891,6 +58908,8 @@ msgid ""
 "    @r{Variable}                              @r{Default value}\n"
 "\n"
 msgstr ""
+"    @r{Variável}                              @r{Valor padrão}\n"
+"\n"
 
 #. type: group
 #: texinfo/texinfo.texi:21815
@@ -58906,6 +58925,15 @@ msgid ""
 "tex-dvi-print-command                     \"lpr -d\"\n"
 "tex-show-queue-command                    \"lpq\"\n"
 msgstr ""
+"texinfo-texi2dvi-command                  \"texi2dvi\"\n"
+"texinfo-tex-command                       \"tex\"\n"
+"texinfo-texindex-command                  \"texindex\"\n"
+"texinfo-delete-from-print-queue-command   \"lprm\"\n"
+"texinfo-tex-trailer                       \"@@bye\"\n"
+"tex-start-of-header                       \"%**start\"\n"
+"tex-end-of-header                         \"%**end\"\n"
+"tex-dvi-print-command                     \"lpr -d\"\n"
+"tex-show-queue-command                    \"lpq\"\n"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:21823
@@ -58915,12 +58943,17 @@ msgid ""
 "Emacs Manual}), or with your @file{.emacs} initialization file (@pxref{Init "
 "File, , , emacs, The GNU Emacs Manual})."
 msgstr ""
+"Você pode mudar os valores dessas variáveis com o comando @kbd{M-x "
+"set-variable} (@pxref{Examinando, , Examinando e Configurando Variáveis, "
+"emacs, O Manual do GNU Emacs}), ou com teu arquivo de inicialização "
+"@file{.emacs} (@pxref{Arquivo de Iniciciação, , , emacs, O Manual do GNU "
+"Emacs})."
 
 #. type: cindex
 #: texinfo/texinfo.texi:21824
 #, no-wrap
 msgid "Customize Emacs package (@t{Development/Docs/Texinfo})"
-msgstr ""
+msgstr "Personalizar o pacote Emacs (@t{Development/Docs/Texinfo})"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:21831
@@ -58932,41 +58965,49 @@ msgid ""
 "found in the @samp{Development/Docs/Texinfo} group, once you invoke the "
 "@kbd{M-x customize} command."
 msgstr ""
+"A partir da versão 20, o GNU Emacs oferece uma interface amigável, chamada "
+"@dfn{Customize}, para mudança de valores de variáveis definíveis pelo(a) "
+"usuário(a). @xref{Personalização Fácil, , Interface de Personalização "
+"Fácil, emacs, O Manual do GNU Emacs}, para mais detalhes acerca disso. As "
+"variáveis do Texinfo podem ser encontradas no grupo "
+"@samp{Development/Docs/Texinfo}, depois de invocar o comando @kbd{M-x "
+"customize}."
 
 #. type: node
 #: texinfo/texinfo.texi:21833
 #, no-wrap
 msgid "Compile-Command"
-msgstr ""
+msgstr "Comando de Compilação"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:21835
 msgid "@nodedescription How to print using Emacs's compile command."
 msgstr ""
+"@nodedescription Como imprimir usando o comando de compilação do Emacs."
 
 #. type: subsection
 #: texinfo/texinfo.texi:21835
 #, no-wrap
 msgid "Using the Local Variables List"
-msgstr ""
+msgstr "Usando a Lista de Variáveis Locais"
 
 #. type: cindex
 #: texinfo/texinfo.texi:21836
 #, no-wrap
 msgid "Local variables"
-msgstr ""
+msgstr "Variáveis locais"
 
 #. type: cindex
 #: texinfo/texinfo.texi:21837
 #, no-wrap
 msgid "Compile command for formatting"
-msgstr ""
+msgstr "Comando de compilação para formatação"
 
 #. type: cindex
 #: texinfo/texinfo.texi:21838
 #, no-wrap
 msgid "Format with the compile command"
-msgstr ""
+msgstr "Formatar com o comando de compilação"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:21848
@@ -58980,6 +59021,14 @@ msgid ""
 "example, at the end of the @file{gdb.texi} file, after the @code{@@bye}, you "
 "could put the following:"
 msgstr ""
+"Outra maneira de aplicar o comando de formatação do @TeX{} a um arquivo do "
+"Texinfo é a de colocar esse comando em uma @dfn{lista de variáveis locais} "
+"no final do arquivo do Texinfo. Você consegue então especificar os "
+"comandos @command{tex} ou @command{texi2dvi} como um @code{compile-command} "
+"e fazer com que o Emacs execute-o digitando @kbd{M-x compile}. Isso cria um "
+"shell especial chamado o buffer do @file{*compilation*} no qual o Emacs "
+"executa o comando de compilação. Por exemplo, no final do arquivo "
+"@file{gdb.texi}, depois do @code{@@bye}, você poderia colocar o seguinte:"
 
 #. type: group
 #: texinfo/texinfo.texi:21854
@@ -58989,6 +59038,9 @@ msgid ""
 "compile-command: \"texi2dvi gdb.texi\"\n"
 "End:\n"
 msgstr ""
+"Variáveis locais:\n"
+"compile-command: \"texi2dvi gdb.texi\"\n"
+"Fim:\n"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:21860
@@ -58996,17 +59048,20 @@ msgid ""
 "This technique is most often used by programmers who also compile programs "
 "this way; see @ref{Compilation, , , emacs, The GNU Emacs Manual}."
 msgstr ""
+"Essa técnica é mais frequentemente usada por programadores(as) que também "
+"compilam programas dessa maneira; veja-se @ref{Compilação, , , emacs, O "
+"Manual do GNU Emacs}."
 
 #. type: section
 #: texinfo/texinfo.texi:21864 texinfo/texinfo.texi:21866
 #, no-wrap
 msgid "Texinfo Mode Summary"
-msgstr ""
+msgstr "Sumário do Modo Texinfo"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:21866
 msgid "@nodedescription Summary of all the Texinfo mode commands."
-msgstr ""
+msgstr "@nodedescription Resumo de todos os comandos do modo Texinfo."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:21872
@@ -59015,12 +59070,16 @@ msgid ""
 "with the same keys.  All the commands that are custom-created for Texinfo "
 "mode begin with @kbd{C-c}.  The keys are somewhat mnemonic."
 msgstr ""
+"No modo Texinfo, cada conjunto de comandos tem atalhos de teclado padrão "
+"que começam com as mesmas teclas. Todos os comandos que sejam "
+"personalizadamente criados para o modo Texinfo começam com @kbd{C-c}. As "
+"teclas são um tanto mnemônicas."
 
 #. type: subheading
 #: texinfo/texinfo.texi:21873
 #, no-wrap
 msgid "Insert Commands"
-msgstr ""
+msgstr "Comandos de Inserção"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:21879
@@ -59030,6 +59089,10 @@ msgid ""
 "mnemonically to use @kbd{C-c C-i}, for `custom insert', but @kbd{C-c C-c} is "
 "quick to type.)"
 msgstr ""
+"Os comandos de inserção são invocados digitando-se @kbd{C-c} duas vezes e "
+"depois a primeira letra do comando @@ a ser inserida. (Pode fazer mais "
+"sentido mnemonicamente usar @kbd{C-c C-i}, para `inserção personalizada', "
+"mas @kbd{C-c C-c} é rápido de digitar)."
 
 #. type: example
 #: texinfo/texinfo.texi:21891
@@ -59047,6 +59110,17 @@ msgid ""
 "C-c @}       @r{Move out of enclosing braces.}\n"
 "\n"
 msgstr ""
+"C-c C-c c       @r{Inserir} @samp{@@code}.\n"
+"C-c C-c d       @r{Inserir} @samp{@@dfn}.\n"
+"C-c C-c e       @r{Inserir} @samp{@@end}.\n"
+"C-c C-c i       @r{Inserir} @samp{@@item}.\n"
+"C-c C-c n       @r{Inserir} @samp{@@node}.\n"
+"C-c C-c s       @r{Inserir} @samp{@@samp}.\n"
+"C-c C-c v       @r{Inserir} @samp{@@var}.\n"
+"C-c @{       @r{Inserir chaves.}\n"
+"C-c ]\n"
+"C-c @}       @r{Mover para fora das chaves cercantes.}\n"
+"\n"
 
 #. type: group
 #: texinfo/texinfo.texi:21896
@@ -59056,12 +59130,15 @@ msgid ""
 "               @r{in the space for the description}\n"
 "               @r{in a menu entry line.}\n"
 msgstr ""
+"C-c C-c C-d     @r{Inserir título da seção de um nó}\n"
+"               @r{no espaço para a descrição}\n"
+"               @r{em uma linha de entrada do menu.}\n"
 
 #. type: subheading
 #: texinfo/texinfo.texi:21899
 #, no-wrap
 msgid "Show Structure"
-msgstr ""
+msgstr "Mostrar Estrutura"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:21903
@@ -59069,18 +59146,20 @@ msgid ""
 "The @code{texinfo-show-structure} command is often used within a narrowed "
 "region."
 msgstr ""
+"O comando @code{texinfo-show-structure} frequentemente é usado em uma "
+"região estreitada."
 
 #. type: example
 #: texinfo/texinfo.texi:21906
 #, no-wrap
 msgid "C-c C-s         @r{List all the headings.}\n"
-msgstr ""
+msgstr "C-c C-s         @r{Listar todos os títulos.}\n"
 
 #. type: subheading
 #: texinfo/texinfo.texi:21908
 #, no-wrap
 msgid "The Master Update Command"
-msgstr ""
+msgstr "O Comando Mestre de Atualização"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:21912
@@ -59088,6 +59167,8 @@ msgid ""
 "The @code{texinfo-master-menu} command creates a master menu; and can be "
 "used to update every node and menu in a file as well."
 msgstr ""
+"O comando @code{texinfo-master-menu} cria um menu mestre; e também pode ser "
+"usado para atualizar cada nó e menu em um arquivo."
 
 #. type: group
 #: texinfo/texinfo.texi:21919
@@ -59097,6 +59178,9 @@ msgid ""
 "M-x texinfo-master-menu\n"
 "               @r{Create or update a master menu.}\n"
 msgstr ""
+"C-c C-u m\n"
+"M-x texinfo-master-menu\n"
+"               @r{Criar ou atualizar um menu mestre.}\n"
 
 #. type: group
 #: texinfo/texinfo.texi:21925
@@ -59106,12 +59190,15 @@ msgid ""
 "               @r{create or update all nodes and regular}\n"
 "               @r{menus, and then create a master menu.}\n"
 msgstr ""
+"C-u C-c C-u m   @r{Com @kbd{C-u} como um argumento de prefixo, primeiro}\n"
+"               @r{criar ou atualizar todos os nós e menus regulares}\n"
+"               @r{e, em seguida, criar um menu mestre.}\n"
 
 #. type: subheading
 #: texinfo/texinfo.texi:21928
 #, no-wrap
 msgid "Update Pointers"
-msgstr ""
+msgstr "Atualizar Ponteiros"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:21933
@@ -59120,6 +59207,9 @@ msgid ""
 "either @kbd{C-n} for @code{texinfo-update-node} or @kbd{C-e} for "
 "@code{texinfo-every-node-update}."
 msgstr ""
+"Os comandos de atualização de ponteiro são invocados digitando-se "
+"@kbd{C-c C-u} e, então, ou @kbd{C-n} para @code{texinfo-update-node} ou "
+"@kbd{C-e} para @code{texinfo-every-node-update}."
 
 #. type: example
 #: texinfo/texinfo.texi:21937
@@ -59128,12 +59218,14 @@ msgid ""
 "C-c C-u C-n     @r{Update a node.}\n"
 "C-c C-u C-e     @r{Update every node in the buffer.}\n"
 msgstr ""
+"C-c C-u C-n     @r{Atualizar um nó.}\n"
+"C-c C-u C-e     @r{Atualizar cada nó no buffer.}\n"
 
 #. type: subheading
 #: texinfo/texinfo.texi:21939
 #, no-wrap
 msgid "Update Menus"
-msgstr ""
+msgstr "Menus de Atualização"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:21946
@@ -59143,6 +59235,10 @@ msgid ""
 "@code{texinfo-all-menus-update}.  To update both nodes and menus at the same "
 "time, precede @kbd{C-c C-u C-a} with @kbd{C-u}."
 msgstr ""
+"Invocar os comandos de atualização de menu digitando @kbd{C-c C-u} e, "
+"então, ou @kbd{C-m} para @code{texinfo-make-menu} ou @kbd{C-a} para "
+"@code{texinfo-all-menus-update}. Para atualizar ambos, nós e menus, ao "
+"mesmo tempo, preceder @kbd{C-c C-u C-a} com @kbd{C-u}."
 
 #. type: example
 #: texinfo/texinfo.texi:21949
@@ -59151,6 +59247,8 @@ msgid ""
 "C-c C-u C-m     @r{Make or update a menu.}\n"
 "\n"
 msgstr ""
+"C-c C-u C-m     @r{Criar ou atualizar um menu.}\n"
+"\n"
 
 #. type: group
 #: texinfo/texinfo.texi:21953
@@ -59159,6 +59257,8 @@ msgid ""
 "C-c C-u C-a     @r{Make or update all}\n"
 "               @r{menus in a buffer.}\n"
 msgstr ""
+"C-c C-u C-a     @r{Criar ou atualizar todos}\n"
+"               @r{os menus em um buffer.}\n"
 
 #. type: group
 #: texinfo/texinfo.texi:21959
