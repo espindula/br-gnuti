@@ -59509,36 +59509,36 @@ msgstr ""
 #: texinfo/texinfo.texi:22069
 #, no-wrap
 msgid "Tagifying"
-msgstr ""
+msgstr "Etiquetando"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:22071
 msgid "@nodedescription How to tagify a file."
-msgstr ""
+msgstr "@nodedescription Como etiquetar um arquivo."
 
 #. type: subsection
 #: texinfo/texinfo.texi:22071
 #, no-wrap
 msgid "Tagifying a File"
-msgstr ""
+msgstr "Etiquetando um Arquivo"
 
 #. type: cindex
 #: texinfo/texinfo.texi:22072
 #, no-wrap
 msgid "Making a tag table manually"
-msgstr ""
+msgstr "Fazendo uma tabela de etiquetas manualmente"
 
 #. type: cindex
 #: texinfo/texinfo.texi:22073
 #, no-wrap
 msgid "Tag table, making manually"
-msgstr ""
+msgstr "Tabela de etiquetas, fazendo manualmente"
 
 #. type: cindex
 #: texinfo/texinfo.texi:22074
 #, no-wrap
 msgid "Info files @subentry making a tag table"
-msgstr ""
+msgstr "Arquivos do Info @subentry criando uma tabela de etiquetas"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:22082
@@ -59550,6 +59550,13 @@ msgid ""
 "@pxref{Unsplit and Tagify}).  Adding a tag table is therefore more generally "
 "useful for manually written Info files."
 msgstr ""
+"Os processadores do Texinfo criam tabelas de etiquetas automaticamente. A "
+"única exceção surge quando @code{texinfo-format-buffer} é chamado com um "
+"prefixo, como @kbd{C-u M-x texinfo-format-buffer}, para criar um arquivo "
+"não dividido do Info sem uma tabela de etiquetas (a qual pode ser útil em "
+"alguns casos para validação do arquivo do Info, @pxref{Desdividir e "
+"Etiquetar}). Adicionar uma tabela de etiquetas é, portanto, mais útil "
+"geralmente para arquivos do Info escritos manualmente."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:22085
@@ -59557,12 +59564,14 @@ msgid ""
 "To create a tag table for an nonsplit file, visit the Info file you wish to "
 "tagify and type:"
 msgstr ""
+"Para criar uma tabela de etiquetas para um arquivo não dividido, visite o "
+"arquivo do Info que você desejar etiquetar e digite:"
 
 #. type: example
 #: texinfo/texinfo.texi:22088 texinfo/texinfo.texi:22560
 #, no-wrap
 msgid "M-x Info-tagify\n"
-msgstr ""
+msgstr "M-x Info-tagify\n"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:22095
@@ -59572,35 +59581,40 @@ msgid ""
 "(@pxref{Tag and Split Files}).  A tag table is also needed to validate or "
 "split the Info file."
 msgstr ""
+"(Observe o @samp{I} maiúsculo no @code{Info-tagify}). Isso cria um arquivo "
+"do Info com uma tabela de etiquetas. Uma tabela de etiquetas faz parte de um "
+"bem formado arquivo do Info (@pxref{Etiquetar e Dividir Arquivos}). Uma "
+"tabela de etiquetas também é necessária para validar ou para dividir o "
+"arquivo do Info."
 
 #. type: node
 #: texinfo/texinfo.texi:22097
 #, no-wrap
 msgid "Splitting"
-msgstr ""
+msgstr "Dividindo"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:22099
 msgid "@nodedescription How to split a file manually."
-msgstr ""
+msgstr "@nodedescription Como dividir um arquivo manualmente."
 
 #. type: subsection
 #: texinfo/texinfo.texi:22099
 #, no-wrap
 msgid "Splitting a File Manually"
-msgstr ""
+msgstr "Dividindo um Arquivo Manualmente"
 
 #. type: cindex
 #: texinfo/texinfo.texi:22100
 #, no-wrap
 msgid "Splitting an Info file manually"
-msgstr ""
+msgstr "Dividindo um arquivo do Info manualmente"
 
 #. type: cindex
 #: texinfo/texinfo.texi:22101
 #, no-wrap
 msgid "Info files @subentry splitting manually"
-msgstr ""
+msgstr "Arquivos do Info @subentry dividindo manualmente"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:22107
@@ -59610,11 +59624,15 @@ msgid ""
 "you will let one of the formatting commands do this job for you.  @xref{Info "
 "Formatting}.)"
 msgstr ""
+"Você deveria dividir um arquivo grande ou então deixar o comando "
+"@code{texinfo-format-buffer} ou @code{makeinfo-buffer} fazer isso para você "
+"automaticamente. (Geralmente você deixará um dos comandos de formatação "
+"fazer esse trabalho para você. @xref{Formatação do Info})."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:22109
 msgid "The split-off files are called the indirect subfiles."
-msgstr ""
+msgstr "Os arquivos divididos são chamados de subarquivos indiretos."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:22114
@@ -59623,6 +59641,10 @@ msgid ""
 "need to create a tag table yourself if you are doing the job manually.  "
 "@xref{Tagifying}, for information about creating a tag table."
 msgstr ""
+"As tabelas de etiquetas são criadas automaticamente pelo comando de "
+"formatação; você só precisa criar uma tabela de etiquetas se estiver "
+"fazendo o trabalho manualmente. @xref{Etiquetando}, para informações "
+"acerca da criação de uma tabela de etiquetas."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:22117
@@ -59630,6 +59652,8 @@ msgid ""
 "Visit the Info file you wish to tagify and split manually and type the two "
 "commands:"
 msgstr ""
+"Visite o arquivo do Info que você deseja etiquetar e dividir manualmente e "
+"digite os dois comandos:"
 
 #. type: example
 #: texinfo/texinfo.texi:22121
@@ -59638,11 +59662,13 @@ msgid ""
 "M-x Info-tagify\n"
 "M-x Info-split\n"
 msgstr ""
+"M-x Info-tagify\n"
+"M-x Info-split\n"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:22125
 msgid "(Note that the @samp{I} in @samp{Info} is uppercase.)"
-msgstr ""
+msgstr "(Observe que o @samp{I} no @samp{Info} está maiúsculo)."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:22131
@@ -59653,6 +59679,12 @@ msgid ""
 "written in the same directory the original file is in, with names generated "
 "by appending @samp{-} and a number to the original file name."
 msgstr ""
+"Quando você usa o comando @code{Info-split}, o buffer é modificado em um "
+"(pequeno) arquivo do Info que lista os subarquivos indiretos. Esse arquivo "
+"deveria ser salvo no lugar do arquivo original visitado. Os subarquivos "
+"indiretos são escritos no mesmo diretório em que o arquivo original está, "
+"com nomes gerados pospondo-se @samp{-} e um número ao nome original do "
+"arquivo."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:22134
@@ -59660,59 +59692,62 @@ msgid ""
 "The primary file still functions as an Info file, but it contains just the "
 "tag table and a directory of subfiles.  @xref{Tag and Split Files}."
 msgstr ""
+"O arquivo primário ainda funciona como um arquivo do Info, mas ele contém "
+"apenas a tabela de etiquetas e um diretório de subarquivos. @xref{Etiquetar "
+"e Dividir Arquivos}."
 
 #. type: section
 #: texinfo/texinfo.texi:22136 texinfo/texinfo.texi:22138
 #, no-wrap
 msgid "Catching Mistakes"
-msgstr ""
+msgstr "Capturando Erros"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:22138
 msgid "@nodedescription How to find mistakes in formatting."
-msgstr ""
+msgstr "@nodedescription Como encontrar erros na formatação."
 
 #. type: cindex
 #: texinfo/texinfo.texi:22139
 #, no-wrap
 msgid "Structure, catching mistakes in"
-msgstr ""
+msgstr "Estrutura, capturando erros em"
 
 #. type: cindex
 #: texinfo/texinfo.texi:22140
 #, no-wrap
 msgid "Nodes, catching mistakes"
-msgstr ""
+msgstr "Nós, capturando erros"
 
 #. type: cindex
 #: texinfo/texinfo.texi:22141
 #, no-wrap
 msgid "Catching mistakes"
-msgstr ""
+msgstr "Capturando erros"
 
 #. type: cindex
 #: texinfo/texinfo.texi:22142
 #, no-wrap
 msgid "Correcting mistakes"
-msgstr ""
+msgstr "Corrigindo erros"
 
 #. type: cindex
 #: texinfo/texinfo.texi:22143
 #, no-wrap
 msgid "Mistakes, catching"
-msgstr ""
+msgstr "Erros, capturando"
 
 #. type: cindex
 #: texinfo/texinfo.texi:22144
 #, no-wrap
 msgid "Problems, catching"
-msgstr ""
+msgstr "Problemas, capturando"
 
 #. type: cindex
 #: texinfo/texinfo.texi:22145
 #, no-wrap
 msgid "Debugging the Texinfo structure"
-msgstr ""
+msgstr "Depurando a estrutura do Texinfo"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:22151
@@ -59722,6 +59757,9 @@ msgid ""
 "@@-commands, and you can make mistakes with the structure of the nodes and "
 "chapters."
 msgstr ""
+"Além de erros no conteúdo da tua documentação, existem dois tipos de "
+"erros que você pode cometer com o Texinfo: você pode cometer erros com "
+"comandos @@ e pode cometer erros com a estrutura dos nós e dos capítulos."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:22155
@@ -59730,6 +59768,10 @@ msgid ""
 "formatting command on the region that has a problem; indeed, you can run "
 "these commands on each region as you write it."
 msgstr ""
+"Para encontrar problemas com comandos @@, você pode executar @TeX{} ou um "
+"comando de formatação de região sobre a região que tenha um problema; na "
+"verdade, você pode executar esses comandos sobre cada região enquanto e "
+"escreve."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:22159
@@ -59738,6 +59780,10 @@ msgid ""
 "@kbd{C-c C-s} (@code{texinfo-show-structure}) and the related @code{occur} "
 "command and you can use the @kbd{M-x Info-validate} command."
 msgstr ""
+"Para encontrar problemas com a estrutura de nós e de capítulos, você "
+"consegue usar @kbd{C-c C-s} (@code{texinfo-show-structure}) e o comando "
+"@code{occur} relacionado e você consegue usar o comando @kbd{M-x "
+"Info-validate}."
 
 #. type: subsection
 #: texinfo/texinfo.texi:22161 texinfo/texinfo.texi:22163
