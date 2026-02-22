@@ -59789,18 +59789,18 @@ msgstr ""
 #: texinfo/texinfo.texi:22161 texinfo/texinfo.texi:22163
 #, no-wrap
 msgid "@command{texi2any} Preferred"
-msgstr ""
+msgstr "@command{texi2any} Preferido"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:22163
 msgid "@nodedescription @command{texi2any} finds errors."
-msgstr ""
+msgstr "@nodedescription @command{texi2any} encontra erros."
 
 #.  prev name
 #. type: anchor{#1}
 #: texinfo/texinfo.texi:22167
 msgid "@code{makeinfo} Preferred"
-msgstr ""
+msgstr "@code{makeinfo} Preferido"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:22173
@@ -59811,6 +59811,11 @@ msgid ""
 "automatically creating and updating node pointers and menus remove many "
 "opportunities for human error."
 msgstr ""
+"O programa @command{texi2any} faz um excelente trabalho de capturar erros e "
+"informá-los–--muito melhor que @code{texinfo-format-region} ou "
+"@code{texinfo-format-buffer}. Além disso, as diversas funções para "
+"automaticamente criar e atualizar ponteiros de nós e menus removem muitas "
+"oportunidades para erro humano."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:22180
@@ -59821,35 +59826,41 @@ msgid ""
 "you cannot use @command{texi2any}, or your problem is very puzzling, then "
 "you may want to use the tools described in this section."
 msgstr ""
+"Use @command{texi2any} (ou as manifestações dele no modo Texinfo, "
+"@code{makeinfo-region} e @code{makeinfo-buffer}) para formatar teu arquivo e "
+"verificar se existem outros erros. Essa é a melhor maneira de trabalhar com "
+"o Texinfo. Mas se não puder usar @command{texi2any}, ou se teu problema for "
+"muito intrigante, então você pode querer usar as ferramentas descritas "
+"nesta seção."
 
 #. type: node
 #: texinfo/texinfo.texi:22182
 #, no-wrap
 msgid "Debugging with Info"
-msgstr ""
+msgstr "Depurando com Info"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:22184
 msgid "@nodedescription How to catch errors with Info formatting."
-msgstr ""
+msgstr "@nodedescription Como capturar erros com formatação do Info."
 
 #. type: subsection
 #: texinfo/texinfo.texi:22184
 #, no-wrap
 msgid "Catching Errors with Info Formatting"
-msgstr ""
+msgstr "Capturando Erros com formatação do Info"
 
 #. type: cindex
 #: texinfo/texinfo.texi:22185
 #, no-wrap
 msgid "Catching errors with Info formatting"
-msgstr ""
+msgstr "Capturando erros com formatação do Info"
 
 #. type: cindex
 #: texinfo/texinfo.texi:22186
 #, no-wrap
 msgid "Debugging with Info formatting"
-msgstr ""
+msgstr "Depuração com formatação do Info"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:22191
@@ -59858,6 +59869,9 @@ msgid ""
 "@code{texinfo-format-region} or the @code{makeinfo-region} command to see "
 "whether the region formats properly."
 msgstr ""
+"Depois de ter escrito parte de um arquivo do Texinfo, você consegue usar o "
+"comando @code{texinfo-format-region} ou o @code{makeinfo-region} para ver se "
+"a região formata corretamente."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:22196
@@ -59866,6 +59880,10 @@ msgid ""
 "you cannot use the @code{makeinfo-region} command; therefore, the rest of "
 "this section presumes that you are using @code{texinfo-format-region}."
 msgstr ""
+"Provavelmente, entretanto, você está lendo esta seção porque, por algum "
+"motivo, não pode usar o comando @code{makeinfo-region}; portanto, o "
+"restante desta seção presume que você está usando "
+"@code{texinfo-format-region}."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:22204
@@ -59877,6 +59895,13 @@ msgid ""
 "of the error.  Also, the text will not be formatted after the place where "
 "the error occurred (or more precisely, where it was detected)."
 msgstr ""
+"Se você tiver cometido um erro com um comando @@, "
+"@code{texinfo-format-region} parará o processamento no momento ou depois do "
+"erro e exibirá uma mensagem de erro. Para ver onde no buffer o ocorreu o "
+"erro, comute para o buffer @samp{*Info Region*}; o cursor estará em uma "
+"posição que é posterior ao local do erro. Além disso, o texto não será "
+"formatado após o local onde o erro ocorreu (ou mais precisamente, onde ele "
+"foi detectado)."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:22208
@@ -59885,12 +59910,15 @@ msgid ""
 "menus} with an `s' on the end, instead of with @code{@@end menu}, you will "
 "see an error message that says:"
 msgstr ""
+"Por exemplo, se acidentalmente encerrar um menu com o comando @code{@@end "
+"menus} com um `s' no final, em vez de @code{@@end menu}, você verá uma "
+"mensagem de erro que diz:"
 
 #. type: example
 #: texinfo/texinfo.texi:22211
 #, no-wrap
 msgid "@@end menus is not handled by texinfo\n"
-msgstr ""
+msgstr "@@end menus não é manuseado pelo texinfo\n"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:22216
@@ -59898,6 +59926,8 @@ msgid ""
 "The cursor will stop at the point in the buffer where the error occurs, or "
 "not long after it.  The buffer will look like this:"
 msgstr ""
+"O cursor parará no ponto no buffer onde o erro ocorrer, ou não muito "
+"depois dele. O buffer se parecerá com isto:"
 
 #. type: group
 #: texinfo/texinfo.texi:22221
@@ -59907,6 +59937,9 @@ msgid ""
 "* Menu:\n"
 "\n"
 msgstr ""
+"---------- Buffer: *Info Region* ----------\n"
+"* Menu:\n"
+"\n"
 
 #. type: group
 #: texinfo/texinfo.texi:22230
@@ -59921,6 +59954,14 @@ msgid ""
 "@point{}\n"
 "---------- Buffer: *Info Region* ----------\n"
 msgstr ""
+"* Usando texinfo-show-structure:: Como usar\n"
+"                                  `texinfo-show-structure'\n"
+"                                  para capturar erros.\n"
+"* Executando Info-validate::      Como verificar se existem\n"
+"                                  nós não referenciados.\n"
+"@@end menus\n"
+"@point{}\n"
+"---------- Buffer: *Info Region* ----------\n"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:22236
@@ -59928,12 +59969,15 @@ msgid ""
 "The @code{texinfo-format-region} command sometimes provides slightly odd "
 "error messages.  For example, the following cross-reference fails to format:"
 msgstr ""
+"O comando @code{texinfo-format-region} às vezes fornece mensagens de erro "
+"um pouco estranhas. Por exemplo, a seguinte referência cruzada falha para "
+"formatar:"
 
 #. type: example
 #: texinfo/texinfo.texi:22239
 #, no-wrap
 msgid "(@@xref@{Catching Mistakes, for more info.)\n"
-msgstr ""
+msgstr "(@@xref@{Capturando Erros, para mais informações).\n"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:22247
@@ -59943,6 +59987,11 @@ msgid ""
 "@samp{Unbalanced braces}.  This is because the formatting command looks for "
 "mismatches between braces as if they were parentheses."
 msgstr ""
+"Neste caso, @code{texinfo-format-region} detecta a chave de fechamento "
+"ausente, mas exibe uma mensagem que diz @samp{Parênteses não balanceados} "
+"em vez de @samp{Chaves não balanceadas}. Isso ocorre porque o comando de "
+"formatação procura descorrespondências entre chaves como se elas fossem "
+"parênteses."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:22251
@@ -59951,23 +60000,26 @@ msgid ""
 "example, in the following, the closing brace is swapped with the closing "
 "parenthesis:"
 msgstr ""
+"Às vezes, @code{texinfo-format-region} falha para detectar erros. Por "
+"exemplo, a seguir, a chave de fechamento é trocada pelo parêntese de "
+"fechamento:"
 
 #. type: example
 #: texinfo/texinfo.texi:22254
 #, no-wrap
 msgid "(@@xref@{Catching Mistakes), for more info.@}\n"
-msgstr ""
+msgstr "(@@xref@{Capturando Erros), para mais informações.@}\n"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:22258
 msgid "Formatting produces:"
-msgstr ""
+msgstr "A formatação produz:"
 
 #. type: example
 #: texinfo/texinfo.texi:22260
 #, no-wrap
 msgid "(*Note for more info.: Catching Mistakes)\n"
-msgstr ""
+msgstr "(*Observação para mais informações: Capturando Erros)\n"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:22264
@@ -59975,12 +60027,14 @@ msgid ""
 "The only way for you to detect this error is to realize that the reference "
 "should have looked like this:"
 msgstr ""
+"A única maneira para você detectar esse erro é a de perceber que a "
+"referência deveria ter se parecido com isto:"
 
 #. type: example
 #: texinfo/texinfo.texi:22267
 #, no-wrap
 msgid "(*Note Catching Mistakes::, for more info.)\n"
-msgstr ""
+msgstr "(*Observe Capturando Erros::, para mais informações).\n"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:22272
@@ -59989,12 +60043,14 @@ msgid ""
 "@key{RET}} (@code{Info-follow-reference}), you will generate an error "
 "message that says:"
 msgstr ""
+"Aliás, se estiver lendo este nó no Info e digitar @kbd{f @key{RET}} "
+"(@code{Info-follow-reference}), você gerará uma mensagem de erro que diz:"
 
 #. type: example
 #: texinfo/texinfo.texi:22275
 #, no-wrap
 msgid "No such node: \"Catching Mistakes) The only way @dots{}\n"
-msgstr ""
+msgstr "Esse nó não existe: \"Capturando Erros) A única maneira @dots{}\n"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:22286
@@ -60007,34 +60063,41 @@ msgid ""
 "Mistakes' node.  (If you try this, you can return from the `Catching "
 "Mistakes' node by typing @kbd{l} (@code{Info-last}).)"
 msgstr ""
+"Isso ocorre porque o Info percebe o exemplo do erro como a primeira "
+"referência cruzada neste nó e se você digitasse um @key{RET} "
+"imediatamente depois de digitar o comando @kbd{f} do Info, o Info tentará "
+"ir para o nó referenciado. Se você digitasse @kbd{f catch @key{TAB} "
+"@key{RET}}, o Info completará o nome do nó do exemplo escrito corretamente "
+"e te levará ao nó `Capturando Erros'. (Se você tentar isso, poderá "
+"retornar do nó `Capturando Erros' digitando @kbd{l} (@code{Info-last}))."
 
 #. type: subsection
 #: texinfo/texinfo.texi:22288 texinfo/texinfo.texi:22290
 #, no-wrap
 msgid "Debugging with @TeX{}"
-msgstr ""
+msgstr "Depuração com @TeX{}"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:22290
 msgid "@nodedescription How to catch errors with @TeX{} formatting."
-msgstr ""
+msgstr "@nodedescription Como capturar erros com a formatação do @TeX{}."
 
 #. type: cindex
 #: texinfo/texinfo.texi:22291
 #, no-wrap
 msgid "Catching errors with @TeX{} formatting"
-msgstr ""
+msgstr "Capturando erros com a formatação do @TeX{}"
 
 #. type: cindex
 #: texinfo/texinfo.texi:22292
 #, no-wrap
 msgid "Debugging with @TeX{} formatting"
-msgstr ""
+msgstr "Depuração com formatação do @TeX{}"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:22295
 msgid "You can also catch mistakes when you format a file with @TeX{}."
-msgstr ""
+msgstr "Você também pode capturar erros ao formatar um arquivo com @TeX{}."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:22301
@@ -60045,12 +60108,19 @@ msgid ""
 "messages that make more sense than @TeX{}.  (@xref{Debugging with Info}, for "
 "more information.)"
 msgstr ""
+"Normalmente, você vai querer fazer isso depois de ter executado "
+"@code{texinfo-format-buffer} (ou, melhor, @code{makeinfo-buffer}) sobre o "
+"mesmo arquivo, porque @code{texinfo-format-buffer} às vezes exibe mensagens "
+"de erro que fazem mais sentido que o @TeX{}. (@xref{Depuração com Info}, "
+"para mais informações)."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:22304
 msgid ""
 "For example, @TeX{} was run on a Texinfo file, part of which is shown here:"
 msgstr ""
+"Por exemplo, @TeX{} foi executado sobre um arquivo do Texinfo, parte do qual "
+"é mostrado aqui:"
 
 #. type: example
 #: texinfo/texinfo.texi:22313
@@ -60064,6 +60134,13 @@ msgid ""
 "indices.)\n"
 "---------- Buffer: texinfo.texi ----------\n"
 msgstr ""
+"---------- Buffer: texinfo.texi ----------\n"
+"nome do arquivo Texinfo como extensão.  Os\n"
+"@@samp@{??@} são `curingas' que fazem com que o shell\n"
+"substitua todos os arquivos brutos de índice. (@@xref@{ordenando\n"
+"indices, para mais informações acerca da ordenação de\n"
+"indices).\n"
+"---------- Buffer: texinfo.texi ----------\n"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:22318
@@ -60071,6 +60148,8 @@ msgid ""
 "(The cross-reference lacks a closing brace.)  @TeX{} produced the following "
 "output, after which it stopped:"
 msgstr ""
+"(A referência cruzada careçe de uma chave de fechamento). @TeX{} produziu "
+"a seguinte saída, depois da qual parou:"
 
 #. type: example
 #: texinfo/texinfo.texi:22328
