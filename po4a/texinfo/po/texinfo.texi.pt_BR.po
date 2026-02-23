@@ -60165,6 +60165,15 @@ msgid ""
 "l.27\n"
 "\n"
 msgstr ""
+"---------- Buffer: *tex-shell* ----------\n"
+"Argumento fugitivo?\n"
+"@{ordenando índices, para mais informações acerca de\n"
+"ordenação de índices). @@ETC.\n"
+"! O parágrafo terminou antes que @@xref estivesse completa.\n"
+"<para ser lido novamente>\n"
+"                  @@par\n"
+"l.27\n"
+"\n"
 
 #. type: example
 #: texinfo/texinfo.texi:22331
@@ -60173,18 +60182,21 @@ msgid ""
 "?\n"
 "---------- Buffer: *tex-shell* ----------\n"
 msgstr ""
+"?\n"
+"---------- Buffer: *tex-shell* ----------\n"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:22335
 msgid ""
 "In this case, @TeX{} produced an accurate and understandable error message:"
 msgstr ""
+"Nesse caso, @TeX{} produziu uma mensagem de erro precisa e compreensível:"
 
 #. type: example
 #: texinfo/texinfo.texi:22338
 #, no-wrap
 msgid "Paragraph ended before @@xref was complete.\n"
-msgstr ""
+msgstr "O parágrafo terminou antes que @@xref estivesse completa.\n"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:22345
@@ -60193,6 +60205,9 @@ msgid ""
 "@samp{l.27} means that @TeX{} detected the problem on line 27 of the Texinfo "
 "file.  The @samp{?} is the prompt @TeX{} uses in this circumstance."
 msgstr ""
+"@samp{@@par} é um comando interno do @TeX{} sem relevância para o Texinfo. "
+"@samp{l.27} significa que @TeX{} detectou o problema na linha 27 do arquivo "
+"do Texinfo. O @samp{?} é o prompt que o @TeX{} usa nessa circunstância."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:22348
@@ -60200,6 +60215,8 @@ msgid ""
 "Unfortunately, @TeX{} is not always so helpful, and sometimes you must truly "
 "be a Sherlock Holmes to discover what went wrong."
 msgstr ""
+"Infelizmente, o @TeX{} nem sempre é tão útil e, às vezes, você precisa "
+"realmente ser um Sherlock Holmes para descobrir o que deu errado."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:22351
@@ -60207,6 +60224,8 @@ msgid ""
 "In any case, if you run into a problem like this, you can do one of three "
 "things."
 msgstr ""
+"De qualquer forma, se você se deparar com um problema como esse, poderá "
+"fazer uma de três coisas."
 
 #. type: enumerate
 #: texinfo/texinfo.texi:22356
@@ -60214,6 +60233,8 @@ msgid ""
 "You can tell @TeX{} to continue running and ignore just this error by typing "
 "@key{RET} at the @samp{?} prompt."
 msgstr ""
+"Você pode dizer ao @TeX{} para continuar executando e ignorar apenas esse "
+"erro digitando @key{RET} no prompt @samp{?}."
 
 #. type: enumerate
 #: texinfo/texinfo.texi:22360
@@ -60221,6 +60242,9 @@ msgid ""
 "You can tell @TeX{} to continue running and to ignore all errors as best it "
 "can by typing @kbd{r @key{RET}} at the @samp{?} prompt."
 msgstr ""
+"Você pode dizer ao @TeX{} para continuar executando e para ignorar todos os "
+"erros da melhor maneira possível digitando @kbd{r @key{RET}} no prompt "
+"@samp{?}."
 
 #. type: enumerate
 #: texinfo/texinfo.texi:22366
@@ -60231,6 +60255,12 @@ msgid ""
 "avalanche of error messages, type @kbd{C-c} (or @kbd{C-c C-c}, if you are "
 "running a shell inside Emacs)."
 msgstr ""
+"Essa frequentemente é a melhor coisa a se fazer. No entanto, tenha cuidado: "
+"um erro possivelmente produza uma cascata de mensagens adicionais de erro, "
+"à medida que as consequências dele forem sentidas ao longo do restante do "
+"arquivo. Para parar o @TeX{} quando ele estiver produzindo tal avalanche de "
+"mensagens de erro, digite @kbd{C-c} (ou @kbd{C-c C-c}, se você estiver "
+"executando um shell dentro do Emacs)."
 
 #. type: enumerate
 #: texinfo/texinfo.texi:22370
@@ -60238,6 +60268,8 @@ msgid ""
 "You can tell @TeX{} to stop this run by typing @kbd{x @key{RET}} at the "
 "@samp{?} prompt."
 msgstr ""
+"Você pode dizer ao @TeX{} para interromper essa execução digitando @kbd{x "
+"@key{RET}} no prompt @samp{?}."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:22374
@@ -60245,6 +60277,8 @@ msgid ""
 "If you are running @TeX{} inside Emacs, you need to switch to the shell "
 "buffer and line at which @TeX{} offers the @samp{?} prompt."
 msgstr ""
+"Se estiver executando o @TeX{} dentro do Emacs, você precisará comutar "
+"para o buffer do shell e a linha na qual o @TeX{} oferece o prompt @samp{?}."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:22381
@@ -60256,12 +60290,19 @@ msgid ""
 "write a DVI file that you can print out.  The only error message that @TeX{} "
 "will give you is the somewhat mysterious comment:"
 msgstr ""
+"Às vezes, o @TeX{} formatará um arquivo sem produzir mensagens de erro, "
+"mesmo que exista um problema. Isso geralmente ocorre se um comando não for "
+"finalizado, mas o @TeX{} puder, de qualquer maneira, continuar o "
+"processamento. Por exemplo, se você falhar para finalizar uma lista "
+"detalhada com o comando @code{@@end itemize}, o @TeX{} escreverá um arquivo "
+"DVI que você conseguirá imprimir. A única mensagem de erro que o @TeX{} "
+"lhe dará será o comentário um tanto misterioso:"
 
 #. type: example
 #: texinfo/texinfo.texi:22384
 #, no-wrap
 msgid "(@@end occurred inside a group at level 1)\n"
-msgstr ""
+msgstr "(@@end ocorreu dentro de um grupo no nível 1)\n"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:22393
@@ -60272,6 +60313,11 @@ msgid ""
 "says that it expected to find an @code{@@end} command somewhere in the file; "
 "but that it could not determine where it was needed."
 msgstr ""
+"No entanto, se você imprimir o arquivo DVI, descobrirá que o texto do "
+"arquivo que segue a lista detalhada estará inteiramente recuado como se "
+"fosse parte do último item da lista detalhada. A mensagem de erro é a "
+"maneira como o @TeX{} diz que esperava encontrar um comando @code{@@end} em "
+"algum lugar no arquivo; mas não conseguiu determinar onde era necessário."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:22398
@@ -60280,6 +60326,9 @@ msgid ""
 "group} command.  If you ever are stumped by incomprehensible errors, look "
 "for a missing @code{@@end group} command first."
 msgstr ""
+"Outra fonte de erros notoriamente difíceis de encontrar é um comando "
+"@code{@@end group} ausente. Se você ficar perplexo(a) com erros "
+"incompreensíveis, procure primeiro um comando @code{@@end group} ausente."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:22403
@@ -60288,6 +60337,9 @@ msgid ""
 "its run and display output that looks like the following.  The @samp{*} "
 "indicates that @TeX{} is waiting for input."
 msgstr ""
+"Se o arquivo do Texinfo careçer de linhas de cabeçalho, @TeX{} poderá "
+"parar no início da execução dele e exibir uma saída que se parece com à "
+"seguinte. O @samp{*} indica que @TeX{} está aguardando entrada."
 
 #. type: example
 #: texinfo/texinfo.texi:22408
@@ -60297,6 +60349,9 @@ msgid ""
 "(test.texinfo [1])\n"
 "*\n"
 msgstr ""
+"Este é o TeX, versão 3.14159 (Web2c 7.0)\n"
+"(test.texinfo [1])\n"
+"*\n"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:22416
@@ -60307,6 +60362,11 @@ msgid ""
 "@samp{@@}; and in this circumstance, you are working directly with @TeX{}, "
 "not with Texinfo.)"
 msgstr ""
+"Nesse caso, simplesmente digite @kbd{\\end @key{RET}} depois do asterisco. "
+"Em seguida, escreva as linhas de cabeçalho no arquivo do Texinfo e execute "
+"o comando @TeX{} novamente. (Observe o uso da barra invertida, @samp{\\}. "
+"@TeX{} usa @samp{\\} em vez de @samp{@@}; e nessa circunstância, você "
+"está trabalhando diretamente com @TeX{}, não com Texinfo)."
 
 #. type: node
 #: texinfo/texinfo.texi:22418
