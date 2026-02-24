@@ -60372,60 +60372,60 @@ msgstr ""
 #: texinfo/texinfo.texi:22418
 #, no-wrap
 msgid "Running @code{Info-validate}"
-msgstr ""
+msgstr "Executando @code{Info-validate}"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:22420
 msgid "@nodedescription How to find badly referenced nodes."
-msgstr ""
+msgstr "@nodedescription Como encontrar nós mal referenciados."
 
 #. type: subsection
 #: texinfo/texinfo.texi:22420
 #, no-wrap
 msgid "Finding Badly Referenced Nodes"
-msgstr ""
+msgstr "Encontrando Nós Mal Referenciados"
 
-#.  old name
+#.  nome antigo
 #. type: anchor{#1}
 #: texinfo/texinfo.texi:22423
 msgid "Running Info-Validate"
-msgstr ""
+msgstr "Executando Info-Validate"
 
 #. type: findex
 #: texinfo/texinfo.texi:22423
 #, no-wrap
 msgid "Info-validate"
-msgstr ""
+msgstr "Info-validate"
 
 #. type: cindex
 #: texinfo/texinfo.texi:22424
 #, no-wrap
 msgid "Nodes, checking for badly referenced"
-msgstr ""
+msgstr "Nós, verificando mal referenciados"
 
 #. type: cindex
 #: texinfo/texinfo.texi:22425
 #, no-wrap
 msgid "Checking for badly referenced nodes"
-msgstr ""
+msgstr "Verificando nós mal referenciados"
 
 #. type: cindex
 #: texinfo/texinfo.texi:22426
 #, no-wrap
 msgid "Looking for badly referenced nodes"
-msgstr ""
+msgstr "Procurando por nós mal referenciados"
 
 #. type: cindex
 #: texinfo/texinfo.texi:22427
 #, no-wrap
 msgid "Finding badly referenced nodes"
-msgstr ""
+msgstr "Encontrando nós mal referenciados"
 
 #. type: cindex
 #: texinfo/texinfo.texi:22428
 #, no-wrap
 msgid "Badly referenced nodes"
-msgstr ""
+msgstr "Nós mal referenciados"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:22435
@@ -60435,6 +60435,11 @@ msgid ""
 "This command checks that every node pointer points to an existing node.  The "
 "@code{Info-validate} command works only on Info files, not on Texinfo files."
 msgstr ""
+"Você consegue usar o comando @code{Info-validate} para verificar se "
+"quaisquer de `Próximo', `Anterior', `Acima' ou outros ponteiros de nó "
+"falham ao apontar para um nó. Esse comando verifica se cada ponteiro de nó "
+"aponta para um nó existente. O comando @code{Info-validate} funciona "
+"somente sobre arquivos do Info, não sobre arquivos do Texinfo."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:22445
@@ -60449,6 +60454,16 @@ msgid ""
 "where the `Next' points) which points back, since it may be correct for a "
 "non standard document structure."
 msgstr ""
+"O programa @command{texi2any} valida ponteiros automaticamente, de modo que "
+"você não precisa usar o comando @code{Info-validate} se estiver usando "
+"@command{texi2any}. Com a variável de personalização "
+"@code{CHECK_NORMAL_MENU_STRUCTURE} configurada, @command{texi2any} também "
+"avisará se os ponteiros dos nós (ou configurados explícita ou "
+"automaticamente) não estiverem consistentes com a ordem das entradas do "
+"menu dos nós. @command{texi2any} não verifica se cada ponteiro `Próximo' "
+"está correspondido por um `Anterior' (no nó para onde o `Próximo' aponta) "
+"que aponte para trás, pois possivelmente seja correto para uma estrutura de "
+"documento não padrão."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:22450
@@ -60458,42 +60473,49 @@ msgid ""
 "@code{texinfo-format-region} or @code{texinfo-format-buffer}, or if you "
 "write an Info file from scratch."
 msgstr ""
+"Você possivelmente necessite usar @code{Info-validate} somente se estiver "
+"inapto(a) para executar @command{texi2any} e, em vez disso, precise criar um "
+"arquivo do Info usando @code{texinfo-format-region} ou "
+"@code{texinfo-format-buffer}, ou se escrever um arquivo do Info a partir do "
+"zero."
 
 #. type: cindex
 #: texinfo/texinfo.texi:22452 texinfo/texinfo.texi:22454
 #: texinfo/texinfo.texi:22456
 #, no-wrap
 msgid "Using @code{Info-validate}"
-msgstr ""
+msgstr "Usando @code{Info-validate}"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:22454
 msgid "@nodedescription How to run @code{Info-validate}."
-msgstr ""
+msgstr "@nodedescription Como executar @code{Info-validate}."
 
 #. type: cindex
 #: texinfo/texinfo.texi:22457
 #, no-wrap
 msgid "Info validating a large file"
-msgstr ""
+msgstr "Info validação de um arquivo grande"
 
 #. type: cindex
 #: texinfo/texinfo.texi:22458
 #, no-wrap
 msgid "Validating a large file"
-msgstr ""
+msgstr "Validando um arquivo grande"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:22462
 msgid ""
 "To use @code{Info-validate}, visit the Info file you wish to check and type:"
 msgstr ""
+"Para usar @code{Info-validate}, visite o arquivo do Info que você desejar "
+"verificar e digite:"
 
 #. type: example
 #: texinfo/texinfo.texi:22465 texinfo/texinfo.texi:22566
 #, no-wrap
 msgid "M-x Info-validate\n"
-msgstr ""
+msgstr "M-x Info-validate\n"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:22471
@@ -60502,6 +60524,9 @@ msgid ""
 "may also need to create a tag table before running @code{Info-validate}.  "
 "@xref{Tagifying}."
 msgstr ""
+"Observe que o comando @code{Info-validate} exige um `I' maiúsculo. Você "
+"possivelmente necessite também criar uma tabela de etiquetas antes de "
+"executar @code{Info-validate}. @xref{Etiquetando}."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:22476
@@ -60511,6 +60536,10 @@ msgid ""
 "error messages will be displayed in a buffer called @samp{*problems in info "
 "file*}."
 msgstr ""
+"Se teu arquivo for válido, você receberá uma mensagem que diz ``Arquivo "
+"parece válido''. No entanto, se você tiver um ponteiro que não apontar "
+"para um nó, mensagens de erro serão exibidas em um buffer chamado "
+"@samp{*problems in info file*}."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:22479
@@ -60518,12 +60547,14 @@ msgid ""
 "For example, @code{Info-validate} was run on a test file that contained only "
 "the first node of this manual.  One of the messages said:"
 msgstr ""
+"Por exemplo, @code{Info-validate} foi executado sobre um arquivo de teste "
+"que continha somente o primeiro nó deste manual. Uma das mensagens dizia:"
 
 #. type: example
 #: texinfo/texinfo.texi:22482
 #, no-wrap
 msgid "In node \"Overview\", invalid Next: Texinfo Mode\n"
-msgstr ""
+msgstr "No nó \"Visão Geral\", inválido Próximo: Modo Texinfo\n"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:22488
@@ -60532,6 +60563,9 @@ msgid ""
 "did not point to anything (which was true in this case, since the test file "
 "had only one node in it)."
 msgstr ""
+"Isso significava que o nó chamado @samp{Visão Geral} tinha um ponteiro "
+"`Próximo' que não apontava para nada (o que era verdade nesse caso, já "
+"que o arquivo de teste tinha somente um nó nele)."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:22492
@@ -60540,12 +60574,15 @@ msgid ""
 "do not specify a `Previous' for this node.  Then we will get the following "
 "error message:"
 msgstr ""
+"Agora suponha que nós adicionássemos um nó chamado @samp{Modo Texinfo} ao "
+"nosso caso de teste, mas não especificássemos um `Anterior' para esse nó. "
+"Então obteríamos a seguinte mensagem de erro:"
 
 #. type: example
 #: texinfo/texinfo.texi:22495
 #, no-wrap
 msgid "In node \"Texinfo Mode\", should have Previous: Overview\n"
-msgstr ""
+msgstr "No nó \"Modo Texinfo\", deveria ter Anterior: Visão Geral\n"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:22501
@@ -60554,6 +60591,9 @@ msgid ""
 "should be matched by a `Previous' (in the node where the `Next' points)  "
 "which points back."
 msgstr ""
+"Isso ocorre porque, com uma estrutura padrão de documento, cada ponteiro "
+"`Próximo' deveria ser correspondido por um `Anterior' (no nó para onde o "
+"`Próximo' aponta) que aponte para trás."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:22504
@@ -60561,6 +60601,8 @@ msgid ""
 "@code{Info-validate} also checks that all menu entries and cross-references "
 "point to actual nodes."
 msgstr ""
+"@code{Info-validate} também verifica se todas as entradas de menu e "
+"referências cruzadas apontam para nós reais."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:22511
@@ -60572,41 +60614,50 @@ msgid ""
 "not split the Info file; and you must create a tag table for the unsplit "
 "file."
 msgstr ""
+"@code{Info-validate} exige uma tabela de etiquetas e não funciona com "
+"arquivos que tiverem sido divididos. (O comando @code{texinfo-format-buffer} "
+"divide automaticamente arquivos grandes). Para a finalidade de usar "
+"@code{Info-validate} sobre um arquivo grande, você precisa executar "
+"@code{texinfo-format-buffer} com um argumento, de modo que ele não divida o "
+"arquivo do Info; e você precisa criar uma tabela de etiquetas para o "
+"arquivo não dividido."
 
 #. type: node
 #: texinfo/texinfo.texi:22513
 #, no-wrap
 msgid "Unsplit and Tagify"
-msgstr ""
+msgstr "Desdividir e Etiquetar"
 
 #. type: nodedescriptionblock
 #: texinfo/texinfo.texi:22516
 msgid "How to create an unsplit file and add a tag table for validation."
 msgstr ""
+"Como criar um arquivo desdividido e adicionar uma tabela de etiquetas para "
+"validação."
 
 #. type: subsubsection
 #: texinfo/texinfo.texi:22517
 #, no-wrap
 msgid "Creating an Unsplit File and Adding a Tag Table"
-msgstr ""
+msgstr "Criando um Arquivo Desdividido e Adicionando uma Tabela de Etiquetas"
 
-#.  old name
+#.  nome antigo
 #. type: anchor{#1}
 #: texinfo/texinfo.texi:22519
 msgid "Unsplit"
-msgstr ""
+msgstr "Desdividido"
 
 #. type: cindex
 #: texinfo/texinfo.texi:22520
 #, no-wrap
 msgid "Creating an unsplit file"
-msgstr ""
+msgstr "Criando um arquivo desdividido"
 
 #. type: cindex
 #: texinfo/texinfo.texi:22521
 #, no-wrap
 msgid "Unsplit file creation"
-msgstr ""
+msgstr "Criação de arquivo desdividido"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:22533
@@ -60620,6 +60671,15 @@ msgid ""
 "file.  After you have done this, you can run @code{Info-validate} and look "
 "for badly referenced nodes."
 msgstr ""
+"Você consegue executar @code{Info-validate} somente sobre um arquivo do "
+"Info que tenha uma tabela de etiquetas. O comando não funcionará sobre os "
+"subarquivos indiretos que forem gerados quando um arquivo mestre for "
+"dividido. Se tiver um arquivo grande (mais que 300.000 bytes ou mais), você "
+"necessita executar o comando @code{texinfo-format-buffer}, ou o "
+"@code{makeinfo-buffer}, de tal maneira que ele não crie subarquivos "
+"indiretos. Você também precisará criar uma tabela de etiquetas para o "
+"arquivo do Info. Depois que tiver feito isso, você pode executar "
+"@code{Info-validate} e procurar nós mal referenciados."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:22538
@@ -60628,23 +60688,27 @@ msgid ""
 "@code{texinfo-format-buffer} from splitting a Texinfo file into smaller Info "
 "files, give a prefix to the @kbd{M-x texinfo-format-buffer} command:"
 msgstr ""
+"A primeira etapa é a de criar um arquivo do Info não dividido. Para evitar "
+"que @code{texinfo-format-buffer} divida um arquivo do Texinfo em arquivos do "
+"Info menores, forneça um prefixo para o comando @kbd{M-x "
+"texinfo-format-buffer}:"
 
 #. type: example
 #: texinfo/texinfo.texi:22541
 #, no-wrap
 msgid "C-u M-x texinfo-format-buffer\n"
-msgstr ""
+msgstr "C-u M-x texinfo-format-buffer\n"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:22545
 msgid "or else"
-msgstr ""
+msgstr "ou então"
 
 #. type: example
 #: texinfo/texinfo.texi:22548
 #, no-wrap
 msgid "C-u C-c C-e C-b\n"
-msgstr ""
+msgstr "C-u C-c C-e C-b\n"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:22553
@@ -60652,6 +60716,8 @@ msgid ""
 "When you do this, @code{texinfo-format-buffer} will not split the file and "
 "will not create a tag table for it."
 msgstr ""
+"Quando você fizer isso, @code{texinfo-format-buffer} não dividirá o "
+"arquivo e não criará uma tabela de etiquetas para ele."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:22557
@@ -60660,11 +60726,14 @@ msgid ""
 "(@pxref{Tagifying}).  Visit the unsplit Info file created by "
 "@code{texinfo-format-buffer} and type:"
 msgstr ""
+"Depois de criar um arquivo do Info não dividido, você precisa criar uma "
+"tabela de etiquetas para ele (@pxref{Etiquetando}). Visite o arquivo do Info "
+"não dividido criado pelo @code{texinfo-format-buffer} e digite:"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:22563
 msgid "The third step is to validate the Info file:"
-msgstr ""
+msgstr "A terceira etapa é a de validar o arquivo do Info:"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:22571
@@ -60672,6 +60741,8 @@ msgid ""
 "(Note the uppercase @samp{I} in @code{Info-validate}.)  In brief, the steps "
 "are:"
 msgstr ""
+"(Observe o @samp{I} maiúsculo no @code{Info-validate}). Resumidamente, as "
+"etapas são:"
 
 #. type: group
 #: texinfo/texinfo.texi:22577
@@ -60681,6 +60752,9 @@ msgid ""
 "M-x Info-tagify\n"
 "M-x Info-validate\n"
 msgstr ""
+"C-u M-x texinfo-format-buffer\n"
+"M-x Info-tagify\n"
+"M-x Info-validate\n"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:22584
@@ -60690,29 +60764,33 @@ msgid ""
 "table and split the file automatically, or you can make the tag table and "
 "split the file manually (@pxref{Splitting})."
 msgstr ""
+"Depois que tiver validado a estrutura do nó, você pode reexecutar "
+"@code{texinfo-format-buffer} da maneira normal, de modo que ele construa uma "
+"tabela de etiquetas e divida o arquivo automaticamente, ou você pode criar "
+"a tabela de etiquetas e dividir o arquivo manualmente (@pxref{Dividindo})."
 
 #. type: section
 #: texinfo/texinfo.texi:22586 texinfo/texinfo.texi:22588
 #, no-wrap
 msgid "Batch Formatting"
-msgstr ""
+msgstr "Formatação em Lote"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:22588
 msgid "@nodedescription How to format for Info in Emacs batch mode."
-msgstr ""
+msgstr "@nodedescription Como formatar para Info no modo em lote do Emacs."
 
 #. type: cindex
 #: texinfo/texinfo.texi:22589
 #, no-wrap
 msgid "Batch formatting for Info"
-msgstr ""
+msgstr "Formatação em lote para Info"
 
 #. type: cindex
 #: texinfo/texinfo.texi:22590
 #, no-wrap
 msgid "Info batch formatting"
-msgstr ""
+msgstr "Formatação em lote do Info"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:22596
@@ -60722,6 +60800,10 @@ msgid ""
 "a shell inside of Emacs.  (@xref{Initial Options,,, emacs, The GNU Emacs "
 "Manual}.)"
 msgstr ""
+"Você pode formatar arquivos do Texinfo para Info usando "
+"@code{batch-texinfo-format} e modo de lote do Emacs. Você pode executar o "
+"Emacs em modo de lote a partir de qualquer shell, incluindo um shell dentro "
+"do Emacs. (@xref{Opções Iniciais,,, emacs, O Manual do GNU Emacs})."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:22599
@@ -60729,12 +60811,14 @@ msgid ""
 "Here is a shell command to format all the files that end in @file{.texinfo} "
 "in the current directory:"
 msgstr ""
+"Aqui está um comando de shell para formatar todos os arquivos que terminem "
+"em @file{.texinfo} no diretório atual:"
 
 #. type: example
 #: texinfo/texinfo.texi:22602
 #, no-wrap
 msgid "emacs -batch -funcall batch-texinfo-format *.texinfo\n"
-msgstr ""
+msgstr "emacs -batch -funcall batch-texinfo-format *.texinfo\n"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:22607
@@ -60742,6 +60826,8 @@ msgid ""
 "Emacs processes all the files listed on the command line, even if an error "
 "occurs while attempting to format some of them."
 msgstr ""
+"O Emacs processa todos os arquivos listados na linha de comando, mesmo se um "
+"erro ocorrer enquanto tenta formatar alguns deles."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:22610
@@ -60749,6 +60835,9 @@ msgid ""
 "Run @code{batch-texinfo-format} only with Emacs in batch mode as shown; it "
 "is not interactive.  It kills the batch mode Emacs on completion."
 msgstr ""
+"Execute @code{batch-texinfo-format} somente com Emacs em modo de lote "
+"conforme mostrado; ele não é interativo. Ele mata o modo de lote do Emacs "
+"após a conclusão."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:22617
@@ -60760,18 +60849,25 @@ msgid ""
 "@code{texinfo-format-buffer}, you cannot use that Emacs for anything else "
 "until the command finishes.)"
 msgstr ""
+"@code{batch-texinfo-format} é conveniente se você careçer do "
+"@command{texi2any} e quiser formatar vários arquivos do Texinfo de uma vez. "
+"Ao usar o modo de Lote, você cria um novo processo do Emacs. Isso libera "
+"teu Emacs atual, de modo que você consiga continuar trabalhando nele. "
+"(Quando executar @code{texinfo-format-region}, ou "
+"@code{texinfo-format-buffer}, você não consegue usar esse Emacs para mais "
+"nada até que o comando termine)."
 
 #. type: cindex
 #: texinfo/texinfo.texi:22619 texinfo/texinfo.texi:22621
 #: texinfo/texinfo.texi:22622
 #, no-wrap
 msgid "Global Document Commands"
-msgstr ""
+msgstr "Comandos Globais de Documento"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:22621
 msgid "@nodedescription Affecting formatting throughout."
-msgstr ""
+msgstr "@nodedescription Afetando toda a formatação."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:22627
@@ -60780,41 +60876,45 @@ msgid ""
 "these commands are for customizing the appearance of the printed output.  "
 "They are generally all given before the Top node, if they are given at all."
 msgstr ""
+"Aqui estão comandos adicionais que afetam o documento como um todo. A "
+"maioria desses comandos serve para personalizar a aparência da saída "
+"gerada impressa. Geralmente, todos são fornecidos antes do nó Top, se "
+"forem fornecidos."
 
 #. type: node
 #: texinfo/texinfo.texi:22629
 #, no-wrap
 msgid "@code{@@setchapternewpage}"
-msgstr ""
+msgstr "@code{@@setchapternewpage}"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:22631
 msgid "@nodedescription Start chapters on right-hand pages."
-msgstr ""
+msgstr "@nodedescription Iniciar capítulos nas páginas da direita."
 
 #. type: section
 #: texinfo/texinfo.texi:22631
 #, no-wrap
 msgid "@code{@@setchapternewpage}: Blank Pages Before Chapters"
-msgstr ""
+msgstr "@code{@@setchapternewpage}: Páginas em Branco Antes dos Capítulos"
 
 #. type: findex
 #: texinfo/texinfo.texi:22634
 #, no-wrap
 msgid "setchapternewpage"
-msgstr ""
+msgstr "setchapternewpage"
 
 #. type: cindex
 #: texinfo/texinfo.texi:22635
 #, no-wrap
 msgid "Starting chapters"
-msgstr ""
+msgstr "Iniciando capítulos"
 
 #. type: cindex
 #: texinfo/texinfo.texi:22636
 #, no-wrap
 msgid "Pages, starting odd"
-msgstr ""
+msgstr "Páginas, começando ímpares"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:22644
@@ -60826,6 +60926,13 @@ msgid ""
 "pages, but are printed on the same page as the end of the preceding chapter, "
 "after a small amount of vertical whitespace."
 msgstr ""
+"Em um livro oficialmente encadernado, o texto geralmente é impresso em "
+"ambos os lados do papel, os capítulos começam nas páginas da direita e as "
+"páginas da direita têm números ímpares. Mas em informes curtos, "
+"frequentemente o texto é impresso somente em um lado do papel. Também em "
+"informes curtos, os capítulos às vezes não começam em novas páginas, "
+"mas são impressos na mesma página do final do capítulo anterior, depois "
+"de uma pequena quantidade de espaço em branco vertical."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:22649
