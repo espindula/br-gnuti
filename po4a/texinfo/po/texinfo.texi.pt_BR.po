@@ -60942,6 +60942,10 @@ msgid ""
 "should be formatted for printing on one or both sides of the paper "
 "(single-sided or double-sided printing)."
 msgstr ""
+"Você consegue usar o comando @code{@@setchapternewpage} com vários "
+"argumentos para especificar como os capítulos deveriam ser iniciados na "
+"saída impressa e se os cabeçalhos deveriam ser formatados para impressão "
+"em um ou ambos os lados do papel (impressão em um lado ou frente e verso)."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:22653
@@ -60950,12 +60954,15 @@ msgid ""
 "followed by its argument.  For example, you would write the following to "
 "cause each chapter to start on a fresh odd-numbered page:"
 msgstr ""
+"Escreva o comando @code{@@setchapternewpage} no início de uma linha seguido "
+"pelo argumento dele. Por exemplo, você escreveria o seguinte para fazer com "
+"que cada capítulo começasse em uma nova página ímpar:"
 
 #. type: example
 #: texinfo/texinfo.texi:22656
 #, no-wrap
 msgid "@@setchapternewpage odd\n"
-msgstr ""
+msgstr "@@setchapternewpage odd\n"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:22660
@@ -60963,12 +60970,14 @@ msgid ""
 "You can specify one of three alternatives with the "
 "@code{@@setchapternewpage} command:"
 msgstr ""
+"Você consegue especificar uma das três alternativas com o comando "
+"@code{@@setchapternewpage}:"
 
 #. type: code{#1}
 #: texinfo/texinfo.texi:22663
 #, no-wrap
 msgid "@@setchapternewpage off"
-msgstr ""
+msgstr "@@setchapternewpage off"
 
 #. type: table
 #: texinfo/texinfo.texi:22667
@@ -60977,12 +60986,15 @@ msgid ""
 "some vertical whitespace.  Also, format page headers for single-sided "
 "printing."
 msgstr ""
+"Tipografar um novo capítulo na mesma página do último capítulo, depois "
+"de pular alguns espaços em branco verticais. Além disso, formatar os "
+"cabeçalhos das páginas para impressão em um lado."
 
 #. type: code{#1}
 #: texinfo/texinfo.texi:22668
 #, no-wrap
 msgid "@@setchapternewpage on"
-msgstr ""
+msgstr "@@setchapternewpage on"
 
 #. type: table
 #: texinfo/texinfo.texi:22672
@@ -60991,12 +61003,15 @@ msgid ""
 "printing.  This is the form most often used for short reports or personal "
 "printing. This is the default."
 msgstr ""
+"Iniciar novos capítulos em novas páginas e formatar cabeçalhos de "
+"páginas para impressão em um lado. Essa é a forma mais frequentemente "
+"usada para informes curtos ou para impressão pessoal. Esse é o padrão."
 
 #. type: code{#1}
 #: texinfo/texinfo.texi:22673
 #, no-wrap
 msgid "@@setchapternewpage odd"
-msgstr ""
+msgstr "@@setchapternewpage odd"
 
 #. type: table
 #: texinfo/texinfo.texi:22677
@@ -61005,6 +61020,9 @@ msgid ""
 "typeset for double-sided printing.  This is the form most often used for "
 "books and manuals."
 msgstr ""
+"Iniciar novos capítulos em novas páginas ímpares (páginas destras) e "
+"tipografadas para impressão frente e verso. Essa é a forma mais "
+"frequentemente usada para livros e manuais."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:22682
@@ -61013,6 +61031,9 @@ msgid ""
 "there is no printing tradition of starting chapters or books on an "
 "even-numbered page."
 msgstr ""
+"Texinfo não tem um comando @code{@@setchapternewpage even}, porque não "
+"existe tradição de impressão de iniciar capítulos ou livros em uma "
+"página par."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:22686
@@ -61021,6 +61042,9 @@ msgid ""
 "you can explicit control them with the @code{@@headings} command.  "
 "@xref{@code{@@headings}}."
 msgstr ""
+"Se não gostar dos cabeçalhos padrão que @code{@@setchapternewpage} "
+"configurar, você consegue controlá-los explicitamente com o comando "
+"@code{@@headings}. @xref{@code{@@headings}}."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:22691
@@ -61030,6 +61054,10 @@ msgid ""
 "table of contents and frontmatter pages are numbered with roman numerals and "
 "not in sequence with the rest of the document."
 msgstr ""
+"No início de um manual ou livro, as páginas não são numeradas–--por "
+"exemplo, as páginas de título e de copirraite de um livro não são "
+"numeradas. Por convenção, páginas de sumário e iniciais são numeradas "
+"com algarismos romanos e não em sequência com o resto do documento."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:22694
@@ -61037,6 +61065,8 @@ msgid ""
 "The @code{@@setchapternewpage} has no effect in output formats that do not "
 "have pages, such as Info and HTML."
 msgstr ""
+"O @code{@@setchapternewpage} não tem efeito em formatos de saída que não "
+"tenham páginas, como Info e HTML."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:22701
@@ -61048,53 +61078,59 @@ msgid ""
 "@option{--texinfo} option to @command{texi2dvi} to specify the output you "
 "want."
 msgstr ""
+"Nós recomendamos não incluir nenhum comando @code{@@setchapternewpage} no "
+"fonte do teu documento, pois tal paginação desejada não é intrínseca ao "
+"documento. Para uma execução específica de cópia impressa, se você não "
+"quiser a saída padrão (sem páginas em branco, mesmos cabeçalhos em todas "
+"as páginas), use a opção @option{--texinfo} para @command{texi2dvi} para "
+"especificar a saída que você quer."
 
 #. type: cindex
 #: texinfo/texinfo.texi:22703 texinfo/texinfo.texi:22707
 #, no-wrap
 msgid "Headings"
-msgstr ""
+msgstr "Cabeçalhos"
 
 #. type: section
 #: texinfo/texinfo.texi:22704
 #, no-wrap
 msgid "Page Headings"
-msgstr ""
+msgstr "Cabeçalhos de Página"
 
 #.  old name
 #. type: Plain text
 #: texinfo/texinfo.texi:22707
 msgid "@nodedescription Page headings."
-msgstr ""
+msgstr "@nodedescription Cabeçalhos de página."
 
 #. type: anchor{#1}
 #: texinfo/texinfo.texi:22707
 msgid "Headings Introduced"
-msgstr ""
+msgstr "Cabeçalhos Introduzidos"
 
 #. type: cindex
 #: texinfo/texinfo.texi:22708
 #, no-wrap
 msgid "Footings"
-msgstr ""
+msgstr "Rodapés"
 
 #. type: cindex
 #: texinfo/texinfo.texi:22709
 #, no-wrap
 msgid "Page numbering"
-msgstr ""
+msgstr "Numeração de páginas"
 
 #. type: cindex
 #: texinfo/texinfo.texi:22710
 #, no-wrap
 msgid "Page headings"
-msgstr ""
+msgstr "Cabeçalhos de página"
 
 #. type: cindex
 #: texinfo/texinfo.texi:22711
 #, no-wrap
 msgid "Formatting headings and footings"
-msgstr ""
+msgstr "Formatando cabeçalhos e rodapés"
 
 #.  HTML output also supports something like these, but in a
 #. type: Plain text
@@ -61104,6 +61140,10 @@ msgid ""
 "title and copyright pages.  Some manuals also contain footings. Headings and "
 "footings have no meaning in Info or the other output formats."
 msgstr ""
+"A maioria dos manuais impressos contém cabeçalhos ao longo do topo de cada "
+"página, exceto nas páginas de título e de copirraite. Alguns manuais "
+"também contêm rodapés. Cabeçalhos e rodapés não têm significado no "
+"Info ou em outros formatos de saída."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:22725
@@ -61113,6 +61153,10 @@ msgid ""
 "sides of the paper.  By default, nothing is specified for the footing of a "
 "Texinfo file, so the footing remains blank."
 msgstr ""
+"O Texinfo fornece dois formatos padrão de cabeçalho, um para manuais "
+"impressos em um lado de cada folha de papel e outro para manuais impressos "
+"em ambos os lados do papel. Por padrão, nada é especificado para o rodapé "
+"de um arquivo do Texinfo, de modo que o rodapé permanece em branco."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:22728
@@ -61120,6 +61164,8 @@ msgid ""
 "Texinfo also has several heading and footing commands that you can use to "
 "generate your own heading and footing formats."
 msgstr ""
+"O Texinfo também tem vários comandos de cabeçalho e de rodapé que você "
+"consegue usar para gerar teus próprios formatos de cabeçalho e de rodapé."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:22736
@@ -61131,12 +61177,20 @@ msgid ""
 "left part of a header or footer line is set flushleft; text for the middle "
 "part is centered; and, text for the right part is set flushright."
 msgstr ""
+"No Texinfo, cabeçalhos e rodapés são linhas únicas no topo e no final "
+"das páginas; você não consegue criar cabeçalhos ou rodapés de "
+"múltiplas linhas. Cada linha de cabeçalho ou de rodapé é dividida em "
+"três partes: uma parte esquerda, uma parte central e uma parte direita. "
+"Qualquer parte, ou uma linha inteira, pode ser deixada em branco. O texto da "
+"parte esquerda de uma linha de cabeçalho ou de rodapé é configurado "
+"alinhado à esquerda; o texto da parte central fica centralizado; e o texto "
+"da parte direita é configurado alinhado à direita."
 
 #. type: node
 #: texinfo/texinfo.texi:22738
 #, no-wrap
 msgid "@code{@@headings}"
-msgstr ""
+msgstr "@code{@@headings}"
 
 #. type: nodedescriptionblock
 #: texinfo/texinfo.texi:22741
@@ -61144,24 +61198,26 @@ msgid ""
 "An option for turning headings on and off and double or single sided "
 "printing."
 msgstr ""
+"Uma opção para ativar e desativar cabeçalhos e impressão frente e verso "
+"ou em um lado."
 
 #. type: subsection
 #: texinfo/texinfo.texi:22742
 #, no-wrap
 msgid "The @code{@@headings} Command"
-msgstr ""
+msgstr "O Comando @code{@@headings}"
 
-#.  old name
+#.  nome antigo
 #. type: anchor{#1}
 #: texinfo/texinfo.texi:22745
 msgid "headings on off"
-msgstr ""
+msgstr "cabeçalhos ativados desativados"
 
 #. type: findex
 #: texinfo/texinfo.texi:22745
 #, no-wrap
 msgid "headings"
-msgstr ""
+msgstr "headings"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:22752
@@ -61172,56 +61228,62 @@ msgid ""
 "@code{@@headings} command only if the @code{@@setchapternewpage} command "
 "does not do what you want."
 msgstr ""
+"O comando @code{@@headings} raramente é usado. Ele especifica quais tipos "
+"de cabeçalhos e rodapés de página imprimir em cada página. Normalmente, "
+"isso é controlado pelo comando @code{@@setchapternewpage}. Você precisará "
+"do comando @code{@@headings} somente se o comando @code{@@setchapternewpage} "
+"não fizer o que você quiser."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:22754
 msgid "You can use @code{@@headings} as follows:"
-msgstr ""
+msgstr "Você consegue usar @code{@@headings} conforme segue:"
 
 #. type: item
 #: texinfo/texinfo.texi:22756
 #, no-wrap
 msgid "@@headings off"
-msgstr ""
+msgstr "@@headings off"
 
 #. type: table
 #: texinfo/texinfo.texi:22758
 msgid "Turn off printing of page headings."
-msgstr ""
+msgstr "Desativar impressão dos cabeçalhos das páginas."
 
 #. type: item
 #: texinfo/texinfo.texi:22759
 #, no-wrap
 msgid "@@headings single"
-msgstr ""
+msgstr "@@headings single"
 
 #. type: table
 #: texinfo/texinfo.texi:22761
 msgid "Turn on page headings appropriate for single-sided printing."
-msgstr ""
+msgstr "Ativar cabeçalhos de página apropriados para impressão em um lado."
 
 #. type: item
 #: texinfo/texinfo.texi:22762
 #, no-wrap
 msgid "@@headings double"
-msgstr ""
+msgstr "@@headings double"
 
 #. type: table
 #: texinfo/texinfo.texi:22764
 msgid "Turn on page headings appropriate for double-sided printing."
 msgstr ""
+"Ativar cabeçalhos de página apropriados para impressão frente e verso."
 
 #. type: item
 #: texinfo/texinfo.texi:22765
 #, no-wrap
 msgid "@@headings singleafter"
-msgstr ""
+msgstr "@@headings singleafter"
 
 #. type: itemx
 #: texinfo/texinfo.texi:22766
 #, no-wrap
 msgid "@@headings doubleafter"
-msgstr ""
+msgstr "@@headings doubleafter"
 
 #. type: table
 #: texinfo/texinfo.texi:22769
@@ -61229,12 +61291,14 @@ msgid ""
 "Turn on @code{single} or @code{double} headings, respectively, after the "
 "current page is output."
 msgstr ""
+"Ativar cabeçalhos @code{single} ou @code{double}, respectivamente, depois "
+"que a página atual for gerada."
 
 #. type: item
 #: texinfo/texinfo.texi:22770
 #, no-wrap
 msgid "@@headings on"
-msgstr ""
+msgstr "@@headings on"
 
 #. type: table
 #: texinfo/texinfo.texi:22773
@@ -61242,6 +61306,8 @@ msgid ""
 "Turn on page headings: @code{single} if @samp{@@setchapternewpage on}, "
 "@code{double} otherwise."
 msgstr ""
+"Ativar os cabeçalhos das páginas: @code{single} se "
+"@samp{@@setchapternewpage on}, @code{double} caso contrário."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:22781
@@ -61252,6 +61318,12 @@ msgid ""
 "typeset for single-sided printing.  To cause page headers to be typeset for "
 "double-sided printing, write @code{@@headings double}."
 msgstr ""
+"Por exemplo, suponha que você escreva @code{@@setchapternewpage off} antes "
+"do comando @code{@@titlepage} para iniciar um novo capítulo na mesma "
+"página do final do último capítulo. Esse comando também faz com que os "
+"cabeçalhos das páginas sejam tipografados para impressão em um lado. Para "
+"fazer com que os cabeçalhos das páginas sejam tipografados para impressão "
+"frente e verso, escreva @code{@@headings double}."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:22784
@@ -61259,12 +61331,14 @@ msgid ""
 "You can stop any page headings at all from being generated by writing "
 "@code{@@headings off} on a line of its own, like this:"
 msgstr ""
+"Você consegue impedir que quaisquer cabeçalhos de página sejam gerados "
+"escrevendo @code{@@headings off} em uma linha própria, como esta:"
 
 #. type: example
 #: texinfo/texinfo.texi:22787
 #, no-wrap
 msgid "@@headings off\n"
-msgstr ""
+msgstr "@@headings off\n"
 
 #. type: node
 #: texinfo/texinfo.texi:22790
