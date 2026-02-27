@@ -62341,48 +62341,48 @@ msgstr ""
 #: texinfo/texinfo.texi:23183
 #, no-wrap
 msgid "@code{@@smallbook}"
-msgstr ""
+msgstr "@code{@@smallbook}"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:23185
 msgid "@nodedescription How to print small format books and manuals."
-msgstr ""
+msgstr "@nodedescription Como imprimir livros e manuais em pequeno formato."
 
 #. type: section
 #: texinfo/texinfo.texi:23185
 #, no-wrap
 msgid "@code{@@smallbook}: Printing ``Small'' Books"
-msgstr ""
+msgstr "@code{@@smallbook}: Imprimindo Livros ``Pequenos''"
 
 #. type: findex
 #: texinfo/texinfo.texi:23188
 #, no-wrap
 msgid "smallbook"
-msgstr ""
+msgstr "smallbook"
 
 #. type: cindex
 #: texinfo/texinfo.texi:23189
 #, no-wrap
 msgid "Small book size"
-msgstr ""
+msgstr "Tamanho pequeno do livro"
 
 #. type: cindex
 #: texinfo/texinfo.texi:23190
 #, no-wrap
 msgid "Book, printing small"
-msgstr ""
+msgstr "Livro, imprimindo pequeno"
 
 #. type: cindex
 #: texinfo/texinfo.texi:23191
 #, no-wrap
 msgid "Page sizes for books"
-msgstr ""
+msgstr "Tamanhos de página para livros"
 
 #. type: cindex
 #: texinfo/texinfo.texi:23192
 #, no-wrap
 msgid "Size of printed book"
-msgstr ""
+msgstr "Tamanho do livro impresso"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:23200
@@ -62394,12 +62394,19 @@ msgid ""
 "on a line by itself at the beginning of the Texinfo file, before the title "
 "page:"
 msgstr ""
+"Por padrão, o @TeX{} tipografa páginas para impressão em um formato de "
+"8,5 por 11 polegadas, que é o tamanho ``carta'' comumente usado nos Estados "
+"Unidos da América do Norte. No entanto, você pode direcionar @TeX{} ou "
+"@LaTeX{} para tipografar um documento em um formato de 7 por 9,25 polegadas "
+"que seja adequado para livros encadernados, inserindo o seguinte comando em "
+"uma linha isolada no início do arquivo do Texinfo, antes da página de "
+"título:"
 
 #. type: example
 #: texinfo/texinfo.texi:23203
 #, no-wrap
 msgid "@@smallbook\n"
-msgstr ""
+msgstr "@@smallbook\n"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:23210
@@ -62408,6 +62415,10 @@ msgid ""
 "been called the @code{@@regularbooksize} command, but it came to be called "
 "the @code{@@smallbook} command by comparison to the 8.5 by 11 inch format.)"
 msgstr ""
+"(Como muitos livros têm cerca de 7 por 9,25 polegadas, esse comando poderia "
+"ter sido melhor chamado de comando @code{@@regularbooksize}, mas passou a "
+"ser chamado de comando @code{@@smallbook} por comparação com o formato de "
+"8,5 por 11 polegadas)."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:23214
@@ -62416,47 +62427,50 @@ msgid ""
 "@ref{Preparing for @TeX{}}, for other ways to format with @code{@@smallbook} "
 "with @TeX{} that do not require changing the source file."
 msgstr ""
+"@xref{Formatar com @command{texi2dvi} ou @command{texi2pdf}} e "
+"@ref{Preparando para @TeX{}}, para outras maneiras de formatar com "
+"@code{@@smallbook} com @TeX{} que não exigem mudar o arquivo fonte."
 
 #. type: node
 #: texinfo/texinfo.texi:23216
 #, no-wrap
 msgid "A4 Paper"
-msgstr ""
+msgstr "Papel A4"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:23218
 msgid "@nodedescription How to print on A4, A5 or B6 paper."
-msgstr ""
+msgstr "@nodedescription Como imprimir em papel A4, A5 ou B6."
 
 #. type: section
 #: texinfo/texinfo.texi:23218
 #, no-wrap
 msgid "Printing on A4 Paper"
-msgstr ""
+msgstr "Imprimir em Papel A4"
 
 #. type: cindex
 #: texinfo/texinfo.texi:23219
 #, no-wrap
 msgid "A4 paper, printing on"
-msgstr ""
+msgstr "Papel A4, impressão em"
 
 #. type: cindex
 #: texinfo/texinfo.texi:23220
 #, no-wrap
 msgid "Paper size, A4"
-msgstr ""
+msgstr "Tamanho do papel, A4"
 
 #. type: cindex
 #: texinfo/texinfo.texi:23221
 #, no-wrap
 msgid "European A4 paper"
-msgstr ""
+msgstr "Papel A4 europeu"
 
 #. type: findex
 #: texinfo/texinfo.texi:23222
 #, no-wrap
 msgid "afourpaper"
-msgstr ""
+msgstr "afourpaper"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:23226
@@ -62465,36 +62479,39 @@ msgid ""
 "@code{@@afourpaper} command.  Write the command on a line by itself near the "
 "beginning of the Texinfo file, before the title page."
 msgstr ""
+"Você pode formatar um documento para impressão em papel tamanho ISO 216 A4 "
+"com o comando @code{@@afourpaper}. Escreva o comando em uma linha própria "
+"próxima ao início do arquivo do Texinfo, antes da página de título."
 
 #. type: cindex
 #: texinfo/texinfo.texi:23227
 #, no-wrap
 msgid "A5 paper, printing on"
-msgstr ""
+msgstr "Papel A5, impressão em"
 
 #. type: findex
 #: texinfo/texinfo.texi:23228
 #, no-wrap
 msgid "afourlatex"
-msgstr ""
+msgstr "afourlatex"
 
 #. type: findex
 #: texinfo/texinfo.texi:23229
 #, no-wrap
 msgid "afourwide"
-msgstr ""
+msgstr "afourwide"
 
 #. type: findex
 #: texinfo/texinfo.texi:23230
 #, no-wrap
 msgid "afivepaper"
-msgstr ""
+msgstr "afivepaper"
 
 #. type: findex
 #: texinfo/texinfo.texi:23231
 #, no-wrap
 msgid "bsixpaper"
-msgstr ""
+msgstr "bsixpaper"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:23236
@@ -62504,6 +62521,10 @@ msgid ""
 "format, @code{@@afivepaper} for A5 paper, and @code{@@bsixpaper} for B6 "
 "paper."
 msgstr ""
+"Você pode ou não preferir a formatação resultante do comando "
+"@code{@@afourlatex}. Existe também @code{@@afourwide} para papel A4 em "
+"formato largo, @code{@@afivepaper} para papel A5 e @code{@@bsixpaper} para "
+"papel B6."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:23240
@@ -62512,65 +62533,70 @@ msgid ""
 "@ref{Preparing for @TeX{}}, for other ways to format for different paper "
 "sizes that do not require changing the source file."
 msgstr ""
+"@xref{Formatar com @command{texi2dvi} ou @command{texi2pdf}} e "
+"@ref{Preparando para @TeX{}}, para outras maneiras de formatar para "
+"diferentes tamanhos de papel que não exigem mudar o arquivo fonte."
 
 #. type: node
 #: texinfo/texinfo.texi:23242
 #, no-wrap
 msgid "@code{@@pagesizes}"
-msgstr ""
+msgstr "@code{@@pagesizes}"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:23244
 msgid "@nodedescription How to print with customized page sizes."
-msgstr ""
+msgstr "@nodedescription Como imprimir com tamanhos personalizados de página."
 
 #. type: section
 #: texinfo/texinfo.texi:23244
 #, no-wrap
 msgid "@code{@@pagesizes} [@var{width}][, @var{height}]: Custom Page Sizes"
 msgstr ""
+"@code{@@pagesizes} [@var{largura}][, @var{altura}]: Tamanhos Personalizados "
+"de Página"
 
 #. type: findex
 #: texinfo/texinfo.texi:23246 texinfo/texinfo.texi:23247
 #, no-wrap
 msgid "pagesizes"
-msgstr ""
+msgstr "pagesizes"
 
 #. type: cindex
 #: texinfo/texinfo.texi:23248
 #, no-wrap
 msgid "Custom page sizes"
-msgstr ""
+msgstr "Tamanhos personalizados de página"
 
 #. type: cindex
 #: texinfo/texinfo.texi:23249
 #, no-wrap
 msgid "Page sizes, customized"
-msgstr ""
+msgstr "Tamanhos de página, personalizados"
 
 #. type: cindex
 #: texinfo/texinfo.texi:23250
 #, no-wrap
 msgid "Text width and height"
-msgstr ""
+msgstr "Largura e altura do texto"
 
 #. type: cindex
 #: texinfo/texinfo.texi:23251
 #, no-wrap
 msgid "Width of text area"
-msgstr ""
+msgstr "Largura da área de texto"
 
 #. type: cindex
 #: texinfo/texinfo.texi:23252
 #, no-wrap
 msgid "Height of text area"
-msgstr ""
+msgstr "Altura da área de texto"
 
 #. type: cindex
 #: texinfo/texinfo.texi:23253
 #, no-wrap
 msgid "Depth of text area"
-msgstr ""
+msgstr "Profundidade da área de texto"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:23260
@@ -62581,30 +62607,35 @@ msgid ""
 "page.  The height comes first, then the width if desired, separated by a "
 "comma.  Examples:"
 msgstr ""
+"Você pode especificar explicitamente a altura e (opcionalmente) a largura "
+"da área principal de texto na página com o comando @code{@@pagesizes}. "
+"Escreva isso em uma linha própria perto do início do arquivo do Texinfo, "
+"antes da página de título. A altura vem primeiro, depois a largura, se "
+"desejado, separada por vírgula. Exemplos:"
 
 #. type: example
 #: texinfo/texinfo.texi:23263
 #, no-wrap
 msgid "@@pagesizes 200mm,150mm  @c for b5 paper\n"
-msgstr ""
+msgstr "@@pagesizes 200mm,150mm  @c para papel b5\n"
 
 #. type: example
 #: texinfo/texinfo.texi:23268
 #, no-wrap
 msgid "@@pagesizes 11.5in       @c for legal paper\n"
-msgstr ""
+msgstr "@@pagesizes 11.5in       @c para papel ofício\n"
 
 #. type: cindex
 #: texinfo/texinfo.texi:23270
 #, no-wrap
 msgid "B5 paper, printing on"
-msgstr ""
+msgstr "Papel B5, impressão em"
 
 #. type: cindex
 #: texinfo/texinfo.texi:23271
 #, no-wrap
 msgid "Legal paper, printing on"
-msgstr ""
+msgstr "Papel ofício, impressão em"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:23276
@@ -62614,12 +62645,16 @@ msgid ""
 "paper (which is 250@dmn{mm} by 177@dmn{mm} for B5, 14@dmn{in} by 8.5@dmn{in} "
 "for legal)."
 msgstr ""
+"Isso seria razoável para impressão em papel tamanho B5. Para enfatizar, "
+"esse comando especifica o tamanho da @emph{área de texto}, não o tamanho "
+"do papel (que é 250@dmn{mm} por 177@dmn{mm} para B5, 14@dmn{in} por "
+"8,5@dmn{in} para ofício)."
 
 #. type: cindex
 #: texinfo/texinfo.texi:23277
 #, no-wrap
 msgid "Margins on page, not controllable"
-msgstr ""
+msgstr "Margens na página, não controláveis"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:23281
@@ -62627,6 +62662,9 @@ msgid ""
 "To make more elaborate changes, such as changing any of the page margins, "
 "you must define a new command in @file{texinfo.tex} or @file{texinfo.cnf}."
 msgstr ""
+"Para fazer mudanças mais elaboradas, como mudar quaisquer das margens da "
+"página, você precisa definir um novo comando no @file{texinfo.tex} ou no "
+"@file{texinfo.cnf}."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:23285
@@ -62635,17 +62673,20 @@ msgid ""
 "@ref{Preparing for @TeX{}}, for other ways to specify @code{@@pagesizes} "
 "that do not require changing the source file."
 msgstr ""
+"@xref{Formatar com @command{texi2dvi} ou @command{texi2pdf}}, e "
+"@ref{Preparando para @TeX{}}, para outras maneiras de especificar "
+"@code{@@pagesizes} que não exigem mudança do arquivo fonte."
 
 #. type: section
 #: texinfo/texinfo.texi:23287 texinfo/texinfo.texi:23289
 #, no-wrap
 msgid "Microtypography"
-msgstr ""
+msgstr "Microtipografia"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:23289
 msgid "@nodedescription Improving the appearance of paragraphs."
-msgstr ""
+msgstr "@nodedescription Melhorando a aparência dos parágrafos."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:23297
@@ -62657,12 +62698,18 @@ msgid ""
 "and can improve paragraph appearance by reducing hyphenation and producing a "
 "more consistent typographic color."
 msgstr ""
+"Algumas versões do @TeX{}, especificamente pdf@TeX{} e Lua@TeX{}, têm "
+"recursos de @dfn{microtipografia}. Esses envolvem esticar glifos de fonte "
+"levemente e permitir que texto se projete muito levemente para dentro das "
+"margens. O uso deles dá ao @TeX{} mais flexibilidade na quebra de um "
+"parágrafo em linhas e pode melhorar a aparência do parágrafo ao reduzir a "
+"hifenização e produzir uma cor tipográfica mais consistente."
 
 #. type: findex
 #: texinfo/texinfo.texi:23298
 #, no-wrap
 msgid "microtype"
-msgstr ""
+msgstr "microtype"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:23302
@@ -62671,12 +62718,16 @@ msgid ""
 "available.  You can turn microtype off by specifying @samp{@@microtype off} "
 "in your input file; likewise, @samp{@@microtype on} turns microtype back on."
 msgstr ""
+"@file{texinfo.tex} usa esses recursos (`microtipos' para abreviar) quando "
+"disponíveis. Você pode desativar o microtipo especificando "
+"@samp{@@microtype off} em teu arquivo de entrada; da mesma forma, "
+"@samp{@@microtype on} ativa o microtipo novamente."
 
 #. type: cindex
 #: texinfo/texinfo.texi:23303
 #, no-wrap
 msgid "CM-Super fonts @subentry for @LaTeX{}"
-msgstr ""
+msgstr "Fontes CM-Super @subentry para @LaTeX{}"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:23311
@@ -62689,46 +62740,55 @@ msgid ""
 "default @LaTeX{} output is to install the CM-Super font package "
 "(@url{http://ctan.org/pkg/cm-super})."
 msgstr ""
+"As fontes usadas na saída do @LaTeX{} possivelmente não sejam "
+"escalonáveis. Se as fontes não forem escalonáveis, usar-se "
+"microtipografia poderá deflagrar um erro ao converter a saída do @LaTeX{}. "
+"Portanto, a microtipografia não está ativada no caso padrão na saída do "
+"@LaTeX{}. É possível ativá-lo com @samp{@@microtype on}. Uma maneira de "
+"obter fontes escalonáveis para a fonte usada na saída padrão do @LaTeX{} "
+"é a de instalar o pacote de fontes CM-Super "
+"(@url{http://ctan.org/pkg/cm-super})."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:23313
 msgid "The @code{@@microtype} command does nothing for other output formats."
 msgstr ""
+"O comando @code{@@microtype} não faz nada para outros formatos de saída."
 
 #. type: section
 #: texinfo/texinfo.texi:23315 texinfo/texinfo.texi:23317
 #, no-wrap
 msgid "Magnification"
-msgstr ""
+msgstr "Ampliação"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:23317
 msgid "@nodedescription How to print scaled up output."
-msgstr ""
+msgstr "@nodedescription Como imprimir saída ampliada."
 
-#.  old name
+#.  nome antigo
 #. type: anchor{#1}
 #: texinfo/texinfo.texi:23319
 msgid "Cropmarks and Magnification"
-msgstr ""
+msgstr "Marcas de corte e Ampliação"
 
 #. type: findex
 #: texinfo/texinfo.texi:23320
 #, no-wrap
 msgid "\\mag @r{(raw @TeX{} magnification)}"
-msgstr ""
+msgstr "\\mag @r{(ampliação bruta do @TeX{})}"
 
 #. type: cindex
 #: texinfo/texinfo.texi:23321
 #, no-wrap
 msgid "Magnified printing"
-msgstr ""
+msgstr "Impressão ampliada"
 
 #. type: cindex
 #: texinfo/texinfo.texi:23322
 #, no-wrap
 msgid "Larger or smaller pages"
-msgstr ""
+msgstr "Páginas maiores ou menores"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:23330
@@ -62741,6 +62801,13 @@ msgid ""
 "command between @code{@@tex} and @code{@@end tex} (@pxref{Raw Formatter "
 "Commands})."
 msgstr ""
+"Você pode tentar direcionar o @TeX{} para tipografar páginas maiores ou "
+"menores que o normal com o comando @code{\\mag} do @TeX{}. Tudo o que for "
+"tipografado é dimensionado proporcionalmente para maior ou para menor. "
+"(@code{\\mag} significa ``ampliação''). Esse @emph{não} é um comando @@ "
+"do Texinfo, mas é um comando bruto do @TeX{} que é prefixado com uma barra "
+"invertida. Você tem que escrever esse comando entre @code{@@tex} e "
+"@code{@@end tex} (@pxref{Comandos do Formatador Bruto})."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:23335
@@ -62750,6 +62817,10 @@ msgid ""
 "normal size, write the following near the beginning of the Texinfo file, "
 "before the title page:"
 msgstr ""
+"Siga o comando @code{\\mag} com um @samp{=} e depois um número que seja "
+"1.000 vezes a ampliação que você desejar. Por exemplo, para imprimir "
+"páginas em tamanho normal 1,2, escreva o seguinte próximo ao início do "
+"arquivo do Texinfo, antes da página de título:"
 
 #. type: group
 #: texinfo/texinfo.texi:23341
@@ -62759,6 +62830,9 @@ msgid ""
 "\\global\\mag=1200\n"
 "@@end tex\n"
 msgstr ""
+"@@tex\n"
+"\\global\\mag=1200\n"
+"@@end tex\n"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:23348
@@ -62767,6 +62841,10 @@ msgid ""
 "better than usual by giving a larger-than-normal master to your print shop.  "
 "They do the reduction, thus effectively increasing the resolution."
 msgstr ""
+"Com algumas tecnologias de impressão, você consegue imprimir cópias de "
+"tamanho normal que aparentem melhor que o normal, fornecendo um mestre maior "
+"que o normal para tua gráfica. Elas fazem a redução, portanto aumentando "
+"efetivamente a resolução."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:23352
@@ -62775,40 +62853,43 @@ msgid ""
 "may not print or may print only with certain magnifications.  Be prepared to "
 "experiment."
 msgstr ""
+"Dependendo do teu sistema, arquivos DVI preparados com um @code{\\mag} não "
+"padrão possivelmente não imprimam ou possivelmente imprimam somente com "
+"determinadas ampliações. Esteja preparado(a) para experimentar."
 
 #. type: appendix
 #: texinfo/texinfo.texi:23354 texinfo/texinfo.texi:23356
 #, no-wrap
 msgid "Info Format Specification"
-msgstr ""
+msgstr "Especificação de Formato do Info"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:23356
 msgid "@nodedescription Technical details of the Info file format."
-msgstr ""
+msgstr "@nodedescription Detalhes técnicos do formato do arquivo Info."
 
 #. type: cindex
 #: texinfo/texinfo.texi:23358
 #, no-wrap
 msgid "Info format specification"
-msgstr ""
+msgstr "Especificação de formato do Info"
 
 #. type: cindex
 #: texinfo/texinfo.texi:23359
 #, no-wrap
 msgid "Specification of Info format"
-msgstr ""
+msgstr "Especificação do formato Info"
 
 #. type: cindex
 #: texinfo/texinfo.texi:23360
 #, no-wrap
 msgid "Definition of Info format"
-msgstr ""
+msgstr "Definição do formato do Info"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:23363
 msgid "Here we describe the technical details of the Info format."
-msgstr ""
+msgstr "Aqui nós descrevemos os detalhes técnicos do formato do Info."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:23372
@@ -62819,6 +62900,12 @@ msgid ""
 "name, @samp{=} means definition, @samp{*} repetition, @samp{?} optional, "
 "@samp{()} grouping, @samp{|} alternation, and @samp{#} comment."
 msgstr ""
+"Nesta descrição formal, os caracteres @code{<>*()|=#} são usados para a "
+"linguagem da própria descrição. Outros caracteres são literais. Os "
+"constructos formais usados são típicos: @code{<...>} indica um nome de "
+"metavariável, @samp{=} significa definição, @samp{*} repetição, "
+"@samp{?} opcional, @samp{()} agrupamento, @samp{|} alternância e @samp{#} "
+"comentário."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:23377
@@ -62828,6 +62915,11 @@ msgid ""
 "@samp{Tag table} should be equivalent) in order to support Info-generating "
 "programs that use different capitalization."
 msgstr ""
+"Em geral, programas que leem arquivos do Info deveriam tentar não "
+"diferenciar maiúsculas de minúsculas em palavras-chave que ocorrerem no "
+"arquivo (por exemplo, @samp{Tabela de Etiquetas} e @samp{Tabela de "
+"etiquetas} deveriam ser equivalentes) para a finalidade de suportar "
+"programas de geração do Info que usem diferentes maisculizações."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:23383
@@ -62837,6 +62929,11 @@ msgid ""
 "@samp{)} respectively.  Finally, the two-character sequence @samp{^@var{x}} "
 "means the single character @samp{CTRL-@var{x}}, for any @var{x}."
 msgstr ""
+"Nós especificamos parênteses literais (aqueles que são parte do formato "
+"Info) com @t{<lparen>} e @t{<rparen>}, significando os caracteres únicos "
+"@samp{(} e @samp{)} respectivamente. Finalmente, a sequência de dois "
+"caracteres @samp{^@var{x}} significa o caractere único @samp{CTRL-@var{x}}, "
+"para alguma @var{x}."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:23391
@@ -62848,91 +62945,98 @@ msgid ""
 "technical standard.  We may refer back to other parts of this manual for "
 "examples and definitions, rather than redundantly spelling out every detail."
 msgstr ""
+"Esta definição de formato foi escrita cerca de 25 anos depois que o "
+"formato Info foi criado. Assim, no caso de conflitos entre esta definição "
+"e a prática real, a prática vence. Ela também pressupõe algum "
+"conhecimento geral do Texinfo; ela é destinada a ser um guia para "
+"implementadores(as) em vez de um padrão técnico rígido. Nós "
+"possivelmente retro referenciemos outras partes deste manual para exemplos e "
+"definições, em vez de redundantemente explicitar cada detalhe."
 
 #. type: menuentry
 #: texinfo/texinfo.texi:23403
 msgid "Whole: Info Format Whole Manual."
-msgstr ""
+msgstr "Inteiro: Manual Inteiro do Formato Info."
 
 #. type: menuentry
 #: texinfo/texinfo.texi:23403
 msgid "Preamble: Info Format Preamble."
-msgstr ""
+msgstr "Preâmbulo: Preâmbulo do Formato Info."
 
 #. type: menuentry
 #: texinfo/texinfo.texi:23403
 msgid "Indirect: Info Format Indirect Table."
-msgstr ""
+msgstr "Indireto: Tabela Indireta do Formato Info."
 
 #. type: menuentry
 #: texinfo/texinfo.texi:23403
 msgid "Tag table: Info Format Tag Table."
-msgstr ""
+msgstr "Tabela de etiquetas: Tabela de Etiquetas do Formato Info."
 
 #. type: menuentry
 #: texinfo/texinfo.texi:23403
 msgid "Local variables: Info Format Local Variables."
-msgstr ""
+msgstr "Variáveis locais: Variáveis Locais do Formato Info."
 
 #. type: menuentry
 #: texinfo/texinfo.texi:23403
 msgid "Regular nodes: Info Format Regular Nodes."
-msgstr ""
+msgstr "Nós regulares: Nós Regulares do Formato Info."
 
 #. type: menuentry
 #: texinfo/texinfo.texi:23403
 msgid "Menu: Info Format Menu."
-msgstr ""
+msgstr "Menu: Menu do Formato Info."
 
 #. type: menuentry
 #: texinfo/texinfo.texi:23403
 msgid "Image: Info Format Image."
-msgstr ""
+msgstr "Imagem: Imagem do Formato Info."
 
 #. type: menuentry
 #: texinfo/texinfo.texi:23403
 msgid "Printindex: Info Format Printindex."
-msgstr ""
+msgstr "Printindex: Printindex do Formato Info."
 
 #. type: menuentry
 #: texinfo/texinfo.texi:23403
 msgid "Cross-Reference: Info Format Cross Reference"
-msgstr ""
+msgstr "Referência Cruzada: Referência Cruzada do Formato Info"
 
 #. type: node
 #: texinfo/texinfo.texi:23406
 #, no-wrap
 msgid "Info Format Whole Manual"
-msgstr ""
+msgstr "Manual Inteiro do Formato Info"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:23408
 msgid "@nodedescription Split vs.@: nonsplit manuals."
-msgstr ""
+msgstr "@nodedescription Manuais divididos versus não divididos."
 
 #. type: section
 #: texinfo/texinfo.texi:23408
 #, no-wrap
 msgid "Info Format: A Whole Manual"
-msgstr ""
+msgstr "Formato Info: Um Manual Inteiro"
 
 #. type: cindex
 #: texinfo/texinfo.texi:23410
 #, no-wrap
 msgid "Nonsplit manuals, Info format of"
-msgstr ""
+msgstr "Manuais não divididos, formato Info de"
 
 #. type: cindex
 #: texinfo/texinfo.texi:23411
 #, no-wrap
 msgid "Split manuals, Info format of"
-msgstr ""
+msgstr "Manuais divididos, formato Info de"
 
 #. type: cindex
 #: texinfo/texinfo.texi:23412
 #, no-wrap
 msgid "Whole manual, in Info format"
-msgstr ""
+msgstr "Manual inteiro, no formato Info"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:23416
@@ -62940,11 +63044,13 @@ msgid ""
 "To begin, an Info manual is either @dfn{nonsplit} (contained wholly within a "
 "single file) or @dfn{split} (across several files)."
 msgstr ""
+"Para começar, um manual do Info ou é @dfn{não dividido} (contido "
+"inteiramente em um arquivo) ou é @dfn{dividido} (em vários arquivos)."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:23418
 msgid "The syntax for a nonsplit manual is:"
-msgstr ""
+msgstr "A sintaxe para um manual não dividido é:"
 
 #. type: example
 #: texinfo/texinfo.texi:23425
@@ -62956,6 +63062,11 @@ msgid ""
 "<tag table>?\n"
 "<local variables>?\n"
 msgstr ""
+"    <arquivo do info não dividido> =\n"
+"<preâmbulo>\n"
+"<nó>*\n"
+"<tabela de etiquetas>?\n"
+"<variáveis locais>?\n"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:23430
@@ -62963,6 +63074,9 @@ msgid ""
 "When split, there is a @dfn{main file}, which contains only pointers to the "
 "nodes given in other @dfn{subfiles}.  The main file looks like this:"
 msgstr ""
+"Quando dividido, existe um @dfn{arquivo principal}, o qual contém somente "
+"ponteiros para os nós fornecidos em outros @dfn{subarquivos}. O arquivo "
+"principal se parece com isto:"
 
 #. type: example
 #: texinfo/texinfo.texi:23437
@@ -62974,11 +63088,16 @@ msgid ""
 "<tag table>\n"
 "<local variables>?\n"
 msgstr ""
+"    <arquivo dividido principal do info> =\n"
+"<preâmbulo>\n"
+"<tabela indireta>\n"
+"<tabela de etiquetas>\n"
+"<variáveis locais>?\n"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:23440
 msgid "The subfiles in a split manual have the following syntax:"
-msgstr ""
+msgstr "Os subarquivos em um manual dividido têm a seguinte sintaxe:"
 
 #. type: example
 #: texinfo/texinfo.texi:23445
@@ -62988,6 +63107,9 @@ msgid ""
 "<preamble>\n"
 "<node>*\n"
 msgstr ""
+"    <subarquivo dividido do info> =\n"
+"<preâmbulo>\n"
+"<nó>*\n"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:23449
@@ -62995,6 +63117,9 @@ msgid ""
 "Note that the tag table is not optional for split files, as it is used with "
 "the indirect table to deduce which subfile a particular node is in."
 msgstr ""
+"Observe que a tabela de etiquetas não é opcional para arquivos divididos, "
+"pois ela é usada com a tabela indireta para deduzir em qual subarquivo um "
+"nó específico está."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:23452
@@ -63002,12 +63127,14 @@ msgid ""
 "Several of the sections in an Info file (such as nodes or tag tables) begin "
 "with a sequence:"
 msgstr ""
+"Várias das seções em um arquivo Info (tais como nós ou tabelas de "
+"etiquetas) começam com uma sequência:"
 
 #. type: example
 #: texinfo/texinfo.texi:23455
 #, no-wrap
 msgid "    <separator> = (^L)?^_(^L)?^J\n"
-msgstr ""
+msgstr "    <separador> = (^L)?^_(^L)?^J\n"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:23460
@@ -63015,6 +63142,8 @@ msgid ""
 "That is, a @samp{CTRL-_} character followed by a newline, with optional "
 "formfeed characters."
 msgstr ""
+"Ou seja, um caractere @samp{CTRL-_} seguido por uma nova linha, com "
+"caracteres formfeed opcionais."
 
 #. type: node
 #: texinfo/texinfo.texi:23463
