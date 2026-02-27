@@ -61344,18 +61344,18 @@ msgstr "@@headings off\n"
 #: texinfo/texinfo.texi:22790
 #, no-wrap
 msgid "Heading Format"
-msgstr ""
+msgstr "Formato do Cabeçalho"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:22792
 msgid "@nodedescription Standard page heading formats."
-msgstr ""
+msgstr "@nodedescription Formatos padrão de cabeçalho de página."
 
 #. type: subsection
 #: texinfo/texinfo.texi:22792
 #, no-wrap
 msgid "Standard Heading Formats"
-msgstr ""
+msgstr "Formatos Padrão de Cabeçalho"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:22797
@@ -61364,6 +61364,9 @@ msgid ""
 "one side of each sheet of paper, and the other for manuals printed on both "
 "sides of the paper."
 msgstr ""
+"O Texinfo fornece dois formatos padrão de cabeçalho, um para manuais "
+"impressos em um lado de cada folha de papel e outro para manuais impressos "
+"em ambos os lados do papel."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:22802
@@ -61373,6 +61376,10 @@ msgid ""
 "is blank, and the right-hand part contains the page number.  A single-sided "
 "page looks like this:"
 msgstr ""
+"O formato padrão para impressão em um lado consiste de uma linha de "
+"cabeçalho na qual a parte esquerda contém o nome do capítulo, a parte "
+"central fica em branco e a parte direita contém o número da página. Uma "
+"página de um lado se parece com isto:"
 
 #. type: group
 #: texinfo/texinfo.texi:22812
@@ -61386,6 +61393,13 @@ msgid ""
 " | ...                   |\n"
 " |                       |\n"
 msgstr ""
+"  _____________________________\n"
+" |                             |\n"
+" | capítulo   número da página |\n"
+" |                             |\n"
+" | Início do texto ...         |\n"
+" | ...                         |\n"
+" |                             |\n"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:22823
@@ -61398,6 +61412,13 @@ msgid ""
 "the page number.  An even-numbered page and an odd-numbered page, side by "
 "side as in an open book, look like this:"
 msgstr ""
+"No formato frente e verso padrão, a parte esquerda da página esquerda "
+"(número par) contém o número da página, a parte central fica em branco e "
+"a parte direita contém o título (especificado pelo comando "
+"@code{@@settitle}). A parte esquerda da página direita (número ímpar) "
+"contém o nome do capítulo, a parte central fica em branco e a parte "
+"direita contém o número da página. Uma página par e uma página ímpar, "
+"lado a lado como em um livro aberto, se parecem com isto:"
 
 #. type: group
 #: texinfo/texinfo.texi:22833
@@ -61411,6 +61432,13 @@ msgid ""
 " | ...                   |   | ...                   |\n"
 " |                       |   |                       |\n"
 msgstr ""
+"  _____________________________     _____________________________\n"
+" |                             |   |                             |\n"
+" | número da página     título |   | número da página   capítulo |\n"
+" |                             |   |                             |\n"
+" | Início do texto...          |   | Mais texto...               |\n"
+" | ...                         |   | ...                         |\n"
+" |                             |   |                             |\n"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:22840
@@ -61418,6 +61446,9 @@ msgid ""
 "The chapter name is preceded by the word ``Chapter'', the chapter number and "
 "a colon.  This makes it easier to keep track of where you are in the manual."
 msgstr ""
+"O nome do capítulo é precedido pela palavra ``Capítulo'', o número do "
+"capítulo e dois pontos. Isso torna mais fácil acompanhar onde você está "
+"no manual."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:22843
@@ -61425,6 +61456,8 @@ msgid ""
 "Note that on pages where a new chapter starts, some text may be omitted from "
 "the heading line."
 msgstr ""
+"Observe que nas páginas onde um novo capítulo começa, algum texto pode "
+"ser omitido da linha do cabeçalho."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:22857
@@ -61432,23 +61465,25 @@ msgid ""
 "By default, nothing is specified for the footing of a Texinfo file, so the "
 "footing remains blank."
 msgstr ""
+"Por padrão, nada é especificado para o rodapé de um arquivo do Texinfo, "
+"de modo que o rodapé permanece em branco."
 
 #. type: node
 #: texinfo/texinfo.texi:22860
 #, no-wrap
 msgid "Custom Headings"
-msgstr ""
+msgstr "Cabeçalhos Personalizados"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:22862
 msgid "@nodedescription How to create your own headings and footings."
-msgstr ""
+msgstr "@nodedescription Como criar teus próprios cabeçalhos e rodapés."
 
 #. type: subsection
 #: texinfo/texinfo.texi:22862
 #, no-wrap
 msgid "How to Make Your Own Headings"
-msgstr ""
+msgstr "Como Fazer Teus Próprios Cabeçalhos"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:22867
@@ -61457,11 +61492,16 @@ msgid ""
 "own.  By default, Texinfo has no footers, so if you specify them, the "
 "available page size for the main text will be slightly reduced."
 msgstr ""
+"Você pode usar os cabeçalhos padrão fornecidos com o Texinfo ou "
+"especificar os teus próprios. Por padrão, o Texinfo não tem rodapés, de "
+"modo que se você especificá-los, o tamanho de página disponível para o "
+"texto principal será ligeiramente reduzido."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:22870
 msgid "Texinfo provides six commands for specifying headings and footings:"
 msgstr ""
+"Texinfo fornece seis comandos para se especificar cabeçalhos e rodapés:"
 
 #. type: itemize
 #: texinfo/texinfo.texi:22874
@@ -61469,6 +61509,8 @@ msgid ""
 "@code{@@everyheading} and @code{@@everyfooting} generate page headers and "
 "footers that are the same for both even- and odd-numbered pages."
 msgstr ""
+"@code{@@everyheading} e @code{@@everyfooting} geram cabeçalhos e rodapés "
+"de página que são os mesmos para ambas, páginas pares e ímpares."
 
 #. type: itemize
 #: texinfo/texinfo.texi:22877
@@ -61476,6 +61518,8 @@ msgid ""
 "@code{@@evenheading} and @code{@@evenfooting} commands generate headers and "
 "footers for even-numbered (left-hand) pages."
 msgstr ""
+"Os comandos @code{@@evenheading} e @code{@@evenfooting} geram cabeçalhos e "
+"rodapés para páginas pares (à esquerda)."
 
 #. type: itemize
 #: texinfo/texinfo.texi:22880
@@ -61483,6 +61527,8 @@ msgid ""
 "@code{@@oddheading} and @code{@@oddfooting} generate headers and footers for "
 "odd-numbered (right-hand) pages."
 msgstr ""
+"@code{@@oddheading} e @code{@@oddfooting} geram cabeçalhos e rodapés para "
+"páginas ímpares (à direita)."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:22884
@@ -61490,6 +61536,8 @@ msgid ""
 "You must cancel the predefined heading commands with the @code{@@headings "
 "off} command before defining your own specifications."
 msgstr ""
+"Você precisa cancelar os comandos predefinidos de cabeçalho com o comando "
+"@code{@@headings off} antes de definir tuas próprias especificações."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:22889
@@ -61498,6 +61546,9 @@ msgid ""
 "center, and the date at the right of every header for both even- and "
 "odd-numbered pages:"
 msgstr ""
+"Aqui está como colocar o nome do capítulo à esquerda, o número da "
+"página no centro e a data à direita de cada cabeçalho para ambas, "
+"páginas pares e ímpares:"
 
 #. type: group
 #: texinfo/texinfo.texi:22894
@@ -61506,6 +61557,8 @@ msgid ""
 "@@headings off\n"
 "@@everyheading @@thischapter @@| @@thispage @@| @@today@{@}\n"
 msgstr ""
+"@@headings off\n"
+"@@everyheading @@thischapter @@| @@thispage @@| @@today@{@}\n"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:22902
@@ -61515,6 +61568,10 @@ msgid ""
 "specification command will not be able to tell where the text for one part "
 "ends and the next part begins."
 msgstr ""
+"Você precisa dividir a parte esquerda originária da parte central e a "
+"parte central originária da parte direita inserindo @samp{@@|} entre as "
+"partes. Caso contrário, o comando de especificação não será capaz de "
+"dizer onde o texto para uma parte termina e a próxima parte começa."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:22907
@@ -61524,35 +61581,39 @@ msgid ""
 "@@-commands replace themselves with the page number, date, chapter name, or "
 "whatever."
 msgstr ""
+"Cada parte pode conter texto ou comandos @@. O texto é impresso como se a "
+"parte estivesse dentro de um parágrafo comum no corpo da página. Os "
+"comandos @@ substituem-se pelo número da página, data, nome do capítulo "
+"ou qualquer outra coisa."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:22910
 msgid "Here are the six heading and footing commands:"
-msgstr ""
+msgstr "Aqui estão os seis comandos de cabeçalho e de rodapé:"
 
 #. type: findex
 #: texinfo/texinfo.texi:22912
 #, no-wrap
 msgid "everyheading"
-msgstr ""
+msgstr "everyheading"
 
 #. type: findex
 #: texinfo/texinfo.texi:22913
 #, no-wrap
 msgid "everyfooting"
-msgstr ""
+msgstr "everyfooting"
 
 #. type: item
 #: texinfo/texinfo.texi:22914
 #, no-wrap
 msgid "@@everyheading @var{left} @@| @var{center} @@| @var{right}"
-msgstr ""
+msgstr "@@everyheading @var{esquerda} @@| @var{centro} @@| @var{direita}"
 
 #. type: itemx
 #: texinfo/texinfo.texi:22915
 #, no-wrap
 msgid "@@everyfooting @var{left} @@| @var{center} @@| @var{right}"
-msgstr ""
+msgstr "@@everyfooting @var{esquerda} @@| @var{centro} @@| @var{direita}"
 
 #. type: table
 #: texinfo/texinfo.texi:22920
@@ -61562,54 +61623,58 @@ msgid ""
 "each sheet of paper, or for documents in which you want symmetrical headers "
 "or footers."
 msgstr ""
+"Os comandos `every' especificam o formato para ambas, páginas pares e "
+"ímpares. Esses comandos são para documentos que forem impressos em um lado "
+"de cada folha de papel ou para documentos nos quais você queira cabeçalhos "
+"ou rodapés simétricos."
 
 #. type: findex
 #: texinfo/texinfo.texi:22921
 #, no-wrap
 msgid "evenheading"
-msgstr ""
+msgstr "evenheading"
 
 #. type: findex
 #: texinfo/texinfo.texi:22922
 #, no-wrap
 msgid "evenfooting"
-msgstr ""
+msgstr "evenfooting"
 
 #. type: findex
 #: texinfo/texinfo.texi:22923
 #, no-wrap
 msgid "oddheading"
-msgstr ""
+msgstr "oddheading"
 
 #. type: findex
 #: texinfo/texinfo.texi:22924
 #, no-wrap
 msgid "oddfooting"
-msgstr ""
+msgstr "oddfooting"
 
 #. type: item
 #: texinfo/texinfo.texi:22925
 #, no-wrap
 msgid "@@evenheading @var{left} @@| @var{center} @@| @var{right}"
-msgstr ""
+msgstr "@@evenheading @var{esquerda} @@| @var{centro} @@| @var{direita}"
 
 #. type: itemx
 #: texinfo/texinfo.texi:22926
 #, no-wrap
 msgid "@@oddheading  @var{left} @@| @var{center} @@| @var{right}"
-msgstr ""
+msgstr "@@oddheading @var{esquerda} @@| @var{centro} @@| @var{direita}"
 
 #. type: itemx
 #: texinfo/texinfo.texi:22927
 #, no-wrap
 msgid "@@evenfooting @var{left} @@| @var{center} @@| @var{right}"
-msgstr ""
+msgstr "@@evenfooting @var{esquerda} @@| @var{centro} @@| @var{direita}"
 
 #. type: itemx
 #: texinfo/texinfo.texi:22928
 #, no-wrap
 msgid "@@oddfooting  @var{left} @@| @var{center} @@| @var{right}"
-msgstr ""
+msgstr "@@oddfooting @var{esquerda} @@| @var{centro} @@| @var{direita}"
 
 #. type: table
 #: texinfo/texinfo.texi:22932
@@ -61618,6 +61683,9 @@ msgid ""
 "odd-numbered pages.  These commands are for books and manuals that are "
 "printed on both sides of each sheet of paper."
 msgstr ""
+"Os comandos `par' e `ímpar' especificam o formato para páginas pares e "
+"páginas ímpares. Esses comandos são para livros e manuais que forem "
+"impressos nos dois lados de cada folha de papel."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:22939
@@ -61627,50 +61695,54 @@ msgid ""
 "@samp{@@this@dots{}} commands in the left, center, or right portions of "
 "headers and footers."
 msgstr ""
+"Use a série @samp{@@this@dots{}} dos comandos @@ para fornecer os nomes dos "
+"capítulos e seções e o número da página. Você pode usar os comandos "
+"@samp{@@this@dots{}} nas partes esquerda, central ou direita dos cabeçalhos "
+"e rodapés."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:22942
 msgid "Here are the @samp{@@this@dots{}} commands:"
-msgstr ""
+msgstr "Aqui estão os comandos @samp{@@this@dots{}}:"
 
 #. type: findex
 #: texinfo/texinfo.texi:22944
 #, no-wrap
 msgid "thispage"
-msgstr ""
+msgstr "thispage"
 
 #. type: table
 #: texinfo/texinfo.texi:22947
 msgid "Expands to the current page number."
-msgstr ""
+msgstr "Expande para o número da página atual."
 
 #. type: findex
 #: texinfo/texinfo.texi:22948
 #, no-wrap
 msgid "thissectionname"
-msgstr ""
+msgstr "thissectionname"
 
 #. type: table
 #: texinfo/texinfo.texi:22951
 msgid "Expands to the name of the current section."
-msgstr ""
+msgstr "Expande para o nome da seção atual."
 
 #. type: findex
 #: texinfo/texinfo.texi:22952
 #, no-wrap
 msgid "thissectionnum"
-msgstr ""
+msgstr "thissectionnum"
 
 #. type: table
 #: texinfo/texinfo.texi:22955
 msgid "Expands to the number of the current section."
-msgstr ""
+msgstr "Expande para o número da seção atual."
 
 #. type: findex
 #: texinfo/texinfo.texi:22956
 #, no-wrap
 msgid "thissection"
-msgstr ""
+msgstr "thissection"
 
 #. type: table
 #: texinfo/texinfo.texi:22960
@@ -61678,36 +61750,38 @@ msgid ""
 "Expands to the number and name of the current section, in the format "
 "`Section 1: Title'."
 msgstr ""
+"Expande para o número e nome da seção atual, no formato `Seção 1: "
+"Título'."
 
 #. type: findex
 #: texinfo/texinfo.texi:22961
 #, no-wrap
 msgid "thischaptername"
-msgstr ""
+msgstr "thischaptername"
 
 #. type: table
 #: texinfo/texinfo.texi:22964
 msgid "Expands to the name of the current chapter."
-msgstr ""
+msgstr "Expande para o nome do capítulo atual."
 
 #. type: findex
 #: texinfo/texinfo.texi:22965
 #, no-wrap
 msgid "thischapternum"
-msgstr ""
+msgstr "thischapternum"
 
 #. type: table
 #: texinfo/texinfo.texi:22969
 msgid ""
 "Expands to the number of the current chapter, or letter of the current "
 "appendix."
-msgstr ""
+msgstr "Expande para o número do capítulo atual ou letra do apêndice atual."
 
 #. type: findex
 #: texinfo/texinfo.texi:22970
 #, no-wrap
 msgid "thischapter"
-msgstr ""
+msgstr "thischapter"
 
 #. type: table
 #: texinfo/texinfo.texi:22974
@@ -61715,12 +61789,14 @@ msgid ""
 "Expands to the number and name of the current chapter, in the format "
 "`Chapter 1: Title'."
 msgstr ""
+"Expande para o número e nome do capítulo atual, no formato `Capítulo 1: "
+"Título'."
 
 #. type: findex
 #: texinfo/texinfo.texi:22975
 #, no-wrap
 msgid "thistitle"
-msgstr ""
+msgstr "thistitle"
 
 #. type: table
 #: texinfo/texinfo.texi:22979
@@ -61728,12 +61804,14 @@ msgid ""
 "Expands to the name of the document, as specified by the @code{@@settitle} "
 "command."
 msgstr ""
+"Expande para o nome do documento, conforme especificado pelo comando "
+"@code{@@settitle}."
 
 #. type: findex
 #: texinfo/texinfo.texi:22980
 #, no-wrap
 msgid "thisfile"
-msgstr ""
+msgstr "thisfile"
 
 #. type: table
 #: texinfo/texinfo.texi:22988
@@ -61745,6 +61823,12 @@ msgid ""
 "an @code{@@include} file.  (@xref{Include Files}, for more information about "
 "@code{@@include} files.)"
 msgstr ""
+"Somente para arquivos @code{@@include}: expande para o nome do arquivo "
+"@code{@@include} atual. Se o atual arquivo fonte do Texinfo não for um "
+"arquivo @code{@@include}, esse comando não terá efeito. Esse comando "
+"@emph{não} fornece o nome atual do arquivo fonte do Texinfo, a menos que "
+"seja um arquivo @code{@@include}. (@xref{Arquivos de Inclusão}, para mais "
+"informações acerca de arquivos @code{@@include})."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:22993
@@ -61752,12 +61836,14 @@ msgid ""
 "You can also use the @code{@@today@{@}} command, which expands to the "
 "current date, in `1 Jan 1900' format."
 msgstr ""
+"Você também pode usar o comando @code{@@today@{@}}, o qual expande para a "
+"data atual, no formato `1 de janeiro de 1900'."
 
 #. type: findex
 #: texinfo/texinfo.texi:22993
 #, no-wrap
 msgid "today"
-msgstr ""
+msgstr "today"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:22998
@@ -61766,6 +61852,9 @@ msgid ""
 "were in the body of a page.  It is useful to incorporate text, particularly "
 "when you are writing drafts:"
 msgstr ""
+"Outros comandos @@ e texto são impressos em um cabeçalho ou rodapé como "
+"se estivessem no corpo de uma página. É útil incorporar texto, "
+"especialmente quando você estiver escrevendo rascunhos:"
 
 #. type: group
 #: texinfo/texinfo.texi:23004
@@ -61775,6 +61864,9 @@ msgid ""
 "@@everyheading @@emph@{Draft!@} @@| @@thispage @@| @@thischapter\n"
 "@@everyfooting @@| @@| Version: 0.27: @@today@{@}\n"
 msgstr ""
+"@@headings off\n"
+"@@everyheading @@emph@{Rascunho!@} @@| @@thispage @@| @@thischapter\n"
+"@@everyfooting @@| @@| Versão: 0.27: @@today@{@}\n"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:23009
@@ -61782,6 +61874,8 @@ msgid ""
 "Beware of overlong titles: they may overlap another part of the header or "
 "footer and blot it out."
 msgstr ""
+"Cuidado com títulos muito longos: eles podem se sobrepor a outra parte do "
+"cabeçalho ou do rodapé e apagá-la."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:23014
@@ -61791,30 +61885,34 @@ msgid ""
 "@code{@@thischapter}, @code{@@thissection} and other such macros to refer to "
 "on such pages as follows:"
 msgstr ""
+"Se você tiver capítulos e(ou) seções muito curtos, vários deles "
+"poderão aparecer em uma página. Você pode especificar quais capítulos e "
+"seções quer que @code{@@thischapter}, @code{@@thissection} e outras macros "
+"se refiram nessas páginas, como segue:"
 
 #. type: findex
 #: texinfo/texinfo.texi:23016
 #, no-wrap
 msgid "everyheadingmarks"
-msgstr ""
+msgstr "everyheadingmarks"
 
 #. type: findex
 #: texinfo/texinfo.texi:23017
 #, no-wrap
 msgid "everyfootingmarks"
-msgstr ""
+msgstr "everyfootingmarks"
 
 #. type: item
 #: texinfo/texinfo.texi:23018
 #, no-wrap
 msgid "@@everyheadingmarks @var{ref}"
-msgstr ""
+msgstr "@@everyheadingmarks @var{referência}"
 
 #. type: itemx
 #: texinfo/texinfo.texi:23019
 #, no-wrap
 msgid "@@everyfootingmarks @var{ref}"
-msgstr ""
+msgstr "@@everyfootingmarks @var{referência}"
 
 #. type: table
 #: texinfo/texinfo.texi:23025
@@ -61825,54 +61923,59 @@ msgid ""
 "page).  These @samp{@@every...} commands specify what to do on both even- "
 "and odd-numbered pages."
 msgstr ""
+"O argumento @var{referência} pode ser ou @code{top} (os comandos "
+"@code{@@this...} se referirão ao capítulo/seção no topo de uma página) "
+"ou @code{bottom} (os comandos refletirão a situação na parte inferior de "
+"uma página). Esses comandos @samp{@@every...} especificam o que fazer em "
+"ambas, páginas pares e ímpares."
 
 #. type: findex
 #: texinfo/texinfo.texi:23026
 #, no-wrap
 msgid "evenheadingmarks"
-msgstr ""
+msgstr "evenheadingmarks"
 
 #. type: findex
 #: texinfo/texinfo.texi:23027
 #, no-wrap
 msgid "oddheadingmarks"
-msgstr ""
+msgstr "oddheadingmarks"
 
 #. type: findex
 #: texinfo/texinfo.texi:23028
 #, no-wrap
 msgid "evenfootingmarks"
-msgstr ""
+msgstr "evenfootingmarks"
 
 #. type: findex
 #: texinfo/texinfo.texi:23029
 #, no-wrap
 msgid "oddfootingmarks"
-msgstr ""
+msgstr "oddfootingmarks"
 
 #. type: item
 #: texinfo/texinfo.texi:23030
 #, no-wrap
 msgid "@@evenheadingmarks @var{ref}"
-msgstr ""
+msgstr "@@evenheadingmarks @var{referência}"
 
 #. type: itemx
 #: texinfo/texinfo.texi:23031
 #, no-wrap
 msgid "@@oddheadingmarks @var{ref}"
-msgstr ""
+msgstr "@@oddheadingmarks @var{referência}"
 
 #. type: itemx
 #: texinfo/texinfo.texi:23032
 #, no-wrap
 msgid "@@evenfootingmarks @var{ref}"
-msgstr ""
+msgstr "@@evenfootingmarks @var{referência}"
 
 #. type: itemx
 #: texinfo/texinfo.texi:23033
 #, no-wrap
 msgid "@@oddfootingmarks @var{ref}"
-msgstr ""
+msgstr "@@oddfootingmarks @var{referência}"
 
 #. type: table
 #: texinfo/texinfo.texi:23037
@@ -61881,6 +61984,9 @@ msgid ""
 "only even- or odd-numbered pages, respectively.  The @var{ref} argument is "
 "the same as with the @samp{@@every...} commands."
 msgstr ""
+"Esses comandos @samp{@@even...} e @samp{@@odd...} especificam o que fazer "
+"somente em páginas pares ou ímpares, respectivamente. O argumento "
+"@var{referência} é o mesmo que com os comandos @samp{@@every...}."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:23043
@@ -61890,6 +61996,10 @@ msgid ""
 "contents or if it is printed at the end of your manual.  These commands have "
 "no effect in @LaTeX{}."
 msgstr ""
+"Escreva esses comandos imediatamente depois dos comandos "
+"@code{@@...contents} ou depois do comando @code{@@end titlepage} se você "
+"não tiver um sumário ou se ele estiver impresso no final do teu manual. "
+"Esses comandos não têm efeito no @LaTeX{}."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:23046
@@ -61897,35 +62007,37 @@ msgid ""
 "By default, for @TeX{}, the @code{@@this...} commands reflect the situation "
 "at the bottom of a page both in headings and in footings."
 msgstr ""
+"Por padrão, para @TeX{}, os comandos @code{@@this...} refletem a situação "
+"na parte inferior de uma página tanto nos cabeçalhos quanto nos rodapés."
 
 #. type: node
 #: texinfo/texinfo.texi:23048
 #, no-wrap
 msgid "@code{@@paragraphindent}"
-msgstr ""
+msgstr "@code{@@paragraphindent}"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:23050
 msgid "@nodedescription Specify paragraph indentation."
-msgstr ""
+msgstr "@nodedescription Especificar o recuo do parágrafo."
 
 #. type: section
 #: texinfo/texinfo.texi:23050
 #, no-wrap
 msgid "@code{@@paragraphindent}: Controlling Paragraph Indentation"
-msgstr ""
+msgstr "@code{@@paragraphindent}: Controlando Recuo do Parágrafo"
 
 #. type: cindex
 #: texinfo/texinfo.texi:23054
 #, no-wrap
 msgid "Indenting paragraphs, control of"
-msgstr ""
+msgstr "Recuo de parágrafos, controle de"
 
 #. type: cindex
 #: texinfo/texinfo.texi:23055
 #, no-wrap
 msgid "Paragraph indentation control"
-msgstr ""
+msgstr "Controle de recuo de parágrafo"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:23062
@@ -61936,40 +62048,45 @@ msgid ""
 "@code{@@paragraphindent} command at the beginning of a line followed by "
 "either @samp{asis} or a number:"
 msgstr ""
+"Os processadores do Texinfo podem inserir espaços em branco no início da "
+"primeira linha de cada parágrafo, recuando assim esse parágrafo. Você "
+"pode usar o comando @code{@@paragraphindent} para especificar esse recuo. "
+"Escreva um comando @code{@@paragraphindent} no início de uma linha seguido "
+"ou por @samp{asis} ou por um número:"
 
 #. type: example
 #: texinfo/texinfo.texi:23065
 #, no-wrap
 msgid "@@paragraphindent @var{indent}\n"
-msgstr ""
+msgstr "@@paragraphindent @var{recuo}\n"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:23068 texinfo/texinfo.texi:23158
 msgid "The indentation is according to the value of @var{indent}:"
-msgstr ""
+msgstr "O recuo fica de acordo com o valor de @var{recuo}:"
 
 #. type: table
 #: texinfo/texinfo.texi:23073 texinfo/texinfo.texi:23163
 msgid ""
 "Do not change the existing indentation (not implemented in printed output)."
-msgstr ""
+msgstr "Não mude o recuo existente (não implementado na saída impressa)."
 
 #. type: item
 #: texinfo/texinfo.texi:23075 texinfo/texinfo.texi:23164
 #, no-wrap
 msgid "0"
-msgstr ""
+msgstr "0"
 
 #. type: table
 #: texinfo/texinfo.texi:23077 texinfo/texinfo.texi:23166
 msgid "Omit all indentation."
-msgstr ""
+msgstr "Omita todo o recuo."
 
 #. type: var{#1}
 #: texinfo/texinfo.texi:23078 texinfo/texinfo.texi:23167
 #, no-wrap
 msgid "n"
-msgstr ""
+msgstr "n"
 
 #. type: table
 #: texinfo/texinfo.texi:23081
@@ -61977,6 +62094,8 @@ msgid ""
 "Indent by @var{n} space characters in Info output, by @var{n} ems in printed "
 "output."
 msgstr ""
+"Recuar por @var{n} caracteres de espaço na saída Info, por @var{n} ems na "
+"saída impressa."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:23086
@@ -61984,6 +62103,8 @@ msgid ""
 "The default value of @var{indent} is 3.  @code{@@paragraphindent} is ignored "
 "for HTML output."
 msgstr ""
+"O valor padrão de @var{recuo} é 3. @code{@@paragraphindent} é ignorado "
+"para saída HTML."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:23091
@@ -61992,59 +62113,63 @@ msgid ""
 "end-of-header line at the beginning of a Texinfo file, so the region "
 "formatting commands indent paragraphs as specified.  @xref{Start of Header}."
 msgstr ""
+"É melhor escrever o comando @code{@@paragraphindent} antes da linha de fim "
+"do cabeçalho no início de um arquivo do Texinfo, de modo que os comandos "
+"de formatação de região recuem parágrafos conforme especificado. "
+"@xref{Início do Cabeçalho}."
 
 #. type: node
 #: texinfo/texinfo.texi:23093
 #, no-wrap
 msgid "@code{@@firstparagraphindent}"
-msgstr ""
+msgstr "@code{@@firstparagraphindent}"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:23095
 msgid "@nodedescription Suppressing first paragraph indentation."
-msgstr ""
+msgstr "@nodedescription Suprimindo o recuo do primeiro parágrafo."
 
 #. type: section
 #: texinfo/texinfo.texi:23095
 #, no-wrap
 msgid "@code{@@firstparagraphindent}: Indenting After Headings"
-msgstr ""
+msgstr "@code{@@firstparagraphindent}: Recuo Depois de Cabeçalhos"
 
 #. type: findex
 #: texinfo/texinfo.texi:23098
 #, no-wrap
 msgid "firstparagraphindent"
-msgstr ""
+msgstr "firstparagraphindent"
 
 #. type: cindex
 #: texinfo/texinfo.texi:23099
 #, no-wrap
 msgid "First paragraph, suppressing indentation of"
-msgstr ""
+msgstr "Primeiro parágrafo, suprimindo o recuo de"
 
 #. type: cindex
 #: texinfo/texinfo.texi:23100
 #, no-wrap
 msgid "Suppressing first paragraph indentation"
-msgstr ""
+msgstr "Suprimindo o recuo do primeiro parágrafo"
 
 #. type: cindex
 #: texinfo/texinfo.texi:23101
 #, no-wrap
 msgid "Preventing first paragraph indentation"
-msgstr ""
+msgstr "Evitando o recuo do primeiro parágrafo"
 
 #. type: cindex
 #: texinfo/texinfo.texi:23102
 #, no-wrap
 msgid "Indenting, suppressing of first paragraph"
-msgstr ""
+msgstr "Recuo, supressão do primeiro parágrafo"
 
 #. type: cindex
 #: texinfo/texinfo.texi:23103
 #, no-wrap
 msgid "Headings, indentation after"
-msgstr ""
+msgstr "Cabeçalhos, recuo depois"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:23110
@@ -62055,12 +62180,17 @@ msgid ""
 "This indentation is controlled with the @code{@@firstparagraphindent} "
 "command:"
 msgstr ""
+"Como você pode ver neste manual, o primeiro parágrafo de qualquer seção "
+"não é recuado por padrão. Tipograficamente, o recuo é um separador de "
+"parágrafo, o que significa que é desnecessário quando uma nova seção "
+"começa. Esse recuo é controlado com o comando "
+"@code{@@firstparagraphindent}:"
 
 #. type: example
 #: texinfo/texinfo.texi:23113
 #, no-wrap
 msgid "@@firstparagraphindent @var{word}\n"
-msgstr ""
+msgstr "@@firstparagraphindent @var{palavra}\n"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:23117
@@ -62068,6 +62198,8 @@ msgid ""
 "The first paragraph after a heading is indented according to the value of "
 "@var{word}:"
 msgstr ""
+"O primeiro parágrafo depois de um cabeçalho é recuado de acordo com o "
+"valor de @var{palavra}:"
 
 #. type: table
 #: texinfo/texinfo.texi:23123
@@ -62075,12 +62207,15 @@ msgid ""
 "Prevents the first paragraph from being indented (default).  This option is "
 "ignored by @command{makeinfo} if @code{@@paragraphindent asis} is in effect."
 msgstr ""
+"Impede que o primeiro parágrafo seja recuado (padrão). Essa opção é "
+"ignorada pelo @command{makeinfo} se @code{@@paragraphindent asis} estiver em "
+"vigor."
 
 #. type: code{#1}
 #: texinfo/texinfo.texi:23124
 #, no-wrap
 msgid "insert"
-msgstr ""
+msgstr "insert"
 
 #. type: table
 #: texinfo/texinfo.texi:23128
@@ -62089,11 +62224,14 @@ msgid ""
 "indentation set by a @code{@@paragraphindent} command "
 "(@pxref{@code{@@paragraphindent}})."
 msgstr ""
+"Inclui recuo normal do parágrafo. Isso respeita o recuo do parágrafo "
+"configurado por um comando @code{@@paragraphindent} "
+"(@pxref{@code{@@paragraphindent}})."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:23131
 msgid "@code{@@firstparagraphindent} is ignored for HTML and DocBook output."
-msgstr ""
+msgstr "@code{@@firstparagraphindent} é ignorado para saída HTML e DocBook."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:23136
@@ -62102,47 +62240,51 @@ msgid ""
 "end-of-header line at the beginning of a Texinfo file, so the region "
 "formatting commands indent paragraphs as specified.  @xref{Start of Header}."
 msgstr ""
+"É melhor escrever o comando @code{@@firstparagraphindent} antes da linha de "
+"final do cabeçalho no início de um arquivo do Texinfo, de modo que os "
+"comandos de formatação de região recuem parágrafos conforme "
+"especificado. @xref{Início do Cabeçalho}."
 
 #. type: node
 #: texinfo/texinfo.texi:23138
 #, no-wrap
 msgid "@code{@@exampleindent}"
-msgstr ""
+msgstr "@code{@@exampleindent}"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:23140
 msgid "@nodedescription Specify environment indentation."
-msgstr ""
+msgstr "@nodedescription Especificar o recuo do ambiente."
 
 #. type: section
 #: texinfo/texinfo.texi:23140
 #, no-wrap
 msgid "@code{@@exampleindent}: Environment Indenting"
-msgstr ""
+msgstr "@code{@@exampleindent}: Recuo do Ambiente"
 
 #. type: findex
 #: texinfo/texinfo.texi:23143
 #, no-wrap
 msgid "exampleindent"
-msgstr ""
+msgstr "exampleindent"
 
 #. type: cindex
 #: texinfo/texinfo.texi:23144
 #, no-wrap
 msgid "Indenting environments"
-msgstr ""
+msgstr "Recuando ambientes"
 
 #. type: cindex
 #: texinfo/texinfo.texi:23145
 #, no-wrap
 msgid "Environment indentation"
-msgstr ""
+msgstr "Recuo do ambiente"
 
 #. type: cindex
 #: texinfo/texinfo.texi:23146
 #, no-wrap
 msgid "Example indentation"
-msgstr ""
+msgstr "Exemplo de recuo"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:23152
@@ -62152,12 +62294,16 @@ msgid ""
 "this indentation.  Write an @code{@@exampleindent} command at the beginning "
 "of a line followed by either @samp{asis} or a number:"
 msgstr ""
+"Os processadores do Texinfo recuam cada linha de @code{@@example} e "
+"ambientes semelhantes. Você pode usar o comando @code{@@exampleindent} para "
+"especificar esse recuo. Escreva um comando @code{@@exampleindent} no início "
+"de uma linha seguido ou por @samp{asis} ou por um número:"
 
 #. type: example
 #: texinfo/texinfo.texi:23155
 #, no-wrap
 msgid "@@exampleindent @var{indent}\n"
-msgstr ""
+msgstr "@@exampleindent @var{recuo}\n"
 
 #. type: table
 #: texinfo/texinfo.texi:23170
@@ -62165,6 +62311,8 @@ msgid ""
 "Indent environments by @var{n} space characters in Info output, by @var{n} "
 "ems in printed output."
 msgstr ""
+"Recuar ambientes por @var{n} caracteres de espaço na saída Info, por "
+"@var{n} ems na saída impressa."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:23176
@@ -62173,6 +62321,9 @@ msgid ""
 "printed output, which is somewhat less.  (The reduction is to help fit more "
 "characters onto physical lines in printed manuals.)"
 msgstr ""
+"O valor padrão de @var{recuo} é 5 espaços no Info e 0,4@dmn{in} na saída "
+"impressa, o que é um pouco menos. (A redução é para ajudar a encaixar "
+"mais caracteres nas linhas físicas nos manuais impressos)."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:23181
@@ -62181,6 +62332,10 @@ msgid ""
 "end-of-header line at the beginning of a Texinfo file, so the region "
 "formatting commands indent paragraphs as specified.  @xref{Start of Header}."
 msgstr ""
+"É melhor escrever o comando @code{@@exampleindent} antes da linha de fim do "
+"cabeçalho no início de um arquivo do Texinfo, de modo que os comandos de "
+"formatação de região recuem parágrafos conforme especificado. "
+"@xref{Início do Cabeçalho}."
 
 #. type: node
 #: texinfo/texinfo.texi:23183
