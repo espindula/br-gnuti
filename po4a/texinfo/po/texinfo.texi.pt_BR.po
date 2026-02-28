@@ -2059,7 +2059,7 @@ msgstr ""
 "escrever comandos @@ em linhas próprias, ou como parte de frases. Como regra "
 "geral, um comando exige chaves se ele se misturar com outro texto; mas não "
 "precisa de chaves se estiver em uma linha própria. Para mais detalhes da "
-"sintaxe de comandos do Texinfo, veja-se @ref{Sintaxe do Comando}."
+"sintaxe de comandos do Texinfo, veja-se @ref{Sintaxe de Comando}."
 
 #. type: itemize
 #: texinfo/texinfo.texi:759
@@ -3192,7 +3192,7 @@ msgstr ""
 "suficiente. Isso ocorre porque os formatadores do Info dividem um arquivo "
 "longo do Info em subarquivos curtos indiretos e os nomeiam pospondo "
 "@samp{-1}, @samp{-2}, @dots{}, @samp{-10}, @samp{-11} e assim por diante ao "
-"nome original do arquivo. (@xref{Arquivos de Etiqueta e de Divisão}.) O nome "
+"nome original do arquivo. (@xref{Arquivos de Etiqueta e Divididos}.) O nome "
 "do subarquivo @file{texinfo.info-10}, por exemplo, é muito longo para "
 "sistemas antigos com um limite de 14 caracteres sobre nomes de arquivo; "
 "portanto, o nome do arquivo do Info para esse documento poderia ser "
@@ -3332,7 +3332,7 @@ msgstr ""
 "do arquivo (@pxref{Cabeçalho do Arquivo do Texinfo}), o bloco "
 "@code{@@copying} especificando as permissões do documento "
 "(@pxref{@code{@@copying}}) e a especificação @code{@@titlepage} "
-"(@pxref{Página de Título e Página de Direitos Autorais})."
+"(@pxref{Página de Título e Página de Copirraite})."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:1249
@@ -3360,7 +3360,7 @@ msgid ""
 msgstr ""
 "Qualquer texto que inicia um parágrafo, comandos @@ que são formatados como "
 "citações, tabelas, listas e assim por diante, e @code{@@node} (@pxref{Nós}) "
-"e comandos de estruturação de capítulos (@pxref{Estruturação de Capítulos}) "
+"e comandos de estruturação de capítulos (@pxref{Estruturamento de Capítulo}) "
 "encerram o preâmbulo."
 
 #. type: Plain text
@@ -3692,7 +3692,7 @@ msgstr ""
 #: texinfo/texinfo.texi:1382 texinfo/texinfo.texi:1385
 #, no-wrap
 msgid "Document Permissions"
-msgstr "Permissões de Documentos"
+msgstr "Permissões do Documento"
 
 #.  old node name
 #. type: Plain text
@@ -4118,7 +4118,7 @@ msgstr ""
 #: texinfo/texinfo.texi:1539
 #, no-wrap
 msgid "Titlepage & Copyright Page"
-msgstr "Página de Título e Página de Direitos Autorais"
+msgstr "Página de Título e Página de Copirraite"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:1541
@@ -4343,7 +4343,7 @@ msgstr "Página órfã de título"
 #: texinfo/texinfo.texi:1627
 #, no-wrap
 msgid "Title page @subentry bastard"
-msgstr "Página de título órfã @subentry"
+msgstr "Página de título @subentry órfã"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:1634
@@ -6042,7 +6042,7 @@ msgid ""
 msgstr ""
 "Na saída gerada HTML, quaisquer caracteres no nome do nó que não sejam "
 "letras, números ou espaços ASCII simples serão mudados no nome do arquivo. "
-"(@xref{Expansão Xref de Nome de Nó do HTML}.) Isso pode tornar os URLs para "
+"(@xref{Expansão de Nome de Nó do Xref do HTML}.) Isso pode tornar os URLs para "
 "as páginas no teu manual menos amigáveis; por exemplo, neste manual, o nó "
 "@samp{@@dots} é gerado como @file{__0040dots.html}."
 
@@ -6102,7 +6102,7 @@ msgstr ""
 #: texinfo/texinfo.texi:2347
 #, no-wrap
 msgid "Node Line Requirements"
-msgstr "Exigências da Linha de Nó"
+msgstr "Exigências da Linha do Nó"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:2349
@@ -6184,7 +6184,7 @@ msgstr "Comandos em nomes de nó"
 #: texinfo/texinfo.texi:2374
 #, no-wrap
 msgid "@sortas{at} @@-commands @subentry in node names"
-msgstr "@subentry @sortas{at} de comandos @@ em nomes de nós"
+msgstr "@sortas{at} comandos @@ @subentry em nomes de nós"
 
 #. type: itemize
 #: texinfo/texinfo.texi:2382
@@ -6325,7 +6325,7 @@ msgid ""
 msgstr ""
 "Se insistir em usar tais caracteres em nomes de nó, para a finalidade de não "
 "confundir os processadores Texinfo, você precisa ainda encapsular tais "
-"caracteres, usando ou inserções especiais (veja-se @ref{Inserindo Uma "
+"caracteres, usando ou inserções especiais (veja-se @ref{Inserindo uma "
 "Vírgula}) ou @code{@@asis} (veja-se @ref{@code{@@asis}}). Por exemplo:"
 
 #. type: example
@@ -6530,7 +6530,7 @@ msgstr ""
 "especificada que apenas @code{/manual/}, se o manual será instalado em "
 "@code{www.gnu.org}. Isso pode ser especificado com a variável de "
 "personalização @code{TOP_NODE_UP_URL} (veja-se @ref{Variáveis de "
-"Personalização de HTML}), como em"
+"Personalização do HTML}), como em"
 
 #. type: example
 #: texinfo/texinfo.texi:2519
@@ -6568,7 +6568,7 @@ msgid ""
 "@xref{Installing an Info File}, for more information about installing an "
 "Info file in the @file{info} directory."
 msgstr ""
-"Veja-se @ref{Instalando Um Arquivo do Info}, para mais informações acerca de "
+"Veja-se @ref{Instalando um Arquivo do Info}, para mais informações acerca de "
 "instalar um arquivo Info no diretório @file{info}."
 
 #. type: Plain text
@@ -7693,7 +7693,7 @@ msgstr ""
 #: texinfo/texinfo.texi:3005
 #, no-wrap
 msgid "Menu Parts"
-msgstr "Partes de Menu"
+msgstr "Partes do Menu"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:3007
@@ -7801,8 +7801,8 @@ msgstr ""
 "Os caracteres de espaço em um menu são preservados como estão na saída Info; "
 "isso te permite formatar o menu como você desejar. Infelizmente, você "
 "precisa digitar os nomes de nó sem quaisquer espaços extras ou algumas "
-"versões de alguns leitores Info não encontrarão o nó (@pxref{Exigências de "
-"Linha de Nó})."
+"versões de alguns leitores Info não encontrarão o nó (@pxref{Exigências da "
+"Linha do Nó})."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:3055
@@ -9378,7 +9378,7 @@ msgid ""
 msgstr ""
 "Por uma questão prática, geralmente você quer somente elevar ou rebaixar "
 "grandes pedaços, normalmente em arquivos externos.  Você consegue usar "
-"@code@@lowersections} para incluir texto escrito, como um arquivo do Texinfo "
+"@code{@@lowersections} para incluir texto escrito, como um arquivo do Texinfo "
 "externo ou independente, em outro arquivo do Texinfo, como um arquivo "
 "interno e incluído (@pxref{Arquivos de Inclusão}).  O uso típico se parece "
 "com o isto:"
@@ -10300,7 +10300,7 @@ msgid ""
 msgstr ""
 "Como você pode ver, o nome do manual está entre parênteses e precede o nome "
 "do nó.  No HTML, o nome do manual e o nome do nó são usados para construir o "
-"URL de hiperlink (@pxref{Xref de HTML}), enquanto o texto do link é baseado "
+"URL de hiperlink (@pxref{Xref do HTML}), enquanto o texto do link é baseado "
 "no rótulo."
 
 #. type: Plain text
@@ -18279,7 +18279,7 @@ msgstr "Outro grupo de comandos é para criar notas de rodapé no Texinfo."
 #: texinfo/texinfo.texi:7361
 #, no-wrap
 msgid "Floats"
-msgstr "Flutuações"
+msgstr "Flutuadores"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:7360
@@ -18449,7 +18449,7 @@ msgstr ""
 #: texinfo/texinfo.texi:7425
 #, no-wrap
 msgid "Floats @subentry making unnumbered"
-msgstr "Flutuações @subentry fazendo não numeradas"
+msgstr "Flutuadores @subentry fazendo não numeradas"
 
 #. type: cindex
 #: texinfo/texinfo.texi:7426
@@ -18498,7 +18498,7 @@ msgstr ""
 #: texinfo/texinfo.texi:7444
 #, no-wrap
 msgid "Floats @subentry numbering of"
-msgstr "Flutuações @subentry numeração de"
+msgstr "Flutuadores @subentry numeração de"
 
 #. type: cindex
 #: texinfo/texinfo.texi:7445
@@ -18525,7 +18525,7 @@ msgid ""
 "Floats within an @code{@@unnumbered}, or outside of any chapter, are simply "
 "numbered consecutively from 1."
 msgstr ""
-"Flutuações dentro de um @code{@@unnumbered}, ou fora de qualquer capítulo, "
+"Flutuadores dentro de um @code{@@unnumbered}, ou fora de qualquer capítulo, "
 "simplesmente são numeradas consecutivamente a partir de 1."
 
 #. type: Plain text
@@ -18706,7 +18706,7 @@ msgstr "@nodedescription Um sumário para flutuações."
 #: texinfo/texinfo.texi:7520
 #, no-wrap
 msgid "@code{@@listoffloats}: Tables of Contents for Floats"
-msgstr "@code{@@listoffloats}: Sumários para Flutuações"
+msgstr "@code{@@listoffloats}: Sumários para Flutuadores"
 
 #. type: findex
 #: texinfo/texinfo.texi:7523
@@ -18724,7 +18724,7 @@ msgstr "Lista de flutuações"
 #: texinfo/texinfo.texi:7525
 #, no-wrap
 msgid "Floats @subentry list of"
-msgstr "Flutuações @subentry lista de"
+msgstr "Flutuadores @subentry lista de"
 
 #. type: cindex
 #: texinfo/texinfo.texi:7526
@@ -18819,7 +18819,7 @@ msgid ""
 "Unnumbered floats (those without cross-reference labels) are omitted from "
 "the list of floats."
 msgstr ""
-"Flutuações não numerados (aquelas sem rótulos de referência cruzada) são "
+"Flutuadores não numerados (aquelas sem rótulos de referência cruzada) são "
 "omitidos da lista de flutuações."
 
 #. type: Plain text
@@ -18839,7 +18839,7 @@ msgid ""
 "@samp{table} (case insensitive) float type.  For other float types, a "
 "specific @code{\\listof} command is output."
 msgstr ""
-"Na saída @LaTeX, @code{\\listoffigures} é gerado para o tipo de flutuação "
+"Na saída @LaTeX{}, @code{\\listoffigures} é gerado para o tipo de flutuação "
 "@samp{figure} (sem distinção entre maiúsculas e minúsculas), "
 "@code{\\listoftables} é gerado para o tipo de flutuação @samp{table} (sem "
 "distinção entre maiúsculas e minúsculas).  Para outros tipos de flutuação, "
@@ -20090,7 +20090,7 @@ msgstr "pg"
 #: texinfo/texinfo.texi:8018
 #, no-wrap
 msgid "@code{pg} (program) index"
-msgstr "@cindex Índice @code{pg} (programa)"
+msgstr "Índice @code{pg} (programa)"
 
 #. type: findex
 #: texinfo/texinfo.texi:8019
@@ -20390,7 +20390,7 @@ msgid ""
 msgstr ""
 "No Info, um índice geralmente é formatado como um menu.  Tente evitar usar "
 "dois pontos nas entradas de índice, pois isso pode confundir alguns leitores "
-"Info.  @xref{Partes de Menu} para mais informações acerca da estrutura de "
+"Info.  @xref{Partes do Menu} para mais informações acerca da estrutura de "
 "uma entrada de menu."
 
 #. type: cindex
@@ -21018,8 +21018,8 @@ msgid ""
 "the raw data to produce a sorted index file.  The sorted index file is what "
 "is actually used to print the index."
 msgstr ""
-"Como parte do processo de criação de um manual impresso com o @TeX, você "
-"executa um programa chamado @command{texindex} (@pxref{Cópia impressa com "
+"Como parte do processo de criação de um manual impresso com o @TeX{}, você "
+"executa um programa chamado @command{texindex} (@pxref{Impresso com "
 "@TeX{}}) para ordenar os dados brutos para produzir um arquivo de índice "
 "ordenado.  O arquivo de índice ordenado é o que, na verdade, é usado para "
 "imprimir o índice."
@@ -21851,7 +21851,7 @@ msgstr ""
 #: texinfo/texinfo.texi:8643
 #, no-wrap
 msgid "Inserting a Comma"
-msgstr "Inserindo Uma Vírgula"
+msgstr "Inserindo uma Vírgula"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:8645
@@ -21897,7 +21897,7 @@ msgid ""
 msgstr ""
 "No entanto, Texinfo usa a vírgula como um caractere especial somente em um "
 "contexto: para separar argumentos para aqueles comandos do Texinfo, como "
-"@code{@@node} (@pxref{Exigências da Linha de Nó}), @code{@@acronym} "
+"@code{@@node} (@pxref{Exigências da Linha do Nó}), @code{@@acronym} "
 "(@pxref{@code{@@acronym}}) e @code{@@xref} (@pxref{Referências Cruzadas}), "
 "bem como macros definidas por usuário(a) (@pxref{Definindo Macros}), que "
 "recebem mais que um argumento."
@@ -22386,7 +22386,7 @@ msgid ""
 "were used by default in @TeX{} output.  Texinfo provides these commands to "
 "choose between these alternate renderings:"
 msgstr ""
-"foram usados ​​por padrão na saída do @TeX.  O Texinfo fornece esses comandos "
+"foram usados por padrão na saída do @TeX{}.  O Texinfo fornece esses comandos "
 "para escolher entre estas renderizações alternativas:"
 
 #. type: findex
@@ -24676,7 +24676,7 @@ msgid ""
 "use @TeX{}'s @samp{_} and @samp{^} characters.  See the next section."
 msgstr ""
 "Para subscritos e sobrescritos em expressões matemáticas, é melhor usar os "
-"caracteres @samp{_} e @samp{^} do @TeX.  Veja-se a próxima seção."
+"caracteres @samp{_} e @samp{^} do @TeX{}.  Veja-se a próxima seção."
 
 #. type: node
 #: texinfo/texinfo.texi:9488
@@ -24779,7 +24779,7 @@ msgid ""
 msgstr ""
 "Por padrão, a saída HTML é apenas enfatizada.  @command{texi2any} oferece "
 "três opções para exibir matemática formatada corretamente para HTML.  Você "
-"consegue selecioná-las com a variável @code{HTML_MATH} (@pxref{Variáveis ​​de "
+"consegue selecioná-las com a variável @code{HTML_MATH} (@pxref{Variáveis de "
 "Personalização do HTML}).  Com @code{HTML_MATH} configurada para @samp{l2h}, "
 "@command{texi2any} tenta usar o programa @command{latex2html} para produzir "
 "arquivos de imagem para material matemático.  Com a configuração @samp{t4h}, "
@@ -24787,9 +24787,9 @@ msgstr ""
 "configuração @samp{mathjax}, @command{texi2any} insere referências nos "
 "arquivos de saída para conjuntos de comandos sequenciais MathJax para "
 "formatar o material.  A opção MathJax exige que JavaScript esteja habilitado "
-"no navegador para funcionar.  Veja-se também @ref{Variáveis ​​de "
-"Personalização da MathJax}, @ref{Variáveis ​​de Personalização do "
-"@command{latex2html}} e @ref{Variáveis ​​de Personalização do "
+"no navegador para funcionar.  Veja-se também @ref{Variáveis de "
+"Personalização da MathJax}, @ref{Variáveis de Personalização do "
+"@command{latex2html}} e @ref{Variáveis de Personalização do "
 "@command{tex4ht}}."
 
 #. type: cindex
@@ -24879,7 +24879,7 @@ msgstr ""
 "O código específico do @LaTeX{} só funcionará quando o formato de saída for "
 "@LaTeX{} e com as opções da @code{HTML_MATH} (embora @command{tex4ht} "
 "precise que @code{T4H_MATH_CONVERSION} seja configurada para @samp{latex}; "
-"@pxref{Variáveis ​​de Personalização do @command{tex4ht}})."
+"@pxref{Variáveis de Personalização do @command{tex4ht}})."
 
 #. type: findex
 #: texinfo/texinfo.texi:9569
@@ -30140,7 +30140,7 @@ msgstr ""
 #: texinfo/texinfo.texi:11642
 #, no-wrap
 msgid "Def Cmd Conventions"
-msgstr "Convenções de Comando de Definição"
+msgstr "Convenções de Comandos de Definição"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:11644
@@ -31107,7 +31107,7 @@ msgid ""
 "macros are used in @LaTeX{}."
 msgstr ""
 "Na saída HTML e @LaTeX{}, se @code{OUTPUT_CHARACTERS} estiver configurada "
-"(@pxref{Outras Variáveis ​​de Personalização}), construções de acentos e "
+"(@pxref{Outras Variáveis de Personalização}), construções de acentos e "
 "caracteres especiais, como @code{@@'e} ou @code{``}, serão gerados como a "
 "sequência UTF-8 real ou caractere de 8 bits na codificação de saída, onde "
 "possível.  Caso contrário, entidades HTML serão usadas para esses caracteres "
@@ -31125,7 +31125,7 @@ msgid ""
 msgstr ""
 "Na saída do DocBook, se a codificação for diferente de UTF-8, um atributo "
 "@code{encoding} será adicionado à declaração XML.  Se "
-"@code{OUTPUT_CHARACTERS} estiver configurada (@pxref{Outras Variáveis ​​de "
+"@code{OUTPUT_CHARACTERS} estiver configurada (@pxref{Outras Variáveis de "
 "Personalização}), construções de acentuação, como @code{@@'e}, serão geradas "
 "como o caractere de 8 bits ou UTF-8 real na codificação de saída, onde "
 "possível.  Caso contrário, entidades XML serão usadas para essas construções."
@@ -31173,7 +31173,7 @@ msgid ""
 "preamble and use @code{\\DeclareUnicodeCharacter} with a UTF-8 encoding.  "
 "For example:"
 msgstr ""
-"Na saída do @LaTeX, o código que carrega o pacote @samp{inputenc} é gerado "
+"Na saída do @LaTeX{}, o código que carrega o pacote @samp{inputenc} é gerado "
 "baseado na codificação.  Isso, por si só, não garante que todos os "
 "caracteres provenientes do documento de entrada possam ser gerados "
 "posteriormente.  As fontes usadas no caso padrão deveriam abranger os glifos "
@@ -31744,13 +31744,13 @@ msgid ""
 msgstr ""
 "As regiões delimitadas por esses comandos são fontes Texinfo comuns, como em "
 "@code{@@iftex}, e não fontes de formatador bruto, como em @code{@@tex} "
-"(@pxref{Comandos do Formatador Bruto})."
+"(@pxref{Comandos Brutos do Formatador})."
 
 #. type: section
 #: texinfo/texinfo.texi:12261 texinfo/texinfo.texi:12263
 #, no-wrap
 msgid "Raw Formatter Commands"
-msgstr "Comandos Brutos de Formatador"
+msgstr "Comandos Brutos do Formatador"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:12263
@@ -32122,7 +32122,7 @@ msgstr "@@inlineraw@{@var{formato}, @var{texto}@}"
 #: texinfo/texinfo.texi:12376
 msgid "Similar, but for raw @var{text} (@pxref{Raw Formatter Commands})."
 msgstr ""
-"Similar, porém para @var{texto} bruto (@pxref{Comandos Brutos de "
+"Similar, porém para @var{texto} bruto (@pxref{Comandos Brutos do "
 "Formatador})."
 
 #. type: Plain text
@@ -33437,7 +33437,7 @@ msgid ""
 "(@pxref{Def Cmd Template})."
 msgstr ""
 "Aliás, essas macros não tem nada a ver com o comando @code{@@defmac}, que "
-"serve para documentar macros na área de assunto do manual (@pxref{Modelos de "
+"serve para documentar macros na área de assunto do manual (@pxref{Modelo de "
 "Comando de Definição})."
 
 #. type: itemize
@@ -35742,7 +35742,7 @@ msgid ""
 msgstr ""
 "O modo Texinfo do GNU Emacs fornece @code{texinfo-multiple-files-update} "
 "para atualizar ponteiros de nós e menu mestre com vários arquivos de "
-"inclusão.  @xref{Atualizar Vários Arquivos}."
+"inclusão.  @xref{Atualizar Múltiplos Arquivos}."
 
 #. type: node
 #: texinfo/texinfo.texi:13899
@@ -35989,7 +35989,7 @@ msgstr "Evolução dos Arquivos de Inclusão"
 #: texinfo/texinfo.texi:14046
 #, no-wrap
 msgid "Hardcopy with @TeX{}"
-msgstr "Cópia impressa com @TeX{}"
+msgstr "Impresso com @TeX{}"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:14048
@@ -37349,7 +37349,7 @@ msgid ""
 "distributions.  The latest version released for general use is available "
 "from the usual GNU servers and mirrors:"
 msgstr ""
-"@Tex{} precisa encontrar o arquivo @file{texinfo.tex} que o comando "
+"@TeX{} precisa encontrar o arquivo @file{texinfo.tex} que o comando "
 "@samp{\\input texinfo} na primeira linha lê.  O arquivo @file{texinfo.tex} "
 "informa ao @TeX{} como lidar com comandos @@; Está incluído em todas as "
 "distribuições padrão do GNU.  A versão mais recente lançada para uso geral "
@@ -37653,7 +37653,7 @@ msgid ""
 msgstr ""
 "O @TeX{} também fornece o número da linha no arquivo fonte do Texinfo e no "
 "texto da linha ofensiva, que é marcada em todos os locais que o @TeX{} "
-"considerou a hifenação. @xref{Depurando com @TeX{}}, para mais informações "
+"considerou a hifenação. @xref{Depuração com @TeX{}}, para mais informações "
 "acerca de erros de tipografia."
 
 #. type: Plain text
@@ -38184,8 +38184,7 @@ msgid ""
 "Generate a TeX DVI file using @command{texi2dvi}, rather than Info "
 "(@pxref{@command{texi2any} Printed Output})."
 msgstr ""
-"Gere um arquivo DVI do TeX usando @command{texi2dvi}, em vez de Info (Saída "
-"Impressa do @pxref{@command{texi2any}})."
+"Gere um arquivo DVI do TeX usando @command{texi2dvi}, em vez de Info (@pxref{Saída Impressa do @command{texi2any}})."
 
 #. type: opindex
 #: texinfo/texinfo.texi:14820 texinfo/texinfo.texi:14821
@@ -38199,8 +38198,7 @@ msgid ""
 "Generate a PDF file using @command{texi2dvi --dvipdf}, rather than Info "
 "(@pxref{@command{texi2any} Printed Output})."
 msgstr ""
-"Gere um arquivo PDF usando @command{texi2dvi --dvipdf}, em vez de Info "
-"(Saída Impressa do @pxref{@command{texi2any}})."
+"Gere um arquivo PDF usando @command{texi2dvi --dvipdf}, em vez de Info (@pxref{Saída Impressa do @command{texi2any}})."
 
 #. type: option{#1}
 #: texinfo/texinfo.texi:14825 texinfo/texinfo.texi:14827
@@ -38590,8 +38588,8 @@ msgstr ""
 "cerca de 300.000 bytes, ele será dividido em subarquivos mais curtos de "
 "aproximadamente esse tamanho. O nome do arquivo da saída gerada e de "
 "quaisquer subarquivos é determinado pelo nome do arquivo de entrada ou por "
-"@code{@@setfilename}, se presente (@pxref{Configurando o Nome do Arquivo de "
-"Saída}). @xref{Arquivos de Etiqueta e Divididos}."
+"@code{@@setfilename}, se presente (@pxref{Configurando o Nome do Arquivo da "
+"Saída Gerada}). @xref{Arquivos de Etiqueta e Divididos}."
 
 #. type: opindex
 #: texinfo/texinfo.texi:14964 texinfo/texinfo.texi:14965
@@ -38785,9 +38783,9 @@ msgid ""
 msgstr ""
 "Com @option{--node-files}, ao gerar HTML, criar arquivos de redirecionamento "
 "para âncoras e quaisquer nós ainda não gerados com o nome do arquivo "
-"correspondente ao nome do nó (@pxref{Expansão Xref de Nome de Nó do HTML}). "
+"correspondente ao nome do nó (@pxref{Expansão de Nome de Nó do Xref do HTML}). "
 "Isso torna possível o êxito de referências entre manuais em nível de seção e "
-"de capítulo (@pxref{Configuração Xref do HTML})."
+"de capítulo (@pxref{Configuração do Xref do HTML})."
 
 #. type: table
 #: texinfo/texinfo.texi:15034
@@ -39006,7 +39004,7 @@ msgstr ""
 "@code{@@setfilename} encontrado no fonte do Texinfo. Se nem "
 "@code{@@setfilename} nem essa opção forem especificados, o nome do arquivo "
 "de entrada será usado para determinar o nome da saída gerada. "
-"@xref{Configurando o Nome do Arquivo de Saída}."
+"@xref{Configurando o Nome do Arquivo da Saída Gerada}."
 
 #. type: table
 #: texinfo/texinfo.texi:15114
@@ -39177,8 +39175,7 @@ msgid ""
 "Generate a PDF file using @command{texi2dvi --pdf}, rather than Info "
 "(@pxref{@command{texi2any} Printed Output})."
 msgstr ""
-"Gerar um arquivo PDF usando @command{texi2dvi --pdf}, em vez de Info (Saída "
-"Impressa do @pxref{@command{texi2any}})."
+"Gerar um arquivo PDF usando @command{texi2dvi --pdf}, em vez de Info (@pxref{Saída Impressa do @command{texi2any}})."
 
 #. type: opindex
 #: texinfo/texinfo.texi:15173 texinfo/texinfo.texi:15174
@@ -39259,8 +39256,7 @@ msgid ""
 "Generate a PostScript file using @command{texi2dvi --ps}, rather than Info "
 "(@pxref{@command{texi2any} Printed Output})."
 msgstr ""
-"Gerar um arquivo PostScript usando @command{texi2dvi --ps}, em vez de Info "
-"(Saída Impressa do @pxref{@command{texi2any}})."
+"Gerar um arquivo PostScript usando @command{texi2dvi --ps}, em vez de Info (@pxref{Saída Impressa do @command{texi2any}})."
 
 #. type: opindex
 #: texinfo/texinfo.texi:15196 texinfo/texinfo.texi:15198
@@ -39422,9 +39418,7 @@ msgid ""
 "Enable transliteration of non-ASCII characters in node names for the purpose "
 "of file name creation.  @xref{HTML Xref 8-bit Character Expansion}."
 msgstr ""
-"Habilitar transliteração de caracteres não ASCII em nomes de nós para fins "
-"de criação de nomes de arquivos. @xref{Expansão Xref de Caracteres de 8 bits "
-"do HTML}."
+"Habilitar transliteração de caracteres não ASCII em nomes de nós para fins de criação de nomes de arquivos. @xref{Expansão do Caractere de 8 Bits do Xref do HTML}."
 
 #. type: item
 #: texinfo/texinfo.texi:15255
@@ -39947,7 +39941,7 @@ msgstr "HTML: Variáveis de Personalização de HTML."
 #. type: menuentry
 #: texinfo/texinfo.texi:15457
 msgid "MathJax: MathJax Customization Variables."
-msgstr "MathJax: Variáveis de Personalização de MathJax."
+msgstr "MathJax: Variáveis de Personalização da MathJax."
 
 #. type: menuentry
 #: texinfo/texinfo.texi:15457
@@ -40750,7 +40744,7 @@ msgid ""
 msgstr ""
 "Verificar se os manuais que são o alvo de referências cruzadas externas "
 "(@pxref{Quatro e Cinco Argumentos}) estão presentes em @file{htmlxref.cnf} "
-"(@pxref{Configuração Xref do HTML}); padrão falso."
+"(@pxref{Configuração do Xref do HTML}); padrão falso."
 
 #. type: item
 #: texinfo/texinfo.texi:15698
@@ -40904,8 +40898,7 @@ msgid ""
 msgstr ""
 "Para referências cruzadas para outros manuais, isso determina se o outro "
 "manual é considerado dividido ou monolítico. Por padrão, ela é configurada "
-"baseada no valor de @code{SPLIT}. @xref{Xref do HTML} e @pxref{Configuração "
-"Xref do HTML}."
+"baseada no valor de @code{SPLIT}. @xref{Xref do HTML} e @pxref{Configuração do Xref do HTML}."
 
 #. type: item
 #: texinfo/texinfo.texi:15749
@@ -40921,7 +40914,7 @@ msgid ""
 "than this variable."
 msgstr ""
 "Diretório base para manuais externos; padrão nenhum. É melhor usar o "
-"mecanismo geral de referência cruzada externa (@pxref{Configuração Xref do "
+"mecanismo geral de referência cruzada externa (@pxref{Configuração do Xref do "
 "HTML}) do que essa variável."
 
 #. type: item
@@ -41041,7 +41034,7 @@ msgid ""
 msgstr ""
 "Método a usar-se para renderizar @code{@@math}. Isso pode ser "
 "desconfigurada, configurada como @samp{mathjax} (@pxref{Variáveis de "
-"Personalização MathJax}), configurada como @samp{l2h}, que usa "
+"Personalização da MathJax}), configurada como @samp{l2h}, que usa "
 "@command{latex2html} (@pxref{Variáveis de Personalização do "
 "@command{latex2html}}), ou configurada como @samp{t4h}, que usa "
 "@command{tex4ht} (@pxref{Variáveis de Personalização do @command{tex4ht}}). "
@@ -41080,7 +41073,7 @@ msgid ""
 msgstr ""
 "Configurar o nome do arquivo usado para referências cruzadas para outros "
 "manuais. Se não definida, @file{htmlxref.cnf} será usado "
-"(@pxref{Configuração Xref do HTML}). Não definida no caso padrão. Se "
+"(@pxref{Configuração do Xref do HTML}). Não definida no caso padrão. Se "
 "@code{TEST} estiver configurada, @code{HTMLXREF_MODE} estiver configurada "
 "para o padrão e @code{HTMLXREF_FILE} não estiver definida, informações "
 "acerca de referências cruzadas para outros manuais não serão usadas."
@@ -41096,7 +41089,7 @@ msgstr ""
 "Se @code{HTMLXREF_MODE} estiver configurada como @samp{file}, o nome do "
 "arquivo será usado diretamente como a fonte de informação; caso contrário, o "
 "nome do arquivo será pesquisado em diretórios e todos os arquivos "
-"encontrados serão usados (@pxref{Configuração Xref do HTML})."
+"encontrados serão usados (@pxref{Configuração do Xref do HTML})."
 
 #. type: item
 #: texinfo/texinfo.texi:15807
@@ -41120,7 +41113,7 @@ msgstr ""
 "partir de um caminho de arquivo, @file{htmlxref.cnf} no caso padrão, ou o "
 "valor de @code{HTMLXREF_FILE}. Se não definida (o padrão) ou configurada "
 "para qualquer outro valor, pesquisar nos diretórios e usar todos os arquivos "
-"(@pxref{Configuração Xref do HTML})."
+"(@pxref{Configuração do Xref do HTML})."
 
 #. type: item
 #: texinfo/texinfo.texi:15815
@@ -41829,7 +41822,7 @@ msgstr ""
 #: texinfo/texinfo.texi:16031 texinfo/texinfo.texi:16032
 #, no-wrap
 msgid "MathJax Customization Variables"
-msgstr "Variáveis de Personalização do MathJax"
+msgstr "Variáveis de Personalização da MathJax"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:16037
@@ -41880,7 +41873,7 @@ msgstr ""
 "ou instruções para obter tal código-fonte, para o arquivo do componente "
 "nomeado por @code{MATHJAX_SCRIPT}. `Forma preferida para modificação' "
 "significa que essa não deveria estar em uma forma `minificada'. Usada na "
-"página de rótulos de licença (@pxref{Variáveis de Personalização de HTML}, "
+"página de rótulos de licença (@pxref{Variáveis de Personalização do HTML}, "
 "sob @code{JS_WEBLABELS})."
 
 #. type: vtable
@@ -42808,7 +42801,7 @@ msgstr ""
 "Info em locais como nomes de nós ou itens de menu, envolver a parte da "
 "construção onde eles aparecerem com caracteres de aspas, conforme descrito "
 "em @ref{Especificação de Formato Info}. O padrão é configurada para Info e "
-"desconfigurada para texto simples. @xref{Requisitos de Linha de Nó}."
+"desconfigurada para texto simples. @xref{Exigências da Linha do Nó}."
 
 #. type: item
 #: texinfo/texinfo.texi:16381
@@ -43384,8 +43377,7 @@ msgstr ""
 "já esteja formatado para o formato da saída gerada. Em HTML pode ser usado "
 "em atributo, portanto não deveria conter nenhum elemento. Usado para saída "
 "HTML somente se @code{TOP_NODE_UP_URL} estiver configurada para substituir o "
-"URL@:; veja-se @code{TOP_NODE_UP_URL} em @ref{Variáveis de Personalização "
-"HTML}."
+"URL@:; veja-se @code{TOP_NODE_UP_URL} em @ref{Variáveis de Personalização do HTML}."
 
 #. type: item
 #: texinfo/texinfo.texi:16555
@@ -43684,7 +43676,7 @@ msgstr ""
 #: texinfo/texinfo.texi:16652 texinfo/texinfo.texi:16654
 #, no-wrap
 msgid "Internationalization of Document Strings"
-msgstr "Internacionalização de Sequências de Caracteres do Documento"
+msgstr "Internacionalização de Sequências de Caracteres de Documentos"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:16654
@@ -44386,7 +44378,7 @@ msgstr ""
 #: texinfo/texinfo.texi:16909 texinfo/texinfo.texi:16910
 #, no-wrap
 msgid "Installing an Info File"
-msgstr "Instalando um Arquivo Info"
+msgstr "Instalando um Arquivo do Info"
 
 #. type: cindex
 #: texinfo/texinfo.texi:16911
@@ -44889,7 +44881,7 @@ msgstr ""
 #: texinfo/texinfo.texi:17100
 #, no-wrap
 msgid "Installing Dir Entries"
-msgstr "Instalando Entradas Dir"
+msgstr "Instalando Entradas de Diretório"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:17102
@@ -45853,13 +45845,13 @@ msgstr "Exibir informações de versão e sair exitosamente."
 #: texinfo/texinfo.texi:17399
 #, no-wrap
 msgid "Tag and Split Files"
-msgstr "Arquivos de Etiqueta e de Divisão"
+msgstr "Arquivos de Etiqueta e Divididos"
 
 #. type: section
 #: texinfo/texinfo.texi:17400
 #, no-wrap
 msgid "Tag Files and Split Files"
-msgstr "Arquivos de Etiqueta e Arquivos de Divisão"
+msgstr "Arquivos de Etiqueta e Arquivos Divididos"
 
 #. type: cindex
 #: texinfo/texinfo.texi:17402
@@ -46618,8 +46610,8 @@ msgstr ""
 "qualquer extensão será removida), com @code{_html} posposto. Por exemplo, a "
 "saída HTML para @file{gcc.texi} seria escrita em um subdiretório mominado de "
 "@samp{gcc_html/}. O nome do subdiretório é baseado em @code{@@setfilename} "
-"ou no nome do arquivo de entrada (@pxref{Configurando o Nome do Arquivo de "
-"Saída})."
+"ou no nome do arquivo de entrada (@pxref{Configurando o Nome do Arquivo da "
+"Saída Gerada})."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:17707
@@ -47215,7 +47207,7 @@ msgstr ""
 "outro arquivo EPUB. Portanto quaisquer referências para manuais ``externos'' "
 "do Texinfo deveriam ser resolvidas para uma URL externa. @command{texi2any} "
 "produz esses linques com configuração de referência cruzada do HTML "
-"(@pxref{Configuração Xref do HTML}). Como os linques no EPUB resultante "
+"(@pxref{Configuração do Xref do HTML}). Como os linques no EPUB resultante "
 "estarão incorretos se nenhuma informação for encontrada para as referências "
 "cruzadas, @command{texi2any} emitirá um aviso por padrão para ausência de "
 "informações de referências cruzadas. Se esses avisos forem indesejados, "
@@ -47478,7 +47470,7 @@ msgstr "Configuração: Configuração do Xref do HTML"
 #: texinfo/texinfo.texi:18022
 #, no-wrap
 msgid "HTML Xref Link Basics"
-msgstr "Básicos do Linque do Xref do HTML"
+msgstr "Básicos do Linque Xref do HTML"
 
 #. type: subsection
 #: texinfo/texinfo.texi:18023
@@ -47898,7 +47890,7 @@ msgid ""
 "Node names may contain @@-commands (@pxref{Node Line Requirements}).  This "
 "section describes how they are handled."
 msgstr ""
-"Os nomes dos nós podem conter comandos @@ (@pxref{Requisitos da Linha do "
+"Os nomes dos nós podem conter comandos @@ (@pxref{Exigências da Linha do "
 "Nó}). Esta seção descreve como eles são manuseados."
 
 #. type: Plain text
@@ -57790,7 +57782,7 @@ msgid ""
 "are @kbd{C-c C-t C-k} and @kbd{C-c C-t C-l}.  @xref{Texinfo Mode Printing}.)"
 msgstr ""
 "(Observe que os comandos paralelos para terminar e recentralizar uma tarefa "
-"do @TeX{} são @kbd{C-c C-t C-k} e @kbd{C-c C-t C-l}. @xref{Impressão Modo "
+"do @TeX{} são @kbd{C-c C-t C-k} e @kbd{C-c C-t C-l}. @xref{Impressão no Modo "
 "Texinfo})."
 
 #. type: Plain text
@@ -57954,7 +57946,7 @@ msgstr ""
 #: texinfo/texinfo.texi:21675
 #, no-wrap
 msgid "Printing with Emacs"
-msgstr "Imprimindo com Emacs"
+msgstr "Imprimindo com o Emacs"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:21677
@@ -57965,7 +57957,7 @@ msgstr "@nodedescription Como formatar com @TeX{} e imprimir com Emacs."
 #: texinfo/texinfo.texi:21677
 #, no-wrap
 msgid "Formatting and Printing with Emacs"
-msgstr "Formatando e Imprimindo com Emacs"
+msgstr "Formatando e Imprimindo com o Emacs"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:21682
@@ -57982,7 +57974,7 @@ msgstr ""
 #: texinfo/texinfo.texi:21684
 #, no-wrap
 msgid "Texinfo Mode Printing"
-msgstr "Impressão em Modo Texinfo"
+msgstr "Impressão no Modo Texinfo"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:21686
@@ -63132,7 +63124,7 @@ msgid ""
 "Printindex}."
 msgstr ""
 "As partes de uma @t{<entrada de menu>} também são descritas em @ref{Partes "
-"de Menu}. Elas têm a mesma sintaxe das referências cruzadas, com um @samp{*} "
+"do Menu}. Elas têm a mesma sintaxe das referências cruzadas, com um @samp{*} "
 "inicial em vez de @samp{* (N|n)ote} (@pxref{Referência Cruzada do Formato "
 "Info}). Índices estendem o formato do menu para especificar a linha de "
 "destino; @pxref{Impressão de Índice do Formato Info}."
