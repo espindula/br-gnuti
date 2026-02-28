@@ -63149,19 +63149,19 @@ msgstr ""
 #: texinfo/texinfo.texi:23463
 #, no-wrap
 msgid "Info Format Preamble"
-msgstr ""
+msgstr "Preâmbulo do Formato Info"
 
 #. type: section
 #: texinfo/texinfo.texi:23464
 #, no-wrap
 msgid "Info Format: Preamble"
-msgstr ""
+msgstr "Formato Info: Preâmbulo"
 
 #. type: cindex
 #: texinfo/texinfo.texi:23466
 #, no-wrap
 msgid "Preamble, in Info format"
-msgstr ""
+msgstr "Preâmbulo, no formato Info"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:23471
@@ -63170,6 +63170,9 @@ msgid ""
 "intended to be visible by default in an Info viewer, but may be displayed "
 "upon user request."
 msgstr ""
+"O @t{<preâmbulo>} é o texto no início de todos os arquivos de saída. "
+"Não se destina a ser visível por padrão em um visualizador do Info, mas "
+"pode ser exibido mediante solicitação do(a) usuário(a)."
 
 #. type: example
 #: texinfo/texinfo.texi:23477
@@ -63180,29 +63183,35 @@ msgid ""
 "<copying text>         # Expansion of @@copying text.\n"
 "<dir entries>          # Derived from @@dircategory and @@direntry.\n"
 msgstr ""
+"    <preâmbulo> =\n"
+"<identificação>         # \"Este é NOMEARQUIVO, produzido por ...\"\n"
+"<copiando texto>        # Expansão do texto de @@copying.\n"
+"<entradas do diretório> # Derivado de @@dircategory e @@direntry.\n"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:23481
 msgid "These pieces are:"
-msgstr ""
+msgstr "Essas peças são:"
 
 #. type: item
 #: texinfo/texinfo.texi:23483
 #, no-wrap
 msgid "<identification line>"
-msgstr ""
+msgstr "<linha de identificação>"
 
 #. type: table
 #: texinfo/texinfo.texi:23486
 msgid ""
 "An arbitrary string beginning the output file, followed by a blank line."
 msgstr ""
+"Uma sequência arbitrária de caracteres iniciando o arquivo da saída "
+"gerada, seguida por uma linha em branco."
 
 #. type: item
 #: texinfo/texinfo.texi:23487
 #, no-wrap
 msgid "<copying text>"
-msgstr ""
+msgstr "<copiando texto>"
 
 #. type: table
 #: texinfo/texinfo.texi:23490
@@ -63210,12 +63219,14 @@ msgid ""
 "The expansion of a @code{@@copying} environment, if the manual has one "
 "(@pxref{@code{@@copying}})."
 msgstr ""
+"A expansão de um ambiente @code{@@copying}, se o manual tiver um "
+"(@pxref{@code{@@copying}})."
 
 #. type: item
 #: texinfo/texinfo.texi:23491
 #, no-wrap
 msgid "<dir entries>"
-msgstr ""
+msgstr "<entradas do diretório>"
 
 #. type: table
 #: texinfo/texinfo.texi:23494
@@ -63223,24 +63234,26 @@ msgid ""
 "The result of any @code{@@dircategory} and @code{@@direntry} commands "
 "present in the manual (@pxref{Installing Dir Entries})."
 msgstr ""
+"O resultado de quaisquer comandos @code{@@dircategory} e @code{@@direntry} "
+"presentes no manual (@pxref{Instalando Entradas de Diretório})."
 
 #. type: node
 #: texinfo/texinfo.texi:23498
 #, no-wrap
 msgid "Info Format Indirect Table"
-msgstr ""
+msgstr "Tabela Indireta do Formato Info"
 
 #. type: section
 #: texinfo/texinfo.texi:23499
 #, no-wrap
 msgid "Info Format: Indirect Table"
-msgstr ""
+msgstr "Formato Info: Tabela Indireta"
 
 #. type: cindex
 #: texinfo/texinfo.texi:23501
 #, no-wrap
 msgid "Indirect table, in Info format"
-msgstr ""
+msgstr "Tabela Indireta, no formato Info"
 
 #. type: example
 #: texinfo/texinfo.texi:23508
@@ -63251,6 +63264,10 @@ msgid ""
 "Indirect:\n"
 "(<filename>: <bytepos>)*\n"
 msgstr ""
+"    <tabela indireta> =\n"
+"<separador>\n"
+"Indireto:\n"
+"(<nome do arquivo>: <bytepos>)*\n"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:23516
@@ -63261,6 +63278,12 @@ msgid ""
 "were concatenated together in order, not including the top-level file.  The "
 "first node of actual content is pointed to by the first entry."
 msgstr ""
+"A tabela indireta é escrita no arquivo principal somente no caso de saída "
+"dividida. Ela especifica, como um número inteiro decimal, a posição "
+"inicial do byte (baseado em zero) que o primeiro nó de cada subarquivo "
+"teria se os subarquivos fossem concatenados em ordem, sem incluir o arquivo "
+"de nível superior. O primeiro nó do conteúdo real é apontado pela "
+"primeira entrada."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:23519
@@ -63268,6 +63291,8 @@ msgid ""
 "As an example, suppose split output is generated for the GDB manual.  The "
 "top-level file @file{gdb.info} will contain something like this:"
 msgstr ""
+"Como exemplo, suponha que a saída dividida seja gerada para o manual do "
+"GDB. O arquivo de nível superior @file{gdb.info} conterá algo assim:"
 
 #. type: example
 #: texinfo/texinfo.texi:23526
@@ -63279,6 +63304,11 @@ msgid ""
 "gdb.info-2: 295733\n"
 "...\n"
 msgstr ""
+"<separador>\n"
+"Indireto:\n"
+"gdb.info-1: 1878\n"
+"gdb.info-2: 295733\n"
+"...\n"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:23533
@@ -63289,6 +63319,11 @@ msgid ""
 "byte 295733 if @file{gdb.info-2} were appended to @file{gdb.info-1}, "
 "including any preamble sections in both files."
 msgstr ""
+"Isso informa aos visualizadores do Info que o primeiro nó do manual ocorre "
+"no byte 1.878 do arquivo @file{gdb.info-1} (que seria depois do preâmbulo "
+"desse arquivo). O primeiro nó no subarquivo @file{gdb.info-2} começaria no "
+"byte 295.733 se @file{gdb.info-2} fosse posposto a @file{gdb.info-1}, "
+"incluindo quaisquer seções de preâmbulo em ambos os arquivos."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:23539
@@ -63299,24 +63334,29 @@ msgid ""
 "``nearby'' the given position for a node, instead of giving up immediately "
 "if the position is not exactly at a node beginning."
 msgstr ""
+"Infelizmente, programas de criação do Info como o @command{makeinfo} nem "
+"sempre implementaram essas regras perfeitamente, devido a vários defeitos e "
+"descuidos. Portanto, visualizadores robustos do Info deveriam voltar para "
+"procurar por um nó ``próximo'' à posição fornecida, em vez de desistir "
+"imediatamente se a posição não estiver exatamente no início de um nó."
 
 #. type: node
 #: texinfo/texinfo.texi:23541
 #, no-wrap
 msgid "Info Format Tag Table"
-msgstr ""
+msgstr "Tabela de Etiquetas do Formato Info"
 
 #. type: section
 #: texinfo/texinfo.texi:23542
 #, no-wrap
 msgid "Info Format: Tag Table"
-msgstr ""
+msgstr "Formato Info: Tabela de Etiquetas"
 
 #. type: cindex
 #: texinfo/texinfo.texi:23544
 #, no-wrap
 msgid "Tag table, in Info format"
-msgstr ""
+msgstr "Tabela de Etiquetas, no formato Info"
 
 #. type: example
 #: texinfo/texinfo.texi:23554
@@ -63330,11 +63370,18 @@ msgid ""
 "<separator>\n"
 "End Tag Table\n"
 msgstr ""
+"    <tabela de etiquetas> =\n"
+"<separador>\n"
+"Tabela de Etiquetas:\n"
+"(<lparen>Indireto<rparen>)?\n"
+"(Nó|Ref): <nodeid>^?<bytepos>\n"
+"<separador>\n"
+"Fim da Tabela de Etiquetas\n"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:23557
 msgid "The @samp{(Indirect)} line appears in the case of split output only."
-msgstr ""
+msgstr "A linha @samp{(Indireto)} aparece somente no caso de saída dividida."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:23561
@@ -63343,6 +63390,9 @@ msgid ""
 "in the file.  In the case of split output, it is only written in the main "
 "output file."
 msgstr ""
+"A tabela de etiquetas especifica a posição inicial do baite de cada nó e "
+"âncora no arquivo. No caso de saída dividida, ela será escrita somente no "
+"arquivo de saída principal."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:23567
@@ -63353,6 +63403,12 @@ msgid ""
 "says that the anchor named @samp{Overview-Footnote-1} starts at byte 30045.  "
 "It is an error to define the same identifier both ways."
 msgstr ""
+"Cada linha define um identificador ou como uma âncora ou como um nó, "
+"conforme especificado. Por exemplo, @samp{Nó: Topo^?1647} diz que o nó "
+"chamado @samp{Topo} começa no baite 1.647 enquanto @samp{Ref: "
+"VisãoGeral-NotaRodapé-1^?30045} diz que a âncora chamada "
+"@samp{VisãoGeral-NotaRodapé-1} começa no baite 30.045. É um erro definir "
+"o mesmo identificador nos dois sentidos."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:23572
@@ -63362,11 +63418,16 @@ msgid ""
 "positions refer to an imaginary file created by concatenating all the split "
 "files (but not the top-level file).  See the previous section."
 msgstr ""
+"No caso de saída não dividida, as posições dos baites referem-se "
+"simplesmente ao local no arquivo da saída gerada. No caso de saída "
+"dividida, as posições dos baites referem-se a um arquivo imaginário "
+"criado pela concatenação de todos os arquivos divididos (mas não o "
+"arquivo de nível superior). Veja-se a seção anterior."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:23574 texinfo/texinfo.texi:23771
 msgid "Here is an example:"
-msgstr ""
+msgstr "Aqui está um exemplo:"
 
 #. type: example
 #: texinfo/texinfo.texi:23582
@@ -63379,6 +63440,12 @@ msgid ""
 "^_\n"
 "End Tag Table\n"
 msgstr ""
+"^_\n"
+"Tabela de Etiquetas:\n"
+"Nó: Topo^?89\n"
+"Nó: Ch1^?292\n"
+"^_\n"
+"Final da Tabela de Etiquetas\n"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:23588
@@ -63387,6 +63454,9 @@ msgid ""
 "89 and 292 respectively.  Because the @samp{(Indirect)} line is not present, "
 "the manual is not split."
 msgstr ""
+"Isso especifica um manual com dois nós, `Topo' e `Ch1', nas posições de "
+"baite 89 e 292 respectivamente. Como a linha @samp{(Indireto)} não está "
+"presente, o manual não é dividido."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:23591
@@ -63394,24 +63464,26 @@ msgid ""
 "Preamble sections or other non-node sections of files do not have a tag "
 "table entry."
 msgstr ""
+"Seções de preâmbulo ou outras seções de arquivos que não sejam nós "
+"não têm uma entrada na tabela de etiquetas."
 
 #. type: node
 #: texinfo/texinfo.texi:23593
 #, no-wrap
 msgid "Info Format Local Variables"
-msgstr ""
+msgstr "Variáveis Locais do Formato Info"
 
 #. type: section
 #: texinfo/texinfo.texi:23594
 #, no-wrap
 msgid "Info Format: Local Variables"
-msgstr ""
+msgstr "Formato Info: Variáveis Locais"
 
 #. type: cindex
 #: texinfo/texinfo.texi:23596
 #, no-wrap
 msgid "Local variable section, in Info format"
-msgstr ""
+msgstr "Seção da variável local, no formato Info"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:23600
@@ -63419,6 +63491,9 @@ msgid ""
 "The local variables section is optional and is currently used to give the "
 "encoding information.  It may be augmented in the future."
 msgstr ""
+"A seção de variáveis locais é opcional e atualmente é usada para "
+"fornecer as informações de codificação. Ela possivelmente seja aumentada "
+"no futuro."
 
 #. type: example
 #: texinfo/texinfo.texi:23607
@@ -63430,34 +63505,39 @@ msgid ""
 "coding: <encoding>\n"
 "End:\n"
 msgstr ""
+"    <variáveis locais> =\n"
+"<separador>\n"
+"Variáveis Locais:\n"
+"codificação: <codificação>\n"
+"Fim:\n"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:23610
 msgid "@xref{@code{@@documentencoding}}."
-msgstr ""
+msgstr "@xref{@code{@@documentencoding}}."
 
 #. type: node
 #: texinfo/texinfo.texi:23612
 #, no-wrap
 msgid "Info Format Regular Nodes"
-msgstr ""
+msgstr "Nós Regulares do Formato Info"
 
 #. type: section
 #: texinfo/texinfo.texi:23613
 #, no-wrap
 msgid "Info Format: Regular Nodes"
-msgstr ""
+msgstr "Formato Info: Nós Regulares"
 
 #. type: cindex
 #: texinfo/texinfo.texi:23615
 #, no-wrap
 msgid "Info nodes, in Info format"
-msgstr ""
+msgstr "Nós do Info, no formato Info"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:23618
 msgid "Regular nodes look like this:"
-msgstr ""
+msgstr "Nós regulares se parecem com isto:"
 
 #. type: example
 #: texinfo/texinfo.texi:23623
@@ -63468,12 +63548,17 @@ msgid ""
 "File: <fn>, Node: <id1>, (Next: <id2>, )? (Prev: <id3>, )? Up: <id4>\n"
 "\n"
 msgstr ""
+"    <nó> =\n"
+"<separador>\n"
+"Arquivo: <fn>, Nó: <id1>, (Próximo: <id2>, )? (Anterior: <id3>, )? Acima: "
+"<id4>\n"
+"\n"
 
 #. type: example
 #: texinfo/texinfo.texi:23625
 #, no-wrap
 msgid "<general text, until the next ^_ or end-of-file>\n"
-msgstr ""
+msgstr "<texto geral, até o próximo ^_ ou final do arquivo>\n"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:23631
@@ -63482,6 +63567,9 @@ msgid ""
 "any number of spaces are ignored.  The @t{<id>} node identifiers have "
 "following format:"
 msgstr ""
+"Pelo menos um espaço ou tabulação precisa estar presente depois de cada "
+"dois pontos e vírgula, mas qualquer número de espaços será ignorado. Os "
+"identificadores de nó @t{<id>} têm o seguinte formato:"
 
 #. type: example
 #: texinfo/texinfo.texi:23636
@@ -63491,6 +63579,9 @@ msgid ""
 "   <node-spec> = <nodename> | <del><nodename><del>\n"
 "   <del> = ^?\n"
 msgstr ""
+"    <id> = (<lparen><arquivoinfo><rparen>)?<especificações-nó>?\\n"
+"   <especificações-nó> = <nomenó> | <del><nomenó><del>\\n"
+"   <del> = ^?\\n"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:23641
@@ -63499,6 +63590,9 @@ msgid ""
 "either @samp{manualname} or @samp{manualname.info}.  No parenthesized "
 "@t{<infofile>} component may appear within @t{<id1>}."
 msgstr ""
+"Esse @t{<nó>} define @t{<id1>} no arquivo @t{<fn>}, o qual tipicamente é "
+"@samp{nomemanual} ou @samp{nomemanual.info}. Nenhum componente "
+"@t{<arquivoinfo>} entre parênteses pode aparecer dentro de @t{<id1>}."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:23648
@@ -63510,6 +63604,13 @@ msgid ""
 "omitted, in which case the node identifier refers to the @samp{Top} node "
 "within the referenced file."
 msgstr ""
+"Cada um dos identificadores depois de @code{Próximo}, @code{Anterior} e "
+"@code{Acima} se refere a nós ou a âncoras dentro de um arquivo. Esses "
+"ponteiros normalmente se referem ao mesmo arquivo, mas @samp{(dir)} é "
+"frequentemente usado para apontar para o arquivo de diretório de nível "
+"superior. Se um componente @t{<arquivoinfo>} for usado, então o nome do nó "
+"poderá ser omitido; nesse caso, o identificador do nó se referirá ao nó "
+"@samp{Topo} dentro do arquivo referenciado."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:23654
@@ -63519,6 +63620,11 @@ msgid ""
 "mistake in the node structuring.  Conventionally, the nodes are arranged to "
 "form a tree, but this is not a requirement of the format."
 msgstr ""
+"Os ponteiros @code{Próximo} e @code{Anterior} são opcionais. O ponteiro "
+"@code{Acima} tecnicamente também é opcional, embora muito provavelmente "
+"indique um erro na estruturação do nó. Convencionalmente, os nós são "
+"organizados para formar uma árvore, mas isso não é uma exigência do "
+"formato."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:23661
@@ -63530,6 +63636,13 @@ msgid ""
 "these characters when needed in the default case.  Note that not all Info "
 "readers recognize this syntax.  @xref{Info Node Names Constraints}."
 msgstr ""
+"Nomes de nós contendo pontos, vírgulas, dois pontos ou parênteses podem "
+"confundir leitores do Info. Se for necessário referir-se a um nó cujo nome "
+"contenha algum desses, o @t{<nomenó>} deveria ser envolvido por um par de "
+"caracteres @code{DEL} (@samp{CTRL-?}, caractere número 127). "
+"@command{makeinfo} adiciona esses caracteres quando necessário no caso "
+"padrão. Observe que nem todos os leitores do Info reconhecem essa sintaxe. "
+"@xref{Restrições de Nomes de Nós do Info}."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:23664
@@ -63537,24 +63650,26 @@ msgid ""
 "The @t{<general text>} of the node can include the special constructs "
 "described next."
 msgstr ""
+"O @t{<texto geral>} do nó pode incluir os constructos especiais descritos a "
+"seguir."
 
 #. type: node
 #: texinfo/texinfo.texi:23666
 #, no-wrap
 msgid "Info Format Menu"
-msgstr ""
+msgstr "Menu do Formato Info"
 
 #. type: section
 #: texinfo/texinfo.texi:23667
 #, no-wrap
 msgid "Info Format: Menu"
-msgstr ""
+msgstr "Formato Info: Menu"
 
 #. type: cindex
 #: texinfo/texinfo.texi:23669
 #, no-wrap
 msgid "Menus, in Info format"
-msgstr ""
+msgstr "Menus, no formato Info"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:23673
@@ -63562,6 +63677,8 @@ msgid ""
 "Conventionally menus appear at the end of nodes, but the Info format places "
 "no restrictions on their location."
 msgstr ""
+"Convencionalmente, menus aparecem no final dos nós, mas o formato Info não "
+"impõe restrições ao local deles."
 
 #. type: example
 #: texinfo/texinfo.texi:23678
@@ -63571,6 +63688,9 @@ msgid ""
 "* Menu:\n"
 "(<menu entry> | <menu comment>)*\n"
 msgstr ""
+"    <menu> =\n"
+"* Menu:\n"
+"(<entrada de menu> | <comentário de menu>)*\n"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:23685
@@ -63581,6 +63701,11 @@ msgid ""
 "extend the menu format to specify the destination line; @pxref{Info Format "
 "Printindex}."
 msgstr ""
+"As partes de uma @t{<entrada de menu>} também são descritas em @ref{Partes "
+"de Menu}. Elas têm a mesma sintaxe das referências cruzadas, com um "
+"@samp{*} inicial em vez de @samp{* (N|n)ote} (@pxref{Referência Cruzada do "
+"Formato Info}). Índices estendem o formato do menu para especificar a linha "
+"de destino; @pxref{Impressão de Índice do Formato Info}."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:23690
@@ -63590,24 +63715,28 @@ msgid ""
 "or more blank lines.  These comments are intended to be displayed as part of "
 "the menu, as-is (@pxref{Writing a Menu})."
 msgstr ""
+"Um @t{<comentário do menu>} é qualquer linha que não comece com @samp{*} "
+"e que apareça ou no início do menu ou seja separada de uma entrada do menu "
+"por uma ou mais linhas em branco. Esses comentários são destinados para "
+"serem exibidos como parte do menu, como estão (@pxref{Escrevendo um Menu})."
 
 #. type: node
 #: texinfo/texinfo.texi:23692
 #, no-wrap
 msgid "Info Format Image"
-msgstr ""
+msgstr "Imagem do Formato Info"
 
 #. type: section
 #: texinfo/texinfo.texi:23693
 #, no-wrap
 msgid "Info Format: Image"
-msgstr ""
+msgstr "Formato Info: Imagem"
 
 #. type: cindex
 #: texinfo/texinfo.texi:23695
 #, no-wrap
 msgid "Images @subentry in Info format"
-msgstr ""
+msgstr "Imagens @subentry no formato Info"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:23699
@@ -63615,6 +63744,8 @@ msgid ""
 "The @code{@@image} command results in the following special directive within "
 "the Info file (@pxref{Images}):"
 msgstr ""
+"O comando @code{@@image} resulta na seguinte diretiva especial dentro do "
+"arquivo Info (@pxref{Imagens}):"
 
 #. type: example
 #: texinfo/texinfo.texi:23706
@@ -63626,6 +63757,11 @@ msgid ""
 "            (alt=\"<alt text>\")?\n"
 "^@@^H]\n"
 msgstr ""
+"    <imagem> =\n"
+"^@@^H[fonte imagem=\"<arquivo de imagem>\"\n"
+"            (texto=\"<conteúdo do arquivo de texto>\")?\n"
+"            (alternativo=\"<texto alternativo>\")?\n"
+"^@@^H]\n"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:23711
@@ -63634,6 +63770,9 @@ msgid ""
 "whitespace between the different parts of the directive in Info files is "
 "arbitrary."
 msgstr ""
+"As quebras de linha e recuos nessa descrição são editoriais; o espaço em "
+"branco entre as diferentes partes da diretiva nos arquivos Info é "
+"arbitrário."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:23715
@@ -63642,6 +63781,10 @@ msgid ""
 "@samp{\"} is quoted as @samp{\\\"} and @samp{\\} is quoted as @samp{\\\\}.  "
 "The txt and alt specifications are optional."
 msgstr ""
+"Nas strings @t{<arquivo de imagem>}, @t{<conteúdo do arquivo de texto>} e "
+"@t{<texto alternativo>}, @samp{\"} é aspeado como @samp{\\\"} e @samp{\\} "
+"é aspeado como @samp{\\\\}. As especificações de texto e de alternativo "
+"são opcionais."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:23720
@@ -63651,6 +63794,10 @@ msgid ""
 "@t{alt} value may be used instead of displaying the (typically graphical) "
 "@t{<image file>}."
 msgstr ""
+"O valor de @t{alternativo} serve ao mesmo propósito que no HTML: uma "
+"descrição em prosa da imagem. Em exibições somente de texto ou sistemas "
+"de fala, por exemplo, o valor de @t{alternativo} pode ser usado em vez de "
+"exibir o @t{<arquivo de imagem>} (tipicamente gráfico)."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:23723
@@ -63658,6 +63805,9 @@ msgid ""
 "The @t{<txt file contents>}, if present, should be taken as an ASCII "
 "representation of the image, for possible use on a text-only display."
 msgstr ""
+"O @t{<conteúdo do arquivo de texto>}, se presente, deveria ser considerado "
+"uma representação ASCII da imagem, para possível uso em uma exibição "
+"somente de texto."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:23726
@@ -63665,24 +63815,26 @@ msgid ""
 "The format does not prescribe the choice between displaying the @t{<image "
 "file>}, the @t{<alt text>} or the @t{<txt file contents>}."
 msgstr ""
+"O formato não prescreve a escolha entre exibir o @t{<arquivo de imagem>}, o "
+"@t{<texto alternativo>} ou o @t{<conteúdo do arquivo de texto>}."
 
 #. type: node
 #: texinfo/texinfo.texi:23728
 #, no-wrap
 msgid "Info Format Printindex"
-msgstr ""
+msgstr "Impressão de Índice do Formato Info"
 
 #. type: section
 #: texinfo/texinfo.texi:23729
 #, no-wrap
 msgid "Info Format: Printindex"
-msgstr ""
+msgstr "Formato Info: Impressão de Índice"
 
 #. type: cindex
 #: texinfo/texinfo.texi:23731
 #, no-wrap
 msgid "Indices, in Info format"
-msgstr ""
+msgstr "Índices, no formato Info"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:23735
@@ -63690,6 +63842,8 @@ msgid ""
 "An index in Info format is a kind of menu, with an additional directive at "
 "the beginning to mark it as an index menu."
 msgstr ""
+"Um índice no formato Info é uma espécie de menu, com uma diretiva "
+"adicional no início para marcá-lo como um menu de índice."
 
 #. type: example
 #: texinfo/texinfo.texi:23740
@@ -63700,12 +63854,16 @@ msgid ""
 "* Menu:\n"
 "\n"
 msgstr ""
+"    <impressãoíndice> =\n"
+"^@@^H[índice^@@^H]\n"
+"* Menu:\n"
+"\n"
 
 #. type: example
 #: texinfo/texinfo.texi:23742
 #, no-wrap
 msgid "<index entry>*\n"
-msgstr ""
+msgstr "<entrada de índice>*\n"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:23747
@@ -63714,6 +63872,9 @@ msgid ""
 "free-format description is replaced by the line number of where the entries "
 "occurs in the text:"
 msgstr ""
+"Os itens de @t{<entrada de índice>} são semelhantes às entradas normais "
+"do menu, mas a descrição em formato livre é substituída pelo número da "
+"linha onde as entradas ocorrem no texto:"
 
 #. type: example
 #: texinfo/texinfo.texi:23751
@@ -63723,6 +63884,9 @@ msgid ""
 "* <entry text>: <node-spec>. <line-spec>\n"
 "\n"
 msgstr ""
+"    <entrada de índice> =\n"
+"* <texto de entrada>: <especificação do nó>. <especificação de linha>\n"
+"\n"
 
 #. type: example
 #: texinfo/texinfo.texi:23754
@@ -63731,6 +63895,8 @@ msgid ""
 "    <line-spec> =\n"
 "<lparen>line <lineno><rparen>\n"
 msgstr ""
+"    <especificação de linha> =\n"
+"<lparen>linha <linhanúmero><rparen>\n"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:23760
@@ -63738,6 +63904,8 @@ msgid ""
 "The initial part, @samp{<entry text>: <entry node>.}, should be on a single "
 "line.  The @t{<entry text>} is the index term."
 msgstr ""
+"A parte inicial, @samp{<texto de entrada>: <nó de entrada>.}, deveria estar "
+"em uma única linha. O @t{<texto de entrada>} é o termo do índice."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:23765
@@ -63747,6 +63915,11 @@ msgid ""
 "possible in the @t{<entry text>}.  (However, @t{<entry text>} may not "
 "contain the @code{DEL} characters that may occur in @t{<node-spec>}.)"
 msgstr ""
+"Embora @t{<texto de entrada>} seja seguido por dois pontos, ele próprio "
+"pode conter dois pontos, de modo que leitores do Info deveriam tentar "
+"incluir o máximo possível da linha no @t{<texto de entrada>}. (No entanto, "
+"@t{<texto de entrada>} pode não conter os caracteres @code{DEL} que podem "
+"ocorrer em @t{<especificação do nó>})."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:23769
@@ -63755,6 +63928,9 @@ msgid ""
 "@t{<entry node>}.  An optional line break may occur before "
 "@samp{<line-spec>}."
 msgstr ""
+"@t{<linhanúmero>} é um número inteiro sem sinal, fornecido relativo ao "
+"início do @t{<nó de entrada>}. Uma quebra de linha opcional pode ocorrer "
+"antes de @samp{<especificação de linha>}."
 
 #. type: example
 #: texinfo/texinfo.texi:23775
@@ -63764,12 +63940,16 @@ msgid ""
 "* Menu:\n"
 "\n"
 msgstr ""
+"^@@^H[índice^@@^H]\n"
+"* Menu:\n"
+"\n"
 
 #. type: example
 #: texinfo/texinfo.texi:23777
 #, no-wrap
 msgid "* thunder:           Weather Phenomena.             (line 5)\n"
 msgstr ""
+"* trovão:          Fenômenos Meteorológicos.             (linha 5)\n"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:23781
@@ -63777,30 +63957,34 @@ msgid ""
 "This means that an index entry for `thunder' appears at line 5 of the node "
 "`Weather Phenomena'."
 msgstr ""
+"Isso significa que uma entrada de índice para `trovão' aparece na linha 5 "
+"do nó `Fenômenos Meteorológicos'."
 
 #. type: node
 #: texinfo/texinfo.texi:23783
 #, no-wrap
 msgid "Info Format Cross Reference"
-msgstr ""
+msgstr "Referência Cruzada do Formato Info"
 
 #. type: section
 #: texinfo/texinfo.texi:23784
 #, no-wrap
 msgid "Info Format: Cross-reference"
-msgstr ""
+msgstr "Formato Info: Referência Cruzada"
 
 #. type: cindex
 #: texinfo/texinfo.texi:23786
 #, no-wrap
 msgid "Cross-references, in Info format"
-msgstr ""
+msgstr "Referências Cruzadas, no formato Info"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:23789
 msgid ""
 "A general cross-reference in Info format has one of the following two forms:"
 msgstr ""
+"Uma referência cruzada geral no formato Info tem uma das duas formas "
+"seguintes:"
 
 #. type: example
 #: texinfo/texinfo.texi:23795
@@ -63811,6 +63995,10 @@ msgid ""
 "| * (N|n)ote <label>:<id>(.|,)\n"
 "\n"
 msgstr ""
+"    <referência cruzada> =\n"
+"  * (N|n)ote <identificador>::\n"
+"| * (N|n)ote <rótulo>:<identificador>(.|,)\n"
+"\n"
 
 #. type: example
 #: texinfo/texinfo.texi:23798
@@ -63819,6 +64007,9 @@ msgid ""
 "    <id> = (<lparen><infofile><rparen>)?<node-spec>?\n"
 "    <label> = <label text> | <del><label text><del>\n"
 msgstr ""
+"    <identificador> = (<lparen><arquivoinfo><rparen>)?<especificação do "
+"nó>?\n"
+"    <rótulo> = <texto do rótulo> | <del><texto do rótulo><del>\n"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:23806
@@ -63830,6 +64021,12 @@ msgid ""
 "and @samp{see} respectively.) In both cases, @t{<label text>} is descriptive "
 "text."
 msgstr ""
+"Nenhum espaço deveria ocorrer entre o caractere @samp{*} e o seguinte "
+"@samp{N} ou @samp{n}. @samp{*Note} deveria ser usado no início de uma "
+"frase, caso contrário, @samp{*note} deveria ser usado. (Alguns leitores do "
+"Info, tais como o do Emacs, conseguem exibir @samp{*Note} e @samp{*note} "
+"como @samp{Veja-se} e @samp{veja-se} respectivamente). Em ambos os casos, "
+"@t{<texto do rótulo>} é um texto descritivo."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:23812
@@ -63840,6 +64037,11 @@ msgid ""
 "manual being referenced, and @t{<node-spec>} gives the node or anchor within "
 "that manual."
 msgstr ""
+"Em ambas as formas, o @t{<identificador>} se refere a um nó ou âncora, da "
+"mesma maneira que uma referência na linha de informações do nó "
+"(@pxref{Nós Regulares do Formato Info}). O opcional entre parênteses "
+"@samp{<arquivoinfo>} é o nome do manual sendo referenciado e "
+"@t{<especificação do nó>} fornece o nó ou âncora dentro desse manual."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:23816
@@ -63848,6 +64050,9 @@ msgid ""
 "should usually be terminated with a comma or period, to make it feasible to "
 "find the end of the @t{<id>}."
 msgstr ""
+"A segunda forma tem um rótulo descritivo. Uma referência cruzada nessa "
+"forma geralmente deveria ser terminada com uma vírgula ou ponto final, para "
+"tornar viável encontrar o final do @t{<identificador>}."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:23824
@@ -63858,6 +64063,12 @@ msgid ""
 "terminating comma or period is not needed.  As stated earlier, this quoting "
 "mechanism is not supported in all Info-reading programs."
 msgstr ""
+"Se @t{<rótulo>} contiver dois pontos (@t{:}), ele deverá ser envolvido por "
+"um par de caracteres @t{<del>}. Da mesma forma, caracteres de aspeamento "
+"podem ser usados para o nome do nó se ele contiver caracteres "
+"problemáticos; então, uma vírgula ou ponto final não é necessária. "
+"Conforme afirmado anteriormente, esse mecanismo de aspeamento não é "
+"suportado em todos os programas de leitura do Info."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:23827
@@ -63865,11 +64076,13 @@ msgid ""
 "The format does not prescribe how to find other manuals to resolve such "
 "references."
 msgstr ""
+"O formato não prescreve como encontrar outros manuais para resolver tais "
+"referências."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:23829
 msgid "Here are some examples:"
-msgstr ""
+msgstr "Aqui estão alguns exemplos:"
 
 #. type: example
 #: texinfo/texinfo.texi:23836
@@ -63881,6 +64094,12 @@ msgid ""
 "*Note ^?:^?: (bash)Bourne Shell Builtins.\n"
 "*Note alloca.h: (gnulib)^?alloca.h^?.\n"
 msgstr ""
+"*observar Licença GNU de Documentação Livre::\n"
+"*observar Tabela de Etiquetas: Tabela de Etiquetas do formato Info, para "
+"detalhes.\n"
+"*Observar Visão Geral: (make)Topo.\n"
+"*Observar ^?:^?: (bash)Builtins do Shell Bourne.\n"
+"*Observar alloca.h: (gnulib)^?alloca.h^?.\n"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:23840
@@ -63888,6 +64107,8 @@ msgid ""
 "The first shows a reference to a node in the current manual using the short "
 "form."
 msgstr ""
+"O primeiro mostra uma referência para um nó no manual atual usando a forma "
+"curta."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:23845
@@ -63897,6 +64118,10 @@ msgid ""
 "particular reference, and the @samp{for details.} is text belonging to the "
 "sentence, not part of the reference."
 msgstr ""
+"O segundo também se refere a um nó no manual atual, chamado `Tabela de "
+"Etiquetas do Formato Info'; a `Tabela de Etiquetas' antes de @samp{:} é "
+"somente um rótulo nessa referência específica, e o @samp{para detalhes.} "
+"é o texto pertencente à frase, não parte da referência."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:23848
@@ -63904,6 +64129,9 @@ msgid ""
 "The third example refers to the node `Top' in another manual, namely "
 "@samp{make}, with `Overview' being the label for this cross-reference."
 msgstr ""
+"O terceiro exemplo se refere ao nó `Topo' em outro manual, nomeadamente "
+"@samp{make}, com `Visão Geral' sendo o rótulo para essa referência "
+"cruzada."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:23851
@@ -63911,22 +64139,25 @@ msgid ""
 "The fourth example shows a colon character being quoted in a label, and the "
 "fifth example shows a period being quoted in a node name."
 msgstr ""
+"O quarto exemplo mostra um caractere de dois pontos sendo aspeado em um "
+"rótulo e o quinto exemplo mostra um ponto final sendo aspeado em um nome de "
+"nó."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:23853
 msgid "@xref{Cross References}."
-msgstr ""
+msgstr "@xref{Referências Cruzadas}."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:23857
 msgid "@nodedescription Copying this manual."
-msgstr ""
+msgstr "@nodedescription Copiando este manual."
 
 #. type: unnumbered
 #: texinfo/texinfo.texi:23862 texinfo/texinfo.texi:23863
 #, no-wrap
 msgid "Command and Variable Index"
-msgstr ""
+msgstr "Índice de Comandos e de Variáveis"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:23868
@@ -63935,14 +64166,17 @@ msgid ""
 "functions, and several variables.  To make the list easier to use, the "
 "commands are listed without their preceding @samp{@@}."
 msgstr ""
+"Esta é uma lista em ordem alfabética de todos os comandos @@, diversas "
+"funções do Emacs Lisp e diversas variáveis. Para facilitar o uso da "
+"lista, os comandos são listados sem @samp{@@} precedente."
 
 #. type: unnumbered
 #: texinfo/texinfo.texi:23872 texinfo/texinfo.texi:23874
 #, no-wrap
 msgid "General Index"
-msgstr ""
+msgstr "Índice Geral"
 
 #. type: Plain text
 #: texinfo/texinfo.texi:23874
 msgid "@nodedescription A menu covering many topics."
-msgstr ""
+msgstr "@nodedescription Um menu que cobre muitos tópicos."
