@@ -10,7 +10,7 @@
 
 @c Automake automatically updates version.texi to @set VERSION and
 @c @set UPDATED to appropriate values.
-@include version.texi
+@include version-pt_BR.texi
 @settitle GNU Texinfo @value{VERSION}
 
 @c Define a new index for command-line options.
@@ -16852,7 +16852,7 @@ incluída abaixo. A versão incluída no manual também é um exemplo de uso do
 @node Página de manual do pod2texi
 @nodedescription Invocação do @command{pod2texi} em um formato de página de
 manual.
-@include pod2texi.texi
+@include pod2texi.pt_BR.texi
 
 
 @node @command{texi2html}
@@ -20587,7 +20587,7 @@ Aqui está um documento de amostra:
 @verbatim
 \input texinfo   @c -*-texinfo-*-
 @comment %**start of header
-@include version.texi
+@include version-pt_BR.texi
 @settitle Amostra GNU @value{VERSION}
 @syncodeindex pg cp
 @comment %**end of header
@@ -20642,7 +20642,7 @@ uso básico e opções de linha de comando dele aqui.
 @node Licença GNU de Documentação Livre
 @appendix Licença GNU de Documentação Livre
 
-@include fdl.texi
+@include fdl-versao_1.3-pt_BR.texi
 
 @node Índice
 @unnumbered Índice
@@ -23936,7 +23936,7 @@ nó.
 @nodedescription Copiando este manual.
 @appendix Licença GNU de Documentação Livre
 
-@include fdl.texi
+@include fdl-versao_1.3-pt_BR.texi
 
 
 @node Índice de Comandos e de Variáveis
