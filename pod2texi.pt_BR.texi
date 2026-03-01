@@ -1,0 +1,188 @@
+@subsection pod2texi
+@anchor{pod2texi}
+
+@subsubheading NOME do pod2texi
+@anchor{NOME do pod2texi}
+
+pod2texi - converter Pod para Texinfo
+
+@subsubheading SINOPSE do pod2texi
+@anchor{SINOPSE do pod2texi}
+
+@verbatim
+  pod2texi [OPÇÃO]... POD...
+@end verbatim
+
+@subsubheading DESCRIÇÃO do pod2texi
+@anchor{DESCRIÇÃO do pod2texi}
+
+Traduzir arquivo(s) Pod para Texinfo. Existem dois modos básicos de
+operação. Primeiro, por padrão, cada Pod é traduzido para um manual Texinfo
+independente.
+
+Segundo, se @code{--base-level} for configurado como superior a 0, cada Pod
+será traduzido para um arquivo adequado para @code{@@include}, e mais um
+arquivo com um menu principal e todo o @code{@@include} será gerado.
+
+@subsubheading OPÇÕES do pod2texi
+@anchor{OPÇÕES do pod2texi}
+
+@table @asis
+@item @strong{@asis{}-@asis{}-@asis{}appendix-sections}
+@anchor{pod2texi @strong{@asis{}-@asis{}-@asis{}appendix-sections}}
+
+Usar comandos de seccionamento de apêndice (@code{@@appendix}, ...) em vez
+dos comandos @@ padrão do Texinfo de seccionamento numerados
+(@code{@@chapter}, @code{@@section}, ...).
+
+@item @strong{@asis{}-@asis{}-@asis{}base-level}=@emph{NUM|NOME}
+@anchor{pod2texi @strong{@asis{}-@asis{}-@asis{}base-level}=@emph{NUM|NOME}}
+
+Configura o nível dos comandos @code{head1}. Pode ser um inteiro ou um
+comando do Texinfo de seccionamento (sem o @code{@@}): 1 corresponde ao
+nível @code{@@chapter}/@code{@@unnumbered}, 2 ao nível @code{@@section} e
+assim por diante. O padrão é 0, significando que os comandos @code{head1}
+ainda são produzidos como capítulos, mas a saída gerada é organizada como um
+manual independente.
+
+Se o nível não for 0, o arquivo Pod será renderizado como um fragmento de um
+manual Texinfo adequado para @code{@@include}. Nesse caso, cada arquivo Pod
+terá um comando de seccionamento adicional cobrindo o arquivo inteiro, um
+nível acima do valor @code{--base-level}. Portanto, para transformar cada
+arquivo Pod em um capítulo de um manual grande, você deveria usar
+@code{section} como o nível base.
+
+Para um exemplo de como transformar o Texinfo a partir da própria
+documentação do Perl, veja-se @code{contrib/perldoc-all} na distribuição do
+fonte do Texinfo.
+
+@item @strong{@asis{}-@asis{}-@asis{}debug}=@emph{NUM}
+@anchor{pod2texi @strong{@asis{}-@asis{}-@asis{}debug}=@emph{NUM}}
+
+Configurar nível de depuração como @emph{NUM}.
+
+@item @strong{@asis{}-@asis{}-@asis{}generate-setfilename}
+@anchor{pod2texi @strong{@asis{}-@asis{}-@asis{}generate-setfilename}}
+
+Gerar uma linha @code{@@setfilename} para manuais independentes. Pode ser
+negado com @code{--no-generate-setfilename}. Ignorado se @code{--base-level}
+não for 0.
+
+@item @strong{@asis{}-@asis{}-@asis{}headings-as-sections}
+@anchor{pod2texi @strong{@asis{}-@asis{}-@asis{}headings-as-sections}}
+
+Usar comandos de cabeçalhos (@code{@@heading}, ...) em vez dos comandos @@
+padrão do Texinfo de seccionamento numerados (@code{@@chapter},
+@code{@@section}, ...). O comando de seccionamento que cobre o arquivo
+inteiro gerado para cada arquivo Pod se
+@strong{@asis{}-@asis{}-@asis{}base-level} não for 0 é um comando numerado.
+
+@item @strong{@asis{}-@asis{}-@asis{}help}
+@anchor{pod2texi @strong{@asis{}-@asis{}-@asis{}help}}
+
+Exibir ajuda e sair.
+
+@item @strong{@asis{}-@asis{}-@asis{}menus}
+@anchor{pod2texi @strong{@asis{}-@asis{}-@asis{}menus}}
+
+Gerar menus do nó. Se existir um manual principal, o menu do nó Superior
+dele será sempre gerado, pois um menu mestre será gerado. Outros menus de
+nós não são gerados no caso padrão.
+
+@item @strong{@asis{}-@asis{}-@asis{}outdir}=@emph{NOME}
+@anchor{pod2texi @strong{@asis{}-@asis{}-@asis{}outdir}=@emph{NOME}}
+
+Se existir um manual principal com arquivos de inclusão (cada um
+correspondendo a um arquivo Pod de entrada), então os arquivos Texinfo
+gerados serão colocados no diretório @emph{NOME}. O padrão é baseado em
+@code{--subdir}.
+
+@item @strong{@asis{}-@asis{}-@asis{}output}=@emph{NOME}
+@anchor{pod2texi @strong{@asis{}-@asis{}-@asis{}output}=@emph{NOME}}
+
+Nome para o primeiro manual ou para o manual principal, se existir um manual
+principal. O padrão é o de escrever na saída padrão.
+
+@item @strong{@asis{}-@asis{}-@asis{}no-section-nodes}
+@anchor{pod2texi @strong{@asis{}-@asis{}-@asis{}no-section-nodes}}
+
+Usar âncoras para seções em vez de nós.
+
+@item @strong{@asis{}-@asis{}-@asis{}no-fill-section-gaps}
+@anchor{pod2texi @strong{@asis{}-@asis{}-@asis{}no-fill-section-gaps}}
+
+Não preencher lacunas de seccionamento com arquivos @code{@@unnumbered}
+vazios. Normalmente, é bom manter intacta a hierarquia de seccionamento.
+
+@item @strong{@asis{}-@asis{}-@asis{}preamble}=@emph{STR}
+@anchor{pod2texi @strong{@asis{}-@asis{}-@asis{}preamble}=@emph{STR}}
+
+Inserir @emph{STR} como padrão superior antes do menu e de inclusões. Se
+@emph{STR} for configurado como @code{-}, ler o padrão superior a partir da
+entrada padrão. O padrão superior é um início mínimo para um documento do
+Texinfo.
+
+@item @strong{@asis{}-@asis{}-@asis{}setfilename}=@emph{STR}
+@anchor{pod2texi @strong{@asis{}-@asis{}-@asis{}setfilename}=@emph{STR}}
+
+Usar @emph{STR} no padrão superior antes do menu e de inclusões para
+@code{@@setfilename} para o manual principal, se @code{--base-level} não
+estiver configurado como 0. Ignorado se @code{--base-level} for 0. Nenhum
+@code{@@setfilename} será gerado no caso padrão para o manual principal.
+
+@item @strong{@asis{}-@asis{}-@asis{}subdir}=@emph{NOME}
+@anchor{pod2texi @strong{@asis{}-@asis{}-@asis{}subdir}=@emph{NOME}}
+
+Se existir um manual principal com arquivos de inclusão (cada um
+correspondendo a um arquivo Pod de entrada), então esses arquivos de
+inclusão serão incluídos a partir de @emph{NAME}.
+
+Se @code{--outdir} for configurado, @emph{NOME} deveria, em geral, ser
+configurado para o diretório relativo entre o manual principal e o argumento
+@code{--outdir}.
+
+@item @strong{@asis{}-@asis{}-@asis{}unnumbered-sections}
+@anchor{pod2texi @strong{@asis{}-@asis{}-@asis{}unnumbered-sections}}
+
+Usar comandos de seccionamento não numerados (@code{@@unnumbered}, ...) em
+vez dos comandos @@ de seccionamento numerados padrão do Texinfo
+(@code{@@chapter}, @code{@@section}, ...).
+
+@item @strong{@asis{}-@asis{}-@asis{}top}=@emph{TOP}
+@anchor{pod2texi @strong{@asis{}-@asis{}-@asis{}top}=@emph{TOP}}
+
+Nome do elemento @code{@@top} para o manual principal. Pode conter código
+Texinfo.
+
+@item @strong{@asis{}-@asis{}-@asis{}version}
+@anchor{pod2texi @strong{@asis{}-@asis{}-@asis{}version}}
+
+Exibir informações da versão e sair.
+
+@end table
+
+@subsubheading VEJA-SE TAMBÉM do pod2texi
+@anchor{VEJA-SE TAMBÉM do pod2texi}
+
+@url{https://www.gnu.org/software/texinfo/manual/Pod/Simple/Texinfo.html,
+Pod::Simple::Texinfo}. @url{https://metacpan.org/pod/perlpod, perlpod}. O
+manual do Texinfo. Página inicial do Texinfo:
+@url{https://www.gnu.org/software/texinfo/}
+
+@subsubheading COPIRRAITE E LICENÇA do pod2texi
+@anchor{COPIRRAITE E LICENÇA do pod2texi}
+
+Copirraite 2012-2024 Free Software Foundation, Inc.
+
+Este programa é software livre; você pode redistribuí-lo e(ou) modificá-lo
+sob os termos da Licença Pública Geral GNU conforme publicada pela Free
+Software Foundation; ou a versão 3 da Licença ou, (a teu critério), qualquer
+versão posterior.
+
+NÃO EXISTE GARANTIA, na medida permitida pela legislação.
+
+@subsubheading AUTOR do pod2texi
+@anchor{AUTOR do pod2texi}
+
+Patrice Dumas <bug-texinfo@@gnu.org>.
+
