@@ -1,33 +1,42 @@
-po-auto-trans() {
-  local pot="" po="" wid=79
-  
-  # Substitui o eval por um parser seguro
-  for arg in "${@}"; do
-    case "${arg}" in
-      pot=*) pot="${arg#*=}" ;;
-      po=*)  po="${arg#*=}"  ;;
-      wid=*) wid="${arg#*=}" ;;
-    esac
-  done
-
-  [[ -z "${pot}" ]] && { echo "Uso: po-auto-trans pot=<arquivo>"; return 1; }
-  : "${po:="${pot%.*}".pt_BR.po}"
-
-  # Processamento...
-  sed -r '/^msgid/{:a;N;s/\n"/+"/;ta;}' "${pot}" | while IFS= read -r line; do
-    read -r field msg <<< "${line}"
-    case "${field}" in
-      msgid*)
-        content="${msg%\"}"   # Remove aspas final
-        content="${content#\"}" # Remove aspas inicial
-        # ... lógica de tradução com a variável content ...
-        trd=$(trans -b -j -no-auto -- "${content}" || echo "${content}")
-        echo "msgid ""${msg}"""
-        ;;
-      msgstr*)
-        # Lógica de impressão da msgstr...
-        ;;
-      *) echo "${line}" ;;
-    esac
-  done | tee "${po}"
+po-auto-trans()
+{
+  local pot po wid
+  eval "$@"
+  : ${pot:?$'\e[20D'Uso: $FUNCNAME pot=<potfile> [po=<pofile>] [wid=<width>]}
+  : ${po:=${pot%.*}.pt_BR.po} ${wid:=79}
+  sed -r '/^msgid/{:a;N;s/\n"/+"/;ta;}' $pot |
+  {
+    time while read -r line
+    do
+      read -r field msg <<< $line
+      case $field in
+        msg* )
+          echo -n "$field "
+          ;;&
+        msgid* )
+          : "${msg:1:-1}"   # remove aspas inicial e final
+          (( ${#_} == 1 )) &&
+          { trd=$_; echo \"$trd\"; continue; } # a tradução do caractere ":" trava
+          : "${_//\"+\"/}"  # remove conector de múltiplas linhas
+          : "${_//\\\"/\"}" # desprotege aspas intenas já protegidas (ex linha 9225:11177)
+          : "${_//\"/\\\"}" # protege aspas internas
+          : "${_//\\/\\\\}" # protege contrabarras
+          # não trata $msg iniciadas por -- como opção do comando trans (ex linha 31518:37338)
+          # se der erro na tradução, assume a msg original (ex linha 26736:31599)
+          trd=$(trans -b -j -no-auto -- "$_" || echo "$_")
+          echo "${msg//\"+\"/\"$'\n'\"}"
+          ;;
+        msgstr* )
+          (( ${#trd}-2 < wid-${#field} )) &&
+          echo "\"$trd\"" ||
+          {
+            echo '""'
+            fold -sw $((wid-2)) <<< $trd |
+            sed -r 's/^/"/; s/[^ ]$/& /; s/$/"/; $s/ "$/"/'
+          }
+          ;;
+        * ) echo "$line"
+      esac
+    done | tee $po
+  }
 }
