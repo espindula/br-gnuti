@@ -50,7 +50,7 @@ msgid ""
 "documentation system that can produce both online information and a printed "
 "manual from a single source using semantic markup."
 msgstr ""
-"Este manual é para o GNU Texinfo (version @value{VERSION}, @value{UPDATED}), "
+"Este manual é para o GNU Texinfo (versão @value{VERSION}, @value{UPDATED}), "
 "um sistema de documentação que consegue produzir informações online e um "
 "manual impresso a partir de uma fonte usando marcação semântica."
 
@@ -5737,7 +5737,7 @@ msgstr ""
 "comando de estruturação de capítulo---por exemplo, uma linha "
 "@code{@@section} ou @code{@@subsection}. (Veja-se @ref{Estruturamento de "
 "Capítulo}.) Você deve necessariamente fazer isso, ainda que você não "
-"pretenda formatar o arquivo para Info. Isso é por que sa'da impressa usa "
+"pretenda formatar o arquivo para Info. Isso é por que saída impressa usa "
 "ambos, nomes @code{@@node} e nomes de estruturação de capítulo, na saída "
 "para referências cruzadas. A única vez que você similarmente usa os comandos "
 "de estruturação de capítulo sem também usar nós é se você estiver escrevendo "
@@ -6057,7 +6057,7 @@ msgid ""
 msgstr ""
 "Como os nomes dos nó são usados em referências cruzadas, não é desejável "
 "mudá-los casualmente uma vez publicados. Quando você deletar ou renomear um "
-"nó, geralmente é uma boa idéia definir um @code{@@anchor} com o nome antigo. "
+"nó, geralmente é uma boa ideia definir um @code{@@anchor} com o nome antigo. "
 "Dessa forma, as referências a partir de outros manuais, a partir de "
 "arquivamentos de correio e assim por diante não serão invalidados. "
 "@xref{@code{@@anchor}}."
@@ -6352,7 +6352,7 @@ msgstr "@@section @@code@{@@@@unnumbered@}, @@code@{@@@@appendix@}: Capítulos c
 #. type: itemize
 #: texinfo/texinfo.texi:2438
 msgid "But the corresponding node name lacks the commas and the subtitle:"
-msgstr "Porém, correspondente nome de nó careçe de vírgulas e do subtítulo:"
+msgstr "Porém, correspondente nome de nó carece de vírgulas e do subtítulo:"
 
 #. type: example
 #: texinfo/texinfo.texi:2441
@@ -7531,7 +7531,7 @@ msgstr "Menu de exemplo"
 #. type: Plain text
 #: texinfo/texinfo.texi:2917
 msgid "A menu looks like this in Texinfo:"
-msgstr "Um menu se pareçe com isto no Texinfo:"
+msgstr "Um menu se parece com isto no Texinfo:"
 
 #. type: group
 #: texinfo/texinfo.texi:2924
@@ -9758,7 +9758,7 @@ msgid ""
 "section.  This is used as the name of the reference in the printed manual.  "
 "If omitted, the node name is used."
 msgstr ""
-"Um rótulo para saída impressa.  Freqüentemente, esse é o título ou tópico da "
+"Um rótulo para saída impressa.  Frequentemente, esse é o título ou tópico da "
 "seção.  Isso é usado como o nome da referência no manual impresso.  Se "
 "omitido, o nome do nó será usado."
 
@@ -10324,7 +10324,7 @@ msgid ""
 "reference is to another manual cannot be known."
 msgstr ""
 "O título do manual impresso é tipografado como @code{@@cite}; e a referência "
-"careçe de um número de página, pois a página a qual uma referência se refere "
+"carece de um número de página, pois a página a qual uma referência se refere "
 "quando essa referência é para outro manual não pode ser conhecida."
 
 #. type: Plain text
@@ -11861,8 +11861,7 @@ msgid ""
 "Marking words and phrases as code, keyboard input, meta-syntactic variables, "
 "and the like."
 msgstr ""
-"Marcando palavras e frases como código, entrada do teclado, variáveis meta-"
-"sintáticas e similares."
+"Marcando palavras e frases como código, entrada do teclado, variáveis metassintáticas e similares."
 
 #. type: chapter
 #: texinfo/texinfo.texi:4750
@@ -13190,7 +13189,7 @@ msgstr ""
 "tipo inclinado.  @footnote{Na saída gerada do @TeX{}, @code{@@var} "
 "atualmente usa uma fonte inclinada de máquina de escrever em contextos de "
 "código como @code{@@code} ou @code{@@example}.  Nós planejamos mudar isso no "
-"proóximo lançamento para usar uma fonte inclinada e de largura variável em "
+"próximo lançamento para usar uma fonte inclinada e de largura variável em "
 "todos os contextos.  Para evitar essa mudança, configure o sinalizador "
 "@samp{txicodevaristt} usando @code{@@set}; especifique @samp{@@clear "
 "txicodevaristt} para fazer essa mudança agora (@pxref{@code{@@set "
@@ -13827,7 +13826,7 @@ msgid ""
 msgstr ""
 "No uso comum do Inglês, siglas são um subconjunto de abreviações: elas "
 "incluem palavras pronunciáveis como `@acronym{NATO}', `radar' e `snafu'; "
-"algumas fontes também incluem siglas de siglas, como `Usenet'; híbridas, "
+"algumas fontes também incluem siglas de siglas, como `Usenet'; hibridas, "
 "como `@acronym{SIGGRAPH}'; e inicialismos impronunciáveis como "
 "`@acronym{FBI}'."
 
@@ -15366,11 +15365,7 @@ msgid ""
 "are output as class names, prefixed by the string @samp{user-}.  This may be "
 "useful for adding syntax highlighting to manuals for code samples."
 msgstr ""
-"Você pode opcionalmente fornecer argumentos para o comando @code{@@example}, "
-"separados por vírgulas, se existir mais que um.  Na saída gerada HTML, "
-"quaisquer argumentos desse tipo são gerados como nomes de classe, prefixados "
-"pela string @samp{user-}.  Isso pode ser útil para adicionar realce de "
-"sintaxe para manuais para amostras de código."
+"Você pode opcionalmente fornecer argumentos para o comando @code{@@example}, separados por vírgulas, se existir mais que um.  Na saída gerada HTML, quaisquer argumentos desse tipo são gerados como nomes de classe, prefixados pela sequência de caracteres @samp{user-}.  Isso pode ser útil para adicionar realce de sintaxe para manuais para amostras de código."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:6141
@@ -16486,7 +16481,7 @@ msgstr ""
 #. type: Plain text
 #: texinfo/texinfo.texi:6617
 msgid "The cartouche with a title looks like this:"
-msgstr "O @code{@@cartouche} com um título se pareçe com isto:"
+msgstr "O @code{@@cartouche} com um título se parece com isto:"
 
 #. type: cartouche
 #: texinfo/texinfo.texi:6621
@@ -17297,7 +17292,7 @@ msgstr ""
 #. type: code{#1}
 #: texinfo/texinfo.texi:6985
 msgid "@@enumerate @var{unsigned-integer}"
-msgstr "@@enumerate @var{inteiro-desinalado}"
+msgstr "@@enumerate @var{inteiro-dessinalado}"
 
 #. type: enumerate
 #: texinfo/texinfo.texi:6989
@@ -17306,7 +17301,7 @@ msgid ""
 "number.  You can use this to continue a list that you interrupted with other "
 "text."
 msgstr ""
-"Com um argumento numérico (desinalado), inicia uma lista numerada com aquele "
+"Com um argumento numérico (dessinalado), inicia uma lista numerada com aquele "
 "número.  Você pode usar isso para continuar uma lista que você interrompeu "
 "com outro texto."
 
@@ -20571,7 +20566,7 @@ msgstr ""
 "Primeiro, você pode criar entradas de índice @dfn{multi nível}, permitindo "
 "agrupar muitos subtópicos relacionados sob o mesmo tópico de nível "
 "superior.  Você faz isso separando as partes de cada entrada com o comando "
-"@code{@@subentry}.  Esses comandos podem se pareçer com isto:"
+"@code{@@subentry}.  Esses comandos podem se parecer com isto:"
 
 #. type: example
 #: texinfo/texinfo.texi:8179
@@ -20804,7 +20799,7 @@ msgid ""
 "programming languages, or program names; these names are usually case-"
 "sensitive, so likewise use upper- and lowercase as required."
 msgstr ""
-"Em qualquer caso, nunca maiuscule um nome que diferencia maiúsculas de "
+"Em qualquer caso, nunca maiusculize um nome que diferencia maiúsculas de "
 "minúsculas, como um nome de função da C ou Lisp ou um comando de shell; isso "
 "seria um erro ortográfico.  Entradas em índices diferentes do índice de "
 "conceito são nomes de símbolos em linguagens de programação ou nomes de "
@@ -22299,7 +22294,7 @@ msgstr ""
 #. type: Plain text
 #: texinfo/texinfo.texi:8801
 msgid "This gives the output"
-msgstr "Isso forneçe a saída gerada"
+msgstr "Isso fornece a saída gerada"
 
 #. type: deftypefn
 #: texinfo/texinfo.texi:8802
@@ -26595,7 +26590,7 @@ msgstr ""
 "importante, @TeX{} não sabe nada acerca da maioria do Unicode.  Suportar "
 "glifos adicionais específicos mediante solicitação é possível, mas não é "
 "viável para @file{texinfo.tex} suportar conjuntos adicionais e inteiros de "
-"comandos sequênciais (japonês, urdu, @dots{}).  O comando @code{@@U} não faz "
+"comandos sequenciados (japonês, urdu, @dots{}).  O comando @code{@@U} não faz "
 "nada para mudar isso.  Se o caractere especificado não for suportado no "
 "@TeX{}, um erro será fornecido.  A saída do @LaTeX{} tem mais possibilidades "
 "em relação ao UTF-8, mas poderia exigir código extra para carregar fontes e "
@@ -27061,7 +27056,7 @@ msgstr ""
 #. type: table
 #: texinfo/texinfo.texi:10358
 msgid "Give hyphenation points for certain words.  For example:"
-msgstr "Forneçe pontos de hifenização para certas palavras.  Por exemplo:"
+msgstr "Fornece pontos de hifenização para certas palavras.  Por exemplo:"
 
 #. type: example
 #: texinfo/texinfo.texi:10360
@@ -27317,7 +27312,7 @@ msgid ""
 msgstr ""
 "Na saída impressa, você também pode usar o comando @code{@@w} para impedir "
 "que um nome longo ou uma frase seja automaticamente hifenizada, por exemplo "
-"se aconteçer perto do fim de uma linha."
+"se acontecer perto do fim de uma linha."
 
 #. type: cindex
 #: texinfo/texinfo.texi:10453
@@ -28830,7 +28825,7 @@ msgstr ""
 "Isso significa que @code{foobar} é uma ``função de biblioteca'' que retorna "
 "um @code{int}, e os argumentos dela são @var{foo} (um @code{int}) e "
 "@var{bar} (um @code{float}).  @samp{Função de Biblioteca} tem de ser "
-"circundado epor chaves para torná-lo um argumento unitário."
+"circundado por chaves para torná-lo um argumento unitário."
 
 #. type: table
 #: texinfo/texinfo.texi:11060
@@ -28921,7 +28916,7 @@ msgstr ""
 "@code{@@deftypefn} e variantes poderiam ser usados quando for conveniente "
 "interpretar a lista de argumentos como código literal de computador, "
 "marcando os nomes dos argumentos com @code{@@var}.  Não é necessário para "
-"quaisquer nomes de tipo apareçer, e você pode fornecer um tipo de retorno "
+"quaisquer nomes de tipo aparecer, e você pode fornecer um tipo de retorno "
 "vazio como @samp{@{@}}."
 
 #. type: example
@@ -30462,7 +30457,7 @@ msgstr ""
 #. type: Plain text
 #: texinfo/texinfo.texi:11782
 msgid "In the Texinfo source file, this example should look like this:"
-msgstr "No arquivo fonte do Texinfo, esse exemplo deveria se pareçer com isto:"
+msgstr "No arquivo fonte do Texinfo, esse exemplo deveria se parecer com isto:"
 
 #. type: group
 #: texinfo/texinfo.texi:11792
@@ -31158,9 +31153,7 @@ msgid ""
 "world, this wide-ranging support is not available in @file{texinfo.tex}, and "
 "it's not feasible to duplicate or incorporate all that effort."
 msgstr ""
-"Embora os sistemas modernos @TeX{} suportem quase todos os scripts em uso no "
-"mundo, esse suporte abrangente não está disponível no @file{texinfo.tex}, e "
-"não é viável duplicar ou incorporar todo esse esforço."
+"Embora os sistemas modernos @TeX{} suportem quase todos os conjuntos de comandos sequenciados em uso no mundo, esse suporte abrangente não está disponível no @file{texinfo.tex}, e não é viável duplicar ou incorporar todo esse esforço."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:12047
@@ -31216,7 +31209,7 @@ msgstr "Condicionais"
 #: texinfo/texinfo.texi:12061
 msgid "@nodedescription Specifying text for only some output cases."
 msgstr ""
-"@nodedescription Especificando texte para somente alguns casos de saída."
+"@nodedescription Especificando texto para somente alguns casos de saída."
 
 #. type: chapter
 #: texinfo/texinfo.texi:12061
@@ -35864,9 +35857,7 @@ msgid ""
 "is named @file{elisp.texi}.  This outer file has already contained a master "
 "menu with 417 entries and a list of 41 @code{@@include} files."
 msgstr ""
-"O arquivo fonte externo do Texinfo para @cite{The GNU Emacs Lisp Reference "
-"Manual} é chamado @file{elisp.texi}.  Esse arquivo externo já conteve um "
-"menu mestre com 417 entradas e uma lista de 41 arquivos @code{@@include}."
+"O arquivo fonte externo do Texinfo para @cite{O Manual de Referência da Lisp do GNU Emacs} é chamado @file{elisp.texi}. Esse arquivo externo já conteve um menu mestre com 417 entradas e uma lista de 41 arquivos @code{@@include}."
 
 #. type: node
 #: texinfo/texinfo.texi:13959
@@ -37229,7 +37220,7 @@ msgid ""
 msgstr ""
 "Por exemplo, os comandos seguintes (provavelmente) serão suficientes para "
 "ordenar os índices, formatar e imprimir este manual usando o conjunto de "
-"comandos sequênciais de shell @command{texi2dvi} (@pxref{Formatar com "
+"comandos sequenciados de shell @command{texi2dvi} (@pxref{Formatar com "
 "@command{texi2dvi}})."
 
 #. type: group
@@ -37676,10 +37667,7 @@ msgid ""
 "coerce @TeX{} into greatly increasing the allowable interword spacing, thus "
 "(if you're lucky) avoiding many of the bad line breaks, like this:"
 msgstr ""
-"Se você tiver muitas caixas lotadas e (ou) uma antipatia por reescrever, "
-"poderá coagir o @TeX{} a aumentar bastante o espaçamento permitido inter-"
-"palavras, assim (se você tiver sorte) evitando muitas das quebras ruins de "
-"linha, assim:"
+"Se você tiver muitas caixas lotadas e (ou) uma antipatia por reescrever, poderá coagir o @TeX{} a aumentar bastante o espaçamento permitido interpalavras, assim (se você tiver sorte) evitando muitas das quebras ruins de linha, assim:"
 
 #. type: findex
 #: texinfo/texinfo.texi:14643
@@ -42270,7 +42258,7 @@ msgid ""
 "sim.  On by default."
 msgstr ""
 "Para saída gerada do Info, quando configurada, usar caracteres ASCII simples "
-"para representar aspas, hífens e travessões quando esses forem fornecidos no "
+"para representar aspas, hifens e travessões quando esses forem fornecidos no "
 "fonte do Texinfo como @samp{-}, @samp{--}, @samp{---}, @samp{`}, @samp{``}, "
 "@samp{'} e @samp{''}, em vez de aspas direcionais UTF-8, travessões, e assim "
 "por diante. Ligada por padrão."
@@ -42348,7 +42336,7 @@ msgid ""
 "used (@pxref{Invoking @command{texi2any}})."
 msgstr ""
 "Número máximo de colunas em uma linha de entrada de menu no Info ao se "
-"adicionar uma descrição origiária de @code{@@nodedescription} ou "
+"adicionar uma descrição originária de @code{@@nodedescription} ou "
 "@code{@@nodedescriptionblock}. Indefinida por padrão, caso em que 10% a mais "
 "que o valor da coluna de preenchimento é usado (@pxref{Invocando "
 "@command{texi2any}})."
@@ -44508,9 +44496,7 @@ msgid ""
 "the @code{dir} file.  For example, the line for the `Top' node of the Emacs "
 "manual looks like this in Info:"
 msgstr ""
-"Em cada um dos arquivos Info, o ponteiro `Up' do nó `Top' referencia de "
-"volta para o arquivo @code{dir}. Por exemplo, a linha para o nó `Top' do "
-"manual do Emacs se parece com isto no Info:"
+"Em cada um dos arquivos do Info, o ponteiro `Acima' do nó `Topo' referencia de volta para o arquivo @code{dir}. Por exemplo, a linha para o nó `Topo' do manual do Emacs se parece com isto no Info:"
 
 #. type: example
 #: texinfo/texinfo.texi:16964
@@ -45526,7 +45512,7 @@ msgid ""
 "Do not replace pre-existing menu entries.  When @samp{--remove} is "
 "specified, this option means that empty sections are not removed."
 msgstr ""
-"Não substituir entradas pré-existentes de menu. Quando @samp{--remove} for "
+"Não substituir entradas preexistentes de menu. Quando @samp{--remove} for "
 "especificada, essa opção significa que seções vazias não serão removidas."
 
 #. type: item
@@ -46286,7 +46272,7 @@ msgstr ""
 "Quando arquivos Texinfo são processados em arquivos Info, as informações "
 "acerca de quais comandos do Texinfo foram usados para marcar o texto são "
 "perdidas. Além disso, não é possível detectar com segurança se o texto "
-"consegue ser refluido (por exemplo@: um parágrafo de prosa) ou se as quebras "
+"consegue ser refluído (por exemplo@: um parágrafo de prosa) ou se as quebras "
 "de linha deveriam ser mantidas (por exemplo@: uma amostra de código ou um "
 "poema)."
 
@@ -46616,7 +46602,7 @@ msgstr ""
 "Ao dividir, os arquivos da saída gerada HTML serão escritos em um "
 "subdiretório. O nome do subdiretório é derivado do nome base (ou seja, "
 "qualquer extensão será removida), com @code{_html} posposto. Por exemplo, a "
-"saída HTML para @file{gcc.texi} seria escrita em um subdiretório mominado de "
+"saída HTML para @file{gcc.texi} seria escrita em um subdiretório nominado de "
 "@samp{gcc_html/}. O nome do subdiretório é baseado em @code{@@setfilename} "
 "ou no nome do arquivo de entrada (@pxref{Configurando o Nome do Arquivo da "
 "Saída Gerada})."
@@ -46782,7 +46768,7 @@ msgid ""
 "document.  Again, a full description is beyond our scope here, but we'll "
 "describe how they work syntactically, so we can explain how they are handled."
 msgstr ""
-"O arquivo CSS possivelmente começe com as assim chamadas diretivas "
+"O arquivo CSS possivelmente comece com as assim chamadas diretivas "
 "@samp{@@import}, as quais lincam especificações externas CSS para "
 "navegadores usarem ao interpretarem o documento. Novamente, uma descrição "
 "completa está além do nosso escopo aqui, mas nós descreveremos como elas "
@@ -47300,7 +47286,7 @@ msgstr "source-highlight"
 #. type: quotation
 #: texinfo/texinfo.texi:17965
 msgid "Source highlighting is experimental, feedback is welcomed."
-msgstr "Realçamento de fonte é experimental; retroalimentação será bemvinda."
+msgstr "Realçamento de fonte é experimental; retroalimentação será bem-vinda."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:17975
@@ -49049,7 +49035,7 @@ msgid ""
 msgstr ""
 "O objetivo de se ter sintaxe diferente para comandos é o de tornar os "
 "arquivos do Texinfo mais fáceis para ler e também o de ajudar os comandos de "
-"parágrafo e de preenchimento do GNU Emacs a funcionarem adequamente."
+"parágrafo e de preenchimento do GNU Emacs a funcionarem adequadamente."
 
 #. type: node
 #: texinfo/texinfo.texi:18588
@@ -49660,7 +49646,7 @@ msgstr "@@bsixpaper"
 #. type: table
 #: texinfo/texinfo.texi:18755
 msgid "Change page dimensions for the B6 paper size.  @xref{A4 Paper}."
-msgstr "Mudar domensões de página para o tamanho de papel B6. @xref{Papel A4}."
+msgstr "Mudar dimensões de página para o tamanho de papel B6. @xref{Papel A4}."
 
 #. type: item
 #: texinfo/texinfo.texi:18756
@@ -49927,7 +49913,7 @@ msgid ""
 "be output, for formats that may output a table of contents.  "
 "@xref{Contents, , Generating a Table of Contents}."
 msgstr ""
-"Imprimit um sumário completo ou especificar que um sumário deveria ser "
+"Imprimir um sumário completo ou especificar que um sumário deveria ser "
 "gerado, para formatos que podem gerar um sumário. @xref{Conteúdo, , Gerando "
 "um Sumário}."
 
@@ -52032,7 +52018,7 @@ msgid ""
 "Provide a short elaboration of the purpose of a node.  @xref{Node "
 "Descriptions}."
 msgstr ""
-"Forneçer uma breve elaboração da finalidade de um nó. @xref{Descrições de "
+"Fornecer uma breve elaboração da finalidade de um nó. @xref{Descrições de "
 "Nó}."
 
 #. type: item
@@ -54313,7 +54299,7 @@ msgstr ""
 #. type: Plain text
 #: texinfo/texinfo.texi:20228
 msgid "so it looks like this:"
-msgstr "de modo que se pareçe com isto:"
+msgstr "de modo que se parece com isto:"
 
 #. type: quotation
 #: texinfo/texinfo.texi:20235
@@ -54387,8 +54373,8 @@ msgid ""
 "formatter reduces three hyphens to two; a long dash is typeset in other "
 "output formats."
 msgstr ""
-"Usar três hífens em uma linha, @samp{---}, para indicar um travessão longo. "
-"O formatador do Info reduz três hífens para dois; um travessão longo é "
+"Usar três hifens em uma linha, @samp{---}, para indicar um travessão longo. "
+"O formatador do Info reduz três hifens para dois; um travessão longo é "
 "tipografado em outros formatos de saída."
 
 #. type: subsubheading
@@ -56195,7 +56181,7 @@ msgid ""
 "structure} command is bound to @kbd{C-c C-s} in Texinfo mode, by default."
 msgstr ""
 "No GNU Emacs, no modo Texinfo, o comando @code{texinfo-show-structure} lista "
-"todas as linhas que começem com os comandos @@ que especifiquem a estrutura: "
+"todas as linhas que comecem com os comandos @@ que especifiquem a estrutura: "
 "@code{@@chapter}, @code{@@section}, @code{@@appendix} e assim por diante. "
 "Com um argumento (@w{@kbd{C-u}} como argumento de prefixo, se interativo), o "
 "comando também mostra as linhas @code{@@node}. O comando @code{texinfo-show-"
@@ -56306,8 +56292,8 @@ msgid ""
 "@code{@@section}, and the like."
 msgstr ""
 "Se você chamar @code{texinfo-show-structure} com um argumento de prefixo "
-"digitando @w{@kbd{C-u C-c C-s}}, ele listará as linhas que começem com "
-"@code{@@node}, bem como as linhas que começem com os comandos de sinal @@ "
+"digitando @w{@kbd{C-u C-c C-s}}, ele listará as linhas que comecem com "
+"@code{@@node}, bem como as linhas que comecem com os comandos de sinal @@ "
 "para @code{@@chapter}, @code{@@section} e similares."
 
 #. type: Plain text
@@ -56404,7 +56390,7 @@ msgid ""
 "helpful when you want to see all the nodes that are part of the same chapter "
 "or section and therefore have the same `Up' pointer."
 msgstr ""
-"Se você quiser ver somente as linhas que começem com a palavra "
+"Se você quiser ver somente as linhas que comecem com a palavra "
 "@samp{@@chapter}, digite @samp{^@@chapter} quando solicitado(a) por "
 "@code{occur}. Se você quiser ver todas as linhas que terminem com uma "
 "palavra ou frase, termine a última palavra com um @samp{$}; por exemplo, "
@@ -56652,7 +56638,7 @@ msgid ""
 "(incorporating the descriptions from pre-existing menus, if any)."
 msgstr ""
 "Criar ou atualizar um menu mestre que inclua todos os outros menus "
-"(incorporando as descrições originárias de menus pré-existentes, se "
+"(incorporando as descrições originárias de menus preexistentes, se "
 "existirem)."
 
 #. type: table
@@ -56746,7 +56732,7 @@ msgid ""
 msgstr ""
 "Inserir os ponteiros `Próximo', `Anterior' e `Acima' para o nó em que o "
 "ponto está (ou seja, para o ponto anterior da linha @code{@@node}). Se a "
-"linha @code{@@node} tiver ponteiros pré-existentes `Próximo', `Anterior' ou "
+"linha @code{@@node} tiver ponteiros preexistentes `Próximo', `Anterior' ou "
 "`Acima', os ponteiros antigos serão removidos e novos serão inseridos. Com "
 "um argumento (argumento de prefixo, @kbd{C-u}, se interativo), esse comando "
 "atualiza todas as linhas @code{@@node} na região (que é o texto entre o "
@@ -56997,7 +56983,7 @@ msgid ""
 "either like this:"
 msgstr ""
 "Cada combinação de linha @code{@@node}/linha de comando estruturante precisa "
-"ou se pareçer com esta:"
+"ou se parecer com esta:"
 
 #. type: group
 #: texinfo/texinfo.texi:21290
@@ -57392,7 +57378,7 @@ msgstr ""
 "comando @code{texinfo-insert-node-lines} não apenas insere linhas "
 "@code{@@node}, mas também insere os títulos dos capítulos ou das seções como "
 "os nomes dos nós correspondentes. Além disso, ele insere os títulos como "
-"nomes de nós em linhas @code{@@node} pré-existentes que careçam de nomes. "
+"nomes de nós em linhas @code{@@node} preexistentes que careçam de nomes. "
 "Como nomes de nós deveriam ser mais concisos que títulos de seções ou de "
 "capítulos, você precisa editar manualmente nomes de nós inseridos desse modo."
 
@@ -58064,7 +58050,7 @@ msgid ""
 "tex-region} and related commands for this purpose.  Use the @code{texinfo-"
 "tex-buffer} command to format all of a buffer."
 msgstr ""
-"Freqüentemente, quando estiver escrevendo um documento, você desejará "
+"Frequentemente, quando estiver escrevendo um documento, você desejará "
 "tipografar e imprimir somente parte de um arquivo para ver como ele ficará. "
 "Você consegue usar o @code{texinfo-tex-region} e comandos relacionados para "
 "essa finalidade. Use o comando @code{texinfo-tex-buffer} para formatar todo "
@@ -59599,7 +59585,7 @@ msgid ""
 "(The cross-reference lacks a closing brace.)  @TeX{} produced the following "
 "output, after which it stopped:"
 msgstr ""
-"(A referência cruzada careçe de uma chave de fechamento). @TeX{} produziu a "
+"(A referência cruzada carece de uma chave de fechamento). @TeX{} produziu a "
 "seguinte saída, depois da qual parou:"
 
 #. type: example
@@ -59788,7 +59774,7 @@ msgid ""
 "its run and display output that looks like the following.  The @samp{*} "
 "indicates that @TeX{} is waiting for input."
 msgstr ""
-"Se o arquivo do Texinfo careçer de linhas de cabeçalho, @TeX{} poderá parar "
+"Se o arquivo do Texinfo carecer de linhas de cabeçalho, @TeX{} poderá parar "
 "no início da execução dele e exibir uma saída que se parece com à seguinte. "
 "O @samp{*} indica que @TeX{} está aguardando entrada."
 
@@ -60299,7 +60285,7 @@ msgid ""
 "@code{texinfo-format-buffer}, you cannot use that Emacs for anything else "
 "until the command finishes.)"
 msgstr ""
-"@code{batch-texinfo-format} é conveniente se você careçer do "
+"@code{batch-texinfo-format} é conveniente se você carecer do "
 "@command{texi2any} e quiser formatar vários arquivos do Texinfo de uma vez. "
 "Ao usar o modo de Lote, você cria um novo processo do Emacs. Isso libera teu "
 "Emacs atual, de modo que você consiga continuar trabalhando nele. (Quando "
@@ -62358,7 +62344,7 @@ msgstr ""
 "diferenciar maiúsculas de minúsculas em palavras-chave que ocorrerem no "
 "arquivo (por exemplo, @samp{Tabela de Etiquetas} e @samp{Tabela de "
 "etiquetas} deveriam ser equivalentes) para a finalidade de suportar "
-"programas de geração do Info que usem diferentes maisculizações."
+"programas de geração do Info que usem diferentes maiusculizações."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:23383
