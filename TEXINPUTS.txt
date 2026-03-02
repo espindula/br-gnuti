@@ -1,0 +1,23 @@
+
+
+Jaboatão dos Guararapes, Pernambuco, Brasil, segunda-feira, 02 de março de 2026.
+Atualização mais recente:
+
+A intenção de se usar a variável exportada "TEXINPUTS" é a de induzir o
+programa TeX a usar o arquivo 'txi-pt_BR.tex' revisto e atualizado, ignorando
+o 'txi-pt.tex' instalado no sistema em "/usr/share/texmf/tex/texinfo".
+Nesse arquivo estão palavras especiais, tais como "veja", "Veja", entre outras.
+
+TEXINPUTS=.:/home/eu/minhabiblioteca:
+export TEXINPUTS
+
+Conforme o manual do sistema GNU Texinfo de documentação:
+
+Essas configurações fariam com que o TeX primeiro procurasse por um arquivo
+\input no diretório atual, indicado pelo ‘.’, então um diretório
+minhabiblioteca de um(a) usuário(a) hipotético(a) ‘eu’ e finalmente nos
+diretórios do sistema. (Um ‘:’ à esquerda, à direita ou duplo indica a pesquisa
+nos diretórios do sistema nesse ponto).
+
+
+TEXINPUTS=.:txi-pt_BR.tex:

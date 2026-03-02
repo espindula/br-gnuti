@@ -1,4 +1,5 @@
 \input texinfo.tex    @c -*-texinfo-*-
+\input txi-pt_BR.tex
 @c ===========================================================================
 @c
 @c This file was generated with po4a. Translate the source file.
@@ -6,7 +7,9 @@
 @c ===========================================================================
 
 
-@setfilename texinfo.info
+@setfilename texinfo-pt_BR.info
+@documentlanguage pt_BR
+@afourpaper
 
 @c Automake automatically updates version.texi to @set VERSION and
 @c @set UPDATED to appropriate values.
@@ -96,7 +99,7 @@ Boston, MA 02110-1301 @* USA @* ISBN 1-882114-67-1
 
 @ignore
 @sp 1
-Cover art by Etienne Suvasa.
+Arte da capa por Etienne Suvasa.
 @end ignore
 @end titlepage
 
@@ -108,7 +111,7 @@ Cover art by Etienne Suvasa.
 @node Top
 @top Texinfo
 
-Este manual é para o GNU Texinfo (version @value{VERSION}, @value{UPDATED}),
+Este manual é para o GNU Texinfo (versão @value{VERSION}, @value{UPDATED}),
 um sistema de documentação que consegue produzir informações online e um
 manual impresso a partir de uma fonte usando marcação semântica.
 
@@ -20557,7 +20560,7 @@ de Diretório}.
 @item
 O nó `Invocando' é um padrão GNU para ajudar usuários(as) a encontrar
 informações básicas acerca do uso da linha de comando de um determinado
-programa. @xref{Detalhes da Estrutura do Manual,,, padrões, Padrões GNU de
+programa. @xref{Detalhes da Estrutura do Manual,,, standards, Padrões GNU de
 Codificação}.
 
 @item

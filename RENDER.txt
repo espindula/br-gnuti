@@ -10,6 +10,7 @@ Formato texto simples (puro):
 ============================
 
 texi2any --plaintext --output=teste.txt texinfo-ed.6.1-pt_BR.texi
+texi2any -c TEXINFO_OUTPUT_FORMAT=textcontent texinfo.pt_BR.texi -o /tmp/saida.txt
 
 
 Formato HTML (página única):
