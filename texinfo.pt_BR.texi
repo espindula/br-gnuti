@@ -97,6 +97,9 @@ GNU de Documentação Livre''.
 Publicado pela Free Software Foundation @* 51 Franklin St, Fifth Floor @*
 Boston, MA 02110-1301 @* USA @* ISBN 1-882114-67-1 
 
+Traduzido para o idioma português conforme escrito e falado no Brasil por
+Jamenson Ferreira Espindula de Almeida Melo.
+
 @ignore
 @sp 1
 Arte da capa por Etienne Suvasa.
@@ -198,7 +201,7 @@ significado pretendido do texto no documento, em vez de instruções de
 formatação física.
 
 O GNU Emacs tem um modo especial, chamado modo Texinfo, que fornece vários
-recursos relacionados ao Texinfo. (@xref{Modo Texinfo}.)
+recursos relacionados ao Texinfo. (@xref{Modo Texinfo}).
 
 @cindex Escopo limitado do Texinfo
 Texinfo foi concebido especificamente para o propósito de escrever
@@ -257,16 +260,16 @@ incluir muito mais que deixar de fora algo importante.
 
 É crítico enviar um arquivo de entrada atual que reproduza o problema.
 
-Quaisquer problemas com o leitor do Info no Emacs deveriam ser informados
-para os(as) desenvolvedores(as) do Emacs: veja-se @ref{Bugs,,, emacs, O
-Manual do GNU Emacs}.
+Quaisquer problemas com o leitor do Info no Emacs deveriam ser informados para
+os(as) desenvolvedores(as) do Emacs: veja-se @ref{Defeitos,,, emacs, O Manual
+do GNU Emacs}.
 
 @cindex Remendos, contribuindo
 Remendos são bem-vindos; se possível, por favor, faça-os com @samp{@w{diff
 -c}}, @samp{@w{diff -u}} (@pxref{,,, diffutils, Comparando e Mesclando
 Arquivos}), ou @samp{git diff} e inclua entradas de @file{ChangeLog}
-(@pxref{Change Log,,, standards, Padrões GNU de Codificação}), e siga o
-estilo existente de codificação.
+(@pxref{Registro das Mudanças,,, standards, Padrões GNU de Codificação}), e
+siga o estilo existente de codificação.
 
 
 @node Formatos de Saída
@@ -281,19 +284,11 @@ Texinfo.
 @table @asis
 @cindex Saída do Info, visão geral
 @item Info
-(Gerado via @command{texi2any}.)   O formato Info é em sua maior parte
-transliteração de texto plano do fonte Texinfo.   Ele adiciona uns poucos
-caracteres de controle para fornecer informação de navegação para
-referências cruzadas, índices, e assim por diante.   O subsistema Emacs Info
-(veja-se @ref{Top,,, info, Info}), e o programa autônomo @command{info}
-(@pxref{Top,,, info-stnd, GNU Info}), entre outros, conseguem ler esses
-arquivos. Veja-se @ref{Arquivos do Info}, e @ref{Criando e Instalando
-Arquivos Info}.
+(Gerado via @command{texi2any}). O formato Info é em sua maior parte transliteração de texto plano do fonte Texinfo. Ele adiciona uns poucos caracteres de controle para fornecer informação de navegação para referências cruzadas, índices, e assim por diante. O subsistema Emacs Info (veja-se @ref{Top,,, info, Info}), e o programa autônomo @command{info} (@pxref{Top,,, info-stnd, GNU Info}), entre outros, conseguem ler esses arquivos. @xref{Arquivos do Info} e @ref{Criando e Instalando Arquivos Info}.
 
 @cindex Saída gerada de texto simples, visão geral
 @item Texto simples
-(Gerado via @command{texi2any --plaintext}.)   Essa é quase a mesma que a
-saída Info com os caracteres de controle de navegação omitidos.
+(Gerado via @command{texi2any --plaintext}). Essa é quase a mesma que a saída Info com os caracteres de controle de navegação omitidos.
 
 @cindex Saída gerada de HTML, visão geral
 @item HTML
@@ -301,7 +296,7 @@ saída Info com os caracteres de controle de navegação omitidos.
 @c @cindex Lynx
 @c @cindex Emacs-W3
 @c such as Mozilla, Lynx, and Emacs-W3
-(Gerado via @command{texi2any --html}.) HTML, que significa Hyper Text
+(Gerado via @command{texi2any --html}). HTML, que significa Hyper Text
 Markup Language, é a linguagem para escrever documentos na World Wide
 Web. Os navegadores da Web conseguem renderizar essa linguagem
 online. Existem muitas versões de HTML, tanto diferentes usos mais comuns
@@ -314,7 +309,7 @@ desejado. @xref{Gerando HTML}.
 
 @cindex Saída EPUB 3, visão geral
 @item EPUB 3
-(Gerada via @command{texi2any --epub3}.) EPUB é um formato projetado para
+(Gerada via @command{texi2any --epub3}). EPUB é um formato projetado para
 leitura de livros eletrônicos em dispositivos portáteis. É um derivado do
 HTML@. O formato foi desenvolvido pelo International Digital Publishing
 Forum (IDPF), que agora faz parte do World Wide Web Consortium (W3C)@. A
@@ -325,19 +320,19 @@ mais recente grande revisão, EPUB 3, data de 2011.
 @pindex dvips @r{(programa)}
 @pindex xdvi
 @item DVI
-(Gerada via @command{texi2dvi}.)   O formato binário DeVIce Independent é
-liberado pelo programa tipográfico @TeX{} (@uref{http://tug.org}). Essa é
-então lida por um `controlador' DVI, o qual conhece os atuais comandos
-específicos de dispositivo que podem ser visualizados ou impressos,
-notadamente Dvips para tradução para PostScript (veja-se @ref{Top,,, dvips,
-Dvips}) e Xdvi para visualização em uma tela do X
-(@uref{http://sourceforge.net/projects/xdvi/}). Veja-se @ref{Impresso com
-@TeX{}}. (Esteja ciente de que a linguagem do Texinfo é muito diferente das
-linguagens usuais do @TeX{}: @TeX{} simples, @LaTeX{}, Con@TeX{}t, etc.)
+(Gerada via @command{texi2dvi}). O formato binário DeVIce Independent é
+liberado pelo programa tipográfico @TeX{} (@uref{http://tug.org}). Essa é então
+lida por um `controlador' DVI, o qual conhece os atuais comandos específicos de
+dispositivo que podem ser visualizados ou impressos, notadamente Dvips para
+tradução para PostScript (veja-se @ref{Top,,, dvips, Dvips}) e Xdvi para
+visualização em uma tela do X (@uref{http://sourceforge.net/projects/xdvi/}).
+Veja-se @ref{Impresso com @TeX{}}. (Esteja ciente de que a linguagem do Texinfo
+é muito diferente das linguagens usuais do @TeX{}: @TeX{} simples, @LaTeX{},
+Con@TeX{}t, entre outras).
 
 @cindex Saída gerada PostScript, visão geral
 @item PostScript
-(Gerada via @command{texi2dvi --ps}.)   PostScript é uma linguagem de
+(Gerada via @command{texi2dvi --ps}). PostScript é uma linguagem de
 descrição de página que se tornou amplamente usada por volta de 1985 e ainda
 é usada hoje em dia. @uref{https://en.wikipedia.org/wiki/PostScript} dá uma
 descrição básica e mais preferências.   Por padrão, Texinfo usa o programa
@@ -347,7 +342,7 @@ Veja-se @ref{Top,,, dvips, Dvips}.
 @cindex Saída gerada PDF, visão geral
 @cindex Beebe, Nelson
 @item PDF
-(Gerada via @command{texi2dvi --pdf} ou @command{texi2pdf}.)   Esse formato
+(Gerada via @command{texi2dvi --pdf} ou @command{texi2pdf}).  Esse formato
 foi desenvolvido pela Adobe Systems para intercâmbio de documento portável,
 baseado na linguagem PostScript prévia deles.   Ele consegue representar a
 exata aparência de um documento, incluindo fontes e gráficos, e suportar
@@ -361,7 +356,7 @@ extensão de @TeX{}, para gerar PDF; veja-se
 
 @cindex Saída LaTeX, visão geral
 @item @LaTeX{}
-(Gerada via @command{texi2any --latex}.) Esse é um sistema de tipografia
+(Gerada via @command{texi2any --latex}). Esse é um sistema de tipografia
 construído sobre o @TeX{}. Foi lançado originalmente por Leslie Lamport em
 1984. O @LaTeX{} adiciona mais definições para aquelas do @TeX{} e tem uma
 ampla gama de pacotes construídos sobre ele. O @LaTeX{} é onipresente na
@@ -378,7 +373,7 @@ simples do Texinfo.
 @cindex Saída Docbook, visão geral
 @cindex Saída XML Docbook, visão geral
 @item Docbook
-(Gerada via @command{texi2any --docbook}.)   Esse é um formato baseado em
+(Gerada via @command{texi2any --docbook}). Esse é um formato baseado em
 XML, primariamente para documentação técnica.   Ele, por conseguinte, assume
 alguma semelhança, em linhas gerais, com Texinfo.   Veja-se
 @uref{http://www.docbook.org}. Vários conversores de Docbook @emph{para}
@@ -390,13 +385,13 @@ Texinfo também foram desenvolvidos; vejam-se as páginas web do Texinfo.
 @pindex texinfo.dtd
 @pindex txixml2texi
 @item XML
-(Gerada via @command{texi2any --xml}.) A saída XML do @command{texi2any},
+(Gerada via @command{texi2any --xml}). A saída XML do @command{texi2any},
 diferente de todos os outros formatos de saída, é uma transliteração do
 fonte do Texinfo, em vez de uma saída finalizada. Os arquivos XML do Texinfo
 não podem ser visualizados em navegadores da web ou outros programas.
 
 XML é uma especificação genérica de sintaxe usável para qualquer tipo de
-conteúdo. (Uma referência está em @uref{http://www.w3.org/XML}.) O propósito
+conteúdo. (Uma referência está em @uref{http://www.w3.org/XML}). O propósito
 da saída XML do Texinfo é o de permitir processamento posterior por
 ferramentas XML. A sintaxe de saída é definida em um DTD de XML, que está
 contido em um arquivo @file{texinfo.dtd} incluído na distribuição do fonte
@@ -438,7 +433,7 @@ Info}).
 Se você desejar ler ao longo de um arquivo Info em sequência, como se ele
 fosse um manual impresso, você pode teclar @key{ESPAÇO} repetidamente, ou
 você percorre o arquivo inteiro com o comando Info avançado @kbd{g
-*}. (Veja-se @ref{Advanced,, Advanced Info commands, info, Info}.)
+*}. (Veja-se @ref{Avançado,, Comandos avançados do Info, info, Info}).
 
 O arquivo @file{dir} no diretório @file{info} serve como o ponto de chegada
 para o sistema Info inteiro.   A partir dele, você consegue alcançar os nós
@@ -756,7 +751,7 @@ coloque um caractere @samp{@@} em frente a ele, como isto: @samp{@@@@},
 Em um arquivo do Texinfo, os comandos que você escreve para descrever o
 conteúdo do manual são precedidos por um caractere @samp{@@}; eles são
 chamados de @dfn{comandos @@}. (O @samp{@@} no Texinfo tem o mesmo
-significado que o @samp{\} tem no @TeX{} simples.)
+significado que o @samp{\} tem no @TeX{} simples).
 
 @cindex Chaves, quando usar
 Dependendo do que eles fazem ou de quais argumentos recebam, você precisa
@@ -876,7 +871,7 @@ o texto em uma linha que se seguir ou a @code{@@comment} ou a @code{@@c} é
 um comentário; o restante da linha não aparece na saída gerada visível.
 (Para ser preciso(a), o caractere depois do @code{@@c} ou do
 @code{@@comment} deve necessariamente ser algo que não um traço ou
-alfanumérico, ou será tomado como sendo parte do comando.)
+alfanumérico, ou será tomado como sendo parte do comando).
 
 Frequentemente, você pode escrever o @code{@@comment} ou o @code{@@c} no
 meio de uma linha, e somente o texto que se seguir depois do comando
@@ -904,7 +899,7 @@ um desses comandos em uma linha própria, iniciando cada comando no começo da
 linha.  O texto entre esses dois comandos não aparece na saída gerada
 processada.  Você pode usar @code{@@ignore} e @code{@@end ignore} para
 escrever comentários.  (Para algumas advertências relativamente ao
-aninhamento de tais comandos, veja-se @ref{Aninhamento de Condicional}.)
+aninhamento de tais comandos, veja-se @ref{Aninhamento de Condicional}).
 
 
 @node Mínimo
@@ -1064,7 +1059,7 @@ Arquivos do Texinfo iniciam com a linha:
 A linha @samp{\input texinfo} diz ao @TeX{} para usar o arquivo
 @file{texinfo.tex}, que diz ao @TeX{} como traduzir os comandos @@ do
 Texinfo para comandos de tipografia do @TeX{}. (Observe o uso da barra
-invertida, @samp{\}; isso é correto para o @TeX{}.)
+invertida, @samp{\}; isso é correto para o @TeX{}).
 
 Faz sentido incluir qualquer comando que afete a formatação do documento
 como um todo no cabeçalho. A linha @code{@@settitle} geralmente está
@@ -1195,7 +1190,7 @@ um problema mesmo quando o nome do arquivo que especificar for curto o
 suficiente. Isso ocorre porque os formatadores do Info dividem um arquivo
 longo do Info em subarquivos curtos indiretos e os nomeiam pospondo
 @samp{-1}, @samp{-2}, @dots{}, @samp{-10}, @samp{-11} e assim por diante ao
-nome original do arquivo. (@xref{Arquivos de Etiqueta e Divididos}.) O nome
+nome original do arquivo. (@xref{Arquivos de Etiqueta e Divididos}). O nome
 do subarquivo @file{texinfo.info-10}, por exemplo, é muito longo para
 sistemas antigos com um limite de 14 caracteres sobre nomes de arquivo;
 portanto, o nome do arquivo do Info para esse documento poderia ser
@@ -1943,7 +1938,7 @@ de Comandos Estruturantes}).
 
 @item @@shortcontents
 @itemx @@summarycontents
-(@code{@@summarycontents} é um sinônimo para @code{@@shortcontents}.)
+(@code{@@summarycontents} é um sinônimo para @code{@@shortcontents}).
 
 Gera um índice curto ou sumário que lista somente os capítulos, apêndices e
 capítulos não numerados. Seções, subseções e subsubseções são
@@ -2044,7 +2039,7 @@ menu detalhado no teu menu mestre, marque-o com o ambiente
 
 Cada seção no menu pode ser introduzida por uma linha descritiva. Contanto
 que a linha não se inicie com um asterisco, ela não será tratada como uma
-entrada de menu. (Veja-se @ref{Escrevendo um Menu}, para mais informações.)
+entrada de menu. (Veja-se @ref{Escrevendo um Menu}, para mais informações).
 
 Por exemplo, o menu mestre para este manual se parece com o seguinte (porém
 tem muito mais entradas):
@@ -2158,7 +2153,7 @@ Segunda seção do primeiro capítulo.
 @end quotation
 
 @noindent
-(Na saída Info e HTML, o capítulo também seria dividido em nós.)
+(Na saída Info e na HTML, o capítulo também seria dividido em nós).
 
 
 @node Finalizando um Arquivo
@@ -2211,7 +2206,7 @@ também podem ser o alvo de referências cruzadas (@pxref{@code{@@anchor}},
 Normalmente, você coloca um comando de nó imediatamente antes de cada
 comando de estruturação de capítulo---por exemplo, uma linha
 @code{@@section} ou @code{@@subsection}. (Veja-se @ref{Estruturamento de
-Capítulo}.) Você deve necessariamente fazer isso, ainda que você não
+Capítulo}). Você deve necessariamente fazer isso, ainda que você não
 pretenda formatar o arquivo para Info. Isso é por que saída impressa usa
 ambos, nomes @code{@@node} e nomes de estruturação de capítulo, na saída
 para referências cruzadas. A única vez que você similarmente usa os comandos
@@ -2286,7 +2281,7 @@ explicitamente, em completa generalidade.
 
 Se você estiver usando o GNU Emacs e quiser ponteiros explícitos, poderá
 usar os comandos de atualização de nós fornecidos pelo modo Texinfo para
-inserir os nomes dos ponteiros. (@xref{Atualizando Nós e Menus}.)
+inserir os nomes dos ponteiros. (@xref{Atualizando Nós e Menus}).
 
 Alternativamente, você pode inserir você mesmo(a) os ponteiros `Próximo',
 `Anterior' e 'Acima'. Se você fizer isso no Emacs, poderá achar útil usar o
@@ -2312,7 +2307,7 @@ Tente escolher nomes de nó que sejam informativos, porém curtos.
 
 No arquivo do Info, o nome do arquivo, o nome do nó e os nomes de ponteiros
 são todos inseridos em uma linha, que podem ser encontrados na borda direita
-da janela. (Isso não causa um problema com o Info, mas é feio.)
+da janela. (Isso não causa um problema com o Info, mas é feio).
 
 @item
 Tente escolher nomes de nó que diferem entre si próximos ao início de seus
@@ -2328,7 +2323,7 @@ maneira está bem; nós recomendamos apenas ser consistente.
 @item
 Na saída gerada HTML, quaisquer caracteres no nome do nó que não sejam
 letras, números ou espaços ASCII simples serão mudados no nome do
-arquivo. (@xref{Expansão de Nome de Nó do Xref do HTML}.) Isso pode tornar
+arquivo. (@xref{Expansão de Nome de Nó do Xref do HTML}). Isso pode tornar
 os URLs para as páginas no teu manual menos amigáveis; por exemplo, neste
 manual, o nó @samp{@@dots} é gerado como @file{__0040dots.html}.
 @end itemize
@@ -2513,7 +2508,7 @@ virtual única do Info, construída a partir de múltiplos diretórios. Nesse
 caso, use @samp{(dir)} como o ancestral do nó Top; isso especifica o nó de
 nível superior no arquivo @file{dir}, o qual contém o menu principal para o
 sistema Info como um todo. (Cada diretório com arquivos Info é destinado a
-conter um arquivo chamado @file{dir}.)
+conter um arquivo chamado @file{dir}).
 
 Isso está bom para Info, porém para saída HTML, alguém bem pode querer que o
 link Acima oriundo do nó Top vá para algum lugar específico. Por exemplo,
@@ -2697,7 +2692,7 @@ omitir escrever esses nomes de nós se teu documento estiver hierarquicamente
 organizado, mas os relacionamentos do ponteiro ainda obtém.
 
 Para ir para as seções 2.1 e 2.2 usando Info, você precisa de um menu dentro
-do Capítulo 2. (@xref{Menus}.) Você escreveria o menu pouco antes do início
+do Capítulo 2. (@xref{Menus}). Você escreveria o menu pouco antes do início
 da Seção 2.1, como este:
 
 @example
@@ -2738,7 +2733,7 @@ também podem liderar em outro lugar, aqui, por exemplo, o ponteiro
 `Anterior' aponta para cima. Um ponteiro `Acima' geralmente leva a um nó no
 nível acima (mais próximo do nó `Top'; e um `Menu' leva a nós em um nível
 abaixo (mais próximo das `folhas'). (Uma referência cruzada pode apontar
-para um nó em qualquer nível; veja-se @ref{Referências Cruzadas}.)
+para um nó em qualquer nível; veja-se @ref{Referências Cruzadas}).
 
 Tecnicamente, os ponteiros explícitos de nós podem te levar a qualquer nó,
 independentemente da estrutura do documento; mesmo para nós em um arquivo
@@ -2750,7 +2745,7 @@ Um comando @code{@@node} e um comando de estruturamento de capítulo são
 usados convencionalmente juntos, nessa ordem, geralmente seguidos por
 comandos de indexação. (Como mostrado no exemplo acima, você pode seguir a
 linha @code{@@node} com uma linha de comentários, por exemplo, para mostrar
-qual ponteiro é qual se ponteiros explícitos forem usados.) Os processadores
+qual ponteiro é qual se ponteiros explícitos forem usados). Os processadores
 Texinfo usam esse construto para determinar as relações entre nós e comandos
 de seccionamento.
 
@@ -2882,7 +2877,7 @@ Unidades Maiores de Texto
 
 @cindex Espaços, em menus
 Em um menu, cada linha que inicie com um @w{@samp{* }} é uma @dfn{entrada de
-menu}. (Observe o espaço depois do asterisco.)
+menu}. (Observe o espaço depois do asterisco).
 
 Uma linha que não se inicie com um @w{@samp{* }} também pode aparecer em um
 menu. Tal linha não é uma entrada de menu, mas sim uma linha de
@@ -3365,7 +3360,7 @@ Acknowledgements  Colophon  Dedication  Preface
 @cindex @code{<chapter>} Etiqueta do Docbook
 @noindent
 então a saída DocBook usará etiquetas especiais correspondentes
-(@code{<preface>}, etc.)@: em vez do padrão @code{<chapter>}.  O argumento
+(@code{<preface>}, entre outras) em vez do padrão @code{<chapter>}. O argumento
 ao próprio @code{@@unnumbered} pode ser qualquer coisa, e é gerado como o
 elemento título como de costume.
 
@@ -3487,7 +3482,7 @@ Títulos de subseções são listados no sumário.
 Os comandos @code{@@unnumberedsubsec}, @code{@@appendixsubsec} e
 @code{@@subheading} são, respectivamente, os equivalentes não numerado, tipo
 apêndice e tipo cabeçalho do comando @code{@@subsection}.
-(@xref{@code{@@subsection}}.)
+(@xref{@code{@@subsection}}).
 
 @code{@@unnumberedsubsec} e @code{@@appendixsubsec} não precisam ser usados
 em circunstâncias normais, pois @code{@@subsection} também pode ser usado
@@ -3519,7 +3514,7 @@ comandos `subsub'.  Eles são:
 @table @code
 @item @@subsubsection
 Subsubseções estão para subseções como subseções estão para seções.
-(@xref{@code{@@subsection}}.)  Títulos de subsubseções aparecem no sumário.
+(@xref{@code{@@subsection}}). Títulos de subsubseções aparecem no sumário.
 
 @item @@unnumberedsubsubsec
 Títulos de subsubseções não numeradas aparecem no sumário, porém carecem de
@@ -3640,7 +3635,7 @@ parece com o isto:
 
 @noindent
 (Sem o @code{@@raisesections}, todas as seções subsequentes no arquivo
-principal também poderiam ser rebaixadas.)
+principal também poderiam ser rebaixadas).
 
 Se o arquivo de inclusão sendo rebaixado tiver um nó @code{@@top}, você
 precisará condicionar a inclusão dele com um sinalizador (@pxref{@code{@@set
@@ -3684,13 +3679,12 @@ outras informações que eles(as) podem não ter lido.
 
 Em um manual impresso, uma referência cruzada resulta em uma referência de
 página, a menos que ela seja completamente para outro manual, caso no qual a
-referência cruzada nomeia esse manual.  No Info, uma referência cruzada
-resulta em uma entrada que você pode seguir usando o comando @samp{f} do
-Info.  (@xref{Help-Xref,, Following cross-references, info, Info}.)  Em
-HTML, uma referência cruzada resulta em um hiperlink.  No DocBook, o
-elemento @code{<link>} é usado para referências cruzadas, a menos que ele
-seja para outro manual, caso no qual a referência cruzada nomeia esse
-manual.
+referência cruzada nomeia esse manual. No Info, uma referência cruzada resulta
+em uma entrada que você pode seguir usando o comando @samp{f} do Info.
+(@xref{Ajuda-Xref,, Seguindo referências cruzadas, info, Info}). Em HTML, uma
+referência cruzada resulta em um hiperlink. No DocBook, o elemento
+@code{<link>} é usado para referências cruzadas, a menos que ele seja para
+outro manual, caso no qual a referência cruzada nomeia esse manual.
 
 Os vários comandos de referências cruzadas usam nós, âncoras
 (@pxref{@code{@@anchor}}) ou rótulos de flutuação (@pxref{@code{@@float}})
@@ -3728,7 +3722,7 @@ e apenas a referência em outros formatos de saída, sem o precedente
 Usado dentro de parênteses, ao final de uma frase, ou, do contrário, antes
 de pontuação, para fazer uma referência.  A saída gerada dele inicia com um
 @samp{*observação} em letras minúsculas no Info, e com um `veja-se' em
-outros formatos de saída.  (@samp{p} é para `parênteses'.)
+outros formatos de saída.  (@samp{p} é para `parênteses').
 @end table
 
 Adicionalmente, existem comandos para produzir referências para documentos
@@ -3962,7 +3956,7 @@ em um manual impresso.
 
 Se um terceiro argumento for dado e o segundo estiver vazio, então o
 terceiro argumento serve para ambos.  (Observe como duas vírgulas, lado a
-lado, marcam o segundo argumento vazio.)
+lado, marcam o segundo argumento vazio).
 
 @example
 @group
@@ -4166,8 +4160,8 @@ de seção é uma distração desnecessária.
 Assim, com referências cruzadas para outros manuais (@pxref{Quatro e Cinco
 Argumentos}), se o primeiro argumento for ou @samp{Top} (primeira letra
 maiúscula exatamente dessa maneira) ou inteiramente omitido, e o terceiro
-argumento for omitido, a saída impressa não inclui nome de nó ou de seção.
-(A saída Info inclui @samp{Top} se foi dado.)  Por exemplo,
+argumento for omitido, a saída impressa não incluirá nome de nó ou de seção. (A
+saída Info incluirá @samp{Top} se foi fornecido). Por exemplo,
 
 @example
 @@xref@{Top,,, make, O Manual do GNU Make@}.
@@ -4398,13 +4392,13 @@ o texto correto quando pular para a âncora.  Você pode colocar o comando
 fonte.  Espaços em branco (incluindo novas linhas) são ignorados depois de
 @code{@@anchor}.
 
-Nomes de âncora, nomes de nó e rótulos de flutuação não podem conflitar.
-Para as âncoras, nós e rótulos de flutuação são dados tratamento similar de
-algumas maneiras; por exemplo, o comando @code{goto-node} recebe ou um nome
-de âncora ou um nome de nó como argumento.  (@xref{Ir para nó,,, info,
-Info}.).  Nomes de âncoras e rótulos de flutuação também poderiam aparecer
-em menus (@pxref{Menus}) e em ponteiros de direção de nó (@pxref{Escrevendo
-um Nó}), embora isso não seja recomendado.
+Nomes de âncora, nomes de nó e rótulos de flutuação não podem conflitar. Para
+as âncoras, nós e rótulos de flutuação são dados tratamento similar de algumas
+maneiras; por exemplo, o comando @code{goto-node} recebe ou um nome de âncora
+ou um nome de nó como argumento. (@xref{Ir para nó,,, info, Info}). Nomes de
+âncoras e rótulos de flutuação também poderiam aparecer em menus
+(@pxref{Menus}) e em ponteiros de direção de nó (@pxref{Escrevendo um Nó}),
+embora isso não seja recomendado.
 
 Nomes de âncora compartilham as mesmas restrições que nós acerca de
 caracteres que podem ser incluídos (@pxref{Restrições de Nomes de Nó do
@@ -4498,18 +4492,19 @@ O modelo é:
 
 @findex url
 @cindex @code{href}, produzindo HTML
+
 @code{@@url} produz uma referência para um Localizador Uniforme de Recursos
-(URL@:).  Ele recebe um argumento obrigatório, a URL@:, e dois argumentos
-opcionais que controlam o texto que é exibido.  Em saída HTML e PDF,
-@code{@@url} produz um link que você consegue seguir.  (Para meramente
-indicar uma URL sem criar um link que as pessoas possam seguir, use
-@code{@@indicateurl}, @pxref{@code{@@indicateurl}}.)
+(URL@:). Ele recebe um argumento obrigatório, a URL@:, e dois argumentos
+opcionais que controlam o texto que é exibido. Em saída HTML e PDF,
+@code{@@url} produz um linque que você consegue seguir. (Para meramente indicar
+uma URL sem criar um linque que as pessoas possam seguir, use
+@code{@@indicateurl}, @pxref{@code{@@indicateurl}}).
 
 @findex uref
-@code{@@uref} é um sinônimo para @code{@@url}.  (Originalmente, @code{@@url}
+@code{@@uref} é um sinônimo para @code{@@url}. (Originalmente, @code{@@url}
 tinha o significado de @code{@@indicateurl} e @code{@@uref} era obrigado a
-produzir um link funcional, porém, na prática, @code{@@url} quase sempre era
-mal usado.  Então, nós mudamos o significado.)
+produzir um linque funcional, porém, na prática, @code{@@url} quase sempre era
+mal usado. Então, nós mudamos o significado).
 
 O segundo argumento, se especificado, é o texto a exibir (o padrão é a URL
 em si); em formatos de saída diferentes de HTML, a URL é gerada em adição a
@@ -4829,9 +4824,9 @@ Indica uma abreviação, como `Comput.'.
 Indica uma sigla.  @xref{@code{@@acronym}}.
 
 @item @@indicateurl@{@var{localizador-uniforme-de-recurso}@}
-Indica um exemplo (isto é, não funcional) de localizador uniforme de
-recurso.  @xref{@code{@@indicateurl}}.  (Use @code{@@url}
-(@pxref{@code{@@url}}) para URLs vivas.)
+Indica um exemplo (isto é, não funcional) de localizador uniforme de recurso.
+@xref{@code{@@indicateurl}}. (Use @code{@@url} (@pxref{@code{@@url}}) para URLs
+vivas).
 
 @item @@email@{@var{endereço-de-email}[, @var{texto-exibido}]@}
 Indica um endereço de correio eletrônico.  @xref{@code{@@email}}.
@@ -4916,14 +4911,14 @@ para a função @code{goto-char} da Emacs Lisp, você deveria usar
 @item
 Em geral, quando escrever acerca dos caracteres usados em um token; por
 exemplo, não use @code{@@code} quando estiver explicando quais letras ou
-símbolos imprimíveis podem ser usados nos nomes das funções.  (Use
-@code{@@samp}.)  Ainda, você não deveria usar @code{@@code} para marcar
-texto que seja considerado entrada para programas, a menos que a entrada
-seja escrita em uma linguagem que seja semelhante a uma linguagem de
-programação.  Por exemplo, você não deveria usar @code{@@code} para os
-comandos de toques de teclas do GNU Emacs (use @code{@@kbd} em vez disso),
-embora você possa usar @code{@@code} para os nomes das funções da Emacs Lisp
-que os comandos de toques de teclas invocam.
+símbolos imprimíveis podem ser usados nos nomes das funções. (Use
+@code{@@samp}). Ainda, você não deveria usar @code{@@code} para marcar texto
+que seja considerado entrada para programas, a menos que a entrada seja escrita
+em uma linguagem que seja semelhante a uma linguagem de programação. Por
+exemplo, você não deveria usar @code{@@code} para os comandos de toques de
+teclas do GNU Emacs (use @code{@@kbd} em vez disso), embora você possa usar
+@code{@@code} para os nomes das funções da Emacs Lisp que os comandos de toques
+de teclas invocam.
 
 @end itemize
 
@@ -5023,9 +5018,7 @@ Para dar o comando @code{logout}, digite os caracteres @kbd{l o g o u t
 @key{RET}}.
 @end quotation
 
-(Além disso, esse exemplo mostra que você pode adicionar espaços para maior
-clareza.  Se você explicitamente quiser mencionar um caractere espaço como
-um dos caracteres da entrada, escreva @kbd{@@key@{SPC@}} para ele.)
+(Além disso, esse exemplo mostra que você pode adicionar espaços para maior clareza. Se você explicitamente quiser mencionar um caractere espaço como um dos caracteres da entrada, escreva @kbd{@@key@{SPC@}} para ele).
 
 
 @node @code{@@key}
@@ -5254,7 +5247,7 @@ Para deletar o arquivo @var{nomearquivo}, digite @samp{rm
 
 @noindent
 (Observe que @code{@@var} pode aparecer dentro de @code{@@code},
-@code{@@samp}, @code{@@file}, etc.)
+@code{@@samp}, @code{@@file}, etc).
 
 Escreva uma variável metassintática toda em letras minúsculas e sem espaços,
 e use hifens para torná-la mais legível.  Assim, o fonte do Texinfo para a
@@ -5834,12 +5827,11 @@ produz
 (+ 2 2)    ; @r{Adiciona dois mais dois.}
 @end lisp
 
-O comando @code{@@t} ocasionalmente pode ser útil para se produzir saída em
-uma fonte de máquina de escrever onde isso for suportado, mas nenhuma
-distinção com aspas é necessária no Info ou em texto simples.  (Compare-se
-@code{@@t@{foo@}} produzindo @t{foo} com @code{@@code@{foo@}} produzindo
-@code{foo}.)  Aqui estão alguns possíveis motivos para se usar @code{@@t} em
-vez de @code{@@code}:
+O comando @code{@@t} ocasionalmente pode ser útil para se produzir saída em uma
+fonte de máquina de escrever onde isso for suportado, mas nenhuma distinção com
+aspas é necessária no Info ou em texto simples. (Compare-se @code{@@t@{foo@}}
+produzindo @t{foo} com @code{@@code@{foo@}} produzindo @code{foo}). Aqui estão
+alguns possíveis motivos para se usar @code{@@t} em vez de @code{@@code}:
 
 @itemize @minus
 @item O argumento é um caractere único
@@ -6013,7 +6005,7 @@ Caution  Important  Note  Tip  Warning
 @cindex etiqueta @code{<blockquote>} do DocBook
 @noindent
 então a saída gerada DocBook usa etiquetas especiais correspondentes
-(@code{<note>}, etc.)@: em vez do padrão @code{<blockquote>}.
+(@code{<note>}, entre outras) em vez do padrão @code{<blockquote>}.
 
 Se o(a) autor(a) da citação for especificado(a) no bloco @code{@@quotation}
 com o comando @code{@@author}, uma linha com o nome do(a) autor(a) é exibida
@@ -6131,8 +6123,8 @@ Texinfo.
 
 @quotation Cuidado
 Não use tabulações nas linhas de um exemplo! (Ou em qualquer outro lugar no
-Texinfo, exceto em ambientes literais.)  @TeX{} trata tabulações como
-espaços simples, e não é isso que elas parecem.
+Texinfo, exceto em ambientes literais). @TeX{} trata tabulações como espaços
+simples, e não é isso que elas parecem.
 @end quotation
 
 
@@ -6534,11 +6526,11 @@ se usar @code{@@indent}, para substituir o comportamento normal de não recuo
 ali (@pxref{@code{@@paragraphindent}}).  Ele ou pode ser seguido por texto
 ou estar em uma linha própria.
 
-Como um caso especial, quando @code{@@indent} for usado em um ambiente onde
-o texto não estiver preenchido, ele produz um espaço de recuo de parágrafo
-na saída @TeX{}.  (Esses ambientes são onde uma linha de entrada produz uma
-linha de saída, como @code{@@example} e @code{@@display}; para um resumo de
-todos os ambientes, @pxref{Comandos de Cercamento de Blocos}.)
+Como um caso especial, quando @code{@@indent} for usado em um ambiente onde o
+texto não estiver preenchido, ele produz um espaço de recuo de parágrafo na
+saída @TeX{}. (Esses ambientes são onde uma linha de entrada produz uma linha
+de saída, como @code{@@example} e @code{@@display}; para um resumo de todos os
+ambientes, @pxref{Comandos de Cercamento de Blocos}).
 
 Não coloque chaves depois de um comando @code{@@indent}; elas não são
 usadas, pois @code{@@indent} é um comando usado fora de parágrafos
@@ -6762,16 +6754,16 @@ iniciando com uma bola ou outra marca dentro da margem esquerda, e
 geralmente recuados.
 
 @cindex @code{@@w}, para itens em branco
-Inicie uma lista de itens escrevendo @code{@@itemize} no início de uma
-linha.  Siga o comando, na mesma linha, com um caractere ou um comando do
-Texinfo que gere uma marca.  Geralmente, você usará @code{@@bullet} depois
-do @code{@@itemize}, mas você pode usar @code{@@minus}, ou qualquer comando
-ou caractere que resulte em um caractere único no arquivo Info.  (Quando
-escrever o comando de marca como @code{@@bullet} depois de um comando
-@code{@@itemize}, você pode omitir o @samp{@{@}}.)  Se você não especificar
-um comando de marca, o padrão é @code{@@bullet}.  Se você não quiser nenhuma
-marca em absoluto, mas ainda quiser itens lógicos, use @code{@@w@{@}} (nesse
-caso as chaves são obrigatórias).
+Inicie uma lista de itens escrevendo @code{@@itemize} no início de uma linha.
+Siga o comando, na mesma linha, com um caractere ou um comando do Texinfo que
+gere uma marca. Geralmente, você usará @code{@@bullet} depois do
+@code{@@itemize}, mas você pode usar @code{@@minus}, ou qualquer comando ou
+caractere que resulte em um caractere único no arquivo Info. (Quando escrever o
+comando de marca como @code{@@bullet} depois de um comando @code{@@itemize},
+você pode omitir o @samp{@{@}}). Se você não especificar um comando de marca, o
+padrão é @code{@@bullet}. Se você não quiser nenhuma marca em absoluto, mas
+ainda quiser itens lógicos, use @code{@@w@{@}} (nesse caso as chaves são
+obrigatórias).
 
 @findex item @r{em @code{@@itemize}}
 Depois do @code{@@itemize}, escreva teus itens, cada um iniciando com
@@ -6788,10 +6780,10 @@ As entradas de índice e comentários que são fornecidos antes de um
 (internamente) para depois do @code{@@item}, de forma que a saída gerada
 esteja como esperada.  Historicamente essa tem sido uma prática comum.
 
-Geralmente, você deveria colocar uma linha em branco entre os itens.  Isso
-coloca uma linha em branco no arquivo Info.  (O @TeX{} insere o espaço
-vertical apropriado em qualquer caso.)  Exceto quando as entradas forem
-muito breves, esses espaços em branco fazem a lista aparentar melhor.
+Geralmente, você deveria colocar uma linha em branco entre os itens. Isso
+coloca uma linha em branco no arquivo Info. (O @TeX{} insere o espaço vertical
+apropriado em qualquer caso). Exceto quando as entradas forem muito breves,
+esses espaços em branco fazem a lista aparentar melhor.
 
 Aqui está um exemplo do uso de @code{@@itemize}, seguido pela saída que ele
 produz.  @code{@@bullet} produz um @samp{*} no Info e um ponto redondo em
@@ -7079,8 +7071,8 @@ Este é o texto para @samp{foo}.
 Texto para @samp{bar}.
 @end table
 
-Se você quiser listar dois ou mais itens nomeados com um bloco único de
-texto, use o comando @code{@@itemx}.  (@xref{@code{@@itemx}}.)
+Se você quiser listar dois ou mais itens nomeados com um bloco único de texto,
+use o comando @code{@@itemx}.  (@xref{@code{@@itemx}}).
 
 O comando @code{@@table} (@pxref{@code{@@table}}) não é suportado dentro do
 @code{@@display}.  Como @code{@@display} é orientado a linha, não faz
@@ -7166,7 +7158,7 @@ caracteres escrito em letras maiúsculas (minúsculas).
 
 @noindent
 (Observe também que esse exemplo ilustra texto de apoio multi linha em uma
-tabela de duas colunas.)
+tabela de duas colunas).
 
 
 @node Tabelas Multi Colunas
@@ -7343,13 +7335,13 @@ principal.  É tipicamente rotulada como sendo uma ``Figura'', ``Tabela'',
 ``Exemplo'' ou algum tipo similar.
 
 @cindex Flutuando, ainda não implementado
-Uma flutuação é assim nomeada porque, a princípio, ela pode ser movida para
-o pé ou topo da página atual, ou para uma página seguinte, na saída
-impressa.  (Flutuação não faz sentido em outros formatos de saída.)  Em cada
-formato de saída, exceto para @LaTeX{}, no entanto, essa flutuação
-infelizmente ainda não está implementada.  Em vez disso, o material
-flutuante simplesmente é gerado no local atual, mais ou menos como se fosse
-um @code{@@group} (@pxref{@code{@@group}}).
+Uma flutuação é assim nomeada porque, a princípio, ela pode ser movida para o
+pé ou topo da página atual, ou para uma página seguinte, na saída impressa.
+(Flutuação não faz sentido em outros formatos de saída). Em cada formato de
+saída, exceto para @LaTeX{}, no entanto, essa flutuação infelizmente ainda não
+está implementada. Em vez disso, o material flutuante simplesmente é gerado no
+local atual, mais ou menos como se fosse um @code{@@group}
+(@pxref{@code{@@group}}).
 
 
 @node @code{@@float}
@@ -7602,9 +7594,9 @@ forma que essas precisam ser convertidas primeiro.
 
 @item
 No Info, @file{@var{nomearquivo}.txt} é incluído literalmente (mais ou menos
-como se estivesse em @code{@@verbatim}).  A saída Info também pode incluir
-uma referência para @file{@var{nomearquivo}.png} ou
-@file{@var{nomearquivo}.jpg}.  (Veja-se abaixo.)
+como se estivesse em @code{@@verbatim}). A saída Info também pode incluir uma
+referência para @file{@var{nomearquivo}.png} ou @file{@var{nomearquivo}.jpg}.
+(Veja-se abaixo).
 
 @item
 Em HTML, uma referência para @file{@var{nomearquivo}.png},
@@ -7621,7 +7613,7 @@ Em DocBook, referências para @file{@var{nomearquivo}.eps},
 @file{@var{nomearquivo}.png} e @file{@var{nomearquivo}.svg} são geradas,
 para cada arquivo encontrado.  Também, @file{@var{nomearquivo}.txt} é
 incluído literalmente, se presente.  (Supõe-se que o processador DocBook
-subsequente escolha o adequado.)
+subsequente escolha o adequado).
 
 @item
 Para @LaTeX{}, @file{@var{nomearquivo}} sem nenhuma extensão é usado;
@@ -7771,7 +7763,7 @@ polegada verticalmente, com a largura dimensionada proporcionalmente:
 Para @code{@@image} funcionar com @TeX{}, o arquivo @file{epsf.tex} precisa
 ser instalado em algum lugar onde o @TeX{} consiga encontrá-lo.  (O local
 padrão é @file{@var{texmf}/tex/generic/dvips/epsf.tex}, onde @var{texmf} é a
-raiz da árvore de diretórios do teu @TeX{}.)  Esse arquivo está incluído na
+raiz da árvore de diretórios do teu @TeX{}).  Esse arquivo está incluído na
 distribuição Texinfo e também está disponível a partir de
 @uref{ftp://tug.org/tex/epsf.tex}, entre outros lugares.
 
@@ -7835,7 +7827,7 @@ do outro; nesse caso, @samp{.@};} é a sequência.  Isso é normal (o primeiro
 termina a nota de rodapé e o segundo pertence à frase sendo anotada), de
 forma que não se preocupe que pareça estranho.  (Outro estilo, perfeitamente
 aceitável, é o de colocar a nota de rodapé depois da pontuação pertencente à
-frase, como em @samp{;@@footnote@{...}.)
+frase, como em @samp{;@@footnote@{...}).
 
 Em formatos de saída impressa, a marca de referência para uma nota de rodapé
 é um número pequeno e sobrescrito; o texto da nota de rodapé aparece na
@@ -8023,7 +8015,7 @@ Nem todo manual precisa de tudo isso, e a maioria dos manuais usa somente
 dois ou três, no máximo.  O presente manual, por exemplo, tem dois índices:
 um índice de conceitos e um índice de comandos @@ (o último na verdade é o
 índice de função, mas é chamado de índice de comandos no cabeçalho de
-capítulo.)
+capítulo).
 
 Você não é obrigado(a) a usar os índices predefinidos estritamente para os
 fins canônicos deles.  Por exemplo, suponha que você deseje indexar algumas
@@ -8340,7 +8332,7 @@ página.
 Na saída Info, @code{@@printindex} produz um menu especial contendo o número
 da linha da entrada, relativo ao início do nó.  Leitores Info podem usar
 isso para ir para a linha exata de uma entrada, não apenas para o nó que a
-contém.  (Leitores Info mais antigos irão apenas para o nó.)  Aqui está um
+contém.  (Leitores Info mais antigos irão apenas para o nó).  Aqui está um
 exemplo:
 
 @example
@@ -8518,7 +8510,7 @@ de conceito e duas entradas de índice @samp{au}.
 @end example
 
 @noindent
-(Evidentemente, @samp{au} aqui serve como uma abreviação para ``autor''.)
+(Evidentemente, @samp{au} aqui serve como uma abreviação para ``autor'').
 
 Texinfo constrói o novo comando de indexação concatenando o nome do índice
 com @samp{index}; portanto, definir um índice @samp{xy} leva à criação
@@ -8663,7 +8655,7 @@ não existe necessidade dele em nenhum lugar, exceto nesse caso incomum.
 
 (Incidentalmente, o nome @samp{@@comma} carece do sufixo @samp{char} usado
 nos comandos complementares dele somente por motivos históricos.  Não
-pareceu importante o suficiente para definir um sinônimo.)
+pareceu importante o suficiente para definir um sinônimo).
 
 
 @node Inserindo uma Barra Invertida
@@ -8855,7 +8847,7 @@ Essas configurações afetam @code{@@code}, @code{@@example}, @code{@@kbd},
 Infelizmente, alguns visualizadores de documentos danificarão os caracteres
 de aspas direcionadas ao copiar e colar.  (O leitor livre de PDF
 @command{xpdf} funciona bem, mas outros leitores de PDF, tanto livres quanto
-não livres, tem problemas.)
+não livres, tem problemas).
 
 @vindex txicodequoteundirected
 @vindex txicodequotebacktick
@@ -8896,7 +8888,7 @@ Texinfo suporta três comandos: @code{@@@kbd{SPACE}}, @code{@@@kbd{TAB}} e
 @code{@@@kbd{SPACE}} representa um caractere @samp{@@} seguido por um
 espaço, ou seja, @samp{@@ }, @kbd{TAB} representa um caractere real de
 tabulação, e @code{@@@kbd{NL}} representa um caractere @samp{@@} e fim de
-linha, ou seja, quando @samp{@@} é o último caractere em uma linha.)
+linha, ou seja, quando @samp{@@} é o último caractere em uma linha).
 
 Por exemplo,
 @example
@@ -9035,7 +9027,7 @@ A ``pontuação de fechamento'' mencionada acima é definida como um parêntese
 simples ou dupla (@samp{'} e @samp{''}; as muitas aspas Unicode adicionais à
 direita possíveis não estão incluídas).  Esses caracteres podem ser
 considerados invisíveis com respeito a se um ponto fornecido finaliza uma
-frase.  (Essa é a mesma regra do @TeX{}.)  Por exemplo, os pontos em
+frase.  (Essa é a mesma regra do @TeX{}).  Por exemplo, os pontos em
 @samp{foo.) Bar} e @samp{foo.'' Bar} finalizam frases.
 
 Os significados de @code{@@:} e @code{@@.}, etc.@: no Texinfo são projetados
@@ -10051,7 +10043,7 @@ questão entre duas linhas de traços contendo o nome do buffer.
 Você pode usar o comando @samp{@@point@{@}} para mostrar o local do ponto no
 texto no buffer.  (O símbolo para ponto, é claro, não é parte do texto no
 buffer; ele indica o lugar @emph{entre} dois caracteres onde o ponto está
-localizado.)
+localizado).
 
 O comando @code{@@point@{@}} é exibido como @samp{@point{}}, ou uma estrela
 pontiaguda ou (quando essa não estiver disponível) a sequência ASCII
@@ -10182,7 +10174,7 @@ nada para mudar isso.  Se o caractere especificado não for suportado no
 @TeX{}, um erro será fornecido.  A saída do @LaTeX{} tem mais possibilidades
 em relação ao UTF-8, mas poderia exigir código extra para carregar fontes e
 para declarar como os caracteres UTF-8 são gerados.
-(@xref{@code{@@documentencoding}}.)
+(@xref{@code{@@documentencoding}}).
 
 @cindex Referência de entidade em HTML et al.
 @cindex @samp{&#x@var{hexadecimal};}, saída oriunda de @code{@@U}
@@ -10564,7 +10556,7 @@ de contextos, a implementação atual dele funciona somente dentro de
 @code{@@example} e variantes, e dentro de @code{@@display}, @code{@@format},
 @code{@@flushleft} e @code{@@flushright}.  @xref{Citações e Exemplos}.  (O
 que todos esses comandos tem em comum é que cada linha da entrada produz uma
-linha de saída.)
+linha de saída).
 
 @c  In other contexts, @code{@@group} can cause anomalous vertical
 @c  spacing.
@@ -11285,7 +11277,7 @@ ou @code{float}) e, em seguida, pelos nomes de atributos de objetos desse
 tipo.  Portanto, você poderia usar esse comando para descrever @code{int} ou
 @code{float}, em cujo caso você poderia usar @code{tipo de dados} como a
 categoria.  (Um tipo de dados é uma categoria de certos objetos para fins de
-decidir quais operações podem ser realizadas sobre neles.)
+decidir quais operações podem ser realizadas sobre neles).
 
 Na Lisp, por exemplo, @dfn{pair} nomeia um tipo particular de dado, e um
 objeto desse tipo tem dois slots chamados @sc{car} e @sc{cdr}.  Aqui está
@@ -11576,7 +11568,7 @@ com chaves quaisquer argumentos contendo espaços.
 
 Você usa @code{@@deftypeline} de maneira semelhante a @code{@@deftypefn},
 seguindo a categoria com um tipo de dado e marcando quaisquer parâmetros com
-@code{@@var}. (@xref{Funções Tipadas}).)
+@code{@@var}. (@xref{Funções Tipadas}).
 
 Para compartilhar a mesma descrição para vários símbolos, você pode juntar
 várias linhas @code{@@defline}.  Por exemplo:
@@ -12707,7 +12699,7 @@ impresso:
 
 @noindent
 (Em uma capa impressa, uma data listando o mês e o ano parece menos
-complicada que uma data listando o dia, bem como o mês e o ano.)
+complicada que uma data listando o dia, bem como o mês e o ano).
 
 @item
 Escreva texto para o nó Top, para as pessoas leitoras do arquivo Info:
@@ -12793,7 +12785,7 @@ assim:
 @example
 @@ifset txicommandconditionals
 @@ifcommandnotdefined foobarnode
-(Bom, @@samp@{@@@@foobarnode@} não está definido.)
+(Bom, @@samp@{@@@@foobarnode@} não está definido).
 @@end ifcommandnotdefined
 @@end ifset
 @end example
@@ -12807,7 +12799,7 @@ Nós recomendamos evitar esses testes sempre que possível---o que geralmente
 desenvolvedores(as) tenham uma determinada versão do Texinfo (ou mais
 recente) instalada, e, portanto, não existe razão para se preocupar com
 versões mais antigas.  (É simples para qualquer um(a) baixar e instalar o
-fonte do Texinfo; ele não tem quaisquer dependências problemáticas.)
+fonte do Texinfo; ele não tem quaisquer dependências problemáticas).
 
 O problema das versões do Texinfo geralmente não surge para usuários(as)
 finais.  Com pacotes distribuídos corretamente, os(as) usuários(as) não
@@ -13782,7 +13774,7 @@ para @code{texi2dvi} em um comando separado.
 
 @item
 Ou você pode executar @option{texi2any --dvi --Xopt -E}.  (Ou @option{--pdf}
-em vez de @option{--dvi}.)  @command{texi2any} então chamará
+em vez de @option{--dvi}). @command{texi2any} então chamará
 @command{texi2dvi -E}.
 @end itemize
 
@@ -13980,7 +13972,7 @@ diretórios dentro de uma distribuição, por exemplo:
 @end example
 
 @noindent
-(Você ainda tem de ter @code{top_srcdir} definido em primeiro lugar.)
+(Você ainda tem de ter @code{top_srcdir} definido em primeiro lugar).
 
 Fora isso, os únicos comandos @@ permitidos são @code{@@@@}, @code{@@@{},
 @code{@@@}} e comandos @@ associados, como @code{@@atchar@{@}}.
@@ -14161,7 +14153,7 @@ suporta melhor a tipografia CJK que o @command{pdftex}.
 @pindex dvips
 Com a opção @option{--ps}, @command{texi2dvi} produz PostScript em vez de
 DVI, executando @command{tex} e então @command{dvips} (@pxref{Top,,, dvips,
-Dvips}).  (Ou o valor da variável de ambiente @env{DVIPS}, se configurada.)
+Dvips}).  (Ou o valor da variável de ambiente @env{DVIPS}, se configurada).
 
 @opindex --language@r{, para @command{texi2dvi}}
 @cindex @LaTeX{}, processando com @command{texi2dvi}
@@ -14312,7 +14304,7 @@ escreve um arquivo de saída dos dados desordenados de índices.  Para gerar
 um índice impresso depois de executar o comando @command{tex}, você primeiro
 precisa de um índice ordenado para trabalhar.  O comando @command{texindex}
 ordena índices. (@command{texi2dvi}, descrito na seção anterior, executa
-@command{tex} e @command{texindex} conforme necessário.)
+@command{tex} e @command{texindex} conforme necessário).
 
 @anchor{Nomes dos arquivos de índice}
 @cindex Nomes dos arquivos de índice
@@ -14361,7 +14353,7 @@ corrigir os números de página nas referências cruzadas.
 
 Para resumir, este é um processo de cinco etapas.  (Alternativamente, é um
 processo de uma etapa: execute @command{texi2dvi}; veja-se a seção
-anterior.)
+anterior).
 
 @enumerate
 @item
@@ -15232,7 +15224,7 @@ possíveis para @var{como} são:
 @table @samp
 @item chapter
 A saída gerada é dividida em @code{@@chapter} e outros comandos @@ de
-seccionamento nesse nível (@code{@@appendix}, etc.).
+seccionamento nesse nível (@code{@@appendix}, entre outros).
 
 @item section
 A saída gerada é dividida em @code{@@section} e semelhante.
