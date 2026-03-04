@@ -647,7 +647,8 @@ msgid ""
 "developers: see @ref{Bugs,,, emacs, The GNU Emacs Manual}."
 msgstr ""
 "Quaisquer problemas com o leitor do Info no Emacs deveriam ser informados "
-"para os(as) desenvolvedores(as) do Emacs: veja-se @ref{Defeitos,,, emacs, O Manual do GNU Emacs}."
+"para os(as) desenvolvedores(as) do Emacs: veja-se @ref{Defeitos,,, emacs, O "
+"Manual do GNU Emacs}."
 
 #. type: cindex
 #: texinfo/texinfo.texi:250
@@ -666,8 +667,8 @@ msgstr ""
 "Remendos são bem-vindos; se possível, por favor, faça-os com "
 "@samp{@w{diff -c}}, @samp{@w{diff -u}} (@pxref{,,, diffutils, Comparando e "
 "Mesclando Arquivos}), ou @samp{git diff} e inclua entradas de "
-"@file{ChangeLog} (@pxref{Registro das Mudanças,,, standards, Padrões GNU de "
-"Codificação}), e siga o estilo existente de codificação."
+"@file{ChangeLog} (@pxref{Registro das Mudanças,,, standards, Padrões GNU "
+"de Codificação}), e siga o estilo existente de codificação."
 
 #. type: section
 #: texinfo/texinfo.texi:257 texinfo/texinfo.texi:259
@@ -723,7 +724,13 @@ msgid ""
 "can read these files.  @xref{Info Files}, and @ref{Creating and Installing "
 "Info Files}."
 msgstr ""
-"(Gerado via @command{texi2any}). O formato Info é em sua maior parte transliteração de texto plano do fonte Texinfo. Ele adiciona uns poucos caracteres de controle para fornecer informação de navegação para referências cruzadas, índices, e assim por diante. O subsistema Emacs Info (veja-se @ref{Top,,, info, Info}), e o programa autônomo @command{info} (@pxref{Top,,, info-stnd, GNU Info}), entre outros, conseguem ler esses arquivos. @xref{Arquivos do Info} e @ref{Criando e Instalando Arquivos Info}."
+"(Gerado via @command{texi2any}). O formato Info é em sua maior parte "
+"transliteração de texto plano do fonte Texinfo. Ele adiciona uns poucos "
+"caracteres de controle para fornecer informação de navegação para "
+"referências cruzadas, índices, e assim por diante. O subsistema Emacs Info "
+"(veja-se @ref{Top,,, info, Info}), e o programa autônomo @command{info} "
+"(@pxref{Top,,, info-stnd, GNU Info}), entre outros, conseguem ler esses "
+"arquivos. @xref{Arquivos do Info} e @ref{Criando e Instalando Arquivos Info}."
 
 #. type: cindex
 #: texinfo/texinfo.texi:276
@@ -743,7 +750,8 @@ msgid ""
 "(Generated via @command{texi2any --plaintext}.)  This is almost the same as "
 "Info output with the navigational control characters are omitted."
 msgstr ""
-"(Gerado via @command{texi2any --plaintext}). Essa é quase a mesma que a saída Info com os caracteres de controle de navegação omitidos."
+"(Gerado via @command{texi2any --plaintext}). Essa é quase a mesma que a "
+"saída Info com os caracteres de controle de navegação omitidos."
 
 #. type: cindex
 #: texinfo/texinfo.texi:282
@@ -842,7 +850,16 @@ msgid ""
 "@TeX{}}.  (Be aware that the Texinfo language is very different from "
 "@TeX{}'s usual languages: plain @TeX{}, @LaTeX{}, Con@TeX{}t, etc.)"
 msgstr ""
-"(Gerada via @command{texi2dvi}). O formato binário DeVIce Independent é liberado pelo programa tipográfico @TeX{} (@uref{http://tug.org}). Essa é então lida por um `controlador' DVI, o qual conhece os atuais comandos específicos de dispositivo que podem ser visualizados ou impressos, notadamente Dvips para tradução para PostScript (veja-se @ref{Top,,, dvips, Dvips}) e Xdvi para visualização em uma tela do X (@uref{http://sourceforge.net/projects/xdvi/}). Veja-se @ref{Impresso com @TeX{}}. (Esteja ciente de que a linguagem do Texinfo é muito diferente das linguagens usuais do @TeX{}: @TeX{} simples, @LaTeX{}, Con@TeX{}t, entre outras)."
+"(Gerada via @command{texi2dvi}). O formato binário DeVIce Independent é "
+"liberado pelo programa tipográfico @TeX{} (@uref{http://tug.org}). Essa é "
+"então lida por um `controlador' DVI, o qual conhece os atuais comandos "
+"específicos de dispositivo que podem ser visualizados ou impressos, "
+"notadamente Dvips para tradução para PostScript (veja-se @ref{Top,,, "
+"dvips, Dvips}) e Xdvi para visualização em uma tela do X "
+"(@uref{http://sourceforge.net/projects/xdvi/}). Veja-se @ref{Impresso com "
+"@TeX{}}. (Esteja ciente de que a linguagem do Texinfo é muito diferente das "
+"linguagens usuais do @TeX{}: @TeX{} simples, @LaTeX{}, Con@TeX{}t, entre "
+"outras)."
 
 #. type: cindex
 #: texinfo/texinfo.texi:324
@@ -5616,7 +5633,8 @@ msgstr "Segunda seção do primeiro capítulo."
 #: texinfo/texinfo.texi:2150
 msgid ""
 "(In the Info and HTML output, the chapter would also be split into nodes.)"
-msgstr "(Na saída Info e na HTML, o capítulo também seria dividido em nós)."
+msgstr ""
+"(Na saída Info e na HTML, o capítulo também seria dividido em nós)."
 
 #. type: node
 #: texinfo/texinfo.texi:2152
@@ -8685,7 +8703,10 @@ msgid ""
 "@code{@@unnumbered} itself can be anything, and is output as the element "
 "title as usual."
 msgstr ""
-"então a saída DocBook usará etiquetas especiais correspondentes (@code{<preface>}, entre outras) em vez do padrão @code{<chapter>}. O argumento ao próprio @code{@@unnumbered} pode ser qualquer coisa, e é gerado como o elemento título como de costume."
+"então a saída DocBook usará etiquetas especiais correspondentes "
+"(@code{<preface>}, entre outras) em vez do padrão @code{<chapter>}. O "
+"argumento ao próprio @code{@@unnumbered} pode ser qualquer coisa, e é "
+"gerado como o elemento título como de costume."
 
 #. type: node
 #: texinfo/texinfo.texi:3371
@@ -9141,8 +9162,8 @@ msgid ""
 "contents."
 msgstr ""
 "Subsubseções estão para subseções como subseções estão para "
-"seções. (@xref{@code{@@subsection}}). Títulos de subsubseções "
-"aparecem no sumário."
+"seções. (@xref{@code{@@subsection}}). Títulos de subsubseções aparecem "
+"no sumário."
 
 #. type: item
 #: texinfo/texinfo.texi:3526
@@ -9611,7 +9632,15 @@ msgid ""
 "cross-references unless it is to another manual, in which case the "
 "cross-reference names that manual."
 msgstr ""
-"Em um manual impresso, uma referência cruzada resulta em uma referência de página, a menos que ela seja completamente para outro manual, caso no qual a referência cruzada nomeia esse manual. No Info, uma referência cruzada resulta em uma entrada que você pode seguir usando o comando @samp{f} do Info. (@xref{Ajuda-Xref,, Seguindo referências cruzadas, info, Info}). Em HTML, uma referência cruzada resulta em um hiperlink. No DocBook, o elemento @code{<link>} é usado para referências cruzadas, a menos que ele seja para outro manual, caso no qual a referência cruzada nomeia esse manual."
+"Em um manual impresso, uma referência cruzada resulta em uma referência de "
+"página, a menos que ela seja completamente para outro manual, caso no qual "
+"a referência cruzada nomeia esse manual. No Info, uma referência cruzada "
+"resulta em uma entrada que você pode seguir usando o comando @samp{f} do "
+"Info. (@xref{Ajuda-Xref,, Seguindo referências cruzadas, info, Info}). Em "
+"HTML, uma referência cruzada resulta em um hiperlink. No DocBook, o "
+"elemento @code{<link>} é usado para referências cruzadas, a menos que ele "
+"seja para outro manual, caso no qual a referência cruzada nomeia esse "
+"manual."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:3702
@@ -10579,7 +10608,11 @@ msgid ""
 "printed output includes no node or section name.  (The Info output includes "
 "@samp{Top} if it was given.)  For example,"
 msgstr ""
-"Assim, com referências cruzadas para outros manuais (@pxref{Quatro e Cinco Argumentos}), se o primeiro argumento for ou @samp{Top} (primeira letra maiúscula exatamente dessa maneira) ou inteiramente omitido, e o terceiro argumento for omitido, a saída impressa não incluirá nome de nó ou de seção. (A saída Info incluirá @samp{Top} se foi fornecido). Por exemplo,"
+"Assim, com referências cruzadas para outros manuais (@pxref{Quatro e Cinco "
+"Argumentos}), se o primeiro argumento for ou @samp{Top} (primeira letra "
+"maiúscula exatamente dessa maneira) ou inteiramente omitido, e o terceiro "
+"argumento for omitido, a saída impressa não incluirá nome de nó ou de "
+"seção. (A saída Info incluirá @samp{Top} se foi fornecido). Por exemplo,"
 
 #. type: example
 #: texinfo/texinfo.texi:4172
@@ -11042,7 +11075,14 @@ msgid ""
 "labels could also appear in menus (@pxref{Menus}) and node direction "
 "pointers (@pxref{Writing a Node}), although this is not recommended."
 msgstr ""
-"Nomes de âncora, nomes de nó e rótulos de flutuação não podem conflitar. Para as âncoras, nós e rótulos de flutuação são dados tratamento similar de algumas maneiras; por exemplo, o comando @code{goto-node} recebe ou um nome de âncora ou um nome de nó como argumento. (@xref{Ir para nó,,, info, Info}). Nomes de âncoras e rótulos de flutuação também poderiam aparecer em menus (@pxref{Menus}) e em ponteiros de direção de nó (@pxref{Escrevendo um Nó}), embora isso não seja recomendado."
+"Nomes de âncora, nomes de nó e rótulos de flutuação não podem "
+"conflitar. Para as âncoras, nós e rótulos de flutuação são dados "
+"tratamento similar de algumas maneiras; por exemplo, o comando "
+"@code{goto-node} recebe ou um nome de âncora ou um nome de nó como "
+"argumento. (@xref{Ir para nó,,, info, Info}). Nomes de âncoras e rótulos "
+"de flutuação também poderiam aparecer em menus (@pxref{Menus}) e em "
+"ponteiros de direção de nó (@pxref{Escrevendo um Nó}), embora isso não "
+"seja recomendado."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:4406
@@ -11316,7 +11356,12 @@ msgid ""
 "a link people can follow, use @code{@@indicateurl}, "
 "@pxref{@code{@@indicateurl}}.)"
 msgstr ""
-"@code{@@url} produz uma referência para um Localizador Uniforme de Recursos (URL@:). Ele recebe um argumento obrigatório, a URL@:, e dois argumentos opcionais que controlam o texto que é exibido. Em saída HTML e PDF, @code{@@url} produz um linque que você consegue seguir. (Para meramente indicar uma URL sem criar um linque que as pessoas possam seguir, use @code{@@indicateurl}, @pxref{@code{@@indicateurl}})."
+"@code{@@url} produz uma referência para um Localizador Uniforme de Recursos "
+"(URL@:). Ele recebe um argumento obrigatório, a URL@:, e dois argumentos "
+"opcionais que controlam o texto que é exibido. Em saída HTML e PDF, "
+"@code{@@url} produz um linque que você consegue seguir. (Para meramente "
+"indicar uma URL sem criar um linque que as pessoas possam seguir, use "
+"@code{@@indicateurl}, @pxref{@code{@@indicateurl}})."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:4513
@@ -11326,7 +11371,10 @@ msgid ""
 "produce a working link, but in practice @code{@@url} was almost always "
 "misused.  So we've changed the meaning.)"
 msgstr ""
-"@code{@@uref} é um sinônimo para @code{@@url}. (Originalmente, @code{@@url} tinha o significado de @code{@@indicateurl} e @code{@@uref} era obrigado a produzir um linque funcional, porém, na prática, @code{@@url} quase sempre era mal usado. Então, nós mudamos o significado)."
+"@code{@@uref} é um sinônimo para @code{@@url}. (Originalmente, "
+"@code{@@url} tinha o significado de @code{@@indicateurl} e @code{@@uref} era "
+"obrigado a produzir um linque funcional, porém, na prática, @code{@@url} "
+"quase sempre era mal usado. Então, nós mudamos o significado)."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:4517
@@ -12248,7 +12296,9 @@ msgid ""
 "@xref{@code{@@indicateurl}}.  (Use @code{@@url} (@pxref{@code{@@url}}) for "
 "live URLs.)"
 msgstr ""
-"Indica um exemplo (isto é, não funcional) de localizador uniforme de recurso. @xref{@code{@@indicateurl}}. (Use @code{@@url} (@pxref{@code{@@url}}) para URLs vivas)."
+"Indica um exemplo (isto é, não funcional) de localizador uniforme de "
+"recurso. @xref{@code{@@indicateurl}}. (Use @code{@@url} "
+"(@pxref{@code{@@url}}) para URLs vivas)."
 
 #. type: item
 #: texinfo/texinfo.texi:4840
@@ -12461,7 +12511,16 @@ msgid ""
 "use @code{@@code} for the names of the Emacs Lisp functions that the "
 "keystroke commands invoke."
 msgstr ""
-"Em geral, quando escrever acerca dos caracteres usados em um token; por exemplo, não use @code{@@code} quando estiver explicando quais letras ou símbolos imprimíveis podem ser usados nos nomes das funções. (Use @code{@@samp}). Ainda, você não deveria usar @code{@@code} para marcar texto que seja considerado entrada para programas, a menos que a entrada seja escrita em uma linguagem que seja semelhante a uma linguagem de programação. Por exemplo, você não deveria usar @code{@@code} para os comandos de toques de teclas do GNU Emacs (use @code{@@kbd} em vez disso), embora você possa usar @code{@@code} para os nomes das funções da Emacs Lisp que os comandos de toques de teclas invocam."
+"Em geral, quando escrever acerca dos caracteres usados em um token; por "
+"exemplo, não use @code{@@code} quando estiver explicando quais letras ou "
+"símbolos imprimíveis podem ser usados nos nomes das funções. (Use "
+"@code{@@samp}). Ainda, você não deveria usar @code{@@code} para marcar "
+"texto que seja considerado entrada para programas, a menos que a entrada "
+"seja escrita em uma linguagem que seja semelhante a uma linguagem de "
+"programação. Por exemplo, você não deveria usar @code{@@code} para os "
+"comandos de toques de teclas do GNU Emacs (use @code{@@kbd} em vez disso), "
+"embora você possa usar @code{@@code} para os nomes das funções da Emacs "
+"Lisp que os comandos de toques de teclas invocam."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:4938
@@ -12713,7 +12772,9 @@ msgid ""
 "explicitly want to mention a space character as one of the characters of "
 "input, write @kbd{@@key@{SPC@}} for it.)"
 msgstr ""
-"(Além disso, esse exemplo mostra que você pode adicionar espaços para maior clareza. Se você explicitamente quiser mencionar um caractere espaço como um dos caracteres da entrada, escreva @kbd{@@key@{SPC@}} para ele)."
+"(Além disso, esse exemplo mostra que você pode adicionar espaços para "
+"maior clareza. Se você explicitamente quiser mencionar um caractere espaço "
+"como um dos caracteres da entrada, escreva @kbd{@@key@{SPC@}} para ele)."
 
 #. type: node
 #: texinfo/texinfo.texi:5034
@@ -14698,7 +14759,12 @@ msgid ""
 "@t{foo} with @code{@@code@{foo@}} producing @code{foo}.)  Here are some "
 "possible reasons for using @code{@@t} instead of @code{@@code}:"
 msgstr ""
-"O comando @code{@@t} ocasionalmente pode ser útil para se produzir saída em uma fonte de máquina de escrever onde isso for suportado, mas nenhuma distinção com aspas é necessária no Info ou em texto simples. (Compare-se @code{@@t@{foo@}} produzindo @t{foo} com @code{@@code@{foo@}} produzindo @code{foo}). Aqui estão alguns possíveis motivos para se usar @code{@@t} em vez de @code{@@code}:"
+"O comando @code{@@t} ocasionalmente pode ser útil para se produzir saída "
+"em uma fonte de máquina de escrever onde isso for suportado, mas nenhuma "
+"distinção com aspas é necessária no Info ou em texto simples. "
+"(Compare-se @code{@@t@{foo@}} produzindo @t{foo} com @code{@@code@{foo@}} "
+"produzindo @code{foo}). Aqui estão alguns possíveis motivos para se usar "
+"@code{@@t} em vez de @code{@@code}:"
 
 #. type: item
 #: texinfo/texinfo.texi:5850
@@ -15204,7 +15270,8 @@ msgid ""
 "then the DocBook output uses corresponding special tags (@code{<note>}, "
 "etc.)@: instead of the default @code{<blockquote>}."
 msgstr ""
-"então a saída gerada DocBook usa etiquetas especiais correspondentes (@code{<note>}, entre outras) em vez do padrão @code{<blockquote>}."
+"então a saída gerada DocBook usa etiquetas especiais correspondentes "
+"(@code{<note>}, entre outras) em vez do padrão @code{<blockquote>}."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:6029
@@ -15484,7 +15551,9 @@ msgid ""
 "except in verbatim environments.)  @TeX{} treats tabs as single spaces, and "
 "that is not what they look like."
 msgstr ""
-"Não use tabulações nas linhas de um exemplo! (Ou em qualquer outro lugar no Texinfo, exceto em ambientes literais). @TeX{} trata tabulações como espaços simples, e não é isso que elas parecem."
+"Não use tabulações nas linhas de um exemplo! (Ou em qualquer outro lugar "
+"no Texinfo, exceto em ambientes literais). @TeX{} trata tabulações como "
+"espaços simples, e não é isso que elas parecem."
 
 #. type: node
 #: texinfo/texinfo.texi:6149
@@ -16417,7 +16486,11 @@ msgid ""
 "output, such as @code{@@example} and @code{@@display}; for a summary of all "
 "environments, @pxref{Block Enclosing Commands}.)"
 msgstr ""
-"Como um caso especial, quando @code{@@indent} for usado em um ambiente onde o texto não estiver preenchido, ele produz um espaço de recuo de parágrafo na saída @TeX{}. (Esses ambientes são onde uma linha de entrada produz uma linha de saída, como @code{@@example} e @code{@@display}; para um resumo de todos os ambientes, @pxref{Comandos de Cercamento de Blocos})."
+"Como um caso especial, quando @code{@@indent} for usado em um ambiente onde "
+"o texto não estiver preenchido, ele produz um espaço de recuo de "
+"parágrafo na saída @TeX{}. (Esses ambientes são onde uma linha de entrada "
+"produz uma linha de saída, como @code{@@example} e @code{@@display}; para "
+"um resumo de todos os ambientes, @pxref{Comandos de Cercamento de Blocos})."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:6559
@@ -16994,7 +17067,16 @@ msgid ""
 "but still want logical items, use @code{@@w@{@}} (in this case the braces "
 "are required)."
 msgstr ""
-"Inicie uma lista de itens escrevendo @code{@@itemize} no início de uma linha. Siga o comando, na mesma linha, com um caractere ou um comando do Texinfo que gere uma marca. Geralmente, você usará @code{@@bullet} depois do @code{@@itemize}, mas você pode usar @code{@@minus}, ou qualquer comando ou caractere que resulte em um caractere único no arquivo Info. (Quando escrever o comando de marca como @code{@@bullet} depois de um comando @code{@@itemize}, você pode omitir o @samp{@{@}}). Se você não especificar um comando de marca, o padrão é @code{@@bullet}. Se você não quiser nenhuma marca em absoluto, mas ainda quiser itens lógicos, use @code{@@w@{@}} (nesse caso as chaves são obrigatórias)."
+"Inicie uma lista de itens escrevendo @code{@@itemize} no início de uma "
+"linha. Siga o comando, na mesma linha, com um caractere ou um comando do "
+"Texinfo que gere uma marca. Geralmente, você usará @code{@@bullet} depois "
+"do @code{@@itemize}, mas você pode usar @code{@@minus}, ou qualquer comando "
+"ou caractere que resulte em um caractere único no arquivo Info. (Quando "
+"escrever o comando de marca como @code{@@bullet} depois de um comando "
+"@code{@@itemize}, você pode omitir o @samp{@{@}}). Se você não "
+"especificar um comando de marca, o padrão é @code{@@bullet}. Se você não "
+"quiser nenhuma marca em absoluto, mas ainda quiser itens lógicos, use "
+"@code{@@w@{@}} (nesse caso as chaves são obrigatórias)."
 
 #. type: findex
 #: texinfo/texinfo.texi:6792
@@ -17046,7 +17128,10 @@ msgid ""
 "Except when the entries are very brief, these blank lines make the list look "
 "better."
 msgstr ""
-"Geralmente, você deveria colocar uma linha em branco entre os itens. Isso coloca uma linha em branco no arquivo Info. (O @TeX{} insere o espaço vertical apropriado em qualquer caso). Exceto quando as entradas forem muito breves, esses espaços em branco fazem a lista aparentar melhor."
+"Geralmente, você deveria colocar uma linha em branco entre os itens. Isso "
+"coloca uma linha em branco no arquivo Info. (O @TeX{} insere o espaço "
+"vertical apropriado em qualquer caso). Exceto quando as entradas forem muito "
+"breves, esses espaços em branco fazem a lista aparentar melhor."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:6815
@@ -17668,7 +17753,8 @@ msgid ""
 "If you want to list two or more named items with a single block of text, use "
 "the @code{@@itemx} command.  (@xref{@code{@@itemx}}.)"
 msgstr ""
-"Se você quiser listar dois ou mais itens nominados com um bloco de texto, use o comando @code{@@itemx}. (@xref{@code{@@itemx}})."
+"Se você quiser listar dois ou mais itens nominados com um bloco de texto, "
+"use o comando @code{@@itemx}. (@xref{@code{@@itemx}})."
 
 #. type: Plain text
 #: texinfo/texinfo.texi:7111
@@ -18390,7 +18476,13 @@ msgid ""
 "location, more or less as if it were an @code{@@group} "
 "(@pxref{@code{@@group}})."
 msgstr ""
-"Uma flutuação é assim nomeada porque, a princípio, ela pode ser movida para o final ou topo da página atual, ou para uma página seguinte, na saída impressa. (Flutuação não faz sentido em outros formatos de saída). Em cada formato de saída, exceto para @LaTeX{}, no entanto, essa flutuação infelizmente ainda não está implementada. Em vez disso, o material flutuante simplesmente é gerado no local atual, mais ou menos como se fosse um @code{@@group} (@pxref{@code{@@group}})."
+"Uma flutuação é assim nomeada porque, a princípio, ela pode ser movida "
+"para o final ou topo da página atual, ou para uma página seguinte, na "
+"saída impressa. (Flutuação não faz sentido em outros formatos de "
+"saída). Em cada formato de saída, exceto para @LaTeX{}, no entanto, essa "
+"flutuação infelizmente ainda não está implementada. Em vez disso, o "
+"material flutuante simplesmente é gerado no local atual, mais ou menos como "
+"se fosse um @code{@@group} (@pxref{@code{@@group}})."
 
 #. type: node
 #: texinfo/texinfo.texi:7377
@@ -19064,7 +19156,10 @@ msgid ""
 "it were in @code{@@verbatim}).  The Info output may also include a reference "
 "to @file{@var{filename}.png} or @file{@var{filename}.jpg}.  (See below.)"
 msgstr ""
-"No Info, @file{@var{nomearquivo}.txt} é incluído literalmente (mais ou menos como se estivesse em @code{@@verbatim}). A saída Info também pode incluir uma referência para @file{@var{nomearquivo}.png} ou @file{@var{nomearquivo}.jpg}. (Veja-se abaixo)."
+"No Info, @file{@var{nomearquivo}.txt} é incluído literalmente (mais ou "
+"menos como se estivesse em @code{@@verbatim}). A saída Info também pode "
+"incluir uma referência para @file{@var{nomearquivo}.png} ou "
+"@file{@var{nomearquivo}.jpg}. (Veja-se abaixo)."
 
 #. type: itemize
 #: texinfo/texinfo.texi:7634
@@ -35730,8 +35825,8 @@ msgid ""
 "@command{texi2dvi -E}."
 msgstr ""
 "Ou você pode executar @option{texi2any --dvi --Xopt -E}.  (Ou "
-"@option{--pdf} em vez de @option{--dvi}). @command{texi2any} então "
-"chamará @command{texi2dvi -E}."
+"@option{--pdf} em vez de @option{--dvi}). @command{texi2any} então chamará "
+"@command{texi2dvi -E}."
 
 #. type: findex
 #: texinfo/texinfo.texi:13798
