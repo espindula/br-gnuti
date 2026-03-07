@@ -1,6 +1,7 @@
 
 use strict;
 use warnings;
+use utf8;
 
 my %translations = (
   'pt_BR' => {
