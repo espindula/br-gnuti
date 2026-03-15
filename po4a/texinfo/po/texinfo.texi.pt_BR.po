@@ -16736,13 +16736,6 @@ msgstr ""
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:6826
-#, fuzzy
-#| msgid ""
-#| "The @code{@@small@dots{}} commands use the same font style as their "
-#| "normal counterparts: @code{@@smallexample} and @code{@@smalllisp} use a "
-#| "fixed-width font, and everything else uses the regular font.  They also "
-#| "have the same behavior in other respects---whether filling is done and "
-#| "whether margins are narrowed."
 msgid ""
 "The @code{@@small@dots{}} commands use the same font style as their normal "
 "counterparts: @code{@@smallexample} and @code{@@smalllisp} use a fixed-width "
@@ -16755,14 +16748,13 @@ msgstr ""
 "contrapartes normais deles: @code{@@smallexample} e @code{@@smalllisp} usam "
 "uma fonte de largura fixa, e os demais usam a fonte regular.  Eles também "
 "tem o mesmo comportamento em outros aspectos---quando o preenchimento é "
-"feito e quando as margens são estreitadas."
+"feito e quando as margens são estreitadas. Entretanto, eles não pegam argumentos, mesmo quando os contrapartes deles pegarem."
 
 #. type: vindex
 #: texinfo/upstream/texinfo.texi:6827
-#, fuzzy, no-wrap
-#| msgid "pagesizes"
+#, no-wrap
 msgid "dispenvsize"
-msgstr "pagesizes"
+msgstr "dispenvsize"
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:6835
@@ -16987,18 +16979,6 @@ msgstr ""
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:6939
-#, fuzzy
-#| msgid ""
-#| "Begin an itemized list by writing @code{@@itemize} at the beginning of a "
-#| "line.  Follow the command, on the same line, with a character or a "
-#| "Texinfo command that generates a mark.  Usually, you will use "
-#| "@code{@@bullet} after @code{@@itemize}, but you can use @code{@@minus}, "
-#| "or any command or character that results in a single character in the "
-#| "Info file.  (When you write the mark command such as @code{@@bullet} "
-#| "after an @code{@@itemize} command, you may omit the @samp{@{@}}.)  If you "
-#| "don't specify a mark command, the default is @code{@@bullet}.  If you "
-#| "don't want any mark at all, but still want logical items, use "
-#| "@code{@@w@{@}} (in this case the braces are required)."
 msgid ""
 "Begin an itemized list by writing @code{@@itemize} at the beginning of a "
 "line.  Follow the command, on the same line, with a Texinfo command or "
@@ -17007,16 +16987,7 @@ msgid ""
 "command or character.  If you don't specify a mark command, the default is "
 "@code{@@bullet}."
 msgstr ""
-"Inicie uma lista de itens escrevendo @code{@@itemize} no início de uma "
-"linha. Siga o comando, na mesma linha, com um caractere ou um comando do "
-"Texinfo que gere uma marca. Geralmente, você usará @code{@@bullet} depois do "
-"@code{@@itemize}, mas você pode usar @code{@@minus}, ou qualquer comando ou "
-"caractere que resulte em um caractere único no arquivo Info. (Quando "
-"escrever o comando de marca como @code{@@bullet} depois de um comando "
-"@code{@@itemize}, você pode omitir o @samp{@{@}}). Se você não especificar "
-"um comando de marca, o padrão é @code{@@bullet}. Se você não quiser nenhuma "
-"marca em absoluto, mas ainda quiser itens lógicos, use @code{@@w@{@}} (nesse "
-"caso as chaves são obrigatórias)."
+"Inicie uma lista de itens escrevendo @code{@@itemize} no início de uma linha. Siga o comando, na mesma linha, com um caractere ou um comando do Texinfo para gerar uma marca. Geralmente, você usará @code{@@bullet} depois do @code{@@itemize}, mas você pode usar @code{@@minus}, ou qualquer outro comando ou caractere do Texinfo. Se você não especificar um comando de marca, o padrão é @code{@@bullet}."
 
 #. type: findex
 #: texinfo/upstream/texinfo.texi:6940
@@ -17037,26 +17008,19 @@ msgstr ""
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:6946
-#, fuzzy
-#| msgid "Here is an example with @code{@@*}:"
 msgid "Here is an example of the use of @code{@@itemize}:"
-msgstr "Aqui está um exemplo com @code{@@*}:"
+msgstr "Aqui está um exemplo do uso de @code{@@itemize}:"
 
 #. type: group
 #: texinfo/upstream/texinfo.texi:6952
-#, fuzzy, no-wrap
-#| msgid ""
-#| "@@itemize @@bullet\n"
-#| "@@item\n"
-#| "Some text for foo.\n"
-#| "\n"
+#, no-wrap
 msgid ""
 "@@itemize @@bullet@{@}\n"
 "@@item\n"
 "Some text for foo.\n"
 "\n"
 msgstr ""
-"@@itemize @@bullet\n"
+"@@itemize @@bullet@{@}\n"
 "@@item\n"
 "Algum texto para foo.\n"
 "\n"
@@ -17150,38 +17114,28 @@ msgstr ""
 
 #. type: group
 #: texinfo/upstream/texinfo.texi:7003
-#, fuzzy, no-wrap
-#| msgid ""
-#| "@@itemize @@bullet\n"
-#| "@@item\n"
-#| "First item.\n"
-#| "\n"
+#, no-wrap
 msgid ""
 "@@itemize @@bullet@{@}\n"
 "@@item\n"
 "First item.\n"
 "\n"
 msgstr ""
-"@@itemize @@bullet\n"
+"@@itemize @@bullet@{@}\n"
 "@@item\n"
 "Primeiro item.\n"
 "\n"
 
 #. type: group
 #: texinfo/upstream/texinfo.texi:7007
-#, fuzzy, no-wrap
-#| msgid ""
-#| "@@itemize @@minus\n"
-#| "@@item\n"
-#| "Inner item.\n"
-#| "\n"
+#, no-wrap
 msgid ""
 "@@itemize @@minus@{@}\n"
 "@@item\n"
 "Inner item.\n"
 "\n"
 msgstr ""
-"@@itemize @@minus\n"
+"@@itemize @@minus@{@}\n"
 "@@item\n"
 "Item interno.\n"
 "\n"
@@ -18591,10 +18545,8 @@ msgstr ""
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:7585
-#, fuzzy
-#| msgid "Here is a numbered list."
 msgid "labeled and numbered float."
-msgstr "Aqui está uma lista numerada."
+msgstr "Flutuador rotulado e numerado."
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:7593
@@ -18884,18 +18836,11 @@ msgstr ""
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:7695
-#, fuzzy
-#| msgid ""
-#| "Without any argument, @code{@@listoffloats} generates a list of floats "
-#| "for which no float type was specified, i.e., no first argument to the "
-#| "@code{@@float} command (@pxref{@code{@@float}})."
 msgid ""
 "floats for which no float type was specified, i.e., no first argument to the "
 "@code{@@float} command (@pxref{@code{@@float}})."
 msgstr ""
-"Sem nenhum argumento, @code{@@listoffloats} gera uma lista de flutuações "
-"para os quais nenhum tipo de flutuação foi especificado, ou seja, nenhum "
-"primeiro argumento para o comando @code{@@float} (@pxref{@code{@@float}})."
+"flutuações para os quais nenhum tipo de flutuação foi especificado, ou seja, nenhum primeiro argumento para o comando @code{@@float} (@pxref{@code{@@float}})."
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:7698
@@ -19084,13 +19029,6 @@ msgstr "inclusões de imagem pdf"
 
 #. type: itemize
 #: texinfo/upstream/texinfo.texi:7768
-#, fuzzy
-#| msgid ""
-#| "@TeX{} (PDF output) reads @file{@var{filename}.pdf}, "
-#| "@file{@var{filename}.png}, @file{@var{filename}.jpg}, or "
-#| "@file{@var{filename}.jpeg} (in that order).  It also tries uppercase "
-#| "versions of the extensions.  The PDF format does not support EPS images, "
-#| "so such must be converted first."
 msgid ""
 "@TeX{} (PDF output) tries (in order) @file{@var{filename}.pdf}, "
 "@file{@var{filename}.png}, @file{@var{filename}.jpg}, and "
@@ -19098,11 +19036,7 @@ msgid ""
 "extensions.  The PDF format does not support EPS images, so such must be "
 "converted first."
 msgstr ""
-"@TeX{} (saída PDF) lê @file{@var{nomearquivo}.pdf}, "
-"@file{@var{nomearquivo}.png}, @file{@var{nomearquivo}.jpg}, ou "
-"@file{@var{nomearquivo}.jpeg} (nessa ordem).  Ele também tenta as versões em "
-"letras maiúsculas das extensões.  O formato PDF não suporta imagens EPS, de "
-"forma que essas precisam ser convertidas primeiro."
+"@TeX{} (saída PDF) tenta (na ordem) @file{@var{nomearquivo}.pdf}, @file{@var{nomearquivo}.png}, @file{@var{nomearquivo}.jpg} e @file{@var{nomearquivo}.jpeg}. Ele também tenta as versões em letras maiúsculas das extensões. O formato PDF não suporta imagens EPS, de modo que essas precisam ser convertidas primeiro."
 
 #. type: itemize
 #: texinfo/upstream/texinfo.texi:7774
@@ -19139,15 +19073,6 @@ msgstr "Imagens SVG, usadas em DocBook"
 
 #. type: itemize
 #: texinfo/upstream/texinfo.texi:7791
-#, fuzzy
-#| msgid ""
-#| "In DocBook, references to @file{@var{filename}.eps}, "
-#| "@file{@var{filename}.gif}, @file{@var{filename}.jpeg}, "
-#| "@file{@var{filename}.jpg}, @file{@var{filename}.pdf}, "
-#| "@file{@var{filename}.png} and @file{@var{filename}.svg} are output, for "
-#| "every file found.  Also, @file{@var{filename}.txt} is included verbatim, "
-#| "if present.  (The subsequent DocBook processor is supposed to choose the "
-#| "appropriate one.)"
 msgid ""
 "In DocBook, all of the following are checked: @file{@var{filename}.eps}, "
 "@file{@var{filename}.gif}, @file{@var{filename}.jpeg}, "
@@ -19157,13 +19082,7 @@ msgid ""
 "verbatim, if present.  (The subsequent DocBook processor is supposed to "
 "choose the appropriate one.)"
 msgstr ""
-"Em DocBook, referências para @file{@var{nomearquivo}.eps}, "
-"@file{@var{nomearquivo}.gif}, @file{@var{nomearquivo}.jpeg}, "
-"@file{@var{nomearquivo}.jpg}, @file{@var{nomearquivo}.pdf}, "
-"@file{@var{nomearquivo}.png} e @file{@var{nomearquivo}.svg} são geradas, "
-"para cada arquivo encontrado.  Também, @file{@var{nomearquivo}.txt} é "
-"incluído literalmente, se presente.  (Supõe-se que o processador DocBook "
-"subsequente escolha o adequado)."
+"Em DocBook, todos os seguintes são verificados: @file{@var{nomearquivo}.eps}, @file{@var{nomearquivo}.gif}, @file{@var{nomearquivo}.jpeg}, @file{@var{nomearquivo}.jpg}, @file{@var{nomearquivo}.pdf}, @file{@var{nomearquivo}.png} e @file{@var{nomearquivo}.svg}. Referências são geradas para cada arquivo encontrado. Também, @file{@var{nomearquivo}.txt} é incluído literalmente, se presente. (Supõe-se que o processador DocBook subsequente escolha o adequado)."
 
 #. type: itemize
 #: texinfo/upstream/texinfo.texi:7796
@@ -20311,23 +20230,13 @@ msgstr ""
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:8188
-#, fuzzy
-#| msgid ""
-#| "Not every manual needs all of these, and most manuals use only two or "
-#| "three at most.  The present manual, for example, has two indices: a "
-#| "concept index and an @@-command index. (The latter is actually the "
-#| "function index but is called a command index in the chapter heading.)"
 msgid ""
 "Not every manual needs all of these, and most manuals use only two or three "
 "at most.  The present manual, for example, has three indices: a concept "
 "index, a variable index, and an @@-command index.  (The last is actually the "
 "function index but is called a command index in the chapter heading.)"
 msgstr ""
-"Nem todo manual precisa de tudo isso, e a maioria dos manuais usa somente "
-"dois ou três, no máximo.  O presente manual, por exemplo, tem dois índices: "
-"um índice de conceitos e um índice de comandos @@ (o último na verdade é o "
-"índice de função, mas é chamado de índice de comandos no cabeçalho de "
-"capítulo)."
+"Nem todo manual precisa de tudo isso, e a maioria dos manuais usa somente dois ou três, no máximo. O presente manual, por exemplo, tem três índices: um índice de conceitos, um índice de variáveis um índice de comandos @@. (O último na verdade é o índice de função, mas é chamado de índice de comandos no cabeçalho de capítulo)."
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:8196
@@ -20379,18 +20288,11 @@ msgstr ""
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:8211
-#, fuzzy
-#| msgid ""
-#| "Index entry commands based on the the two letter index names are also "
-#| "valid, for example @code{@@cpindex} can be used instead of "
-#| "@code{@@cindex}."
 msgid ""
 "Index entry commands based on the two letter index names are also valid, for "
 "example @code{@@cpindex} can be used instead of @code{@@cindex}."
 msgstr ""
-"Comandos de entrada de índice baseados em nomes de índice de duas letras "
-"também são válidos, por exemplo, @code{@@cpindex} pode ser usado em vez de "
-"@code{@@cindex}."
+"Comandos de entrada de índice baseados nos nomes de índice de duas letras também são válidos, por exemplo, @code{@@cpindex} pode ser usado em vez de @code{@@cindex}."
 
 #. type: node
 #: texinfo/upstream/texinfo.texi:8213
@@ -20518,18 +20420,11 @@ msgstr ""
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:8257
-#, fuzzy
-#| msgid ""
-#| "Among other reasons, that way following indexing links (in whatever "
-#| "context) ends up before the material, where readers want to be, instead "
-#| "of after."
 msgid ""
 "whatever context) ends up before the material, where readers want to be, "
 "instead of after."
 msgstr ""
-"Entre outros motivos, dessa maneira, seguir os linques de indexação (em "
-"qualquer contexto) acaba antes do material, onde os(as) leitores(as) querem "
-"estar, em vez de depois."
+"em qualquer contexto) acaba antes do material, onde os(as) leitores(as) querem estar, em vez de depois."
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:8263
@@ -22385,15 +22280,6 @@ msgstr ""
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:8924
-#, fuzzy
-#| msgid ""
-#| "However, the ampersand character is treated specially in just one "
-#| "restricted context.  In the argument to a definition command "
-#| "(@pxref{Definition Commands}), an ampersand followed by a series of "
-#| "letters may be typeset specially when processing with @TeX{} "
-#| "@footnote{This syntax is used for Emacs Lisp keywords. @xref{A Sample "
-#| "Function Description,,, elisp, GNU Emacs Lisp Reference Manual}.} "
-#| "(@pxref{Def Cmd Conventions}).  For example:"
 msgid ""
 "However, the ampersand character is treated specially in just one restricted "
 "context.  In the argument to a definition command (@pxref{Definition "
@@ -22402,14 +22288,7 @@ msgid ""
 "Lisp keywords. @xref{A Sample Function Description,,, elisp, GNU Emacs Lisp "
 "Reference Manual}.} (@pxref{Def Cmd Conventions}).  For example:"
 msgstr ""
-"No entanto, o caractere ``e'' comercial é tratado especialmente em apenas um "
-"contexto restrito.  No argumento para um comando de definição "
-"(@pxref{Comandos de Definição}), um ``e'' comercial seguido por uma série de "
-"letras pode ser tipografado especialmente ao se processar com @TeX{} "
-"@footnote{Essa sintaxe é usada para palavras-chave da Lisp do Emacs. "
-"@xref{Uma Descrição de Função de Amostra,,, elisp, Manual de Referência da "
-"Lisp do GNU Emacs}.} (@pxref{Convenções de Comandos de Definição}).  Por "
-"exemplo:"
+"No entanto, o caractere ``e'' comercial é tratado especialmente em apenas um contexto restrito. No argumento para um comando de definição (@pxref{Comandos de Definição}), um ``e'' comercial seguido por uma série de letras pode ser tipografado especialmente ao se processar com @TeX{}@footnote{Essa sintaxe é usada para palavras-chave da Lisp do Emacs. @xref{Uma Descrição de Função de Amostra,,, elisp, Manual de Referência da Lisp do GNU Emacs}.} (@pxref{Convenções de Comandos de Definição}). Por exemplo:"
 
 #. type: example
 #: texinfo/upstream/texinfo.texi:8929
@@ -22870,42 +22749,27 @@ msgstr ""
 
 #. type: item
 #: texinfo/upstream/texinfo.texi:9093
-#, fuzzy, no-wrap
-#| msgid "After a period that ends a lowercase abbreviation which is not at the end of a sentence."
 msgid "After a period that ends a lowercase abbreviation which is not at"
-msgstr "Depois de um ponto que finalize uma abreviação em minúscula que não esteja no final de uma frase."
+msgstr "Depois de um ponto que finalize uma abreviação em minúscula que não esteja"
 
 #. type: enumerate
 #: texinfo/upstream/texinfo.texi:9095
-#, fuzzy
-#| msgid "Not ending a sentence"
 msgid "the end of a sentence."
-msgstr "Não finalizando uma frase"
+msgstr "no final de uma frase."
 
 #. type: item
 #: texinfo/upstream/texinfo.texi:9096
-#, fuzzy, no-wrap
-#| msgid "Spacing, in the middle of sentences"
 msgid "When a parenthetical remark in the middle of a sentence (like"
-msgstr "Espaçamento, no meio de frases"
+msgstr "Quando um comentário entre parênteses no meio de uma frase (como"
 
 #. type: enumerate
 #: texinfo/upstream/texinfo.texi:9100
-#, fuzzy
-#| msgid ""
-#| "When a parenthetical remark in the middle of a sentence (like this "
-#| "one!)@: ends with a period, exclamation point or question mark, "
-#| "@code{@@:} should be used after the right parenthesis.  Similarly for "
-#| "right brackets and right quotes (both single and double)."
 msgid ""
 "this one!)@: ends with a period, exclamation point or question mark, "
 "@code{@@:} should be used after the right parenthesis.  Similarly for right "
 "brackets and right quotes (both single and double)."
 msgstr ""
-"Quando um comentário entre parênteses no meio de uma frase (como este!)@: "
-"terminar com um ponto, ponto de exclamação ou ponto de interrogação, "
-"@code{@@:} deveria ser usado depois do parêntese à direita.  Similarmente "
-"para colchetes à direita e aspas à direita (ambas, simples e duplas)."
+"este!)@: terminar com um ponto, ponto de exclamação ou ponto de interrogação, @code{@@:} deveria ser usado depois do parêntese à direita. Similarmente para colchetes à direita e aspas à direita (ambas, simples e duplas)."
 
 #. type: example
 #: texinfo/upstream/texinfo.texi:9106
@@ -25312,18 +25176,11 @@ msgstr "Libras, símbolo"
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:9772
-#, fuzzy
-#| msgid ""
-#| "Use the @code{@@pounds@{@}} command to generate `@pounds{}'.  Where "
-#| "possible, this is the symbol for the pounds sterling British currency.  "
-#| "Otherwise, it is @samp{#}."
 msgid ""
 "Use the @code{@@pounds@{@}} command to generate `@pounds{}'.  Where "
 "possible, this is the symbol for the pounds sterling British currency."
 msgstr ""
-"Use o comando @code{@@pounds@{@}} para gerar `@pounds{}'.  Onde possível, "
-"esse é o símbolo para a moeda britânica Libra Esterlina.  Caso contrário, é "
-"@samp{#}."
+"Use o comando @code{@@pounds@{@}} para gerar `@pounds{}'.  Onde possível, esse é o símbolo para a moeda britânica Libra Esterlina."
 
 #. type: node
 #: texinfo/upstream/texinfo.texi:9781
@@ -25356,17 +25213,11 @@ msgstr "Símbolo de Graus"
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:9791
-#, fuzzy
-#| msgid ""
-#| "Use the @code{@@textdegree@{@}} command to generate `@textdegree{}'.  "
-#| "Where possible, this is the normal symbol for degrees.  Otherwise, it is "
-#| "an @samp{o}."
 msgid ""
 "Use the @code{@@textdegree@{@}} command to generate `@textdegree{}'.  Where "
 "possible, this is the normal symbol for degrees."
 msgstr ""
-"Use o comando @code{@@textdegree@{@}} para gerar `@textdegree{}'.  Onde "
-"possível, esse é o símbolo normal para Graus.  Caso contrário, é um @samp{o}."
+"Use o comando @code{@@textdegree@{@}} para gerar `@textdegree{}'. Onde possível, esse é o símbolo normal para Graus."
 
 #. type: node
 #: texinfo/upstream/texinfo.texi:9796
@@ -26379,17 +26230,11 @@ msgstr "arrow"
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:10189
-#, fuzzy
-#| msgid ""
-#| "The @code{@@click} command produces a right arrow by default; this glyph "
-#| "is also available independently via the command @code{@@arrow@{@}}."
 msgid ""
 "The @code{@@click} command produces a right arrow; this glyph is also "
 "available independently via the command @code{@@arrow@{@}}."
 msgstr ""
-"O comando @code{@@click} produz uma seta para a direita por padrão; esse "
-"glifo também está disponível independentemente por meio do comando "
-"@code{@@arrow@{@}}."
+"O comando @code{@@click} produz uma seta para a direita; esse glifo também está disponível independentemente por meio do comando @code{@@arrow@{@}}."
 
 #. type: findex
 #: texinfo/upstream/texinfo.texi:10190
@@ -26413,17 +26258,14 @@ msgstr ""
 
 #. type: example
 #: texinfo/upstream/texinfo.texi:10199
-#, fuzzy, no-wrap
-#| msgid "@@clickstyle @@@var{cmd}"
+#, no-wrap
 msgid "@@clickstyle @@result\n"
-msgstr "@@clickstyle @@@var{comando}"
+msgstr "@@clickstyle @@result\n"
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:10201
-#, fuzzy
-#| msgid "bye"
 msgid "by"
-msgstr "bye"
+msgstr "by"
 
 #. type: example
 #: texinfo/upstream/texinfo.texi:10203
@@ -26433,10 +26275,8 @@ msgstr ""
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:10206
-#, fuzzy
-#| msgid "The @code{@@sp} command is most often used in the title page."
 msgid "The @code{@@clickstyle} command will be removed in a future release."
-msgstr "O comando @code{@@sp} é usado mais frequentemente na página de título."
+msgstr "O comando @code{@@clickstyle} será removido em um lançamento futuro."
 
 #. type: node
 #: texinfo/upstream/texinfo.texi:10208
@@ -26598,10 +26438,9 @@ msgstr "@nodedescription Formatando expressões matemáticas."
 
 #. type: chapter
 #: texinfo/upstream/texinfo.texi:10257
-#, fuzzy, no-wrap
-#| msgid "Formatting Commands"
+#, no-wrap
 msgid "Formatting Mathematics"
-msgstr "Comandos de Formatação"
+msgstr "Formatando Expressões Matemáticas"
 
 #. type: findex
 #: texinfo/upstream/texinfo.texi:10260
@@ -26640,21 +26479,12 @@ msgstr "@@math@{\\partial_\\alpha \\partial^\\alpha A^\\beta = \\mu_0 J^\\beta@}
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:10274
-#, fuzzy
-#| msgid ""
-#| "@code{@@math} is formatted inline when used inside a paragraph, like "
-#| "@math{\\partial_\\alpha \\partial^\\alpha A^\\beta = \\mu_0 J^\\beta} in "
-#| "this example.  The @code{@@math} command has no special effect on the "
-#| "Info output, merely outputting the contents verbatim."
 msgid ""
 "@code{@@math} is formatted inline when used inside a paragraph, like "
 "@math{\\partial_\\alpha \\partial^\\alpha A^\\beta = \\mu_0 J^\\beta} in "
 "this example."
 msgstr ""
-"@code{@@math} é formatado em linha quando usado dentro de um parágrafo, como "
-"@math{\\partial_\\alpha \\partial^\\alpha A^\\beta = \\mu_0 J^\\beta} nesse "
-"exemplo.  O comando @code{@@math} não tem efeito especial na saída do Info, "
-"meramente gerando o conteúdo literal."
+"@code{@@math} é formatado em linha quando usado dentro de um parágrafo, como @math{\\partial_\\alpha \\partial^\\alpha A^\\beta = \\mu_0 J^\\beta} nesse exemplo."
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:10279
@@ -26685,28 +26515,11 @@ msgstr "Saída gerada matemática para HTML"
 
 #. type: cindex
 #: texinfo/upstream/texinfo.texi:10286
-#, fuzzy, no-wrap
-#| msgid "The HTML output is this:"
 msgid "HTML output @subentry math"
-msgstr "A saída gerada HTML é esta:"
+msgstr "A saída HTML @subentry matemática"
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:10301
-#, fuzzy
-#| msgid ""
-#| "By default, the HTML output is only emphasized.  @command{texi2any} "
-#| "provides three options for displaying properly formatted mathematics for "
-#| "HTML.  You can select these with the @code{HTML_MATH} variable "
-#| "(@pxref{HTML Customization Variables}).  With @code{HTML_MATH} set to "
-#| "@samp{l2h}, @command{texi2any} attempts to use the @command{latex2html} "
-#| "program to produce image files for mathematical material.  With the "
-#| "@samp{t4h} setting, @command{texi2any} attempts to use the "
-#| "@command{tex4ht} program.  With the @samp{mathjax} setting, "
-#| "@command{texi2any} inserts references in the output files to MathJax "
-#| "scripts to format the material.  The MathJax option requires JavaScript "
-#| "to be enabled in the browser to work.  See also @ref{MathJax "
-#| "Customization Variables}, @ref{@command{latex2html} Customization "
-#| "Variables} and @ref{@command{tex4ht} Customization Variables}."
 msgid ""
 "By default, the HTML output is only emphasized.  @command{texi2any} provides "
 "three options for displaying properly formatted mathematics for HTML.  You "
@@ -26721,20 +26534,7 @@ msgid ""
 "@ref{MathJax Customization Variables}, @ref{@command{latex2html} "
 "Customization Variables} and @ref{@command{tex4ht} Customization Variables}."
 msgstr ""
-"Por padrão, a saída HTML é apenas enfatizada.  @command{texi2any} oferece "
-"três opções para exibir matemática formatada corretamente para HTML.  Você "
-"consegue selecioná-las com a variável @code{HTML_MATH} (@pxref{Variáveis de "
-"Personalização do HTML}).  Com @code{HTML_MATH} configurada para @samp{l2h}, "
-"@command{texi2any} tenta usar o programa @command{latex2html} para produzir "
-"arquivos de imagem para material matemático.  Com a configuração @samp{t4h}, "
-"@command{texi2any} tenta usar o programa @command{tex4ht}.  Com a "
-"configuração @samp{mathjax}, @command{texi2any} insere referências nos "
-"arquivos de saída para conjuntos de comandos sequenciais MathJax para "
-"formatar o material.  A opção MathJax exige que JavaScript esteja habilitado "
-"no navegador para funcionar.  Veja-se também @ref{Variáveis de "
-"Personalização da MathJax}, @ref{Variáveis de Personalização do "
-"@command{latex2html}} e @ref{Variáveis de Personalização do "
-"@command{tex4ht}}."
+"Por padrão, a saída HTML é apenas enfatizada. @command{texi2any} fornece três opções para exibir expressões matemáticas formatadas corretamente para HTML. Você consegue selecioná-las com a variável @code{HTML_MATH} (@pxref{Personalização do HTML para Matemática}). Com @code{HTML_MATH} configurada para @samp{l2h}, @command{texi2any} tenta usar o programa @command{latex2html} para produzir arquivos de imagem para material matemático. Com a configuração @samp{t4h}, @command{texi2any} tenta usar o programa @command{tex4ht}. Com a configuração @samp{mathjax}, @command{texi2any} insere referências nos arquivos da saída gerada para conjuntos de comandos sequenciados MathJax para formatar o material. A opção MathJax exige que JavaScript esteja habilitado no navegador para funcionar. Veja-se também @ref{Variáveis de Personalização da MathJax}, @ref{Variáveis de Personalização do @command{latex2html}} e @ref{Variáveis de Personalização do @command{tex4ht}}."
 
 #. type: cindex
 #: texinfo/upstream/texinfo.texi:10302
@@ -26787,13 +26587,6 @@ msgstr ""
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:10327
-#, fuzzy
-#| msgid ""
-#| "In general, the contents of @code{@@math} or @code{@@displaymath} should "
-#| "be plain @TeX{} only, with no interspersed Texinfo commands.  If you do "
-#| "use any Texinfo commands, then you should mark these with @samp{@@} as "
-#| "usual, rather than @samp{\\} (e.g. @samp{@@var} rather than "
-#| "@samp{\\var}), but we do not guarantee which Texinfo commands will work."
 msgid ""
 "In general, the contents of @code{@@math} or @code{@@displaymath} should be "
 "plain @TeX{} only, with no interspersed Texinfo commands.  If you do use any "
@@ -26801,11 +26594,7 @@ msgid ""
 "than @samp{\\} (e.g.@: @samp{@@var} rather than @samp{\\var}), but we do not "
 "guarantee which Texinfo commands will work."
 msgstr ""
-"Em geral, o conteúdo de @code{@@math} ou @code{@@displaymath} deveria ser "
-"apenas @TeX{} simples, sem comandos Texinfo intercalados.  Se usar algum "
-"comando Texinfo, então você deveria marcá-lo com @samp{@@}, como de costume, "
-"em vez de @samp{\\} (por exemplo, @samp{@@var} em vez de @samp{\\var}), mas "
-"nós não garantimos quais comandos Texinfo funcionarão."
+"Em geral, o conteúdo de @code{@@math} ou de @code{@@displaymath} deveria ser somente @TeX{} simples, sem comandos Texinfo intercalados. Se usar quaisquer comandos do Texinfo, então você deveria marcá-los com @samp{@@}, como de costume, em vez de @samp{\\} (por exemplo, @samp{@@var} em vez de @samp{\\var}), mas nós não garantimos quais comandos do Texinfo funcionarão."
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:10332
@@ -27290,19 +27079,11 @@ msgstr "@@hyphenation@{man-u-scrito man-u-scritos@}\n"
 
 #. type: table
 #: texinfo/upstream/texinfo.texi:10506
-#, fuzzy
-#| msgid ""
-#| "As shown, you put a @samp{-} at each hyphenation point.  @TeX{} only uses "
-#| "the specified hyphenation points when the words match exactly, so give "
-#| "all necessary variants, such as plurals."
 msgid ""
 "@TeX{} only uses the specified hyphenation points when the words match "
 "exactly, so give all necessary variants, such as plurals."
 msgstr ""
-"Como mostrado, você coloca um @samp{-} em cada ponto de hifenização.  @TeX{} "
-"só usa os pontos de hifenização especificados quando as palavras "
-"corresponderem exatamente, portanto forneça todas as variantes necessárias, "
-"tais como plurais."
+"@TeX{} usa somente os pontos de hifenização especificados quando as palavras corresponderem exatamente, portanto forneça todas as variantes necessárias, tais como plurais."
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:10510
@@ -27414,18 +27195,11 @@ msgstr "@@allowcodebreaks false\n"
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:10546
-#, fuzzy
-#| msgid ""
-#| "to prevent from breaking at @samp{-} or @samp{_} within @code{@@code}.  "
-#| "You can go back to allowing such breaks with @code{@@allowcodebreaks "
-#| "true}.  Write these commands on lines by themselves."
 msgid ""
 "@code{@@code}.  You can go back to allowing such breaks with "
 "@code{@@allowcodebreaks true}.  Write these commands on lines by themselves."
 msgstr ""
-"para impedir quebras em @samp{-} ou @samp{_} dentro do @code{@@code}.  Você "
-"pode voltar a permitir tais quebras com @code{@@allowcodebreaks true}.  "
-"Escreva esses comandos em linhas dedicadas."
+"@code{@@code}. Você pode voltar a permitir tais quebras com @code{@@allowcodebreaks true}. Escreva esses comandos em linhas dedicadas."
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:10550
@@ -27687,10 +27461,9 @@ msgstr "@nodedescription Inserindo linhas em branco."
 
 #. type: section
 #: texinfo/upstream/texinfo.texi:10644
-#, fuzzy, no-wrap
-#| msgid "@code{@@sp} @var{n}: Insert Blank Lines"
+#, no-wrap
 msgid "@code{@@sp @var{n}}: Insert Blank Lines"
-msgstr "@code{@@sp} @var{n}: Inserir Linhas em Branco"
+msgstr "@code{@@sp @var{n}}: Inserir Linhas em Branco"
 
 #. type: cindex
 #: texinfo/upstream/texinfo.texi:10648
@@ -27728,11 +27501,9 @@ msgstr "gera duas linhas em branco."
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:10665
-#, fuzzy
-#| msgid "The @code{@@sp} command is most often used in the title page."
 msgid ""
 "The @code{@@sp} command is most often used inside a @code{@@titlepage} block."
-msgstr "O comando @code{@@sp} é usado mais frequentemente na página de título."
+msgstr "O comando @code{@@sp} é usado mais frequentemente dentro de um bloco @code{@@titlepage}."
 
 #. type: node
 #: texinfo/upstream/texinfo.texi:10667
@@ -27765,23 +27536,13 @@ msgstr "Quebras de página, forçando"
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:10680
-#, fuzzy
-#| msgid ""
-#| "A line containing only @code{@@page} starts a new page in a printed "
-#| "manual.  In other formats, without the concept of pages, it starts a new "
-#| "paragraph.  A @code{@@page} command is often used in the "
-#| "@code{@@titlepage} section of a Texinfo file to start the copyright page."
 msgid ""
 "A line containing only @code{@@page} starts a new page in a printed manual.  "
 "In other formats, without the concept of pages, it starts a new paragraph.  "
 "A @code{@@page} command is often used in a @code{@@titlepage} section of a "
 "Texinfo file to start the copyright page."
 msgstr ""
-"Uma linha contendo somente @code{@@page} inicia uma nova página em um manual "
-"impresso.  Em outros formatos, sem o conceito de páginas, ele inicia um novo "
-"parágrafo.  Um comando @code{@@page} frequentemente é usado na seção "
-"@code{@@titlepage} de um arquivo do Texinfo para iniciar a página de "
-"direitos autorais."
+"Uma linha contendo somente @code{@@page} inicia uma nova página em um manual impresso. Em outros formatos, sem o conceito de páginas, ele inicia um novo parágrafo. Um comando @code{@@page} frequentemente é usado em uma seção @code{@@titlepage} de um arquivo do Texinfo para iniciar a página de copirraite."
 
 #. type: node
 #: texinfo/upstream/texinfo.texi:10682
@@ -28312,18 +28073,11 @@ msgstr ""
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:10918
-#, fuzzy
-#| msgid ""
-#| "The output (not shown) has excess space between `Category' and `Name'.  "
-#| "To avoid this, elide the unwanted whitespace in your input, or put the "
-#| "continuation @code{@@} outside braces."
 msgid ""
 "and `Name'.  To avoid this, elide the unwanted whitespace in your input, or "
 "put the continuation @code{@@} outside braces."
 msgstr ""
-"A saída gerada (não mostrada) tem espaço excessivo entre `Nome' e "
-"`Categoria'.  Para evitar isso, elimine os espaços em branco indesejados na "
-"tua entrada ou coloque a continuação @code{@@} fora das chaves."
+"e `Nome'. Para evitar isso, elimine os espaços em branco indesejados na tua entrada ou coloque a continuação @code{@@} fora das chaves."
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:10923
@@ -28492,12 +28246,7 @@ msgstr ""
 
 #. type: example
 #: texinfo/upstream/texinfo.texi:10984
-#, fuzzy, no-wrap
-#| msgid ""
-#| "@@set txidefnamenospace\n"
-#| "@@deffn Builtin index (string, substring)\n"
-#| "@@dots@{@}\n"
-#| "@@end deffn\n"
+#, no-wrap
 msgid ""
 "@@set txidefnamenospace\n"
 "@@deffn Builtin m4_index (string, substring)\n"
@@ -28505,16 +28254,15 @@ msgid ""
 "@@end deffn\n"
 msgstr ""
 "@@set txidefnamenospace\n"
-"@@deffn Índice de builtins (string, substring)\n"
+"@@deffn Índice_m4 interno (string, substring)\n"
 "@@dots@{@}\n"
 "@@end deffn\n"
 
 #. type: deffn
 #: texinfo/upstream/texinfo.texi:10989
-#, fuzzy, no-wrap
-#| msgid "Builtin index (string, substring)"
+#, no-wrap
 msgid "Builtin m4_index (string, substring)"
-msgstr "Índice de builtins (string, substring)"
+msgstr "Índice_m4 interno (string, substring)"
 
 #. type: deftypeivar
 #: texinfo/upstream/texinfo.texi:10991 texinfo/upstream/texinfo.texi:11184
@@ -29069,25 +28817,12 @@ msgstr ""
 
 #. type: table
 #: texinfo/upstream/texinfo.texi:11196
-#, fuzzy
-#| msgid ""
-#| "When using @code{@@deftypefn} command and variations, you should mark "
-#| "parameter names with @code{@@var} to distinguish these from data type "
-#| "names, keywords, and other parts of the literal syntax of the programming "
-#| "language.  Where the output format allows, all output on the definition "
-#| "line is in a typewriter font by default.  @code{@@var} uses an "
-#| "appropriate font where it occurs."
 msgid ""
 "When using @code{@@deftypefn} command and variations, you should mark "
 "parameter names with @code{@@var} to distinguish these from data type names, "
 "keywords, and other parts of the literal syntax of the programming language."
 msgstr ""
-"Ao usar o comando @code{@@deftypefn} e variações, você deveria marcar os "
-"nomes dos parâmetros com @code{@@var} para distingui-los dos nomes de tipos "
-"de dados, palavras-chave e outras partes da sintaxe literal da linguagem de "
-"programação.  Onde o formato de saída permitir, toda a saída na linha de "
-"definição estará em uma fonte de máquina de escrever por padrão.  "
-"@code{@@var} usa uma fonte apropriada onde ocorrer."
+"Ao usar o comando @code{@@deftypefn} e variações, você deveria marcar os nomes dos parâmetros com @code{@@var} para distingui-los dos nomes de tipos de dados, de palavras-chave e de outras partes da sintaxe literal da linguagem de programação."
 
 #. type: table
 #: texinfo/upstream/texinfo.texi:11207
@@ -29219,21 +28954,16 @@ msgstr ""
 
 #. type: example
 #: texinfo/upstream/texinfo.texi:11278
-#, fuzzy, no-wrap
-#| msgid ""
-#| "@@deftypefn @{Sub@} @{(@@var@{$result@}, @@var@{$status@} =)@} @@\n"
-#| "                     process (@@var@{$input@})\n"
-#| "@dots{} Set @@var@{$status@} to 0 in case of failure @dots{}\n"
-#| "@@end deftypefn\n"
+#, no-wrap
 msgid ""
 "@@deftypefn @{Sub@} @{(@@var@{$result@}, @@var@{$status@}) =@} @@\n"
 "                     process (@@var@{$input@})\n"
 "@dots{} Set @@var@{$status@} to 0 in case of failure @dots{}\n"
 "@@end deftypefn\n"
 msgstr ""
-"@@deftypefn @{Sub@} @{(@@var@{$result@}, @@var@{$status@} =)@} @@\n"
-"                     process (@@var@{$input@})\n"
-"@dots{} Set @@var@{$status@} to 0 in case of failure @dots{}\n"
+"@@deftypefn @{Sub@} @{(@@var@{$resultado@}, @@var@{$situação@}) =@} @@\n"
+"                     process (@@var@{$entrada@})\n"
+"@dots{} Configurar @@var@{$situação@} para 0 no caso de falha @dots{}\n"
 "@@end deftypefn\n"
 
 #. type: table
@@ -30792,16 +30522,11 @@ msgstr ""
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:11962
-#, fuzzy
-#| msgid ""
-#| "In this manual, this function is listed in the Command and Variable Index "
-#| "under @code{apply}."
 msgid ""
 "In this manual, this function is listed in the Command Index under "
 "@code{apply}."
 msgstr ""
-"Neste manual, essa função está listada no Índice de Comandos e Variáveis sob "
-"@code{apply}."
+"Neste manual, essa função está listada no Índice de Comandos sob @code{apply}."
 
 #. type: cindex
 #: texinfo/upstream/texinfo.texi:11964 texinfo/upstream/texinfo.texi:11966
@@ -30896,14 +30621,6 @@ msgstr "@@documentlanguage @var{ll}[_@var{cc}]\n"
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:12001
-#, fuzzy
-#| msgid ""
-#| "Include a two-letter ISO@tie{}639-2 language code (@var{ll}) following "
-#| "the command name, optionally followed by an underscore and two-letter "
-#| "ISO@tie{}3166 two-letter country code (@var{cc}).  If you have a "
-#| "multilingual document, the intent is to be able to use this command "
-#| "multiple times, to declare each language change.  If the command is not "
-#| "used at all, the default is @code{en_US} for US English."
 msgid ""
 "Include a two-letter (or three-letter) ISO@tie{}639-2 language code "
 "(@var{ll}) following the command name, optionally followed by an underscore "
@@ -30911,12 +30628,7 @@ msgid ""
 "have a multilingual document, the intent is to be able to use this command "
 "multiple times, to declare each language change."
 msgstr ""
-"Inclua um código de idioma ISO@tie{}639-2 de duas letras (@var{ll}) seguindo "
-"o nome do comando, opcionalmente seguido por um sublinhado e um código de "
-"país ISO@tie{}3166 de duas letras (@var{cc}).  Se você tiver um documento "
-"multi idioma, a intenção é a de poder usar esse comando várias vezes para "
-"declarar cada mudança de idioma.  Se o comando não for usado em absoluto, o "
-"padrão é @code{en_US} para inglês dos Estados Unidos da América do Norte."
+"Inclua um código de idioma ISO@tie{}639-2 de duas letras (ou de três letras) (@var{ll}) seguindo o nome do comando, opcionalmente seguido por um sublinhado e código de país ISO@tie{}3166 de duas letras ou de três letras (@var{cc}). Se você tiver um documento multi idioma, a intenção é a de poder usar esse comando várias vezes para declarar cada mudança de idioma."
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:12006
