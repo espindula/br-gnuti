@@ -30650,15 +30650,6 @@ msgstr "Sequências de caracteres de documentos, tradução de"
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:12016
-#, fuzzy
-#| msgid ""
-#| "For Info and other online output, this command changes the translation of "
-#| "various @dfn{document strings} such as ``see'' in cross-references "
-#| "(@pxref{Cross References}), ``Function'' in defuns (@pxref{Definition "
-#| "Commands}), and so on.  Some strings, such as ``Node:'', ``Next:'', "
-#| "``Menu:'', etc., are keywords in Info output, so are not translated "
-#| "there; they are translated in other output formats.  In DocBook output "
-#| "@code{@@documentlanguage} sets the language for following sections."
 msgid ""
 "This command changes the translation of various @dfn{document strings} such "
 "as ``see'' in cross-references (@pxref{Cross References}), ``Function'' in "
@@ -30668,14 +30659,7 @@ msgid ""
 "document language is not specified, the default English document strings are "
 "output as they are."
 msgstr ""
-"Para Info e outras saídas online, esse comando muda a tradução de várias "
-"@dfn{sequências de caracteres de documento}, tais como ``veja-se'' em "
-"referências cruzadas (@pxref{Referências Cruzadas}), ``Função'' em defuns "
-"(@pxref{Comandos de Definição}), e assim por diante.  Algumas sequências de "
-"caracteres, como ``Node:'', ``Next:'', ``Menu:'', entre outras, são palavras-"
-"chave na saída Info, de forma que não são traduzidas lá; elas são traduzidas "
-"em outros formatos de saída. Na saída DocBook, @code{@@documentlanguage} "
-"configura o idioma para seções seguintes."
+"Esse comando muda a tradução de várias @dfn{sequências de caracteres de documento}, tais como ``veja-se'' em referências cruzadas (@pxref{Referências Cruzadas}), ``Função'' em defuns (@pxref{Comandos de Definição}), e assim por diante. Opcionalmente, esse comando possivelmente afete como @command{texi2any} ordena índices (@pxref{Variáveis Globais de Personalização}, sob @code{DOCUMENTLANGUAGE_COLLATION}). Se o idioma do documento não estiver especificado, as sequências padrão de caracteres de documento em inglês serão geradas como estiverem."
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:12019
@@ -30853,22 +30837,13 @@ msgstr "Codificação de entrada do documento"
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:12077
-#, fuzzy
-#| msgid ""
-#| "In the default case, the input and output document encoding are assumed "
-#| "to be UTF-8, the vast global character encoding, expressed in 8-bit "
-#| "bytes.  UTF-8 is compatible with 7-bit ASCII.  It is recommended to use "
-#| "UTF-8 encoding for Texinfo manuals."
 msgid ""
 "By default, the input and output document encoding are assumed to be UTF-8, "
 "the vast global character encoding, expressed in 8-bit bytes.  UTF-8 is "
 "compatible with 7-bit ASCII.  It is recommended to use UTF-8 encoding for "
 "Texinfo manuals."
 msgstr ""
-"No caso padrão, a codificação dos documentos de entrada e saída é assumida "
-"como UTF-8, a vasta codificação global de caracteres, expressa em bytes de 8 "
-"bits.  UTF-8 é compatível com ASCII de 7 bits.  É recomendado usar "
-"codificação UTF-8 para os manuais do Texinfo."
+"Por padrão, a codificação dos documentos de entrada e de saída é assumida ser UTF-8, a vasta codificação global de caracteres, expressa em baites de 8 bits. UTF-8 é compatível com ASCII de 7 bits. É recomendado usar codificação UTF-8 para os manuais do Texinfo."
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:12082
@@ -31048,10 +31023,8 @@ msgstr ""
 
 #. type: cindex
 #: texinfo/upstream/texinfo.texi:12140
-#, fuzzy, no-wrap
-#| msgid "HTML output, and encodings"
 msgid "HTML output @subentry encodings"
-msgstr "Saída HTML e codificações"
+msgstr "Saída HTML @subentry codificações"
 
 #. type: cindex
 #: texinfo/upstream/texinfo.texi:12141
@@ -31091,14 +31064,6 @@ msgstr ""
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:12160
-#, fuzzy
-#| msgid ""
-#| "In HTML and @LaTeX{} output, if @code{OUTPUT_CHARACTERS} is set "
-#| "(@pxref{Other Customization Variables}), accent constructs and special "
-#| "characters, such as @code{@@'e} or @code{``}, are output as the actual "
-#| "UTF-8 sequence or 8-bit character in the output encoding where possible.  "
-#| "Otherwise, HTML entities are used for those characters in HTML, and "
-#| "@LaTeX{} macros are used in @LaTeX{}."
 msgid ""
 "In HTML and @LaTeX{} output, if @code{OUTPUT_CHARACTERS} is set "
 "(@pxref{Customization Variables for Multiple Formats}), accent constructs "
@@ -31107,23 +31072,10 @@ msgid ""
 "possible.  Otherwise, HTML entities are used for those characters in HTML, "
 "and @LaTeX{} macros are used in @LaTeX{}."
 msgstr ""
-"Na saída HTML e @LaTeX{}, se @code{OUTPUT_CHARACTERS} estiver configurada "
-"(@pxref{Outras Variáveis de Personalização}), construções de acentos e "
-"caracteres especiais, como @code{@@'e} ou @code{``}, serão gerados como a "
-"sequência UTF-8 real ou caractere de 8 bits na codificação de saída, onde "
-"possível.  Caso contrário, entidades HTML serão usadas para esses caracteres "
-"em HTML, e macros @LaTeX{} serão usadas em @LaTeX{}."
+"Na saída HTML e @LaTeX{}, se @code{OUTPUT_CHARACTERS} estiver configurada (@pxref{Variáveis de Personalização para Múltiplos Formatos}), constructos de acentos e caracteres especiais, como @code{@@'e} ou @code{``}, serão gerados como a sequência UTF-8 real ou caractere de 8 bits na codificação da saída gerada, onde possível. Caso contrário, entidades HTML serão usadas para esses caracteres no HTML, e macros @LaTeX{} serão usadas em @LaTeX{}."
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:12167
-#, fuzzy
-#| msgid ""
-#| "In DocBook output, if the encoding is different from UTF-8, an "
-#| "@code{encoding} attribute is added to the XML declaration.  If "
-#| "@code{OUTPUT_CHARACTERS} is set (@pxref{Other Customization Variables}), "
-#| "accent constructs such as @code{@@'e} are output as the actual 8-bit or "
-#| "UTF-8 character in the output encoding where possible.  Otherwise XML "
-#| "entities are used for those constructs."
 msgid ""
 "In DocBook output, if the encoding is different from UTF-8, an "
 "@code{encoding} attribute is added to the XML declaration.  If "
@@ -31132,12 +31084,7 @@ msgid ""
 "bit or UTF-8 character in the output encoding where possible.  Otherwise XML "
 "entities are used for those constructs."
 msgstr ""
-"Na saída do DocBook, se a codificação for diferente de UTF-8, um atributo "
-"@code{encoding} será adicionado à declaração XML.  Se "
-"@code{OUTPUT_CHARACTERS} estiver configurada (@pxref{Outras Variáveis de "
-"Personalização}), construções de acentuação, como @code{@@'e}, serão geradas "
-"como o caractere de 8 bits ou UTF-8 real na codificação de saída, onde "
-"possível.  Caso contrário, entidades XML serão usadas para essas construções."
+"Na saída DocBook, se a codificação for diferente de UTF-8, um atributo @code{encoding} será adicionado à declaração XML. Se @code{OUTPUT_CHARACTERS} estiver configurada (@pxref{Variáveis de Personalização para Múltiplos Formatos}), constructos de acentos, como @code{@@'e}, serão geradas como o caractere de 8 bits ou UTF-8 real na codificação da saída gerada, onde possível. Caso contrário, entidades XML serão usadas para esses constructos."
 
 #. type: cindex
 #: texinfo/upstream/texinfo.texi:12168
@@ -31550,10 +31497,8 @@ msgstr "No entanto, este texto aparecerá somente em Info e em texto simples."
 
 #. type: ifhtml
 #: texinfo/upstream/texinfo.texi:12321
-#, fuzzy
-#| msgid "And this text will only appear in HTML@."
 msgid "And this text will only appear in HTML."
-msgstr "E este texto aparecerá somente em HTML@."
+msgstr "E este texto aparecerá somente em HTML."
 
 #. type: iflatex
 #: texinfo/upstream/texinfo.texi:12324
@@ -32168,10 +32113,8 @@ msgstr ""
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:12540
-#, fuzzy
-#| msgid "Float environment"
 msgid "(environment) case."
-msgstr "Ambiente de flutuação"
+msgstr "caso (ambiente)"
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:12544
@@ -32974,17 +32917,7 @@ msgstr ""
 
 #. type: group
 #: texinfo/upstream/texinfo.texi:12862
-#, fuzzy, no-wrap
-#| msgid ""
-#| "@@titlepage\n"
-#| "@@title GNU Make\n"
-#| "@@subtitle A Program for Directing Recompilation\n"
-#| "@@subtitle Edition @@value@{EDITION@}, @dots{}\n"
-#| "@@subtitle @@value@{UPDATE-MONTH@}\n"
-#| "@@page\n"
-#| "@@insertcopying\n"
-#| "@dots{}\n"
-#| "@@end titlepage\n"
+#, no-wrap
 msgid ""
 "@@documentinfo\n"
 "@@title GNU Make\n"
@@ -32993,15 +32926,12 @@ msgid ""
 "@@subtitle @@value@{UPDATE-MONTH@}\n"
 "@@end documentinfo\n"
 msgstr ""
-"@@titlepage\n"
+"@@documentinfo\n"
 "@@title GNU Make\n"
-"@@subtitle Um Programa para Direcionar Recompilação\n"
+"@@subtitle Um Programa para Direcionamento de Recompilação\n"
 "@@subtitle Edição @@value@{EDITION@}, @dots{}\n"
 "@@subtitle @@value@{UPDATE-MONTH@}\n"
-"@@page\n"
-"@@insertcopying\n"
-"@dots{}\n"
-"@@end titlepage\n"
+"@@end documentinfo\n"
 
 #. type: enumerate
 #: texinfo/upstream/texinfo.texi:12868
@@ -33192,20 +33122,12 @@ msgstr "arquivo @file{NEWS} para Texinfo"
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:12941
-#, fuzzy
-#| msgid ""
-#| "You can check the @file{NEWS} file in the Texinfo source distribution and "
-#| "linked from the Texinfo home page (@url{http://www.gnu.org/software/"
-#| "texinfo}) to see when a particular command was added."
 msgid ""
 "You can check the @file{NEWS} file in the Texinfo source distribution and "
 "linked from the Texinfo home page (@url{https://www.gnu.org/software/"
 "texinfo}) to see when a particular command was added."
 msgstr ""
-"Você pode verificar o arquivo @file{NEWS} na distribuição do fonte do "
-"Texinfo e lincado a partir da página inicial do Texinfo (@url{http://"
-"www.gnu.org/software/texinfo}) para ver quando um comando específico foi "
-"adicionado."
+"Você pode verificar o arquivo @file{NEWS} na distribuição do fonte do Texinfo e lincado a partir da página inicial do Texinfo (@url{https://www.gnu.org/software/texinfo}) para ver quando um comando específico foi adicionado."
 
 #. type: vindex
 #: texinfo/upstream/texinfo.texi:12942
@@ -33917,15 +33839,14 @@ msgstr ""
 
 #. type: item
 #: texinfo/upstream/texinfo.texi:13223
-#, fuzzy, no-wrap
-#| msgid "If a macro takes only one argument, all commas in its invocation are quoted by default.  For example:"
+#, no-wrap
 msgid "If a macro takes only one argument, all commas in its invocation"
-msgstr "Se uma macro receber somente um argumento, todas as vírgulas na invocação dela serão aspeadas por padrão.  Por exemplo:"
+msgstr "Se uma macro receber somente um argumento, todas as vírgulas na invocação dela"
 
 #. type: enumerate
 #: texinfo/upstream/texinfo.texi:13225
 msgid "are quoted by default.  For example:"
-msgstr ""
+msgstr "serão aspeadas por padrão. Por exemplo:"
 
 #. type: group
 #: texinfo/upstream/texinfo.texi:13231
@@ -33976,18 +33897,11 @@ msgstr ""
 
 #. type: enumerate
 #: texinfo/upstream/texinfo.texi:13250
-#, fuzzy
-#| msgid ""
-#| "If a macro invocation includes another command (including a recursive "
-#| "invocation of itself), any commas in the nested command invocation(s)  "
-#| "are quoted by default.  For example, in"
 msgid ""
 "recursive invocation of itself), any commas in the nested command "
 "invocation(s) are quoted by default.  For example, in"
 msgstr ""
-"Se uma invocação de macro incluir outro comando (incluindo uma invocação "
-"recursiva dela mesma), quaisquer vírgulas na(s) invocação(ões) de comando(s) "
-"aninhado(s) serão aspeadas por padrão.  Por exemplo, em"
+"invocação recursiva dela mesma), quaisquer vírgulas na(s) invocação(ões) de comando(s) aninhado(s) serão aspeadas por padrão. Por exemplo, em"
 
 #. type: example
 #: texinfo/upstream/texinfo.texi:13253
@@ -34031,17 +33945,14 @@ msgstr "produzirá a sequência de caracteres @samp{foobarbaz}."
 
 #. type: item
 #: texinfo/upstream/texinfo.texi:13271
-#, fuzzy, no-wrap
-#| msgid "Otherwise, a comma should be explicitly quoted, as above, for it to be treated as a part of an argument."
+#, no-wrap
 msgid "Otherwise, a comma should be explicitly quoted, as above, for it"
-msgstr "Caso contrário, uma vírgula deveria ser explicitamente aspeada, como acima, para ser tratada como parte de um argumento."
+msgstr "Caso contrário, uma vírgula deveria ser explicitamente aspeada, como acima, para"
 
 #. type: enumerate
 #: texinfo/upstream/texinfo.texi:13273
-#, fuzzy
-#| msgid "Repeated and optional arguments"
 msgid "to be treated as a part of an argument."
-msgstr "Argumentos repetidos e opcionais"
+msgstr " ser tratada como parte de um argumento."
 
 #. type: cindex
 #: texinfo/upstream/texinfo.texi:13275
@@ -34240,22 +34151,19 @@ msgstr "linhas @code{@@clickstyle};"
 
 #. type: item
 #: texinfo/upstream/texinfo.texi:13351
-#, fuzzy, no-wrap
-#| msgid "@code{@@end} lines when there is no macro expansion in the block command."
+#, no-wrap
 msgid "@code{@@end} lines when there is no macro expansion in the block"
-msgstr "linhas @code{@@end} quando não existir expansão de macro no comando de bloco."
+msgstr "linhas @code{@@end} quando não existir expansão de macro no bloco"
 
 #. type: itemize
 #: texinfo/upstream/texinfo.texi:13353
-#, fuzzy
-#| msgid "command"
 msgid "command."
-msgstr "command"
+msgstr "comando."
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:13357
 msgid "possibly yielding errors."
-msgstr ""
+msgstr "possivelmente gerando erros."
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:13366
@@ -34701,14 +34609,9 @@ msgstr ""
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:13584
-#, fuzzy
-#| msgid ""
-#| "with just @samp{aaa} as the argument to @code{@@center}.  In the earlier "
-#| "implementation, it would have been parsed as this:"
 msgid "the earlier implementation, it would have been parsed as this:"
 msgstr ""
-"com apenas @samp{aaa} como o argumento para @code{@@center}.  Na "
-"implementação anterior, ele teria sido analisado assim:"
+"a implementação anterior, ele teria sido analisado assim:"
 
 #. type: example
 #: texinfo/upstream/texinfo.texi:13587
@@ -35039,18 +34942,11 @@ msgstr ""
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:13725
-#, fuzzy
-#| msgid ""
-#| "Note how braces are needed around @samp{\\type\\} in the macro body in "
-#| "case the @code{type} argument contains a space.  This example produces "
-#| "the output below and enters an index entry for @code{F}."
 msgid ""
 "macro body in case the @code{type} argument contains a space.  This example "
 "produces the output below and enters an index entry for @code{F}."
 msgstr ""
-"Observe como as chaves são necessárias em torno de @samp{\\tipo\\} no corpo "
-"da macro caso o argumento @code{tipo} contenha um espaço.  Esse exemplo "
-"produz a saída abaixo e insere uma entrada de índice para @code{F}."
+"corpo da macro caso o argumento @code{tipo} contenha um espaço. Esse exemplo produz a saída abaixo e insere uma entrada de índice para @code{F}."
 
 #. type: deftypeline
 #: texinfo/upstream/texinfo.texi:13728
@@ -35195,22 +35091,13 @@ msgstr "@@definfoenclose phoo,//,\\\\\n"
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:13788
-#, fuzzy
-#| msgid ""
-#| "near the beginning of a Texinfo file to define @code{@@phoo} as an Info "
-#| "and HTML formatting command that inserts `//' before and `\\\\' after the "
-#| "argument to @code{@@phoo}.  You can then write @code{@@phoo@{bar@}} "
-#| "wherever you want `//bar\\\\' highlighted in Info and HTML."
 msgid ""
 "near the beginning of a Texinfo file to define @code{@@phoo} as an Info and "
 "HTML command that inserts `//' before and `\\\\' after the argument to "
 "@code{@@phoo}.  You can then write @code{@@phoo@{bar@}} wherever you want `//"
 "bar\\\\' highlighted in Info and HTML."
 msgstr ""
-"perto do início de um arquivo do Texinfo para definir @code{@@phoo} como um "
-"comando de formatação do Info e HTML que insira `//' antes e `\\\\' depois "
-"do argumento para para @code{@@phoo}.  Você pode então escrever "
-"@code{@@phoo@{bar@}} onde quiser `//bar\\\\' realçado no Info e HTML."
+"perto do início de um arquivo do Texinfo para definir @code{@@phoo} como um comando do Info e do HTML que insira `//' antes e `\\\\' depois do argumento para @code{@@phoo}. Você pode então escrever @code{@@phoo@{bar@}} onde quiser `//bar\\\\' realçado no Info e no HTML."
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:13790
@@ -35380,34 +35267,16 @@ msgstr "@hashchar{}line 100 \"foo.ptexi\"\n"
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:13860
-#, fuzzy
-#| msgid ""
-#| "indicates that the next line was line 100 of the file @file{foo.ptexi}, "
-#| "and so that's what an error message should refer to.  Both M4 "
-#| "(@pxref{Preprocessor features,,, m4, GNU M4}) and CPP (@pxref{Line "
-#| "Control,,, cpp, The C Preprocessor}, and @ref{Preprocessor Output,,, cpp, "
-#| "The C Preprocessor}) can generate such lines."
 msgid ""
 "@file{foo.ptexi}, and so that's what an error message should refer to.  Both "
 "M4 (@pxref{Preprocessor features,,, m4, GNU M4}) and CPP (@pxref{Line "
 "Control,,, cpp, The C Preprocessor}, and @ref{Preprocessor Output,,, cpp, "
 "The C Preprocessor}) can generate such lines."
 msgstr ""
-"indica que a próxima linha era a linha 100 do arquivo @file{foo.ptexi}, e, "
-"portanto, isso é ao que uma mensagem de erro deveria se referir.  Tanto M4 "
-"(@pxref{Preprocessor features,,, m4, GNU M4}) quanto CPP (@pxref{Line "
-"Control,,, cpp, O Preprocessador C} e @ref{Preprocessor Output,,, cpp, O "
-"Preprocessador C}) conseguem gerar tais linhas."
+"@file{foo.ptexi}, e, portanto, isso é ao que uma mensagem de erro deveria se referir. Tanto M4 (@pxref{Recursos de preprocessador,,, m4, GNU M4}) quanto CPP (@pxref{Controle de Linha,,, cpp, O Preprocessador C} e @ref{Saída de Preprocessador,,, cpp, O Preprocessador C}) conseguem gerar tais linhas."
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:13866
-#, fuzzy
-#| msgid ""
-#| "The @command{texi2any} program recognizes these lines by default, except "
-#| "within @code{@@verbatim} blocks (@pxref{@code{@@verbatim}}).  Their "
-#| "recognition can be turned off completely with @code{CPP_LINE_DIRECTIVES} "
-#| "(@pxref{Other Customization Variables}), though there is normally no "
-#| "reason to do so."
 msgid ""
 "The @command{texi2any} program recognizes these lines by default, except "
 "within @code{@@verbatim} blocks (@pxref{@code{@@verbatim}}).  Their "
@@ -35415,11 +35284,7 @@ msgid ""
 "(@pxref{Global Customization Variables}), though there is normally no reason "
 "to do so."
 msgstr ""
-"O programa @command{texi2any} reconhece essas linhas por padrão, exceto "
-"dentro dos blocos @code{@@verbatim} (@pxref{@code{@@verbatim}}).  O "
-"reconhecimento delas pode ser desativado completamente com "
-"@code{CPP_LINE_DIRECTIVES} (@pxref{Outras Variáveis de Personalização}), "
-"embora normalmente não exista razão para fazer isso."
+"O programa @command{texi2any} reconhece essas linhas por padrão, exceto dentro dos blocos @code{@@verbatim} (@pxref{@code{@@verbatim}}). O reconhecimento delas pode ser desativado completamente com @code{CPP_LINE_DIRECTIVES} (@pxref{Variáveis Globais de Personalização}), embora normalmente não exista razão para fazer isso."
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:13872
@@ -36575,33 +36440,27 @@ msgstr "o diretório atual não fica abarrotado com uma abundância de arquivos 
 
 #. type: item
 #: texinfo/upstream/texinfo.texi:14344
-#, fuzzy, no-wrap
-#| msgid "clutter can be even further reduced using @option{--build-dir=dir}: all the @code{*.t2d} directories are stored there."
+#, no-wrap
 msgid "clutter can be even further reduced using @option{--build-dir=dir}: all"
-msgstr "a desordem pode ser ainda mais reduzida usando-se @option{--build-dir=diretório}: todos os diretórios @code{*.t2d} são armazenados lá."
+msgstr "a desordem pode ser reduzida ainda mais usando-se @option{--build-dir=diretório}: todos"
 
 #. type: itemize
 #: texinfo/upstream/texinfo.texi:14346
 msgid "the @code{*.t2d} directories are stored there."
-msgstr ""
+msgstr "os diretórios @code{*.t2d} ficam armazenados lá."
 
 #. type: item
 #: texinfo/upstream/texinfo.texi:14346
 #, no-wrap
 msgid "clutter can be reduced to zero using, e.g.,"
-msgstr ""
+msgstr "a desordem pode ser reduzida a zero usando-se, por exemplo,"
 
 #. type: itemize
 #: texinfo/upstream/texinfo.texi:14348
-#, fuzzy
-#| msgid ""
-#| "clutter can be reduced to zero using, e.g., @option{--build-dir=/tmp/\\"
-#| "$USER.t2d} or @option{--build-dir=\\$HOME/.t2d}."
 msgid ""
 "@option{--build-dir=/tmp/\\$USER.t2d} or @option{--build-dir=\\$HOME/.t2d}."
 msgstr ""
-"a desordem pode ser reduzida a zero usando-se, por exemplo, @option{--build-"
-"dir=/tmp/\\$USER.t2d} ou @option{--build-dir=\\$HOME/.t2d}."
+"@option{--build-dir=/tmp/\\$USER.t2d} ou @option{--build-dir=\\$HOME/.t2d}."
 
 #. type: item
 #: texinfo/upstream/texinfo.texi:14348
@@ -36611,52 +36470,35 @@ msgstr ""
 
 #. type: itemize
 #: texinfo/upstream/texinfo.texi:14351
-#, fuzzy
-#| msgid ""
-#| "the output file is updated after every successful @TeX{} run, for sake of "
-#| "concurrent visualization of the output.  In a @samp{local} build the "
-#| "viewer stops during the whole @TeX{} run."
 msgid ""
 "sake of concurrent visualization of the output.  In a @samp{local} build the "
 "viewer stops during the whole @TeX{} run."
 msgstr ""
-"o arquivo de saída é atualizado depois de cada execução bem-sucedida do "
-"@TeX{}, para fins de visualização concorrente da saída gerada.  Em uma "
-"construção @samp{local}, o visualizador para durante a execução inteira do "
-"@TeX{}."
+"para fins de visualização concorrente da saída gerada. Em uma construção @samp{local}, o visualizador para durante a execução inteira do @TeX{}."
 
 #. type: item
 #: texinfo/upstream/texinfo.texi:14351
-#, fuzzy, no-wrap
-#| msgid "if the compilation fails, the previous state of the output file is preserved."
+#, no-wrap
 msgid "if the compilation fails, the previous state of the output file"
-msgstr "se a compilação falhar, o estado anterior do arquivo de saída será preservado."
+msgstr "se a compilação falhar, o estado anterior do arquivo da saída gerada"
 
 #. type: itemize
 #: texinfo/upstream/texinfo.texi:14353
 msgid "is preserved."
-msgstr ""
+msgstr "será preservado."
 
 #. type: item
 #: texinfo/upstream/texinfo.texi:14353
-#, fuzzy, no-wrap
-#| msgid "@acronym{PDF} and @acronym{DVI} compilation are kept in separate subdirectories preventing any possibility of auxiliary file incompatibility."
+#, no-wrap
 msgid "@acronym{PDF} and @acronym{DVI} compilation are kept in separate"
-msgstr "As compilações @acronym{PDF} e @acronym{DVI} são mantidas em subdiretórios separados, evitando qualquer possibilidade de incompatibilidade dos arquivos auxiliares."
+msgstr "As compilações de @acronym{PDF} e de @acronym{DVI} são mantidas em separado"
 
 #. type: itemize
 #: texinfo/upstream/texinfo.texi:14356
-#, fuzzy
-#| msgid ""
-#| "@acronym{PDF} and @acronym{DVI} compilation are kept in separate "
-#| "subdirectories preventing any possibility of auxiliary file "
-#| "incompatibility."
 msgid ""
 "subdirectories preventing any possibility of auxiliary file incompatibility."
 msgstr ""
-"As compilações @acronym{PDF} e @acronym{DVI} são mantidas em subdiretórios "
-"separados, evitando qualquer possibilidade de incompatibilidade dos arquivos "
-"auxiliares."
+"subdiretórios, evitando qualquer possibilidade de incompatibilidade dos arquivos auxiliares."
 
 #. type: table
 #: texinfo/upstream/texinfo.texi:14362
@@ -36841,22 +36683,12 @@ msgstr "tex foo.texi\n"
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:14425
-#, fuzzy
-#| msgid ""
-#| "@TeX{} will produce a @dfn{DVI file} as well as several auxiliary files "
-#| "containing information for indices, cross-references, etc.  The DVI file "
-#| "(for @dfn{DeVice Independent} file) can be printed on virtually any "
-#| "device, perhaps after a further conversion (see the previous section)."
 msgid ""
 "files containing information for indices, cross-references, etc.  The DVI "
 "file (for @dfn{DeVice Independent} file) can be printed on virtually any "
 "device, perhaps after a further conversion (see the previous section)."
 msgstr ""
-"@TeX{} produzirá um @dfn{arquivo DVI}, bem como vários arquivos auxiliares "
-"contendo informações para índices, referências cruzadas, entre outros.  O "
-"arquivo DVI (para arquivo @dfn{DeVice Independent}) pode ser impresso em "
-"praticamente qualquer dispositivo, talvez depois de uma conversão adicional "
-"(veja-se a seção anterior)."
+"arquivos contendo informações para índices, referências cruzadas, entre outros. O arquivo DVI (para arquivo @dfn{DeVice Independent}) pode ser impresso em praticamente qualquer dispositivo, talvez depois de uma conversão adicional (veja-se a seção anterior)."
 
 #. type: pindex
 #: texinfo/upstream/texinfo.texi:14426
@@ -37146,18 +36978,11 @@ msgstr ""
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:14539
-#, fuzzy
-#| msgid ""
-#| "@code{@@novalidate} also turns off validation in @command{texi2any}, just "
-#| "like its @code{--no-validate} option (@pxref{Invoking "
-#| "@command{texi2any}})."
 msgid ""
 "@command{texi2any}, just like its @code{--no-validate} option "
 "(@pxref{Invoking @command{texi2any}})."
 msgstr ""
-"@code{@@novalidate} também desativa a validação no @command{texi2any}, assim "
-"como a opção @code{--no-validate} dele (@pxref{Invocando "
-"@command{texi2any}})."
+"@command{texi2any}, assim como a opção @code{--no-validate} dele (@pxref{Invocando @command{texi2any}})."
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:14545
@@ -37332,16 +37157,13 @@ msgstr ""
 
 #. type: display
 #: texinfo/upstream/texinfo.texi:14603
-#, fuzzy, no-wrap
-#| msgid ""
-#| "@uref{http://ftp.gnu.org/gnu/texinfo/texinfo.tex}\n"
-#| "@uref{http://ftpmirror.gnu.org/texinfo/texinfo.tex}\n"
+#, no-wrap
 msgid ""
 "@uref{https://ftp.gnu.org/gnu/texinfo/texinfo.tex}\n"
 "@uref{https://ftpmirror.gnu.org/texinfo/texinfo.tex}\n"
 msgstr ""
-"@uref{http://ftp.gnu.org/gnu/texinfo/texinfo.tex}\n"
-"@uref{http://ftpmirror.gnu.org/texinfo/texinfo.tex}\n"
+"@uref{https://ftp.gnu.org/gnu/texinfo/texinfo.tex}\n"
+"@uref{https://ftpmirror.gnu.org/texinfo/texinfo.tex}\n"
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:14607
@@ -37354,10 +37176,9 @@ msgstr ""
 
 #. type: display
 #: texinfo/upstream/texinfo.texi:14610
-#, fuzzy, no-wrap
-#| msgid "@uref{http://git.savannah.gnu.org/cgit/texinfo.git/plain/doc/texinfo.tex}\n"
+#, no-wrap
 msgid "@uref{https://git.savannah.gnu.org/cgit/texinfo.git/plain/doc/texinfo.tex}\n"
-msgstr "@uref{http://git.savannah.gnu.org/cgit/texinfo.git/plain/doc/texinfo.tex}\n"
+msgstr "@uref{https://git.savannah.gnu.org/cgit/texinfo.git/plain/doc/texinfo.tex}\n"
 
 #. type: pindex
 #: texinfo/upstream/texinfo.texi:14612
@@ -37738,19 +37559,12 @@ msgstr "finalout"
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:14739
-#, fuzzy
-#| msgid ""
-#| "To prevent such a monstrosity from marring your final printout, write the "
-#| "following in the beginning of the Texinfo file on a line of its own, "
-#| "before the @code{@@titlepage} command:"
 msgid ""
 "To prevent such a monstrosity from marring your final printout, write the "
 "following in the beginning of the Texinfo file on a line of its own, before "
 "the @code{@@maketitle} or @code{@@titlepage} command:"
 msgstr ""
-"Para impedir que essa monstruosidade estrague tua impressão final, escreva o "
-"seguinte no início do arquivo do Texinfo em uma linha própria, antes do "
-"comando @code{@@titlepage}:"
+"Para impedir que tal monstruosidade estrague tua impressão final, escreva o seguinte no início do arquivo do Texinfo em uma linha própria, antes do comando @code{@@maketitle}ou do @code{@@titlepage}:"
 
 #. type: example
 #: texinfo/upstream/texinfo.texi:14742
@@ -37760,30 +37574,26 @@ msgstr "@@finalout\n"
 
 #. type: section
 #: texinfo/upstream/texinfo.texi:14744 texinfo/upstream/texinfo.texi:14746
-#, fuzzy, no-wrap
-#| msgid "Printing Indices and Menus"
+#, no-wrap
 msgid "Printing Japanese and Chinese"
-msgstr "Imprimindo Índices e Menus"
+msgstr "Imprimindo Japonês e Chinês"
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:14746
-#, fuzzy
-#| msgid "@nodedescription Keep names unique."
 msgid "@nodedescription XeTeX or LuaTeX required."
-msgstr "@nodedescription Mantenha nomes únicos."
+msgstr "@nodedescription XeTeX ou LuaTeX exigidos."
 
 #. type: cindex
 #: texinfo/upstream/texinfo.texi:14748
 #, no-wrap
 msgid "Chinese language"
-msgstr ""
+msgstr "Idioma chinês"
 
 #. type: cindex
 #: texinfo/upstream/texinfo.texi:14749
-#, fuzzy, no-wrap
-#| msgid "Variables, in typed languages"
+#, no-wrap
 msgid "Japanese language"
-msgstr "Variáveis, em linguagens tipadas"
+msgstr "Idioma japonês"
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:14752
@@ -37794,16 +37604,15 @@ msgstr ""
 
 #. type: cindex
 #: texinfo/upstream/texinfo.texi:14753
-#, fuzzy, no-wrap
-#| msgid "Hardcopy with @TeX{}"
+#, no-wrap
 msgid "Japanese with Xe@TeX{}"
-msgstr "Impresso com @TeX{}"
+msgstr "Japonês com Xe@TeX{}"
 
 #. type: cindex
 #: texinfo/upstream/texinfo.texi:14754
 #, no-wrap
 msgid "Japanese with LuaTeX"
-msgstr ""
+msgstr "Japonês com LuaTeX"
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:14760
@@ -37812,14 +37621,13 @@ msgid ""
 "should begin with a @samp{\\input texinfo-ja} line, rather than the standard "
 "@w{@samp{\\input texinfo}}.  Use the UTF-8 character encoding as usual.  You "
 "must process the files with either Xe@TeX{} or LuaTeX."
-msgstr ""
+msgstr "Para japonês, você usa o arquivo @file{texinfo-ja.tex}. Teu arquivo de entrada principal deveria começar com uma linha @samp{\\input texinfo-ja}, em vez da padrão @w{@samp{\\input texinfo}}. Use a codificação de caracteres UTF-8 como de costume. Você precisa processar os arquivos ou com Xe@TeX{} ou com LuaTeX."
 
 #. type: cindex
 #: texinfo/upstream/texinfo.texi:14761
-#, fuzzy, no-wrap
-#| msgid "Debugging with @TeX{}"
+#, no-wrap
 msgid "Chinese with Xe@TeX{}"
-msgstr "Depuração com @TeX{}"
+msgstr "Chinês com Xe@TeX{}"
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:14767
@@ -37828,7 +37636,7 @@ msgid ""
 "should begin with a @samp{\\input texinfo-zh} line, rather than the standard "
 "@w{@samp{\\input texinfo}}.  Use the UTF-8 character encoding as usual.  You "
 "must process the files with Xe@TeX{}."
-msgstr ""
+msgstr "Para chinês, você usa o arquivo @file{texinfo-zh.tex}. Teu arquivo de entrada principal deveria começar com uma linha @samp{\\input texinfo-zh}, em vez da padrão @w{@samp{\\input texinfo}}. Use a codificação de caracteres UTF-8 como de costume. Você precisa processar os arquivos com Xe@TeX{}."
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:14772
@@ -37836,7 +37644,7 @@ msgid ""
 "For example, you would run @samp{PDFTEX=xetex texi2pdf @var{my-input-"
 "file.texi}} to use Xe@TeX{} to produce PDF output.  You may have to install "
 "Xe@TeX{} (or LuaTeX), the @samp{zhspacing} package, and/or font packages."
-msgstr ""
+msgstr "Por exemplo, você executaria @samp{PDFTEX=xetex texi2pdf @var{meu-arquivo-entrada.texi}} para usar Xe@TeX{} para produzir saída em PDF. Você possivelmente tenha que instalar o Xe@TeX{} (ou o LuaTeX), o pacote @samp{zhspacing} e(ou) pacotes de fontes."
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:14776
@@ -37844,7 +37652,7 @@ msgid ""
 "Neither Japanese nor Chinese is supported with the standard @TeX{} (or "
 "pdf@TeX{}) program, as it cannot support the fonts and thousands of glyphs "
 "needed for these languages."
-msgstr ""
+msgstr "Nem o japonês nem o chinês são suportados com o programa padrão @TeX{} (ou o pdf@TeX{}), pois ele não suporta as fontes e milhares de glifos necessários para esses idiomas."
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:14781
@@ -37852,21 +37660,19 @@ msgid ""
 "The Texinfo distribution comes with a couple of sample files that you can "
 "use to test support for these languages: @samp{short-sample-ja.texi} for "
 "Japanese, and @samp{short-sample-zh.texi} for Chinese."
-msgstr ""
+msgstr "A distribuição do Texinfo vem com alguns arquivos de amostra que você pode usar para testar o suporte para esses idiomas: @samp{short-sample-ja.texi} para japonês e @samp{short-sample-zh.texi} para chinês."
 
 #. type: cindex
 #: texinfo/upstream/texinfo.texi:14782
-#, fuzzy, no-wrap
-#| msgid "Use @TeX{}"
+#, no-wrap
 msgid "Xe@TeX{}"
-msgstr "Use @TeX{}"
+msgstr "Xe@TeX{}"
 
 #. type: cindex
 #: texinfo/upstream/texinfo.texi:14783
-#, fuzzy, no-wrap
-#| msgid "LaTeX"
+#, no-wrap
 msgid "LuaTeX"
-msgstr "LaTeX"
+msgstr "LuaTeX"
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:14787
@@ -37874,7 +37680,7 @@ msgid ""
 "For more information on these extensions to @TeX{}, see @uref{https://"
 "tug.org/xetex/, the Xe@TeX{} home page} and @uref{https://www.luatex.org/, "
 "the LuaTeX website}."
-msgstr ""
+msgstr "Para mais informações acerca dessas extensões para @TeX{}, veja-se @uref{https://tug.org/xetex/, a página inicial do Xe@TeX{}} e @uref{https://www.luatex.org/, o site do LuaTeX}."
 
 #. type: node
 #: texinfo/upstream/texinfo.texi:14789
@@ -37938,14 +37744,6 @@ msgstr ""
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:14818
-#, fuzzy
-#| msgid ""
-#| "Beside these default formats, command line options to @command{texi2any} "
-#| "can change many aspects of the output.  Beyond that, initialization files "
-#| "provide even more control over the final output---nearly anything not "
-#| "specified in the Texinfo input file.  Initialization files are written in "
-#| "Perl, like the main program, and anything which can be specified on the "
-#| "command line can also be specified within a initialization file."
 msgid ""
 "Beside these default formats, command line options to @command{texi2any} can "
 "change many aspects of the output.  Beyond that, initialization files "
@@ -37954,13 +37752,7 @@ msgid ""
 "Perl, and anything which can be specified on the command line can also be "
 "specified within a initialization file."
 msgstr ""
-"Além desses formatos padrão, as opções de linha de comando para "
-"@command{texi2any} podem mudar muitos aspectos da saída gerada. Além disso, "
-"os arquivos de inicialização fornecem ainda mais controle sobre a saída "
-"final---quase tudo o que não esteja especificado no arquivo de entrada do "
-"Texinfo. Os arquivos de inicialização são escritos em Perl, como o programa "
-"principal, e qualquer coisa que possa ser especificada na linha de comando "
-"também pode ser especificada em um arquivo de inicialização."
+"Além desses formatos padrão, as opções de linha de comando para @command{texi2any} podem mudar muitos aspectos da saída gerada. Além disso, os arquivos de inicialização fornecem ainda mais controle sobre a saída final---quase tudo o que não esteja especificado no arquivo de entrada do Texinfo. Os arquivos de inicialização são escritos em Perl, e qualquer coisa que possa ser especificada na linha de comando também pode ser especificada em um arquivo de inicialização."
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:14829
@@ -38545,15 +38337,6 @@ msgstr "-I @var{diretório}"
 
 #. type: table
 #: texinfo/upstream/texinfo.texi:15040
-#, fuzzy
-#| msgid ""
-#| "Append @var{dir} to the directory search list for finding files that are "
-#| "included using the @code{@@include} command.  By default, "
-#| "@command{texi2any} searches only the current directory.  If @var{dir} is "
-#| "not given, the current directory is appended.  The @var{dir} value can be "
-#| "a single directory or a list of several directories separated by the "
-#| "usual path separator character (@samp{:} on Unix-like systems, @samp{;} "
-#| "on Windows)."
 msgid ""
 "Append @var{dir} to the directory search list for finding files that are "
 "included using the @code{@@include} command.  By default, @command{texi2any} "
@@ -38562,14 +38345,7 @@ msgid ""
 "be a single directory or a list of several directories separated by the "
 "usual path separator character (@samp{:} on Unix-like systems, @samp{;} on "
 "Windows)."
-msgstr ""
-"Preponha @var{diretório} à lista de pesquisa de diretórios para encontrar "
-"arquivos que sejam incluídos usando o comando @code{@@include}. Por padrão, "
-"@command{texi2any} pesquisa somente o diretório atual. Se @var{diretório} "
-"não for fornecido, o diretório atual será preposto. O valor de "
-"@var{diretório} pode ser um diretório ou uma lista de vários diretórios "
-"separados pelo caractere usual separador de caminhos (@samp{:} em sistemas "
-"do tipo Unix, @samp{;} no Windows)."
+msgstr "Posponha @var{diretório} à lista de pesquisa de diretório para encontrar arquivos que sejam incluídos usando o comando @code{@@include}. Por padrão, @command{texi2any} pesquisa o diretório atual e o diretório principal do caminho do arquivo de entrada, se existir um (e não for o diretório atual). O valor de @var{diretório} pode ser um diretório ou uma lista de vários diretórios separados pelo caractere separador de caminho usual (@samp{:} em sistemas do tipo Unix, @samp{;} no Windows)."
 
 #. type: opindex
 #: texinfo/upstream/texinfo.texi:15041 texinfo/upstream/texinfo.texi:15042
@@ -38744,37 +38520,23 @@ msgstr "Linques internos, do HTML"
 
 #. type: table
 #: texinfo/upstream/texinfo.texi:15109
-#, fuzzy
-#| msgid ""
-#| "In HTML mode, output a tab-separated file containing three columns: the "
-#| "internal link to an indexed item or item in the table of contents, the "
-#| "name of the index (or table of contents) in which it occurs, and the term "
-#| "which was indexed or entered.  The items are in the natural sorting order "
-#| "for the given element.  This dump can be useful for post-processors."
 msgid ""
 "In HTML mode, output a tab-separated file containing three columns: the "
 "internal link to an item, the type of the item and the name of the item or "
 "the term corresponding to the item which was indexed or entered."
 msgstr ""
-"No modo HTML, produzir um arquivo separado por tabulações contendo três "
-"colunas: o linque interno para um item indexado ou item no sumário, o nome "
-"do índice (ou sumário) no qual ele ocorre e o termo que foi indexado ou "
-"inserido. Os itens estão na ordem natural de classificação para o elemento "
-"fornecido. Esse despejo pode ser útil para pós-processadores."
+"No modo HTML, produzir um arquivo separado por tabulações contendo três colunas: o linque interno para um item, o tipo do item e o nome do item ou o termo correspondente ao item que foi indexado ou inserido."
 
 #. type: table
 #: texinfo/upstream/texinfo.texi:15111
-#, fuzzy
-#| msgid "The output is:"
 msgid "The items output are:"
-msgstr "A saída gerada é:"
+msgstr "Os itens gerados são:"
 
 #. type: item
 #: texinfo/upstream/texinfo.texi:15112
-#, fuzzy, no-wrap
-#| msgid "The output is:"
+#, no-wrap
 msgid "output units"
-msgstr "A saída gerada é:"
+msgstr "unidades de saída gerada"
 
 #. type: table
 #: texinfo/upstream/texinfo.texi:15116
@@ -38782,51 +38544,49 @@ msgid ""
 "Output units are the main unit of output documents.  Output units contain "
 "the content associated with a node or a sectioning command.  The item name "
 "is the associated node or a sectioning command name."
-msgstr ""
+msgstr "As unidades de saída são a unidade principal dos documentos de saída. As unidades de saída contêm o conteúdo associado a um nó ou a um comando de seccionamento. O nome do item é o nó associado ou um nome de comando de seccionamento."
 
 #. type: item
 #: texinfo/upstream/texinfo.texi:15116
-#, fuzzy, no-wrap
-#| msgid "Subsub sectioning commands"
+#, no-wrap
 msgid "sectioning commands"
-msgstr "Comandos subsub de seccionamento"
+msgstr "Comandos de seccionamento"
 
 #. type: table
 #: texinfo/upstream/texinfo.texi:15119
 msgid ""
 "The command name without @code{@@}, adjusted for raise/lowersections is "
 "prepended to the item name."
-msgstr ""
+msgstr "O nome do comando sem @code{@@}, ajustado para elevar/rebaixar seções é posposto ao nome do item."
 
 #. type: item
 #: texinfo/upstream/texinfo.texi:15119
 #, no-wrap
 msgid "nodes, anchors and floats"
-msgstr ""
+msgstr "nós, âncoras e flutuadores"
 
 #. type: table
 #: texinfo/upstream/texinfo.texi:15121
 msgid "The type of the element is the command name without @code{@@}."
-msgstr ""
+msgstr "O tipo do elemento é o nome do comando sem @code{@@}."
 
 #. type: item
 #: texinfo/upstream/texinfo.texi:15121
-#, fuzzy, no-wrap
-#| msgid "Index entries"
+#, no-wrap
 msgid "index entries"
-msgstr "Entradas de índice"
+msgstr "intradas de índice"
 
 #. type: table
 #: texinfo/upstream/texinfo.texi:15123
 msgid "The type of the element is the name of the index."
-msgstr ""
+msgstr "O tipo do elemento é o nome do índice."
 
 #. type: table
 #: texinfo/upstream/texinfo.texi:15128
 msgid ""
 "The items are in the natural sorting order for the given element.  This dump "
 "can be useful for post-processors."
-msgstr ""
+msgstr "Os itens estão na ordem de classificação natural para o elemento fornecido. Esse despejo pode ser útil para pós-processadores."
 
 #. type: opindex
 #: texinfo/upstream/texinfo.texi:15129 texinfo/upstream/texinfo.texi:15130
@@ -39222,18 +38982,11 @@ msgstr "-P @var{caminho}"
 
 #. type: table
 #: texinfo/upstream/texinfo.texi:15287
-#, fuzzy
-#| msgid ""
-#| "Prepend @var{path} to the directory search list for @code{@@include}.  If "
-#| "@var{path} is not given, the current directory is prepended.  See @samp{-"
-#| "I} above."
 msgid ""
 "Prepend @var{path} to the directory search list for @code{@@include}.  See "
 "@samp{-I} above."
 msgstr ""
-"Posponha @var{caminho} à lista de pesquisa de diretórios para "
-"@code{@@include}. Se @var{caminho} não for fornecido, o diretório atual será "
-"posposto. Veja-se @samp{-I} acima."
+"Posponha @var{caminho} à lista de pesquisa de diretórios para @code{@@include}. Veja-se @samp{-I} acima."
 
 #. type: opindex
 #: texinfo/upstream/texinfo.texi:15288 texinfo/upstream/texinfo.texi:15290
@@ -39529,10 +39282,9 @@ msgstr ""
 #. type: option{#1}
 #: texinfo/upstream/texinfo.texi:15393 texinfo/upstream/texinfo.texi:15394
 #: texinfo/upstream/texinfo.texi:15773
-#, fuzzy, no-wrap
-#| msgid "--css-include"
+#, no-wrap
 msgid "--trace-includes"
-msgstr "--css-include"
+msgstr "--trace-includes"
 
 #. type: table
 #: texinfo/upstream/texinfo.texi:15401
@@ -39553,21 +39305,13 @@ msgstr "--transliterate-file-names"
 
 #. type: table
 #: texinfo/upstream/texinfo.texi:15409
-#, fuzzy
-#| msgid ""
-#| "Enable transliteration of non-ASCII characters in node names for the "
-#| "purpose of file name creation.  @xref{HTML Xref 8-bit Character "
-#| "Expansion}."
 msgid ""
 "Enable transliteration of non-ASCII characters in node and sectioning "
 "commands names for the purpose of file name and sectioning commands "
 "identifiers creation.  The file names and identifiers obtained that way are "
 "platform and processor dependent.  @xref{HTML Xref 8-bit Character "
 "Expansion}."
-msgstr ""
-"Habilitar transliteração de caracteres não ASCII em nomes de nós para fins "
-"de criação de nomes de arquivos. @xref{Expansão de Caracteres de 8 bits do "
-"Xref do HTML}."
+msgstr "Habilitar transliteração de caracteres não ASCII em nomes de comandos de nó e de seccionamento para fins de criação de identificadores de nomes de arquivos e de comandos de seccionamento. Os nomes de arquivos e identificadores obtidos dessa maneira são dependentes da plataforma e do processador. @xref{Expansão de Caracteres de 8 bits do Xref do HTML}."
 
 #. type: table
 #: texinfo/upstream/texinfo.texi:15415
@@ -39577,7 +39321,7 @@ msgid ""
 "created too.  It is recommended to have non-translitered file names created "
 "for nodes such that cross-references to the generated manual succeed.  "
 "@xref{@option{--node-files}}. @xref{HTML Xref Configuration}."
-msgstr ""
+msgstr "Arquivos de redirecionamento para âncoras e nós não são afetados, portanto, se @option{--node-files} estiver habilitada, arquivos com nomes não transliterados também serão criados. É recomendado criar nomes de arquivos não transliterados para nós, de modo que as referências cruzadas para o manual gerado sejam bem-sucedidas. @xref{@option{--nodes-files}}. @xref{Configuração do Xref do HTML}."
 
 #. type: item
 #: texinfo/upstream/texinfo.texi:15416
