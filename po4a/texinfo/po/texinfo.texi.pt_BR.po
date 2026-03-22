@@ -46167,40 +46167,16 @@ msgstr ""
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:17958
-#, fuzzy
-#| msgid ""
-#| "The @var{dir} and @var{file} parts are more complicated, and depend on "
-#| "the relative split/mono nature of both the manual being processed and the "
-#| "manual that the cross-reference refers to.  The underlying idea is that "
-#| "there is one directory for Texinfo manuals in HTML, and a given "
-#| "@var{manual} is either available as a monolithic file "
-#| "@file{@var{manual}.html}, or a split subdirectory @file{@var{manual}_html/"
-#| "*.html}.  Here are the cases:"
 msgid ""
 "The underlying idea is that there is one directory for Texinfo manuals in "
 "HTML, and a given @var{manual} is either available as a monolithic file "
 "@file{@var{manual}.html}, or as a split subdirectory @file{@var{manual}_html/"
 "*.html}."
 msgstr ""
-"As partes @var{diretório} e @var{arquivo} são mais complicadas e dependem da "
-"natureza relativa de dividido/mono de ambos, o manual sendo processado e do "
-"manual ao qual a referência cruzada se refere. A ideia subjacente é a de que "
-"existe um diretório para manuais do Texinfo em HTML, e um determinado "
-"@var{manual} está ou disponível como um arquivo monolítico "
-"@file{@var{manual}.html} ou como um subdiretório dividido @file{@var{manual}"
-"_html/*.html}. Aqui estão os casos:"
+"A ideia subjacente é a de que existe um diretório para manuais do Texinfo em HTML, e um determinado @var{manual} ou está disponível como um arquivo monolítico @file{@var{manual}.html} ou como um subdiretório dividido @file{@var{manual}_html/*.html}."
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:17967
-#, fuzzy
-#| msgid ""
-#| "Another rule, that only holds for file names, is that base file names are "
-#| "truncated to 245 characters, to allow for an extension to be appended and "
-#| "still comply with the 255-character limit which is common to many "
-#| "filesystems.  Although technically this can be changed with the "
-#| "@code{BASEFILENAME_LENGTH} customization variable (@pxref{Other "
-#| "Customization Variables}), doing so would make cross-manual references to "
-#| "such nodes invalid."
 msgid ""
 "Another rule, which only holds for file names, is that base file names are "
 "truncated to 245 characters to allow for an extension to be appended and "
@@ -46210,10 +46186,7 @@ msgstr ""
 "Outra regra, que vale somente para nomes de arquivos, é que nomes de base de "
 "arquivos sejam truncados para 245 caracteres, para permitir que uma extensão "
 "seja posposta e ainda cumpra o limite de 255 caracteres, o qual é comum para "
-"muitos sistemas de arquivos. Embora tecnicamente isso possa ser mudado com a "
-"variável de personalização @code{BASEFILENAME_LENGTH} (@pxref{Outras "
-"Variáveis de Personalização}), fazer isso tornaria inválidas as referências "
-"entre manuais para tais nós."
+"muitos sistemas de arquivos."
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:17974
@@ -46237,19 +46210,12 @@ msgstr "Finalmente, a parte do @var{alvo} é sempre o nome expandido do nó."
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:17980
-#, fuzzy
-#| msgid ""
-#| "Whether the present manual is split or mono is determined by user option; "
-#| "@command{texi2any} defaults to split, with the @option{--no-split} option "
-#| "overriding this."
 msgid ""
 "Whether the present manual is output as split or mono is determined by how "
 "you run @command{texi2any}; the default is to split, with the @option{--no-"
 "split} option overriding this."
 msgstr ""
-"Quer o manual atual seja dividido ou quer seja mono é determinado pela opção "
-"de usuário(a); O padrão do @command{texi2any} é dividido, com a opção "
-"@option{--no-split} substituindo isso."
+"Quer o manual atual seja dividido ou quer seja mono é determinado por como você executa o @command{texi2any}; o padrão é o de dividir, com a opção @option{--no-split} substituindo isso."
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:17985
@@ -46258,15 +46224,10 @@ msgid ""
 "the same form as the present manual: if the present manual is generated as "
 "split, then links to other manuals are to their split forms by default; "
 "likewise for mono output."
-msgstr ""
+msgstr "Por padrão, @command{texi2any} gera linques para um manual referente usando a mesma forma do manual atual: se o manual atual for gerado como dividido, então linques para outros manuais serão para as formas divididas deles por padrão; da mesma forma para saída mono."
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:17991
-#, fuzzy
-#| msgid ""
-#| "Thus, there can be a mismatch between the format of the referent manual "
-#| "that the generating software assumes, and the format it's actually "
-#| "present in.  @xref{HTML Xref Mismatch}."
 msgid ""
 "However, the form of the referent manual (mono or split) should usually be "
 "specified in a configuration file (@pxref{HTML Xref Configuration}).  This "
@@ -46274,9 +46235,7 @@ msgid ""
 "that the generating software assumes, and the format it's actually present "
 "in."
 msgstr ""
-"Assim, pode existir uma descorrespondência entre o formato do manual "
-"referente que o software gerador assume e o formato em que ele está "
-"realmente presente. @xref{Descorrespondência do Xref do HTML}."
+"Entretanto, a forma do manual referente (mono ou dividido) normalmente deveria ser especificada em um arquivo de configuração (@pxref{Configuração do Xref do HTML}). Isso garante que não exista descorrespondência entre o formato do manual referente que o software gerador assume e o formato em que ele realmente esteja presente."
 
 #. type: node
 #: texinfo/upstream/texinfo.texi:17993
@@ -46945,19 +46904,6 @@ msgstr ""
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:18217
-#, fuzzy
-#| msgid ""
-#| "This method works fine if the node name consists mostly of ASCII "
-#| "characters and contains only few 8-bit ones.  But if the document is "
-#| "written in a language whose script is not based on the Latin alphabet "
-#| "(for example, Ukrainian), it will create file names consisting almost "
-#| "entirely of @samp{_@var{xxxx}} notations, which is inconvenient and all "
-#| "but unreadable.  To handle such cases, @command{texi2any} offers the "
-#| "@option{--transliterate-file-names} command line option.  This option "
-#| "enables @dfn{transliteration} of node names into ASCII characters for the "
-#| "purposes of file name creation and referencing.  The transliteration is "
-#| "based on phonetic principles, which makes the generated file names more "
-#| "easily understandable."
 msgid ""
 "This method works fine if the node name consists mostly of ASCII characters "
 "and contains only few 8-bit ones.  But if the document is written in a "
@@ -46978,9 +46924,7 @@ msgstr ""
 "ilegível. Para lidar com esses casos, @command{texi2any} oferece a opção de "
 "linha de comando @option{--transliterate-file-names}. Essa opção habilita "
 "@dfn{transliteração} de nomes de nós em caracteres ASCII para fins de "
-"criação e referenciamento de nomes de arquivos. A transliteração é baseada "
-"em princípios fonéticos, o que torna os nomes dos arquivos gerados mais "
-"facilmente compreensíveis."
+"criação de nomes de arquivos. A transliteração é baseada em princípios fonéticos, o que torna os nomes dos arquivos gerados mais facilmente compreensíveis."
 
 #. type: cindex
 #: texinfo/upstream/texinfo.texi:18218
@@ -47183,54 +47127,41 @@ msgstr "@var{datadir}/texinfo/"
 
 #. type: table
 #: texinfo/upstream/texinfo.texi:18289
-#, fuzzy
-#| msgid "(likewise specified at compile time, e.g., @file{/usr/local/share})"
 msgid "(specified at compile time, e.g., @file{/usr/local/share})"
 msgstr ""
-"(igualmente especificado ao tempo de compilação, por exemplo, @file{/usr/"
-"local/share})"
+"(especificado ao tempo de compilação, por exemplo, @file{/usr/local/share})"
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:18307
-#, fuzzy
-#| msgid ""
-#| "All files found are used, with earlier entries overriding later ones.  "
-#| "The Texinfo distribution includes a default file which handles many GNU "
-#| "manuals; it is installed in the last of the above directories, i.e., "
-#| "@file{@var{datadir}/texinfo/htmlxref.cnf}."
 msgid ""
 "All files found are used, with earlier entries overriding later ones.  The "
 "Texinfo distribution includes files that are installed in "
 "@file{@var{datadir}/texinfo/htmlxref.d}, in one of the last of the above "
 "directories:"
 msgstr ""
-"Todos os arquivos encontrados são usados, com as entradas anteriores "
-"substituindo as posteriores. A distribuição do Texinfo inclui um arquivo "
-"padrão que lida com muitos manuais GNU; ele é instalado no último dos "
-"diretórios acima, ou seja, @file{@var{datadir}/texinfo/htmlxref.cnf}."
+"Todos os arquivos encontrados são usados, com as entradas anteriores substituindo as posteriores. A distribuição do Texinfo inclui arquivos que são instalados em @file{@var{datadir}/texinfo/htmlxref.d}, em um dos últimos dos diretórios acima:"
 
 #. type: item
 #: texinfo/upstream/texinfo.texi:18309
-#, fuzzy, no-wrap
-#| msgid "Texinfo"
+#, no-wrap
 msgid "Texinfo_GNU.cnf"
-msgstr "Texinfo"
+msgstr "Texinfo_GNU.cnf"
 
 #. type: table
 #: texinfo/upstream/texinfo.texi:18311
 msgid "Handles many GNU manuals."
-msgstr ""
+msgstr "Manuseia muitos manuais GNU."
 
 #. type: item
 #: texinfo/upstream/texinfo.texi:18311
 #, no-wrap
 msgid "Texinfo_nonGNU.cnf"
-msgstr ""
+msgstr "Texinfo_nonGNU.cnf"
 
 #. type: table
 #: texinfo/upstream/texinfo.texi:18313
 msgid "Free manuals of non GNU projects."
-msgstr ""
+msgstr "Manuais livres de projetos não GNU."
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:18321
@@ -47241,17 +47172,10 @@ msgid ""
 "manuals.  Other software packages managing lists of manuals following the "
 "HTML cross-references specification could install @file{.cnf} files in "
 "@file{@var{datadir}/texinfo/htmlxref.d}."
-msgstr ""
+msgstr "Você pode usar um @file{htmlxref.cnf} local para completar ou para corrigir os arquivos padrão provenientes da distribuição do Texinfo. Isso poderia ser útil para corrigir dados desatualizados ou, até mesmo, para gerar referências cruzadas para arquivos locais para alguns manuais. Outros pacotes de software que gerenciam listas de manuais seguindo a especificação de referências cruzadas do HTML poderiam instalar arquivos @file{.cnf} em @file{@var{datadir}/texinfo/htmlxref.d}."
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:18326
-#, fuzzy
-#| msgid ""
-#| "The @code{HTMLXREF_MODE} customization variable can be set to modify how "
-#| "the files are found.  For instance, if set to @samp{none}, no external "
-#| "information is used.  @code{HTMLXREF_FILE} sets the file name to "
-#| "something else than @file{htmlxref.cnf}.  @pxref{HTML Customization "
-#| "Variables}."
 msgid ""
 "The @code{HTMLXREF_MODE} customization variable can be set to modify how the "
 "files are found.  For instance, if set to @samp{none}, no external "
@@ -47262,7 +47186,7 @@ msgstr ""
 "modificar como os arquivos são encontrados. Por exemplo, se configurada como "
 "@samp{none}, nenhuma informação externa será usada. @code{HTMLXREF_FILE} "
 "configura o nome do arquivo para algo diferente de @file{htmlxref.cnf}. "
-"@pxref{Variáveis de Personalização do HTML}."
+"@xref{Variáveis de Personalização do HTML}."
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:18332
@@ -62337,12 +62261,6 @@ msgstr ""
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:23847
-#, fuzzy
-#| msgid ""
-#| "At the beginning of a manual or book, pages are not numbered---for "
-#| "example, the title and copyright pages of a book are not numbered.  By "
-#| "convention, table of contents and frontmatter pages are numbered with "
-#| "roman numerals and not in sequence with the rest of the document."
 msgid ""
 "At the beginning of a manual or book, pages are not numbered---for example, "
 "the title and copyright pages of a book are not numbered.  By convention, "
@@ -62463,15 +62381,6 @@ msgstr ""
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:23892
-#, fuzzy
-#| msgid ""
-#| "In Texinfo, headings and footings are single lines at the tops and "
-#| "bottoms of pages; you cannot create multiline headings or footings.  Each "
-#| "header or footer line is divided into three parts: a left part, a middle "
-#| "part, and a right part.  Any part, or a whole line, may be left blank.  "
-#| "Text for the left part of a header or footer line is set flushleft; text "
-#| "for the middle part is centered; and, text for the right part is set "
-#| "flushright."
 msgid ""
 "In Texinfo, headings and footings are single lines at the tops and bottoms "
 "of pages; you cannot create multiline headings or footings.  Each header or "
@@ -63026,15 +62935,11 @@ msgstr "thissection"
 
 #. type: table
 #: texinfo/upstream/texinfo.texi:24108
-#, fuzzy
-#| msgid ""
-#| "Expands to the number and name of the current section, in the format "
-#| "`Section 1: Title'."
 msgid ""
 "Expands to the number and name of the current section, in the format "
 "`Section 1.1: Title'."
 msgstr ""
-"Expande para o número e nome da seção atual, no formato `Seção 1: Título'."
+"Expande para o número e nome da seção atual, no formato `Seção 1.1: Título'."
 
 #. type: findex
 #: texinfo/upstream/texinfo.texi:24109
@@ -63055,13 +62960,9 @@ msgstr "thissectionnum"
 
 #. type: table
 #: texinfo/upstream/texinfo.texi:24116
-#, fuzzy
-#| msgid ""
-#| "Expands to the number and name of the current section, in the format "
-#| "`Section 1: Title'."
 msgid "Expands to the number of the current section, in the format `1.1'."
 msgstr ""
-"Expande para o número e nome da seção atual, no formato `Seção 1: Título'."
+"Expande para o número da seção atual, no formato `1.1'."
 
 #. type: findex
 #: texinfo/upstream/texinfo.texi:24117
@@ -63104,23 +63005,17 @@ msgstr "Expande para o número do capítulo atual ou letra do apêndice atual."
 
 #. type: findex
 #: texinfo/upstream/texinfo.texi:24131
-#, fuzzy, no-wrap
-#| msgid "thispage"
+#, no-wrap
 msgid "thispart"
-msgstr "thispage"
+msgstr "thispart"
 
 #. type: table
 #: texinfo/upstream/texinfo.texi:24135
-#, fuzzy
-#| msgid ""
-#| "Expands to the name of the document, as specified by the "
-#| "@code{@@settitle} command."
 msgid ""
 "Expands to the name of the current part, as specified by the last "
 "@code{@@part} command."
 msgstr ""
-"Expande para o nome do documento, conforme especificado pelo comando "
-"@code{@@settitle}."
+"Expande para o nome da parte atual, conforme especificado pelo último comando @code{@@part}."
 
 #. type: findex
 #: texinfo/upstream/texinfo.texi:24136
@@ -64809,26 +64704,15 @@ msgstr "Seção da variável local, no formato Info"
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:24760
-#, fuzzy
-#| msgid ""
-#| "The local variables section is optional and is currently used to give the "
-#| "encoding information.  It may be augmented in the future."
 msgid ""
 "The local variables section is optional.  It is currently used to give the "
 "encoding information and/or the document language code."
 msgstr ""
-"A seção de variáveis locais é opcional e atualmente é usada para fornecer as "
-"informações de codificação. Ela possivelmente seja aumentada no futuro."
+"A seção de variáveis locais é opcional. Ela atualmente é usada para fornecer as informações de codificação e(ou) o código do idioma do documento."
 
 #. type: example
 #: texinfo/upstream/texinfo.texi:24768
-#, fuzzy, no-wrap
-#| msgid ""
-#| "    <local variables> =\n"
-#| "<separator>\n"
-#| "Local Variables:\n"
-#| "coding: <encoding>\n"
-#| "End:\n"
+#, no-wrap
 msgid ""
 "    <local variables> =\n"
 "<separator>\n"
@@ -64841,17 +64725,15 @@ msgstr ""
 "<separador>\n"
 "Variáveis Locais:\n"
 "codificação: <codificação>\n"
+"(Info-documentlanguage: <idioma>)?\n"
 "Fim:\n"
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:24771
-#, fuzzy
-#| msgid "@code{@@documentencoding @var{enc}}: Set Input Encoding"
 msgid ""
 "@xref{@code{@@documentencoding}} for information about the document encoding."
 msgstr ""
-"@code{@@documentencoding @var{codificação}}: Configurar Codificação de "
-"Entrada"
+"@xref{@code{@@documentencoding}} para informações acerca da codificação do documento."
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:24776
@@ -64860,7 +64742,7 @@ msgid ""
 "@ref{@code{@@documentlanguage}}.  Only one language can be specified in the "
 "local variables section even if @code{@@documentlanguage} occurs several "
 "times in a Texinfo document."
-msgstr ""
+msgstr "@samp{<idioma>} deveria ser da forma @var{ll} ou @var{ll}_@var{cc}; veja-se @ref{@code{@@documentlanguage}}. Somente um idioma pode ser especificado na seção de variáveis locais, mesmo que @code{@@documentlanguage} ocorra várias vezes em um documento do Texinfo."
 
 #. type: node
 #: texinfo/upstream/texinfo.texi:24778
@@ -65093,13 +64975,7 @@ msgstr ""
 
 #. type: example
 #: texinfo/upstream/texinfo.texi:24874
-#, fuzzy, no-wrap
-#| msgid ""
-#| "    <image> =\n"
-#| "^@@^H[image src=\"<image file>\"\n"
-#| "            (text=\"<txt file contents>\")?\n"
-#| "            (alt=\"<alt text>\")?\n"
-#| "^@@^H]\n"
+#, no-wrap
 msgid ""
 "    <image> =\n"
 "^@@^H[image src=\"<image file>\"\n"
@@ -65109,10 +64985,12 @@ msgid ""
 "            (alt=\"<alt text>\")?\n"
 "^@@^H]\n"
 msgstr ""
-"    <imagem> =\n"
-"^@@^H[fonte imagem=\"<arquivo de imagem>\"\n"
-"            (texto=\"<conteúdo do arquivo de texto>\")?\n"
-"            (alternativo=\"<texto alternativo>\")?\n"
+"    <image> =\n"
+"^@@^H[image src=\"<arquivo da imagem>\"\n"
+"            (dpi=<dpi>)?\n"
+"            (depth=<profundidade>)?\n"
+"            (text=\"<conteúdo do arquivo de texto>\")?\n"
+"            (alt=\"<texto alternativo>\")?\n"
 "^@@^H]\n"
 
 #. type: Plain text
@@ -65550,40 +65428,31 @@ msgstr "@nodedescription Copiando este manual."
 
 #. type: unnumbered
 #: texinfo/upstream/texinfo.texi:25058 texinfo/upstream/texinfo.texi:25059
-#, fuzzy, no-wrap
-#| msgid "Command Contexts"
+#, no-wrap
 msgid "Command Index"
-msgstr "Contextos de Comando"
+msgstr "Índice de Comandos"
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:25064
-#, fuzzy
-#| msgid ""
-#| "This is an alphabetical list of all the @@-commands, assorted Emacs Lisp "
-#| "functions, and several variables.  To make the list easier to use, the "
-#| "commands are listed without their preceding @samp{@@}."
 msgid ""
 "This is an alphabetical list of all the @@-commands and assorted Emacs Lisp "
 "functions.  To make the list easier to use, the commands are listed without "
 "their preceding @samp{@@}."
 msgstr ""
-"Esta é uma lista em ordem alfabética de todos os comandos @@, diversas "
-"funções do Emacs Lisp e diversas variáveis. Para facilitar o uso da lista, "
-"os comandos são listados sem @samp{@@} precedente."
+"Esta é uma lista alfabética de todos os comandos @@ e de diversas funções do Emacs Lisp. Para facilitar o uso da lista, os comandos são listados sem @samp{@@} precedente."
 
 #. type: unnumbered
 #: texinfo/upstream/texinfo.texi:25068 texinfo/upstream/texinfo.texi:25069
-#, fuzzy, no-wrap
-#| msgid "Variable index"
+#, no-wrap
 msgid "Variables Index"
-msgstr "Índice de variável"
+msgstr "Índice de Variáveis"
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:25072
 msgid ""
 "This is an alphabetical list of all variables, mainly customization "
 "variables."
-msgstr ""
+msgstr "Esta é uma lista alfabética de todas as variáveis, principalmente variáveis de personalização."
 
 #. type: unnumbered
 #: texinfo/upstream/texinfo.texi:25076 texinfo/upstream/texinfo.texi:25078
