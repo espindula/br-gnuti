@@ -48113,7 +48113,7 @@ msgid ""
 "the external manual, unless this manual was itself also produced using the "
 "corresponding customization. It is therefore, in general, better to use HTML "
 "Xref Configuration only."
-msgstr ""
+msgstr "referencia ``inválido'' no sentido de que a URL gerada não lincará para o manual externo, a menos que esse manual fosse ele próprio produzido usando a personalização correspondente. Portanto, em geral, é melhor usar apenas a Configuração do Xref do HTML."
 
 #. type: item
 #: texinfo/upstream/texinfo.texi:18751 texinfo/upstream/texinfo.texi:19313
@@ -48127,20 +48127,19 @@ msgid ""
 "You can change the maximum length of a base file name for internal cross-"
 "references by setting @code{BASEFILENAME_LENGTH}; by default, the base file "
 "names are truncated to 245 characters."
-msgstr ""
+msgstr "Você consegue mudar o comprimento máximo de um nome de arquivo base para referências cruzadas internas configurando @code{BASEFILENAME_LENGTH}; por padrão, os nomes dos arquivos base são truncados para 245 caracteres."
 
 #. type: subsection
 #: texinfo/upstream/texinfo.texi:18759 texinfo/upstream/texinfo.texi:18760
-#, fuzzy, no-wrap
-#| msgid "Customization Variables and Options"
+#, no-wrap
 msgid "Customization of Navigation and Headers"
-msgstr "Variáveis e Opções de Personalização"
+msgstr "Personalização da Navegação e de Cabeçalhos"
 
 #. type: vindex
 #: texinfo/upstream/texinfo.texi:18762
 #, no-wrap
 msgid "HEADERS @subentry @r{for HTML}"
-msgstr ""
+msgstr "HEADERS @subentry @r{para HTML}"
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:18767
@@ -48149,7 +48148,7 @@ msgid ""
 "If you use @option{--no-headers}, or if the customization variable "
 "@code{HEADERS} is unset, the navigation panel is only inserted at the "
 "beginning of split files."
-msgstr ""
+msgstr "Cabeçalhos e rodapés com um painel de navegação são gerados no caso padrão. Se você usar @option{--no-headers}, ou se a variável de personalização @code{HEADERS} estiver desconfigurada, o painel de navegação só será inserido no início dos arquivos divididos."
 
 #. type: item
 #: texinfo/upstream/texinfo.texi:18768 texinfo/upstream/texinfo.texi:19656
@@ -48164,7 +48163,7 @@ msgid ""
 "to specify relationships between the HTML page and other resources, for "
 "example the Top node, the next node or the table of contents.  Unset "
 "@code{USE_LINKS} to avoid those elements."
-msgstr ""
+msgstr "Por padrão, os elementos @code{<link>} são gerados no @code{<head>} do HTML para especificar relacionamentos entre a página HTML e outros recursos, por exemplo, o nó Topo, o próximo nó ou o sumário. Desconfigure @code{USE_LINKS} para evitar esses elementos."
 
 #. type: item
 #: texinfo/upstream/texinfo.texi:18774 texinfo/upstream/texinfo.texi:19599
@@ -48180,14 +48179,13 @@ msgid ""
 "the node name is also added to this HTML title.  Set "
 "@code{SECTION_NAME_IN_TITLE} to use the argument of the associated chapter "
 "structuring command instead of the node name."
-msgstr ""
+msgstr "O @code{<title>} e a descrição do documento em @code{<head>} são baseados em @code{@@settitle} (@pxref{@code{@@settitle}}). Se o manual for dividido, o nome do nó também será adicionado a esse título HTML. Configure @code{SECTION_NAME_IN_TITLE} para usar o argumento do comando de estruturamento do capítulo associado em vez do nome do nó."
 
 #. type: vindex
 #: texinfo/upstream/texinfo.texi:18781
-#, fuzzy, no-wrap
-#| msgid "OUTPUT_ENCODING_NAME"
+#, no-wrap
 msgid "OUTPUT_ENCODING_NAME @subentry @r{for HTML}"
-msgstr "OUTPUT_ENCODING_NAME"
+msgstr "OUTPUT_ENCODING_NAME @subentry @r{para HTML}"
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:18790
@@ -48201,7 +48199,7 @@ msgid ""
 "set @code{OUTPUT_ENCODING_NAME}.  The specified encoding should be a "
 "normalized charset name usable in HTML, typically one of the preferred IANA "
 "encoding names."
-msgstr ""
+msgstr "Por padrão, se uma codificação de entrada for configurada (tipicamente por meio de @code{@@documentencoding}), essas informações serão usadas para configurar o nome da codificação de saída, caso contrário, a codificação da saída gerada será baseada na codificação padrão. Uma etiqueta @samp{<meta>} é gerada, na seção @samp{<head>} do HTML, para especificar a codificação da saída gerada. @xref{@code{@@documentencoding}}. Para configurar explicitamente a codificação da saída gerada, configure @code{OUTPUT_ENCODING_NAME}. A codificação especificada deveria ser um nome de conjunto de caracteres normalizado usável em HTML, tipicamente um dos nomes de codificação preferidos da IANA."
 
 #. type: item
 #: texinfo/upstream/texinfo.texi:18791 texinfo/upstream/texinfo.texi:19682
@@ -48220,14 +48218,14 @@ msgid ""
 "based on the HTML output for the node so far (including any navigation bar "
 "at the top of the page), which yields a value somewhat greater than the "
 "number of words that would be visible to the user in their web browser."
-msgstr ""
+msgstr "Quando a saída é dividida em nós (@pxref{Dividindo HTML}), o valor da variável de personalização @code{WORDS_IN_PAGE} especifica o comprimento mínimo aproximado da página no qual um painel de navegação é colocado na parte inferior de uma página. Não é possível calibrar esse valor muito precisamente para resultados exatos: isso ocorre porque a contagem de palavras usadas para a verificação é baseada na saída HTML para o nó até o momento (incluindo qualquer barra de navegação na parte superior da página), o que produz um valor um pouco maior que o número de palavras que seriam visíveis para o(a) usuário(a) no navegador da web deles(as)."
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:18804
 msgid ""
 "The appearance of the navigation panel is affected by the following "
 "customization variables, all false in the default case:"
-msgstr ""
+msgstr "A aparência do painel de navegação é afetada pelas seguintes variáveis de personalização, todas falsas no caso padrão:"
 
 #. type: item
 #: texinfo/upstream/texinfo.texi:18806 texinfo/upstream/texinfo.texi:19380
@@ -48237,11 +48235,9 @@ msgstr "DATE_IN_HEADER"
 
 #. type: vtable
 #: texinfo/upstream/texinfo.texi:18808
-#, fuzzy
-#| msgid "Put the document generation date in the header; off by default."
 msgid "Put the document generation date in the header."
 msgstr ""
-"Colocar a data de geração do documento no cabeçalho; desligado por padrão."
+"Colocar a data de geração do documento no cabeçalho."
 
 #. type: item
 #: texinfo/upstream/texinfo.texi:18809 texinfo/upstream/texinfo.texi:19436
@@ -48251,14 +48247,9 @@ msgstr "HEADER_IN_TABLE"
 
 #. type: vtable
 #: texinfo/upstream/texinfo.texi:18811
-#, fuzzy
-#| msgid ""
-#| "Use tables for header formatting rather than a simple @code{<div>} "
-#| "element; default false."
 msgid "Use tables for header formatting rather than a simple @samp{<div>}."
 msgstr ""
-"Usar tabelas para formatação de cabeçalho em vez de um simples elemento "
-"@code{<div>}; padrão falso."
+"Usar tabelas para formatação de cabeçalho em vez de um simples @code{<div>}."
 
 #. type: item
 #: texinfo/upstream/texinfo.texi:18812 texinfo/upstream/texinfo.texi:19491
@@ -48268,10 +48259,8 @@ msgstr "ICONS"
 
 #. type: vtable
 #: texinfo/upstream/texinfo.texi:18814
-#, fuzzy
-#| msgid "Use icons for the navigation panel; default false."
 msgid "Use icons for the navigation panel."
-msgstr "Usar ícones para o painel de navegação; padrão falso."
+msgstr "Usar ícones para o painel de navegação."
 
 #. type: item
 #: texinfo/upstream/texinfo.texi:18815 texinfo/upstream/texinfo.texi:19595
@@ -48281,16 +48270,11 @@ msgstr "PROGRAM_NAME_IN_FOOTER"
 
 #. type: vtable
 #: texinfo/upstream/texinfo.texi:18818
-#, fuzzy
-#| msgid ""
-#| "If set, output the program name and miscellaneous related information in "
-#| "the page footers; default false."
 msgid ""
 "If set, output the program name and miscellaneous related information in the "
 "page footers."
 msgstr ""
-"Se configurada, gerar o nome do programa e diversas informações relacionadas "
-"nos rodapés das páginas; padrão falso."
+"Se configurada, gerar o nome do programa e diversas informações relacionadas nos rodapés das páginas."
 
 #. type: item
 #: texinfo/upstream/texinfo.texi:18819 texinfo/upstream/texinfo.texi:19677
@@ -48300,17 +48284,13 @@ msgstr "VERTICAL_HEAD_NAVIGATION"
 
 #. type: vtable
 #: texinfo/upstream/texinfo.texi:18821
-#, fuzzy
-#| msgid "If set, a vertical navigation panel is used; default false."
 msgid "If set, a vertical navigation panel is used."
-msgstr "Se configurada, um painel vertical de navegação é usado; padrão falso."
+msgstr "Se configurada, um painel vertical de navegação é usado."
 
 #. type: cindex
 #: texinfo/upstream/texinfo.texi:18823
-#, fuzzy, no-wrap
-#| msgid "Initialization file for @TeX{} input"
 msgid "Initialization file, HTML icon direction buttons"
-msgstr "Arquivo de inicialização para entrada do @TeX{}"
+msgstr "Arquivo de inicialização, botões de direção de ícone do HTML"
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:18830
@@ -48321,14 +48301,12 @@ msgid ""
 "@code{PASSIVE_ICONS} customization variables.  You can only do this using an "
 "initialization file (@pxref{Invoking @command{texi2any}}).  @xref{,,, "
 "texi2any_api, GNU Texinfo @command{texi2any} Output Customization}."
-msgstr ""
+msgstr "Configurar-se @code{ICONS} é necessário, mas não suficiente para obter ícones para botões de direção, uma vez que nenhuma imagem de botão é especificada no caso padrão. Além disso, você precisa configurar as variáveis de personalização @code{ACTIVE_ICONS} e @code{PASSIVE_ICONS}. Você só consegue fazer isso usando um arquivo de inicialização (@pxref{Invocando @command{texi2any}}). @xref{,,, texi2any_api, Personalização da Saída do @command{texi2any} do GNU Texinfo}."
 
 #. type: subsection
 #: texinfo/upstream/texinfo.texi:18832 texinfo/upstream/texinfo.texi:18833
-#, fuzzy, no-wrap
-#| msgid "HTML Customization Variables"
 msgid "HTML Features Customization"
-msgstr "Variáveis de Personalização do HTML"
+msgstr "Personalização de Recursos do HTML"
 
 #. type: item
 #: texinfo/upstream/texinfo.texi:18835 texinfo/upstream/texinfo.texi:19674
@@ -48340,13 +48318,13 @@ msgstr "USE_XML_SYNTAX"
 #: texinfo/upstream/texinfo.texi:18836
 #, no-wrap
 msgid "DOCTYPE customization"
-msgstr ""
+msgstr "Personalização do DOCTYPE"
 
 #. type: vindex
 #: texinfo/upstream/texinfo.texi:18837
 #, no-wrap
 msgid "DOCTYPE @subentry @r{for HTML}"
-msgstr ""
+msgstr "DOCTYPE @subentry @r{para HTML}"
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:18843
@@ -48355,19 +48333,19 @@ msgid ""
 "to generate XML compatible code.  The main difference is that @samp{/>} "
 "instead of @samp{>} ends tags such as @code{<img>} or @code{<link>} that do "
 "not have a closing tag (such tags create so-called @dfn{void elements})."
-msgstr ""
+msgstr "Por padrão, o HTML é gerado, mas você consegue configurar @code{USE_XML_SYNTAX} para a finalidade de gerar código compatível com XML. A principal diferença é que @samp{/>} em vez de @samp{>} encerra etiquetas como @code{<img>} ou @code{<link>} que não têm uma etiqueta de fechamento (essas etiquetas criam os assim chamados @dfn{elementos void})."
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:18846
 msgid ""
 "To set the @dfn{DOCTYPE}, set the @code{DOCTYPE} customization variable.  "
 "The default is the simple DTD-less DOCTYPE used for HTML5."
-msgstr ""
+msgstr "Para configurar o @dfn{DOCTYPE}, configure a variável de personalização @code{DOCTYPE}. O padrão é o DOCTYPE simples sem DTD usado para HTML5."
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:18848
 msgid "You can set an XML compatible file beginning instead:"
-msgstr ""
+msgstr "Você consegue configurar um arquivo compatível com XML começando:"
 
 #. type: example
 #: texinfo/upstream/texinfo.texi:18852
@@ -48377,11 +48355,14 @@ msgid ""
 "   -c DOCTYPE='<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n"
 "<!DOCTYPE html>'\n"
 msgstr ""
+"@command{texi2any} --html meu_manual.texi -c USE_XML_SYNTAX \\\n"
+"   -c DOCTYPE='<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n"
+"<!DOCTYPE html>'\n"
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:18855
 msgid "You could also set the DOCTYPE to HTML 4.01 Transitional:"
-msgstr ""
+msgstr "Você também poderia configurar o DOCTYPE como HTML 4.01 Transitório:"
 
 #. type: example
 #: texinfo/upstream/texinfo.texi:18859
@@ -48391,6 +48372,9 @@ msgid ""
 "'<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\"\n"
 "  \"http://www.w3.org/TR/html4/loose.dtd\">'\n"
 msgstr ""
+"@command{texi2any} --html meu_manual.texi -c DOCTYPE=\\\n"
+"'<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\"\n"
+"  \"http://www.w3.org/TR/html4/loose.dtd\">'\n"
 
 #. type: item
 #: texinfo/upstream/texinfo.texi:18861 texinfo/upstream/texinfo.texi:19649
@@ -48400,16 +48384,15 @@ msgstr "USE_ISO"
 
 #. type: vindex
 #: texinfo/upstream/texinfo.texi:18862
-#, fuzzy, no-wrap
-#| msgid "USE_NUMERIC_ENTITY"
+#, no-wrap
 msgid "USE_NUMERIC_ENTITY @subentry @r{for HTML}"
-msgstr "USE_NUMERIC_ENTITY"
+msgstr "USE_NUMERIC_ENTITY @subentry @r{para HTML}"
 
 #. type: vindex
 #: texinfo/upstream/texinfo.texi:18863
 #, no-wrap
 msgid "OUTPUT_CHARACTERS @subentry @r{for HTML}"
-msgstr ""
+msgstr "OUTPUT_CHARACTERS @subentry @r{para HTML}"
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:18872
@@ -48421,7 +48404,7 @@ msgid ""
 "possible.  Set @code{USE_NUMERIC_ENTITY} to use numeric entities only.  Set "
 "@code{OUTPUT_CHARACTERS} to output accented characters based on the output "
 "encoding instead of entities."
-msgstr ""
+msgstr "Por padrão, entidades são usadas para caracteres duplicados de aspas simples (@pxref{Inserindo Marcas de Citação}) e @samp{---} e @samp{--} (@pxref{Convenções}). Configure @code{USE_ISO} como @samp{0} no caso improvável de você querer uma saída mais simples. Por padrão, entidades textuais são usadas quando possível. Configure @code{USE_NUMERIC_ENTITY} para usar somente entidades numéricas. Configure @code{OUTPUT_CHARACTERS} para gerar caracteres acentuados baseados na codificação da saída gerada em vez de nas entidades."
 
 #. type: item
 #: texinfo/upstream/texinfo.texi:18873 texinfo/upstream/texinfo.texi:19571
@@ -48436,7 +48419,7 @@ msgid ""
 "provide the target manual name in cross-references.  If it is not desirable, "
 "for example to generate strict XHTML, you can set "
 "@code{NO_CUSTOM_HTML_ATTRIBUTE} to prevent custom attributes being output."
-msgstr ""
+msgstr "Por padrão, um atributo personalizado, conforme permitido pelo padrão, é usado para fornecer o nome do manual alvo em referências cruzadas. Se não for desejável, por exemplo, gerar XHTML estrito, você pode configurar @code{NO_CUSTOM_HTML_ATTRIBUTE} para evitar atributos personalizados sendo gerados."
 
 #. type: item
 #: texinfo/upstream/texinfo.texi:18880 texinfo/upstream/texinfo.texi:19372
@@ -48446,12 +48429,6 @@ msgstr "COPIABLE_LINKS"
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:18888
-#, fuzzy
-#| msgid ""
-#| "If set, output copiable links for the definition commands "
-#| "(@pxref{Definition Commands}) and table commands (@pxref{Two-column "
-#| "Tables}) where an index entry is defined.  A link appears as a `@U{00B6}' "
-#| "sign that appears when you hover the mouse pointer over the heading text."
 msgid ""
 "Copiable links are output for link targets for the definition commands "
 "(@pxref{Definition Commands}), table commands (@pxref{Two-column Tables}) "
@@ -48459,51 +48436,45 @@ msgid ""
 "`@U{00B6}' sign that appears when you hover the mouse pointer over the "
 "heading text.  Unset @code{COPIABLE_LINKS} to prevent copiable links output."
 msgstr ""
-"Se configurada, produzir linques copiáveis para os comandos de definição "
-"(@pxref{Comandos de Definição}) e comandos de tabela (@pxref{Tabelas de Duas "
-"Colunas}) onde uma entrada de índice estiver definida. Um linque aparece "
-"como um sinal `@U{00B6}' que aparece quando você passa o ponteiro do mouse "
-"sobre o texto do título."
+"Linques copiáveis são gerados para alvos de linque para os comandos de definição (@pxref{Comandos de Definição}), comandos de tabela (@pxref{Tabelas de Duas Colunas}) onde uma entrada de índice estiver definida e cabeçalhos. Um linque aparece como um sinal `@U{00B6}' que aparece quando você passa o ponteiro do mouse sobre o texto do título. Desconfigure @code{COPIABLE_LINKS} para evitar que linques copiáveis sejam gerados."
 
 #. type: subsection
 #: texinfo/upstream/texinfo.texi:18890 texinfo/upstream/texinfo.texi:18891
 #, no-wrap
 msgid "Customization of Inserted HTML Code"
-msgstr ""
+msgstr "Personalização de Código HTML Inserido"
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:18895
 msgid ""
 "There are variables to set the HTML code inserted at various points in the "
 "output."
-msgstr ""
+msgstr "Existem variáveis para configurar o código HTML inserido em vários pontos da saída gerada."
 
 #. type: vindex
 #: texinfo/upstream/texinfo.texi:18896
-#, fuzzy, no-wrap
-#| msgid "CLOSE_QUOTE_SYMBOL"
+#, no-wrap
 msgid "CLOSE_QUOTE_SYMBOL @subentry @r{for HTML}"
-msgstr "CLOSE_QUOTE_SYMBOL"
+msgstr "CLOSE_QUOTE_SYMBOL @subentry @r{para HTML}"
 
 #. type: vindex
 #: texinfo/upstream/texinfo.texi:18897
 #, no-wrap
 msgid "OPEN_QUOTE_SYMBOL @subentry @r{for HTML}"
-msgstr ""
+msgstr "OPEN_QUOTE_SYMBOL @subentry @r{para HTML}"
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:18900
 msgid ""
 "Opening quote and closing quotes needed, e.g.@: for @code{@@samp} output, "
 "are set to:"
-msgstr ""
+msgstr "Aspa de abertura e aspas de fechamento necessárias, por exemplo, para saída @code{@@samp}, são configuradas como:"
 
 #. type: item
 #: texinfo/upstream/texinfo.texi:18902
-#, fuzzy, no-wrap
-#| msgid "(@code{`} and @code{'})"
+#, no-wrap
 msgid "@code{&lsquo;} and @code{&rsquo;}"
-msgstr "(@code{`} e @code{'})"
+msgstr "@code{&lsquo;} e @code{&rsquo;}"
 
 #. type: table
 #: texinfo/upstream/texinfo.texi:18905
@@ -48511,27 +48482,24 @@ msgid ""
 "By default, with @code{OPEN_QUOTE_SYMBOL} and @code{CLOSE_QUOTE_SYMBOL} "
 "undefined."
 msgstr ""
+"Por padrão, com @code{OPEN_QUOTE_SYMBOL} e @code{CLOSE_QUOTE_SYMBOL} desconfiguradas."
 
 #. type: item
 #: texinfo/upstream/texinfo.texi:18906
-#, fuzzy, no-wrap
-#| msgid "(@code{`} and @code{'})"
+#, no-wrap
 msgid "@code{&#8216;} and @code{&#8217;}"
-msgstr "(@code{`} e @code{'})"
+msgstr "@code{&#8216;} e @code{&#8217;}"
 
 #. type: table
 #: texinfo/upstream/texinfo.texi:18908
-#, fuzzy
-#| msgid "USE_NUMERIC_ENTITY"
 msgid "If you set @code{USE_NUMERIC_ENTITY}."
-msgstr "USE_NUMERIC_ENTITY"
+msgstr "Se você configurar @code{USE_NUMERIC_ENTITY}."
 
 #. type: item
 #: texinfo/upstream/texinfo.texi:18909
-#, fuzzy, no-wrap
-#| msgid "Inserting quote characters"
+#, no-wrap
 msgid "An opening and closing quote character"
-msgstr "Inserindo caracteres de citação"
+msgstr "Um caractere de aspa de abertura e de fechamento"
 
 #. type: table
 #: texinfo/upstream/texinfo.texi:18912
@@ -48539,19 +48507,18 @@ msgid ""
 "If you set @code{OUTPUT_CHARACTERS} and the output encoding includes that "
 "character."
 msgstr ""
+"Se você configurar @code{OUTPUT_CHARACTERS} e a codificação da saída gerada incluir esse caractere."
 
 #. type: item
 #: texinfo/upstream/texinfo.texi:18913
 #, no-wrap
 msgid "@code{OPEN_QUOTE_SYMBOL} and @code{CLOSE_QUOTE_SYMBOL}"
-msgstr ""
+msgstr "@code{OPEN_QUOTE_SYMBOL} e @code{CLOSE_QUOTE_SYMBOL}"
 
 #. type: table
 #: texinfo/upstream/texinfo.texi:18915
-#, fuzzy
-#| msgid "Other Customization Variables"
 msgid "If you set those customization variables."
-msgstr "Outras Variáveis de Personalização"
+msgstr "Se você configurar essas variáveis de personalização."
 
 #. type: item
 #: texinfo/upstream/texinfo.texi:18917 texinfo/upstream/texinfo.texi:19388
@@ -48572,7 +48539,7 @@ msgid ""
 "contexts, set @code{DEFAULT_RULE}, which is used for most horizontal "
 "separators output in the resulting HTML, and set @code{BIG_RULE} for the "
 "wider separator sometimes used."
-msgstr ""
+msgstr "Para mudar o código HTML para quebras (regra horizontal) inseridas em vários contextos, configure @code{DEFAULT_RULE}, que é usado para a saída da maioria dos separadores horizontais no HTML resultante, e configure @code{BIG_RULE} para o separador mais largo usado algumas vezes."
 
 #. type: item
 #: texinfo/upstream/texinfo.texi:18925 texinfo/upstream/texinfo.texi:19464
@@ -48588,17 +48555,15 @@ msgstr "EXTRA_HEAD"
 
 #. type: cindex
 #: texinfo/upstream/texinfo.texi:18928
-#, fuzzy, no-wrap
-#| msgid "@code{<thead>} HTML/DocBook tag"
+#, no-wrap
 msgid "@code{<head>} block, adding to"
-msgstr "Etiqueta @code{<thead>} do HTML/DocBook"
+msgstr "Bloco @code{<head>}, adicionando ao"
 
 #. type: item
 #: texinfo/upstream/texinfo.texi:18929 texinfo/upstream/texinfo.texi:19338
-#, fuzzy, no-wrap
-#| msgid "HTML_ROOT_ELEMENT_ATTRIBUTES"
+#, no-wrap
 msgid "BODY_ELEMENT_ATTRIBUTES"
-msgstr "HTML_ROOT_ELEMENT_ATTRIBUTES"
+msgstr "BODY_ELEMENT_ATTRIBUTES"
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:18936
@@ -48608,31 +48573,23 @@ msgid ""
 "text within the @code{<head>} HTML element.  Similarly, the value of "
 "@code{AFTER_BODY_OPEN} is added just after @code{<body>} is output.  These "
 "variables are empty by default."
-msgstr ""
+msgstr "Você consegue configurar @code{HTML_ROOT_ELEMENT_ATTRIBUTES} para adicionar atributos ao elemento @code{<html>}. Você pode definir a variável @code{EXTRA_HEAD} para adicionar texto dentro do elemento @code{<head>} do HTML. Similarmente, o valor de @code{AFTER_BODY_OPEN} é adicionado logo depois que @code{<body>} for gerado. Essas variáveis ficam vazias por padrão."
 
 #. type: cindex
 #: texinfo/upstream/texinfo.texi:18937
-#, fuzzy, no-wrap
-#| msgid "@code{<body>} text, customizing"
+#, no-wrap
 msgid "@code{<body>} tag, attributes of"
-msgstr "texto do @code{<body>}, personalizando"
+msgstr "Etiqueta @code{<body>}, atributos da"
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:18942
-#, fuzzy
-#| msgid ""
-#| "The text appearing in @code{<body>}.  By default, sets the HTML "
-#| "@code{lang} attribute to the document language "
-#| "(@pxref{@code{@@documentlanguage}})."
 msgid ""
 "You can set the attributes of the @code{<body>} element by defining the "
 "customization variable @code{BODY_ELEMENT_ATTRIBUTES}.  By default, the "
 "@samp{lang} attribute is set to the document language "
 "(@pxref{@code{@@documentlanguage}})."
 msgstr ""
-"O texto que aparece em @code{<body>}. Por padrão, configura o atributo "
-"@code{lang} do HTML para o idioma do documento "
-"(@pxref{@code{@@documentlanguage}})."
+"Você consegue configurar os atributos do elemento @code{<body>} definindo a variável de personalização @code{BODY_ELEMENT_ATTRIBUTES}. Por padrão, o atributo @code{lang} é configurado como o idioma do documento (@pxref{@code{@@documentlanguage}})."
 
 #. type: item
 #: texinfo/upstream/texinfo.texi:18943 texinfo/upstream/texinfo.texi:19586
@@ -48645,14 +48602,14 @@ msgstr "PRE_BODY_CLOSE"
 msgid ""
 "You can define the variable @code{PRE_BODY_CLOSE} to add text just before "
 "the HTML @code{</body>} element.  Nothing is added by default."
-msgstr ""
+msgstr "Você pode definir a variável @code{PRE_BODY_CLOSE} para adicionar texto logo antes do elemento @code{</body>} do HTML. Nada é adicionado por padrão."
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:18949
 msgid ""
 "Similarly, the following variables allow for some useful control of the "
 "formatting of the table of contents and the short table of contents:"
-msgstr ""
+msgstr "Similarmente, as seguintes variáveis permitem algum controle útil da formatação do sumário e do sumaríssimo:"
 
 #. type: itemx
 #: texinfo/upstream/texinfo.texi:18951 texinfo/upstream/texinfo.texi:19320
@@ -48662,10 +48619,8 @@ msgstr "BEFORE_TOC_LINES"
 
 #. type: vtable
 #: texinfo/upstream/texinfo.texi:18953
-#, fuzzy
-#| msgid "Section titles are listed in the table of contents."
 msgid "Inserted before the table of contents text."
-msgstr "Títulos de seção são listados no sumário."
+msgstr "Inserido antes do texto do sumário."
 
 #. type: itemx
 #: texinfo/upstream/texinfo.texi:18954 texinfo/upstream/texinfo.texi:19303
@@ -48675,10 +48630,8 @@ msgstr "AFTER_TOC_LINES"
 
 #. type: vtable
 #: texinfo/upstream/texinfo.texi:18956
-#, fuzzy
-#| msgid "Subsection titles are listed in the table of contents."
 msgid "Inserted after the table of contents text."
-msgstr "Títulos de subseções são listados no sumário."
+msgstr "Inserido depois do texto do sumário."
 
 #. type: item
 #: texinfo/upstream/texinfo.texi:18957 texinfo/upstream/texinfo.texi:19319
@@ -48688,10 +48641,8 @@ msgstr "BEFORE_SHORT_TOC_LINES"
 
 #. type: vtable
 #: texinfo/upstream/texinfo.texi:18959
-#, fuzzy
-#| msgid "Short table of contents"
 msgid "Inserted before the short table of contents text."
-msgstr "Sumário curto"
+msgstr "Inserido antes do texto do sumaríssimo."
 
 #. type: item
 #: texinfo/upstream/texinfo.texi:18960 texinfo/upstream/texinfo.texi:19302
@@ -48701,10 +48652,8 @@ msgstr "AFTER_SHORT_TOC_LINES"
 
 #. type: vtable
 #: texinfo/upstream/texinfo.texi:18962
-#, fuzzy
-#| msgid "Short table of contents"
 msgid "Inserted after the short table of contents text."
-msgstr "Sumário curto"
+msgstr "Inserido depois do texto do sumaríssimo."
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:18967
@@ -48712,7 +48661,7 @@ msgid ""
 "At the time of writing, the default values of these variables are set to "
 "opening and closing tags for a @code{<div>} element enclosing the tables of "
 "contents."
-msgstr ""
+msgstr "Ao tempo desta escrita, os valores padrão dessas variáveis eram configurados como etiquetas de abertura e de fechamento para um elemento @code{<div>} que encerra os sumários."
 
 #. type: example
 #: texinfo/upstream/texinfo.texi:18982
@@ -48727,25 +48676,32 @@ msgid ""
 "texinfo_set_from_init_file('USE_NUMERIC_ENTITY', 1);\n"
 "texinfo_set_from_init_file('OUTPUT_ENCODING_NAME', 'utf-8');\n"
 msgstr ""
+"texinfo_set_from_init_file('HTML_ROOT_ELEMENT_ATTRIBUTES',\n"
+"                           'xmlns=\"http://www.w3.org/1999/xhtml\"');\n"
+"texinfo_set_from_init_file('NO_CUSTOM_HTML_ATTRIBUTE', 1);\n"
+"texinfo_set_from_init_file('USE_XML_SYNTAX', 1);\n"
+"texinfo_set_from_init_file('DOCTYPE', '<?xml version=\"1.0\" encoding=\"UTF-8\"?>'.\"\\n\"\n"
+"                                      .'<!DOCTYPE html>');\n"
+"texinfo_set_from_init_file('USE_NUMERIC_ENTITY', 1);\n"
+"texinfo_set_from_init_file('OUTPUT_ENCODING_NAME', 'utf-8');\n"
 
 #. type: subsection
 #: texinfo/upstream/texinfo.texi:18986 texinfo/upstream/texinfo.texi:18987
-#, fuzzy, no-wrap
-#| msgid "HTML Customization Variables"
+#, no-wrap
 msgid "HTML Customization of Specific Output"
-msgstr "Variáveis de Personalização do HTML"
+msgstr "Personalização do HTML da Saída Gerada Específica"
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:18990
 msgid "The output of specific constructs is customizable."
-msgstr ""
+msgstr "A saída gerada de constructos específicos é personalizável."
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:18996
 msgid ""
 "In HTML, heading levels translate to @samp{<h@var{n}>} elements where "
 "@var{n} is the heading level.  The following header levels are customizable:"
-msgstr ""
+msgstr "No HTML, níveis de cabeçalho traduzem para elementos @samp{<h@var{n}>} onde @var{n} é o nível do cabeçalho. Os seguintes níveis de cabeçalho são personalizáveis:"
 
 #. type: item
 #: texinfo/upstream/texinfo.texi:18998 texinfo/upstream/texinfo.texi:19347
@@ -48776,18 +48732,12 @@ msgstr "FOOTNOTE_SEPARATE_HEADER_LEVEL"
 
 #. type: vtable
 #: texinfo/upstream/texinfo.texi:19007
-#, fuzzy
-#| msgid ""
-#| "Header formatting level used for the footnotes header with the `separate' "
-#| "footnotestyle; default @samp{4}.  @xref{Footnote Styles}."
 msgid ""
 "Header formatting level used for the footnotes header with the `end' "
 "footnotestyle or for the `separate' footnotestyle; default @samp{4}.  "
 "@xref{Footnote Styles}."
 msgstr ""
-"Nível de formatação de cabeçalho usado para o cabeçalho das notas de rodapé "
-"com o estilo de nota de rodapé `separate'; padrão @samp{4}. @xref{Estilos de "
-"Notas de Rodapé}."
+"Nível de formatação de cabeçalho usado para o cabeçalho das notas de rodapé com o estilo de nota de rodapé `end' ou para o estilo de nota de rodapé `separate'; padrão @samp{4}. @xref{Estilos de Notas de Rodapé}."
 
 #. type: item
 #: texinfo/upstream/texinfo.texi:19008 texinfo/upstream/texinfo.texi:19549
@@ -48808,7 +48758,7 @@ msgstr ""
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:19020
 msgid "You may modify the appearance of various constructs by setting:"
-msgstr ""
+msgstr "Você pode modificar a aparência de vários constructos configurando:"
 
 #. type: item
 #: texinfo/upstream/texinfo.texi:19022 texinfo/upstream/texinfo.texi:19383
@@ -48831,17 +48781,14 @@ msgstr ""
 #: texinfo/upstream/texinfo.texi:19027 texinfo/upstream/texinfo.texi:19498
 #, no-wrap
 msgid "INDENTED_BLOCK_COMMANDS_IN_TABLE"
-msgstr ""
+msgstr "INDENTED_BLOCK_COMMANDS_IN_TABLE"
 
 #. type: table
 #: texinfo/upstream/texinfo.texi:19030 texinfo/upstream/texinfo.texi:19501
-#, fuzzy
-#| msgid ""
-#| "If set, use tables for indentation of complex formats; default false."
 msgid ""
 "If set, use tables for indentation of indented block commands; default false."
 msgstr ""
-"Se configurada, usar tabelas para recuo de formatos complexos; padrão falso."
+"Se configurada, usar tabelas para recuo de comandos de blocos recuados; padrão falso."
 
 #. type: item
 #: texinfo/upstream/texinfo.texi:19031 texinfo/upstream/texinfo.texi:19502
@@ -48851,16 +48798,11 @@ msgstr "INDEX_ENTRY_COLON"
 
 #. type: table
 #: texinfo/upstream/texinfo.texi:19034 texinfo/upstream/texinfo.texi:19505
-#, fuzzy
-#| msgid ""
-#| "Symbol used between the index entry and the associated node or section; "
-#| "default @samp{:}."
 msgid ""
 "Symbol used between the index entry and the associated node or section; "
 "default is an empty string."
 msgstr ""
-"Símbolo usado entre a entrada de índice e o nó ou seção associado; padrão "
-"@samp{:}."
+"Símbolo usado entre a entrada de índice e o nó, ou seção, associado; padrão é uma sequência vazia de caracteres."
 
 #. type: item
 #: texinfo/upstream/texinfo.texi:19035 texinfo/upstream/texinfo.texi:19554
@@ -48908,10 +48850,9 @@ msgstr ""
 
 #. type: subsection
 #: texinfo/upstream/texinfo.texi:19053 texinfo/upstream/texinfo.texi:19054
-#, fuzzy, no-wrap
-#| msgid "HTML Customization Variables"
+#, no-wrap
 msgid "HTML Customization for Math"
-msgstr "Variáveis de Personalização do HTML"
+msgstr "Personalização do HTML para Matemática"
 
 #. type: item
 #: texinfo/upstream/texinfo.texi:19056 texinfo/upstream/texinfo.texi:19454
@@ -48923,7 +48864,7 @@ msgstr "HTML_MATH"
 #: texinfo/upstream/texinfo.texi:19057
 #, no-wrap
 msgid "HTML output @subentry math @subentry customization"
-msgstr ""
+msgstr "Saída HTML @subentry matemática @subentry personalização"
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:19065
@@ -48935,13 +48876,13 @@ msgid ""
 "formatted mathematics.  For some of these options, if you set @option{--"
 "iftex}, @code{@@tex} sections are converted to HTML, and if you set "
 "@option{--iflatex} @code{@@latex} sections are converted to HTML."
-msgstr ""
+msgstr "Você pode selecionar vários métodos para renderizar matemática em HTML (@pxref{Inserindo Matemática}). Isso é controlado pela variável de personalização @code{HTML_MATH}. Por padrão, a variável de personalização está desconfigurada e a saída HTML é apenas enfatizada. Você pode selecionar outras opções para a finalidade de exibir fórmulas matemáticas formatadas corretamente. Para algumas dessas opções, se você configurar @option{--iftex}, as seções @code{@@tex} serão convertidas para HTML e se você configurar @option{--iflatex}, as seções @code{@@latex} serão convertidas para HTML."
 
 #. type: item
 #: texinfo/upstream/texinfo.texi:19067
 #, no-wrap
 msgid "l2h"
-msgstr ""
+msgstr "l2h"
 
 #. type: table
 #: texinfo/upstream/texinfo.texi:19070
@@ -49165,13 +49106,6 @@ msgstr "MATHJAX_SOURCE"
 
 #. type: vtable
 #: texinfo/upstream/texinfo.texi:19173
-#, fuzzy
-#| msgid ""
-#| "A URL of the full source code in its preferred form for modification, or "
-#| "instructions for obtaining such source code, for the component file named "
-#| "by @code{MATHJAX_SCRIPT}.  `Preferred form for modification' means that "
-#| "this should not be in a `minified' form.  Used in the license labels page "
-#| "(@pxref{HTML Customization Variables}, under @code{JS_WEBLABELS})."
 msgid ""
 "A URL of the full source code in its preferred form for modification, or "
 "instructions for obtaining such source code, for the component file named by "
@@ -49183,8 +49117,7 @@ msgstr ""
 "ou instruções para obter tal código-fonte, para o arquivo do componente "
 "nomeado por @code{MATHJAX_SCRIPT}. `Forma preferida para modificação' "
 "significa que essa não deveria estar em uma forma `minificada'. Usada na "
-"página de rótulos de licença (@pxref{Variáveis de Personalização do HTML}, "
-"sob @code{JS_WEBLABELS})."
+"página de rótulos de licença (@pxref{rótulos web da licença JavaScript})."
 
 #. type: vtable
 #: texinfo/upstream/texinfo.texi:19179
@@ -49422,15 +49355,6 @@ msgstr ""
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:19268
-#, fuzzy
-#| msgid ""
-#| "(Experimental.)  Add a JavaScript browsing interface to the manual.  The "
-#| "value of the variable is the directory to place the code for this "
-#| "interface, so you would run the program as e.g.@: @samp{texi2any --html "
-#| "-c INFO_JS_DIR=js @var{manual}.texi} to place files in a @samp{js} "
-#| "directory under the output.  This provides some of the functionality of "
-#| "the Info browsers in a web browser, such as keyboard navigation and index "
-#| "lookup.  This only works with non-split HTML output."
 msgid ""
 "You can add an experimental JavaScript browsing interface to the HTML output "
 "by setting @code{INFO_JS_DIR} value to the name of a directory in which to "
@@ -49439,15 +49363,7 @@ msgid ""
 "under the output.  This interface provides some of the functionality of the "
 "Info browsers in a web browser, such as keyboard navigation and index "
 "lookup.  This only works with non-split HTML output."
-msgstr ""
-"(Experimental). Adicionar uma interface de navegação JavaScript ao manual. O "
-"valor da variável é o diretório para colocar o código para essa interface, "
-"de forma que você executaria o programa como por exemplo@: @samp{texi2any --"
-"html -c INFO_JS_DIR=js @var{manual}.texi} para colocar arquivos em um "
-"diretório @samp{js} sob a saída gerada. Isso fornece algumas das "
-"funcionalidades dos navegadores Info em um navegador da Web, como navegação "
-"por teclado e pesquisa de índice. Isso funciona somente com saída HTML não "
-"dividida."
+msgstr "Você pode adicionar uma interface de navegação JavaScript experimental à saída HTML configurando o valor de @code{INFO_JS_DIR} como o nome de um diretório no qual colocar o código para essa interface. Por exemplo, @samp{texi2any --html -c INFO_JS_DIR=js @var{manual}.texi} coloca arquivos em um diretório @samp{js} abaixo da saída gerada. Essa interface fornece algumas das funcionalidades dos navegadores Info em um navegador da Web, como navegação por teclado e pesquisa de índice. Isso funciona apenas com saída HTML não dividida."
 
 #. type: anchor{#1}
 #: texinfo/upstream/texinfo.texi:19270
@@ -49498,10 +49414,9 @@ msgstr ""
 
 #. type: subsection
 #: texinfo/upstream/texinfo.texi:19290 texinfo/upstream/texinfo.texi:19291
-#, fuzzy, no-wrap
-#| msgid "HTML Customization Variables"
+#, no-wrap
 msgid "HTML Customization Variables List"
-msgstr "Variáveis de Personalização do HTML"
+msgstr "Lista de Variáveis de Personalização do HTML"
 
 #. type: anchor{#1}
 #: texinfo/upstream/texinfo.texi:19295
@@ -49510,15 +49425,10 @@ msgstr "Variáveis de Personalização do HTML"
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:19297
-#, fuzzy
-#| msgid ""
-#| "This table gives the customization variables which apply to @LaTeX{} "
-#| "output only."
 msgid ""
 "This table lists the customization variables which apply to HTML output."
 msgstr ""
-"Esta tabela fornece as variáveis de personalização que se aplicam somente "
-"para saída gerada do @LaTeX{}."
+"Esta tabela lista as variáveis de personalização que se aplicam para saída gerada HTML."
 
 #. type: item
 #: texinfo/upstream/texinfo.texi:19299
@@ -49528,34 +49438,19 @@ msgstr "AFTER_BODY_OPEN"
 
 #. type: table
 #: texinfo/upstream/texinfo.texi:19301
-#, fuzzy
-#| msgid ""
-#| "If set, the corresponding text will appear at the beginning of each HTML "
-#| "file; default unset."
 msgid "Text added at the beginning of each HTML file; default unset."
 msgstr ""
-"Se configurada, o texto correspondente aparecerá no início de cada arquivo "
-"HTML; padrão desconfigurada."
+"Texto adicionado no início de cada arquivo HTML; padrão desconfigurada."
 
 #. type: table
 #: texinfo/upstream/texinfo.texi:19308
-#, fuzzy
-#| msgid ""
-#| "If set, the corresponding text is output after the short table of "
-#| "contents for @code{AFTER_SHORT_TOC_LINES} and after the table of contents "
-#| "for @code{AFTER_TOC_LINES}; otherwise, a default string is used.  At the "
-#| "time of writing, a @code{</div>} element is closed."
 msgid ""
 "Text output after the short table of contents for "
 "@code{AFTER_SHORT_TOC_LINES} and after the table of contents for "
 "@code{AFTER_TOC_LINES} if set; otherwise, a default string is used.  At the "
 "time of writing, a @code{</div>} element is closed."
 msgstr ""
-"Se configurada, o texto correspondente será exibido depois do sumário curto "
-"para @code{AFTER_SHORT_TOC_LINES} e depois do sumário para "
-"@code{AFTER_TOC_LINES}; caso contrário, uma sequência de caracteres padrão "
-"será usada. Ao tempo da escrita deste texto, um elemento @code{</div>} "
-"estava fechado."
+"Texto gerado depois do sumaríssimo para @code{AFTER_SHORT_TOC_LINES} e depois do sumário para @code{AFTER_TOC_LINES} se configurada; caso contrário, uma sequência padrão de caracteres será usada. Ao tempo desta escrita, um elemento @code{</div>} estava fechado."
 
 #. type: table
 #: texinfo/upstream/texinfo.texi:19312
@@ -49577,23 +49472,13 @@ msgstr ""
 
 #. type: table
 #: texinfo/upstream/texinfo.texi:19325
-#, fuzzy
-#| msgid ""
-#| "If set, the corresponding text is output before the short table of "
-#| "contents for @code{BEFORE_SHORT_TOC_LINES} and before the table of "
-#| "contents for @code{BEFORE_TOC_LINES}, otherwise a default string is "
-#| "used.  At the time of writing, a @code{<div ...>} element is opened."
 msgid ""
 "If set, text output before the short table of contents for "
 "@code{BEFORE_SHORT_TOC_LINES} and before the table of contents for "
 "@code{BEFORE_TOC_LINES}, otherwise a default string is used.  At the time of "
 "writing, a @code{<div ...>} element is opened."
 msgstr ""
-"Se configurada, o texto correspondente será produzido antes do sumário curto "
-"para @code{BEFORE_SHORT_TOC_LINES} e antes do sumário para "
-"@code{BEFORE_TOC_LINES}, caso contrário, uma sequência padrão de caracteres "
-"será usada. Ao tempo da escrita deste texto, um elemento @code{<div ...>} é "
-"aberto."
+"Se configurada, o texto gerado antes do sumaríssimo para @code{BEFORE_SHORT_TOC_LINES} e antes do sumário para @code{BEFORE_TOC_LINES}, caso contrário, uma sequência padrão de caracteres será usada. Ao tempo desta escrita, um elemento @code{<div ...>} está aberto."
 
 #. type: table
 #: texinfo/upstream/texinfo.texi:19329
@@ -49629,18 +49514,11 @@ msgstr "lang@r{, atributo do HTML}"
 
 #. type: table
 #: texinfo/upstream/texinfo.texi:19342
-#, fuzzy
-#| msgid ""
-#| "The text appearing in @code{<body>}.  By default, sets the HTML "
-#| "@code{lang} attribute to the document language "
-#| "(@pxref{@code{@@documentlanguage}})."
 msgid ""
 "The @code{<body>} attributes text.  By default, sets the HTML @code{lang} "
 "attribute to the document language (@pxref{@code{@@documentlanguage}})."
 msgstr ""
-"O texto que aparece em @code{<body>}. Por padrão, configura o atributo "
-"@code{lang} do HTML para o idioma do documento "
-"(@pxref{@code{@@documentlanguage}})."
+"O texto de atributos do @code{<body>}. Por padrão, configura o atributo @code{lang} do HTML para o idioma do documento (@pxref{@code{@@documentlanguage}})."
 
 #. type: table
 #: texinfo/upstream/texinfo.texi:19346
@@ -49654,19 +49532,12 @@ msgstr ""
 
 #. type: table
 #: texinfo/upstream/texinfo.texi:19356
-#, fuzzy
-#| msgid ""
-#| "Check that manuals which are the target of external cross-references "
-#| "(@pxref{Four and Five Arguments}) are present in @file{htmlxref.cnf} "
-#| "(@pxref{HTML Xref Configuration}); default false."
 msgid ""
 "Check that manuals which are the target of external cross-references "
 "(@pxref{Four and Five Arguments}) are present in @file{htmlxref.cnf} or "
 "@file{htmlxref.d/*.cnf} (@pxref{HTML Xref Configuration}); default true."
 msgstr ""
-"Verificar se os manuais que são o alvo de referências cruzadas externas "
-"(@pxref{Quatro e Cinco Argumentos}) estão presentes em @file{htmlxref.cnf} "
-"(@pxref{Configuração do Xref do HTML}); padrão falso."
+"Verificar se os manuais que são o alvo de referências cruzadas externas (@pxref{Quatro e Cinco Argumentos}) estão presentes em @file{htmlxref.cnf} ou em @file{htmlxref.d/*.cnf} (@pxref{Configuração do Xref do HTML}); padrão verdadeiro."
 
 #. type: table
 #: texinfo/upstream/texinfo.texi:19365
@@ -49702,23 +49573,13 @@ msgstr ""
 
 #. type: table
 #: texinfo/upstream/texinfo.texi:19379
-#, fuzzy
-#| msgid ""
-#| "If set, output copiable links for the definition commands "
-#| "(@pxref{Definition Commands}) and table commands (@pxref{Two-column "
-#| "Tables}) where an index entry is defined.  A link appears as a `@U{00B6}' "
-#| "sign that appears when you hover the mouse pointer over the heading text."
 msgid ""
 "If set, output copiable links for the definition commands (@pxref{Definition "
 "Commands}), table commands (@pxref{Two-column Tables}) where an index entry "
 "is defined and headings.  A link appears as a `@U{00B6}' sign that appears "
 "when you hover the mouse pointer over the heading text."
 msgstr ""
-"Se configurada, produzir linques copiáveis para os comandos de definição "
-"(@pxref{Comandos de Definição}) e comandos de tabela (@pxref{Tabelas de Duas "
-"Colunas}) onde uma entrada de índice estiver definida. Um linque aparece "
-"como um sinal `@U{00B6}' que aparece quando você passa o ponteiro do mouse "
-"sobre o texto do título."
+"Se configurada, produzir linques copiáveis para os comandos de definição (@pxref{Comandos de Definição}), comandos de tabela (@pxref{Tabelas de Duas Colunas}) onde uma entrada de índice estiver definida e cabeçalhos. Um linque aparece como um sinal `@U{00B6}' que aparece quando você passa o ponteiro do mouse sobre o texto do cabeçalho."
 
 #. type: table
 #: texinfo/upstream/texinfo.texi:19382
@@ -49755,23 +49616,13 @@ msgstr ""
 
 #. type: table
 #: texinfo/upstream/texinfo.texi:19408
-#, fuzzy
-#| msgid ""
-#| "If set, keep the directory containing the directories and files needed "
-#| "for EPUB.  The EPUB output file is a ZIP archive of this directory.  "
-#| "Default is not defined.  Set if not defined and @code{TEST} or "
-#| "@code{DEBUG} is set. @xref{EPUB Output File and Directory}."
 msgid ""
 "If set, keep the directory containing the directories and files needed for "
 "EPUB@.  The EPUB output file is a ZIP archive of this directory.  Default is "
 "not defined.  Set if not defined and @code{TEST} or @code{DEBUG} is set. "
 "@xref{EPUB Output File and Directory}."
 msgstr ""
-"Se configurada, mantém o diretório contendo os diretórios e arquivos "
-"necessários para EPUB. O arquivo de saída EPUB é um arquivamento ZIP desse "
-"diretório. O padrão é não definida. Configurada se não definida e "
-"@code{TEST} ou @code{DEBUG} estiver configurada. @xref{Arquivo e Diretório "
-"da Saída Gerada EPUB}."
+"Se configurada, mantém o diretório contendo os diretórios e arquivos necessários para EPUB@. O arquivo de saída EPUB é um arquivamento ZIP desse diretório. O padrão é não definida. Configurada se não definida e @code{TEST} ou @code{DEBUG} estiver configurada. @xref{Arquivo e Diretório da Saída Gerada EPUB}."
 
 #. type: table
 #: texinfo/upstream/texinfo.texi:19414
@@ -49800,14 +49651,9 @@ msgstr ""
 #.   If unset,
 #. type: table
 #: texinfo/upstream/texinfo.texi:19423
-#, fuzzy
-#| msgid ""
-#| "File extension for cross-references to other manuals.  If unset, based on "
-#| "@code{EXTENSION}."
 msgid "File extension for cross-references to other manuals."
 msgstr ""
-"Extensão de arquivo para referências cruzadas para outros manuais. Se "
-"desconfigurada, baseada em @code{EXTENSION}."
+"Extensão de arquivo para referências cruzadas para outros manuais."
 
 #. type: table
 #: texinfo/upstream/texinfo.texi:19426
