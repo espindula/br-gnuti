@@ -47251,13 +47251,6 @@ msgstr "@var{manual} @var{palavrachave} @var{prefixourl}\n"
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:18360
-#, fuzzy
-#| msgid ""
-#| "with @var{manual} the short identifier for a manual, @var{keyword} being "
-#| "one of: @code{mono}, @code{node}, @code{section}, @code{chapter}, and "
-#| "@var{urlprefix} described below.  Variable references can occur only in "
-#| "the @var{urlprefix}.  For example (used in the canonical "
-#| "@file{htmlxref.cnf}):"
 msgid ""
 "with @var{manual} the short identifier for a manual, @var{keyword} being one "
 "of: @code{mono}, @code{node}, @code{section}, @code{chapter}, and "
@@ -47267,19 +47260,11 @@ msgstr ""
 "com @var{manual} o identificador curto para um manual, @var{palavrachave} "
 "sendo um dos: @code{mono}, @code{node}, @code{section}, @code{chapter} e "
 "@var{prefixourl} descritos abaixo. Referências de variáveis podem ocorrer "
-"somente na @var{prefixourl}. Por exemplo (usado no canônico "
-"@file{htmlxref.cnf}):"
+"somente na @var{prefixourl}. Por exemplo (usado no arquivo canônico):"
 
 #. type: example
 #: texinfo/upstream/texinfo.texi:18368
-#, fuzzy, no-wrap
-#| msgid ""
-#| "G = http://www.gnu.org\n"
-#| "GS = $@{G@}/software\n"
-#| "hello mono    $@{GS@}/hello/manual/hello.html\n"
-#| "hello chapter $@{GS@}/hello/manual/html_chapter/\n"
-#| "hello section $@{GS@}/hello/manual/html_section/\n"
-#| "hello node    $@{GS@}/hello/manual/html_node/\n"
+#, no-wrap
 msgid ""
 "G = https://www.gnu.org\n"
 "GS = $@{G@}/software\n"
@@ -47288,7 +47273,7 @@ msgid ""
 "hello section $@{GS@}/hello/manual/html_section/\n"
 "hello node    $@{GS@}/hello/manual/html_node/\n"
 msgstr ""
-"G = http://www.gnu.org\n"
+"G = https://www.gnu.org\n"
 "GS = $@{G@}/software\n"
 "hello mono    $@{GS@}/hello/manual/hello.html\n"
 "hello chapter $@{GS@}/hello/manual/html_chapter/\n"
@@ -47415,17 +47400,14 @@ msgstr ""
 
 #. type: section
 #: texinfo/upstream/texinfo.texi:18427 texinfo/upstream/texinfo.texi:18429
-#, fuzzy, no-wrap
-#| msgid "HTML Customization Variables"
+#, no-wrap
 msgid "HTML Output Customization"
-msgstr "Variáveis de Personalização do HTML"
+msgstr "Personalização da Saída Gerada HTML"
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:18429
-#, fuzzy
-#| msgid "@nodedescription Inserting quotation marks."
 msgid "@nodedescription Using customization variables."
-msgstr "@nodedescription Inserindo aspas."
+msgstr "@nodedescription Usando variáveis de personalização."
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:18437
@@ -47440,20 +47422,12 @@ msgstr ""
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:18442
-#, fuzzy
-#| msgid ""
-#| "The documentation of @command{texi2any} HTML output adaptation using "
-#| "customization files is in a separate manual.  @xref{,,, texi2any_api, GNU "
-#| "Texinfo @command{texi2any} Output Customization}."
 msgid ""
 "If you ever need more control, you may be able to achieve this through the "
 "use of initialization files, which are described in a separate manual "
 "(@pxref{,,, texi2any_api, GNU Texinfo @command{texi2any} Output "
 "Customization})."
-msgstr ""
-"A documentação da adaptação da saída HTML do @command{texi2any} usando "
-"arquivos de personalização está em um manual separado. @xref{,,, "
-"texi2any_api, Personalização da Saída do @command{texi2any} do GNU Texinfo}."
+msgstr "Se você precisar de mais controle, poderá conseguir isso por meio do uso de arquivos de inicialização, que são descritos em um manual separado (@pxref{,,, texi2any_api, Personalização da Saída do @command{texi2any} do GNU Texinfo})."
 
 #. type: item
 #: texinfo/upstream/texinfo.texi:18443 texinfo/upstream/texinfo.texi:19618
@@ -47511,10 +47485,9 @@ msgstr ""
 
 #. type: vindex
 #: texinfo/upstream/texinfo.texi:18469
-#, fuzzy, no-wrap
-#| msgid "NO_TOP_NODE_OUTPUT"
+#, no-wrap
 msgid "NO_TOP_NODE_OUTPUT @subentry @r{for HTML}"
-msgstr "NO_TOP_NODE_OUTPUT"
+msgstr "NO_TOP_NODE_OUTPUT @subentry @r{para HTML}"
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:18477
@@ -47642,15 +47615,6 @@ msgstr "USE_NODE_DIRECTIONS"
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:18547
-#, fuzzy
-#| msgid ""
-#| "If true, use nodes to determine where next, up and prev link to in node "
-#| "headers.  If false, use sections.  If undefined, use @code{USE_NODES} "
-#| "value.  Default is undefined.  Note that this setting does not determine "
-#| "the link string only where the links points to, see @ref{Three "
-#| "Arguments, , xrefautomaticsectiontitle} for the link string "
-#| "customization.  If nodes and sections are systematically associated, this "
-#| "customization has no practical effect."
 msgid ""
 "By default, the @code{USE_NODES} setting also affects whether next, up and "
 "prev links in node headers link to nodes or sections, with nodes used if "
@@ -47660,15 +47624,7 @@ msgid ""
 "to; see @ref{Three Arguments, , xrefautomaticsectiontitle} for the link "
 "string customization.  If nodes and sections are systematically associated, "
 "this customization has no practical effect."
-msgstr ""
-"Se verdadeiro, usar nós para determinar para onde lincar próximo, acima e "
-"anterior nos cabeçalhos dos nós. Se falso, usar seções. Se indefinida, usar "
-"valor de @code{USE_NODES}. O padrão é indefinida. Observe que essa "
-"configuração não determina somente a sequência de caracteres do linque para "
-"onde os linques apontam; veja-se @ref{Três Argumentos, , "
-"xrefautomaticsectiontitle} para a personalização da sequência de caracteres "
-"do linque. Se nós e seções estiverem sistematicamente associados, essa "
-"personalização não terá efeito prático."
+msgstr "Por padrão, a configuração de @code{USE_NODES} também afeta se os linques Próximo, Acima e Anterior nos cabeçalhos dos nós lincam-se a nós ou a seções, com os nós usados se verdadeira e as seções usadas se falsa. Você consegue substituir isso usando a variável @code{USE_NODE_DIRECTIONS} (o valor padrão é indefinido). Observe que essa configuração não determina a sequência de caracteres do linque, somente para onde os linques apontam; veja-se @ref{Três Argumentos, , xrefautomaticsectiontitle} para a personalização da sequência de caracteres do linque. Se os nós e as seções estiverem sistematicamente associados, essa personalização não terá efeito prático."
 
 #. type: item
 #: texinfo/upstream/texinfo.texi:18548 texinfo/upstream/texinfo.texi:19393
@@ -47684,21 +47640,13 @@ msgstr "PROGRAM_NAME_IN_ABOUT"
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:18555
-#, fuzzy
-#| msgid ""
-#| "Used when an About element is output.  If set, output the program name "
-#| "and miscellaneous related information in About special element; default "
-#| "false."
 msgid ""
 "You can add a special @dfn{About} element explaining how to navigate by "
 "setting @code{DO_ABOUT}, set to 0 in the default case (no About element).  "
 "If @code{PROGRAM_NAME_IN_ABOUT} is also set, output the program name and "
 "miscellaneous related information in the About special element; default "
 "false."
-msgstr ""
-"Usada quando um elemento Sobre for gerado. Se configurada, produzir o nome "
-"do programa e diversas informações relacionadas no elemento especial Sobre; "
-"padrão falso."
+msgstr "Você pode adicionar um elemento especial @dfn{Sobre}, explicando como navegar, configurando @code{DO_ABOUT}; configurada como 0 no caso padrão (sem elemento Sobre). Se @code{PROGRAM_NAME_IN_ABOUT} também estiver configurada, produz o nome do programa e diversas informações relacionadas no elemento especial Sobre; padrão falso."
 
 #. type: item
 #: texinfo/upstream/texinfo.texi:18556 texinfo/upstream/texinfo.texi:19564
@@ -47715,39 +47663,38 @@ msgid ""
 "@samp{separate_element}).  If you prefer such special elements to be "
 "separate, set @code{MONOLITHIC} to 0 to output special elements to separate "
 "files."
-msgstr ""
+msgstr "No caso de saída gerada não dividida, por padrão, somente um arquivo é gerado, o qual contém quaisquer elementos Sobre (com @code{DO_ABOUT}) e elementos de sumário (com @code{CONTENTS_OUTPUT_LOCATION} configurada como @samp{separate_element}). Se você preferir que esses elementos especiais sejam separados, configure @code{MONOLITHIC} como 0 para gerar elementos especiais em arquivos separados."
 
 #. type: subsection
 #: texinfo/upstream/texinfo.texi:18565 texinfo/upstream/texinfo.texi:18566
 #, no-wrap
 msgid "File Names and Links Customization for HTML"
-msgstr ""
+msgstr "Personalização de Nomes de Arquivo e de Linques para HTML"
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:18570
 msgid ""
 "There are customization variables to control output file names, and to "
 "customize hyperlinks output within output files."
-msgstr ""
+msgstr "Existem variáveis de personalização para controlar os nomes dos arquivos da saída gerada e para personalizar a saída de hiperlinques dentro dos arquivos da saída gerada."
 
 #. type: vindex
 #: texinfo/upstream/texinfo.texi:18573
 #, no-wrap
 msgid "PREFIX @subentry @r{for HTML}"
-msgstr ""
+msgstr "PREFIXO @subentry @r{para HTML}"
 
 #. type: vindex
 #: texinfo/upstream/texinfo.texi:18574
-#, fuzzy, no-wrap
-#| msgid "URL @subentry referring to"
+#, no-wrap
 msgid "SUBDIR @subentry @r{for HTML}"
-msgstr "URL @subentry referenciando"
+msgstr "SUBDIR @subentry @r{para HTML}"
 
 #. type: vindex
 #: texinfo/upstream/texinfo.texi:18575
 #, no-wrap
 msgid "EXTENSION @subentry @r{for HTML}"
-msgstr ""
+msgstr "EXTENSÃO @subentry @r{para HTML}" 
 
 #. type: item
 #: texinfo/upstream/texinfo.texi:18576 texinfo/upstream/texinfo.texi:19343
@@ -47769,7 +47716,7 @@ msgid ""
 "@code{CASE_INSENSITIVE_FILENAMES}, file names are constructed as if the "
 "filesystem were case insensitive.  In that case, one file name is used for "
 "all files differing only by case."
-msgstr ""
+msgstr "Você consegue especificar os nomes dos arquivos de saída com mais controle que meramente a opção de linha de comando @option{--output} (@pxref{Invocando @command{texi2any}}). A variável de personalização @code{PREFIX} substitui o nome base do arquivo fornecido por @code{@@setfilename}, ou o nome do arquivo, e deveria não conter quaisquer componentes de diretório. Para alterar diretórios intermediários, use a variável de personalização @code{SUBDIR}. Finalmente, você também pode substituir a extensão com a variável de personalização @code{EXTENSION}. Essa variável deveria ser @code{undef} se nenhuma extensão for para ser adicionada. Se você configurar @code{CASE_INSENSITIVE_FILENAMES}, os nomes dos arquivos serão construídos como se o sistema de arquivos fosse insensível a maiúsculas e minúsculas. Nesse caso, um nome de arquivo será usado para todos os arquivos, diferindo somente por maiúsculas e por minúsculas."
 
 #. type: item
 #: texinfo/upstream/texinfo.texi:18589 texinfo/upstream/texinfo.texi:19626
@@ -47783,7 +47730,7 @@ msgid ""
 "Furthermore, the customization variable @code{TOP_FILE} overrides the output "
 "file name for the top element.  This is, in general, only taken into account "
 "when output is split."
-msgstr ""
+msgstr "Além disso, a variável de personalização @code{TOP_FILE} substitui o nome do arquivo da saída gerada para o elemento superior. Isso, em geral, só é levado em conta quando a saída gerada for dividida."
 
 #. type: item
 #: texinfo/upstream/texinfo.texi:18594 texinfo/upstream/texinfo.texi:19645
@@ -47801,21 +47748,20 @@ msgid ""
 "this customization variable value is @code{undef}, and set automatically "
 "based on output document split, to avoid setting @code{accesskey} to "
 "multiple values in the same HTML page (@pxref{HTML Splitting})."
-msgstr ""
+msgstr "Se @code{USE_ACCESSKEY} estiver configurada, o atributo @code{accesskey} será usado para fornecer atalhos de teclado em alguns hiperlinques de navegação. @kbd{n} é usado para linques para o próximo nó ou seção, @kbd{p} para linques para o nó ou seção anterior e @kbd{u} para linques de direção ascendente. No caso padrão, o valor dessa variável de personalização é @code{undef} e configurado automaticamente baseado na divisão do documento de saída, para evitar configurar @code{accesskey} para vários valores na mesma página HTML (@pxref{Dividindo HTML})."
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:18608
 msgid ""
 "There are customization variables that are specific to particular types of "
 "link:"
-msgstr ""
+msgstr "Existem variáveis de personalização que são específicas para tipos particulares de linques:"
 
 #. type: item
 #: texinfo/upstream/texinfo.texi:18610
-#, fuzzy, no-wrap
-#| msgid "Cross Reference Commands"
+#, no-wrap
 msgid "Cross-reference command links"
-msgstr "Comandos de Referência Cruzada"
+msgstr "Linques de comandos de referência cruzada"
 
 #. type: item
 #: texinfo/upstream/texinfo.texi:18611 texinfo/upstream/texinfo.texi:19694
@@ -47825,15 +47771,6 @@ msgstr "XREF_USE_NODE_NAME_ARG"
 
 #. type: table
 #: texinfo/upstream/texinfo.texi:18621
-#, fuzzy
-#| msgid ""
-#| "Only relevant for cross-reference commands with no cross reference name "
-#| "(second argument).  If set to@tie{}1, use the node name (first) argument "
-#| "in cross-reference @@-commands for the text displayed as the hyperlink.  "
-#| "If set to@tie{}0, use the node name if @code{USE_NODES} is set, otherwise "
-#| "the section name.  If set to @samp{undef}, use the first argument in "
-#| "preformatted environments, otherwise use the node name or section name "
-#| "depending on @code{USE_NODES}.  The default is @samp{undef}."
 msgid ""
 "If the second argument of a cross-reference command is set, it is displayed "
 "as hyperlink text (@pxref{Two Arguments}).  Otherwise the "
@@ -47844,22 +47781,13 @@ msgid ""
 "section name.  If set to @samp{undef}, use the first argument in "
 "preformatted environments, otherwise use the node name or section name "
 "depending on @code{USE_NODES}.  The default is @samp{undef}."
-msgstr ""
-"Relevante somente para comandos de referência cruzada sem nome de referência "
-"cruzada (segundo argumento). Se configurada como@tie{}1, usar o argumento "
-"(primeiro) do nome do nó em comandos @@ de referência cruzada para o texto "
-"exibido como o hiperlinque. Se configurada como@tie{}0, usar o nome do nó se "
-"@code{USE_NODES} estiver configurada; caso contrário, o nome da seção. Se "
-"configurada como @samp{undef}, usar o primeiro argumento em ambientes pré-"
-"formatados; caso contrário, usar o nome do nó ou o nome da seção, dependendo "
-"de @code{USE_NODES}. O padrão é @samp{undef}."
+msgstr "Se o segundo argumento de um comando de referência cruzada estiver configurado, ele será exibido como texto de hiperlinque (@pxref{Dois Argumentos}). Caso contrário, a variável de personalização @code{XREF_USE_NODE_NAME_ARG} será usada para determinar o texto do hiperlinque. Se configurado como@tie{}1, usar o (primeiro) argumento do nome do nó em comandos @@ de referência cruzada para o texto exibido como o hiperlinque. Se configurado como@tie{}0, usar o nome do nó se @code{USE_NODES} estiver configurada; caso contrário, o nome da seção. Se configurado como @samp{undef}, usar o primeiro argumento em ambientes pré-formatados, caso contrário, usar o nome do nó ou o nome da seção dependendo de @code{USE_NODES}. O padrão é @samp{undef}."
 
 #. type: item
 #: texinfo/upstream/texinfo.texi:18622
-#, fuzzy, no-wrap
-#| msgid "List of floats"
+#, no-wrap
 msgid "Links to floats"
-msgstr "Lista de flutuações"
+msgstr "Linques para flutuações"
 
 #. type: item
 #: texinfo/upstream/texinfo.texi:18623 texinfo/upstream/texinfo.texi:19689
@@ -47869,26 +47797,18 @@ msgstr "XREF_USE_FLOAT_LABEL"
 
 #. type: table
 #: texinfo/upstream/texinfo.texi:18627
-#, fuzzy
-#| msgid ""
-#| "If set, for the float name in cross-references, use the float label "
-#| "instead of the type followed by the float number "
-#| "(@pxref{@code{@@float}}).  The default is off."
 msgid ""
 "If you set @code{XREF_USE_FLOAT_LABEL} (default is off), the float label is "
 "used instead of the type followed by the float number "
 "(@pxref{@code{@@float}})."
 msgstr ""
-"Se configurada, para o nome flutuante em referências cruzadas, usar o rótulo "
-"flutuante em vez do tipo seguido pelo número flutuante "
-"(@pxref{@code{@@float}}). O padrão é desligado."
+"Se você configurar @code{XREF_USE_FLOAT_LABEL}(padrão é desligada), o rótulo flutuante será usado em vez do tipo seguido pelo número flutuante (@pxref{@code{@@float}})."
 
 #. type: item
 #: texinfo/upstream/texinfo.texi:18628
-#, fuzzy, no-wrap
-#| msgid "sort keys for index entries"
+#, no-wrap
 msgid "Links to nodes or sections for index entries"
-msgstr "ordenar chaves para entradas de índice"
+msgstr "Linques para nós ou para seções para entradas de índice"
 
 #. type: item
 #: texinfo/upstream/texinfo.texi:18629 texinfo/upstream/texinfo.texi:19578
@@ -47906,14 +47826,13 @@ msgid ""
 "node names in index entries, otherwise use section names.  If undefined, use "
 "the @code{USE_NODES} value to determine which root @@-command to prefer.  "
 "Default is undefined."
-msgstr ""
+msgstr "Na formatação de @code{@@printindex}, dois linques são gerados: um linque para a entrada do índice e um linque para o comando @@ raiz que contém a entrada do índice. A variável de customização @code{NODE_NAME_IN_INDEX} especifica se o nó ou seção deveria ser usado para o linque para o comando @@ raiz. Se verdadeiro, usar nomes de nós nas entradas de índice; caso contrário, usar nomes de seção. Se indefinido, usar o valor de @code{USE_NODES} para determinar qual comando @@ raiz preferir. O padrão é indefinido."
 
 #. type: item
 #: texinfo/upstream/texinfo.texi:18638
-#, fuzzy, no-wrap
-#| msgid "Menu location"
+#, no-wrap
 msgid "Menu links"
-msgstr "Local de Menu"
+msgstr "Linques de menu"
 
 #. type: item
 #: texinfo/upstream/texinfo.texi:18639 texinfo/upstream/texinfo.texi:19582
@@ -47926,14 +47845,13 @@ msgstr "NODE_NAME_IN_MENU"
 msgid ""
 "Node names are used in menu entries links by default.  Set "
 "@code{NODE_NAME_IN_MENU} to false to use section names instead."
-msgstr ""
+msgstr "Os nomes dos nós são usados em linques de entradas de menu por padrão. Configurar @code{NODE_NAME_IN_MENU} como falso para usar nomes de seção."
 
 #. type: item
 #: texinfo/upstream/texinfo.texi:18643
-#, fuzzy, no-wrap
-#| msgid "Table of contents"
+#, no-wrap
 msgid "Table of contents links"
-msgstr "Sumário"
+msgstr "Linques de sumário"
 
 #. type: item
 #: texinfo/upstream/texinfo.texi:18644 texinfo/upstream/texinfo.texi:19604
@@ -47943,20 +47861,12 @@ msgstr "SHORT_TOC_LINK_TO_TOC"
 
 #. type: table
 #: texinfo/upstream/texinfo.texi:18649
-#, fuzzy
-#| msgid ""
-#| "If set, the cross-references in the Short table of contents links to the "
-#| "corresponding Table of Contents entries, if a Table of Contents is "
-#| "output; default true."
 msgid ""
 "If a main Table of contents and a Short table of contents are both present, "
 "the cross-references in the Short table of contents link to the "
 "corresponding Table of Contents entries in the default case.  Set "
 "@code{SHORT_TOC_LINK_TO_TOC} to 0 to link to the sectioning commands instead."
-msgstr ""
-"Se configurada, as referências cruzadas no sumário curto se lincam às "
-"entradas correspondentes do Sumário, se um Sumário for gerado; padrão "
-"verdadeiro."
+msgstr "Se um Sumário principal e um Sumaríssimo estiverem presentes, as referências cruzadas no Sumaríssimo se lincarão às correspondentes entradas do Sumário no caso padrão. Configurar @code{SHORT_TOC_LINK_TO_TOC} como 0 para lincar aos comandos de seccionamento."
 
 #. type: item
 #: texinfo/upstream/texinfo.texi:18650 texinfo/upstream/texinfo.texi:19622
@@ -47966,22 +47876,17 @@ msgstr "TOC_LINKS"
 
 #. type: table
 #: texinfo/upstream/texinfo.texi:18653
-#, fuzzy
-#| msgid ""
-#| "If set, links from headings to toc entries are created; default false."
 msgid ""
 "If you set @code{TOC_LINKS}, links from headings to toc entries are created; "
 "default false."
 msgstr ""
-"Se configurada, linques de títulos para entradas de índice serão criados; "
-"padrão falso."
+"Se você configurar @code{TOC_LINKS}, linques de títulos para entradas do sumário serão criados; padrão falso."
 
 #. type: item
 #: texinfo/upstream/texinfo.texi:18654
-#, fuzzy, no-wrap
-#| msgid "Top node is first"
+#, no-wrap
 msgid "Top node Up direction link"
-msgstr "Nó Top é primeiro"
+msgstr "Linque de direção Acima do nó Topo"
 
 #. type: item
 #: texinfo/upstream/texinfo.texi:18655 texinfo/upstream/texinfo.texi:19520
@@ -47997,7 +47902,7 @@ msgid ""
 "(by default, @samp{(dir)}) appearing in other cross-references are also "
 "ignored.  @code{IGNORE_REF_TO_TOP_NODE_UP} is not set in the default case.  "
 "(@xref{TOP_NODE_UP}.)"
-msgstr ""
+msgstr "Por padrão, nenhuma referência Acima é gerada para o nó Topo. Você pode configurar @code{IGNORE_REF_TO_TOP_NODE_UP} para que quaisquer referências para o nó Acima de Topo (por padrão, @samp{(dir)}) que aparecem em outras referências cruzadas também sejam ignoradas. @code{IGNORE_REF_TO_TOP_NODE_UP} não está configurada no caso padrão. (@xref{TOP_NODE_UP})."
 
 #. type: item
 #: texinfo/upstream/texinfo.texi:18662 texinfo/upstream/texinfo.texi:19636
@@ -48009,7 +47914,7 @@ msgstr "TOP_NODE_UP_URL"
 #: texinfo/upstream/texinfo.texi:18663
 #, no-wrap
 msgid "TOP_NODE_UP @subentry @r{for HTML}"
-msgstr ""
+msgstr "TOP_NODE_UP @subentry @r{para HTML}"
 
 #. type: table
 #: texinfo/upstream/texinfo.texi:18670
@@ -48020,7 +47925,7 @@ msgid ""
 "value of @code{TOP_NODE_UP} is used for the hyperlink text, with "
 "@samp{(dir)} as default.  @code{TOP_NODE_UP} can be used in attribute, so "
 "should not contain any element."
-msgstr ""
+msgstr "Se o manual estiver referenciado em uma página web juntamente com outros manuais, possivelmente seja relevante lincar para essa página. Configure @code{TOP_NODE_UP_URL} como o URL usado para nó Topo que Acima referenciar. Se @code{TOP_NODE_UP_URL} for configurada, o valor de @code{TOP_NODE_UP} será usado para o texto do hiperlinque, com @samp{(dir)} como padrão. @code{TOP_NODE_UP} pode ser usada no atributo, portanto deveria não conter nenhum elemento."
 
 #. type: table
 #: texinfo/upstream/texinfo.texi:18675
@@ -48029,19 +47934,18 @@ msgid ""
 "links to most GNU manuals; therefore @code{TOP_NODE_UP_URL} is best "
 "specified as @code{/manual/} if the manual will be installed on "
 "@code{www.gnu.org}."
-msgstr ""
+msgstr "Por exemplo, no projeto GNU @url{https://www.gnu.org/manual/} coleta linques para a maioria dos manuais GNU; portanto, @code{TOP_NODE_UP_URL} é melhor especificada como @code{/manual/} se o manual for instalado em @code{www.gnu.org}."
 
 #. type: table
 #: texinfo/upstream/texinfo.texi:18677
 msgid "@xref{First Node} for more about the Top node pointers."
-msgstr ""
+msgstr "@xref{Primeiro Nó} para mais acerca dos ponteiros do nó Topo."
 
 #. type: item
 #: texinfo/upstream/texinfo.texi:18678
-#, fuzzy, no-wrap
-#| msgid "Image Scaling"
+#, no-wrap
 msgid "images links"
-msgstr "Escalonamento da Imagem"
+msgstr "linques de imagens"
 
 #. type: item
 #: texinfo/upstream/texinfo.texi:18679 texinfo/upstream/texinfo.texi:19494
@@ -48051,24 +47955,17 @@ msgstr "IMAGE_LINK_PREFIX"
 
 #. type: table
 #: texinfo/upstream/texinfo.texi:18683
-#, fuzzy
-#| msgid ""
-#| "If set, the associated value is prepended to the image file links; "
-#| "default unset."
 msgid ""
 "If @code{IMAGE_LINK_PREFIX} is set, the associated value is prepended to the "
 "image file links; default unset.  This could be useful if image files are in "
 "a specific subdirectory."
 msgstr ""
-"Se configurada, o valor associado será preposto aos linques do arquivo de "
-"imagem; padrão desconfigurada."
+"Se @code{IMAGE_LINK_PREFIX} estiver configurada, o valor associado será preposto aos linques do arquivo de imagem; padrão desconfigurada. Isso poderia ser útil se arquivos de imagens estiverem em um subdiretório específico."
 
 #. type: anchor{#1}
 #: texinfo/upstream/texinfo.texi:18692
-#, fuzzy
-#| msgid "HTML Xref Configuration"
 msgid "HTML Xref Configuration Customization"
-msgstr "Configuração do Xref do HTML"
+msgstr "Personalização da Configuração do Xref do HTML"
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:18692
@@ -48077,7 +47974,7 @@ msgid ""
 "Xref}).  Customization of manual locations is provided through the "
 "@file{htmlxref.cnf} and and @file{htmlxref.d/*.cnf} files (@pxref{HTML Xref "
 "Configuration})."
-msgstr ""
+msgstr "As referências cruzadas entre manuais HTML são especificadas precisamente (@pxref{Xref do HTML}). A personalização de locais de manuais é fornecida por meio dos arquivos @file{htmlxref.cnf} e @file{htmlxref.d/*.cnf} (@pxref{Configuração do Xref do HTML})."
 
 #. type: item
 #: texinfo/upstream/texinfo.texi:18693 texinfo/upstream/texinfo.texi:19351
@@ -48094,7 +47991,7 @@ msgid ""
 "the HTML Xref configuration files.  If you do not want warnings about such "
 "manuals, you should set @code{CHECK_HTMLXREF} to @samp{0}.  This could be "
 "relevant, for example, if you know that manuals are installed locally."
-msgstr ""
+msgstr "Diretórios e nomes de arquivo padrão são usados para referenciar cruzadamente manuais alvo não encontrados por meio da Configuração do Xref do HTML (@pxref{Básicos do Linque Xref do HTML}). Por padrão, um aviso é fornecido para cada manual externo que não esteja nos arquivos de configuração do Xref do HTML. Se não quiser avisos acerca de tais manuais, você deveria configurar @code{CHECK_HTMLXREF} como @samp{0}. Isso poderia ser relevante, por exemplo, se você souber que os manuais estão instalados localmente."
 
 #. type: item
 #: texinfo/upstream/texinfo.texi:18701 texinfo/upstream/texinfo.texi:19481
@@ -48116,10 +48013,9 @@ msgstr "EXTERNAL_CROSSREF_SPLIT"
 
 #. type: cindex
 #: texinfo/upstream/texinfo.texi:18704
-#, fuzzy, no-wrap
-#| msgid "HTML cross-references @subentry configuration"
+#, no-wrap
 msgid "HTML cross-references @subentry configuration customization"
-msgstr "Referências cruzadas do HTML @subentry configuração"
+msgstr "Referências cruzadas do HTML @subentry personalização de configuração"
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:18723
@@ -48141,21 +48037,20 @@ msgid ""
 "the distant manual is considered to be split or monolithic based on the "
 "splitting of the manual being output.  You can set it explicitly, instead, "
 "by setting @code{EXTERNAL_CROSSREF_SPLIT}."
-msgstr ""
+msgstr "Você consegue usar variáveis de personalização para especificar a Configuração do Xref do HTML mais precisamente. Por padrão, o nome do arquivo usado para configuração do Xref do HTML e o diretório @file{htmlxref.d} são pesquisados em diretórios, arquivos em @file{htmlxref.d} com a extensão @file{.cnf} e todos os arquivos usados para configuração do Xref do HTML encontrados serão usados. Você pode configurar a variável de personalização @code{HTMLXREF_MODE} para modificar como as referências cruzadas para outras informações de manuais são determinadas. Se @code{HTMLXREF_MODE} estiver configurada como @samp{file}, o nome do arquivo será usado diretamente como a fonte da informação. Se @code{HTMLXREF_MODE} estiver configurada como @samp{none}, nenhuma informação será usada. O caso padrão é obtido com @code{HTMLXREF_MODE} não definida ou configurada com qualquer outro valor. A variável de personalização @code{HTMLXREF_FILE} configura o arquivo usado para configuração do Xref do HTML com um valor diferente do padrão, @file{htmlxref.cnf}.  Se @code{HTMLXREF_FILE} contiver diretórios, eles serão carregados se encontrados, mas não serão pesquisados nos diretórios. Por padrão, o manual distante é considerado estar dividido ou monolítico baseado na divisão do manual sendo produzido. Você pode configurá-lo explicitamente, configurando @code{EXTERNAL_CROSSREF_SPLIT}."
 
 #. type: cindex
 #: texinfo/upstream/texinfo.texi:18724
-#, fuzzy, no-wrap
-#| msgid "Cross-reference configuration, for HTML"
+#, no-wrap
 msgid "Cross-references customization, in HTML"
-msgstr "Configuração de referência cruzada, para HTML"
+msgstr "Personalização de referências cruzadas, no HTML"
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:18727
 msgid ""
 "There are also customization variables that modify various other aspects of "
 "cross-references:"
-msgstr ""
+msgstr "Existem também variáveis de personalização que modificam vários outros aspectos das referências cruzadas:"
 
 #. type: item
 #: texinfo/upstream/texinfo.texi:18729 texinfo/upstream/texinfo.texi:19632
@@ -48165,17 +48060,16 @@ msgstr "TOP_NODE_FILE_TARGET"
 
 #. type: item
 #: texinfo/upstream/texinfo.texi:18730
-#, fuzzy, no-wrap
-#| msgid "File name used for the Top node in cross-references; default is @code{index.html}."
+#, no-wrap
 msgid "You can set the file name used for the Top node in cross-references by"
-msgstr "Nome do arquivo usado para o nó Top em referências cruzadas; o padrão é @code{index.html}."
+msgstr "Você consegue configurar o nome do arquivo usado para o nó Topo em referências cruzadas por"
 
 #. type: itemize
 #: texinfo/upstream/texinfo.texi:18733
 msgid ""
 "setting the @code{TOP_NODE_FILE_TARGET} customization variable value; "
 "default is @file{index.html}."
-msgstr ""
+msgstr "configurando o valor da variável de personalização @code{TOP_NODE_FILE_TARGET}; padrão é @file{index.html}."
 
 #. type: item
 #: texinfo/upstream/texinfo.texi:18734 texinfo/upstream/texinfo.texi:19415
@@ -48187,12 +48081,12 @@ msgstr "EXTERNAL_DIR"
 #: texinfo/upstream/texinfo.texi:18735
 #, no-wrap
 msgid "You specify a base directory for external"
-msgstr ""
+msgstr "Você especifica um diretório base para externos"
 
 #. type: itemize
 #: texinfo/upstream/texinfo.texi:18737
 msgid "manuals with @code{EXTERNAL_DIR}; in the default case, there is none."
-msgstr ""
+msgstr "manuais com @code{EXTERNAL_DIR}; no caso padrão, não existe nenhum."
 
 #. type: item
 #: texinfo/upstream/texinfo.texi:18738 texinfo/upstream/texinfo.texi:19420
@@ -48204,15 +48098,13 @@ msgstr "EXTERNAL_CROSSREF_EXTENSION"
 #: texinfo/upstream/texinfo.texi:18739
 #, no-wrap
 msgid "Similarly, you set the file extension for cross-references to other"
-msgstr ""
+msgstr "Similarmente, você configura a extensão do arquivo para referenciar cruzadamente a outros"
 
 #.  , which, if unset, is based on
 #. type: itemize
 #: texinfo/upstream/texinfo.texi:18742
-#, fuzzy
-#| msgid "EXTERNAL_CROSSREF_EXTENSION"
 msgid "manuals with @code{EXTERNAL_CROSSREF_EXTENSION}."
-msgstr "EXTERNAL_CROSSREF_EXTENSION"
+msgstr "manuais com @code{EXTERNAL_CROSSREF_EXTENSION}."
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:18750
