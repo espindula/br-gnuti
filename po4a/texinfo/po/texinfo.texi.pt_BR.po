@@ -467,6 +467,12 @@ msgid ""
 "Emacs also offers commands for converting Texinfo code to Info "
 "(@pxref{@code{texinfo-format} commands})."
 msgstr ""
+"A saída para a maioria dos formatos de saída é manuseada pelo programa "
+"@command{texi2any}. @xref{Tradutor Genérico @command{texi2any}}. A "
+"exceção é quando o código do Texinfo é processado pelo @TeX{} para DVI "
+"ou PDF (@pxref{Livros Impressos}, abaixo). O Emacs também oferece comandos "
+"para converter código Texinfo para Info (@pxref{comandos "
+"@code{texinfo-format}})."
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:192
@@ -1600,6 +1606,8 @@ msgid ""
 "The new Perl program was intended to have the following advantages over the "
 "old C program:"
 msgstr ""
+"O novo programa Perl pretendia ter as seguintes vantagens sobre o antigo "
+"programa C:"
 
 #. type: item
 #: texinfo/upstream/texinfo.texi:586
@@ -1638,6 +1646,8 @@ msgid ""
 "Asian languages.  At that time, doing it in C would have been tantamount to "
 "rewriting the entire program."
 msgstr ""
+"Idiomas asiáticos. Naquela época, fazer isso em C teria sido equivalente a "
+"reescrever todo o programa."
 
 #. type: item
 #: texinfo/upstream/texinfo.texi:598
@@ -1700,6 +1710,9 @@ msgid ""
 "provide a reference for command-line options for any other program that "
 "might process Texinfo in the future."
 msgstr ""
+"que define partes da linguagem não totalmente especificadas pelo manual e "
+"para fornecer uma referência para opções de linha de comando para "
+"qualquer outro programa que possa processar o Texinfo no futuro."
 
 #. type: cindex
 #: texinfo/upstream/texinfo.texi:617
@@ -1717,6 +1730,13 @@ msgid ""
 "program has also been translated to C.  The @command{texi2any} C "
 "implementation embeds a Perl interpreter for the parts that require Perl."
 msgstr ""
+"Na época, o novo programa Perl era muito mais lento que o antigo programa "
+"C. Desde então, o analisador, parte do conversor Info e o conversor HTML "
+"como um todo foram traduzidos para C, levando a importantes ganhos de "
+"velocidade comparado com a implementação Perl pura do @command{texi2any}. "
+"O programa principal também foi traduzido para C. A implementação C do "
+"@command{texi2any} embute um interpretador Perl para as partes que exigem "
+"Perl."
 
 #. type: section
 #: texinfo/upstream/texinfo.texi:628 texinfo/upstream/texinfo.texi:630
@@ -1780,7 +1800,7 @@ msgstr ""
 #: texinfo/upstream/texinfo.texi:649
 #, no-wrap
 msgid "Output formats, with Texinfo XML as input"
-msgstr ""
+msgstr "Formatos de saída, com XML do Texinfo como entrada"
 
 #. type: cindex
 #: texinfo/upstream/texinfo.texi:650
@@ -1843,6 +1863,10 @@ msgid ""
 "process Texinfo to use these test cases and verify that they give correct "
 "results with your new program."
 msgstr ""
+"Testes extensivos da linguagem e do processador são desenvolvidos com "
+"@command{texi2any}; nós encorajamos qualquer pessoa pensando em escrever um "
+"programa para processar o Texinfo a usar esses casos de teste e verificar se "
+"eles fornecem resultados corretos com teu novo programa."
 
 #. type: cindex
 #: texinfo/upstream/texinfo.texi:670
@@ -2677,6 +2701,10 @@ msgid ""
 "@@chapter First Chapter\n"
 "\n"
 msgstr ""
+"@@node Primeiro Capítulo\n"
+"@@nodedescription O primeiro capítulo é o único capítulo nesta amostra.\n"
+"@@chapter Primeiro Capítulo\n"
+"\n"
 
 #. type: group
 #: texinfo/upstream/texinfo.texi:972 texinfo/upstream/texinfo.texi:2157
@@ -3633,6 +3661,10 @@ msgid ""
 "independently with no central co-ordination that would result in such "
 "consistency."
 msgstr ""
+"Não existe consistência no uso de categorias de diretório entre manuais, "
+"e é improvável que alguma vez exista, já que os(as) autores(as) trabalham "
+"na documentação do Texinfo independentemente, sem nenhuma coordenação "
+"central que resultaria em tal consistência."
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:1337
@@ -3641,6 +3673,10 @@ msgid ""
 "categories in Info or Texinfo files, if a logical organization within "
 "@code{dir} files is something that they value."
 msgstr ""
+"É possível para usuários(as) ou para distribuições de sistemas "
+"operacionais editarem categorias em arquivos do Info ou do Texinfo, se uma "
+"organização lógica dentro de arquivos @code{dir} for algo que eles(as) "
+"valorizem."
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:1342
@@ -3650,6 +3686,10 @@ msgid ""
 "be a good idea to use package-specific category, or categories, to group its "
 "manuals."
 msgstr ""
+"Autores(as) de manuais podem considerar usar algumas das seguintes "
+"categorias para manuais. Para um pacote que instale muitos manuais (como o "
+"Emacs), pode ser uma boa ideia usar categoria específica de pacote, ou "
+"categorias, para agrupar os manuais dele."
 
 #. type: display
 #: texinfo/upstream/texinfo.texi:1382
@@ -3689,6 +3729,39 @@ msgid ""
 "Video\n"
 "Web authoring\n"
 msgstr ""
+"Arquivamento\n"
+"Áudio\n"
+"Negócios e produtividade\n"
+"Compressão\n"
+"Base de dados\n"
+"Dicionários\n"
+"Tradução de documentação\n"
+"Editores\n"
+"Educação\n"
+"Correio eletrônico\n"
+"Fontes\n"
+"Jogos\n"
+"Gráficos\n"
+"Saúde\n"
+"Interface\n"
+"Aplicações de Internet\n"
+"Comunicações ao vivo\n"
+"Localização\n"
+"Matemática\n"
+"Música\n"
+"Aplicações de rede de intercomunicação\n"
+"Impressão\n"
+"Segurança\n"
+"Ciência\n"
+"Desenvolvimento de software\n"
+"Bibliotecas de software\n"
+"Planilhas\n"
+"Administração do sistema\n"
+"Telefonia\n"
+"Criação e manipulação de texto\n"
+"Controle de versão\n"
+"Vídeo\n"
+"Autoria web\n"
 
 #. type: section
 #: texinfo/upstream/texinfo.texi:1385 texinfo/upstream/texinfo.texi:1388
@@ -4197,12 +4270,18 @@ msgid ""
 "the @dfn{copyright page}.  As this is on the back (verso)  of the title "
 "page, this page is also known as the @dfn{title verso}."
 msgstr ""
+"A primeira página de um livro impresso geralmente é a @dfn{página de "
+"título}, a qual contém o nome do livro e o(a) autor(a). As informações "
+"de copirraite e de publicação geralmente são impressas na página "
+"seguinte; nós nos referimos a essa página como a @dfn{página de "
+"copirraite}. Como essa está atrás (no verso) da página de título, essa "
+"página também é conhecida como o @dfn{verso do título}."
 
 #. type: cindex
 #: texinfo/upstream/texinfo.texi:1573
 #, no-wrap
 msgid "Document metadata"
-msgstr ""
+msgstr "Metadados de documento"
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:1580
@@ -4214,6 +4293,13 @@ msgid ""
 "information appears in the output in some form for other output formats, "
 "even if not displayed as a title page."
 msgstr ""
+"O Texinfo fornece comandos para você fornecer o título do documento, "
+"qualquer subtítulo, o nome do(a) autor(a) (ou nomes de vários(as) "
+"autores(as)) e informações de cópia e de publicação para o documento. "
+"Esses @dfn{metadados} são usados para o conteúdo da página de título e "
+"da página de copirraite. Da mesma forma, essas informações aparecem na "
+"saída gerada, em alguma forma, para outros formatos de saída, mesmo se "
+"não exibidas como a página de título."
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:1584
@@ -4222,6 +4308,9 @@ msgid ""
 "to generate the title and copyright pages, which are described in the "
 "following subsections."
 msgstr ""
+"O Texinfo fornece pelo menos três maneiras para fornecer esses metadados e "
+"para gerar as páginas de título e de copirraite, as quais estão descritas "
+"nas seguintes subseções."
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:1588
@@ -4274,7 +4363,7 @@ msgstr ""
 #: texinfo/upstream/texinfo.texi:1600
 #, no-wrap
 msgid "Document Metadata"
-msgstr ""
+msgstr "Metadados de Documento"
 
 #. type: nodedescriptionblock
 #: texinfo/upstream/texinfo.texi:1604
@@ -4301,6 +4390,9 @@ msgid ""
 "The simplest way to define document metadata used for the title page is "
 "using the @code{@@documentinfo} command.  Here is a template:"
 msgstr ""
+"A maneira mais simples para definir metadados de documento usados para a "
+"página de título é a de usar-se o comando @code{@@documentinfo}. Aqui "
+"está um modelo:"
 
 #. type: group
 #: texinfo/upstream/texinfo.texi:1619
@@ -4331,6 +4423,13 @@ msgid ""
 "@code{@@subtitle}, and @code{@@author} commands relative to each other is "
 "not significant.)"
 msgstr ""
+"Você só deveria usar o comando @code{@@title} uma vez dentro do bloco "
+"@code{@@documentinfo}. Você pode usar o comando @code{@@subtitle} mais que "
+"uma vez, e a ordem em que quaisquer comandos @code{@@subtitle} aparecem no "
+"bloco é mantida quando o arquivo do Texinfo for processado. Da mesma forma, "
+"você pode usar @code{@@author} mais que uma vez. (No entanto, a ordem dos "
+"comandos @code{@@title}, @code{@@subtitle} e @code{@@author} em relação um "
+"ao outro não é significativa)."
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:1633
@@ -4339,6 +4438,9 @@ msgid ""
 "and @code{@@publication} commands.  @xref{Document Permissions} for more "
 "discussion of @code{@@copying}."
 msgstr ""
+"As informações para a página de copirraite aparecem dentro dos comandos "
+"@code{@@copying} e @code{@@publication}. @xref{Permissões de Documento} "
+"para mais discussão do @code{@@copying}."
 
 #. type: findex
 #: texinfo/upstream/texinfo.texi:1634
@@ -4356,6 +4458,12 @@ msgid ""
 "ISBN@.  You use this block for information that would go an ``imprint'' or "
 "``colophon'' in a printed book."
 msgstr ""
+"O comando @code{@@publication} funciona muito similarmente a "
+"@code{@@copying}. Os processadores de Texinfo salvam o conteúdo desse bloco "
+"quando o encontram no fonte de Texinfo. Você usa esse comando para fornecer "
+"informações acerca da publicação do documento, como o endereço do(a) "
+"editor(a) ou o ISBN@. Você usa esse bloco para informações que seriam "
+"``impressas'' ou ``colofões'' em um livro impresso."
 
 #. type: findex
 #: texinfo/upstream/texinfo.texi:1642
