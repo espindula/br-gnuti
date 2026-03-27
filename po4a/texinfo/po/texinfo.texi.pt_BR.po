@@ -34664,7 +34664,7 @@ msgstr ""
 #: texinfo/upstream/texinfo.texi:13247
 #, no-wrap
 msgid "If a macro invocation includes another command (including a"
-msgstr ""
+msgstr "Se uma invocação de macro incluir outro comando (incluindo um"
 
 #. type: enumerate
 #: texinfo/upstream/texinfo.texi:13250
@@ -35029,6 +35029,7 @@ msgstr ""
 #: texinfo/upstream/texinfo.texi:13400
 msgid "Macros should not be used in node names.  @xref{Node Names}."
 msgstr ""
+"Macros deveriam não serem usadas em nomes de nós. @xref{Nomes de Nós}."
 
 #. type: itemize
 #: texinfo/upstream/texinfo.texi:13404
@@ -36673,7 +36674,7 @@ msgstr "@@verbatiminclude @@value@{top_srcdir@}/NEWS\n"
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:14117
 msgid "first place.)"
-msgstr ""
+msgstr "primeiro lugar)."
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:14121
@@ -37278,6 +37279,8 @@ msgstr ""
 #, no-wrap
 msgid "the output file is updated after every successful @TeX{} run, for"
 msgstr ""
+"o arquivo da saída gerada é atualizado depois de cada execução "
+"bem-sucedida do @TeX{}, por"
 
 #. type: itemize
 #: texinfo/upstream/texinfo.texi:14351
@@ -38432,6 +38435,8 @@ msgid ""
 "Texinfo comes with support files for processing input in the Japanese and "
 "Chinese languages."
 msgstr ""
+"Texinfo vem com arquivos de suporte para processamento de entrada nos "
+"idiomas japonês e chinês."
 
 #. type: cindex
 #: texinfo/upstream/texinfo.texi:14753
@@ -38625,6 +38630,12 @@ msgid ""
 "can use Perl extension modules in compiled native code, while the native "
 "code program embeds a Perl interpreter for the parts that require Perl."
 msgstr ""
+"Duas implementações funcionalmente equivalentes do @command{texi2any} "
+"podem ser construídas no GNU Texinfo, uma em Perl e outra em código nativo "
+"compilado (em C). A implementação de código nativo ainda é experimental. "
+"O programa Perl pode usar módulos de extensão Perl em código nativo "
+"compilado, enquanto o programa de código nativo embute um interpretador "
+"Perl para as partes que exigem Perl."
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:14833
@@ -38633,6 +38644,10 @@ msgid ""
 "the experimental C implementation instead at build time by passing the "
 "@option{--enable-using-c-texi2any} option to @command{configure}."
 msgstr ""
+"No caso padrão, a implementação Perl é instalada. Você consegue "
+"selecionar a implementação experimental C ao tempo da construção, "
+"passando a opção @option{--enable-using-c-texi2any} para "
+"@command{configure}."
 
 #. type: node
 #: texinfo/upstream/texinfo.texi:14835
@@ -40181,6 +40196,12 @@ msgid ""
 "output in any output format.  (The purpose of this option is to make it "
 "easier to collect the sources of a Texinfo manual.)"
 msgstr ""
+"Imprimir o nome de cada arquivo incluído na saída padrão, incluindo "
+"quaisquer arquivos incluídos indiretamente. Um arquivo de inclusão será "
+"impresso somente se for realmente encontrado. Quando essa opção é "
+"fornecida, @command{texi2any} não gera em nenhum formato de saída. (O "
+"objetivo dessa opção é o de facilitar coletar os fontes de um manual do "
+"Texinfo)."
 
 #. type: option{#1}
 #: texinfo/upstream/texinfo.texi:15402 texinfo/upstream/texinfo.texi:15403
@@ -40498,6 +40519,12 @@ msgid ""
 "for the following steps.  Three steps are distinguished, each associated "
 "with an environment variable:"
 msgstr ""
+"Você pode desabilitar o uso da implementação de código nativo na "
+"implementação Perl do @command{texi2any} para as principais etapas de "
+"processamento mais detalhadamente. Se os módulos de código nativo não "
+"forem usados em uma etapa, eles não poderão ser usados nas etapas "
+"seguintes. São distinguidas três etapas, cada uma associada a uma "
+"variável de ambiente:"
 
 #. type: item
 #: texinfo/upstream/texinfo.texi:15511
@@ -40518,6 +40545,10 @@ msgid ""
 "used for further processing.  Set @env{TEXINFO_XS_PARSER} to @samp{0} to "
 "disable the use of the native code implementation of the parser module."
 msgstr ""
+"Corresponde à conversão da entrada do Texinfo em um formato interno de "
+"árvore usado para processamento posterior. Configure "
+"@env{TEXINFO_XS_PARSER} como @samp{0} para desabilitar o uso da "
+"implementação de código nativo do módulo analisador."
 
 #. type: item
 #: texinfo/upstream/texinfo.texi:15516 texinfo/upstream/texinfo.texi:15834
@@ -40538,6 +40569,9 @@ msgid ""
 "@env{TEXINFO_XS_STRUCTURE} to @samp{0} to disable the use of the native code "
 "implementation of Perl modules in that step."
 msgstr ""
+"Corresponde à determinação de seccionamentos e de estruturas de nós. "
+"Configure @env{TEXINFO_XS_STRUCTURE} como @samp{0} para desabilitar o uso da "
+"implementação de código nativo de módulos Perl nessa etapa."
 
 #. type: item
 #: texinfo/upstream/texinfo.texi:15521
@@ -40558,6 +40592,10 @@ msgid ""
 "code for conversion of the tree to output format.  Note that many output "
 "formats do not have a native code implementation for this step."
 msgstr ""
+"Configure @env{TEXINFO_XS_CONVERT} como @samp{0} para desabilitar o uso do "
+"código nativo para conversão da árvore para o formato de saída. Observe "
+"que muitos formatos de saída não têm uma implementação de código "
+"nativo para essa etapa."
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:15531
@@ -40565,6 +40603,8 @@ msgid ""
 "This may be useful for working around bugs or incompatibilities between the "
 "native code implementation and the implementation in pure Perl code."
 msgstr ""
+"Isso pode ser útil para contornar defeitos ou incompatibilidades entre a "
+"implementação do código nativo e a implementação em código Perl puro."
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:15539
@@ -40578,6 +40618,14 @@ msgid ""
 "@env{TEXINFO_XS} to @code{omit} with the C @command{texi2any} implementation "
 "is an error."
 msgstr ""
+"A implementação C do @command{texi2any} usa somente código nativo para as "
+"etapas de @emph{análise} e de @emph{estruturação}. Para a etapa de "
+"@emph{conversão}, o código nativo é usado, se possível. Se o código "
+"Perl for chamado, o programa sempre tenta carregar os módulos de extensão "
+"Perl disponíveis. A falha ao carregar uma extensão será informada e o "
+"programa aborta. Configurar-se @env{TEXINFO_XS} como @code{debug} ainda pode "
+"ser útil para obter mais informações. Configurar-se @env{TEXINFO_XS} como "
+"@code{omit} com a implementação C do @command{texi2any} é um erro."
 
 #. type: vindex
 #: texinfo/upstream/texinfo.texi:15540
@@ -40600,6 +40648,12 @@ msgid ""
 "customization initialization files, conversion to most output formats and "
 "optimal index sorting require Perl."
 msgstr ""
+"Você pode controlar o uso do Perl embutido da implementação C do "
+"@command{texi2any} configurando a variável de ambiente "
+"@env{TEXINFO_C_EMBED_PERL} como @samp{0} para desabilitar o uso do Perl "
+"embutido. Configure com cuidado, pois os arquivos de inicialização de "
+"personalização do HTML, a conversão para a maioria dos formatos de saída "
+"e a ordenação ideal do índice exigem Perl."
 
 #. type: section
 #: texinfo/upstream/texinfo.texi:15549 texinfo/upstream/texinfo.texi:15551
@@ -40795,6 +40849,8 @@ msgid ""
 "Those affecting the global behavior of @command{texi2any}, in particular "
 "Texinfo code parsing."
 msgstr ""
+"Aqueles que afetam o comportamento global do @command{texi2any}, em "
+"particular a análise de código Texinfo."
 
 #. type: itemize
 #: texinfo/upstream/texinfo.texi:15640
@@ -40802,11 +40858,14 @@ msgid ""
 "Those associated with particular output formats.  (Variables only relevant "
 "for HTML output are documented in @ref{HTML Output Customization}.)"
 msgstr ""
+"Aqueles associados a formatos de saída específicos. (Variáveis relevantes "
+"somente para saída gerada HTML estão documentadas em @ref{Personalização "
+"da Saída Gerada HTML})."
 
 #. type: itemize
 #: texinfo/upstream/texinfo.texi:15643
 msgid "Those relevant for multiple output formats."
-msgstr ""
+msgstr "Aqueles relevantes para vários formatos de saída."
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:15651
@@ -40843,7 +40902,7 @@ msgstr "Opções: Variáveis e Opções de Personalização."
 #. type: menuentry
 #: texinfo/upstream/texinfo.texi:15663
 msgid "Format: Output Format Selection."
-msgstr ""
+msgstr "Formato: Seleção do Formato de Saída."
 
 #. type: menuentry
 #: texinfo/upstream/texinfo.texi:15663
@@ -41241,7 +41300,7 @@ msgstr "@code{SPLIT_SIZE}"
 #: texinfo/upstream/texinfo.texi:15771
 #, no-wrap
 msgid "TRACE_INCLUDES"
-msgstr ""
+msgstr "TRACE_INCLUDES"
 
 #. type: multitable
 #: texinfo/upstream/texinfo.texi:15773
@@ -41580,7 +41639,7 @@ msgstr ""
 #: texinfo/upstream/texinfo.texi:15878
 #, no-wrap
 msgid "COLLATION_LANGUAGE"
-msgstr ""
+msgstr "COLLATION_LANGUAGE"
 
 #. type: vtable
 #: texinfo/upstream/texinfo.texi:15884
@@ -41591,6 +41650,11 @@ msgid ""
 "#10}), without language-specific collation tailoring.  If set, use the "
 "language for linguistic tailoring of index sorting."
 msgstr ""
+"Por padrão, @command{texi2any} ordena os índices de documentos de acordo "
+"com o @dfn{Algoritmo de Agrupamento Unicode} (definido em "
+"@uref{http://www.unicode.org/reports/tr10/, Padrão Técnico Unicode nº "
+"10}), sem adaptação de agrupamento específico do idioma. Se configurado, "
+"usar o idioma para adaptação linguística da ordenação de índice."
 
 #. type: vtable
 #: texinfo/upstream/texinfo.texi:15888
@@ -41599,6 +41663,9 @@ msgid ""
 "linguistic tailoring due to either missing software or missing support for "
 "the specified language."
 msgstr ""
+"Atualmente, @command{texi2any} não avisa se não existir suporte para "
+"adaptação linguística devido ou à ausência de software ou à ausência "
+"de suporte para o idioma especificado."
 
 #. type: vtable
 #: texinfo/upstream/texinfo.texi:15892
@@ -41607,6 +41674,9 @@ msgid ""
 "tailoring; therefore if this module is not installed, the variable will be "
 "silently ignored."
 msgstr ""
+"Em Perl, o módulo @code{Unicode::Collate::Locale} é usado para adaptação "
+"linguística; portanto, se esse módulo não estiver instalado, a variável "
+"será ignorada silenciosamente."
 
 #. type: vtable
 #: texinfo/upstream/texinfo.texi:15895
@@ -41614,12 +41684,17 @@ msgid ""
 "If @code{USE_UNICODE_COLLATION} is set to @samp{0}, there is no Unicode "
 "collation and so no linguistic tailoring either."
 msgstr ""
+"Se @code{USE_UNICODE_COLLATION} estiver configurada como @samp{0}, não "
+"existirá agrupamento Unicode e, portanto, também não existirá "
+"adaptação linguística."
 
 #. type: vtable
 #: texinfo/upstream/texinfo.texi:15897
 msgid ""
 "See also the @code{DOCUMENTLANGUAGE_COLLATION} variable, described below."
 msgstr ""
+"Veja-se também a variável @code{DOCUMENTLANGUAGE_COLLATION}, descrita "
+"abaixo."
 
 #. type: item
 #: texinfo/upstream/texinfo.texi:15898
@@ -41766,7 +41841,7 @@ msgstr "A variável @code{OUTPUT_FILE_NAME_ENCODING} substitui essa variável."
 #: texinfo/upstream/texinfo.texi:15944
 #, no-wrap
 msgid "DOCUMENTLANGUAGE_COLLATION"
-msgstr ""
+msgstr "DOCUMENTLANGUAGE_COLLATION"
 
 #. type: vtable
 #: texinfo/upstream/texinfo.texi:15949
@@ -41776,6 +41851,11 @@ msgid ""
 "@code{COLLATION_LANGUAGE} variable, described above.  "
 "(@xref{@code{@@documentlanguage}}.)"
 msgstr ""
+"Se configurada, tentar usar o idioma especificado em uma diretiva "
+"@code{@@documentlanguage} para adaptação específica do idioma na "
+"ordenação de índice. Veja-se também a variável "
+"@code{COLLATION_LANGUAGE}, descrita acima. "
+"(@xref{@code{@@documentlinguagem}})."
 
 #. type: item
 #: texinfo/upstream/texinfo.texi:15950
@@ -41978,12 +42058,15 @@ msgid ""
 "such as @code{@@printindex}, @code{@@synindex} or @code{@@defindex} have no "
 "effect.  Default false."
 msgstr ""
+"Se configurada, as entradas de índice não são registradas e os comandos "
+"@@ relacionados aos índices, como @code{@@printindex}, @code{@@synindex} ou "
+"@code{@@defindex} não terão efeito. Padrão falso."
 
 #. type: item
 #: texinfo/upstream/texinfo.texi:16020
 #, no-wrap
 msgid "NO_USER_COMMANDS"
-msgstr ""
+msgstr "NO_USER_COMMANDS"
 
 #. type: vtable
 #: texinfo/upstream/texinfo.texi:16024
@@ -41992,6 +42075,10 @@ msgid ""
 "@code{@@definfoenclose}, @code{@@defindex}, @code{@@macro} and similar "
 "@@-commands have no effect.  Default false."
 msgstr ""
+"Se configurada, as definições de comando @@ definidas por usuário(a) "
+"serão ignoradas. @code{@@alias}, @code{@@definfoenclose}, "
+"@code{@@defindex}, @code{@@macro} e comandos @@ semelhantes não terão "
+"efeito. Padrão falso."
 
 #. type: item
 #: texinfo/upstream/texinfo.texi:16025
@@ -42207,6 +42294,18 @@ msgid ""
 "released memory.  If the value is higher, more checks are enabled, which may "
 "require additional Perl modules installation.  The default is undef."
 msgstr ""
+"Se configurada como um número inteiro positivo, algumas variáveis que "
+"normalmente são geradas dinamicamente novamente para cada execução (data, "
+"nome do programa, versão) serão configuradas como valores fixos e "
+"fornecidos. Alguns nomes de arquivos também podem ter a parte de diretório "
+"removida. Também pode ser selecionado código que forneça resultados mais "
+"reproduzíveis. Isso é útil para comparar a saída gerada com um arquivo "
+"de referência, como é feito para os testes. Recursos não selecionados no "
+"caso padrão, mas interessantes para testes, também estarão habilitados. "
+"Por exemplo, código relacionado à liberação de memória e a "
+"verificações de memória liberada. Se o valor for maior, mais "
+"verificações serão habilitadas, o que pode exigir a instalação de "
+"módulos Perl adicionais. O padrão é indefinida."
 
 #. type: item
 #: texinfo/upstream/texinfo.texi:16089
@@ -42222,6 +42321,11 @@ msgid ""
 "value (@pxref{@command{texi2any} Environment Variables}) or as a "
 "customization option.  @xref{Output Format Selection}"
 msgstr ""
+"O formato de saída gerado. Configurar a partir da linha de comando com "
+"opções como @option{--html}, como o valor da variável de ambiente "
+"@env{TEXINFO_OUTPUT_FORMAT} (@pxref{Variáveis de Ambiente do "
+"@command{texi2any}}) ou como uma opção de personalização. "
+"@xref{Seleção do Formato da Saída Gerada}."
 
 #. type: vtable
 #: texinfo/upstream/texinfo.texi:16102
@@ -42234,6 +42338,15 @@ msgid ""
 "specific output format name @code{texinfoxml}.  That kind of difference in "
 "naming should not have any user-visible consequence."
 msgstr ""
+"O valor configurado na variável @code{TEXINFO_OUTPUT_FORMAT} é em geral o "
+"mesmo que o nome usado para configurar o formato, mas nem sempre. Se o "
+"formato for configurado como @code{xml}, com @option{--xml}, com a variável "
+"de ambiente @env{TEXINFO_OUTPUT_FORMAT} ou com uma variável de "
+"personalização, a variável de personalização "
+"@code{TEXINFO_OUTPUT_FORMAT} será configurada com um nome de formato de "
+"saída mais específico @code{texinfoxml}. Esse tipo de diferença na "
+"nomenclatura deveria não ter nenhuma consequência visível para o(a) "
+"usuário(a)."
 
 #. type: item
 #: texinfo/upstream/texinfo.texi:16103
@@ -42442,7 +42555,7 @@ msgstr ""
 #: texinfo/upstream/texinfo.texi:16172
 #, no-wrap
 msgid "Unicode::Collate"
-msgstr ""
+msgstr "Unicode::Collate"
 
 #. type: item
 #: texinfo/upstream/texinfo.texi:16173
@@ -42462,12 +42575,22 @@ msgid ""
 "However, the use of this algorithm incurs noticeably longer run times when "
 "processing manuals with large indices."
 msgstr ""
+"Por padrão, @command{texi2any} ordena os índices de documentos de acordo "
+"com o @dfn{Algoritmo de Agrupamento Unicode} (definido em "
+"@uref{http://www.unicode.org/reports/tr10/, Padrão Técnico Unicode nº "
+"10}), que realiza uma ordenação @dfn{multi-nível} de sequências de "
+"caracteres contendo pontos de código Unicode. (Para fazer isso, o programa "
+"usa o módulo @code{Unicode::Collate}, uma parte padrão das instalações "
+"Perl). No entanto, o uso desse algoritmo incorre em tempos de execução "
+"notavelmente mais longos ao processar manuais com índices grandes."
 
 #. type: vtable
 #: texinfo/upstream/texinfo.texi:16184
 msgid ""
 "Set this variable to @samp{0} to use a simpler, faster sorting algorithm."
 msgstr ""
+"Configure essa variável como @samp{0} para usar um algoritmo de ordenação "
+"mais simples e mais rápido."
 
 #. type: vtable
 #: texinfo/upstream/texinfo.texi:16189
@@ -42477,6 +42600,10 @@ msgid ""
 "about having the indices sorted correctly, especially when working on the "
 "draft of a manual."
 msgstr ""
+"Você pode achar isso útil para acelerar o @command{texi2any} se você não "
+"tiver muitos caracteres não-ASCII no texto de entrada do índice ou se não "
+"se importar em ter os índices ordenados corretamente, especialmente ao "
+"trabalhar no rascunho de um manual."
 
 #. type: pindex
 #: texinfo/upstream/texinfo.texi:16191
@@ -42657,7 +42784,7 @@ msgstr ""
 #: texinfo/upstream/texinfo.texi:16249
 #, no-wrap
 msgid "INFO_MATH_IMAGES"
-msgstr ""
+msgstr "INFO_MATH_IMAGES"
 
 #. type: vtable
 #: texinfo/upstream/texinfo.texi:16256
@@ -42669,6 +42796,12 @@ msgid ""
 "program.  It may be suitable for math-heavy documents that are unlikely to "
 "be viewed in a text terminal."
 msgstr ""
+"(Experimental). Se configurada, converter o conteúdo de @code{@@math} e de "
+"@code{@@displaymath} em imagens e referencie-os no arquivo Info produzido. "
+"Essa variável exige uma instalação funcional do @TeX{}, o pacote "
+"@samp{preview} do @LaTeX{}, bem como o programa @command{dvipng}. Pode ser "
+"adequado para documentos com muitas fórmulas matemáticas que provavelmente "
+"não serão visualizados em um terminal de texto."
 
 #. type: vtable
 #: texinfo/upstream/texinfo.texi:16264
@@ -42681,6 +42814,14 @@ msgid ""
 "further feedback.  @xref{Info Format Image} for more details about how "
 "images are currently output with this option."
 msgstr ""
+"Esse recurso é marcado como experimental, pois exigiria suporte extra em "
+"programas de visualização do Info (atualmente, somente o modo Info do "
+"Emacs) para visualizar as imagens corretamente. As imagens deveriam estar "
+"visíveis nas versões existentes do Emacs, mas podem ter o tamanho errado "
+"ou parecer desalinhadas com o texto ao redor. É possível que nós mudemos "
+"a saída gerada para essa opção com base em comentários adicionais. "
+"@xref{Imagem do Formato Info} para mais detalhes acerca de como as imagens "
+"são geradas atualmente com essa opção."
 
 #. type: item
 #: texinfo/upstream/texinfo.texi:16265
@@ -42896,6 +43037,8 @@ msgid ""
 "Set new floats definition file extension for @LaTeX{} output.  Default "
 "@samp{tfl}."
 msgstr ""
+"Configurar nova extensão de arquivo de definição de flutuações para "
+"saída gerada @LaTeX{}. Padrão @samp{tfl}."
 
 #. type: subsection
 #: texinfo/upstream/texinfo.texi:16351 texinfo/upstream/texinfo.texi:16352
@@ -43219,6 +43362,10 @@ msgid ""
 "command is associated with a previous node; they both together make up the "
 "output unit."
 msgstr ""
+"A unidade principal dos documentos de saída é @dfn{unidade de saída}. "
+"Normalmente, um nó está associado a um comando de seccionamento seguinte, "
+"enquanto um comando de seccionamento está associado a um nó anterior; "
+"ambos juntos constituem a unidade de saída."
 
 #. type: vtable
 #: texinfo/upstream/texinfo.texi:16468
@@ -43441,6 +43588,9 @@ msgid ""
 "supports specifying the formatting of the translated string independently of "
 "the output format."
 msgstr ""
+"Essa abordagem é reconhecidamente um pouco complicada. A utilidade dela é "
+"a de que ela suporta especificar a formatação da sequência de caracteres "
+"traduzida independentemente do formato da saída gerada."
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:16552
@@ -44485,6 +44635,18 @@ msgid ""
 "different programs they can run.  Likewise, a manual for a C library may "
 "install a dir entry for each function it provides."
 msgstr ""
+"Usar @code{@@dircategory} para especificar uma categoria para o manual, que "
+"determina em qual parte do diretório Info colocá-lo. (@xref{Categoria de "
+"Diretório}). Usar @code{@@direntry} para especificar a entrada ou entradas "
+"de menu a serem adicionadas ao arquivo do diretório Info. Alguns manuais "
+"(como o manual que você está lendo agora, ou o do GNU Coreutils; "
+"@pxref{Top,,, coreutils, GNU Coreutils}) terão diversas entradas. É "
+"típico ter uma entrada de diretório para cada programa que um pacote "
+"instala, geralmente para o nó `Invocando' do programa. Isso permite que "
+"os(as) usuários(as) encontrem facilmente a documentação para os "
+"diferentes programas que podem executar. Da mesma forma, um manual para uma "
+"biblioteca C pode instalar uma entrada de diretório para cada função que "
+"fornece."
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:16942
@@ -46182,7 +46344,7 @@ msgstr ""
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:17523
 msgid "is always named @samp{index.html}."
-msgstr ""
+msgstr "é sempre nominado @samp{index.html}."
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:17529
@@ -46489,6 +46651,12 @@ msgid ""
 "elements in the @code{style} attribute rather than at the beginning of the "
 "output."
 msgstr ""
+"Por padrão, classes são adicionadas aos elementos HTML e regras CSS para "
+"essas classes são geradas no início de cada arquivo HTML. Configure a "
+"variável de personalização @code{NO_CSS} para evitar classes sendo "
+"adicionadas e CSS sendo usado. Configure @code{INLINE_CSS_STYLE} para ter "
+"código CSS colocado em elementos HTML no atributo @code{style} em vez de no "
+"início da saída gerada."
 
 #. type: item
 #: texinfo/upstream/texinfo.texi:17634 texinfo/upstream/texinfo.texi:19609
@@ -46505,6 +46673,12 @@ msgid ""
 "with the @code{SHOW_BUILTIN_CSS_RULES} customization variable set to output "
 "the built-in default CSS rules on the standard output and exit, like:"
 msgstr ""
+"Como @command{texi2any} insere somente código CSS necessário para o HTML "
+"realmente gerado, a lista completa do código CSS potencialmente inserido "
+"não é visível no documento da saída gerada. Para obter a lista completa "
+"de regras CSS, chame @command{texi2any} com a variável de personalização "
+"@code{SHOW_BUILTIN_CSS_RULES} configurada para gerar, na saída padrão, as "
+"regras CSS padrão integradas e sair, como:"
 
 #. type: example
 #: texinfo/upstream/texinfo.texi:17643
@@ -46927,6 +47101,8 @@ msgid ""
 "The HTML generated for EPUB is XHTML conformant, UTF-8 encoded, and "
 "formatted without the usual HTML navigation headers and footers."
 msgstr ""
+"O HTML gerado para EPUB é compatível com XHTML, codificado em UTF-8 e "
+"formatado sem os habituais cabeçalhos e rodapés de navegação do HTML."
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:17796
@@ -46970,6 +47146,11 @@ msgid ""
 "are used internally for the conversion, and should not interact with any "
 "customization set by the user."
 msgstr ""
+"Esse uso das variáveis de personalização pelo @command{texi2any} está "
+"mencionado aqui porque reconfigurar-se tais variáveis é incomum; no "
+"entanto, as variáveis reconfiguradas são usadas internamente para a "
+"conversão, e deveria não interagir com nenhuma personalização "
+"configurada pelo(a) usuário(a)."
 
 #. type: node
 #: texinfo/upstream/texinfo.texi:17810
