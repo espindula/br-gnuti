@@ -4478,6 +4478,10 @@ msgid ""
 "@code{@@maketitle} command.  Write this command on a line by itself.  This "
 "draws together the available information to produce these two pages."
 msgstr ""
+"Finalmente, para realmente gerar as páginas de título e de copirraite, "
+"você usa o comando @code{@@maketitle}. Escreva esse comando sozinho em uma "
+"linha. Isso reúne as informações disponíveis para produzir essas duas "
+"páginas."
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:1648
@@ -4497,6 +4501,14 @@ msgid ""
 "@@end publication\n"
 "@@maketitle\n"
 msgstr ""
+"@@copying\n"
+"@var{informações-cópia}\n"
+"@@end copying\n"
+"@@publication\n"
+"Publicado por @var{nome-editor(a)}\n"
+"@var{endereço-editor(a)}\n"
+"@@end publication\n"
+"@@maketitle\n"
 
 #. type: node
 #: texinfo/upstream/texinfo.texi:1661
@@ -4535,6 +4547,10 @@ msgid ""
 "between @code{@@titlepage} and @code{@@end titlepage} lines is directly "
 "output for a printed manual.  Here is a basic example:"
 msgstr ""
+"Uma alternativa ao uso de @code{@@maketitle} para criar páginas de título "
+"e de copirraite é a de usar o comando @code{@@titlepage}. Qualquer material "
+"entre as linhas @code{@@titlepage} e @code{@@end titlepage} é enviado "
+"diretamente para um manual impresso. Aqui está um exemplo básico:"
 
 #. type: group
 #: texinfo/upstream/texinfo.texi:1678
@@ -4602,6 +4618,11 @@ msgid ""
 "first closer to the previous method with @code{@@documentinfo}, the second "
 "with more explicit formatting."
 msgstr ""
+"O material antes da linha @samp{@@page} é usado para a página de título. "
+"As subseções a seguir explicam as duas maneiras pelas quais o comando "
+"@code{@@titlepage} pode ser usado em um documento do Texinfo para produzir "
+"uma página de título, a primeira mais próxima do método anterior com "
+"@code{@@documentinfo}, a segunda com formatação mais explícita."
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:1702
@@ -4609,6 +4630,8 @@ msgid ""
 "However, the copyright page is always produced in the same way with "
 "@code{@@titlepage}."
 msgstr ""
+"Porém, a página de copirraite é sempre produzida da mesma maneira com "
+"@code{@@titlepage}."
 
 #. type: anchor{#1}
 #: texinfo/upstream/texinfo.texi:1705
@@ -4705,6 +4728,8 @@ msgid ""
 "using @code{@@titlepage}, unlike with @code{@@maketitle} where this text is "
 "output automatically.)"
 msgstr ""
+"usando @code{@@titlepage}, ao contrário de @code{@@maketitle} onde esse "
+"texto é gerado automaticamente)."
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:1745
@@ -5475,6 +5500,13 @@ msgid ""
 "following example shows how you would use the @code{@@menu} command to give "
 "a menu in the `Top' node:"
 msgstr ""
+"Na saída Info (e às vezes na saída HTML), o nó `Topo' geralmente contém "
+"um @dfn{menu} de nível superior listando os capítulos, e possivelmente um "
+"@dfn{menu detalhado} listando todos os nós em todo o documento. Geralmente "
+"não é necessário fornecer tal menu no fonte do Texinfo, pois "
+"@command{texi2any} gera esses menus automaticamente. No entanto, o exemplo a "
+"seguir mostra como você usaria o comando @code{@@menu} para fornecer um "
+"menu no nó `Topo':"
 
 #. type: cindex
 #: texinfo/upstream/texinfo.texi:2053
@@ -6295,6 +6327,8 @@ msgid ""
 "Node names should not contain user-defined macros.  @xref{Macro Details} for "
 "other constraints on the use of macros."
 msgstr ""
+"Os nomes dos nós não deveriam conter macros definidas por usuário(a). "
+"@xref{Detalhes da Macro} para outras restrições no uso de macros."
 
 #. type: itemize
 #: texinfo/upstream/texinfo.texi:2395
@@ -9804,6 +9838,9 @@ msgid ""
 "All the examples of nodes in this chapter so far have used a @code{@@node} "
 "line followed by a structuring command (such as @code{@@chapter})."
 msgstr ""
+"Todos os exemplos de nós neste capítulo até agora usaram uma linha "
+"@code{@@node} seguida por um comando de estruturação (como "
+"@code{@@chapter})."
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:3747
@@ -9813,6 +9850,11 @@ msgid ""
 "to have a hierarchical structure, with chapters superior to sections, "
 "sections superior to sub-sections and so on."
 msgstr ""
+"No entanto, você também pode criar nós sem usar um comando de "
+"estruturação. Você pode achar isso útil se não quiser que teu manual "
+"(ou partes de um manual) tenha uma estrutura hierárquica, com capítulos "
+"superiores às seções, seções superiores às subseções e assim por "
+"diante."
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:3756
@@ -9831,6 +9873,9 @@ msgid ""
 "@@heading All about the Topic\n"
 "@dots{}\n"
 msgstr ""
+"@@node Tópico\n"
+"@@heading Tudo acerca do Tópico\n"
+"@dots{}\n"
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:3767
@@ -9840,6 +9885,10 @@ msgid ""
 "(@pxref{@code{xrefautomaticsectiontitle}}), this argument will also be used "
 "as the text for any cross-references to the node."
 msgstr ""
+"O argumento para o comando de cabeçalho será impresso normalmente. Quando "
+"o sinalizador @code{xrefautomaticsectiontitle} estiver ativado "
+"(@pxref{@code{xrefautomaticsectiontitle}}), esse argumento também será "
+"usado como o texto para quaisquer referências cruzadas para o nó."
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:3772
@@ -9849,6 +9898,11 @@ msgid ""
 "direction pointers (@samp{Next}, @samp{Prev} or @samp{Up}; @pxref{Writing a "
 "Node}) do not link to or from these nodes."
 msgstr ""
+"Esses nós não são parte de uma estrutura hierárquica de documento. Isso "
+"significa que eles não estão listados em nenhum sumário e os ponteiros "
+"automáticos de direção do nó (@samp{Próximo}, @samp{Anterior} ou "
+"@samp{Acima}; @pxref{Escrevendo um Nó}) não lincam para ou a partir desses "
+"nós."
 
 #. type: findex
 #: texinfo/upstream/texinfo.texi:3773
@@ -9863,6 +9917,9 @@ msgid ""
 "at the start, you can use the @code{@@xrefname} command in place of the "
 "heading command.  For example:"
 msgstr ""
+"Se desejar criar um nó não estruturado @emph{sem} imprimir um cabeçalho "
+"no início, você pode usar o comando @code{@@xrefname} no lugar do comando "
+"de cabeçalho. Por exemplo:"
 
 #. type: example
 #: texinfo/upstream/texinfo.texi:3782
@@ -9872,6 +9929,9 @@ msgid ""
 "@@xrefname All about the Topic\n"
 "@dots{}\n"
 msgstr ""
+"@@node Tópico\n"
+"@@xrefname Tudo acerca do Tópico\n"
+"@dots{}\n"
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:3788
@@ -9881,6 +9941,10 @@ msgid ""
 "@samp{@@xref@{Topic@}} would produce output like ``See `All about the "
 "Topic@w{'}''."
 msgstr ""
+"O comando @code{@@xrefname} fornece o texto para referências cruzadas para "
+"o nó quando o sinalizador @code{xrefautomaticsectiontitle} está ativado, "
+"de modo que @samp{@@xref@{Tópico@}} produziria uma saída como ``Veja-se "
+"`Tudo acerca do Tópico@w{'}''."
 
 #. type: node
 #: texinfo/upstream/texinfo.texi:3791
@@ -10622,6 +10686,8 @@ msgid ""
 "This setting is also used for cross-references to anchors defined with "
 "@code{@@namedanchor} (@pxref{@code{@@anchor}})."
 msgstr ""
+"Essa configuração também é usada para referências cruzadas para "
+"âncoras definidas com @code{@@namedanchor} (@pxref{@code{@@anchor}})."
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:4143
@@ -11261,6 +11327,16 @@ msgid ""
 "@ref{Help-Inv, Help-Inv, Invisible text in Emacs Info, info, Info: An "
 "Introduction})."
 msgstr ""
+"O efeito de @samp{@@pxref@{@var{nome-nó}@}} é idêntico ao de "
+"@samp{@@ref@{@var{nome-nó}@}} na saída gerada do Info. Portanto, pode ser "
+"preferível, quando não estiver entre parênteses, escrever @samp{veja-se "
+"@@ref@{@var{nome-nó}@}} em vez de @samp{@@pxref@{@var{nome-nó}@}} quando "
+"você quiser que a palavra ``veja-se'' ocorra na saída gerada, pois os "
+"leitores Info não conseguem confiavelmente inserir essa palavra com base no "
+"marcador de referência cruzada @samp{*observação} (por exemplo, usando o "
+"variável @code{Info-hide-note-references}; veja-se @ref{Ajuda-Invisível, "
+"Ajuda-Invisível, Texto invisível no Info do Emacs, info, Info: Uma "
+"Introdução})."
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:4486
@@ -11269,6 +11345,9 @@ msgid ""
 "@code{@@pxref}, so it could be used @emph{only} before a right parenthesis.  "
 "This is no longer the case."
 msgstr ""
+"Nas versões anteriores do Texinfo, não era permitido escrever pontuação "
+"depois de um @code{@@pxref}, de modo que poderia ser usado @emph{somente} "
+"antes de um parêntese direito. Esse não mais é o caso."
 
 #. type: node
 #: texinfo/upstream/texinfo.texi:4488
@@ -11320,6 +11399,11 @@ msgid ""
 "@code{@@anchor} command just before the position you wish to refer to.  For "
 "example:"
 msgstr ""
+"Talvez você deseje criar referências cruzadas para posições arbitrárias "
+"em um documento, não apenas para o início dos nós. O comando "
+"@code{@@anchor} marca essa posição no teu documento, chamada "
+"@dfn{âncora}. Coloque um comando @code{@@anchor} logo antes da posição "
+"que você deseja se referir. Por exemplo:"
 
 #. type: example
 #: texinfo/upstream/texinfo.texi:4508
@@ -11355,6 +11439,12 @@ msgid ""
 "References}).  As you can see, the @code{@@anchor} command itself produces "
 "no output."
 msgstr ""
+"O argumento delimitado por chaves para @code{@@anchor}, aqui @samp{x-spot}, "
+"é o @dfn{nome da âncora}, que desempenha o mesmo papel que um nome de nó. "
+"O nome da âncora é usado para criar referências cruzadas para a âncora, "
+"como com um @code{@@xref} ou com outro comando de referência cruzada, "
+"conforme mostrado (@pxref{Referências Cruzadas}). Como você pode ver, o "
+"comando @code{@@anchor} em si não produz saída."
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:4528
@@ -11405,6 +11495,10 @@ msgid ""
 "@code{xrefautomaticsectiontitle}}).  This means that the anchor name will be "
 "used as label text in the cross-reference."
 msgstr ""
+"Por padrão, os linques para âncoras não são afetados pela configuração "
+"de @code{xrefautomaticsectiontitle} (veja-se @ref{Três Argumentos,, "
+"@code{xrefautomaticsectiontitle}}). Isso significa que o nome da âncora "
+"será usado como texto de rótulo na referência cruzada."
 
 #. type: findex
 #: texinfo/upstream/texinfo.texi:4552
@@ -11418,6 +11512,8 @@ msgid ""
 "However, you can define a @dfn{named anchor} using @code{@@namedanchor}.  "
 "The template is:"
 msgstr ""
+"No entanto, você pode definir uma @dfn{âncora nominada} usando "
+"@code{@@namedanchor}. O modelo é:"
 
 #. type: example
 #: texinfo/upstream/texinfo.texi:4558
@@ -11432,6 +11528,9 @@ msgid ""
 "@var{xref-name} parameter gives the text to use if "
 "@code{xrefautomaticsectiontitle} is on.  For example:"
 msgstr ""
+"Use isso exatamente como faria com @code{@@anchor}, exceto que o parâmetro "
+"adicional @var{nome-xref} fornece o texto para usar se "
+"@code{xrefautomaticsectiontitle} estiver ativado. Por exemplo:"
 
 #. type: example
 #: texinfo/upstream/texinfo.texi:4569
@@ -15512,7 +15611,7 @@ msgstr ""
 #: texinfo/upstream/texinfo.texi:6152
 #, no-wrap
 msgid "Note"
-msgstr ""
+msgstr "Observação"
 
 #. type: quotation
 #: texinfo/upstream/texinfo.texi:6155
@@ -16090,6 +16189,9 @@ msgid ""
 "@code{@@example} command (@pxref{@code{@@example}}), so the example above "
 "could also be written as:"
 msgstr ""
+"A linguagem de programação também pode ser fornecida como um argumento "
+"para o comando @code{@@example} (@pxref{@code{@@example}}), de modo que o "
+"exemplo acima também poderia ser escrito como:"
 
 #. type: example
 #: texinfo/upstream/texinfo.texi:6393
@@ -17152,6 +17254,13 @@ msgid ""
 "font for @code{@@example} and other environments.  In HTML output, you can "
 "use CSS to change the font size of environments if needed; @pxref{HTML CSS}."
 msgstr ""
+"Como regra geral, é melhor usar somente os comandos regulares (como "
+"@code{@@example} em vez de @code{@@smallexample}), a menos que você tenha "
+"um bom motivo para isso. Ao processar somente com @file{texinfo.tex}, você "
+"pode obter um efeito semelhante com @samp{@@set dispenvsize small}, que usa "
+"uma fonte menor para @code{@@example} e outros ambientes. Na saída HTML, "
+"você pode usar CSS para mudar o tamanho da fonte dos ambientes, se "
+"necessário; @pxref{CSS do HTML}."
 
 #. type: chapter
 #: texinfo/upstream/texinfo.texi:6837 texinfo/upstream/texinfo.texi:6839
@@ -17447,6 +17556,9 @@ msgid ""
 "@code{@@itemize} command, you may omit the @samp{@{@}} that would normally "
 "follow the command."
 msgstr ""
+"Quando fornecer um comando de marca como @code{@@bullet} como o argumento "
+"para o comando @code{@@itemize}, você pode omitir o @samp{@{@}} que "
+"normalmente seguiria o comando."
 
 #. type: cindex
 #: texinfo/upstream/texinfo.texi:6978
@@ -17460,6 +17572,8 @@ msgid ""
 "If you don't want any mark at all, but still want logical items, use "
 "@code{@@w@{@}} (in this case the braces are required)."
 msgstr ""
+"Se você não quiser nenhuma marca, mas ainda quiser itens lógicos, use "
+"@code{@@w@{@}} (nesse caso, os colchetes são exigidos)."
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:6986
@@ -17480,6 +17594,8 @@ msgid ""
 "Index entries that occur immediately before an @code{@@item} are associated "
 "with the @code{@@item}."
 msgstr ""
+"As entradas de índice que ocorrem imediatamente antes de um @code{@@item} "
+"são associadas com o @code{@@item}."
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:6994
@@ -22754,7 +22870,7 @@ msgstr ""
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:8933
 msgid "even without any @@-command involved."
-msgstr ""
+msgstr "mesmo sem nenhum comando @@ envolvido."
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:8937
@@ -26763,11 +26879,15 @@ msgid ""
 "You can use @code{@@alias} (@pxref{@code{@@alias}}) instead to change the "
 "glyph produced by @code{@@click}."
 msgstr ""
+"O comando @code{@@clickstyle} que poderia ser usado para mudar o glifo "
+"produzido por @code{@@click} está obsoleto; você deveria não mais "
+"usá-lo. Você pode usar @code{@@alias} (@pxref{@code{@@alias}}) para mudar "
+"o glifo produzido por @code{@@click}."
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:10197
 msgid "You can replace:"
-msgstr ""
+msgstr "Você pode substituir:"
 
 #. type: example
 #: texinfo/upstream/texinfo.texi:10199
@@ -26784,7 +26904,7 @@ msgstr "by"
 #: texinfo/upstream/texinfo.texi:10203
 #, no-wrap
 msgid "@@alias click=result\n"
-msgstr ""
+msgstr "@@alias clique=resultado\n"
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:10206
@@ -27011,6 +27131,10 @@ msgid ""
 "experimental @code{INFO_MATH_IMAGES} variable to produce images; see "
 "@ref{Info and Plaintext Customization Variables}."
 msgstr ""
+"Por padrão, o comando @code{@@math} não tem nenhum efeito especial na "
+"saída Info, meramente gerando o conteúdo literalmente. Você pode usar a "
+"variável experimental @code{INFO_MATH_IMAGES} para produzir imagens; "
+"veja-se @ref{Variáveis de Personalização do Info e de Texto Simples}."
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:10284
@@ -31255,6 +31379,9 @@ msgid ""
 "Note that in Info output, some strings, such as ``Node:'', ``Next:'', "
 "``Menu:'', etc., are keywords and so are not translated."
 msgstr ""
+"Observe que na saída Info, algumas sequências de caracteres, como "
+"``Node:'', ``Next:'', ``Menu:'', entre outras, são palavras-chave e "
+"portanto não são traduzidas."
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:12022
@@ -31262,6 +31389,8 @@ msgid ""
 "In DocBook output @code{@@documentlanguage} sets the language for following "
 "sections."
 msgstr ""
+"Na saída gerada DocBook, @code{@@documentlanguage} configura o idioma para "
+"as seções seguintes."
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:12025
@@ -34368,7 +34497,7 @@ msgstr "@@@var{nomemacro} @{@var{arg1}, @var{arg2}, @dots{}@}\n"
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:13175
 msgid "@var{macroname} at that spot.  For example:"
-msgstr ""
+msgstr "@var{nomemacro} naquele local. Por exemplo:"
 
 #. type: example
 #: texinfo/upstream/texinfo.texi:13181
