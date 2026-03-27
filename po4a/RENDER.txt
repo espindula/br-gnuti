@@ -5,6 +5,8 @@ Situação um: com arquivos PO e POT vazios, o comando acima gera os textos para
 Situação dois: com arquivos PO e POT existentes (já com material traduzido), o comando acima atualiza os arquivos PO e POT existentes (mantém os textos já traduzidos e, eventualmente, gera textos novos para traduzir)
 
 
+po4a-translate --format texinfo --keep 0 --master texinfo/upstream/texinfo.texi --master-charset UTF-8 --po texinfo/po/texinfo.texi.pt_BR.po --localized texinfo/translated/texinfo.pt_BR.texi
+
 ( LC_ALL=C po4a --no-update po4a.conf 2>&1 | tee logs/`date "+%Y-%m-%d-%H-%M-%S"`-po4a.log.txt && exit "${PIPESTATUS}" )
 
 Observação: o comando acima somente gera o arquivo final traduzido (substitui os textos originais pelos textos traduzidos)
