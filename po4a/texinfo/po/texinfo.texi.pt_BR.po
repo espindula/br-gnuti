@@ -14,10 +14,10 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Texinfo 7.1\n"
+"Project-Id-Version: Texinfo 7.3\n"
 "Report-Msgid-Bugs-To: jafesp@gmail.com\n"
 "POT-Creation-Date: 2026-03-13 15:40-0300\n"
-"PO-Revision-Date: 2026-03-03 05:28-0300\n"
+"PO-Revision-Date: 2026-03-27 05:28-0300\n"
 "Last-Translator: Jamenson Ferreira Espindula de Almeida Melo "
 "<jafesp@gmail.com>\n"
 "Language-Team: none\n"
@@ -47182,6 +47182,10 @@ msgid ""
 "Source highlighting is experimental; feedback is welcomed.  The syntax\n"
 "of @code{HIGHLIGHT_SYNTAX} is very likely to change in future release.\n"
 msgstr ""
+"Realçamento de fonte é experimental; retroalimentação é bem-vinda. É "
+"muito\n"
+"provável que a sintaxe da @code{HIGHLIGHT_SYNTAX} mude em lançamentos\n"
+"futuros.\n"
 
 #. type: item
 #: texinfo/upstream/texinfo.texi:17825 texinfo/upstream/texinfo.texi:19440
@@ -47203,6 +47207,10 @@ msgid ""
 "external software.  You can set @code{HIGHLIGHT_SYNTAX} to one of several "
 "special values:"
 msgstr ""
+"Você pode usar a variável @code{HIGHLIGHT_SYNTAX} para realce de sintaxe "
+"do código-fonte em blocos @code{@@example} para a saída HTML, com a ajuda "
+"de software externo. Você pode configurar @code{HIGHLIGHT_SYNTAX} para um "
+"dos vários valores especiais:"
 
 #. type: item
 #: texinfo/upstream/texinfo.texi:17834
@@ -47248,6 +47256,11 @@ msgid ""
 "@code{HIGHLIGHT_SYNTAX_DEFAULT_LANGUAGE} if set, which variable gives the "
 "language to use for highlighting such blocks."
 msgstr ""
+"O primeiro argumento em uma linha @code{@@example} "
+"(@pxref{@code{@@example}}) fornece o nome da linguagem usada para realce de "
+"sintaxe. Blocos @code{@@example} sem tal argumento só serão realçados se "
+"@code{HIGHLIGHT_SYNTAX_DEFAULT_LANGUAGE} estiver configurada, variável essa "
+"que fornece a linguagem a usar para realçamento de tais blocos."
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:17858
@@ -47262,6 +47275,15 @@ msgid ""
 "block (converted to simple text) on standard input, and the highlighted HTML "
 "is read from the standard output."
 msgstr ""
+"Se você usar um valor para @code{HIGHLIGHT_SYNTAX} que não esteja listado "
+"acima, ele será um modelo para uma linha de comando que é executada para "
+"realçar código. Isso lhe dá mais controle sobre as opções exatas de "
+"linha de comando usadas para o programa de realce e permite usar outros "
+"programas além dos listados acima. Nesse modelo, o nome da linguagem "
+"realçada é substituído por ocorrências de @samp{%l} e @samp{%} é "
+"substituído por @samp{%%}. @command{texi2any} passa o conteúdo de cada "
+"bloco @code{@@example} (convertido para texto simples) na entrada padrão, e "
+"o HTML realçado é lido a partir da saída padrão."
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:17864
@@ -47272,6 +47294,11 @@ msgid ""
 "@samp{@@example} block passed to the standard input of the executed command, "
 "and the result is read from the standard output of the executed command."
 msgstr ""
+"Por exemplo, se você configurar @code{HIGHLIGHT_SYNTAX} como "
+"@samp{colorcode -l=%l} e existir um bloco @samp{@@example C++} no documento, "
+"a linha de comando @command{colorcode -l=C++} será executada com o bloco "
+"@samp{@@example} passado para a entrada padrão do comando executado e o "
+"resultado será lido a partir da saída padrão do comando executado."
 
 #. type: node
 #: texinfo/upstream/texinfo.texi:17866
@@ -47428,6 +47455,11 @@ msgid ""
 "the values of @var{host} and @var{dir}.  This is detailed later on "
 "(@pxref{HTML Xref Configuration})."
 msgstr ""
+"No caso usual de manuais HTML publicados na World Wide Web, para a "
+"finalidade de se ter referências cruzadas funcionais, informações "
+"externas são exigidas para definir os valores de @var{dispositivo} e de "
+"@var{diretório}. Isso será detalhado posteriormente (@pxref{Configuração "
+"do Xref do HTML})."
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:17927
@@ -47439,6 +47471,13 @@ msgid ""
 "the literal string @samp{localhost}, or be omitted entirely along with "
 "@samp{http://}, according to the rules for HTML links."
 msgstr ""
+"Se nenhuma informação externa estiver disponível para um manual, então "
+"padrões serão usados para @var{dispositivo} e para @var{diretório} que "
+"correspondem a linques de referência cruzada entre uma coleção de manuais "
+"localizados lado a lado em um dispositivo. Nesse caso, @var{dispositivo} "
+"está programado para ser o dispositivo local. Esse poderia ser ou a "
+"sequência literal de caracteres @samp{localhost} ou ser totalmente omitido "
+"junto com @samp{http://}, de acordo com as regras para linques HTML."
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:17931
@@ -47447,6 +47486,9 @@ msgid ""
 "nature of the manual being processed, and on the manual to which the "
 "cross-reference refers:"
 msgstr ""
+"As partes @var{diretório} e @var{arquivo} dependem da natureza relativa de "
+"divisão/mono do manual sendo processado e do manual ao qual a referência "
+"cruzada referencia:"
 
 #. type: itemize
 #: texinfo/upstream/texinfo.texi:17937
@@ -48354,6 +48396,13 @@ msgid ""
 "have correct cross-references to other manuals, @command{texi2any} needs to "
 "know how to construct the URLs for other manuals."
 msgstr ""
+"Para outros manuais publicados na World Wide Web estarem aptos para terem "
+"referências cruzadas corretas para teu manual, as partes @var{dispositivo} "
+"e @var{diretório} da referência cruzada precisam ser conhecidas pelos "
+"conversores de Texinfo quando eles produzirem HTML para esses outros "
+"manuais. Similarmente, para teu manual em formato HTML ter referências "
+"cruzadas corretas para outros manuais, @command{texi2any} precisa saber como "
+"construir as URLs para outros manuais."
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:18254
@@ -48366,6 +48415,14 @@ msgid ""
 "@url{https://specifications.freedesktop.org/basedir-spec/latest/, XDG Base "
 "Directory Specification} with defaults based on installation directories:"
 msgstr ""
+"@command{texi2any} lê um arquivo chamado @file{htmlxref.cnf} e todos os "
+"arquivos que terminam com a extensão @file{.cnf} no diretório "
+"@file{htmlxref.d} para coletar informações para referências cruzadas para "
+"outros manuais na saída HTML. @file{htmlxref.cnf} e @file{htmlxref.d} são "
+"procurados nos seguintes diretórios, com base na "
+"@url{https://specifications.freedesktop.org/basedir-spec/latest/, "
+"Especificação de Diretório Base XDG} com padrões baseados em diretórios "
+"de instalação:"
 
 #. type: item
 #: texinfo/upstream/texinfo.texi:18256
@@ -48413,7 +48470,7 @@ msgstr "(sob o diretório atual)"
 #: texinfo/upstream/texinfo.texi:18268
 #, no-wrap
 msgid "@env{XDG_CONFIG_HOME}/texinfo"
-msgstr ""
+msgstr "@env{XDG_CONFIG_HOME}/texinfo"
 
 #. type: table
 #: texinfo/upstream/texinfo.texi:18270
@@ -48453,7 +48510,7 @@ msgstr ""
 #: texinfo/upstream/texinfo.texi:18279
 #, no-wrap
 msgid "@env{XDG_CONFIG_DIRS}/texinfo"
-msgstr ""
+msgstr "@env{XDG_CONFIG_DIRS}/texinfo"
 
 #. type: table
 #: texinfo/upstream/texinfo.texi:18282
@@ -48461,6 +48518,8 @@ msgid ""
 "(for each directory in the @code{:} delimited @env{XDG_CONFIG_DIRS} "
 "environment variable)"
 msgstr ""
+"(para cada diretório na variável de ambiente @env{XDG_CONFIG_DIRS} "
+"delimitada por @code{:})"
 
 #. type: item
 #: texinfo/upstream/texinfo.texi:18287
@@ -48676,6 +48735,13 @@ msgid ""
 "linking to the generated manuals rather than to the versions found in "
 "cross-references configurations shipped with Texinfo."
 msgstr ""
+"Se @var{prefixourl} for omitido, os elementos das referências cruzadas "
+"corresponderão a linques de referência cruzada entre uma coleção de "
+"manuais localizados lado a lado em um dispositivo (@pxref{Básicos do Linque "
+"Xref do HTML}). Isso poderia ser útil se você gerasse e publicasse uma "
+"coleção de manuais e preferisse lincar para os manuais gerados em vez de "
+"para as versões encontradas nas configurações de referências cruzadas "
+"enviadas com o Texinfo."
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:18392
@@ -48686,6 +48752,11 @@ msgid ""
 "(@option{--no-split}), a @code{mono} URL will be preferred; when generating "
 "output that is split by node, a @code{node} URL will be preferred, etc."
 msgstr ""
+"Quando @command{texi2any} estiver gerando um linque para outro manual do "
+"Texinfo, ele preferirá usar uma linha para o manual com a mesma opção de "
+"divisão que a da saída atual. Ou seja, ao gerar saída monolítica "
+"(@option{--no-split}), uma URL @code{mono} será preferida; ao gerar saída "
+"que seja dividida por nó, uma URL @code{node} será preferida, entre outras."
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:18396
@@ -48694,6 +48765,10 @@ msgid ""
 "given manual, then other lines for that manual can be used if present.  Here "
 "is the full search order for each splitting option:"
 msgstr ""
+"Se nenhuma linha de informação com a opção de divisão preferida estiver "
+"presente para um determinado manual, então outras linhas para esse manual "
+"poderão ser usadas, se presentes. Aqui está a ordem de pesquisa completa "
+"para cada opção de divisão:"
 
 #. type: example
 #: texinfo/upstream/texinfo.texi:18402
@@ -48735,6 +48810,12 @@ msgid ""
 "used by @command{texi2any}, information on HTML manuals found in these files "
 "will be used for cross-references by default."
 msgstr ""
+"Atualmente, os arquivos @file{Texinfo_GNU.cnf} e @file{Texinfo_nonGNU.cnf} "
+"distribuídos com o GNU Texinfo servem como o principal recurso para "
+"localizar manuais HTML do Texinfo na World Wide Web. Como eles são "
+"instalados em um local usado pelo @command{texi2any}, as informações "
+"acerca dos manuais HTML encontradas nesses arquivos serão usadas para "
+"referências cruzadas por padrão."
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:18425
@@ -48750,6 +48831,19 @@ msgid ""
 "If you want to maintain a separate file distributed with Texinfo, please "
 "email @email{bug-texinfo@@gnu.org} as well."
 msgstr ""
+"Se você tiver acréscimos ou correções para os arquivos distribuídos com "
+"o Texinfo, por favor envie uma mensagem eletrônica para "
+"@email{bug-texinfo@@gnu.org} como de costume. Se você publicar um manual "
+"HTML do Texinfo na World Wide Web, ter um local atualizado listado em "
+"@file{Texinfo_GNU.cnf} ou em @file{Texinfo_nonGNU.cnf} deveria garantir que "
+"todos os manuais HTML gerados pelo @command{texi2any} usem esse local para "
+"referências cruzadas automaticamente. Você pode obter as versões mais "
+"recentes a partir de "
+"@url{https://ftpmirror.gnu.org/@/texinfo/@/htmlxref.d/@/Texinfo_GNU.cnf} e "
+"@url{https://ftpmirror.gnu.org/@/texinfo/@/htmlxref.d/@/Texinfo_nonGNU.cnf}. "
+"Se você quiser manter um arquivo separado distribuído com Texinfo, por "
+"favor envie uma mensagem eletrônica para @email{bug-texinfo@@gnu.org} "
+"também."
 
 #. type: section
 #: texinfo/upstream/texinfo.texi:18427 texinfo/upstream/texinfo.texi:18429
@@ -48772,6 +48866,13 @@ msgid ""
 "specific constructs, should cover most needs not already satisfied by CSS "
 "customization (@pxref{HTML CSS})."
 msgstr ""
+"Você pode usar muitas variáveis de personalização definíveis por "
+"usuário(a) para influenciar a saída HTML. @xref{Lista de Variáveis de "
+"Personalização do HTML} para a lista completa. As possibilidades "
+"oferecidas pelas variáveis de personalização, que vão desde a estrutura "
+"geral do documento e variante da linguagem HTML até a formatação de "
+"constructos específicos, deveriam cobrir a maioria das necessidades ainda "
+"não satisfeitas pela personalização de CSS (@pxref{CSS do HTML})."
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:18442
@@ -48803,12 +48904,20 @@ msgid ""
 "initialization files and are described in the separate manual on "
 "@command{texi2any} Output Customization.  Unset in the default case."
 msgstr ""
+"Se a variável de personalização @code{TEXI2HTML} estiver configurada, o "
+"HTML gerado será o mais compatível possível com @command{texi2html} "
+"(@pxref{@command{texi2html}}). O efeito dessa variável é bastante incomum, "
+"pois ela não modifica diretamente a saída gerada, mas configura muitas "
+"outras variáveis de personalização, incluindo algumas que só podem ser "
+"configuradas em arquivos de inicialização e estão descritas no manual "
+"separado em Personalização de Saída Gerada do @command{texi2any}. "
+"Desconfigurada no caso padrão."
 
 #. type: subsection
 #: texinfo/upstream/texinfo.texi:18453 texinfo/upstream/texinfo.texi:18454
 #, no-wrap
 msgid "HTML Output Structure Customization"
-msgstr ""
+msgstr "Personalização da Estrutura da Saída Gerada HTML"
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:18460
@@ -48818,6 +48927,11 @@ msgid ""
 "have an effect on how @command{texi2any} views the structure of a document "
 "and how output is split into output files."
 msgstr ""
+"Você consegue usar variáveis de personalização para controlar a saída "
+"gerada de títulos e de sumários de documentos ou de outras partes "
+"semelhantes de documentos. Outras variáveis afetam como @command{texi2any} "
+"visualiza a estrutura de um documento e como a saída gerada é dividida em "
+"arquivos da saída gerada."
 
 #. type: item
 #: texinfo/upstream/texinfo.texi:18461 texinfo/upstream/texinfo.texi:19612
@@ -48839,6 +48953,12 @@ msgid ""
 "@code{@@titlepage} (or output from @code{@@maketitle}) is used for the "
 "title; unset @code{USE_TITLEPAGE_FOR_TITLE} to get a simple title string."
 msgstr ""
+"Se @code{SHOW_TITLE} for @samp{undef}, o padrão, nenhum título será "
+"gerado no início da saída gerada. Se você configurar essa variável, por "
+"padrão o conteúdo de @code{@@titlepage} (ou a saída gerada a partir de "
+"@code{@@maketitle}) será usado para o título; desconfigure "
+"@code{USE_TITLEPAGE_FOR_TITLE} para obter uma sequência simples de "
+"caracteres de título."
 
 #. type: vindex
 #: texinfo/upstream/texinfo.texi:18469
@@ -48857,12 +48977,19 @@ msgid ""
 "the document, although you can override this by setting @code{SHOW_TITLE} to "
 "0."
 msgstr ""
+"Por padrão, a saída gerada HTML é adaptada para visualização on-line, "
+"com o nó Topo sendo gerado como um ponto de partida de nível superior para "
+"o leitor. Você pode configurar @code{NO_TOP_NODE_OUTPUT} para remover o nó "
+"Topo, o que resulta em saída gerada que pode ser mais semelhante ao formato "
+"de um livro impresso. Por padrão, configurar-se @code{NO_TOP_NODE_OUTPUT} "
+"também gera um título no início do documento, embora você consiga "
+"substituir isso configurando @code{SHOW_TITLE} como 0."
 
 #. type: vindex
 #: texinfo/upstream/texinfo.texi:18478
 #, no-wrap
 msgid "FORMAT_MENU @subentry @r{for HTML}"
-msgstr ""
+msgstr "FORMAT_MENU @subentry @r{para HTML}"
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:18487
@@ -48876,6 +49003,15 @@ msgid ""
 "do not want either menus or subordinate sections list for navigation to be "
 "output, set @code{FORMAT_MENU} to @samp{nomenu}."
 msgstr ""
+"Em cada nó, por padrão, uma lista de seções subordinadas é gerada para "
+"navegação. Isso corresponde à variável @code{FORMAT_MENU} sendo "
+"configurada como @samp{sectiontoc}. Para usar menus para navegar no "
+"documento (como no formato Info; @pxref{Menus}), configure "
+"@code{FORMAT_MENU} como @samp{menu}. Configure @code{FORMAT_MENU} como "
+"@samp{menu_no_detailmenu} se você quiser menus, mas nenhum "
+"@code{@@detailmenu} gerado automaticamente para o menu mestre Topo. Se você "
+"não quiser que ou menus ou listas de seções subordinadas para navegação "
+"sejam exibidas, configure @code{FORMAT_MENU} como @samp{nomenu}."
 
 #. type: item
 #: texinfo/upstream/texinfo.texi:18488 texinfo/upstream/texinfo.texi:19357
@@ -48891,6 +49027,10 @@ msgid ""
 "the whole document early on.  This corresponds to the "
 "@code{CONTENTS_OUTPUT_LOCATION} variable set to @samp{after_top}."
 msgstr ""
+"Por padrão, o sumário para o documento inteiro é gerado no final da "
+"seção @code{@@top}, para ter o local principal para navegação no "
+"documento inteiro desde o início. Isso corresponde à variável "
+"@code{CONTENTS_OUTPUT_LOCATION} configurada como @samp{after_top}."
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:18503
@@ -48904,6 +49044,14 @@ msgid ""
 "tables of contents are output where the corresponding @@-command, for "
 "example @code{@@contents}, is used."
 msgstr ""
+"Você consegue ter o sumário gerado depois do título (se @code{SHOW_TITLE} "
+"estiver configurada) configurando @code{CONTENTS_OUTPUT_LOCATION} como "
+"@samp{after_title}. Para gerar o sumário no final do documento ou em um "
+"arquivo separado, se a saída gerada for dividida, configure "
+"@code{CONTENTS_OUTPUT_LOCATION} como @samp{separate_element}. Você também "
+"pode configurar @code{CONTENTS_OUTPUT_LOCATION} como @samp{inline}: nesse "
+"caso, o sumário será gerado onde o comando @@ correspondente, por exemplo "
+"@code{@@contents}, for usado."
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:18509
@@ -48914,12 +49062,17 @@ msgid ""
 "@code{@@top} section (@pxref{Master Menu Parts}), and so the reader of your "
 "manual may not need a table of contents at the same location."
 msgstr ""
+"Você pode achar útil configurar @code{CONTENTS_OUTPUT_LOCATION} quando "
+"@code{FORMAT_MENU} estiver configurada como @samp{menu} para a finalidade de "
+"usar menus para navegação. Nesse caso, já deveria existir um menu mestre "
+"na seção @code{@@top} (@pxref{Partes do Menu Mestre}), e assim o leitor do "
+"teu manual possivelmente não precise de um sumário no mesmo local."
 
 #. type: vindex
 #: texinfo/upstream/texinfo.texi:18510
 #, no-wrap
 msgid "SPLIT @subentry @r{for HTML}"
-msgstr ""
+msgstr "SPLIT @subentry @r{para HTML}"
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:18516
