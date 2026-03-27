@@ -49083,12 +49083,18 @@ msgid ""
 "@samp{chapter}, @samp{section}, or @samp{node}, or be set to an empty string "
 "to indicate non-split output.  @xref{Splitting Output}."
 msgstr ""
+"Por padrão, cada nó é gerado em um arquivo separado. Você consegue mudar "
+"isso com a opção de linha de comando @option{--split}, que é equivalente "
+"a configurar a variável @code{SPLIT}. @code{SPLIT} pode assumir os valores "
+"@samp{chapter}, @samp{section} ou @samp{node} ou ser configurada como uma "
+"sequência vazia de caracteres para indicar saída não dividida. "
+"@xref{Dividindo Saída Gerada}."
 
 #. type: vindex
 #: texinfo/upstream/texinfo.texi:18517
 #, no-wrap
 msgid "USE_NODES @subentry @r{for HTML}"
-msgstr ""
+msgstr "USE_NODES @subentry @r{para HTML}"
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:18524
@@ -49100,6 +49106,12 @@ msgid ""
 "node command is almost always associated with an immediately following "
 "sectioning command."
 msgstr ""
+"Unidades elementares chamadas @dfn{unidades de saída} são usadas para "
+"saída, com cada arquivo de saída contendo o conteúdo de uma ou mais "
+"unidades de saída, dependendo do valor de @code{SPLIT}. As unidades de "
+"saída contêm o conteúdo associado a um nó ou comando de seccionamento. "
+"Em fontes típicas de documentos Texinfo, um comando de nó é quase sempre "
+"associado com um comando de seccionamento imediatamente seguinte."
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:18537
@@ -49116,6 +49128,19 @@ msgid ""
 "sections not associated with nodes are associated with the previous node, "
 "and isolated nodes are output units."
 msgstr ""
+"A variável de personalização @code{USE_NODES} determina se o nó ou o "
+"comando de seccionamento é considerado o comando principal. Por padrão, "
+"nós são usados como o componente principal para a separação das unidades "
+"da saída gerada. Você consegue configurar @code{USE_NODES} como falso para "
+"usar preferencialmente seccionamento para decidir onde as unidades da saída "
+"gerada serão separadas. Quando seções forem os componentes principais das "
+"unidades da saída gerada, nós ``isolados'' não diretamente associados com "
+"um comando de seccionamento serão associados com o comando de seccionamento "
+"seguinte, enquanto comandos de seccionamento sem nós constituem unidades da "
+"saída gerada. Por outro lado, quando nós forem os principais componentes "
+"das unidades da saída gerada, seções isoladas não associadas com nós "
+"serão associadas com o nó anterior e nós isolados serão unidades da "
+"saída gerada."
 
 #. type: item
 #: texinfo/upstream/texinfo.texi:18538 texinfo/upstream/texinfo.texi:19660
@@ -50614,6 +50639,10 @@ msgid ""
 "if @code{NUMBER_FOOTNOTES} is set to 0, a @samp{*} is used instead, or the "
 "@code{NO_NUMBER_FOOTNOTE_SYMBOL} customization variable value, if set."
 msgstr ""
+"Por padrão, notas de rodapé são numeradas. Com "
+"@option{--no-number-footnotes} ou se @code{NUMBER_FOOTNOTES} estiver "
+"configurada como 0, um @samp{*} será usado ou o valor da variável de "
+"personalização @code{NO_NUMBER_FOOTNOTE_SYMBOL}, se configurada."
 
 #. type: subsection
 #: texinfo/upstream/texinfo.texi:19053 texinfo/upstream/texinfo.texi:19054
@@ -50666,6 +50695,8 @@ msgid ""
 "Use the @command{latex2html} program to produce image files for mathematical "
 "material."
 msgstr ""
+"Usar o programa @command{latex2html} para produzir arquivos de imagem para "
+"material matemático."
 
 #. type: table
 #: texinfo/upstream/texinfo.texi:19077
@@ -50676,6 +50707,12 @@ msgid ""
 "corresponding sections are not ignored.  Note that @command{latex2html} can "
 "only process @LaTeX{}, including when processing @code{@@tex} sections."
 msgstr ""
+"@command{latex2html} processará matemática @LaTeX{} em comandos "
+"matemáticos, incluindo matemática @TeX{} compatível com @LaTeX{}. "
+"@command{latex2html} é usado para traduzir seções @code{@@tex} e "
+"@code{@@latex} para HTML se as seções correspondentes não forem "
+"ignoradas. Observe que @command{latex2html} só consegue processar @LaTeX{}, "
+"inclusive ao processar seções @code{@@tex}."
 
 #. type: table
 #: texinfo/upstream/texinfo.texi:19081
@@ -50684,6 +50721,9 @@ msgid ""
 "directory, with @samp{-l2h} in their name, in particular a cache file to "
 "avoid redoing translation to HTML if already done."
 msgstr ""
+"O processamento com @command{latex2html} deveria deixar os arquivos no "
+"diretório da saída gerada, com @samp{-l2h} no nome deles, em particular um "
+"arquivo de cache para evitar refazer a tradução para HTML se já feita."
 
 #. type: table
 #: texinfo/upstream/texinfo.texi:19083
@@ -50751,6 +50791,8 @@ msgstr "t4h"
 msgid ""
 "Use the @command{tex4ht} program to produce HTML for mathematical material."
 msgstr ""
+"Usar o programa @command{tex4ht} para produzir HTML para material "
+"matemático."
 
 #. type: table
 #: texinfo/upstream/texinfo.texi:19109
@@ -50761,6 +50803,12 @@ msgid ""
 "ignored.  The @code{@@tex} sections are processed in @TeX{} mode, while the "
 "@code{@@latex} sections are processed as @LaTeX{}."
 msgstr ""
+"@command{tex4ht} processará matemática @LaTeX{} em comandos matemáticos, "
+"incluindo matemática @TeX{} compatível com @LaTeX{}. @command{tex4ht} é "
+"usado para traduzir seções @code{@@tex} e @code{@@latex} para HTML se as "
+"seções não forem ignoradas. As seções @code{@@tex} são processadas no "
+"modo @TeX{}, enquanto as seções @code{@@latex} são processadas como "
+"@LaTeX{}."
 
 #. type: table
 #: texinfo/upstream/texinfo.texi:19112
@@ -50768,6 +50816,8 @@ msgid ""
 "Processing with @command{tex4ht} should leave files in the output directory, "
 "with @samp{_tex4ht} in their name."
 msgstr ""
+"O processamento com @command{tex4ht} deveria deixar os arquivos no "
+"diretório da saída gerada, com @samp{_tex4ht} no nomes deles."
 
 #. type: table
 #: texinfo/upstream/texinfo.texi:19114
@@ -50789,6 +50839,11 @@ msgid ""
 "converted to @LaTeX{}, before converting the @code{@@math} or "
 "@code{@@displaymath} to HTML."
 msgstr ""
+"Por padrão, com @code{CONVERT_TO_LATEX_IN_MATH} indefinida, configurar-se "
+"@code{HTML_MATH} também configura @code{CONVERT_TO_LATEX_IN_MATH}. Nesse "
+"caso, comandos @@ do Texinfo dentro de @code{@@math} e de "
+"@code{@@displaymath} serão convertidos para @LaTeX{}, antes de converter o "
+"@code{@@math} ou o @code{@@displaymath} para HTML."
 
 #. type: subsubsection
 #: texinfo/upstream/texinfo.texi:19125 texinfo/upstream/texinfo.texi:19126
@@ -51137,7 +51192,7 @@ msgstr ""
 #: texinfo/upstream/texinfo.texi:19255 texinfo/upstream/texinfo.texi:19256
 #, no-wrap
 msgid "JavaScript Interface and Licenses"
-msgstr ""
+msgstr "Interface e Licenças JavaScript"
 
 #. type: item
 #: texinfo/upstream/texinfo.texi:19258 texinfo/upstream/texinfo.texi:19506
@@ -51149,7 +51204,7 @@ msgstr "INFO_JS_DIR"
 #: texinfo/upstream/texinfo.texi:19259
 #, no-wrap
 msgid "JavaScript browsing interface for HTML"
-msgstr ""
+msgstr "Interface de navegação JavaScript para HTML"
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:19268
@@ -51174,13 +51229,13 @@ msgstr ""
 #. type: anchor{#1}
 #: texinfo/upstream/texinfo.texi:19270
 msgid "JavaScript license web labels"
-msgstr ""
+msgstr "Rótulos web de licença JavaScript"
 
 #. type: cindex
 #: texinfo/upstream/texinfo.texi:19270
 #, no-wrap
 msgid "JavaScript license web labels page"
-msgstr ""
+msgstr "Página de rótulos da web de licença JavaScript"
 
 #. type: item
 #: texinfo/upstream/texinfo.texi:19271 texinfo/upstream/texinfo.texi:19527
@@ -51210,6 +51265,20 @@ msgid ""
 "useful if you separately maintain a single labels file for a larger website "
 "that includes your manual."
 msgstr ""
+"Por padrão, uma @dfn{página web de rótulos de licença JavaScript} é "
+"configurada para fornecer informações de licenciamento e de código-fonte "
+"para qualquer JavaScript usado pela saída gerada HTML (veja-se "
+"@uref{https://www.gnu.org/licenses/javascript-labels.html}). Para evitar "
+"gerar uma página web de rótulos de licença JavaScript, configure "
+"@code{JS_WEBLABELS} como @samp{omit}. Com @code{JS_WEBLABELS} configurada "
+"como @samp{generate}, o padrão, gerar uma página de rótulos em "
+"@code{JS_WEBLABELS_FILE}, @file{js_licenses.html} no caso padrão, e lincar "
+"a ela nos arquivos da saída gerada HTML. Com @code{JS_WEBLABELS} "
+"configurada como @samp{reference}, lincar ao arquivo de rótulos fornecido "
+"por @code{JS_WEBLABELS_FILE} na saída gerada e não gerar um arquivo de "
+"rótulos. Essa última configuração é útil se você mantiver "
+"separadamente um arquivo de rótulos para um sítio web maior que inclua teu "
+"manual."
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:19288
@@ -51217,6 +51286,9 @@ msgid ""
 "Labels files can be generated if @code{INFO_JS_DIR} is set, or if "
 "@code{HTML_MATH} is set to @samp{mathjax} (@pxref{MathJax scripts})."
 msgstr ""
+"Arquivos de rótulos podem ser gerados se @code{INFO_JS_DIR} estiver "
+"configurada ou se @code{HTML_MATH} estiver configurada como @samp{mathjax} "
+"(@pxref{conjuntos de comandos sequenciados MathJax})."
 
 #. type: subsection
 #: texinfo/upstream/texinfo.texi:19290 texinfo/upstream/texinfo.texi:19291
@@ -51279,6 +51351,8 @@ msgid ""
 "The maximum length of a base file name for internal cross-references; "
 "default 245."
 msgstr ""
+"O comprimento máximo de um nome de arquivo base para referências cruzadas "
+"internas; padrão 245."
 
 #. type: table
 #: texinfo/upstream/texinfo.texi:19325
@@ -55604,6 +55678,8 @@ msgid ""
 "Start information about the publication of the document.  Pair with "
 "@samp{@@end publication}.  @xref{Document Metadata}."
 msgstr ""
+"Iniciar informações acerca da publicação do documento. Emparelhar com "
+"@samp{@@end publicação}. @xref{Metadados de Documento}."
 
 #. type: item
 #: texinfo/upstream/texinfo.texi:20732
@@ -57252,6 +57328,9 @@ msgid ""
 "Coding Standards}.  Here are some other tips for writing Texinfo "
 "documentation:"
 msgstr ""
+"Escritores(as) de manuais GNU deveriam consultar @ref{Manuais GNU,,, "
+"standards, Padrões GNU de Codificação}. Aqui estão algumas outras dicas "
+"para escrever documentação do Texinfo:"
 
 #. type: cindex
 #: texinfo/upstream/texinfo.texi:21232
@@ -66622,6 +66701,9 @@ msgid ""
 "@samp{INFO_MATH_IMAGES} variable of @command{texi2any} (@pxref{Info and "
 "Plaintext Customization Variables})."
 msgstr ""
+"As opções @t{dpi} e @t{depth} são geradas somente para a variável "
+"experimental @samp{INFO_MATH_IMAGES} do @command{texi2any} "
+"(@pxref{Variáveis e Personalização do Info e de Texto Simples})."
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:24903
@@ -66631,11 +66713,15 @@ msgid ""
 "surrounding text.  Here is a possible formula for the height of an image in "
 "pixels:"
 msgstr ""
+"@t{dpi} fornece os pontos por polegada (@dfn{DPI}) da imagem. Programas de "
+"visualização do Info poderiam usar isso para dimensionar a imagem, de modo "
+"que ela tenha um tamanho apropriado para o texto ao redor. Aqui está uma "
+"fórmula possível para a altura de uma imagem em pixeis:"
 
 #. type: displaymath
 #: texinfo/upstream/texinfo.texi:24906
 msgid "h_{@r{display}} = (h_{@r{file}} / dpi) * (72.27/10) * f"
-msgstr ""
+msgstr "h_{@r{exibição}} = (h_{@r{arquivo}} / dpi) * (72.27/10) * f"
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:24912
@@ -66644,6 +66730,9 @@ msgid ""
 "image, @math{dpi} is the DPI from the Info file, and @math{f} is the font "
 "size in pizels of the currently used font."
 msgstr ""
+"a imagem em, @math{h_{@r{arquivo}}} é a altura em pixeis da imagem sem "
+"escala, @math{dpi} é o DPI proveniente do arquivo Info e @math{f} é o "
+"tamanho da fonte em pixeis da fonte usada atualmente."
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:24918
@@ -66654,6 +66743,11 @@ msgid ""
 "per inch and converts from the height of the image in inches to the height "
 "of the image in ems."
 msgstr ""
+"O 72,27 nessa fórmula é o número de pontos em uma polegada (conforme "
+"usado pelo @TeX{}). O 10 é o tamanho de fonte padrão 10 @dmn{point} do "
+"@TeX{}, em outras palavras, o tamanho de 1 em. O quociente (72,27/10) "
+"fornece o número de ems por polegada e converte a altura da imagem em "
+"polegadas para a altura da imagem em ems."
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:24922
@@ -66662,6 +66756,10 @@ msgid ""
 "(before scaling).  Viewing programs should use it for shifting the image "
 "downwards to align it properly with surrounding text."
 msgstr ""
+"@t{depth} fornece a profundidade da imagem abaixo da linha de base, em "
+"pixeis da imagem (antes do dimensionamento). Programas de visualização "
+"deveriam usá-lo para deslocar a imagem para baixo para alinhá-la "
+"adequadamente com o texto ao redor."
 
 #. type: node
 #: texinfo/upstream/texinfo.texi:24924
