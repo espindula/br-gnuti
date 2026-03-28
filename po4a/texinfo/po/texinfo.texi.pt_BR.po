@@ -471,7 +471,7 @@ msgstr ""
 "@command{texi2any}. @xref{Tradutor Genérico @command{texi2any}}. A "
 "exceção é quando o código do Texinfo é processado pelo @TeX{} para DVI "
 "ou PDF (@pxref{Livros Impressos}, abaixo). O Emacs também oferece comandos "
-"para converter código Texinfo para Info (@pxref{comandos "
+"para converter código Texinfo para Info (@pxref{Comandos "
 "@code{texinfo-format}})."
 
 #. type: Plain text
@@ -4439,7 +4439,7 @@ msgid ""
 "discussion of @code{@@copying}."
 msgstr ""
 "As informações para a página de copirraite aparecem dentro dos comandos "
-"@code{@@copying} e @code{@@publication}. @xref{Permissões de Documento} "
+"@code{@@copying} e @code{@@publication}. @xref{Permissões do Documento} "
 "para mais discussão do @code{@@copying}."
 
 #. type: findex
@@ -6328,7 +6328,7 @@ msgid ""
 "other constraints on the use of macros."
 msgstr ""
 "Os nomes dos nós não deveriam conter macros definidas por usuário(a). "
-"@xref{Detalhes da Macro} para outras restrições no uso de macros."
+"@xref{Detalhes de Macro} para outras restrições no uso de macros."
 
 #. type: itemize
 #: texinfo/upstream/texinfo.texi:2395
@@ -6834,8 +6834,8 @@ msgstr ""
 "(uma página da web que coleciona linques para a maioria dos manuais GNU), "
 "melhor especificada que apenas @code{/manual/}, se o manual será instalado "
 "em @code{www.gnu.org}. Isso pode ser especificado com a variável de "
-"personalização @code{TOP_NODE_UP_URL} (@pxref{Nomes de Arquivo e "
-"Personalização de Linques para HTML}), como em"
+"personalização @code{TOP_NODE_UP_URL} (@pxref{Personalização de Nomes de "
+"Arquivo e de Linques para HTML}), como em"
 
 #. type: example
 #: texinfo/upstream/texinfo.texi:2589
@@ -7628,9 +7628,9 @@ msgstr ""
 "@dfn{Menus} contém ponteiros para subordinar nós. Na saída gerada Info, "
 "você usa menus para ir para tais nós. @command{texi2any} consegue gerar "
 "menus na saída gerada HTML, porém não faz isso por padrão "
-"(@pxref{Personalização da Estrutura da Saída HTML}, @code{FORMAT_MENU}). "
-"Os menus não têm efeito em manuais impressos ou em outros formatos de "
-"saída."
+"(@pxref{Personalização da Estrutura da Saída Gerada HTML}, "
+"@code{FORMAT_MENU}). Os menus não têm efeito em manuais impressos ou em "
+"outros formatos de saída."
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:2914
@@ -8656,9 +8656,9 @@ msgid ""
 msgstr ""
 "No HTML, os comandos de nível de capítulo produzem um cabeçalho de nível "
 "@code{<h2>} por padrão (controlado pela variável de personalização "
-"@code{CHAPTER_HEADER_LEVEL}, @pxref{Personalização da Saída Específica "
-"do HTML}). O nível do elemento de cabeçalho é ajustado para os outros "
-"comandos."
+"@code{CHAPTER_HEADER_LEVEL}, @pxref{Personalização da Saída Gerada "
+"Específica do HTML}). O nível do elemento de cabeçalho é ajustado para "
+"os outros comandos."
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:3349
@@ -22912,9 +22912,9 @@ msgid ""
 "Although @samp{@@&} and @samp{@@ampchar@{@}} can be used nearly anywhere, "
 "there is no need for them anywhere except this unusual case."
 msgstr ""
-"Embora @samp{@@&} e @samp{@@ampchar@{@}} possam ser usados ​​em quase "
-"qualquer lugar, não existe necessidade deles em nenhum lugar, exceto nesse "
-"caso incomum."
+"Embora @samp{@@&} e @samp{@@ampchar@{@}} possam ser usados em quase qualquer "
+"lugar, não existe necessidade deles em nenhum lugar, exceto nesse caso "
+"incomum."
 
 #. type: section
 #: texinfo/upstream/texinfo.texi:8954 texinfo/upstream/texinfo.texi:8956
@@ -29428,8 +29428,8 @@ msgid ""
 msgstr ""
 "O comando @code{@@deftypefn} e as variantes dele são comandos genéricos "
 "para descrever funções.  Eles são particularmente adequados para "
-"linguagens nas quais você precisa declarar tipos de variáveis ​​e "
-"funções, como C e C++."
+"linguagens nas quais você precisa declarar tipos de variáveis e funções, "
+"como C e C++."
 
 #. type: findex
 #: texinfo/upstream/texinfo.texi:11157
@@ -29633,9 +29633,8 @@ msgid ""
 "@var{$status} name in the following manner:"
 msgstr ""
 "As informações acerca dos valores de retorno podem ser usadas para nomear "
-"as variáveis ​​de retorno.  Por exemplo, na Perl, os escalares "
-"retornados podem receber os nomes @var{$result} e @var{$status} da seguinte "
-"maneira:"
+"as variáveis de retorno.  Por exemplo, na Perl, os escalares retornados "
+"podem receber os nomes @var{$result} e @var{$status} da seguinte maneira:"
 
 #. type: example
 #: texinfo/upstream/texinfo.texi:11278
@@ -35029,7 +35028,7 @@ msgstr ""
 #: texinfo/upstream/texinfo.texi:13400
 msgid "Macros should not be used in node names.  @xref{Node Names}."
 msgstr ""
-"Macros deveriam não serem usadas em nomes de nós. @xref{Nomes de Nós}."
+"Macros deveriam não serem usadas em nomes de nós. @xref{Nomes de Nó}."
 
 #. type: itemize
 #: texinfo/upstream/texinfo.texi:13404
@@ -40238,7 +40237,7 @@ msgstr ""
 "portanto, se @option{--node-files} estiver habilitada, arquivos com nomes "
 "não transliterados também serão criados. É recomendado criar nomes de "
 "arquivos não transliterados para nós, de modo que as referências cruzadas "
-"para o manual gerado sejam bem-sucedidas. @xref{@option{--nodes-files}}. "
+"para o manual gerado sejam bem-sucedidas. @xref{@option{--node-files}}. "
 "@xref{Configuração do Xref do HTML}."
 
 #. type: item
@@ -40382,7 +40381,7 @@ msgid ""
 msgstr ""
 "@code{TEXINFO_OUTPUT_FORMAT} pode assumir alguns outros valores especiais, "
 "os quais não correspondem a nenhum formato de saída configurável de linha "
-"de comando (@pxref{Seleção de Formato de Saída})."
+"de comando (@pxref{Seleção do Formato de Saída})."
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:15467
@@ -40393,7 +40392,7 @@ msgid ""
 msgstr ""
 "A variável de personalização de mesmo nome também é lida; se "
 "configurada, essa substitui uma configuração de variável de ambiente, mas "
-"não uma opção de linha de comando. @xref{Seleção de Formato de Saída}."
+"não uma opção de linha de comando. @xref{Seleção do Formato de Saída}."
 
 #. type: vindex
 #: texinfo/upstream/texinfo.texi:15468
@@ -41344,7 +41343,7 @@ msgstr ""
 #: texinfo/upstream/texinfo.texi:15786 texinfo/upstream/texinfo.texi:15787
 #, no-wrap
 msgid "Output Format Selection"
-msgstr "Seleção de Formatos de Saída"
+msgstr "Seleção do Formato de Saída"
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:15794
@@ -41588,7 +41587,7 @@ msgstr "exec texi2any -c TEXINFO_OUTPUT_FORMAT=textcontent \"$@@\"\n"
 #: texinfo/upstream/texinfo.texi:15860 texinfo/upstream/texinfo.texi:15861
 #, no-wrap
 msgid "Global Customization Variables"
-msgstr "Variáveis Globais de de Personalização"
+msgstr "Variáveis Globais de Personalização"
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:15865
@@ -41855,7 +41854,7 @@ msgstr ""
 "@code{@@documentlanguage} para adaptação específica do idioma na "
 "ordenação de índice. Veja-se também a variável "
 "@code{COLLATION_LANGUAGE}, descrita acima. "
-"(@xref{@code{@@documentlinguagem}})."
+"(@xref{@code{@@documentlanguage}})."
 
 #. type: item
 #: texinfo/upstream/texinfo.texi:15950
@@ -42325,7 +42324,7 @@ msgstr ""
 "opções como @option{--html}, como o valor da variável de ambiente "
 "@env{TEXINFO_OUTPUT_FORMAT} (@pxref{Variáveis de Ambiente do "
 "@command{texi2any}}) ou como uma opção de personalização. "
-"@xref{Seleção do Formato da Saída Gerada}."
+"@xref{Seleção do Formato de Saída}."
 
 #. type: vtable
 #: texinfo/upstream/texinfo.texi:16102
@@ -43732,7 +43731,7 @@ msgstr ""
 #: texinfo/upstream/texinfo.texi:16614
 #, no-wrap
 msgid "pod2texi.texi"
-msgstr "pod2texi.texi"
+msgstr "pod2texi.pt_BR.texi"
 
 #. type: node
 #: texinfo/upstream/texinfo.texi:16617
@@ -50140,7 +50139,7 @@ msgid ""
 "encoding instead of entities."
 msgstr ""
 "Por padrão, entidades são usadas para caracteres duplicados de aspas "
-"simples (@pxref{Inserindo Marcas de Citação}) e @samp{---} e @samp{--} "
+"simples (@pxref{Inserindo Aspas}) e @samp{---} e @samp{--} "
 "(@pxref{Convenções}). Configure @code{USE_ISO} como @samp{0} no caso "
 "improvável de você querer uma saída mais simples. Por padrão, entidades "
 "textuais são usadas quando possível. Configure @code{USE_NUMERIC_ENTITY} "
@@ -50473,7 +50472,7 @@ msgstr ""
 #: texinfo/upstream/texinfo.texi:18986 texinfo/upstream/texinfo.texi:18987
 #, no-wrap
 msgid "HTML Customization of Specific Output"
-msgstr "Personalização do HTML da Saída Gerada Específica"
+msgstr "Personalização da Saída Gerada Específica do HTML"
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:18990
@@ -50674,8 +50673,8 @@ msgid ""
 "set @option{--iflatex} @code{@@latex} sections are converted to HTML."
 msgstr ""
 "Você pode selecionar vários métodos para renderizar matemática em HTML "
-"(@pxref{Inserindo Matemática}). Isso é controlado pela variável de "
-"personalização @code{HTML_MATH}. Por padrão, a variável de "
+"(@pxref{Inserindo Fórmulas Matemáticas}). Isso é controlado pela "
+"variável de personalização @code{HTML_MATH}. Por padrão, a variável de "
 "personalização está desconfigurada e a saída HTML é apenas enfatizada. "
 "Você pode selecionar outras opções para a finalidade de exibir fórmulas "
 "matemáticas formatadas corretamente. Para algumas dessas opções, se você "
@@ -50773,12 +50772,12 @@ msgid ""
 msgstr ""
 "Se os comandos matemáticos forem realmente processados, um rótulo da web "
 "de licença JavaScript será gerado para conjuntos de comandos sequenciados "
-"MathJax (@pxref{rótulos da web de licença JavaScript})."
+"MathJax (@pxref{Rótulos web de licença JavaScript})."
 
 #. type: table
 #: texinfo/upstream/texinfo.texi:19099
 msgid "@xref{MathJax Customization Variables}."
-msgstr "@xref{Variáveis de Personalização MathJax}."
+msgstr "@xref{Variáveis de Personalização da MathJax}."
 
 #. type: item
 #: texinfo/upstream/texinfo.texi:19100
@@ -50969,8 +50968,7 @@ msgstr ""
 "modificação, ou instruções para obter tal código-fonte, para o arquivo "
 "do componente nomeado por @code{MATHJAX_SCRIPT}. `Forma preferida para "
 "modificação' significa que essa não deveria estar em uma forma "
-"`minificada'. Usada na página de rótulos de licença (@pxref{rótulos web "
-"da licença JavaScript})."
+"`minificada'. Usada na página de rótulos de licença (@pxref{Rótulos web de licença JavaScript})."
 
 #. type: vtable
 #: texinfo/upstream/texinfo.texi:19179
@@ -51235,7 +51233,7 @@ msgstr "Rótulos web de licença JavaScript"
 #: texinfo/upstream/texinfo.texi:19270
 #, no-wrap
 msgid "JavaScript license web labels page"
-msgstr "Página de rótulos da web de licença JavaScript"
+msgstr "Página de rótulos web de licença JavaScript"
 
 #. type: item
 #: texinfo/upstream/texinfo.texi:19271 texinfo/upstream/texinfo.texi:19527
@@ -51288,7 +51286,7 @@ msgid ""
 msgstr ""
 "Arquivos de rótulos podem ser gerados se @code{INFO_JS_DIR} estiver "
 "configurada ou se @code{HTML_MATH} estiver configurada como @samp{mathjax} "
-"(@pxref{conjuntos de comandos sequenciados MathJax})."
+"(@pxref{Conjuntos de comandos sequenciados MathJax})."
 
 #. type: subsection
 #: texinfo/upstream/texinfo.texi:19290 texinfo/upstream/texinfo.texi:19291
@@ -51635,7 +51633,7 @@ msgid ""
 "Customization Variables}).  By default, setting @code{HTML_MATH} also sets "
 "@code{CONVERT_TO_LATEX_IN_MATH}."
 msgstr ""
-"Método a usar-se para renderizar @code{@@math} (@pxref{Personalização de "
+"Método a usar-se para renderizar @code{@@math} (@pxref{Personalização do "
 "HTML para Matemática}). Isso pode ser desconfigurada, configurada como "
 "@samp{mathjax} (@pxref{Variáveis de Personalização da MathJax}), "
 "configurada como @samp{l2h}, que usa @command{latex2html} (@pxref{Variáveis "
@@ -51777,9 +51775,9 @@ msgid ""
 "files for the manual.  (See "
 "@uref{https://www.gnu.org/licenses/javascript-labels.html})."
 msgstr ""
-"Especificar como usar uma página @dfn{rótulos da web de licença "
-"JavaScript} para fornecer informações de licenciamento e código-fonte "
-"para qualquer JavaScript usado nos arquivos HTML para o manual. (Veja-se "
+"Especificar como usar uma página @dfn{rótulos web de licença JavaScript} "
+"para fornecer informações de licenciamento e código-fonte para qualquer "
+"JavaScript usado nos arquivos HTML para o manual. (Veja-se "
 "@uref{https://www.gnu.org/licenses/javascript-labels.html})."
 
 #. type: table
@@ -58405,7 +58403,7 @@ msgstr "Licença GNU de Documentação Livre"
 #: texinfo/upstream/texinfo.texi:21727 texinfo/upstream/texinfo.texi:25055
 #, no-wrap
 msgid "fdl.texi"
-msgstr "fdl.texi"
+msgstr "fdl-versao_1.3-pt_BR.texi"
 
 #. type: unnumbered
 #: texinfo/upstream/texinfo.texi:21729 texinfo/upstream/texinfo.texi:21730
@@ -66703,7 +66701,7 @@ msgid ""
 msgstr ""
 "As opções @t{dpi} e @t{depth} são geradas somente para a variável "
 "experimental @samp{INFO_MATH_IMAGES} do @command{texi2any} "
-"(@pxref{Variáveis e Personalização do Info e de Texto Simples})."
+"(@pxref{Variáveis de Personalização do Info e de Texto Simples})."
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:24903

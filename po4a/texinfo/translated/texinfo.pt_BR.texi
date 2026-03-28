@@ -191,7 +191,7 @@ A saída para a maioria dos formatos de saída é manuseada pelo programa
 @command{texi2any}. @xref{Tradutor Genérico @command{texi2any}}. A exceção é
 quando o código do Texinfo é processado pelo @TeX{} para DVI ou PDF
 (@pxref{Livros Impressos}, abaixo). O Emacs também oferece comandos para
-converter código Texinfo para Info (@pxref{comandos @code{texinfo-format}}).
+converter código Texinfo para Info (@pxref{Comandos @code{texinfo-format}}).
 
 O GNU Emacs tem um modo especial, chamado modo Texinfo, que fornece vários
 recursos relacionados ao Texinfo. (@xref{Modo Texinfo}).
@@ -1634,7 +1634,7 @@ comandos @code{@@title}, @code{@@subtitle} e @code{@@author} em relação um
 ao outro não é significativa).
 
 As informações para a página de copirraite aparecem dentro dos comandos
-@code{@@copying} e @code{@@publication}. @xref{Permissões de Documento} para
+@code{@@copying} e @code{@@publication}. @xref{Permissões do Documento} para
 mais discussão do @code{@@copying}.
 
 @findex publication
@@ -2381,7 +2381,7 @@ maneira está bem; nós recomendamos apenas ser consistente.
 
 @item
 Os nomes dos nós não deveriam conter macros definidas por
-usuário(a). @xref{Detalhes da Macro} para outras restrições no uso de
+usuário(a). @xref{Detalhes de Macro} para outras restrições no uso de
 macros.
 
 @item
@@ -2579,8 +2579,8 @@ para GNU, o lugar natural seria @url{https://www.gnu.org/manual/} (uma
 página da web que coleciona linques para a maioria dos manuais GNU), melhor
 especificada que apenas @code{/manual/}, se o manual será instalado em
 @code{www.gnu.org}. Isso pode ser especificado com a variável de
-personalização @code{TOP_NODE_UP_URL} (@pxref{Nomes de Arquivo e
-Personalização de Linques para HTML}), como em
+personalização @code{TOP_NODE_UP_URL} (@pxref{Personalização de Nomes de
+Arquivo e de Linques para HTML}), como em
 
 @example
 $ @kbd{texi2any --html -c TOP_NODE_UP_URL=/manual/} ...
@@ -2895,8 +2895,8 @@ um menu conforme segue:
 @dfn{Menus} contém ponteiros para subordinar nós. Na saída gerada Info, você
 usa menus para ir para tais nós. @command{texi2any} consegue gerar menus na
 saída gerada HTML, porém não faz isso por padrão (@pxref{Personalização da
-Estrutura da Saída HTML}, @code{FORMAT_MENU}). Os menus não têm efeito em
-manuais impressos ou em outros formatos de saída.
+Estrutura da Saída Gerada HTML}, @code{FORMAT_MENU}). Os menus não têm
+efeito em manuais impressos ou em outros formatos de saída.
 
 Os menus são gerados automaticamente pelo @command{texi2any} ao gerar Info
 ou HTML com menus para nós seguidos por um comando de seccionamento, sem um
@@ -3328,8 +3328,9 @@ mesmo nível. Por exemplo, é o mesmo para os comandos de nível de capítulo
 
 No HTML, os comandos de nível de capítulo produzem um cabeçalho de nível
 @code{<h2>} por padrão (controlado pela variável de personalização
-@code{CHAPTER_HEADER_LEVEL}, @pxref{Personalização da Saída Específica do
-HTML}). O nível do elemento de cabeçalho é ajustado para os outros comandos.
+@code{CHAPTER_HEADER_LEVEL}, @pxref{Personalização da Saída Gerada
+Específica do HTML}). O nível do elemento de cabeçalho é ajustado para os
+outros comandos.
 
 Na saída gerada Docbook, o nível apropriado do elemento é usado.  O elemento
 produzido inclui todas as seções seguintes até o próximo comando no mesmo
@@ -8881,9 +8882,9 @@ Documentação de @@code@{foo@}.
 Documentação de @code{foo}.
 @end deftypefn
 
-Embora @samp{@@&} e @samp{@@ampchar@{@}} possam ser usados ​​em quase
-qualquer lugar, não existe necessidade deles em nenhum lugar, exceto nesse
-caso incomum.
+Embora @samp{@@&} e @samp{@@ampchar@{@}} possam ser usados em quase qualquer
+lugar, não existe necessidade deles em nenhum lugar, exceto nesse caso
+incomum.
 
 
 @node Inserindo Caracteres de Aspas
@@ -11045,7 +11046,7 @@ Todos esses comandos criam entradas no índice de funções.
 
 O comando @code{@@deftypefn} e as variantes dele são comandos genéricos para
 descrever funções.  Eles são particularmente adequados para linguagens nas
-quais você precisa declarar tipos de variáveis ​​e funções, como C e C++.
+quais você precisa declarar tipos de variáveis e funções, como C e C++.
 
 @table @code
 @findex deftypefn
@@ -11159,7 +11160,7 @@ For example, for documenting the R language, you could use input like
 @end ignore
 
 As informações acerca dos valores de retorno podem ser usadas para nomear as
-variáveis ​​de retorno.  Por exemplo, na Perl, os escalares retornados podem
+variáveis de retorno.  Por exemplo, na Perl, os escalares retornados podem
 receber os nomes @var{$result} e @var{$status} da seguinte maneira:
 
 @example
@@ -13294,7 +13295,7 @@ Macros não podem ser usadas confiavelmente no argumento para comandos de
 acento (@pxref{Inserindo Acentos}).
 
 @item
-Macros deveriam não serem usadas em nomes de nós. @xref{Nomes de Nós}.
+Macros deveriam não serem usadas em nomes de nós. @xref{Nomes de Nó}.
 
 @item
 O escape de barra invertida para vírgulas em argumentos de macro não
@@ -15316,7 +15317,7 @@ se @option{--node-files} estiver habilitada, arquivos com nomes não
 transliterados também serão criados. É recomendado criar nomes de arquivos
 não transliterados para nós, de modo que as referências cruzadas para o
 manual gerado sejam
-bem-sucedidas. @xref{@option{--nodes-files}}. @xref{Configuração do Xref do
+bem-sucedidas. @xref{@option{--node-files}}. @xref{Configuração do Xref do
 HTML}.
 
 @item -U @var{variável}
@@ -15367,11 +15368,11 @@ Se não configurada ou especificada de outro modo, saída Info é o padrão.
 
 @code{TEXINFO_OUTPUT_FORMAT} pode assumir alguns outros valores especiais,
 os quais não correspondem a nenhum formato de saída configurável de linha de
-comando (@pxref{Seleção de Formato de Saída}).
+comando (@pxref{Seleção do Formato de Saída}).
 
 A variável de personalização de mesmo nome também é lida; se configurada,
 essa substitui uma configuração de variável de ambiente, mas não uma opção
-de linha de comando. @xref{Seleção de Formato de Saída}.
+de linha de comando. @xref{Seleção do Formato de Saída}.
 
 @vindex TEXINFO_XS
 @cindex Módulos de extensão da Perl (XS)
@@ -15703,8 +15704,8 @@ essencialmente o mesmo que especificar @code{--@var{opt}=foo} se a opção
 receber um argumento, ou @code{--@var{opt}} se não.
 
 
-@node Seleção de Formatos de Saída
-@subsection Seleção de Formatos de Saída
+@node Seleção do Formato de Saída
+@subsection Seleção do Formato de Saída
 
 @c @vindex TEXINFO_OUTPUT_FORMAT
 A variável de personalização @code{TEXINFO_OUTPUT_FORMAT} pega o valor do
@@ -15779,8 +15780,8 @@ exec texi2any -c TEXINFO_OUTPUT_FORMAT=textcontent "$@@"
 @end table
 
 
-@node Variáveis Globais de de Personalização
-@subsection Variáveis Globais de de Personalização
+@node Variáveis Globais de Personalização
+@subsection Variáveis Globais de Personalização
 
 Esta tabela fornece as variáveis de personalização que afetam o
 comportamento global do @command{texi2any}.
@@ -15875,7 +15876,7 @@ A variável @code{OUTPUT_FILE_NAME_ENCODING} substitui essa variável.
 Se configurada, tentar usar o idioma especificado em uma diretiva
 @code{@@documentlanguage} para adaptação específica do idioma na ordenação
 de índice. Veja-se também a variável @code{COLLATION_LANGUAGE}, descrita
-acima. (@xref{@code{@@documentlinguagem}}).
+acima. (@xref{@code{@@documentlanguage}}).
 
 @item DUMP_STRUCTURE
 Para depuração. Se configurada, a árvore construída ao analisar um documento
@@ -16030,7 +16031,7 @@ O formato de saída gerado. Configurar a partir da linha de comando com
 opções como @option{--html}, como o valor da variável de ambiente
 @env{TEXINFO_OUTPUT_FORMAT} (@pxref{Variáveis de Ambiente do
 @command{texi2any}}) ou como uma opção de personalização. @xref{Seleção do
-Formato da Saída Gerada}.
+Formato de Saída}.
 
 O valor configurado na variável @code{TEXINFO_OUTPUT_FORMAT} é em geral o
 mesmo que o nome usado para configurar o formato, mas nem sempre. Se o
@@ -16577,7 +16578,7 @@ incluída abaixo. A versão incluída no manual também é um exemplo de uso do
 @node Página de manual do pod2texi
 @nodedescription Invocação do @command{pod2texi} em um formato de página de
 manual.
-@include pod2texi.texi
+@include pod2texi.pt_BR.texi
 
 
 @node @command{texi2html}
@@ -18876,7 +18877,7 @@ Você também poderia configurar o DOCTYPE como HTML 4.01 Transitório:
 @vindex USE_NUMERIC_ENTITY @subentry @r{para HTML}
 @vindex OUTPUT_CHARACTERS @subentry @r{para HTML}
 Por padrão, entidades são usadas para caracteres duplicados de aspas simples
-(@pxref{Inserindo Marcas de Citação}) e @samp{---} e @samp{--}
+(@pxref{Inserindo Aspas}) e @samp{---} e @samp{--}
 (@pxref{Convenções}). Configure @code{USE_ISO} como @samp{0} no caso
 improvável de você querer uma saída mais simples. Por padrão, entidades
 textuais são usadas quando possível. Configure @code{USE_NUMERIC_ENTITY}
@@ -18998,8 +18999,8 @@ texinfo_set_from_init_file('OUTPUT_ENCODING_NAME', 'utf-8');
 
 @end ignore
 
-@node Personalização do HTML da Saída Gerada Específica
-@subsection Personalização do HTML da Saída Gerada Específica
+@node Personalização da Saída Gerada Específica do HTML
+@subsection Personalização da Saída Gerada Específica do HTML
 
 A saída gerada de constructos específicos é personalizável.
 
@@ -19071,7 +19072,7 @@ personalização @code{NO_NUMBER_FOOTNOTE_SYMBOL}, se configurada.
 @vindex HTML_MATH
 @cindex Saída HTML @subentry matemática @subentry personalização
 Você pode selecionar vários métodos para renderizar matemática em HTML
-(@pxref{Inserindo Matemática}). Isso é controlado pela variável de
+(@pxref{Inserindo Fórmulas Matemáticas}). Isso é controlado pela variável de
 personalização @code{HTML_MATH}. Por padrão, a variável de personalização
 está desconfigurada e a saída HTML é apenas enfatizada. Você pode selecionar
 outras opções para a finalidade de exibir fórmulas matemáticas formatadas
@@ -19110,9 +19111,9 @@ deveria ser um problema prático.
 
 Se os comandos matemáticos forem realmente processados, um rótulo da web de
 licença JavaScript será gerado para conjuntos de comandos sequenciados
-MathJax (@pxref{rótulos da web de licença JavaScript}).
+MathJax (@pxref{Rótulos web de licença JavaScript}).
 
-@xref{Variáveis de Personalização MathJax}.
+@xref{Variáveis de Personalização da MathJax}.
 
 @item t4h
 Usar o programa @command{tex4ht} para produzir HTML para material
@@ -19185,7 +19186,7 @@ Uma URL do código-fonte completo na forma dela preferida para modificação,
 ou instruções para obter tal código-fonte, para o arquivo do componente
 nomeado por @code{MATHJAX_SCRIPT}. `Forma preferida para modificação'
 significa que essa não deveria estar em uma forma `minificada'. Usada na
-página de rótulos de licença (@pxref{rótulos web da licença JavaScript}).
+página de rótulos de licença (@pxref{Rótulos web de licença JavaScript}).
 
 Novamente, @command{texi2any} fornece um valor padrão para essa variável,
 mas você é incentivado(a) a hospedar você mesmo(a) o código-fonte para
@@ -19288,7 +19289,7 @@ como navegação por teclado e pesquisa de índice. Isso funciona apenas com
 saída HTML não dividida.
 
 @anchor{Rótulos web de licença JavaScript}
-@cindex Página de rótulos da web de licença JavaScript
+@cindex Página de rótulos web de licença JavaScript
 @vindex JS_WEBLABELS
 @vindex JS_WEBLABELS_FILE
 Por padrão, uma @dfn{página web de rótulos de licença JavaScript} é
@@ -19307,7 +19308,7 @@ arquivo de rótulos para um sítio web maior que inclua teu manual.
 
 Arquivos de rótulos podem ser gerados se @code{INFO_JS_DIR} estiver
 configurada ou se @code{HTML_MATH} estiver configurada como @samp{mathjax}
-(@pxref{conjuntos de comandos sequenciados MathJax}).
+(@pxref{Conjuntos de comandos sequenciados MathJax}).
 
 
 @node Lista de Variáveis de Personalização do HTML
@@ -19480,7 +19481,7 @@ O idioma padrão usado para realce de sintaxe quando não existir informações
 de idioma.
 
 @item HTML_MATH
-Método a usar-se para renderizar @code{@@math} (@pxref{Personalização de
+Método a usar-se para renderizar @code{@@math} (@pxref{Personalização do
 HTML para Matemática}). Isso pode ser desconfigurada, configurada como
 @samp{mathjax} (@pxref{Variáveis de Personalização da MathJax}), configurada
 como @samp{l2h}, que usa @command{latex2html} (@pxref{Variáveis de
@@ -19559,7 +19560,7 @@ gerada; padrão falso.
 
 @item JS_WEBLABELS
 @itemx JS_WEBLABELS_FILE
-Especificar como usar uma página @dfn{rótulos da web de licença JavaScript}
+Especificar como usar uma página @dfn{rótulos web de licença JavaScript}
 para fornecer informações de licenciamento e código-fonte para qualquer
 JavaScript usado nos arquivos HTML para o manual. (Veja-se
 @uref{https://www.gnu.org/licenses/javascript-labels.html}).
@@ -21767,7 +21768,7 @@ uso básico e opções de linha de comando dele aqui.
 @node Licença GNU de Documentação Livre
 @appendix Licença GNU de Documentação Livre
 
-@include fdl.texi
+@include fdl-versao_1.3-pt_BR.texi
 
 @node Índice
 @unnumbered Índice
@@ -24931,7 +24932,7 @@ O formato não prescreve a escolha entre exibir o @t{<arquivo de imagem>}, o
 
 As opções @t{dpi} e @t{depth} são geradas somente para a variável
 experimental @samp{INFO_MATH_IMAGES} do @command{texi2any} (@pxref{Variáveis
-e Personalização do Info e de Texto Simples}).
+de Personalização do Info e de Texto Simples}).
 
 @t{dpi} fornece os pontos por polegada (@dfn{DPI}) da imagem. Programas de
 visualização do Info poderiam usar isso para dimensionar a imagem, de modo
@@ -25092,7 +25093,7 @@ nó.
 @nodedescription Copiando este manual.
 @appendix Licença GNU de Documentação Livre
 
-@include fdl.texi
+@include fdl-versao_1.3-pt_BR.texi
 
 
 @node Índice de Comandos
