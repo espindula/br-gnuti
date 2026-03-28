@@ -38,7 +38,7 @@ Este manual é para o GNU Texinfo (versão @value{VERSION}, @value{UPDATED}),
 um sistema de documentação que consegue produzir informações online e um
 manual impresso a partir de uma fonte usando marcação semântica.
 
-Copyright @copyright{} 1988-2026 Free Software Foundation, Inc.
+Copyright @copyright{} 1988-2026 Fundação do Software Livre, Inc.
 
 @quotation
 É concedida permissão para copiar, distribuir e (ou) modificar este
@@ -62,8 +62,9 @@ GNU de Documentação Livre''.
 @c ISBN 1-882114-65-5 is for version 3.12, March 1998.
 @c ISBN 1-882114-64-7 is for edition 2.24 of November 1996.
 @c ISBN 1-882114-63-9 is for edition 2.20 of 28 February 1995.
-@publication Publicado pela Free Software Foundation @* 31 Milk St # 960789
-@* Boston, MA 02196 @* USA @* ISBN 1-882114-67-1 
+@publication Publicado pela Fundação do Software Livre @* Rua 31 Milk nº
+960789 @* Boston, Massachussets 02196 @* Estados Unidos da América do Norte
+@* ISBN 1-882114-67-1 
 
 @ignore
 @sp 1
@@ -6127,8 +6128,8 @@ depois da citação:
 @example
 @@quotation
 As pessoas às vezes me perguntam se é pecado na Igreja do Emacs usar
-vi.  Usar uma versão livre do vi não é pecado; é uma penitência.  Então, feliz
-hacking.
+vi. Usar uma versão livre do vi não é pecado; é uma penitência. Então,
+feliz hacking.
 
 @@author Richard Stallman
 @@end quotation
@@ -12779,8 +12780,8 @@ expandidas, de forma que a saída contém texto como este:
 
 @example
 @group
-Esta é a Edição 0.35 Beta, atualizada mais recentemente em 14 de agosto de 1992,
-do `Manual do GNU Make', para `make', versão 3.63 Beta.
+Esta é a Edição 0.35 Beta, atualizada mais recentemente em 14 de agosto de
+1992, do `Manual do GNU Make', para `make', versão 3.63 Beta.
 @end group
 @end example
 @end enumerate
@@ -21732,7 +21733,12 @@ o qual é um exemplo na documentação do Texinfo.
 Copirraite @copyright{} 2026 Fundação do Software Livre, Inc.
 
 @quotation
-É concedida permissão para copiar, distribuir e(ou) modificar este documento sob os termos da Licença GNU de Documentação Livre, Versão 1.3 ou qualquer versão posterior publicada pela Fundação do Software Livre; sem Seções Invariantes, sem Textos de Capa Frontal e sem Textos de Contracapa. Uma cópia da licença está incluída na seção intitulada ``Licença GNU de Documentação Livre''.
+É concedida permissão para copiar, distribuir e(ou) modificar este
+documento sob os termos da Licença GNU de Documentação Livre, Versão 1.3
+ou qualquer versão posterior publicada pela Fundação do Software Livre;
+sem Seções Invariantes, sem Textos de Capa Frontal e sem Textos de
+Contracapa. Uma cópia da licença está incluída na seção intitulada
+``Licença GNU de Documentação Livre''.
 @end quotation
 @end copying
 
@@ -21834,7 +21840,9 @@ completo de amostra, vejam-se as seções anteriores.
 @example
 Copirraite @@copyright@{@} 2026 Fundação do Software Livre, Inc.
 
-A cópia e distribuição deste arquivo, com ou sem modificação, são permitidas em qualquer meio sem royalties, desde que o aviso de copirraite e este aviso sejam preservados.
+A cópia e distribuição deste arquivo, com ou sem modificação, são
+permitidas em qualquer meio sem royalties, desde que o aviso de copirraite e
+este aviso sejam preservados.
 @end example
 
 
@@ -24820,7 +24828,8 @@ Nós regulares se parecem com isto:
 @example
     <nó> =
 <separador>
-Arquivo: <fn>, Nó: <id1>, (Próximo: <id2>, )? (Anterior: <id3>, )? Acima: <id4>
+Arquivo: <fn>, Nó: <id1>, (Próximo: <id2>, )? (Anterior: <id3>, )? Acima:
+<id4>
 
 <texto geral, até o próximo ^_ ou final do arquivo>
 @end example
@@ -25065,7 +25074,8 @@ Aqui estão alguns exemplos:
 
 @example
 *observar Licença GNU de Documentação Livre::
-*observar Tabela de Etiquetas: Tabela de Etiquetas do formato Info, para detalhes.
+*observar Tabela de Etiquetas: Tabela de Etiquetas do formato Info, para
+detalhes.
 *Observar Visão Geral: (make)Topo.
 *Observar ^?:^?: (bash)Builtins do Shell Bourne.
 *Observar alloca.h: (gnulib)^?alloca.h^?.
