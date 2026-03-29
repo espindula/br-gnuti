@@ -41,7 +41,7 @@ Este manual é para o GNU Texinfo (versão @value{VERSION}, @value{UPDATED}),
 um sistema de documentação que consegue produzir informações online e um
 manual impresso a partir de uma fonte usando marcação semântica.
 
-Copyright @copyright{} 1988-2026 Free Software Foundation, Inc.
+Copyright @copyright{} 1988-2026 Fundação do Software Livre, Inc.
 
 @quotation
 É concedida permissão para copiar, distribuir e (ou) modificar este
@@ -62,15 +62,15 @@ GNU de Documentação Livre''.
 @author Richard Matthew Stallman
 @end documentinfo
 
-@publication
-Publicado pela Fundação do Software Livre @*
-Rua 31 Milk nº 960789 @*
-Boston, Massachusets 02196 @*
-Estados Unidos da América do Norte @*
-ISBN 1-882114-67-1 @c for version 4.0, September 1999.
 @c ISBN 1-882114-65-5 is for version 3.12, March 1998.
 @c ISBN 1-882114-64-7 is for edition 2.24 of November 1996.
 @c ISBN 1-882114-63-9 is for edition 2.20 of 28 February 1995.
+@publication
+Publicado pela Fundação do Software Livre @*
+Rua 31 Milk nº 960789 @*
+Boston, Massachussets 02196 @*
+Estados Unidos da América do Norte @*
+ISBN 1-882114-67-1 
 
 @ignore
 @sp 1
@@ -2472,8 +2472,7 @@ Alguns comandos não fazem sentido em nomes de nó; por exemplo, ambientes
 (por exemplo, @code{@@quotation}), comandos que leem uma linha inteira como
 argumento deles (por exemplo, @code{@@sp}), e muitos outros. Para a lista
 completa dos comandos que são permitidos, e as expansões deles para
-identificadores HTML e nomes de arquivo, veja-se @ref{Expansão do Comando
-Xref do HTML}.
+identificadores HTML e nomes de arquivo, veja-se @ref{Expansão de Comando do Xref do HTML}.
 
 @item
 @cindex Parêntesis em nome de nó
@@ -2915,8 +2914,8 @@ um menu conforme segue:
 @dfn{Menus} contém ponteiros para subordinar nós. Na saída gerada Info, você
 usa menus para ir para tais nós. @command{texi2any} consegue gerar menus na
 saída gerada HTML, porém não faz isso por padrão (@pxref{Personalização da
-Estrutura da Saída Gerada HTML}, @code{FORMAT_MENU}). Os menus não têm efeito em
-manuais impressos ou em outros formatos de saída.
+Estrutura da Saída Gerada HTML}, @code{FORMAT_MENU}). Os menus não têm
+efeito em manuais impressos ou em outros formatos de saída.
 
 Os menus são gerados automaticamente pelo @command{texi2any} ao gerar Info
 ou HTML com menus para nós seguidos por um comando de seccionamento, sem um
@@ -3349,8 +3348,9 @@ mesmo nível. Por exemplo, é o mesmo para os comandos de nível de capítulo
 
 No HTML, os comandos de nível de capítulo produzem um cabeçalho de nível
 @code{<h2>} por padrão (controlado pela variável de personalização
-@code{CHAPTER_HEADER_LEVEL}, @pxref{Personalização da Saída Gerada Específica
-do HTML}). O nível do elemento de cabeçalho é ajustado para os outros comandos.
+@code{CHAPTER_HEADER_LEVEL}, @pxref{Personalização da Saída Gerada
+Específica do HTML}). O nível do elemento de cabeçalho é ajustado para os
+outros comandos.
 
 Na saída gerada Docbook, o nível apropriado do elemento é usado.  O elemento
 produzido inclui todas as seções seguintes até o próximo comando no mesmo
@@ -6177,8 +6177,8 @@ depois da citação:
 @example
 @@quotation
 As pessoas às vezes me perguntam se é pecado na Igreja do Emacs usar
-vi.  Usar uma versão livre do vi não é pecado; é uma penitência.  Então, feliz
-hacking.
+vi. Usar uma versão livre do vi não é pecado; é uma penitência. Então,
+feliz hacking.
 
 @@author Richard Stallman
 @@end quotation
@@ -8953,9 +8953,9 @@ Documentação de @@code@{foo@}.
 Documentação de @code{foo}.
 @end deftypefn
 
-Embora @samp{@@&} e @samp{@@ampchar@{@}} possam ser usados em quase
-qualquer lugar, não existe necessidade deles em nenhum lugar, exceto nesse
-caso incomum.
+Embora @samp{@@&} e @samp{@@ampchar@{@}} possam ser usados em quase qualquer
+lugar, não existe necessidade deles em nenhum lugar, exceto nesse caso
+incomum.
 
 
 @node Inserindo Caracteres de Aspas
@@ -12882,8 +12882,8 @@ expandidas, de forma que a saída contém texto como este:
 
 @example
 @group
-Esta é a Edição 0.35 Beta, atualizada mais recentemente em 14 de agosto de 1992,
-do `Manual do GNU Make', para `make', versão 3.63 Beta.
+Esta é a Edição 0.35 Beta, atualizada mais recentemente em 14 de agosto de
+1992, do `Manual do GNU Make', para `make', versão 3.63 Beta.
 @end group
 @end example
 @end enumerate
@@ -17975,11 +17975,10 @@ O algoritmo foi desenvolvido principalmente por Patrice Dumas em 2003--04.
 
 @menu
 * Básicos do Linque: Básicos do Linque Xref do HTML.
-* Expansão de Nó: Expansão do Xref do HTML de Nome de Nó
+* Expansão de Nó: Expansão de Nome de Nó do Xref do HTML.
 * Expansão de Comando: Expansão de Comando do Xref do HTML.
 * Expansão de 8 bits: Expansão de Caracteres de 8 bits do Xref do HTML.
-* Configuração: Configuração do Xref do HTML.  Configuração: Configuração do 
-                                                 Xref do HTML
+* Configuração: Configuração do Xref do HTML.
 @end menu
 
 
@@ -18166,7 +18165,7 @@ sensíveis a maiúsculas e minúsculas, independentemente do sistema
 operacional.
 
 
-@node Expansão do Comando Xref do HTML
+@node Expansão de Comando do Xref do HTML
 @subsection Expansão do Comando de Referência Cruzada do HTML
 @cindex Referências cruzadas do HTML @subentry expansão de comando
 
@@ -19396,7 +19395,7 @@ como navegação por teclado e pesquisa de índice. Isso funciona apenas com
 saída HTML não dividida.
 
 @anchor{Rótulos web de licença JavaScript}
-@cindex Página de rótulos da web de licença JavaScript
+@cindex Página de rótulos web de licença JavaScript
 @vindex JS_WEBLABELS
 @vindex JS_WEBLABELS_FILE
 Por padrão, uma @dfn{página web de rótulos de licença JavaScript} é
@@ -19667,7 +19666,7 @@ gerada; padrão falso.
 
 @item JS_WEBLABELS
 @itemx JS_WEBLABELS_FILE
-Especificar como usar uma página @dfn{rótulos da web de licença JavaScript}
+Especificar como usar uma página @dfn{rótulos web de licença JavaScript}
 para fornecer informações de licenciamento e código-fonte para qualquer
 JavaScript usado nos arquivos HTML para o manual. (Veja-se
 @uref{https://www.gnu.org/licenses/javascript-labels.html}).
@@ -21839,7 +21838,12 @@ o qual é um exemplo na documentação do Texinfo.
 Copirraite @copyright{} 2026 Fundação do Software Livre, Inc.
 
 @quotation
-É concedida permissão para copiar, distribuir e(ou) modificar este documento sob os termos da Licença GNU de Documentação Livre, Versão 1.3 ou qualquer versão posterior publicada pela Fundação do Software Livre; sem Seções Invariantes, sem Textos de Capa Frontal e sem Textos de Contracapa. Uma cópia da licença está incluída na seção intitulada ``Licença GNU de Documentação Livre''.
+É concedida permissão para copiar, distribuir e(ou) modificar este
+documento sob os termos da Licença GNU de Documentação Livre, Versão 1.3
+ou qualquer versão posterior publicada pela Fundação do Software Livre;
+sem Seções Invariantes, sem Textos de Capa Frontal e sem Textos de
+Contracapa. Uma cópia da licença está incluída na seção intitulada
+``Licença GNU de Documentação Livre''.
 @end quotation
 @end copying
 
@@ -21875,7 +21879,7 @@ uso básico e opções de linha de comando dele aqui.
 @node Licença GNU de Documentação Livre
 @appendix Licença GNU de Documentação Livre
 
-@include fdl.texi
+@include fdl-versao_1.3-pt_BR.texi
 
 @node Índice
 @unnumbered Índice
@@ -21941,7 +21945,9 @@ completo de amostra, vejam-se as seções anteriores.
 @example
 Copirraite @@copyright@{@} 2026 Fundação do Software Livre, Inc.
 
-A cópia e distribuição deste arquivo, com ou sem modificação, são permitidas em qualquer meio sem royalties, desde que o aviso de copirraite e este aviso sejam preservados.
+A cópia e distribuição deste arquivo, com ou sem modificação, são
+permitidas em qualquer meio sem royalties, desde que o aviso de copirraite e
+este aviso sejam preservados.
 @end example
 
 
@@ -24936,7 +24942,8 @@ Nós regulares se parecem com isto:
 @example
     <nó> =
 <separador>
-Arquivo: <fn>, Nó: <id1>, (Próximo: <id2>, )? (Anterior: <id3>, )? Acima: <id4>
+Arquivo: <fn>, Nó: <id1>, (Próximo: <id2>, )? (Anterior: <id3>, )? Acima:
+<id4>
 
 <texto geral, até o próximo ^_ ou final do arquivo>
 @end example
@@ -25047,8 +25054,8 @@ O formato não prescreve a escolha entre exibir o @t{<arquivo de imagem>}, o
 @t{<texto alternativo>} ou o @t{<conteúdo do arquivo de texto>}.
 
 As opções @t{dpi} e @t{depth} são geradas somente para a variável
-experimental @samp{INFO_MATH_IMAGES} do @command{texi2any} (@pxref{Variáveis de
-Personalização do Info e de Texto Simples}).
+experimental @samp{INFO_MATH_IMAGES} do @command{texi2any} (@pxref{Variáveis
+de Personalização do Info e de Texto Simples}).
 
 @t{dpi} fornece os pontos por polegada (@dfn{DPI}) da imagem. Programas de
 visualização do Info poderiam usar isso para dimensionar a imagem, de modo
@@ -25181,7 +25188,8 @@ Aqui estão alguns exemplos:
 
 @example
 *observar Licença GNU de Documentação Livre::
-*observar Tabela de Etiquetas: Tabela de Etiquetas do formato Info, para detalhes.
+*observar Tabela de Etiquetas: Tabela de Etiquetas do formato Info, para
+detalhes.
 *Observar Visão Geral: (make)Topo.
 *Observar ^?:^?: (bash)Builtins do Shell Bourne.
 *Observar alloca.h: (gnulib)^?alloca.h^?.
