@@ -428,7 +428,7 @@ msgstr ""
 "referências cruzadas e índices. A partir do mesmo arquivo fonte do "
 "Texinfo, você consegue criar saída HTML adequada para uso com um navegador "
 "web; você consegue criar um arquivo do Info para uso no GNU Emacs ou outros "
-"programas de leitura do Info; e também criar arquivos Docbook, EPUB 3 ou "
+"programas de leitura do Info; e também criar arquivos DocBook, EPUB 3 ou "
 "@LaTeX{}."
 
 #. type: cindex
@@ -1010,19 +1010,19 @@ msgstr ""
 #: texinfo/upstream/texinfo.texi:366
 #, no-wrap
 msgid "DocBook output, overview"
-msgstr "Saída Docbook, visão geral"
+msgstr "Saída DocBook, visão geral"
 
 #. type: cindex
 #: texinfo/upstream/texinfo.texi:367
 #, no-wrap
 msgid "XML DocBook output, overview"
-msgstr "Saída XML Docbook, visão geral"
+msgstr "Saída XML DocBook, visão geral"
 
 #. type: item
 #: texinfo/upstream/texinfo.texi:368 texinfo/upstream/texinfo.texi:816
 #, no-wrap
 msgid "DocBook"
-msgstr "Docbook"
+msgstr "DocBook"
 
 #. type: table
 #: texinfo/upstream/texinfo.texi:375
@@ -1036,7 +1036,7 @@ msgstr ""
 "(Gerada via @command{texi2any --docbook}). Esse é um formato baseado em "
 "XML, primariamente para documentação técnica.   Ele, por conseguinte, "
 "assume alguma semelhança, em linhas gerais, com Texinfo.   Veja-se "
-"@uref{http://www.docbook.org}. Vários conversores de Docbook @emph{para} "
+"@uref{http://www.docbook.org}. Vários conversores de DocBook @emph{para} "
 "Texinfo também foram desenvolvidos; vejam-se as páginas web do Texinfo."
 
 #. type: cindex
@@ -4228,7 +4228,7 @@ msgid ""
 "normal text."
 msgstr ""
 "O texto de permissões definido por @code{@@copying} também aparece "
-"automaticamente no início dos arquivos de saída Docbook usando-se "
+"automaticamente no início dos arquivos de saída DocBook usando-se "
 "marcação apropriada. @code{@@insertcopying} pode ser usado para gerar o "
 "texto de permissão dentro do texto normal."
 
@@ -8687,7 +8687,7 @@ msgid ""
 "produced for @code{@@chapter}, and contains any sections or subsections in "
 "the chapter."
 msgstr ""
-"Na saída gerada Docbook, o nível apropriado do elemento é usado.  O "
+"Na saída gerada DocBook, o nível apropriado do elemento é usado.  O "
 "elemento produzido inclui todas as seções seguintes até o próximo "
 "comando no mesmo nível ou superior.  Por exemplo, um elemento "
 "@code{<chapter>} é produzido para @code{@@chapter}, e contém quaisquer "
@@ -8917,13 +8917,13 @@ msgstr ""
 #: texinfo/upstream/texinfo.texi:3424
 #, no-wrap
 msgid "DocBook and prefatory sections"
-msgstr "Docbook e seções prévias"
+msgstr "DocBook e seções prévias"
 
 #. type: cindex
 #: texinfo/upstream/texinfo.texi:3425
 #, no-wrap
 msgid "Preface, etc., and DocBook"
-msgstr "Prefácio, etc., e Docbook"
+msgstr "Prefácio, etc., e DocBook"
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:3428
@@ -8944,31 +8944,31 @@ msgstr "Acknowledgements  Colophon  Dedication  Preface\n"
 #: texinfo/upstream/texinfo.texi:3433
 #, no-wrap
 msgid "@code{<acknowledgements>} DocBook tag"
-msgstr "@code{<acknowledgements>} Etiqueta do Docbook"
+msgstr "@code{<acknowledgements>} Etiqueta do DocBook"
 
 #. type: cindex
 #: texinfo/upstream/texinfo.texi:3434
 #, no-wrap
 msgid "@code{<colophon>} DocBook tag"
-msgstr "@code{<colophon>} Etiqueta do Docbook"
+msgstr "@code{<colophon>} Etiqueta do DocBook"
 
 #. type: cindex
 #: texinfo/upstream/texinfo.texi:3435
 #, no-wrap
 msgid "@code{<dedication>} DocBook tag"
-msgstr "@code{<dedication>} Etiqueta do Docbook"
+msgstr "@code{<dedication>} Etiqueta do DocBook"
 
 #. type: cindex
 #: texinfo/upstream/texinfo.texi:3436
 #, no-wrap
 msgid "@code{<preface>} DocBook tag"
-msgstr "@code{<preface>} Etiqueta do Docbook"
+msgstr "@code{<preface>} Etiqueta do DocBook"
 
 #. type: cindex
 #: texinfo/upstream/texinfo.texi:3437
 #, no-wrap
 msgid "@code{<chapter>} DocBook tag"
-msgstr "@code{<chapter>} Etiqueta do Docbook"
+msgstr "@code{<chapter>} Etiqueta do DocBook"
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:3443
@@ -9651,7 +9651,7 @@ msgid ""
 "chapters, up to the next @code{<part>}.  A @code{<part>} containing chapters "
 "is also closed at an appendix."
 msgstr ""
-"Na saída gerada Docbook, o elemento @code{<part>} inclui todos os "
+"Na saída gerada DocBook, o elemento @code{<part>} inclui todos os "
 "capítulos seguintes, até o próximo @code{<part>}.  Um @code{<part>} "
 "contendo capítulos também é fechado em um apêndice."
 
@@ -9781,12 +9781,12 @@ msgstr ""
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:3718
-#, fuzzy
-#| msgid "sections in the main file would also be lowered.)"
 msgid ""
 "(Without the @code{@@raisesections}, all the subsequent sections in the main "
 "file would also be lowered)."
-msgstr "seções no arquivo principal também poderiam ser rebaixadas)."
+msgstr ""
+"(Sem o @code{@@raisesections}, todas as seções subsequentes no arquivo "
+"principal também poderiam ser rebaixadas)."
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:3722
@@ -10372,10 +10372,9 @@ msgstr "Veja-se Furacões, página @var{ppp} --- para os detalhes"
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:3959
-#, fuzzy
-#| msgid "@w{`See Hurricanes, page @var{ppp}, --- for the details'}."
 msgid "instead of @w{`See Hurricanes, page @var{ppp}, --- for the details'}."
-msgstr "@w{`Veja-se Furacões, página @var{ppp}, --- para os detalhes'}."
+msgstr ""
+"em vez de @w{`Veja-se Furacões, página @var{ppp}, --- para os detalhes'}."
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:3963
@@ -11046,10 +11045,8 @@ msgstr "*Observe (make)Top::.\n"
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:4321 texinfo/upstream/texinfo.texi:24506
-#, fuzzy
-#| msgid "end"
 msgid "and"
-msgstr "end"
+msgstr "e"
 
 #. type: quotation
 #: texinfo/upstream/texinfo.texi:4324
@@ -11969,10 +11966,8 @@ msgstr ""
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:4740
-#, fuzzy
-#| msgid "HTML output @subentry math"
 msgid "The HTML output is this:"
-msgstr "A saída HTML @subentry matemática"
+msgstr "A saída HTML é esta:"
 
 #. type: example
 #: texinfo/upstream/texinfo.texi:4743
@@ -11986,10 +11981,8 @@ msgstr ""
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:4747
-#, fuzzy
-#| msgid "The template is like this:"
 msgid "In other formats, the output is like this:"
-msgstr "O modelo é semelhante a isto:"
+msgstr "Em outros formatos, a saída gerada é semelhante a isto:"
 
 #. type: example
 #: texinfo/upstream/texinfo.texi:4750
@@ -12020,10 +12013,8 @@ msgstr "O programa @@url@{/man.cgi/1/ls,,ls@} @dots{}\n"
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:4761
-#, fuzzy
-#| msgid "which produces:"
 msgid "which, except for HTML, produces:"
-msgstr "o que produz:"
+msgstr "o que, exceto para HTML, produz:"
 
 #. type: display
 #: texinfo/upstream/texinfo.texi:4763
@@ -14385,7 +14376,7 @@ msgstr ""
 "No @TeX{}, a sigla é impressa em fonte ligeiramente menor.  Na saída Info, "
 "o argumento é impresso como está.  Em qualquer formato, e na saída "
 "@LaTeX{}, se o segundo argumento estiver presente, ele é impresso entre "
-"parênteses depois da sigla.  Em HTML e em Docbook a etiqueta apropriada é "
+"parênteses depois da sigla.  Em HTML e em DocBook a etiqueta apropriada é "
 "usada."
 
 #. type: Plain text
@@ -15755,12 +15746,12 @@ msgstr "etiqueta @code{<blockquote>} do DocBook"
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:6199
-#, fuzzy
-#| msgid "(@code{<note>}, etc.)@: instead of the default @code{<blockquote>}."
 msgid ""
 "then the DocBook output uses corresponding special tags (@code{<note>}, "
 "etc.)@: instead of the default @code{<blockquote>}."
-msgstr "(@code{<note>}, entre outras) em vez do padrão @code{<blockquote>}."
+msgstr ""
+"então a saída DocBook usará etiquetas especiais correspondentes "
+"(@code{<note>}, entre outras) em vez da padrão @code{<blockquote>}."
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:6203
@@ -19068,10 +19059,8 @@ msgstr ""
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:7583
-#, fuzzy
-#| msgid "and in printed output:"
 msgid "And the output:"
-msgstr "e em saída impressa:"
+msgstr "E a saída gerada:"
 
 #. type: float
 #: texinfo/upstream/texinfo.texi:7586
@@ -19291,10 +19280,8 @@ msgstr ""
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:7662
-#, fuzzy
-#| msgid "The template is:"
 msgid "The output is:"
-msgstr "O modelo é:"
+msgstr "A saída gerada é:"
 
 #. type: float
 #: texinfo/upstream/texinfo.texi:7666
@@ -23003,22 +22990,20 @@ msgid ""
 "Documentation of @@code@{foo@}.\n"
 "@@end deftypefn\n"
 msgstr ""
-"@@deftypefn Função int foo (const std::vector<int>@@& @@var@{bar@})\n"
+"@@deftypefn Function int foo (const std::vector<int>@@& @@var@{bar@})\n"
 "Documentação de @@code@{foo@}.\n"
 "@@end deftypefn\n"
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:8982
-#, fuzzy
-#| msgid "This is the first chapter."
 msgid "This gives the output"
-msgstr "Este é o primeiro capítulo"
+msgstr "Isso fornece a saída"
 
 #. type: deftypefn
 #: texinfo/upstream/texinfo.texi:8983
 #, no-wrap
 msgid "Function int foo (const std::vector<int>@& @var{bar})"
-msgstr "Função int foo (const std::vector<int>@& @var{bar})"
+msgstr "Function int foo (const std::vector<int>@& @var{bar})"
 
 #. type: deftypefn
 #: texinfo/upstream/texinfo.texi:8985
@@ -30828,10 +30813,8 @@ msgstr ""
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:11791 texinfo/upstream/texinfo.texi:11821
-#, fuzzy
-#| msgid "This produces the following result:"
 msgid "This produces the output:"
-msgstr "Isso produz o seguinte resultado:"
+msgstr "Isso produz a saída:"
 
 #. type: defline
 #: texinfo/upstream/texinfo.texi:11793
@@ -34991,10 +34974,8 @@ msgstr ""
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:13390
-#, fuzzy
-#| msgid "produces this:"
 msgid "produces simply:"
-msgstr "produz isto:"
+msgstr "produz simplesmente:"
 
 #. type: display
 #: texinfo/upstream/texinfo.texi:13393
@@ -35356,10 +35337,8 @@ msgstr ""
 
 #. type: itemize
 #: texinfo/upstream/texinfo.texi:13545
-#, fuzzy
-#| msgid "produces the following:"
 msgid "you can do the following instead:"
-msgstr "produz o seguinte:"
+msgstr "você pode fazer o seguinte:"
 
 #. type: group
 #: texinfo/upstream/texinfo.texi:13553
@@ -35555,12 +35534,12 @@ msgstr ""
 
 #. type: Plain text
 #: texinfo/upstream/texinfo.texi:13653
-#, fuzzy
-#| msgid "the earlier implementation, it would have been parsed as this:"
 msgid ""
 "with just @samp{aaa} as the argument to @code{@@center}.  In the earlier "
 "implementation, it would have been parsed as this:"
-msgstr "a implementação anterior, ele teria sido analisado assim:"
+msgstr ""
+"com apenas @samp{aaa} como o argumento para @code{@@center}. Na "
+"implementação anterior, ele teria sido analisado assim:"
 
 #. type: example
 #: texinfo/upstream/texinfo.texi:13656
