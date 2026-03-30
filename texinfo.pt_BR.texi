@@ -11,6 +11,8 @@
 @documentlanguage pt_BR
 @afourpaper
 
+@set txifontfamily lmodern
+
 @c Automake automatically updates version.texi to @set VERSION and
 @c @set UPDATED to appropriate values.
 @include version-pt_BR.texi
@@ -25063,7 +25065,7 @@ que ela tenha um tamanho apropriado para o texto ao redor. Aqui está uma
 fórmula possível para a altura de uma imagem em pixeis:
 
 @displaymath
-h_{@r{exibição}} = (h_{@r{arquivo}} / dpi) * (72.27/10) * f
+@math{h_{@hbox{exibição}} = (h_{@hbox{arquivo}} / dpi) * (72.27/10) * f}
 @end displaymath
 
 @noindent Here, @math{h_{@r{display}}} is the height in pixels to display
