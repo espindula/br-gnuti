@@ -57,7 +57,8 @@ GNU de Documentação Livre''.
 
 @author Robert James Chassell
 @author Richard Matthew Stallman
-@author Jamenson Ferreira Espindula de Almeida Melo - tradução para português brasileiro
+@author Jamenson Ferreira Espindula de Almeida Melo (tradução para português
+brasileiro)
 @end documentinfo
 
 @c ISBN 1-882114-65-5 is for version 3.12, March 1998.
@@ -608,34 +609,37 @@ programa C:
 
 @itemize @bullet
 @item
-HTML customization.  Many GNU and other free software packages had been
-happily using the HTML customization features in @command{texi2html} for
-years.  Thus, in effect two independent implementations of the Texinfo
-language had developed, and keeping them in sync was not simple.  Adding the
-HTML customization possible in @command{texi2html} to a C program would have
-been an enormous effort at that time.
+Personalização do HTML. Muitos pacotes GNU e outros softwares livres têm
+sido felizes no uso dos recursos de personalização de HTML no
+@command{texi2html} por anos. Assim, na verdade, duas implementações
+independentes da linguagem Texinfo foram desenvolvidas, e mantê-las em
+sincronia não era simples. Adicionar a possibilidade de personalização de
+HTML no @command{texi2html} a um programa C teria sido um esforço enorme na
+época.
 
 @item
-Unicode, and multilingual support generally, especially of east Asian
-languages.  At that time, doing it in C would have been tantamount to
-rewriting the entire program.
+Unicode e suporte multilíngue em geral, especialmente de idiomas do leste
+asiático. Naquela época, fazer isso em C teria sido equivalente a reescrever
+o programa inteiro.
 
 @item
-Additional back-ends.  The @command{makeinfo} code had become convoluted to
-the point where adding a new back-end was quite complex, requiring complex
-interactions with existing back-ends.  In contrast, the new implementation
-provides a clean tree-based representation for all back-ends to work from.
-People had requested numerous different back-ends (@LaTeX{}, the latest
-(X)HTML, @dots{}); this change made them much more feasible to implement.
+Estruturas adicionais de retaguarda. O código do @command{makeinfo} se
+tornou complicado até o ponto onde adicionar-se uma nova estrutura de
+retaguarda era bastante complexo, exigindo interações complexas com
+estruturas de retaguarda existentes. Em contraste, a nova implementação
+fornece uma representação limpa baseada em árvore para todas as estruturas
+de retaguarda trabalharem. Pessoas têm solicitado numerosas estruturas de
+retaguarda (@LaTeX{}, o mais recente (X)HTML, @dots{}); essa mudança as
+tornou muito mais viáveis de implementar.
 
 @cindex @command{texi2any}, como implementação de referência
 @cindex Implementação de referência
 @cindex Implementação, @command{texi2any} como referência
 @anchor{Implementação de referência}@item
-@command{texi2any} was intended to be a reference implementation that
-defines parts of the language not fully specified by the manual, and to
-provide a reference for command-line options for any other program that
-might process Texinfo in the future.
+@command{texi2any} foi concebido para ser uma implementação de referência
+que define partes da linguagem não totalmente especificadas pelo manual e
+para fornecer uma referência para opções de linha de comando para qualquer
+outro programa que possa processar o Texinfo no futuro.
 
 @end itemize
 
@@ -2470,7 +2474,7 @@ Alguns comandos não fazem sentido em nomes de nó; por exemplo, ambientes
 (por exemplo, @code{@@quotation}), comandos que leem uma linha inteira como
 argumento deles (por exemplo, @code{@@sp}), e muitos outros. Para a lista
 completa dos comandos que são permitidos, e as expansões deles para
-identificadores HTML e nomes de arquivo, veja-se @ref{Expansão do Comando
+identificadores HTML e nomes de arquivo, veja-se @ref{Expansão de Comando do
 Xref do HTML}.
 
 @item
@@ -2874,7 +2878,7 @@ Aqui está um exemplo do uso desses comandos:
 Este capítulo é a respeito de diferentes ferramentas que você pode usar.
 
 @@node Chaves de fenda
-@@nodedescription Flathead e Phillips.
+@@nodedescription Ponta Chata e Phillips.
 @@section Chaves de fenda
 
 Esta seção é a respeito de chaves de fenda.
@@ -7664,11 +7668,11 @@ Aqui está com o que se parece a saída gerada a partir de
 
 @ifinfo
 @display
-*      Figura 12.1:      fig:ex1.
+*      Figure 12.1:      fig:ex1.
 @end display
 @end ifinfo
 @ifnotinfo
-@listoffloats Figura
+@listoffloats Figure
 @end ifnotinfo
 
 Geralmente, cada linha na lista de flutuações contém o tipo de flutuação (se
@@ -17958,7 +17962,7 @@ O algoritmo foi desenvolvido principalmente por Patrice Dumas em 2003--04.
 
 @menu
 * Básicos do Linque: Básicos do Linque Xref do HTML.
-* Expansão de Nó: Expansão do Xref do HTML de Nome de Nó
+* Expansão de Nó: Expansão de Nome de Nó do Xref do HTML.
 * Expansão de Comando: Expansão de Comando do Xref do HTML.
 * Expansão de 8 bits: Expansão de Caracteres de 8 bits do Xref do HTML.
 * Configuração: Configuração do Xref do HTML.  Configuração: Configuração do 
@@ -18149,7 +18153,7 @@ sensíveis a maiúsculas e minúsculas, independentemente do sistema
 operacional.
 
 
-@node Expansão do Comando Xref do HTML
+@node Expansão de Comando do Xref do HTML
 @subsection Expansão do Comando de Referência Cruzada do HTML
 @cindex Referências cruzadas do HTML @subentry expansão de comando
 
@@ -21991,8 +21995,9 @@ frequentemente usados e para criar ponteiros de nós e menus.
 
 
 @node Edição do Emacs
-@nodedescription O modo Texinfo adiciona recursos de edição de uso geral do
-GNU Emacs.
+@nodedescriptionblock
+Adições do modo Texinfo para recursos de edição de uso geral do GNU Emacs.
+@end nodedescriptionblock
 @section Os Comandos Usuais de Edição do GNU Emacs
 
 Na maioria dos casos, os comandos usuais do modo Texto funcionam da mesma
