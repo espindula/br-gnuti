@@ -51,6 +51,7 @@ Texts.  A copy of the license is included in the section entitled
 
 @author Robert J. Chassell
 @author Richard M. Stallman
+@author Jamenson Ferreira Espindula de Almeida Melo - tradução para português brasileiro
 @end documentinfo
 
 @publication
@@ -232,12 +233,23 @@ For bug reports, please include enough information for the maintainers
 to reproduce the problem.  Generally speaking, that means:
 
 @itemize @bullet
-@item The version number of Texinfo and the program(s) or manual(s) involved.
-@item The contents of any input files necessary to reproduce the bug.
-@item Precisely how you ran any program(s) involved.
-@item A description of the problem and samples of any erroneous output.
-@item Hardware and operating system names and versions.
-@item Anything else that you think would be helpful.
+@item
+The version number of Texinfo and the program(s) or manual(s) involved.
+
+@item
+The contents of any input files necessary to reproduce the bug.
+
+@item
+Precisely how you ran any program(s) involved.
+
+@item
+A description of the problem and samples of any erroneous output.
+
+@item
+Hardware and operating system names and versions.
+
+@item
+Anything else that you think would be helpful.
 @end itemize
 
 When in doubt whether something is needed or not, include it.  It's
@@ -583,7 +595,8 @@ The new Perl program was intended to have the following advantages over
 the old C program:
 
 @itemize @bullet
-@item HTML customization.  Many GNU and other free software packages
+@item
+HTML customization.  Many GNU and other free software packages
 had been happily using the HTML customization features in
 @command{texi2html} for years.  Thus, in effect two independent
 implementations of the Texinfo language had developed, and keeping
@@ -591,11 +604,13 @@ them in sync was not simple.  Adding the HTML customization possible
 in @command{texi2html} to a C program would have been an
 enormous effort at that time.
 
-@item Unicode, and multilingual support generally, especially of east
+@item
+Unicode, and multilingual support generally, especially of east
 Asian languages.  At that time, doing it in C would have been tantamount
 to rewriting the entire program.
 
-@item Additional back-ends.  The @command{makeinfo} code had become
+@item
+Additional back-ends.  The @command{makeinfo} code had become
 convoluted to the point where adding a new back-end was quite complex,
 requiring complex interactions with existing back-ends.  In contrast,
 the new implementation provides a clean tree-based representation for
@@ -607,7 +622,8 @@ much more feasible to implement.
 @cindex Reference implementation
 @cindex Implementation, @command{texi2any} as reference
 @anchor{Reference Implementation}@c
-@item @command{texi2any} was intended to be a reference implementation
+@item
+@command{texi2any} was intended to be a reference implementation
 that defines parts of the language not fully specified by the manual,
 and to provide a reference for command-line options for any other
 program that might process Texinfo in the future.

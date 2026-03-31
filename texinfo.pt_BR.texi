@@ -6,12 +6,7 @@
 @c ===========================================================================
 
 
-@documentencoding UTF-8
-@setfilename texinfo-pt_BR.info
-@documentlanguage pt_BR
-@afourpaper
-
-@set txifontfamily lmodern
+@setfilename texinfo.info
 
 @c Automake automatically updates version.texi to @set VERSION and
 @c @set UPDATED to appropriate values.
@@ -62,17 +57,15 @@ GNU de Documentação Livre''.
 
 @author Robert James Chassell
 @author Richard Matthew Stallman
+@author Jamenson Ferreira Espindula de Almeida Melo - tradução para português brasileiro
 @end documentinfo
 
 @c ISBN 1-882114-65-5 is for version 3.12, March 1998.
 @c ISBN 1-882114-64-7 is for edition 2.24 of November 1996.
 @c ISBN 1-882114-63-9 is for edition 2.20 of 28 February 1995.
-@publication
-Publicado pela Fundação do Software Livre @*
-Rua 31 Milk nº 960789 @*
-Boston, Massachussets 02196 @*
-Estados Unidos da América do Norte @*
-ISBN 1-882114-67-1 
+@publication Publicado pela Fundação do Software Livre @* Rua 31 Milk nº
+960789 @* Boston, Massachussets 02196 @* Estados Unidos da América do Norte
+@* ISBN 1-882114-67-1 
 
 @ignore
 @sp 1
@@ -185,7 +178,7 @@ tipográfico @TeX{}) em formato PDF, incluindo capítulos, seções, referência
 cruzadas e índices. A partir do mesmo arquivo fonte do Texinfo, você
 consegue criar saída HTML adequada para uso com um navegador web; você
 consegue criar um arquivo do Info para uso no GNU Emacs ou outros programas
-de leitura do Info; e também criar arquivos Docbook, EPUB 3 ou @LaTeX{}.
+de leitura do Info; e também criar arquivos DocBook, EPUB 3 ou @LaTeX{}.
 
 @cindex Formato do arquivo fonte
 @cindex Marcação semântica
@@ -249,12 +242,24 @@ os(as) mantenedores(as) reproduzirem o problema. Falando genericamente, isso
 significa:
 
 @itemize @bullet
-@item O número da versão do Texinfo e o(s) programa(s) ou manual(is) envolvido(s).
-@item O conteúdo de quaisquer arquivos de entrada necessários para reproduzir o defeito.
-@item Precisamente como você executou quaisquer programa(s) envolvido(s).
-@item Uma descrição do problema e amostras de quaisquer saídas errôneas.
-@item Nomes e versões do hardware e do sistema operacional.
-@item Qualquer outra coisa que você pense que pudesse ajudar.
+@item
+O número da versão do Texinfo e o(s) programa(s) ou manual(is) envolvido(s).
+
+@item
+O conteúdo de quaisquer arquivos de entrada necessários para reproduzir o
+defeito.
+
+@item
+Precisamente como você executou quaisquer programa(s) envolvido(s).
+
+@item
+Uma descrição do problema e amostras de quaisquer saídas errôneas.
+
+@item
+Nomes e versões do hardware e do sistema operacional.
+
+@item
+Qualquer outra coisa que você pense que pudesse ajudar.
 @end itemize
 
 Quando em dúvida se alguma coisa é necessária ou não, inclua-a. É melhor
@@ -381,13 +386,13 @@ personalização da saída do que seria possível com a implementação @TeX{}
 simples do Texinfo.
 
 
-@cindex Saída Docbook, visão geral
-@cindex Saída XML Docbook, visão geral
-@item Docbook
+@cindex Saída DocBook, visão geral
+@cindex Saída XML DocBook, visão geral
+@item DocBook
 (Gerada via @command{texi2any --docbook}). Esse é um formato baseado em XML,
 primariamente para documentação técnica.   Ele, por conseguinte, assume
 alguma semelhança, em linhas gerais, com Texinfo.   Veja-se
-@uref{http://www.docbook.org}. Vários conversores de Docbook @emph{para}
+@uref{http://www.docbook.org}. Vários conversores de DocBook @emph{para}
 Texinfo também foram desenvolvidos; vejam-se as páginas web do Texinfo.
 
 @cindex Saída XML Texinfo, visão geral
@@ -602,34 +607,35 @@ O novo programa Perl pretendia ter as seguintes vantagens sobre o antigo
 programa C:
 
 @itemize @bullet
-@item Personalização de HTML.  Muitos pacotes de software livre GNU e outros
-tem sido felizes no uso das características de personalização de HTML no
-@command{texi2html} por anos.  Assim, na verdade, duas implementações
-independentes da linguagem Texinfo foram desenvolvidas, e mantê-las em
-sincronia não era simples.  Adicionar a possibilidade de personalização de
-HTML no @command{texi2html} a um programa C teria sido um esforço enorme na
-época.
+@item
+HTML customization.  Many GNU and other free software packages had been
+happily using the HTML customization features in @command{texi2html} for
+years.  Thus, in effect two independent implementations of the Texinfo
+language had developed, and keeping them in sync was not simple.  Adding the
+HTML customization possible in @command{texi2html} to a C program would have
+been an enormous effort at that time.
 
-@item Unicode, e suporte multilíngue em geral, especialmente de idiomas do leste
-Idiomas asiáticos. Naquela época, fazer isso em C teria sido equivalente a
-reescrever todo o programa.
+@item
+Unicode, and multilingual support generally, especially of east Asian
+languages.  At that time, doing it in C would have been tantamount to
+rewriting the entire program.
 
-@item Estruturas adicionais de retaguarda. O código do @command{makeinfo}
-complicou-se até o ponto onde adicionar-se uma nova estrutura de retaguarda
-era bastante complexo, exigindo interações complexas com estruturas de
-retaguarda existentes. Em contraste, a nova implementação fornece uma
-representação limpa baseada em árvore para todas as estruturas de retaguarda
-trabalharem. Pessoas tem solicitado numerosas estruturas de retaguarda
-(@LaTeX{}, o mais recente (X)HTML, @dots{}); essa mudança os tornou muito
-mais viáveis de implementar.
+@item
+Additional back-ends.  The @command{makeinfo} code had become convoluted to
+the point where adding a new back-end was quite complex, requiring complex
+interactions with existing back-ends.  In contrast, the new implementation
+provides a clean tree-based representation for all back-ends to work from.
+People had requested numerous different back-ends (@LaTeX{}, the latest
+(X)HTML, @dots{}); this change made them much more feasible to implement.
 
 @cindex @command{texi2any}, como implementação de referência
 @cindex Implementação de referência
 @cindex Implementação, @command{texi2any} como referência
-@anchor{Implementação de referência}@item @command{texi2any}, foi concebido para ser uma implementação de referência
-que define partes da linguagem não totalmente especificadas pelo manual e
-para fornecer uma referência para opções de linha de comando para qualquer
-outro programa que possa processar o Texinfo no futuro.
+@anchor{Implementação de referência}@item
+@command{texi2any} was intended to be a reference implementation that
+defines parts of the language not fully specified by the manual, and to
+provide a reference for command-line options for any other program that
+might process Texinfo in the future.
 
 @end itemize
 
@@ -708,8 +714,7 @@ partir de @uref{https://www.gnu.org/software/help2man}.
 
 
 @node Escrevendo um Arquivo do Texinfo
-@anchor{Iniciando e Finalizando um Arquivo}
-@nodedescription Formato de um arquivo fonte do Texinfo.
+@anchor{Iniciando e Finalizando um Arquivo}@nodedescription Formato de um arquivo fonte do Texinfo.
 @chapter Escrevendo um Arquivo do Texinfo
 
 Este capítulo descreve a sintaxe do Texinfo e o que é exigido em um arquivo
@@ -833,7 +838,7 @@ ignorada.
 Mantenha-os em qualquer lugar; em atributos, encapsulados como @samp{\f}; também,
 @samp{\} é encapsulado como @samp{\\} e nova linha como @samp{\n}.
 
-@item Docbook
+@item DocBook
 Completamente removidos, dado que não são permitidos.
 @end table
 
@@ -952,8 +957,7 @@ como UTF-8, um conjunto universal de códigos compatível com ASCII de 7 bits.
 
 @node Arquivo Curto do Texinfo de Amostra
 @nodedescription Um arquivo curto do Texinfo de amostra.
-@anchor{Amostra Curta}@anchor{Amostra de Início}
-@section Amostra Curta
+@anchor{Amostra Curta}@anchor{Amostra de Início}@section Amostra Curta
 @cindex Arquivo do Texinfo de amostra, sem comentários
 
 Aqui está um arquivo curto de amostra do Texinfo.
@@ -1097,8 +1101,9 @@ ao GNU Emacs para usar o modo Texinfo quando o arquivo for editado:
 \input texinfo   @@c -*-texinfo-*-
 @end example
 
-@noindent This may be useful when Emacs doesn't detect the file type
-a partir da extensão do arquivo automaticamente.
+@noindent
+Isso possivelmente seja útil quando o Emacs não detectar automaticamente o
+tipo do arquivo a partir da extensão do arquivo.
 
 
 @node @code{@@setfilename}
@@ -1181,8 +1186,7 @@ alternativo.
 @nodedescription Crie um título para o trabalho impresso.
 @subsection @code{@@settitle}: Configura o Título do Documento
 
-@anchor{settitle}
-@findex settitle
+@anchor{settitle}@findex settitle
 @cindex Título de documento, especificando
 
 Um arquivo Texinfo deveria conter uma linha que se pareça com isto:
@@ -1289,8 +1293,7 @@ Texto finalizando o preâmbulo
 @node Início e Fim do Cabeçalho
 @nodedescription Formatar uma região no Emacs exige isto.
 @subsection Início e Fim do Cabeçalho para Emacs
-@anchor{Início do Cabeçalho}
-@cindex Início da linha de cabeçalho
+@anchor{Início do Cabeçalho}@cindex Início da linha de cabeçalho
 
 No Emacs, as linhas de início e de fim de cabeçalho podem ser usadas para
 cercar comandos que afetam globalmente o documento no preâmbulo do
@@ -1309,8 +1312,7 @@ Texinfo. Siga os comandos de início de cabeçalho que afetam globalmente a
 formatação do documento, como @code{@@settitle}, @code{@@synindex} ou
 @code{@@footnotestyle}; e então por uma linha @w{end-of-header}.
 
-@anchor{Fim do Cabeçalho}
-@cindex Linha de fim do cabeçalho
+@anchor{Fim do Cabeçalho}@cindex Linha de fim do cabeçalho
 
 Uma linha de fim de cabeçalho é um comentário do Texinfo que se parece com
 isto:
@@ -1406,8 +1408,7 @@ Autoria web
 
 @node Permissões do Documento
 @nodedescription Garantindo que teu manual seja livre.
-@anchor{Permissões de Cópia de Software}
-@section Permissões do Documento
+@anchor{Permissões de Cópia de Software}@section Permissões do Documento
 @cindex Permissões de documentos
 @cindex Permissões de cópia
 
@@ -1457,8 +1458,7 @@ texto completo da licença do software não é necessariamente exigido.
 @nodedescription Declare as permissões de cópia do documento.
 @subsection @code{@@copying}: Declarar Permissões de Cópia
 
-@anchor{copying}
-@findex copying
+@anchor{copying}@findex copying
 
 O comando @code{@@copying} deveria ser fornecido bem no início do documento;
 o local recomendado é logo depois do material do cabeçalho (@pxref{Cabeçalho
@@ -1535,8 +1535,7 @@ distribuídos.
 @nodedescription Onde inserir as permissões.
 @subsection @code{@@insertcopying}: Incluir Texto de Permissões
 
-@anchor{insertcopying}
-@findex insertcopying
+@anchor{insertcopying}@findex insertcopying
 @cindex Texto de reprodução, incluindo
 @cindex Texto das permissões, incluindo
 @cindex Incluindo texto das permissões
@@ -1567,7 +1566,7 @@ não é visível sem @code{@@insertcopying} (a menos que o(a) leitor(a)
 visualize o fonte HTML).
 
 O texto de permissões definido por @code{@@copying} também aparece
-automaticamente no início dos arquivos de saída Docbook usando-se marcação
+automaticamente no início dos arquivos de saída DocBook usando-se marcação
 apropriada. @code{@@insertcopying} pode ser usado para gerar o texto de
 permissão dentro do texto normal.
 
@@ -1686,8 +1685,7 @@ Publicado por @var{nome-editor(a)}
 @nodedescription Crie um título para o documento impresso.
 @subsection @code{@@titlepage}
 
-@anchor{titlepage}
-@cindex Página de título
+@anchor{titlepage}@cindex Página de título
 @findex titlepage
 
 Uma alternativa ao uso de @code{@@maketitle} para criar páginas de título e
@@ -1761,9 +1759,10 @@ Para inserir o próprio texto de direitos autorais, escreva
 @@insertcopying
 @end example
 
-@noindent (This is required for outputting the copying text when
-usando @code{@@titlepage}, ao contrário de @code{@@maketitle} onde esse
-texto é gerado automaticamente).
+@noindent
+(Isso é exigido para gerar o texto mediante cópia ao se usar
+@code{@@titlepage}, ao contrário de @code{@@maketitle} onde esse texto é
+gerado automaticamente).
 
 Siga o texto de direitos autorais pelo(a) editor(a), números ISBN, créditos
 da arte de capa, e outras tais informações.
@@ -1776,8 +1775,7 @@ Os comandos @code{@@title}, @code{@@subtitle} e @code{@@author}.
 @end nodedescriptionblock
 @subsubsection @code{@@title}, @code{@@subtitle} e @code{@@author}
 
-@anchor{title subtitle author}
-@findex title
+@anchor{title subtitle author}@findex title
 @findex subtitle
 @findex author
 
@@ -1867,8 +1865,7 @@ Os comandos @code{@@titlefont}, @code{@@center} e @code{@@sp}.
 @end nodedescriptionblock
 @subsubsection @code{@@titlefont}, @code{@@center} e @code{@@sp}
 
-@anchor{titlefont center sp}
-@findex titlefont
+@anchor{titlefont center sp}@findex titlefont
 @findex center
 @findex sp @r{(espaçamento entre linhas da página de título)}
 
@@ -1957,8 +1954,7 @@ veja-se @ref{O Nó Top}).
 de direitos autorais.
 @subsection Geração de Títulos
 
-@anchor{end titlepage}
-@cindex Gerando títulos de página
+@anchor{end titlepage}@cindex Gerando títulos de página
 
 Texinfo tem dois formatos padrão de cabeçalho de página, um para documentos
 impressos em um lado de cada folha de papel (impressão de lado único), e o
@@ -2232,8 +2228,8 @@ Primeira seção do primeiro capítulo.
 Segunda seção do primeiro capítulo.
 @end quotation
 
-@noindent (In the Info and HTML output, the chapter would also be split
-em nós).
+@noindent
+(Na saída Info e HTML, o capítulo também seria dividido em nós).
 
 
 @node Finalizando um Arquivo
@@ -2474,7 +2470,8 @@ Alguns comandos não fazem sentido em nomes de nó; por exemplo, ambientes
 (por exemplo, @code{@@quotation}), comandos que leem uma linha inteira como
 argumento deles (por exemplo, @code{@@sp}), e muitos outros. Para a lista
 completa dos comandos que são permitidos, e as expansões deles para
-identificadores HTML e nomes de arquivo, veja-se @ref{Expansão de Comando do Xref do HTML}.
+identificadores HTML e nomes de arquivo, veja-se @ref{Expansão do Comando
+Xref do HTML}.
 
 @item
 @cindex Parêntesis em nome de nó
@@ -2555,10 +2552,11 @@ substituídos por um espaço único. Por exemplo:
 @c @node @  foo @: @* bar,
 @c However, it is best to leave those special cases non documented
 
-@noindent all define the same node, namely @samp{foo bar}.
+@noindent
 @c FIXME to be removed.  In 2022 both Info readers find the node.
-Em entradas de menu, um espaço interno deveria ser usado em nomes de nó ou
-algumas versões de alguns leitores Info não encontrarão o nó.
+todas definem o mesmo nó, nominadamente @samp{foo bar}. Em entradas de menu,
+um espaço interno deveria ser usado em nomes de nó ou algumas versões de
+alguns leitores Info não encontrarão o nó.
 @end itemize
 
 
@@ -2634,8 +2632,7 @@ que as ferramentas os definam implicitamente, com este resultado simples:
 @nodedescription Como usar o comando @code{@@top}.
 @section O Comando de Seccionamento @code{@@top}
 
-@anchor{comando top}@anchor{makeinfo top}@anchor{comando makeinfo top}
-@findex top
+@anchor{comando top}@anchor{makeinfo top}@anchor{comando makeinfo top}@findex top
 
 O comando @code{@@top} é um comando especial de seccionamento que você
 deveria usar somente depois de uma linha @samp{@@node Top} no início de um
@@ -3228,8 +3225,7 @@ escrever tais menus manualmente. @xref{Atualizando Nós e Menus}.
 @node Estruturamento de Capítulo
 @nodedescription Criando capítulos, seções, apêndices, etc.
 @chapter Estruturamento de Capítulo
-@anchor{Estruturamento}
-@cindex Capítulos, estruturamento de
+@anchor{Estruturamento}@cindex Capítulos, estruturamento de
 @cindex Estruturamento de capítulos
 @cindex Seccionamento
 
@@ -3343,10 +3339,10 @@ uma linha por si só, com uma linha de um caractere ASCII (@samp{*},
 @end group
 @end example
 
-@noindent The underlining character is the same for all the commands at the
-mesmo nível. Por exemplo, é o mesmo para os comandos de nível de capítulo
-@code{@@chapter}, @code{@@apppendix}, @code{@@unnumbered} e
-@code{@@chapheading}.
+@noindent
+O caractere sublinhado é o mesmo para todos os comandos no mesmo nível. Por
+exemplo, é o mesmo para os comandos de nível de capítulo @code{@@chapter},
+@code{@@apppendix}, @code{@@unnumbered} e @code{@@chapheading}.
 
 No HTML, os comandos de nível de capítulo produzem um cabeçalho de nível
 @code{<h2>} por padrão (controlado pela variável de personalização
@@ -3354,7 +3350,7 @@ No HTML, os comandos de nível de capítulo produzem um cabeçalho de nível
 Específica do HTML}). O nível do elemento de cabeçalho é ajustado para os
 outros comandos.
 
-Na saída gerada Docbook, o nível apropriado do elemento é usado.  O elemento
+Na saída gerada DocBook, o nível apropriado do elemento é usado.  O elemento
 produzido inclui todas as seções seguintes até o próximo comando no mesmo
 nível ou superior.  Por exemplo, um elemento @code{<chapter>} é produzido
 para @code{@@chapter}, e contém quaisquer seções ou subseções no capítulo.
@@ -3383,8 +3379,7 @@ Aqui está um sumário:
 @node @code{@@chapter}
 @section @code{@@chapter}: Estruturamento de Capítulo
 
-@anchor{chapter}
-@findex chapter
+@anchor{chapter}@findex chapter
 
 @code{@@chapter} identifica um capítulo no documento--o nível mais alto da
 hierarquia de estruturamento normal do documento.  Escreva o comando no
@@ -3403,8 +3398,7 @@ de Capítulo'';  a linha @code{@@chapter} se parece com isto:
 @node @code{@@unnumbered @@appendix}
 @section @code{@@unnumbered}, @code{@@appendix}: Capítulos com Outra Rotulagem
 
-@anchor{unnumbered e appendix}
-@findex unnumbered
+@anchor{unnumbered e appendix}@findex unnumbered
 @findex appendix
 
 Use o comando @code{@@unnumbered} para iniciar um elemento de nível de
@@ -3425,22 +3419,23 @@ HTML.  Esse tipo de escolha estilística geralmente não é oferecida pelo
 Texinfo.  Você está recomendado(a) a não usar esse comando, pois ele
 possivelmente seja removido em futuros lançamentos do Texinfo.
 
-@cindex Docbook e seções prévias
-@cindex Prefácio, etc., e Docbook
-Com @code{@@unnumbered}, se o nome do nó associado é uma destas palavras do
-Inglês (não diferencia maiúsculas de minúsculas):
+@cindex DocBook e seções prévias
+@cindex Prefácio, etc., e DocBook
+Com @code{@@unnumbered}, se o nome do nó associado for uma destas palavras
+do Inglês (não diferencia maiúsculas de minúsculas):
 
 @example
 Acknowledgements  Colophon  Dedication  Preface
 @end example
 
-@cindex @code{<acknowledgements>} Etiqueta do Docbook
-@cindex @code{<colophon>} Etiqueta do Docbook
-@cindex @code{<dedication>} Etiqueta do Docbook
-@cindex @code{<preface>} Etiqueta do Docbook
-@cindex @code{<chapter>} Etiqueta do Docbook
-@noindent then the DocBook output uses corresponding special tags
-(@code{<preface>}, entre outras) em vez do padrão @code{<chapter>}. O
+@cindex @code{<acknowledgements>} Etiqueta do DocBook
+@cindex @code{<colophon>} Etiqueta do DocBook
+@cindex @code{<dedication>} Etiqueta do DocBook
+@cindex @code{<preface>} Etiqueta do DocBook
+@cindex @code{<chapter>} Etiqueta do DocBook
+@noindent
+então a saída DocBook usará etiquetas especiais correspondentes
+(@code{<preface>}, entre outras) em vez da padrão @code{<chapter>}. O
 argumento para o próprio @code{@@unnumbered} pode ser qualquer coisa, e é
 gerado como o elemento título como de costume.
 
@@ -3448,8 +3443,7 @@ gerado como o elemento título como de costume.
 @node @code{@@majorheading @@chapheading}
 @section @code{@@majorheading}, @code{@@chapheading}: Cabeçalhos de Nível de Capítulo
 
-@anchor{majorheading e chapheading}
-@findex majorheading
+@anchor{majorheading e chapheading}@findex majorheading
 @findex chapheading
 
 Os comandos @code{@@majorheading} e @code{@@chapheading} produzem cabeçalhos
@@ -3471,8 +3465,7 @@ diferença é a falta de numeração e a falta de qualquer associação com nós
 @node @code{@@section}
 @section @code{@@section}: Seções Abaixo de Capítulos
 
-@anchor{section}
-@findex section
+@anchor{section}@findex section
 
 Um comando @code{@@section} identifica uma seção dentro de uma unidade de
 capítulo, seja ela criada com @code{@@chapter}, @code{@@unnumbered}, ou
@@ -3495,8 +3488,7 @@ Títulos de seção são listados no sumário.
 @node @code{@@unnumberedsec @@appendixsec @@heading}
 @section @code{@@unnumberedsec}, @code{@@appendixsec}, @code{@@heading}
 
-@anchor{unnumberedsec appendixsec heading}
-@findex unnumberedsec
+@anchor{unnumberedsec appendixsec heading}@findex unnumberedsec
 @findex appendixsec
 @findex heading
 
@@ -3537,8 +3529,7 @@ comando, etc., não sejam permitidos.
 @node @code{@@subsection}
 @section @code{@@subsection}: Subseções Abaixo de Seções
 
-@anchor{subsection}
-@findex subsection
+@anchor{subsection}@findex subsection
 
 Subseções estão para seções como seções estão para capítulos;
 @pxref{@code{@@section}}.  Por exemplo:
@@ -3553,8 +3544,7 @@ Títulos de subseções são listados no sumário.
 @node @code{@@unnumberedsubsec @@appendixsubsec @@subheading}
 @section Os Comandos do Tipo @code{@@subsection}
 
-@anchor{unnumberedsubsec appendixsubsec subheading}
-@findex unnumberedsubsec
+@anchor{unnumberedsubsec appendixsubsec subheading}@findex unnumberedsubsec
 @findex appendixsubsec
 @findex subheading
 @cindex Comandos tipo subseção
@@ -3581,8 +3571,7 @@ sumário.
 @node @code{@@subsubsection}
 @section @code{@@subsubsection} e Outros Comandos Subsub
 
-@anchor{subsubsection}
-@findex subsubsection
+@anchor{subsubsection}@findex subsubsection
 @findex unnumberedsubsubsec
 @findex appendixsubsubsec
 @findex subsubheading
@@ -3670,7 +3659,7 @@ Na saída gerada de HTML, o texto do @code{@@part} similarmente é incluído no
 sumário, e um cabeçalho é incluído no texto principal do documento, como
 parte do nó seguinte do capítulo ou apêndice.
 
-Na saída gerada Docbook, o elemento @code{<part>} inclui todos os capítulos
+Na saída gerada DocBook, o elemento @code{<part>} inclui todos os capítulos
 seguintes, até o próximo @code{<part>}.  Um @code{<part>} contendo capítulos
 também é fechado em um apêndice.
 
@@ -3714,8 +3703,9 @@ parece com o isto:
 @@raisesections
 @end example
 
-@noindent (Without the @code{@@raisesections}, all the subsequent
-seções no arquivo principal também poderiam ser rebaixadas).
+@noindent
+(Sem o @code{@@raisesections}, todas as seções subsequentes no arquivo
+principal também poderiam ser rebaixadas).
 
 Se o arquivo de inclusão sendo rebaixado tiver um nó @code{@@top}, você
 precisará condicionar a inclusão dele com um sinalizador (@pxref{@code{@@set
@@ -3956,8 +3946,8 @@ detalhes}} produz
 Veja-se Furacões, página @var{ppp} --- para os detalhes
 @end quotation
 
-@noindent instead of
-@w{`Veja-se Furacões, página @var{ppp}, --- para os detalhes'}.
+@noindent
+em vez de @w{`Veja-se Furacões, página @var{ppp}, --- para os detalhes'}.
 
 @command{texi2any} alerta e protege nomes quando o texto de uma referência
 cruzada (e nomes de nó e itens de menu) contiver uma construção problemática
@@ -4311,7 +4301,8 @@ seção. (A saída Info incluirá @samp{Top} se foi fornecido). Por exemplo,
 @@xref@{Top,,, make, O Manual do GNU Make@}.
 @end example
 
-@noindent produces
+@noindent
+produz
 
 @example
 @group
@@ -4319,7 +4310,8 @@ seção. (A saída Info incluirá @samp{Top} se foi fornecido). Por exemplo,
 @end group
 @end example
 
-@noindent and
+@noindent
+e
 
 @quotation
 Veja-se @cite{O Manual do GNU Make}.
@@ -4367,8 +4359,7 @@ referências cruzadas de manual inteiro.
 @nodedescription Iniciar uma referência com `Veja-se' @dots{}
 @section @code{@@xref}
 
-@anchor{xref}
-@findex xref
+@anchor{xref}@findex xref
 @cindex Referências cruzadas usando @code{@@xref}
 @cindex Referências usando @code{@@xref}
 
@@ -4380,8 +4371,7 @@ frase.  Exemplo de uso do @code{@@xref} estão em seções anteriores.
 @nodedescription Uma referência para a última parte de uma frase.
 @section @code{@@ref}
 
-@anchor{ref}
-@findex ref
+@anchor{ref}@findex ref
 @cindex Referências cruzadas usando @code{@@ref}
 @cindex Referências usando @code{@@ref}
 
@@ -4389,7 +4379,8 @@ frase.  Exemplo de uso do @code{@@xref} estão em seções anteriores.
 gera um `Veja-se' na saída gerada, apenas a referência em si.  Isso a torna
 útil como a última parte de uma frase.
 
-@noindent For example,
+@noindent
+Por exemplo,
 
 @cindex Furacões
 @example
@@ -4441,8 +4432,7 @@ Ondas do mar estão descritas em *observe Furacões::.
 @nodedescription Como escrever uma referência cruzada entre parênteses.
 @section @code{@@pxref}
 
-@anchor{pxref}
-@findex pxref
+@anchor{pxref}@findex pxref
 @cindex Referências cruzadas usando @code{@@pxref}
 @cindex Referências usando @code{@@pxref}
 
@@ -4502,8 +4492,7 @@ antes de um parêntese direito. Esse não mais é o caso.
 @nodedescription Definindo alvos arbitrários de referências cruzadas
 @section @code{@@anchor}: Definindo Alvos Arbitrários de Referências Cruzadas
 
-@anchor{anchor}
-@findex anchor
+@anchor{anchor}@findex anchor
 @cindex Âncoras
 @cindex Alvos das referências cruzadas, arbitrários
 @cindex Alvos para referências cruzadas, arbitrários
@@ -4520,7 +4509,8 @@ Isso marca o ponto @@anchor@{x-spot@}.
 @@xref@{x-spot,,o ponto@}.
 @end example
 
-@noindent This produces:
+@noindent
+Isso produz:
 
 @example
 Isso marca o ponto.
@@ -4583,7 +4573,8 @@ Isso marca o @@namedanchor@{x-spot, o ponto@}ponto.
 @@xref@{x-spot@}.
 @end example
 
-@noindent This produces:
+@noindent
+Isso produz:
 
 @example
 Isso marca o ponto.
@@ -4629,8 +4620,7 @@ símbolo em uma biblioteca de programação.
 @nodedescription Como referenciar somente um arquivo Info.
 @section @code{@@inforef}: Referências cruzadas para material unicamente Info
 
-@anchor{inforef}
-@findex inforef
+@anchor{inforef}@findex inforef
 @cindex Referências cruzadas usando @code{@@inforef}
 @cindex Referências usando @code{@@inforef}
 
@@ -4711,7 +4701,8 @@ do link:
 O sítio FTP GNU oficial é @@url@{https://ftp.gnu.org/gnu@}.
 @end example
 
-@noindent produces:
+@noindent
+produz:
 @display
 O sítio FTP GNU oficial é @url{https://ftp.gnu.org/gnu}.
 @end display
@@ -4724,19 +4715,22 @@ O @@url@{https://ftp.gnu.org/gnu, sítio FTP GNU oficial@}
 mantém programas e textos.
 @end example
 
-@noindent which produces:
+@noindent
+o que produz:
 @display
 O @url{https://ftp.gnu.org/gnu, sítio FTP GNU oficial}
 mantém programas e textos.
 @end display
 
-@noindent The HTML output is this:
+@noindent
+A saída HTML é esta:
 @example
 O <a href="https://ftp.gnu.org/gnu">sítio FTP GNU oficial</a>
 mantém programas e textos.
 @end example
 
-@noindent In other formats, the output is like this:
+@noindent
+Em outros formatos, a saída gerada é semelhante a isto:
 @example
 O sítio FTP GNU oficial (https://ftp.gnu.org/gnu)
 mantém programas e textos.
@@ -4749,12 +4743,14 @@ Finalmente, um exemplo da forma de três argumentos:
 O programa @@url@{/man.cgi/1/ls,,ls@} @dots{}
 @end example
 
-@noindent which, except for HTML, produces:
+@noindent
+o que, exceto para HTML, produz:
 @display
 O programa @url{/man.cgi/1/ls,,ls} @dots{}
 @end display
 
-@noindent but with HTML:
+@noindent
+porém com HTML:
 @example
 O programa <a href="/man.cgi/1/ls">ls</a> @dots{}
 @end example
@@ -4800,7 +4796,8 @@ comando @code{@@urefbreakstyle} (esse comando tem efeito somente no @TeX{}):
 @@urefbreakstyle @var{como}
 @end example
 
-@noindent where the argument @var{how} is one of these words:
+@noindent
+onde o argumento @var{como} é uma dessas palavras:
 
 @vindex after@r{, valor para @code{@@urefbreakstyle}}
 @vindex before@r{, valor para @code{@@urefbreakstyle}}
@@ -4853,8 +4850,7 @@ mostrado acima.  Ela é ignorada quando DVI está sendo produzido.
 @nodedescription Como referenciar livros fora do sistema Info.
 @section @code{@@cite}@{@var{referência}@}
 
-@anchor{cite}
-@findex cite
+@anchor{cite}@findex cite
 
 Use o comando @code{@@cite} para o nome de um livro que careça de um arquivo
 complementar Info.  Por exemplo, nós poderíamos referenciar @cite{Um
@@ -5010,8 +5006,7 @@ Indica um endereço de correio eletrônico.  @xref{@code{@@email}}.
 @nodedescription Indicando código de programa.
 @subsection @code{@@code}@{@var{código-amostra}@}
 
-@anchor{code}
-@findex code
+@anchor{code}@findex code
 
 @cindex Tokens sintáticos, indicando
 Use o comando @code{@@code} para indicar texto que seja um pedaço de um
@@ -5115,8 +5110,7 @@ Formatos}).
 @nodedescription Exibindo entrada de teclado.
 @subsection @code{@@kbd}@{@var{caracteres-de-teclado}@}
 
-@anchor{kbd}
-@findex kbd
+@anchor{kbd}@findex kbd
 @cindex Entrada de teclado
 
 Use o comando @code{@@kbd} para caracteres de entrada a serem digitados por
@@ -5199,8 +5193,7 @@ dos caracteres da entrada, escreva @kbd{@@key@{SPC@}} para ele).
 @nodedescription Especificando teclas.
 @subsection @code{@@key}@{@var{nome-tecla}@}
 
-@anchor{key}
-@findex key
+@anchor{key}@findex key
 
 Use o comando @code{@@key} para o nome convencional para uma tecla em um
 teclado, como em:
@@ -5270,8 +5263,7 @@ escreva @samp{@@kbd@{Meta-a@}} para produzir @kbd{Meta-a} e
 @nodedescription Indicando uma sequência literal de caracteres.
 @subsection @code{@@samp}@{@var{texto}@}
 
-@anchor{samp}
-@findex samp
+@anchor{samp}@findex samp
 
 Use o comando @code{@@samp} para indicar texto que seja um exemplo literal
 ou `amostra' de uma sequência de caracteres em um arquivo, cadeia de
@@ -5327,8 +5319,7 @@ e, ocasionalmente, @samp{y}.
 @nodedescription Indicando uma sequência de caracteres literais.
 @subsection @code{@@verb}@{@var{char}@var{text}@var{char}@}
 
-@anchor{verb}
-@findex verb
+@anchor{verb}@findex verb
 @cindex Texto literal interno à linha
 
 @cindex Caractere delimitador, para literalidade
@@ -5373,8 +5364,7 @@ figuras.
 @nodedescription Indicando variáveis metassintáticas.
 @subsection @code{@@var}@{@var{variável-metassintática}@}
 
-@anchor{var}
-@findex var
+@anchor{var}@findex var
 
 Use o comando @code{@@var} para indicar variáveis metassintáticas.  Uma
 @dfn{variável metassintática} é algo que representa outro pedaço de texto.
@@ -5462,8 +5452,7 @@ Entretanto, esse não é o estilo que Texinfo usa.
 @nodedescription Indicando variáveis de ambiente.
 @subsection @code{@@env}@{@var{variável-ambiente}@}
 
-@anchor{env}
-@findex env
+@anchor{env}@findex env
 
 Use o comando @code{@@env} para indicar variáveis de ambiente, conforme
 usadas por muitos sistemas operacionais, incluindo GNU@.  Não a use para
@@ -5475,7 +5464,8 @@ seção anterior).
 @example
 A variável de ambiente @@env@{PATH@} @dots{}
 @end example
-@noindent produces
+@noindent
+produz
 @quotation
 A variável de ambiente @env{PATH} @dots{}
 @end quotation
@@ -5485,8 +5475,7 @@ A variável de ambiente @env{PATH} @dots{}
 @nodedescription Indicando nomes de arquivos.
 @subsection @code{@@file}@{@var{nome-arquivo}@}
 
-@anchor{file}
-@findex file
+@anchor{file}@findex file
 
 Use o comando @code{@@file} para indicar texto que seja o nome de um
 arquivo, buffer, ou diretório, ou seja o nome de um nó no Info.  Você também
@@ -5513,8 +5502,7 @@ Os arquivos @file{.el} estão no diretório @file{/usr/local/emacs/lisp}.
 @nodedescription Indicando nomes de comandos.
 @subsection @code{@@command}@{@var{nome-comando}@}
 
-@anchor{command}
-@findex command
+@anchor{command}@findex command
 @cindex Nomes de comandos, indicando
 @cindex Nomes de programas, indicando
 
@@ -5527,7 +5515,8 @@ exemplo:
 @example
 O comando @@command@{ls@} lista conteúdo de diretórios.
 @end example
-@noindent produces
+@noindent
+produz
 @quotation
 O comando @command{ls} lista conteúdo de diretórios.
 @end quotation
@@ -5544,8 +5533,7 @@ Quando escrever uma invocação inteira de comando de shell, como em @samp{ls
 @nodedescription Indicando nomes de opções.
 @subsection @code{@@option}@{@var{nome-opção}@}
 
-@anchor{option}
-@findex option
+@anchor{option}@findex option
 
 Use o comando @code{@@option} para indicar uma opção de linha de comando;
 por exemplo, @option{-l} ou @option{--version} ou
@@ -5557,7 +5545,8 @@ exemplo:
 @example
 A opção @@option@{-l@} produz uma listagem longa.
 @end example
-@noindent produces
+@noindent
+produz
 @quotation
 A opção @option{-l} produz uma listagem longa.
 @end quotation
@@ -5567,8 +5556,7 @@ A opção @option{-l} produz uma listagem longa.
 @nodedescription Especificando definições.
 @subsection @code{@@dfn}@{@var{termo}@}
 
-@anchor{dfn}
-@findex dfn
+@anchor{dfn}@findex dfn
 
 Use o comando @code{@@dfn} para identificar o uso introdutório ou definidor
 de um termo técnico.  Use o comando somente em passagens cujo propósito seja
@@ -5598,8 +5586,7 @@ definição---ela deveria tornar claro o significado.
 @nodedescription Indicando abreviações.
 @subsection @code{@@abbr}@{@var{abreviação}[, @var{significado}]@}
 
-@anchor{abbr}
-@findex abbr
+@anchor{abbr}@findex abbr
 
 @cindex Abreviações, etiquetando
 Você pode usar o comando @code{@@abbr} para abreviações gerais.  A
@@ -5627,7 +5614,8 @@ depois da abreviação.  Por exemplo:
 @@abbr@{Comput. J., Jornal do Computador@}
 @end example
 
-@noindent produces:
+@noindent
+produz:
 
 @display
 @abbr{Comput. J., Jornal do Computador}
@@ -5642,8 +5630,7 @@ seção para mais acerca do uso desses dois comandos.
 @nodedescription Indicando siglas.
 @subsection @code{@@acronym}@{@var{sigla}[, @var{significado}]@}
 
-@anchor{acronym}
-@findex acronym
+@anchor{acronym}@findex acronym
 
 @cindex NASA, como sigla
 @cindex Siglas, etiquetando
@@ -5663,7 +5650,7 @@ argumento, lembre-se de usar o @code{@@.} ou comando similar
 No @TeX{}, a sigla é impressa em fonte ligeiramente menor.  Na saída Info, o
 argumento é impresso como está.  Em qualquer formato, e na saída @LaTeX{},
 se o segundo argumento estiver presente, ele é impresso entre parênteses
-depois da sigla.  Em HTML e em Docbook a etiqueta apropriada é usada.
+depois da sigla.  Em HTML e em DocBook a etiqueta apropriada é usada.
 
 Por exemplo (dado que GNU é uma sigla recursiva, nós usamos @code{@@acronym}
 recursivamente):
@@ -5672,7 +5659,8 @@ recursivamente):
 @@acronym@{GNU, @@acronym@{GNU@} Não é Unix@}
 @end example
 
-@noindent produces:
+@noindent
+produz:
 
 @display
 @acronym{GNU, @acronym{GNU} Não é Unix}
@@ -5723,8 +5711,7 @@ abreviações; use teu bom senso.  O texto é perfeitamente legível sem eles.
 @nodedescription Indicando um URL de exemplo.
 @subsection @code{@@indicateurl}@{@var{localizador-uniforme-de-recurso}@}
 
-@anchor{indicateurl}
-@findex indicateurl
+@anchor{indicateurl}@findex indicateurl
 @cindex URL @subentry indicando
 
 Use o comando @code{@@indicateurl} para indicar um localizador uniforme de
@@ -5737,7 +5724,8 @@ para URLs que não existem realmente.  Por exemplo:
 Por exemplo, a URL poderia ser @@indicateurl@{http://exemplo.org/path@}.
 @end example
 
-@noindent which produces:
+@noindent
+o que produz:
 
 @display
 Por exemplo, a URL poderia ser @indicateurl{http://exemplo.org/path}.
@@ -5751,8 +5739,7 @@ A saída oriunda de @code{@@indicateurl} geralmente é semelhante àquela de
 @nodedescription Indicando um endereço eletrônico de correio.
 @subsection @code{@@email}@{@var{endereço-correio-eletrônico}[, @var{texto-exibido}]@}
 
-@anchor{email}
-@findex email
+@anchor{email}@findex email
 
 Use o comando @code{@@email} para indicar um endereço de correio
 eletrônico.  Ele recebe um argumento obrigatório, o endereço, e um argumento
@@ -5770,7 +5757,8 @@ Envie informes de defeitos para @@email@{bug-texinfo@@@@gnu.org@},
 sugestões para o @@email@{bug-texinfo@@@@gnu.org, algum lugar@}.
 @end example
 
-@noindent produces
+@noindent
+produz
 
 @display
 Envie informes de defeitos para @email{bug-texinfo@@gnu.org},
@@ -5797,8 +5785,7 @@ comando @code{@@r}, tem algum uso regular.
 @nodedescription Como enfatizar texto no Texinfo.
 @subsection @code{@@emph}@{@var{texto}@} e @code{@@strong}@{@var{texto}@}
 
-@anchor{emph & strong}
-@findex emph
+@anchor{emph & strong}@findex emph
 @findex strong
 @cindex Enfatização de texto, fonte para
 
@@ -6169,8 +6156,9 @@ Caution  Important  Note  Tip  Warning
 @cindex etiqueta @code{<tip>} do DocBook
 @cindex etiqueta @code{<warning>} do DocBook
 @cindex etiqueta @code{<blockquote>} do DocBook
-@noindent then the DocBook output uses corresponding special tags
-(@code{<note>}, entre outras) em vez do padrão @code{<blockquote>}.
+@noindent
+então a saída DocBook usará etiquetas especiais correspondentes
+(@code{<note>}, entre outras) em vez da padrão @code{<blockquote>}.
 
 Se o(a) autor(a) da citação for especificado(a) no bloco @code{@@quotation}
 com o comando @code{@@author}, uma linha com o nome do(a) autor(a) é exibida
@@ -6229,8 +6217,7 @@ Este é um exemplo ...
 @nodedescription Escrevendo um exemplo em uma fonte de largura fixa.
 @section @code{@@example}: Texto de Exemplo
 
-@anchor{example}
-@findex example
+@anchor{example}@findex example
 @cindex Exemplos, formatando-os
 @cindex Formatando exemplos
 
@@ -6297,8 +6284,7 @@ simples, e não é isso que elas parecem.
 @nodedescription Escrevendo um exemplo literal.
 @section @code{@@verbatim}: Texto Literal
 
-@anchor{verbatim}
-@findex verbatim
+@anchor{verbatim}@findex verbatim
 @cindex Ambiente verbatim
 
 Use o ambiente @code{@@verbatim} para imprimir texto que pode conter
@@ -6368,8 +6354,7 @@ Veja-se também @ref{@code{@@verbatiminclude}}.
 @nodedescription Ilustrando código Lisp.
 @section @code{@@lisp}: Marcando um Exemplo da Lisp
 
-@anchor{lisp}
-@findex lisp
+@anchor{lisp}@findex lisp
 @cindex Exemplo Lisp
 
 O comando @code{@@lisp} é muito semelhante ao @code{@@example}, porém marca
@@ -6402,8 +6387,7 @@ usar o arquivo do Texinfo como uma biblioteca Lisp.
 @nodedescription Escrevendo um exemplo na fonte atual.
 @section @code{@@display}: Exemplos Usando a Fonte de Texto
 
-@anchor{exibição}
-@findex exibição
+@anchor{exibição}@findex exibição
 @cindex Formatação de exibição
 
 O comando @code{@@display} inicia outro tipo de ambiente, onde a fonte é
@@ -6422,8 +6406,7 @@ recua o texto, mas não o preenche.
 @nodedescription Escrevendo um exemplo sem margens estreitadas.
 @section @code{@@format}: Exemplos Usando a Largura Total da Linha
 
-@anchor{formato}
-@findex formato
+@anchor{formato}@findex formato
 
 O comando @code{@@format} é similar a @code{@@display}, exceto que deixa o
 texto sem recuo.  Como @code{@@display}, ele não seleciona a fonte de
@@ -6457,8 +6440,7 @@ o comando @code{@@format} não preenche o texto.
 @nodedescription Desfazer recuo em uma linha.
 @section @code{@@exdent}: Desfazendo o Recuo de Uma Linha
 
-@anchor{exdent}
-@findex exdent
+@anchor{exdent}@findex exdent
 @cindex Recuo, desfazendo
 
 O comando @code{@@exdent} remove qualquer recuo que uma linha possa ter.  O
@@ -6504,8 +6486,7 @@ normal dela.
 @nodedescription Enviando texto alinhado à esquerda ou alinhado à direita.
 @section @code{@@flushleft} e @code{@@flushright}
 
-@anchor{flushleft e flushright}
-@findex flushleft
+@anchor{flushleft e flushright}@findex flushleft
 @findex flushright
 @cindex Direita irregular, sem preencher
 @cindex Esquerda irregular, sem preencher
@@ -6569,8 +6550,7 @@ extremidade esquerda irregular.
 @nodedescription Evitando justificação à direita.
 @section @code{@@raggedright}: Texto Irregular à Direita
 
-@anchor{raggedright}
-@findex raggedright
+@anchor{raggedright}@findex raggedright
 @cindex Irregular à direita, com preenchimento
 
 O @code{@@raggedright} preenche texto como de costume, mas o texto só é
@@ -6614,8 +6594,7 @@ Comandos para aspas de ângulo duplo e único: @code{@@guillemetleft@{@}},
 @nodedescription Evitando recuo de parágrafo.
 @section @code{@@noindent}: Omitindo Recuo
 
-@anchor{noindent}
-@findex noindent
+@anchor{noindent}@findex noindent
 @cindex Omitindo recuo
 @cindex Suprimindo recuo
 @cindex Recuo, omitindo
@@ -6644,7 +6623,8 @@ linha que segue depois dele.
 @end group
 @end example
 
-@noindent produces:
+@noindent
+produz:
 
 @display
 @example
@@ -6677,8 +6657,7 @@ de Comando}).
 @nodedescription Forçando recuo de parágrafo.
 @section @code{@@indent}: Forçando Recuo
 
-@anchor{indent}
-@findex indent
+@anchor{indent}@findex indent
 @cindex Forçando recuo
 @cindex Inserindo recuo
 @cindex Recuo, forçando
@@ -6708,8 +6687,7 @@ usadas, pois @code{@@indent} é um comando usado fora de parágrafos
 @nodedescription Desenhando retângulos arredondados ao redor do texto.
 @section @code{@@cartouche}: Retângulos Arredondados
 
-@anchor{cartouche}
-@findex cartouche
+@anchor{cartouche}@findex cartouche
 @cindex Caixa com cantos arredondados
 @cindex Retângulos arredondados, ao redor do texto
 
@@ -6918,8 +6896,7 @@ Tabelas de duas colunas, opcionalmente com indexação.
 @nodedescription Como construir uma lista simples.
 @section @code{@@itemize}: Construindo Uma Lista de Itens
 
-@anchor{itemize}
-@findex itemize
+@anchor{itemize}@findex itemize
 @cindex Itenização
 
 O comando @code{@@itemize} produz uma sequência de ``itens'', cada um
@@ -7036,8 +7013,7 @@ Segundo item externo.
 @nodedescription Como construir uma lista numerada.
 @section @code{@@enumerate}: Fazendo Uma Lista Numerada ou Com Letras
 
-@anchor{enumerate}
-@findex enumerate
+@anchor{enumerate}@findex enumerate
 @cindex Enumeração
 
 @code{@@enumerate} é como @code{@@itemize} (@pxref{@code{@@itemize}}),
@@ -7182,8 +7158,7 @@ aplicado ao texto na primeira coluna.  Por exemplo, @code{@@table @@code}
 fará com que o texto na primeira coluna seja gerado como se ele tivesse sido
 o argumento para um comando @code{@@code}.
 
-@anchor{@code{@@asis}}
-@findex asis
+@anchor{@code{@@asis}}@findex asis
 Você pode usar o comando @code{@@asis} como um argumento para
 @code{@@table}.  @code{@@asis} é um comando que não faz nada: se você usar
 esse comando depois de @code{@@table}, as entradas da primeira coluna serão
@@ -7258,8 +7233,7 @@ sentido usá-los juntos.  Se você desejar recuar uma tabela, tente
 @nodedescription Indexamento automático para tabelas de duas colunas.
 @subsection @code{@@ftable} e @code{@@vtable}
 
-@anchor{ftable vtable}
-@findex ftable
+@anchor{ftable vtable}@findex ftable
 @findex vtable
 @cindex Tabelas com indexação
 @cindex Indexando entradas de tabela automaticamente
@@ -7287,8 +7261,7 @@ Veja-se o exemplo para @code{@@table} na seção anterior.
 @nodedescription Como colocar mais entradas na primeira coluna.
 @subsection @code{@@itemx}: Segundo e Itens Subsequentes
 
-@anchor{itemx}
-@cindex Dois itens nomeados para @code{@@table}
+@anchor{itemx}@cindex Dois itens nomeados para @code{@@table}
 @findex itemx
 
 Use o comando @code{@@itemx} dentro de uma tabela quando você tiver duas ou
@@ -7464,7 +7437,8 @@ divide aquela janela.
 @@end multitable
 @end example
 
-@noindent produces:
+@noindent
+produz:
 
 @multitable @columnfractions .15 .45 .4
 @headitem Tecla @tab Comando @tab Descrição
@@ -7520,8 +7494,7 @@ simplesmente é gerado no local atual, mais ou menos como se fosse um
 @nodedescription Produzindo material flutuante.
 @subsection @code{@@float} [@var{tipo}][,@var{rótulo}]: Material Flutuante
 
-@anchor{float}
-@findex float
+@anchor{float}@findex float
 @cindex Ambiente de flutuação
 
 Para produzir material flutuante, circunde o material que você quer que seja
@@ -7539,7 +7512,8 @@ Esta é uma flutuação de exemplo.
 @@end float
 @end example
 
-@noindent And the output:
+@noindent
+E a saída gerada:
 
 @float Figure,fig:ex1
 Este é um flutuador de exemplo.
@@ -7571,8 +7545,9 @@ será numerada e consequentemente não aparecerá na saída
 @code{@@listoffloats} ou será referenciável cruzadamente.
 @end table
 
-@noindent Ordinarily, you specify both @var{type} and @var{label}, to get a
-Flutuador rotulado e numerado.
+@noindent
+Ordinariamente, você especifica ambos, @var{tipo} e @var{rótulo}, para obter
+um flutuador rotulado e numerado.
 
 Na saída do @LaTeX{}, o código que carrega o pacote @code{float} é gerado no
 preâmbulo se @code{@@float} estiver presente.  Um @code{@@float} com o tipo
@@ -7598,8 +7573,7 @@ Essas convenções de numeração não são, atualmente, mudáveis.
 @nodedescription Especificando descrições para flutuações.
 @subsection @code{@@caption} e @code{@@shortcaption}
 
-@anchor{caption shortcaption}
-@findex caption
+@anchor{caption shortcaption}@findex caption
 @findex shortcaption
 @cindex Legendas, para flutuações
 @cindex Legendas curtas, para listas de flutuações
@@ -7616,7 +7590,8 @@ Um exemplo de flutuação, com legenda.
 @@end float
 @end example
 
-@noindent The output is:
+@noindent
+A saída gerada é:
 
 @float
 Uma flutuação de exemplo, com legenda. @caption{Legenda para flutuação de
@@ -7659,8 +7634,7 @@ parágrafos levará a um erro quando formatado, a menos que exista um
 @nodedescription Um sumário para flutuações.
 @subsection @code{@@listoffloats}: Sumários para Flutuadores
 
-@anchor{listoffloats}
-@findex listoffloats
+@anchor{listoffloats}@findex listoffloats
 @cindex Lista de flutuações
 @cindex Flutuadores @subentry lista de
 @cindex Sumário, para flutuações
@@ -7680,10 +7654,10 @@ Aqui está exemplo:
 @@listoffloats Figura
 @end example
 
-@noindent Without any argument, @code{@@listoffloats} generates a list of
-flutuações para os quais nenhum tipo de flutuação foi especificado, ou seja,
-nenhum primeiro argumento para o comando @code{@@float}
-(@pxref{@code{@@float}}).
+@noindent
+Sem nenhum argumento, @code{@@listoffloats} gera uma lista de flutuações
+para os quais nenhum tipo de flutuação foi especificado, ou seja, nenhum
+primeiro argumento para o comando @code{@@float} (@pxref{@code{@@float}}).
 
 Aqui está com o que se parece a saída gerada a partir de
 @code{@@listoffloats}, dada a figura de exemplo anterior neste capítulo:
@@ -7856,8 +7830,9 @@ Info output:
            alt="@var{alttexto} ... ^@@^H]
 @end example
 
-@noindent where @samp{^@@} and @samp{^H} stand for the actual null and
-backspace control characters.  If one of the files is not present, the
+@noindent
+where @samp{^@@} and @samp{^H} stand for the actual null and backspace
+control characters.  If one of the files is not present, the
 corresponding argument is omitted.
 
 The reason for mentioning this here is that older Info browsers (this
@@ -8252,9 +8227,10 @@ indexado.  Por exemplo:
 Alô, você!
 @end example
 
-@noindent Among other reasons, that way following indexing links (in
-em qualquer contexto) acaba antes do material, onde os(as) leitores(as)
-querem estar, em vez de depois.
+@noindent
+Entre outros motivos, dessa maneira linques de indexação seguintes (em
+qualquer contexto) acabam antes do material, onde os(as) leitores(as) querem
+estar, em vez de depois.
 
 @c At the time of writing, it always works in standalone info, and a
 @c single colon not followed by a space works in Emacs.
@@ -8550,8 +8526,7 @@ circundar cada uma delas entre chaves de @code{@@code}.
 para o índice mesclado.
 @subsection @code{@@syncodeindex}: Combinando Índices Usando @code{@@code}
 
-@anchor{syncodeindex}
-@findex syncodeindex
+@anchor{syncodeindex}@findex syncodeindex
 
 Quando quiser combinar funções e conceitos em um índice, você deveria
 indexar as funções com @code{@@findex} e indexar os conceitos com
@@ -8623,8 +8598,7 @@ de funções serão impressos na fonte do @code{@@code} como você esperaria.
 índice mesclado.
 @subsection @code{@@synindex}: Combinando Índices
 
-@anchor{synindex}
-@findex synindex
+@anchor{synindex}@findex synindex
 
 O comando @code{@@synindex} é quase o mesmo que o comando
 @code{@@syncodeindex}, exceto que não coloca as entradas do índice `de' na
@@ -8936,22 +8910,24 @@ Definição}). Por exemplo:
 @@end defun
 @end example
 
-@noindent may have @samp{&optional} and @samp{&rest} formatted in bold,
-mesmo sem nenhum comando @@ envolvido.
+@noindent
+pode ter @samp{&optional} e @samp{&rest} formatados em negrito, mesmo sem
+nenhum comando @@ envolvido.
 
 Portanto, para a finalidade de tipografar um ``e'' comercial nesse contexto,
 é necessário usar @code{@@&} ou alguma outra construção.  Aqui está um
 exemplo de uma função C++ que recebe uma referência como parâmetro:
 
 @example
-@@deftypefn Função int foo (const std::vector<int>@@& @@var@{bar@})
+@@deftypefn Function int foo (const std::vector<int>@@& @@var@{bar@})
 Documentação de @@code@{foo@}.
 @@end deftypefn
 @end example
 
-@noindent This gives the output
+@noindent
+Isso fornece a saída 
 
-@deftypefn Função int foo (const std::vector<int>@& @var{bar})
+@deftypefn Function int foo (const std::vector<int>@& @var{bar})
 Documentação de @code{foo}.
 @end deftypefn
 
@@ -9062,7 +9038,8 @@ Exemplo@@ @@ @@ @@
 espaçoso.
 @end example
 
-@noindent produces
+@noindent
+produz
 
 @example
 Exemplo@ @ @ @
@@ -9217,8 +9194,7 @@ forma, em @code{... @@var@{NOMEVARIÁVEL@}. Texto} o ponto depois de
 @nodedescription Especificando espaçamento de fim de frase.
 @subsection @code{@@frenchspacing} @var{val}: Espaçamento de Controle de Frase
 
-@anchor{frenchspacing}
-@findex frenchspacing
+@anchor{frenchspacing}@findex frenchspacing
 @cindex Espaçamento francês
 @cindex Frases, espaçamento depois
 @cindex Espaço, depois de frases
@@ -9242,7 +9218,8 @@ Isso é texto. Duas frases. Três frases. Espaçamento francês.
 Isso é texto. Duas frases. Três frases. Espaçamento não francês.
 @end example
 
-@noindent produces:
+@noindent
+produz:
 
 @frenchspacing on
 Isso é texto. Duas frases. Três frases. Espaçamento francês.
@@ -9260,8 +9237,7 @@ Isso é texto. Duas frases. Três frases. Espaçamento não francês.
 @nodedescription Formatando uma dimensão.
 @subsection @code{@@dmn}@{@var{dimensão}@}: Formatar uma Dimensão
 
-@anchor{dmn}
-@cindex Espaço fino entre número, dimensão
+@anchor{dmn}@cindex Espaço fino entre número, dimensão
 @cindex Formatação de dimensão
 @cindex Formatar uma dimensão
 @findex dmn
@@ -9610,7 +9586,8 @@ e @code{@@sup}.  Por exemplo:
 aqui@@sub@{abaixo@}@@sup@{acima@}
 @end example
 
-@noindent produces:
+@noindent
+produz:
 
 @display
 aqui@sub{abaixo}@sup{acima}
@@ -9633,8 +9610,7 @@ caracteres @samp{_} e @samp{^} do @TeX{}.  Veja-se a próxima seção.
 @nodedescription Inserindo pontos, marcadores, moedas, etc.
 @section Glifos para Texto
 
-@anchor{Glifos}@anchor{TeX e direitos autorais}
-@cindex Glifos para texto
+@anchor{Glifos}@anchor{TeX e direitos autorais}@cindex Glifos para texto
 @cindex Glifos textuais
 
 Texinfo tem suporte para alguns glifos adicionais que são comumente usados
@@ -9647,8 +9623,7 @@ respeito ao @code{texi2any}, mas o @TeX{} não é tão sortudo.
 @nodedescription As logomarcas do @TeX{}.
 @subsection @code{@@TeX}@{@} (@TeX{}) e @code{@@LaTeX}@{@} (@LaTeX{})
 
-@anchor{tex}
-@findex TeX
+@anchor{tex}@findex TeX
 @findex LaTeX
 @cindex Logomarcas, @TeX{}
 @cindex Logo do @TeX{}
@@ -9671,8 +9646,7 @@ maiúsculas e minúsculas.
 @nodedescription O símbolo de copirraite (c em um círculo).
 @subsection @code{@@copyright@{@}} (@copyright{})
 
-@anchor{símbolo de copirraite}
-@findex copyright
+@anchor{símbolo de copirraite}@findex copyright
 @cindex Símbolo de copirraite
 
 Use o comando @code{@@copyright@{@}} para gerar o símbolo de copirraite,
@@ -9687,8 +9661,7 @@ inglês `Copyright' é suficiente, de acordo com tratado internacional.
 @nodedescription O símbolo de registrado(a) (R em um círculo).
 @subsection @code{@@registeredsymbol@{@}} (@registeredsymbol{})
 
-@anchor{símbolo de registrado(a)}
-@findex registeredsymbol
+@anchor{símbolo de registrado(a)}@findex registeredsymbol
 @cindex Símbolo de registrado(a)
 
 Use o comando @code{@@registeredsymbol@{@}} para gerar o símbolo de
@@ -9700,8 +9673,7 @@ dentro de um círculo; do contrário, isso é @samp{(R)}.
 @nodedescription Como inserir reticências: @dots{} e @enddots{}
 @subsection @code{@@dots} (@dots{}) e @code{@@enddots} (@enddots{})
 
-@anchor{dots}
-@findex dots
+@anchor{dots}@findex dots
 @findex enddots
 @cindex Inserindo pontos
 @cindex Inserindo reticências
@@ -9733,8 +9705,7 @@ estão muito mais próximos um do outro que os pontos nas reticências.
 @nodedescription Como inserir um marcador: @bullet{}
 @subsection @code{@@bullet} (@bullet{})
 
-@anchor{bullet}
-@findex bullet
+@anchor{bullet}@findex bullet
 
 Use o comando @code{@@bullet@{@}} para gerar um ponto redondo grande, ou a
 coisa mais próxima possível de um.  Um asterisco também pode ser usado.
@@ -9745,8 +9716,7 @@ Aqui está um marcador: @bullet{}
 @nodedescription Como inserir o símbolo da moeda Euro.
 @subsection @code{@@euro} (@euro{}): Símbolo da Moeda Euro
 
-@anchor{euro}
-@findex euro
+@anchor{euro}@findex euro
 @cindex Símbolo do Euro, produzindo
 
 Use o comando @code{@@euro@{@}} para gerar `@euro{}'.  Onde possível, esse é
@@ -9766,8 +9736,7 @@ inclui instruções de instalação.
 @nodedescription Como inserir o símbolo da moeda Libras.
 @subsection @code{@@pounds} (@pounds{}): Libras Esterlinas
 
-@anchor{pounds}
-@findex pounds
+@anchor{pounds}@findex pounds
 @cindex Libras, símbolo
 
 Use o comando @code{@@pounds@{@}} para gerar `@pounds{}'.  Onde possível,
@@ -9785,8 +9754,7 @@ Otherwise, it is @samp{#}.
 @nodedescription Como inserir o símbolo de Graus.
 @subsection @code{@@textdegree} (@textdegree{}): Símbolo de Graus
 
-@anchor{textdegree}
-@findex textdegree
+@anchor{textdegree}@findex textdegree
 @cindex Símbolo de Graus
 
 Use o comando @code{@@textdegree@{@}} para gerar `@textdegree{}'. Onde
@@ -9800,8 +9768,7 @@ Otherwise, it is an @samp{o}.
 @nodedescription Como inserir um sinal de menos.
 @subsection @code{@@minus} (@minus{}): Inserindo um Sinal de Menos
 
-@anchor{minus}
-@findex minus
+@anchor{minus}@findex minus
 @cindex Sinal de menos
 
 @cindex Travessão, comparado ao sinal de menos
@@ -9828,8 +9795,7 @@ subtração, é melhor usar @code{@@math}, como em @code{@@math@{a-b@}}
 @nodedescription Como inserir sinais de maior/menor que ou igual a.
 @subsection @code{@@geq} (@geq{}) e @code{@@leq} (@leq{}): Inserindo Relações
 
-@anchor{geq leq}
-@findex geq
+@anchor{geq leq}@findex geq
 @findex leq
 
 Use os comandos @code{@@geq@{@}} e @code{@@leq@{@}} para gerar sinais de
@@ -9896,8 +9862,7 @@ então selecioná-lo.
 @nodedescription Como mostrar o resultado da expressão.
 @subsection @code{@@result@{@}} (@result{}): Resultado de uma Expressão
 
-@anchor{result}
-@findex result
+@anchor{result}@findex result
 @cindex Resultado de uma expressão
 @cindex Indicando avaliação
 @cindex Glifo de avaliação
@@ -9925,8 +9890,7 @@ pode ser lido como ``@code{(cdr '(1 2 3))} avalia para @code{(2 3)}''.
 @nodedescription Como indicar uma expansão.
 @subsection @code{@@expansion@{@}} (@expansion{}): Indicando uma Expansão
 
-@anchor{expansion}
-@cindex Expansão, Indicando
+@anchor{expansion}@cindex Expansão, Indicando
 @cindex Expansão de macro, indicando
 @findex expansion
 
@@ -9979,8 +9943,7 @@ Frequentemente, como nesse caso, um exemplo aparenta melhor se os comandos
 @nodedescription Como indicar saída gerada.
 @subsection @code{@@print@{@}} (@print{}): Indicando Saída Gerada
 
-@anchor{Glifo de Imprimir}
-@findex print
+@anchor{Glifo de Imprimir}@findex print
 @cindex Saída impressa, indicando
 
 Às vezes, uma expressão gerará saída durante a execução dela.  Você pode
@@ -10021,8 +9984,7 @@ Em um arquivo fonte do Texinfo, esse exemplo é escrito como segue:
 @nodedescription Como indicar uma mensagem de erro.
 @subsection @code{@@error@{@}} (@error{}): Indicando uma Mensagem de Erro
 
-@anchor{Glifo de Erro}
-@cindex Mensagem de erro, indicando
+@anchor{Glifo de Erro}@cindex Mensagem de erro, indicando
 @findex error
 
 Um pedaço de código possivelmente cause um erro quando você o avaliar.  Você
@@ -10066,8 +10028,7 @@ A própria palavra @samp{@error{}} não é parte da mensagem de erro.
 @nodedescription Como indicar equivalência.
 @subsection @code{@@equiv@{@}} (@equiv{}): Indicando Equivalência
 
-@anchor{Equivalência}
-@cindex Equivalência, indicando
+@anchor{Equivalência}@cindex Equivalência, indicando
 @findex equiv
 
 Às vezes, duas expressões produzem resultados idênticos.  Você consegue
@@ -10101,8 +10062,7 @@ idênticos à avaliação de @code{(list 'keymap)}.
 @nodedescription Como indicar o local do ponto.
 @subsection @code{@@point@{@}} (@point{}): Indicando Ponto em um Buffer
 
-@anchor{Glifo de Ponto}
-@cindex Ponto, indicando em um buffer
+@anchor{Glifo de Ponto}@cindex Ponto, indicando em um buffer
 @findex point
 
 Às vezes, você precisa mostrar um exemplo de texto em um buffer do Emacs.
@@ -10258,8 +10218,7 @@ ASCII @samp{U+0132} para o exemplo acima.
 @nodedescription Formatando expressões matemáticas.
 @chapter Formatando Expressões Matemáticas
 
-@anchor{math}
-@findex math
+@anchor{math}@findex math
 @cindex Expressões matemáticas, inserindo
 @cindex Fórmulas, matemáticas
 Você consegue escrever uma expressão matemática, equação ou fórmula usando o
@@ -10313,7 +10272,8 @@ e^@{-@{1\over2@}\left(@{x-\mu\over\sigma@}\right)^2@}
 @@end displaymath
 @end example
 
-@noindent which produces:
+@noindent
+o que produz:
 
 @displaymath
 f(x) = {1\over\sigma\sqrt{2\pi}}
@@ -10452,7 +10412,8 @@ Aqui está um exemplo com @code{@@*}:
 Esta frase está quebrada @@*em duas linhas.
 @end example
 
-@noindent produces
+@noindent
+produz
 
 @example
 @group
@@ -10472,8 +10433,7 @@ Linha de URL}), de forma que use @code{@@/} somente se você precisar.
 @nodedescription Ajudando @TeX{} com pontos de hifenação.
 @section @code{@@-} e @code{@@hyphenation}: Hifenização em Saída Impressa
 
-@anchor{- e hifenação}
-@findex @sortas{-} - @r{(hífen discricionário)}
+@anchor{- e hifenação}@findex @sortas{-} - @r{(hífen discricionário)}
 @ifset commandlookup
 @findex @sortas{-} -
 @end ifset
@@ -10503,10 +10463,11 @@ Fornece pontos de hifenização para certas palavras.  Por exemplo:
 @@hyphenation@{man-u-scrito man-u-scritos@}
 @end example
 
-@noindent As shown, you put a @samp{-} at each hyphenation point.
-@TeX{} usa somente os pontos de hifenização especificados quando as palavras
-corresponderem exatamente, portanto forneça todas as variantes necessárias,
-tais como plurais.
+@noindent
+Conforme mostrado, você coloca um @samp{-} em cada ponto de
+hifenização. @TeX{} usa somente os pontos de hifenização especificados
+quando as palavras corresponderem exatamente, portanto forneça todas as
+variantes necessárias, tais como plurais.
 @end table
 
 Saídas não impressas não são hifenizadas, de forma que nenhum desses
@@ -10517,8 +10478,7 @@ comandos tem qualquer efeito em outros formatos de saída.
 @nodedescription Controlando quebras de linhas dentro de texto do @@code.
 @section @code{@@allowcodebreaks}: Controle Quebras de Linha no @code{@@code}
 
-@anchor{allowcodebreaks}
-@findex allowcodebreaks
+@anchor{allowcodebreaks}@findex allowcodebreaks
 @cindex Quebras, dentro do @code{@@code}
 @cindex @sortas{-} -, ponto de interrupção dentro do @code{@@code}
 @cindex Hífen, ponto de interrupção dentro do @code{@@code}
@@ -10543,9 +10503,10 @@ Assim, Texinfo fornece este comando:
 @@allowcodebreaks false
 @end example
 
-@noindent to prevent from breaking at @samp{-} or @samp{_} within
-@code{@@code}. Você pode voltar a permitir tais quebras com
-@code{@@allowcodebreaks true}. Escreva esses comandos em linhas dedicadas.
+@noindent
+para evitar quebra em @samp{-} ou em @samp{_} dentro de @code{@@code}. Você
+pode voltar a permitir tais quebras com @code{@@allowcodebreaks
+true}. Escreva esses comandos em linhas dedicadas.
 
 Esses comandos podem ser fornecidos em qualquer lugar no documento.  Por
 exemplo, você pode ter apenas um parágrafo problemático onde precisa
@@ -10558,8 +10519,7 @@ Esse comando não tem efeito, exceto na saída do @TeX{}.
 @nodedescription Impedindo quebras de linha indesejadas no texto.
 @section @code{@@w}@{@var{texto}@}: Impedir Quebras de Linha
 
-@anchor{w}
-@findex w
+@anchor{w}@findex w
 @cindex Quebras de linha, impedindo
 
 @code{@@w@{@var{texto}@}} gera @var{texto}, ao mesmo tempo que proíbe
@@ -10574,7 +10534,8 @@ fixado na largura de um espaço normal interpalavras:
 @@w@{ @} @@w@{ @} @@w@{ @} recuo.
 @end example
 
-@noindent produces:
+@noindent
+produz:
 
 @display
 @w{ } @w{ } @w{ } recuo.
@@ -10605,8 +10566,7 @@ formatos de saída.
 @nodedescription Inserindo um inquebrável, porém variante espaço.
 @section @code{@@tie@{@}}: Inserindo um Espaço Inquebrável
 
-@anchor{tie}
-@findex tie
+@anchor{tie}@findex tie
 @cindex Espaço amarrado
 @cindex Espaço não quebrável, variável
 @cindex Inquebrável, espaço variável
@@ -10647,8 +10607,7 @@ por @code{@@w@{@w{ }@}} não variará.
 @nodedescription Inserindo linhas em branco.
 @section @code{@@sp @var{n}}: Inserir Linhas em Branco
 
-@anchor{sp}
-@findex sp
+@anchor{sp}@findex sp
 @cindex Espaço, inserindo vertical
 @cindex Linhas em branco
 @cindex Espaçamento entre linhas
@@ -10672,8 +10631,7 @@ O comando @code{@@sp} é usado mais frequentemente dentro de um bloco
 @nodedescription Forçando o início de uma página nova.
 @section @code{@@page}: Comece uma Nova Página
 
-@anchor{page}
-@findex page
+@anchor{page}@findex page
 @cindex Quebras de página, forçando
 
 Uma linha contendo somente @code{@@page} inicia uma nova página em um manual
@@ -10687,8 +10645,7 @@ copirraite.
 @nodedescription Impedindo quebras de página indesejadas.
 @section @code{@@group}: Impedir Quebras de Página
 
-@anchor{group}
-@findex group
+@anchor{group}@findex group
 @cindex Agrupar (manter texto unido verticalmente)
 @cindex Mantendo texto unido verticalmente
 @cindex Verticalmente mantendo texto unido
@@ -10739,8 +10696,7 @@ linha de saída).
 @nodedescription Outra maneira de impedir quebras de página indesejadas.
 @section @code{@@need @var{mils}}: Impedir Quebras de Página
 
-@anchor{need}
-@findex need
+@anchor{need}@findex need
 @cindex Precisa de espaço no final da página
 @cindex Mils, argumento para @code{@@need}
 
@@ -10887,7 +10843,8 @@ Essa é a defun básica continuada.
 @@end defun
 @end example
 
-@noindent produces:
+@noindent
+produz:
 
 @defun fn-name   arg1 arg2 arg3
 Essa é a defun básica continuada.
@@ -10913,8 +10870,9 @@ de uma continuação dentro de chaves.  Por exemplo:
   Categoria@} @dots{}
 @end example
 
-@noindent The output (not shown) has excess space between `Category'
-e `Nome'. Para evitar isso, elimine os espaços em branco indesejados na tua
+@noindent
+A saída gerada (não mostrada) tem espaço excessivo entre `Categoria' e
+`Nome'. Para evitar isso, elimine os espaços em branco indesejados na tua
 entrada ou coloque a continuação @code{@@} fora das chaves.
 
 @code{@@} não funciona como um caractere de continuação em @emph{nenhum}
@@ -10983,7 +10941,8 @@ abertura.  Para fazer isso, configure o sinalizador @samp{txidefnamenospace}
 @@end deffn
 @end example
 
-@noindent produces the following:
+@noindent
+produz o seguinte:
 
 @set txidefnamenospace
 @deffn Índice_m4 interno (string, substring)
@@ -10996,8 +10955,7 @@ abertura.  Para fazer isso, configure o sinalizador @samp{txidefnamenospace}
 @nodedescription Agrupe duas ou mais `primeiras' linhas.
 @section @code{@@deffnx}, et al.: Duas ou Mais `Primeiras' Linhas
 
-@anchor{deffnx}
-@findex deffnx
+@anchor{deffnx}@findex deffnx
 @cindex Duas `Primeiras' Linhas para @code{@@deffn}
 @cindex Agrupando duas definições juntas
 @cindex Definições agrupadas
@@ -11247,7 +11205,8 @@ For example, for documenting the R language, you could use input like
 @@end deftypefn
 @end example
 
-@noindent to get output like
+@noindent
+to get output like
 
 @deftypefn stats {} t.test (@var{x}, @var{y} = NULL,@
   @w{@var{alternative} = c("two.sided", "less", "greater")},@
@@ -11257,7 +11216,8 @@ For example, for documenting the R language, you could use input like
 @dots{}
 @end deftypefn
 
-@noindent Here the @code{@@w} command is used to prevent some line breaks.
+@noindent
+Here the @code{@@w} command is used to prevent some line breaks.
 
 @end ignore
 
@@ -11505,7 +11465,8 @@ definida, a classe à qual ela pertence e o nome dela.  Por exemplo:
 @end group
 @end example
 
-@noindent produces:
+@noindent
+produz:
 @defcv {Opção da Classe} Janela padrão-borda
 @dots{}
 @end defcv
@@ -11527,7 +11488,8 @@ tipo da variável de instância.
 @end group
 @end example
 
-@noindent produces:
+@noindent
+produz:
 
 @deftypecv {Opção da Classe} Janela int padrão-borda
 @dots{}
@@ -11550,7 +11512,8 @@ exemplo:
 @end group
 @end example
 
-@noindent produces:
+@noindent
+produz:
 
 @defivar Janela padrão-borda
 @dots{}
@@ -11573,7 +11536,8 @@ o tipo da variável de instância.
 @end group
 @end example
 
-@noindent produces:
+@noindent
+produz:
 
 @deftypeivar Janela @code{int} padrão-borda
 @dots{}
@@ -11713,7 +11677,8 @@ Descrição de foo.
 @@end defblock
 @end example
 
-@noindent This produces the output:
+@noindent
+Isso produz a saída:
 
 @defblock
 @defline Macro mac (arg1, arg2)
@@ -11742,7 +11707,8 @@ Descrição de set-var e var.
 @@end defblock
 @end example
 
-@noindent This produces the output:
+@noindent
+Isso produz a saída:
 
 @defblock
 @defline Function set-var (value)
@@ -11834,7 +11800,8 @@ important for the language, the following could be used:
 @end group
 @end example
 
-@noindent produces:
+@noindent
+produces:
 
 @macro metasymbol {argument}
 @r{@t{@slanted{\argumento\}}}
@@ -12044,8 +12011,7 @@ oficial do ISO@tie{}3166 podem ser encontrados via
 @nodedescription Declarando a codificação de entrada.
 @section @code{@@documentencoding @var{codificação}}: Configurar Codificação de Entrada
 
-@anchor{documentencoding}
-@findex documentencoding
+@anchor{documentencoding}@findex documentencoding
 @cindex Codificação, declarando
 @cindex Codificação de entrada, declarando
 @cindex Conjunto de caracteres, declarando
@@ -12513,7 +12479,8 @@ Por exemplo,
 @@inlinefmt@{html, @@emph@{texto somente HTML@}@}
 @end example
 
-@noindent is nearly equivalent to
+@noindent
+é quase equivalente a
 
 @example
 @@ifhtml
@@ -12521,8 +12488,9 @@ Por exemplo,
 @@end ifhtml
 @end example
 
-@noindent except that no whitespace is added, as happens in the latter
-caso (ambiente)
+@noindent
+exceto que nenhum espaço em branco é adicionado, como acontece no último
+caso (ambiente).
 
 Nesses comandos, o espaço em branco é ignorado depois da vírgula que separa
 os argumentos, como de costume, mas @emph{não} é ignorado no final de
@@ -12589,8 +12557,7 @@ Versão delimitada por chaves de @code{@@ifclear}.
 caracteres.
 @subsection @code{@@set} e @code{@@value}
 
-@anchor{set value}
-@findex set
+@anchor{set value}@findex set
 @findex value
 @findex clear
 
@@ -12702,8 +12669,7 @@ comando de acento (@pxref{Inserindo Acentos}).  Por exemplo, isto falha:
 @nodedescription Formate uma região se um sinalizador estiver configurado.
 @subsection @code{@@ifset} e @code{@@ifclear}
 
-@anchor{ifset ifclear}
-@findex ifset
+@anchor{ifset ifclear}@findex ifset
 
 Quando um @var{sinalizador} for configurado, os comandos de formatação do
 Texinfo formatam o texto entre pares subsequentes de comandos @code{@@ifset
@@ -12919,7 +12885,8 @@ Bom, @@samp@{@@@@node@} está definido.
 @@end ifcommanddefined
 @end example
 
-@noindent will output the expected `Good, @samp{@@node} is defined.'.
+@noindent
+gerará o esperado `Bom, @samp{@@node} está definido.'.
 
 Esse condicional também considerará verdadeiros quaisquer novos comandos
 definidos pelo documento via @code{@@macro}, @code{@@alias},
@@ -13169,7 +13136,8 @@ Depois que uma macro estiver definida (veja-se a seção anterior), você pode
 @@@var{nomemacro} @{@var{arg1}, @var{arg2}, @dots{}@}
 @end example
 
-@noindent and the result will be more or less as if you typed the body of
+@noindent
+e o resultado será mais ou menos como se você digitasse o corpo de
 @var{nomemacro} naquele local. Por exemplo:
 
 @example
@@ -13179,7 +13147,8 @@ Junto: \p\ & \q\.
 @@foo@{a, b@}
 @end example
 
-@noindent produces:
+@noindent
+produz:
 
 @display
 Junto: a & b.
@@ -13198,7 +13167,8 @@ Sem argumentos aqui.
 @@argless@{@}
 @end example
 
-@noindent produces:
+@noindent
+produz:
 
 @display
 Sem argumentos aqui.
@@ -13300,7 +13270,8 @@ Duas vezes: \p\ & \p\.
 @@bar aah
 @end example
 
-@noindent produces:
+@noindent
+produz:
 
 @display
 Duas vezes: aah & aah.
@@ -13322,7 +13293,8 @@ Ambos: \p\\q\.
 @@addtwo@{a@}
 @end example
 
-@noindent produces simply:
+@noindent
+produz simplesmente:
 
 @display
 Ambos: a.
@@ -13354,8 +13326,9 @@ contextos:
 comando.
 @end itemize
 
-@noindent Unfortunately, @TeX{} may do some expansion in these situations,
-possivelmente gerando erros.
+@noindent
+Infelizmente, @TeX{} pode fazer alguma expansão nessas situações,
+possivelmente ocasionando erros.
 
 Também, algumas construções relacionadas a macro causam problemas com
 @TeX{}; algumas das ressalvas estão listadas abaixo.  Portanto, se você
@@ -13479,7 +13452,8 @@ texto para saída não do TeX
 @end group
 @end example
 
-@noindent you can do the following instead:
+@noindent
+você pode fazer o seguinte:
 
 @example
 @group
@@ -13540,7 +13514,8 @@ Por exemplo,
 @@mactwo@{@@value@{fc@},@}
 @end example
 
-@noindent produces:
+@noindent
+produz:
 
 @display
 Fran@,cois+.
@@ -13586,8 +13561,9 @@ No @code{texi2any} atual, isso é equivalente a:
 bbb
 @end example
 
-@noindent with just @samp{aaa} as the argument to @code{@@center}.  In
-a implementação anterior, ele teria sido analisado assim:
+@noindent
+com apenas @samp{aaa} como o argumento para @code{@@center}. Na
+implementação anterior, ele teria sido analisado assim:
 
 @example
 @@center aaa bbb
@@ -13598,8 +13574,7 @@ a implementação anterior, ele teria sido analisado assim:
 @nodedescription Apelidos de comandos.
 @section @samp{@@alias @var{novo}=@var{existente}}
 
-@anchor{alias}
-@cindex Apelidos, comando
+@anchor{alias}@cindex Apelidos, comando
 @cindex Apelidos de comando
 @findex alias
 
@@ -13726,8 +13701,9 @@ Explicação
 @@end defblock
 @end example
 
-@noindent Note how braces are needed around @samp{\type\} in the
-corpo da macro caso o argumento @code{tipo} contenha um espaço. Esse exemplo
+@noindent
+Observe como chaves são necessárias em torno de @samp{\tipo\} no corpo da
+macro caso o argumento de @code{tipo} contenha um espaço. Esse exemplo
 produz a saída abaixo e insere uma entrada de índice para @code{F}.
 
 @linemacro deffunc {type, name, args}
@@ -13750,8 +13726,7 @@ com @code{@@linemacro} que para aquelas definidas com @code{@@macro}.
 @nodedescription Realçamento personalizado.
 @section @code{@@definfoenclose}: Realçamento Personalizado
 
-@anchor{definfoenclose}
-@cindex Realçamento, personalizado
+@anchor{definfoenclose}@cindex Realçamento, personalizado
 @findex definfoenclose
 
 Um comando @code{@@definfoenclose} pode ser usado para definir um comando de
@@ -13859,10 +13834,11 @@ Uma linha de entrada como esta:
 @hashchar{}line 100 "foo.ptexi"
 @end example
 
-@noindent indicates that the next line was line 100 of the file
-@file{foo.ptexi}, e, portanto, isso é ao que uma mensagem de erro deveria se
-referir. Tanto M4 (@pxref{Recursos de preprocessador,,, m4, GNU M4}) quanto
-CPP (@pxref{Controle de Linha,,, cpp, O Preprocessador C} e @ref{Saída de
+@noindent
+indica que a próxima linha foi linha 100 do arquivo @file{foo.ptexi}, e,
+portanto, isso é ao que uma mensagem de erro deveria se referir. Tanto M4
+(@pxref{Recursos de preprocessador,,, m4, GNU M4}) quanto CPP
+(@pxref{Controle de Linha,,, cpp, O Preprocessador C} e @ref{Saída de
 Preprocessador,,, cpp, O Preprocessador C}) conseguem gerar tais linhas.
 
 O programa @command{texi2any} reconhece essas linhas por padrão, exceto
@@ -14093,8 +14069,7 @@ um menu mestre com 417 entradas e uma lista de 41 arquivos @code{@@include}.
 @nodedescription Incluindo um literal de arquivo.
 @section @var{arquivo} @code{@@verbatiminclude}: Incluir um Literal de Arquivo
 
-@anchor{verbatiminclude}
-@findex verbatiminclude
+@anchor{verbatiminclude}@findex verbatiminclude
 @cindex Literal, arquivo de inclusão
 @cindex Incluindo um literal de arquivo
 
@@ -14119,8 +14094,8 @@ diretórios dentro de uma distribuição, por exemplo:
 @@verbatiminclude @@value@{top_srcdir@}/NEWS
 @end example
 
-@noindent (You still have to get @code{top_srcdir} defined in the
-primeiro lugar).
+@noindent
+(Você ainda tem de ter @code{top_srcdir} definido no primeiro lugar).
 
 Fora isso, os únicos comandos @@ permitidos são @code{@@@@}, @code{@@@{},
 @code{@@@}} e comandos @@ associados, como @code{@@atchar@{@}}.
@@ -14198,8 +14173,7 @@ precisa executar o @TeX{} novamente.  @command{texi2dvi} se encarrega de
 tudo isso, executando @TeX{} e @command{texindex} conforme necessário
 (@pxref{Formatar com @command{texi2dvi}}).
 
-@anchor{Dentro do Emacs} @anchor{Impressão de Shell do Emacs}
-@cindex Imprimir, formatar a partir do shell do Emacs
+@anchor{Dentro do Emacs} @anchor{Impressão de Shell do Emacs} @cindex Imprimir, formatar a partir do shell do Emacs
 @cindex Formatar, imprimir a partir do shell do Emacs
 @cindex Shell, formatar, imprimir a partir de
 @cindex Shell do Emacs, formatar, imprimir a partir de
@@ -14421,11 +14395,12 @@ exemplo:
 tex foo.texi
 @end example
 
-@noindent @TeX{} will produce a @dfn{DVI file} as well as several auxiliary
-arquivos contendo informações para índices, referências cruzadas, entre
-outros. O arquivo DVI (para arquivo @dfn{DeVice Independent}) pode ser
-impresso em praticamente qualquer dispositivo, talvez depois de uma
-conversão adicional (veja-se a seção anterior).
+@noindent
+@TeX{} produzirá um @dfn{arquivo DVI} bem como muitos arquivos auxiliares
+contendo informações para índices, referências cruzadas, entre outras. O
+arquivo DVI (para arquivo @dfn{DeVice Independent}) pode ser impresso em
+praticamente qualquer dispositivo, talvez depois de uma conversão adicional
+(veja-se a seção anterior).
 
 @pindex texindex
 O comando de formatação @command{tex} em si não ordena os índices; ele
@@ -14541,9 +14516,10 @@ Assim, o início do teu arquivo aparentaria aproximadamente assim:
 @dots{}
 @end example
 
-@noindent @code{@@novalidate} also turns off validation in
-@command{texi2any}, assim como a opção @code{--no-validate} dele
-(@pxref{Invocando @command{texi2any}}).
+@noindent
+@code{@@novalidate} também desliga a validação no @command{texi2any},
+exatamente como a opção @code{--no-validate} dele (@pxref{Invocando
+@command{texi2any}}).
 
 Além disso, você não precisa executar @command{texindex} toda vez depois que
 executar @command{tex}.  O comando de formatação @command{tex} simplesmente
@@ -15604,13 +15580,15 @@ exemplo, executando
 texi2any --Xopt -t --Xopt @@afourpaper --pdf foo.texi
 @end example
 
-@noindent is equivalent to running
+@noindent
+é equivalente a executar
 
 @example
 texi2dvi -t @@afourpaper --pdf foo.texi
 @end example
 
-@noindent except for the validity check.
+@noindent
+exceto para verificação de validade.
 
 Embora se possa desejar que outras opções para @command{texi2any} tenham
 efeito, elas não tem. Por exemplo, executar @samp{texi2any
@@ -16171,9 +16149,10 @@ texi2any \
   -o /tmp/saida
 @end example
 
-@noindent (Caveat: Since @samp{plaintexinfo} output expands
-macros e condicionais do Texinfo, é necessário remover quaisquer dessas
-diferenças antes de se instalar as atualizações no documento original. Isso
+@noindent
+(Advertência: como a saída de @samp{plaintexinfo} expande macros e
+condicionais do Texinfo, é necessário remover quaisquer dessas diferenças
+antes de se instalar as atualizações no documento original. Isso
 possivelmente seja remediado em um lançamento futuro).
 
 As seguintes transformações são atualmente suportadas (muitas são usadas no
@@ -16718,8 +16697,9 @@ invocação como esta:
 texi2any --set-customization-variable TEXI2HTML=1 ...
 @end example
 
-@noindent but, to emphasize, this is @emph{not} a drop-in replacement
-para o @command{texi2html} anterior. Aqui estão as maiores diferenças:
+@noindent
+porém, para enfatizar, isso @emph{não} é um substituto imediato para o
+@command{texi2html} anterior. Aqui estão as maiores diferenças:
 
 @itemize @bullet
 @item Mais descaradamente, as opções de linha de comando do @command{texi2html}
@@ -17605,8 +17585,9 @@ saída HTML para @file{gcc.texi} seria escrita em um subdiretório nominado de
 ou no nome do arquivo de entrada (@pxref{Configurando o Nome do Arquivo da
 Saída Gerada}).
 
-@noindent In any case, the top-level output file within the directory
-é sempre nominado @samp{index.html}.
+@noindent
+Em qualquer caso, o arquivo da saída gerada do nível superior dentro do
+diretório é sempre nominado @samp{index.html}.
 
 A saída monolítica (@code{--no-split}) será nominada de acordo com
 @code{@@setfilename}, se presente, (com qualquer extensão @samp{.info}
@@ -17977,10 +17958,11 @@ O algoritmo foi desenvolvido principalmente por Patrice Dumas em 2003--04.
 
 @menu
 * Básicos do Linque: Básicos do Linque Xref do HTML.
-* Expansão de Nó: Expansão de Nome de Nó do Xref do HTML.
+* Expansão de Nó: Expansão do Xref do HTML de Nome de Nó
 * Expansão de Comando: Expansão de Comando do Xref do HTML.
 * Expansão de 8 bits: Expansão de Caracteres de 8 bits do Xref do HTML.
-* Configuração: Configuração do Xref do HTML.
+* Configuração: Configuração do Xref do HTML.  Configuração: Configuração do 
+                                                 Xref do HTML
 @end menu
 
 
@@ -18167,7 +18149,7 @@ sensíveis a maiúsculas e minúsculas, independentemente do sistema
 operacional.
 
 
-@node Expansão de Comando do Xref do HTML
+@node Expansão do Comando Xref do HTML
 @subsection Expansão do Comando de Referência Cruzada do HTML
 @cindex Referências cruzadas do HTML @subentry expansão de comando
 
@@ -18862,9 +18844,10 @@ manuais com @code{EXTERNAL_CROSSREF_EXTENSION}.
 
 @end itemize
 
-@noindent However, in general use of these will make cross-manual
-referencia ``inválido'' no sentido de que a URL gerada não lincará para o
-manual externo, a menos que esse manual fosse ele próprio produzido usando a
+@noindent
+Entretanto, em geral, o uso dessas tornará referências entre manuais
+``inválidas'' no sentido de que a URL gerada não lincará para o manual
+externo, a menos que esse manual fosse ele próprio produzido usando a
 personalização correspondente. Portanto, em geral, é melhor usar apenas a
 Configuração do Xref do HTML.
 
@@ -19274,8 +19257,9 @@ tex: @{
 @}
 @end example
 
-@noindent to disable the MathJax right-click menu, and to load the
-Extensão @code{physics} da MathJax. (Veja-se
+@noindent
+para desabilitar o menu do clique direito da MathJax e para carregar a
+extensão @code{physics} da MathJax. (Veja-se
 @uref{https://docs.mathjax.org/en/latest/options/index.html, Configurando
 MathJax} na documentação da MathJax).
 
@@ -22825,8 +22809,7 @@ arquivo do Texinfo para Info.
 @subsection Executando @command{texi2any}/@command{makeinfo} no Emacs
 
 @c anchor{makeinfo in Emacs}@c prev name
-@anchor{@code{makeinfo} no Emacs}@anchor{Vantagens do @command{makeinfo}}
-@cindex Executando @command{makeinfo} no Emacs
+@anchor{@code{makeinfo} no Emacs}@anchor{Vantagens do @command{makeinfo}}@cindex Executando @command{makeinfo} no Emacs
 @cindex Executando @command{texi2any} no Emacs
 @cindex @command{makeinfo} dentro do Emacs
 @cindex @command{texi2any} dentro do Emacs
@@ -23725,8 +23708,7 @@ você está trabalhando diretamente com @TeX{}, não com Texinfo).
 @nodedescription Como encontrar nós mal referenciados.
 @subsection Encontrando Nós Mal Referenciados
 
-@anchor{Executando Info-Validate}
-@findex Info-validate
+@anchor{Executando Info-Validate}@findex Info-validate
 @cindex Nós, verificando mal referenciados
 @cindex Verificando nós mal referenciados
 @cindex Procurando por nós mal referenciados
@@ -23943,8 +23925,7 @@ fornecidos.
 @nodedescription Iniciar capítulos nas páginas da direita.
 @section @code{@@setchapternewpage}: Páginas em Branco Antes dos Capítulos
 
-@anchor{setchapternewpage}
-@findex setchapternewpage
+@anchor{setchapternewpage}@findex setchapternewpage
 @cindex Iniciando capítulos
 @cindex Páginas, começando ímpares
 
@@ -24017,8 +23998,7 @@ especificar a saída que você quer.
 @node Cabeçalhos
 @section Cabeçalhos de Página
 @nodedescription Cabeçalhos de página.
-@anchor{Cabeçalhos Introduzidos}
-@cindex Cabeçalhos
+@anchor{Cabeçalhos Introduzidos}@cindex Cabeçalhos
 @cindex Rodapés
 @cindex Numeração de páginas
 @cindex Cabeçalhos de página
@@ -24055,8 +24035,7 @@ em um lado.
 @end nodedescriptionblock
 @subsection O Comando @code{@@headings}
 
-@anchor{cabeçalhos ativados desativados}
-@findex headings
+@anchor{cabeçalhos ativados desativados}@findex headings
 
 O comando @code{@@headings} raramente é usado. Ele especifica quais tipos de
 cabeçalhos e rodapés de página imprimir em cada página. Normalmente, isso é
@@ -24364,8 +24343,7 @@ parte inferior de uma página tanto nos cabeçalhos quanto nos rodapés.
 @nodedescription Especificar o recuo do parágrafo.
 @section @code{@@paragraphindent}: Controlando Recuo do Parágrafo
 
-@anchor{paragraphindent}
-@findex paragraphindent
+@anchor{paragraphindent}@findex paragraphindent
 @cindex Recuo de parágrafos, controle de
 @cindex Controle de recuo de parágrafo
 
@@ -24408,8 +24386,7 @@ do Cabeçalho}.
 @nodedescription Suprimindo o recuo do primeiro parágrafo.
 @section @code{@@firstparagraphindent}: Recuo Depois de Cabeçalhos
 
-@anchor{firstparagraphindent}
-@findex firstparagraphindent
+@anchor{firstparagraphindent}@findex firstparagraphindent
 @cindex Primeiro parágrafo, suprimindo o recuo de
 @cindex Suprimindo o recuo do primeiro parágrafo
 @cindex Evitando o recuo do primeiro parágrafo
@@ -24451,8 +24428,7 @@ especificado. @xref{Início do Cabeçalho}.
 @nodedescription Especificar o recuo do ambiente.
 @section @code{@@exampleindent}: Recuo do Ambiente
 
-@anchor{exampleindent}
-@findex exampleindent
+@anchor{exampleindent}@findex exampleindent
 @cindex Recuando ambientes
 @cindex Recuo do ambiente
 @cindex Exemplo de recuo
@@ -24495,8 +24471,7 @@ do Cabeçalho}.
 @nodedescription Como imprimir livros e manuais em pequeno formato.
 @section @code{@@smallbook}: Imprimindo Livros ``Pequenos''
 
-@anchor{smallbook}
-@findex smallbook
+@anchor{smallbook}@findex smallbook
 @cindex Tamanho pequeno do livro
 @cindex Livro, imprimindo pequeno
 @cindex Tamanhos de página para livros
@@ -24573,7 +24548,8 @@ separada por vírgula. Exemplos:
 @example
 @@pagesizes 200mm,150mm  @c para papel b5
 @end example
-@noindent and
+@noindent
+e
 @example
 @@pagesizes 11.5in       @c para papel ofício
 @end example
@@ -25065,13 +25041,14 @@ que ela tenha um tamanho apropriado para o texto ao redor. Aqui está uma
 fórmula possível para a altura de uma imagem em pixeis:
 
 @displaymath
-@math{h_{@hbox{exibição}} = (h_{@hbox{arquivo}} / dpi) * (72.27/10) * f}
+h_{@r{exibir}} = (h_{@r{arquivo}} / dpi) * (72.27/10) * f
 @end displaymath
 
-@noindent Here, @math{h_{@r{display}}} is the height in pixels to display
-a imagem em, @math{h_{@r{arquivo}}} é a altura em pixeis da imagem sem
-escala, @math{dpi} é o DPI proveniente do arquivo Info e @math{f} é o
-tamanho da fonte em pixeis da fonte usada atualmente.
+@noindent
+Aqui, @math{h_{@r{exibir}}} é a altura em pixeis na qual se exibir a imagem,
+@math{h_{@r{arquivo}}} é a altura em pixeis da imagem sem escala, @math{dpi}
+é o DPI proveniente do arquivo Info e @math{f} é o tamanho da fonte em
+pixeis da fonte usada atualmente.
 
 O 72,27 nessa fórmula é o número de pontos em uma polegada (conforme usado
 pelo @TeX{}). O 10 é o tamanho de fonte padrão 10 @dmn{point} do @TeX{}, em

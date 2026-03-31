@@ -57,6 +57,7 @@ GNU de Documentação Livre''.
 
 @author Robert James Chassell
 @author Richard Matthew Stallman
+@author Jamenson Ferreira Espindula de Almeida Melo - tradução para português brasileiro
 @end documentinfo
 
 @c ISBN 1-882114-65-5 is for version 3.12, March 1998.
@@ -241,12 +242,24 @@ os(as) mantenedores(as) reproduzirem o problema. Falando genericamente, isso
 significa:
 
 @itemize @bullet
-@item O número da versão do Texinfo e o(s) programa(s) ou manual(is) envolvido(s).
-@item O conteúdo de quaisquer arquivos de entrada necessários para reproduzir o defeito.
-@item Precisamente como você executou quaisquer programa(s) envolvido(s).
-@item Uma descrição do problema e amostras de quaisquer saídas errôneas.
-@item Nomes e versões do hardware e do sistema operacional.
-@item Qualquer outra coisa que você pense que pudesse ajudar.
+@item
+O número da versão do Texinfo e o(s) programa(s) ou manual(is) envolvido(s).
+
+@item
+O conteúdo de quaisquer arquivos de entrada necessários para reproduzir o
+defeito.
+
+@item
+Precisamente como você executou quaisquer programa(s) envolvido(s).
+
+@item
+Uma descrição do problema e amostras de quaisquer saídas errôneas.
+
+@item
+Nomes e versões do hardware e do sistema operacional.
+
+@item
+Qualquer outra coisa que você pense que pudesse ajudar.
 @end itemize
 
 Quando em dúvida se alguma coisa é necessária ou não, inclua-a. É melhor
@@ -594,34 +607,35 @@ O novo programa Perl pretendia ter as seguintes vantagens sobre o antigo
 programa C:
 
 @itemize @bullet
-@item Personalização de HTML.  Muitos pacotes de software livre GNU e outros
-tem sido felizes no uso das características de personalização de HTML no
-@command{texi2html} por anos.  Assim, na verdade, duas implementações
-independentes da linguagem Texinfo foram desenvolvidas, e mantê-las em
-sincronia não era simples.  Adicionar a possibilidade de personalização de
-HTML no @command{texi2html} a um programa C teria sido um esforço enorme na
-época.
+@item
+HTML customization.  Many GNU and other free software packages had been
+happily using the HTML customization features in @command{texi2html} for
+years.  Thus, in effect two independent implementations of the Texinfo
+language had developed, and keeping them in sync was not simple.  Adding the
+HTML customization possible in @command{texi2html} to a C program would have
+been an enormous effort at that time.
 
-@item Unicode, e suporte multilíngue em geral, especialmente de idiomas do leste
-Idiomas asiáticos. Naquela época, fazer isso em C teria sido equivalente a
-reescrever todo o programa.
+@item
+Unicode, and multilingual support generally, especially of east Asian
+languages.  At that time, doing it in C would have been tantamount to
+rewriting the entire program.
 
-@item Estruturas adicionais de retaguarda. O código do @command{makeinfo}
-complicou-se até o ponto onde adicionar-se uma nova estrutura de retaguarda
-era bastante complexo, exigindo interações complexas com estruturas de
-retaguarda existentes. Em contraste, a nova implementação fornece uma
-representação limpa baseada em árvore para todas as estruturas de retaguarda
-trabalharem. Pessoas tem solicitado numerosas estruturas de retaguarda
-(@LaTeX{}, o mais recente (X)HTML, @dots{}); essa mudança os tornou muito
-mais viáveis de implementar.
+@item
+Additional back-ends.  The @command{makeinfo} code had become convoluted to
+the point where adding a new back-end was quite complex, requiring complex
+interactions with existing back-ends.  In contrast, the new implementation
+provides a clean tree-based representation for all back-ends to work from.
+People had requested numerous different back-ends (@LaTeX{}, the latest
+(X)HTML, @dots{}); this change made them much more feasible to implement.
 
 @cindex @command{texi2any}, como implementação de referência
 @cindex Implementação de referência
 @cindex Implementação, @command{texi2any} como referência
-@anchor{Implementação de referência}@item @command{texi2any}, foi concebido para ser uma implementação de referência
-que define partes da linguagem não totalmente especificadas pelo manual e
-para fornecer uma referência para opções de linha de comando para qualquer
-outro programa que possa processar o Texinfo no futuro.
+@anchor{Implementação de referência}@item
+@command{texi2any} was intended to be a reference implementation that
+defines parts of the language not fully specified by the manual, and to
+provide a reference for command-line options for any other program that
+might process Texinfo in the future.
 
 @end itemize
 
@@ -25027,14 +25041,14 @@ que ela tenha um tamanho apropriado para o texto ao redor. Aqui está uma
 fórmula possível para a altura de uma imagem em pixeis:
 
 @displaymath
-h_{@r{exibição}} = (h_{@r{arquivo}} / dpi) * (72.27/10) * f
+h_{@r{exibir}} = (h_{@r{arquivo}} / dpi) * (72.27/10) * f
 @end displaymath
 
 @noindent
-Aqui, @math{h_{@r{exibição}}} é a altura em pixeis na qual se exibir a
-imagem, @math{h_{@r{arquivo}}} é a altura em pixeis da imagem sem escala,
-@math{dpi} é o DPI proveniente do arquivo Info e @math{f} é o tamanho da
-fonte em pixeis da fonte usada atualmente.
+Aqui, @math{h_{@r{exibir}}} é a altura em pixeis na qual se exibir a imagem,
+@math{h_{@r{arquivo}}} é a altura em pixeis da imagem sem escala, @math{dpi}
+é o DPI proveniente do arquivo Info e @math{f} é o tamanho da fonte em
+pixeis da fonte usada atualmente.
 
 O 72,27 nessa fórmula é o número de pontos em uma polegada (conforme usado
 pelo @TeX{}). O 10 é o tamanho de fonte padrão 10 @dmn{point} do @TeX{}, em
