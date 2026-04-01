@@ -10,13 +10,14 @@ texi2any --fill-column=68 --output=teste.info texinfo.pt_BR.texi
 Formato texto simples (puro):
 ============================
 
-texi2any --plaintext --output=teste.txt texinfo.pt_BR.texi
+texi2any --plaintext --output=texinfo-pt_BR.txt --init-file ./t2a_modify_translations.pm texinfo.pt_BR.texi
 texi2any -c TEXINFO_OUTPUT_FORMAT=textcontent texinfo.pt_BR.texi -o /tmp/saida.txt
 
 
 Formato HTML (página única):
 ===========================
 
+texi2any --html --no-split --output=teste-mono.html --init-file ./t2a_modify_translations.pm texinfo.pt_BR.texi
 ( texi2any --html --no-split --output=teste-mono.html texinfo.pt_BR.texi 2>&1 | tee /home/jamenson/$(date "+%Y-%m-%d-%H-%M-%S")-texi2any-html_no-split.log.txt && exit "${PIPESTATUS}" )
 
 
@@ -29,7 +30,7 @@ texi2any --html --output=teste-multi.html texinfo.pt_BR.texi
 Formato PDF:
 ===========
 
-TEXI2DVI_BUILD_DIRECTORY=/home/jamenson/texinfo texi2dvi --pdf texinfo.pt_BR.texi
+TEXI2DVI_BUILD_DIRECTORY=/home/jamenson/texinfo texi2dvi --pdf --output=texinfo.pt_BR.pdf texinfo.pt_BR.texi
 
 ( TEXI2DVI_BUILD_DIRECTORY=/home/jamenson/texinfo texi2dvi --pdf texinfo.pt_BR.texi 2>&1 | tee /home/jamenson/$(date "+%Y-%m-%d-%H-%M-%S")-texi2dvi-pdf.log.txt && exit "${PIPESTATUS}" )
 

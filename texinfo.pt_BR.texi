@@ -6,7 +6,11 @@
 @c ===========================================================================
 
 
-@setfilename texinfo.info
+@setfilename texinfo-pt_BR.info
+
+@documentencoding UTF-8
+@documentlanguage pt_BR
+@afourpaper
 
 @c Automake automatically updates version.texi to @set VERSION and
 @c @set UPDATED to appropriate values.
@@ -57,16 +61,18 @@ GNU de Documentação Livre''.
 
 @author Robert James Chassell
 @author Richard Matthew Stallman
-@author Jamenson Ferreira Espindula de Almeida Melo (tradução para português
-brasileiro)
+@author Jamenson Espindula (tradução para português brasileiro)
 @end documentinfo
 
 @c ISBN 1-882114-65-5 is for version 3.12, March 1998.
 @c ISBN 1-882114-64-7 is for edition 2.24 of November 1996.
 @c ISBN 1-882114-63-9 is for edition 2.20 of 28 February 1995.
-@publication Publicado pela Fundação do Software Livre @* Rua 31 Milk nº
-960789 @* Boston, Massachussets 02196 @* Estados Unidos da América do Norte
-@* ISBN 1-882114-67-1 
+@publication
+Publicado pela Fundação do Software Livre @*
+Rua 31 Milk nº 960789 @*
+Boston, Massachussets 02196 @*
+Estados Unidos da América do Norte @*
+ISBN 1-882114-67-1 
 
 @ignore
 @sp 1
@@ -2900,7 +2906,7 @@ um menu conforme segue:
 @example
 * Menu:
 
-* Chaves de fenda::       Flathead e Phillips.
+* Chaves de fenda::       Ponta Chata e Phillips.
 * Brocas::                Fazendo buracos em coisas com chaves
                           elétricas de fenda, controladores de broca,
                           brocas combi, controladores de impacto, brocas
