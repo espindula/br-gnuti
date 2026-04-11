@@ -51,7 +51,6 @@ Texts.  A copy of the license is included in the section entitled
 
 @author Robert J. Chassell
 @author Richard M. Stallman
-@author Jamenson Ferreira Espindula de Almeida Melo - tradução para português brasileiro
 @end documentinfo
 
 @publication
@@ -233,23 +232,12 @@ For bug reports, please include enough information for the maintainers
 to reproduce the problem.  Generally speaking, that means:
 
 @itemize @bullet
-@item
-The version number of Texinfo and the program(s) or manual(s) involved.
-
-@item
-The contents of any input files necessary to reproduce the bug.
-
-@item
-Precisely how you ran any program(s) involved.
-
-@item
-A description of the problem and samples of any erroneous output.
-
-@item
-Hardware and operating system names and versions.
-
-@item
-Anything else that you think would be helpful.
+@item The version number of Texinfo and the program(s) or manual(s) involved.
+@item The contents of any input files necessary to reproduce the bug.
+@item Precisely how you ran any program(s) involved.
+@item A description of the problem and samples of any erroneous output.
+@item Hardware and operating system names and versions.
+@item Anything else that you think would be helpful.
 @end itemize
 
 When in doubt whether something is needed or not, include it.  It's
@@ -595,8 +583,7 @@ The new Perl program was intended to have the following advantages over
 the old C program:
 
 @itemize @bullet
-@item
-HTML customization.  Many GNU and other free software packages
+@item HTML customization.  Many GNU and other free software packages
 had been happily using the HTML customization features in
 @command{texi2html} for years.  Thus, in effect two independent
 implementations of the Texinfo language had developed, and keeping
@@ -604,13 +591,11 @@ them in sync was not simple.  Adding the HTML customization possible
 in @command{texi2html} to a C program would have been an
 enormous effort at that time.
 
-@item
-Unicode, and multilingual support generally, especially of east
+@item Unicode, and multilingual support generally, especially of east
 Asian languages.  At that time, doing it in C would have been tantamount
 to rewriting the entire program.
 
-@item
-Additional back-ends.  The @command{makeinfo} code had become
+@item Additional back-ends.  The @command{makeinfo} code had become
 convoluted to the point where adding a new back-end was quite complex,
 requiring complex interactions with existing back-ends.  In contrast,
 the new implementation provides a clean tree-based representation for
@@ -622,8 +607,7 @@ much more feasible to implement.
 @cindex Reference implementation
 @cindex Implementation, @command{texi2any} as reference
 @anchor{Reference Implementation}@c
-@item
-@command{texi2any} was intended to be a reference implementation
+@item @command{texi2any} was intended to be a reference implementation
 that defines parts of the language not fully specified by the manual,
 and to provide a reference for command-line options for any other
 program that might process Texinfo in the future.
@@ -1094,9 +1078,8 @@ to use Texinfo mode when the file is edited:
 \input texinfo   @@c -*-texinfo-*-
 @end example
 
-@noindent
-This may be useful when Emacs doesn't detect the file type from the
-file extension automatically.
+@noindent This may be useful when Emacs doesn't detect the file type 
+from the file extension automatically.
 
 
 @node @code{@@setfilename}
@@ -1753,10 +1736,9 @@ next (@pxref{Document Permissions}):
 @@insertcopying
 @end example
 
-@noindent
-(This is required for outputting the copying text when using
-@code{@@titlepage}, unlike with @code{@@maketitle} where this text is
-output automatically).
+@noindent (This is required for outputting the copying text when
+using @code{@@titlepage}, unlike with @code{@@maketitle} where this
+text is output automatically.)
 
 Follow the copying text by the publisher, ISBN numbers, cover art
 credits, and other such information.
@@ -2230,9 +2212,8 @@ First section of first chapter.
 Second section of first chapter.
 @end quotation
 
-@noindent
-(In the Info and HTML output, the chapter would also be split into
-nodes).
+@noindent (In the Info and HTML output, the chapter would also be split
+into nodes.)
 
 
 @node Ending a File
@@ -2556,8 +2537,7 @@ single space.  For example:
 @c @node @  foo @: @* bar,
 @c However, it is best to leave those special cases non documented
 
-@noindent
-all define the same node, namely @samp{foo bar}.
+@noindent all define the same node, namely @samp{foo bar}.
 @c FIXME to be removed.  In 2022 both Info readers find the node.
 In menu entries, a single internal space should be used in node
 names or some versions of some Info readers will not find the node.
@@ -3351,9 +3331,8 @@ For example, the ``Chapter Structuring'' heading could be:
 @end group
 @end example
 
-@noindent
-The underlining character is the same for all the commands at the same
-level.  For instance, it is the same for the chapter-level commands
+@noindent The underlining character is the same for all the commands at the
+same level.  For instance, it is the same for the chapter-level commands
 @code{@@chapter}, @code{@@apppendix}, @code{@@unnumbered} and
 @code{@@chapheading}.
 
@@ -3451,11 +3430,10 @@ Acknowledgements  Colophon  Dedication  Preface
 @cindex @code{<dedication>} DocBook tag
 @cindex @code{<preface>} DocBook tag
 @cindex @code{<chapter>} DocBook tag
-@noindent
-then the DocBook output uses corresponding special tags
-(@code{<preface>}, etc.)@: instead of the default
-@code{<chapter>}. The argument to @code{@@unnumbered} itself can be
-anything, and is output as the element title as usual.
+@noindent then the DocBook output uses corresponding special tags
+(@code{<preface>}, etc.)@: instead of the default @code{<chapter>}.
+The argument to @code{@@unnumbered} itself can be anything, and is
+output as the element title as usual.
 
 
 @node @code{@@majorheading @@chapheading}
@@ -3728,9 +3706,8 @@ included file (@pxref{Include Files}).  Typical usage looks like this:
 @@raisesections
 @end example
 
-@noindent
-(Without the @code{@@raisesections}, all the subsequent sections in
-the main file would also be lowered).
+@noindent (Without the @code{@@raisesections}, all the subsequent
+sections in the main file would also be lowered.)
 
 If the included file being lowered has a @code{@@top} node, you'll
 need to conditionalize its inclusion with a flag (@pxref{@code{@@set
@@ -3970,8 +3947,8 @@ with a command such as @samp{@@:}.  For example,
 See Hurricanes, page @var{ppp} --- for the details
 @end quotation
 
-@noindent
-instead of @w{`See Hurricanes, page @var{ppp}, --- for the details'}.
+@noindent instead of
+@w{`See Hurricanes, page @var{ppp}, --- for the details'}.
 
 @command{texi2any} warns and protect names when the text of a cross-reference
 (and node names and menu items) contains a problematic construct that could
@@ -4323,8 +4300,7 @@ includes @samp{Top} if it was given.)  For example,
 @@xref@{Top,,, make, The GNU Make Manual@}.
 @end example
 
-@noindent
-produces
+@noindent produces
 
 @example
 @group
@@ -4332,8 +4308,7 @@ produces
 @end group
 @end example
 
-@noindent
-and
+@noindent and
 
 @quotation
 See @cite{The GNU Make Manual}.
@@ -4404,8 +4379,7 @@ in previous sections.
 not generate a `See' in the output, just the reference itself.
 This makes it useful as the last part of a sentence.
 
-@noindent
-For example,
+@noindent For example,
 
 @cindex Hurricanes
 @example
@@ -4533,8 +4507,7 @@ This marks the @@anchor@{x-spot@}spot.
 @@xref@{x-spot,,the spot@}.
 @end example
 
-@noindent
-This produces:
+@noindent This produces:
 
 @example
 This marks the spot.
@@ -4595,8 +4568,7 @@ This marks the @@namedanchor@{x-spot, the spot@}spot.
 @@xref@{x-spot@}.
 @end example
 
-@noindent
-This produces:
+@noindent This produces:
 
 @example
 This marks the spot.
@@ -4730,8 +4702,7 @@ text of the link:
 The official GNU ftp site is @@url@{https://ftp.gnu.org/gnu@}.
 @end example
 
-@noindent
-produces:
+@noindent produces:
 @display
 The official GNU ftp site is @url{https://ftp.gnu.org/gnu}.
 @end display
@@ -4744,22 +4715,19 @@ The official @@url@{https://ftp.gnu.org/gnu, GNU ftp site@}
 holds programs and texts.
 @end example
 
-@noindent
-which produces:
+@noindent which produces:
 @display
 The official @url{https://ftp.gnu.org/gnu, GNU ftp site}
 holds programs and texts.
 @end display
 
-@noindent
-The HTML output is this:
+@noindent The HTML output is this:
 @example
 The official <a href="https://ftp.gnu.org/gnu">GNU ftp site</a>
 holds programs and texts.
 @end example
 
-@noindent
-In other formats, the output is like this:
+@noindent In other formats, the output is like this:
 @example
 The official GNU ftp site (https://ftp.gnu.org/gnu)
 holds programs and texts.
@@ -4772,14 +4740,12 @@ Finally, an example of the three-argument form:
 The @@url@{/man.cgi/1/ls,,ls@} program @dots{}
 @end example
 
-@noindent
-which, except for HTML, produces:
+@noindent which, except for HTML, produces:
 @display
 The @url{/man.cgi/1/ls,,ls} program @dots{}
 @end display
 
-@noindent
-but with HTML:
+@noindent but with HTML:
 @example
 The <a href="/man.cgi/1/ls">ls</a> program @dots{}
 @end example
@@ -4827,8 +4793,7 @@ the special character.  This can be controlled with the
 @@urefbreakstyle @var{how}
 @end example
 
-@noindent
-where the argument @var{how} is one of these words:
+@noindent where the argument @var{how} is one of these words:
 
 @vindex after@r{, value for @code{@@urefbreakstyle}}
 @vindex before@r{, value for @code{@@urefbreakstyle}}
@@ -5503,8 +5468,7 @@ For example:
 @example
 The @@env@{PATH@} environment variable @dots{}
 @end example
-@noindent
-produces
+@noindent produces
 @quotation
 The @env{PATH} environment variable @dots{}
 @end quotation
@@ -5557,8 +5521,7 @@ For example:
 @example
 The command @@command@{ls@} lists directory contents.
 @end example
-@noindent
-produces
+@noindent produces
 @quotation
 The command @command{ls} lists directory contents.
 @end quotation
@@ -5588,8 +5551,7 @@ For example:
 @example
 The option @@option@{-l@} produces a long listing.
 @end example
-@noindent
-produces
+@noindent produces
 @quotation
 The option @option{-l} produces a long listing.
 @end quotation
@@ -5660,8 +5622,7 @@ abbreviation.  For instance:
 @@abbr@{Comput. J., Computer Journal@}
 @end example
 
-@noindent
-produces:
+@noindent produces:
 
 @display
 @abbr{Comput. J., Computer Journal}
@@ -5708,8 +5669,7 @@ For instance (since GNU is a recursive acronym, we use
 @@acronym@{GNU, @@acronym@{GNU@}'s Not Unix@}
 @end example
 
-@noindent
-produces:
+@noindent produces:
 
 @display
 @acronym{GNU, @acronym{GNU}'s Not Unix}
@@ -5776,8 +5736,7 @@ For example:
 For example, the URL might be @@indicateurl@{http://example.org/path@}.
 @end example
 
-@noindent
-which produces:
+@noindent which produces:
 
 @display
 For example, the URL might be @indicateurl{http://example.org/path}.
@@ -5810,8 +5769,7 @@ Send bug reports to @@email@{bug-texinfo@@@@gnu.org@},
 suggestions to the @@email@{bug-texinfo@@@@gnu.org, same place@}.
 @end example
 
-@noindent
-produces
+@noindent produces
 
 @display
 Send bug reports to @email{bug-texinfo@@gnu.org},
@@ -6209,8 +6167,7 @@ Caution  Important  Note  Tip  Warning
 @cindex @code{<tip>} DocBook tag
 @cindex @code{<warning>} DocBook tag
 @cindex @code{<blockquote>} DocBook tag
-@noindent
-then the DocBook output uses corresponding special tags
+@noindent then the DocBook output uses corresponding special tags
 (@code{<note>}, etc.)@: instead of the default @code{<blockquote>}.
 
 If the author of the quotation is specified in the @code{@@quotation}
@@ -6687,8 +6644,7 @@ line that follows after it.
 @end group
 @end example
 
-@noindent
-produces:
+@noindent produces:
 
 @display
 @example
@@ -7515,8 +7471,7 @@ split that window.
 @@end multitable
 @end example
 
-@noindent
-produces:
+@noindent produces:
 
 @multitable @columnfractions .15 .45 .4
 @headitem Key @tab Command @tab Description
@@ -7594,8 +7549,7 @@ This is an example float.
 @@end float
 @end example
 
-@noindent
-And the output:
+@noindent And the output:
 
 @float Figure,fig:ex1
 This is an example float.
@@ -7626,8 +7580,7 @@ not be numbered and consequently will not appear in the
 @code{@@listoffloats} output or be cross-referenceable.
 @end table
 
-@noindent
-Ordinarily, you specify both @var{type} and @var{label}, to get a
+@noindent Ordinarily, you specify both @var{type} and @var{label}, to get a
 labeled and numbered float.
 
 In the @LaTeX{} output, code loading the @code{float} package is
@@ -7673,8 +7626,7 @@ An example float, with caption.
 @@end float
 @end example
 
-@noindent
-The output is:
+@noindent The output is:
 
 @float
 An example float, with caption.
@@ -7737,9 +7689,8 @@ Here's an example:
 @@listoffloats Figure
 @end example
 
-@noindent
-Without any argument, @code{@@listoffloats} generates a list of floats
-for which no float type was specified, i.e., no first argument to the
+@noindent Without any argument, @code{@@listoffloats} generates a list of
+floats for which no float type was specified, i.e., no first argument to the
 @code{@@float} command (@pxref{@code{@@float}}).
 
 Here's what the output from @code{@@listoffloats}
@@ -7910,9 +7861,8 @@ Info output:
            alt="@var{alttext} ... ^@@^H]
 @end example
 
-@noindent
-where @samp{^@@} and @samp{^H} stand for the actual null and backspace
-control characters.  If one of the files is not present, the
+@noindent where @samp{^@@} and @samp{^H} stand for the actual null and
+backspace control characters.  If one of the files is not present, the
 corresponding argument is omitted.
 
 The reason for mentioning this here is that older Info browsers (this
@@ -8301,10 +8251,9 @@ indexed.  For instance:
 Hello, there!
 @end example
 
-@noindent
-Among other reasons, that way following indexing links (in whatever
-context) ends up before the material, where readers want to be,
-instead of after.
+@noindent Among other reasons, that way following indexing links (in
+whatever context) ends up before the material, where readers want to
+be, instead of after.
 
 In Info, an index is usually formatted as a menu.  Try to avoid using
 a colon in index entries, as this may confuse some Info readers.
@@ -8979,9 +8928,8 @@ Manual}.} (@pxref{Def Cmd Conventions}).  For example:
 @@end defun
 @end example
 
-@noindent
-may have @samp{&optional} and @samp{&rest} formatted in bold, even
-without any @@-command involved.
+@noindent may have @samp{&optional} and @samp{&rest} formatted in bold,
+even without any @@-command involved.
 
 So, in order to typeset an ampersand in such a context,
 it's necessary to use @code{@@&} or some other construct.
@@ -8993,8 +8941,7 @@ Documentation of @@code@{foo@}.
 @@end deftypefn
 @end example
 
-@noindent
-This gives the output 
+@noindent This gives the output 
 
 @deftypefn Function int foo (const std::vector<int>@& @var{bar})
 Documentation of @code{foo}.
@@ -9108,8 +9055,7 @@ Spacey@@ @@ @@ @@
 example.
 @end example
 
-@noindent
-produces
+@noindent produces
 
 @example
 Spacey@ @ @ @
@@ -9290,8 +9236,7 @@ This is text. Two sentences. Three sentences. French spacing.
 This is text. Two sentences. Three sentences. Non-French spacing.
 @end example
 
-@noindent
-produces:
+@noindent produces:
 
 @frenchspacing on
 This is text. Two sentences. Three sentences. French spacing.
@@ -9659,8 +9604,7 @@ and @code{@@sup} commands.  For example:
 here@@sub@{below@}@@sup@{above@}
 @end example
 
-@noindent
-produces:
+@noindent produces:
 
 @display
 here@sub{below}@sup{above}
@@ -10368,8 +10312,7 @@ e^@{-@{1\over2@}\left(@{x-\mu\over\sigma@}\right)^2@}
 @@end displaymath
 @end example
 
-@noindent
-which produces:
+@noindent which produces:
 
 @displaymath
 f(x) = {1\over\sigma\sqrt{2\pi}}
@@ -10506,8 +10449,7 @@ Here is an example with @code{@@*}:
 This sentence is broken @@*into two lines.
 @end example
 
-@noindent
-produces
+@noindent produces
 
 @example
 @group
@@ -10558,10 +10500,9 @@ Give hyphenation points for certain words.  For example:
 @@hyphenation@{man-u-script man-u-scripts@}
 @end example
 
-@noindent
-As shown, you put a @samp{-} at each hyphenation point. @TeX{} only
-uses the specified hyphenation points when the words match exactly, so
-give all necessary variants, such as plurals.
+@noindent As shown, you put a @samp{-} at each hyphenation point.
+@TeX{} only uses the specified hyphenation points when the words match
+exactly, so give all necessary variants, such as plurals.
 @end table
 
 Non-printed output is not hyphenated, so none of
@@ -10598,11 +10539,10 @@ So Texinfo provides this command:
 @@allowcodebreaks false
 @end example
 
-@noindent
-to prevent from breaking at @samp{-} or @samp{_} within
-@code{@@code}. You can go back to allowing such breaks
-with @code{@@allowcodebreaks true}. Write these
-commands on lines by themselves.
+@noindent to prevent from breaking at @samp{-} or @samp{_} within
+@code{@@code}.  You can go back to allowing such breaks with
+@code{@@allowcodebreaks true}.  Write these commands on lines by
+themselves.
 
 These commands can be given anywhere in the document.  For example,
 you may have just one problematic paragraph where you need to turn off
@@ -10631,8 +10571,7 @@ the width of a normal interword space:
 @@w@{ @} @@w@{ @} @@w@{ @} indentation.
 @end example
 
-@noindent
-produces:
+@noindent produces:
 
 @display
 @w{ } @w{ } @w{ } indentation.
@@ -10947,8 +10886,7 @@ This is the basic continued defun.
 @@end defun
 @end example
 
-@noindent
-produces:
+@noindent produces:
 
 @defun fn-name   arg1 arg2 arg3
 This is the basic continued defun.
@@ -10974,10 +10912,9 @@ around a continuation inside braces.  For example:
   Name@} @dots{}
 @end example
 
-@noindent
-The output (not shown) has excess space between `Category' and `Name'.
-To avoid this, elide the unwanted whitespace in your input, or put the
-continuation @code{@@} outside braces.
+@noindent The output (not shown) has excess space between `Category'
+and `Name'.  To avoid this, elide the unwanted whitespace in your
+input, or put the continuation @code{@@} outside braces.
 
 @code{@@} does not function as a continuation character in @emph{any}
 other context.  Ordinarily, @samp{@@} followed by a whitespace
@@ -11046,8 +10983,7 @@ flag (@pxref{@code{@@set @@value}}).  For example, this input
 @@end deffn
 @end example
 
-@noindent
-produces the following:
+@noindent produces the following:
 
 @set txidefnamenospace
 @deffn Builtin m4_index (string, substring)
@@ -11316,8 +11252,7 @@ For example, for documenting the R language, you could use input like
 @@end deftypefn
 @end example
 
-@noindent
-to get output like
+@noindent to get output like
 
 @deftypefn stats {} t.test (@var{x}, @var{y} = NULL,@
   @w{@var{alternative} = c("two.sided", "less", "greater")},@
@@ -11327,8 +11262,7 @@ to get output like
 @dots{}
 @end deftypefn
 
-@noindent
-Here the @code{@@w} command is used to prevent some line breaks.
+@noindent Here the @code{@@w} command is used to prevent some line breaks.
 
 @end ignore
 
@@ -11587,8 +11521,7 @@ name.  For instance:
 @end group
 @end example
 
-@noindent
-produces:
+@noindent produces:
 @defcv {Class Option} Window border-pattern
 @dots{}
 @end defcv
@@ -11610,8 +11543,7 @@ specify the type of the instance variable.
 @end group
 @end example
 
-@noindent
-produces:
+@noindent produces:
 
 @deftypecv {Class Option} Window int border-pattern
 @dots{}
@@ -11634,8 +11566,7 @@ instance:
 @end group
 @end example
 
-@noindent
-produces:
+@noindent produces:
 
 @defivar Window border-pattern
 @dots{}
@@ -11658,8 +11589,7 @@ specify the type of the instance variable.
 @end group
 @end example
 
-@noindent
-produces:
+@noindent produces:
 
 @deftypeivar Window @code{int} border-pattern
 @dots{}
@@ -11802,8 +11732,7 @@ Description of foo.
 @@end defblock
 @end example
 
-@noindent
-This produces the output:
+@noindent This produces the output:
 
 @defblock
 @defline Macro mac (arg1, arg2)
@@ -11832,8 +11761,7 @@ Description of set-var and var.
 @@end defblock
 @end example
 
-@noindent
-This produces the output:
+@noindent This produces the output:
 
 @defblock
 @defline Function set-var (value)
@@ -11926,8 +11854,7 @@ important for the language, the following could be used:
 @end group
 @end example
 
-@noindent
-produces:
+@noindent produces:
 
 @macro metasymbol {argument}
 @r{@t{@slanted{\argument\}}}
@@ -12600,8 +12527,7 @@ For example,
 @@inlinefmt@{html, @@emph@{HTML-only text@}@}
 @end example
 
-@noindent
-is nearly equivalent to
+@noindent is nearly equivalent to
 
 @example
 @@ifhtml
@@ -12609,8 +12535,7 @@ is nearly equivalent to
 @@end ifhtml
 @end example
 
-@noindent
-except that no whitespace is added, as happens in the latter
+@noindent except that no whitespace is added, as happens in the latter
 (environment) case.
 
 In these commands, whitespace is ignored after the comma separating
@@ -12998,8 +12923,7 @@ Good, @@samp@{@@@@node@} is defined.
 @@end ifcommanddefined
 @end example
 
-@noindent
-will output the expected `Good, @samp{@@node} is defined.'.
+@noindent will output the expected `Good, @samp{@@node} is defined.'.
 
 This conditional will also consider any new commands defined by
 the document via @code{@@macro}, @code{@@alias},
@@ -13246,8 +13170,7 @@ After a macro is defined (see the previous section), you can
 @@@var{macroname} @{@var{arg1}, @var{arg2}, @dots{}@}
 @end example
 
-@noindent
-and the result will be more or less as if you typed the body of
+@noindent and the result will be more or less as if you typed the body of
 @var{macroname} at that spot.  For example:
 
 @example
@@ -13257,8 +13180,7 @@ Together: \p\ & \q\.
 @@foo@{a, b@}
 @end example
 
-@noindent
-produces:
+@noindent produces:
 
 @display
 Together: a & b.
@@ -13278,8 +13200,7 @@ No arguments here.
 @@argless@{@}
 @end example
 
-@noindent
-produces:
+@noindent produces:
 
 @display
 No arguments here.
@@ -13379,8 +13300,7 @@ Twice: \p\ & \p\.
 @@bar aah
 @end example
 
-@noindent
-produces:
+@noindent produces:
 
 @display
 Twice: aah & aah.
@@ -13401,8 +13321,7 @@ Both: \p\\q\.
 @@addtwo@{a@}
 @end example
 
-@noindent
-produces simply:
+@noindent produces simply:
 
 @display
 Both: a.
@@ -13433,8 +13352,7 @@ By design, macro expansion should not happen in the following contexts:
 command.
 @end itemize
 
-@noindent
-Unfortunately, @TeX{} may do some expansion in these situations,
+@noindent Unfortunately, @TeX{} may do some expansion in these situations,
 possibly yielding errors.
 
 Also, quite a few macro-related constructs cause problems with @TeX{};
@@ -13556,8 +13474,7 @@ text for not TeX output
 @end group
 @end example
 
-@noindent
-you can do the following instead:
+@noindent you can do the following instead:
 
 @example
 @group
@@ -13617,8 +13534,7 @@ For example,
 @@mactwo@{@@value@{fc@},@}
 @end example
 
-@noindent
-produces:
+@noindent produces:
 
 @display
 Fran@,cois+.
@@ -13663,9 +13579,8 @@ In the current @code{texi2any}, this is equivalent to:
 bbb
 @end example
 
-@noindent
-with just @samp{aaa} as the argument to @code{@@center}.  In the
-earlier implementation, it would have been parsed as this:
+@noindent with just @samp{aaa} as the argument to @code{@@center}.  In
+the earlier implementation, it would have been parsed as this:
 
 @example
 @@center aaa bbb
@@ -13803,10 +13718,10 @@ Explanation
 @@end defblock
 @end example
 
-@noindent
-Note how braces are needed around @samp{\type\} in the macro body in
-case the @code{type} argument contains a space. This example produces
-the output below and enters an index entry for @code{F}.
+@noindent Note how braces are needed around @samp{\type\} in the
+macro body in case the @code{type} argument contains a space.
+This example produces the output below and enters an index entry
+for @code{F}.
 
 @linemacro deffunc {type, name, args}
 @c @findex \name\
@@ -13936,10 +13851,9 @@ An input line such as this:
 @hashchar{}line 100 "foo.ptexi"
 @end example
 
-@noindent
-indicates that the next line was line 100 of the file
-@file{foo.ptexi}, and so that's what an error message should refer
-to. Both M4 (@pxref{Preprocessor features,,, m4, GNU M4}) and CPP
+@noindent indicates that the next line was line 100 of the file
+@file{foo.ptexi}, and so that's what an error message should refer to.
+Both M4 (@pxref{Preprocessor features,,, m4, GNU M4}) and CPP
 (@pxref{Line Control,,, cpp, The C Preprocessor}, and
 @ref{Preprocessor Output,,, cpp, The C Preprocessor}) can generate
 such lines.
@@ -14198,8 +14112,8 @@ for instance:
 @@verbatiminclude @@value@{top_srcdir@}/NEWS
 @end example
 
-@noindent
-(You still have to get @code{top_srcdir} defined in the first place).
+@noindent (You still have to get @code{top_srcdir} defined in the
+first place.)
 
 Other than that, the only @@-commands allowed are @code{@@@@},
 @code{@@@{}, @code{@@@}} and associated @@-commands such as
@@ -14503,8 +14417,7 @@ example:
 tex foo.texi
 @end example
 
-@noindent
-@TeX{} will produce a @dfn{DVI file} as well as several auxiliary
+@noindent @TeX{} will produce a @dfn{DVI file} as well as several auxiliary
 files containing information for indices, cross-references, etc.  The
 DVI file (for @dfn{DeVice Independent} file) can be printed on
 virtually any device, perhaps after a further conversion (see the
@@ -14620,10 +14533,9 @@ Thus, the beginning of your file would look approximately like this:
 @dots{}
 @end example
 
-@noindent
-@code{@@novalidate} also turns off validation in @command{texi2any},
-just like its @code{--no-validate} option (@pxref{Invoking
-@command{texi2any}}).
+@noindent @code{@@novalidate} also turns off validation in
+@command{texi2any}, just like its @code{--no-validate} option
+(@pxref{Invoking @command{texi2any}}).
 
 Furthermore, you need not run @command{texindex} each time after you run
 @command{tex}.  The @command{tex} formatting command simply uses whatever
@@ -15669,15 +15581,13 @@ example, running
 texi2any --Xopt -t --Xopt @@afourpaper --pdf foo.texi
 @end example
 
-@noindent
-is equivalent to running
+@noindent is equivalent to running
 
 @example
 texi2dvi -t @@afourpaper --pdf foo.texi
 @end example
 
-@noindent
-except for the validity check.
+@noindent except for the validity check.
 
 Although one might wish that other options to @command{texi2any} would
 take effect, they don't.  For example, running @samp{texi2any
@@ -16209,11 +16119,10 @@ texi2any \
   -o /tmp/out
 @end example
 
-@noindent
-(Caveat: Since @samp{plaintexinfo} output expands Texinfo macros and
-conditionals, it's necessary to remove any such differences before
-installing the updates in the original document. This may be remedied
-in a future release).
+@noindent (Caveat: Since @samp{plaintexinfo} output expands
+Texinfo macros and conditionals, it's necessary to remove any such
+differences before installing the updates in the original document.
+This may be remedied in a future release.)
 
 The following transformations are currently supported (many are used
 in the @code{pod2texi} utility distributed with Texinfo;
@@ -16733,9 +16642,8 @@ invocation like this:
 texi2any --set-customization-variable TEXI2HTML=1 ...
 @end example
 
-@noindent
-but, to emphasize, this is @emph{not} a drop-in replacement for the
-previous @command{texi2html}.  Here are the biggest differences:
+@noindent but, to emphasize, this is @emph{not} a drop-in replacement
+for the previous @command{texi2html}.  Here are the biggest differences:
 
 @itemize @bullet
 @item Most blatantly, the command line options of @command{texi2html}
@@ -17610,9 +17518,8 @@ output for @file{gcc.texi} would be written into a subdirectory
 named @samp{gcc_html/}.  The subdirectory name is based on @code{@@setfilename}
 or on the input file name (@pxref{Setting the Output File Name}).
 
-@noindent
-In any case, the top-level output file within the directory is always
-named @samp{index.html}.
+@noindent In any case, the top-level output file within the directory
+is always named @samp{index.html}.
 
 Monolithic output (@code{--no-split}) is named according to
 @code{@@setfilename}, if present (with any @samp{.info} extension replaced
@@ -18835,12 +18742,11 @@ manuals with @code{EXTERNAL_CROSSREF_EXTENSION}. @c , which, if unset, is based 
 
 @end itemize
 
-@noindent
-However, in general use of these will make cross-manual references
-``invalid'' in the sense that the generated URL will not link to the
-external manual, unless this manual was itself also produced using the
-corresponding customization. It is therefore, in general, better to
-use HTML Xref Configuration only.
+@noindent However, in general use of these will make cross-manual
+references ``invalid'' in the sense that the generated URL will not link
+to the external manual, unless this manual was itself also produced
+using the corresponding customization. It is therefore, in general,
+better to use HTML Xref Configuration only.
 
 @vindex BASEFILENAME_LENGTH
 You can change the maximum length of a base file name
@@ -19243,11 +19149,10 @@ tex: @{
 @}
 @end example
 
-@noindent
-to disable the MathJax right-click menu, and to load the MathJax
-@code{physics} extension. (See
-@uref{https://docs.mathjax.org/en/latest/options/index.html,
-Configuring MathJax} in the MathJax documentation).
+@noindent to disable the MathJax right-click menu, and to load the
+MathJax @code{physics} extension.
+(See @uref{https://docs.mathjax.org/en/latest/options/index.html,
+Configuring MathJax} in the MathJax documentation.)
 
 If you override any of the defaults for this configuration output by
 @command{texi2any} you should make sure that your new settings align
@@ -21944,9 +21849,7 @@ used @@-commands and for creating node pointers and menus.
 
 
 @node Emacs Editing
-@nodedescriptionblock
-Texinfo mode adds to GNU Emacs' general purpose editing features.
-@end nodedescriptionblock
+@nodedescription Texinfo mode adds to GNU Emacs' general purpose editing features.
 @section The Usual GNU Emacs Editing Commands
 
 In most cases, the usual Text mode commands work the same in Texinfo
@@ -24519,8 +24422,7 @@ separated by a comma.  Examples:
 @example
 @@pagesizes 200mm,150mm  @c for b5 paper
 @end example
-@noindent
-and
+@noindent and
 @example
 @@pagesizes 11.5in       @c for legal paper
 @end example
@@ -25003,11 +24905,10 @@ an image in pixels:
 h_{@r{display}} = (h_{@r{file}} / dpi) * (72.27/10) * f
 @end displaymath
 
-@noindent
-Here, @math{h_{@r{display}}} is the height in pixels to display the
-image at, @math{h_{@r{file}}} is the height in pixels of the unscaled
-image, @math{dpi} is the DPI from the Info file, and @math{f} is the
-font size in pizels of the currently used font.
+@noindent Here, @math{h_{@r{display}}} is the height in pixels to display
+the image at, @math{h_{@r{file}}} is the height in pixels of the unscaled
+image, @math{dpi} is the DPI from the Info file, and @math{f} is
+the font size in pizels of the currently used font.
 
 The 72.27 in this formula is the number of points in an inch (as used
 by @TeX{}).  The 10 is the default 10 @dmn{point} font size of @TeX{},
