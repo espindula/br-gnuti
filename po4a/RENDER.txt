@@ -10,3 +10,15 @@ po4a-translate --format texinfo --keep 0 --master texinfo/upstream/texinfo.texi 
 ( LC_ALL=C po4a --no-update po4a.conf 2>&1 | tee logs/`date "+%Y-%m-%d-%H-%M-%S"`-po4a.log.txt && exit "${PIPESTATUS}" )
 
 Observação: o comando acima somente gera o arquivo final traduzido (substitui os textos originais pelos textos traduzidos)
+
+
+Como aplicar as traduções se o arquivo original precisou ser mudado?
+
+cp -v texinfo/po/texinfo.texi.pt_BR.po texinfo/gettextized/
+po4a-updatepo -f texinfo -m texinfo/upstream/texinfo.texi -p texinfo/gettextized/texinfo.texi.pt_BR.po
+
+Observação um: o arquivo gerado (texinfo.texi.pt_BR.po) certamente precisará ser mudado para corrigir inconsistências originárias do arquivo original.
+
+Observação dois: agora tem-se dois arquivos PO: um dentro do diretório 'gettextized' e outro dentro do diretório 'po'.
+
+Observação três: inicialmente, deve-se trabalhar o arquivo PO dentro do diretório 'gettextized'.
