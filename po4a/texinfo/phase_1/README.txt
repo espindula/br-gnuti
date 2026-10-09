@@ -1,9 +1,8 @@
-Este é o diretório 'phase_1'. Neste diretório estão os arquivos
-iniciais da 'jornada' de tradução. No subdiretório 'upstream' estão os
-arquivos contendo texto originário do fluxo de desenvolvimento
-(nominados de 'arquivos mestre' na nomenclatura do projeto 'po4a').
+This is the 'phase_1' directory. It contains the initial files for the
+translation 'journey'. The 'upstream' subdirectory holds files
+containing text originating from the development stream (referred to
+as 'master files' in 'po4a' project terminology).
 
-Considerando que tais arquivos contêm alguns textos potencialmente
-problemáticos para o programa 'po4a', certamente mudanças serão
-necessárias para adequar os arquivos para o analisador do programa
-'po4a'.
+Since these files contain text that may be problematic for 'po4a',
+changes will certainly be required to make them compatible with the
+'po4a' parser.
