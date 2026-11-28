@@ -17,7 +17,7 @@ msgstr ""
 "Project-Id-Version: Texinfo 7.3\n"
 "Report-Msgid-Bugs-To: jafesp@gmail.com\n"
 "POT-Creation-Date: 2026-10-08 20:31-0300\n"
-"PO-Revision-Date: 2026-11-25 21:35-0300\n"
+"PO-Revision-Date: 2026-11-28 16:13-0300\n"
 "Last-Translator: Jamenson Ferreira Espindula de Almeida Melo "
 "<jafesp@gmail.com>\n"
 "Language-Team: none\n"
@@ -3038,6 +3038,9 @@ msgid ""
 "@xref{Setting the Output File Name} for more details on how "
 "@command{texi2any} determines the names of output files."
 msgstr ""
+"@xref{Configurando o Nome do Arquivo da Saída Gerada} para mais detalhes "
+"acerca de como @command{texi2any} determina os nomes dos arquivos da saída "
+"gerada."
 
 #. type: node
 #: texinfo/phase_1/upstream/texinfo.texi:1093
@@ -4288,6 +4291,13 @@ msgid ""
 "(@pxref{Raw Formatter Commands}).  An example with HTML, EPUB and Docbook "
 "metadata:"
 msgstr ""
+"Outro código de Texinfo encontrado em @code{@@documentinfo} é gerado em "
+"seções de metadados de formatos de saída. Os processadores Texinfo não "
+"interpretam especialmente esse código adicional, portanto, você "
+"frequentemente precisa usar comandos do formatador bruto para que a "
+"formatação específica dos metadados do formato de saída seja produzida "
+"(@pxref{Comandos do Formatador Bruto}). Um exemplo com metadados HTML, EPUB "
+"e Docbook:"
 
 #. type: example
 #: texinfo/phase_1/upstream/texinfo.texi:1593
@@ -4317,6 +4327,29 @@ msgid ""
 "@@end docbook\n"
 "@@end documentinfo\n"
 msgstr ""
+"@@documentinfo\n"
+"@@title O Título\n"
+"@@ifepub\n"
+"@@html\n"
+"<dc:creator id=\"creator\">Algum Corpo</dc:creator>\n"
+"<meta refines=\"#creator\" property=\"role\" scheme=\"marc:relators\"\n"
+"    id=\"role\">aut</meta>\n"
+"@@end html\n"
+"@@end ifepub\n"
+"@@ifnotepub\n"
+"@@html\n"
+"<meta name=\"creator\" content=\"Algum Corpo\" />\n"
+"@@end html\n"
+"@@end ifnotepub\n"
+"@@docbook\n"
+"<author>\n"
+"  <firstname>Algum</firstname><surname>Corpo</surname>\n"
+"  <affiliation><jobtitle>Diretor</jobtitle>\n"
+"    <orgname>A Escola de Algum Lugar</orgname>\n"
+"  </affiliation>\n"
+"</author>\n"
+"@@end docbook\n"
+"@@end documentinfo\n"
 
 #. type: Plain text
 #: texinfo/phase_1/upstream/texinfo.texi:1598
@@ -14866,6 +14899,14 @@ msgid ""
 "format-specific features to control such details of formatting, e.g.@: CSS "
 "or @LaTeX{} package options respectively.)"
 msgstr ""
+"Texinfo fornece um comando para mudar o tamanho da fonte do corpo principal "
+"na saída impressa (com @file{texinfo.tex}) para um documento: "
+"@code{@@fonttextsize}. (Esse comando não é uma boa maneira de configurar o "
+"tamanho da fonte em outros formatos de saída, onde pode ser ignorado pelo "
+"@command{texi2any}---em formatos como HTML ou @LaTeX{}, nós recomendamos "
+"usar recursos específicos de formato para controlar esses detalhes de "
+"formatação, por exemplo: opções de pacote CSS ou @LaTeX{} "
+"respectivamente)."
 
 #. type: Plain text
 #: texinfo/phase_1/upstream/texinfo.texi:5866
@@ -21723,6 +21764,10 @@ msgid ""
 "@code{USE_UNICODE_COLLATION}, and @code{DOCUMENTLANGUAGE_COLLATION}.  "
 "@xref{Global Customization Variables}."
 msgstr ""
+"Ao processar com @command{texi2any}, a ordenação das entradas do índice "
+"é afetada pelas seguintes variáveis: @code{COLLATION_LANGUAGE}, "
+"@code{USE_UNICODE_COLLATION} e @code{DOCUMENTLANGUAGE_COLLATION}. "
+"@xref{Variáveis Globais de Personalização}."
 
 #. type: itemize
 #: texinfo/phase_1/upstream/texinfo.texi:8485
@@ -21733,6 +21778,12 @@ msgid ""
 "underlying system features used for sorting (e.g.@: version of Perl "
 "installed or version of the C standard library)."
 msgstr ""
+"Espera-se que @command{texi2any} ordene índices em uma ordem reproduzível "
+"quando executado sobre o mesmo arquivo de entrada com as mesmas opções. No "
+"entanto, a ordem exata possivelmente difira entre instalações do "
+"@command{texi2any} dependendo dos recursos subjacentes do sistema usados "
+"para ordenação (por exemplo: versão instalada do Perl ou versão da "
+"biblioteca padrão C)."
 
 #. type: itemize
 #: texinfo/phase_1/upstream/texinfo.texi:8492
@@ -23359,6 +23410,14 @@ msgid ""
 "whitespace from input lines, so treats @code{@@@kbd{SPACE}} at the end of a "
 "line as if the @code{@@@kbd{NL}} command had appeared instead."
 msgstr ""
+"Para saída consistente, independentemente de se @command{texi2any} ou "
+"@TeX{} estiver processando teu arquivo Texinfo, você deveria sempre seguir "
+"um comando @code{@@@kbd{SPACE}} ou @code{@@@kbd{TAB}} com um caractere que "
+"não seja espaço em branco na mesma linha. A razão para isso é a de que "
+"@TeX{} ignora caracteres de espaço seguintes a @code{@@@kbd{SPACE}} e "
+"também remove os espaços em branco finais das linhas de entrada, de modo "
+"que trata @code{@@@kbd{SPACE}} no final de uma linha como se o comando "
+"@code{@@@kbd{NL}} tivesse aparecido."
 
 #. type: Plain text
 #: texinfo/phase_1/upstream/texinfo.texi:9071
@@ -23366,6 +23425,9 @@ msgid ""
 "One workaround to use @code{@@@kbd{SPACE}} at the end of a line is to add an "
 "empty @samp{@@w@{@}} after the command.  For example:"
 msgstr ""
+"Uma solução alternativa para usar @code{@@@kbd{SPACE}} no final de uma "
+"linha é a de se adicionar um @samp{@@w@{@}} vazio depois do comando. Por "
+"exemplo:"
 
 #. type: example
 #: texinfo/phase_1/upstream/texinfo.texi:9075
@@ -23374,12 +23436,14 @@ msgid ""
 "A@@ @@w@{@}\n"
 "B.\n"
 msgstr ""
+"A@@ @@w@{@}\n"
+"B.\n"
 
 #. type: example
 #: texinfo/phase_1/upstream/texinfo.texi:9081
 #, no-wrap
 msgid "A  B.\n"
-msgstr ""
+msgstr "A  B.\n"
 
 #. type: Plain text
 #: texinfo/phase_1/upstream/texinfo.texi:9085
